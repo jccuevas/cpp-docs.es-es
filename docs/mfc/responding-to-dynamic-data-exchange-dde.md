@@ -1,12 +1,6 @@
 ---
-title: Responder al intercambio dinámico de datos (DDE) | Documentos de Microsoft
-ms.custom: ''
+title: Responder al intercambio dinámico de datos (DDE)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - registry [MFC], most recently used files
 - frame windows [MFC], dynamic data exchange (DDE)
@@ -17,20 +11,18 @@ helpviewer_keywords:
 - responding to dynamic data exchange (DDE)
 - frame windows [MFC], shell registration
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 327a719de5cdd3eef7c0eb769b0abf7cfe03ca49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b18e4e48e79afa549fbc3be08b4bf6947449f972
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470660"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>Responder al intercambio dinámico de datos (DDE)
-La ventana de marco puede responder a las solicitudes de intercambio (DDE) de datos dinámicos para abrir los archivos desde el Administrador de archivos (si la extensión de archivo se ha registrado o asociada a la aplicación). Vea [registro de Shell](../mfc/special-cwinapp-services.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Uso de ventanas de marco](../mfc/using-frame-windows.md)
+
+La ventana de marco puede responder a solicitudes de datos dinámicos DDE (intercambio) para abrir archivos desde el Administrador de archivos (si la extensión de archivo se ha registrado o asociada con la aplicación). Consulte [Shell registro](../mfc/special-cwinapp-services.md).
+
+## <a name="see-also"></a>Vea también
+
+[Uso de ventanas de marco](../mfc/using-frame-windows.md)
 

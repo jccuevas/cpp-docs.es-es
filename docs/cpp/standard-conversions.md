@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75ec7271950a2aee28e55d4b7b9fdcf7c8c894d0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
-ms.translationtype: MT
+ms.openlocfilehash: dec0456c880fea47219dc11c509bbecac025f5d3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039379"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070592"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 
@@ -81,11 +81,11 @@ Las promociones que poseen la cualidad de conservación de valores y las promoci
 
 - Un operando de **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, o **>=**
 
-     Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.
+   Estos operadores dependen del signo para determinar el resultado. Por consiguiente, las promociones que poseen la cualidad de conservación de valores y que conservan el tipo signed/unsigned generan resultados diferentes cuando se aplican a estos operandos.
 
 - El operando izquierdo de **>>** o **>>=**
 
-     Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.
+   Estos operadores tratan las cantidades signed y unsigned de forma diferente cuando realizan una operación de desplazamiento. En el caso de cantidades signed, el desplazamiento de una cantidad a la derecha hace que el bit de signo se propague a las posiciones de bits desocupadas. En el caso de cantidades unsigned, las posiciones de bits desocupadas se rellenan con ceros.
 
 - Un argumento a una función sobrecargada o un operando de un operador sobrecargado que depende de la condición signed/unsigned de dicho operando para la coincidencia de argumentos. (Consulte [operadores sobrecargados](../cpp/operator-overloading.md) para obtener más información acerca de cómo definir operadores sobrecargados.)
 
@@ -162,7 +162,7 @@ Muchos operadores binarios (descritos en [expresiones con operadores binarios](.
 |Uno de los operandos es de tipo **long double**.|Otro operando se convierte al tipo **long double**.|
 |Anterior no se cumplió la condición y alguno de los operandos es de tipo **doble**.|Otro operando se convierte al tipo **doble**.|
 |Anterior condiciones no se cumplen y alguno de los operandos es de tipo **float**.|Otro operando se convierte al tipo **float**.|
-|Las condiciones anteriores no se satisfacen (ninguno de los operandos es de tipo flotante).|Las promociones de entero se realizan en los operandos de la forma siguiente:<br /><br /> -Si alguno de los operandos es de tipo **unsigned long**, el otro operando se convierte al tipo **unsigned long**.<br />-Si la condición anterior no se cumple y si alguno de los operandos es de tipo **largo** y otro de tipo **int sin signo**, ambos operandos se convierten al tipo **unsigned long**.<br />-Si no se cumplen las dos condiciones anteriores, y si alguno de los operandos es de tipo **largo**, el otro operando se convierte al tipo **largo**.<br />-Si no se cumplen las tres condiciones anteriores, y si alguno de los operandos es de tipo **int sin signo**, el otro operando se convierte al tipo **int sin signo**.<br />-Si se cumple ninguna de las condiciones anteriores, ambos operandos se convierten al tipo **int**.|
+|Las condiciones anteriores no se satisfacen (ninguno de los operandos es de tipo flotante).|Las promociones de entero se realizan en los operandos de la forma siguiente:<br /><br />-Si alguno de los operandos es de tipo **unsigned long**, el otro operando se convierte al tipo **unsigned long**.<br />-Si la condición anterior no se cumple y si alguno de los operandos es de tipo **largo** y otro de tipo **int sin signo**, ambos operandos se convierten al tipo **unsigned long**.<br />-Si no se cumplen las dos condiciones anteriores, y si alguno de los operandos es de tipo **largo**, el otro operando se convierte al tipo **largo**.<br />-Si no se cumplen las tres condiciones anteriores, y si alguno de los operandos es de tipo **int sin signo**, el otro operando se convierte al tipo **int sin signo**.<br />-Si se cumple ninguna de las condiciones anteriores, ambos operandos se convierten al tipo **int**.|
 
 En el código siguiente se muestran las reglas de conversión descritas en la tabla:
 
@@ -221,7 +221,7 @@ El segundo caso en el que un puntero a una clase se puede convertir a un puntero
 
 El resultado de tal conversión es un puntero al “subobjeto”, la parte del objeto que la clase base describe completamente.
 
-En el código siguiente se definen dos clases, `A` y `B`, donde `B` se deriva de `A`. (Para obtener más información sobre la herencia, vea [clases derivadas](../cpp/inheritance-cpp.md).) A continuación, define `bObject`, un objeto de tipo `B` y dos punteros (`pA` y `pB`) que apuntan al objeto.
+En el código siguiente se definen dos clases, `A` y `B`, donde `B` se deriva de `A`. (Para obtener más información sobre la herencia, vea [clases derivadas](../cpp/inheritance-cpp.md).) A continuación, define , un objeto de tipo `bObject` y dos punteros (`B` y `pB`) que apuntan al objeto.
 
 ```cpp
 // C2039 expected

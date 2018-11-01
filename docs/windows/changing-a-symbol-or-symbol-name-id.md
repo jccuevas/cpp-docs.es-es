@@ -1,29 +1,18 @@
 ---
-title: Cambiar un símbolo o el nombre de símbolo (ID) | Microsoft Docs
-ms.custom: ''
+title: Cambiar un símbolo o el nombre de un símbolo (ID)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbol names
 - symbols [C++], names
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8b80c854d144f0f2010d1482a03f692062ea81ef
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 98df98a2ed466066d9f0d32d6686e55e75280167
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487404"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>Cambiar un símbolo o el nombre de un símbolo (ID)
 
@@ -48,5 +37,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)  
+[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

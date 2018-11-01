@@ -1,10 +1,6 @@
 ---
-title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l | Microsoft Docs
-ms.custom: ''
+title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswcsym_l
 - __iswcsym
@@ -50,8 +46,6 @@ f1_keywords:
 - ctype/__iswcsymf
 - ctype/__iswcsym_l
 - ctype/__iswcsymf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscsymf_l function
 - iswsym_l function
@@ -68,16 +62,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b1561e93fc19832607d304f3d087ab33b04040de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617868"
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
@@ -134,7 +124,7 @@ Ambos **__iscsym** y **__iswcsym** devuelven un valor distinto de cero si *c* es
 
 Estas rutinas se definen como macros, a menos que se defina la macro de preprocesador _CTYPE_DISABLE_MACROS. Al usar las versiones de macro de estas rutinas, los argumentos se pueden evaluar varias veces. Tenga cuidado al usar expresiones que tengan efectos secundarios en la lista de argumentos.
 
-Por compatibilidad con versiones anteriores, **iscsym** y **iscsymf** se definen como macros solo cuando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) no está definido o se ha definido como 0; en caso contrario, no están definidos.
+Por compatibilidad con versiones anteriores, **iscsym** y **iscsymf** se definen como macros únicamente cuando [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) no está definido o está definido como 0; en caso contrario, están sin definir.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,7 +132,7 @@ Por compatibilidad con versiones anteriores, **iscsym** y **iscsymf** se definen
 |-------------|---------------------|
 |**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> o \<ctype.h>|
 
-El **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, y **_iswcsymf_l** son rutinas Específicos de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+El **iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, y **_iswcsymf_l** son rutinas Específicas de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

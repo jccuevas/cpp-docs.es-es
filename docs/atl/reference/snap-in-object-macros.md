@@ -1,10 +1,6 @@
 ---
-title: Macros de objeto de complemento | Microsoft Docs
-ms.custom: ''
+title: Macros de objeto de complemento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlsnap/ATL::BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP
 - atlsnap/ATL::BEGIN_SNAPINTOOLBARID_MAP
@@ -14,19 +10,13 @@ f1_keywords:
 - atlsnap/ATL::EXTENSION_SNAPIN_NODEINFO_ENTRY
 - atlsnap/ATL::SNAPINMENUID
 - atlsnap/ATL::SNAPINTOOLBARID_ENTRY
-dev_langs:
-- C++
 ms.assetid: 4e9850c0-e395-4929-86c9-584a81828053
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e3eec62e2bea92f1f308b149046b83be1b9085b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656942"
 ---
 # <a name="snap-in-object-macros"></a>Macros de objeto de complemento
 
@@ -41,7 +31,7 @@ Estas macros proporcionan compatibilidad para extensiones de complemento.
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|Crea a un miembro de datos para la clase de datos de la extensión del complemento.|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|Escribe una clase de datos de extensión de complemento en la asignación de clase de datos de extensión de complemento del objeto de complemento.|
 |[SNAPINMENUID](#snapinmenuid)|Declara el identificador del menú contextual usado por el objeto de complemento.|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Escribe una barra de herramientas en el mapa de barra de herramientas del complemento de objeto.|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|Escribe una barra de herramientas en el mapa de barra de herramientas del complemento de objeto.|
 
 ## <a name="requirements"></a>Requisitos
 

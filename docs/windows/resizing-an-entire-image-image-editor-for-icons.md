@@ -1,29 +1,18 @@
 ---
-title: Cambiar el tamaño de una imagen completa (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Cambiar el tamaño de una imagen completa (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], resizing images
 - size [C++], images
 - images [C++], resizing
 - resizing images
 ms.assetid: 10782937-7eb4-4340-bdec-618ee7d7904b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5465ccacf6fb051e787cf390c82108cb9344d203
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e21706b08ec8debf0b8c3ee93832fc11525b78b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566418"
 ---
 # <a name="resizing-an-entire-image-image-editor-for-icons"></a>Cambiar el tamaño de una imagen completa (Editor de imágenes para iconos)
 
@@ -48,5 +37,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)

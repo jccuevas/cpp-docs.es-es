@@ -1,16 +1,10 @@
 ---
-title: -Fd (nombre de archivo de base de datos de programa) | Microsoft Docs
-ms.custom: ''
+title: /Fd (Nombre del archivo de base de datos del programa)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /FD
 - VC.Project.VCCLWCECompilerTool.ProgramDataBaseFileName
 - VC.Project.VCCLCompilerTool.ProgramDataBaseFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - /FD compiler option [C++]
 - program database file name [C++]
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64e047a832b3c097ced57f9d491b1344c51da495
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 449b0a2be44f438c35feeb446df6d7c47f270c35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494322"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Nombre del archivo de base de datos del programa)
 
@@ -75,7 +65,7 @@ CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

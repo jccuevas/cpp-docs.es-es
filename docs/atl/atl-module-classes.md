@@ -1,27 +1,17 @@
 ---
-title: Clases de módulo ATL | Microsoft Docs
-ms.custom: ''
+title: Clases de módulo de ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComModule class, what's changed
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47ab7f69e5df98dbd9b09adaa2676c22fdf72bed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505277"
 ---
 # <a name="atl-module-classes"></a>Clases de módulo de ATL
 
@@ -55,15 +45,15 @@ La funcionalidad de `CComModule` se ha distribuido en varias clases nuevas para 
 
 - Realizar la funcionalidad en `CComModule` granular.
 
-     Compatibilidad con COM, ventanas, depuración de la interfaz y las características específicas de la aplicación de (DLL o EXE) está ahora en clases independientes.
+   Compatibilidad con COM, ventanas, depuración de la interfaz y las características específicas de la aplicación de (DLL o EXE) está ahora en clases independientes.
 
 - Automáticamente, declare una instancia global de cada uno de estos módulos.
 
-     Una instancia global de las clases de módulo necesario está vinculada al proyecto.
+   Una instancia global de las clases de módulo necesario está vinculada al proyecto.
 
 - Eliminan la necesidad de llamar a métodos Init y término.
 
-     Los métodos Init y término se han movido a los constructores y destructores para las clases de módulo; ya no hay necesidad de llamar a Init y término.
+   Los métodos Init y término se han movido a los constructores y destructores para las clases de módulo; ya no hay necesidad de llamar a Init y término.
 
 ## <a name="see-also"></a>Vea también
 

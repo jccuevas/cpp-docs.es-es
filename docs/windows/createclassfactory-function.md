@@ -1,28 +1,18 @@
 ---
-title: CreateClassFactory (función) | Microsoft Docs
-ms.custom: ''
+title: CreateClassFactory (función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreateClassFactory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3cecffa8505aaead738007e2a0872c3f1bc5a6d6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: aa235312e39434e39ea954aa083701fa55f336ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484037"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (función)
 
@@ -42,16 +32,16 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>Parámetros
 
-*flags*  
+*flags*<br/>
 Una combinación de uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) valores de enumeración.
 
-*entry*  
+*entry*<br/>
 Puntero a un [CreatorMap](../windows/creatormap-structure.md) que contiene información de inicialización y el registro sobre el parámetro *riid*.
 
-*riid*  
+*riid*<br/>
 Referencia a un identificador de interfaz.
 
-*ppFactory*  
+*ppFactory*<br/>
 Si esta operación completa correctamente, un puntero a un generador de clases.
 
 ## <a name="return-value"></a>Valor devuelto

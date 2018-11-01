@@ -1,27 +1,17 @@
 ---
-title: wbuffer_convert (Clase) | Microsoft Docs
-ms.custom: ''
+title: wbuffer_convert (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmon/stdext::cvt::wbuffer_convert
-dev_langs:
-- C++
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 364ae6c544f58f09208cefeec9d3984de35120e1
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476458"
 ---
 # <a name="wbufferconvert-class"></a>wbuffer_convert (Clase)
 
@@ -32,7 +22,7 @@ Describe un búfer de secuencia que controla la transmisión de elementos a y de
 ```cpp
 template <class Codecvt, class Elem = wchar_t, class Traits = std::char_traits<Elem>>
 class wbuffer_convert
- : public std::basic_streambuf<Elem, Traits>
+    : public std::basic_streambuf<Elem, Traits>
 ```
 
 ### <a name="parameters"></a>Parámetros

@@ -1,16 +1,10 @@
 ---
-title: -Fp (nombre. Archivos PCH) | Microsoft Docs
-ms.custom: ''
+title: /Fp (Dar nombre al archivo .Pch)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
 - VC.Project.VCCLWCECompilerTool.PrecompiledHeaderFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - Fp compiler option [C++]
 - -Fp compiler option [C++]
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54968c551a79dbda1f81af682222e22ced5fdf0f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 30a569b367d10a4f230d0054b19833c6614afac7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517096"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Dar nombre al archivo .Pch)
 
@@ -80,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

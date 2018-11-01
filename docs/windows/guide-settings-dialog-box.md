@@ -1,12 +1,6 @@
 ---
-title: Guía de cuadro de diálogo de configuración (C++) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo de configuración de la guía (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLUs (dialog units)
 - Dialog Editor [C++], snap to guides
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - controls [C++], snap to guides/grid
 - Guide Settings dialog box (Dialog editor)
 ms.assetid: 55381e1c-146a-4fa7-b1b3-b1492817615f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7369fdb37dbef474dafea2ba2a9a7e28f5eface9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2f83acddf0f56225f74961ef31988a5938685b67
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483621"
 ---
 # <a name="guide-settings-dialog-box-c"></a>Cuadro de diálogo de configuración de la guía (C++)
 
@@ -68,5 +57,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Modificación de la cuadrícula de diseño](../windows/modifying-the-layout-grid.md)  
+[Modificación de la cuadrícula de diseño](../windows/modifying-the-layout-grid.md)<br/>
 [Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)

@@ -1,28 +1,18 @@
 ---
-title: En tiempo de ejecución de Windows y plantillas administradas (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Windows Runtime y plantillas administradas (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cbd66f3ddf41602f7ed9a73f3a334bb86f1f3705
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471479"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows Runtime y plantillas administradas (Extensiones de componentes de C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows Runtime y plantillas administradas (C++ / c++ / CLI y c++ / CX)
 
 Las plantillas le permiten definir un prototipo de un tiempo de ejecución de Windows o un tipo common language runtime y, a continuación, crear instancias de las variaciones de ese tipo mediante el uso de parámetros de tipo de plantilla diferente.
 
@@ -50,7 +40,7 @@ Opción del compilador: `/clr`
 
 ### <a name="examples"></a>Ejemplos
 
-Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de tipo genérico. Esto es porque los tipos genéricos se resuelven en tiempo de ejecución. Para obtener más información, consulte [genéricos y plantillas (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Es posible crear instancias de un tipo genérico con un parámetro de plantilla de tipo administrado, pero no se puede crear una instancia de una plantilla administrada con un parámetro de tipo genérico. Esto es porque los tipos genéricos se resuelven en tiempo de ejecución. Para obtener más información, consulte [genéricos y plantillas (C++ / c++ / CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +132,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

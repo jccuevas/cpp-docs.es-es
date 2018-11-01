@@ -1,32 +1,22 @@
 ---
-title: -AI (especificar directorios de metadatos) | Microsoft Docs
-ms.custom: ''
+title: /AI (Especificar directorios de metadatos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.AdditionalUsingDirectories
 - VC.Project.VCNMakeTool.AssemblySearchPath
 - /AI
 - VC.Project.VCCLWCECompilerTool.AdditionalUsingDirectories
-dev_langs:
-- C++
 helpviewer_keywords:
 - /AI compiler option [C++]
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 985ff4eb96b904dc9c5b4377b336109b00e06b40
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a9e752f68ed53c7a94fec1914bc42c39a17648b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716597"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471532"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Especificar directorios de metadatos)
 
@@ -49,9 +39,9 @@ Un único directorio puede pasarse a una **/AI** invocación. Especifique uno **
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-2. Seleccione el **propiedades de configuración** > **C o C++** > **General** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **General** página de propiedades.
 
-3. Modificar el **adicionales # directorios using** propiedad.
+1. Modificar el **adicionales # directorios using** propiedad.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 

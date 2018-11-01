@@ -1,12 +1,6 @@
 ---
-title: Crear un pincel personalizado (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Crear un pincel personalizado (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], brush
 - brushes, colors
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 62e4cb9d6eebee4235db2bc38b2cd20935493b02
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 01d5badc70aac3e51a8731c5ea62b30a27d2962a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502861"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>Crear un pincel personalizado (Editor de imágenes para iconos)
 
@@ -76,6 +65,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

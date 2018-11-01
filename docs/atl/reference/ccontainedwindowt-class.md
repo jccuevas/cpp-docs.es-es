@@ -1,10 +1,6 @@
 ---
-title: CContainedWindowT (clase) | Microsoft Docs
-ms.custom: ''
+title: CContainedWindowT (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CContainedWindowT
 - ATLWIN/ATL::CContainedWindowT
@@ -21,23 +17,17 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbc1f7a5ff27fdb18b251b73d5b40e87f637ef21
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548530"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT (clase)
 
@@ -118,7 +108,7 @@ Cuando se usa el **Agregar control basado en** opción en el Asistente para proy
 |Crear controles|[Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Utilizar ventanas en ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) y los temas siguientes en el SDK de Windows|
+|Windows|[Windows](/windows/desktop/winmsg/windows) y los temas siguientes en el SDK de Windows|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -176,7 +166,7 @@ Si deriva una subclase de una ventana existente a través de [SubclassWindow](#s
 Las llamadas [RegisterWndSuperclass](#registerwndsuperclass) para registrar una clase de ventana que se basa en una clase existente, pero usa [CContainedWindowT::WindowProc](#windowproc).
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +431,7 @@ Use este método solo si desea restaurar el procedimiento de ventana original an
 Este método estático implementa el procedimiento de ventana.
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

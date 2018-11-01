@@ -1,29 +1,19 @@
 ---
-title: nullptr (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: nullptr (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 73ebfdf9bea9f200279cb3cd2352a88878d8ebe8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5d2a2a679beca3929622c93d71412661713859f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474014"
 ---
-# <a name="nullptr--c-component-extensions"></a>nullptr (Extensiones de componentes de C++)
+# <a name="nullptr--ccli-and-ccx"></a>nullptr (C++ / c++ / CLI y c++ / CX)
 
 El **nullptr** palabra clave representa un *el valor de puntero null*. Use un valor de puntero nulo para indicar que un identificador de objeto, puntero interior o tipo de puntero nativo no apunta a un objeto.
 
@@ -86,7 +76,7 @@ int main() {
    if (pV1 == nullptr) {}
    if (pV2 == nullptr) {}
 // nullptr can be used as a function argument.
-   f(nullptr);   // calls f(System::Object ^)  
+   f(nullptr);   // calls f(System::Object ^)
 }
 ```
 
@@ -104,17 +94,17 @@ public:
 
 int main() {
    MyClass * pMyClass = nullptr;
-   if ( pMyClass == nullptr)  
+   if ( pMyClass == nullptr)
       System::Console::WriteLine("pMyClass == nullptr");
 
-   if ( pMyClass == 0)  
+   if ( pMyClass == 0)
       System::Console::WriteLine("pMyClass == 0");
 
    pMyClass = 0;
-   if ( pMyClass == nullptr)  
+   if ( pMyClass == nullptr)
       System::Console::WriteLine("pMyClass == nullptr");
 
-   if ( pMyClass == 0)  
+   if ( pMyClass == 0)
       System::Console::WriteLine("pMyClass == 0");
 }
 ```
@@ -164,7 +154,7 @@ int main() {
    // Delete the following line to resolve.
    f(nullptr);
 
-   f(0);   // T = int, call f(int)  
+   f(0);   // T = int, call f(int)
 }
 ```
 
@@ -201,7 +191,7 @@ ref class MyClass {
 public:
    void Test() {
       MyClass ^pMyClass;   // gc type
-      if (pMyClass == nullptr)  
+      if (pMyClass == nullptr)
          Console::WriteLine("NULL");
    }
 };
@@ -235,5 +225,5 @@ Opción del compilador: (no requerido; compatible con todas las opciones de gene
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

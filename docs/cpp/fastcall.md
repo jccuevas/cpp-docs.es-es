@@ -1,27 +1,19 @@
 ---
-title: __fastcall | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __fastcall
+ms.date: 10/09/2018
 f1_keywords:
 - __fastcall_cpp
-dev_langs:
-- C++
+- __fastcall
+- _fastcall
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72e3a36c646249fe34791d6703fd0350111b4137
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480046"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -62,6 +54,8 @@ equivale a esto:
 ```cpp
 void __fastcall CMyClass::mymethod() { return; }
 ```
+
+Para ofrecer compatibilidad con versiones anteriores, **_fastcall** es un sinónimo de **__fastcall** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) es especificado.
 
 ## <a name="example"></a>Ejemplo
 

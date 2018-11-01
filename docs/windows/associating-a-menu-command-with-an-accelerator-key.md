@@ -1,28 +1,17 @@
 ---
-title: Asociar un comando de menú a una tecla de aceleración (C++) | Microsoft Docs
-ms.custom: ''
+title: Asociar un comando de menú a una tecla de aceleración (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard shortcuts [C++], menu association
 - commands [C++], associating menu commands with accelerator keys
 - menu commands [C++], associating with keyboard shortcuts
 ms.assetid: ad2de43f-b20a-4c9f-bda8-0420179da48c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b55535e9306d272d47f098e7cf15d28a764f3620
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c68d391d1046ab1d1af2fcf54b43b25a7aa9a237
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478330"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key-c"></a>Asociar un comando de menú a una tecla de aceleración (C++)
 
@@ -56,5 +45,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Adición de comandos a un menú](../windows/adding-commands-to-a-menu.md)  
+[Adición de comandos a un menú](../windows/adding-commands-to-a-menu.md)<br/>
 [Editor de menús](../windows/menu-editor.md)

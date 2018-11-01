@@ -1,10 +1,6 @@
 ---
-title: _aligned_msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _aligned_msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_msize_dbg
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _aligned_msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c16fd1292f78c8c3f6b3133050e27046fb003343
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392879"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451303"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -68,9 +58,9 @@ Devuelve el tamaño (en bytes) de un entero sin signo.
 
 ## <a name="remarks"></a>Comentarios
 
-El *alineación* y *desplazamiento* valores deben ser el mismo que los valores pasados a la función que asignó el bloque.
+El *alineación* y *desplazamiento* valores deben ser igual que los valores pasados a la función que asignó el bloque.
 
-**_aligned_msize_dbg** es una versión de depuración de la [_aligned_msize](aligned-msize.md) (función). Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_msize_dbg** se reduce a una llamada a **_aligned_msize**. Ambos **_aligned_msize** y **_aligned_msize_dbg** calcular el tamaño de un bloque de memoria del montón base, pero **_aligned_msize_dbg** agrega una característica de depuración: incluye bloquear los búferes situados a cada lado de la parte del usuario de la memoria en el tamaño devuelto.
+**_aligned_msize_dbg** es una versión de depuración de la [_aligned_msize](aligned-msize.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_msize_dbg** se reduce a una llamada a **_aligned_msize**. Ambos **_aligned_msize** y **_aligned_msize_dbg** calcular el tamaño de un bloque de memoria del montón base, pero **_aligned_msize_dbg** agrega una característica de depuración: incluye los búferes situados a cada lado de la parte del usuario de la memoria de bloque en el tamaño devuelto.
 
 Esta función valida su parámetro. Si *memblock* es un puntero nulo o *alineación* no es una potencia de 2, **_msize** invoca un controlador de parámetros no válidos, tal y como se describe en [validación de parámetros ](../../c-runtime-library/parameter-validation.md). Si se controla el error, la función establece **errno** a **EINVAL** y devuelve -1.
 

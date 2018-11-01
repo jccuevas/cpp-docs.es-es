@@ -1,25 +1,15 @@
 ---
-title: Usar operadores de inserción y controlar el formato | Microsoft Docs
-ms.custom: ''
+title: Usar operadores de inserción y controlar el formato
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51754b2b777523593118b0b0a88dfa4ac8803b20
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8c04cc6d5deeaf5dfea65a7f8e92a8569084c077
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38959812"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565417"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Usar operadores de inserción y controlar el formato
 
@@ -99,7 +89,7 @@ int main( )
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
    char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
-      cout << setw( 6 )  << names[i]
+      cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
@@ -107,10 +97,10 @@ int main( )
 El `width` función miembro se declara en \<iostream >. Si usa `setw` o cualquier otro manipulador con argumentos, se debe incluir \<iomanip>. En la salida, las cadenas se imprimen en un campo de ancho 6 y números enteros en un campo de ancho 10:
 
 ```Output
-  Zoot      1.23
- Jimmy     35.36
-    Al     653.7
-  Stan   4358.24
+   Zoot      1.23
+  Jimmy     35.36
+     Al     653.7
+   Stan   4358.24
 ```
 
 Ni `setw` ni `width` truncan valores. Si la salida con formato supera el ancho, se imprime el valor completo, sujeto a la configuración de precisión del flujo. Ambos `setw` y `width` afectan únicamente al campo siguiente. El ancho de campo revierte a su comportamiento predeterminado (el ancho necesario) después de que se haya impreso un campo, pero las opciones de formato de flujo seguirán vigentes hasta que se modifiquen.

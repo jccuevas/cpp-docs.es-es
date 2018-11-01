@@ -1,12 +1,6 @@
 ---
-title: Mostrar u ocultar la cuadrícula de píxeles (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Mostrar u ocultar la cuadrícula de píxeles (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - grids, pixel
 - pixel grid, Image editor
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 571afcd7-94fb-433e-a652-c087d5665db1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 911810a53df47e9ea7eb0485724d23a41eef3349
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e93564511dbaf337d0f8114183771c85f3c63607
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497157"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Mostrar u ocultar la cuadrícula de píxeles (Editor de imágenes para iconos)
 
@@ -47,5 +36,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Paneles de ventana](../windows/window-panes-image-editor-for-icons.md)

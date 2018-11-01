@@ -1,28 +1,17 @@
 ---
-title: Cambiar propiedades de la imagen (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Cambiar las propiedades de la imagen (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], properties
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 286e71b427bd39df6c493c7727b66ef27b72c766
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: dae1570ab447a3801e0835ede4502a0626283656
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459956"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>Cambiar las propiedades de la imagen (Editor de imágenes para iconos)
 
@@ -52,6 +41,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

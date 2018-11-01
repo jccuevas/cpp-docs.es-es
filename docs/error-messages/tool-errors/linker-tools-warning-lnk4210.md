@@ -1,53 +1,43 @@
 ---
-title: Las herramientas del vinculador LNK4210 advertencia | Documentos de Microsoft
-ms.custom: ''
+title: Advertencia de las herramientas del vinculador LNK4210
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4210
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8700d9ad8eeef177de2f70f616cb0c06ba50670
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ac36330bbbec2cea5b7fcf2c3e13ff8cb3dca85a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555805"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>Advertencia de las herramientas del vinculador LNK4210
 
-> sección *sección* existe; se puede tratamiento terminadores o inicializadores estáticos
+> sección *sección* existe; se puede ser no controlada terminadores o inicializadores estáticos
 
 ## <a name="remarks"></a>Comentarios
 
-Parte del código ha introducido inicializadores o terminadores estáticos, pero el código de inicio de la biblioteca de VCRuntime o su equivalente (que debe ejecutar los terminadores o inicializadores estáticos) no se ejecuta cuando se inicia la aplicación. Estos son algunos ejemplos de código que requiere terminadores o inicializadores estáticos:
+Algo de código ha introducido terminadores o inicializadores estáticos, pero no se ejecuta el código de inicio de la biblioteca de VCRuntime o su equivalente (lo que necesita para ejecutar los terminadores o inicializadores estáticos) cuando se inicia la aplicación. Estos son algunos ejemplos de código que requiere terminadores o inicializadores estáticos:
 
-- Variable de clase global con un constructor, un destructor o una tabla de funciones virtuales.
+- Variable de clase global con un constructor, destructor o tabla de funciones virtuales.
 
-- Variable global inicializada con una constante sin tiempo de compilación.
+- Inicializado con una constante de tiempo de compilación que no es una variable global.
 
 Para corregir este problema, pruebe uno de los siguientes:
 
 - Quite todo el código con inicializadores estáticos.
 
-- No utilice [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Después de quitar/NOENTRY, también tendrá que quitar [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) desde la línea de comandos del vinculador.
+- No use [/NOENTRY](../../build/reference/noentry-no-entry-point.md). Después de quitar/NOENTRY, también es posible que deba quitar [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) desde la línea de comandos del vinculador.
 
-- Si la compilación usa/MT, agregar libcmt.lib, libvcruntime.lib y libucrt.lib a la línea de comandos del vinculador. Si la compilación usa/MTd, agregue libcmtd.lib, vcruntimed.lib y libucrtd.lib.
+- Si la compilación usa/MT, agregue libcmt.lib, libvcruntime.lib y libucrt.lib a la línea de comandos del vinculador. Si la compilación usa/MTd, agregue libcmtd.lib, vcruntimed.lib y libucrtd.lib.
 
-- Al mover de/CLR: pure compilación a/CLR, quite el [/Entry](../../build/reference/entry-entry-point-symbol.md) opción desde la línea del vinculador. Esto habilita la inicialización de CRT y permite inicializadores estáticos que se ejecutará en el inicio de la aplicación. El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+- Al pasar de/CLR: compilación puro a/CLR, quite el [/Entry](../../build/reference/entry-entry-point-symbol.md) opción desde la línea del vinculador. Esto permite la inicialización de CRT e inicializadores estáticos que se ejecutará al iniciar la aplicación. El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
-El [/GS](../../build/reference/gs-buffer-security-check.md) opción del compilador requiere inicialización que se realiza el `__security_init_cookie` función. Esta inicialización se proporciona de forma predeterminada en el código de inicio de biblioteca de VCRuntime que se ejecuta en `_DllMainCRTStartup`.
+El [/GS](../../build/reference/gs-buffer-security-check.md) opción del compilador requiere inicialización mediante el `__security_init_cookie` función. Esta inicialización se proporciona de forma predeterminada en el código de inicio de biblioteca de VCRuntime que se ejecuta en `_DllMainCRTStartup`.
 
-- Si el proyecto se compila con/Entry y/Entry se pasa una función distinta de `_DllMainCRTStartup`, debe llamar la función `_CRT_INIT` para inicializar la biblioteca CRT. Esta llamada por sí solo no es suficiente si el archivo DLL utiliza/GS, requiere a inicializadores estáticos o se llama en el contexto del código MFC o ATL. Vea [archivos DLL y Visual C++ comportamiento de la biblioteca de tiempo de ejecución](../../build/run-time-library-behavior.md) para obtener más información.
+- Si el proyecto se compiló con/Entry y/Entry se pasa una función distinta `_DllMainCRTStartup`, debe llamar la función `_CRT_INIT` para inicializar la biblioteca CRT. Esta llamada por sí solo no es suficiente si el archivo DLL utiliza/GS, requiere a inicializadores estáticos o se llama en el contexto de código MFC o ATL. Consulte [Visual C++ y archivos DLL de comportamiento de la biblioteca de tiempo de ejecución](../../build/run-time-library-behavior.md) para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 

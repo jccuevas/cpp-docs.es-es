@@ -1,28 +1,18 @@
 ---
-title: valarray&lt;bool&gt; (Clase) | Microsoft Docs
-ms.custom: ''
+title: valarray&lt;bool&gt; (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - valarray<bool>
 - valarray/std::valarray<bool>
-dev_langs:
-- C++
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c05b1bd6e8bb13e0c2f19b8f3c666b57308e6680
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c7cf76935bc1e4489a963f67cc9ffeece5e7dfb8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316996"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445817"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; (Clase)
 
@@ -68,7 +58,7 @@ int main( )
 
    vaBool = ( vaL < vaR );
    cout << "The result of the less-than comparison "
-   << "test is the\n valarray<bool>: ( ";
+   << "test is the\nvalarray<bool>: ( ";
    for ( i = 0 ; i < 10 ; i++ )
       cout << vaBool [ i ] << " ";
    cout << ")." << endl;
@@ -77,7 +67,7 @@ int main( )
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The result of the less-than comparison test is the
- valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
+valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 */
 ```
 

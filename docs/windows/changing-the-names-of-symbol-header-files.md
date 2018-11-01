@@ -1,14 +1,8 @@
 ---
-title: Cambiar los nombres de los archivos de encabezado de símbolos | Microsoft Docs
-ms.custom: ''
+title: Cambiar los nombres de los archivos de encabezado de símbolos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.header
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource files [C++], multiple
 - Resource Includes dialog box [C++]
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - symbols [C++], symbol header files
 - Resource.h
 ms.assetid: b948284a-7899-402e-ab12-9f2c8480ca9d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 587cc5315395a58e6fdeb01929f920f506031e58
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4d9aa350d0f680e975c68bf46ac066072df044cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432345"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>Cambiar los nombres de los archivos de encabezado de símbolos
 
@@ -49,5 +38,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)  
+[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

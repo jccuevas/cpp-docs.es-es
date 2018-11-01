@@ -1,28 +1,18 @@
 ---
-title: MixIn (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: MixIn (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::MixIn
-dev_langs:
-- C++
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6ccea9a053f47ae206cbe5c8412c387f07bd5b52
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e6c4fb2abd6c27f8feec4357e17ef71b385cb7a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464940"
 ---
 # <a name="mixin-structure"></a>MixIn (estructura)
 
@@ -32,23 +22,22 @@ Garantiza que una clase Runtime deriva de interfaces de Windows Runtime, si las 
 
 ```cpp
 template<
-   typename Derived,
-   typename MixInType,
-   bool hasImplements = __is_base_of(Details::ImplementsBase,
-   MixInType)  
+    typename Derived,
+    typename MixInType,
+    bool hasImplements = __is_base_of(Details::ImplementsBase, MixInType)
 >
 struct MixIn;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Derivados*  
+*Derivados*<br/>
 Un tipo derivado de la [implementa](../windows/implements-structure.md) estructura.
 
-*MixInType*  
+*MixInType*<br/>
 Tipo base.
 
-*hasImplements*  
+*hasImplements*<br/>
 **True** si *MixInType* es derivado de la implementación actual del tipo base; **false** en caso contrario.
 
 ## <a name="remarks"></a>Comentarios

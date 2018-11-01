@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680544"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066076"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novedades de Visual C++ en Visual Studio 2017
 
@@ -42,11 +42,11 @@ En esta versión, hemos actualizado el compilador C++ y la biblioteca estándar 
 
 - Visual Studio 2017 permite usar [/sdl](build/reference/sdl-enable-additional-security-checks.md) con [/await](build/reference/await-enable-coroutine-support.md). Se ha eliminado la limitación de [/RTC](build/reference/rtc-run-time-error-checks.md) con corrutinas.
 
-   **Visual Studio 2017 versión 15.3**:  
+   **Visual Studio 2017 versión 15.3**:
+
 - [/std:c++14 y /std:c++latest](build/reference/std-specify-language-standard-version.md): estas opciones del compilador permiten participar en versiones específicas del lenguaje de programación ISO C++ en un proyecto. La mayoría de las nuevas características del borrador estándar están protegidas con la opción **/std:c++latest**.
 
 - [/std:c++17](build/reference/std-specify-language-standard-version.md) habilita el conjunto de características de C++17 implementadas por el compilador. Esta opción deshabilita la compatibilidad del compilador y la biblioteca estándar con las características nuevas o que se han modificado en las versiones del borrador de trabajo y las actualizaciones de defectos de C++ Standard posteriores a C++17. Para habilitar estas características, use **/std:c++latest**.
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen, seguridad, diagnóstico y control de versiones
 
@@ -65,7 +65,7 @@ Se han implementado mejoras adicionales en los diagnósticos del compilador. Par
 
 **Versión 15.5 de Visual Studio 2017**:
 
-El rendimiento del entorno de ejecución Visual C++ sigue mejorando debido a que la calidad del código generado es mayor. Esto significa que puede volver a compilar el código y la aplicación se ejecutará más rápido. Algunas de las optimizaciones del compilador son totalmente nuevas, como la vectorización de almacenes escalares condicionales, la combinación de llamadas `sin(x)` y `cos(x)` en una nueva llamada `sincos(x)`, y la eliminación de instrucciones redundantes del Optimizador SSA. Otras optimizaciones del compilador son mejoras de funcionalidades existentes, como las heurísticas del vectorizador para expresiones condicionales, las optimizaciones de bucle mejoradas y la generación de código min/max flotante. Ahora, el enlazador tiene una nueva implementación **/OPT:ICF** más rápida, con la que podrá agilizar el tiempo de vínculo hasta un 9 %. Asimismo, los vínculos incrementales también presentan otras mejoras de rendimiento. Para obtener más información, vea [/OPT (Optimizations)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations) (/OPT (optimizaciones)) e [/INCREMENTAL (Link Incrementally)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally) (/INCREMENTAL (vincular de forma incremental)).
+El rendimiento del entorno de ejecución Visual C++ sigue mejorando debido a que la calidad del código generado es mayor. Esto significa que puede volver a compilar el código y la aplicación se ejecutará más rápido. Algunas de las optimizaciones del compilador son totalmente nuevas, como la vectorización de almacenes escalares condicionales, la combinación de llamadas `sin(x)` y `cos(x)` en una nueva llamada `sincos(x)`, y la eliminación de instrucciones redundantes del Optimizador SSA. Otras optimizaciones del compilador son mejoras de funcionalidades existentes, como las heurísticas del vectorizador para expresiones condicionales, las optimizaciones de bucle mejoradas y la generación de código min/max flotante. Ahora, el enlazador tiene una nueva implementación **/OPT:ICF** más rápida, con la que podrá agilizar el tiempo de vínculo hasta un 9 %. Asimismo, los vínculos incrementales también presentan otras mejoras de rendimiento. Para obtener más información, vea [/OPT (Optimizations)](build/reference/opt-optimizations.md) (/OPT (optimizaciones)) e [/INCREMENTAL (Link Incrementally)](build/reference/incremental-link-incrementally.md) (/INCREMENTAL (vincular de forma incremental)).
 
 Visual C++ admite las instrucciones AVX-512 de Intel, incluidas las instrucciones vectoriales de longitud, que incorporan nuevas funciones en AVX-512 y amplios registros de 128 y 256 bits.
 
@@ -342,9 +342,9 @@ Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin conv
 
   ![Abrir carpeta Cmake](media/cmake_cpp.png "Abrir carpeta CMake")
 
-**Visual Studio 2017 versión 15.3**: se agregó compatibilidad con el generador CMake Ninja. 
+**Visual Studio 2017 versión 15.3**: se agregó compatibilidad con el generador CMake Ninja.
 
-**Visual Studio 2017, versión 15.5**: se ha agregado compatibilidad para importar memorias caché de CMake existentes. 
+**Visual Studio 2017, versión 15.5**: se ha agregado compatibilidad para importar memorias caché de CMake existentes.
 
 **Visual Studio 2017 versión 15.7**: se ha agregado compatibilidad para CMake 3.11, análisis de código en proyectos de CMake, la vista de destinos en el Explorador de soluciones, opciones de generación de caché y la compilación de archivo único. Para obtener más información, vea [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Compatibilidad con CMake en Visual Studio) y [Proyectos de CMake en Visual C++](ide/cmake-tools-for-visual-cpp.md).
 
@@ -394,12 +394,11 @@ C++ viene como un componente opcional de la carga de trabajo de la Aplicación W
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nuevas opciones de C++ en la Plataforma universal de Windows (UWP)
 Ahora dispone de nuevas opciones para escribir y empaquetar aplicaciones de C++ para la Plataforma universal de Windows y la Tienda Windows: puede usar la infraestructura Puente de dispositivo de escritorio para empaquetar la aplicación de escritorio existente para su implementación a través de la Tienda Windows o a través de los canales existentes mediante la instalación de prueba. Las nuevas capacidades de Windows 10 le permiten agregar funcionalidad de Plataforma universal de Windows a su aplicación de escritorio de varias maneras. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017, versión 15.5**  
-Se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que simplifica en gran medida la tarea de empaquetar aplicaciones de escritorio mediante el uso del Puente de dispositivo de escritorio. Está disponible en **Archivo | Nuevo | Proyecto | Instalado | Visual C++ | Plataforma universal de Windows**. Para obtener más información, consulte [Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Visual Studio 2017 versión 15.5**: se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que simplifica en gran medida la tarea de empaquetar aplicaciones de escritorio mediante el uso del Puente de dispositivo de escritorio. Está disponible en **Archivo | Nuevo | Proyecto | Instalado | Visual C++ | Plataforma universal de Windows**. Para obtener más información, consulte [Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Al escribir código nuevo, ahora puede usar C++/WinRT, una proyección del lenguaje C++ estándar para Windows Runtime que se implementa solamente en los archivos de encabezado. Permite crear y usar las API de Windows Runtime con cualquier compilador de C++ conforme a los estándares. C++/WinRT está diseñado para proporcionar a los desarrolladores de C++ acceso de primera a la API de Windows moderna. Para obtener más información, vea [C++/WinRT Available on GitHub](https://moderncpp.com/) (C++/WinRT está disponible en GitHub).
 
-En la [compilación 17025 de la versión preliminar de Insider de Windows SDK](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97), C++/WinRT se incluyen en Windows SDK. Para obtener más información, vea [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/) (Ahora se incluyen C++/WinRT en Windows SDK).
+En la compilación 17025 de Windows SDK Insider Preview, C++/WinRT está incluido en Windows SDK. Para obtener más información, vea [C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/) (Ahora se incluyen C++/WinRT en Windows SDK).
 
 ## <a name="clangc2-platform-toolset"></a>Conjunto de herramientas de la plataforma Clang/C2
 
@@ -417,10 +416,11 @@ Ahora se distribuyen con Visual Studio los comprobadores principales de C++ para
 
 Algunos números de advertencias que puede encontrar en 15.3 ya no están disponibles en 15.5. Estas advertencias se han sustituido por comprobaciones más específicas.
 
-**Visual Studio 2017 versión 15.6**:  
-Se ha agregado compatibilidad para el análisis de archivo único y mejoras en el rendimiento en tiempo de ejecución de los análisis. Para obtener más información, vea [C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/) (Mejoras de análisis estático de C++ para Visual Studio de 2017 15.6 [versión preliminar 2])
+**Visual Studio 2017 versión 15.6**:
 
-**Visual Studio 2017 versión 15.7**:  
+- Se ha agregado compatibilidad para el análisis de archivo único y mejoras en el rendimiento en tiempo de ejecución de los análisis. Para obtener más información, vea [C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/) (Mejoras de análisis estático de C++ para Visual Studio de 2017 15.6 [versión preliminar 2])
+
+**Visual Studio 2017 versión 15.7**:
 
 - Se ha agregado compatibilidad para [/analyze:ruleset](build/reference/analyze-code-analysis.md) que permite especificar las reglas de análisis de código que se van a ejecutar.
 - Se ha agregado compatibilidad para reglas de C++ Core Guidelines adicionales.  Para más información, consulte [Usar los comprobadores de directrices principales de C++](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
@@ -436,11 +436,11 @@ Google Test Adapter y Boost.Test Adapter ahora están disponibles como component
 - Se ha agregado compatibilidad para admitir la biblioteca dinámica de Boost.Test.
 - Ahora en el IDE hay una plantilla de elemento Boost.Test disponible.
 
-Para obtener más información, vea [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Prueba unitaria Boost.Test: compatibilidad con las bibliotecas dinámicas y nueva plantilla de elemento). 
+Para obtener más información, vea [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Prueba unitaria Boost.Test: compatibilidad con las bibliotecas dinámicas y nueva plantilla de elemento).
 
 **Visual Studio 2017 versión 15.7**:
 
-Se ha agregado compatibilidad con [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) para proyectos de pruebas unitarias de C++. Para obtener más información, vea [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/) (Anuncio de CodeLens para pruebas unitarias de C++).
+Se ha agregado compatibilidad con [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) para proyectos de pruebas unitarias de C++. Para obtener más información, vea [Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/) (Anuncio de CodeLens para pruebas unitarias de C++).
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Diagnóstico de gráficos de Visual Studio
 

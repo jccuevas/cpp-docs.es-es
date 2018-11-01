@@ -1,11 +1,6 @@
 ---
-title: cpow, cpowf, cpowl | Microsoft Docs
-ms.custom: ''
+title: cpow, cpowf, cpowl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cpow
 - cpowf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cpow
 - complex/cpowf
 - complex/copwl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpow function
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8311b4c8bd8c082b03f01a2df253c55d170c560e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394787"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562492"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
 
@@ -82,11 +71,11 @@ El exponente.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor de *x* elevado a la potencia de *y* a una bifurcación de cortar para *x* a lo largo del eje negativo real.
+El valor de *x* elevado a la potencia de *y* con un corte de bifurcación *x* en el eje real negativo.
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **cpow** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cpow** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cpow** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cpow** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

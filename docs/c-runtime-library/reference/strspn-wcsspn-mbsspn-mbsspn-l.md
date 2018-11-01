@@ -1,10 +1,6 @@
 ---
-title: strspn, wcsspn, _mbsspn, _mbsspn_l | Microsoft Docs
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415166"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477325"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
@@ -99,15 +89,15 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un valor entero que especifica la longitud de la subcadena en *str* que constar únicamente de caracteres de *strCharSet*. Si *str* comienza con un carácter que no está en *strCharSet*, la función devuelve 0.
+Devuelve el valor entero que especifica la longitud de la subcadena de *str* que consta únicamente de caracteres en *strCharSet*. Si *str* comienza con un carácter que no está en *strCharSet*, la función devuelve 0.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strspn** función devuelve el índice del primer carácter en *str* que no pertenecen al conjunto de caracteres de *strCharSet*. En la búsqueda no se incluyen los caracteres nulos de finalización.
+El **strspn** función devuelve el índice del primer carácter en *str* que no pertenece al conjunto de caracteres en *strCharSet*. En la búsqueda no se incluyen los caracteres nulos de finalización.
 
-**wcsspn** y **_mbsspn** son versiones de caracteres multibyte y anchos de **strspn**. Los argumentos de **wcsspn** son caracteres anchos cadenas; los de **_mbsspn** son cadenas de caracteres multibyte. **_mbsspn** valida sus parámetros. Si *str* o *strCharSet* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, **_mbspn** establece **errno** a **EINVAL** y devuelve 0. **strspn** y **wcsspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
+**wcsspn** y **_mbsspn** son versiones de caracteres anchos y caracteres multibyte de **strspn**. Los argumentos de **wcsspn** son caracteres anchos cadenas; los de **_mbsspn** son cadenas de caracteres multibyte. **_mbsspn** valida sus parámetros. Si *str* o *strCharSet* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, **_mbspn** establece **errno** a **EINVAL** y devuelve 0. **strspn** y **wcsspn** no validan sus parámetros. Estas tres funciones se comportan exactamente igual.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

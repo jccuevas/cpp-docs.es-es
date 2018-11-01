@@ -1,28 +1,17 @@
 ---
-title: 'Cómo: crear un archivo de Script de recursos (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: crear un archivo de Script de recursos (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - rc files [C++], creating
 - .rc files [C++], creating
 - resource script files [C++], creating
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 092cb7c33aab2805ca40410cac404d43ba5c9274
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: eb884ca7520b34771c73e71c7ee9b4d811d5383c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491265"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>Cómo: crear un archivo de Script de recursos (C++)
 
@@ -55,5 +44,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

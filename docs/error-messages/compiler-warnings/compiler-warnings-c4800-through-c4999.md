@@ -1,9 +1,6 @@
 ---
-title: C4800 de advertencias del compilador a través de C5999 | Microsoft Docs
-ms.date: 05/30/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
+title: C4800 de advertencias del compilador a través de C5999
+ms.date: 10/24/2018
 f1_keywords:
 - C4806
 - C4807
@@ -99,18 +96,14 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
-dev_langs:
-- C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+- C5045
+- C5046
+ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642863"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
 
@@ -153,6 +146,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 4) C4842|no se garantiza el resultado de "offsetof" aplicada a un tipo mediante herencia múltiple sea consistente con las versiones del compilador|
 |Advertencia C4843 del compilador|'*type1*': un controlador de excepciones de referencia al tipo de matriz o función no es accesible, use '*type2*' en su lugar|
 |Advertencia C4844 del compilador|"Exportar módulo *module_name*;' es ahora la sintaxis recomendada para declarar una interfaz de módulo|
+|[Advertencia del compilador (nivel 4) C4866](c4866.md)| compilador no puede aplicar el orden de evaluación de izquierda a derecha de la llamada a *nombre_operador*|
 |[Advertencia (Error) del compilador C4867](compiler-warning-c4867.md)|'*función*': falta la lista de argumentos de llamada de función; utilice '*llamar*' para crear un puntero a miembro|
 |[Advertencia (nivel 4) del compilador C4868](compiler-warning-c4868.md)|'_archivo_(*line_number*)' compilador no puede aplicar el orden de evaluación de izquierda a derecha en la lista de inicialización entre llaves|
 |Advertencia del compilador (nivel 2) C4872|división de punto flotante por cero detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*ubicación*'|
@@ -250,3 +244,4 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 2) los errores C5043|'*especificación*': especificación de excepción no coincide con la declaración anterior|
 |Advertencia del compilador (nivel 4) C5044|Un argumento de opción de línea de comandos *opción* apunta a una ruta de acceso '*ruta*' que no existe|
 |[C5045 de advertencia del compilador](c5045.md)|Compilador insertará la mitigación de Spectre para la carga de memoria si el modificador/qspectre especificado.|
+|[Advertencia del compilador (nivel 2) C5046](c5046.md)|'*función*': símbolo de que impliquen tipo con vinculación interna no definido|

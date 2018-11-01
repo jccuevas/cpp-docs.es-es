@@ -1,29 +1,18 @@
 ---
-title: Cuadro de diálogo Configuración de cuadrícula (C++) (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Configuración de cuadrícula (C++) (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-dev_langs:
-- C++
 helpviewer_keywords:
 - Grid Settings dialog box [C++]
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 17f44f972482aefda0c65c7599fa6a83b49c36fb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a7ac57cf752b5e083a7429316631ea1a49b31cd8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462821"
 ---
 # <a name="grid-settings-dialog-box-c-image-editor-for-icons"></a>Cuadro de diálogo Configuración de cuadrícula (C++) (Editor de imágenes para iconos)
 
@@ -51,5 +40,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)  
+[Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

@@ -1,12 +1,6 @@
 ---
-title: Creación y configuración, guías y márgenes | Microsoft Docs
-ms.custom: ''
+title: Crear y establecer las guías y los márgenes
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - guides, clearing
 - guides
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - guides, moving
 - margins, moving
 ms.assetid: fafa4545-8f00-436f-b590-300e76601156
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8ceee8a6275ef612cb26eff042d29efa35e8aa5c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b41b05f8a6c69fb46392a2669cb3171da6c195ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459519"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>Crear y establecer las guías y los márgenes
 
@@ -67,5 +56,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

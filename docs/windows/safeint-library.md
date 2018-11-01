@@ -1,33 +1,23 @@
 ---
-title: Biblioteca SafeInt | Microsoft Docs
+title: Biblioteca SafeInt
 ms.custom: index-page
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
+ms.date: 10/22/2018
 f1_keywords:
 - SafeInt
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries, SafeInt
 - SafeInt library
 ms.assetid: 5321e875-67c5-49d7-9650-85a876552d14
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 567190aafad10577bb715e2d1c7e651faa2e280b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d65ac9deaadc39b04ee816251c4b342d26b0a2a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561322"
 ---
 # <a name="safeint-library"></a>Biblioteca SafeInt
 
-El **SafeInt** biblioteca ayuda a evitar los desbordamientos de enteros que podrían producir cuando la aplicación realiza operaciones matemáticas.
+El **SafeInt** biblioteca ayuda a evitar los desbordamientos de enteros que podrían producir cuando la aplicación realiza operaciones matemáticas. La versión más reciente de esta biblioteca se encuentra en [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="in-this-section"></a>En esta sección
 

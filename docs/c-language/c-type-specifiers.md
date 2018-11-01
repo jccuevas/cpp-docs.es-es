@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c2bf6990180a7fe325b1ee3d4f4e497a433c183e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764269"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103365"
 ---
 # <a name="c-type-specifiers"></a>Especificadores de tipos de C
 
@@ -28,19 +28,7 @@ Los especificadores de tipo en las declaraciones definen el tipo de una declarac
 
 ## <a name="syntax"></a>Sintaxis
 
-*type-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
+*type-specifier*: &nbsp;&nbsp;&nbsp;&nbsp;**void** &nbsp;&nbsp;&nbsp;&nbsp;**char** &nbsp;&nbsp;&nbsp;&nbsp;**short** &nbsp;&nbsp;&nbsp;&nbsp;**int** &nbsp;&nbsp;&nbsp;&nbsp;**long** &nbsp;&nbsp;&nbsp;&nbsp;**float** &nbsp;&nbsp;&nbsp;&nbsp;**double** &nbsp;&nbsp;&nbsp;&nbsp;**signed** &nbsp;&nbsp;&nbsp;&nbsp;**unsigned** &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 Los tipos **signed char**, **signed int**, **signed short int** y **signed long int**, así como sus homólogos **unsigned** y **enum**, se denominan tipos *enteros*. Los especificadores de tipo **float**, **double** y **long double** se conocen como tipos *flotantes* o de *punto flotante*. Se puede utilizar cualquier especificador de tipo entero o de punto flotante en una declaración de variable o de función. Si en una declaración no se proporciona *type-specifier*, se considera que es **int**.
 
@@ -87,4 +75,4 @@ Se pueden crear especificadores de tipo adicionales con declaraciones **typedef*
 
 ## <a name="see-also"></a>Vea también
 
-[Declaraciones y tipos](../c-language/declarations-and-types.md)  
+[Declaraciones y tipos](../c-language/declarations-and-types.md)

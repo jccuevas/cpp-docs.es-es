@@ -1,29 +1,18 @@
 ---
-title: Predeterminado de los eventos de Control | Microsoft Docs
-ms.custom: ''
+title: Eventos predeterminados de los controles
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], default control events
 - controls [C++], default control events
 - events [C++], controls
 - dialog box controls [C++], events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8cd0102be240bc98cf7900653b8fbb714e2a99a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520414"
 ---
 # <a name="default-control-events"></a>Eventos predeterminados de los controles
 
@@ -63,9 +52,9 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Definición de variables miembro para controles de cuadro de diálogo](../windows/defining-member-variables-for-dialog-controls.md)  
-[Tipos de mensajes asociados a objetos de la interfaz de usuario](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[Edición de un controlador de mensajes](../mfc/reference/editing-a-message-handler.md)  
-[Definición de un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[Declaración de una variable basada en una clase de control nueva](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
-[Reemplazar una función Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)
+[Definición de variables miembro para controles de cuadro de diálogo](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[Tipos de mensajes asociados a objetos de la interfaz de usuario](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[Edición de un controlador de mensajes](../mfc/reference/editing-a-message-handler.md)<br/>
+[Definición de un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[Declaración de una variable basada en una clase de control nueva](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
+[Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)

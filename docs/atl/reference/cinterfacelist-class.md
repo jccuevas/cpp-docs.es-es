@@ -1,29 +1,19 @@
 ---
-title: CInterfaceList (clase) | Microsoft Docs
-ms.custom: ''
+title: CInterfaceList (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CInterfaceList
 - ATLCOLL/ATL::CInterfaceList
 - ATLCOLL/ATL::CInterfaceList::CInterfaceList
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6187bd6ada44a0e967b02e0183aa34becf0750ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520437"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList (clase)
 
@@ -33,7 +23,7 @@ Esta clase proporciona métodos útiles al construir una lista de punteros de in
 
 ```
 template<class I, const IID* piid =& __uuidof(I)>
-class CInterfaceList 
+class CInterfaceList
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
 ```

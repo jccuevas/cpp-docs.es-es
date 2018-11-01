@@ -1,10 +1,6 @@
 ---
-title: hash_map (Clase) | Microsoft Docs
-ms.custom: ''
+title: hash_map (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_map
 - hash_map/stdext::hash_map::allocator_type
@@ -48,8 +44,6 @@ f1_keywords:
 - hash_map/stdext::hash_map::swap
 - hash_map/stdext::hash_map::upper_bound
 - hash_map/stdext::hash_map::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::hash_map
 - stdext::hash_map::allocator_type
@@ -94,16 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: de000584ad0cb797886ac11d367940212aaa50e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702032"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495297"
 ---
 # <a name="hashmap-class"></a>hash_map (Clase)
 
@@ -277,7 +267,6 @@ Una referencia al valor de datos del elemento encontrado.
 ### <a name="remarks"></a>Comentarios
 
 Si no se encuentra el valor de clave de argumento, la función genera un objeto de clase [out_of_range](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Ejemplo
 
@@ -1650,7 +1639,7 @@ int main()
     hm1.insert(Int_Pair(3, 30));
     hm1.insert(Int_Pair(4, 40));
 
-    cout<< "The original elements (Key => Value) of hm1 are:";
+    cout << "The original elements (Key => Value) of hm1 are:";
     for (hm1_pIter = hm1.begin(); hm1_pIter != hm1.end(); hm1_pIter++)
         cout << endl << " " << hm1_pIter -> first << " => "
              << hm1_pIter->second;
@@ -1661,22 +1650,23 @@ int main()
 
     if (pr.second == true)
     {
-        cout<< "The element 10 was inserted in hm1 successfully."
+        cout << "The element 10 was inserted in hm1 successfully."
             << endl;
     }
     else
     {
-        cout<< "The element 10 already exists in hm1\n with a key value of"
-            << "((pr.first) -> first)= "<<(pr.first)-> first
-            << "."<< endl;
+        cout << "The element 10 already exists in hm1\n"
+            << "with a key value of "
+            << "((pr.first) -> first) = " << (pr.first)->first
+            << "." << endl;
     }
 
     // The hint version of insert
     hm1.insert(--hm1.end(), Int_Pair(5, 50));
 
-    cout<< "After the insertions, the elements of hm1 are:";
+    cout << "After the insertions, the elements of hm1 are:";
     for (hm1_pIter = hm1.begin(); hm1_pIter != hm1.end(); hm1_pIter++)
-        cout << endl << " " << hm1_pIter -> first << " => "
+        cout << endl << hm1_pIter -> first << " => "
              << hm1_pIter->second;
     cout << endl;
 
@@ -1685,9 +1675,9 @@ int main()
     // The templatized version inserting a range
     hm2.insert( ++hm1.begin(), --hm1.end() );
 
-    cout<< "After the insertions, the elements of hm2 are:";
+    cout << "After the insertions, the elements of hm2 are:";
     for (hm2_pIter = hm2.begin(); hm2_pIter != hm2.end(); hm2_pIter++)
-        cout << endl << " " << hm2_pIter -> first << " => "
+        cout << endl << hm2_pIter -> first << " => "
              << hm2_pIter->second;
     cout << endl;
 
@@ -1697,13 +1687,13 @@ int main()
 
     hm3.insert(move(is1));
     cout << "After the move insertion, hm3 contains:" << endl
-      << " " << hm3.begin()->first
+      << hm3.begin()->first
       << " => " << hm3.begin()->second
       << endl;
 
     hm4.insert(hm4.begin(), move(is2));
     cout << "After the move insertion, hm4 contains:" << endl
-      << " " << hm4.begin()->first
+      << hm4.begin()->first
       << " => " << hm4.begin()->second
       << endl;
 }
@@ -1711,27 +1701,27 @@ int main()
 
 ```Output
 The original elements (Key => Value) of hm1 are:
- 1 => 10
- 2 => 20
- 3 => 30
- 4 => 40
+1 => 10
+2 => 20
+3 => 30
+4 => 40
 The element 10 already exists in hm1
- with a key value of((pr.first) -> first)= 1.
+with a key value of ((pr.first) -> first) = 1.
 After the insertions, the elements of hm1 are:
- 1 => 10
- 2 => 20
- 3 => 30
- 4 => 40
- 5 => 50
+1 => 10
+2 => 20
+3 => 30
+4 => 40
+5 => 50
 After the insertions, the elements of hm2 are:
- 2 => 20
- 10 => 100
- 3 => 30
- 4 => 40
+2 => 20
+10 => 100
+3 => 30
+4 => 40
 After the move insertion, hm3 contains:
- 1 => a
+1 => a
 After the move insertion, hm4 contains:
- 2 => b
+2 => b
 ```
 
 ## <a name="iterator"></a>  hash_map::iterator
@@ -2657,8 +2647,8 @@ int main( )
    // using a dereferenced iterator addressing the location
    hm1_AcIter = hm1.begin( );
    hm1_RcIter = hm1. upper_bound ( hm1_AcIter -> first );
-   cout << "The 1st element of hm1 with a key greater than "
-        << "that\n of the initial element of hm1 is: "
+   cout << "The 1st element of hm1 with a key greater than that\n"
+        << "of the initial element of hm1 is: "
         << hm1_RcIter -> second << "." << endl;
 }
 ```
@@ -2667,7 +2657,7 @@ int main( )
 The first element of hash_map hm1 with a key greater than 2 is: 30.
 The hash_map hm1 doesn't have an element with a key greater than 4.
 The 1st element of hm1 with a key greater than that
- of the initial element of hm1 is: 20.
+of the initial element of hm1 is: 20.
 ```
 
 ## <a name="value_comp"></a>  hash_map::value_comp
@@ -2687,9 +2677,9 @@ Devuelve el objeto de función de comparación que un objeto hash_map usa para o
 
 ### <a name="remarks"></a>Comentarios
 
-Para un objeto hash_map *m*, si dos elementos *e*1 *(k*1 *, d*1 *)* y *e*2 *(k*2 *, d*2 *)* son objetos de tipo [value_type](#value_type), donde *k*1 y *k*2 son sus claves de tipo [key_type](#key_type) y `d`1 y `d`2 son sus datos de tipo [mapped_type](#mapped_type), entonces *m.*`value_comp`*( )(e*1 *, e*2 *)* es equivalente a *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Un objeto almacenado define la función miembro
+Para un objeto hash_map *m*, si dos elementos *e1* (*k1*, *d1*) y *e2* (*k2*, *d2*) son objetos de tipo [value_type](#value_type), donde *k1* y *k2* son sus claves de tipo [key_type](#key_type) y *d1* y *d2* son sus datos de tipo [mapped_type](#mapped_type), a continuación, `m.value_comp()(e1, e2)` es equivalente a `m.key_comp()(k1, k2)` . Un objeto almacenado define la función miembro
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 que devuelve **True** si el valor de clave de `left` precede y no es igual al valor de clave de `right` en el criterio de ordenación.
 

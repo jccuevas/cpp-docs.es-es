@@ -1,10 +1,6 @@
 ---
-title: CDialogImpl (clase) | Microsoft Docs
-ms.custom: ''
+title: CDialogImpl (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDialogImpl
 - ATLWIN/ATL::CDialogImpl
@@ -17,22 +13,16 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572112"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (clase)
 
@@ -115,12 +105,12 @@ Crea un cuadro de diálogo no modal.
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +134,7 @@ Este cuadro de diálogo se adjunta automáticamente a la `CDialogImpl` objeto. P
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-Destruye un cuadro de diálogo no modal.  
+Destruye un cuadro de diálogo no modal.
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +150,13 @@ Devuelve TRUE si el cuadro de diálogo se destruyó correctamente; en caso contr
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Esta función estática implementa el procedimiento de cuadro de diálogo.  
+Esta función estática implementa el procedimiento de cuadro de diálogo.
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +189,8 @@ Puede invalidar `DialogProc` para proporcionar un mecanismo diferente para el tr
 Crea un cuadro de diálogo modal.
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -273,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un `CRect` objeto o [RECT](../../mfc/reference/rect-structure1.md) estructura que va a recibir las coordenadas de cliente de la actualización que rodea la región de actualización.
+Apunta a un `CRect` objeto o [RECT](../../mfc/reference/rect-structure.md) estructura que va a recibir las coordenadas de cliente de la actualización que rodea la región de actualización.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -306,9 +296,9 @@ Se llama solo una vez, cuando se recibe el primer mensaje, para procesar los men
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

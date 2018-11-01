@@ -1,14 +1,8 @@
 ---
-title: Asignar y liberar memoria para un BSTR | Microsoft Docs
-ms.custom: ''
+title: Asignación y liberación de memoria para un BSTR
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - bstr
-dev_langs:
-- C++
 helpviewer_keywords:
 - BSTRs, memory allocation
 - memory deallocation, string memory
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - memory deallocation, BSTR memory
 - strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3bd299c228b3b388658093f6b138225c10ff38db
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5d21134b85013f9a8ae508590f1a8db0c2e7a7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751067"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668577"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>Asignación y liberación de memoria para un BSTR
 
@@ -52,8 +42,8 @@ En general, las reglas para asignar y liberar memoria asignan para `BSTR`s son l
 
 ## <a name="see-also"></a>Vea también
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)   
-[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)   
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring)<br/>
+[SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring)<br/>
 [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)
 

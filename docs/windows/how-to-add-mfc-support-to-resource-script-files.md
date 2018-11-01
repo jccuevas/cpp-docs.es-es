@@ -1,31 +1,20 @@
 ---
-title: 'Cómo: agregar compatibilidad con MFC a archivos de Script de recursos (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: agregar compatibilidad con MFC a archivos de Script de recursos (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.resvw.add.MFC
-dev_langs:
-- C++
 helpviewer_keywords:
 - rc files [C++], adding MFC support
 - .rc files [C++], adding MFC support
 - MFC, adding support to resource scripts files
 - resource script files [C++], adding MFC support
 ms.assetid: 599dfe9d-ad26-4e34-899c-49b56599e37f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f6951a5e8ceb56d366f8f9024aef479c83a5925f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c2d0f9ee30085bd2bcc02cf48fd18f6de63eb69a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594394"
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files-c"></a>Cómo: agregar compatibilidad con MFC a archivos de Script de recursos (C++)
 
@@ -61,5 +50,5 @@ MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

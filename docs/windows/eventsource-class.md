@@ -1,9 +1,6 @@
 ---
-title: EventSource (clase) | Microsoft Docs
-ms.custom: ''
+title: EventSource (clase)
 ms.date: 09/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource
@@ -15,8 +12,6 @@ f1_keywords:
 - event/Microsoft::WRL::EventSource::Remove
 - event/Microsoft::WRL::EventSource::targets_
 - event/Microsoft::WRL::EventSource::targetsPointerLock_
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::EventSource class
 - Microsoft::WRL::EventSource::Add method
@@ -28,17 +23,12 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561283"
 ---
 # <a name="eventsource-class"></a>EventSource (clase)
 
@@ -53,7 +43,7 @@ class EventSource;
 
 ### <a name="parameters"></a>Parámetros
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 La interfaz a un delegado que representa un controlador de eventos.
 
 ## <a name="members"></a>Miembros
@@ -104,10 +94,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parámetros
 
-*delegateInterface*  
+*delegateInterface*<br/>
 La interfaz para un objeto delegado, que representa un controlador de eventos.
 
-*símbolo (token)*  
+*símbolo (token)*<br/>
 Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el [Remove()](#remove) método para descartar el controlador de eventos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -302,64 +292,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>Parámetros
 
-*T0*  
+*T0*<br/>
 El tipo del argumento del controlador de evento inicial.
 
-*T1*  
+*T1*<br/>
 El tipo del primer argumento de controlador de eventos.
 
-*T2*  
+*T2*<br/>
 El tipo del segundo argumento de controlador de eventos.
 
-*T3*  
+*T3*<br/>
 El tipo del tercer argumento de controlador de eventos.
 
-*T4*  
+*T4*<br/>
 El tipo del cuarto argumento de controlador de eventos.
 
-*T5*  
+*T5*<br/>
 El tipo del quinto argumento de controlador de eventos.
 
-*T6*  
+*T6*<br/>
 El tipo del sexto argumento de controlador de eventos.
 
-*T7*  
+*T7*<br/>
 El tipo del séptimo argumento de controlador de eventos.
 
-*T8*  
+*T8*<br/>
 El tipo del argumento del controlador de evento de identificador de octava.
 
-*T9*  
+*T9*<br/>
 El tipo del noveno argumento de controlador de eventos.
 
-*arg0*  
+*arg0*<br/>
 El argumento de controlador de evento inicial.
 
-*Arg1*  
+*Arg1*<br/>
 El primer argumento de controlador de eventos.
 
-*Arg2*  
+*Arg2*<br/>
 El segundo argumento de controlador de eventos.
 
-*Arg3*  
+*Arg3*<br/>
 El tercer argumento de controlador de eventos.
 
-*Arg4*  
+*Arg4*<br/>
 El cuarto argumento de controlador de eventos.
 
-*Arg5*  
+*Arg5*<br/>
 El quinto argumento de controlador de eventos.
 
-*Arg6*  
+*Arg6*<br/>
 El sexto argumento de controlador de eventos.
 
-*Arg7*  
+*Arg7*<br/>
 El séptimo argumento de controlador de eventos.
 
-*Arg8*  
+*Arg8*<br/>
 El argumento de controlador de evento de identificador de octava.
 
-*Arg9*  
+*Arg9*<br/>
 El noveno argumento de controlador de eventos.
 
 ## <a name="remove"></a>EventSource
@@ -374,7 +364,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Parámetros
 
-*símbolo (token)*  
+*símbolo (token)*<br/>
 Un identificador que representa un controlador de eventos. Este token se devolvió cuando se registró el controlador de eventos por la [Add()](#add) método.
 
 ### <a name="return-value"></a>Valor devuelto

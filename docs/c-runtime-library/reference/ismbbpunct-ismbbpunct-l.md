@@ -1,10 +1,6 @@
 ---
-title: _ismbbpunct, _ismbbpunct_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbpunct, _ismbbpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbpunct
 - _ismbbpunct_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbpunct_l
 - _ismbbpunct_l
 - _ismbbpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbpunct function
 - _ismbbpunct function
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7881461b7468d27ac376ab942d35683928cc1651
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acf23cf9da34ba50693aea7772cdbcfaeb146f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563001"
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct, _ismbbpunct_l
 
@@ -71,7 +61,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbpunct** devuelve un valor distinto de cero si el entero *c* es un signo de puntuación no ASCII. **_ismbbpunct** usa la configuración regional actual para cualquier configuración de caracteres dependientes de la configuración regional. **_ismbbpunct_l** es idéntica, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbpunct** devuelve un valor distinto de cero si el entero *c* es un signo de puntuación no ASCII. **_ismbbpunct** usa la configuración regional actual para cualquier configuración de caracteres dependientes de la configuración regional. **_ismbbpunct_l** es idéntico, salvo que usa la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

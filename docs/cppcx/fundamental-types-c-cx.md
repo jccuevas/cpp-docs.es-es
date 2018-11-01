@@ -1,20 +1,13 @@
 ---
-title: Tipos fundamentales (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Tipos fundamentales (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110797"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529134"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 
@@ -26,7 +19,7 @@ En la tabla siguiente se muestran los tipos de caracteres y booleanos integrados
 
 |Espacio de nombres|C++ / c++ / nombre CX|de esquema JSON|Nombre de C++ estándar|Intervalo de valores|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Plataforma|Booleano|Un valor booleano de 8 bits.|bool|`true` (distinto de cero) y `false` (cero)|
+|Plataforma|Booleano|Un valor booleano de 8 bits.|bool|**True** (distinto de cero) y **false** (cero)|
 |default|char16|Valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|wchar_t<br /><br /> O bien<br /><br /> L'c'|(Especificado por el estándar Unicode)|
 
 ## <a name="numeric-types"></a>Tipos numéricos

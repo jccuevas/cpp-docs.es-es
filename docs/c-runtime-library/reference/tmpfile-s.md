@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft Docs
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488119"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -71,11 +61,11 @@ Si se produce el error de validación de parámetros anterior, se invoca al cont
 
 ## <a name="remarks"></a>Comentarios
 
-El **tmpfile_s** función crea un archivo temporal y se coloca un puntero a ese flujo en el *pFilePtr* argumento. El archivo temporal se crea en el directorio raíz. Para crear un archivo temporal en un directorio que no sea el raíz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) junto con [fopen](fopen-wfopen.md).
+El **tmpfile_s** función crea un archivo temporal y coloca un puntero a ese flujo en el *pFilePtr* argumento. El archivo temporal se crea en el directorio raíz. Para crear un archivo temporal en un directorio que no sea el raíz, use [tmpnam_s](tmpnam-s-wtmpnam-s.md) o [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) junto con [fopen](fopen-wfopen.md).
 
-Si no se puede abrir el archivo, **tmpfile_s** escribe **NULL** a la *pFilePtr* parámetro. Este archivo temporal se elimina automáticamente cuando se cierra el archivo, cuando el programa se cierra normalmente o al **_rmtmp** se llama, suponiendo que el directorio de trabajo actual no cambia. Se abre el archivo temporal en **w + b** modo (lectura/escritura binario).
+Si no se puede abrir el archivo, **tmpfile_s** escribe **NULL** a la *pFilePtr* parámetro. Este archivo temporal se elimina automáticamente cuando se cierra el archivo, cuando el programa finaliza normalmente o cuando **_rmtmp** se llama, suponiendo que no cambie el directorio de trabajo actual. Se abre el archivo temporal en **w + b** modo (lectura/escritura binario).
 
-Error puede ocurrir si se intenta superar **TMP_MAX_S** (vea STDIO. (H) llamadas con **tmpfile_s**.
+Error puede producirse si intenta más de **TMP_MAX_S** (consulte STDIO. H) llamadas con **tmpfile_s**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -88,7 +78,7 @@ Para obtener información adicional sobre compatibilidad, consulte [Compatibilid
 ## <a name="example"></a>Ejemplo
 
 > [!NOTE]
-> En este ejemplo puede requerir privilegios administrativos para ejecutar en Windows.
+> En este ejemplo puede requerir privilegios administrativos para ejecutarse en Windows.
 
 ```C
 // crt_tmpfile_s.c

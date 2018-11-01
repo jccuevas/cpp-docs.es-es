@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C2872 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C2872
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2872
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566223"
 ---
 # <a name="compiler-error-c2872"></a>Error del compilador C2872
 
@@ -31,7 +21,11 @@ El compilador no puede determinar el símbolo que se hace referencia a. Más de 
 
 C2872 puede producirse si un archivo de encabezado incluye un [#using](../../cpp/namespaces-cpp.md#using_directives), y se incluye un archivo de encabezado siguiente que contiene un tipo que se encuentra también en el espacio de nombres especificado en el `using` directiva. Especifique un `using` la directiva solo después de todos los archivos de encabezado se especifican con `#include`.
 
-Para obtener más información sobre el error C2872, consulte los artículos de Knowledge Base [PRB: compilador errores cuando se usar #import con XML en Visual C++ .NET](http://support.microsoft.com/kb/316317) y ["Error C2872: 'Plataforma': símbolo ambiguo" mensaje de error cuando se usa el Espacio de nombres Windows::Foundation::Metadata en Visual Studio 2013](https://support.microsoft.com/kb/2890859).
+C2872 puede producirse en Visual Studio 2013 debido a un conflicto entre la `Windows::Foundation::Metadata::Platform` enum tipo y C++ / c++ / CX definido por `Platform` espacio de nombres. Para solucionar este problema, siga estos pasos:
+
+- Quite la cláusula "using namespace Windows::Foundation::Metadata" de los archivos del proyecto.
+
+- Especifique el nombre completo para cualquier tipo que se incluye en este espacio de nombres.
 
 ## <a name="example"></a>Ejemplo
 

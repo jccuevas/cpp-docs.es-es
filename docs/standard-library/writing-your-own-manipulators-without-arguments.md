@@ -1,52 +1,42 @@
 ---
-title: Escribir manipuladores propios sin argumentos | Microsoft Docs
-ms.custom: ''
+title: Escribir manipuladores propios sin argumentos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df8fcc1f316b5281e8c6775492d402559d77f483
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c3037c007e9388485f9553f9d2b0a69a1980b9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428414"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Escribir manipuladores propios sin argumentos
 
 Escribir manipuladores que no usan argumentos no requiere la derivación de clases ni el uso de macros complejas. Supongamos que su impresora requiere el par \<ESC >[ para entrar en modo de negrita. Puede insertar este par directamente en la secuencia:
 
 ```cpp
-cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;
+cout << "regular " << '\033' << '[' << "boldface" << endl;
 ```
 
 O puede definir el manipulador `bold`, que inserta los caracteres:
 
 ```cpp
 ostream& bold(ostream& os) {
-    return os <<'\033' <<'[';
+    return os << '\033' << '[';
 }
-cout <<"regular " <<bold <<"boldface" <<endl;
+cout << "regular " << bold << "boldface" << endl;
 ```
 
 La función `bold` definida globalmente toma un argumento de referencia `ostream` y devuelve la referencia `ostream`. No es una función miembro ni una función friend porque no necesita tener acceso a los elementos de ninguna clase privada. La función `bold` se conecta a la secuencia porque el operador `<<` de la secuencia se sobrecarga para aceptar este tipo de función, mediante una declaración de aspecto similar al siguiente:
 
 ```cpp
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
-{     // call ios_base manipulator
- (*_Pfn)(*(ios_base *)this);
+{
+    // call ios_base manipulator
+    (*_Pfn)(*(ios_base *)this);
 
     return (*this);
-
 }
 ```
 

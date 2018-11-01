@@ -1,23 +1,13 @@
 ---
-title: Diseño dinámico | Microsoft Docs
-ms.custom: ''
+title: Diseño dinámico
 ms.date: 06/25/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6976669127dca79be59b85efbd15273b0f580a1
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: c4c0cbf4bc0629487121232b03c6e3efc9c6b7f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132067"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449197"
 ---
 # <a name="dynamic-layout"></a>Diseño dinámico
 
@@ -65,7 +55,7 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
 
 1. Busque o cree un lugar en el código de implementación de la clase de su diálogo donde desee especificar el diseño dinámico del diálogo. Por ejemplo, puede que quiera agregar un método `AdjustLayout` en el diálogo y llamarlo desde los lugares donde se deba cambiar el diseño. Podría llamar primero a este método desde el constructor o después de haber realizado cambios en el diálogo.
 
-2. Para el cuadro de diálogo, llame a [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un método de la `CWnd` clase. `GetDynamicLayout` Devuelve un puntero a un `CMFCDynamicLayout` objeto.
+2. Para el cuadro de diálogo, llame a [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), un método de la `CWnd` clase. `GetDynamicLayout` devuelve un puntero a un objeto `CMFCDynamicLayout` .
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -119,7 +109,7 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
     dynamicLayout->LoadResource("IDD_DIALOG1");
     ```
 
-     El recurso con nombre debe hacer referencia a un cuadro de diálogo que contiene información de diseño en forma de un **AFX_DIALOG_LAYOUT** entrada en el archivo de recursos, como en el ejemplo siguiente:
+   El recurso con nombre debe hacer referencia a un cuadro de diálogo que contiene información de diseño en forma de un **AFX_DIALOG_LAYOUT** entrada en el archivo de recursos, como en el ejemplo siguiente:
 
     ```RC
     /////////////////////////////////////////////////////////////////////////////
@@ -153,8 +143,8 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
 
 ## <a name="see-also"></a>Vea también
 
-[CMFCDynamicLayout (clase)](../mfc/reference/cmfcdynamiclayout-class.md)  
-[Clases de control](../mfc/control-classes.md)  
-[Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)  
-[Editor de cuadros de diálogo](../windows/dialog-editor.md)  
+[CMFCDynamicLayout (clase)](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
+[Clases de control](../mfc/control-classes.md)<br/>
+[Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)<br/>
+[Editor de cuadros de diálogo](../windows/dialog-editor.md)<br/>
 [Diseño dinámico del cuadro de diálogo de MFC en Visual C++ 2015](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

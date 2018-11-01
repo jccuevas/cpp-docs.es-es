@@ -1,27 +1,17 @@
 ---
-title: '&lt;vector&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;vector&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <vector>
-dev_langs:
-- C++
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c4ec16ba621ee268be65bfee11798fb4b358673
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498298"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -42,7 +32,8 @@ class vector<bool>;
 
 template <class Allocator>
 struct hash<vector<bool, Allocator>>;
- // TEMPLATE FUNCTIONS
+
+// TEMPLATE FUNCTIONS
 template <class Type, class Allocator>
 bool operator== (
     const vector<Type, Allocator>& left,

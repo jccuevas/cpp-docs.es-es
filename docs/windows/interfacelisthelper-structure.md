@@ -1,28 +1,18 @@
 ---
-title: InterfaceListHelper (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: InterfaceListHelper (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceListHelper
-dev_langs:
-- C++
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b2336562abb82ae89bd2f6864d0678023a3ccf69
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ae9bf9d9c1301c142f94cb23cf6b0c2774f79bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464784"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (estructura)
 
@@ -32,55 +22,53 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 
 ```cpp
 template <
-   typename T0,
-   typename T1 = Nil,
-   typename T2 = Nil,
-   typename T3 = Nil,
-   typename T4 = Nil,
-   typename T5 = Nil,
-   typename T6 = Nil,
-   typename T7 = Nil,
-   typename T8 = Nil,
-   typename T9 = Nil
+    typename T0,
+    typename T1 = Nil,
+    typename T2 = Nil,
+    typename T3 = Nil,
+    typename T4 = Nil,
+    typename T5 = Nil,
+    typename T6 = Nil,
+    typename T7 = Nil,
+    typename T8 = Nil,
+    typename T9 = Nil
 >
 struct InterfaceListHelper;
 
-template <
-   typename T0
->
+template <typename T0>
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T0*  
+*T0*<br/>
 Parámetro de plantilla 0, que es necesario.
 
-*T1*  
+*T1*<br/>
 Parámetro de plantilla 1, que no se especifica de forma predeterminada.
 
-*T2*  
+*T2*<br/>
 Parámetro de plantilla 2, que no se especifica de forma predeterminada. El tercer parámetro de plantilla.
 
-*T3*  
+*T3*<br/>
 Parámetro de plantilla 3, que no se especifica de forma predeterminada.
 
-*T4*  
+*T4*<br/>
 Parámetro de plantilla 4, que no se especifica de forma predeterminada.
 
-*T5*  
+*T5*<br/>
 Parámetro de plantilla 5, que no se especifica de forma predeterminada.
 
-*T6*  
+*T6*<br/>
 Parámetro de plantilla 6, que no se especifica de forma predeterminada.
 
-*T7*  
+*T7*<br/>
 Parámetro de plantilla 7, que no se especifica de forma predeterminada.
 
-*T8*  
+*T8*<br/>
 Parámetro de plantilla 8, que no se especifica de forma predeterminada.
 
-*T9*  
+*T9*<br/>
 Parámetro de plantilla 9, que no se especifica de forma predeterminada.
 
 ## <a name="remarks"></a>Comentarios

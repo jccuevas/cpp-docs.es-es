@@ -1,10 +1,6 @@
 ---
-title: 'Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn | Microsoft Docs'
-ms.custom: ''
+title: 'Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393607"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531868"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -102,15 +92,15 @@ El **_j0**, **_j1**, y **_jn** rutinas devuelven funciones Bessel del primer tip
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NO VÁLIDO**|**_DOMAIN**|
+|+ **QNAN**, **IND**|**NO VÁLIDO**|**_DOMINIO**|
 
 El **_y0**, **_y1**, y **_yn** rutinas devuelven funciones Bessel del segundo tipo: ordena 0, 1 y n, respectivamente.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NO VÁLIDO**|**_DOMAIN**|
+|+ **QNAN**, **IND**|**NO VÁLIDO**|**_DOMINIO**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NO VÁLIDO**|**_DOMAIN**|
+|&#124;x&#124; < 0.0|**NO VÁLIDO**|**_DOMINIO**|
 
 ## <a name="requirements"></a>Requisitos
 

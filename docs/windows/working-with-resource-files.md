@@ -1,28 +1,17 @@
 ---
-title: Trabajar con archivos de recursos (C++) | Microsoft Docs
-ms.custom: ''
+title: Trabajar con archivos de recursos (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a39b4147bd997659f264b60fb1fc88956784bbaf
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 276a63f01eba3cfc8c4fd45e0f875d78ada1942a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318198"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483322"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
 
@@ -39,24 +28,24 @@ Para obtener información sobre cómo agregar recursos a proyectos administrados
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 Describe los archivos de recursos y cómo se usan en aplicaciones de escritorio de Windows. También proporciona vínculos a temas en los que se describe cómo usar los archivos de recursos.
 
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)  
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
 Describe los símbolos y proporciona información sobre el uso del cuadro de diálogo **Símbolos de recursos** para administrar los símbolos de los proyectos.
 
-[Editores de recursos](../windows/resource-editors.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
 Describe los editores de recursos que se proporcionan en Visual Studio y los tipos de recursos que puede modificar con cada editor, y proporciona vínculos a información detallada acerca del uso de cada editor.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Visual C++](../visual-cpp-in-visual-studio.md)  
+[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
 Proporciona vínculos a la documentación de Visual C++.
 
-[Hable con nosotros](/visualstudio/ide/talk-to-us)  
+[Hable con nosotros](/visualstudio/ide/talk-to-us)<br/>
 Proporciona vínculos a información acerca del uso del conjunto de documentación, el contacto con el servicio de soporte técnico y el uso de características de accesibilidad.
 
 ## <a name="see-also"></a>Vea también
 
-[Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)  
+[Aplicaciones de escritorio de Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

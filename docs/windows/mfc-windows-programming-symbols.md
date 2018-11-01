@@ -1,28 +1,17 @@
 ---
-title: Símbolos de programación de Windows MFC | Microsoft Docs
-ms.custom: ''
+title: Símbolos de la programación para Windows de MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC symbols
 - symbols [C++], MFC
 - Windows programming MFC symbols [C++]
 ms.assetid: fcc2194d-b639-4e0c-be2c-75f5579f2780
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ef471f5e06e770d79f67e4630c004e14d2aff968
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5ee5cd216ef3bcbb6400ba94c63583429081b0be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317036"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458225"
 ---
 # <a name="mfc-windows-programming-symbols"></a>Símbolos de la programación para Windows de MFC
 
@@ -72,5 +61,5 @@ MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)  
+[Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)<br/>
 [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

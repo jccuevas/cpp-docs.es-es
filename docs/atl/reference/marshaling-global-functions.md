@@ -1,27 +1,17 @@
 ---
-title: Funciones globales de serialización | Microsoft Docs
-ms.custom: ''
+title: Funciones globales de serialización
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
-dev_langs:
-- C++
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554419"
 ---
 # <a name="marshaling-global-functions"></a>Funciones globales de serialización
 
@@ -34,7 +24,7 @@ Estas funciones proporcionan compatibilidad para el cálculo de referencias y co
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Libera los datos de serialización y el `IStream` puntero.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crea un nuevo objeto de secuencia y calcula las referencias el puntero de interfaz especificado.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Serialización de datos de la secuencia se convierte en un puntero de interfaz.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Serialización de datos de la secuencia se convierte en un puntero de interfaz.|
 
 ## <a name="requirements"></a>Requisitos:
 
@@ -42,7 +32,7 @@ Estas funciones proporcionan compatibilidad para el cálculo de referencias y co
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Libera los datos de serializar del flujo; a continuación, libera el puntero del flujo.  
+Libera los datos de serializar del flujo; a continuación, libera el puntero del flujo.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);

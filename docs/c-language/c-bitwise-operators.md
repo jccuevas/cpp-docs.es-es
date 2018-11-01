@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384338"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118523"
 ---
 # <a name="c-bitwise-operators"></a>Operadores bit a bit de C
 
@@ -35,23 +35,17 @@ Los operadores bit a bit realizan operaciones AND bit a bit (**&**), OR exclusiv
 
 ## <a name="syntax"></a>Sintaxis
 
-*AND-expression*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*:  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 Los operandos de los operadores bit a bit deben tener tipos enteros, pero sus tipos pueden ser diferentes. Estos operadores realizan las conversiones aritméticas habituales; el tipo del resultado es el tipo de los operandos después de la conversión.
 
 A continuación se describen los operadores bit a bit de C:
 
-|Operador|Description|
+|Operador|Descripción|
 |--------------|-----------------|
 |**&**|El operador AND bit a bit compara cada bit de su primer operando con el bit correspondiente de su segundo operando. Si ambos bits son 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.|
 |**^**|El operador OR exclusivo bit a bit compara cada bit de su primer operando con el bit correspondiente de su segundo operando. Si un bit es 0 y el otro bit es 1, el bit del resultado correspondiente se establece en 1. De lo contrario, el bit del resultado correspondiente se establece en 0.|
@@ -96,6 +90,6 @@ El resultado de la operación AND bit a bit es 96 (decimal).
 
 ## <a name="see-also"></a>Vea también
 
-[Operador AND bit a bit: &](../cpp/bitwise-and-operator-amp.md)  
-[Operador OR exclusivo bit a bit: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[Operador OR inclusivo bit a bit: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[Operador AND bit a bit: &](../cpp/bitwise-and-operator-amp.md)<br/>
+[Operador OR exclusivo bit a bit: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Operador OR inclusivo bit a bit: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

@@ -1,27 +1,17 @@
 ---
-title: 'Cómo: anclar punteros y matrices | Microsoft Docs'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: 'Cómo: Anclar punteros y matrices'
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointers, pinning
 - arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0d6900a602f4173db738a6cc8060f156f79bc5eb
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 54897253b93c97eb2d1ef94b6922c99fb75fdae9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641864"
 ---
 # <a name="how-to-pin-pointers-and-arrays"></a>Cómo: Anclar punteros y matrices
 

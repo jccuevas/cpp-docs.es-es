@@ -1,31 +1,20 @@
 ---
-title: Editor de menús (C++) | Microsoft Docs
-ms.custom: ''
+title: Editor de menús (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.menu.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource editors [C++], Menu editor
 - editors, menus
 - Menu editor
 - menus [C++], Menu editor
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 80519b17fc5d9aee963ec3718cf82c7fe44d686b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 96be3b944416a2e4a5c9b5fe8f99c76f103264c9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437915"
 ---
 # <a name="menu-editor"></a>Editor de menús
 
@@ -73,8 +62,8 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)  
-[Editores de recursos](../windows/resource-editors.md)  
-[Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)  
-[Menús](../mfc/menus-mfc.md)  
+[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[Menús](../mfc/menus-mfc.md)<br/>
 [Menús](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)

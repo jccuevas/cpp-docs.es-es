@@ -1,31 +1,20 @@
 ---
-title: Seleccionar un área de una imagen (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Seleccionar un área de una imagen (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], image selection
 - Image editor [C++], selecting images
 - images [C++], selecting
 - cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c90367a1db313de1935e119c2efb8e9713b3d282
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5e2522d23b30a91639e887a8761871e3df8139f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565118"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>Seleccionar un área de una imagen (Editor de imágenes para iconos)
 
@@ -58,6 +47,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

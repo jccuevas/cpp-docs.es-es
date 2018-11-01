@@ -1,23 +1,13 @@
 ---
-title: 2.4.1 for (construcción) | Microsoft Docs
-ms.custom: ''
+title: 2.4.1 for (Construcción)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac142c628f3c2bef0bc29a2ffd50df8a9efda400
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: adf2d5d0580f3b65f90ab68ca21885be12abf678
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496517"
 ---
 # <a name="241-for-construct"></a>2.4.1 for (Construcción)
 
@@ -115,28 +105,28 @@ Hay una barrera implícita al final de un **para** construir a menos que un **no
 
 Restricciones para el **para** directiva son los siguientes:
 
--   El **para** bucle debe ser un bloque estructurado y, además, su ejecución no debe terminar con un **salto** instrucción.
+- El **para** bucle debe ser un bloque estructurado y, además, su ejecución no debe terminar con un **salto** instrucción.
 
--   Los valores del bucle controlan las expresiones de la **para** bucle asociado con un **para** directiva debe ser el mismo para todos los subprocesos en el equipo.
+- Los valores del bucle controlan las expresiones de la **para** bucle asociado con un **para** directiva debe ser el mismo para todos los subprocesos en el equipo.
 
--   El **para** variable de iteración del bucle debe tener un tipo entero con signo.
+- El **para** variable de iteración del bucle debe tener un tipo entero con signo.
 
--   Una sola **programación** cláusula puede aparecer en un **para** directiva.
+- Una sola **programación** cláusula puede aparecer en un **para** directiva.
 
--   Una sola **ordenados** cláusula puede aparecer en un **para** directiva.
+- Una sola **ordenados** cláusula puede aparecer en un **para** directiva.
 
--   Una sola **nowait** cláusula puede aparecer en un **para** directiva.
+- Una sola **nowait** cláusula puede aparecer en un **para** directiva.
 
--   Es si no especificado o con qué frecuencia los efectos secundarios dentro de la *chunk_size*, *lb*, *b*, o *incr* las expresiones se encuentran.
+- Es si no especificado o con qué frecuencia los efectos secundarios dentro de la *chunk_size*, *lb*, *b*, o *incr* las expresiones se encuentran.
 
--   El valor de la *chunk_size* expresión debe ser el mismo para todos los subprocesos en el equipo.
+- El valor de la *chunk_size* expresión debe ser el mismo para todos los subprocesos en el equipo.
 
 ## <a name="cross-references"></a>Referencias cruzadas:
 
--   **privada**, **firstprivate**, **lastprivate**, y **reducción** cláusulas, vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.
+- **privada**, **firstprivate**, **lastprivate**, y **reducción** cláusulas, vea [sección 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) en la página 25.
 
--   **OMP_SCHEDULE** vea variable de entorno [sección 4.1](../../parallel/openmp/4-1-omp-schedule.md) en página 48.
+- **OMP_SCHEDULE** vea variable de entorno [sección 4.1](../../parallel/openmp/4-1-omp-schedule.md) en página 48.
 
--   **ordenar** construir, consulte [sección 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) en la página 22.
+- **ordenar** construir, consulte [sección 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) en la página 22.
 
--   [Apéndice D](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, proporciona más información sobre el uso de la cláusula schedule.
+- [Apéndice D](../../parallel/openmp/d-using-the-schedule-clause.md), página 93, proporciona más información sobre el uso de la cláusula schedule.

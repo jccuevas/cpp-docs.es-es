@@ -1,10 +1,6 @@
 ---
-title: _chsize | Microsoft Docs
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600647"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -65,15 +55,15 @@ Nueva longitud del archivo en bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_chsize** devuelve el valor 0 si el tamaño del archivo se cambió correctamente. Un valor devuelto de -1 indica un error: **errno** está establecido en **EACCES** si el archivo especificado es de solo lectura o el archivo especificado esté bloqueado contra el acceso, a **EBADF** si el descriptor no es válido, **ENOSPC** si no queda espacio en el dispositivo, o **EINVAL** si *tamaño* es menor que cero.
+**_chsize** devuelve el valor 0 si el tamaño del archivo se cambió correctamente. Un valor devuelto de -1 indica un error: **errno** está establecido en **EACCES** si el archivo especificado es de solo lectura o el archivo especificado está bloqueado contra el acceso, a **EBADF** si el descriptor no es válido, **ENOSPC** si no se queda espacio en el dispositivo, o **EINVAL** si *tamaño* es menor que cero.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_chsize** función amplía o trunca el archivo asociado a *fd* a la longitud especificada por *tamaño*. El archivo debe estar abierto en un modo que permita escritura. Si el archivo se amplía, se anexan caracteres nulos ("\0"). Si el archivo se trunca, se pierden todos los datos desde el final del archivo abreviado hasta la longitud original del archivo.
+El **_chsize** función amplía o trunca el archivo asociado *fd* a la longitud especificada por *tamaño*. El archivo debe estar abierto en un modo que permita escritura. Si el archivo se amplía, se anexan caracteres nulos ("\0"). Si el archivo se trunca, se pierden todos los datos desde el final del archivo abreviado hasta la longitud original del archivo.
 
-Esta función valida sus parámetros. Si *tamaño* es menor que cero o *fd* es un descriptor de archivo incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Esta función valida sus parámetros. Si *tamaño* es menor que cero o *fd* es un descriptor de archivo incorrecto, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="requirements"></a>Requisitos
 

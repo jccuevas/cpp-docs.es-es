@@ -1,12 +1,6 @@
 ---
-title: Personalizar o cambiar colores (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Personalizar o cambiar colores (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dithered color, Image editor
 - Custom Color Selector dialog box [C++]
@@ -20,17 +14,12 @@ helpviewer_keywords:
 - Adjust Colors command [C++]
 - Image editor [C++], dithered color
 ms.assetid: e58f6b32-f435-4d9a-a570-7569433661ae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6927ce218c862329e1669aaa1a42316cab68ec86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8d41baa83c94568b62044e58e7dd09c3c2238459
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317386"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586282"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Personalizar o cambiar colores (Editor de imágenes para iconos)
 
@@ -56,5 +45,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)

@@ -1,10 +1,7 @@
 ---
-title: Macros predefinidas | Microsoft Docs
+title: Macros predefinidas
 ms.custom: update_every_version
 ms.date: 04/30/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -72,8 +69,6 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs:
-- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -148,16 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c2419925896112eb235bcdfe77d9916373f0091
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 42b81431ca69de84a5d38cca3eaa088bb7255656
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540489"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660465"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -435,7 +426,7 @@ Microsoft Visual C++ admite estas macros predefinidas adicionales.
 
 - **&#95;WINRT&#95;DLL** definido como 1 cuando se compila como C++ y ambos [/ZW (compilación de Windows Runtime)](../build/reference/zw-windows-runtime-compilation.md) y [/LD o /LDd](../build/reference/md-mt-ld-use-run-time-library.md) se establecen las opciones del compilador. En caso contrario, es indefinido.
 
- Macros de preprocesador utilizadas para determinar la versión de la biblioteca ATL o MFC no están predefinidas por el compilador. Estas macros se definen en los encabezados para la biblioteca, por lo que no están definidos en las directivas de preprocesador antes de que se incluye el encabezado necesario.
+Macros de preprocesador utilizadas para determinar la versión de la biblioteca ATL o MFC no están predefinidas por el compilador. Estas macros se definen en los encabezados para la biblioteca, por lo que no están definidos en las directivas de preprocesador antes de que se incluye el encabezado necesario.
 
 - **&#95;ATL&#95;VIDOR** definido en \<atldef.h > como un literal entero que codifica el número de versión ATL.
 
@@ -443,6 +434,6 @@ Microsoft Visual C++ admite estas macros predefinidas adicionales.
 
 ## <a name="see-also"></a>Vea también
 
-[Macros (C/C ++)](../preprocessor/macros-c-cpp.md)   
-[Operadores de preprocesador](../preprocessor/preprocessor-operators.md)   
+[Macros (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
+[Operadores de preprocesador](../preprocessor/preprocessor-operators.md)<br/>
 [Directivas de preprocesador](../preprocessor/preprocessor-directives.md)

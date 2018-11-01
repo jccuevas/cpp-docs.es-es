@@ -1,14 +1,8 @@
 ---
-title: Tipo de fecha | Microsoft Docs
-ms.custom: ''
+title: Tipo de fecha
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - DATE
-dev_langs:
-- C++
 helpviewer_keywords:
 - Date data type, implementing
 - Date data type
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5a6ade991e3a2def588bdd3139cbea8089d3124
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548192"
 ---
 # <a name="date-type"></a>Tipo de fecha
 
@@ -76,6 +66,6 @@ Para obtener más información sobre problemas relacionados con la fecha y `COle
 
 ## <a name="see-also"></a>Vea también
 
-[Fecha y hora](../atl-mfc-shared/date-and-time.md)   
+[Fecha y hora](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md)
 

@@ -1,23 +1,13 @@
 ---
-title: -arch (x64) | Microsoft Docs
-ms.custom: ''
+title: /arch (x64)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 236923732a193830fe3fad643570666db56cddac
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d1ee086eff73b0538390764ef26b051919d65bcf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707361"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456802"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -59,6 +49,6 @@ El `__AVX__` se define el símbolo de preprocesador cuando la **/arch: AVX** se 
 
 ## <a name="see-also"></a>Vea también
 
-[/arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/arch (Arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

@@ -1,28 +1,22 @@
 ---
-title: FactoryCache (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: FactoryCache (estructura)
+ms.date: 09/21/2018
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::FactoryCache
-dev_langs:
-- C++
+- module/Microsoft::WRL::Details::FactoryCache::cookie
+- module/Microsoft::WRL::Details::FactoryCache::factory
 helpviewer_keywords:
-- FactoryCache structure
+- Microsoft::WRL::Details::FactoryCache structure
+- Microsoft::WRL::Details::FactoryCache::cookie data member
+- Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: df2335a49d2d5daf862db7cea7eb413c01164bee
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545852"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (estructura)
 
@@ -42,10 +36,10 @@ Contiene la ubicación de un generador de clases y un valor que identifica un re
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[FactoryCache::cookie (miembro de datos)](../windows/factorycache-cookie-data-member.md)|Contiene un valor que identifica un objeto de clase en tiempo de ejecución de Windows o COM registrado y se utiliza posteriormente para anular el registro del objeto.|
-|[FactoryCache::factory (miembro de datos)](../windows/factorycache-factory-data-member.md)|Apunta a un generador de clases COM o en tiempo de ejecución de Windows.|
+Name                              | Descripción
+--------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
+[Factorycache](#cookie)   | Contiene un valor que identifica un objeto de clase en tiempo de ejecución de Windows o COM registrado y se utiliza posteriormente para anular el registro del objeto.
+[Factorycache](#factory) | Apunta a un generador de clases COM o en tiempo de ejecución de Windows.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -57,6 +51,29 @@ Contiene la ubicación de un generador de clases y un valor que identifica un re
 
 **Namespace:** wrl
 
-## <a name="see-also"></a>Vea también
+## <a name="cookie"></a>Factorycache
 
-[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+union {
+   WINRT_REGISTRATION_COOKIE winrt;
+   DWORD com;
+} cookie;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Contiene un valor que identifica un objeto de clase en tiempo de ejecución de Windows o COM registrado y se utiliza posteriormente para anular el registro del objeto.
+
+## <a name="factory"></a>Factorycache
+
+Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiempo de ejecución y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+IUnknown* factory;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Apunta a un generador de clases COM o en tiempo de ejecución de Windows.

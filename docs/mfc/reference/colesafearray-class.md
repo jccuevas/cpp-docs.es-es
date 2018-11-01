@@ -1,10 +1,6 @@
 ---
-title: COleSafeArray (clase) | Microsoft Docs
-ms.custom: ''
+title: COleSafeArray (clase)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleSafeArray
 - AFXDISP/COleSafeArray
@@ -35,8 +31,6 @@ f1_keywords:
 - AFXDISP/COleSafeArray::ResizeOneDim
 - AFXDISP/COleSafeArray::UnaccessData
 - AFXDISP/COleSafeArray::Unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleSafeArray [MFC], COleSafeArray
 - COleSafeArray [MFC], AccessData
@@ -66,18 +60,15 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a1bad1ccc1671176ce213e59c5d4c8c318a441b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203429"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648102"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray (clase)
+
 Una clase para trabajar con matrices de tipo y dimensión arbitrarios.
 
 ## <a name="syntax"></a>Sintaxis
@@ -239,11 +230,9 @@ Construye un objeto `COleSafeArray`.
 ```
 COleSafeArray();
 
-
 COleSafeArray(
     const SAFEARRAY& saSrc,
     VARTYPE vtSrc);
-
 
 COleSafeArray(
     LPCSAFEARRAY pSrc,
@@ -304,7 +293,6 @@ void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
     DWORD* rgElements);
-
 
 void Create(
     VARTYPE vtSrc,

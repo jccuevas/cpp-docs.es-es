@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df624c04b1fd5a80b6e54928adb8f3ca7424920a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84d37ad6303a9e5b4fb9d238dd8c15c3a40ccef6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058798"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementación de IUnknown en MFC/OLE
 
@@ -399,7 +399,6 @@ class CAggrExample : public CCmdTarget
 public:
     CAggrExample();
 
-
 protected:
     LPUNKNOWN m_lpAggrInner;
     virtual BOOL OnCreateAggregates();
@@ -414,7 +413,7 @@ CAggrExample::CAggrExample()
 }
 
 BOOL CAggrExample::OnCreateAggregates()
-{ 
+{
     // wire up aggregate with correct controlling unknown
     m_lpAggrInner = CoCreateInstance(CLSID_Example,
         GetControllingUnknown(), CLSCTX_INPROC_SERVER,
@@ -471,10 +470,10 @@ DWORD ExternalQueryInterface(
 
 #### <a name="parameters"></a>Parámetros
 
-*lpIID*  
+*lpIID*<br/>
 Un puntero lejano a un IID (el primer argumento para QueryInterface)
 
-*ppvObj*  
+*ppvObj*<br/>
 Un puntero a un IUnknown* (el segundo argumento para QueryInterface)
 
 #### <a name="remarks"></a>Comentarios
@@ -520,10 +519,10 @@ END_INTERFACE_PART(localClass)
 
 #### <a name="parameters"></a>Parámetros
 
-*localClass*  
+*localClass*<br/>
 El nombre de la clase que implementa la interfaz
 
-*iface*  
+*iface*<br/>
 El nombre de la interfaz que implementa esta clase
 
 #### <a name="remarks"></a>Comentarios
@@ -560,10 +559,10 @@ END_INTERFACE_MAP
 
 #### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 La clase en la que se debe definir el mapa de interfaz.
 
-*baseClass*  
+*baseClass*<br/>
 La clase de la cual *theClass* deriva.
 
 #### <a name="remarks"></a>Comentarios
@@ -578,13 +577,13 @@ INTERFACE_PART(theClass, iid, localClass)
 
 #### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 El nombre de la clase que contiene el mapa de interfaz.
 
-*IID*  
+*IID*<br/>
 El `IID` que se debe asignar a la clase incrustada.
 
-*localClass*  
+*localClass*<br/>
 El nombre de la clase local (menos la “X”).
 
 #### <a name="remarks"></a>Comentarios
@@ -626,10 +625,10 @@ INTERFACE_AGGREGATE(theClass, theAggr)
 
 #### <a name="parameters"></a>Parámetros
 
-*theClass*  
+*theClass*<br/>
 El nombre de la clase que contiene el mapa de interfaz.
 
-*theAggr*  
+*theAggr*<br/>
 El nombre de la variable miembro que se debe agregar.
 
 #### <a name="remarks"></a>Comentarios
@@ -638,5 +637,5 @@ Esta macro se usa para indicar al marco de trabajo que la clase está usando un 
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

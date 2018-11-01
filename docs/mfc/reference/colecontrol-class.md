@@ -1,10 +1,6 @@
 ---
-title: COleControl (clase) | Microsoft Docs
-ms.custom: ''
+title: COleControl (clase)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleControl
 - AFXCTL/COleControl
@@ -172,8 +168,6 @@ f1_keywords:
 - AFXCTL/COleControl::DrawMetafile
 - AFXCTL/COleControl::IsInvokeAllowed
 - AFXCTL/COleControl::SetInitialDataFormats
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleControl [MFC], COleControl
 - COleControl [MFC], AmbientAppearance
@@ -340,18 +334,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050104"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534139"
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
+
 Una clase base eficaz para desarrollar controles OLE.
 
 ## <a name="syntax"></a>Sintaxis
@@ -956,7 +947,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Parámetros
 
 *pPX*<br/>
-Un puntero a un `CPropExchange` objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
+Puntero a un objeto `CPropExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1092,7 +1083,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Parámetros
 
 *pPX*<br/>
-Un puntero a un `CPropExchange` objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
+Puntero a un objeto `CPropExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de propiedad, incluida su dirección.
 
 *dwVersionDefault*<br/>
 El número de versión actual del control.
@@ -1440,15 +1431,13 @@ void FireReadyStateChange();
 
 El estado de la lista puede ser uno de los siguientes valores:
 
-Estado de inicialización predeterminado READYSTATE_UNINITIALIZED
-
-Control READYSTATE_LOADING está cargando sus propiedades
-
-Se ha inicializado el Control READYSTATE_LOADED
-
-Control READYSTATE_INTERACTIVE tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos
-
-Control de READYSTATE_COMPLETE tiene todos sus datos
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Estado de inicialización predeterminado|
+|READYSTATE_LOADING|Control está cargando sus propiedades|
+|READYSTATE_LOADED|Se ha inicializado el control|
+|READYSTATE_INTERACTIVE|Control tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos|
+|READYSTATE_COMPLETE|Control tiene todos sus datos|
 
 Use [GetReadyState](#getreadystate) para determinar la preparación actual del control.
 
@@ -1466,11 +1455,11 @@ virtual DWORD GetActivationPolicy();
 
 Una combinación de marcas de la enumeración POINTERINACTIVE. Indicadores posibles son:
 
-El objeto POINTERINACTIVE_ACTIVATEONENTRY debe ser activado cuando entra en el mouse durante una operación de movimiento del mouse en el contexto.
-
-Operación de mover POINTERINACTIVE_DEACTIVATEONLEAVE el objeto debe desactivarse cuando el mouse sale del objeto durante un mouse.
-
-POINTERINACTIVE_ACTIVATEONDRAG el objeto debe ser activado cuando se arrastra el mouse sobre él durante un arrastre en el contexto y la operación anular.
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|El objeto debe estar activado cuando entra en el mouse durante una operación de movimiento del mouse en contexto.|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|El objeto debe desactivarse cuando el mouse sale del objeto durante una operación de movimiento del mouse.|
+|POINTERINACTIVE_ACTIVATEONDRAG|El objeto debe estar activado cuando se arrastra el mouse sobre él durante un arrastre en contexto y la operación anular.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1915,15 +1904,13 @@ long GetReadyState();
 
 El estado de preparación del control, uno de los valores siguientes:
 
-Estado de inicialización predeterminado READYSTATE_UNINITIALIZED
-
-Control READYSTATE_LOADING está cargando sus propiedades
-
-Se ha inicializado el Control READYSTATE_LOADED
-
-Control READYSTATE_INTERACTIVE tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos
-
-Control de READYSTATE_COMPLETE tiene todos sus datos
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Estado de inicialización predeterminado|
+|READYSTATE_LOADING|Control está cargando sus propiedades|
+|READYSTATE_LOADED|Se ha inicializado el control|
+|READYSTATE_INTERACTIVE|Control tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos|
+|READYSTATE_COMPLETE|Control tiene todos sus datos|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2065,15 +2052,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 El estado de preparación para establecer el control, uno de los valores siguientes:
 
-Estado de inicialización predeterminado READYSTATE_UNINITIALIZED
-
-Control READYSTATE_LOADING está cargando sus propiedades
-
-Se ha inicializado el Control READYSTATE_LOADED
-
-Control READYSTATE_INTERACTIVE tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos
-
-Control de READYSTATE_COMPLETE tiene todos sus datos
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|Estado de inicialización predeterminado|
+|READYSTATE_LOADING|Control está cargando sus propiedades|
+|READYSTATE_LOADED|Se ha inicializado el control|
+|READYSTATE_INTERACTIVE|Control tiene suficientes datos para ser interactiva, pero todavía se cargan asincrónicas no todos los datos|
+|READYSTATE_COMPLETE|Control tiene todos sus datos|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2163,7 +2148,7 @@ Distinto de cero si se ha inicializado el control; en caso contrario, es 0.
 
 ### <a name="remarks"></a>Comentarios
 
-Implementación de .NET framework de `IDispatch::Invoke` llamadas `IsInvokeAllowed` para determinar si una función determinada (identificado por `dispid`) se pueden invocar. Es el comportamiento predeterminado para un control OLE permitir que se invoca sólo si se ha inicializado el control; los métodos de automatización Sin embargo, `IsInvokeAllowed` es una función virtual y se puede reemplazar si es necesario (por ejemplo, cuando el control se se usa como un servidor de automatización). Para obtener más información, consulte el artículo de Knowledge Base Q166472, "HOWTO: usar un Control OLE como un servidor de automatización." Artículos de Knowledge Base están disponibles en [ http://support.microsoft.com ](http://support.microsoft.com/).
+Implementación de .NET framework de `IDispatch::Invoke` llamadas `IsInvokeAllowed` para determinar si una función determinada (identificado por `dispid`) se pueden invocar. Es el comportamiento predeterminado para un control OLE permitir que se invoca sólo si se ha inicializado el control; los métodos de automatización Sin embargo, `IsInvokeAllowed` es una función virtual y se puede reemplazar si es necesario (por ejemplo, cuando el control se se usa como un servidor de automatización).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 
@@ -2848,13 +2833,12 @@ virtual DWORD OnGetViewStatus();
 
 Uno de los valores de la enumeración VIEWSTATUS si se realiza correctamente; en caso contrario, es 0. Los valores posibles son cualquier combinación de las siguientes acciones:
 
-Objeto VIEWSTATUS_OPAQUE es completamente opaco. Si no se establece este bit, el objeto contiene las partes transparentes. Este bit se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.
-
-Objeto VIEWSTATUS_SOLIDBKGND tiene un fondo sólido (que consta de un color sólido, no de tramas de pincel). Este bit es significativo únicamente si VIEWSTATUS_OPAQUE está establecida y se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.
-
-Objeto VIEWSTATUS_DVASPECTOPAQUE admite DVASPECT_OPAQUE. IViewObjectEx todos los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.
-
-Objeto VIEWSTATUS_DVASPECTTRANSPARENT admite DVASPECT_TRANSPARENT. Todos los `IViewObjectEx` los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|Objeto es completamente opaco. Si no se establece este bit, el objeto contiene las partes transparentes. Este bit se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.|
+|VIEWSTATUS_SOLIDBKGND|Objeto tiene un fondo sólido (que consta de un color sólido, no de tramas de pincel). Este bit es significativo únicamente si VIEWSTATUS_OPAQUE está establecida y se aplica solo a los aspectos relacionados con el contenido y no a DVASPECT_ICON o DVASPECT_DOCPRINT.|
+|VIEWSTATUS_DVASPECTOPAQUE|Objeto admite DVASPECT_OPAQUE. IViewObjectEx todos los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.|
+|VIEWSTATUS_DVASPECTTRANSPARENT|Objeto admite DVASPECT_TRANSPARENT. Todos los `IViewObjectEx` los métodos que toman un aspecto de dibujo como un parámetro se puede llamar con este aspecto.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4092,7 +4076,6 @@ void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
     UINT nHelpID = -1);
-
 
 void ThrowError(
     SCODE sc,

@@ -1,7 +1,7 @@
 ---
-title: interfaz class (extensiones de componentes de C++) | Microsoft Docs
+title: clase de interfaz (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ecc99a5c97f96290932a7d758a959501532c07be
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714316"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328329"
 ---
-# <a name="interface-class--c-component-extensions"></a>interface class (Extensiones de componentes de C++)
+# <a name="interface-class--ccli-and-ccx"></a>clase de interfaz (C++ / c++ / CLI y c++ / CX)
 
 Declara una interfaz.  Para obtener información sobre las interfaces nativas, consulte [__interface](../cpp/interface.md).
 
@@ -36,21 +36,21 @@ Declara una interfaz.  Para obtener información sobre las interfaces nativas, c
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*interface_access*  
+*interface_access*<br/>
 La accesibilidad de una interfaz fuera del ensamblado.  Los valores posibles son **pública** y **privada**.  **privada** es el valor predeterminado. Interfaces anidadas no pueden tener un *interface_access* especificador.
 
-*name*  
+*name*<br/>
 Nombre de la interfaz.
 
-*inherit_access*  
+*inherit_access*<br/>
 La accesibilidad de *base_interface*.  Los únicos permiten accesibilidad para una interfaz base es **pública** (predeterminado).
 
-*base_interface*  
+*base_interface*<br/>
 (Opcional) Una interfaz base para la interfaz *nombre*.
 
 ### <a name="remarks"></a>Comentarios
@@ -67,7 +67,7 @@ Para obtener más información, consulte:
 
 - [Constructor estático de interfaz](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
-- [Interfaces genéricas (Visual C++)](../windows/generic-interfaces-visual-cpp.md)
+- [Interfaces genéricas (C++ / c++ / CLI)](../windows/generic-interfaces-visual-cpp.md)
 
 Para obtener información sobre otros tipos CLR, vea [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -230,4 +230,4 @@ ref struct R : I, J {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

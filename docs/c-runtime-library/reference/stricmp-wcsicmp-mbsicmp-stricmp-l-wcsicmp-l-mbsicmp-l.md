@@ -1,10 +1,6 @@
 ---
-title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l | Microsoft Docs
-ms.custom: ''
+title: _stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _stricmp_l
 - _mbsicmp
@@ -39,8 +35,6 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -62,16 +56,12 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0014ea3c727db2a368123696c47df1eca6ba3bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559095"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -122,7 +112,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto indica la relación de *string1* a *string2* como se indica a continuación.
+El valor devuelto indica la relación de *string1* a *cadena2* como sigue.
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
@@ -134,24 +124,24 @@ Produce un error, **_mbsicmp** devuelve **_NLSCMPERROR**, que se define en \<str
 
 ## <a name="remarks"></a>Comentarios
 
-El **_stricmp** función ordinal compara *string1* y *string2* después de convertir cada carácter a minúsculas y devuelve un valor que indica su relación. **_stricmp** difiere de **_stricoll** en que la **_stricmp** comparación solo se ve afectada por **LC_CTYPE**, que determina qué caracteres van superiores y minúsculas. El **_stricoll** función compara las cadenas según las el **LC_CTYPE** y **LC_COLLATE** categorías de la configuración regional, que incluye el caso y la intercalación orden. Para obtener más información sobre la **LC_COLLATE** categoría, vea [setlocale](setlocale-wsetlocale.md) y [categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el **_l** sufijo usan la configuración regional actual de comportamiento dependiente de la configuración regional. Las versiones con el sufijo son idénticas, salvo que usan el parámetro de configuración regional que se pasa. Si no se ha establecido la configuración regional, se utiliza la configuración regional de C. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El **_stricmp** función ordinal compara *string1* y *cadena2* después de convertir cada carácter a minúsculas y devuelve un valor que indica su relación. **_stricmp** difiere **_stricoll** en que el **_stricmp** comparación sólo se ve afectada por **LC_CTYPE**, que determina qué caracteres son superiores y minúsculas. El **_stricoll** función compara las cadenas según la **LC_CTYPE** y **LC_COLLATE** categorías de la configuración regional, que incluye el caso y la intercalación orden. Para obtener más información sobre la **LC_COLLATE** categoría, vea [setlocale](setlocale-wsetlocale.md) y [categorías de configuración regional](../../c-runtime-library/locale-categories.md). Las versiones de estas funciones sin el **_l** sufijo usar la configuración regional actual para el comportamiento dependiente de la configuración regional. Las versiones con el sufijo son idénticas, salvo que usan el parámetro de configuración regional que se pasa. Si no se ha establecido la configuración regional, se utiliza la configuración regional de C. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> **_stricmp** es equivalente a **_strcmpi**. Pueden usarse indistintamente pero **_stricmp** es el estándar preferido.
+> **_stricmp** es equivalente a **_strcmpi**. Se pueden usar indistintamente pero **_stricmp** es el estándar preferido.
 
-El **_strcmpi** función es equivalente a **_stricmp** y se proporciona por compatibilidad con versiones anteriores.
+El **_strcmpi** es equivalente a la función **_stricmp** y se proporciona por razones de compatibilidad.
 
 Dado que **_stricmp** comparaciones de minúsculas, se podrían producir un comportamiento inesperado.
 
-Para mostrar cuándo caso la conversión de **_stricmp** influye en el resultado de una comparación, se supone que tiene las dos cadenas JOHNSTON y JOHN_HENRY. La cadena JOHN_HENRY se considera menor que JOHNSTON porque el carácter "_" tiene un valor ASCII menor que una S minúscula. De hecho, cualquier carácter que tenga un valor ASCII comprendido entre 91 y 96 se considerará menor que cualquier letra.
+Para ilustrar cuándo caso conversión por **_stricmp** afecta al resultado de una comparación, supongamos que dispone de las dos cadenas JOHNSTON y JOHN_HENRY. La cadena JOHN_HENRY se considera menor que JOHNSTON porque el carácter "_" tiene un valor ASCII menor que una S minúscula. De hecho, cualquier carácter que tenga un valor ASCII comprendido entre 91 y 96 se considerará menor que cualquier letra.
 
 Si el [strcmp](strcmp-wcscmp-mbscmp.md) función se utiliza en lugar de **_stricmp**, JOHN_HENRY será mayor que JOHNSTON.
 
-**_wcsicmp** y **_mbsicmp** son versiones de caracteres multibyte y anchos de **_stricmp**. Los argumentos y el valor devuelto de **_wcsicmp** son caracteres anchos cadenas; los de **_mbsicmp** son cadenas de caracteres multibyte. **_mbsicmp** reconoce las secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual.
+**_wcsicmp** y **_mbsicmp** son versiones de caracteres anchos y caracteres multibyte de **_stricmp**. Los argumentos y el valor devuelto de **_wcsicmp** son caracteres anchos cadenas; los de **_mbsicmp** son cadenas de caracteres multibyte. **_mbsicmp** reconoce secuencias de caracteres multibyte según la página de códigos multibyte actual y devuelve **_NLSCMPERROR** produce un error. Para obtener más información, vea [Páginas de códigos](../../c-runtime-library/code-pages.md). Estas tres funciones se comportan exactamente igual.
 
 **_wcsicmp** y **wcscmp** se comportan exactamente igual, salvo que **wcscmp** no convierte los argumentos en minúsculas antes de compararlos. **_mbsicmp** y **_mbscmp** se comportan exactamente igual, salvo que **_mbscmp** no convierte los argumentos en minúsculas antes de compararlos.
 
-Debe llamar a [setlocale](setlocale-wsetlocale.md) para **_wcsicmp** para trabajar con caracteres de Latín 1. La configuración regional de C está activada de forma predeterminada, de modo que, por ejemplo, ä no se considera igual a Ä. Llame a **setlocale** con cualquier configuración regional que no sea la configuración regional de C antes de llamar a **_wcsicmp**. El ejemplo siguiente se muestra cómo **_wcsicmp** es sensible a la configuración regional:
+Deberá llamar a [setlocale](setlocale-wsetlocale.md) para **_wcsicmp** para trabajar con caracteres de latino 1. La configuración regional de C está activada de forma predeterminada, de modo que, por ejemplo, ä no se considera igual a Ä. Llame a **setlocale** con cualquier configuración regional distinta de la configuración regional de C antes de llamar a **_wcsicmp**. El ejemplo siguiente se muestra cómo **_wcsicmp** es sensible a la configuración regional:
 
 ```C
 // crt_stricmp_locale.c
@@ -167,9 +157,9 @@ int main() {
 }
 ```
 
-Una alternativa consiste en llamar a [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) y pase el objeto de configuración regional devuelto como un parámetro a **_wcsicmp_l**.
+Una alternativa consiste en llamar a [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md) y pase el objeto de configuración regional devuelto como parámetro a **_wcsicmp_l**.
 
-Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2* son punteros nulos, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si bien *string1* o *cadena2* son punteros nulos, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

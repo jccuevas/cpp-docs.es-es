@@ -1,14 +1,8 @@
 ---
-title: Enumeraciones (C++) | Microsoft Docs
-ms.custom: ''
+title: Enumeraciones [C++]
 ms.date: 06/01/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - enum_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - declarations, enumerations
 - enumerators, declaring
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35aa004a2c4f47c476175ac500777ee8eb6efb07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2258683fae8d14051d798cd18a3c3d74f8fdac6d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557984"
 ---
 # <a name="enumerations-c"></a>Enumeraciones [C++]
 
@@ -39,7 +29,7 @@ Una enumeración es un tipo definido por el usuario que consta de un conjunto de
 ```
 // unscoped enum:
 enum [identifier] [: type]
-{enum-list}; 
+{enum-list}; 
 
 // scoped enum:
 enum [class|struct]
@@ -134,19 +124,19 @@ Utilizar conversiones implícitas de esta manera puede provocar efectos secundar
 ```cpp
 namespace ScopedEnumConversions
 {
-    enum class Suit { Diamonds, Hearts, Clubs, Spades };
+    enum class Suit { Diamonds, Hearts, Clubs, Spades };
 
-    void AttemptConversions()
+    void AttemptConversions()
     {
-        Suit hand; 
-        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
-        hand = Suit::Clubs; //Correct.
-        int account_num = 135692;
-        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
-        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
+        Suit hand; 
+        hand = Clubs; // error C2065: 'Clubs' : undeclared identifier
+        hand = Suit::Clubs; //Correct.
+        int account_num = 135692;
+        hand = account_num; // error C2440: '=' : cannot convert from 'int' to 'Suit'
+        hand = static_cast<Suit>(account_num); // OK, but probably a bug!!!
 
-        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
-        account_num = static_cast<int>(Suit::Hearts); // OK
+        account_num = Suit::Hearts; // error C2440: '=' : cannot convert from 'Suit' to 'int'
+        account_num = static_cast<int>(Suit::Hearts); // OK
 }
 ```
 
@@ -155,7 +145,6 @@ Observe que la línea `hand = account_num;` aún produce el error que se produce
 ## <a name="no_enumerators"></a> Enumeraciones con ningún enumeradores
 
 **Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): al definir una enumeración (normal o con ámbito) con un tipo explícito subyacente y no los enumeradores, puede vigente introducir un nuevo tipo de entero no tiene ninguna conversión implícita a cualquier otro tipo. Con este tipo en lugar de su tipo subyacente integrado, puede eliminar la posibilidad de errores sutiles debidos a involuntarias conversiones implícitas.
-
 
 ```cpp
 enum class byte : unsigned char { };

@@ -1,31 +1,22 @@
 ---
-title: C.2 reglas | Microsoft Docs
-ms.custom: ''
+title: C.2 Reglas
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642811"
 ---
 # <a name="c2-rules"></a>C.2 Reglas
+
 La notación se describe en la sección 6.1 del estándar C. Este apéndice gramática muestra las extensiones para la gramática del lenguaje de base para las directivas de OpenMP C y C++.
 
 **/\* en C++ (ISO/IEC 14882: 1998) \*/**
 
 *instrucción seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instrucción de declaración seq*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*seq de instrucción de OpenMP*
@@ -33,7 +24,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 **/\* en C90 ISO/IEC 9899 (puede: en 1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de OpenMP*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*instrucción de la lista de instrucciones*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de instrucciones de directiva de openmp*
@@ -41,8 +32,8 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 **/\* en C99 (ISO/IEC 9899: 1999) \*/**
 
 *elemento de bloque*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Declaración*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de OpenMP*
 
 **/\* instrucciones estándar \*/**
@@ -67,7 +58,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva de vaciado*
 
 *bloque estructurado*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*instrucción*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *construcción de paralelo*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*bloque estructurado de paralelo directiva*
@@ -100,7 +91,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 &nbsp;&nbsp;&nbsp;&nbsp;**programación (** *tipo de programación* **,** *expresión* **)**
 
 *tipo de programación*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Estático**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Dinámico**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**guiada por perfiles**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**En tiempo de ejecución**
@@ -194,22 +185,22 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 
 **/\* declaraciones estándares \*/**
 
-*declaración*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva threadprivate*
 
 *Directiva de threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *lista de variables***)** *nueva línea* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *lista de variables***)** *nueva línea*
 
 *cláusula de datos*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**privada (** *lista de variables* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***lista de variables***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***lista de variables***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *lista de variables***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***lista de variables***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***lista de variables***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *lista de variables***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**compartido (** *lista de variables* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**predeterminado (compartido)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**valor predeterminado (ninguna)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**reducción (***operador de reducción***:***lista de variables***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***lista de variables***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**reducción (***operador de reducción***:***lista de variables***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***lista de variables***)**
 
 *operador de reducción*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Uno de:  **+  \* -& ^ &#124; & &&#124;&#124;**
@@ -217,7 +208,7 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 **/\* en C \*/**
 
 *lista de variables*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*lista de variables* **,** *identificador*
 
 **/\* en C++ \*/**

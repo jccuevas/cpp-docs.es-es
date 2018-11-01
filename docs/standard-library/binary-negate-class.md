@@ -1,27 +1,17 @@
 ---
-title: binary_negate (Clase) | Microsoft Docs
-ms.custom: ''
+title: binary_negate (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::binary_negate
-dev_langs:
-- C++
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33bbd9406f6a9f35e02d5e02aa5a2d6419d1cdae
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536651"
 ---
 # <a name="binarynegate-class"></a>binary_negate (Clase)
 
@@ -61,7 +51,7 @@ La negación de la función binaria.
 
 La clase de plantilla almacena una copia de un objeto de función binaria _ *Func*. Define su función miembro `operator()` para que devuelva **!**\_ *Func(left, right).*
 
-El constructor de `binary_negate` no suele usarse directamente. La función auxiliar [not2](../standard-library/functional-functions.md#not2) se suele preferir para declarar y usar el predicado de adaptador **binary_negator**.
+El constructor de `binary_negate` no suele usarse directamente. La función del asistente [not2](../standard-library/functional-functions.md#not2) se suele preferir para declarar y usar el predicado de adaptador **binary_negator**.
 
 ## <a name="example"></a>Ejemplo
 

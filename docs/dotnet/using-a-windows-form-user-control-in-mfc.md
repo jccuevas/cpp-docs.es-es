@@ -1,12 +1,6 @@
 ---
-title: Uso de un Windows forman el Control de usuario en MFC | Microsoft Docs
-ms.custom: ''
+title: Utilizar un control de usuario de Windows Forms en MFC
 ms.date: 1/08/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 795c16a46356eb9599e02b43b51066b603b8b9ce
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494164"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Utilizar un control de usuario de Windows Forms en MFC
 
@@ -85,5 +74,5 @@ Si la aplicación MFC utiliza Windows Forms, deberá redistribuir mfcmifc80.dll 
 
 ## <a name="see-also"></a>Vea también
 
-[Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)  
-[Vistas de formulario](../mfc/form-views-mfc.md)  
+[Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)<br/>
+[Vistas de formulario](../mfc/form-views-mfc.md)

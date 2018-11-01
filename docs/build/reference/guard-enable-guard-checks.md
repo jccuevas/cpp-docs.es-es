@@ -1,23 +1,13 @@
 ---
-title: -GUARD (habilitar comprobaciones de restricción) | Microsoft Docs
-ms.custom: ''
+title: /GUARD (habilitar comprobaciones de restricción)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d775e9c42ceb8a564e2cc7992cb95ac9717a966d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 730e26477f4684ca6339a25a945ae04ff5a823c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565911"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (habilitar comprobaciones de restricción)
 
@@ -47,6 +37,6 @@ La opción /GUARD:CF debe especificarse tanto en el compilador como en el vincul
 
 ## <a name="see-also"></a>Vea también
 
-[/Guard (habilitar el Control de flujo de protección)](../../build/reference/guard-enable-control-flow-guard.md)
-[opciones de configuración del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[/guard (Habilitar Protección de flujo de control)](../../build/reference/guard-enable-control-flow-guard.md)<br/>
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

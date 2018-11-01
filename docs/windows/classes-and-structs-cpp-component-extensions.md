@@ -1,7 +1,7 @@
 ---
-title: Clases y Structs (extensiones de componentes de C++) | Microsoft Docs
+title: clase ref y struct ref (C++ / c++ / CLI y c++ / CX) | Documentos de Microsoft
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726627"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328082"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Clases y structs (Extensiones de componentes de C++)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>clase ref y struct ref (C++ / c++ / CLI y c++ / CX)
 
-Declara una clase o struct cuya *duración del objeto* se administra automáticamente. Cuando el objeto ya no es accesible o se sale del ámbito, Visual C++ descarta automáticamente la memoria asignada al objeto.
+El **clase ref** o **ref struct** extensiones declaran una clase o struct cuya *duración del objeto* se administra automáticamente. Cuando el objeto ya no es accesible o se sale del ámbito, se libera la memoria.
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
@@ -46,22 +46,22 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>Parámetros
 
-*class_access*  
+*class_access*<br/>
 (Opcional) La accesibilidad de la clase o struct fuera del ensamblado. Los valores posibles son **pública** y **privada** (**privada** es el valor predeterminado). Las clases anidadas o las estructuras no pueden tener un *class_access* especificador.
 
-*name*  
+*name*<br/>
 Nombre de la clase o struct.
 
-*Modificador*  
+*Modificador*<br/>
 (Opcional) [abstracta](../windows/abstract-cpp-component-extensions.md) y [sealed](../windows/sealed-cpp-component-extensions.md) son modificadores válidos.
 
-*inherit_access*  
+*inherit_access*<br/>
 (Opcional) La accesibilidad de *base_type*. La única accesibilidad permitida es **pública** (**pública** es el valor predeterminado).
 
-*base_type*  
+*base_type*<br/>
 (Opcional) Un tipo base. Sin embargo, un tipo de valor no puede actuar como tipo base.
 
-Para obtener más información, consulte las descripciones específicas del idioma de este parámetro en el tiempo de ejecución de Windows y Runtimesections de lenguaje común.
+Para obtener más información, consulte las descripciones específicas del idioma de este parámetro en las secciones de Windows Runtime y Common Language Runtime.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -97,7 +97,7 @@ Consulte [clases y structs Ref](../cppcx/ref-classes-and-structs-c-cx.md) y [cla
 
 ### <a name="parameters"></a>Parámetros
 
-*base_type*  
+*base_type*<br/>
 (Opcional) Un tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más interfaces y cero o uno **ref** tipos. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces.
 
 Cuando declara un objeto mediante el uso de la **clase ref** o **ref struct** palabras clave, se obtiene acceso al objeto mediante un identificador de objeto; es decir, un puntero de contador de referencias al objeto. Cuando la variable declarada se sale del ámbito, el compilador elimina automáticamente el objeto subyacente. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente un identificador del objeto.
@@ -116,7 +116,7 @@ En la tabla siguiente enumera las diferencias con la sintaxis mostrada en el **t
 
 ### <a name="parameters"></a>Parámetros
 
-*base_type*  
+*base_type*<br/>
 (Opcional) Un tipo base. Un **clase ref** o **ref struct** puede heredar de cero o más administrados, interfaces y cero o un tipo ref. Un **clase de valor** o **struct de valor** sólo puede heredar de cero o más interfaces administradas.
 
 El **clase ref** y **ref struct** palabras clave indican al compilador que es la clase o estructura debe asignarse en el montón. Cuando el objeto se usa como parámetro en una llamada o se almacena en una variable, se pasa o se almacena realmente una referencia al objeto.
@@ -129,4 +129,4 @@ Opción del compilador: `/clr`
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

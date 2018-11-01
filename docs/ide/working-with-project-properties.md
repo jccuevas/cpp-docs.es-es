@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9961eaa6529773e8d21d9c953242d1656a6a443
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43211668"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821392"
 ---
 # <a name="working-with-project-properties"></a>Trabajar con configuraciones de proyecto
 
@@ -141,11 +141,11 @@ La macro definida por el usuario se almacena en una hoja de propiedades. Si el p
 
 ##### <a name="to-create-a-user-defined-macro"></a>Para crear una macro definida por el usuario
 
-1.  En la ventana **Administrador de propiedades** (en la barra de menús, seleccione **Ver**, **Administrador de propiedades**), abra el menú contextual de una hoja de propiedades (su nombre termina en .user) y después seleccione Propiedades. Se abre el cuadro de diálogo **Páginas de propiedades** de esa hoja de propiedades.
+1. En la ventana **Administrador de propiedades** (en la barra de menús, seleccione **Ver**, **Administrador de propiedades**), abra el menú contextual de una hoja de propiedades (su nombre termina en .user) y después seleccione Propiedades. Se abre el cuadro de diálogo **Páginas de propiedades** de esa hoja de propiedades.
 
-2.  En el panel de la izquierda del cuadro de diálogo, seleccione **Macros de usuario**. En el panel de la derecha, haga clic en el botón **Agregar macro** para abrir el cuadro de diálogo **Agregar macro de usuario**.
+1. En el panel de la izquierda del cuadro de diálogo, seleccione **Macros de usuario**. En el panel de la derecha, haga clic en el botón **Agregar macro** para abrir el cuadro de diálogo **Agregar macro de usuario**.
 
-3.  En el cuadro de diálogo, especifique un nombre y un valor para la macro. Opcionalmente, active la casilla **Establecer esta macro como variable de entorno en el entorno de compilación**.
+1. En el cuadro de diálogo, especifique un nombre y un valor para la macro. Opcionalmente, active la casilla **Establecer esta macro como variable de entorno en el entorno de compilación**.
 
 ## <a name="property-editor"></a>Editor de propiedades
 
@@ -250,7 +250,7 @@ En el panel de la derecha, modifique las opciones **Entorno** o **Combinar entor
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>Modificar las propiedades y los destinos sin cambiar el archivo de proyecto
 
-Puede invalidar las propiedades y los destinos del proyecto desde la línea de comandos de MSBuild sin cambiar el archivo de proyecto. Esto es útil cuando se quieren aplicar algunas propiedades de manera ocasional o temporal. Se presuponen ciertos conocimientos de MSBuild. Para obtener más información, vea [MSBUild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild).
+Puede invalidar las propiedades y los destinos del proyecto desde la línea de comandos de MSBuild sin cambiar el archivo de proyecto. Esto es útil cuando se quieren aplicar algunas propiedades de manera ocasional o temporal. Se presuponen ciertos conocimientos de MSBuild. Para obtener más información, vea [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Para crear el archivo .props o .targets, puede usar el Editor XML de Visual Studio o cualquier editor de texto. No use el **Administrador de propiedades** en este escenario ya que agrega las propiedades al archivo de proyecto.

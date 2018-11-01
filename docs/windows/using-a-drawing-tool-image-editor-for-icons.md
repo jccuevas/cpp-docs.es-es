@@ -1,30 +1,19 @@
 ---
-title: Usar una herramienta de dibujo (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Usar una herramienta de dibujo (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.drawing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], selecting drawing tools
 - Image editor [C++], toolbar
 - drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5e7f1c678cc2f5c3595f1782f1bb3561ae90b86a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: de6308ad396a9f9e355ecefdecca444c551d51f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677089"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Usar una herramienta de dibujo (Editor de imágenes para iconos)
 
@@ -76,7 +65,7 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
 [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)

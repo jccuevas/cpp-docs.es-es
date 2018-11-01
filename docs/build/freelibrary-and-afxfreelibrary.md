@@ -1,15 +1,9 @@
 ---
-title: FreeLibrary y AfxFreeLibrary | Microsoft Docs
-ms.custom: ''
+title: FreeLibrary y AfxFreeLibrary
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - FreeLibrary
 - AfxFreeLibrary
-dev_langs:
-- C++
 helpviewer_keywords:
 - extension DLLs [C++], unloading
 - AfxFreeLibrary method
@@ -19,20 +13,16 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e6c7e498100a60a3d4c592c343cc86b5ee0a0ea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ce52eb43fa8f371b68d836f01163003f056f34c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530239"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary y AfxFreeLibrary
 
-Los procesos que se vinculan explícitamente a una llamada a la DLL del [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx) funcionar cuando ya no se necesita el módulo de DLL. Esta función reduce recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.
+Los procesos que se vinculan explícitamente a una llamada a la DLL del [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) funcionar cuando ya no se necesita el módulo de DLL. Esta función reduce recuento de referencias del módulo y, si el recuento de referencias es cero, elimina la asignación del espacio de direcciones del proceso.
 
 En una aplicación MFC, utilice [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) en lugar de `FreeLibrary` para descargar un archivo DLL de extensión MFC. La interfaz (prototipo de función) para `AfxFreeLibrary` es el mismo que `FreeLibrary`.
 
@@ -51,5 +41,5 @@ En una aplicación MFC, utilice [AfxFreeLibrary](../mfc/reference/application-in
 ## <a name="see-also"></a>Vea también
 
 [Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152(v=vs.85).aspx)
+[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

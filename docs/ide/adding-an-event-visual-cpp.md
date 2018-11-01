@@ -16,32 +16,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 657053f33a83d67e79bea13ab87da21156bde94c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: cade82c94b022c3665795ca6f0ecfb02c29cc1ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327494"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421588"
 ---
 # <a name="adding-an-event-visual-c"></a>Agregar un evento (Visual C++)
-Desde la Vista de clases, puede agregar un evento mediante el [Asistente para agregar eventos](../ide/add-event-wizard.md) solo a la clase de control del proyecto [Control ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Si quiere agregar un evento a otro tipo de proyecto, use el botón **Eventos** de la [ventana Propiedades](/visualstudio/ide/reference/properties-window).  
-  
-### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>Para agregar un evento al proyecto de control ActiveX MFC  
-  
-1.  En la Vista de clases, expanda el nodo del proyecto para mostrar las clases del proyecto.  
-  
-2.  Haga clic con el botón derecho en la clase de control del proyecto.  
-  
-3.  En el menú contextual, haga clic en **Agregar** y después en **Agregar evento** para mostrar el Asistente para agregar eventos.  
-  
-4.  Proporcione la información del evento en los cuadros apropiados del asistente.  
-  
-5.  Haga clic en **Finalizar** para agregar el evento al proyecto.  
-  
-## <a name="see-also"></a>Vea también  
- [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Agregar una clase](../ide/adding-a-class-visual-cpp.md)   
- [Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)   
- [Adición de un controlador de mensajes MFC](../mfc/reference/adding-an-mfc-message-handler.md)   
- [Navegar por la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)
+
+Desde la Vista de clases, puede agregar un evento mediante el [Asistente para agregar eventos](../ide/add-event-wizard.md) solo a la clase de control del proyecto [Control ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md). Si quiere agregar un evento a otro tipo de proyecto, use el botón **Eventos** de la [ventana Propiedades](/visualstudio/ide/reference/properties-window).
+
+### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>Para agregar un evento al proyecto de control ActiveX MFC
+
+1. En la Vista de clases, expanda el nodo del proyecto para mostrar las clases del proyecto.
+
+1. Haga clic con el botón derecho en la clase de control del proyecto.
+
+1. En el menú contextual, haga clic en **Agregar** y después en **Agregar evento** para mostrar el Asistente para agregar eventos.
+
+1. Proporcione la información del evento en los cuadros apropiados del asistente.
+
+1. Haga clic en **Finalizar** para agregar el evento al proyecto.
+
+## <a name="see-also"></a>Vea también
+
+[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Agregar una clase](../ide/adding-a-class-visual-cpp.md)<br>
+[Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Controlador de mensajes de MFC](../mfc/reference/adding-an-mfc-message-handler.md)<br>
+[Navegar por la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)

@@ -1,32 +1,25 @@
 ---
-title: Asistente para proveedores ATL OLE DB | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
+title: Asistente para proveedores OLE DB ATL
+ms.date: 10/03/2018
 f1_keywords:
 - vc.codewiz.class.atl.provider.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c01852c89d79b44bdae75b0ded9e2b8d1678cbd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441332"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Asistente para proveedores OLE DB ATL
 
 Este asistente crea las clases que componen un proveedor OLE DB.
+
+> [!WARNING]
+> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 ## <a name="remarks"></a>Comentarios
 

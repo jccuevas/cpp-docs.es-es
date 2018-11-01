@@ -1,10 +1,6 @@
 ---
-title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,16 +55,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505696"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -146,11 +136,11 @@ Cada una de estas funciones devuelve un puntero a la cadena convertida. Dado que
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strlwr** función convierte las letras mayúsculas en *str* a minúsculas, según lo determinado por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El **_strlwr** función convierte las letras mayúsculas en *str* en minúsculas según lo determinado por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-El **_wcslwr** y **_mbslwr** funciones son versiones de caracteres multibyte y anchos de **_strlwr**. El argumento y el valor devuelto de **_wcslwr** son caracteres anchos cadenas; los de **_mbslwr** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+El **_wcslwr** y **_mbslwr** funciones son versiones de caracteres anchos y caracteres multibyte de **_strlwr**. El valor de argumentos y valores devueltos de **_wcslwr** son caracteres anchos cadenas; los de **_mbslwr** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
-Si *str* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven la cadena original y establecen **errno** a **EINVAL**.
+Si *str* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven la cadena original y establecen **errno** a **EINVAL**.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

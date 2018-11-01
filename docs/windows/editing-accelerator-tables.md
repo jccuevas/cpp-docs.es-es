@@ -1,29 +1,18 @@
 ---
-title: Editar tablas de aceleradores (C++) | Microsoft Docs
-ms.custom: ''
+title: Editar tablas de aceleradores (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - keyboard shortcuts [C++], editing in an accelerator table
 ms.assetid: 56e24efb-d06b-4ed9-8915-1f99f725e247
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 14f9e82e87d395341dc1f05f1de49a20d58fec52
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2714374ab76523729c1b07c87f87fa00fdf5c24f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314890"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537779"
 ---
 # <a name="editing-accelerator-tables-c"></a>Editar tablas de aceleradores (C++)
 
@@ -51,5 +40,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de aceleradores](../windows/accelerator-editor.md)  
+[Editor de aceleradores](../windows/accelerator-editor.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

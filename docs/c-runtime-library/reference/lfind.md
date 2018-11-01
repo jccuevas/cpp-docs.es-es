@@ -1,10 +1,6 @@
 ---
-title: _lfind | Microsoft Docs
-ms.custom: ''
+title: _lfind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lfind
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - lfind
 - _lfind
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - lfind function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450655"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579171"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -83,9 +73,9 @@ Si se encuentra la clave, **_lfind** devuelve un puntero al elemento de la matri
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lfind** función realiza una búsqueda lineal para el valor *clave* en una matriz de *número* elementos, cada uno de los *ancho* bytes. A diferencia de **bsearch**, **_lfind** no requiere que la matriz se ordenen. El *base* argumento es un puntero a la base de la matriz que se debe buscar. El *comparar* argumento es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y, a continuación, devuelve un valor que especifica la relación. **_lfind** llamadas el *comparar* rutinas una o varias veces durante la búsqueda, pasar punteros a dos elementos de la matriz en cada llamada. El *comparar* rutina debe comparar los elementos y, a continuación, devolver es distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
+El **_lfind** función realiza una búsqueda lineal del valor *clave* en una matriz de *número* elementos, cada uno de *ancho* bytes. A diferencia de **bsearch**, **_lfind** no requiere la matriz esté ordenada. El *base* argumento es un puntero a la base de la matriz se va a buscar. El *comparar* argumento es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y, a continuación, devuelve un valor que especifica su relación. **_lfind** llamadas la *comparar* rutinarias una o varias veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. El *comparar* rutina debe comparar los elementos y, a continuación, devolver distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
 
-Esta función valida sus parámetros. Si *comparar*, *clave* o *número* es **NULL**, o si *base* es **NULL**y *número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
+Esta función valida sus parámetros. Si *comparar*, *clave* o *número* es **NULL**, o si *base* es **NULL**y *número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve **NULL**.
 
 ## <a name="requirements"></a>Requisitos
 

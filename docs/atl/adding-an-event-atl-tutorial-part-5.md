@@ -1,23 +1,14 @@
 ---
-title: Agregar un evento (ATL Tutorial, parte 5) | Microsoft Docs
+title: Agregar un evento (Tutorial de ATL, Parte 5)
 ms.custom: get-started-article
-ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
+ms.date: 09/27/2018
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb72babcc4bf425e4ea588e4e2a155b077c47cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4576af12f73e907fa8826ad71185a42ed9b9308e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643048"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Agregar un evento (Tutorial de ATL, Parte 5)
 
@@ -39,53 +30,30 @@ El atributo de origen indica que el control es el origen de las notificaciones, 
 
 Ahora, agregue el `ClickIn` y `ClickOut` métodos para la `_IPolyCtlEvents` interfaz.
 
-#### <a name="to-add-the-clickin-and-clickout-methods"></a>Para agregar los métodos ClickIn y ClickOut
+### <a name="to-add-the-clickin-and-clickout-methods"></a>Para agregar los métodos ClickIn y ClickOut
 
-1. En la vista de clases, expanda Polygon y PolygonLib para mostrar _IPolyCtlEvents.
+1. En **el Explorador de soluciones**, abra Polygon.idl y agregue el siguiente código bajo `methods:` en el `dispInterface_IPolyCtlEvents` declaración de la biblioteca PolygonLib:
 
-2. Haga clic en _IPolyCtlEvents. En el menú contextual, haga clic en **Agregar** y después en **Agregar método**.
-
-3. Seleccione un **tipo de valor devuelto** de `void`.
-
-4. Escriba *ClickIn* en el **nombre del método** cuadro.
-
-5. En **atributos de parámetro**, seleccione el **en** cuadro.
-
-6. Seleccione un **tipo de parámetro** de `LONG`.
-
-7. Tipo *x* como el **nombre del parámetro**y haga clic en **agregar**.
-
-8. Repita los pasos 5 a 7, esta vez para una **nombre del parámetro** de *y*.
-
-9. Haga clic en **Siguiente**.
-
-10. Tipo `method ClickIn` como el **helpstring**.
-
-11. Haga clic en **Finalizar**.
-
-12. Repita los pasos anteriores para definir un `ClickOut` método con el mismo `LONG` parámetros *x* y *y*, el mismo **atributos de parámetro** y el mismo `void` tipo de valor devuelto.
-
-Compruebe el archivo Polygon.idl para ver que el código se ha agregado a la `_IPolyCtlEvents` dispinterface.
-
-El `_IPolyCtlEvents` dispinterface del archivo Polygon.idl ahora debería parecerse a esto:
-
-[!code-cpp[NVC_ATL_Windowing#56](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_1.idl)]
+    ```cpp
+   [id(1), helpstring("method ClickIn")] void ClickIn([in] LONG x,[in] LONG y);
+   [id(2), helpstring("method ClickOut")] void ClickOut([in] LONG x,[in] LONG y);
+    ```
 
 El `ClickIn` y `ClickOut` métodos toman la x y coordenadas del punto donde ha hecho clic como parámetros.
 
 ## <a name="generating-the-type-library"></a>Generar la biblioteca de tipos
 
-Generar la biblioteca de tipos en este momento, ya que el Asistente para puntos de conexión se utiliza para obtener la información que necesita construir una interfaz de punto de conexión y una interfaz de contenedor de punto de conexión para el control.
+Generar la biblioteca de tipos en este momento, porque el proyecto usará para obtener la información que necesita construir una interfaz de punto de conexión y una interfaz de contenedor de punto de conexión para el control.
 
-#### <a name="to-generate-the-type-library"></a>Para generar la biblioteca de tipos
+### <a name="to-generate-the-type-library"></a>Para generar la biblioteca de tipos
 
 1. Recompile el proyecto.
 
      O bien
 
-2. Haga clic en el archivo Polygon.idl en el Explorador de soluciones y haga clic en **compilar** en el menú contextual.
+1. Haga clic en el archivo Polygon.idl en **el Explorador de soluciones** y haga clic en **compilar** en el menú contextual.
 
-Esto creará el archivo Polygon.tlb, que es la biblioteca de tipos. El archivo Polygon.tlb no es visible desde el Explorador de soluciones, ya que es un archivo binario y no puede ver ni modificar directamente.
+Esto creará el archivo Polygon.tlb, que es la biblioteca de tipos. No es visible desde el archivo Polygon.tlb **el Explorador de soluciones**, porque es un archivo binario y no puede ver ni modificar directamente.
 
 ## <a name="implementing-the-connection-point-interfaces"></a>Implementación de las Interfaces de punto de conexión
 
@@ -95,39 +63,90 @@ La interfaz que implementa un punto de conexión se denomina `IConnectionPoint`,
 
 Para ayudar a implementar `IConnectionPoint`, utilizará el Asistente para implementar puntos de conexión. Este asistente genera el `IConnectionPoint` interfaz mediante la lectura de la biblioteca de tipos e implementando una función por cada evento que se puede activar.
 
-#### <a name="to-use-the-implement-connection-point-wizard"></a>Para usar al Asistente para implementar puntos de conexión
+### <a name="to-implement-the-connection-points"></a>Para implementar los puntos de conexión
 
-1. En la vista de clases, haga clic en la clase del control implementación `CPolyCtl`.
+1. En **el Explorador de soluciones**, abra _IPolyCtlEvents_CP.h y agregue el siguiente código bajo el `public:` instrucción en el `CProxy_IPolyCtlEvents` clase:
 
-2. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **agregar punto de conexión**.
+    ```cpp
+    VOID Fire_ClickIn(LONG x, LONG y)
+    {
+        T* pT = static_cast<T*>(this);
+        int nConnectionIndex;
+        CComVariant* pvars = new CComVariant[2];
+        int nConnections = m_vec.GetSize();
 
-3. Seleccione `_IPolyCtlEvents` desde el **Interfaces de origen** lista y haga doble clic en él para agregarlo a la **implementar puntos de conexión** columna. Haga clic en **Finalizar**. Se generará una clase de proxy del punto de conexión, en este caso, `CProxy_IPolyCtlEvents`.
+        for (nConnectionIndex = 0; nConnectionIndex < nConnections; nConnectionIndex++)
+        {
+            pT->Lock();
+            CComPtr<IUnknown> sp = m_vec.GetAt(nConnectionIndex);
+            pT->Unlock();
+            IDispatch* pDispatch = reinterpret_cast<IDispatch*>(sp.p);
+            if (pDispatch != NULL)
+            {
+                pvars[1].vt = VT_I4;
+                pvars[1].lVal = x;
+                pvars[0].vt = VT_I4;
+                pvars[0].lVal = y;
+                DISPPARAMS disp = { pvars, NULL, 2, 0 };
+                pDispatch->Invoke(0x1, IID_NULL, LOCALE_USER_DEFAULT, DISPATCH_METHOD, &disp, NULL, NULL, NULL);
+            }
+        }
+        delete[] pvars;
 
-Si observa el archivo _IPolyCtlEvents_CP.h generado en el Explorador de soluciones, verá que tiene una clase denominada `CProxy_IPolyCtlEvents` que se deriva de `IConnectionPointImpl`. _IPolyCtlEvents_CP.h también define los dos métodos `Fire_ClickIn` y `Fire_ClickOut`, que toman los dos parámetros de coordenadas. Estos métodos se llaman cuando desea desencadenar un evento desde el control.
+    }
+    VOID Fire_ClickOut(LONG x, LONG y)
+    {
+        T* pT = static_cast<T*>(this);
+        int nConnectionIndex;
+        CComVariant* pvars = new CComVariant[2];
+        int nConnections = m_vec.GetSize();
 
-El asistente también agrega `CProxy_PolyEvents` y `IConnectionPointContainerImpl` a la lista de herencia múltiple de su control. El asistente también expuesto `IConnectionPointContainer` automáticamente mediante la adición de entradas correspondientes al mapa COM.
+        for (nConnectionIndex = 0; nConnectionIndex < nConnections; nConnectionIndex++)
+        {
+            pT->Lock();
+            CComPtr<IUnknown> sp = m_vec.GetAt(nConnectionIndex);
+            pT->Unlock();
+            IDispatch* pDispatch = reinterpret_cast<IDispatch*>(sp.p);
+            if (pDispatch != NULL)
+            {
+                pvars[1].vt = VT_I4;
+                pvars[1].lVal = x;
+                pvars[0].vt = VT_I4;
+                pvars[0].lVal = y;
+                DISPPARAMS disp = { pvars, NULL, 2, 0 };
+                pDispatch->Invoke(0x2, IID_NULL, LOCALE_USER_DEFAULT, DISPATCH_METHOD, &disp, NULL, NULL, NULL);
+            }
+        }
+        delete[] pvars;
+
+    }
+    ```
+
+Verá que este archivo tiene una clase denominada `CProxy_IPolyCtlEvents` que se deriva de `IConnectionPointImpl`. _IPolyCtlEvents_CP.h define ahora los dos métodos `Fire_ClickIn` y `Fire_ClickOut`, que toman los dos parámetros de coordenadas. Estos métodos se llaman cuando desea desencadenar un evento desde el control.
+
+Creando el control con **puntos de conexión** opción seleccionada, el archivo _IPolyCtlEvents_CP.h se generó para usted. Se agregó también `CProxy_PolyEvents` y `IConnectionPointContainerImpl` a la lista de herencia múltiple de su control y exponen `IConnectionPointContainer` automáticamente mediante la adición de entradas correspondientes al mapa COM.
 
 Ya ha terminado de implementar el código para admitir los eventos. Ahora, agregue código para activar los eventos en el momento adecuado. Recuerde que va a activar una `ClickIn` o `ClickOut` cuando el usuario hace clic en el botón primario del mouse en el control de eventos. Para averiguar cuándo el usuario hace clic en el botón, agregue un controlador para el `WM_LBUTTONDOWN` mensaje.
 
-#### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>Para agregar un controlador para el mensaje WM_LBUTTONDOWN
+### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>Para agregar un controlador para el mensaje WM_LBUTTONDOWN
 
-1. En la vista de clases, haga clic en la clase CPolyCtl y haga clic en **propiedades** en el menú contextual.
+1. En **vista de clases**, haga clic en el `CPolyCtl` clase y haga clic en **propiedades** en el menú contextual.
 
-2. En el **propiedades** ventana, haga clic en el **mensajes** icono y, a continuación, haga clic en `WM_LBUTTONDOWN` en la lista de la izquierda.
+1. En el **propiedades** ventana, haga clic en el **mensajes** icono y, a continuación, haga clic en `WM_LBUTTONDOWN` en la lista de la izquierda.
 
-3. En la lista desplegable que aparece, haga clic en  **\<Agregar > OnLButtonDown**. El `OnLButtonDown` declaración del controlador se agregarán a PolyCtl.h y la implementación del controlador se agregarán a PolyCtl.cpp.
+1. En la lista desplegable que aparece, haga clic en  **\<Agregar > OnLButtonDown**. El `OnLButtonDown` declaración del controlador se agregarán a PolyCtl.h y la implementación del controlador se agregarán a PolyCtl.cpp.
 
 A continuación, modifique el controlador.
 
-#### <a name="to-modify-the-onlbuttondown-method"></a>Para modificar el método OnLButtonDown
+### <a name="to-modify-the-onlbuttondown-method"></a>Para modificar el método OnLButtonDown
 
 1. Cambiar el código que contiene el `OnLButtonDown` método PolyCtl.cpp (eliminando el código insertado el asistente) para que se parece a esto:
 
-     [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]
+    [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]
 
 Esto permite código calcula el uso de los puntos en el `OnDraw` función para crear una región que detecta los clics del usuario con la llamada a `PtInRegion`.
 
-El *uMsg* parámetro es el identificador del mensaje de Windows está controlando. Esto le permite tener una función que controla un intervalo de mensajes. El *wParam* y *lParam* parámetros son los valores estándar para el mensaje que se está controlando. El parámetro bHandled permite especificar si la función controló el mensaje o no. De forma predeterminada, el valor se establece en TRUE para indicar que la función controló el mensaje, pero se puede establecer en FALSE. Esto hará que ATL continuar buscando otra función de controlador de mensajes enviar el mensaje.
+El *uMsg* parámetro es el identificador del mensaje de Windows está controlando. Esto le permite tener una función que controla un intervalo de mensajes. El *wParam* y *lParam* parámetros son los valores estándar para el mensaje que se está controlando. El parámetro *bHandled* le permite especificar si la función controló el mensaje o no. De forma predeterminada, el valor se establece en TRUE para indicar que la función controló el mensaje, pero se puede establecer en FALSE. Esto hará que ATL continuar buscando otra función de controlador de mensajes enviar el mensaje.
 
 ## <a name="building-and-testing-the-control"></a>Compilar y probar el control
 
@@ -140,4 +159,3 @@ A continuación, agregará una página de propiedades.
 ## <a name="see-also"></a>Vea también
 
 [Tutorial](../atl/active-template-library-atl-tutorial.md)
-

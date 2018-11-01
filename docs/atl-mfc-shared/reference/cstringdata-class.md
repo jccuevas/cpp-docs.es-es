@@ -1,10 +1,6 @@
 ---
-title: CStringData (clase) | Microsoft Docs
-ms.custom: ''
+title: CStringData (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CStringData
 - ATLSIMPSTR/ATL::CStringData
@@ -19,22 +15,16 @@ f1_keywords:
 - ATLSIMPSTR/ATL::nDataLength
 - ATLSIMPSTR/ATL::nRefs
 - ATLSIMPSTR/ATL::pStringMgr
-dev_langs:
-- C++
 helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 41b212c0a8af3fde7fb8630b2fcb513f5edad2ee
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43759693"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589532"
 ---
 # <a name="cstringdata-class"></a>CStringData (clase)
 
@@ -261,6 +251,6 @@ Bloqueo y desbloqueo se utilizan cuando el programador debe asegurarse de que no
 
 ## <a name="see-also"></a>Vea también
 
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

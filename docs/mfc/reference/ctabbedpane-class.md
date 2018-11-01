@@ -1,10 +1,6 @@
 ---
-title: CTabbedPane (clase) | Microsoft Docs
-ms.custom: ''
+title: CTabbedPane (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTabbedPane
 - AFXTABBEDPANE/CTabbedPane
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXTABBEDPANE/CTabbedPane::SetTabAutoColors
 - AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop
 - AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTabbedPane [MFC], DetachPane
 - CTabbedPane [MFC], EnableTabAutoColor
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d345d7a5aef53ac7975564a580f1353157a01376
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645723"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane (clase)
 
@@ -183,9 +173,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *pBar*  
+[in] *pBar*<br/>
 
-[in] *bHide*  
+[in] *bHide*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -224,10 +214,10 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Parámetros
 
-*pBar*<br/>
-[in] [in] *nTabID*  
-*dockMethod*<br/>
-[in] [in] *bHide*  
+[in] *pBar*<br/>
+[in] *nTabID*<br/>
+[in] *dockMethod*<br/>
+[in] *bHide*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -308,6 +298,7 @@ Debe establecer este valor antes de que se ha creado un panel con pestañas.
 El valor predeterminado es FALSE.
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 Información de clase en tiempo de ejecución para un derivado de `CMFCTabCtrl` personalizado.
 
 ```
@@ -351,8 +342,8 @@ Use [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) para habilitar o desh
 
 ## <a name="see-also"></a>Vea también
 
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)  
-[Clases](../../mfc/reference/mfc-classes.md)  
-[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)  
-[CBaseTabbedPane (clase)](../../mfc/reference/cbasetabbedpane-class.md)  
-[CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)  
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
+[Clases](../../mfc/reference/mfc-classes.md)<br/>
+[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
+[CBaseTabbedPane (clase)](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBar (clase)](../../mfc/reference/cmfcoutlookbar-class.md)

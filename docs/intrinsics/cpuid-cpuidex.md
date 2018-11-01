@@ -1,30 +1,20 @@
 ---
-title: __cpuid, __cpuidex | Microsoft Docs
-ms.custom: ''
+title: __cpuid, __cpuidex
 ms.date: 03/22/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __cpuid_cpp
 - __cpuid
-dev_langs:
-- C++
 helpviewer_keywords:
 - __cpuid intrinsic
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 047f74a48b2c3f378b81868721b16ecdd22a6379
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494562"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -404,7 +394,6 @@ SYSCALL supported
 TBM not supported
 XOP not supported
 XSAVE supported
-
 ```
 
 **FIN de Específicos de Microsoft**

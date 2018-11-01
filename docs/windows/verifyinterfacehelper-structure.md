@@ -1,28 +1,20 @@
 ---
-title: VerifyInterfaceHelper (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: VerifyInterfaceHelper (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInterfaceHelper
-dev_langs:
-- C++
+- implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify
 helpviewer_keywords:
-- VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c8ac728c70b160b64b66ddc697c54e4c488320db
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: cdd0272953b2399cd71efe207eb1c56e5de154e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42607880"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448417"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (estructura)
 
@@ -31,21 +23,16 @@ Admite la infraestructura de la biblioteca de plantillas C++ de Windows en tiemp
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <
-   bool isWinRTInterface,
-   typename I
->
+template <bool isWinRTInterface, typename I>
 struct VerifyInterfaceHelper;
 
-template <
-   typename I
->
+template <typename I>
 struct VerifyInterfaceHelper<false, I>;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*I*  
+*I*<br/>
 Para comprobar una interfaz.
 
 *isWinRTInterface*
@@ -58,9 +45,9 @@ Comprueba que la interfaz especificada por el parámetro de plantilla cumple det
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[VerifyInterfaceHelper::Verify (método)](../windows/verifyinterfacehelper-verify-method.md)||
+Name                                            | Descripción
+----------------------------------------------- | ---------------------------------------------------------------------------------------------------
+[VerifyInterfaceHelper::Verify (método)](#verify) | Comprueba que la interfaz especificada por el parámetro de plantilla actual cumple determinados requisitos.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -72,6 +59,14 @@ Comprueba que la interfaz especificada por el parámetro de plantilla cumple det
 
 **Namespace:** wrl
 
-## <a name="see-also"></a>Vea también
+## <a name="verify"></a>Verifyinterfacehelper
 
-[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Comentarios
+
+Comprueba que la interfaz especificada por el parámetro de plantilla actual cumple determinados requisitos.

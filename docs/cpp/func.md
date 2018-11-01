@@ -1,29 +1,19 @@
 ---
-title: __Func__ | Documentos de Microsoft
-ms.custom: ''
+title: __func__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438589"
 ---
-# <a name="func"></a>__Func__
+# <a name="func"></a>__func__
 
-**(C ++ 11)**  El identificador predefinido &#95; &#95;func&#95; &#95; se define implícitamente como una cadena que contiene el nombre completo y sin adornar de la función de inclusión. &#95;&#95;Func&#95; &#95; está asignada por el estándar de C++ y no es una extensión de Microsoft.
+**(C ++ 11)**  El identificador predefinido &#95; &#95;func&#95; &#95; se definió implícitamente como una cadena que contiene el nombre no completo y sin adornar de la función envolvente. &#95;&#95;Func&#95; &#95; está asignada por el estándar de C++ y no es una extensión de Microsoft.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un terminada en null const char una matriz de caracteres que contiene el nombre de función.
+Devuelve terminada en null const char matriz de caracteres que contiene el nombre de función.
 
 ## <a name="example"></a>Ejemplo
 

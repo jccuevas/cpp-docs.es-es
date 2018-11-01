@@ -1,27 +1,17 @@
 ---
-title: _com_error (clase) | Microsoft Docs
-ms.custom: ''
+title: _com_error (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _com_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfbaf1f0c88eaeb71bc4dfbbf2dca72c8d07251e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 093509d838ba6dc06a9b84b4c680c631a47826ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435184"
 ---
 # <a name="comerror-class"></a>_com_error (Clase)
 
@@ -56,7 +46,7 @@ Un **_com_error** objeto representa una condición de excepción detectada por l
 |[Descripción](../cpp/com-error-description.md)|Llama a la función `IErrorInfo::GetDescription`.|
 |[HelpContext](../cpp/com-error-helpcontext.md)|Llama a la función `IErrorInfo::GetHelpContext`.|
 |[HelpFile](../cpp/com-error-helpfile.md)|Llama a la función `IErrorInfo::GetHelpFile`.|
-|[Source](../cpp/com-error-source.md)|Llama a la función `IErrorInfo::GetSource`.|
+|[Origen](../cpp/com-error-source.md)|Llama a la función `IErrorInfo::GetSource`.|
 |[GUID](../cpp/com-error-guid.md)|Llama a la función `IErrorInfo::GetGUID`.|
 
 ### <a name="format-message-extractor"></a>Extractor de mensajes de formato

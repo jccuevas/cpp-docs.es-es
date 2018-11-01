@@ -1,10 +1,6 @@
 ---
-title: memmove_s, wmemmove_s | Microsoft Docs
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561192"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -86,13 +76,13 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|any|any|**EINVAL**|no modificado|
 |any|any|**NULL**|**EINVAL**|no modificado|
-|any|< *Recuento*|any|**ERANGE**|no modificado|
+|any|< *recuento*|any|**ERANGE**|no modificado|
 
 ## <a name="remarks"></a>Comentarios
 
-Copias *recuento* bytes de caracteres de *src* a *dest*. Si algunas regiones del área de origen y el destino se superponen, **memmove_s** garantiza que se copian los bytes de origen original en la región que se superpone antes de que se sobrescriba.
+Copias *recuento* bytes de caracteres de *src* a *dest*. Si algunas regiones del área de origen y el destino se superponen, **memmove_s** garantiza que se copian los bytes de origen original en la región superpuesta antes de que se sobrescriban.
 
-Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
+Si *dest* o si *src* es un puntero nulo, o si la cadena de destino es demasiado pequeña, estas funciones invocan un controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

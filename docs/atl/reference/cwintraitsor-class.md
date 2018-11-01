@@ -1,31 +1,21 @@
 ---
-title: CWinTraitsOR (clase) | Microsoft Docs
-ms.custom: ''
+title: CWinTraitsOR (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CWinTraitsOR
 - ATLWIN/ATL::CWinTraitsOR
 - ATLWIN/ATL::CWinTraitsOR::GetWndExStyle
 - ATLWIN/ATL::CWinTraitsOR::GetWndStyle
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 153ff21a9122839c7d306e33d57afab69c3c155e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646347"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR (clase)
 
@@ -38,7 +28,7 @@ Esta clase proporciona un método de normalización de los estilos usados al cre
 
 ```
 template <DWORD t_dwStyle = 0,
-          DWORD t_dwExStyle = 0, 
+          DWORD t_dwExStyle = 0,
           class TWinTraits = CControlWinTraits>
 class CWinTraitsOR
 ```

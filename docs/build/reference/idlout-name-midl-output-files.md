@@ -1,15 +1,9 @@
 ---
-title: -IDLOUT (dar nombre a los archivos de salida MIDL) | Microsoft Docs
-ms.custom: ''
+title: /IDLOUT (Dar nombre a los archivos de resultados de MIDL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /idlout
 - VC.Project.VCLinkerTool.MergedIDLBaseFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - MIDL, output file names
 - .idl files, path
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6749b59a1c12b5d7c3116a925adc727ad6f7ab5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500430"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Dar nombre a los archivos de resultados de MIDL)
 
@@ -82,6 +72,6 @@ Si especifica/IDLOUT ni TLBOUT, el vinculador creará vc70.tlb, vc70.idl, vc70_p
 
 [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (no procesar atributos en MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (especificar las opciones de línea de comandos MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)
-[compilar programas con atributos](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (No procesar atributos en MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Compilación de programas con atributos](../../windows/building-an-attributed-program.md)

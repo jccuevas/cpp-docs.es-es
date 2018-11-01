@@ -1,5 +1,5 @@
 ---
-title: Compilar en el marco | Documentos de Microsoft
+title: Compilar en el marco | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c10b9d0903901cfe564b161a250d58078d5a08c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ca0ebd9bf03df8725c14df8d2aca1f7858b7b65
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341559"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396186"
 ---
 # <a name="building-on-the-framework"></a>Compilar en el marco
-Su rol en la configuración de una aplicación con el marco de trabajo MFC es proporcionar el código de origen específica de la aplicación y para conectar los componentes definiendo qué mensajes y comandos a los que responden. Usar el lenguaje C++ y las técnicas estándar de C++ para derivar sus propias clases específicas de la aplicación de los proporcionados por la biblioteca de clases y para reemplazar y extender el comportamiento de la clase base.  
-  
- En otros temas relacionados, las tablas siguientes describen la secuencia general de las operaciones que normalmente se siguen y sus responsabilidades frente a las responsabilidades del marco de trabajo:  
-  
--   [Secuencia para la creación de una aplicación con el marco de trabajo](../mfc/sequence-of-operations-for-building-mfc-applications.md)  
-  
--   [Secuencia de operaciones para crear aplicaciones OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)  
-  
--   [Secuencia de operaciones para crear controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)  
-  
--   [Secuencia de operaciones para crear aplicaciones de base de datos](../mfc/sequence-of-operations-for-creating-database-applications.md)  
-  
- En su mayor parte, puede seguir estas tablas como una secuencia de pasos para crear una aplicación MFC, aunque algunos de los pasos son opciones alternativas. Por ejemplo, la mayoría de las aplicaciones usa un tipo de clase de vista de los diferentes tipos disponibles.  
-  
-## <a name="see-also"></a>Vea también  
- [Temas generales de MFC](../mfc/general-mfc-topics.md)
+
+Su rol en la configuración de una aplicación con el marco de trabajo MFC es proporcionar el código fuente específica de la aplicación y para conectar los componentes definiendo qué mensajes y comandos a la que responden. Usar el lenguaje C++ y las técnicas estándar de C++ para derivar sus propias clases específicas de la aplicación de las proporcionadas por la biblioteca de clases y para invalidar y aumentar el comportamiento de la clase base.
+
+En otros temas relacionados, las tablas siguientes describen la secuencia general de las operaciones que normalmente se siguen y sus responsabilidades frente a las responsabilidades de .NET framework:
+
+- [Secuencia para la creación de una aplicación con el marco de trabajo](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+
+- [Secuencia de operaciones para crear aplicaciones OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+
+- [Secuencia de operaciones para crear controles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+
+- [Secuencia de operaciones para crear aplicaciones de base de datos](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+En su mayor parte, puede seguir estas tablas como una secuencia de pasos para crear una aplicación MFC, aunque algunos de los pasos son opciones alternativas. Por ejemplo, la mayoría de las aplicaciones usa un tipo de clase de vista de los diferentes tipos disponibles.
+
+## <a name="see-also"></a>Vea también
+
+[Temas generales de MFC](../mfc/general-mfc-topics.md)
 

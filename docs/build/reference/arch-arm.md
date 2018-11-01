@@ -1,23 +1,13 @@
 ---
-title: -arch (ARM) | Microsoft Docs
-ms.custom: ''
+title: /arch (ARM)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17f0f0735981c0a851bcab62ca1ad39c97af3965
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf12abd140a56b1b914156083ecbbd3e61e7285a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495588"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
@@ -59,6 +49,6 @@ Cuando usas [/CLR](../../build/reference/clr-common-language-runtime-compilation
 
 ## <a name="see-also"></a>Vea también
 
-[/arch (arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/arch (Arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

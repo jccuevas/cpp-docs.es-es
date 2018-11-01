@@ -1,28 +1,17 @@
 ---
-title: Recursos para crear un juego de C++ usando DirectX | Microsoft Docs
-ms.custom: ''
+title: Recursos para crear un juego de C++ con DirectX
 ms.date: 06/08/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - games [C++]
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 414074c6cbc7945573409923da8070eac218c91a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d76db600c5cec1099daa195324e7102ed5cdbd24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586802"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Recursos para crear un juego de C++ con DirectX
 
@@ -36,7 +25,7 @@ Para Windows 8.1 y versiones posteriores, el SDK de DirectX se incluye en el SDK
 
 Para crear aplicaciones de DirectX para Windows 7, Windows Vista o Windows XP, puede descargar la aplicación independiente [DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
 
-[Gráficos de DirectX y juegos](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) tiene información y ejemplos que le ayudarán a empezar a trabajar con DirectX de programación.
+[Gráficos de DirectX y juegos](https://msdn.microsoft.com/library/windows/desktop/ee663274) tiene información y ejemplos que le ayudarán a empezar a trabajar con DirectX de programación.
 
 [Las aplicaciones Windows Win32](../windows/windows-desktop-applications-cpp.md) contiene artículos que describen cómo crear una aplicación básica de escritorio de Windows.
 

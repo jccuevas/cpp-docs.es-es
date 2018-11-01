@@ -1,14 +1,8 @@
 ---
-title: -Fm (nombre de archivo de asignaciones) | Microsoft Docs
-ms.custom: ''
+title: /Fm (Asignar nombre al archivo de asignaciones)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /fm
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Fm compiler option [C++]
 - mapfiles [C++], creating linker
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e69a273d523a78adc2b71652e5f13fb9141d3b1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 49a3d20aee54b06bae2670be139d748fd2aaca6d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469863"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Asignar nombre al archivo de asignaciones)
 
@@ -63,7 +53,7 @@ Símbolos globales en un archivo de asignaciones normalmente tienen uno o más c
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

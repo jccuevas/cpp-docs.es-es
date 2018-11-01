@@ -1,29 +1,18 @@
 ---
-title: Ajustar el tamaño de los controles individuales | Microsoft Docs
-ms.custom: ''
+title: Cambiar el tamaño de los controles individuales
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Size to Content command
 - size, controls
 - text, autosizing controls to fit text
 - controls [C++], sizing
 ms.assetid: 14ccba02-7171-463a-a121-7018cf1e2e5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 929cf8eea66b928fe4889a98ca0a78fa7224bf17
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 32a43e6cf8eff9f1da8eb08294834982c6755f52
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466894"
 ---
 # <a name="sizing-individual-controls"></a>Cambiar el tamaño de los controles individuales
 
@@ -60,5 +49,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

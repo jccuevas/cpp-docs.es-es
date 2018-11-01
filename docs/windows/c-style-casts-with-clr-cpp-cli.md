@@ -1,26 +1,16 @@
 ---
-title: Conversiones de estilo C con /CLR (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Conversiones de estilo C con /CLR (C++ / c++ / CLI)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 28a92f115e2d5fdd3185285f245abf6d282efa7a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: abbcd61f8c86709e16958e4220c0ea96e393c8bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447078"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>Conversiones de estilo C con /clr (C++/CLI)
 
@@ -172,4 +162,4 @@ Opción del compilador: `/clr`
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

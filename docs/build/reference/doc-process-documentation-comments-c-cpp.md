@@ -1,32 +1,22 @@
 ---
-title: -doc (procesar comentarios de documentación) (C/C ++) | Microsoft Docs
-ms.custom: ''
+title: /doc (Procesar comentarios de documentación) (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - /doc
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - /doc compiler option [C++]
 - comments, C++ code
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 39b614b1ab21a654a35e30b0d3acffa15d244fb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530044"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (Procesar comentarios de documentación) (C/C++)
 
@@ -45,7 +35,7 @@ El nombre del archivo .xdc que va a crear el compilador. Solo es válido cuando 
 
 Los archivos .xdc se procesan en un archivo .xml con xdcmake.exe. Para obtener más información, consulte [referencia de XDCMake](../../ide/xdcmake-reference.md).
 
-Puede agregar comentarios de documentación para los archivos de código fuente. Para obtener más información, consulte [etiquetas recomendadas para comentarios de documentación](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
+Puede agregar comentarios de documentación para los archivos de código fuente. Para más información, consulte [Etiquetas recomendadas para los comentarios de documentación](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).
 
 Para usar el archivo .xml generado con IntelliSense, hacer que el nombre de archivo del archivo .xml igual que el ensamblado que desea admitir y ponga el archivo .xml se encuentra en el mismo directorio que el ensamblado. Cuando se hace referencia al ensamblado en el proyecto de Visual Studio, también se encuentra el archivo .xml. Para obtener más información, consulte [Using IntelliSense](/visualstudio/ide/using-intellisense) y [proporcionar comentarios del código XML](/visualstudio/ide/supplying-xml-code-comments).
 

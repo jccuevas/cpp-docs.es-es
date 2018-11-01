@@ -1,25 +1,15 @@
 ---
-title: COM + 1.0, Asistente para componentes ATL COM + 1.0 | Microsoft Docs
-ms.custom: ''
+title: COM+ 1.0, Asistente para componentes ATL COM+ 1.0
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
-dev_langs:
-- C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116105"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562063"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, Asistente para componentes ATL COM+ 1.0
 
@@ -34,7 +24,7 @@ Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea 
    |Opción|Descripción|
    |------------|-----------------|
    |**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable tiene funciones de interfaz personalizada y un enlace `IDispatch` métodos). Permite que los clientes COM y los controladores de automatización tener acceso al objeto.|
-   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> -   **Compatible con automatización** agrega compatibilidad con automatización a la interfaz personalizada. Para proyectos con atributos, Establece el **oleautomation** atributo en la coclase.|
+   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> - **Compatible con automatización** agrega compatibilidad con automatización a la interfaz personalizada. Para proyectos con atributos, Establece el **oleautomation** atributo en la coclase.|
 
 - **Uno de estos**
 

@@ -1,30 +1,20 @@
 ---
-title: -diagnostics (opciones del compilador de diagnóstico) | Microsoft Docs
-ms.custom: ''
+title: /Diagnostics (opciones del compilador de diagnóstico)
 ms.date: 11/11/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /diagnostics
 - VC.Project.VCCLCompilerTool.DiagnosticsFormat
-dev_langs:
-- C++
 helpviewer_keywords:
 - /diagnostics compiler diagnostic options [C++]
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d9b485f749f4d4d9fce4e07d9bcd6d6de564fb58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709168"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531805"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opciones del compilador de diagnóstico)
 
@@ -56,9 +46,9 @@ El **/diagnostics** opción está disponible a partir de Visual Studio 2017.
 
 1. Abra el proyecto **páginas de propiedades** cuadro de diálogo.
 
-2. En **propiedades de configuración**, expanda el **C o C++** carpeta y elija el **General** página de propiedades.
+1. En **propiedades de configuración**, expanda el **C o C++** carpeta y elija el **General** página de propiedades.
 
-3. Use el control de lista desplegable en el **diagnósticos formato** opción de presentación del campo para seleccionar un diagnóstico. Elija **Aceptar** o **aplicar** para guardar los cambios.
+1. Use el control de lista desplegable en el **diagnósticos formato** opción de presentación del campo para seleccionar un diagnóstico. Elija **Aceptar** o **aplicar** para guardar los cambios.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,10 +1,6 @@
 ---
-title: mktime, _mktime32, _mktime64 | Microsoft Docs
-ms.custom: ''
+title: mktime, _mktime32, _mktime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -25,8 +21,6 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206073"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499913"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +83,7 @@ Estas funciones se pueden usar para validar y rellenar una estructura de tm. Si 
 
 - Un valor menor que cero para que el código de la biblioteca en tiempo de ejecución de C calcule si está vigente la hora estándar o el horario de verano.
 
-La biblioteca en tiempo de ejecución de C determinará el comportamiento del horario de verano partiendo de la variable de entorno [TZ](tzset.md). Si **TZ** no se establece, la llamada API de Win32 [GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) se utiliza para obtener el horario de verano información de hora del sistema operativo. Si se produce un error, la biblioteca supone que se usan las reglas de Estados Unidos para implementar el cálculo del horario de verano. **tm_isdst** es un campo obligatorio. Si no se establece, su valor es indefinido y el valor devuelto de estas funciones es imprevisible. Si *timeptr* apunta a un **tm** estructura devuelta por una llamada anterior a [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), o [localtime](localtime-localtime32-localtime64.md) (o las variantes de estas funciones), el **tm_isdst** campo contiene el valor correcto.
+La biblioteca en tiempo de ejecución de C determinará el comportamiento del horario de verano partiendo de la variable de entorno [TZ](tzset.md). Si **TZ** no se establece, la llamada API de Win32 [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) se utiliza para obtener el horario de verano información de hora del sistema operativo. Si se produce un error, la biblioteca supone que se usan las reglas de Estados Unidos para implementar el cálculo del horario de verano. **tm_isdst** es un campo obligatorio. Si no se establece, su valor es indefinido y el valor devuelto de estas funciones es imprevisible. Si *timeptr* apunta a un **tm** estructura devuelta por una llamada anterior a [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), o [localtime](localtime-localtime32-localtime64.md) (o las variantes de estas funciones), el **tm_isdst** campo contiene el valor correcto.
 
 Tenga en cuenta que **gmtime** y **localtime** (y **_gmtime32**, **_gmtime64**, **_localtime32**, y **_localtime64**) usan un único búfer por subproceso para la conversión. Si proporciona este búfer a **mktime**, **_mktime32** o **_mktime64**, se destruye el contenido anterior.
 

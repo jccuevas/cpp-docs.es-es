@@ -1,10 +1,6 @@
 ---
-title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Microsoft Docs
-ms.custom: ''
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403666"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539693"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -106,7 +96,7 @@ Las funciones prueban un carácter *c* y, si es posible, aplican una de las conv
 |**_mbctolower**, **_mbctolower_l**|Carácter en mayúscula en carácter en minúscula.|
 |**_mbctoupper**, **_mbctoupper_l**|Carácter en minúscula en carácter en mayúscula.|
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que usa el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que usa el parámetro de configuración regional pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En versiones anteriores, **_mbctolower** se llamó a **jtolower**, y **_mbctoupper** se llamó a **jtoupper**. Para código nuevo, use los nombres nuevos.
 

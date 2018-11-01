@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096813"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860659"
 ---
 # <a name="while-statement-c"></a>while (Instrucción) (C)
 
@@ -37,7 +37,7 @@ La instrucción `while` permite repetir una instrucción hasta que una expresió
 
 1. Se evalúa *expression*.
 
-2. Si *expression* es inicialmente false, el cuerpo de la instrucción `while` nunca se ejecuta y el control pasa de la instrucción `while` a la siguiente instrucción del programa.
+1. Si *expression* es inicialmente false, el cuerpo de la instrucción `while` nunca se ejecuta y el control pasa de la instrucción `while` a la siguiente instrucción del programa.
 
    Si *expression* es true (distinta de cero), el cuerpo de la instrucción se ejecuta y se repite el proceso a partir del paso 1.
 

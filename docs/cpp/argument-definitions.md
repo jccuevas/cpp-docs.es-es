@@ -1,12 +1,6 @@
 ---
-title: Definiciones de argumentos | Microsoft Docs
-ms.custom: ''
+title: Definiciones de argumentos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - envp argument
 - main function, arguments
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3f194f337288f86190177fc7fa0f63bf18f45665
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056396"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444195"
 ---
 # <a name="argument-definitions"></a>Definiciones de argumentos
 
@@ -45,7 +35,7 @@ Una matriz de cadenas terminadas en null que representan los argumentos de la l�
 El primer argumento de línea de comandos siempre es `argv` **[1]** y el último es `argv` **[** `argc` - 1 **]**.
 
 > [!NOTE]
->  Por convención, `argv`**[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso usando [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) y si usa los argumentos primeros y segundo (*lpApplicationName* y *lpCommandLine*), `argv` **[0]** no puede ser el archivo ejecutable nombre; use [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) para recuperar el nombre del archivo ejecutable y su ruta de acceso completa.
+>  Por convención, `argv`**[0]** es el comando con el que se invoca el programa.  Sin embargo, es posible generar un proceso usando [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) y si usa los argumentos primeros y segundo (*lpApplicationName* y *lpCommandLine*), `argv` **[0]** no puede ser el archivo ejecutable nombre; use [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) para recuperar el nombre del archivo ejecutable y su ruta de acceso completa.
 
 ## <a name="microsoft-specific"></a>Específicos de Microsoft
 

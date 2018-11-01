@@ -1,12 +1,6 @@
 ---
-title: Modificación de la cuadrícula de diseño | Microsoft Docs
-ms.custom: ''
+title: Modificar la cuadrícula de diseño
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], layout grid
 - snap to layout grid
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - layout grid in Dialog Editor
 - grids, changing size
 ms.assetid: ec31f595-7542-485b-806f-efbaeccc1b3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 615138b44ab9fdbbf94d4130428ba708697c2aee
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f77c26efdca61e8225ff1761ef1d3ff815e80173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438888"
 ---
 # <a name="modifying-the-layout-grid"></a>Modificar la cuadrícula de diseño
 
@@ -52,5 +41,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)  
+[Estados del Editor de cuadros de diálogo (guías y cuadrículas)](../windows/dialog-editor-states-guides-and-grids.md)<br/>
 [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

@@ -1,28 +1,18 @@
 ---
-title: Especificar páginas de propiedades (ATL) | Microsoft Docs
-ms.custom: ''
+title: Especificar páginas de propiedades (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - ISpecifyPropertyPages
-dev_langs:
-- C++
 helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c78a48d369f25f5432158ee6f09ee4cda499e7c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069435"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642248"
 ---
 # <a name="specifying-property-pages"></a>Especificar páginas de propiedades
 
@@ -32,12 +22,12 @@ Para implementar `ISpecifyPropertyPages` mediante ATL, realice los pasos siguien
 
 1. Derive la clase de [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md).
 
-2. Agregue una entrada para `ISpecifyPropertyPages` al mapa COM de la clase.
+1. Agregue una entrada para `ISpecifyPropertyPages` al mapa COM de la clase.
 
-3. Agregar un [PROP_PAGE](reference/property-map-macros.md#prop_page) entrada al mapa de propiedades para cada página asociada al control.
+1. Agregar un [PROP_PAGE](reference/property-map-macros.md#prop_page) entrada al mapa de propiedades para cada página asociada al control.
 
 > [!NOTE]
->  Al generar un control estándar mediante el [Asistente para controles ATL](../atl/reference/atl-control-wizard.md), sólo tendrá que agregar las entradas PROP_PAGE al mapa de propiedades. El asistente genera el código necesario para los demás pasos.
+> Al generar un control estándar mediante el [Asistente para controles ATL](../atl/reference/atl-control-wizard.md), sólo tendrá que agregar las entradas PROP_PAGE al mapa de propiedades. El asistente genera el código necesario para los demás pasos.
 
 Los contenedores mostrarán las páginas de propiedades especificada en el mismo orden que las entradas PROP_PAGE en la asignación de propiedad. Por lo general, debería colocar entradas de la página de propiedades estándar después de las entradas para las páginas personalizadas en el mapa de propiedades, para que los usuarios ven las páginas específicas de su control primero.
 
@@ -51,4 +41,3 @@ La siguiente clase de un calendario de control usa el `ISpecifyPropertyPages` in
 
 [Páginas de propiedades](../atl/atl-com-property-pages.md)<br/>
 [Ejemplo ATLPages](../visual-cpp-samples.md)
-

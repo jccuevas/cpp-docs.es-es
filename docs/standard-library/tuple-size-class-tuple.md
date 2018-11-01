@@ -1,29 +1,19 @@
 ---
-title: tuple_size (Clase) | Microsoft Docs
-ms.custom: ''
+title: tuple_size (Clase);
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - tuple_size
 - std::tuple_size
 - utility/std::tuple_size
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 883e7bdefe4bc1424dfea343d8d473015e6387d6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535712"
 ---
 # <a name="tuplesize-class"></a>tuple_size (Clase);
 
@@ -105,24 +95,29 @@ int main()
 {
     MyTuple c0(0, 1.5, 2, 3.7);
 
-    // display contents " 0 1 2 3"
-    cout << " " << get<0>(c0);
+    // display contents "0 1 2 3"
+    cout << get<0>(c0);
     cout << " " << get<1>(c0);
     cout << " " << get<2>(c0);
     cout << " " << get<3>(c0) << endl;
 
-    // display size " 4"
+    // display size "4"
     cout << " " << tuple_size<MyTuple>::value << endl;
 }
 ```
 
 ```Output
- 0 1.5 2 3.7
+0 1.5 2 3.7
+4
 ```
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** \<tupla > **encabezado:** \<array > (para la especialización de matrices) **encabezado:** \<utilidad > (para la especialización de pares)
+**Encabezado:** \<tuple>
+
+**Encabezado:** \<array> (para la especialización de matrices)
+
+**Encabezado:** \<utility> (para la especialización de pares)
 
 **Espacio de nombres:** std
 

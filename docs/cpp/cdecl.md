@@ -1,27 +1,20 @@
 ---
-title: __cdecl | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __cdecl
+ms.date: 10/09/2018
 f1_keywords:
 - __cdecl_cpp
-dev_langs:
-- C++
+- __cdecl
+- _cdecl
+- cdecl
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 37804aed04f998c6762cdbbc7012ae10c19a2529
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550220"
 ---
 # <a name="cdecl"></a>__cdecl
 
@@ -62,6 +55,8 @@ equivale a esto:
 ```cpp
 void __cdecl CMyClass::mymethod() { return; }
 ```
+
+Para ofrecer compatibilidad con versiones anteriores, **cdecl** y **_cdecl** son un sinónimo de **__cdecl** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 ## <a name="example"></a>Ejemplo
 

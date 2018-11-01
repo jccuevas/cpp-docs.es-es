@@ -1,28 +1,20 @@
 ---
-title: MutexTraits (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: MutexTraits (estructura)
+ms.date: 09/27/2018
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits
-dev_langs:
-- C++
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock
 helpviewer_keywords:
-- MutexTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::MutexTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::MutexTraits::Unlock method
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 529265c4b1e5f510a92295a1ceff6d0a012163fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 84bfac08a944928ff91a7734cdbaccbe4d351e16
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42584176"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650754"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits (estructura)
 
@@ -38,9 +30,9 @@ struct MutexTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[MutexTraits::Unlock (método)](../windows/mutextraits-unlock-method.md)|Devuelve el control exclusivo de un recurso compartido.|
+Name                           | Descripción
+------------------------------ | ------------------------------------------------
+[Mutextraits](#unlock) | Devuelve el control exclusivo de un recurso compartido.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -54,6 +46,17 @@ struct MutexTraits : HANDLENullTraits;
 
 **Namespace:** handletraits
 
-## <a name="see-also"></a>Vea también
+## <a name="unlock"></a>Mutextraits (método)
 
-[Microsoft::WRL::Wrappers::HandleTraits (espacio de nombres)](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Devuelve el control exclusivo de un recurso compartido.
+
+```cpp
+inline static void Unlock(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*h*<br/>
+Identificador de un objeto de exclusión mutua.

@@ -1,10 +1,6 @@
 ---
-title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l | Microsoft Docs
-ms.custom: ''
+title: strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsnlen
 - strnlen_s
@@ -40,8 +36,6 @@ f1_keywords:
 - _mbstrnlen
 - strnlen
 - _tcscnlen_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcscnlen function
 - _mbstrnlen function
@@ -63,16 +57,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22adcaafc54a6b086629b7b9087b7088001bba85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417764"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602571"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 
@@ -133,22 +123,22 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Estas funciones devuelven el número de caracteres de la cadena, sin incluir el carácter null de terminación. Si no hay ningún terminador null en los primeros *numberOfElements* bytes de la cadena (o caracteres anchos para **wcsnlen**), a continuación, *numberOfElements* se devuelve al indicar la condición de error; cadenas terminadas en NULL tienen longitudes estrictamente menor que *numberOfElements*.
+Estas funciones devuelven el número de caracteres de la cadena, sin incluir el carácter null de terminación. Si no hay ningún terminador null en los primeros *numberOfElements* bytes de la cadena (o caracteres anchos para **wcsnlen**), a continuación, *numberOfElements* se devuelve a indicar la condición de error; cadenas terminadas en NULL tienen longitudes estrictamente menor que *numberOfElements*.
 
 **_mbstrnlen** y **_mbstrnlen_l** devuelven -1 si la cadena contiene un carácter multibyte no válido.
 
 ## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
-> **strnlen** no es un sustituto de **strlen**; **strnlen** está pensado para usarse únicamente para calcular el tamaño de los datos entrantes que no se confía en un búfer de tamaño conocido, por ejemplo, un paquete de red. **strnlen** calcula la longitud, pero no traspasa el final del búfer si la cadena está sin terminar. Para otras situaciones, vea **strlen**. (Lo mismo se aplica a **wcsnlen**, **_mbsnlen**, y **_mbstrnlen**.)
+> **strnlen** no es un sustituto de **strlen**; **strnlen** está pensado para usarse solo para calcular el tamaño de los datos entrantes que no se confía en un búfer de tamaño conocido, por ejemplo, un paquete de red. **strnlen** calcula la longitud, pero no traspasa el final del búfer si la cadena no terminada. Para otras situaciones, utilice **strlen**. (Lo mismo se aplica a **wcsnlen**, **_mbsnlen**, y **_mbstrnlen**.)
 
-Cada una de estas funciones devuelve el número de caracteres en *str*, sin incluir el carácter nulo de terminación. Sin embargo, **strnlen** y **strnlen_s** interpretar la cadena como una cadena de caracteres de byte único y por lo tanto, el valor devuelto siempre es igual al número de bytes, incluso si la cadena contiene multibyte caracteres. **wcsnlen** y **wcsnlen_s** son versiones de caracteres anchos de **strnlen** y **strnlen_s** respectivamente; los argumentos de **wcsnlen**  y **wcsnlen_s** son cadenas de caracteres anchos y el número de caracteres que se encuentran en unidades de caracteres anchos. En caso contrario, **wcsnlen** y **strnlen** se comportan exactamente igual, igual que **strnlen_s** y **wcsnlen_s**.
+Cada una de estas funciones devuelve el número de caracteres en *str*, sin incluir el carácter nulo de terminación. Sin embargo, **strnlen** y **strnlen_s** interpretar la cadena como una cadena de caracteres de byte único y por lo tanto, el valor devuelto siempre es igual al número de bytes, incluso si la cadena contiene multibyte caracteres. **wcsnlen** y **wcsnlen_s** son versiones de caracteres anchos de **strnlen** y **strnlen_s** respectivamente; los argumentos para **wcsnlen**  y **wcsnlen_s** son cadenas de caracteres anchos y el recuento de caracteres están en unidades de caracteres anchos. En caso contrario, **wcsnlen** y **strnlen** se comportan exactamente igual, igual que **strnlen_s** y **wcsnlen_s**.
 
 **strnlen**, **wcsnlen**, y **_mbsnlen** no validan sus parámetros. Si *str* es **NULL**, se produce una infracción de acceso.
 
 **strnlen_s** y **wcsnlen_s** validan sus parámetros. Si *str* es **NULL**, las funciones devuelven 0.
 
-**_mbstrnlen** también valida sus parámetros. Si *str* es **NULL**, o si *numberOfElements* es mayor que **INT_MAX**, **_mbstrnlen** genera una excepción de parámetro no válido, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbstrnlen** establece **errno** a **EINVAL** y devuelve -1.
+**_mbstrnlen** también valida sus parámetros. Si *str* es **NULL**, o si *numberOfElements* es mayor que **INT_MAX**, **_mbstrnlen** genera una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbstrnlen** establece **errno** a **EINVAL** y devuelve -1.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -158,9 +148,9 @@ Cada una de estas funciones devuelve el número de caracteres en *str*, sin incl
 |**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
-**_mbsnlen** y **_mbstrnlen** devuelve el número de caracteres multibyte en una cadena de caracteres multibyte. **_mbsnlen** reconoce las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso o de acuerdo con la configuración regional que se pasa; no comprueba la validez de los caracteres multibyte. **_mbstrnlen** comprueba la validez del carácter multibyte y reconoce secuencias de caracteres multibyte. Si la cadena que se pasa a **_mbstrnlen** contiene un carácter multibyte no válido, **errno** está establecido en **EILSEQ**.
+**_mbsnlen** y **_mbstrnlen** devuelve el número de caracteres multibyte en una cadena de caracteres multibyte. **_mbsnlen** reconoce secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso o según la configuración regional que se pasa; no comprueba la validez de los caracteres multibyte. **_mbstrnlen** comprueba la validez de los caracteres multibyte y reconoce secuencias de caracteres multibyte. Si la cadena que se pasa a **_mbstrnlen** contiene un carácter multibyte no válido, **errno** está establecido en **EILSEQ**.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usar la configuración regional actual para este comportamiento dependiente de la configuración regional y las versiones que tengan la **_l** sufijo en su lugar, use el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usar la configuración regional actual para este comportamiento dependiente de la configuración regional y las versiones que tienen el **_l** sufijo en su lugar, use el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

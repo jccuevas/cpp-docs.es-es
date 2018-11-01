@@ -1,23 +1,13 @@
 ---
-title: UNWIND_CODE (estructura) | Microsoft Docs
-ms.custom: ''
+title: UNWIND_CODE (Estructura)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 104955d8-7e33-4c5a-b0c6-3254648f0af3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1ba3cc76c521e158ba448ac2e4e1beda9b3da35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643240"
 ---
 # <a name="struct-unwindcode"></a>UNWIND_CODE (Estructura)
 
@@ -112,17 +102,17 @@ Este código de desenredado siempre aparecerá en un prólogo ficticio, lo que r
 
 1. POP RIP remite desde la parte superior de la pila en *Temp*
 
-2. Insertar SS
+1. Insertar SS
 
-3. Insertar RSP anterior
+1. Insertar RSP anterior
 
-4. Insertar EFLAGS
+1. Insertar EFLAGS
 
-5. Insertar CS
+1. Insertar CS
 
-6. Insertar *Temp*
+1. Insertar *Temp*
 
-7. Insertar código de Error (si la información de la operación es igual a 1)
+1. Insertar código de Error (si la información de la operación es igual a 1)
 
 Simulated `UWOP_PUSH_MACHFRAME` reduce operación RSP en 40 (información de la operación es igual a 0) o 48 (información de la operación es igual a 1).
 

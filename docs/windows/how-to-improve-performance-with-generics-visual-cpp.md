@@ -1,33 +1,23 @@
 ---
-title: 'Cómo: mejorar el rendimiento con genéricos (Visual C++) | Microsoft Docs'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: 'Cómo: mejorar el rendimiento con genéricos (C++ / c++ / CLI)'
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - performance, C++
 - C++, performance
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 61d858542505b0e37b03e13cca803df10ffbdddc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318531"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527964"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Cómo: Mejorar el rendimiento con genéricos (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Cómo: mejorar el rendimiento con genéricos (C++ / c++ / CLI)
 
-Con los genéricos, puede crear código reutilizable basado en un parámetro de tipo. El tipo real del parámetro de tipo se aplaza hasta que llame a código de cliente. Para obtener más información sobre genéricos, vea [genéricos](../windows/generics-cpp-component-extensions.md).
+Con los genéricos, puede crear código reutilizable basado en un parámetro de tipo. El tipo real del parámetro de tipo se aplaza hasta que llame a código de cliente. Para más información sobre genéricos, vea [Generics](../windows/generics-cpp-component-extensions.md).
 
 Este artículo describe cómo pueden ayudar a aumentar el rendimiento de una aplicación que usa colecciones de genéricos.
 
@@ -48,7 +38,7 @@ El ejemplo de código siguiente muestra los dos inconvenientes principales de la
 using namespace System;
 using namespace System::Collections;
 
-int main()  
+int main()
 {
     // This Stack can contain any type.
     Stack ^s = gcnew Stack();
@@ -64,14 +54,14 @@ int main()
     // Pop the items off the Stack.
     // The item is returned as an Object, so a cast is
     // necessary to convert it to its proper type.
-    while (s->Count> 0)  
+    while (s->Count> 0)
     {
         Object ^o = s->Pop();
-        if (o->GetType() == Type::GetType("System.String"))  
+        if (o->GetType() == Type::GetType("System.String"))
         {
             Console::WriteLine("Popped a String: {0}", (String ^)o);
         }
-        else if (o->GetType() == Type::GetType("System.Int32"))  
+        else if (o->GetType() == Type::GetType("System.Int32"))
         {
             Console::WriteLine("Popped an int: {0}", (int)o);
         }
@@ -103,7 +93,7 @@ Compare el ejemplo escrito anteriormente con este ejemplo que usa un tipo genér
 using namespace System;
 using namespace System::Collections::Generic;
 
-int main()  
+int main()
 {
     // This Stack can only contain integers.
     Stack<int> ^s = gcnew Stack<int>();

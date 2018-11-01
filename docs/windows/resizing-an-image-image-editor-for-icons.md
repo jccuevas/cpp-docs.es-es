@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0da05d9599767f52fa6e65cabb4614be191699e0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dc70d6cd5933608067a43cdb7dcca1e11dd22a2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610794"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082301"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>Cambiar el tamaño de una imagen (Editor de imágenes para iconos)
 
@@ -37,7 +37,7 @@ Cuando la selección incluye toda la imagen, el **imagen** editor bien reduce y 
 
 Hay dos mecanismos para cambiar el tamaño de una imagen: los controladores de tamaño y la [ventana propiedades](/visualstudio/ide/reference/properties-window). Puede arrastrar los controladores de tamaño para cambiar el tamaño de todo o parte de una imagen. Ajuste de tamaño que se pueden arrastrar son sólidos. No puede arrastrar cuadros huecos. Puede usar el **propiedades** ventana para cambiar el tamaño de toda la imagen solo, no es una parte seleccionada.
 
-![Controladores en un mapa de bits de tamaño](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+![Controladores en un mapa de bits de tamaño](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")<br/>
 Asas de ajuste de tamaño
 
 > [!NOTE]
@@ -59,6 +59,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

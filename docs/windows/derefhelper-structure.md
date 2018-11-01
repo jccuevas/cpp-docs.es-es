@@ -1,28 +1,18 @@
 ---
-title: DerefHelper (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: DerefHelper (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - async/Microsoft::WRL::Details::DerefHelper
-dev_langs:
-- C++
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 326974e935608c9b41866e61e72b7a85fc8cb0b2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7e9de446fdf18b3cf92cc438e421287c8fcfc29f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450207"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (estructura)
 
@@ -31,20 +21,16 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 struct DerefHelper;
 
-template <
-   typename T
->
+template <typename T>
 struct DerefHelper<T*>;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Un parámetro de plantilla.
 
 ## <a name="remarks"></a>Comentarios

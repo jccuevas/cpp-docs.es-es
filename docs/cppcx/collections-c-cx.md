@@ -1,20 +1,13 @@
 ---
-title: Colecciones (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Colecciones (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67e5b086e57c90b9cb11779d8f3af167768a45fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531600"
 ---
 # <a name="collections-ccx"></a>Colecciones (C++/CX)
 
@@ -30,7 +23,7 @@ El tiempo de ejecución de Windows define las interfaces para colecciones y tipo
 
 - La[clase Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) y la[clase Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md) son versiones de solo lectura de `Vector` y la `Map`.
 
-- Los iteradores se definen en el [espacio de nombres Platform::Collections](../cppcx/platform-collections-namespace.md). Estos iteradores cumplen los requisitos para los iteradores STL y permiten el uso de [std:: Find](../standard-library/algorithm-functions.md#find), [std:: count_if](../standard-library/algorithm-functions.md#count_if)y otros algoritmos STL en cualquier [Collections](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) tipo de interfaz o [Platform:: Collections](../cppcx/platform-collections-namespace.md) tipo concreto. Por ejemplo, esto significa que puede recorrer en iteración una colección en un componente de Windows en tiempo de ejecución que se crea en C# y aplicarle un algoritmo STL.
+- Los iteradores se definen en el [espacio de nombres Platform::Collections](../cppcx/platform-collections-namespace.md). Estos iteradores cumplen los requisitos de los iteradores de STL y permiten el uso de [std::find](../standard-library/algorithm-functions.md#find),  [std::count_if](../standard-library/algorithm-functions.md#count_if)y otros algoritmos de STL en cualquier tipo de interfaz [Windows::Foundation::Collections](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) o tipo de [Platform::Collections](../cppcx/platform-collections-namespace.md) concreto. Por ejemplo, esto significa que puede recorrer en iteración una colección en un componente de Windows en tiempo de ejecución que se crea en C# y aplicarle un algoritmo STL.
 
    > [!IMPORTANT]
    > Los iteradores de proxy `VectorIterator` y `VectorViewIterator` usan los objetos proxy `VectoryProxy<T>` y `ArrowProxy<T>` para permitir el uso de contenedores de STL. Para obtener más información, consulta “Elementos de VectorProxy” más adelante en este artículo.
@@ -60,11 +53,11 @@ Si tienes un vector de cadenas que debes pasar a través de ABI en algún moment
 
 ## <a name="value-types-in-vector"></a>Tipos de valor de Vector
 
-Cualquier elemento que se almacena en un objeto [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) debe admitir la comparación de igualdad, ya sea de forma implícita o mediante el comparador [std::equal_to](../standard-library/equal-to-struct.md) personalizado que proporciones. Todos los tipos de referencia y todos los tipos escalares admiten implícitamente comparaciones de igualdad. Para escalar que no son tipos de valor como [DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), o para las comparaciones personalizadas, por ejemplo, `objA->UniqueID == objB->UniqueID`: debe proporcionar un objeto de función personalizado.
+Cualquier elemento que se almacena en un objeto [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) debe admitir la comparación de igualdad, ya sea de forma implícita o mediante el comparador [std::equal_to](../standard-library/equal-to-struct.md) personalizado que proporciones. Todos los tipos de referencia y todos los tipos escalares admiten implícitamente comparaciones de igualdad. Para los tipos de valor no escalares como [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)o para las comparaciones personalizadas (por ejemplo, `objA->UniqueID == objB->UniqueID`) debes proporcionar un objeto de función personalizado.
 
 ## <a name="vectorproxy-elements"></a>Elementos de VectorProxy
 
-[Vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) y [vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) habilitar el uso de `range for` bucles y algoritmos como [std:: Sort](../standard-library/algorithm-functions.md#sort) con un [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) contenedor. Pero `IVector` no pueden tener acceso a los elementos a través de C++ desreferencia de puntero; se puede acceder a sólo [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) y [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) métodos. Por tanto, estos iteradores utilizan las clases de proxy `Platform::Details::VectorProxy<T>` y `Platform::Details::ArrowProxy<T>` para proporcionar acceso a los distintos elementos con los operadores `*`, `->`y `[]` , tal como STL requiere. En realidad, dado un `IVector<Person^> vec`, el tipo de `*begin(vec)` es `VectorProxy<Person^>`. Sin embargo, el objeto proxy casi siempre es transparente en el código. Estos objetos proxy no están documentados porque solo los usan internamente los operadores, pero es útil conocer cómo funciona el mecanismo.
+[Vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) y [vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) habilitar el uso de `range for` bucles y algoritmos como [std:: Sort](../standard-library/algorithm-functions.md#sort) con un [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) contenedor. Sin embargo, no se puede acceder a los elementos de `IVector` mediante la desreferencia de un puntero de C++; solo se puede acceder a ellos con los métodos [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) y [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) . Por lo tanto, estos iteradores utilizan las clases de proxy `Platform::Details::VectorProxy<T>` y `Platform::Details::ArrowProxy<T>` para proporcionar acceso a los elementos individuales a través de __\*__, __->__ y  __\[]__ operadores, según sea necesario por la biblioteca estándar. En realidad, dado un `IVector<Person^> vec`, el tipo de `*begin(vec)` es `VectorProxy<Person^>`. Sin embargo, el objeto proxy casi siempre es transparente en el código. Estos objetos proxy no están documentados porque solo los usan internamente los operadores, pero es útil conocer cómo funciona el mecanismo.
 
 Cuando usas un bucle `range for` en contenedores `IVector` , utilizas `auto&&` para permitir a la variable de iterador enlazar correctamente con los elementos de `VectorProxy` . Si usas `auto` o `auto&`, se genera la advertencia del compilador C4239 y `VectoryProxy` se menciona en el texto de la advertencia.
 
@@ -74,8 +67,7 @@ En la ilustración siguiente se muestra un bucle `range for` en un `IVector<Pers
 
 Un escenario en el que tendrás código alrededor del objeto proxy es cuando tengas que aplicar `dynamic_cast` a los elementos (por ejemplo, cuando busques objetos XAML de un tipo determinado en una colección de elementos `UIElement` ). En este caso, primero debes convertir el elemento en [Platform::Object](../cppcx/platform-object-class.md)^ y después realizar la conversión dinámica:
 
-```
-
+```cpp
 void FindButton(UIElementCollection^ col)
 {
     // Use auto&& to avoid warning C4239
@@ -96,7 +88,7 @@ En este ejemplo se muestra cómo insertar elementos y buscarlos en un [Platform:
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
-Normalmente, para la funcionalidad interna de mapas, es preferible el tipo `std::map` por razones de rendimiento. Si tiene que pasar el contenedor a través de ABI, construya un [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) desde el [std:: Map](../standard-library/map-class.md) y devolver el `Map` como un [Windows::Foundation:: Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_). Si intentas usar un tipo `Map` en un valor devuelto o parámetro público, se producirá el error del compilador C3986. Puedes corregir el error cambiando el tipo `Map` a `IMap`. En algunos casos (por ejemplo, si no estás realizando un gran número de búsquedas o inserciones y estás pasando la colección a través de ABI con frecuencia), puede ser menos oneroso utilizar `Platform::Collections::Map` desde el principio y evitar el costo de convertir el objeto `std::map`. En cualquier caso, conviene que evites operaciones de búsqueda e inserción en un objeto `IMap` ya que estas son las menos rentables en cuando a rendimiento de los tres tipos. Convierte a `IMap` solo en el momento de pasar el contenedor a través de ABI.
+Normalmente, para la funcionalidad interna de mapas, es preferible el tipo `std::map` por razones de rendimiento. Si tiene que pasar el contenedor a través de la ABI, crea un objeto [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) desde [std::map](../standard-library/map-class.md) y devuelve el objeto `Map` como un [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_). Si intentas usar un tipo `Map` en un valor devuelto o parámetro público, se producirá el error del compilador C3986. Puedes corregir el error cambiando el tipo `Map` a `IMap`. En algunos casos (por ejemplo, si no estás realizando un gran número de búsquedas o inserciones y estás pasando la colección a través de ABI con frecuencia), puede ser menos oneroso utilizar `Platform::Collections::Map` desde el principio y evitar el costo de convertir el objeto `std::map`. En cualquier caso, conviene que evites operaciones de búsqueda e inserción en un objeto `IMap` ya que estas son las menos rentables en cuando a rendimiento de los tres tipos. Convierte a `IMap` solo en el momento de pasar el contenedor a través de ABI.
 
 ## <a name="value-types-in-map"></a>Tipos de valor de Map
 
@@ -149,7 +141,7 @@ En la tabla siguiente se enumeran los iteradores y las funciones disponibles.
 
 `Vector` y `Map` admiten el enlace de datos en colecciones de XAML mediante la implementación de eventos que se producen cuando se cambia o se restablece un objeto de colección, o cuando se inserta, se quita o se cambia cualquier elemento de una colección. Puedes escribir tus propios tipos que admitan enlace de datos, aunque no puedes heredar de `Map` o `Vector` porque esos tipos están sellados.
 
-El [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) y [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) delegados especifican las firmas de los controladores de eventos para los eventos de cambio de la colección. El [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) clase enum pública, y `Platform::Collection::Details::MapChangedEventArgs` y `Platform::Collections::Details::VectorChangedEventArgs` las clases ref, almacenan los argumentos de evento para determinar la causa del evento. Los tipos *`EventArgs` se definen en el espacio de nombres `Details` porque no tienes que crearlos ni usarlos de forma explícita cuando utilices `Map` o `Vector`.
+Los delegados [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) y [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) especifican las firmas de los controladores de eventos para los eventos de cambio de la colección. La clase de enumeración pública [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) y las clases ref `Platform::Collection::Details::MapChangedEventArgs` y `Platform::Collections::Details::VectorChangedEventArgs` almacenan los argumentos de eventos para determinar la causa del evento. El `*EventArgs` tipos se definen en el `Details` espacio de nombres porque no tiene que crearlos o consumirlos explícitamente al usar `Map` o `Vector`.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,29 +1,18 @@
 ---
-title: Definir Variables miembro para controles de cuadro de diálogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Definir Variables miembro para controles de cuadro de diálogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - member variables, defining for controls
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 56a7d01d26656c8cf9def3bf09e3ccb18fb436fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449466"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>Definir Variables miembro para controles de cuadro de diálogo (C++)
 
@@ -55,11 +44,11 @@ MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)  
-[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[Asistente para clases MFC](../mfc/reference/mfc-class-wizard.md)  
-[Agregar una clase](../ide/adding-a-class-visual-cpp.md)  
-[Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)  
-[Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)  
-[Reemplazar una función Virtual](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[Asignación de mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[Asistente para clases MFC](../mfc/reference/mfc-class-wizard.md)<br/>
+[Agregar una clase](../ide/adding-a-class-visual-cpp.md)<br/>
+[Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../mfc/reference/adding-an-mfc-message-handler.md)

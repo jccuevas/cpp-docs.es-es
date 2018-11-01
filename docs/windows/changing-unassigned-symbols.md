@@ -1,30 +1,19 @@
 ---
-title: Cambiar símbolos sin asignar | Microsoft Docs
-ms.custom: ''
+title: Cambiar símbolos sin asignar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.unassigned
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], unassigned
 - Change Symbol dialog box [C++]
 - unassigned symbols
 ms.assetid: b6abee4a-3c24-4697-a166-fe6a86cad35f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 052616134fa1d650bc49fbc9d56e30a27bc9ee96
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d4e8fe86e9d95cb128efd2f80f6096fdb6798265
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432492"
 ---
 # <a name="changing-unassigned-symbols"></a>Cambiar símbolos sin asignar
 
@@ -47,7 +36,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)  
-[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)  
-[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)  
+[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)<br/>
+[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)<br/>
+[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

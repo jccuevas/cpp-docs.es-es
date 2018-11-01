@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb8e560e46da06c4312ab4261016ccd5a5ddda68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3da81f46514fbdd7d01ce9c2a9d8be6007301b45
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017852"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861582"
 ---
 # <a name="linker-tools-error-lnk2001"></a>Error de las herramientas del vinculador LNK2001
 
@@ -73,9 +73,9 @@ Este error puede producirse si crea un vínculo a las bibliotecas de modo de ver
 
 Este error puede producirse si el código hace referencia a un símbolo de una versión de una biblioteca, pero proporcionar una versión diferente de la biblioteca del vinculador. Por lo general, no se pueden mezclar archivos objeto o bibliotecas que se generan para las diferentes versiones del compilador. Las bibliotecas que se incluyen en una nueva versión pueden contener símbolos que no se encuentra en las bibliotecas incluidas con las versiones anteriores y viceversa. Para corregir este problema, cree todos los archivos objeto y bibliotecas con la misma versión del compilador antes de vincularlas.
 
--  Las herramientas de &#124; opciones &#124; proyectos &#124; cuadro de diálogo de directorios de VC ++, en la selección de archivos de biblioteca, le permite cambiar el orden de búsqueda de biblioteca. La carpeta vinculador del cuadro de diálogo páginas de propiedades del proyecto también puede contener rutas de acceso que podrían estar obsoletas.
+- Las herramientas de &#124; opciones &#124; proyectos &#124; cuadro de diálogo de directorios de VC ++, en la selección de archivos de biblioteca, le permite cambiar el orden de búsqueda de biblioteca. La carpeta vinculador del cuadro de diálogo páginas de propiedades del proyecto también puede contener rutas de acceso que podrían estar obsoletas.
 
--  Este problema puede aparecer cuando se instala un nuevo SDK (quizás en una ubicación diferente), y el orden de búsqueda no se actualiza para señalar a la nueva ubicación. Normalmente, se debe colocar la ruta de acceso al nuevo SDK include y lib directorios delante de la ubicación predeterminada Visual C++. Además, un proyecto que contiene las rutas de acceso incrustados todavía puede apuntar a rutas de acceso anteriores que sean válidos, pero obsoleto en la nueva funcionalidad agregada por la nueva versión que se instala en una ubicación diferente.
+- Este problema puede aparecer cuando se instala un nuevo SDK (quizás en una ubicación diferente), y el orden de búsqueda no se actualiza para señalar a la nueva ubicación. Normalmente, se debe colocar la ruta de acceso al nuevo SDK include y lib directorios delante de la ubicación predeterminada Visual C++. Además, un proyecto que contiene las rutas de acceso incrustados todavía puede apuntar a rutas de acceso anteriores que sean válidos, pero obsoleto en la nueva funcionalidad agregada por la nueva versión que se instala en una ubicación diferente.
 
 - Si compila en la línea de comandos y ha creado sus propias variables de entorno, compruebe que las rutas de acceso a archivos de encabezado, bibliotecas y herramientas se dirijan a una versión coherente. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
 

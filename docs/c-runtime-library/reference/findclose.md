@@ -1,10 +1,6 @@
 ---
-title: _findclose | Microsoft Docs
-ms.custom: ''
+title: _findclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findclose
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _findclose
 - findclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a25ed42f1a53eb81c834997f42db0154658f376
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395691"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538117"
 ---
 # <a name="findclose"></a>_findclose
 
@@ -54,12 +44,12 @@ int _findclose(
 
 ### <a name="parameters"></a>Parámetros
 
-*Identificador*<br/>
+*identificador*<br/>
 Identificador de búsqueda devuelto por una llamada anterior a **_findfirst**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **_findclose** devuelve 0. En caso contrario, devuelve -1 y establece **errno** a **ENOENT**, que indica que la búsqueda de coincidencias no más archivos se encontró.
+Si es correcto, **_findclose** devuelve 0. En caso contrario, devuelve -1 y establece **errno** a **ENOENT**, que indica que no más archivos coincidentes se encontró.
 
 ## <a name="requirements"></a>Requisitos
 

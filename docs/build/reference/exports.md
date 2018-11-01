@@ -1,27 +1,17 @@
 ---
-title: EXPORTACIONES | Microsoft Docs
-ms.custom: ''
+title: EXPORTS
 ms.date: 09/07/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - EXPORTS
-dev_langs:
-- C++
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435681"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +57,7 @@ Para buscar los nombres representativos producidos por el compilador, utilice la
 
 Puede usar \@ *ordinal* para especificar que un número y no el nombre de función entra en tabla de exportación del archivo DLL. Muchas DLL de Windows exportan ordinales para admitir código heredado. En el código de Windows de 16 bits, era habitual usar ordinales, porque con ellos puede ser más fácil minimizar el tamaño de las DLL. No recomendamos exportar las funciones por ordinales, salvo que los clientes de su DLL lo necesiten para admitir código heredado. Dado que el archivo .LIB contendrá la asignación entre el ordinal y la función, puede usar el nombre de la función como lo haría normalmente en los proyectos que usan la DLL.
 
-Mediante el uso opcional **NONAME** palabra clave, puede exportar por ordinal solamente y reducir el tamaño de la tabla de exportación en la DLL resultante. Sin embargo, si desea usar [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) en el archivo DLL, debe conocer el ordinal, porque el nombre no será válido.
+Mediante el uso opcional **NONAME** palabra clave, puede exportar por ordinal solamente y reducir el tamaño de la tabla de exportación en la DLL resultante. Sin embargo, si desea usar [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) en el archivo DLL, debe conocer el ordinal, porque el nombre no será válido.
 
 La palabra clave opcional **privada** impide *entrada* se incluyan en la biblioteca de importación generada por LINK. No afecta a la exportación de la imagen que también genera LINK.
 
@@ -82,11 +72,11 @@ Puede exportar una definición de estas cuatro formas, por orden de más a menos
 
 1. El [__declspec (dllexport)](../../cpp/dllexport-dllimport.md) palabra clave en el código fuente
 
-2. Una instrucción `EXPORTS` en un archivo .DEF
+1. Una instrucción `EXPORTS` en un archivo .DEF
 
-3. Un [/EXPORT](../../build/reference/export-exports-a-function.md) especificación en un comando LINK
+1. Un [/EXPORT](../../build/reference/export-exports-a-function.md) especificación en un comando LINK
 
-4. Un [comentario](../../preprocessor/comment-c-cpp.md) la directiva en el código fuente, del formulario `#pragma comment(linker, "/export: definition ")`. El ejemplo siguiente muestra una directiva de #pragma comment antes de una declaración de función, donde `PlainFuncName` es el nombre no representativo, y `_PlainFuncName@4` es el nombre representativo de la función:
+1. Un [comentario](../../preprocessor/comment-c-cpp.md) la directiva en el código fuente, del formulario `#pragma comment(linker, "/export: definition ")`. El ejemplo siguiente muestra una directiva de #pragma comment antes de una declaración de función, donde `PlainFuncName` es el nombre no representativo, y `_PlainFuncName@4` es el nombre representativo de la función:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

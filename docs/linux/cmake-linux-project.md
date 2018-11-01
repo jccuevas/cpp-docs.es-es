@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064113"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configuración de un proyecto de CMake de Linux
 
@@ -29,8 +29,8 @@ Al instalar la carga de trabajo C++ de Linux para Visual Studio, se activa de fo
 
 En este tema se da por supuesto que tiene conocimientos básicos de la compatibilidad de CMake en Visual Studio. Para obtener más información, consulte [Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md). Para obtener más información sobre el propio CMake, vea [Build, Test and Package Your Software With CMake](https://cmake.org/) (Compilar, probar y empaquetar con CMake).
 
-> [!NOTE]  
-> La compatibilidad de CMake en Visual Studio requiere la compatibilidad de modo de servidor que se introdujo en CMake 3.8. Para obtener una variante de CMake proporcionada por Microsoft compatible con el panel [Vista de destinos de CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) en Visual Studio, descargue los últimos binarios precompilados en [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Si el administrador de paquetes proporciona una versión anterior a CMake 3.8, puede [compilar CMake a partir del origen](#build-a-supported-cmake-release-from-source) o si prefiere usar la versión estándar de CMake, puede descargarla de la [página de descarga de CMake](https://cmake.org/download/) oficial. 
+> [!NOTE]
+> La compatibilidad de CMake en Visual Studio requiere la compatibilidad de modo de servidor que se introdujo en CMake 3.8. Para ver una variante de CMake proporcionada por Microsoft, descargue los archivos binarios creados previamente más recientes en [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="open-a-folder"></a>Abrir una carpeta
 
@@ -72,7 +72,7 @@ Para proporcionar compatibilidad con IntelliSense para los encabezados remotos, 
 
 Para depurar el código en el sistema remoto, establezca un punto de interrupción, seleccione el destino CMake como el elemento de inicio en el menú de barra de herramientas situado junto a la configuración del proyecto y haga elija **&#x23f5; Iniciar** en la barra de herramientas o presione F5.
 
-Para personalizar los argumentos de la línea de comandos del programa, haga clic con el botón derecho en el archivo ejecutable en el **Explorador de soluciones** y seleccione **Configuración de depuración e inicio**. Esto abre o crea un archivo de configuración launch.vs.json que contiene información sobre el programa. Para especificar argumentos adicionales, agréguelos en la matriz de JSON `args`. Para más información, consulte el artículo sobre los [proyectos Abrir carpeta en Visual C++](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects).
+Para personalizar los argumentos de la línea de comandos del programa, haga clic con el botón derecho en el archivo ejecutable en el **Explorador de soluciones** y seleccione **Configuración de depuración e inicio**. Esto abre o crea un archivo de configuración launch.vs.json que contiene información sobre el programa. Para especificar argumentos adicionales, agréguelos en la matriz de JSON `args`. Para más información, consulte el artículo sobre los [proyectos Abrir carpeta en Visual C++](../ide/non-msbuild-projects.md).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Configuración de CMake para Linux
 
@@ -118,51 +118,11 @@ También hay algunos valores de configuración opcionales que puede usar para te
 
 Estas opciones permiten ejecutar comandos en el cuadro de diálogo remoto antes y después de compilar, y antes de la generación de CMake. Puede ser cualquier comando válido en el cuadro de diálogo remoto. El resultado se canaliza de nuevo a Visual Studio.
 
-## <a name="build-a-supported-cmake-release-from-source"></a>Compilación de una versión compatible de CMake a partir del origen
+## <a name="download-prebuilt-cmake-binaries"></a>Descarga de archivos binarios CMake creados previamente
 
-La versión mínima de CMake necesaria en su máquina Linux es la 3.8. También debe admitir el modo servidor. Para comprobar esta condición, ejecute este comando:
-
-```cmd
-cmake --version
-```
-
-Para comprobar que el modo de servidor está habilitado, ejecute:
-
-```cmd
-cmake -E capabilities
-```
-
-En la salida, busque **"serverMode":true**. Tenga en cuenta que aunque compile CMake a partir del origen tal y como se describe a continuación, debe comprobar las capacidades cuando haya finalizado. El sistema Linux puede tener limitaciones que impidan la habilitación del modo servidor.
-
-Para empezar a compilar CMake desde el origen en el shell de su sistema Linux, asegúrese de que el administrador de paquetes está actualizado y que git y cmake están disponibles.
-
-En primer lugar, clone los orígenes de CMake del [repositorio de Microsoft CMake](https://github.com/Microsoft/CMake) donde mantenemos una bifurcación para la compatibilidad con CMake de Visual Studio:
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-A continuación, para compilar e instalan la versión actual de CMake en /usr/local/bin, ejecute estos comandos:
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-Después, ejecute este comando para comprobar que la versión es >=3.8 y que el modo servidor está habilitado:
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
+La distribución de Linux puede tener una versión anterior de CMake. La compatibilidad de CMake en Visual Studio requiere la compatibilidad de modo de servidor que se introdujo en CMake 3.8. Para ver una variante de CMake proporcionada por Microsoft, descargue los archivos binarios creados previamente más recientes en [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)  
-[Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md)  
+[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)<br/>
+[Herramientas de CMake para Visual C++](../ide/cmake-tools-for-visual-cpp.md)

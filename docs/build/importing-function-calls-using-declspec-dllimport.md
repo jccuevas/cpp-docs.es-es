@@ -1,31 +1,21 @@
 ---
-title: Importar llamadas a funciones mediante __declspec (dllimport) | Microsoft Docs
-ms.custom: ''
+title: Importar llamadas a funciones mediante __declspec(dllimport)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - __declspec
 - dllimport
-dev_langs:
-- C++
 helpviewer_keywords:
 - importing function calls [C++]
 - dllimport attribute [C++], function call imports
 - __declspec(dllimport) keyword [C++]
 - function calls [C++], importing
 ms.assetid: 6b53c616-0c6d-419a-8e2a-d2fff20510b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3f7c1bf81b94eebbe32b40053fc5ce3aeaa0bd7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 513e6bd7b1120dd710852ab61aa7603bba74907e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498233"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>Importar llamadas a funciones mediante __declspec(dllimport)
 

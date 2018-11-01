@@ -1,14 +1,8 @@
 ---
-title: Incluidos comparten (de sólo lectura) o calculados símbolos | Microsoft Docs
-ms.custom: ''
+title: Incluir símbolos compartidos (de sólo lectura) o calculados
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.shared.calculated
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], read-only
 - symbols [C++], shared
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 63da1f6ffb684cd2971808f4a56167e19f7bd347
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9d57ceb202ce88a6668b8eb3cc93b41c1f11f2b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646006"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>Incluir símbolos compartidos (de sólo lectura) o calculados
 
@@ -40,7 +29,7 @@ También puede usar los archivos de símbolos incluidos cuando dispone de recurs
 
 ```cpp
 #define   IDC_CONTROL1 2100
-#define   IDC_CONTROL2 (IDC_CONTROL1+1)  
+#define   IDC_CONTROL2 (IDC_CONTROL1+1)
 ```
 
 El entorno interpreta correctamente estos símbolos calculados siempre y cuando:
@@ -82,7 +71,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)  
-[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)  
-[Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)  
+[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)<br/>
+[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)<br/>
+[Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>
 [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

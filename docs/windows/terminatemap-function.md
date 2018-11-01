@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56e3f48a3a58f25d03053867c195d11970893f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bc5aec34177572552d119df967c9d25571b6cb63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601412"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066037"
 ---
 # <a name="terminatemap-function"></a>TerminateMap (Función)
 
@@ -34,18 +34,18 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 inline bool TerminateMap(
    _In_ ModuleBase *module,
    _In_opt_z_ const wchar_t *serverName,
-    bool forceTerminate) throw()  
+    bool forceTerminate) throw()
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*módulo*  
+*module*<br/>
 Un [módulo](../windows/module-class.md).
 
-*Nombre de servidor*  
+*Nombre de servidor*<br/>
 El nombre de un subconjunto de los generadores de clases en el módulo especificado por el parámetro *módulo*.
 
-*forceTerminate*  
+*forceTerminate*<br/>
 **True** para terminar la clase generadores independientemente de están activos; **false** no terminar los generadores de clases si cualquier factory está activo.
 
 ## <a name="return-value"></a>Valor devuelto

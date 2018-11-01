@@ -1,31 +1,21 @@
 ---
-title: Delegate (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: delegado (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - delegate_cpp
 - delegate
-dev_langs:
-- C++
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 7c58a5b239e91fd3e15f806049e4f71635aebb73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584137"
 ---
-# <a name="delegate--c-component-extensions"></a>delegate (Extensiones de componentes de C++)
+# <a name="delegate--ccli-and-ccx"></a>delegado (C++ / c++ / CLI y c++ / CX)
 
 Declara un tipo que representa un puntero de función.
 
@@ -52,21 +42,21 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 (opcional) La accesibilidad del delegado, que puede ser **pública** (valor predeterminado) o **privada**. El prototipo de función también se puede calificar con el **const** o **volátil** palabras clave.
 
-*tipo de valor devuelto*  
+*tipo de valor devuelto*<br/>
 El tipo de valor devuelto del prototipo de función.
 
-*identificador del tipo de delegado*  
+*identificador del tipo de delegado*<br/>
 El nombre del tipo de delegado declarado.
 
-*Parámetros*  
+*Parámetros*<br/>
 (Opcional) Los tipos y los identificadores del prototipo de función.
 
 ### <a name="remarks"></a>Comentarios
@@ -91,10 +81,10 @@ function_declaration
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 (opcional) La accesibilidad del delegado fuera del ensamblado puede ser público o privado.  El valor predeterminado es privado.  Dentro de una clase, un delegado puede tener cualquier tipo de accesibilidad.
 
-*function_declaration*  
+*function_declaration*<br/>
 La firma de la función que se puede enlazar al delegado. El tipo de valor devuelto de un delegado puede ser cualquier tipo administrado. Por motivos de interoperabilidad, se recomienda que el tipo de valor devuelto de un delegado de ser un tipo CLS.
 
 Para definir un delegado sin enlazar, el primer parámetro de *function_declaration* deben ser de tipo de la **esto** puntero para el objeto.
@@ -131,7 +121,7 @@ Para obtener más información sobre los delegados, vea
 
 - [Cómo: Definir y usar delegados (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Delegados genéricos (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [Delegados genéricos (C++/CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Requisitos
 
@@ -171,14 +161,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +202,4 @@ in static func3 11
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,10 +1,6 @@
 ---
-title: Clase CMFCRibbonMainPanel | Documentos de Microsoft
-ms.custom: ''
+title: CMFCRibbonMainPanel (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToBottom
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToRight
 - AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::GetCommandsFrame
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], Add
 - CMFCRibbonMainPanel [MFC], AddRecentFilesList
@@ -22,141 +16,154 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 101c718d25a2e06461156045deea5f42d85e2f4d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37037377"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638222"
 ---
-# <a name="cmfcribbonmainpanel-class"></a>Clase CMFCRibbonMainPanel
-Implementa un panel de cinta de opciones que se muestra al hacer clic en el [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class CMFCRibbonMainPanel : public CMFCRibbonPanel  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Constructor predeterminado.|  
-|`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Destructor.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CMFCRibbonMainPanel::Add](#add)|Agrega un elemento de la cinta de opciones en el panel izquierdo del panel de botones de aplicación. (Invalida [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|  
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Agrega una cadena de texto en el menú de lista de archivos recientes.|  
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Agrega un elemento de la cinta de opciones a la sección inferior del panel de la aplicación de cinta.|  
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Agrega un elemento de la cinta de opciones en el panel derecho del panel de botón de aplicación.|  
-|`CMFCRibbonMainPanel::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|  
-|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Devuelve un rectángulo que representa el área del panel principal de la cinta.|  
-|`CMFCRibbonMainPanel::GetThisClass`|Usado por el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado a este tipo de clase.|  
-  
-## <a name="remarks"></a>Comentarios  
- El marco de trabajo muestra el `CMFCRibbonMainPanel` al abrir el panel de la aplicación. Contiene tres paneles:  
-  
--   El panel izquierdo contiene comandos asociados con los archivos, como **abiertos**, **guardar**, **impresión**, y **cerrar**. Para agregar un comando a este panel, llame [CMFCRibbonMainPanel::Add](#add).  
-  
--   El panel derecho contiene opciones que modifican el comando que se hace clic en el panel izquierdo. Por ejemplo, si hace clic en **Guardar como** en el panel izquierdo, el panel derecho puede mostrar tipos de archivo disponibles. Para agregar un elemento a este panel, llame [CMFCRibbonMainPanel::AddToRight](#addtoright).  
-  
--   El panel inferior contiene botones que le permiten cambiar la configuración de la aplicación y para salir del programa. Para agregar un elemento a este panel, llame [CMFCRibbonMainPanel::AddToBottom](#addtobottom).  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)  
-  
- [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxRibbonMainPanel.h  
-  
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
- Agrega un elemento de la cinta de opciones en el panel izquierdo del panel de botones de aplicación.  
-  
-```  
+# <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel (clase)
+
+Implementa un panel de cinta de opciones que se muestra al hacer clic en el [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class CMFCRibbonMainPanel : public CMFCRibbonPanel
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|`CMFCRibbonMainPanel::CMFCRibbonMainPanel`|Constructor predeterminado.|
+|`CMFCRibbonMainPanel::~CMFCRibbonMainPanel`|Destructor.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CMFCRibbonMainPanel::Add](#add)|Agrega un elemento de la cinta de opciones en el panel izquierdo del panel de botones de la aplicación. (Invalida [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Agrega una cadena de texto en el menú de lista de archivos recientes.|
+|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Agrega un elemento de la cinta de opciones en el panel inferior del panel de la aplicación de cinta.|
+|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Agrega un elemento de la cinta de opciones en el panel derecho del panel de botones de la aplicación.|
+|`CMFCRibbonMainPanel::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Devuelve un rectángulo que representa el área del panel principal de la cinta.|
+|`CMFCRibbonMainPanel::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
+
+## <a name="remarks"></a>Comentarios
+
+El marco de trabajo muestra el `CMFCRibbonMainPanel` al abrir el panel de la aplicación. Contiene tres paneles:
+
+- El panel izquierdo contiene comandos asociados, como archivos, **abierto**, **guardar**, **impresión**, y **cerrar**. Para agregar un comando a este panel, llame [CMFCRibbonMainPanel::Add](#add).
+
+- El panel derecho contiene las opciones que modifican el comando que se hace clic en el panel izquierdo. Por ejemplo, si hace clic en **Guardar como** desde el panel izquierdo, el panel derecho puede mostrar tipos de archivo disponibles. Para agregar un elemento a este panel, llame [CMFCRibbonMainPanel::AddToRight](#addtoright).
+
+- El panel inferior contiene botones que le permiten cambiar la configuración de la aplicación y para salir del programa. Para agregar un elemento a este panel, llame [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
+
+[CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** afxRibbonMainPanel.h
+
+##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+
+Agrega un elemento de la cinta de opciones en el panel izquierdo del panel de botones de la aplicación.
+
+```
 virtual void Add(CMFCRibbonBaseElement* pElem);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- [in] [out] *pElem*  
- Un puntero al elemento de la cinta de opciones para agregar al panel principal.  
-  
-### <a name="remarks"></a>Comentarios  
- Agrega un elemento de la cinta de opciones en el panel. Elementos agregados con este método se encuentra en la columna izquierda del panel principal.  
-  
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
- Agrega una cadena de texto en el menú de lista de archivos recientes.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*pElem*<br/>
+[in, out] Un puntero al elemento de cinta de opciones para agregar el panel principal.
+
+### <a name="remarks"></a>Comentarios
+
+Agrega un elemento de la cinta de opciones en el panel. Los elementos agregados con este método se ubicará en la columna izquierda del panel principal.
+
+##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+
+Agrega una cadena de texto en el menú de lista de archivos recientes.
+
+```
 void AddRecentFilesList(
-    LPCTSTR lpszLabel,  
+    LPCTSTR lpszLabel,
     int nWidth = 300);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *lpszLabel*  
- Especifica la cadena que se agregará a la lista de archivos recientes.  
-  
- *nWidth*  
- Especifica el ancho, en píxeles, del panel de lista de archivos recientes.  
-  
-### <a name="remarks"></a>Comentarios  
-  
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
- Agrega un elemento de la cinta de opciones a la sección inferior del panel de la aplicación de cinta.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*lpszLabel*<br/>
+Especifica la cadena que se agregará a la lista de archivos recientes.
+
+*nWidth*<br/>
+Especifica el ancho, en píxeles, del panel de lista de archivos recientes.
+
+### <a name="remarks"></a>Comentarios
+
+##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+
+Agrega un elemento de la cinta de opciones en el panel inferior del panel de la aplicación de cinta.
+
+```
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- [in] [out] *pElem*  
- Un puntero al elemento de la cinta de opciones para agregar a la parte inferior del panel principal.  
-  
-### <a name="remarks"></a>Comentarios  
-  
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
- Agrega un elemento de la cinta de opciones en el panel derecho del panel de botón de aplicación.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*pElem*<br/>
+[in, out] Un puntero al elemento de cinta de opciones para agregar a la parte inferior del panel principal.
+
+### <a name="remarks"></a>Comentarios
+
+##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+
+Agrega un elemento de la cinta de opciones en el panel derecho del panel de botones de la aplicación.
+
+```
 void AddToRight(
-    CMFCRibbonBaseElement* pElem,  
+    CMFCRibbonBaseElement* pElem,
     int nWidth = 300);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *pElem*  
- Un puntero a un elemento de la cinta de opciones para agregarse a la derecha del panel principal.  
-  
- *nWidth*  
- Especifica el ancho, en píxeles, del panel derecho.  
-  
-### <a name="remarks"></a>Comentarios  
- Utilice esta función para agregar un elemento de la cinta de opciones en el panel derecho. Normalmente, el panel derecho muestra la lista de archivos recientes, pero puede agregar aquí cualquier otro elemento de la cinta de opciones.  
-  
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
- Devuelve un rectángulo que representa el área del panel principal de la cinta.  
-  
-```  
-CRect GetCommandsFrame() const;  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
- Un rectángulo que representa el área del panel principal de la cinta.  
-  
-## <a name="see-also"></a>Vea también  
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [Clases](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonPanel (clase)](../../mfc/reference/cmfcribbonpanel-class.md)
+```
+
+### <a name="parameters"></a>Parámetros
+
+*pElem*<br/>
+Un puntero a un elemento de la cinta que se agregarán a la derecha del panel principal.
+
+*nWidth*<br/>
+Especifica el ancho, en píxeles, del panel derecho.
+
+### <a name="remarks"></a>Comentarios
+
+Utilice esta función para agregar un elemento de la cinta en el panel derecho. Normalmente, el panel derecho muestra la lista de archivos recientes, pero puede agregar aquí cualquier otro elemento de cinta de opciones.
+
+##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+
+Devuelve un rectángulo que representa el área del panel principal de la cinta.
+
+```
+CRect GetCommandsFrame() const;
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Un rectángulo que representa el área del panel principal de la cinta.
+
+## <a name="see-also"></a>Vea también
+
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
+[Clases](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCRibbonPanel (clase)](../../mfc/reference/cmfcribbonpanel-class.md)

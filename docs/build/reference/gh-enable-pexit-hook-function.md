@@ -1,30 +1,20 @@
 ---
-title: -GH (habilitar la función de enlace _pexit) | Microsoft Docs
-ms.custom: ''
+title: /GH (Habilitar la función de enlace _pexit)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _pexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gh compiler option [C++]
 - Gh compiler option [C++]
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9be8573f5f9c344d2675bd7c9fc7d8beb3c8cffd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527652"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (Habilitar la función de enlace _pexit)
 
@@ -43,7 +33,7 @@ El `_pexit` función no forma parte de cualquier biblioteca y depende de usted p
 A menos que se va a llamar explícitamente a `_pexit`, no es necesario proporcionar un prototipo. La función debe aparecer como si tuviera el siguiente prototipo, y se debe insertar el contenido de todos los registros de entrada y extraer el contenido sin modificar al salir:
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` es similar a `_penter`; vea [/Gh (habilitar _penter la función de enlace)](../../build/reference/gh-enable-penter-hook-function.md) para obtener un ejemplo de cómo escribir un `_pexit` función.

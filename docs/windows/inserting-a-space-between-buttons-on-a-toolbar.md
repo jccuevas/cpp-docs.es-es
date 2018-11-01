@@ -1,27 +1,16 @@
 ---
-title: Insertar un espacio entre los botones de una barra de herramientas (C++) | Microsoft Docs
-ms.custom: ''
+title: Insertar un espacio entre los botones de una barra de herramientas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbar editor [C++], spacing toolbar buttons
 - toolbar buttons [C++], space between buttons
 ms.assetid: 4925ea6b-5d3a-4949-a920-bf371a37e529
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 09086ea214bcf2abd9708f8abcee4f9f5f376994
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e60587dbbb616150f1f5d5002cb19661d938dcad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668902"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar-c"></a>Insertar un espacio entre los botones de una barra de herramientas (C++)
 
@@ -47,5 +36,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor de barras de herramientas](../windows/toolbar-editor.md)

@@ -1,29 +1,19 @@
 ---
-title: CComQIPtrElementTraits (clase) | Microsoft Docs
-ms.custom: ''
+title: CComQIPtrElementTraits (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComQIPtrElementTraits
 - ATLCOLL/ATL::CComQIPtrElementTraits
 - ATLCOLL/ATL::CComQIPtrElementTraits::INARGTYPE
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6dbc0e10f2747b9a9a2ad3ff345a580d4797ea72
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df1bbf5cb36e45b6b47acbd4263c34a7353fd6ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603741"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits (clase)
 
@@ -33,7 +23,7 @@ Esta clase proporciona métodos, funciones estáticas y definiciones de tipos ú
 
 ```
 template<typename I, const IID* piid=& __uuidof(I)>
-class CComQIPtrElementTraits : 
+class CComQIPtrElementTraits :
    public CDefaultElementTraits<ATL::CComQIPtr<I, piid>>
 ```
 

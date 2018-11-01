@@ -1,28 +1,18 @@
 ---
-title: sync_per_container (Clase) | Microsoft Docs
-ms.custom: ''
+title: sync_per_container (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_per_container
 - allocators/stdext::sync_per_container::equals
-dev_langs:
-- C++
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 641595f663c382129a40ce503ebdb789f8042cf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957126"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466825"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container (Clase)
 
@@ -33,7 +23,7 @@ Describe un [filtro de sincronización](../standard-library/allocators-header.md
 ```cpp
 template <class Cache>
 class sync_per_container
- : public Cache
+    : public Cache
 ```
 
 ### <a name="parameters"></a>Parámetros

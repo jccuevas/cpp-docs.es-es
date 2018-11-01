@@ -1,26 +1,18 @@
 ---
-title: __declspec | Microsoft Docs
-ms.custom: ''
-ms.date: 1/23/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __declspec
+ms.date: 10/09/2018
 f1_keywords:
 - __declspec_cpp
-dev_langs:
-- C++
+- __declspec
+- _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645099"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +58,8 @@ El espacio en blanco separa la secuencia de modificador de la declaración. En s
 Estos atributos de clase de almacenamiento específico de Microsoft admite la gramática de atributo extendido: [alinear](../cpp/align-cpp.md), [asignar](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [en desuso](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [proceso](../cpp/process.md), [restringir](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), y [subproceso](../cpp/thread.md). También es compatible con estos atributos de objetos COM: [propiedad](../cpp/property-cpp.md) y [uuid](../cpp/uuid-cpp.md).
 
 El **code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **propiedad**, **restringir**, **selectany**, **subproceso**, y **uuid**los atributos de clase de almacenamiento son propiedades solo de la declaración del objeto o función a la que se aplican. El **subproceso** atributo afecta a los datos y solo los objetos. El **naked** y **spectre** atributos que afectan a las funciones solo. El **dllimport** y **dllexport** atributos que afectan a funciones, datos y objetos. El **propiedad**, **selectany**, y **uuid** atributos que afectan a los objetos COM.
+
+Para ofrecer compatibilidad con versiones anteriores, **_declspec** es un sinónimo de **__declspec** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) es especificado.
 
 El **__declspec** palabras clave deben colocarse al principio de una declaración simple. El compilador omite, sin advertencia, las **__declspec** palabras clave con posterioridad * o & y delante del identificador en una declaración de variable.
 

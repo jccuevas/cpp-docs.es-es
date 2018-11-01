@@ -1,32 +1,21 @@
 ---
-title: Cuadro de diálogo Editor (C++) | Microsoft Docs
-ms.custom: ''
+title: Cuadro de diálogo Editor (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
 - dialog boxes [C++], editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6226b583b60bb458d75ba82ac1fd0b758028dca8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ca532e1691a5d92280c89067a943b7d2e27e3f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540886"
 ---
 # <a name="dialog-editor-c"></a>Cuadro de diálogo Editor (C++)
 
@@ -71,8 +60,8 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
-[Controles](../mfc/controls-mfc.md)  
-[Clases de control](../mfc/control-classes.md)  
-[Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Controles](../mfc/controls-mfc.md)<br/>
+[Clases de control](../mfc/control-classes.md)<br/>
+[Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)<br/>
 [Tipos de controles de cuadro de diálogo y tipos de variable](../ide/dialog-box-controls-and-variable-types.md)

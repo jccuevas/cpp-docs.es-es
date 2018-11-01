@@ -1,10 +1,6 @@
 ---
-title: atan, atanf, atanl, atan2, atan2f, atan2l | Microsoft Docs
-ms.custom: ''
+title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393903"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541731"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Calcula el arco tangente de **x** (**atan**, **atanf**, y **atanl**) o el arco tangente de **y** / **x** (**atan2**, **atan2f**, y **atan2l**).
+Calcula el arcotangente de **x** (**atan**, **atanf**, y **atanl**) o el arco tangente de **y** / **x** (**atan2**, **atan2f**, y **atan2l**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -86,21 +76,21 @@ Cualquier número.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**ATAN** devuelve el arco tangente de *x* en el intervalo de - π/2 a π/2 radianes. **ATAN2** devuelve el arco tangente de *y*/*x* en el intervalo - π y π radianes. Si *x* es 0, **atan** devuelve 0. Si ambos parámetros de **atan2** son 0, la función devuelve 0. Todos los resultados están en radianes.
+**ATAN** devuelve el arco tangente de *x* en el intervalo de - π/2 a π/2 radianes. **ATAN2** devuelve el arco tangente de *y*/*x* en el intervalo - π a radianes π. Si *x* es 0, **atan** devuelve 0. Si ambos parámetros de **atan2** son 0, la función devuelve 0. Todos los resultados están en radianes.
 
-**ATAN2** utiliza los signos de dos parámetros para determinar el cuadrante del valor devuelto.
+**ATAN2** utiliza los signos de los dos parámetros para determinar el cuadrante del valor devuelto.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|+ **QNAN**, **IND**|ninguna|**_DOMINIO**|
 
 ## <a name="remarks"></a>Comentarios
 
-El **atan** función calcula el arco tangente (función tangente inversa) de *x*. **ATAN2** calcula el arco tangente de *y*/*x* (si *x* es igual a 0, **atan2** devuelve π/2 si *y* es positivo, - π/2 si *y* es negativo o 0 si *y* es 0.)
+El **atan** función calcula el arco tangente (función tangente inversa) de *x*. **ATAN2** calcula el arcotangente de *y*/*x* (si *x* es igual a 0, **atan2** devuelve π/2 si *y* es positivo, if - π/2 *y* es negativo o 0 si *y* es 0.)
 
 **ATAN** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2, consulte [_set_SSE2_enable](set-sse2-enable.md).
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **atan** y **atan2** que toman **float** o **largo** **dobles**  argumentos. En un programa C, **atan** y **atan2** siempre tienen **doble** argumentos y devuelven un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **atan** y **atan2** que toman **float** o **largo** **dobles**  argumentos. En un programa C, **atan** y **atan2** siempre toman **doble** argumentos y devuelven un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

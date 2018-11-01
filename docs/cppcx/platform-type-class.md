@@ -1,27 +1,19 @@
 ---
-title: 'Clase Platform:: Type | Microsoft Docs'
-ms.custom: ''
+title: Platform::Type (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
 - VCCORLIB/Platform::Type::FullName
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea0723d1dfa3c278ab385e393cd0f3b0d9f633f0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 8df41f8845bad0847e8835c1c6c3a1019d2621d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109063"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517070"
 ---
 # <a name="platformtype-class"></a>Platform::Type (Clase)
 
@@ -56,7 +48,7 @@ La clase `Type` es útil en aplicaciones que deben dirigir el procesamiento medi
 
 |||
 |-|-|
-|[operator Type^](../cppcx/operator-type-hat.md)|Permite la conversión de `Windows::UI::Xaml::Interop::TypeName` a `Platform::Type`.|
+|[operador Type^](../cppcx/operator-type-hat.md)|Permite la conversión de `Windows::UI::Xaml::Interop::TypeName` a `Platform::Type`.|
 |[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|Permite la conversión de `Platform::Type` a `Windows::UI::Xaml::Interop::TypeName`.|
 
 ### <a name="requirements"></a>Requisitos
@@ -112,7 +104,7 @@ Uno de los valores enumerados de Platform::TypeCode.
 
 ### <a name="remarks"></a>Comentarios
 
-El equivalente del método miembro GetTypeCode() es la `typeid` propiedad.
+El equivalente del método miembro GetTypeCode() es la propiedad `typeid`.
 
 ## <a name="tostring"></a> Método Type::ToString
 

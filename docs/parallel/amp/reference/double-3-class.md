@@ -1,10 +1,6 @@
 ---
-title: double_3 (clase) | Microsoft Docs
-ms.custom: ''
+title: double_3 (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
 - amp_short_vectors/Concurrency::graphics::double_3
@@ -75,218 +71,209 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yx
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
-dev_langs:
-- C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6ecc1939faab978c84f786d90c8693b036d2e938
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508919"
 ---
 # <a name="double3-class"></a>double_3 (Clase)
-Representa un vector corto de tres valores double.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class double_3;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|value_type||  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Constructor double_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|double_3:: get_X||  
-|double_3::get_xy||  
-|double_3::get_xyz||  
-|double_3::get_xz||  
-|double_3::get_xzy||  
-|double_3:: get_Y||  
-|double_3::get_yx||  
-|double_3::get_yxz||  
-|double_3::get_yz||  
-|double_3::get_yzx||  
-|double_3::get_z||  
-|double_3::get_zx||  
-|double_3::get_zxy||  
-|double_3::get_zy||  
-|double_3::get_zyx||  
-|double_3:: ref_b||  
-|double_3:: ref_g||  
-|double_3:: ref_r||  
-|double_3:: ref_x||  
-|double_3:: ref_y||  
-|double_3::ref_z||  
-|double_3:: set_X||  
-|double_3:: set_xy||  
-|double_3::set_xyz||  
-|double_3::set_xz||  
-|double_3::set_xzy||  
-|double_3:: set_y||  
-|double_3::set_yx||  
-|double_3::set_yxz||  
-|double_3::set_yz||  
-|double_3::set_yzx||  
-|double_3::set_z||  
-|double_3::set_zx||  
-|double_3::set_zxy||  
-|double_3::set_zy||  
-|double_3::set_zyx||  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|double_3::operator-||  
-|double_3::operator--||  
-|double_3::operator*=||  
-|operador double_3:: / =||  
-|operador double_3:: ++||  
-|operador double_3:: +=||  
-|double_3::operator=||  
-|double_3::operator-=||  
-  
-### <a name="public-constants"></a>Constantes públicas  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[cambio de tamaño constante](#double_3__size)||  
-  
-### <a name="public-data-members"></a>Miembros de datos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|double_3:: b||  
-|double_3:: BG||  
-|double_3:: BGR||  
-|double_3:: br||  
-|double_3:: brg||  
-|double_3:: g||  
-|double_3:: GB||  
-|double_3:: GBR||  
-|double_3:: GR||  
-|double_3:: GRB||  
-|double_3:: r||  
-|double_3:: RB||  
-|double_3:: RBG||  
-|double_3:: RG||  
-|double_3:: RGB||  
-|double_3:: x||  
-|double_3:: XY||  
-|double_3:: XYZ||  
-|double_3:: XZ||  
-|double_3:: xzy||  
-|double_3:: y||  
-|double_3:: YX||  
-|double_3:: YXZ||  
-|double_3:: YZ||  
-|double_3:: yzx||  
-|double_3:: z||  
-|double_3:: ZX||  
-|double_3:: zxy||  
-|double_3:: ZY||  
-|double_3:: ZYX||  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `double_3`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> double_3 
 
- El constructor predeterminado, inicializa todos los elementos con 0.  
-  
-```  
+Representa un vector corto de tres valores double.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class double_3;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|value_type||
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Constructor double_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|double_3:: get_X||
+|double_3::get_xy||
+|double_3::get_xyz||
+|double_3::get_xz||
+|double_3::get_xzy||
+|double_3:: get_Y||
+|double_3::get_yx||
+|double_3::get_yxz||
+|double_3::get_yz||
+|double_3::get_yzx||
+|double_3::get_z||
+|double_3::get_zx||
+|double_3::get_zxy||
+|double_3::get_zy||
+|double_3::get_zyx||
+|double_3:: ref_b||
+|double_3:: ref_g||
+|double_3:: ref_r||
+|double_3:: ref_x||
+|double_3:: ref_y||
+|double_3::ref_z||
+|double_3:: set_X||
+|double_3:: set_xy||
+|double_3::set_xyz||
+|double_3::set_xz||
+|double_3::set_xzy||
+|double_3:: set_y||
+|double_3::set_yx||
+|double_3::set_yxz||
+|double_3::set_yz||
+|double_3::set_yzx||
+|double_3::set_z||
+|double_3::set_zx||
+|double_3::set_zxy||
+|double_3::set_zy||
+|double_3::set_zyx||
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|double_3::operator-||
+|double_3::operator--||
+|double_3::operator*=||
+|operador double_3:: / =||
+|operador double_3:: ++||
+|operador double_3:: +=||
+|double_3::operator=||
+|double_3::operator-=||
+
+### <a name="public-constants"></a>Constantes públicas
+
+|nombre|Descripción|
+|----------|-----------------|
+|[cambio de tamaño constante](#double_3__size)||
+
+### <a name="public-data-members"></a>Miembros de datos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|double_3:: b||
+|double_3:: BG||
+|double_3:: BGR||
+|double_3:: br||
+|double_3:: brg||
+|double_3:: g||
+|double_3:: GB||
+|double_3:: GBR||
+|double_3:: GR||
+|double_3:: GRB||
+|double_3:: r||
+|double_3:: RB||
+|double_3:: RBG||
+|double_3:: RG||
+|double_3:: RGB||
+|double_3:: x||
+|double_3:: XY||
+|double_3:: XYZ||
+|double_3:: XZ||
+|double_3:: xzy||
+|double_3:: y||
+|double_3:: YX||
+|double_3:: YXZ||
+|double_3:: YZ||
+|double_3:: yzx||
+|double_3:: z||
+|double_3:: ZX||
+|double_3:: zxy||
+|double_3:: ZY||
+|double_3:: ZYX||
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`double_3`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> double_3
+
+El constructor predeterminado, inicializa todos los elementos con 0.
+
+```
 double_3() restrict(amp,
     cpu);
 
- 
 double_3(
-    double _V0,  
-    double _V1,  
+    double _V0,
+    double _V1,
     double _V2) restrict(amp,
     cpu);
 
- 
 double_3(
     double _V) restrict(amp,
     cpu);
 
- 
 double_3(
     const double_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const uint_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const int_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const float_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const unorm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline double_3(
     const norm_3& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*_V0*<br/>
-El valor para inicializar el elemento 0.  
-  
-*_V1*<br/>
-El valor para inicializar el elemento 1.  
-  
-*_V2*<br/>
-El valor para inicializar el elemento 2.  
-  
-*_V*<br/>
-El valor de inicialización.  
-  
-*_Otro*<br/>
-El objeto usado para inicializar.  
-  
-##  <a name="double_3__size"></a> Tamaño 
+```
 
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parámetros
+
+*_V0*<br/>
+El valor para inicializar el elemento 0.
+
+*_V1*<br/>
+El valor para inicializar el elemento 1.
+
+*_V2*<br/>
+El valor para inicializar el elemento 2.
+
+*_V*<br/>
+El valor de inicialización.
+
+*_Otro*<br/>
+El objeto usado para inicializar.
+
+##  <a name="double_3__size"></a> Tamaño
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>Vea también
+
+[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

@@ -1,27 +1,17 @@
 ---
-title: Uso de CString | Microsoft Docs
-ms.custom: ''
+title: Uso de CString
 ms.date: 06/18/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, C++ string manipulation
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c97ca07e06da3663dfd0a06a125f361b4e4dc591
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430295"
 ---
 # <a name="using-cstring"></a>Uso de CString
 
@@ -43,52 +33,52 @@ Para agregar más capacidades de las que `CString`, `CStringA` o `CStringW` ofre
 
 El siguiente código muestra cómo crear una `CString` e imprimirla en una salida estándar:
 
-```cpp  
+```cpp
 #include <atlstr.h>
 
-int main() {  
-    CString aCString = CString(_T("A string"));  
-    _tprintf(_T("%s"), (LPCTSTR) aCString);  
-}  
+int main() {
+    CString aCString = CString(_T("A string"));
+    _tprintf(_T("%s"), (LPCTSTR) aCString);
+}
 ```
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Operaciones básicas de CString](../atl-mfc-shared/basic-cstring-operations.md)  
+[Operaciones básicas de CString](../atl-mfc-shared/basic-cstring-operations.md)<br/>
 Se describen las operaciones básicas de `CString`, por ejemplo, cómo crear objetos a partir de cadenas literales de C, cómo acceder a caracteres individuales de una `CString`, cómo concatenar dos objetos y cómo comparar objetos `CString`.
 
-[Administración de datos de cadena](../atl-mfc-shared/string-data-management.md)  
+[Administración de datos de cadena](../atl-mfc-shared/string-data-management.md)<br/>
 Se aborda el uso de Unicode y MBCS con `CString`.
 
-[Semántica de CString](../atl-mfc-shared/cstring-semantics.md)  
+[Semántica de CString](../atl-mfc-shared/cstring-semantics.md)<br/>
 Se explica el uso de objetos `CString`.
 
-[Operaciones de CString relacionadas con cadenas de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)  
+[Operaciones de CString relacionadas con cadenas de estilo C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 Se describe cómo manipular el contenido de un objeto `CString` como una cadena terminada en un valor nulo de estilo C.
 
-[Asignación y liberación de memoria para un BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)  
+[Asignación y liberación de memoria para un BSTR](../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)<br/>
 Describe el uso de memoria para un objeto COM y BSTR.
 
-[Limpieza de excepciones de CString](../atl-mfc-shared/cstring-exception-cleanup.md)  
+[Limpieza de excepciones de CString](../atl-mfc-shared/cstring-exception-cleanup.md)<br/>
 Se explica que la limpieza expresa en MFC 3.0 y en versiones posteriores ya no es necesaria.
 
-[Paso de argumentos de CString](../atl-mfc-shared/cstring-argument-passing.md)  
+[Paso de argumentos de CString](../atl-mfc-shared/cstring-argument-passing.md)<br/>
 Se detalla cómo pasar objetos CString a funciones y cómo obtener objetos `CString` de las funciones.
 
-[Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)  
+[Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
 Se centra en cómo MFC permite el uso de Unicode y MBCS.
 
 ## <a name="reference"></a>Referencia
 
-[CStringT](../atl-mfc-shared/reference/cstringt-class.md)  
+[CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 Contiene información de referencia sobre la clase `CStringT`.
 
-[CSimpleStringT (clase)](../atl-mfc-shared/reference/csimplestringt-class.md)  
+[CSimpleStringT (clase)](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
 Contiene información de referencia sobre la clase `CSimpleStringT`.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 Contiene vínculos a temas en los que se describen las diversas formas de administrar datos de cadena.
 
 [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)

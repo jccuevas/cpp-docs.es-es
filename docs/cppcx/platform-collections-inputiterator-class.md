@@ -1,26 +1,18 @@
 ---
-title: Inputiterator (clase) | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::InputIterator (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs:
-- C++
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67376497f3c0be84c0e24e403eaa3129ec38b255
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455242"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator (Clase)
 
@@ -137,7 +129,7 @@ Otro objeto InputIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el objeto InputIterator actual es igual que `other`; en caso contrario, `false`.
+**True** si el objeto InputIterator actual es igual a *otros*; en caso contrario, **false**.
 
 ## <a name="operator-increment"></a>  Inputiterator:: operator ++ (operador)
 
@@ -177,7 +169,7 @@ Otro objeto InputIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el objeto InputIterator actual no es igual a `other`; en caso contrario, `false`.
+**True** si el objeto InputIterator actual no es igual a *otros*; en caso contrario, **false**.
 
 ## <a name="see-also"></a>Vea también
 

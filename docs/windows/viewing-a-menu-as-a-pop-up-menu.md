@@ -1,27 +1,16 @@
 ---
-title: Ver un menú como menú emergente (C++) | Microsoft Docs
-ms.custom: ''
+title: Ver un menú como menú emergente (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pop-up menus
 - menus [C++], pop-up
 ms.assetid: 220a16dd-a6e8-4362-af85-68fbfce2870e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2ef855c4ba73b1f5595568a8b7e61d1a286a0c04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c8af24c7a39e8574e046da1bfce073a9a432387f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614817"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Ver un menú como menú emergente
 
@@ -42,5 +31,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Creación de menús emergentes](../windows/creating-pop-up-menus.md)  
-[Editor de menús](../windows/menu-editor.md)  
+[Creación de menús emergentes](../windows/creating-pop-up-menus.md)<br/>
+[Editor de menús](../windows/menu-editor.md)

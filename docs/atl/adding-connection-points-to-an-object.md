@@ -1,26 +1,16 @@
 ---
-title: Agregar puntos de conexión a un objeto | Microsoft Docs
-ms.custom: ''
+title: Agregar puntos de conexión a un objeto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], adding to ATL objects
 - Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: bf3819f96821b8794b6bd120d63798b902eb2b9e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762553"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473806"
 ---
 # <a name="adding-connection-points-to-an-object"></a>Agregar puntos de conexión a un objeto
 
@@ -38,15 +28,15 @@ En cualquier caso, el Asistente para implementar puntos de conexión utiliza una
 
 1. Defina una interfaz dispinterface en el bloque de biblioteca del archivo .idl. Si habilitó la compatibilidad con puntos de conexión cuando creó el control con el Asistente para controles ATL, ya se creará la interfaz dispinterface. Si no habilitó la compatibilidad con puntos de conexión cuando se creó el control, debe agregar manualmente la dispinterface en el archivo. idl. El siguiente es un ejemplo de una interfaz dispinterface. Interfaces de salida no son necesarias para interfaces de envío, pero muchos lenguajes de scripting como VBScript y JScript requieren esto, por lo que este ejemplo usa dos interfaces dispinterface:
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     Use la utilidad uuidgen.exe o guidgen.exe para generar un GUID.
+   Use la utilidad uuidgen.exe o guidgen.exe para generar un GUID.
 
 2. Agregue la dispinterface como la `[default,source]` interfaz en la coclase para el objeto en el archivo .idl del proyecto. Nuevamente, si habilitó la compatibilidad con puntos de conexión cuando se creó el control, el Asistente para controles ATL creará el `[default,source`] entrada. Para agregar manualmente esta entrada, agregue la línea en negrita:
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     Consulte el archivo .idl en el [Circ](../visual-cpp-samples.md) ejemplo ATL para ver un ejemplo.
+   Consulte el archivo .idl en el [Circ](../visual-cpp-samples.md) ejemplo ATL para ver un ejemplo.
 
 3. Utilice la vista de clases para agregar métodos y propiedades a la interfaz de eventos. Haga clic en la clase en la vista de clases, seleccione **agregar** en el menú contextual y haga clic en **agregar punto de conexión**.
 
@@ -56,7 +46,7 @@ En cualquier caso, el Asistente para implementar puntos de conexión utiliza una
 
    - Agregue una entrada a la asignación de punto de conexión.
 
-     También verá una lista de todas las bibliotecas de tipos en el equipo. Solo debe usar una de estas otras bibliotecas de tipos para definir el punto de conexión si desea implementar la interfaz de salida misma exacta que se encuentra en otra biblioteca de tipos.
+   También verá una lista de todas las bibliotecas de tipos en el equipo. Solo debe usar una de estas otras bibliotecas de tipos para definir el punto de conexión si desea implementar la interfaz de salida misma exacta que se encuentra en otra biblioteca de tipos.
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>Para volver a usar una interfaz de punto de conexión definida en otra biblioteca de tipos
 

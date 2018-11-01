@@ -1,10 +1,6 @@
 ---
-title: _umask_s | Microsoft Docs
-ms.custom: ''
+title: _umask_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d45cb3ded6fd2c3d7a380069a7d7f3fd79619810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414485"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480676"
 ---
 # <a name="umasks"></a>_umask_s
 
@@ -67,7 +57,7 @@ Valor anterior de la configuración de permisos.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un código de error si *modo* no especifica un modo válido o la *pOldMode* puntero es **NULL**.
+Devuelve un código de error si *modo* no especifica un modo válido o el *pOldMode* puntero es **NULL**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
@@ -80,7 +70,7 @@ Si se da una de las condiciones anteriores, se invoca al controlador de parámet
 
 ## <a name="remarks"></a>Comentarios
 
-El **_umask_s** función establece la máscara de permisos de archivo del proceso actual en el modo especificado por *modo*. La máscara de permisos de archivo modifica la configuración del permiso de nuevos archivos creados por **_creat**, **_open**, o **_sopen**. Si un bit de la máscara es 1, el bit correspondiente del valor de permiso solicitado del archivo se establece en 0 (no permitido). Si un bit de la máscara es 0, el bit correspondiente se deja sin modificar. La configuración de permisos de un nuevo archivo no se establece hasta que se cierra el archivo por primera vez.
+El **_umask_s** función establece la máscara de permisos de archivo del proceso actual en el modo especificado por *modo*. La máscara de permisos de archivo modifica la configuración de permisos de los archivos creados por **_creat**, **_open**, o **_sopen**. Si un bit de la máscara es 1, el bit correspondiente del valor de permiso solicitado del archivo se establece en 0 (no permitido). Si un bit de la máscara es 0, el bit correspondiente se deja sin modificar. La configuración de permisos de un nuevo archivo no se establece hasta que se cierra el archivo por primera vez.
 
 La expresión de entero *pmode* contiene una o ambas de las siguientes constantes de manifiesto, definidas en SYS\STAT. H:
 
@@ -90,9 +80,9 @@ La expresión de entero *pmode* contiene una o ambas de las siguientes constante
 |**_S_IREAD**|Lectura permitida.|
 |**_S_IREAD** \| **_S_IWRITE**|Lectura y escritura permitidas.|
 
-Cuando ambas constantes se proporcionan, se combinan con el operador OR bit a bit ( **|** ). Si el *modo* argumento es **_S_IREAD**, no se permite la lectura (el archivo es de solo escritura). Si el *modo* argumento es **_S_IWRITE**, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por consiguiente, establecer la lectura de tipo bit **_umask_s** no tiene ningún efecto sobre los modos del archivo.
+Cuando ambas constantes se proporcionan, se unen con el operador OR bit a bit ( **|** ). Si el *modo* argumento es **_S_IREAD**, no se permite la lectura (el archivo es de solo escritura). Si el *modo* argumento es **_S_IWRITE**, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por consiguiente, establecer el bit de lectura con **_umask_s** no tiene ningún efecto en los modos del archivo.
 
-Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente omitirá los.
+Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omitirá.
 
 ## <a name="requirements"></a>Requisitos
 

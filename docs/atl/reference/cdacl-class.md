@@ -1,10 +1,6 @@
 ---
-title: CDacl (clase) | Microsoft Docs
-ms.custom: ''
+title: CDacl (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDacl
 - ATLSECURITY/ATL::CDacl
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f96fe03288495eb109795e31c6dfd2bd3928d47c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462899"
 ---
 # <a name="cdacl-class"></a>CDacl (clase)
 
@@ -93,12 +83,12 @@ Para obtener una introducción al modelo de control de acceso en Windows, consul
 Agrega una ACE permitida (entrada de control de acceso) a la `CDacl` objeto.
 
 ```
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);
 
-bool AddAllowedAce(  
+bool AddAllowedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags,
@@ -138,7 +128,7 @@ Consulte [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-_ace_header) para obte
 Agrega una ACE de denegación (entrada de control de acceso) a la `CDacl` objeto.
 
 ```
-bool AddDeniedAce(  
+bool AddDeniedAce(
     const CSid& rSid,
     ACCESS_MASK AccessMask,
     BYTE AceFlags = 0) throw(...);

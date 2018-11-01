@@ -1,28 +1,17 @@
 ---
-title: Voltear una imagen (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Voltear una imagen (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], flipping and rotating images
 - images [C++], flipping
 - images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 15160ce25d0f20715ac05f1b3c525f932261bc0f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 74b3ffc345881481abd3cc3536dbabcbd1120429
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456464"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>Voltear una imagen (Editor de imágenes para iconos)
 
@@ -57,5 +46,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

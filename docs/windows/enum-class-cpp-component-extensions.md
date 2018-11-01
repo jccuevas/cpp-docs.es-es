@@ -1,26 +1,16 @@
 ---
-title: enum class (extensiones de componente de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: clase Enum (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 72c312bdec9248cdc38150163d914b2ac7036ab8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592522"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum class (Extensiones de componentes de C++)
+# <a name="enum-class--ccli-and-ccx"></a>clase Enum (C++ / c++ / CLI y c++ / CX)
 
 Declara una enumeración en el ámbito de espacio de nombres, que es un tipo definido por el usuario que está compuesto de un conjunto de constantes con nombre llamadas enumeradores.
 
@@ -44,28 +34,28 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 La accesibilidad de la enumeración, que puede ser **pública** o **privada**.
 
-*enumeration-identifier*  
+*enumeration-identifier*<br/>
 Nombre de la enumeración.
 
-*underlying-type*  
+*underlying-type*<br/>
 (Opcional) Tipo de datos subyacente de la enumeración.
 
 (Opcional. Windows en tiempo de ejecución solo) el tipo subyacente de la enumeración, que puede ser **bool**, **char**, `char16`, `int16`, `uint16`, **int**, `uint32`, `int64`, o `uint64`.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Lista de nombres de enumerador separados con comas.
 
 El valor de cada enumerador es una expresión constante definida implícitamente por el compilador o explícitamente mediante la notación, *enumerator*`=`*constant-expression*. De forma predeterminada, el valor del primer enumerador es cero si se define implícitamente. El valor de cada enumerador implícitamente definido subsiguiente es el valor del enumerador anterior + 1.
 
-*var*  
+*var*<br/>
 (Opcional) Nombre de una variable del tipo de enumeración.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información y ejemplos, vea [enumeraciones](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Para obtener más información y ejemplos, vea [Enumeraciones](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
 
 Observe que el compilador emite mensajes de error si la expresión constante que define el valor de un enumerador no se puede representar mediante *underlying-type*.  Sin embargo, el compilador no indica un error para un valor que es inadecuado para el tipo subyacente. Por ejemplo:
 
@@ -92,19 +82,19 @@ accessenum structname [:type] { enumerator-list } var;
 
 ### <a name="parameters"></a>Parámetros
 
-*access*  
+*access*<br/>
 Accesibilidad de la enumeración. Puede ser **pública** o **privada**.
 
-*enumerator-list*  
+*enumerator-list*<br/>
 Una lista delimitada por comas de los identificadores (enumeradores) en la enumeración.
 
-*name*  
+*name*<br/>
 Nombre de la enumeración. Las enumeraciones administradas anónimas no se permiten.
 
-*type*  
+*type*<br/>
 (Opcional) El tipo subyacente de la *identificadores*. Esto puede ser cualquier tipo escalar, como versiones con o sin signo de **int**, **corto**, o **largo**.  **BOOL** o **char** también se permite.
 
-*var*  
+*var*<br/>
 (Opcional) Nombre de una variable del tipo de enumeración.
 
 ### <a name="remarks"></a>Comentarios
@@ -146,13 +136,13 @@ Los nombres de enumerador administrados (*identifiers*) no se insertan en el ám
 
 Los enumeradores de una enumeración estándar se insertan fuertemente en el ámbito de inclusión.  Es decir, si hay otro símbolo con el mismo nombre que un enumerador en el ámbito de inclusión, el compilador generará un error.
 
-En Visual C++ 2002 y Visual C++ 2003, los enumeradores se insertaban de forma poco rigurosa (visibles en el ámbito de inclusión a menos que hubiera otro identificador con el mismo nombre).
+En Visual Studio 2002 y Visual Studio 2003, los enumeradores se insertaban (visible en el ámbito de inclusión a menos que hubiera otro identificador con el mismo nombre).
 
-Si se define una enumeración estándar de C++ (sin **clase** o **struct**), la compilación con `/clr` hará que la enumeración se compile como una enumeración administrada.  La enumeración todavía tiene la semántica de una enumeración no administrada.  Nota: el compilador inserta un atributo, `Microsoft::VisualC::NativeEnumAttribute`, que el compilador de Visual C++ reconoce, para identificar la intención del programador de que la enumeración sea una enumeración nativa.  Otros compiladores verán simplemente la enumeración estándar como enumeración administrada.
+Si se define una enumeración estándar de C++ (sin **clase** o **struct**), la compilación con `/clr` hará que la enumeración se compile como una enumeración administrada.  La enumeración todavía tiene la semántica de una enumeración no administrada.  Tenga en cuenta que el compilador inserta un atributo, `Microsoft::VisualC::NativeEnumAttribute` para identificar la intención del programador de la enumeración sea una enumeración nativa.  Otros compiladores verán simplemente la enumeración estándar como enumeración administrada.
 
 Una llamada, enumeración estándar se compila con `/clr` estarán visibles en el ensamblado como una enumeración administrada y pueden utilizarse en cualquier otro compilador administrado.   Sin embargo, una enumeración estándar sin nombre no será visible de forma pública desde el ensamblado.
 
-En Visual C++ 2002 y Visual C++ 2003, una enumeración estándar usada como el tipo de un parámetro de función:
+En Visual Studio 2002 y Visual Studio 2003, una enumeración estándar usada como el tipo de un parámetro de función:
 
 ```cpp
 // mcppv2_enum.cpp
@@ -175,7 +165,7 @@ void f(int32);
 Sin embargo, en las versiones actuales del compilador, la enumeración estándar se emite como enumeración administrada con [NativeEnumAttribute] y lo siguiente en MSIL para la signatura de la función:
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 Para obtener más información sobre enumeraciones nativas, vea [Declaraciones de enumeración de C++](../cpp/enumerations-cpp.md).
@@ -202,7 +192,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;
@@ -231,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

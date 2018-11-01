@@ -1,14 +1,8 @@
 ---
-title: 'Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de C++ imágenes para iconos) | Microsoft Docs'
-ms.custom: ''
+title: 'Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de C++ imágenes para iconos)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - cursors [C++], creating
 - image resources [C++], display devices
@@ -21,17 +15,12 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 03c3b64cfbf93260c1195fa028d05bb8085c9b09
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5d5e252dd7841d923a6de42f06518838f4314563
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586659"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-c-image-editor-for-icons"></a>Iconos y cursores: recursos de imagen para dispositivos de presentación (Editor de C++ imágenes para iconos)
 
@@ -84,6 +73,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)  
-[Iconos](https://msdn.microsoft.com/library/windows/desktop/ms646973)  
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
+[Iconos](https://msdn.microsoft.com/library/windows/desktop/ms646973)<br/>
 [Cursores](https://msdn.microsoft.com/library/windows/desktop/ms646970)

@@ -1,26 +1,16 @@
 ---
-title: 'Cómo: declarar punteros internos con la palabra clave const (C++ / c++ / CLI) | Microsoft Docs'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: 'Cómo: Declarar punteros internos con la palabra clave const (C++/CLI)'
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ec8b965cb29e689fccf7af6a3692a5fe164a9aa6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f687ed3540512ee4e0a0e11b39fa22b867154d4e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587218"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Cómo: Declarar punteros internos con la palabra clave const (C++/CLI)
 

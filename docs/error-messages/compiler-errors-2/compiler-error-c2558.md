@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C2558 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C2558
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2558
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2558
 ms.assetid: 822b701e-dcae-423a-b21f-47f36aff9c90
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b0dca0b19d427cf83238c824739d288a1cfd54d4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571735"
 ---
 # <a name="compiler-error-c2558"></a>Error del compilador C2558
 
@@ -33,7 +23,7 @@ Un constructor de copias inicializa un objeto a partir de otro objeto del mismo 
 
 1. El problema puede producirse cuando se intenta copiar una clase cuyo constructor de copias es `private`. En la mayoría de los casos, no debe copiarse una clase que tenga un constructor de copias `private`. Una técnica de programación común consiste en declarar un constructor de copias `private` para impedir el uso directo de una clase. La clase puede quedar inservible o requerir otra clase para poder funcionar correctamente.
 
-     Si determina que es seguro utilizar una clase que tenga un constructor de copias `private`, derive una nueva clase a partir de la clase que tiene el constructor `private` y proporcione un constructor de copias `public` o `protected` en la clase nueva. Utilice la clase derivada en lugar de la original.
+   Si determina que es seguro utilizar una clase que tenga un constructor de copias `private`, derive una nueva clase a partir de la clase que tiene el constructor `private` y proporcione un constructor de copias `public` o `protected` en la clase nueva. Utilice la clase derivada en lugar de la original.
 
 1. El problema puede producirse cuando se trata de copiar una clase cuyo constructor de copias es explícito. Declarar un constructor de copias como `explicit` impide que se pasen objetos de una clase a las funciones o que se devuelvan objetos de una clase desde las funciones. Para obtener más información sobre los constructores explícitos, consulte [conversiones de tipos definidos por el usuario](../../cpp/user-defined-type-conversions-cpp.md).
 

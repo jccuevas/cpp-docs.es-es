@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9a454d067881a15f6d125430c304f4b5af71b5d1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314409"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063853"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Barra de herramientas (Editor de C++ imágenes para iconos)
 
@@ -36,8 +36,7 @@ El **Editor de imágenes** barra de herramientas contiene herramientas de dibujo
 > [!NOTE]
 > Todas las herramientas disponibles en el **Editor de imágenes** también están disponibles en la barra de herramientas del **imagen** menú (bajo la **herramientas** comando).
 
-![Barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Barra de herramientas del Editor de imágenes
+![Barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") barra de herramientas del Editor de imágenes
 
 Para usar el **Editor de imágenes** barra de herramientas y **opción** selector, haga clic en la herramienta o la opción que desee.
 
@@ -46,8 +45,7 @@ Para usar el **Editor de imágenes** barra de herramientas y **opción** selecto
 
 Con el **opción** selector se puede especificar el ancho de línea, el trazo de pincel, etcetera. En el icono del **opción** cambia selector botón en función de la herramienta seleccionada.
 
-![Dibujo&#45;selector con forma de la barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Selector de opciones en la barra de herramientas del Editor de imágenes
+![Dibujo&#45;selector con forma de la barra de herramientas del Editor de imágenes](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") Selector de opciones en la barra de herramientas del Editor de imágenes
 
 Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 
@@ -57,6 +55,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Mostrar u ocultar la barra de herramientas](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)  
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Mostrar u ocultar la barra de herramientas](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)<br/>
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

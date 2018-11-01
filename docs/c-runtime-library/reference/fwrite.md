@@ -1,10 +1,6 @@
 ---
-title: fwrite | Microsoft Docs
-ms.custom: ''
+title: fwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwrite
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1320bcc61830833f2b1a4a225dff30652df2d3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400585"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506757"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -65,20 +55,20 @@ Tamaño del elemento en bytes.
 *count*<br/>
 Número máximo de elementos que se va a escribir.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**fwrite** devuelve el número de completo elementos escritos realmente, lo que puede ser menor que *recuento* si se produce un error. De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo. Si el valor *flujo* o *búfer* es un puntero nulo, o si se especifica un número impar de bytes que se escribirán en el modo Unicode, la función invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
+**fwrite** devuelve el número de completo elementos escritos realmente, lo que puede ser menor que *recuento* si se produce un error. De igual modo, si se produce un error, no se podrá conocer el indicador de posición de archivo. Si bien *secuencia* o *búfer* es un puntero nulo, o si se especifica un número impar de bytes que se escribirán en el modo Unicode, la función invoca al controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve 0.
 
 ## <a name="remarks"></a>Comentarios
 
-El **fwrite** función escribe hasta *recuento* elementos de *tamaño* longitud cada uno, de *búfer* a la salida de *flujo*. El puntero de archivo asociado a *flujo* (si hay alguno) que se incrementa el número de bytes escritos realmente. Si *flujo* se abre en modo de texto, cada salto de línea se reemplaza por un retorno de carro y avance de línea par. Este reemplazo no tiene efecto alguno en el valor devuelto.
+El **fwrite** función escribe hasta *recuento* elementos, de *tamaño* longitud cada uno, de *búfer* a la salida *secuencia*. El puntero de archivo asociado *secuencia* (si existe) se incrementa el número de bytes escritos realmente. Si *flujo* se abre en modo de texto, cada avance de línea se reemplaza por un retorno de carro y avance de línea par. Este reemplazo no tiene efecto alguno en el valor devuelto.
 
-Cuando *flujo* se abre en modo de traducción de Unicode, por ejemplo, si *flujo* se abre mediante una llamada a **fopen** y el uso de un parámetro de modo que incluya **ccs = UNICODE**, **ccs = UTF-16LE**, o **ccs = UTF-8**, o si el modo se cambia a un modo de traducción de Unicode mediante el uso de **_setmode** y un modo parámetro que incluye **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**:*búfer* se interpreta como un puntero a un matriz de **wchar_t** que contiene datos UTF-16. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
+Cuando *secuencia* se abre en modo de traducción de Unicode, por ejemplo, si *secuencia* se abre mediante una llamada a **fopen** y el uso de un parámetro de modo que incluya **ccs = UNICODE**, **ccs = UTF-16LE**, o **ccs = UTF-8**, o si se cambia el modo de un modo de traducción de Unicode utilizando **_setmode** y un modo parámetro que incluye **_O_WTEXT**, **_O_U16TEXT**, o **_O_U8TEXT**:*búfer* se interpreta como un puntero a un matriz de **wchar_t** que contiene datos UTF-16. Si se intenta escribir un número impar de bytes en este modo, se producirá un error de validación de parámetros.
 
-Como esta función bloquea el subproceso de llamada, es segura para los subprocesos. Para obtener una versión de no bloqueo, vea **_fwrite_nolock**.
+Como esta función bloquea el subproceso de llamada, es segura para los subprocesos. Para obtener una versión que no sea de bloqueo, consulte **_fwrite_nolock**.
 
 ## <a name="requirements"></a>Requisitos
 

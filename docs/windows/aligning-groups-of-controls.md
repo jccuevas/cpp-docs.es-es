@@ -1,26 +1,15 @@
 ---
-title: Alinear grupos de controles | Microsoft Docs
-ms.custom: ''
+title: Alinear grupos de controles
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9b28868ee3df91c97c37ceb3451b59c0a12e6d0c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2c1f1d53a39d37424fec9ad1782ca96572df9371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592505"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456776"
 ---
 # <a name="aligning-groups-of-controls"></a>Alinear grupos de controles
 
@@ -54,6 +43,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

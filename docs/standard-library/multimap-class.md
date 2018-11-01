@@ -1,10 +1,6 @@
 ---
-title: multimap (Clase) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
+title: multimap (Clase)
+ms.date: 10/18/2018
 f1_keywords:
 - map/std::multimap
 - map/std::multimap::allocator_type
@@ -47,8 +43,6 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::multimap [C++]
 - std::multimap [C++], allocator_type
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d69497092ba89b91a4dbfaf56ac842fa8e07236
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 11f7362689e8dcfcf8272786050439f850f81e10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458005"
 ---
 # <a name="multimap-class"></a>multimap (Clase)
 
@@ -887,7 +877,6 @@ Devuelve el iterador más allá del final.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -960,8 +949,8 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << m1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
-        << " returned by equal_range( 2 )." << endl;
+        << "matching the 2nd element of the pair "
+        << "returned by equal_range( 2 )." << endl;
 
    p2 = m1.equal_range( 4 );
 
@@ -980,7 +969,7 @@ int main( )
 The lower bound of the element with a key of 2 in the multimap m1 is: 20.
 The upper bound of the element with a key of 2 in the multimap m1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The multimap m1 doesn't have an element with a key less than 4.
 ```
 
@@ -1030,7 +1019,6 @@ Devuelve un iterador que hace referencia a la primera ubicación de un elemento 
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1194,19 +1182,16 @@ Inserta un elemento o un rango de elementos en una asignación múltiple.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1214,13 +1199,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1652,18 +1635,18 @@ multimap(
 
 template <class InputIterator>
 multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 multimap(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);
@@ -2339,7 +2322,7 @@ Devuelve el objeto de función de comparación que usa un mapa múltiple para or
 
 ### <a name="remarks"></a>Comentarios
 
-Para un mapa múltiple *m*, si dos elementos *e*1( *k*1, *d*1) y *e*2( *k*2, `d`2) son objetos de tipo `value_type`, donde *k*1 y *k*2 son sus claves de tipo `key_type`, y `d`1 y `d`2 son sus datos de tipo `mapped_type`, entonces *m.*`value_comp`( *e*1, *e*2) es equivalente a *m.*`key_comp`( *k*1, *k*2).
+Para un mapa múltiple *m*, si dos elementos *e1*(*k1*, *d1*) y *e2*(*k2*, *d2*) son objetos de tipo `value_type`, donde *k1* y *k2* son sus claves de tipo `key_type` y *d1*  y *d2* son sus datos de tipo `mapped_type`, a continuación, `m.value_comp(e1, e2)` es equivalente a `m.key_comp(k1, k2)`.
 
 ### <a name="example"></a>Ejemplo
 

@@ -1,14 +1,8 @@
 ---
-title: Seleccionar un Color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Seleccionar un color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bff0018d4240089897cc3001c3887794295c22d4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 65994c7242ffcc46cbb4eb23841f7269c9352400
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519683"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Seleccionar un color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos)
 
@@ -54,5 +43,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)

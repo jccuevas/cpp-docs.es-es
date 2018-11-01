@@ -1,12 +1,6 @@
 ---
-title: Contención de controles ATL preguntas más frecuentes | Microsoft Docs
-ms.custom: ''
+title: Preguntas más frecuentes sobre contención de controles ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - hosting controls using ATL
 - ActiveX control containers [C++], ATL control hosting
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ef175ff83fd641852b27fea8408f1bb7de69f839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052925"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630820"
 ---
 # <a name="atl-control-containment-faq"></a>Preguntas más frecuentes sobre contención de controles ATL
 
@@ -37,7 +27,7 @@ El código de hospedaje de controles de ATL no requiere que se use ninguna clase
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Ajusta un **"AtlAxWinLic80"** ventana, que proporciona métodos para crear la ventana, crear un control o adjuntar un control con licencia a la ventana y recuperar los punteros de interfaz en el objeto host.|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Actúa como clase base para clases de controles ActiveX en función de un recurso de cuadro de diálogo. Estos controles pueden contener otros controles ActiveX.|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Actúa como clase base para las clases de cuadro de diálogo en función de un recurso de cuadro de diálogo. Estos controles pueden contener controles ActiveX.|
-|[CWindow](../atl/reference/cwindow-class.md)|Proporciona un método, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), que devuelve un puntero de interfaz en un control, el identificador de su ventana host dado. Además, los contenedores de Windows API exponen por `CWindow` suele facilitar la administración de ventanas.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Proporciona un método, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), que devuelve un puntero de interfaz en un control, el identificador de su ventana host dado. Además, los contenedores de Windows API exponen por `CWindow` suele facilitar la administración de ventanas.|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>¿Qué es la biblioteca ATL API de hospedaje de controles?
 
@@ -62,11 +52,11 @@ El `HWND` parámetros en las tres primeras funciones deben ser una ventana exist
 Las primeras siete funciones llaman a [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) implícitamente.
 
 > [!NOTE]
->  La API de hospedaje de controles constituye la base de compatibilidad de ATL para contención de controles ActiveX. Sin embargo, suele haber poca necesidad de llamar directamente a estas funciones si aprovechar o hacer un uso completo de las clases contenedoras de ATL. Para obtener más información, consulte [que ATL clases facilitan la contención de controles ActiveX](which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  La API de hospedaje de controles constituye la base de compatibilidad de ATL para contención de controles ActiveX. Sin embargo, suele haber poca necesidad de llamar directamente a estas funciones si aprovechar o hacer un uso completo de las clases contenedoras de ATL. Para obtener más información, consulte [que ATL clases facilitan la contención de controles ActiveX](which-atl-classes-facilitate-activex-control-containment-q.md).
 
 ## <a name="what-is-atlaxwin100"></a>¿Qué es AtlAxWin100?
 
-`AtlAxWin100` es el nombre de una clase de ventana que ayuda a proporcionar funcionalidad de hospedaje de controles de ATL. Cuando se crea una instancia de esta clase, el procedimiento de ventana usará automáticamente la API de hospedaje de controles para crear un objeto host asociado a la ventana y cargarlo con el control que se especifica como el título de la ventana. 
+`AtlAxWin100` es el nombre de una clase de ventana que ayuda a proporcionar funcionalidad de hospedaje de controles de ATL. Cuando se crea una instancia de esta clase, el procedimiento de ventana usará automáticamente la API de hospedaje de controles para crear un objeto host asociado a la ventana y cargarlo con el control que se especifica como el título de la ventana.
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>¿Cuándo es necesario llamar a AtlAxWinInit?
 

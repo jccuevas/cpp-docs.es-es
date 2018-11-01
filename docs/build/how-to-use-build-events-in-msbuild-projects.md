@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc75cc0e58f86e8de87e3fb29c8ea02e624a73a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fd35ff136c0145e1c76a04d15052d426a7c90dcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700705"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161273"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Cómo: Usar eventos de compilación en proyectos de MSBuild
 
@@ -29,7 +29,7 @@ Un evento de compilación es un comando que MSBuild se realiza en una determinad
 
 Cada uno de los eventos de tres compilación se representa en un grupo de definiciones de elemento mediante un elemento command (`<Command>`) que se ejecuta y un elemento de mensaje (`<Message>`) que es que se muestran cuando **MSBuild** realiza el evento de compilación. Cada elemento es opcional y, si especifica varias veces el mismo elemento, la última aparición tiene prioridad.
 
-Opcional *use compilación* elemento (`<`*eventos de compilación*`UseInBuild>`) se pueden especificar en un grupo de propiedades para indicar si se ejecuta el evento de compilación. El valor del contenido de un *use compilación* elemento sea `true` o `false`. De forma predeterminada, un evento de compilación se ejecuta a menos que el correspondiente *use compilación* elemento está establecido en `false`.
+Opcional *use compilación* elemento (`<`*eventos de compilación*`UseInBuild>`) se pueden especificar en un grupo de propiedades para indicar si se ejecuta el evento de compilación. El valor del contenido de un *use compilación* elemento sea **true** o **false**. De forma predeterminada, un evento de compilación se ejecuta a menos que el correspondiente *use compilación* elemento está establecido en `false`.
 
 En la tabla siguiente se enumera cada elemento XML de eventos de compilación:
 
@@ -82,5 +82,5 @@ En el siguiente ejemplo se puede agregar dentro del elemento de proyecto del arc
 
 ## <a name="see-also"></a>Vea también
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
-[Tutorial: usar MSBuild para crear un proyecto de Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
+[Tutorial: Usar MSBuild para crear un proyecto de Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

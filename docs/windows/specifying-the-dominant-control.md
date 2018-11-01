@@ -1,28 +1,17 @@
 ---
-title: Especificar el Control dominante | Microsoft Docs
-ms.custom: ''
+title: Especificar el control dominante
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dominant controls
 - Dialog Editor [C++], dominant control
 - controls [C++], dominant
 ms.assetid: 42b523a7-192a-417b-9512-d4af795e002f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a4721cec6ebc11cf2107afe0048da90164c0f47f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84a426418a11d622a0f29e047d75e72beb96b339
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559034"
 ---
 # <a name="specifying-the-dominant-control"></a>Especificar el control dominante
 
@@ -48,6 +37,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Selección de varios controles](../windows/selecting-multiple-controls.md)  
-[Selección de controles](../windows/selecting-controls.md)  
+[Selección de varios controles](../windows/selecting-multiple-controls.md)<br/>
+[Selección de controles](../windows/selecting-controls.md)<br/>
 [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

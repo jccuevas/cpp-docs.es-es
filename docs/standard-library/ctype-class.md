@@ -1,10 +1,6 @@
 ---
-title: ctype (Clase) | Microsoft Docs
-ms.custom: ''
+title: ctype (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocale/std::ctype
 - xlocale/std::ctype::char_type
@@ -22,8 +18,6 @@ f1_keywords:
 - xlocale/std::ctype::tolower
 - xlocale/std::ctype::toupper
 - xlocale/std::ctype::widen
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::ctype [C++]
 - std::ctype [C++], char_type
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24eb9bbad0e5732eaba523abcaa93eecd6e7c240
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719451"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438962"
 ---
 # <a name="ctype-class"></a>ctype (Clase)
 
@@ -176,7 +166,6 @@ virtual bool do_is(
     mask maskVal,
     CharType ch) const;
 
-
 virtual const CharType *do_is(
     const CharType* first,
     const CharType* last,
@@ -222,7 +211,6 @@ Una función virtual llamada para convertir un carácter de tipo `CharType` usad
 virtual char do_narrow(
     CharType ch,
     char default = '\0') const;
-
 
 virtual const CharType* do_narrow(
     const CharType* first,
@@ -337,7 +325,6 @@ Función virtual a la que se llama para convertir a minúsculas un carácter o u
 ```cpp
 virtual CharType do_tolower(CharType ch) const;
 
-
 virtual const CharType *do_tolower(
     CharType* first,
     const CharType* last) const;
@@ -373,7 +360,6 @@ Función virtual a la que se llama para convertir a mayúsculas un carácter o u
 ```cpp
 virtual CharType do_toupper(CharType ch) const;
 
-
 virtual const CharType *do_toupper(
     CharType* first,
     const CharType* last) const;
@@ -408,7 +394,6 @@ Una función virtual llamada para convierte un carácter de tipo **char** en el 
 
 ```cpp
 virtual CharType do_widen(char byte) const;
-
 
 virtual const char *do_widen(
     const char* first,
@@ -450,7 +435,6 @@ Comprueba si un carácter individual tiene un atributo determinado, o clasifica 
 
 ```cpp
 bool is(mask maskVal, CharType ch) const;
-
 
 const CharType *is(
     const CharType* first,
@@ -530,7 +514,6 @@ Convierte los caracteres de tipo `CharType` utilizado por una configuración reg
 
 ```cpp
 char narrow(CharType ch, char default = '\0') const;
-
 
 const CharType* narrow(
     const CharType* first,
@@ -710,7 +693,6 @@ Convierte a minúsculas un carácter o un intervalo de caracteres.
 
 ```cpp
 CharType tolower(CharType ch) const;
-
 
 const CharType *tolower(CharType* first, const CharType* last) const;
 ```

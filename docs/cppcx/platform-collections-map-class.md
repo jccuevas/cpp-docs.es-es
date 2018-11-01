@@ -1,8 +1,6 @@
 ---
-title: Clase Platform::Collections::Map | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::Map (Clase)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -14,21 +12,15 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs:
-- C++
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103884"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481463"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map (Clase)
 
@@ -173,7 +165,7 @@ La clave que se usa para ubicar el elemento Map. El tipo de *clave* es typename 
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encuentra la clave; de lo contrario, `false`.
+**True** si la clave se encuentra; en caso contrario, **false**.
 
 ## <a name="insert"></a>  Map:: Insert (método)
 
@@ -195,7 +187,7 @@ La parte de valor del par clave-valor. El tipo de *valor* es typename *V*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si la clave de un elemento existente en el mapa actual coincide con *clave* y la parte del valor de ese elemento se establece en *valor*. `false` Si ningún elemento existente en el mapa actual coincide con *clave* y *clave* y *valor* parámetros se crean en un par de clave-valor y, a continuación, se agrega al mapa actual.
+**True** si la clave de un elemento existente en el mapa actual coincide con *clave* y la parte del valor de ese elemento se establece en *valor*. **false** si ningún elemento existente en el mapa actual coincide con *clave* y *clave* y *valor* parámetros se crean en un par de clave-valor y, a continuación, se agregan a la objeto Map actual.
 
 ## <a name="lookup"></a>  Map:: Lookup (método)
 

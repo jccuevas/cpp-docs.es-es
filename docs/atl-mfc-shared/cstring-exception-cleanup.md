@@ -1,26 +1,16 @@
 ---
-title: Limpieza de excepciones de CString | Microsoft Docs
-ms.custom: ''
+title: Limpieza de excepciones de CString
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, exceptions
 - exception handling, cleanup code
 ms.assetid: 28b9ce70-be63-4a0d-92a8-44bbfbc95e83
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 656739ad000612f130f5cdfb1a53a6de2d67c4c8
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: f1950553e3bf3a43f029478e00b177f5cbfe121f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492552"
 ---
 # <a name="cstring-exception-cleanup"></a>Limpieza de excepciones de CString
 
@@ -30,6 +20,6 @@ En el mecanismo que ahora utiliza MFC de control de excepciones de C++, no es ne
 
 ## <a name="see-also"></a>Vea también
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
 

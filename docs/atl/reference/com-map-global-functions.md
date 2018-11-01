@@ -1,28 +1,18 @@
 ---
-title: Funciones globales de mapa COM | Microsoft Docs
-ms.custom: ''
+title: Funciones globales de mapa COM
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
 - atlbase/ATL::InlineIsEqualIUnknown
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c9185a71cc77cadb1ad7cdf577654730819147d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f3f5e1c5ec1d845962783b8768404a89727edc8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458791"
 ---
 # <a name="com-map-global-functions"></a>Funciones globales de mapa COM
 
@@ -31,11 +21,11 @@ Estas funciones proporcionan compatibilidad para mapa COM `IUnknown` implementac
 |||
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|Delega en el `IUnknown` de un objeto no agregado.|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un código eficaz para comparar las interfaces con `IUnknown`.|  
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|Genera un código eficaz para comparar las interfaces con `IUnknown`.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlbase.h  
+**Encabezado:** atlbase.h
 
 ##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface
 

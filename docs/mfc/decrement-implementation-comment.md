@@ -1,5 +1,5 @@
 ---
-title: --Implementation (comentario) | Documentos de Microsoft
+title: --Implementation (comentario) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,28 +17,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89f87c33abfec7b9d055b589726639fcd741e59d
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 874c7eb29f1908e6098ee4a9095f17a4dae00006
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930279"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402127"
 ---
 # <a name="-implementation-comment"></a>// Implementation (Comentario)
-El `// Implementation` sección es la parte más importante de cualquier declaración de clase MFC.  
-  
- Esta sección contiene todos los detalles de implementación. Las variables miembro y funciones miembro pueden aparecer en esta sección. Todos los elementos por debajo de esta línea pudieron cambiar en futuras versiones de MFC. A menos que se no se puede evitar, no debe confiar en los detalles a continuación la `// Implementation` línea. Además, los miembros declarados debajo de la línea de implementación no están documentados, aunque parte de la implementación se describe en notas técnicas. Reemplazos de funciones virtuales en la clase base se encuentran en esta sección, independientemente de qué sección de la función de clase base está definida, porque el hecho de que una función reemplaza la implementación de la clase base se considera un detalle de implementación. Normalmente, estos miembros están protegidos, pero no siempre.  
-  
- Tenga en cuenta desde el `CStdioFile` enumerar en [un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md) que los miembros declarados bajo el `// Implementation` comentario puede declararse como **pública**, **protegido**, o **privada**. Sólo se deben utilizar a estos miembros con precaución, ya que pueden variar en el futuro. Declarar un grupo de miembros como **público** puede ser necesaria para la implementación de la biblioteca de clase para que funcione correctamente. Sin embargo, esto no significa que puede utilizar los miembros declarados por lo que de forma segura.  
-  
+
+El `// Implementation` sección es la parte más importante de cualquier declaración de clase MFC.
+
+Esta sección contiene todos los detalles de implementación. Variables de miembro y funciones miembro pueden aparecer en esta sección. Todo bajo esta línea podría cambiar en futuras versiones de MFC. A menos que no se puede evitar, no debe confiar en los detalles a continuación el `// Implementation` línea. Además, los miembros declarados debajo de la línea de implementación no están documentados, aunque parte de la implementación se describe en las notas técnicas. Reemplazos de funciones virtuales en la clase base se encuentran en esta sección, independientemente de qué sección de la función de la clase base está definida, ya que el hecho de que una función invalida la implementación de la clase base se considera un detalle de implementación. Normalmente, estos miembros están protegidos, pero no siempre.
+
+Tenga en cuenta desde la `CStdioFile` listado en [un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md) que los miembros declarados bajo el `// Implementation` comentario puede declararse como **pública**, **protegido**, o **privada**. Solo se deben usar a estos miembros con precaución, ya que pueden variar en el futuro. Declarar un grupo de miembros como **pública** puede ser necesario para la implementación de la biblioteca de clase para que funcione correctamente. Sin embargo, esto no significa que los miembros declarados por lo que puede utilizar sin ningún riesgo.
+
 > [!NOTE]
->  Puede encontrar los comentarios de los tipos restantes encima o debajo de la `// Implementation` comentario. En cualquier caso, describen los tipos de miembros declarados debajo de ellos. Si se encuentran por debajo del `// Implementation` comentario, debe suponer que los miembros pueden cambiar en versiones futuras de MFC.  
-  
-## <a name="see-also"></a>Vea también  
- [Usar los archivos de código fuente MFC](../mfc/using-the-mfc-source-files.md)   
- [Un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md)   
- [Comentario de constructores](../mfc/decrement-constructors-comment.md)   
- [Comentario Attributes](../mfc/decrement-attributes-comment.md)   
- [Comentario Operations](../mfc/decrement-operations-comment.md)   
- [Comentarios reemplazables](../mfc/decrement-overridables-comment.md)
+>  Puede encontrar los comentarios de los tipos restantes encima o debajo de la `// Implementation` comentario. En cualquier caso, describen los tipos de miembros declarados debajo de ellos. Si aparecen a continuación el `// Implementation` comentario, debe suponer que los miembros pueden cambiar en futuras versiones de MFC.
+
+## <a name="see-also"></a>Vea también
+
+[Uso de los archivos de código fuente de MFC](../mfc/using-the-mfc-source-files.md)<br/>
+[Un ejemplo de los comentarios](../mfc/an-example-of-the-comments.md)<br/>
+[Comentario de constructores](../mfc/decrement-constructors-comment.md)<br/>
+[Comentario Attributes](../mfc/decrement-attributes-comment.md)<br/>
+[Comentario Operations](../mfc/decrement-operations-comment.md)<br/>
+[Overridables (comentario)](../mfc/decrement-overridables-comment.md)
 

@@ -1,28 +1,18 @@
 ---
-title: CComAutoDeleteCriticalSection (clase) | Microsoft Docs
-ms.custom: ''
+title: CComAutoDeleteCriticalSection (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComAutoDeleteCriticalSection
 - atlcore/ATL::CComAutoDeleteCriticalSection
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c8ff6141fb5aa58e8de626675e29b46426ed47f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 93b9a266bba59b80a7661cf63046dcfe63f3edb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431179"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection (clase)
 
@@ -36,7 +26,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 
 ## <a name="remarks"></a>Comentarios
 
-`CComAutoDeleteCriticalSection` se deriva de la clase [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Sin embargo, `CComAutoDeleteCriticalSection` invalida la [término](ccomsafedeletecriticalsection-class.md#term) método **privada** acceso, que fuerza la limpieza de memoria interna que se produzca solo cuando las instancias de esta clase salen del ámbito o se eliminan explícitamente desde memoria.  
+`CComAutoDeleteCriticalSection` se deriva de la clase [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Sin embargo, `CComAutoDeleteCriticalSection` invalida la [término](ccomsafedeletecriticalsection-class.md#term) método **privada** acceso, que fuerza la limpieza de memoria interna que se produzca solo cuando las instancias de esta clase salen del ámbito o se eliminan explícitamente desde memoria.
 
 Esta clase no presenta ninguna métodos adicionales a través de su clase base. Consulte [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) y [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) para obtener más información sobre las clases auxiliares de sección crítica.
 

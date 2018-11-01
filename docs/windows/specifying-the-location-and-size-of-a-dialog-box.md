@@ -1,27 +1,16 @@
 ---
-title: Especificar la ubicación y tamaño de un cuadro de diálogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Especificar la ubicación y tamaño de un cuadro de diálogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 854e4df84bfc5f75eda8f98fa117c199ba054b3a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2c39cf5076ea38635268120da96fec6c82e23c47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524944"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box-c"></a>Especificar la ubicación y tamaño de un cuadro de diálogo (C++)
 
@@ -37,5 +26,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

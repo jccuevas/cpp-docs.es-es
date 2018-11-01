@@ -1,30 +1,20 @@
 ---
-title: 'TN065: Compatibilidad con una interfaz Dual para los servidores de automatización OLE | Microsoft Docs'
-ms.custom: ''
+title: 'TN065: Compatibilidad con una interfaz dual para los servidores de Automation OLE'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.ole
-dev_langs:
-- C++
 helpviewer_keywords:
 - dual interfaces [MFC], OLE Automation
 - TN065 [MFC]
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ef599c99cc46c2014ee2d72c538b55e59122848
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209691"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575219"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Compatibilidad con una interfaz dual para los servidores de Automation OLE
 
@@ -328,7 +318,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     Esto crea un `HRESULT` específico de la interfaz que produjo la excepción. El código de error se desplaza por 0 x 200 para evitar conflictos con el definido por el sistema `HRESULT`s para interfaces OLE estándares.
+   Esto crea un `HRESULT` específico de la interfaz que produjo la excepción. El código de error se desplaza por 0 x 200 para evitar conflictos con el definido por el sistema `HRESULT`s para interfaces OLE estándares.
 
 - [CMemoryException](../mfc/reference/cmemoryexception-class.md) : en este caso, `E_OUTOFMEMORY` se devuelve.
 
@@ -377,5 +367,5 @@ STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo(
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

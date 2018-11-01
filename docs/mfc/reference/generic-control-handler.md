@@ -1,5 +1,5 @@
 ---
-title: Identificador de Control genérico | Documentos de Microsoft
+title: Identificador de Control genérico | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,20 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae941e7a59fe673dea6068c6ca6df5feb94db239
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 060bda1de088f3e1e84791601f176097f764c412
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372935"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446431"
 ---
 # <a name="generic-control-handler"></a>Identificador de control genérico
-La siguiente entrada de mapa correspondiente para el prototipo de función.  
-  
-|Entrada de mapa|Prototipo de función|  
-|---------------|------------------------|  
-|ON_CONTROL ( \<wNotifyCode >, \<Id. >, \<memberFxn >)|void memberFxn de afx_msg ();|  
-  
-## <a name="see-also"></a>Vea también  
- [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
+
+La siguiente entrada de mapa corresponde al prototipo de función.
+
+|Entrada de asignación|Prototipo de función|
+|---------------|------------------------|
+|ON_CONTROL ( \<wNotifyCode >, \<id >, \<memberFxn >)|void memberFxn de afx_msg ();|
+
+## <a name="see-also"></a>Vea también
+
+[Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)
 

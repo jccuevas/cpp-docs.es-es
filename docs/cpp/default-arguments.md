@@ -1,12 +1,6 @@
 ---
-title: Argumentos predeterminados | Microsoft Docs
-ms.custom: ''
+title: Argumentos predeterminados
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - arguments [C++], function
 - function declarators
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528926"
 ---
 # <a name="default-arguments"></a>Argumentos predeterminados
 
@@ -112,7 +102,7 @@ Tenga en cuenta los siguientes puntos al utilizar argumentos predeterminados:
     }
     ```
 
-     El problema con este código es que la declaración de función de la definición vuelve a definir el argumento predeterminado para `prec`.
+   El problema con este código es que la declaración de función de la definición vuelve a definir el argumento predeterminado para `prec`.
 
 - Declaraciones posteriores pueden agregar argumentos predeterminados adicionales.
 

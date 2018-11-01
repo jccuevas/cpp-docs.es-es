@@ -1,14 +1,8 @@
 ---
-title: Inclusión de recursos de cuadro de diálogo) (C++) | Microsoft Docs
-ms.custom: ''
+title: Inclusión de recursos de cuadro de diálogo) (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourceincludes
-dev_langs:
-- C++
 helpviewer_keywords:
 - Resource Includes dialog box [C++]
 - rc files [C++], changing storage
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - symbol header files [C++], read-only
 - symbols [C++], symbol header files
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1263b5037d9e5ed3cf81eaa55f6e4accb8737e6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b0e7125e07deb965055da54126eb0933e64c0429
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625071"
 ---
 # <a name="resource-includes-dialog-box-c"></a>Inclusión de recursos de cuadro de diálogo) (C++)
 
@@ -58,7 +47,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Procedimiento para especificar directorios de inclusión para los recursos](../windows/how-to-specify-include-directories-for-resources.md)  
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Procedimiento para especificar directorios de inclusión para los recursos](../windows/how-to-specify-include-directories-for-resources.md)<br/>
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

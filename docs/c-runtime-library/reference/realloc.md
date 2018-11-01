@@ -1,10 +1,6 @@
 ---
-title: realloc | Microsoft Docs
-ms.custom: ''
+title: realloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - realloc
 apilocation:
@@ -25,8 +21,6 @@ f1_keywords:
 - _nrealloc
 - realloc
 - _frealloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _brealloc function
 - realloc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6452d14e0a8630c68d5e179fd94d531db1b667ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d61746365a8ded8d68072b1f398a18ba6ce7605
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408099"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544968"
 ---
 # <a name="realloc"></a>realloc
 
@@ -74,21 +64,21 @@ Nuevo tamaño en bytes.
 
 **realloc** devuelve un **void** puntero al bloque de memoria reasignado (y, probablemente, trasladado).
 
-Si no hay memoria suficiente para expandir el bloque al tamaño especificado, el bloque original se permanecen sin cambios, y **NULL** se devuelve.
+Si no hay suficiente memoria disponible para expandir el bloque al tamaño determinado, el bloque original permanece inalterado y **NULL** se devuelve.
 
-Si *tamaño* es cero, el bloque señalado por *memblock* se libera; el valor devuelto es **NULL**, y *memblock* haciendo referencia a un bloque liberado.
+Si *tamaño* es cero, el bloque señalado por *memblock* se libera; el valor devuelto es **NULL**, y *memblock* sigue apuntando a un bloque liberado.
 
-El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para obtener un puntero a un tipo distinto de **void**, use un conversión de tipo en el valor devuelto.
+El valor devuelto apunta a un espacio de almacenamiento confirmado como correctamente alineado para almacenar cualquier tipo de objeto. Para obtener un puntero a un tipo distinto **void**, use un conversión de tipo en el valor devuelto.
 
 ## <a name="remarks"></a>Comentarios
 
 El **realloc** función cambia el tamaño de un bloque de memoria asignado. El *memblock* argumento apunta al principio del bloque de memoria. Si *memblock* es **NULL**, **realloc** se comporta del mismo modo que **malloc** y asigna un nuevo bloque de *tamaño*bytes. Si *memblock* no **NULL**, debe ser un puntero devuelto por una llamada anterior a **calloc**, **malloc**, o **realloc** .
 
-El *tamaño* argumento proporciona el nuevo tamaño del bloque, en bytes. El contenido del bloque es igual hasta el más pequeño de los tamaños nuevo y antiguo, aunque el bloque nuevo puede estar en otra ubicación. Dado que el nuevo bloque puede ser en una nueva ubicación de memoria, el puntero devuelto por **realloc** no se garantiza que el puntero que se pasa a través de la *memblock* argumento. **realloc** cero no recién asignados a la memoria en el caso de crecimiento de búfer.
+El *tamaño* argumento proporciona el nuevo tamaño del bloque, en bytes. El contenido del bloque es igual hasta el más pequeño de los tamaños nuevo y antiguo, aunque el bloque nuevo puede estar en otra ubicación. Dado que el bloque nuevo puede estar en una nueva ubicación de memoria, el puntero devuelto por **realloc** no se garantiza que el puntero que se pasa a través de la *memblock* argumento. **realloc** cero no recién asignados a la memoria en el caso de un crecimiento del búfer.
 
 **realloc** establece **errno** a **ENOMEM** si se produce un error en la asignación de memoria o si la cantidad de memoria solicitada supera **_HEAP_MAXREQ**. Para obtener información sobre este y otros códigos de error, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** llamadas **malloc** para poder usar C++ [_set_new_mode](set-new-mode.md) función para establecer el modo de controlador nuevo. El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del controlador nuevo según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del controlador de nuevo en caso de error al asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **realloc** no puede asignar memoria, **malloc** llama a la rutina del controlador de nuevo en la misma forma en que la **nueva** does de operador Cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
+**realloc** llamadas **malloc** con el fin de usar C++ [_set_new_mode](set-new-mode.md) función para establecer el modo de controlador nuevo. El nuevo modo de controlador indica si, en caso de error, **malloc** consiste en llamar a la rutina del nuevo controlador según lo establecido por [_set_new_handler](set-new-handler.md). De forma predeterminada, **malloc** no llama a la rutina del nuevo controlador en caso de error para asignar memoria. Puede invalidar este comportamiento predeterminado para que, cuando **realloc** no puede asignar memoria, **malloc** llame a la rutina del nuevo controlador de la misma forma en que el **nuevo** operador Cuando se produce un error por la misma razón. Para invalidar el valor predeterminado, llame a
 
 ```C
 _set_new_mode(1);

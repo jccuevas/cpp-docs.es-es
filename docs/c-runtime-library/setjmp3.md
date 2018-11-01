@@ -29,44 +29,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d06bd7728347770bd17c48abc9898f2a2467a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22416f4036d79f9e9b7c95f1cf9098e450533f39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408372"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054277"
 ---
 # <a name="setjmp3"></a>_setjmp3
-Función de CRT interna. Nueva implementación de la función `setjmp`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-int _setjmp3(  
-   OUT jmp_buf env,  
-   int count,  
-   (optional parameters)  
-);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- [out] `env`  
- Dirección del búfer para almacenar la información de estado.  
-  
- [in] `count`  
- Número de `DWORD` de información adicionales que hay almacenados en los `optional parameters`.  
-  
- [in] `optional parameters`  
- Datos adicionales insertados por la función intrínseca `setjmp`. El primer `DWORD` es un puntero de función que sirve para desenredar datos extra y regresar a un estado de registro no volatile. El segundo `DWORD` es el nivel de intento que se va a restaurar. Cualquier otro dato extra se guarda en la matriz de datos genéricos de `jmp_buf`.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Siempre devuelve 0.  
-  
-## <a name="remarks"></a>Comentarios  
- No use esta función en un programa de C++. Se trata de una función intrínseca que no admite C++. Para más información sobre cómo usar `setjmp`, vea [Usar setjmp/longjmp](../cpp/using-setjmp-longjmp.md).  
-  
-## <a name="requirements"></a>Requisitos  
-  
-## <a name="see-also"></a>Vea también  
- [Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [setjmp](../c-runtime-library/reference/setjmp.md)
+
+Función de CRT interna. Nueva implementación de la función `setjmp`.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+int _setjmp3(
+   OUT jmp_buf env,
+   int count,
+   (optional parameters)
+);
+```
+
+#### <a name="parameters"></a>Parámetros
+
+*env*<br/>
+[out] Dirección del búfer para almacenar la información de estado.
+
+*count*<br/>
+[in] Número de `DWORD` de información adicionales que hay almacenados en los `optional parameters`.
+
+*optional parameters*<br/>
+[in] Datos adicionales insertados por la función intrínseca `setjmp`. El primer `DWORD` es un puntero de función que sirve para desenredar datos extra y regresar a un estado de registro no volatile. El segundo `DWORD` es el nivel de intento que se va a restaurar. Cualquier otro dato extra se guarda en la matriz de datos genéricos de `jmp_buf`.
+
+## <a name="return-value"></a>Valor devuelto
+
+Siempre devuelve 0.
+
+## <a name="remarks"></a>Comentarios
+
+No use esta función en un programa de C++. Se trata de una función intrínseca que no admite C++. Para más información sobre cómo usar `setjmp`, vea [Usar setjmp/longjmp](../cpp/using-setjmp-longjmp.md).
+
+## <a name="requirements"></a>Requisitos
+
+## <a name="see-also"></a>Vea también
+
+[Referencia alfabética de funciones](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[setjmp](../c-runtime-library/reference/setjmp.md)

@@ -1,5 +1,5 @@
 ---
-title: Usar CComboBoxEx | Documentos de Microsoft
+title: Usar CComboBoxEx | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,28 +19,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 755c7b211e9c387a923ac1e2fdfaacf4b8525efb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc92a76b9563c74111deda12d00ca7b5895a11d7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381766"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433314"
 ---
 # <a name="using-ccomboboxex"></a>Usar CComboBoxEx
-El control de cuadro combinado extendido es una extensión del control de cuadro combinado estándar que proporciona compatibilidad nativa con imágenes de elementos. Estas imágenes se pueden utilizar para indicar el estado de los elementos individuales en el cuadro combinado, por ejemplo, los elementos seleccionados y no seleccionados actualmente. Para facilitar el acceso a imágenes de elemento, el control proporciona compatibilidad con listas de imágenes.  
-  
- Utilice este control para proporcionar la funcionalidad de un cuadro combinado sin tener que dibujar manualmente gráficos de elementos.  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea obtener más información acerca de  
-  
--   [Creación de un control de cuadro combinado extendido](../mfc/creating-an-extended-combo-box-control.md)  
-  
--   [Uso de listas de imágenes en un control de cuadro combinado extendido](../mfc/using-image-lists-in-an-extended-combo-box-control.md)  
-  
--   [Configuración de las imágenes para un elemento Individual](../mfc/setting-the-images-for-an-individual-item.md)  
-  
--   [Procesamiento de mensajes de notificación en los controles de cuadro combinado extendido](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)  
-  
-## <a name="see-also"></a>Vea también  
- [Controles](../mfc/controls-mfc.md)
+
+El control de cuadro combinado extendido es una extensión de control de cuadro combinado estándar que proporciona compatibilidad nativa para las imágenes de elemento. Estas imágenes se pueden usar para indicar el estado de los elementos individuales en el cuadro combinado, como los elementos actualmente seleccionados o sin seleccionados. Para crear imágenes de elemento fácilmente accesibles, el control proporciona compatibilidad de la lista de imágenes.
+
+Use este control para proporcionar la funcionalidad de un cuadro combinado sin tener que dibujar manualmente gráficos de elementos.
+
+## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
+
+- [Creación de un control de cuadro combinado extendido](../mfc/creating-an-extended-combo-box-control.md)
+
+- [Uso de listas de imágenes en un control de cuadro combinado extendido](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
+
+- [Configuración de las imágenes para un elemento Individual](../mfc/setting-the-images-for-an-individual-item.md)
+
+- [Procesamiento de mensajes de notificación en los controles de cuadro combinado extendido](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
+
+## <a name="see-also"></a>Vea también
+
+[Controles](../mfc/controls-mfc.md)
 

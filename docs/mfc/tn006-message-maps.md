@@ -1,14 +1,8 @@
 ---
-title: 'TN006: Mapas de mensajes | Microsoft Docs'
-ms.custom: ''
+title: 'TN006: Mapas de mensajes'
 ms.date: 06/25/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.messages.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - ON_UPDATE_COMMAND_UI macro [MFC]
 - ON_NOTIFY_RANGE macro [MFC]
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213982"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463314"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mapas de mensajes
 
@@ -87,7 +77,7 @@ Se ha definido una firma de función estándar para desempaquetar los parámetro
 > [!NOTE]
 > ClassWizard requiere el uso de la **afx_msg** palabra clave en las declaraciones de controlador de mapa de mensajes.
 
- Estas firmas de función se derivaban mediante el uso de una convención simple. El nombre de la función siempre empieza por `"On`". Esto es seguido por el nombre del mensaje de Windows con el "WM_" quitado y la primera letra de cada palabra en mayúsculas. El orden de los parámetros es *wParam* seguido `LOWORD`(*lParam*), a continuación, `HIWORD`(*lParam*). No se pasan parámetros sin utilizar. Los identificadores que se ajustan a las clases de MFC se convierten en punteros a los objetos MFC adecuados. El ejemplo siguiente muestra cómo controlar el mensaje WM_PAINT y hacer el `CMyWnd::OnPaint` llamada a función:
+Estas firmas de función se derivaban mediante el uso de una convención simple. El nombre de la función siempre empieza por `"On`". Esto es seguido por el nombre del mensaje de Windows con el "WM_" quitado y la primera letra de cada palabra en mayúsculas. El orden de los parámetros es *wParam* seguido `LOWORD`(*lParam*), a continuación, `HIWORD`(*lParam*). No se pasan parámetros sin utilizar. Los identificadores que se ajustan a las clases de MFC se convierten en punteros a los objetos MFC adecuados. El ejemplo siguiente muestra cómo controlar el mensaje WM_PAINT y hacer el `CMyWnd::OnPaint` llamada a función:
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +87,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- La tabla de asignación de mensajes debe definirse fuera del ámbito de cualquier definición de función o clase. No se debe colocar en un bloque extern "C".
+La tabla de asignación de mensajes debe definirse fuera del ámbito de cualquier definición de función o clase. No se debe colocar en un bloque extern "C".
 
 > [!NOTE]
 > ClassWizard modificará las entradas de mapa de mensajes que se producen entre la / / {{y / /}} corchete de comentario.
@@ -223,7 +213,7 @@ Ejemplos de estas formas:
     }
     ```
 
- Los usuarios avanzados pueden controlar una variedad de comandos mediante el uso de un controlador de comandos única: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) o ON_COMMAND_RANGE_EX. Consulte la documentación del producto para obtener más información sobre estas macros.
+Los usuarios avanzados pueden controlar una variedad de comandos mediante el uso de un controlador de comandos única: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) o ON_COMMAND_RANGE_EX. Consulte la documentación del producto para obtener más información sobre estas macros.
 
 > [!NOTE]
 > ClassWizard admite la creación de controladores ON_COMMAND y ON_UPDATE_COMMAND_UI, pero no admite la creación de controladores ON_COMMAND_EX o ON_COMMAND_RANGE. Sin embargo, clase de asistente analizará y le permiten examinar todas las variantes de controlador de comando de cuatro.
@@ -251,5 +241,5 @@ Utilice el método más eficaz los controles comunes de Windows [WM_NOTIFY](http
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

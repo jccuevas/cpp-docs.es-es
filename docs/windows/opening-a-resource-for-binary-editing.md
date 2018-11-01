@@ -1,29 +1,18 @@
 ---
-title: Abrir un recurso para editarlo en modo binario (C++) | Microsoft Docs
-ms.custom: ''
+title: Abrir un recurso para editarlo en modo binario (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
-dev_langs:
-- C++
 helpviewer_keywords:
 - binary data, editing
 - resources [C++], opening for binary editing
 ms.assetid: d3cdb0e4-da66-410d-8e49-b29073ff2929
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cc66c9d06a8549984e9347af776c56883f8e22f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316359"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491187"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>Abrir un recurso para editarlo en modo binario (C++)
 
@@ -53,7 +42,7 @@ ms.locfileid: "44316359"
    > [!NOTE]
    > Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 
-![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 Datos binarios de un cuadro de diálogo que aparece en el editor binario
 
 Solo determinados valores ASCII se representan en el editor binario (de 0x20 a 0x7E). Los caracteres extendidos se muestran como puntos en la sección de valor ASCII del editor binario (el panel derecho). Los caracteres "imprimibles" son valores ASCII de 32 a 126.

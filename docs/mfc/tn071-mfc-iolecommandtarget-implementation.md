@@ -1,28 +1,18 @@
 ---
-title: 'TN071: Implementación de IOleCommandTarget en MFC | Microsoft Docs'
-ms.custom: ''
+title: 'TN071: Implementación de IOleCommandTarget en MFC'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - IOleCommandTarget
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d8e029b1ffc4e17e55f2cb69405bb272b92e94e
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43221399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522231"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Implementación de IOleCommandTarget en MFC
 
@@ -59,11 +49,11 @@ Esta macro se incluye en la declaración de clase (normalmente en el archivo de 
 BEGIN_OLECMD_MAP(theClass, baseClass)
 ```
 
-*theClass*  
- Nombre de la clase que contiene la asignación de comandos.
+*theClass*<br/>
+Nombre de la clase que contiene la asignación de comandos.
 
-*baseClass*  
- Nombre de la clase base de la clase que contiene la asignación de comandos.
+*baseClass*<br/>
+Nombre de la clase base de la clase que contiene la asignación de comandos.
 
 Esta macro marca el principio de la asignación de comandos. Use esta macro en el archivo de implementación de la clase que contiene la asignación de comandos.
 
@@ -77,14 +67,14 @@ Esta macro marca el final de la asignación de comandos. Use esta macro en el ar
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
-*pguid*  
- Puntero al GUID de grupo de comandos del comando OLE. Este parámetro es **NULL** para el grupo de comandos OLE estándar.
+*pguid*<br/>
+Puntero al GUID de grupo de comandos del comando OLE. Este parámetro es **NULL** para el grupo de comandos OLE estándar.
 
-*olecmdid*  
- Identificador de comando OLE de invocar el comando.
+*olecmdid*<br/>
+Identificador de comando OLE de invocar el comando.
 
-*identificador*  
- Id. del mensaje WM_COMMAND se envíen a la aplicación que contiene la asignación de comandos cuando se invoca este comando OLE.
+*identificador*<br/>
+Id. del mensaje WM_COMMAND se envíen a la aplicación que contiene la asignación de comandos cuando se invoca este comando OLE.
 
 Utilice el on_olecmd (macro) en el mapa de comando para agregar entradas para los comandos OLE que desea administrar. Cuando se reciben los comandos OLE, se convierte en el mensaje WM_COMMAND especificado y enrutadas en el mapa de mensajes de la aplicación con la arquitectura de enrutamiento de comandos MFC estándar.
 
@@ -158,5 +148,5 @@ void CContainerCntrItem::DoOleCmd()
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

@@ -1,16 +1,10 @@
 ---
-title: -D (definiciones de preprocesador) | Microsoft Docs
-ms.custom: ''
+title: /D (Definiciones de preprocesador)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
 - /d
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor definition symbols
 - constants, defining
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 19da0c8e29a27734b23a01a1b2d3ffaa64a7fe05
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713805"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620511"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definiciones de preprocesador)
 
@@ -109,6 +99,6 @@ TEST defined 1
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/ U, /u (anular la definición de símbolos)](../../build/reference/u-u-undefine-symbols.md)
-[#undef (directiva) (C/C ++)](../../preprocessor/hash-undef-directive-c-cpp.md)
-[#define (directiva) (C/C ++)](../../preprocessor/hash-define-directive-c-cpp.md)
+[/U, /u (Anular la definición de símbolos)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[#undef (directiva) (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
+[#define (directiva) (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

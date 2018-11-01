@@ -1,32 +1,23 @@
 ---
-title: A.7 mediante la cláusula de reducción | Documentos de Microsoft
-ms.custom: ''
+title: A.7 Usar la cláusula reduction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: e71e65bc-a25c-4f02-b507-66b52bf950a4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfa7042d32ed3a82dc2cf73ab565f0db6b98d3d8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: ba0b1c9563837314c06949f898938031149d4663
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618613"
 ---
 # <a name="a7---using-the-reduction-clause"></a>A.7 Usar la cláusula reduction
-En el ejemplo siguiente se muestra la cláusula de reducción ([sección 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) en página 28):  
-  
-```  
-#pragma omp parallel for private(i) shared(x, y, n) \  
-                         reduction(+: a, b)  
-    for (i=0; i<n; i++) {  
-        a = a + x[i];  
-        b = b + y[i];  
-    }  
+
+En el ejemplo siguiente se muestra la cláusula reduction ([sección 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md) en la página 28):
+
+```
+#pragma omp parallel for private(i) shared(x, y, n) \
+                         reduction(+: a, b)
+    for (i=0; i<n; i++) {
+        a = a + x[i];
+        b = b + y[i];
+    }
 ```

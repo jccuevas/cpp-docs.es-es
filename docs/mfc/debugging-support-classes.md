@@ -1,14 +1,8 @@
 ---
-title: Clases de soporte de depuración | Documentos de Microsoft
-ms.custom: ''
+title: Depurar las clases de depuración
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.debug
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging memory leaks, MFC
 - memory allocation, debugging dynamic
@@ -18,26 +12,24 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 942302a07a55adf7d7a1a89ac2b518e3dcaefe2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6cabd2fb35a60f1b6b53d47d19e95fa65d92c620
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342610"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521351"
 ---
 # <a name="debugging-support-classes"></a>Depurar las clases de depuración
-MFC proporciona las siguientes clases para ayudar a depurar problemas de asignación de memoria dinámica.  
-  
- [CDumpContext](../mfc/reference/cdumpcontext-class.md)  
- Proporciona un destino para volcados.  
-  
- [CMemoryState](../mfc/reference/cmemorystate-structure.md)  
- Estructura que proporciona las instantáneas de uso de memoria. También se usa para comparar las instantáneas de memoria anteriores y posteriores.  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+MFC proporciona las siguientes clases para ayudarle a depurar problemas de asignación de memoria dinámica.
+
+[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+Proporciona un destino para los volcados de diagnóstico.
+
+[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+Estructura que proporciona las instantáneas de uso de memoria. También se usa para comparar instantáneas de memoria anteriores y posteriores.
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

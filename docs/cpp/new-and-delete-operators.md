@@ -1,30 +1,20 @@
 ---
-title: nuevo y eliminar operadores | Microsoft Docs
-ms.custom: ''
+title: Operadores new y delete
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441306"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
@@ -45,7 +35,6 @@ char *pch = new char[BUFFER_SIZE];
 Si la solicitud es para cero bytes de almacenamiento, **new (operador)** devuelve un puntero a un objeto distinto (es decir, las llamadas repetidas a **operador new** devuelven punteros diferentes). Si no hay memoria suficiente para la solicitud de asignación, **new (operador)** produce una excepción std:: bad_alloc o devuelve **nullptr** si ha vinculado en no producen excepciones **operador new** admite.
 
 Puede escribir una rutina que intente liberar memoria y vuelva a intentar la asignación; consulte [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) para obtener más información. Para obtener más detalles sobre el esquema de recuperación, consulte la sección de memoria insuficiente de control de este tema.
-
 
 Los dos ámbitos para **operador new** funciones se describen en la tabla siguiente.
 

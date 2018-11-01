@@ -1,31 +1,21 @@
 ---
-title: Event (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: eventos (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d301f2bc7464d52be643d252e4febf7049657c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 66125645582fbc95523aea74047563bfd4f712b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542472"
 ---
-# <a name="event--c-component-extensions"></a>event (Extensiones de componentes de C++)
+# <a name="event--ccli-and-ccx"></a>eventos (C++ / c++ / CLI y c++ / CX)
 
 El **eventos** palabra clave declara una *eventos*, que es una notificación a los suscriptores registrados (*controladores de eventos*) que ha sucedido algo de interés.
 
@@ -50,19 +40,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parámetros
 
-*Modificador*  
+*Modificador*<br/>
 Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son **estático** y **virtual**.
 
-*delegate*  
+*delegate*<br/>
 El [delegar](../windows/delegate-cpp-component-extensions.md), cuya firma debe coincidir con el controlador de eventos.
 
-*event_name*  
+*event_name*<br/>
 Nombre del evento.
 
-*RETURN_VALUE*  
+*RETURN_VALUE*<br/>
 El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser **void**.
 
-*Parámetros*  
+*Parámetros*<br/>
 (opcional) Parámetros para el `raise` método, que coincide con la firma de la *delegar* parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -71,10 +61,10 @@ Un evento es una asociación entre un delegado (delegate) y una función miembro
 
 Hay dos tipos de declaraciones de eventos:
 
-*miembro de datos de evento*  
+*miembro de datos de evento*<br/>
 El compilador crea automáticamente almacenamiento para el evento en el formulario de un miembro del tipo delegate y crea funciones miembro internas `add()`, `remove()`, y `raise()` . Un miembro de datos de evento debe declararse dentro de una clase. El tipo de valor devuelto del tipo de valor devuelto del delegado debe coincidir con el tipo de valor devuelto del controlador de eventos.
 
-*bloque de eventos*  
+*bloque de eventos*<br/>
 Un bloque de eventos le permite personalizar y declarar explícitamente el comportamiento de los métodos `add()`, `remove()`, y `raise()`.
 
 Puede usar **operadores +=** y **operador-=** para agregar y quitar un evento de controlador o llame a la `add()` y `remove()` métodos explícitamente.
@@ -114,19 +104,19 @@ modifiereventdelegate^ event_name
 
 ### <a name="parameters"></a>Parámetros
 
-*Modificador*  
+*Modificador*<br/>
 Un modificador que se puede utilizar en la declaración de evento o un método de descriptor de acceso de eventos.  Los valores posibles son **estático** y **virtual**.
 
-*delegate*  
+*delegate*<br/>
 El [delegar](../windows/delegate-cpp-component-extensions.md), cuya firma debe coincidir con el controlador de eventos.
 
-*event_name*  
+*event_name*<br/>
 Nombre del evento.
 
-*RETURN_VALUE*  
+*RETURN_VALUE*<br/>
 El valor devuelto del método de descriptor de acceso del evento.  Para que sea comprobable, el tipo devuelto debe ser **void**.
 
-*Parámetros*  
+*Parámetros*<br/>
 (opcional) Parámetros para el `raise` método, que coincide con la firma de la *delegar* parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -137,10 +127,10 @@ El delegado (delegate) puede tener uno o varios métodos asociados que se llamar
 
 Hay dos tipos de declaraciones de eventos:
 
-*miembros de datos de evento*  
+*miembros de datos de evento*<br/>
 El compilador para eventos de miembro de datos crea el almacenamiento para el evento en forma de un miembro del tipo delegate.  Un miembro de datos de evento debe declararse dentro de una clase. Esto también se conoce como un evento trivial (vea el siguiente ejemplo de código).
 
-*bloques de eventos*  
+*bloques de eventos*<br/>
 Los bloques de eventos le permiten personalizar el comportamiento de los métodos add, remove y raise mediante su implementación. La firma de los métodos add, remove y raise debe coincidir con la firma del delegado (delegate).  Los eventos del bloque de eventos no son miembros de datos y cualquier uso como un miembro de datos generará un error del compilador.
 
 El tipo de valor devuelto del controlador de eventos debe coincidir con el del delegado.
@@ -282,4 +272,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

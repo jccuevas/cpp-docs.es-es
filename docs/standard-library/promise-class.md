@@ -1,10 +1,6 @@
 ---
-title: promise (Clase) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
+title: promise (Clase)
+ms.date: 10/18/2018
 f1_keywords:
 - future/std::promise
 - future/std::promise::promise
@@ -14,11 +10,7 @@ f1_keywords:
 - future/std::promise::set_value
 - future/std::promise::set_value_at_thread_exit
 - future/std::promise::swap
-dev_langs:
-- C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::promise [C++]
 - std::promise [C++], promise
@@ -28,14 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a56e188e581ea5d9dcafaa222ab4367e0b4b33fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100305"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592577"
 ---
 # <a name="promise-class"></a>promise (Clase)
 
@@ -139,7 +129,7 @@ Un objeto `promise`.
 
 ### <a name="remarks"></a>Comentarios
 
-El primer constructor crea un objeto `promise` *vacío*.
+El primer constructor crea un *vacía* `promise` objeto.
 
 El segundo constructor crea un valor vacío `promise` objeto y se usa *Al* para asignación de memoria.
 

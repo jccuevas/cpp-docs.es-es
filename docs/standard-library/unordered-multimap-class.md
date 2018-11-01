@@ -1,10 +1,6 @@
 ---
-title: unordered_multimap (Clase) | Microsoft Docs
-ms.custom: ''
+title: unordered_multimap (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
@@ -52,8 +48,6 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::operator=
 - unordered_map/std::unordered_multimap::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_multimap
 - std::unordered_multimap::allocator_type
@@ -143,16 +137,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b4c501b651a72fa28d603ec818dcc70989b5302e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622942"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap (Clase)
 
@@ -297,7 +287,6 @@ Designa el principio de la secuencia controlada o un depósito.
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1124,7 +1113,6 @@ iterator end();
 
 const_iterator end() const;
 
-
 local_iterator end(size_type nbucket);
 
 const_local_iterator end(size_type nbucket) const;
@@ -1486,19 +1474,16 @@ Inserta un elemento o un intervalo de elementos en un unordered_multimap.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1506,13 +1491,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2004,7 +1987,6 @@ Obtiene o establece los elementos máximos por depósito.
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```
@@ -2582,7 +2564,8 @@ unordered_multimap(
 
 template <class InputIterator>
 unordered_multimap(
-InputIterator first, InputIterator last,
+    InputIterator first,
+    InputIterator last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
     const Comp& Comp = Pred(),

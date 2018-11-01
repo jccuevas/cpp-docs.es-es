@@ -1,11 +1,6 @@
 ---
-title: ccosh, ccoshf, ccoshl | Microsoft Docs
-ms.custom: ''
+title: ccosh, ccoshf, ccoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ccosh
 - ccoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ccosh
 - complex/ccoshf
 - complex/ccoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ccosh function
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a883869b830efbba08822b77c97fd6a156358dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394488"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676842"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
@@ -74,7 +63,7 @@ _Lcomplex ccoshl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo que representa el ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -83,7 +72,7 @@ El coseno hiperbólico de *z*, en radianes.
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ccosh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ccosh** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ccosh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ccosh** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 

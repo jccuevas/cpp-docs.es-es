@@ -1,12 +1,6 @@
 ---
-title: Creación de una información sobre herramientas para un botón de barra de herramientas (C++) | Microsoft Docs
-ms.custom: ''
+title: Creación de una información sobre herramientas para un botón de barra de herramientas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - tool tips [C++], adding to toolbar buttons
 - "\nin tool tip"
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5e5fef71d3fa2ad76192a06603ed9e22d52eef71
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9179dfcc47f69b9f5db131467f0216da6363085c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558016"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button-c"></a>Creación de una información sobre herramientas para un botón de barra de herramientas (C++)
 
@@ -59,5 +48,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor de barras de herramientas](../windows/toolbar-editor.md)

@@ -1,29 +1,18 @@
 ---
-title: Asistente para aplicaciones Win32 | Microsoft Docs
-ms.custom: ''
+title: Asistente para aplicaciones Win32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bdcd101759b35490451bf46bd6e222db469a3fba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1b89ae1c91536956924090f4a5eafa883053ed7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581247"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526173"
 ---
 # <a name="win32-application-wizard"></a>Asistente para aplicaciones Win32
 
@@ -62,5 +51,5 @@ Puede ver los archivos que el asistente crea para el proyecto en el **Explorador
 
 ## <a name="see-also"></a>Vea también
 
-[Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)  
+[Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)<br/>
 [Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)

@@ -1,27 +1,16 @@
 ---
-title: 'Cómo: buscar símbolos en recursos (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: buscar símbolos en recursos (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 6efef8e8-d0d4-4c49-b895-314974e7791a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 51b2045a1605a37fa9c0d17fdc0c9456652345bd
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b289fa1c2e5e5e1997c5024b21cae3d7a22b2b8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655996"
 ---
 # <a name="how-to-search-for-symbols-in-resources-c"></a>Cómo: buscar símbolos en recursos (C++)
 
@@ -49,6 +38,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

@@ -1,7 +1,7 @@
 ---
 title: Palabras clave de C | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057802"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161910"
 ---
 # <a name="c-keywords"></a>Palabras clave de C
 
@@ -48,17 +48,19 @@ El compilador de Microsoft C reconoce las palabras clave e identificadores espec
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**2|**__int8**|**naked**2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**2|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
-1. La palabra clave **__based** tiene usos limitados para las compilaciones de destino de 32 y 64 bits.
+<sup>1</sup> La palabra clave **__based** tiene usos limitados para las compilaciones de destino de 32 y 64 bits.
 
-2. Estos son identificadores especiales cuando se usan con **__declspec**; su uso en otros contextos no está restringido.
+<sup>2</sup> Estos son identificadores especiales cuando se usan con **__declspec**; su uso en otros contextos no está restringido.
 
-Las extensiones de Microsoft están habilitadas de manera predeterminada. Para asegurarse de que los programas sean totalmente portables, puede deshabilitar las extensiones de Microsoft especificando la opción /Za (compilación para la compatibilidad con ANSI) durante la compilación. Al hacerlo, se deshabilitan las palabras clave específicas de Microsoft.
+<sup>3</sup> Para compatibilidad con versiones anteriores, estas palabras clave están disponibles con dos caracteres de subrayado iniciales y un único carácter de subrayado inicial cuando se habilitan las extensiones de Microsoft.
+
+Las extensiones de Microsoft están habilitadas de manera predeterminada. Para asegurarse de que los programas sean totalmente portables, puede deshabilitar las extensiones de Microsoft especificando la opción [/Za \(Deshabilitar las extensiones del lenguaje)](../build/reference/za-ze-disable-language-extensions.md) durante la compilación. Al hacerlo, se deshabilitan algunas las palabras clave específicas de Microsoft.
 
 Con las extensiones de Microsoft habilitadas, puede usar las palabras clave antes indicadas en los programas. Para la compatibilidad con ANSI, la mayoría de estas palabras clave van precedidas de un subrayado doble. Las cuatro excepciones, **dllexport**, **dllimport**, **naked** y **thread**, solo se usan con **__declspec** y, por consiguiente, no requieren un subrayado doble inicial. Por compatibilidad con versiones anteriores, se admiten las versiones con un solo subrayado del resto de las palabras clave.
 

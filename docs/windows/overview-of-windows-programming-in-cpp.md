@@ -1,32 +1,22 @@
 ---
-title: Información general de la programación de Windows en C++ | Microsoft Docs
-ms.custom: ''
+title: Información general de la programación para Windows en C++
 ms.date: 04/06/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6ec12428b090d2317a6f2e5cc493d1e4f9392ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677832"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494411"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
 Puede usar Visual C++ para escribir muchas clases de programas que se ejecutan en un equipo de Windows (x 86, x64 o ARM), en un servidor de Windows, en la nube o en Xbox. Los programas bien escritos de C++ tienen estas cualidades:
+
 - eficaz en los requisitos de memoria
-- económica en el consumo de energía 
+- económica en el consumo de energía
 - puede aprovechar al máximo de dispositivos de varios núcleos y varios núcleos
-- capaz de hacer el cálculo general en la unidad de procesamiento de gráficos (GPGPU)  
+- capaz de hacer el cálculo general en la unidad de procesamiento de gráficos (GPGPU)
 - se puede sacar provecho de otros avances recientes en hardware.
 
 Existen varias categorías de aplicaciones de Windows que se pueden desarrollar con Visual C++. Estas categorías tienen distintos modelos de programación o modelos de aplicación, que se han introducido en los años. Cada modelo utiliza diferentes bibliotecas y API para proporcionar acceso a la plataforma y crear interfaces de usuario como ventanas y cuadros de diálogo. La biblioteca estándar de C++, así como bibliotecas de terceros pueden usarse en cualquiera de estas categorías, con algunas restricciones para UWP.
@@ -35,7 +25,7 @@ Existen varias categorías de aplicaciones de Windows que se pueden desarrollar 
 
 Aplicaciones para UWP pueden ejecutar en todos los dispositivos Windows 10 como tabletas y teléfonos móviles, así como en el escritorio. En el escritorio pueden ejecutarse como una ventana de escritorio normal en lugar de hacerlo continuamente a pantalla completa. Estas aplicaciones también pueden ejecutarse en la consola Xbox y en futuros dispositivos.  Las aplicaciones UWP se ejecutan en el tiempo de ejecución de Windows, que proporciona una interfaz para los diversos dispositivos de hardware que se admiten en Windows, servicios y elementos de la interfaz de usuario.
 
-Puede escribir aplicaciones para UWP en C++ / c++ / CX, un dialecto de C++, puede usar el [C++ / c++ / WinRT biblioteca](https://moderncpp.com/)para algunos escenarios. Las aplicaciones para UWP compilan a código nativo y tienen una interfaz de usuario XAML o utilizan DirectX. Componentes de Windows en tiempo de ejecución que se escriben en código nativo que pueden consumir las aplicaciones para UWP escritas en otros lenguajes. Para obtener más información, consulte [crear una aplicación plataforma Universal de Windows en C++](http://go.microsoft.com/fwlink/?LinkID=534976), [crea tu primer juego para UWP con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), y [componentes de creación en tiempo de ejecución de Windows en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
+Puede escribir aplicaciones para UWP en C++ / c++ / CX, un dialecto de C++, puede usar el [C++ / c++ / WinRT biblioteca](https://moderncpp.com/) para algunos escenarios. Las aplicaciones para UWP compilan a código nativo y tienen una interfaz de usuario XAML o utilizan DirectX. Componentes de Windows en tiempo de ejecución que se escriben en código nativo que pueden consumir las aplicaciones para UWP escritas en otros lenguajes. Para obtener más información, consulte [crear una aplicación plataforma Universal de Windows en C++](http://go.microsoft.com/fwlink/?LinkID=534976), [crea tu primer juego para UWP con DirectX](http://go.microsoft.com/fwlink/p/?LinkId=244656), y [componentes de creación en tiempo de ejecución de Windows en C++](http://go.microsoft.com/fwlink/p/?LinkId=244658).
 
    En esta categoría se incluye también el uso de C++ para los componentes principales y el código computacional en el contexto de programación de servidor y nube. A veces, el código de rendimiento intensivo que constituye el núcleo de una aplicación de servidor o de nube está escrito en C++ a fin de maximizar el rendimiento. Este código se puede compilar en un archivo DLL y usarlo desde C# o Visual Basic.
 
@@ -54,11 +44,11 @@ Si tiene un proyecto de Windows 8.1 y desea trasladarlo a Windows 10 existentes,
 
 Para obtener más información sobre UWP en general, consulte [¿qué es una aplicación de plataforma Universal de Windows (UWP)?](/windows/uwp/get-started/whats-a-uwp).
 
-Para obtener más información sobre todos estos conceptos, consulte [guía para aplicaciones universales de Windows](http://go.microsoft.com/fwlink/p/?linkid=534605).
+Para obtener más información sobre todos estos conceptos, consulte [Guía de aplicaciones para la Plataforma universal de Windows (UWP)](http://go.microsoft.com/fwlink/p/?linkid=534605).
 
 ##  <a name="BK_Native"></a> Aplicaciones de escritorio y servidores
 
-Para obtener información sobre los fundamentos de escribir aplicaciones de cliente de Windows para el escritorio, consulte [desarrollar aplicaciones de Windows en C++](https://msdn.microsoft.com/vstudio//hh304489) y [Introducción a la programación de Windows en C++](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx).
+Para obtener información sobre los fundamentos de escribir aplicaciones cliente de Windows para el escritorio, consulte [Developing Windows Applications in C++](https://msdn.microsoft.com/vstudio//hh304489) (Desarrollo de aplicaciones Windows en C++) e [Introduction to Windows Programming in C++](https://msdn.microsoft.com/library/windows/desktop/ff381398)(Introducción a la programación para Windows en C++).
 
 En Windows 10, puede usar Visual C++ para crear muchos tipos de programas de escritorio:
 
@@ -76,7 +66,7 @@ En Windows 10, puede usar Visual C++ para crear muchos tipos de programas de esc
 
 - Servicios de Windows. Para obtener más información, consulta [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications).
 
-Puede utilizar Visual C++ para empaquetar casi cualquier tipo de funcionalidad personalizada de alto rendimiento en archivos DLL Win32 o en archivos DLL COM que pueden usar las aplicaciones de C++ o las aplicaciones escritas en otros lenguajes, por ejemplo C# o Visual Basic. Para obtener más información sobre los archivos DLL WIn32, consulte [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre el desarrollo COM, vea [modelo de objetos componentes (COM)](/windows/desktop/com/component-object-model--com--portal).
+Puede utilizar Visual C++ para empaquetar casi cualquier tipo de funcionalidad personalizada de alto rendimiento en archivos DLL Win32 o en archivos DLL COM que pueden usar las aplicaciones de C++ o las aplicaciones escritas en otros lenguajes, por ejemplo C# o Visual Basic. Para obtener más información sobre los archivos DLL WIn32, consulte [DLLs in Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre el desarrollo COM, consulte [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="games"></a>Juegos
 
@@ -92,13 +82,13 @@ Las bibliotecas de Microsoft incluyen:
 
 - Microsoft Foundation Classes (MFC): un marco de trabajo orientado a objetos para crear programas tradicionales de Windows, especialmente aplicaciones empresariales, que tienen interfaces de usuario complejas con botones, cuadros de lista, vistas de árbol y otros controles. Para obtener más información, consulta [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL): una biblioteca auxiliar eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Active Template Library (ATL): una biblioteca del asistente eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
 - C++ AMP (C++ Accelerated Massive Parallelism): una biblioteca que habilita el trabajo de proceso general de alto rendimiento en la GPU. Para obtener más información, consulta [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
 - Runtime de simultaneidad: una biblioteca que simplifica el trabajo de programación paralela y asincrónica para dispositivos de varios núcleos. Para obtener más información, consulta [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
-En muchos escenarios de programación para Windows también se requiere Windows SDK, que incluye los archivos de encabezado que permiten el acceso a componentes del sistema operativo Windows. De forma predeterminada, Visual Studio instala el SDK de Windows como un componente de la carga de trabajo de escritorio de C++, que permite el desarrollo de aplicaciones de Windows Universal. Para desarrollar aplicaciones para UWP, necesitará la versión de Windows 10 del SDK de Windows. Para obtener información, consulte [SDK de Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obtener más información sobre los SDK de Windows para las versiones anteriores de Windows, consulte el [archivo de Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)). 
+En muchos escenarios de programación para Windows también se requiere Windows SDK, que incluye los archivos de encabezado que permiten el acceso a componentes del sistema operativo Windows. De forma predeterminada, Visual Studio instala el SDK de Windows como un componente de la carga de trabajo de escritorio de C++, que permite el desarrollo de aplicaciones de Windows Universal. Para desarrollar aplicaciones para UWP, necesitará la versión de Windows 10 del SDK de Windows. Para obtener información, consulte [SDK de Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obtener más información sobre los SDK de Windows para las versiones anteriores de Windows, consulte el [archivo de Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
 **Programar archivos (x86) \Windows Kits** es la ubicación predeterminada para todas las versiones del SDK de Windows que ha instalado.
 

@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f80def64c62420fff47b0476822fb3eb612ca4b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f005beb9bc71724c289322822a3bae4c03f19d48
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588253"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136255"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -45,7 +45,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 ### <a name="VS_RTM"></a> Mejoras de conformidad en Visual Studio 2015
 
-- **Opción /Zc:forScope-** La opción del compilador `/Zc:forScope-` está en desuso y se quitará en una próxima versión.
+- **/Zc:forScope- (opción)**
+
+   La opción del compilador `/Zc:forScope-` está en desuso y se quitará en una próxima versión.
 
    ```output
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
@@ -66,11 +68,15 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Opción del compilador /Zg.** La opción de compilador `/Zg` (Generar prototipos de función) ya no está disponible. Esta opción del compilador quedó en desuso anteriormente.
+- **Opción del compilador /Zg.**
+
+   La opción de compilador `/Zg` (Generar prototipos de función) ya no está disponible. Esta opción del compilador quedó en desuso anteriormente.
 
 - Ya no se pueden ejecutar pruebas unitarias con C++/CLI desde la línea de comandos con mstest.exe. En su lugar, use vstest.console.exe.
 
-- **Palabra clave mutable.** El especificador de clase de almacenamiento **mutable** ya no se permite en lugares donde anteriormente se compilaba sin errores. Ahora, el compilador produce el error C2071 (clase de almacenamiento no válida). Según el estándar, el especificador mutable solo puede aplicarse a los nombres de miembros de datos de clase; no puede aplicarse a los nombres declarados como const o static y tampoco para hacer referencia a los miembros.
+- **Palabra clave mutable.**
+
+   El especificador de clase de almacenamiento **mutable** ya no se permite en lugares donde anteriormente se compilaba sin errores. Ahora, el compilador produce el error C2071 (clase de almacenamiento no válida). Según el estándar, el especificador mutable solo puede aplicarse a los nombres de miembros de datos de clase; no puede aplicarse a los nombres declarados como const o static y tampoco para hacer referencia a los miembros.
 
    Por ejemplo, considere el siguiente código:
 
@@ -88,7 +94,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para corregir el error, basta con quitar la palabra clave **mutable** redundante.
 
-- **char_16_t y char32_t** Ya no puede usar `char16_t` o `char32_t` como alias en una definición de tipo, ya que estos tipos ahora se consideran integrados. Era habitual que los usuarios y creadores de bibliotecas definieran `char16_t` y `char32_t` como alias de `uint16_t` y `uint32_t`, respectivamente.
+- **char_16_t y char32_t**
+
+   Ya no puede usar `char16_t` o `char32_t` como alias en una definición de tipo (typedef), ya que estos tipos ahora se consideran integrados. Era habitual que los usuarios y creadores de bibliotecas definieran `char16_t` y `char32_t` como alias de `uint16_t` y `uint32_t`, respectivamente.
 
    ```cpp
     #include <cstdint>
@@ -107,7 +115,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para actualizar el código, quite las declaraciones **typedef** y cambie el nombre de todos los identificadores que estén en conflicto con estos nombres.
 
-- **Parámetros de plantilla sin tipo** Hay determinado código que implica parámetros de plantilla sin tipo en el que ahora se comprueba correctamente la compatibilidad de tipos cuando se proporcionan argumentos de plantilla explícitos. Por ejemplo, el código siguiente se compilaba sin errores en las versiones anteriores de Visual C++.
+- **Parámetros de plantilla sin tipo**
+
+   Hay determinado código que implica parámetros de plantilla sin tipo en el que ahora se comprueba la compatibilidad de tipos cuando se proporcionan argumentos de plantilla explícitos. Por ejemplo, el código siguiente se compilaba sin errores en las versiones anteriores de Visual C++.
 
    ```cpp
     struct S1
@@ -118,7 +128,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
     struct S2
     {
-        template <class C, void (C::*Function)(int) const> void f() {}        
+        template <class C, void (C::*Function)(int) const> void f() {}
     };
 
     void f()
@@ -136,7 +146,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para solucionar este error en el código, asegúrese de que el tipo del argumento de la plantilla que está usando coincide con el tipo declarado del parámetro de plantilla.
 
-- **__declspec(align)** El compilador ya no acepta `__declspec(align)` en las funciones. Esto siempre se ignoraba, pero ahora produce un error del compilador.
+- **__declspec(align)**
+
+   El compilador ya no acepta `__declspec(align)` en las funciones. Esto siempre se ignoraba, pero ahora produce un error del compilador.
 
    ```cpp
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations
@@ -144,7 +156,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para solucionar este problema, quite `__declspec(align)` de la declaración de función. Puesto que no tenía ningún efecto, el hecho de quitarlo no cambia nada.
 
-- **Control de excepciones** Hay un par de cambios en el control de excepciones. En primer lugar, los objetos de excepción deben poderse copiar o mover. El siguiente código se compila en Visual Studio 2013, pero no en Visual Studio 2015:
+- **Control de excepciones**
+
+   Hay un par de cambios en el control de excepciones. En primer lugar, los objetos de excepción deben poderse copiar o mover. El siguiente código se compila en Visual Studio 2013, pero no en Visual Studio 2015:
 
    ```cpp
     struct S {
@@ -208,7 +222,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Literales de cadena seguidos de macros** El compilador ahora admite literales definidos por el usuario. En consecuencia, los literales de cadena seguidos de macros sin ningún espacio en blanco intermedio se interpretan como literales definidos por el usuario, lo que puede dar lugar a errores o resultados inesperados. Por ejemplo, en los compiladores anteriores el código siguiente se compilaba perfectamente:
+- **Literales de cadena seguidos de macros**
+
+   El compilador ahora admite literales definidos por el usuario. En consecuencia, los literales de cadena seguidos de macros sin ningún espacio en blanco intermedio se interpretan como literales definidos por el usuario, lo que puede dar lugar a errores o resultados inesperados. Por ejemplo, en los compiladores anteriores el código siguiente se compilaba perfectamente:
 
    ```cpp
     #define _x "there"
@@ -232,7 +248,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para solucionar este problema, agregue un espacio entre el literal de cadena y la macro.
 
-- **Literales de cadena adyacentes** Como en el caso anterior, en versiones anteriores de Visual C++ y debido a los cambios relacionados con el análisis de cadenas, los literales de cadena adyacentes (ya fueran literales de cadena de caracteres anchos o estrechos) sin ningún espacio en blanco se interpretaban como una sola cadena concatenada. En Visual Studio 2015, ahora debe agregarse un espacio en blanco entre las dos cadenas. Por ejemplo, el código siguiente debe modificarse:
+- **Literales de cadena adyacentes**
+
+   Como en el caso anterior, en versiones anteriores de Visual C++ y debido a los cambios relacionados con el análisis de cadenas, los literales de cadena adyacentes (ya fueran literales de cadena de caracteres anchos o estrechos) sin ningún espacio en blanco se interpretaban como una sola cadena concatenada. En Visual Studio 2015, ahora debe agregarse un espacio en blanco entre las dos cadenas. Por ejemplo, el código siguiente debe modificarse:
 
    ```cpp
     char * str = "abc""def";
@@ -244,14 +262,16 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     char * str = "abc" "def";
    ```
 
-- **Placement new y delete** Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa **placement new**, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
+- **Placement new y delete**
+
+   Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa **placement new**, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
 
    La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new**  `void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función **delete** es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de **placement new** busca una función **delete** correspondiente y encuentra una función de desasignación habitual, el programa tendrá un formato incorrecto.
 
    Supongamos, por ejemplo, que el código define tanto **placement new** como **placement delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -292,18 +312,20 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para solucionar este problema, cambie los tipos de referencia a un puntero o a un valor. Para poder cambiar el tipo a un puntero, hay que hacer cambios en el código que usa el campo union. Si se cambia el código a un valor, también cambian los datos almacenados en la unión, lo que afecta a otros campos, ya que los campos de tipos union comparten la misma memoria. En función del tamaño del valor, también podrá cambiar el tamaño de la unión.
 
-- **Las uniones anónimas** ahora se ajustan mejor al estándar. Las versiones anteriores del compilador generaban un constructor y destructor explícitos para uniones anónimas. Estos se eliminan en Visual Studio 2015.
+- Las **uniones anónimas**
+
+   ahora se ajustan mejor al estándar. Las versiones anteriores del compilador generaban un constructor y destructor explícitos para uniones anónimas. Estos se eliminan en Visual Studio 2015.
 
    ```cpp
     struct S {
-      S();
-     };
+      S();
+     };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+     union {
+      struct {
+       S s;
+      };
+     } u; // C2280
    ```
 
    El código anterior genera el error siguiente en Visual Studio 2015:
@@ -328,7 +350,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     } u;
    ```
 
-- **Uniones con estructuras anónimas** Para cumplir con el estándar, el comportamiento en tiempo de ejecución ha cambiado para los miembros de estructuras anónimas en uniones. El constructor de miembros de estructura anónima de una unión ya no se llama implícitamente cuando se crea este tipo de unión. Además, el destructor de miembros de estructura anónima de una unión ya no se llama implícitamente cuando la unión sale del ámbito. Analice el siguiente código, en el que una unión U contiene una estructura anónima que a su vez contiene a un miembro que es una estructura con nombre S que tiene un destructor.
+- **Uniones con estructuras anónimas**
+
+   Para cumplir con el estándar, el comportamiento de runtime ha cambiado para los miembros de estructuras anónimas en uniones. El constructor de miembros de estructura anónima de una unión ya no se llama implícitamente cuando se crea este tipo de unión. Además, el destructor de miembros de estructura anónima de una unión ya no se llama implícitamente cuando la unión sale del ámbito. Analice el siguiente código, en el que una unión U contiene una estructura anónima que a su vez contiene a un miembro que es una estructura con nombre S que tiene un destructor.
 
    ```cpp
     #include <stdio.h>
@@ -433,7 +457,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Resolución de plantillas** Se han hecho cambios en la resolución de nombres de plantillas. En C++, al pensar en candidatos para la resolución de un nombre, puede darse el caso de que uno o más de los nombres considerados como coincidencias posibles produzcan una creación de instancias de plantilla no válida. Normalmente, estas instancias no válidas no provocan errores del compilador; este principio se conoce como SFINAE (Substitution Failure Is Not An Error).
+- **Resolución de plantilla**
+
+   Se han hecho cambios en la resolución de nombres de plantillas. En C++, al pensar en candidatos para la resolución de un nombre, puede darse el caso de que uno o más de los nombres considerados como coincidencias posibles produzcan una creación de instancias de plantilla no válida. Normalmente, estas instancias no válidas no provocan errores del compilador; este principio se conoce como SFINAE (Substitution Failure Is Not An Error).
 
    Ahora, si SFINAE requiere que el compilador cree una instancia de la especialización de una plantilla de clase, los errores que se producen durante este proceso son errores del compilador. En versiones anteriores, el compilador omitiría esos errores. Por ejemplo, considere el siguiente código:
 
@@ -491,11 +517,15 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    En este caso, la solución es no usar los rasgos de tipos (type traits) mientras no se defina la clase. Si mueve las definiciones de B y D al principio del archivo de código, el error se soluciona. Si las definiciones están en archivos de encabezado, compruebe el orden de las instrucciones include para los archivos de encabezado a fin de asegurarse de que las definiciones de clase se compilan antes de que se usen las plantillas problemáticas.
 
-- **Constructores de copias** Tanto en Visual Studio 2013 como en Visual Studio 2015, el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".
+- **Constructores de copias**
+
+   Tanto en Visual Studio 2013 como en Visual Studio 2015, el compilador genera un constructor de copias para una clase si esa clase tiene un constructor de movimiento definido por el usuario, pero ningún constructor de copias definido por el usuario. En Dev14, este constructor de copias generado implícitamente también se marca como "= delete".
 
 ### <a name="VS_Update1"></a> Mejoras de conformidad en Visual Studio 2015 Update 1
 
-- **Clases base virtuales privadas y herencia indirecta** Las versiones anteriores del compilador permitían que una clase derivada llamara a funciones de miembro de sus clases base *derivadas indirectamente*`private virtual`. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.
+- **Clases base virtuales privadas y herencia indirecta**
+
+   Las versiones anteriores del compilador permitían que una clase derivada llamase a funciones de miembro de sus clases base `private virtual` *derivadas indirectamente*. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2280 como resultado.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -547,7 +577,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Operator new y operator delete sobrecargados** Las versiones anteriores del compilador permitieron que el **operador new**  no miembro y el **operador delete** no miembro se declarasen como static y que se declarasen en espacios de nombres distintos del espacio de nombres global.  Este comportamiento anterior provocó el riesgo de que el programa no llamaba a la implementación del operador **new** o **delete** tal y como estaba diseñada por el programador, lo que daba lugar a un comportamiento en tiempo de ejecución incorrecto silencioso. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2323 en su lugar.
+- **Operador new y operador delete sobrecargados**
+
+   Las versiones anteriores del compilador permitieron que **operator new** no miembro y **operator delete** no miembro se declarasen como static y que se declararan en espacios de nombres distintos del espacio de nombres global.  Este comportamiento anterior provocó el riesgo de que el programa no llamaba a la implementación del operador **new** o **delete** tal y como estaba diseñada por el programador, lo que daba lugar a un comportamiento en tiempo de ejecución incorrecto silencioso. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2323 en su lugar.
 
    ```Output
     error C2323: 'operator new': non-member operator new or delete functions may not be declared static or in a namespace other than the global namespace.
@@ -703,7 +735,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Restauración de advertencias de instrucción de modificador** Una versión anterior del compilador quitó advertencias existentes anteriormente relacionadas con instrucciones **switch**; estas advertencias se han restaurado ahora. El compilador emite ahora las advertencias restauradas y se emiten ahora advertencias relacionadas con los casos específicos (incluido el caso predeterminado) en la línea que contiene el caso que genera el error, en lugar de en la última línea de la instrucción switch. Como resultado de emitir ahora esas advertencias en líneas diferentes a como se hacía en el pasado, ya no se podrán suprimir según lo previsto las advertencias suprimidas anteriormente mediante `#pragma warning(disable:####)` . Para suprimir estas advertencias según lo previsto, es posible que sea necesario mover la directiva `#pragma warning(disable:####)` a una línea por encima del primer caso que genera potencialmente el error. Las siguientes son las advertencias restauradas.
+- **Restauración de las advertencias de la instrucción switch**
+
+   Una versión anterior del compilador quitó advertencias existentes anteriormente relacionadas con instrucciones **switch**; estas advertencias se han restaurado ahora. El compilador emite ahora las advertencias restauradas y se emiten ahora advertencias relacionadas con los casos específicos (incluido el caso predeterminado) en la línea que contiene el caso que genera el error, en lugar de en la última línea de la instrucción switch. Como resultado de emitir ahora esas advertencias en líneas diferentes a como se hacía en el pasado, ya no se podrán suprimir según lo previsto las advertencias suprimidas anteriormente mediante `#pragma warning(disable:####)` . Para suprimir estas advertencias según lo previsto, es posible que sea necesario mover la directiva `#pragma warning(disable:####)` a una línea por encima del primer caso que genera potencialmente el error. Las siguientes son las advertencias restauradas.
 
    ```Output
     warning C4060: switch statement contains no 'case' or 'default' labels
@@ -800,7 +834,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **#include: uso del especificador de principal-directorio '..' en pathname** (solo afecta a `/Wall` `/WX`)
 
-     Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas  `#include` . El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.
+   Las versiones anteriores del compilador no detectaron el uso del especificador de principal-directorio '..' en el nombre de la ruta de acceso de las directivas  `#include` . El código escrito de este modo normalmente está pensado para incluir encabezados que existen fuera del proyecto usando incorrectamente rutas de acceso relativas del proyecto. Este comportamiento antiguo crea un riesgo de que el programa se pueda compilar incluyendo un archivo de origen diferente del que pensaba el programador, o que esas rutas de acceso relativas no son portables a otros entornos de compilación. Ahora el compilador detecta y notifica al programador del código escrito de esta manera y emite una advertencia C4464 de compilador opcional, si se habilita.
 
    ```Output
     warning C4464: relative include path contains '..'
@@ -909,7 +943,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Aunque es poco frecuente, a veces el código escrito de este modo es intencionado. El código escrito de este modo es sensible a los cambios en el orden de `#include`. Cuando sea posible, se recomienda que los archivos de código fuente administren el estado de advertencia de forma independiente.
 
-- **#pragma warning(push) sin coincidencia** (solo afecta a `/Wall` `/WX`) Las versiones anteriores del compilador no detectaban cambios de estado `#pragma warning(push)` sin coincidencia al final de una unidad de traducción. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5032 en la ubicación de `#pragma warning(push)` no coincidente, si se habilita. Esta advertencia solo se emite si no hay ningún error de compilación en la unidad de traducción.
+- **#pragma warning(push) sin coincidencia** (solo afecta a `/Wall` `/WX`)
+
+   Las versiones anteriores del compilador no detectaron cambios de estado `#pragma warning(push)` sin coincidencia al final de una unidad de traducción. Ahora el compilador detecta el código escrito de esta manera, lo notifica al programador y emite una advertencia del compilador opcional C5032 en la ubicación de `#pragma warning(push)` no coincidente, si se habilita. Esta advertencia solo se emite si no hay ningún error de compilación en la unidad de traducción.
 
    ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -946,11 +982,15 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     // C5032.cpp ends -- the translation unit is completed without unmatched #pragma warning(push)
    ```
 
-- **Se pueden emitir advertencias adicionales como resultado del seguimiento del estado de advertencia #pragma mejorado** Las versiones anteriores del compilador no realizaron un seguimiento de los cambios de estados de advertencia `#pragma warning` lo suficientemente bueno como para emitir todas las advertencias que se pretendían. Este comportamiento provocó un riesgo de que se suprimirían algunas advertencias de manera eficaz en circunstancias diferentes de las que tenía previstas el programador. El compilador realiza ahora el seguimiento del estado `#pragma warning` con mayor eficacia, especialmente en relación con los cambios de estado `#pragma warning` dentro de las plantillas y, opcionalmente, emite nuevas advertencias C5031 y C5032 que están pensadas para ayudar al programador a localizar usos imprevistos de `#pragma warning(push)` y `#pragma warning(pop)`.
+- **Se pueden emitir advertencias adicionales como resultado del seguimiento del estado de advertencia #pragma mejorado**
+
+   Las versiones anteriores del compilador no realizaron un seguimiento de los cambios de estados `#pragma warning` lo suficientemente bueno como para emitir todas las advertencias que se pretendían. Este comportamiento provocó un riesgo de que se suprimirían algunas advertencias de manera eficaz en circunstancias diferentes de las que tenía previstas el programador. El compilador realiza ahora el seguimiento del estado `#pragma warning` con mayor eficacia, especialmente en relación con los cambios de estado `#pragma warning` dentro de las plantillas y, opcionalmente, emite nuevas advertencias C5031 y C5032 que están pensadas para ayudar al programador a localizar usos imprevistos de `#pragma warning(push)` y `#pragma warning(pop)`.
 
    Como resultado del seguimiento del cambio de estado de `#pragma warning` mejorado, es posible emitir ahora las advertencias anteriormente suprimidas de manera incorrecta o las advertencias relacionadas con problemas que anteriormente tenían un mal diagnóstico.
 
-- **Se ha mejorado la identificación de código inaccesible** Los cambios en la biblioteca estándar de C++ y la mejora en la capacidad de las llamadas a funciones insertadas con respecto a versiones anteriores del compilador pueden permitirle a este demostrar que determinado código ahora es inaccesible. Este nuevo comportamiento puede producir nuevas instancias de advertencia C4720 emitidas con mayor frecuencia.
+- **Mejora de la identificación del código inaccesible**
+
+   Los cambios en la biblioteca estándar de C++ y la mejora en la capacidad para llamadas a funciones insertadas respecto a versiones anteriores del compilador pueden permitirle a este demostrar que determinado código ahora es inaccesible. Este nuevo comportamiento puede producir nuevas instancias de advertencia C4720 emitidas con mayor frecuencia.
 
    ```Output
     warning C4720: unreachable code
@@ -986,7 +1026,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 ### <a name="VS_Update2"></a> Mejoras de conformidad en Visual Studio 2015 Update 2
 
-- **Puede que se generen errores y advertencias adicionales como consecuencia de la compatibilidad parcial con la expresión SFINAE** Las versiones anteriores del compilador no analizaban determinados tipos de expresiones dentro de especificadores **decltype** debido a la falta de compatibilidad con la expresión SFINAE. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador analiza estas expresiones y tiene compatibilidad parcial para la expresión SFINAE gracias a las mejoras de cumplimiento continuas. Como resultado, ahora, el compilador genera advertencias y errores detectados en las expresiones que las versiones anteriores del compilador no analizaban.
+- **Puede que se generen errores y advertencias adicionales como resultado de la compatibilidad parcial con la expresión SFINAE**
+
+   Las versiones anteriores del compilador no analizaban determinados tipos de expresiones dentro de especificadores **decltype** debido a la falta de compatibilidad con la expresión SFINAE. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador analiza estas expresiones y tiene compatibilidad parcial para la expresión SFINAE gracias a las mejoras de cumplimiento continuas. Como resultado, ahora, el compilador genera advertencias y errores detectados en las expresiones que las versiones anteriores del compilador no analizaban.
 
    Cuando este comportamiento nuevo analiza una expresión **decltype** que incluye un tipo que aún no se ha declarado, el compilador genera el error del compilador C2039 como resultado.
 
@@ -1127,7 +1169,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     B b2 (b1);  // error C2280
    ```
 
-- **Las funciones miembro estáticas no admiten calificadores cv.** Las versiones anteriores de Visual C++ 2015 permitían que las funciones miembro estáticas tuvieran calificadores cv. Este comportamiento se debe a una regresión en Visual C++ 2015 y Visual C++ 2015 Update 1; Visual C++ 2013 y las versiones anteriores de Visual C++ rechazan el código escrito de este modo. El comportamiento de Visual C++ 2015 y Visual C++ 2015 Update 1 es incorrecto y no cumple el estándar de C++.  Visual Studio 2015 Update 2 rechaza el código escrito de este modo y genera el error de compilador C2511 en su lugar.
+- **Las funciones miembro estáticas no admiten calificadores cv.**
+
+   Las versiones anteriores de Visual C++ 2015 permitían que las funciones miembro estáticas tuvieran calificadores cv. Este comportamiento se debe a una regresión en Visual C++ 2015 y Visual C++ 2015 Update 1; Visual C++ 2013 y las versiones anteriores de Visual C++ rechazan el código escrito de este modo. El comportamiento de Visual C++ 2015 y Visual C++ 2015 Update 1 es incorrecto y no cumple el estándar de C++.  Visual Studio 2015 Update 2 rechaza el código escrito de este modo y genera el error de compilador C2511 en su lugar.
 
    ```Output
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'
@@ -1155,7 +1199,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     void A::func() {}  // removed const
    ```
 
-- **La declaración adelantada de la enumeración no se admite en el código de WinRT** (afecta solo a `/ZW`) El código compilado para Windows Runtime (WinRT) no permite que los tipos **enum** se declaren por adelantado, del mismo modo que cuando el código C++ administrado se compila para .NET Framework mediante el modificador de compilador `/clr`. Este comportamiento garantiza que siempre se conozca el tamaño de una enumeración y que se pueda proyectar correctamente al sistema de tipos de WinRT. El compilador rechaza el código escrito de este modo y genera los errores de compilador C2599 y C3197.
+- **No se permite la declaración adelantada de la enumeración en el código de WinRT** (solo afecta a `/ZW`)
+
+   El código compilado para Windows Runtime (WinRT) no permite que los tipos **enum** se declaren por adelantado, del mismo modo que cuando el código C++ administrado se compila para .NET Framework mediante el modificador de compilador `/clr`. Este comportamiento garantiza que siempre se conozca el tamaño de una enumeración y que se pueda proyectar correctamente al sistema de tipos de WinRT. El compilador rechaza el código escrito de este modo y genera los errores de compilador C2599 y C3197.
 
    ```Output
     error C2599: 'CustomEnum': the forward declaration of a WinRT enum is not allowed
@@ -1210,7 +1256,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
    ```
 
-- **Es posible que operator new y operator delete no miembro sobrecargados no se declaren como insertadas** (nivel 1 (`/W1`), activo de manera predeterminada) Las versiones anteriores del compilador no generaban ninguna advertencia cuando las funciones **operator new** y **operator delete** se declaraban como insertadas. El código escrito de este modo tiene un formato incorrecto (no se requiere ningún diagnóstico) y puede provocar problemas de memoria derivados de funciones operator new y operator delete no coincidentes (especialmente si se usan junto con una desasignación dimensionada) que puede resultar difícil de diagnosticar. Ahora, el compilador emite la advertencia C4595 para ayudarle a identificar el código escrito de este modo.
+- **El operador no miembro sobrecargado new y el operador delete no se pueden declarar como inline** (nivel 1 (`/W1`), activo de manera predeterminada)
+
+   Las versiones anteriores del compilador no generan ninguna advertencia cuando las funciones de **operador new** no miembro y de **operador delete** se declaraban como inline. El código escrito de este modo tiene un formato incorrecto (no se requiere ningún diagnóstico) y puede provocar problemas de memoria derivados de funciones operator new y operator delete no coincidentes (especialmente si se usan junto con una desasignación dimensionada) que puede resultar difícil de diagnosticar. Ahora, el compilador emite la advertencia C4595 para ayudarle a identificar el código escrito de este modo.
 
    ```Output
     warning C4595: 'operator new': non-member operator new or delete functions may not be declared inline
@@ -1264,7 +1312,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    En versiones anteriores de Visual C++, las aserciones estáticas de la parte inferior de este ejemplo se aceptaban porque `std::is_convertable<>::value` estaba establecido de forma incorrecta en **true**. Ahora, `std::is_convertable<>::value` se ha establecido de forma correcta en **false**, lo que hace que se produzcan errores en las aserciones estáticas.
 
-- **Los constructores de copia y movimiento triviales establecidos como valor predeterminado o eliminados respetan los especificadores de acceso** Las versiones anteriores del compilador no comprobaban el especificador de acceso de los constructores de copia y movimiento triviales establecidos como valor predeterminado o eliminados antes de permitir llamarlos. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. En algunos casos, este comportamiento anterior ha creado un riesgo de generación de código no válido silencioso, lo que ha producido un comportamiento impredecible en tiempo de ejecución. Ahora, el compilador comprueba el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados para determinar si se pueden llamar y, en caso contrario, emite como resultado una advertencia del compilador C2248.
+- **Los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados respetan los especificadores de acceso**
+
+   Las versiones anteriores del compilador no comprobaban el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados antes de permitir llamarlos. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. En algunos casos, este comportamiento anterior ha creado un riesgo de generación de código no válido silencioso, lo que ha producido un comportamiento impredecible en tiempo de ejecución. Ahora, el compilador comprueba el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados para determinar si se pueden llamar y, en caso contrario, emite como resultado una advertencia del compilador C2248.
 
    ```Output
     error C2248: 'S::S' cannot access private member declared in class 'S'
@@ -1308,7 +1358,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Compatibilidad en desuso con código ATL con atributos**  (nivel 1 (`/W1`), activo de manera predeterminada) Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.
+- **Compatibilidad en desuso con código ATL con atributos**  (nivel 1 (`/W1`), activo de manera predeterminada)
+
+   Las versiones anteriores del compilador admitían código ATL con atributos. Como parte de la fase siguiente para quitar la compatibilidad con código ATL con atributos que [comenzó en Visual C++ 2008](https://msdn.microsoft.com/library/bb384632), el código ATL con atributos está en desuso. Ahora, el compilador emite la advertencia del compilador C4467 para ayudarle a identificar este tipo de código en desuso.
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -1403,7 +1455,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
    ```
 
-- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`) Las versiones anteriores del compilador aceptaban directivas `#include` no coincidentes en archivos de código fuente entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo. Ahora, el compilador emite la advertencia del compilador CC4598 para ayudar a identificar las directivas `#include` no coincidentes cuando se usan archivos PCH.
+- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`)
+
+   Las versiones anteriores del compilador aceptaban directivas `#include` no coincidentes en archivos de código fuente entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo. Ahora, el compilador emite la advertencia del compilador CC4598 para ayudar a identificar las directivas `#include` no coincidentes cuando se usan archivos PCH.
 
    ```Output
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position
@@ -1411,7 +1465,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Ejemplo (antes):
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1419,7 +1473,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "b.h"
@@ -1429,7 +1483,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Ejemplo (después)
 
-     X.cpp (-Ycc.h)
+   X.cpp (-Ycc.h)
 
    ```cpp
     #include "a.h"
@@ -1437,7 +1491,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
    ```
 
-     Z.cpp (-Yuc.h)
+   Z.cpp (-Yuc.h)
 
    ```cpp
     #include "a.h"
@@ -1445,7 +1499,9 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     #include "c.h"
    ```
 
-- **Archivos de encabezado precompilado (PCH) y directorios de inclusión no coincidentes** (solo afecta a `/Wall` `/WX`) Las versiones anteriores del compilador aceptaban argumentos de línea de comandos de directorio de inclusión (`-I`) al compilador entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo.   Ahora, el compilador emite la advertencia del compilador CC4599 para ayudar a identificar los argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) cuando se usan archivos PCH.
+- **Archivos de encabezado precompilado (PCH) y directivas #include no coincidentes** (solo afecta a `/Wall` `/WX`)
+
+   Las versiones anteriores del compilador aceptaban argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) en el compilador entre compilaciones `-Yc` y `-Yu` cuando se usaban archivos de encabezado precompilado (PCH). El compilador ya no admite código escrito de este modo.   Ahora, el compilador emite la advertencia del compilador CC4599 para ayudar a identificar los argumentos de la línea de comandos de directorios de inclusión no coincidentes (`-I`) cuando se usan archivos PCH.
 
    ```Output
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position
@@ -1535,11 +1591,25 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 
 ### <a name="windows-runtime-app-development-support"></a>Compatibilidad con el desarrollo de aplicaciones de Windows Runtime
 
-- **Compatibilidad con tipos a los que se aplica la conversión boxing en estructuras de valores.** Ahora puede definir tipos de valores utilizando campos que pueden ser null; por ejemplo, `IBox<int>^` en lugar de **int**. Esto significa que los campos pueden tener un valor o ser iguales a **nullptr**.
-- **Información de excepción más completa.** C++/CX admite el nuevo modelo de errores de Windows que habilita la captura y la propagación de información detallada de excepciones a través de la interfaz binaria de aplicaciones (ABI); esto incluye las pilas de llamadas y las cadenas de mensaje personalizadas.
-- **Object::ToString() ahora es virtual.** Ahora puede reemplazar ToString en tipos ref de Windows Runtime definidos por el usuario.
-- **Compatibilidad con las API en desuso.** Las API públicas de Windows en tiempo de ejecución ahora se pueden marcar como desusadas y se puede mostrar en ellas un mensaje personalizado que aparezca como una advertencia de compilación y que proporcione directrices sobre la migración.
-- **Mejoras del depurador.** Compatibilidad con la depuración de interoperabilidad nativa/JavaScript, diagnóstico de excepciones de Windows en tiempo de ejecución y depuración de código asincrónica (Windows en tiempo de ejecución y PPL).
+- **Compatibilidad con tipos a los que se aplica la conversión boxing en estructuras de valores.**
+
+   Ahora puede definir tipos de valores utilizando campos que pueden ser null; por ejemplo, `IBox<int>^` en lugar de **int**. Esto significa que los campos pueden tener un valor o ser iguales a **nullptr**.
+
+- **Información de excepción más completa.**
+
+   C++/CX admite el nuevo modelo de errores de Windows que habilita la captura y la propagación de información detallada de excepciones a través de la interfaz binaria de aplicaciones (ABI); esto incluye las pilas de llamadas y las cadenas de mensaje personalizadas.
+
+- **Object::ToString() ahora es virtual.**
+
+   Ahora puede reemplazar ToString en tipos ref de Windows Runtime definidos por el usuario.
+
+- **Compatibilidad con las API en desuso.**
+
+   Las API públicas de Windows en tiempo de ejecución ahora se pueden marcar como desusadas y se puede mostrar en ellas un mensaje personalizado que aparezca como una advertencia de compilación y que proporcione directrices sobre la migración.
+
+- **Mejoras del depurador.**
+
+   Compatibilidad con la depuración de interoperabilidad nativa/JavaScript, diagnóstico de excepciones de Windows en tiempo de ejecución y depuración de código asincrónica (Windows en tiempo de ejecución y PPL).
 
 > [!NOTE]
 > Además de las características y mejoras específicas de C++ que se describen en esta sección, hay otras mejoras de Visual Studio que también pueden ayudarle a escribir aplicaciones de Windows Runtime más eficaces.
@@ -1704,7 +1774,7 @@ Use el nuevo marco de pruebas unitarias de C++ en Visual Studio para escribir pr
 
 #### <a name="architecture-dependency-graphs"></a>Gráficos de dependencias de arquitectura
 
-Para comprender mejor el código, ahora puede generar gráficos de dependencias de los archivos binarios, de clase, espacio de nombres e inclusión de una solución. En la barra de menús, elija **Arquitectura** > **Generar gráfico de dependencias** y, después, **Para la solución** o **Para archivo de inclusión** para generar un gráfico de dependencias. Una vez completada la generación del gráfico, puede explorarlo al expandir cada nodo, obtener información sobre las relaciones de dependencia al moverse por los nodos y examinar el código fuente al elegir **Ver contenido** en el menú contextual de un nodo. Para generar un gráfico de dependencias para los archivos de inclusión, en el menú contextual de un archivo de código fuente *.cpp o archivo de encabezado *.h, elija **Generar gráfico de archivos de inclusión**.
+Para comprender mejor el código, ahora puede generar gráficos de dependencias de los archivos binarios, de clase, espacio de nombres e inclusión de una solución. En la barra de menús, elija **Arquitectura** > **Generar gráfico de dependencias** y, después, **Para la solución** o **Para archivo de inclusión** para generar un gráfico de dependencias. Una vez completada la generación del gráfico, puede explorarlo al expandir cada nodo, obtener información sobre las relaciones de dependencia al moverse por los nodos y examinar el código fuente al elegir **Ver contenido** en el menú contextual de un nodo. Para generar un gráfico de dependencias para los archivos de inclusión, en el menú contextual de un archivo de código fuente \*.cpp o archivo de encabezado \*.h, elija **Generar gráfico de archivos de inclusión**.
 
 #### <a name="architecture-explorer"></a>Explorador de arquitectura
 
@@ -2030,7 +2100,7 @@ El compilador tiene cambios importantes en esta versión.
 - Se ha agregado la opción del enlazador `/CLRIMAGETYPE` (especificar tipo de imagen CLR).
 - Se ha agregado la opción del enlazador `/CLRSUPPORTLASTERROR` (conservar el último código de error para las llamadas a PInvoke).
 - Se ha agregado la opción del enlazador `/CLRTHREADATTRIBUTE` (establecer el atributo del subproceso de CLR).
-- Se ha agregado la opción del enlazador `/CLRUNMANAGEDCODECHECK` (agregar SupressUnmanagedCodeSecurityAttribute).
+- Se ha agregado la opción del enlazador `/CLRUNMANAGEDCODECHECK` (agregar SuppressUnmanagedCodeSecurityAttribute).
 - Se ha agregado la opción del enlazador `/ERRORREPORT` (informar de los errores internos del enlazador).
 - Se ha quitado la opción del enlazador `/EXETYPE`. El enlazador ya no admite la creación de controladores de dispositivos de Windows 95 y Windows 98. Use un DDK adecuado para crear estos controladores de dispositivos. La palabra clave EXETYPE ya no es válida para los archivos de definición de módulo.
 - Se ha agregado la opción del enlazador `/FUNCTIONPADMIN` (crear imagen a la que aplicar una revisión activa).

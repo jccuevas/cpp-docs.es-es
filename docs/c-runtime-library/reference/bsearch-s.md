@@ -1,10 +1,6 @@
 ---
-title: bsearch_s | Microsoft Docs
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430841"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -73,7 +63,7 @@ Ancho de los elementos.
 *compare*<br/>
 Función de devolución de llamada que compara dos elementos. El primer argumento es el *contexto* puntero. El segundo argumento es un puntero a la *clave* para la búsqueda. El tercer argumento es un puntero al elemento de matriz que se comparará con *clave*.
 
-*Contexto*<br/>
+*context*<br/>
 Un puntero a un objeto al que se puede acceder en la función de comparación.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -94,7 +84,7 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 
 ## <a name="remarks"></a>Comentarios
 
-El **bsearch_s** función realiza una búsqueda binaria de una matriz ordenada de *número* elementos, cada uno de los *ancho* el tamaño en bytes. El *base* value es un puntero a la base de la matriz que desea buscar, y *clave* es el valor que se van a buscar. El *comparar* parámetro es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada en un elemento de matriz y devuelve uno de los siguientes valores que especifica su relación:
+El **bsearch_s** función realiza una búsqueda binaria de una matriz ordenada de *número* elementos, cada uno de *ancho* bytes de tamaño. El *base* valor es un puntero a la base de la matriz que desea buscar, y *clave* es el valor buscado. El *comparar* parámetro es un puntero a una rutina proporcionada por el usuario que compara la clave solicitada en un elemento de matriz y devuelve uno de los siguientes valores que especifica su relación:
 
 |Valor devuelto por *comparar* rutina|Descripción|
 |-----------------------------------------|-----------------|
@@ -102,7 +92,7 @@ El **bsearch_s** función realiza una búsqueda binaria de una matriz ordenada d
 |0|El valor de clave es igual al elemento de matriz.|
 |> 0|La clave es mayor que el elemento de matriz.|
 
-El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto y la función de comparación necesita tener acceso a los miembros del objeto. El *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto correspondiente de ese objeto. La adición de la *contexto* parámetro hace **bsearch_s** más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados con el uso de variables estáticas que estén disponibles para datos el *comparar* función.
+El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto, y la función de comparación necesita acceder a los miembros del objeto. El *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto adecuado de ese objeto. La adición de la *contexto* parámetro hace que **bsearch_s** más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos disponibles en el *comparar* función.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -114,7 +104,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 
 ## <a name="example"></a>Ejemplo
 
-Este programa ordena una matriz de cadenas con [qsort_s](qsort-s.md) y luego usa bsearch_s para buscar la palabra "cat".
+Este programa ordena una matriz de cadenas con [qsort_s](qsort-s.md)y, luego, usa bsearch_s para buscar la palabra "cat".
 
 ```cpp
 // crt_bsearch_s.cpp

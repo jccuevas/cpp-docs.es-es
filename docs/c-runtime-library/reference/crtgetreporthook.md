@@ -1,10 +1,6 @@
 ---
-title: _CrtGetReportHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d78c176d5d4de54f4ae5eea84b0483b9e6bc3bec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395015"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536765"
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 
@@ -55,7 +45,7 @@ Devuelve la función actual de creación de informes definida por el cliente.
 
 ## <a name="remarks"></a>Comentarios
 
-**_CrtGetReportHook** permite que una aplicación recuperar la función de creación de informes actual para la biblioteca de depuración en tiempo de ejecución de C proceso de notificación.
+**_CrtGetReportHook** permite que una aplicación recuperar la función de informes actual de la biblioteca de depuración en tiempo de ejecución de C proceso de informes.
 
 Para obtener más información sobre cómo usar otras funciones con capacidad de enlace en tiempo de ejecución y cómo escribir funciones de enlace definidas por el cliente, consulte [Creación de funciones de enlace de depuración](/visualstudio/debugger/debug-hook-function-writing).
 

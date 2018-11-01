@@ -7,12 +7,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c07a1e14d0aaf29d695fda9a70e7d813c4613db
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8a64fd3c15f589fdd677354c43c9a5bb9a3484aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198333"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082546"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -23,7 +23,7 @@ ms.locfileid: "43198333"
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage"> 
+                                    <div class="cardImage">
                                         <img data-hoverimage="/media/hubs/cpp/cpp_setup-installation.svg" src="/media/hubs/cpp/cpp_setup-installation.png" alt="" />
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@ ms.locfileid: "43198333"
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage"> 
+                                    <div class="cardImage">
                                         <img data-hoverimage="/media/hubs/cpp/cpp_get-started.svg" src="/media/hubs/cpp/cpp_get-started.png" alt="" />
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@ ms.locfileid: "43198333"
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
-                                    <div class="cardImage"> 
+                                    <div class="cardImage">
                                         <img data-hoverimage="/media/hubs/cpp/cpp_whats-new.svg" src="/media/hubs/cpp/cpp_whats-new.png" alt="" />
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_workloads-1.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -107,7 +107,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_workloads-2.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -126,7 +126,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_workloads-3.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -145,7 +145,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_workloads-4.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -164,7 +164,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_workloads-5.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -183,12 +183,12 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_workloads-6.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Plantillas de</h3>
+                                                    <h3>Python</h3>
                                                     <p>Use Python Tools para Visual Studio para crear aplicaciones de Python que interactúen con programas de C++.</p>
                                                 </div>
                                             </div>
@@ -212,12 +212,12 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-1.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Desarrollar</h3>
+                                                    <h3>Escribir código</h3>
                                                     <p>Escriba, refactorice, explore y entienda el código mediante el editor de código.</p>
                                                 </div>
                                             </div>
@@ -231,7 +231,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-2.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -250,7 +250,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-3.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -269,7 +269,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-4.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -288,7 +288,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-5.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -307,7 +307,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-6.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -326,7 +326,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_features-7.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -355,7 +355,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_language-library-1.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -374,13 +374,13 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_language-library-2.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Extensiones de componente</h3>
-                                                    <p>Extensiones de componentes de C++: C++/CLI para la programación de .NET y C++/CX para la programación de UWP.</p>
+                                                    <p>Extensiones de componentes de C++:  C++/CLI para la programación de .NET y C++/CX para la programación de UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -393,7 +393,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_language-library-3.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -412,7 +412,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_language-library-4.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -431,7 +431,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_language-library-5.svg" alt="" />
                                                     </div>
                                                 </div>
@@ -450,7 +450,7 @@ ms.locfileid: "43198333"
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1"> 
+                                                    <div class="cardImage bgdAccent1">
                                                         <img src="/media/hubs/cpp/cpp_language-library-6.svg" alt="" />
                                                     </div>
                                                 </div>

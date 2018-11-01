@@ -1,24 +1,14 @@
 ---
-title: 'Cómo: crear instancias de componentes WRL directamente | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: Crear instancias de componentes WRL directamente'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 05bd0ab8e402c1d3a926b46bf1df54a084fc9f93
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2da1bd65631d33f3e1edb67efb5e94f270f1f1ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595180"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523194"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Cómo: Crear instancias de componentes WRL directamente
 
@@ -57,6 +47,6 @@ En este documento se muestran dos ejemplos. El primer ejemplo utiliza la funció
 
 ## <a name="see-also"></a>Vea también
 
-[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)  
-[Microsoft::WRL::Make](../windows/make-function.md)  
+[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Microsoft::WRL::Make](../windows/make-function.md)<br/>
 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

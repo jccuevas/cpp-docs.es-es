@@ -1,23 +1,13 @@
 ---
-title: -INTEGRITYCHECK (requerir firma) | Microsoft Docs
-ms.custom: ''
+title: /INTEGRITYCHECK (Requerir control de signatura)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31df513a40b60fcb57c48f0d20e124fc77888d99
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8530175cd5bc0ed5dced7f92e5f67a1576bb43e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578352"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (Requerir control de signatura)
 
@@ -49,6 +39,6 @@ El **/INTEGRITYCHECK** conjuntos de opciones, en el encabezado PE del archivo DL
 
 [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[Forzar la integridad de firma de archivos ejecutables portátiles (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)
-[tutorial de firma de código de modo Kernel](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
+[Forzada archivos de la integridad de firma del ejecutable Portable (PE)](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
+[Tutorial sobre la firma de código de modo kernel](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [DLL de AppInit en Windows 7 y Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

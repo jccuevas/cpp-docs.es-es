@@ -1,12 +1,6 @@
 ---
-title: Cambiar el orden de tabulación de controles | Microsoft Docs
-ms.custom: ''
+title: Cambiar el orden de tabulación de los controles
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], tab order
 - focus, tab order
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - controls [C++], focus
 - dialog box controls [C++], tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 330fe056a4b06e006d69e630cc933b4402eeb0c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: aaff855434ccd8f14b0bbd2394ae2902cf9390b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429333"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>Cambiar el orden de tabulación de los controles
 
@@ -84,6 +73,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

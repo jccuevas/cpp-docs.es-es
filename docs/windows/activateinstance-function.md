@@ -1,29 +1,19 @@
 ---
-title: ActivateInstance (función) | Microsoft Docs
-ms.custom: ''
+title: ActivateInstance (función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Windows::Foundation::ActivateInstance
 - client/ABI::Windows::Foundation::ActivateInstance
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c2ac6d8722bcdfed06ae97508b0ca7e5bb8ea00a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 65648d62657bf989d4a08660e0fd7724511350c1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666302"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (función)
 
@@ -41,13 +31,13 @@ inline HRESULT ActivateInstance(
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Un tipo que se va a activar.
 
-*activatableClassId*  
+*activatableClassId*<br/>
 El nombre de la Id. de clase que define el parámetro *T*.
 
-*Instancia*  
+*Instancia*<br/>
 Cuando finalice esta operación, una referencia a una instancia de *T*.
 
 ## <a name="return-value"></a>Valor devuelto

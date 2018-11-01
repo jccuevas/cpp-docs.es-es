@@ -1,59 +1,46 @@
 ---
-title: Matrices (C++) | Microsoft Docs
-ms.custom: ''
+title: Matrices (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7c88c1d0f4096017b8ffc48a92143a63d229c5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550675"
 ---
 # <a name="arrays-c"></a>Matrices (C++)
 
 Una matriz es una colección de objetos similares. El caso más simple de una matriz es un vector, que se puede declarar mediante la secuencia siguiente:
 
-```
-decl-specifier identifier [ constant-expression ]
-decl-specifier identifier []
-decl-specifier identifer [][ constant-expression] . . .
-decl-specifier identifier [ constant-expression ]
-[ constant-expression ] . . .
-```
+> *decl-specifier* *identificador* **\[** *expresión-constante* **]**<br/>
+> *decl-specifier* *identificador*  **\[]**<br/>
+> *decl-specifier* *identificador* **\[]\[** *expresión-constante* **]** . . .<br/>
+> *decl-specifier* *identificador* **\[** *expresión-constante* **]** **\[** *expresión-constante* **]** . . .
 
 1. El especificador de declaración:
 
-- Un especificador de clase de almacenamiento opcional.
+   - Un especificador de clase de almacenamiento opcional.
 
-- Opcional **const** o **volátil** especificadores.
+   - Opcional **const** o **volátil** especificadores.
 
-- El tipo de nombre de los elementos de la matriz.
+   - El tipo de nombre de los elementos de la matriz.
 
-2. El declarador:
+1. El declarador:
 
-- El identificador.
+   - El identificador.
 
-- Una expresión constante de tipo entero incluida entre corchetes, **[]**. Si se declaran varias dimensiones con corchetes adicionales, se puede omitir la expresión constante en el primer conjunto de corchetes.
+   - Una expresión constante de tipo entero incluida entre corchetes,  **\[]**. Si se declaran varias dimensiones con corchetes adicionales, se puede omitir la expresión constante en el primer conjunto de corchetes.
 
-- Corchetes adicionales opcionales que encierran expresiones constantes.
+   - Corchetes adicionales opcionales que encierran expresiones constantes.
 
-3. Un inicializador opcional.  Consulte [inicializadores](../cpp/initializers.md).
+1. Un inicializador opcional. Para obtener más información, consulte [inicializadores](../cpp/initializers.md).
 
-El número de elementos de la matriz viene determinado por la expresión constante. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) el elemento, donde *n* es el número de elementos que puede contener la matriz. El *expresión-constante* debe ser de tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida únicamente cuando la matriz es el último campo de un **struct** o **unión** y cuando las extensiones de Microsoft (/Ze) están habilitadas.
+El número de elementos de la matriz viene dado por la *expresión-constante*. El primer elemento de la matriz es el elemento 0 y el último elemento es el (*n*-1) el elemento, donde *n* es el número de elementos que puede contener la matriz. El *expresión-constante* debe ser de tipo entero y debe ser mayor que 0. Una matriz de tamaño cero es válida únicamente cuando la matriz es el último campo de un **struct** o **unión** y cuando las extensiones de Microsoft (/Ze) están habilitadas.
 
 En el ejemplo siguiente se muestra cómo definir una matriz en tiempo de ejecución:
 

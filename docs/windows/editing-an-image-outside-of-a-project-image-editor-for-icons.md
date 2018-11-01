@@ -1,27 +1,16 @@
 ---
-title: Editar una imagen fuera de un proyecto (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Editar una imagen fuera de un proyecto (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], editing images
 - images [C++], editing
 ms.assetid: ac297b51-95c2-4512-a07f-b5d1596fc61e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a99b66588b3158252106ba95aaddfc73e260c9ac
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 46f8d8a934887e11fff389aed3b1043fadb1e055
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511142"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>Editar una imagen fuera de un proyecto (Editor de imágenes para iconos)
 
@@ -43,5 +32,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

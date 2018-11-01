@@ -1,16 +1,10 @@
 ---
-title: -C (conservar los comentarios durante el preprocesamiento) | Microsoft Docs
-ms.custom: ''
+title: /C (Conservar los comentarios durante el preprocesamiento)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
 - /c
 - VC.Project.VCCLWCECompilerTool.KeepComments
-dev_langs:
-- C++
 helpviewer_keywords:
 - comments, not stripping during preprocessing
 - preserve comments during preprocessing
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20973969385d0b5c61872a12f4d0168420bc2eef
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b37e279af3995bd1d61c97dc88b49cdd95495c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713191"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442606"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (Conservar los comentarios durante el preprocesamiento)
 
@@ -76,6 +66,6 @@ int i;   // a variable
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/E (Preprocesar para stdout)](../../build/reference/e-preprocess-to-stdout.md)
-[/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md)
+[/E (Preprocesar para stdout)](../../build/reference/e-preprocess-to-stdout.md)<br/>
+[/P (Preprocesar para archivo)](../../build/reference/p-preprocess-to-a-file.md)<br/>
 [/EP (Preprocesar para stdout sin directivas #line)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

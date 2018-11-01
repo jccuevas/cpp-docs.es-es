@@ -1,12 +1,6 @@
 ---
-title: Compatibilidad con Unicode | Microsoft Docs
-ms.custom: ''
+title: Compatibilidad con Unicode
 ms.date: 1/09/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - portable data types [MFC]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b4f83d4d991b55ec7151db22a9b21424914bd04
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fea49bff2a4563b8617e19636e27afbae1c55811
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501691"
 ---
 # <a name="support-for-unicode"></a>Compatibilidad con Unicode
 
@@ -67,5 +57,6 @@ Clase `CString` usa `_TCHAR` como base y proporciona constructores y operadores 
 - [Obtenga información sobre asignaciones de texto genérico para portabilidad de ancho de byte](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Vea también
- [Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)  
- [Compatibilidad con el uso de wmain](../text/support-for-using-wmain.md)  
+
+[Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)<br/>
+[Compatibilidad con el uso de wmain](../text/support-for-using-wmain.md)

@@ -1,81 +1,79 @@
 ---
-title: IUMSScheduler (estructura) | Microsoft Docs
-ms.custom: ''
+title: IUMSScheduler (Estructura)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
-dev_langs:
-- C++
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46ed7dac35dce4b5df51cd4c218a1a70a84d21df
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0fd1ed90ca30c9c9e6815bb05b516f24b4f9a164
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513794"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler (Estructura)
-Una interfaz a una abstracción de un programador de trabajo que desea que el Administrador de recursos del runtime de simultaneidad controle los subprocesos programables de modo de usuario (UMS). El Administrador de recursos usa esta interfaz para comunicarse con los programadores de subprocesos UMS. La interfaz `IUMSScheduler` hereda de la interfaz `IScheduler`.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
+
+Una interfaz a una abstracción de un programador de trabajo que desea que el Administrador de recursos del runtime de simultaneidad controle los subprocesos programables de modo de usuario (UMS). El Administrador de recursos usa esta interfaz para comunicarse con los programadores de subprocesos UMS. La interfaz `IUMSScheduler` hereda de la interfaz `IScheduler` .
+
+## <a name="syntax"></a>Sintaxis
+
 ```
 struct IUMSScheduler : public IScheduler;
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Asigna un `IUMSCompletionList` interfaz para un programador de subprocesos UMS.|  
-  
-## <a name="remarks"></a>Comentarios  
- Si está implementando un programador personalizado que se comunica con el Administrador de recursos, y desea que los subprocesos UMS que se va a pasar a su programador, en lugar de subprocesos Win32 normales, debe proporcionar una implementación de la `IUMSScheduler` interfaz. Además, debe establecer el valor de directiva de la clave de directiva de programador `SchedulerKind` sea `UmsThreadDefault`. Si la directiva especifica subproceso UMS, el `IScheduler` interfaz que se pasa como parámetro a la [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) método debe ser un `IUMSScheduler` interfaz.  
-  
- El Administrador de recursos es capaz de entregar los subprocesos UMS únicamente en sistemas operativos que tienen la característica UMS. los sistemas operativos de 64 bits con la versión de Windows 7 y versiones posteriores admiten los subprocesos UMS. Si crea una directiva de programador con el `SchedulerKind` clave se establece en el valor `UmsThreadDefault` y la plataforma subyacente no admite UMS, el valor de la `SchedulerKind` clave en esa directiva se cambiará al valor `ThreadScheduler`. Siempre debe leer volver este valor de directiva antes de esperar recibir los subprocesos UMS.  
-  
- El `IUMSScheduler` interfaz es un extremo de un canal bidireccional de comunicación entre un programador y el Administrador de recursos. El otro extremo es representado por la `IResourceManager` y `ISchedulerProxy` interfaces, que se implementan mediante el Administrador de recursos.  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- [IScheduler](ischeduler-structure.md)  
-  
- `IUMSScheduler`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** concrtrm.h  
-  
- **Espacio de nombres:** simultaneidad  
-  
-##  <a name="setcompletionlist"></a>  IUMSScheduler:: SetCompletionList (método)  
- Asigna un `IUMSCompletionList` interfaz para un programador de subprocesos UMS.  
-  
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[IUMSScheduler:: SetCompletionList](#setcompletionlist)|Asigna un `IUMSCompletionList` interfaz para un programador de subprocesos UMS.|
+
+## <a name="remarks"></a>Comentarios
+
+Si está implementando un programador personalizado que se comunica con el Administrador de recursos, y desea que los subprocesos UMS que se va a pasar a su programador, en lugar de subprocesos Win32 normales, debe proporcionar una implementación de la `IUMSScheduler` interfaz. Además, debe establecer el valor de directiva de la clave de directiva de programador `SchedulerKind` sea `UmsThreadDefault`. Si la directiva especifica subproceso UMS, el `IScheduler` interfaz que se pasa como parámetro a la [IResourceManager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler) método debe ser un `IUMSScheduler` interfaz.
+
+El Administrador de recursos es capaz de entregar los subprocesos UMS únicamente en sistemas operativos que tienen la característica UMS. los sistemas operativos de 64 bits con la versión de Windows 7 y versiones posteriores admiten los subprocesos UMS. Si crea una directiva de programador con el `SchedulerKind` clave se establece en el valor `UmsThreadDefault` y la plataforma subyacente no admite UMS, el valor de la `SchedulerKind` clave en esa directiva se cambiará al valor `ThreadScheduler`. Siempre debe leer volver este valor de directiva antes de esperar recibir los subprocesos UMS.
+
+El `IUMSScheduler` interfaz es un extremo de un canal bidireccional de comunicación entre un programador y el Administrador de recursos. El otro extremo es representado por la `IResourceManager` y `ISchedulerProxy` interfaces, que se implementan mediante el Administrador de recursos.
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+[IScheduler](ischeduler-structure.md)
+
+`IUMSScheduler`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** concrtrm.h
+
+**Espacio de nombres:** simultaneidad
+
+##  <a name="setcompletionlist"></a>  IUMSScheduler:: SetCompletionList (método)
+
+Asigna un `IUMSCompletionList` interfaz para un programador de subprocesos UMS.
+
 ```
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
-```  
-  
-### <a name="parameters"></a>Parámetros  
+```
+
+### <a name="parameters"></a>Parámetros
+
 *pCompletionList*<br/>
-La interfaz de la lista de finalización para el programador. Hay una sola lista por programador.  
-  
-### <a name="remarks"></a>Comentarios  
- El Administrador de recursos invocará este método en un programador que especifica que quiere que los subprocesos UMS, después de que el programador ha solicitado una asignación inicial de los recursos. El programador puede utilizar el `IUMSCompletionList` interfaz para determinar cuándo se han desbloqueado proxy del subproceso UMS. Solo es válido para tener acceso a esta interfaz desde un proxy del subproceso que se ejecuta en una raíz del procesador virtual asignada al programador UMS.  
-  
-## <a name="see-also"></a>Vea también  
- [simultaneidad Namespace](concurrency-namespace.md)   
- [PolicyElementKey](concurrency-namespace-enums.md)   
- [IScheduler (estructura)](ischeduler-structure.md)   
- [IUMSCompletionList (estructura)](iumscompletionlist-structure.md)   
- [IResourceManager (estructura)](iresourcemanager-structure.md)
+La interfaz de la lista de finalización para el programador. Hay una sola lista por programador.
+
+### <a name="remarks"></a>Comentarios
+
+El Administrador de recursos invocará este método en un programador que especifica que quiere que los subprocesos UMS, después de que el programador ha solicitado una asignación inicial de los recursos. El programador puede utilizar el `IUMSCompletionList` interfaz para determinar cuándo se han desbloqueado proxy del subproceso UMS. Solo es válido para tener acceso a esta interfaz desde un proxy del subproceso que se ejecuta en una raíz del procesador virtual asignada al programador UMS.
+
+## <a name="see-also"></a>Vea también
+
+[concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
+[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[IScheduler (estructura)](ischeduler-structure.md)<br/>
+[IUMSCompletionList (estructura)](iumscompletionlist-structure.md)<br/>
+[IResourceManager (estructura)](iresourcemanager-structure.md)

@@ -1,27 +1,17 @@
 ---
-title: Error del compilador de recursos RC2165 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador de recursos RC2165
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - RC2165
-dev_langs:
-- C++
 helpviewer_keywords:
 - RC2165
 ms.assetid: bf7d4630-9355-47e3-87fa-6693fcf0ef0d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61293576fa36d9e8a853cb7a8b71e4c2de98e932
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dee1e3539a734ccb59a7e13218ea47b94287ffd6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655723"
 ---
 # <a name="resource-compiler-error-rc2165"></a>Error del compilador de recursos RC2165
 
@@ -31,4 +21,4 @@ La instrucción no especificó un archivo de inclusión válida.
 
 El **DLGINCLUDE** instrucción debe usar la sintaxis siguiente:
 
-**DLGINCLUDE "*filename*. h"**
+**DLGINCLUDE "**<em>filename</em>**. h"**

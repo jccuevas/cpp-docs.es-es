@@ -1,31 +1,20 @@
 ---
-title: Barra de herramientas del Editor (C++) | Microsoft Docs
-ms.custom: ''
+title: Barra de herramientas del Editor (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource editors [C++], Toolbar editor
 - editors, toolbars
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c51c8a5dc321d61b6167fb6a1e5b71d52145d81d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7efff3d4d784de6ee3130c3481f3674351cc7463
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316957"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486064"
 ---
 # <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
 
@@ -43,8 +32,7 @@ Con el **barra de herramientas** editor, puede:
 
 El **barra de herramientas** ventana del editor muestra dos vistas de una imagen del botón, igual que la ventana del editor de imágenes. Una barra de división separa los dos paneles. Se puede arrastrar dicha barra a uno u otro lado para cambiar el tamaño relativo de los paneles. El panel activo muestra un borde de selección. Por encima de las dos vistas de la imagen se encuentra la barra de herramientas del asunto.
 
-![Editor de la barra de herramientas](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
-Editor de barras de herramientas
+![Editor de la barra de herramientas](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") barra de herramientas del Editor
 
 El **barra de herramientas** editor es similar a la **imagen** editor en la funcionalidad. Los elementos de menú, las herramientas gráficas y cuadrícula de mapa de bits son los mismos que los de la **imagen** editor. Hay un comando de menú en el **imagen** menú para que pueda cambiar entre el **barra de herramientas** editor y la **imagen** editor. Para obtener más información sobre el uso de la **gráficos** barra de herramientas, **colores** paleta, o **imagen** menú, vea [Editor de imágenes](../windows/image-editor-for-icons.md).
 
@@ -56,5 +44,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
 [Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

@@ -1,30 +1,20 @@
 ---
-title: Conversión boxing (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Conversión boxing (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2308265b223304f30c8715d12d14e89bcb7344de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316723"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475444"
 ---
-# <a name="boxing--c-component-extensions"></a>Conversión boxing (Extensiones de componentes de C++)
+# <a name="boxing--ccli-and-ccx"></a>Conversión boxing (C++ / c++ / CLI y c++ / CX)
 
-El compilador de Visual C++ puede convertir tipos de valor a los objetos en un proceso denominado *boxing*así como convertir objetos a tipos de valor en un proceso denominado *unboxing*.
+Se llama a la conversión de tipos de valor a los objetos *boxing*, y se llama a la conversión de objetos a los tipos de valor *unboxing*.
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
@@ -51,7 +41,7 @@ En el siguiente ejemplo de código, se aplica una conversión boxing y unboxing 
 Para probar el ejemplo, cree un `BlankApplication` del proyecto, reemplace el `BlankPage::OnNavigatedTo()` método y, a continuación, especifique los puntos de interrupción en el corchete de cierre y la asignación de variable `str1`. Cuando el ejemplo alcance el corchete de cierre, examine `str1`.
 
 ```cpp
-void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
+void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
     using namespace Windows::Globalization::DateTimeFormatting;
 
@@ -86,7 +76,7 @@ Para obtener más información, consulte [conversión Boxing (C++ / c++ / CX)](h
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Ahora el compilador de Visual C++ aplica conversión boxing a tipos de valor, que pasan a ser <xref:System.Object>. Esto es posible por una conversión definida por el compilador que convierte tipos de valor en <xref:System.Object>.
+Tipos de valor de los cuadros del compilador <xref:System.Object>. Esto es posible por una conversión definida por el compilador que convierte tipos de valor en <xref:System.Object>.
 
 Aplicar conversiones boxing y unboxing permite tratar a los tipos de valor como objetos. Los tipos de valor, incluidos los tipos de estructura y los tipos integrados, como int, se pueden convertir a y desde el tipo <xref:System.Object>.
 
@@ -174,7 +164,7 @@ int main() {
                 // Will call void func1(System::Object^);
 
    func2(v2);   // OK: Calls "static V2::operator System::Object^(V2 v2)"
-   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
+   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)
 }
 ```
 
@@ -195,9 +185,9 @@ in func1(V2^)
 
 in func2(System::ValueType^)
 
-in func2(System::ValueType^)  
+in func2(System::ValueType^)
 ```
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

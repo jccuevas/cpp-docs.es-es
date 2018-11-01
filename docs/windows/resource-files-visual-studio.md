@@ -1,12 +1,6 @@
 ---
-title: Archivos de recursos (C++) | Microsoft Docs
-ms.custom: ''
+title: Archivos de recursos (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++]
 - .rc files [C++]
@@ -21,17 +15,12 @@ helpviewer_keywords:
 - .rct files [C++]
 - resource script files [C++], unsupported types
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6db3af430b0274f116eba4445158ddcf55ad1636
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ad36f19185bc5b3430e7644ef55164d3cb0839a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461703"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
@@ -94,6 +83,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 [Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

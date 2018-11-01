@@ -1,10 +1,6 @@
 ---
-title: CComBSTR (clase) | Microsoft Docs
-ms.custom: ''
+title: CComBSTR (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComBSTR
 - ATLBASE/ATL::CComBSTR
@@ -28,27 +24,21 @@ f1_keywords:
 - ATLBASE/ATL::CComBSTR::ToUpper
 - ATLBASE/ATL::CComBSTR::WriteToStream
 - ATLBASE/ATL::CComBSTR::m_str
-dev_langs:
-- C++
 helpviewer_keywords:
 - BSTRs, wrapper
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2045a6c14a37d270d895a5eeb4fa455711e7354
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097684"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475652"
 ---
 # <a name="ccombstr-class"></a>CComBSTR (clase)
 
-Esta clase es un contenedor de cadenas BSTR.
+Esta clase es un contenedor para [BSTR](/previous-versions/windows/desktop/automat/bstr)s.
 
 ## <a name="syntax"></a>Sintaxis
 

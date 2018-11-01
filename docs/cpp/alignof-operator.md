@@ -1,16 +1,12 @@
 ---
-title: __alignof (operador) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __alignof (Operador)
+ms.date: 10/09/2018
 f1_keywords:
 - alignas_cpp
 - __alignof_cpp
 - alignof_cpp
-dev_langs:
-- C++
+- __alignof
+- _alignof
 helpviewer_keywords:
 - alignas [C++]
 - alignment of structures
@@ -18,16 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ffea0fdf40f7ef794563849f97b0b68631b9734e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 391535d7d80b075149c797cbd00fa34d46ed677d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50479500"
 ---
 # <a name="alignof-operator"></a>__alignof (Operador)
 
@@ -81,6 +73,8 @@ typedef __declspec(align(32)) struct { int a; double b; } S;
 int n = 50; // array size
 S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
 ```
+
+Para ofrecer compatibilidad con versiones anteriores, **_alignof** es un sinónimo de **__alignof** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) es especificado.
 
 Para obtener más información sobre la modificación de la alineación, vea:
 

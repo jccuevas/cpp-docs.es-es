@@ -1,30 +1,20 @@
 ---
-title: Palabras clave contextuales (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Palabras clave contextuales (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - internal_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78b61e77da8ed45a43b3830b7eaa9588c1860928
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652756"
 ---
-# <a name="context-sensitive-keywords--c-component-extensions"></a>Palabras clave contextuales (Extensiones de componentes de C++)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>Palabras clave contextuales (C++ / c++ / CLI y c++ / CX)
 
 *Palabras clave contextuales* son elementos del lenguaje que solo se reconocen en contextos concretos. Fuera del contexto concreto, una palabra clave contextual puede ser un símbolo definido por el usuario.
 
@@ -111,4 +101,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

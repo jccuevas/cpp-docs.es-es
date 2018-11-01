@@ -1,25 +1,15 @@
 ---
-title: Agregados y uniones | Microsoft Docs
-ms.custom: ''
+title: Agregados y uniones
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a4206a5e07c765e9c789eab5c8963c9db4c2f234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496266"
 ---
 # <a name="aggregates-and-unions"></a>Agregados y uniones
 
@@ -29,7 +19,7 @@ Otros tipos, como matrices, estructuras y uniones, tienen requisitos de alineaci
 
    Contiene un grupo ordenado de objetos de datos adyacentes. Cada objeto se denomina un elemento. Todos los elementos dentro de una matriz tienen el mismo tamaño y tipo de datos.
 
--  Estructura
+- Estructura
 
    Contiene un grupo ordenado de objetos de datos. A diferencia de los elementos de una matriz, los objetos de datos dentro de una estructura pueden tener diferentes tipos de datos y tamaños. Cada objeto de datos en una estructura se llama a un miembro.
 

@@ -1,30 +1,19 @@
 ---
-title: Teclas de aceleración (C++) predefinidas | Microsoft Docs
-ms.custom: ''
+title: Teclas de aceleración predefinidas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
 - keyboard shortcuts [C++], predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5e6498e0b0722b5de28b5569c5f3565b0f033ea9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9ee884123bfe440e2246b6313ba1e37c0b01b494
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541627"
 ---
 # <a name="predefined-accelerator-keys-c"></a>Teclas de aceleración predefinidas (C++)
 
@@ -92,5 +81,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de aceleradores](../windows/accelerator-editor.md)  
+[Editor de aceleradores](../windows/accelerator-editor.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

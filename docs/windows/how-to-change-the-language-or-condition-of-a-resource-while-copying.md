@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ec8987b22444c98bb7a88c791c4f941737ceae
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3594e3c6ec839e41963ba7458e246563241bb4aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066570"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>Cómo: cambiar el idioma o la condición de un recurso al copiarlo (C++)
 
@@ -35,7 +35,7 @@ Al copiar un recurso, puede cambiar sus propiedades de idioma, condición o amba
 El idioma y la condición de un recurso se muestran entre paréntesis después del nombre del recurso en la ventana del área de trabajo. En este ejemplo, el recurso denominado IDD_AboutBox tienen finés como idioma y XX33 como condición.
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Para copiar un recurso existente y cambiar su idioma o su condición
@@ -56,6 +56,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Procedimiento para copiar recursos](../windows/how-to-copy-resources.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Procedimiento para copiar recursos](../windows/how-to-copy-resources.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

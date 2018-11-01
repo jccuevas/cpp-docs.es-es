@@ -1,28 +1,18 @@
 ---
-title: Identificador de operador de objeto (^) (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Identificador de operador de objeto (^) (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 569770b548d4bb076bdfac83942def5684ebdf5e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6f61a6b95ba8f9a059606376696fd1d8d64030db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625737"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>Operador de identificador de objeto (^) (Extensiones de componentes de C++)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>Identificador de operador de objeto (^) (C++ / c++ / CLI y c++ / CX)
 
 El *declarador del identificador* (`^`, pronunciado "sombrero"), modifica el tipo [especificador](../cpp/overview-of-declarators.md) para indicar que el objeto declarado debe eliminarse automáticamente cuando el sistema determina que el objeto es ya no es accesible.
 
@@ -34,7 +24,7 @@ Una variable que se declara con el declarador de identificador se comporta como 
 
 El compilador utiliza el COM *recuento de referencias* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Esto es posible debido a que un objeto que se deriva de una interfaz de Windows Runtime es, en realidad, un objeto COM. El recuento de referencias se incrementa cuando se crea o se copia el objeto y se reduce cuando el objeto se establece en null o queda fuera de ámbito. Si el recuento de referencias llega a cero, el objeto se elimina de inmediato y de manera automática.
 
-La ventaja del declarador del identificador es que, en COM, debe administrar de manera explícita el recuento de referencias para un objeto, lo cual es un proceso tedioso que puede dar lugar a errores. Es decir, para aumentar y disminuir el recuento de referencias, debe invocar los métodos AddRef() y Release() del objeto. Sin embargo, si declara un objeto con el declarador de identificador, el compilador de Visual C++ genera código que ajusta de manera automática el recuento de referencias.
+La ventaja del declarador del identificador es que, en COM, debe administrar de manera explícita el recuento de referencias para un objeto, lo cual es un proceso tedioso que puede dar lugar a errores. Es decir, para aumentar y disminuir el recuento de referencias, debe invocar los métodos AddRef() y Release() del objeto. Sin embargo, si declara un objeto con el declarador de identificador, el compilador genera código que se ajusta automáticamente el recuento de referencias.
 
 Para obtener información sobre cómo crear una instancia de un objeto, vea [referencia nuevos](../windows/ref-new-gcnew-cpp-component-extensions.md).
 
@@ -44,11 +34,9 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, se pueden mover sus objetos, lo que invalida las ubicaciones que usan las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.
+El sistema usa CLR *recolector de elementos no utilizados* mecanismo para determinar si el objeto ya no se está usando y puede eliminarse. Common Language Runtime mantiene un montón donde asigna objetos y usa las referencias administradas (variables) del programa para indicar la ubicación de objetos en el montón. Cuando un objeto ya no se usa, se libera la memoria que ocupaba en el montón. De manera periódica, el recolector de elementos no utilizados compacta el montón para mejorar el uso de la memoria liberada. Al compactar el montón, puede mover objetos en el montón, lo que invalida las ubicaciones que hace referencia a las referencias administradas. Sin embargo, el recolector de elementos no utilizados reconoce la ubicación de todas las referencias administradas y las actualiza automáticamente para indicar la ubicación actual de los objetos en el montón.
 
 Dado que los punteros de C++ nativo (`*`) y las referencias (`&`) no son referencias administradas, el recolector de elementos no utilizados no puede actualizar de manera automática las direcciones a las que apuntan. Para solucionar este problema, utilice el declarador de identificador para especificar una variable que el recolector de elementos no utilizados reconozca y pueda actualizar automáticamente.
-
-En Visual C++ 2002 y Visual C++ 2003, se utiliza `__gc *` para declarar un objeto del montón administrado.  `^` reemplaza a `__gc *` en la nueva sintaxis.
 
 Para obtener más información, consulte [Cómo: declarar controla en tipos nativos](../dotnet/how-to-declare-handles-in-native-types.md).
 
@@ -96,7 +84,7 @@ using namespace System;
 void Test(Object^ o) {
    Int32^ i = dynamic_cast<Int32^>(o);
 
-   if(i)  
+   if(i)
       Console::WriteLine(i);
    else
       Console::WriteLine("Not a boxed int");
@@ -175,12 +163,12 @@ private:
 public:
    DataCollection(int i) : Size(i) {
       x = gcnew array<String^>(Size);
-      for (int i = 0 ; i < Size ; i++)  
+      for (int i = 0 ; i < Size ; i++)
          x[i] = i.ToString();
    }
 
    void f(int Item) {
-      if (Item >= Size)  
+      if (Item >= Size)
       {
          System::Console::WriteLine("Cannot access array element {0}, size is {1}", Item, Size);
          return;
@@ -235,5 +223,5 @@ Opción del compilador: `/clr`
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md)

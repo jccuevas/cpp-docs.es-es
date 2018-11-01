@@ -1,10 +1,6 @@
 ---
-title: unorm_4 (clase) | Microsoft Docs
-ms.custom: ''
+title: unorm_4 (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
 - amp_short_vectors/Concurrency::graphics::unorm_4::gbra
@@ -271,433 +267,422 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs:
-- C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c57bbb2e54eb86333ee7e80ad144a486c4c1fba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46027666"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619367"
 ---
 # <a name="unorm4-class"></a>unorm_4 (Clase)
-Representa un vector corto de cuatro números normales sin signo.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class unorm_4;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Constructor unorm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|unorm_4::get_w||  
-|unorm_4::get_wx||  
-|unorm_4::get_wxy||  
-|unorm_4::get_wxyz||  
-|unorm_4::get_wxz||  
-|unorm_4::get_wxzy||  
-|unorm_4::get_wy||  
-|unorm_4::get_wyx||  
-|unorm_4::get_wyxz||  
-|unorm_4::get_wyz||  
-|unorm_4::get_wyzx||  
-|unorm_4::get_wz||  
-|unorm_4::get_wzx||  
-|unorm_4::get_wzxy||  
-|unorm_4::get_wzy||  
-|unorm_4::get_wzyx||  
-|unorm_4::get_x||  
-|unorm_4::get_xw||  
-|unorm_4::get_xwy||  
-|unorm_4::get_xwyz||  
-|unorm_4::get_xwz||  
-|unorm_4::get_xwzy||  
-|unorm_4::get_xy||  
-|unorm_4::get_xyw||  
-|unorm_4::get_xywz||  
-|unorm_4::get_xyz||  
-|unorm_4::get_xyzw||  
-|unorm_4::get_xz||  
-|unorm_4::get_xzw||  
-|unorm_4::get_xzwy||  
-|unorm_4::get_xzy||  
-|unorm_4::get_xzyw||  
-|unorm_4::get_y||  
-|unorm_4::get_yw||  
-|unorm_4::get_ywx||  
-|unorm_4::get_ywxz||  
-|unorm_4::get_ywz||  
-|unorm_4::get_ywzx||  
-|unorm_4::get_yx||  
-|unorm_4::get_yxw||  
-|unorm_4::get_yxwz||  
-|unorm_4::get_yxz||  
-|unorm_4::get_yxzw||  
-|unorm_4::get_yz||  
-|unorm_4::get_yzw||  
-|unorm_4::get_yzwx||  
-|unorm_4::get_yzx||  
-|unorm_4::get_yzxw||  
-|unorm_4::get_z||  
-|unorm_4::get_zw||  
-|unorm_4::get_zwx||  
-|unorm_4::get_zwxy||  
-|unorm_4::get_zwy||  
-|unorm_4::get_zwyx||  
-|unorm_4::get_zx||  
-|unorm_4::get_zxw||  
-|unorm_4::get_zxwy||  
-|unorm_4::get_zxy||  
-|unorm_4::get_zxyw||  
-|unorm_4::get_zy||  
-|unorm_4::get_zyw||  
-|unorm_4::get_zywx||  
-|unorm_4::get_zyx||  
-|unorm_4::get_zyxw||  
-|unorm_4::ref_a||  
-|unorm_4::ref_b||  
-|unorm_4::ref_g||  
-|unorm_4::ref_r||  
-|unorm_4::ref_w||  
-|unorm_4::ref_x||  
-|unorm_4::ref_y||  
-|unorm_4::ref_z||  
-|unorm_4::set_w||  
-|unorm_4::set_wx||  
-|unorm_4::set_wxy||  
-|unorm_4::set_wxyz||  
-|unorm_4::set_wxz||  
-|unorm_4::set_wxzy||  
-|unorm_4::set_wy||  
-|unorm_4::set_wyx||  
-|unorm_4::set_wyxz||  
-|unorm_4::set_wyz||  
-|unorm_4::set_wyzx||  
-|unorm_4::set_wz||  
-|unorm_4::set_wzx||  
-|unorm_4::set_wzxy||  
-|unorm_4::set_wzy||  
-|unorm_4::set_wzyx||  
-|unorm_4::set_x||  
-|unorm_4::set_xw||  
-|unorm_4::set_xwy||  
-|unorm_4::set_xwyz||  
-|unorm_4::set_xwz||  
-|unorm_4::set_xwzy||  
-|unorm_4::set_xy||  
-|unorm_4::set_xyw||  
-|unorm_4::set_xywz||  
-|unorm_4::set_xyz||  
-|unorm_4::set_xyzw||  
-|unorm_4::set_xz||  
-|unorm_4::set_xzw||  
-|unorm_4::set_xzwy||  
-|unorm_4::set_xzy||  
-|unorm_4::set_xzyw||  
-|unorm_4::set_y||  
-|unorm_4::set_yw||  
-|unorm_4::set_ywx||  
-|unorm_4::set_ywxz||  
-|unorm_4::set_ywz||  
-|unorm_4::set_ywzx||  
-|unorm_4::set_yx||  
-|unorm_4::set_yxw||  
-|unorm_4::set_yxwz||  
-|unorm_4::set_yxz||  
-|unorm_4::set_yxzw||  
-|unorm_4::set_yz||  
-|unorm_4::set_yzw||  
-|unorm_4::set_yzwx||  
-|unorm_4::set_yzx||  
-|unorm_4::set_yzxw||  
-|unorm_4::set_z||  
-|unorm_4::set_zw||  
-|unorm_4::set_zwx||  
-|unorm_4::set_zwxy||  
-|unorm_4::set_zwy||  
-|unorm_4::set_zwyx||  
-|unorm_4::set_zx||  
-|unorm_4::set_zxw||  
-|unorm_4::set_zxwy||  
-|unorm_4::set_zxy||  
-|unorm_4::set_zxyw||  
-|unorm_4::set_zy||  
-|unorm_4::set_zyw||  
-|unorm_4::set_zywx||  
-|unorm_4::set_zyx||  
-|unorm_4::set_zyxw||  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|unorm_4::operator-||  
-|unorm_4::operator--||  
-|unorm_4::operator*=||  
-|unorm_4::operator/=||  
-|unorm_4::operator++||  
-|unorm_4::operator+=||  
-|unorm_4::operator=||  
-|unorm_4::operator-=||  
-  
-### <a name="public-constants"></a>Constantes públicas  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[cambio de tamaño constante](#unorm_4__size)||  
-  
-### <a name="public-data-members"></a>Miembros de datos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|unorm_4::a||  
-|unorm_4::ab||  
-|unorm_4::abg||  
-|unorm_4::abgr||  
-|unorm_4::abr||  
-|unorm_4::abrg||  
-|unorm_4:: AG||  
-|unorm_4:: agb||  
-|unorm_4:: agbr||  
-|unorm_4:: Agr||  
-|unorm_4:: agrb||  
-|unorm_4:: ar||  
-|unorm_4:: ARB||  
-|unorm_4::arbg||  
-|unorm_4:: arg||  
-|unorm_4:: ARGB||  
-|unorm_4:: b||  
-|unorm_4::ba||  
-|unorm_4::bag||  
-|unorm_4::bagr||  
-|unorm_4::bar||  
-|unorm_4::barg||  
-|unorm_4:: BG||  
-|unorm_4::bga||  
-|unorm_4::bgar||  
-|unorm_4::bgr||  
-|unorm_4::bgra||  
-|unorm_4::br||  
-|unorm_4::bra||  
-|unorm_4:: brag||  
-|unorm_4::brg||  
-|unorm_4::brga||  
-|unorm_4:: g||  
-|unorm_4::ga||  
-|unorm_4::gab||  
-|unorm_4::gabr||  
-|unorm_4::gar||  
-|unorm_4::garb||  
-|unorm_4::gb||  
-|unorm_4::gba||  
-|unorm_4::gbar||  
-|unorm_4::gbr||  
-|unorm_4::gbra||  
-|unorm_4:: GR||  
-|unorm_4::gra||  
-|unorm_4::grab||  
-|unorm_4::grb||  
-|unorm_4::grba||  
-|unorm_4:: r||  
-|unorm_4::ra||  
-|unorm_4::rab||  
-|unorm_4::rabg||  
-|unorm_4:: rag||  
-|unorm_4:: ragb||  
-|unorm_4::rb||  
-|unorm_4::rba||  
-|unorm_4::rbag||  
-|unorm_4::rbg||  
-|unorm_4::rbga||  
-|unorm_4::rg||  
-|unorm_4::rga||  
-|unorm_4::rgab||  
-|unorm_4::rgb||  
-|unorm_4::rgba||  
-|unorm_4:: w||  
-|unorm_4:: WX||  
-|unorm_4:: WXY||  
-|unorm_4:: wxyz||  
-|unorm_4:: wxz||  
-|unorm_4:: wxzy||  
-|unorm_4:: WY||  
-|unorm_4:: wyx||  
-|unorm_4:: wyxz||  
-|unorm_4:: WYZ||  
-|unorm_4:: wyzx||  
-|unorm_4:: wZ||  
-|unorm_4::wzx||  
-|unorm_4:: wzxy||  
-|unorm_4:: wzy||  
-|unorm_4:: wzyx||  
-|unorm_4:: x||  
-|unorm_4:: xw||  
-|unorm_4:: xwy||  
-|unorm_4:: xwyz||  
-|unorm_4::xwz||  
-|unorm_4:: xwzy||  
-|unorm_4:: XY||  
-|unorm_4:: xyw||  
-|unorm_4::xywz||  
-|unorm_4:: XYZ||  
-|unorm_4:: xyzw||  
-|unorm_4::xz||  
-|unorm_4:: xzw||  
-|unorm_4:: xzwy||  
-|unorm_4:: xzy||  
-|unorm_4::xzyw||  
-|unorm_4:: y||  
-|unorm_4:: yw||  
-|unorm_4:: ywx||  
-|unorm_4::ywxz||  
-|unorm_4::ywz||  
-|unorm_4::ywzx||  
-|unorm_4:: YX||  
-|unorm_4:: yxw||  
-|unorm_4::yxwz||  
-|unorm_4::yxz||  
-|unorm_4:: yxzw||  
-|unorm_4:: YZ||  
-|unorm_4:: yzw||  
-|unorm_4:: yzwx||  
-|unorm_4:: yzx||  
-|unorm_4::yzxw||  
-|unorm_4::z||  
-|unorm_4:: ZW||  
-|unorm_4::zwx||  
-|unorm_4::zwxy||  
-|unorm_4:: zwy||  
-|unorm_4::zwyx||  
-|unorm_4::zx||  
-|unorm_4::zxw||  
-|unorm_4::zxwy||  
-|unorm_4::zxy||  
-|unorm_4::zxyw||  
-|unorm_4:: ZY||  
-|unorm_4::zyw||  
-|unorm_4::zywx||  
-|unorm_4:: ZYX||  
-|unorm_4::zyxw||  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `unorm_4`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> unorm_4 
 
- El constructor predeterminado, inicializa todos los elementos con 0.  
-  
-```  
+Representa un vector corto de cuatro números normales sin signo.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class unorm_4;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Constructor unorm_4](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|unorm_4::get_w||
+|unorm_4::get_wx||
+|unorm_4::get_wxy||
+|unorm_4::get_wxyz||
+|unorm_4::get_wxz||
+|unorm_4::get_wxzy||
+|unorm_4::get_wy||
+|unorm_4::get_wyx||
+|unorm_4::get_wyxz||
+|unorm_4::get_wyz||
+|unorm_4::get_wyzx||
+|unorm_4::get_wz||
+|unorm_4::get_wzx||
+|unorm_4::get_wzxy||
+|unorm_4::get_wzy||
+|unorm_4::get_wzyx||
+|unorm_4::get_x||
+|unorm_4::get_xw||
+|unorm_4::get_xwy||
+|unorm_4::get_xwyz||
+|unorm_4::get_xwz||
+|unorm_4::get_xwzy||
+|unorm_4::get_xy||
+|unorm_4::get_xyw||
+|unorm_4::get_xywz||
+|unorm_4::get_xyz||
+|unorm_4::get_xyzw||
+|unorm_4::get_xz||
+|unorm_4::get_xzw||
+|unorm_4::get_xzwy||
+|unorm_4::get_xzy||
+|unorm_4::get_xzyw||
+|unorm_4::get_y||
+|unorm_4::get_yw||
+|unorm_4::get_ywx||
+|unorm_4::get_ywxz||
+|unorm_4::get_ywz||
+|unorm_4::get_ywzx||
+|unorm_4::get_yx||
+|unorm_4::get_yxw||
+|unorm_4::get_yxwz||
+|unorm_4::get_yxz||
+|unorm_4::get_yxzw||
+|unorm_4::get_yz||
+|unorm_4::get_yzw||
+|unorm_4::get_yzwx||
+|unorm_4::get_yzx||
+|unorm_4::get_yzxw||
+|unorm_4::get_z||
+|unorm_4::get_zw||
+|unorm_4::get_zwx||
+|unorm_4::get_zwxy||
+|unorm_4::get_zwy||
+|unorm_4::get_zwyx||
+|unorm_4::get_zx||
+|unorm_4::get_zxw||
+|unorm_4::get_zxwy||
+|unorm_4::get_zxy||
+|unorm_4::get_zxyw||
+|unorm_4::get_zy||
+|unorm_4::get_zyw||
+|unorm_4::get_zywx||
+|unorm_4::get_zyx||
+|unorm_4::get_zyxw||
+|unorm_4::ref_a||
+|unorm_4::ref_b||
+|unorm_4::ref_g||
+|unorm_4::ref_r||
+|unorm_4::ref_w||
+|unorm_4::ref_x||
+|unorm_4::ref_y||
+|unorm_4::ref_z||
+|unorm_4::set_w||
+|unorm_4::set_wx||
+|unorm_4::set_wxy||
+|unorm_4::set_wxyz||
+|unorm_4::set_wxz||
+|unorm_4::set_wxzy||
+|unorm_4::set_wy||
+|unorm_4::set_wyx||
+|unorm_4::set_wyxz||
+|unorm_4::set_wyz||
+|unorm_4::set_wyzx||
+|unorm_4::set_wz||
+|unorm_4::set_wzx||
+|unorm_4::set_wzxy||
+|unorm_4::set_wzy||
+|unorm_4::set_wzyx||
+|unorm_4::set_x||
+|unorm_4::set_xw||
+|unorm_4::set_xwy||
+|unorm_4::set_xwyz||
+|unorm_4::set_xwz||
+|unorm_4::set_xwzy||
+|unorm_4::set_xy||
+|unorm_4::set_xyw||
+|unorm_4::set_xywz||
+|unorm_4::set_xyz||
+|unorm_4::set_xyzw||
+|unorm_4::set_xz||
+|unorm_4::set_xzw||
+|unorm_4::set_xzwy||
+|unorm_4::set_xzy||
+|unorm_4::set_xzyw||
+|unorm_4::set_y||
+|unorm_4::set_yw||
+|unorm_4::set_ywx||
+|unorm_4::set_ywxz||
+|unorm_4::set_ywz||
+|unorm_4::set_ywzx||
+|unorm_4::set_yx||
+|unorm_4::set_yxw||
+|unorm_4::set_yxwz||
+|unorm_4::set_yxz||
+|unorm_4::set_yxzw||
+|unorm_4::set_yz||
+|unorm_4::set_yzw||
+|unorm_4::set_yzwx||
+|unorm_4::set_yzx||
+|unorm_4::set_yzxw||
+|unorm_4::set_z||
+|unorm_4::set_zw||
+|unorm_4::set_zwx||
+|unorm_4::set_zwxy||
+|unorm_4::set_zwy||
+|unorm_4::set_zwyx||
+|unorm_4::set_zx||
+|unorm_4::set_zxw||
+|unorm_4::set_zxwy||
+|unorm_4::set_zxy||
+|unorm_4::set_zxyw||
+|unorm_4::set_zy||
+|unorm_4::set_zyw||
+|unorm_4::set_zywx||
+|unorm_4::set_zyx||
+|unorm_4::set_zyxw||
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|unorm_4::operator-||
+|unorm_4::operator--||
+|unorm_4::operator*=||
+|unorm_4::operator/=||
+|unorm_4::operator++||
+|unorm_4::operator+=||
+|unorm_4::operator=||
+|unorm_4::operator-=||
+
+### <a name="public-constants"></a>Constantes públicas
+
+|nombre|Descripción|
+|----------|-----------------|
+|[cambio de tamaño constante](#unorm_4__size)||
+
+### <a name="public-data-members"></a>Miembros de datos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|unorm_4::a||
+|unorm_4::ab||
+|unorm_4::abg||
+|unorm_4::abgr||
+|unorm_4::abr||
+|unorm_4::abrg||
+|unorm_4:: AG||
+|unorm_4:: agb||
+|unorm_4:: agbr||
+|unorm_4:: Agr||
+|unorm_4:: agrb||
+|unorm_4:: ar||
+|unorm_4:: ARB||
+|unorm_4::arbg||
+|unorm_4:: arg||
+|unorm_4:: ARGB||
+|unorm_4:: b||
+|unorm_4::ba||
+|unorm_4::bag||
+|unorm_4::bagr||
+|unorm_4::bar||
+|unorm_4::barg||
+|unorm_4:: BG||
+|unorm_4::bga||
+|unorm_4::bgar||
+|unorm_4::bgr||
+|unorm_4::bgra||
+|unorm_4::br||
+|unorm_4::bra||
+|unorm_4:: brag||
+|unorm_4::brg||
+|unorm_4::brga||
+|unorm_4:: g||
+|unorm_4::ga||
+|unorm_4::gab||
+|unorm_4::gabr||
+|unorm_4::gar||
+|unorm_4::garb||
+|unorm_4::gb||
+|unorm_4::gba||
+|unorm_4::gbar||
+|unorm_4::gbr||
+|unorm_4::gbra||
+|unorm_4:: GR||
+|unorm_4::gra||
+|unorm_4::grab||
+|unorm_4::grb||
+|unorm_4::grba||
+|unorm_4:: r||
+|unorm_4::ra||
+|unorm_4::rab||
+|unorm_4::rabg||
+|unorm_4:: rag||
+|unorm_4:: ragb||
+|unorm_4::rb||
+|unorm_4::rba||
+|unorm_4::rbag||
+|unorm_4::rbg||
+|unorm_4::rbga||
+|unorm_4::rg||
+|unorm_4::rga||
+|unorm_4::rgab||
+|unorm_4::rgb||
+|unorm_4::rgba||
+|unorm_4:: w||
+|unorm_4:: WX||
+|unorm_4:: WXY||
+|unorm_4:: wxyz||
+|unorm_4:: wxz||
+|unorm_4:: wxzy||
+|unorm_4:: WY||
+|unorm_4:: wyx||
+|unorm_4:: wyxz||
+|unorm_4:: WYZ||
+|unorm_4:: wyzx||
+|unorm_4:: wZ||
+|unorm_4::wzx||
+|unorm_4:: wzxy||
+|unorm_4:: wzy||
+|unorm_4:: wzyx||
+|unorm_4:: x||
+|unorm_4:: xw||
+|unorm_4:: xwy||
+|unorm_4:: xwyz||
+|unorm_4::xwz||
+|unorm_4:: xwzy||
+|unorm_4:: XY||
+|unorm_4:: xyw||
+|unorm_4::xywz||
+|unorm_4:: XYZ||
+|unorm_4:: xyzw||
+|unorm_4::xz||
+|unorm_4:: xzw||
+|unorm_4:: xzwy||
+|unorm_4:: xzy||
+|unorm_4::xzyw||
+|unorm_4:: y||
+|unorm_4:: yw||
+|unorm_4:: ywx||
+|unorm_4::ywxz||
+|unorm_4::ywz||
+|unorm_4::ywzx||
+|unorm_4:: YX||
+|unorm_4:: yxw||
+|unorm_4::yxwz||
+|unorm_4::yxz||
+|unorm_4:: yxzw||
+|unorm_4:: YZ||
+|unorm_4:: yzw||
+|unorm_4:: yzwx||
+|unorm_4:: yzx||
+|unorm_4::yzxw||
+|unorm_4::z||
+|unorm_4:: ZW||
+|unorm_4::zwx||
+|unorm_4::zwxy||
+|unorm_4:: zwy||
+|unorm_4::zwyx||
+|unorm_4::zx||
+|unorm_4::zxw||
+|unorm_4::zxwy||
+|unorm_4::zxy||
+|unorm_4::zxyw||
+|unorm_4:: ZY||
+|unorm_4::zyw||
+|unorm_4::zywx||
+|unorm_4:: ZYX||
+|unorm_4::zyxw||
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`unorm_4`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> unorm_4
+
+El constructor predeterminado, inicializa todos los elementos con 0.
+
+```
 unorm_4() restrict(amp,
     cpu);
 
- 
 unorm_4(
-    unorm _V0,  
-    unorm _V1,  
-    unorm _V2,  
+    unorm _V0,
+    unorm _V1,
+    unorm _V2,
     unorm _V3) restrict(amp,
     cpu);
 
- 
 unorm_4(
-    float _V0,  
-    float _V1,  
-    float _V2,  
+    float _V0,
+    float _V1,
+    float _V2,
     float _V3) restrict(amp,
     cpu);
 
- 
 unorm_4(
     unorm _V) restrict(amp,
     cpu);
 
- 
 explicit unorm_4(
     float _V) restrict(amp,
     cpu);
 
- 
 unorm_4(
     const unorm_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_4(
     const uint_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_4(
     const int_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_4(
     const float_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_4(
     const norm_4& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline unorm_4(
     const double_4& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*_V0*<br/>
-El valor para inicializar el elemento 0.  
-  
-*_V1*<br/>
-El valor para inicializar el elemento 1.  
-  
-*_V2*<br/>
-El valor para inicializar el elemento 2.  
-  
-*_V3*<br/>
-El valor para inicializar el elemento 3.  
-  
-*_V*<br/>
-El valor de inicialización.  
-  
-*_Otro*<br/>
-El objeto usado para inicializar.  
-  
-##  <a name="unorm_4__size"></a> Tamaño 
+```
 
-```  
-static const int size = 4;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parámetros
+
+*_V0*<br/>
+El valor para inicializar el elemento 0.
+
+*_V1*<br/>
+El valor para inicializar el elemento 1.
+
+*_V2*<br/>
+El valor para inicializar el elemento 2.
+
+*_V3*<br/>
+El valor para inicializar el elemento 3.
+
+*_V*<br/>
+El valor de inicialización.
+
+*_Otro*<br/>
+El objeto usado para inicializar.
+
+##  <a name="unorm_4__size"></a> Tamaño
+
+```
+static const int size = 4;
+```
+
+## <a name="see-also"></a>Vea también
+
+[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

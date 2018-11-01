@@ -1,26 +1,18 @@
 ---
-title: Vectoriterator (clase) | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::VectorIterator (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
-dev_langs:
-- C++
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 8e776e0f5d479ee8633efa647ac41e6b1b5f9c0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102556"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595603"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator (Clase)
 
@@ -124,7 +116,7 @@ La primera sintaxis disminuye y devuelve después el objeto VectorIterator actua
 
 La primera sintaxis de VectorIterator disminuye previamente el objeto VectorIterator actual.
 
-La segunda sintaxis disminuye posteriormente el objeto VectorIterator actual. El `int` tipo en la segunda sintaxis indica una operación de decremento posterior, no un operando entero real.
+La segunda sintaxis disminuye posteriormente el objeto VectorIterator actual. El tipo `int` de la segunda sintaxis indica una operación de decremento posterior, no un operando entero real.
 
 ## <a name="operator-dereference"></a>  Vectoriterator:: operator\* operador
 
@@ -157,7 +149,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el objeto VectorIterator actual es igual que `other`; de lo contrario, es `false`.
+**True** si el objeto VectorIterator actual es igual a *otros*; en caso contrario, **false**.
 
 ## <a name="operator-greater-than"></a>  Vectoriterator:: operator&gt; operador
 
@@ -176,7 +168,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el objeto VectorIterator actual es mayor que `other`; en caso contrario, `false`.
+**True** si el objeto VectorIterator actual es mayor que *otros*; en caso contrario, **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectoriterator:: operator&gt;= (operador)
 
@@ -195,7 +187,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si el objeto VectorIterator actual es mayor o igual que `other`; en caso contrario, `false`.
+**True** si el objeto VectorIterator actual es mayor o igual a *otros*; en caso contrario, **false**.
 
 ## <a name="operator-increment"></a>  Vectoriterator:: operator ++ (operador)
 
@@ -235,7 +227,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el objeto VectorIterator actual no es igual a `other`; en caso contrario, `false`.
+**True** si el objeto VectorIterator actual no es igual a *otros*; en caso contrario, **false**.
 
 ## <a name="operator-less-than"></a>  Vectoriterator:: operator&lt; operador
 
@@ -254,7 +246,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es `true` si el objeto VectorIterator actual es menor que `other`; de lo contrario, es `false`.
+**True** si el objeto VectorIterator actual es menor que *otros*; en caso contrario, **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  Vectoriterator:: operator&lt;= (operador)
 
@@ -273,7 +265,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` Si el objeto VectorIterator actual es menor o igual que `other`; en caso contrario, `false`.
+**True** si el objeto VectorIterator actual es menor o igual que *otros*; en caso contrario, **false**.
 
 ## <a name="operator-minus"></a>  Vectoriterator:: operator-(operador)
 
@@ -298,7 +290,7 @@ Otro objeto VectorIterator.
 
 ### <a name="return-value"></a>Valor devuelto
 
-La sintaxis del primer operador devuelve un objeto VectorIterator que tiene `n` elementos menos que el objeto VectorIterator actual. La segunda sintaxis del operador devuelve el número de elementos entre actual y el `other` VectorIterator.
+La sintaxis del primer operador devuelve un objeto VectorIterator que tiene `n` elementos menos que el objeto VectorIterator actual. La segunda sintaxis del operador devuelve el número de elementos que hay entre el objeto actual y `other` VectorIterator.
 
 ## <a name="operator-plus-assign"></a>  Vectoriterator:: operator += (operador)
 
@@ -319,7 +311,7 @@ Desplazamiento entero.
 
 VectorIterator actualizado.
 
-## <a name="operator-plus"></a>  ectorIterator::operator + (operador)
+## <a name="operator-plus"></a>  Vectoriterator:: operator + (operador)
 
 Devuelve un objeto VectorIterator que hace referencia al elemento en el desplazamiento especificado desde el objeto VectorIterator especificado.
 

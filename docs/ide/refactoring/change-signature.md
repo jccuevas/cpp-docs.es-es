@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335096"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448340"
 ---
 # <a name="change-signature"></a>Cambiar firma
 **Qué:** Permite modificar los parámetros de una función.
 
-**Cuándo:** Quiere reordenar, agregar, quitar o modificar los parámetros de una función que actualmente se está usando en varias ubicaciones.  
+**Cuándo:** Quiere reordenar, agregar, quitar o modificar los parámetros de una función que actualmente se está usando en varias ubicaciones.
 
 **Por qué:** Podría cambiar el orden de estos parámetros manualmente y, después, buscar todas las llamadas a esa función y cambiarlas una por una, pero esto podría provocar errores.  Esta herramienta de refactorización realizará la tarea automáticamente.
 
@@ -42,7 +42,7 @@ ms.locfileid: "33335096"
 
    ![Cuadro de diálogo para cambiar firma](images/changesignature_dialog.png)
 
-   | Botón | Description
+   | Botón | Descripción
    | ------ | ---
    | **Up/Down**    | Mueve el parámetro seleccionado hacia arriba y hacia abajo en la lista.
    | **Add**        | Agrega un parámetro a nuevo la lista
@@ -60,7 +60,7 @@ ms.locfileid: "33335096"
 
    Aquí, puede realizar lo siguiente:
 
-   | Entrada | Description
+   | Entrada | Descripción
    | ----- | ---
    | **Type**               | El tipo del parámetro (int, double, float, etc.)
    | **Name**               | El nombre del parámetro.

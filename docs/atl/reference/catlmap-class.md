@@ -1,10 +1,6 @@
 ---
-title: CAtlMap (clase) | Microsoft Docs
-ms.custom: ''
+title: CAtlMap (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlMap
 - ATLCOLL/ATL::CAtlMap
@@ -38,21 +34,15 @@ f1_keywords:
 - ATLCOLL/ATL::CAtlMap::SetAt
 - ATLCOLL/ATL::CAtlMap::SetOptimalLoad
 - ATLCOLL/ATL::CAtlMap::SetValueAt
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075727"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499695"
 ---
 # <a name="catlmap-class"></a>CAtlMap (clase)
 
@@ -62,8 +52,8 @@ Esta clase proporciona métodos para crear y administrar un objeto de mapa.
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CAtlMap
 ```
@@ -97,7 +87,7 @@ El código utilizado para copiar o mover elementos de valor.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Clase CAtlMap::CPair](#cpair_class)|Una clase que contiene los elementos clave y valor.|  
+|[Clase CAtlMap::CPair](#cpair_class)|Una clase que contiene los elementos clave y valor.|
 
 ### <a name="cpair-data-members"></a>Miembros de datos CPair
 
@@ -145,7 +135,7 @@ El código utilizado para copiar o mover elementos de valor.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Reemplaza o agrega un nuevo elemento a la `CAtlMap`.|  
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Reemplaza o agrega un nuevo elemento a la `CAtlMap`.|
 
 ## <a name="remarks"></a>Comentarios
 

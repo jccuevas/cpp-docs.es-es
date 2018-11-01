@@ -1,36 +1,58 @@
 ---
-title: PROTO | Microsoft Docs
-ms.custom: ''
-ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
+title: PROTO
+ms.date: 10/22/2018
 f1_keywords:
 - PROTO
-dev_langs:
-- C++
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29f7d49832b23ac9db7555d47dd8d7069ec4de46
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536742"
 ---
 # <a name="proto"></a>PROTO
 
-Prototipos de función.
+Prototipos de función o procedimiento. Puede llamar a la función prototipo lo PROTO (directiva) mediante el uso de la [INVOKE](invoke.md) directiva.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *etiqueta* PROTO [[*distancia*]] [[*langtype*]] [[, [[*parámetro*]]:*etiqueta*]]...
+> *etiqueta* **PROTO** \[ *distancia*] \[ *langtype*] \[ __,__ \[ *parámetro*]__:__*etiqueta*]...
+
+### <a name="parameters"></a>Parámetros
+
+*Etiqueta*<br/>
+El nombre de la función de prototipo.
+
+*distance*<br/>
+(Opcional) Utilizadas en modelos de memoria de 16 bits para invalidar el valor predeterminado e indique **NEAR** o **lejano** llamadas.
+
+*langtype*<br/>
+(Opcional) Establece la convención de llamada y nomenclatura para los procedimientos y los símbolos públicos. Convenciones admitidas son:
+
+- 32 bits **planos** modelo: **C**, **STDCALL**
+
+- modelos de 16 bits: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+
+*Parámetro*<br/>
+El nombre opcional para un parámetro de función.
+
+*Etiqueta*<br/>
+El tipo de un parámetro de función.
+
+El *parámetro* y *etiqueta* parámetros pueden aparecer varias veces, una vez para cada argumento pasado.
+
+## <a name="example"></a>Ejemplo
+
+Este ejemplo se muestra un **PROTO** declaración para una función denominada `addup3` que usa un **NEAR** llamada para invalidar el valor predeterminado de modelo de 16 bits para las llamadas a procedimientos y utiliza el **C**convención de llamada para apilar los parámetros y valores devueltos. Acepta dos argumentos: un **WORD** y un **VARARG**.
+
+```MASM
+addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
+```
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>
+[Referencia de directivas](directives-reference.md)<br/>
+[. Referencia del modelo](dot-model.md)<br/>

@@ -1,10 +1,6 @@
 ---
-title: _ismbbkana, _ismbbkana_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkana, _ismbbkana_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkana_l
 - _ismbbkana
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkana_l
 - ismbbkana
 - _ismbbkana
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkana_l function
 - _ismbbkana function
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e0d4f470a2d40540508a6701e587987df9b0df4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440990"
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
 
@@ -71,7 +61,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbkana** devuelve un valor distinto de cero si el entero *c* es un símbolo katakana, o 0 si no lo está. **_ismbbkana** utiliza la configuración regional actual para obtener información de caracteres dependientes de la configuración regional. **_ismbbkana_l** es idéntica, salvo que usa el objeto de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbkana** devuelve un valor distinto de cero si el entero *c* es un símbolo katakana, o 0 si no lo está. **_ismbbkana** usa la configuración regional actual para la información sobre caracteres dependientes de la configuración regional. **_ismbbkana_l** es idéntico, salvo que usa el objeto de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

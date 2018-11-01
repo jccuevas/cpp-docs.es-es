@@ -1,24 +1,14 @@
 ---
-title: 'Cómo: completar operaciones asincrónicas mediante WRL | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: Completar operaciones asincrónicas mediante WRL'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6c68a6cfedb7af73ee2fa7710452968320996aea
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ec57d6dd94357a65b7aaa300d5622ec5feac9932
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534074"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Cómo: Completar operaciones asincrónicas mediante WRL
 

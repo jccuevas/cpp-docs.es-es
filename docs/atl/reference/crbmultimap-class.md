@@ -1,10 +1,6 @@
 ---
-title: CRBMultiMap (clase) | Microsoft Docs
-ms.custom: ''
+title: CRBMultiMap (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CRBMultiMap
 - ATLCOLL/ATL::CRBMultiMap
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLCOLL/ATL::CRBMultiMap::GetNextWithKey
 - ATLCOLL/ATL::CRBMultiMap::Insert
 - ATLCOLL/ATL::CRBMultiMap::RemoveKey
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae9a83ff8cc8e4909e23e7751e0c82da690a0c21
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659100"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap (clase)
 
@@ -38,8 +28,8 @@ Esta clase representa una estructura de asignación que permite que cada clave p
 
 ```
 template<typename K,
-         typename V, 
-         class KTraits = CElementTraits<K>, 
+         typename V,
+         class KTraits = CElementTraits<K>,
          class VTraits = CElementTraits<V>>
 class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ```

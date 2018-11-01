@@ -1,34 +1,24 @@
 ---
-title: Variables globales ATL | Microsoft Docs
-ms.custom: ''
+title: Variables globales de ATL
 ms.date: 12/06/2017
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ATLBASE/_pAtlModule
-dev_langs:
-- C++
 helpviewer_keywords:
 - global variables, ATL
 - _pAtlModule
 ms.assetid: e881a319-99ca-4f5d-8a0b-34b3dcd0f37f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f32ff38008e55e656bf8901541ffc5ec7246bed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f98b31d2454b7c6e903e5b5b87bceb4ddcb6961
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085997"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498324"
 ---
 # <a name="atl-global-variables"></a>Variables globales de ATL
 
 ## <a name="patlmodule"></a>_pAtlModule
 
-Una variable global que almacenar un puntero al módulo actual.  
+Una variable global que almacenar un puntero al módulo actual.
 
 ```cpp
 __declspec(selectany) CAtlModule * _pAtlModule

@@ -1,24 +1,14 @@
 ---
-title: 'Cómo: usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071372"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664937"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Cómo: Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows
 
@@ -39,13 +29,13 @@ De forma predeterminada en [Windows 8.1, winmdidl.exe y midlrt.exe se encuentran
 ## <a name="winmdidl-command-line-arguments"></a>Argumentos de la línea de comandos de Winmdidl
 
 ```
-Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
+Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
 **/nologo**<br/>
 Impide que se muestre en la consola el mensaje de copyright y el número de versión de winmdidl.
 
-**/supressversioncheck**<br/>
+**/suppressversioncheck**<br/>
 No usado.
 
 **/ hora**<br/>

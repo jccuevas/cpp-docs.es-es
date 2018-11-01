@@ -1,10 +1,6 @@
 ---
-title: Funciones globales de Control compuesto | Microsoft Docs
-ms.custom: ''
+title: Funciones globales de Control compuesto
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
 - atlhost/ATL::AtlAxCreateDialog
@@ -19,21 +15,15 @@ f1_keywords:
 - atlhost/ATL::AtlAxWinInit
 - atlhost/ATL::AtlAxWinTerm
 - atlhost/ATL::AtlGetObjectSourceInterface
-dev_langs:
-- C++
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037364"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525273"
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de Control compuesto
 
@@ -56,11 +46,11 @@ Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y par
 |[AtlSetChildSite](#atlsetchildsite)|Inicializa el `IUnknown` del sitio secundario.|
 |[AtlAxWinInit](#atlaxwininit)|Inicializa el código de hospedaje para los objetos AxWin.|
 |[AtlAxWinTerm](#atlaxwinterm)|El código de hospedaje para los objetos AxWin anula la inicialización.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Devuelve información acerca de la interfaz de origen predeterminada de un objeto.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Devuelve información acerca de la interfaz de origen predeterminada de un objeto.|
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atlhost.h  
+**Encabezado:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog
 
@@ -81,7 +71,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifica una instancia del módulo cuyo archivo ejecutable contiene la plantilla de cuadro de diálogo.
 
 *lpTemplateName*<br/>
-[in] Identifica la plantilla de cuadro de diálogo. Este parámetro es el puntero a una cadena de caracteres terminada en null que especifica el nombre de la plantilla de cuadro de diálogo o un valor entero que especifica el identificador de recurso de la plantilla de cuadro de diálogo. Si el parámetro especifica un identificador de recurso, su palabra de orden superior debe ser cero y su palabra de orden inferior debe contener el identificador. Puede usar el [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macros para crear este valor.
+[in] Identifica la plantilla de cuadro de diálogo. Este parámetro es el puntero a una cadena de caracteres terminada en null que especifica el nombre de la plantilla de cuadro de diálogo o un valor entero que especifica el identificador de recurso de la plantilla de cuadro de diálogo. Si el parámetro especifica un identificador de recurso, su palabra de orden superior debe ser cero y su palabra de orden inferior debe contener el identificador. Puede usar el [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macros para crear este valor.
 
 *hWndParent*<br/>
 [in] Identifica la ventana propietaria del cuadro de diálogo.
@@ -101,7 +91,7 @@ Uno de los valores HRESULT estándar.
 Para usar `AtlAxDialogBox` con una plantilla de cuadro de diálogo que contiene un control ActiveX, especifique una cadena válida de CLSID, APPID o dirección URL como la *texto* campo de la **CONTROL** sección del recurso de cuadro de diálogo, junto con " AtlAxWin80 "como el *nombre de la clase* campo en la misma sección. El siguiente ejemplo muestra qué válido **CONTROL** sección podría ser similar a:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -128,7 +118,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifica una instancia del módulo cuyo archivo ejecutable contiene la plantilla de cuadro de diálogo.
 
 *lpTemplateName*<br/>
-[in] Identifica la plantilla de cuadro de diálogo. Este parámetro es el puntero a una cadena de caracteres terminada en null que especifica el nombre de la plantilla de cuadro de diálogo o un valor entero que especifica el identificador de recurso de la plantilla de cuadro de diálogo. Si el parámetro especifica un identificador de recurso, su palabra de orden superior debe ser cero y su palabra de orden inferior debe contener el identificador. Puede usar el [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) macros para crear este valor.
+[in] Identifica la plantilla de cuadro de diálogo. Este parámetro es el puntero a una cadena de caracteres terminada en null que especifica el nombre de la plantilla de cuadro de diálogo o un valor entero que especifica el identificador de recurso de la plantilla de cuadro de diálogo. Si el parámetro especifica un identificador de recurso, su palabra de orden superior debe ser cero y su palabra de orden inferior debe contener el identificador. Puede usar el [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) macros para crear este valor.
 
 *hWndParent*<br/>
 [in] Identifica la ventana propietaria del cuadro de diálogo.
@@ -261,7 +251,7 @@ Para crear un control ActiveX con licencia, consulte [AtlAxCreateControlLicEx](#
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada.  
+Crea un control ActiveX con licencia, lo inicializa y lo hospeda en la ventana especificada.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +474,7 @@ Distinto de cero si la inicialización del control de código de hospedaje se re
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función debe llamarse antes de usar la API que hospeda los controles ATL. Después de una llamada a esta función, el **"AtlAxWin"** clase de ventana se puede usar en las llamadas a [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) o [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), tal y como se describe en el SDK de Windows.  
+Esta función debe llamarse antes de usar la API que hospeda los controles ATL. Después de una llamada a esta función, el **"AtlAxWin"** clase de ventana se puede usar en las llamadas a [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) o [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), tal y como se describe en el SDK de Windows.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

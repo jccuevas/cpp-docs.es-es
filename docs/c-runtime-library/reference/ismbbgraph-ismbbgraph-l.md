@@ -1,10 +1,6 @@
 ---
-title: _ismbbgraph, _ismbbgraph_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbgraph_l
 - _ismbbgraph
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6336beee17759ac01667d7c2aac65be419d9e170
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662888"
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 
@@ -75,7 +65,7 @@ Devuelve un valor distinto de cero si la expresión:
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-es distinto de cero para *c*, o 0 si no lo está. **_ismbbgraph** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbgraph_l** es idéntica, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+es distinto de cero para *c*, o 0 si no lo está. **_ismbbgraph** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbgraph_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

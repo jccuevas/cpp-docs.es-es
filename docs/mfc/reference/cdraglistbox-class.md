@@ -30,179 +30,205 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a32963ebb6bfbfcb1063e8eda678693bec872e79
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 2d9e4fb2835870fa9c3a46dcd5cda5b0cca600a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37337289"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432989"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox (clase)
-Además de proporcionar la funcionalidad de un cuadro de lista de Windows, la `CDragListBox` clase permite al usuario mover elementos de cuadro de lista, como los nombres de archivo, en el cuadro de lista.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class CDragListBox : public CListBox  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CDragListBox::CDragListBox](#cdraglistbox)|Construye un objeto `CDragListBox`.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[CDragListBox::BeginDrag](#begindrag)|Lo llama el marco de trabajo cuando se inicia una operación de arrastre.|  
-|[CDragListBox::CancelDrag](#canceldrag)|Lo llama el marco de trabajo cuando se ha cancelado una operación de arrastre.|  
-|[CDragListBox::Dragging](#dragging)|Lo llama el marco de trabajo durante una operación de arrastre.|  
-|[CDragListBox::DrawInsert](#drawinsert)|Dibuja a la Guía de inserción del cuadro de lista de arrastre.|  
-|[CDragListBox::Dropped](#dropped)|Lo llama el marco de trabajo después de que se ha quitado el elemento.|  
-|[CDragListBox::ItemFromPt](#itemfrompt)|Devuelve las coordenadas del elemento que se está arrastrando.|  
-  
-## <a name="remarks"></a>Comentarios  
- Cuadros de lista con esta funcionalidad permiten a los usuarios ordenar los elementos en una lista de la manera más útil. De forma predeterminada, el cuadro de lista moverá el elemento a la nueva ubicación en la lista. Sin embargo, `CDragListBox` objetos se pueden personalizar para copiar elementos en lugar de moverlos.  
-  
- El control de cuadro de lista asociada con el `CDragListBox` clase no debe tener el LBS_SORT o el estilo LBS_MULTIPLESELECT. Para obtener una descripción de los estilos de cuadro de lista, consulte [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).  
-  
- Para usar un cuadro de lista de arrastre en un cuadro de diálogo existente de la aplicación, agregue un control de cuadro de lista a la plantilla de cuadro de diálogo con el editor de cuadro de diálogo y, a continuación, asignar una variable miembro (de categoría `Control` y el tipo de Variable `CDragListBox`) correspondiente al cuadro de lista controlar en la plantilla de cuadro de diálogo.  
-  
- Para obtener más información sobre la asignación de controles a las variables miembro, vea [acceso directo para definir Variables miembro para controles de cuadro de diálogo](../../windows/defining-member-variables-for-dialog-controls.md).  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWnd](../../mfc/reference/cwnd-class.md)  
-  
- [CListBox](../../mfc/reference/clistbox-class.md)  
-  
- `CDragListBox`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxcmn.h  
-  
-##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
- Lo llama el marco de trabajo cuando produce un evento que pudiera iniciar una operación de arrastre, por ejemplo, al presionar el botón primario del mouse.  
-  
-```  
+
+Además de proporcionar la funcionalidad de un cuadro de lista de Windows, la `CDragListBox` clase permite al usuario mover elementos de cuadro de lista, como los nombres de archivo, en el cuadro de lista.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class CDragListBox : public CListBox
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CDragListBox::CDragListBox](#cdraglistbox)|Construye un objeto `CDragListBox`.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[CDragListBox::BeginDrag](#begindrag)|Lo llama el marco de trabajo cuando se inicia una operación de arrastre.|
+|[CDragListBox::CancelDrag](#canceldrag)|Lo llama el marco de trabajo cuando se ha cancelado una operación de arrastre.|
+|[CDragListBox::Dragging](#dragging)|Lo llama el marco de trabajo durante una operación de arrastre.|
+|[CDragListBox::DrawInsert](#drawinsert)|Dibuja a la Guía de inserción del cuadro de lista de arrastre.|
+|[CDragListBox::Dropped](#dropped)|Lo llama el marco de trabajo después de que se ha quitado el elemento.|
+|[CDragListBox::ItemFromPt](#itemfrompt)|Devuelve las coordenadas del elemento que se está arrastrando.|
+
+## <a name="remarks"></a>Comentarios
+
+Cuadros de lista con esta funcionalidad permiten a los usuarios ordenar los elementos en una lista de la manera más útil. De forma predeterminada, el cuadro de lista moverá el elemento a la nueva ubicación en la lista. Sin embargo, `CDragListBox` objetos se pueden personalizar para copiar elementos en lugar de moverlos.
+
+El control de cuadro de lista asociada con el `CDragListBox` clase no debe tener el LBS_SORT o el estilo LBS_MULTIPLESELECT. Para obtener una descripción de los estilos de cuadro de lista, consulte [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
+
+Para usar un cuadro de lista de arrastre en un cuadro de diálogo existente de la aplicación, agregue un control de cuadro de lista a la plantilla de cuadro de diálogo con el editor de cuadro de diálogo y, a continuación, asignar una variable miembro (de categoría `Control` y el tipo de Variable `CDragListBox`) correspondiente al cuadro de lista controlar en la plantilla de cuadro de diálogo.
+
+Para obtener más información sobre la asignación de controles a las variables miembro, vea [acceso directo para definir Variables miembro para controles de cuadro de diálogo](../../windows/defining-member-variables-for-dialog-controls.md).
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWnd](../../mfc/reference/cwnd-class.md)
+
+[CListBox](../../mfc/reference/clistbox-class.md)
+
+`CDragListBox`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** afxcmn.h
+
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag
+
+Lo llama el marco de trabajo cuando produce un evento que pudiera iniciar una operación de arrastre, por ejemplo, al presionar el botón primario del mouse.
+
+```
 virtual BOOL BeginDrag(CPoint pt);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *PT*  
- Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se está arrastrando.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Distinto de cero si la operación de arrastre puede, 0 en caso contrario.  
-  
-### <a name="remarks"></a>Comentarios  
- Reemplace esta función si desea controlar lo que ocurre cuando se inicia una operación de arrastre. La implementación predeterminada, captura el mouse y permanece en modo de arrastre hasta que el usuario hace clic en el botón izquierdo o derecho del mouse o presiona ESC, momento en el que se cancela la operación de arrastre.  
-  
-##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
- Lo llama el marco de trabajo cuando se ha cancelado una operación de arrastre.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*PT*<br/>
+Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se está arrastrando.
+
+### <a name="return-value"></a>Valor devuelto
+
+Distinto de cero si la operación de arrastre puede, 0 en caso contrario.
+
+### <a name="remarks"></a>Comentarios
+
+Reemplace esta función si desea controlar lo que ocurre cuando se inicia una operación de arrastre. La implementación predeterminada, captura el mouse y permanece en modo de arrastre hasta que el usuario hace clic en el botón izquierdo o derecho del mouse o presiona ESC, momento en el que se cancela la operación de arrastre.
+
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag
+
+Lo llama el marco de trabajo cuando se ha cancelado una operación de arrastre.
+
+```
 virtual void CancelDrag(CPoint pt);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *PT*  
- Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se está arrastrando.  
-  
-### <a name="remarks"></a>Comentarios  
- Reemplace esta función para controlar cualquier procesamiento especial para el control de cuadro de lista.  
-  
-##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
- Construye un objeto `CDragListBox`.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*PT*<br/>
+Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se está arrastrando.
+
+### <a name="remarks"></a>Comentarios
+
+Reemplace esta función para controlar cualquier procesamiento especial para el control de cuadro de lista.
+
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox
+
+Construye un objeto `CDragListBox`.
+
+```
 CDragListBox();
-```  
-  
-##  <a name="dragging"></a>  CDragListBox::Dragging  
- Lo llama el marco de trabajo cuando se arrastra un elemento de cuadro de lista dentro de la `CDragListBox` objeto.  
-  
-```  
+```
+
+##  <a name="dragging"></a>  CDragListBox::Dragging
+
+Lo llama el marco de trabajo cuando se arrastra un elemento de cuadro de lista dentro de la `CDragListBox` objeto.
+
+```
 virtual UINT Dragging(CPoint pt);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *PT*  
- Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene x e y coordenadas del cursor de la pantalla.  
-  
-### <a name="return-value"></a>Valor devuelto  
- El identificador de recurso del cursor que se mostrará. Los valores posibles son:  
-  
-- DL_COPYCURSOR indica que se copiará el elemento.  
-  
-- DL_MOVECURSOR indica que se moverá el elemento.  
-  
-- DL_STOPCURSOR indica que el destino de colocación actual no es aceptable.  
-  
-### <a name="remarks"></a>Comentarios  
- El comportamiento predeterminado devuelve DL_MOVECURSOR. Reemplace esta función si desea proporcionar funcionalidad adicional.  
-  
-##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
- Lo llama el marco de trabajo para dibujar a la Guía de inserción antes del elemento con el índice indicado.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*PT*<br/>
+Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene x e y coordenadas del cursor de la pantalla.
+
+### <a name="return-value"></a>Valor devuelto
+
+El identificador de recurso del cursor que se mostrará. Los valores posibles son:
+
+- DL_COPYCURSOR indica que se copiará el elemento.
+
+- DL_MOVECURSOR indica que se moverá el elemento.
+
+- DL_STOPCURSOR indica que el destino de colocación actual no es aceptable.
+
+### <a name="remarks"></a>Comentarios
+
+El comportamiento predeterminado devuelve DL_MOVECURSOR. Reemplace esta función si desea proporcionar funcionalidad adicional.
+
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert
+
+Lo llama el marco de trabajo para dibujar a la Guía de inserción antes del elemento con el índice indicado.
+
+```
 virtual void DrawInsert(int nItem);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *nItem*  
- Índice de base cero del punto de inserción.  
-  
-### <a name="remarks"></a>Comentarios  
- Un valor de - 1 borra a la Guía de inserción. Reemplace esta función para modificar la apariencia o comportamiento de la Guía de inserción.  
-  
-##  <a name="dropped"></a>  CDragListBox::Dropped  
- Lo llama el marco de trabajo cuando se quita un elemento dentro de un `CDragListBox` objeto.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*nItem*<br/>
+Índice de base cero del punto de inserción.
+
+### <a name="remarks"></a>Comentarios
+
+Un valor de - 1 borra a la Guía de inserción. Reemplace esta función para modificar la apariencia o comportamiento de la Guía de inserción.
+
+##  <a name="dropped"></a>  CDragListBox::Dropped
+
+Lo llama el marco de trabajo cuando se quita un elemento dentro de un `CDragListBox` objeto.
+
+```
 virtual void Dropped(
-    int nSrcIndex,  
+    int nSrcIndex,
     CPoint pt);
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *nSrcIndex*  
- Especifica el índice de base cero de la cadena quitada.  
-  
- *PT*  
- Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del sitio de destino.  
-  
-### <a name="remarks"></a>Comentarios  
- El comportamiento predeterminado, copia el elemento de cuadro de lista y sus datos a la nueva ubicación y, a continuación, elimina el elemento original. Reemplace esta función para personalizar el comportamiento predeterminado, como la habilitación de copias de los elementos de cuadro de lista arrastrar a otras ubicaciones dentro de la lista.  
-  
-##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- Llamada a esta función para recuperar el índice de base cero del elemento de cuadro de lista que se encuentra en *pt*.  
-  
-```  
+```
+
+### <a name="parameters"></a>Parámetros
+
+*nSrcIndex*<br/>
+Especifica el índice de base cero de la cadena quitada.
+
+*PT*<br/>
+Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del sitio de destino.
+
+### <a name="remarks"></a>Comentarios
+
+El comportamiento predeterminado, copia el elemento de cuadro de lista y sus datos a la nueva ubicación y, a continuación, elimina el elemento original. Reemplace esta función para personalizar el comportamiento predeterminado, como la habilitación de copias de los elementos de cuadro de lista arrastrar a otras ubicaciones dentro de la lista.
+
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt
+
+Llamada a esta función para recuperar el índice de base cero del elemento de cuadro de lista que se encuentra en *pt*.
+
+```
 int ItemFromPt(
-    CPoint pt,  
-    BOOL bAutoScroll = TRUE) const;  
-```  
-  
-### <a name="parameters"></a>Parámetros  
- *PT*  
- Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas de un punto en el cuadro de lista.  
-  
- *bAutoScroll*  
- Distinto de cero si se permite el desplazamiento, en caso contrario, 0.  
-  
-### <a name="return-value"></a>Valor devuelto  
- Índice de base cero del elemento de cuadro de lista de arrastre.  
-  
-## <a name="see-also"></a>Vea también  
- [Ejemplo de MFC TSTCON](../../visual-cpp-samples.md)   
- [CListBox (clase)](../../mfc/reference/clistbox-class.md)   
- [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
- [CListBox (clase)](../../mfc/reference/clistbox-class.md)
+    CPoint pt,
+    BOOL bAutoScroll = TRUE) const;
+```
+
+### <a name="parameters"></a>Parámetros
+
+*PT*<br/>
+Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas de un punto en el cuadro de lista.
+
+*bAutoScroll*<br/>
+Distinto de cero si se permite el desplazamiento, en caso contrario, 0.
+
+### <a name="return-value"></a>Valor devuelto
+
+Índice de base cero del elemento de cuadro de lista de arrastre.
+
+## <a name="see-also"></a>Vea también
+
+[Ejemplo de MFC TSTCON](../../visual-cpp-samples.md)<br/>
+[CListBox (clase)](../../mfc/reference/clistbox-class.md)<br/>
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
+[CListBox (clase)](../../mfc/reference/clistbox-class.md)

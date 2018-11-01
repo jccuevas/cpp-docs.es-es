@@ -1,9 +1,6 @@
 ---
-title: Compatibilidad de compilador para Type Traits (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Compatibilidad de compilador para Type Traits (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
@@ -34,8 +31,6 @@ f1_keywords:
 - __is_empty
 - __is_pod
 - __has_user_destructor
-dev_langs:
-- C++
 helpviewer_keywords:
 - __is_class keyword [C++]
 - __is_pod keyword [C++]
@@ -66,21 +61,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5cd4d7feef01d1b7bedd407357c618ba208d06f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536193"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Compatibilidad de compilador para type traits (Extensiones de componentes de C++)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Compatibilidad de compilador para Type Traits (C++ / c++ / CLI y c++ / CX)
 
-El compilador admite *rasgos de tipos*, que indican diversas características de un tipo en tiempo de compilación.
+El compilador de Microsoft C++ admite *rasgos de tipos* C / c++ / CLI y c++ / extensiones CX, que indican diversas características de un tipo en tiempo de compilación.
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
@@ -90,9 +80,9 @@ Los rasgos de tipo son especialmente útiles para los programadores que escriben
 
 En la lista siguiente contiene los rasgos de tipo que son compatibles con el compilador. Todos los rasgos de tipo devuelven **false** si no se cumple la condición especificada por el nombre del rasgo de tipo.
 
-(En la lista siguiente, los ejemplos de código se escriben solo en C++ / c++ / CLI. Pero el rasgo de tipo correspondiente también es compatible con las extensiones de componente de Visual C++, a menos que se indique lo contrario. El término "tipo de plataforma" hace referencia a tipos en tiempo de ejecución de Windows o en tipos common language runtime.)
+(En la lista siguiente, los ejemplos de código se escriben solo en C++ / c++ / CLI. Pero el rasgo de tipo correspondiente también se admite en C++ / c++ / CX, a menos que se indique lo contrario. El término "tipo de plataforma" hace referencia a tipos en tiempo de ejecución de Windows o en tipos common language runtime.)
 
-- `__has_assign(` `type` `)`
+- `__has_assign(` *Tipo* `)`
 
    Devuelve **true** si la plataforma o tipo nativo tiene un operador de asignación de copia.
 
@@ -106,7 +96,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_copy(` `type` `)`
+- `__has_copy(` *Tipo* `)`
 
    Devuelve **true** si la plataforma o tipo nativo tiene un constructor de copias.
 
@@ -120,9 +110,9 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_finalizer(` `type` `)`
+- `__has_finalizer(` *Tipo* `)`
 
-   (No se admite en las extensiones de componente de Visual C++.) Devuelve **true** si el tipo CLR tiene un finalizador. Consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.
+   (No se admite en C++ / c++ / CX.) Devuelve **true** si el tipo CLR tiene un finalizador. Consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) para obtener más información.
 
     ```cpp
     using namespace System;
@@ -137,7 +127,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_nothrow_assign(` `type` `)`
+- `__has_nothrow_assign(` *Tipo* `)`
 
    Devuelve **true** si un operador de asignación de copia tiene una especificación de excepción vacía.
 
@@ -153,7 +143,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_nothrow_constructor(` `type` `)`
+- `__has_nothrow_constructor(` *Tipo* `)`
 
    Devuelve **true** si el constructor predeterminado tiene una especificación de excepción vacía.
 
@@ -169,7 +159,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_nothrow_copy(` `type` `)`
+- `__has_nothrow_copy(` *Tipo* `)`
 
    Devuelve **true** si el constructor de copia tiene una especificación de excepción vacía.
 
@@ -185,7 +175,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_trivial_assign(` `type` `)`
+- `__has_trivial_assign(` *Tipo* `)`
 
    Devuelve **true** si el tipo tiene un operador de asignación triviales, generado por el compilador.
 
@@ -199,7 +189,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_trivial_constructor(` `type` `)`
+- `__has_trivial_constructor(` *Tipo* `)`
 
    Devuelve **true** si el tipo tiene un constructor trivial, generado por el compilador.
 
@@ -213,7 +203,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_trivial_copy(` `type` `)`
+- `__has_trivial_copy(` *Tipo* `)`
 
    Devuelve **true** si el tipo tiene un constructor de copias trivial, generado por el compilador.
 
@@ -227,11 +217,11 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_trivial_destructor(` `type` `)`
+- `__has_trivial_destructor(` *Tipo* `)`
 
    Devuelve **true** si el tipo tiene un destructor trivial, generado por el compilador.
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -242,7 +232,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_user_destructor(` `type` `)`
+- `__has_user_destructor(` *Tipo* `)`
 
    Devuelve **true** si la plataforma o tipo nativo tiene un destructor declarado por el usuario.
 
@@ -259,7 +249,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__has_virtual_destructor(` `type` `)`
+- `__has_virtual_destructor(` *Tipo* `)`
 
    Devuelve **true** si el tipo tiene un destructor virtual.
 
@@ -278,11 +268,11 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_abstract(` `type` `)`
+- `__is_abstract(` *Tipo* `)`
 
-   Devuelve **true** si el tipo es un tipo abstracto. Para obtener más información sobre tipos abstractos nativos, vea [abstracta](../windows/abstract-cpp-component-extensions.md).
+   Devuelve **true** si el tipo es un tipo abstracto. Para obtener más información sobre tipos abstractos nativos, vea [clases abstractas](../cpp/abstract-classes-cpp.md).
 
-   `__is_abstract` también funciona en los tipos de plataforma. Una interfaz con al menos un miembro es un tipo abstracto, como también lo es un tipo de referencia con al menos un miembro abstracto. Para obtener más información sobre tipos abstractos de plataforma, consulte [clases abstractas](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` también funciona en los tipos de plataforma. Una interfaz con al menos un miembro es un tipo abstracto, como también lo es un tipo de referencia con al menos un miembro abstracto. Para obtener más información sobre tipos abstractos de plataforma, consulte [abstracta](../windows/abstract-cpp-component-extensions.md).
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +308,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_class(` `type` `)`
+- `__is_class(` *Tipo* `)`
 
    Devuelve **true** si el tipo es una clase o struct nativo.
 
@@ -350,9 +340,9 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_delegate(` `type` `)`
+- `__is_delegate(` *Tipo* `)`
 
-   Devuelve **true** si `type` es un delegado. Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).
+   Devuelve **true** si `type` es un delegado. Para obtener más información, consulte [delegar (C++ / c++ / CLI y c++ / CX)](../windows/delegate-cpp-component-extensions.md).
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +351,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_empty(` `type` `)`
+- `__is_empty(` *Tipo* `)`
 
    Devuelve **true** si el tipo no tiene ningún miembro de datos de instancia.
 
@@ -377,7 +367,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_enum(` `type` `)`
+- `__is_enum(` *Tipo* `)`
 
    Devuelve **true** si el tipo es una enumeración nativa.
 
@@ -399,7 +389,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_interface_class(` `type` `)`
+- `__is_interface_class(` *Tipo* `)`
 
    Devuelve **true** si pasa una interfaz de plataforma. Para obtener más información, consulte [clase de interfaz](../windows/interface-class-cpp-component-extensions.md).
 
@@ -413,7 +403,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_pod(` `type` `)`
+- `__is_pod(` *Tipo* `)`
 
    Devuelve **true** si el tipo es una clase o unión con ningún constructor o miembro no estático privado o protegido, ninguna clase base y ninguna función virtual. Vea el estándar de C++, secciones 8.5.1/1, 9/4 y 10 3.9 para más información sobre POD.
 
@@ -429,7 +419,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_polymorphic(` `type` `)`
+- `__is_polymorphic(` *Tipo* `)`
 
    Devuelve **true** si un tipo nativo tiene funciones virtuales.
 
@@ -445,7 +435,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_ref_array(` `type` `)`
+- `__is_ref_array(` *Tipo* `)`
 
    Devuelve **true** si pasa una matriz de plataforma. Para obtener más información, consulte [matrices](../windows/arrays-cpp-component-extensions.md).
 
@@ -457,7 +447,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_ref_class(` `type` `)`
+- `__is_ref_class(` *Tipo* `)`
 
    Devuelve **true** si pasa una clase de referencia. Para obtener más información sobre los tipos de referencia definidos por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -470,7 +460,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_sealed(` `type` `)`
+- `__is_sealed(` *Tipo* `)`
 
    Devuelve **true** si pasa una plataforma o tipo nativo marcado como sealed. Para obtener más información, consulte [sealed](../windows/sealed-cpp-component-extensions.md).
 
@@ -481,7 +471,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_simple_value_class(` `type` `)`
+- `__is_simple_value_class(` *Tipo* `)`
 
    Devuelve **true** si pasa un tipo de valor que no contiene referencias al montón de recolección. Para obtener más información sobre los tipos de valor definido por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -499,7 +489,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_union(` `type` `)`
+- `__is_union(` *Tipo* `)`
 
    Devuelve **true** si un tipo es una unión.
 
@@ -516,7 +506,7 @@ En la lista siguiente contiene los rasgos de tipo que son compatibles con el com
     }
     ```
 
-- `__is_value_class(` `type` `)`
+- `__is_value_class(` *Tipo* `)`
 
    Devuelve **true** si pasa un tipo de valor. Para obtener más información sobre los tipos de valor definido por el usuario, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md).
 
@@ -567,7 +557,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");
@@ -580,4 +570,4 @@ R is a ref class
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

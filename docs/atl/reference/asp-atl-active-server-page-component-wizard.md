@@ -1,33 +1,23 @@
 ---
-title: ASP, Asistente para componentes de páginas de Active Server ATL | Microsoft Docs
-ms.custom: ''
+title: ASP, Asistente para componentes de páginas Active Server ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.asp
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6ab66fc606b58e87ac65373bf9f6a0662a720ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640276"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, Asistente para componentes de páginas Active Server ATL
 
 Use esta página del Asistente para componentes de páginas Active Server ATL para especificar la configuración opcional para controlar la información y estado relacionados con el componente ASP.
 
-- **Métodos opcionales**  
+- **Métodos opcionales**
 
    Agrega los métodos ASP opcionales, **OnStartPage** y **OnEndPage**, al objeto. Esta opción debe seleccionarse para establecer los objetos intrínsecos de páginas Active Server. De forma predeterminada, se selecciona.
 
@@ -35,7 +25,7 @@ Use esta página del Asistente para componentes de páginas Active Server ATL pa
 
    [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx) se llama a la primera vez que el script intenta tener acceso al objeto. **OnEndPage** se llama cuando finaliza el objeto de la secuencia de comandos de procesamiento.
 
-- **Objeto intrínseco**  
+- **Objeto intrínseco**
 
    Debe seleccionar la **OnStartPage/OnEndPage** opción para establecer los objetos intrínsecos de ASP.
 

@@ -1,27 +1,17 @@
 ---
-title: Compilador advertencia (nivel 1) C4096 | Microsoft Docs
-ms.custom: ''
+title: Compilador advertencia (nivel 1) C4096
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4096
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436555"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Compilador advertencia (nivel 1) C4096
 
@@ -29,7 +19,7 @@ ms.locfileid: "46047699"
 
 Una definición de interfaz que desea como una interfaz COM no se definió como una interfaz COM y, por tanto, no se emitirá para el archivo IDL.
 
-Consulte [atributos de la interfaz](../../windows/interface-attributes.md) para una lista de atributos que indican una interfaz es una interfaz COM.
+Consulte [atributos de la interfaz](../../windows/attributes/interface-attributes.md) para una lista de atributos que indican una interfaz es una interfaz COM.
 
 El ejemplo siguiente genera C4096:
 

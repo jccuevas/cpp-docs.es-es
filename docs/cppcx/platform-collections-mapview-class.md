@@ -1,8 +1,6 @@
 ---
-title: Mapview (clase) | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::MapView (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -11,21 +9,15 @@ f1_keywords:
 - COLLECTION/Platform::Collections::MapView::Lookup
 - COLLECTION/Platform::Collections::MapView::Size
 - COLLECTION/Platform::Collections::MapView::Split
-dev_langs:
-- C++
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e222ba48121702c2388e64cea5e81da627f324a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496390"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView (Clase)
 
@@ -117,11 +109,11 @@ bool HasKey(K key);
 ### <a name="parameters"></a>Parámetros
 
 *key*<br/>
-La clave que se usa para ubicar el elemento MapView. El tipo de `key` es typename *K*.
+La clave que se usa para ubicar el elemento MapView. El tipo de *clave* es typename *K*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encuentra la clave; de lo contrario, `false`.
+**True** si la clave se encuentra; en caso contrario, **false**.
 
 ##  <a name="lookup"></a> Mapview (método)
 

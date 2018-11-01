@@ -17,16 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c06b98acec18e845fd1353875c1453c4bee8b1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: eeee8c7b0b3cd4977688b627cb27f73e39c7ea89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097164"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437097"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT (Estructura)
-Escribir su [controlador de notificación de información sobre herramienta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), deberá usar el **TOOLTIPTEXT** estructura. Los miembros de la **TOOLTIPTEXT** estructura son:  
-  
+
+Escribir su [controlador de notificación de información sobre herramienta](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), deberá usar el **TOOLTIPTEXT** estructura. Los miembros de la **TOOLTIPTEXT** estructura son:
+
 ```cpp
 typedef struct {
     NMHDR     hdr;        // required for all WM_NOTIFY messages
@@ -38,27 +39,28 @@ typedef struct {
                           // that is included in the structure
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
-  
- *HDR*  
- Identifica la herramienta que necesita el texto. El único miembro de esta estructura que necesita es el identificador de comando. del control Será el identificador de comando del control en el *idFrom* miembro de la **NMHDR** estructura, obtiene acceso con la sintaxis `hdr.idFrom`. Consulte [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) para obtener una explicación de los miembros de la **NMHDR** estructura.  
-  
- *lpszText*  
- Dirección de una cadena que recibe el texto para una herramienta.  
-  
- *szText*  
- Búfer que recibe el texto de sugerencia. Una aplicación puede copiar el texto a este búfer como una alternativa a especificar una dirección de la cadena.  
-  
- *hinst*  
- Identificador de la instancia que contiene una cadena que se usará como el texto de sugerencia. Si *lpszText* es la dirección del texto de sugerencia de herramienta, este miembro es NULL.  
-  
-Cuando controle el `TTN_NEEDTEXT` notificación de mensaje, especifique la cadena que se mostrará en una de las maneras siguientes:  
-  
--   Copie el texto en el búfer especificado por el *szText* miembro.  
-  
--   Copie la dirección del búfer que contiene el texto a la *lpszText* miembro.  
-  
--   Copie el identificador de un recurso de cadena a la *lpszText* miembro y copie el identificador de la instancia que contiene el recurso para el *hinst* miembro.  
-  
-## <a name="see-also"></a>Vea también  
- [Información sobre herramientas en ventanas no derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+*HDR*<br/>
+Identifica la herramienta que necesita el texto. El único miembro de esta estructura que necesita es el identificador de comando. del control Será el identificador de comando del control en el *idFrom* miembro de la **NMHDR** estructura, obtiene acceso con la sintaxis `hdr.idFrom`. Consulte [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) para obtener una explicación de los miembros de la **NMHDR** estructura.
+
+*lpszText*<br/>
+Dirección de una cadena que recibe el texto para una herramienta.
+
+*szText*<br/>
+Búfer que recibe el texto de sugerencia. Una aplicación puede copiar el texto a este búfer como una alternativa a especificar una dirección de la cadena.
+
+*hinst*<br/>
+Identificador de la instancia que contiene una cadena que se usará como el texto de sugerencia. Si *lpszText* es la dirección del texto de sugerencia de herramienta, este miembro es NULL.
+
+Cuando controle el `TTN_NEEDTEXT` notificación de mensaje, especifique la cadena que se mostrará en una de las maneras siguientes:
+
+- Copie el texto en el búfer especificado por el *szText* miembro.
+
+- Copie la dirección del búfer que contiene el texto a la *lpszText* miembro.
+
+- Copie el identificador de un recurso de cadena a la *lpszText* miembro y copie el identificador de la instancia que contiene el recurso para el *hinst* miembro.
+
+## <a name="see-also"></a>Vea también
+
+[Información sobre herramientas en ventanas no derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

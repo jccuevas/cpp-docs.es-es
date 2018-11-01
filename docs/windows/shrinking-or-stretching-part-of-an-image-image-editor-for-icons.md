@@ -1,29 +1,18 @@
 ---
-title: Comprimir o expandir parte de una imagen (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Comprimir o ajustar parte de una imagen (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitmaps [C++], shrinking
 - images [C++], stretching
 - bitmaps [C++], stretching
 - images [C++], shrinking
 ms.assetid: c5f58e2c-6b6e-4fb3-9784-76483b2440af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5b8d9ef624f17645da058ab86cd9b6a53cf17069
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 20034416fc9e84c0e12360f80d674602af7b11f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487755"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>Comprimir o ajustar parte de una imagen (Editor de imágenes para iconos)
 
@@ -41,5 +30,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Cambiar el tamaño de una imagen](../windows/resizing-an-image-image-editor-for-icons.md)

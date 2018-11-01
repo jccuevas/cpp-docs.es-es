@@ -1,28 +1,30 @@
 ---
 title: IsSame (estructura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsSame
+- internal/Microsoft::WRL::Details::IsSame::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsSame structure
+- Microsoft::WRL::Details::IsSame structure
+- Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9e45f64d8eda3e24fb7c85120f14e981963f7f1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2af59860016835f8e8dfddc9d0a77204ff866bd3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42595790"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161858"
 ---
 # <a name="issame-structure"></a>IsSame (estructura)
 
@@ -31,23 +33,19 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <
-   typename T1,
-   typename T2
->
+template <typename T1, typename T2>
 struct IsSame;
-template <
-   typename T1
->
+
+template <typename T1>
 struct IsSame<T1, T1>;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T1*  
+*T1*<br/>
 Un tipo.
 
-*T2*  
+*T2*<br/>
 Otro tipo.
 
 ## <a name="remarks"></a>Comentarios
@@ -58,9 +56,9 @@ Las pruebas si un tipo especificado es igual que otro tipo especificado.
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
-|----------|-----------------|
-|[IsSame::value (constante)](../windows/issame-value-constant.md)|Indica si un tipo es igual a otro.|
+nombre                    | Descripción
+----------------------- | --------------------------------------------------
+[Issame](#value) | Indica si un tipo es igual a otro.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -72,6 +70,26 @@ Las pruebas si un tipo especificado es igual que otro tipo especificado.
 
 **Namespace:** wrl
 
-## <a name="see-also"></a>Vea también
+## <a name="value"></a>Issame
 
-[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+template <typename T1, typename T2>
+struct IsSame
+{
+    static const bool value = false;
+};
+
+template <typename T1>
+struct IsSame<T1, T1>
+{
+    static const bool value = true;
+};
+```
+
+### <a name="remarks"></a>Comentarios
+
+Indica si un tipo es igual a otro.
+
+`value` es **true** si los parámetros de plantilla son los mismos, y **false** si los parámetros de plantilla son diferentes.

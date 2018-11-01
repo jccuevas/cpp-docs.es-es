@@ -1,28 +1,18 @@
 ---
-title: ActivationFactoryCallback (función) | Microsoft Docs
-ms.custom: ''
+title: ActivationFactoryCallback (función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::ActivationFactoryCallback
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7979dd21d68c5b1e2606573a5271fc8deafdfb07
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8da0f3f54e142673a44909f3fe2141b09a71d388
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604185"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586451"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (función)
 
@@ -39,10 +29,10 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 
 ### <a name="parameters"></a>Parámetros
 
-*activationId*  
+*activationId*<br/>
 Identificador de una cadena que especifica un nombre de clase en tiempo de ejecución.
 
-*ppFactory*  
+*ppFactory*<br/>
 Cuando finalice esta operación, un generador de activación que corresponde al parámetro *activationId*.
 
 ## <a name="return-value"></a>Valor devuelto

@@ -1,27 +1,17 @@
 ---
-title: Del compilador (nivel 3) de la advertencia C4996 | Microsoft Docs
-ms.custom: ''
+title: Del compilador (nivel 3) de la advertencia C4996
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4996
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472181"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilador (nivel 3) de la advertencia C4996
 
@@ -35,7 +25,7 @@ Estos son algunos mensajes de advertencia C4996 comunes generados por la bibliot
 
 - [' std::*function_name*::\_Unchecked\_iteradores::\_Deprecate' llamar a std::*nombre_función*con parámetros que pueden ser seguros; esta llamada se basa en el llamador para comprobar que los valores pasados son correctos. Para deshabilitar esta advertencia, utilice -D_SCL_SECURE_NO_WARNINGS. Consulte la documentación sobre cómo usar Visual C++ 'Iteradores activados'](#unsafe-standard-library-functions)
 
-- [Esta función o variable ha sido reemplazada por la funcionalidad de biblioteca o un sistema operativo más reciente. Considere el uso de *new_item* en su lugar. Consulte la ayuda en línea para obtener información detallada.](#obsolete-crt-functions-and-variables)
+- [Esta función o variable se ha sustituido por nuevas funcionalidades del sistema operativo o biblioteca. Considere el uso de *new_item* en su lugar. Consulte la ayuda en línea para obtener información detallada.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>Motivo
 
@@ -82,7 +72,6 @@ Microsoft ha cambiado el nombre de algunas funciones POSIX en CRT para ajustarse
 Para corregir este problema, generalmente recomendamos que cambiar el código para usar los nombres de función sugeridos en su lugar. Sin embargo, los nombres actualizados son específicas de Microsoft. Si tiene que usar los nombres de función existente por motivos de portabilidad, puede desactivar estas advertencias. Las funciones POSIX siguen estando disponibles en la biblioteca en sus nombres originales.
 
 Para desactivar las advertencias sobre desuso para estas funciones, defina la macro de preprocesador  **\_CRT\_NONSTDC\_NO\_advertencias**. Puede definir esta macro en la línea de comandos si incluye la opción `/D_CRT_NONSTDC_NO_WARNINGS`.
-
 
 ### <a name="unsafe-crt-library-functions"></a>Funciones de biblioteca de CRT no seguras
 
@@ -257,7 +246,7 @@ Para obtener información sobre cómo suprimir estas advertencias, vea [_AFX_SEC
 
 ### <a name="obsolete-crt-functions-and-variables"></a>Las variables y funciones de CRT obsoletas
 
-**Esta función o variable ha sido reemplazada por la funcionalidad de biblioteca o un sistema operativo más reciente. Considere el uso de** *new_item* **en su lugar. Consulte la ayuda en línea para obtener información detallada.**
+**Esta función o variable se ha sustituido por nuevas funcionalidades del sistema operativo o biblioteca. Considere el uso de** *new_item* **en su lugar. Consulte la ayuda en línea para obtener información detallada.**
 
 Algunas variables globales y funciones de la biblioteca están en desuso por estar obsoletas. Es posible que estas funciones y variables se quiten en una versión futura de la biblioteca. El compilador emite una advertencia de desuso para estos elementos y sugiere la alternativa preferida.
 

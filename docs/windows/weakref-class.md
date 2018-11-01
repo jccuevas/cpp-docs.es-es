@@ -1,9 +1,6 @@
 ---
-title: WeakRef (clase) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/07/2018
-ms.technology:
-- cpp-windows
+title: WeakRef (Clase)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef
@@ -13,8 +10,6 @@ f1_keywords:
 - client/Microsoft::WRL::WeakRef::CopyTo
 - client/Microsoft::WRL::WeakRef::operator&
 - client/Microsoft::WRL::WeakRef::WeakRef
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::WeakRef class
 - Microsoft::WRL::WeakRef::~WeakRef, destructor
@@ -24,17 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6f9b121b75e31fdd79313e36b9e1e19c1cf3200e
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: bd8aecc17c7f70540c06fa6b7b4885002dbea31a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645697"
 ---
 # <a name="weakref-class"></a>WeakRef (Clase)
 
@@ -43,7 +33,7 @@ Representa una *referencia débil* que solo puede usar Windows en tiempo de ejec
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-class WeakRef : public ComPtr<IWeakReference>
+class WeakRef : public ComPtr<IWeakReference>;
 ```
 
 ## <a name="members"></a>Miembros
@@ -75,7 +65,7 @@ Un `WeakRef` objeto mantiene un *referencia fuerte*, que está asociado a un obj
 
 Un `WeakRef` objeto normalmente se utiliza para representar un objeto cuya existencia se controla mediante una aplicación o un subproceso externo. Por ejemplo, crear un `WeakRef` objeto a partir de una referencia a un objeto de archivo. Mientras el archivo esté abierto, la referencia segura será válida. Sin embargo, si el archivo está abierto, la referencia segura no será válida.
 
-Tenga en cuenta que hay un cambio de comportamiento en el [como](#as), [AsIID](#asiid) y [CopyTo](#copyto) métodos en el SDK de Windows 10. Anteriormente, después de llamar a cualquiera de estos métodos, podría comprobar la `WeakRef` para `nullptr` para determinar si se obtuvo correctamente una referencia segura, como se muestra en el código siguiente:
+Tenga en cuenta que hay un cambio de comportamiento en los métodos [As](#as), [AsIID](#asiid) y [CopyTo](#copyto) en el SDK de Windows 10. Anteriormente, después de llamar a cualquiera de estos métodos, podría comprobar la `WeakRef` para `nullptr` para determinar si se obtuvo correctamente una referencia segura, como se muestra en el código siguiente:
 
 ```cpp
 WeakRef wr;
@@ -88,7 +78,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +87,7 @@ if(wr == nullptr)
 El código anterior no funciona al usar el SDK de Windows 10 (o posterior). En su lugar, compruebe el puntero que se pasó para `nullptr`.
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -141,10 +131,10 @@ HRESULT As(
 
 ### <a name="parameters"></a>Parámetros
 
-*U*  
+*U*<br/>
 Id. de interfaz.
 
-*ptr*  
+*ptr*<br/>
 Cuando finalice esta operación, un objeto que representa el parámetro *U*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +149,7 @@ Cuando finalice esta operación, un objeto que representa el parámetro *U*.
 
 Se genera un error si parámetro *U* es `IWeakReference`, o no se deriva `IInspectable`.
 
-La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
+La primera plantilla es el formulario que debe usar en el código. La segunda plantilla es una especialización del asistente interno, que admite características del lenguaje C++, como palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
 
 A partir del SDK de Windows 10, este método no establece la `WeakRef` instancia a `nullptr` si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la `WeakRef` para `nullptr`. En su lugar, compruebe *ptr* para `nullptr`.
 
@@ -176,10 +166,10 @@ HRESULT AsIID(
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Id. de interfaz.
 
-*ptr*  
+*ptr*<br/>
 Cuando finalice esta operación, un objeto que representa el parámetro *riid*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -194,7 +184,7 @@ Cuando finalice esta operación, un objeto que representa el parámetro *riid*.
 
 Se genera un error si parámetro *riid* no se deriva `IInspectable`. Este error sustituye el valor devuelto.
 
-La primera plantilla es el formulario que debe usar en el código. La segunda plantilla (no se muestra aquí, pero se declara en el archivo de encabezado) es una especialización de aplicación auxiliar interna, que admite características del lenguaje C++, como la palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
+La primera plantilla es el formulario que debe usar en el código. La segunda plantilla (no se muestra aquí, pero se declara en el archivo de encabezado) es una especialización del asistente interno, que admite características del lenguaje C++, como la palabra clave de deducción de tipos [automática](../cpp/auto-cpp.md) .
 
 A partir del SDK de Windows 10, este método no establece la `WeakRef` instancia a `nullptr` si no se pudo obtener la referencia débil, por lo que debería evitar código de comprobación de errores que comprueba la `WeakRef` para `nullptr`. En su lugar, compruebe *ptr* para `nullptr`.
 
@@ -220,13 +210,13 @@ HRESULT CopyTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*U*  
+*U*<br/>
 Puntero un `IInspectable` interfaz. Se genera un error si *U* no se deriva `IInspectable`.
 
-*riid*  
+*riid*<br/>
 Id. de interfaz. Se genera un error si *riid* no se deriva `IWeakReference`.
 
-*ptr*  
+*ptr*<br/>
 Un puntero indirecto doble a `IInspectable` o `IWeakReference`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -244,7 +234,7 @@ A partir del SDK de Windows 10, este método no establece la `WeakRef` instancia
 Devuelve un `ComPtrRef` objeto que representa el actual `WeakRef` objeto.
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -262,7 +252,7 @@ Inicializa una nueva instancia de la clase `WeakRef`.
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(
@@ -284,7 +274,7 @@ WeakRef(
 
 ### <a name="parameters"></a>Parámetros
 
-*ptr*  
+*ptr*<br/>
 Un puntero, referencia o referencia de valor r a un objeto existente que inicializa actual `WeakRef` objeto.
 
 ### <a name="remarks"></a>Comentarios

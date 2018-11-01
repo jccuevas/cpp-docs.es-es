@@ -1,10 +1,6 @@
 ---
-title: Constantes de tipo de parámetro Variant | Microsoft Docs
-ms.custom: ''
+title: Constantes de tipo de parámetro Variant
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - VTS_YPOS_HIMETRIC
 - VTS_PICTURE
@@ -20,8 +16,6 @@ f1_keywords:
 - VTS_OPTEXCLUSIVE
 - VTS_YSIZE_PIXELS
 - VTS_XSIZE_PIXELS
-dev_langs:
-- C++
 helpviewer_keywords:
 - VTS_XPOS_HIMETRIC constant [MFC]
 - VTS_FONT constant [MFC]
@@ -41,57 +35,56 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d61930bda4560baaf628ce018cc0161527d9d07e
-ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
+ms.openlocfilehash: 9627452d674aa48a84094665d9499e3a38a3bdf4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37885954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632510"
 ---
 # <a name="variant-parameter-type-constants"></a>Constantes de tipo de parámetro Variant
-En este tema se enumera nuevas constantes que indican los tipos de parámetro variant diseñados para su uso con las clases de control OLE de la biblioteca Microsoft Foundation Class.  
-  
- La siguiente es una lista de constantes de clase:  
-  
-##  <a name="_mfc_variant_data_constants"></a> Constantes de datos Variant  
-  
--   Entero de 32 bits VTS_COLOR utilizado para representar un valor de color RGB.  
-  
--   Puntero de un VTS_FONT a la `IFontDisp` interfaz de un objeto de fuente OLE.  
-  
--   Valor de identificador VTS_HANDLE A Windows.  
-  
--   Puntero de un VTS_PICTURE a la `IPictureDisp` interfaz de un objeto de imagen OLE.  
-  
--   Valor de 16 bits VTS_OPTEXCLUSIVE usado para un control que está pensado para usarse en un grupo de controles, como botones de radio. Este tipo indica al contenedor que si un control en un grupo tiene un valor TRUE, todas las demás deben ser FALSE.  
-  
--   Utilizado para las propiedades que pueden tener uno de los tres valores posibles (activados, desactivados, no está disponible), por ejemplo, una casilla de verificación de entero con signo de 16 bits VTS_TRISTATE.  
-  
--   VTS_XPOS_HIMETRIC 32 bits sin signo entero utilizado para representar una posición a lo largo del eje x en unidades HIMETRIC.  
-  
--   VTS_YPOS_HIMETRIC 32 bits sin signo entero utilizado para representar una posición a lo largo del eje y en unidades HIMETRIC.  
-  
--   VTS_XPOS_PIXELS 32 bits sin signo entero utilizado para representar una posición a lo largo del eje x en píxeles.  
-  
--   VTS_YPOS_PIXELS 32 bits sin signo entero utilizado para representar una posición a lo largo del eje y, en píxeles.  
-  
--   VTS_XSIZE_PIXELS 32 bits sin signo entero utilizado para representar el ancho de un objeto de la pantalla en píxeles.  
-  
--   VTS_YSIZE_PIXELS 32 bits sin signo entero utilizado para representar el alto de un objeto de la pantalla en píxeles.  
-  
--   VTS_XSIZE_HIMETRIC 32 bits sin signo entero utilizado para representar el ancho de un objeto de la pantalla en unidades HIMETRIC.  
-  
--   VTS_YSIZE_HIMETRIC 32 bits sin signo entero utilizado para representar el alto de un objeto de la pantalla en unidades HIMETRIC.  
-  
+
+En este tema se enumera nuevas constantes que indican los tipos de parámetro variant diseñados para su uso con las clases de control OLE de la biblioteca Microsoft Foundation Class.
+
+La siguiente es una lista de constantes de clase:
+
+##  <a name="_mfc_variant_data_constants"></a> Constantes de datos Variant
+
+- Entero de 32 bits VTS_COLOR utilizado para representar un valor de color RGB.
+
+- Puntero de un VTS_FONT a la `IFontDisp` interfaz de un objeto de fuente OLE.
+
+- Valor de identificador VTS_HANDLE A Windows.
+
+- Puntero de un VTS_PICTURE a la `IPictureDisp` interfaz de un objeto de imagen OLE.
+
+- Valor de 16 bits VTS_OPTEXCLUSIVE usado para un control que está pensado para usarse en un grupo de controles, como botones de radio. Este tipo indica al contenedor que si un control en un grupo tiene un valor TRUE, todas las demás deben ser FALSE.
+
+- Utilizado para las propiedades que pueden tener uno de los tres valores posibles (activados, desactivados, no está disponible), por ejemplo, una casilla de verificación de entero con signo de 16 bits VTS_TRISTATE.
+
+- VTS_XPOS_HIMETRIC 32 bits sin signo entero utilizado para representar una posición a lo largo del eje x en unidades HIMETRIC.
+
+- VTS_YPOS_HIMETRIC 32 bits sin signo entero utilizado para representar una posición a lo largo del eje y en unidades HIMETRIC.
+
+- VTS_XPOS_PIXELS 32 bits sin signo entero utilizado para representar una posición a lo largo del eje x en píxeles.
+
+- VTS_YPOS_PIXELS 32 bits sin signo entero utilizado para representar una posición a lo largo del eje y, en píxeles.
+
+- VTS_XSIZE_PIXELS 32 bits sin signo entero utilizado para representar el ancho de un objeto de la pantalla en píxeles.
+
+- VTS_YSIZE_PIXELS 32 bits sin signo entero utilizado para representar el alto de un objeto de la pantalla en píxeles.
+
+- VTS_XSIZE_HIMETRIC 32 bits sin signo entero utilizado para representar el ancho de un objeto de la pantalla en unidades HIMETRIC.
+
+- VTS_YSIZE_HIMETRIC 32 bits sin signo entero utilizado para representar el alto de un objeto de la pantalla en unidades HIMETRIC.
+
     > [!NOTE]
-    >  Constantes de tipo variant adicionales se han definido para todos los tipos variantes, a excepción de VTS_FONT y VTS_PICTURE, que proporcionan un puntero a la constante de datos variant. Estas constantes se denominan mediante el VTS_P`constantname` convención. Por ejemplo, VTS_PCOLOR es un puntero a un VTS_COLOR (constante).  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** afxdisp.h  
-  
-## <a name="see-also"></a>Vea también  
- [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
+    >  Constantes de tipo variant adicionales se han definido para todos los tipos variantes, a excepción de VTS_FONT y VTS_PICTURE, que proporcionan un puntero a la constante de datos variant. Estas constantes se denominan mediante el VTS_P`constantname` convención. Por ejemplo, VTS_PCOLOR es un puntero a un VTS_COLOR (constante).
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** afxdisp.h
+
+## <a name="see-also"></a>Vea también
+
+[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)

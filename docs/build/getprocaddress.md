@@ -1,33 +1,23 @@
 ---
-title: GetProcAddress | Microsoft Docs
-ms.custom: ''
+title: GetProcAddress
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLLs [C++], GetProcAddress
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 241f31717274c73a658f4cddf4e6e1ef4e40b402
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457673"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Los procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) para obtener la dirección de una función exportada en el archivo DLL. Use el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función que desee se debe llamar o el ordinal de exportación de la función.
+Los procesos que se vinculan explícitamente a una llamada DLL [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) para obtener la dirección de una función exportada en el archivo DLL. Use el puntero de función devuelto para llamar a la función DLL. **GetProcAddress** toma como parámetros el identificador de módulo del archivo DLL (devuelto por **LoadLibrary**, `AfxLoadLibrary`, o **GetModuleHandle**) y toma el nombre de la función que desee se debe llamar o el ordinal de exportación de la función.
 
 Dado que está llamando a la función DLL mediante un puntero y no hay ninguna comprobación de tipo en tiempo de compilación, asegúrese de que los parámetros a la función son correctos para que no sobrepasar la memoria asignada en la pila y provocar una infracción de acceso. Una manera de ayudar a proporcionar seguridad de tipos es consultar los prototipos de función de las funciones exportadas y crear definiciones typedef coincidentes para los punteros de función. Por ejemplo:
 
@@ -73,7 +63,7 @@ Solo puede obtener el ordinal de exportación si se compila el archivo DLL se vi
 
 - [LoadLibrary y AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Exportación desde un archivo DLL mediante archivos DEF](../build/exporting-from-a-dll-using-def-files.md)
 

@@ -1,27 +1,17 @@
 ---
-title: Compilador advertencia (nivel 1) C4251 | Microsoft Docs
-ms.custom: ''
+title: Advertencia del compilador (nivel 1) C4251
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4251
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad47d769dbfd09cc741be18598355dc34486bd54
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649662"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Advertencia del compilador (nivel 1) C4251
 
@@ -39,11 +29,9 @@ Para minimizar la posibilidad de daños en los datos al exportar una clase con [
 
 Puede evitar la exportación de clases definiendo un archivo DLL que define una clase con funciones virtuales y funciones que se puede llamar para crear instancias y eliminar objetos del tipo.  , A continuación, simplemente puede llamar a funciones virtuales en el tipo.
 
-Para obtener más información sobre la exportación de plantillas, consulte [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
-
 C4251 puede omitirse si se va a derivar de un tipo en la biblioteca estándar de C++, compilar una versión de depuración (**/MTd**) y donde el mensaje de error del compilador hace referencia a _Container_base.
 
-```
+```cpp
 // C4251.cpp
 // compile with: /EHsc /MTd /W2 /c
 #include <vector>

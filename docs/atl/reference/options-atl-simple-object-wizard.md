@@ -1,27 +1,17 @@
 ---
-title: Opciones, Asistente para objetos simples ATL | Microsoft Docs
-ms.custom: ''
+title: Opciones, Asistente para objetos simples ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650509"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 
@@ -60,7 +50,7 @@ Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea 
    |Opción|Descripción|
    |------------|-----------------|
    |**Dual**|Especifica que el objeto admite una interfaz dual (su tabla vtable posee funciones de interfaz personalizado y enlace tardío `IDispatch` métodos). Permite que los clientes COM y [controladores de automatización](../../mfc/automation-clients.md) para tener acceso al objeto. El valor predeterminado.|
-   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> -   **Compatible con automatización** controladores de automatización permite tener acceso a un objeto que tiene la compatibilidad de interfaz personalizado.|
+   |**Custom**|Especifica que el objeto admite una interfaz personalizada (su tabla vtable tiene funciones de interfaz personalizada). Una interfaz personalizada puede ser más rápida que una interfaz dual, especialmente entre los límites del proceso.<br /><br /> - **Compatible con automatización** controladores de automatización permite tener acceso a un objeto que tiene la compatibilidad de interfaz personalizado.|
 
 - **Soporte técnico**
 

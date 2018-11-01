@@ -1,27 +1,17 @@
 ---
-title: Preguntas más frecuentes sobre archivos DLL de MFC | Microsoft Docs
-ms.custom: ''
+title: Preguntas más frecuentes sobre archivos DLL de MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 4d6490691583162fc95042601bd85566f693d049
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713094"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629143"
 ---
 # <a name="dll-frequently-asked-questions"></a>Preguntas más frecuentes sobre archivos DLL
 
@@ -39,7 +29,7 @@ Siguientes son algunas de las preguntas más frecuentes (P+F) sobre los archivos
 
 ## <a name="mfc_multithreaded_1"></a> ¿Puede crear una DLL de MFC de varios subprocesos?
 
-Excepto durante la inicialización, una DLL de MFC puede crear de forma segura varios subprocesos siempre y cuando utiliza el subproceso de Win32, como funciones de almacenamiento local (TLS) **TlsAlloc** para asignar el almacenamiento local de subproceso. Sin embargo, si utiliza una DLL de MFC **__declspec (Thread)** para asignar el almacenamiento local de subprocesos, la aplicación cliente debe vincularse implícitamente a la DLL. Si la aplicación cliente se vincula explícitamente a la DLL, la llamada a **LoadLibrary** no podrá cargar el archivo DLL. Para obtener más información sobre la creación de varios subprocesos dentro de archivos DLL de MFC, vea el artículo de Knowledge Base "PRB: llamar a LoadLibrary() para carga una DLL que tiene estático TLS" (Q118816). Para obtener más información acerca de las variables locales del subproceso en archivos DLL, consulte [subproceso](../cpp/thread.md).
+Excepto durante la inicialización, una DLL de MFC puede crear de forma segura varios subprocesos siempre y cuando utiliza el subproceso de Win32, como funciones de almacenamiento local (TLS) **TlsAlloc** para asignar el almacenamiento local de subproceso. Sin embargo, si utiliza una DLL de MFC **__declspec (Thread)** para asignar el almacenamiento local de subprocesos, la aplicación cliente debe vincularse implícitamente a la DLL. Si la aplicación cliente se vincula explícitamente a la DLL, la llamada a **LoadLibrary** no podrá cargar el archivo DLL. Para obtener más información acerca de las variables locales del subproceso en archivos DLL, consulte [subproceso](../cpp/thread.md).
 
 Una DLL de MFC que crea un nuevo subproceso MFC durante el inicio dejará de responder cuando se cargue por una aplicación. Esto incluye cada vez que se crea un subproceso mediante una llamada a `AfxBeginThread` o `CWinThread::CreateThread` dentro:
 
@@ -49,13 +39,11 @@ Una DLL de MFC que crea un nuevo subproceso MFC durante el inicio dejará de res
 
 - Un proporcionado `DllMain` o **RawDllMain** función en un archivo DLL de extensión MFC.
 
-Para obtener más información sobre la creación de subprocesos durante la inicialización, vea el artículo de Knowledge Base "PRB: no se puede crear un MFC Thread During DLL Startup" (Q142243).
-
 ## <a name="mfc_multithreaded_2"></a> ¿Puede una aplicación multiproceso tener acceso a una DLL de MFC en distintos subprocesos?
 
 Aplicaciones multiproceso con comportamiento pueden tener acceso a archivos DLL de MFC estándar vinculados dinámicamente a MFC y archivos DLL de extensión MFC desde subprocesos diferentes. Y, a partir de Visual C++ versión 4.2, una aplicación puede tener acceso a archivos DLL de MFC estándar vinculados estáticamente a MFC desde varios subprocesos que se crean en la aplicación.
 
-Antes de la versión 4.2, sólo un subproceso externo puede adjuntar a una DLL de MFC regulares que están vinculados estáticamente a MFC. Para obtener más información sobre las restricciones de acceso a archivos DLL de MFC estándar vinculados estáticamente a MFC desde varios subprocesos (antes de Visual C++ versión 4.2), consulte el artículo de Knowledge Base, "varios subprocesos y MFC _USRDLL" (Q122676).
+Antes de la versión 4.2, sólo un subproceso externo puede adjuntar a una DLL de MFC regulares que están vinculados estáticamente a MFC.
 
 Tenga en cuenta que el término USRDLL ya no se usa en la documentación de Visual C++. DLL MFC estándar que se vincula estáticamente a MFC tiene las mismas características que el archivo USRDLL anterior.
 

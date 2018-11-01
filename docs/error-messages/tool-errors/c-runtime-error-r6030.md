@@ -1,41 +1,31 @@
 ---
-title: Error en tiempo de ejecución de C R6030 | Microsoft Docs
-ms.custom: ''
+title: Error en tiempo de ejecución de C R6030
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6030
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63606624e1cbcc5ef2c5ea453ee6d346e3e686a8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7f5c61d9b39b1d655bcbf3d42ea870370ddf2842
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46038131"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461625"
 ---
 # <a name="c-runtime-error-r6030"></a>Error en tiempo de ejecución de C R6030
 
 CRT no inicializado
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. Este problema suele deberse algunos programas de software de seguridad o con poca frecuencia, por un error en el programa.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. Este problema suele deberse algunos programas de software de seguridad o con poca frecuencia, por un error en el programa.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   El software de seguridad puede tener instrucciones específicas para mitigar este problema. Compruebe el sitio Web de su proveedor de software de seguridad para obtener más información. Como alternativa, busque las versiones actualizadas de su software de seguridad o pruebe el software de seguridad diferente.
-> -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - El software de seguridad puede tener instrucciones específicas para mitigar este problema. Compruebe el sitio Web de su proveedor de software de seguridad para obtener más información. Como alternativa, busque las versiones actualizadas de su software de seguridad o pruebe el software de seguridad diferente.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

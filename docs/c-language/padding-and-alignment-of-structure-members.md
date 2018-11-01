@@ -1,7 +1,7 @@
 ---
 title: Relleno y alineación de miembros de estructura | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959d6296c563958a0c8bdd1ecca660680941755f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a1b301372a9998197c46c1e44c91c9d3456cea8e
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074856"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808217"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>Relleno y alineación de miembros de estructura
 
@@ -29,7 +29,7 @@ Los miembros de estructura se almacenan secuencialmente en el orden en que se de
 
 Cada objeto de datos tiene un elemento alignment-requirement. El requisito de alineación para todos los datos excepto las estructuras, uniones y matrices es el tamaño del objeto o el tamaño actual de empaquetado (especificado con /Zp o la directiva pragma `pack`, lo que sea menor). Para estructuras, uniones y matrices, el requisito de alineación es el mayor requisito de alineación de sus miembros. A cada objeto se le asigna un offset de forma que
 
-*offset*  `%` *alignment-requirement* `==` 0
+*offset* **%** *alignment-requirement* **== 0**
 
 Los campos de bits adyacentes se empaquetan en la misma unidad de asignación de 1, 2 o 4 bytes si los tipos enteros tienen el mismo tamaño y si el siguiente campo de bits cabe en la unidad de asignación actual sin traspasar el límite impuesto por los requisitos comunes de alineación de los campos de bits.
 

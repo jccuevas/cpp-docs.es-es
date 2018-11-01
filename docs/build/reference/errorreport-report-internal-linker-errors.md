@@ -1,30 +1,20 @@
 ---
-title: -ERRORREPORT (informar de errores internos del vinculador) | Microsoft Docs
-ms.custom: ''
+title: /ERRORREPORT (Informar de los errores del compilador)
 ms.date: 12/28/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
-dev_langs:
-- C++
 helpviewer_keywords:
 - /ERRORREPORT linker option
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30cc9cbab9a3575eee2f791b0af7dfcaffc1538d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701095"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447255"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Informar de los errores del compilador)
 
@@ -64,6 +54,6 @@ La opción **/errorreport: Send** envía automáticamente información de errore
 
 ## <a name="see-also"></a>Vea también
 
-[/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md)
-[opciones de configuración del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[/errorReport (Informar de los errores internos del compilador)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

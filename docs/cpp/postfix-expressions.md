@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069820"
 ---
 # <a name="postfix-expressions"></a>Expresiones postfijas
 
@@ -41,7 +41,7 @@ Las expresiones de postfijo constan de expresiones primarias o expresiones en la
 La sintaxis siguiente describe expresiones de postfijo posibles:
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ Cuando se llama a una función, se realizan las tareas siguientes:
     Func( 7 );          // Execute function call
     ```
 
-     Las inicializaciones conceptuales anteriores a la llamada son:
+   Las inicializaciones conceptuales anteriores a la llamada son:
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     Observe que la inicialización se realiza como si se utilizara la sintaxis de signo igual en lugar de la sintaxis de paréntesis. Se realiza una copia de `i` antes de pasar el valor a la función. (Para obtener más información, consulte [inicializadores](../cpp/initializers.md) y [conversiones](../cpp/user-defined-type-conversions-cpp.md)).
+   Observe que la inicialización se realiza como si se utilizara la sintaxis de signo igual en lugar de la sintaxis de paréntesis. Se realiza una copia de `i` antes de pasar el valor a la función. (Para obtener más información, consulte [inicializadores](../cpp/initializers.md) y [conversiones](../cpp/user-defined-type-conversions-cpp.md)).
 
-     Por lo tanto, si el prototipo de función (declaración) requiere un argumento de tipo **largo**, y si el programa que realiza la llamada proporciona un argumento real de tipo **int**, el argumento real se promueve utilizando una conversión de tipo estándar al tipo **largo** (consulte [conversiones estándar](../cpp/standard-conversions.md)).
+   Por lo tanto, si el prototipo de función (declaración) requiere un argumento de tipo **largo**, y si el programa que realiza la llamada proporciona un argumento real de tipo **int**, el argumento real se promueve utilizando una conversión de tipo estándar al tipo **largo** (consulte [conversiones estándar](../cpp/standard-conversions.md)).
 
-     Es un error proporcionar un argumento real para el que no hay ninguna conversión estándar o definida por el usuario al tipo del argumento formal.
+   Es un error proporcionar un argumento real para el que no hay ninguna conversión estándar o definida por el usuario al tipo del argumento formal.
 
-     Para los argumentos reales de tipo de clase, el argumento formal se inicializa llamando al constructor de la clase. (Consulte [constructores](../cpp/constructors-cpp.md) para obtener más información acerca de estas funciones miembro de clase especial.)
+   Para los argumentos reales de tipo de clase, el argumento formal se inicializa llamando al constructor de la clase. (Consulte [constructores](../cpp/constructors-cpp.md) para obtener más información acerca de estas funciones miembro de clase especial.)
 
 - Se ejecuta la llamada de función.
 

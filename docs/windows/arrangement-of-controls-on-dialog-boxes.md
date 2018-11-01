@@ -1,28 +1,17 @@
 ---
 title: Organización de los controles en cuadros de diálogo (C++) | Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], positioning
 - dialog box controls [C++], placement
 - Dialog Editor [C++], arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 46bc2d627c9efbb49227e17c809d188aa3a8b5fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 56062d166e8a58b6bf0211ce57a6a8f6ed3eea75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576012"
 ---
 # <a name="arrangement-of-controls-on-dialog-box-ces"></a>Organización de los controles del cuadro de diálogo cuadro es (C++)
 
@@ -54,5 +43,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

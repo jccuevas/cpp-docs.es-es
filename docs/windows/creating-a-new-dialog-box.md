@@ -1,29 +1,18 @@
 ---
-title: Crear un nuevo cuadro de diálogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Crear un nuevo cuadro de diálogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - dialog boxes [C++], creating
 - Dialog Editor [C++], creating dialog boxes
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 285444b5f9bfa29ab00fc6a2ca1b644208bc95a8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ed1bb21029b2a61eb51b54386ed51ef08b90e149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315800"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605352"
 ---
 # <a name="creating-a-new-dialog-box-c"></a>Crear un nuevo cuadro de diálogo (C++)
 
@@ -50,6 +39,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Procedimiento para crear un recurso](../windows/how-to-create-a-resource.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Procedimiento para crear un recurso](../windows/how-to-create-a-resource.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editor de cuadros de diálogo](../windows/dialog-editor.md)

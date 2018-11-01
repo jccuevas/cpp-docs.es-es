@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bd95ea00a63f28f04874f873cf0a4e991fac0fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca8522f85a8ce10bc694ab1144e7f24ed3fca6fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710526"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425761"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (Combinar código insertado)
 
@@ -86,6 +86,6 @@ Si el programa incluye un archivo de encabezado que usa código insertado, **/Fx
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

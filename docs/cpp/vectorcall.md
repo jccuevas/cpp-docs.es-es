@@ -1,23 +1,20 @@
 ---
-title: __vectorcall | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
+title: __vectorcall
+ms.date: 10/10/2018
+f1_keywords:
+- __vectorcall_cpp
+- __vectorcall
+- _vectorcall
+helpviewer_keywords:
+- __vectorcall keyword
+- __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 335f81a204ec91361c51f7573e58b61fad91f97b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061713"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507229"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
@@ -79,6 +76,8 @@ El **__vectorcall** se debe especificar el modificador de convención de llamada
 ```cpp
 typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 ```
+
+Para ofrecer compatibilidad con versiones anteriores, **_vectorcall** es un sinónimo de **__vectorcall** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md)se especifica.
 
 ## <a name="vectorcall-convention-on-x64"></a>Convención __vectorcall en x64
 

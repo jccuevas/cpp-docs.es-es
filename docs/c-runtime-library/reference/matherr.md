@@ -1,10 +1,6 @@
 ---
-title: _matherr | Microsoft Docs
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445726"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -56,17 +46,17 @@ Puntero a la estructura que contiene información de error.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_matherr** devuelve 0 para indicar un error o un valor distinto de cero para indicar una operación correcta. Si **_matherr** devuelve 0, un mensaje de error se puede mostrar y **errno** se establece en un valor de error adecuado. Si **_matherr** devuelve un valor distinto de cero, no hay ningún mensaje de error se muestra y **errno** permanece sin cambios.
+**_matherr** devuelve 0 para indicar un error o un valor distinto de cero para indicar el éxito. Si **_matherr** devuelve 0, un mensaje de error se puede mostrar y **errno** está establecido en un valor de error adecuado. Si **_matherr** devuelve un valor distinto de cero, ningún mensaje de error se muestra y **errno** permanece sin cambios.
 
 Para obtener más información sobre los códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_matherr** función procesa los errores generados por las funciones de punto flotante de la biblioteca matemática. Llamar estas funciones **_matherr** cuando se detecta un error.
+El **_matherr** función procesa los errores generados por las funciones de la biblioteca matemática de punto flotante. Estas funciones llaman a **_matherr** cuando se detecta un error.
 
-Para el control de error especial, puede proporcionar una definición diferente de **_matherr**. Si utiliza la versión vinculada dinámicamente de la biblioteca de tiempo de ejecución de C (CRT), puede reemplazar el valor predeterminado **_matherr** rutinarias en un ejecutable con una versión definido por el usuario del cliente. Sin embargo, no se puede reemplazar el valor predeterminado **_matherr** rutinarias en un cliente DLL de la DLL de CRT.
+Para el control de errores especial, puede proporcionar una definición diferente de **_matherr**. Si usa la versión vinculada dinámicamente de la biblioteca de tiempo de ejecución de C (CRT), puede reemplazar el valor predeterminado **_matherr** rutinarias en un archivo ejecutable con una versión definido por el usuario del cliente. Sin embargo, no se puede reemplazar el valor predeterminado **_matherr** rutinarias en un cliente DLL de la DLL de CRT.
 
-Cuando se produce un error en una rutina de matemáticas, **_matherr** se llama con un puntero a un **_exception** estructura de tipo (definido en \<math.h >) como argumento. La estructura **_exception** contiene los siguientes elementos.
+Cuando se produce un error en una rutina matemática, **_matherr** se denomina con un puntero a un **_exception** estructura de tipo (definido en \<math.h >) como argumento. La estructura **_exception** contiene los siguientes elementos.
 
 ```C
 struct _exception
@@ -83,10 +73,10 @@ El **tipo** miembro especifica el tipo de error matemático. Es uno de los valor
 
 |Macro|Significado|
 |-|-|
-**_DOMAIN**|Error de dominio de argumento
-**_SING**|Singularidad de argumento
+**_DOMINIO**|Error de argumento de dominio
+**_SING**|Singularidad del argumento
 **_OVERFLOW**|Error de intervalo de desbordamiento
-**_PLOSS**|Pérdida parcial de importancia
+**_PLOSS**|Pérdida parcial de significado
 **_TLOSS**|Pérdida total de significado
 **_UNDERFLOW**|El resultado es demasiado pequeño para representarlo (esta condición no se admite actualmente).
 

@@ -36,44 +36,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea2a6d07a6664b74abaa1513a39f8f908f72fa1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7eb9682a648f8e302a620e3c2e0dc1631abf7945
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389691"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46068278"
 ---
 # <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func, ___mb_cur_max_l_func, __p___mb_cur_max, __mb_cur_max
-Función de CRT interna. Recupera el número máximo de bytes en un carácter multibyte de la configuración local actual o especificada.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```cpp  
-int ___mb_cur_max_func(void);  
-int ___mb_cur_max_l_func(_locale_t locale);  
-int * __p___mb_cur_max(void);  
-#define __mb_cur_max (___mb_cur_max_func())  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
- configuración regional  
- Estructura de configuración local de la que obtener los resultados. Si este valor es nulo, se usa la configuración regional de subproceso actual.  
-  
-## <a name="return-value"></a>Valor devuelto  
- Número máximo de bytes en un carácter multibyte de la configuración local para el subproceso actual o de la configuración local especificada.  
-  
-## <a name="remarks"></a>Comentarios  
- Se trata de una función interna que CRT usa para recuperar el valor actual de la macro [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) del almacenamiento local de subprocesos. Le recomendamos usar la macro `MB_CUR_MAX` en su código de cara a la portabilidad.  
-  
- La macro `__mb_cur_max` constituye una forma muy cómoda de llamar a la función `___mb_cur_max_func()`. La función `__p___mb_cur_max` se define para la compatibilidad con Visual C++ 5.0 y versiones anteriores.  
-  
- Las funciones de CRT internas son específicas de la implementación y están sujetas a cambio en cada versión. Se desaconseja usarlas en el código.  
-  
-## <a name="requirements"></a>Requisitos  
-  
-|Rutina|Encabezado necesario|  
-|-------------|---------------------|  
-|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|  
-  
-## <a name="see-also"></a>Vea también  
- [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)
+
+Función de CRT interna. Recupera el número máximo de bytes en un carácter multibyte de la configuración local actual o especificada.
+
+## <a name="syntax"></a>Sintaxis
+
+```cpp
+int ___mb_cur_max_func(void);
+int ___mb_cur_max_l_func(_locale_t locale);
+int * __p___mb_cur_max(void);
+#define __mb_cur_max (___mb_cur_max_func())
+```
+
+#### <a name="parameters"></a>Parámetros
+
+locale Estructura de configuración local de la que obtener los resultados. Si este valor es nulo, se usa la configuración regional de subproceso actual.
+
+## <a name="return-value"></a>Valor devuelto
+
+Número máximo de bytes en un carácter multibyte de la configuración local para el subproceso actual o de la configuración local especificada.
+
+## <a name="remarks"></a>Comentarios
+
+Se trata de una función interna que CRT usa para recuperar el valor actual de la macro [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md) del almacenamiento local de subprocesos. Le recomendamos usar la macro `MB_CUR_MAX` en su código de cara a la portabilidad.
+
+La macro `__mb_cur_max` constituye una forma muy cómoda de llamar a la función `___mb_cur_max_func()`. La función `__p___mb_cur_max` se define para la compatibilidad con Visual C++ 5.0 y versiones anteriores.
+
+Las funciones de CRT internas son específicas de la implementación y están sujetas a cambio en cada versión. Se desaconseja usarlas en el código.
+
+## <a name="requirements"></a>Requisitos
+
+|Rutina|Encabezado necesario|
+|-------------|---------------------|
+|`___mb_cur_max_func`, `___mb_cur_max_l_func`, `__p___mb_cur_max`|\<ctype.h>, \<stdlib.h>|
+
+## <a name="see-also"></a>Vea también
+
+[MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)

@@ -1,10 +1,6 @@
 ---
-title: _strtime_s, _wstrtime_s | Microsoft Docs
-ms.custom: ''
+title: _strtime_s, _wstrtime_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -26,8 +22,6 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642369"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -91,19 +81,19 @@ Si se produce una condición de error, se invoca al controlador de parámetros n
 |*buffer*|*numberOfElements*|Volver|Contenido de *búfer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(cualquiera)|**EINVAL**|No modificado|
-|No **NULL** (que señala al búfer válido)|0|**EINVAL**|No modificado|
-|No **NULL** (que señala al búfer válido)|0 < tamaño < 9|**EINVAL**|Cadena vacía|
-|No **NULL** (que señala al búfer válido)|Tamaño > 9|0|Hora actual con el formato especificado en la sección de comentarios|
+|No **NULL** (apunta al búfer válido)|0|**EINVAL**|No modificado|
+|No **NULL** (apunta al búfer válido)|0 < tamaño < 9|**EINVAL**|Cadena vacía|
+|No **NULL** (apunta al búfer válido)|Tamaño > 9|0|Hora actual con el formato especificado en la sección de comentarios|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
-Pasar a un no válido no es**NULL** valor para el búfer se produciría una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
+Pasar a un no válido que no sean de**NULL** valor para el búfer, se producirá una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
 
-Se pasa un valor *numberOfElements* que es mayor que el tamaño real del búfer dará como resultado de saturación del búfer.
+Pasar un valor para *numberOfElements* mayor que el tamaño real del búfer dará como resultado de la saturación del búfer.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones proporcionan versiones más seguras de [_strtime](strtime-wstrtime.md) y [_wstrtime](strtime-wstrtime.md). El **_strtime_s** función copia la hora local actual en el búfer señalado por *timestr*. La hora se formatea como **hh** donde **hh** es de dos dígitos que representa la hora en la notación de 24 horas, **mm** es de dos dígitos que representa los minutos transcurridos tras la hora y **ss** es de dos dígitos que representa los segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos más allá de 6 p. M. El búfer debe tener una longitud mínima de 9 bytes; el segundo parámetro especifica el tamaño real.
+Estas funciones proporcionan versiones más seguras de [_strtime](strtime-wstrtime.md) y [_wstrtime](strtime-wstrtime.md). El **_strtime_s** función copia la hora local actual en el búfer señalado por *timestr*. La hora se formatea como **hh: mm:** donde **hh** son dos dígitos que representa la hora en la notación de 24 horas, **mm** son dos dígitos que representa los minutos transcurridos tras la hora y **ss** son dos dígitos que representan los segundos. Por ejemplo, la cadena **18:23:44** representa 23 minutos y 44 segundos después de las 6 P.M. El búfer debe tener una longitud mínima de 9 bytes; el segundo parámetro especifica el tamaño real.
 
 **_wstrtime** es una versión con caracteres anchos de **_strtime**; el argumento y el valor devuelto de **_wstrtime** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 

@@ -1,25 +1,15 @@
 ---
-title: Información general sobre MSBuild (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Información general sobre MSBuild (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484804"
 ---
 # <a name="msbuild-visual-c-overview"></a>Información general sobre MSBuild (Visual C++)
 
@@ -111,7 +101,7 @@ Por ejemplo, establecer el `PreferredToolArchitecture` propiedad `x64` para usar
 
 ### <a name="useenv-property"></a>Propiedad UseEnv
 
-De forma predeterminada, la configuración de específicos de la plataforma para el proyecto actual invalida las variables de entorno PATH, INCLUDE, LIB, LIBPATH, configuración y plataforma. Establecer el `UseEnv` propiedad `true` para garantizar que no se invalidan las variables de entorno.
+De forma predeterminada, la configuración de específicos de la plataforma para el proyecto actual invalida las variables de entorno PATH, INCLUDE, LIB, LIBPATH, configuración y plataforma. Establecer el `UseEnv` propiedad **true** para garantizar que no se invalidan las variables de entorno.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

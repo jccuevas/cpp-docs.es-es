@@ -1,27 +1,17 @@
 ---
-title: tuple_element (Clase) | Microsoft Docs
-ms.custom: ''
+title: tuple_element (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - utility/std::tuple_element
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb89f479320287ff238517cc649f199e0081ffa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8b50e04e530e2d21b7a4e042d9feb2984e639db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596747"
 ---
 # <a name="tupleelement-class"></a>tuple_element (Clase)
 
@@ -136,19 +126,19 @@ int main()
 
     for (const auto& e : c0)
     {
-        cout << " " << e;
+        cout << e << " ";
     }
     cout << endl;
 
-    // display first element " 0"
+    // display first element "0"
     tuple_element<0, MyArray>::type val = c0.front();
-    cout << " " << val << endl;
+    cout << val << endl;
 }
 ```
 
 ```Output
- 0 1 2 3
- 0
+0 1 2 3
+0
 ```
 
 ## <a name="example"></a>Ejemplo
@@ -163,23 +153,23 @@ typedef pair<int, double> MyPair;
 int main() {
     MyPair c0(0, 1.333);
 
-    // display contents " 0 1"
-    cout << " " << get<0>(c0);
-    cout << " " << get<1>(c0) << endl;
+    // display contents "0 1"
+    cout << get<0>(c0) << " ";
+    cout << get<1>(c0) << endl;
 
-    // display first element " 0" by index
+    // display first element "0 " by index
     tuple_element<0, MyPair>::type val = get<0>(c0);
-    cout << " " << val;
+    cout << val << " ";
 
     // display second element by type
     tuple_element<1, MyPair>::type val2 = get<double>(c0);
-    cout << " " << val2 << endl;
+    cout << val2 << endl;
 }
 ```
 
 ```Output
- 0 1.333
- 0 1.333
+0 1.333
+0 1.333
 ```
 
 ## <a name="requirements"></a>Requisitos

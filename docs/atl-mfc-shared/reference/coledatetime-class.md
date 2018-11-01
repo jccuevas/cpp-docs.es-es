@@ -1,10 +1,6 @@
 ---
-title: COleDateTime (clase) | Microsoft Docs
-ms.custom: ''
+title: COleDateTime (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -30,8 +26,6 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTime::SetTime
 - ATLCOMTIME/ATL::COleDateTime::m_dt
 - ATLCOMTIME/ATL::COleDateTime::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, COleDateTime
 - time-only values
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6c2cb19908b177ea1e07e0178023e868b96a4560
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505903"
 ---
 # <a name="coledatetime-class"></a>COleDateTime (clase)
 
@@ -165,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Fecha*  
+*Fecha*<br/>
 Objeto `COleDateTime` que se va a comparar.
 
 ### <a name="remarks"></a>Comentarios
@@ -210,31 +200,31 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dateSrc*  
+*dateSrc*<br/>
 Existente `COleDateTime` objeto que se copiará en el nuevo `COleDateTime` objeto.
 
-*varSrc*  
+*varSrc*<br/>
 Existente `VARIANT` estructura de datos (posiblemente un `COleVariant` objeto) que se convertirá en un valor de fecha y hora (VT_DATE) y copiar en el nuevo `COleDateTime` objeto.
 
-*dtSrc*  
+*dtSrc*<br/>
 Una fecha y hora (`DATE`) valor que se copiará en el nuevo `COleDateTime` objeto.
 
-*timeSrc*  
+*timeSrc*<br/>
 Un `time_t` o `__time64_t` valor al convertirse en un valor de fecha y hora y copiar en el nuevo `COleDateTime` objeto.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Un `SYSTEMTIME` estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `COleDateTime` objeto.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Un `FILETIME` estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `COleDateTime` objeto. Tenga en cuenta que `FILETIME` usa la hora Universal coordinada (UTC), por lo que si se pasa una hora local en la estructura, los resultados serán incorrectos. Consulte [tiempos archivos](/windows/desktop/SysInfo/file-times) en el SDK de Windows para obtener más información.
 
-*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*  
+*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*<br/>
 Indique los valores de fecha y hora en que se copiará en el nuevo `COleDateTime` objeto.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Los valores de fecha y hora de MS-DOS para convertirse en un valor de fecha y hora y copiar en el nuevo `COleDateTime` objeto.
 
-*DBTS*  
+*DBTS*<br/>
 Una referencia a un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) estructura que contiene la hora local actual.
 
 ### <a name="remarks"></a>Comentarios
@@ -297,7 +287,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica que uno de los siguientes indicadores de configuración regional:
 
 - LOCALE_NOUSEROVERRIDE usar la configuración regional predeterminada del sistema, en lugar de la configuración de usuario personalizada.
@@ -306,10 +296,10 @@ Indica que uno de los siguientes indicadores de configuración regional:
 
 - VAR_DATEVALUEONLY ignorar el espacio de tiempo durante el análisis.
 
-*lcid*  
+*lcid*<br/>
 Indica el identificador de configuración regional que se usará para la conversión. Para obtener más información acerca de los identificadores de idioma, consulte [los identificadores de idioma](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Cadena de un formato similar a la `printf` cadena de formato. Cada formato de código, precedido por un porcentaje ( `%`) inicie sesión, se reemplaza por la correspondiente `COleDateTime` componente. Otros caracteres en la cadena de formato se copian sin cambios a la cadena devuelta. Vea la función de tiempo de ejecución [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) para obtener más información. El valor y el significado de los códigos de formato para `Format` son:
 
 - `%H` Horas del día actual
@@ -320,7 +310,7 @@ Cadena de un formato similar a la `printf` cadena de formato. Cada formato de c�
 
 - `%%` Signo de porcentaje
 
-*nFormatID*  
+*nFormatID*<br/>
 El identificador de recurso para la cadena de formato de control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -333,13 +323,13 @@ Si el estado de este `COleDateTime` objeto es null, el valor devuelto es una cad
 
 A continuación se muestra una breve descripción de las tres formas para esta función:
 
-`Format`( *dwFlags*, *lcid*)  
+`Format`( *dwFlags*, *lcid*)<br/>
 Este formulario da formato al valor mediante el uso de las especificaciones del lenguaje (identificadores de configuración regional) para la fecha y hora. Con los parámetros predeterminados, este formulario imprimirá la fecha y la hora, a menos que la parte de hora es 0 (medianoche), en cuyo caso imprimirá solo la fecha o la parte de fecha es 0 (30 de diciembre de 1899), en cuyo caso se imprimirá el momento. Si el valor de fecha y hora es 0 (30 de diciembre de 1899, medianoche), este formulario con los parámetros predeterminados imprimirá la medianoche.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Este formulario da formato al valor usando la cadena de formato que contiene códigos de formato especiales que van precedidos por un signo de porcentaje (%), como en `printf`. La cadena de formato se pasa como un parámetro a la función. Para obtener más información acerca de los códigos de formato, vea [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) en la referencia de la biblioteca de tiempo de ejecución.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Este formulario da formato al valor usando la cadena de formato que contiene códigos de formato especiales que van precedidos por un signo de porcentaje (%), como en `printf`. La cadena de formato es un recurso. El Id. de este recurso de cadena se pasa como parámetro. Para obtener más información acerca de los códigos de formato, vea [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) en el *referencia de la biblioteca de tiempo de ejecución*.
 
 ### <a name="example"></a>Ejemplo
@@ -356,7 +346,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*DBTS*  
+*DBTS*<br/>
 Una referencia a un [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -381,7 +371,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*sysTime*  
+*sysTime*<br/>
 Una referencia a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para recibir el valor de fecha y hora convertido desde el `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -404,7 +394,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Update*  
+*Update*<br/>
 Una referencia a un `UDATE` estructura para recibir el valor de fecha y hora convertido desde el `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -701,13 +691,13 @@ Devuelve el estado de este `COleDateTime` valor. Si se llama a `GetStatus` en un
 El valor devuelto se define mediante el `DateTimeStatus` tipo enumerado, que se define dentro de la `COleDateTime` clase.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:
@@ -930,18 +920,18 @@ El `DATE` operador se producirá una aserción si el `COleDateTime` objeto está
 Analiza una cadena para leer un valor de fecha y hora.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*lpszDate*  
+*lpszDate*<br/>
 Un puntero a la cadena terminada en null que se analizará. Para conocer más detalles, vea la sección Comentarios.
 
-*dwFlags*  
+*dwFlags*<br/>
 Indica los marcadores para la configuración regional y el análisis. Uno o varios de los siguientes indicadores:
 
 - LOCALE_NOUSEROVERRIDE usar la configuración regional predeterminada del sistema, en lugar de configuración de usuario personalizada.
@@ -950,7 +940,7 @@ Indica los marcadores para la configuración regional y el análisis. Uno o vari
 
 - VAR_DATEVALUEONLY ignorar el espacio de tiempo durante el análisis.
 
-*lcid*  
+*lcid*<br/>
 Indica el identificador de configuración regional que se usará para la conversión.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -991,15 +981,15 @@ Para obtener más información acerca de los límites y la implementación para 
 Establece la fecha de este `COleDateTime` objeto.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nYear*, *nMonth*, *Ndía*  
+*nYear*, *nMonth*, *Ndía*<br/>
 Indican los componentes de fecha que se copiará en esto `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1062,18 +1052,18 @@ Para obtener más información acerca de los límites de `COleDateTime` valores,
 Establece la fecha y hora de esta `COleDateTime` objeto.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*  
+*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*<br/>
 Indican los componentes de fecha y hora en que se copiará en esto `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1151,7 +1141,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*status*  
+*status*<br/>
 El nuevo valor de estado para esta `COleDateTime` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -1170,15 +1160,15 @@ Vea el ejemplo de [GetStatus](#getstatus).
 Establece la hora de esta `COleDateTime` objeto.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Nhora*, *nmín*, *nSec*  
+*Nhora*, *nmín*, *nSec*<br/>
 Indican los componentes de tiempo que se copiará en esto `COleDateTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1236,9 +1226,9 @@ Vea el ejemplo de [SetDate](#setdate).
 
 ## <a name="see-also"></a>Vea también
 
-[Clase COleVariant](../../mfc/reference/colevariant-class.md)   
-[CTime (clase)](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan (clase)](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+[COleVariant (clase)](../../mfc/reference/colevariant-class.md)<br/>
+[CTime (clase)](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan (clase)](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -1,27 +1,17 @@
 ---
-title: Usar IDispEventSimpleImpl (ATL) | Microsoft Docs
-ms.custom: ''
+title: Usar IDispEventSimpleImpl (ATL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - IDispEventSimpleImpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 00dadde438af1b4de820316dd4dc50e773827aca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b8b651b9f300d3de87297fc62ba54b549e99001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107531"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538273"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Usar IDispEventSimpleImpl
 
@@ -43,7 +33,7 @@ Cuando se usa `IDispEventSimpleImpl` para controlar eventos, tendrá que:
 
 El ejemplo siguiente muestra cómo controlar el `DocumentChange` eventos desencadenados por la palabra **aplicación** objeto. Este evento se define como un método en el `ApplicationEvents` dispinterface.
 
-El ejemplo proviene del [ejemplo ATLEventHandling](../visual-cpp-samples.md).  
+El ejemplo proviene del [ejemplo ATLEventHandling](../visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]

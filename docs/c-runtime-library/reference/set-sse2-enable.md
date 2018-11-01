@@ -1,10 +1,6 @@
 ---
-title: _set_SSE2_enable | Microsoft Docs
-ms.custom: ''
+title: _set_SSE2_enable
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_SSE2_enable
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_SSE2_enable function
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f4ed5333dd8ae6bab6291233391884e4efc7ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c340423e93b6487a4a951e4b96055cba6e474269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539339"
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 
-Habilita o deshabilita el uso de instrucciones de extensiones SIMD de transmisión por secuencias 2 (SSE2) en rutinas matemáticas de CRT. (esta función no está disponible en las arquitecturas x64 porque SSE2 está habilitada de forma predeterminada).
+Habilita o deshabilita el uso de instrucciones de extensiones SIMD de transmisión por secuencias 2 (SSE2) en las rutinas matemáticas de CRT. (esta función no está disponible en las arquitecturas x64 porque SSE2 está habilitada de forma predeterminada).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -85,7 +75,7 @@ Las siguientes funciones tienen implementaciones de SSE2 que se pueden habilitar
 Las implementaciones de SSE2 de estas funciones pueden proporcionar respuestas algo diferentes que las implementaciones predeterminadas, porque los valores intermedios de SSE2 son cantidades de punto flotante de 64 bits, mientras que los valores intermedios de implementación predeterminados son cantidades de punto flotante de 80 bits.
 
 > [!NOTE]
-> Si usas el [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) opción del compilador para compilar el proyecto, puede parecer que **_set_SSE2_enable** no tiene ningún efecto. El **/Oi** opción del compilador indica al compilador la autoridad para usar funciones intrínsecas para reemplazar las llamadas de CRT; este comportamiento invalida el efecto de **_set_SSE2_enable**. Si desea garantizar que **/Oi** no invalida **_set_SSE2_enable**, use **/Oi-** compilar el proyecto. Esto también puede buena práctica cuando se utiliza otros modificadores de compilador que implican **/Oi**.
+> Si usas el [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) opción del compilador para compilar el proyecto, puede parecer que **_set_SSE2_enable** no tiene ningún efecto. El **/Oi** opción del compilador da al compilador la autoridad para usar funciones intrínsecas para reemplazar las llamadas de CRT; este comportamiento invalida el efecto de **_set_SSE2_enable**. Si desea garantizar que **/Oi** no invalida **_set_SSE2_enable**, utilice **/Oi-** para compilar el proyecto. También sería conveniente cuando se usa otros modificadores de compilador que implican **/Oi**.
 
 La implementación de SSE2 solo se usa si se enmascaran todas las excepciones. Use [_control87, _controlfp](control87-controlfp-control87-2.md) para enmascarar las excepciones.
 

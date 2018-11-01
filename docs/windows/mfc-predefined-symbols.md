@@ -1,27 +1,16 @@
 ---
-title: Símbolos predefinidos de MFC | Microsoft Docs
-ms.custom: ''
+title: Símbolos predefinidos de MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC symbols
 - symbols [C++], MFC
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b26d070728a45ba34013276b92ba3f5677c53a6b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2ad7b7cb43e28ac4d3d0e0e3c0c7d7c755f1cb11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592629"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos de MFC
 
@@ -224,5 +213,5 @@ MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)  
+[Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>
 [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

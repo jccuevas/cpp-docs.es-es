@@ -1,10 +1,6 @@
 ---
-title: Clase map | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
+title: map (Clase)
+ms.date: 10/18/2018
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -48,8 +44,6 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -94,16 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8694d554261468c4e828936f6a999f073e98849f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703929"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429697"
 ---
 # <a name="map-class"></a>map (Clase)
 
@@ -1012,7 +1002,6 @@ Devuelve el iterador más allá del final.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1083,7 +1072,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << m1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = m1.equal_range( 4 );
@@ -1103,7 +1092,7 @@ int main( )
 The lower bound of the element with a key of 2 in the map m1 is: 20.
 The upper bound of the element with a key of 2 in the map m1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
@@ -1115,11 +1104,9 @@ Quita un elemento o un intervalo de elementos de una asignación de las posicion
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1219,6 @@ Devuelve un iterador que hace referencia a la ubicación de un elemento de un ma
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1380,16 @@ Inserta un elemento o un intervalo de elementos en una asignación.
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1397,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1794,18 +1775,18 @@ map(
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);
@@ -2636,9 +2617,9 @@ Devuelve el objeto de función de comparación que un mapa usa para ordenar sus 
 
 ### <a name="remarks"></a>Comentarios
 
-Para un mapa *m*, si dos elementos *e*1( *k*1, *d*1) y *e*2( *k*2, `d`2) son objetos de tipo `value_type`, donde *k*1 y *k*2 son sus claves de tipo `key_type`, y `d`1 y `d`2 son sus datos de tipo `mapped_type`, entonces *m.*`value_comp`( *e*1, *e*2) es equivalente a *m.*`key_comp`*(k*1, *k*2). Un objeto almacenado define la función miembro
+Para un mapa *m*, si dos elementos *e1*(*k1*, *d1*) y *e2*(*k2*, *d2*) son objetos de tipo `value_type`, donde *k1* y *k1* son sus claves de tipo `key_type` y *d1* y *d2* son sus datos de tipo `mapped_type`, a continuación, `m.value_comp(e1, e2)` es equivalente a `m.key_comp(k1, k2)`. Un objeto almacenado define la función miembro
 
-**BOOL (operador)**( **value_type &**`left`, **value_type &**`right`);
+`bool operator( value_type& left, value_type& right);`
 
 que devuelve **True** si el valor de clave de `left` precede y no es igual al valor de clave de `right` en el criterio de ordenación.
 

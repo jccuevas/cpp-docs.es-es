@@ -1,29 +1,19 @@
 ---
-title: Asistente para consumidores ATL OLE DB | Microsoft Docs
-ms.custom: ''
+title: Asistente para consumidores OLE DB ATL
 ms.date: 08/31/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.consumer.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fcaffc3eba3711accdfa13d311f5284e564b703
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499572"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 
@@ -36,7 +26,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
 - **Origen de datos**
 
-   El **origen de datos** botón le permite configurar el origen de datos especificado mediante el proveedor OLE DB especificado. Al hacer clic en este botón, el **propiedades de vínculo de datos** aparece el cuadro de diálogo. Para obtener más información sobre la creación de cadenas de conexión y la **propiedades de vínculo de datos** cuadro de diálogo, vea [Introducción a la API de vínculo de datos](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) en la documentación del SDK de Windows.
+   El **origen de datos** botón le permite configurar el origen de datos especificado mediante el proveedor OLE DB especificado. Al hacer clic en este botón, el **propiedades de vínculo de datos** aparece el cuadro de diálogo. Para obtener más información sobre la creación de cadenas de conexión y la **propiedades de vínculo de datos** cuadro de diálogo, vea [Introducción a la API de vínculo de datos](/previous-versions/windows/desktop/ms718102) en la documentación del SDK de Windows.
 
    La siguiente información adicional describe las pestañas en el **propiedades de vínculo de datos** cuadro de diálogo.
 
@@ -52,7 +42,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
       1. **Seleccione o escriba un nombre de servidor:** haga clic en el menú de lista desplegable para mostrar todos los servidores de datos registrados en la red y seleccionar uno.
 
-      2. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
+      1. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
 
          > [!NOTE]
          > Hay un problema de seguridad con la característica de "Permitir guardar contraseña" del cuadro de diálogo Propiedades de vínculo de datos. En "Especifique la información para iniciar sesión en el servidor", hay dos botones de opción:
@@ -63,7 +53,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
          > Si selecciona **utilizar un nombre de usuario específico y una contraseña**, tiene la opción de guardar la contraseña (mediante la casilla de verificación para "Permitir guardar contraseña"); sin embargo, esta opción no es segura. Se recomienda que seleccione **seguridad integrada de uso Windows NT**; esta opción es segura porque cifra la contraseña.
          > Puede haber situaciones en las que desea seleccionar "Permitir guardar contraseña". Por ejemplo, si está lanzando una biblioteca con una solución de base de datos privado, debe no tener acceso directamente a la base de datos pero en su lugar, use una aplicación de nivel intermedio para comprobar el usuario (a través de cualquier esquema de autenticación que elija) y, a continuación, limitar al tipo de datos disponible para el usuario.
 
-      3. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar todas las instancias registradas de bases de datos en el servidor de datos y seleccione uno.
+      1. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar todas las instancias registradas de bases de datos en el servidor de datos y seleccione uno.
 
          \- o -
 
@@ -80,13 +70,13 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
          **Usar cadena de conexión:** escriba una cadena de conexión que ya ha obtenido o haga clic en el **compilar** botón; el **Seleccionar origen de datos** aparece el cuadro de diálogo. Seleccione un origen de datos de archivo o equipo y haga clic en **Aceptar**.
 
          > [!NOTE]
-         > Puede obtener una cadena de conexión mediante la visualización de las propiedades de una conexión existente en el Explorador de servidores, o puede crear una conexión haciendo doble clic en **Agregar conexión** en el Explorador de servidores.
+         > Puede obtener una cadena de conexión mediante la visualización de las propiedades de una conexión existente en **Explorador de servidores**, o bien puede crear una conexión haciendo doble clic en **Agregar conexión** en **Server Explorador**.
 
-      2. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
+      1. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
 
-      3. Escriba el catálogo inicial que se usará.
+      1. Escriba el catálogo inicial que se usará.
 
-      4. Haga clic en **Probar conexión**; si la prueba se realiza correctamente, haga clic en **Aceptar**. Si no es así, compruebe la información de inicio de sesión, intente otra base de datos o pruebe con otro servidor de datos.
+      1. Haga clic en **Probar conexión**; si la prueba se realiza correctamente, haga clic en **Aceptar**. Si no es así, compruebe la información de inicio de sesión, intente otra base de datos o pruebe con otro servidor de datos.
 
    - **Advanced** ficha
 
@@ -177,7 +167,7 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
 - **Soporte técnico**
 
-   Seleccione las casillas de verificación para especificar los tipos de actualizaciones que se aceptan en el consumidor (el valor predeterminado es none). Cada una de las siguientes acciones establecerá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) y las entradas adecuadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) en la propiedad establece el mapa.
+   Seleccione las casillas de verificación para especificar los tipos de actualizaciones que se aceptan en el consumidor (el valor predeterminado es none). Cada una de las siguientes acciones establecerá [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) y las entradas adecuadas para [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) en la propiedad establece el mapa.
 
    - **Cambio**
 
@@ -195,4 +185,4 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
 [Consumidor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Las cadenas de conexión y vínculos de datos (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Las cadenas de conexión y vínculos de datos (OLE DB)](/previous-versions/windows/desktop/ms718376)

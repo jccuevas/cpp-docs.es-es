@@ -1,28 +1,18 @@
 ---
-title: Fecha y hora | Microsoft Docs
-ms.custom: ''
+title: Fecha y hora
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - time, MFC programming
 - time
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9753578de006ed46719d94d5861035ab77dbca6c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dcb5ef9f21987e11608cfa29e77b24e96153e6b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752257"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459454"
 ---
 # <a name="date-and-time"></a>Fecha y hora
 
@@ -44,6 +34,6 @@ MFC admite varias maneras de trabajar con fechas y horas. Se incluyen los siguie
 
 ## <a name="see-also"></a>Vea también
 
-[Conceptos](../mfc/mfc-concepts.md)   
+[Conceptos](../mfc/mfc-concepts.md)<br/>
 [Temas generales de MFC](../mfc/general-mfc-topics.md)
 

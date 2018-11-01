@@ -1,22 +1,16 @@
 ---
-title: Unorderedmapview (clase) | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::UnorderedMapView (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4acecf3697b793d52079d4f55176717e3f6f2d5c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109932"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560841"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 
@@ -112,7 +106,7 @@ La clave utilizada para buscar el elemento. El tipo de `key` es typename *K*.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encuentra la clave; de lo contrario, `false`.
+**True** si la clave se encuentra; en caso contrario, **false**.
 
 ## <a name="lookup"></a>  UnorderedMapView::Lookup (Método)
 

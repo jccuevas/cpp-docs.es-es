@@ -1,27 +1,16 @@
 ---
-title: Mover un botón de barra de herramientas (C++) | Microsoft Docs
-ms.custom: ''
+title: Mover un botón de barra de herramientas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbar buttons [C++], moving
 - Toolbar editor [C++], moving buttons
 ms.assetid: 7625f2ce-8ac4-4428-a3f8-a95bfdf6f95f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bf8cec4505c7b981920ed8af946e668d3d0f16ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d70b6b0b19704d3a0f68c31fecdfabd41f91bf27
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569551"
 ---
 # <a name="moving-a-toolbar-button"></a>Mover un botón de la barra de herramientas
 
@@ -37,5 +26,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor de barras de herramientas](../windows/toolbar-editor.md)

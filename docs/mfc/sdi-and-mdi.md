@@ -1,12 +1,6 @@
 ---
-title: SDI y MDI | Documentos de Microsoft
-ms.custom: ''
+title: SDI y MDI
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - frame windows [MFC], SDI applications
 - frame windows [MFC], MDI applications
@@ -14,26 +8,24 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db63efe8d7e2622610bb56f5e6885b72b705093b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 75ff46a829bd129c7f73bf11a303a67ab1526969
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641121"
 ---
 # <a name="sdi-and-mdi"></a>SDI y MDI
-MFC simplifica la a trabajar con la interfaz de único documento (SDI) y las aplicaciones de interfaz de múltiples documentos (MDI).  
-  
- SDI (aplicaciones) permiten solo una ventana de marco de documento abierto a la vez. Las aplicaciones MDI permiten documento varias ventanas de marco esté abierto en la misma instancia de una aplicación. Una aplicación MDI tiene una ventana dentro de qué MDI varias ventanas secundarias, que son ventanas de marco por sí mismos, pueden abrirse, que contiene un documento independiente. En algunas aplicaciones, las ventanas secundarias pueden ser de tipos diferentes, como ventanas de gráfico y las ventanas de hoja de cálculo. En ese caso, la barra de menús puede cambiar cuando se activan ventanas secundarias MDI de diferentes tipos.  
-  
+
+MFC facilita trabajar con la interfaz de único documento (SDI) y las aplicaciones de interfaz de múltiples documentos (MDI).
+
+Las aplicaciones SDI permiten sólo una ventana de marco de documento abierto a la vez. Las aplicaciones MDI permiten documento varias ventanas de marco esté abierto en la misma instancia de una aplicación. Una aplicación MDI tiene una ventana dentro de lo múltiples MDI, se pueden abrir ventanas secundarias, que son ventanas de marco a sí mismos, que contiene un documento independiente. En algunas aplicaciones, las ventanas secundarias pueden ser de tipos diferentes, como chart de windows y windows de la hoja de cálculo. En ese caso, puede cambiar la barra de menús que se activan ventanas secundarias MDI de diferentes tipos.
+
 > [!NOTE]
->  En Windows 95 y versiones posteriores, las aplicaciones suelen SDI porque el sistema operativo ha adoptado una vista "centrado en documentos".  
-  
- Para obtener más información, consulte [documentos, vistas y el marco de trabajo](../mfc/documents-views-and-the-framework.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Uso de las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+>  En Windows 95 y versiones posteriores, las aplicaciones normalmente son SDI porque el sistema operativo ha adoptado una vista "centrado en documentos".
+
+Para obtener más información, consulte [documentos, vistas y el marco de trabajo](../mfc/documents-views-and-the-framework.md).
+
+## <a name="see-also"></a>Vea también
+
+[Uso de las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

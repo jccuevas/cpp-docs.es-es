@@ -1,29 +1,18 @@
 ---
-title: Vista previa de recursos (C++) | Microsoft Docs
-ms.custom: ''
+title: Vista previa de recursos (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.previewing
 - vs.resvw.resource.previewing
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], viewing
 ms.assetid: d6abda66-0e2b-4ac3-a59a-a57b8c6fb70b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 80d4256057cb268baf2c8750f6d781e7d7aba4db
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 79756bd71dfc731b78b21bd4df311e4848beb899
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589558"
 ---
 # <a name="previewing-resources"></a>Vista previa de recursos
 
@@ -68,5 +57,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Procedimiento para abrir un archivo de script de recursos fuera de un proyecto (independiente)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)  
+[Procedimiento para abrir un archivo de script de recursos fuera de un proyecto (independiente)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

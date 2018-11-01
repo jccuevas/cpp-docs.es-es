@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333162"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136125"
 ---
 # <a name="extract-function"></a>Extraer función
 **Qué:** permite convertir un fragmento de código en su propia función.
 
-**Cuándo:** tiene un fragmento de código existente en alguna función que se debe llamar desde otra.  
+**Cuándo:** tiene un fragmento de código existente en alguna función que se debe llamar desde otra.
 
 **Por qué:** Podría copiar y pegar ese código, pero esto provocaría una duplicación.  Una mejor solución consiste en refactorizar ese fragmento en su propia función a la que cualquier otra puede llamar libremente.
 
@@ -39,9 +39,9 @@ ms.locfileid: "33333162"
      * Haga clic con el botón derecho en el código, seleccione el menú **Acciones rápidas y refactorizaciones** y seleccione **Extraer función (experimental)** en el menú contextual.
      * Haga clic en el icono ![Bombilla](images/bulb.png) que aparece en el margen izquierdo y seleccione **Extraer función (experimental)** en el menú contextual.
 
-1. En la ventana **Extraer función/método (experimental)**, escriba el nombre de función nuevo, seleccione dónde quiere colocar el código y haga clic en el botón **Aceptar**.  
+1. En la ventana **Extraer función/método (experimental)**, escriba el nombre de función nuevo, seleccione dónde quiere colocar el código y haga clic en el botón **Aceptar**.
 
-   ![Función Extraer función](images/extractfunction_dialog.png)
+   ![Extraer el diálogo de la función](images/extractfunction_dialog.png)
 
 1. La función nueva se creará donde haya especificado, un prototipo de función en el archivo de encabezado correspondiente, y el código original se cambiará para llamar a esa función.
 

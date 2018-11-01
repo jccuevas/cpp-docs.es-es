@@ -1,28 +1,18 @@
 ---
-title: Macros de mapa de servicio | Microsoft Docs
-ms.custom: ''
+title: Macros de mapa de servicio
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
 - atlcom/ATL::END_SERVICE_MAP
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
-dev_langs:
-- C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 14e543946be50c39020d46ab00e702a4f2b7a815
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053718"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618184"
 ---
 # <a name="service-map-macros"></a>Macros de mapa de servicio
 
@@ -33,7 +23,7 @@ Estas macros definen entradas y mapas de servicio.
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Marca el principio de un mapa de servicio ATL.|
 |[END_SERVICE_MAP](#end_service_map)|Marca el final de un mapa de servicio ATL.|
 |[SERVICE_ENTRY](#service_entry)|Indica que el objeto admite un identificador de servicio específico.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Indica a [método IServiceProviderImpl:: QueryService](#queryservice) a cadena al objeto especificado.|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Indica a [método IServiceProviderImpl:: QueryService](#queryservice) a cadena al objeto especificado.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -115,7 +105,7 @@ Vea el ejemplo de [BEGIN_SERVICE_MAP](#begin_service_map).
 Crea o tiene acceso al servicio especificado y devuelve un puntero de interfaz a la interfaz especificada para el servicio.
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

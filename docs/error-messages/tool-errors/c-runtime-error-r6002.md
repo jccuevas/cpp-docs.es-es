@@ -1,27 +1,17 @@
 ---
-title: Error en tiempo de ejecución de C R6002 | Microsoft Docs
-ms.custom: ''
+title: Error en tiempo de ejecución de C R6002
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - R6002
-dev_langs:
-- C++
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dc23cf3c692eef37a86b5385d2e9e3a68340374e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f8b5fe69c9fd688f4d0a181176cda247cde9ac11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080927"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648648"
 ---
 # <a name="c-runtime-error-r6002"></a>Error en tiempo de ejecución de C R6002
 
@@ -30,13 +20,13 @@ compatibilidad de punto flotante no cargado
 No se vinculó la biblioteca de punto flotante es necesaria.
 
 > [!NOTE]
->  Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. Hay varias razones posibles para este error, pero a menudo está provocada por los defectos de código de la aplicación o al intentar ejecutar una aplicación que no se generó para el procesador del equipo en particular.
+> Si encuentra este mensaje de error al ejecutar una aplicación, la aplicación se cerró porque tiene un problema interno. Hay varias razones posibles para este error, pero a menudo está provocada por los defectos de código de la aplicación o al intentar ejecutar una aplicación que no se generó para el procesador del equipo en particular.
 >
->  Puede intentar seguir estos pasos para corregir este error:
+> Puede intentar seguir estos pasos para corregir este error:
 >
->  -   Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
-> -   Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
-> -   Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
+> - Use la **aplicaciones y características** o **programas y características** página en el **Panel de Control** para reparar o reinstalar el programa.
+> - Comprobar **Windows Update** en el **Panel de Control** las actualizaciones de software.
+> - Busque una versión actualizada de la aplicación. Si el problema persiste, póngase en contacto con el proveedor de la aplicación.
 
 **Información para programadores**
 

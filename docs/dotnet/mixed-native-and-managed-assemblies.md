@@ -1,12 +1,6 @@
 ---
-title: Ensamblados mixtos (nativos y administrados) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
+title: Ensamblados mixtos (nativos y administrados)
+ms.date: 09/18/2018
 helpviewer_keywords:
 - interop [C++], mixed assemblies
 - /clr compiler option [C++], mixed assemblies
@@ -18,23 +12,18 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 2a48f34edec8a9f24f22d35be482d3b297215dbe
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43210630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428692"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Ensamblados mixtos (nativos y administrados)
 
-Los ensamblados mixtos son capaces de contener tanto instrucciones máquina no administradas como instrucciones MSIL. Esto les permite llamar y ser llamados por componentes .NET, a la vez que conservan la compatibilidad con componentes totalmente no administrados. Mediante ensamblados mixtos, los desarrolladores pueden crear aplicaciones con una combinación de funcionalidad administrada y no administrada. Esto crea ensamblados mixtos ideales para migrar aplicaciones existentes de Visual C++ a la plataforma .NET.
+Los ensamblados mixtos son capaces de contener tanto instrucciones máquina no administradas como instrucciones MSIL. Esto les permite llamar y ser llamados por componentes. NET, conservando la compatibilidad con bibliotecas de C++ nativas. Mediante ensamblados mixtos, los desarrolladores pueden crear aplicaciones con una mezcla de .NET y el código C++ nativo.
 
-Por ejemplo, una aplicación existente que consta únicamente de funciones no administradas se puede poner a la plataforma .NET volviendo a compilar sólo un módulo con el **/CLR** modificador del compilador. Este módulo puede utilizar las características de .NET pero sigue siendo compatible con el resto de la aplicación. De esta manera, una aplicación se puede convertir a la plataforma .NET de un modo gradual, por partes. Incluso es posible decidir entre compilación administrada y según una función por función dentro del mismo archivo (consulte [managed, unmanaged](../preprocessor/managed-unmanaged.md)).
+Por ejemplo, una biblioteca existente que consta únicamente de código C++ nativo se puede poner a la plataforma .NET volviendo a compilar sólo un módulo con el **/CLR** modificador del compilador. Este módulo puede utilizar las características de .NET pero sigue siendo compatible con el resto de la aplicación. Incluso es posible decidir entre compilación administrada y nativa según una función por función dentro del mismo archivo (consulte [managed, unmanaged](../preprocessor/managed-unmanaged.md)).
 
 Visual C++ solo admite la generación de ensamblados administrados mixtos mediante la **/CLR** opción del compilador. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017. Si necesita puros o que se pueda comprobar los ensamblados administrados, se recomienda que crearlas en C#.
 

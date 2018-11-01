@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 95a336319861ef44f65f0573389f09c3e9a45573
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894460"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425852"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -31,22 +31,22 @@ La etiqueta \<include> le permite hacer referencia a comentarios colocados en ot
 
 ## <a name="syntax"></a>Sintaxis
 
-```  
+```
 <include file='filename' path='tagpath' />
-```  
+```
 
 #### <a name="parameters"></a>Parámetros
 
-`filename`  
+*filename*<br/>
 El nombre del archivo que contiene la documentación. El nombre de archivo se puede calificar con una ruta de acceso.  Ponga el nombre entre comillas simples o dobles.  El compilador emite una advertencia si no encuentra `filename`.
 
-`tagpath`  
+*tagpath*<br/>
 Una expresión XPath válida que selecciona el conjunto de nodos deseado contenido en el archivo.
 
-`name`  
+*name*<br/>
 El especificador de nombre en la etiqueta que precede a los comentarios; `name` tendrá un `id`.
 
-`id`  
+*identificador*<br/>
 El identificador de la etiqueta que precede a los comentarios.  Ponga el nombre entre comillas simples o dobles.
 
 ## <a name="remarks"></a>Comentarios
@@ -75,7 +75,7 @@ public ref class Test2 {
    void Test() {
    }
 };
-```  
+```
 
 El segundo archivo, xml_include_tag.doc, contiene los siguientes comentarios de documentación:
 
@@ -95,7 +95,7 @@ The summary for this other type.
 </MyMembers>
 
 </MyDocs>
-```  
+```
 
 ## <a name="program-output"></a>Resultados del programa
 

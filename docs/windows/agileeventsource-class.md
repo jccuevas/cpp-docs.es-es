@@ -1,7 +1,7 @@
 ---
 title: Clase AgileEventSource | Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0f2ee187087917220751155cc43e8619e6dcf763
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054579"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 
@@ -31,9 +31,13 @@ Representa un evento provocado por un componente de agile, que es un componente 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
-class AgileEventSource
-    : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
+template<
+    typename TDelegateInterface,
+    typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>
+>
+class AgileEventSource :
+    public Microsoft::WRL::EventSource<
+        TDelegateInterface, TEventSourceOptions>;
 ```
 
 ## <a name="parameters"></a>Parámetros
@@ -83,16 +87,15 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Parámetros
 
-*delegateInterface*  
+*delegateInterface*<br/>
 La interfaz para un objeto delegado, que representa un controlador de eventos.
 
-*símbolo (token)*  
+*símbolo (token)*<br/>
 Cuando se completa esta operación, un identificador que representa el evento. Use este token como parámetro para el `Remove()` método para descartar el controlador de eventos.
 
 ### <a name="return-value"></a>Valor devuelto
 
 S_OK si se realiza correctamente; de lo contrario, un HRESULT que indica el error.
-
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,27 +1,17 @@
 ---
-title: Constructores (C++) | Microsoft Docs
-ms.custom: ''
+title: Constructores (C++)
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069123"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460884"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -388,11 +378,11 @@ Un constructor realiza su trabajo en este orden:
 
 1. Llama a los constructores miembros y de clase base en el orden en que se declararon.
 
-2. Si la clase se deriva de clases base virtuales, inicializa los punteros base virtuales del objeto.
+1. Si la clase se deriva de clases base virtuales, inicializa los punteros base virtuales del objeto.
 
-3. Si la clase tiene o hereda funciones virtuales, inicializa los punteros de funciones virtuales del objeto. Los punteros de funciones virtuales apuntan a la tabla de funciones virtuales de la clase para permitir el enlace correcto de las llamadas de funciones virtuales al código.
+1. Si la clase tiene o hereda funciones virtuales, inicializa los punteros de funciones virtuales del objeto. Los punteros de funciones virtuales apuntan a la tabla de funciones virtuales de la clase para permitir el enlace correcto de las llamadas de funciones virtuales al código.
 
-4. Ejecuta cualquier código en el cuerpo de su función.
+1. Ejecuta cualquier código en el cuerpo de su función.
 
 En el ejemplo siguiente se muestra el orden en el que los constructores miembros y de clase base se llaman en el constructor para una clase derivada. Primero, se llama al constructor base, después los miembros de la clase base se inicializan en el orden en que aparecen en la declaración de clase y después se llama al constructor derivado.
 
@@ -593,7 +583,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 El objeto creado por los constructores se inicializa totalmente en cuanto finaliza cualquiera de los constructores. Para obtener más información, consulte [inicialización uniforme y constructores de delegación](../cpp/uniform-initialization-and-delegating-constructors.md).
 

@@ -1,36 +1,26 @@
 ---
-title: sealed (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: sealed (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
-dev_langs:
-- C++
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f9693e16695d7a8c755515b4dd5163e2688a1d29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bbeaaa6b7d921cca600a665a961307ddac967367
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551234"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (Extensiones de componentes de C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C++ / c++ / CLI y c++ / CX)
 
 **sellado** es una palabra de clave contextual para las clases ref que indica que no se puede invalidar un miembro virtual o un tipo no se puede usar como tipo base.
 
 > [!NOTE]
-> El ISO C ++ 11 estándar lenguaje tiene la [final](../cpp/final-specifier.md) palabra clave, que es compatible con Visual Studio. Use **final** en clases estándar y **sealed** en las clases ref.
+> El ISO C ++ 11 estándar lenguaje introdujo el [final](../cpp/final-specifier.md) palabra clave. Use **final** en clases estándar y **sealed** en las clases ref.
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
@@ -43,17 +33,17 @@ virtual return-type identifier() sealed {...};
 
 ### <a name="parameters"></a>Parámetros
 
-*identifier*  
+*identifier*<br/>
 Nombre de la función o clase.
 
-*tipo de valor devuelto*  
+*tipo de valor devuelto*<br/>
 Tipo devuelto por una función.
 
 ## <a name="remarks"></a>Comentarios
 
 En el primer ejemplo de sintaxis, una clase está sellada. En el segundo ejemplo, una función virtual está sellada.
 
-El **sealed** palabra clave es válida para destinos nativos y también para el tiempo de ejecución de Windows y common language runtime (CLR). Para obtener más información, consulte [especificadores de invalidación y compilaciones nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Use la **sealed** palabra clave para las clases ref y sus funciones de miembro virtual. Para obtener más información, consulte [especificadores de invalidación y compilaciones nativas](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 Puede detectar en tiempo de compilación si un tipo está sellado usando el `__is_sealed(type)` rasgo de tipo. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -104,11 +94,11 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +140,4 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

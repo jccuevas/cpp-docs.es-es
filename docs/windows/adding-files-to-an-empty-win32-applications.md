@@ -1,29 +1,18 @@
 ---
-title: Agregar archivos a una aplicación de Win32 vacía | Microsoft Docs
-ms.custom: ''
+title: Agregar archivos a una aplicación de Win32 vacía
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - empty projects [C++], adding files
 - projects [C++], adding items
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2801ddf7169bfd8d9ede93ada28cd4716057661c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: d5347a0693619e5db44b1087fc249c68b9227fb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568663"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Agregar archivos a una aplicación de Win32 vacía
 
@@ -44,4 +33,4 @@ Para agregar los archivos que no son ni de origen, encabezado ni archivos de rec
 
 ## <a name="see-also"></a>Vea también
 
-[Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)  
+[Creación de una aplicación de escritorio de Windows vacía](../windows/creating-an-empty-windows-desktop-application.md)

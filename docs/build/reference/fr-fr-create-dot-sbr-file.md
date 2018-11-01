@@ -1,34 +1,24 @@
 ---
-title: -FR, -Fr (crear. Archivos SBR) | Microsoft Docs
-ms.custom: ''
+title: /FR, /Fr (Crear archivo .Sbr)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BrowseInformation
 - VC.Project.VCCLCompilerTool.BrowseInformation
 - /fr
 - VC.Project.VCCLCompilerTool.BrowseInformationFile
 - VC.Project.VCCLWCECompilerTool.BrowseInformationFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - /FR compiler option [C++]
 - -FR compiler option [C++]
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a5691a87f7350c7816e8ddb58d5591e16cc18189
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1eeca5d5ddbb40e0439a1774392f3c3b53c3c90e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656240"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Crear archivo .Sbr)
 
@@ -70,7 +60,7 @@ Si no se especifica el valor de `filename`, el archivo .sbr recibe el mismo nomb
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
 [Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

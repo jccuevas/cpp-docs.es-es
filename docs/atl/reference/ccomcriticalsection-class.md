@@ -1,10 +1,6 @@
 ---
-title: CComCriticalSection (clase) | Microsoft Docs
-ms.custom: ''
+title: CComCriticalSection (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComCriticalSection
 - ATLCORE/ATL::CComCriticalSection
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLCORE/ATL::CComCriticalSection::Term
 - ATLCORE/ATL::CComCriticalSection::Unlock
 - ATLCORE/ATL::CComCriticalSection::m_sec
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4678acbe251086f3a42e3544e155a191a5847f11
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ddd6c6a36c05d92d2f53bc4937826581942470dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491772"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection (clase)
 
@@ -67,7 +57,7 @@ class CComCriticalSection
 
 `CComCriticalSection` es similar a la clase [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), salvo que explícitamente se debe inicializar y liberar la sección crítica.
 
-Normalmente, se utiliza `CComCriticalSection` a través de la **typedef** nombre [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Este nombre hace referencia a `CComCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.  
+Normalmente, se utiliza `CComCriticalSection` a través de la **typedef** nombre [CriticalSection](ccommultithreadmodel-class.md#criticalsection). Este nombre hace referencia a `CComCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.
 
 Consulte [CComCritSecLock (clase)](../../atl/reference/ccomcritseclock-class.md) para una forma más segura de usar esta clase de llamar al `Lock` y `Unlock` directamente.
 

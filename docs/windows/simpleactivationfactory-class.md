@@ -1,34 +1,24 @@
 ---
-title: SimpleActivationFactory (clase) | Microsoft Docs
-ms.custom: ''
+title: SimpleActivationFactory (clase)
 ms.date: 09/07/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory
 - module/Microsoft::WRL::SimpleActivationFactory::ActivateInstance
 - module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
 - module/Microsoft::WRL::SimpleActivationFactory::GetTrustLevel
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory class
 - Microsoft::WRL::SimpleActivationFactory::ActivateInstance method
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 07c37dbf1629461141d592eb1987ce071324e22c
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: a9483a4acec14fbd7e520e047b259f1e5cb7f9c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515393"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory (clase)
 
@@ -43,7 +33,7 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 Una clase base.
 
 ## <a name="remarks"></a>Comentarios
@@ -106,7 +96,7 @@ STDMETHOD( ActivateInstance )(
 
 #### <a name="parameters"></a>Parámetros
 
-*ppvObject*  
+*ppvObject*<br/>
 Cuando finalice esta operación, puntero a una instancia del objeto especificado por el `Base` parámetro de plantilla de clase.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -129,7 +119,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 #### <a name="parameters"></a>Parámetros
 
-*runtimeName*  
+*runtimeName*<br/>
 Cuando se completa esta operación, el nombre de clase en tiempo de ejecución.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -152,7 +142,7 @@ STDMETHOD(
 
 #### <a name="parameters"></a>Parámetros
 
-*trustLvl*  
+*trustLvl*<br/>
 Cuando se completa esta operación, el nivel de confianza del objeto de clase actual.
 
 ### <a name="return-value"></a>Valor devuelto

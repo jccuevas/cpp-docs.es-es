@@ -1,7 +1,7 @@
 ---
 title: Implementar una aplicación de Visual C++ mediante un proyecto de instalación | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,42 +14,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36aad914fc9552cea06eabd0898fe33b9b09481e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ea46400f0c04b62a35a676e94b7a023620c13a50
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069651"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación
-Describe cómo usar un proyecto de instalación para implementar una aplicación de Visual C++.  
-  
-## <a name="prerequisites"></a>Requisitos previos  
- Necesita los componentes siguientes para completar este tutorial:  
-  
--   Un equipo con Visual Studio 2012 instalado.  
-  
--   Un equipo adicional que no tenga las bibliotecas de Visual C++.  
-  
-### <a name="to-deploy-an-application-by-using-a-setup-project"></a>Para implementar una aplicación mediante un proyecto de instalación  
-  
-1.  Use **ApplicationWizard MFC** para crear una solución de Visual Studio. Para buscar el asistente desde el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Visual C++**, seleccione **MFC**, seleccione **Aplicación MFC**, escriba un el nombre para el proyecto y, después, haga clic en **Aceptar**.  
-  
-2.  Cambie la configuración de la solución activa a **Release**. Desde el menú **Compilar**, seleccione **Administrador de configuración**. En el cuadro de diálogo **Administrador de configuración**, seleccione **Release** en la lista desplegable **Configuración de soluciones activas**.  
-  
-3.  Presione F7 para compilar la aplicación. O bien, en el menú **Compilar**, haga clic en **Compilar solución**. Esto permite que el proyecto de instalación use la salida de este proyecto de aplicación MFC.  
-  
-4.  Si todavía no lo ha hecho, descargue InstallShield Limited Edition (ISLE), que es gratuito para los desarrolladores de Visual Studio y reemplaza la funcionalidad de las plantillas de proyecto en Visual Studio para la instalación e implementación. Cuando esté conectado a Internet, abra el cuadro de diálogo **Nuevo proyecto** seleccionando **Archivo**, **Nuevo**, **Proyecto** en la barra de menús, o bien haciendo clic con el botón derecho en la solución en el **Explorador de soluciones** y seleccionando **Agregar**, **Nuevo proyecto**. Expanda el nodo **Otros tipos de proyectos**, seleccione **Habilitar InstallShield Limited Edition** en el nodo **Instalación e implementación** y siga las instrucciones que aparecen. Después de haber descargado, instalado y activado InstallShield Limited Edition, cierre Visual Studio y ábralo de nuevo.  
-  
-5.  Vuelva a abrir el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Otros tipos de proyectos** y seleccione **Proyecto de InstallShield Limited Edition** en el nodo **InstallShield Limited Edition**.  
-  
-6.  Siga las instrucciones del nodo **Introducción** del proyecto de instalación creado por la plantilla InstallShield Limited Edition para agregar una referencia de salida al proyecto MFC de Visual Studio.  
-  
-7.  Compile el proyecto de instalación para crear el archivo de instalador (setup.exe). Para ello, haga clic con el botón derecho en el nodo del proyecto de instalación en el **Explorador de soluciones** y seleccione **Compilar**.  
-  
-     InstallShield Limited Edition crea el archivo de instalación en el árbol del proyecto de instalación (de forma predeterminada, puede estar ubicado en la subcarpeta Express\SingleImage\DiskImages\DISK1 del proyecto de instalación).  
-  
-8.  Ejecute el programa de instalación en un segundo equipo que no tenga las bibliotecas de Visual C++.  
-  
-## <a name="see-also"></a>Vea también  
- [Ejemplos de implementación](../ide/deployment-examples.md)
+
+Describe cómo usar un proyecto de instalación para implementar una aplicación de Visual C++.
+
+## <a name="prerequisites"></a>Requisitos previos
+
+Necesita los componentes siguientes para completar este tutorial:
+
+- Un equipo con Visual Studio instalado.
+
+- Un equipo adicional que no tenga las bibliotecas de Visual C++.
+
+### <a name="to-deploy-an-application-by-using-a-setup-project"></a>Para implementar una aplicación mediante un proyecto de instalación
+
+1. Cree un nuevo proyecto. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.
+
+1. Use **ApplicationWizard MFC** para crear una solución de Visual Studio. Para buscar el asistente desde el cuadro de diálogo **Nuevo proyecto**, expanda el nodo **Visual C++**, seleccione **MFC**, seleccione **Aplicación MFC**, escriba un el nombre para el proyecto y, después, haga clic en **Aceptar**. Haga clic en **Finalizar**.
+
+   > [!NOTE]
+   > Si falta el tipo **Aplicación MFC**:<br/>
+   > **Visual Studio 2017**: seleccione el vínculo **Abrir el Instalador de Visual Studio** en el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**. Instale la opción que se encuentra en **Desarrollo para el escritorio con C++** en la sección de componentes **Opcional**, denominada **MFC de Visual C++ para x86 y x64**.<br/>
+   > **Visual Studio 2015**: haga clic en el botón Inicio de Windows y escriba **Agregar o quitar programas**. Abra el programa desde la lista de resultados y, a continuación, busque la instalación de Microsoft Visual Studio 2015 en la lista de programas instalados. Haga doble clic en ella y luego elija **Modificar** y seleccione el componente **Microsoft Foundation Classes** en **Visual C++**.
+
+1. Cambie la configuración de la solución activa a **Release**. Desde el menú **Compilar**, seleccione **Administrador de configuración**. En el cuadro de diálogo **Administrador de configuración**, seleccione **Release** en la lista desplegable **Configuración de soluciones activas**. Haga clic en **Cerrar**.
+
+1. Presione **Ctrl**+**Mayús**+**B** para compilar la aplicación. O bien, en el menú **Compilar**, haga clic en **Compilar solución**. La compilación de la aplicación permite que el proyecto de instalación use la salida de este proyecto de aplicación MFC.
+
+1. Si aún no lo ha hecho, descargue la extensión de proyectos del instalador de Microsoft Visual Studio. La extensión es gratis para desarrolladores de Visual Studio y agrega la funcionalidad de las plantillas de proyecto de instalación e implementación a Visual Studio. Cuando esté conectado a Internet, en Visual Studio, elija **Herramientas** > **Extensiones y actualizaciones**. En el cuadro de diálogo **Extensiones y actualizaciones**, seleccione la pestaña **En línea** y escriba *Proyectos del instalador de Microsoft Visual Studio* en el cuadro de búsqueda. Presione **ENTRAR**, seleccione **Microsoft Visual Studio \<versión> Proyectos del instalador** y haga clic en **Descargar**. Opte por ejecutar e instalar la extensión y, a continuación, reinicie Visual Studio.
+
+1. En la barra de menús, seleccione **Archivo** > **Proyectos y soluciones recientes** y, después, elija la opción para volver a abrir el proyecto.
+
+1. En la barra de menús, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**. En el panel de la izquierda del cuadro de diálogo, expanda los nodos **Instalado** > **Otros tipos de proyectos** y después seleccione **Instalador de Visual Studio**. En el panel central, seleccione **Proyecto de instalación**.
+
+1. Escriba un nombre para el proyecto de instalación en el cuadro **Nombre**. En la lista desplegable **Solución**, seleccione **Agregar a la solución**. Haga clic en el botón **Aceptar** para crear el proyecto de instalación. Se abre una pestaña **Asistente de archivos (ProjectName)** en la ventana del editor.
+
+1. Haga clic con el botón derecho en el nodo **Carpeta de la aplicación** y seleccione **Agregar** > **Resultados del proyecto** para abrir el cuadro de diálogo **Agregar grupo de resultados del proyecto**. En el cuadro de diálogo, seleccione **Resultado principal** y haga clic en **Aceptar**. Aparece un nuevo elemento denominado **Resultado principal de ProjectName (activo)**.
+
+1. Haga clic con el botón derecho en el nodo **Carpeta de la aplicación** y seleccione **Agregar** > **Ensamblado** para abrir el cuadro de diálogo **Seleccionar componente**. Seleccione y agregue todos los archivos DLL necesarios para el programa, según se describe en el artículo [Determinar qué archivos DLL se redistribuirán](determining-which-dlls-to-redistribute.md).
+
+1. Seleccione el elemento **Resultado principal de ProjectName (activo)**, haga clic con el botón derecho y elija **Crear acceso directo al resultado principal de ProjectName (activo)**. Aparece un nuevo elemento denominado **Acceso directo al resultado principal de ProjectName (activo)**. Puede cambiar el nombre del elemento de acceso directo, arrastrar y colocar el elemento en el nodo **Menú Programas del usuario** en el lado izquierdo de la ventana.
+
+1. En la barra de menús, elija **Compilar** > **Administrador de configuración**. En la tabla **Proyecto**, en la columna **Compilar**, marque la casilla del proyecto de implementación. Haga clic en **Cerrar**.
+
+1. En la barra de menús, seleccione **Compilar** > **Compilar solución** para compilar el proyecto MFC y el proyecto de implementación.
+
+1. En la carpeta de soluciones, busque el programa setup.exe que se creó a partir del proyecto de implementación. Puede copiar este archivo, y también el archivo .msi, para instalar la aplicación y sus archivos de biblioteca necesarios en otro equipo. Ejecute el programa de instalación en un segundo equipo que no tenga las bibliotecas de Visual C++.
+
+## <a name="see-also"></a>Vea también
+
+[Ejemplos de implementación](deployment-examples.md)<br/>

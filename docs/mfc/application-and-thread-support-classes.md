@@ -1,5 +1,5 @@
 ---
-title: Clases de compatibilidad de aplicaciones y subprocesos | Documentos de Microsoft
+title: Clases de compatibilidad de aplicación y subproceso | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,62 +21,67 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce9c799c8dbc2a98c7d45dfa9a2e444024c9a7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341315"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412330"
 ---
 # <a name="application-and-thread-support-classes"></a>Clases de aplicación y de compatibilidad con subprocesos
-Cada aplicación tiene uno y solo un objeto de aplicación; Este objeto coordina otros objetos en el programa en ejecución y se deriva de `CWinApp`.  
-  
- La biblioteca (Microsoft Foundation Classes) es compatible con varios subprocesos de ejecución dentro de una aplicación. Todas las aplicaciones que deben tener al menos un subproceso; el subproceso utilizado por su `CWinApp` objeto es el subproceso principal.  
-  
- `CWinThread` Encapsula una parte de las capacidades de subprocesos del sistema operativo. Para hacer que sea más fácil el uso de varios subprocesos, MFC proporciona también sincronización de las clases de objeto para proporcionar una interfaz de C++ para objetos de sincronización de Win32.  
-  
-## <a name="application-and-thread-classes"></a>Clases de aplicación y subprocesos  
- [CWinApp](../mfc/reference/cwinapp-class.md)  
- Encapsula el código para inicializar, ejecutar y finalizar la aplicación. El objeto application derivará de esta clase.  
-  
- [CWinThread](../mfc/reference/cwinthread-class.md)  
- La clase base para todos los subprocesos. Usar directamente o derivar una clase de `CWinThread` si su subproceso realiza funciones de la interfaz de usuario. La clase `CWinApp` se deriva de la clase `CWinThread`.  
-  
-## <a name="synchronization-object-classes"></a>Clases de objeto de sincronización  
- [CSyncObject](../mfc/reference/csyncobject-class.md)  
- Clase base de las clases de objeto de sincronización.  
-  
- [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
- Una clase de sincronización que permite que un solo subproceso dentro de un proceso único para tener acceso a un objeto.  
-  
- [CSemaphore](../mfc/reference/csemaphore-class.md)  
- Una clase de sincronización que permite que haya entre uno y un número máximo especificado de accesos simultáneos en el objeto.  
-  
- [CMutex](../mfc/reference/cmutex-class.md)  
- Una clase de sincronización que permite que un solo subproceso dentro de cualquier número de procesos tengan acceso a un objeto.  
-  
- [CEvent](../mfc/reference/cevent-class.md)  
- Una clase de sincronización que notifica a una aplicación cuando se ha producido un evento.  
-  
- [CSingleLock](../mfc/reference/csinglelock-class.md)  
- Se utilizan en las funciones miembro de clases seguras para subprocesos para bloquear en un objeto de sincronización.  
-  
- [CMultiLock](../mfc/reference/cmultilock-class.md)  
- Se utilizan en las funciones miembro de clases seguras para subprocesos para bloquear en uno o varios objetos de sincronización de una matriz de objetos de sincronización.  
-  
-## <a name="related-classes"></a>Clases relacionadas  
- [CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)  
- Analiza la línea de comandos con la que se inició el programa.  
-  
- [CWaitCursor](../mfc/reference/cwaitcursor-class.md)  
- Coloca un cursor de espera en la pantalla. Se utiliza durante las operaciones largas.  
-  
- [CDockState](../mfc/reference/cdockstate-class.md)  
- Controla el almacenamiento persistente de datos de estado para las barras de control de acoplamiento.  
-  
- [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
- Mantiene la mayoría de la archivos usados recientemente (MRU).  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+Cada aplicación tiene solo un objeto de aplicación; Este objeto coordina otros objetos en el programa en ejecución y se deriva de `CWinApp`.
+
+La biblioteca Microsoft Foundation Class (MFC) es compatible con varios subprocesos de ejecución dentro de una aplicación. Todas las aplicaciones deben tener al menos un subproceso; el subproceso utilizado por su `CWinApp` objeto es este subproceso principal.
+
+`CWinThread` Encapsula una parte de las capacidades de subprocesamiento del sistema operativo. Con el fin de usar varios subprocesos más fácil, MFC también proporciona a sincronización de las clases de objeto para proporcionar una interfaz de C++ para objetos de sincronización de Win32.
+
+## <a name="application-and-thread-classes"></a>Clases de aplicación y subprocesos
+
+[CWinApp](../mfc/reference/cwinapp-class.md)<br/>
+Encapsula el código para inicializar, ejecutar y finalizar la aplicación. El objeto de aplicación derivará de esta clase.
+
+[CWinThread](../mfc/reference/cwinthread-class.md)<br/>
+La clase base para todos los subprocesos. Utilizar directamente o derivar una clase de `CWinThread` si el subproceso realiza funciones de interfaz de usuario. La clase `CWinApp` se deriva de la clase `CWinThread`.
+
+## <a name="synchronization-object-classes"></a>Clases de objeto de sincronización
+
+[CSyncObject](../mfc/reference/csyncobject-class.md)<br/>
+Clase base de las clases de objeto de sincronización.
+
+[CCriticalSection](../mfc/reference/ccriticalsection-class.md)<br/>
+Una clase de sincronización que permite solo un subproceso en un único proceso para tener acceso a un objeto.
+
+[CSemaphore](../mfc/reference/csemaphore-class.md)<br/>
+Una clase de sincronización que permite entre uno y un número máximo especificado de accesos simultáneos a un objeto.
+
+[CMutex](../mfc/reference/cmutex-class.md)<br/>
+Una clase de sincronización que permite solo un subproceso dentro de cualquier número de procesos tengan acceso a un objeto.
+
+[CEvent](../mfc/reference/cevent-class.md)<br/>
+Una clase de sincronización que notifica a una aplicación cuando se ha producido un evento.
+
+[CSingleLock](../mfc/reference/csinglelock-class.md)<br/>
+Se utiliza en funciones miembro de clases seguras para subprocesos para bloquear en un objeto de sincronización.
+
+[CMultiLock](../mfc/reference/cmultilock-class.md)<br/>
+Se utiliza en funciones miembro de clases seguras para subprocesos para bloquear en uno o varios objetos de sincronización de una matriz de objetos de sincronización.
+
+## <a name="related-classes"></a>Clases relacionadas
+
+[CCommandLineInfo](../mfc/reference/ccommandlineinfo-class.md)<br/>
+Analiza la línea de comandos con la que se inició el programa.
+
+[CWaitCursor](../mfc/reference/cwaitcursor-class.md)<br/>
+Coloca un cursor de espera en la pantalla. Se usa durante las operaciones largas.
+
+[CDockState](../mfc/reference/cdockstate-class.md)<br/>
+Controla el almacenamiento persistente de datos de estado de las barras de control de acoplamiento.
+
+[CRecentFileList](../mfc/reference/crecentfilelist-class.md)<br/>
+Mantiene la mayoría de la archivos usados recientemente (MRU).
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

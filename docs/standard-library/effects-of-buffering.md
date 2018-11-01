@@ -1,26 +1,16 @@
 ---
-title: Efectos del almacenamiento en búfer | Microsoft Docs
-ms.custom: ''
+title: Efectos del almacenamiento en búfer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842383"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631444"
 ---
 # <a name="effects-of-buffering"></a>Efectos del almacenamiento en búfer
 
@@ -49,7 +39,7 @@ Para que el programa funcione lógicamente, el objeto `cout` debe vaciarse de fo
 cout <<"Please wait..." <<flush;
 ```
 
-En este paso se vacía el búfer, lo que garantiza que el mensaje se imprima antes de la espera. También puede usar el `endl` manipulador, que vacía el búfer y se genera un retorno de carro/salto de línea, o puede usar el `cin` objeto. Este objeto (junto con los objetos `cerr` o `clog` ) suele estar vinculado al objeto `cout` . Por tanto, cualquier uso de `cin` (o de los objetos `cerr` o `clog` ) vacía el objeto `cout` .
+En este paso se vacía el búfer, lo que garantiza que el mensaje se imprima antes de la espera. También puede usar el `endl` manipulador, que vacía el búfer y da como resultado un retorno de carro/salto de línea, o puede usar el `cin` objeto. Este objeto (junto con los objetos `cerr` o `clog` ) suele estar vinculado al objeto `cout` . Por tanto, cualquier uso de `cin` (o de los objetos `cerr` o `clog` ) vacía el objeto `cout` .
 
 ## <a name="see-also"></a>Vea también
 

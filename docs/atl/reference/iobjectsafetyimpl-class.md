@@ -1,34 +1,24 @@
 ---
-title: IObjectSafetyImpl (clase) | Microsoft Docs
-ms.custom: ''
+title: IObjectSafetyImpl (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
 - ATLCTL/ATL::IObjectSafetyImpl
 - ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [ATL], safe
 - safe for scripting and initialization (controls)
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e9035a8573a917e732f3452aeb7fd07af160517f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471791"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl (clase)
 
@@ -94,7 +84,7 @@ Tenga en cuenta que el uso del [IMPLEMENTED_CATEGORY](category-macros.md#impleme
 Recupera las opciones de seguridad admitidas por el objeto, así como las opciones de seguridad establecidas para el objeto.
 
 ```
-HRESULT GetInterfaceSafetyOptions(  
+HRESULT GetInterfaceSafetyOptions(
     REFIID riid,
     DWORD* pdwSupportedOptions,
     DWORD* pdwEnabledOptions);
@@ -122,7 +112,7 @@ DWORD m_dwCurrentSafety;
 Hace que el objeto seguras para inicialización o scripting estableciendo el [m_dwCurrentSafety](#m_dwcurrentsafety) miembro en el valor adecuado.
 
 ```
-HRESULT SetInterfaceSafetyOptions(  
+HRESULT SetInterfaceSafetyOptions(
     REFIID riid,
     DWORD dwOptionsSetMask,
     DWORD dwEnabledOptions);

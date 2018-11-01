@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2ba75745d769d593549e707a9100a50c40e6f65
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 459114678352004293b425ba7cdff39d15d084b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318829"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057756"
 ---
 # <a name="changing-the-caption-property-of-multiple-string-resources-c"></a>Cambiar la propiedad Caption de varios recursos de cadena (C++)
 
@@ -40,7 +40,7 @@ El siguiente procedimiento muestra cómo cambiar la propiedad caption de varias 
 
 4. Presione **ENTRAR**.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,4 +48,4 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de cadenas](../windows/string-editor.md)  
+[Editor de cadenas](../windows/string-editor.md)

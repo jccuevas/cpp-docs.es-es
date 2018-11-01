@@ -1,25 +1,15 @@
 ---
-title: 'Cómo: definir constructores de movimiento y operadores de asignación de movimiento (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: definir constructores de movimiento y operadores de asignación de movimiento (C++)'
 ms.date: 03/05/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118497"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504525"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructores de movimiento y operadores de asignación de movimiento (C++)
 
@@ -151,14 +141,14 @@ Los procedimientos siguientes describen cómo escribir un constructor de movimie
 
 1. En la instrucción condicional, libere los recursos (tales como la memoria) del objeto al que se asigna.
 
-     El ejemplo siguiente libera el miembro `_data` del objeto al que se asigna:
+   El ejemplo siguiente libera el miembro `_data` del objeto al que se asigna:
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     Siga los pasos 2 y 3 del primer procedimiento para transferir los miembros de datos del objeto de origen al objeto que se construye:
+   Siga los pasos 2 y 3 del primer procedimiento para transferir los miembros de datos del objeto de origen al objeto que se construye:
 
     ```cpp
     // Copy the data pointer and its length from the

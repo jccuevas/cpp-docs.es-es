@@ -1,33 +1,23 @@
 ---
-title: Error del compilador C3115 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C3115
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3115
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da47a6987a1b540dc42b154c1a181c67e1524043
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520502"
 ---
 # <a name="compiler-error-c3115"></a>Error del compilador C3115
 
 'attribute': este atributo no se permite en 'construct'
 
-Un atributo se aplicó a una construcción para que no estaba previsto.  Consulte [atributos por uso](../../windows/attributes-by-usage.md) para obtener más información.
+Un atributo se aplicó a una construcción para que no estaba previsto.  Consulte [atributos por uso](../../windows/attributes/attributes-by-usage.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,26 +1,15 @@
 ---
-title: Cambiar el Factor de ampliación (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Cambiar el factor de ampliación (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 561c5c46d0486718cbe05af1507459c26babea8b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 5a94b66b210f6c5fbf3e54e553267043f7bddcf3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636792"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Cambiar el factor de ampliación (Editor de imágenes para iconos)
 
@@ -43,5 +32,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Paneles de ventana](../windows/window-panes-image-editor-for-icons.md)

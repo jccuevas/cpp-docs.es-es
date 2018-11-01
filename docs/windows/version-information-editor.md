@@ -1,30 +1,19 @@
 ---
-title: Editor de información de versión (C++) | Microsoft Docs
-ms.custom: ''
+title: Editor de información de versión (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - Version Information editor [C++], about Version Information editor
 - editors, Version Information
 - resource editors [C++], Version Information editor
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1d8a4eb57996bcc2afd9ddc92a9eecf354f88116
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 817092af316fbc39b696e1ed19e1c67f9a799bd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667498"
 ---
 # <a name="version-information-editor-c"></a>Editor de información de versión (C++)
 
@@ -56,5 +45,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
 [Menús y otros recursos](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)

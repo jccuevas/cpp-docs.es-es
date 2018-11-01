@@ -1,14 +1,8 @@
 ---
-title: 'TN062: Reflexión para controles de Windows de mensajes | Microsoft Docs'
-ms.custom: ''
+title: 'TN062: Reflexión de mensajes para controles de Windows'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.messages
-dev_langs:
-- C++
 helpviewer_keywords:
 - ON_WM_VKEYTOITEM_REFLECT macro [MFC]
 - ON_WM_DRAWITEM_REFLECT macro [MFC]
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce5d24321f007139401c46e07d19e006d4e1dcd3
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677505"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Reflexión de mensajes para controles de Windows
 
@@ -126,7 +116,7 @@ Este sencillo ejemplo crea un control reutilizable denominado `CYellowEdit`. El 
 
 1. Crear un nuevo cuadro de diálogo en una aplicación existente. Para obtener más información, consulte el [editor de cuadro de diálogo](../windows/dialog-editor.md) tema.
 
-     Debe tener una aplicación en el que se va a desarrollar el control reutilizable. Si no tiene una aplicación existente para usar, crear una aplicación basada en el cuadro de diálogo mediante el Asistente para aplicaciones.
+   Debe tener una aplicación en el que se va a desarrollar el control reutilizable. Si no tiene una aplicación existente para usar, crear una aplicación basada en el cuadro de diálogo mediante el Asistente para aplicaciones.
 
 2. Con el proyecto cargado en Visual C++, use ClassWizard para crear una nueva clase denominada `CYellowEdit` según `CEdit`.
 
@@ -145,7 +135,7 @@ Este sencillo ejemplo crea un control reutilizable denominado `CYellowEdit`. El 
 
 5. Con ClassWizard, agregue un controlador para el mensaje WM_CTLCOLOR reflejado para su `CYellowEdit` clase. Tenga en cuenta que se indica que el mensaje se refleja el signo igual delante del nombre del mensaje en la lista de mensajes que puede controlar. Esto se describe en [definir un controlador de mensajes para un mensaje reflejado](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-     ClassWizard agrega la siguiente función de macro y el esqueleto de mapa de mensajes para usted:
+   ClassWizard agrega la siguiente función de macro y el esqueleto de mapa de mensajes para usted:
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()
@@ -174,5 +164,5 @@ Este sencillo ejemplo crea un control reutilizable denominado `CYellowEdit`. El 
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

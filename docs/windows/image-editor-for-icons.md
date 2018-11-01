@@ -1,38 +1,27 @@
 ---
-title: Editor de imágenes para iconos | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
+title: Editor de imágenes para iconos
+ms.date: 10/17/2018
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
 - vc.editors.cursor
 - vc.editors.bitmap.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
 - Image editor [C++]
 - resource editors [C++], Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8d160a042263f783b88c7ff2d9dfd03c46759079
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4f27b4582da340d401c3ecf10b502453d80b6e7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318816"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561518"
 ---
 # <a name="image-editor-for-icons"></a>Editor de imágenes para iconos
 
-El Editor de imágenes dispone de un completo conjunto de herramientas para crear y editar imágenes, así como características que facilitan la creación de mapas de bits de barras de herramientas. Además de mapas de bits, iconos y cursores, pueden editarse imágenes en formato GIF o JPEG mediante los comandos del menú **Imagen** y las herramientas de la barra de herramientas del **Editor de imágenes** .
+Al hacer clic en un archivo de imagen (por ejemplo, .ico, .bmp, .png) en el Explorador de soluciones, la imagen se abre en el Editor de imágenes de la misma manera que los archivos de código abierto en el Editor de código. Cuando está activa una pestaña del Editor de imágenes, vea las barras de herramientas con muchas herramientas para crear y editar imágenes. Además de mapas de bits, iconos y cursores, pueden editarse imágenes en formato GIF o JPEG mediante los comandos del menú **Imagen** y las herramientas de la barra de herramientas del **Editor de imágenes** .
 
 Con el Editor de imágenes, se puede:
 
@@ -67,5 +56,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
 [Iconos](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)

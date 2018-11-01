@@ -1,81 +1,70 @@
 ---
-title: 2.7.2.6 reducción de | Documentos de Microsoft
-ms.custom: ''
+title: 2.7.2.6 reduction
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: e7630a15-2978-4dbe-a29b-3a46371a0151
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 759a2ee50f047fbd5777481d009332be998ad359
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 54b326feb4e4ccf1f1da5c8152ffc8d1e4bd13b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33688809"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456022"
 ---
 # <a name="2726-reduction"></a>2.7.2.6 reduction
 
-Esta cláusula lleva a cabo una reducción en las variables escalares que aparecen en *lista de variables*, con el operador *op*. La sintaxis de la `reduction` cláusula es como sigue:
+Esta cláusula realiza una reducción en las variables escalares que aparecen en *lista de variables*, con el operador *op*. La sintaxis de la `reduction` cláusula es como sigue:
 
-> reducción (*op*: *lista de variables*)
+> reducción (*op*: *variable lista*)
 
-Normalmente, se especifica una reducción para una instrucción con una de las formas siguientes:
+Una reducción se suele especificar para una instrucción con una de las formas siguientes:
 
-> *x* = *x* *op* *expr*  
-> *x* *binop* = *expr*  
-> *x* = *expr* *op* *x* (a excepción de resta)  
-> *x*++  
-> ++*x*  
-> *x*--  
-> --*x*  
+> *x* = *x* *op* *expr*
+> *x* *binop* = *expr*
+> *x* = *expr* *op* *x* (excepto para la resta) *x*++
+> ++*x*
+> *x*--
+> --*x*
 
 donde:
 
-*x*  
+*x*<br/>
 Una de las variables de reducción especificadas en el `list`.
 
-*lista de variables*  
+*lista de variables*<br/>
 Una lista separada por comas de variables de reducción escalar.
 
-*expr*  
-Una expresión con un tipo escalar que no hace referencia a *x*.
+*expr*<br/>
+Una expresión con tipo escalar que no hace referencia a *x*.
 
-*OP*  
+*OP*<br/>
 No es un operador sobrecargado, pero uno de +, &#42;, -, &amp;, ^, &#124;, &amp; &amp;, o &#124; &#124;.
 
-*binop*  
+*binop*<br/>
 No es un operador sobrecargado, pero uno de +, &#42;, -, &amp;, ^, o &#124;.
 
-El siguiente es un ejemplo de la `reduction` cláusula:  
-  
-```cpp  
-#pragma omp parallel for reduction(+: a, y) reduction(||: am)  
-for (i=0; i<n; i++) {  
-   a += b[i];  
-   y = sum(y, c[i]);  
-   am = am || b[i] == c[i];  
-}  
-```  
-  
-Como se muestra en el ejemplo, un operador puede estar ocultos dentro de una llamada de función. El usuario debe tener cuidado de que el operador especificado en el `reduction` cláusula coincide con la operación de reducción.
+El siguiente es un ejemplo de la `reduction` cláusula:
 
-Aunque el operando derecho de la &#124; &#124; operador no tiene efectos secundarios en este ejemplo, se permiten, pero deben utilizarse con cuidado. En este contexto, un efecto secundario que se garantiza que no se producen durante la ejecución secuencial del bucle pueden producirse durante la ejecución en paralelo. Esta diferencia puede producirse porque el orden de ejecución de las iteraciones es indeterminado.
+```cpp
+#pragma omp parallel for reduction(+: a, y) reduction(||: am)
+for (i=0; i<n; i++) {
+   a += b[i];
+   y = sum(y, c[i]);
+   am = am || b[i] == c[i];
+}
+```
 
-Este operador se usa para determinar el valor inicial de las variables privadas utilizado por el compilador para la reducción y para determinar el operador de finalización. Especificar explícitamente el operador permite la instrucción de reducción debe estar fuera de la extensión léxica de la construcción. Cualquier número de `reduction` cláusulas se pueden especificar en la directiva, pero una variable puede aparecer en al menos uno `reduction` cláusula para dicha directiva.
+Como se muestra en el ejemplo, un operador puede estar oculto dentro de una llamada de función. El usuario debe tener cuidado de que el operador especificado en el `reduction` cláusula coincide con la operación de reducción.
 
-Una copia privada de cada variable de *lista de variables* se crea, uno para cada subproceso, como si el `private` cláusula hubiese utilizada. La copia privada se inicializa según el operador (vea la tabla siguiente).
+Aunque el operando derecho de la &#124; &#124; operador tiene efectos secundarios en este ejemplo, se permiten, pero deben usarse con cuidado. En este contexto, puede producirse un efecto secundario que se garantiza que no se producen durante la ejecución secuencial del bucle durante la ejecución en paralelo. Esta diferencia puede producirse porque el orden de ejecución de las iteraciones es indeterminado.
 
-Al final de la región para el que el `reduction` se especificó la cláusula, el objeto original se actualiza para reflejar el resultado de combinar su valor original con el valor final de cada una de las copias privadas utilizando el operador especificado. Los operadores de reducción son todos los asociativos (a excepción de resta) y el compilador puede volver a asociar el cálculo del valor final libremente. (Los resultados parciales de una reducción de resta se agregan para formar el valor final).
+El operador se utiliza para determinar el valor inicial de las variables privadas utilizadas por el compilador para la reducción y determinar el operador de finalización. Especificar explícitamente el operador permite la instrucción de reducción que pueden estar fuera de la extensión de la construcción de léxica. Cualquier número de `reduction` cláusulas se pueden especificar en la directiva, pero puede aparecer una variable en a lo sumo uno `reduction` cláusula para dicha directiva.
 
-El valor del objeto original vuelve al estado indeterminado cuando el primer subproceso llega a la cláusula que lo contiene y permanece así hasta que se complete el cálculo de la reducción.  Normalmente, el cálculo se completará al final de la construcción; Sin embargo, si la `reduction` cláusula se usa en una construcción que `nowait` es también se aplica, el valor del objeto original sigue siendo indeterminado hasta que se ha realizado una sincronización de barrera para asegurarse de que todos los subprocesos han completado la `reduction`cláusula.
+Una copia privada de cada variable en *lista de variables* se crean, uno para cada subproceso, como si el `private` cláusula hubiese utilizada. La copia privada se inicializa según el operador (consulte la tabla siguiente).
 
-En la tabla siguiente se enumera los operadores que son válidos y sus valores de inicialización canónica. El valor de inicialización real será coherente con el tipo de datos de la variable de reducción.
+Al final de la región para el que el `reduction` se especificó la cláusula, el objeto original se actualiza para reflejar el resultado de combinar su valor original con el valor final de cada una de las copias privadas mediante el operador especificado. Los operadores de reducción son todas asociativos (excepto para la resta), y el compilador puede reasociar libremente el cálculo del valor final. (Los resultados parciales de una reducción de la resta se suman para formar el valor final).
+
+El valor del objeto original se convierte en indeterminado cuando el primer subproceso llega a la cláusula contenedora y permanece así hasta que finalice el cálculo de reducción.  Normalmente, el cálculo se completará al final de la construcción; Sin embargo, si la `reduction` cláusula se usa en una construcción que `nowait` es también se aplica el valor del objeto original permanece indeterminado hasta que se ha realizado una sincronización de barrera para asegurarse de que todos los subprocesos han completado la `reduction`cláusula.
+
+En la tabla siguiente se enumera los operadores que son válidos y sus valores de inicialización canónico. El valor de inicialización real será coherente con el tipo de datos de la variable de reducción.
 
 |Operador|Inicialización|
 |--------------|--------------------|
@@ -88,7 +77,7 @@ En la tabla siguiente se enumera los operadores que son válidos y sus valores d
 |&amp;&amp;|1|
 |&#124;&#124;|0|
 
-Las restricciones a la `reduction` cláusula son los siguientes:
+Las restricciones para el `reduction` cláusula son los siguientes:
 
 - El tipo de las variables en el `reduction` cláusula debe ser válida para el operador de reducción, salvo que nunca se permiten los tipos de puntero y tipos de referencia.
 
@@ -104,7 +93,7 @@ Las restricciones a la `reduction` cláusula son los siguientes:
       for (i=0; i<n; i++)
          y += b[i];
    }
-   
+
    /* ERROR - variable x cannot be specified in both
               a shared and a reduction clause */
    #pragma omp parallel for shared(x) reduction(+: x)

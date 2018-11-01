@@ -1,30 +1,19 @@
 ---
-title: Abrir el Editor de recursos para un símbolo determinado (C++) | Microsoft Docs
-ms.custom: ''
+title: Abrir el Editor de recursos para un símbolo determinado (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.resource
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource symbols
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: f715807b-5af2-4627-be25-be63b23fd097
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b4b2c6f37a1e496310b1520754a90feb2facb163
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2b8191896675f0ec51520ffa09a38138cdec8040
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537896"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol-c"></a>Abrir el Editor de recursos para un símbolo determinado (C++)
 
@@ -48,5 +37,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)  
+[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

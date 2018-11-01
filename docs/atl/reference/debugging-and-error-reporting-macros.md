@@ -1,10 +1,6 @@
 ---
-title: Macros de depuración e informe de errores | Microsoft Docs
-ms.custom: ''
+title: Macros de depuración e informe de errores
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -12,21 +8,15 @@ f1_keywords:
 - afx/ATL::ATLENSURE
 - atltrace/ATL::ATLTRACENOTIMPL
 - atltrace/ATL::ATLTRACE
-dev_langs:
-- C++
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8fc187cea874d16522955dcd46c2ceac34d29098
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522312"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuración e informe de errores
 
@@ -102,7 +92,7 @@ Expresión (incluidos los punteros) que se evalúa como 0 o distinto de cero.
 
 ### <a name="remarks"></a>Comentarios
 
-En las compilaciones de depuración, se evalúa como ATLASSERT *booleanExpression* y genera un informe de depuración cuando el resultado es false.  
+En las compilaciones de depuración, se evalúa como ATLASSERT *booleanExpression* y genera un informe de depuración cuando el resultado es false.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -139,11 +129,11 @@ La diferencia entre ATLENSURE y ATLASSERT es que ATLENSURE produce una excepció
 
 ### <a name="example"></a>Ejemplo
 
-[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+[!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afx.h  
+**Encabezado:** afx.h
 
 ##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL
 
@@ -168,7 +158,7 @@ En versiones de lanzamiento, simplemente devuelva E_NOTIMPL.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** atltrace.h 
+**Encabezado:** atltrace.h
 
 ##  <a name="atltrace"></a>  ATLTRACE
 
@@ -177,7 +167,7 @@ Advertencias de informes a un dispositivo de salida, como la ventana del depurad
 ```
 ATLTRACE(exp);
 
-ATLTRACE(  
+ATLTRACE(
     DWORD category,
     UINT  level,
     LPCSTR lpszFormat, ...);

@@ -1,41 +1,25 @@
 ---
-title: Atributos (extensiones de componentes de C++) definido por el usuario | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Atributos definidos por el usuario (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f64cf5415e79678f0e0b43b58aae2249601fb3d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600386"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546658"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Atributos definidos por el usuario (Extensiones de componentes de C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Atributos definidos por el usuario (C++ / c++ / CLI y c++ / CX)
 
-Los atributos personalizados le permiten extender los metadatos de una interfaz, clase o estructura, método, parámetro o enumeración.
-
-## <a name="all-runtimes"></a>Todos los runtimes
-
-Todos los Runtimes admite atributos personalizados.
+C++ / c++ / CLI y c++ / CX le permiten crear atributos específicos de la plataforma que extienden los metadatos de una interfaz, clase o estructura, método, parámetro o enumeración. Estos atributos son distintos de los [atributos estándar de C++](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
-C++ / c++ / atributos CX admite solo las propiedades, pero no métodos o constructores de atributo.
-
-### <a name="remarks"></a>Comentarios
+Puede aplicar C + + / los atributos a las propiedades, pero no a métodos o constructores CX.
 
 ### <a name="requirements"></a>Requisitos
 
@@ -43,21 +27,15 @@ Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-Los atributos personalizados le permiten ampliar los metadatos de un elemento administrado. Para obtener más información, consulte [Attributes](/dotnet/standard/attributes/index) (Atributos).
-
-### <a name="remarks"></a>Comentarios
-
-La información y la sintaxis presentadas en este tema está pensado para sustituir la información presentada en [atributo](../windows/attribute.md).
+La información y la sintaxis presentadas en este tema está pensado para sustituir la información presentada en [atributo](attributes/attribute.md).
 
 Puede definir un atributo personalizado mediante la definición de un tipo y realizar <xref:System.Attribute> una clase base para el tipo y, opcionalmente, aplicar el <xref:System.AttributeUsageAttribute> atributo.
 
-Por ejemplo, en Microsoft Transaction Server (MTS) 1.0, el comportamiento con respecto a las transacciones, la sincronización, el equilibrio de carga, y así sucesivamente se especificó mediante GUID personalizados insertados en la biblioteca de tipos mediante el atributo personalizado ODL. Por lo tanto, un cliente de un servidor MTS podía determinar sus características mediante la lectura de la biblioteca de tipos. En .NET Framework, la analogía de la biblioteca de tipos es los metadatos y del atributo personalizado ODL son atributos personalizados. Además, es parecido a usar la reflexión en los tipos de lectura de la biblioteca de tipos.
+Para obtener más información, consulte:
 
-Para obtener más información, vea
+- [Destinos de atributo](attribute-targets-cpp-component-extensions.md)
 
-- [Destinos de atributo](../windows/attribute-targets-cpp-component-extensions.md)
-
-- [Tipos de parámetro de atributo](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Tipos de parámetro de atributo](attribute-parameter-types-cpp-component-extensions.md)
 
 Para obtener información sobre cómo firmar ensamblados en Visual C++, vea [ensamblados de nombre seguro (firma de ensamblados) (C++ / c++ / CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +155,7 @@ El `Object^` tipo reemplaza al tipo de datos variant. En el ejemplo siguiente se
 
 Los argumentos de atributo deben ser constantes de tiempo de compilación; en la mayoría de los casos, deben ser literales constantes.
 
-Consulte [typeid](../windows/typeid-cpp-component-extensions.md) para obtener información sobre cómo devolver un valor de System:: Type de un bloque de atributos personalizados.
+Consulte [typeid](typeid-cpp-component-extensions.md) para obtener información sobre cómo devolver un valor de System:: Type de un bloque de atributos personalizados.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +194,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](component-extensions-for-runtime-platforms.md)

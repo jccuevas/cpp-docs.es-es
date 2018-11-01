@@ -1,30 +1,20 @@
 ---
-title: -await (habilitar la compatibilidad con corrutinas) | Microsoft Docs
-ms.custom: ''
+title: / await (habilitar la compatibilidad con corrutinas)
 ms.date: 08/15/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /await
 - -await
-dev_langs:
-- C++
 helpviewer_keywords:
 - /await enable coroutine support [C++]
 - -await enable coroutine support [C++]
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5da401f940a39c135ba0b64571b6330a42fed796
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e3f7359b60e1ba22c2646cecfd35b827919ae033
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725522"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590444"
 ---
 # <a name="await-enable-coroutine-support"></a>/ await (habilitar la compatibilidad con corrutinas)
 
@@ -44,9 +34,9 @@ El **/ await** opción está disponible a partir de Visual Studio 2015.
 
 1. Abra el proyecto **páginas de propiedades** cuadro de diálogo.
 
-2. En **propiedades de configuración**, expanda el **C o C++** carpeta y elija el **línea de comandos** página de propiedades.
+1. En **propiedades de configuración**, expanda el **C o C++** carpeta y elija el **línea de comandos** página de propiedades.
 
-3. Escriba el **/ await** opción del compilador en el **opciones adicionales** cuadro. Elija **Aceptar** o **aplicar** para guardar los cambios.
+1. Escriba el **/ await** opción del compilador en el **opciones adicionales** cuadro. Elija **Aceptar** o **aplicar** para guardar los cambios.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 

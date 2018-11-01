@@ -1,30 +1,20 @@
 ---
-title: interior_ptr (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: interior_ptr (C++/CLI)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - stdcli::language::interior_ptr
 - interior_ptr_cpp
 - interior_ptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c2745ed1a17311f92fda6fc61743fed65882b952
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 05ae4aeba3761ccb0abeb8c3722d9ddf932bee5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443087"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -54,16 +44,16 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 ### <a name="parameters"></a>Parámetros
 
-*cv_qualifier*  
+*cv_qualifier*<br/>
 **Const** o **volátil** calificadores.
 
-*type*  
+*type*<br/>
 El tipo de *inicializador*.
 
-*var*  
+*var*<br/>
 El nombre de la **interior_ptr** variable.
 
-*initializer*  
+*initializer*<br/>
 Un miembro de un tipo de referencia, el elemento de una matriz administrada o cualquier otro objeto que se puede asignar a un puntero nativo.
 
 ### <a name="remarks"></a>Comentarios
@@ -134,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

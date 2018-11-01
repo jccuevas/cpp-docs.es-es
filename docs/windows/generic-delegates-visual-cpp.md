@@ -1,31 +1,21 @@
 ---
-title: Delegados genéricos (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Delegados genéricos (C++ / c++ / CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8a9613dbc28b3e1f263133c15ae88d20294962e9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 78a8e0ebd1217000671cad2a266da367c76d0a67
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639057"
 ---
-# <a name="generic-delegates-visual-c"></a>Delegados genéricos (Visual C++)
+# <a name="generic-delegates-ccli"></a>Delegados genéricos (C++ / c++ / CLI)
 
-Puede usar parámetros de tipo genérico con delegados. Para obtener más información sobre los delegados, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).
+Puede usar parámetros de tipo genérico con delegados. Para obtener más información sobre los delegados, vea [delegar (C++ / c++ / CLI y c++ / CX)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,25 +29,25 @@ generic < [class | typename] type-parameter-identifiers>
 
 ### <a name="parameters"></a>Parámetros
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
 
-*tipo de-parámetro-identificadores*  
+*tipo de-parámetro-identificadores*<br/>
 Lista separada por comas de identificadores para los parámetros de tipo.
 
-*tipo de parámetro restricciones cláusulas*  
+*tipo de parámetro restricciones cláusulas*<br/>
 Toma la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificadores de accesibilidad*  
+*modificadores de accesibilidad*<br/>
 (Opcional) Modificadores de accesibilidad (por ejemplo, **pública**, **privada**).
 
-*tipo de resultado*  
+*tipo de resultado*<br/>
 Tipo de valor devuelto del delegado.
 
-*identifier*  
+*identifier*<br/>
 El nombre del delegado.
 
-*parámetros formales*  
+*parámetros formales*<br/>
 (Opcional) La lista de parámetros del delegado.
 
 ## <a name="example"></a>Ejemplo

@@ -1,10 +1,6 @@
 ---
-title: CSecurityDesc (clase) | Microsoft Docs
-ms.custom: ''
+title: CSecurityDesc (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSecurityDesc
 - ATLSECURITY/ATL::CSecurityDesc
@@ -35,21 +31,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605813"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc (clase)
 
@@ -556,14 +546,14 @@ Establece los bits de control de un descriptor de seguridad.
 
 ```
 bool SetControl(
-    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest, 
+    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,
     SECURITY_DESCRIPTOR_CONTROL ControlBitsToSet) throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *ControlBitsOfInterest*<br/>
-Una máscara SECURITY_DESCRIPTOR_CONTROL que indica los bits de control para establecer. Para obtener una lista de las marcas que se pueden establecer, consulte [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Una máscara SECURITY_DESCRIPTOR_CONTROL que indica los bits de control para establecer. Para obtener una lista de las marcas que se pueden establecer, consulte [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 *ControlBitsToSet*<br/>
 Una máscara SECURITY_DESCRIPTOR_CONTROL que indica los nuevos valores para los bits de control especificados por el *ControlBitsOfInterest* máscara. Este parámetro puede ser una combinación de las marcas enumeradas para el *ControlBitsOfInterest* parámetro.
@@ -574,18 +564,18 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-Este método llama a [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Este método llama a [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
 Establece la información en una lista de control de acceso discrecional (DACL). Si ya hay una DACL del descriptor de seguridad, se reemplaza.
 
 ```
-inline void SetDacl(  
+inline void SetDacl(
     bool bPresent = true,
     bool bDefaulted = false) throw(...);
 
-inline void SetDacl(  
+inline void SetDacl(
     const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
 ```

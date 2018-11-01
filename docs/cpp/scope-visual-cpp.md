@@ -1,12 +1,6 @@
 ---
-title: Ámbito (C++) | Microsoft Docs
-ms.custom: ''
+title: Ámbito (C++)
 ms.date: 04/08/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb9d21eee8e561e2caa8a7c4088774435d3ce273
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506618"
 ---
 # <a name="scope-c"></a>Ámbito (C++)
 
@@ -41,7 +31,7 @@ Existen seis tipos de ámbito:
 
 - **Ámbito local** un nombre declarado dentro de una función o expresión lambda, incluidos los nombres de parámetro tienen ámbito local. A menudo se conocen como "locales". Solo son visibles desde su punto de declaración hasta el final del cuerpo de función o expresión lambda. Ámbito local es un tipo de ámbito de bloque, que se explica más adelante en este artículo.
 
-- **Ámbito de clase** los nombres de miembros de clase tienen ámbito de clase, que se extiende a lo largo de la definición de clase, independientemente del punto de declaración. Accesibilidad de miembro de clase es aplicarán más controlado por la **pública**, **privada**, y **protegido** palabras clave. Pueden tener acceso a los miembros públicos o protegidos sólo mediante los operadores de selección de miembro (**.** o **->**) u operadores de puntero a miembro (**.** <strong>\*</strong> o **->** <strong>\*</strong>).
+- **Ámbito de clase** los nombres de miembros de clase tienen ámbito de clase, que se extiende a lo largo de la definición de clase, independientemente del punto de declaración. Accesibilidad de miembro de clase adicional se controla mediante el **pública**, **privada**, y **protegido** palabras clave. Pueden tener acceso a los miembros públicos o protegidos sólo mediante los operadores de selección de miembro (**.** o **->**) u operadores de puntero a miembro (**.** <strong>\*</strong> o **->** <strong>\*</strong>).
 
 - **Ámbito de la instrucción** los nombres declarados en un **para**, **si**, **mientras**, o **cambiar** instrucción son visibles hasta el final de la bloque de instrucciones.
 
@@ -49,7 +39,7 @@ Existen seis tipos de ámbito:
 
 ## <a name="hiding-names"></a>Ocultar nombres
 
-Puede ocultar un nombre declarándolo en un bloque delimitado. En la ilustración siguiente, `i` se declara dentro del bloque interno, ocultando de esta manera la variable asociada a `i` en el ámbito del bloque externo.
+Puede ocultar un nombre declarándolo en un bloque delimitado. En la ilustración siguiente, `i` se declara dentro del bloque interno, ocultando de esta manera la variable asociada a `i` en el ámbito de bloque externo.
 
 ![Bloque&#45;ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "vc38SF1") ámbito de bloque y ocultación de nombre
 

@@ -1,12 +1,7 @@
 ---
-title: Funciones genéricas (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Funciones genéricas (C++/CLI)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], generic
 - generic methods
@@ -14,17 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 74e8cfe2b5b49a672b276400be75031626fd61c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709155"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432414"
 ---
 # <a name="generic-functions-ccli"></a>Funciones genéricas (C++/CLI)
 
@@ -57,41 +47,41 @@ Una función genérica es una función que se declara con parámetros de tipo. C
 return-type identifier<type-parameter identifier(s)>
 [type-parameter-constraints clauses]
 
-([formal-parameters])  
+([formal-parameters])
 {function-body}
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea atributos.
 
-*Modificadores*  
+*Modificadores*<br/>
 (Opcional) Un modificador de la función, como estático.  **virtual** no se permite porque los métodos virtuales no pueden ser genéricos.
 
-*tipo de valor devuelto*  
+*tipo de valor devuelto*<br/>
 Tipo devuelto por el método. Si el tipo de valor devuelto es void, no se requiere ningún valor devuelto.
 
-*identifier*  
+*identifier*<br/>
 Nombre de la función.
 
-*identificadores de parámetro de tipo*  
+*identificadores de parámetro de tipo*<br/>
 Lista separada por comas de identificadores.
 
-*parámetros formales*  
+*parámetros formales*<br/>
 (Opcional) Lista de parámetros.
 
-*tipo de parámetro restricciones cláusulas*  
+*tipo de parámetro restricciones cláusulas*<br/>
 Esto especifica restricciones de los tipos que se pueden usar como argumentos de tipo y adopta la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md).
 
-*cuerpo de la función*  
+*cuerpo de la función*<br/>
 El cuerpo del método, que puede hacer referencia a los identificadores de parámetro de tipo.
 
 ### <a name="remarks"></a>Comentarios
 
 Funciones genéricas son las funciones declaradas con un parámetro de tipo genérico. Pueden ser métodos en las funciones de una clase o struct o independiente. Una sola declaración genérica declara implícitamente una familia de funciones que solo difieren en la sustitución de un tipo real diferente para el parámetro de tipo genérico.
 
-En Visual C++, no se pueden declarar constructores de clase o struct con parámetros de tipo genérico.
+No se puede declarar un constructor de clase o struct con parámetros de tipo genérico.
 
 Cuando se llama, el parámetro de tipo genérico se reemplaza por un tipo real. El tipo real puede especificarse explícitamente en corchetes angulares mediante una sintaxis similar a una llamada de función de plantilla. Si se llama sin los parámetros de tipo, el compilador intentará deducir el tipo real de los parámetros proporcionados en la llamada de función. Si no se puede deducir el argumento de tipo previsto desde los parámetros utilizados, el compilador notificará un error.
 
@@ -193,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Genéricos](../windows/generics-cpp-component-extensions.md)

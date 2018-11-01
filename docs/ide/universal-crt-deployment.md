@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20006118d4bf27c379b78b84dc8807a4fd6c5e6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b7fe21753dc4310752c1081d17ddff942bcbd89f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256294"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821002"
 ---
 # <a name="universal-crt-deployment"></a>Implementación de CRT universal
 
@@ -29,7 +29,7 @@ CRT universal es un componente del sistema operativo Microsoft Windows. Se inclu
 
 ## <a name="central-deployment"></a>Implementación central
 
-El método preferido para instalar de forma centralizada CRT universal consiste en usar Microsoft Windows Update. CRT universal es una actualización recomendada para todos los sistemas operativos Microsoft Windows compatibles, por lo que de forma predeterminada, en la mayoría de los equipos se instala como parte del proceso de actualización habitual. La versión inicial de la biblioteca CRT universal fue [KB2999226](https://support.microsoft.com/en-us/kb/2999226); se realizó una actualización posterior con varias correcciones de errores en [KB3118401](https://support.microsoft.com/en-us/kb/3118401), y se han realizado actualizaciones adicionales con más correcciones de errores y características nuevas. Para obtener las actualizaciones más recientes, busque "tiempo de ejecución de C universal" o "CRT universal" en [support.microsoft.com](https://support.microsoft.com).
+El método preferido para instalar de forma centralizada CRT universal consiste en usar Microsoft Windows Update. CRT universal es una actualización recomendada para todos los sistemas operativos Microsoft Windows compatibles, por lo que de forma predeterminada, en la mayoría de los equipos se instala como parte del proceso de actualización habitual. La versión inicial de la biblioteca CRT universal fue [KB2999226](https://support.microsoft.com/kb/2999226); se realizó una actualización posterior con varias correcciones de errores en [KB3118401](https://support.microsoft.com/kb/3118401), y se han realizado actualizaciones adicionales con más correcciones de errores y características nuevas. Para obtener las actualizaciones más recientes, busque "tiempo de ejecución de C universal" o "CRT universal" en [support.microsoft.com](https://support.microsoft.com).
 
 No en todos los equipos Microsoft Windows se instalan las actualizaciones periódicamente mediante Windows Update, y es posible que en algunos no se instalen todas las actualizaciones recomendadas. Para admitir el uso de las aplicaciones compiladas con los conjuntos de herramientas de C++ para Visual Studio 2015 y versiones posteriores en esos equipos, existen paquetes redistribuibles de CRT universal para la distribución sin conexión. Estos archivos redistribuibles se pueden descargar desde uno de los vínculos de KB anteriores. Tenga en cuenta que los archivos redistribuibles de CRT universal requieren que el equipo se haya actualizado con el Service Pack actual. Por tanto, por ejemplo, el paquete redistribuible para Windows 7 solo se instalará en Windows 7 SP1, no en Windows 7 RTM.
 

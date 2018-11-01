@@ -1,7 +1,7 @@
 ---
 title: __identifier (C++ / c++ / CLI) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d578c820660d99e6fa217a14181330d258ab081b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ee4aa1686980d2baecd0b261a615818fc5a6c0ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082598"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-Habilita el uso de palabras clave de Visual C++ como identificadores.
+Habilita el uso de palabras clave de C++ como identificadores.
 
 ## <a name="all-platforms"></a>Todas las plataformas
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -53,7 +51,7 @@ Opción del compilador: `/ZW`
 
 **Ejemplo**
 
-En el ejemplo siguiente, una clase denominada **plantilla** se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el **plantilla** (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.
+En el ejemplo siguiente, una clase denominada **plantilla** se crea en C# y se distribuye como un archivo DLL. En C++ / c++ / programa CLI que utiliza el **plantilla** (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ Opción del compilador: `/clr`
 
 ### <a name="examples"></a>Ejemplos
 
-En el ejemplo siguiente, una clase denominada **plantilla** se crea en C# y se distribuye como un archivo DLL. En el programa de Visual C++ que usa el **plantilla** (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.
+En el ejemplo siguiente, una clase denominada **plantilla** se crea en C# y se distribuye como un archivo DLL. En C++ / c++ / programa CLI que utiliza el **plantilla** (clase), el **__identifier** palabra clave oculta el hecho de que **plantilla** es una palabra clave de C++ estándar.
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

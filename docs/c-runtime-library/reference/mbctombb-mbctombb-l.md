@@ -1,10 +1,6 @@
 ---
-title: _mbctombb, _mbctombb_l | Microsoft Docs
-ms.custom: ''
+title: _mbctombb, _mbctombb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402909"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519839"
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb, _mbctombb_l
 
@@ -74,13 +64,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, **_mbctombb** y **_mbctombb_l** devuelve el carácter de un solo byte que corresponde a *c*; de lo contrario devuelve *c* .
+Si es correcto, **_mbctombb** y **_mbctombb_l** devuelve el carácter de un byte que corresponde a *c*; de lo contrario devuelve *c* .
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbctombb** y **_mbctombb_l** funciones convierten un carácter multibyte dado a un carácter multibyte de un solo byte correspondiente. Caracteres deben corresponder a los caracteres de byte único dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF va a convertir.
+El **_mbctombb** y **_mbctombb_l** funciones convierten un carácter multibyte determinado en un carácter multibyte de byte único correspondiente. Caracteres deben corresponder a los caracteres de byte único dentro del intervalo 0 x 20-0x7E o 0xA1 - 0xDF va a convertir.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. La versión de esta función sin el **_l** sufijo usa la configuración regional actual para este comportamiento dependiente de la configuración regional; la versión con el **_l** sufijo es idéntico, salvo que use el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En versiones anteriores, **_mbctombb** se llamó a **zentohan**. Use **_mbctombb** en su lugar.
 

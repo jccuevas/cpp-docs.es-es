@@ -1,27 +1,17 @@
 ---
-title: Opciones, Asistente para controles ATL | Microsoft Docs
-ms.custom: ''
+title: Opciones, Asistente para controles ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.options
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443763"
 ---
 # <a name="options-atl-control-wizard"></a>Opciones, Asistente para controles ATL
 
@@ -49,11 +39,11 @@ El tipo de control que desea crear.
 
    - Una página de prueba HTML que contiene el control compuesto.
 
-     De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) es verdadera, para indicar que se trata de un control con ventana. Implementa un mapa de receptores. Para obtener más información, consulte [compatibilidad con controles DHTML](../../atl/atl-support-for-dhtml-controls.md).
+   De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) es verdadera, para indicar que se trata de un control con ventana. Implementa un mapa de receptores. Para obtener más información, consulte [compatibilidad con controles DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Control DHTML**: control DHTML ATL An especifica la interfaz de usuario mediante HTML. La clase de UI DHTML contiene un mapa COM. De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) es verdadera, para indicar que se trata de un control con ventana.
 
-     Para obtener más información, consulte [que identifican los elementos del proyecto de Control DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+   Para obtener más información, consulte [que identifican los elementos del proyecto de Control DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
 ### <a name="minimal-control"></a>Control mínimo
 

@@ -1,10 +1,6 @@
 ---
-title: Clase CTaskDialog | Microsoft Docs
-ms.custom: ''
+title: CTaskDialog Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CTaskDialog
 - AFXTASKDIALOG/CTaskDialog
@@ -63,8 +59,6 @@ f1_keywords:
 - AFXTASKDIALOG/CTaskDialog::SetWindowTitle
 - AFXTASKDIALOG/CTaskDialog::ShowDialog
 - AFXTASKDIALOG/CTaskDialog::TaskDialogCallback
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTaskDialog [MFC], CTaskDialog
 - CTaskDialog [MFC], AddCommandControl
@@ -122,16 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51970f99a05b587bcdbccc5d24ad21b036d87f74
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cbfb0a355b4901907b5df0a0b42ac28d5a76c551
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710819"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441956"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -377,7 +367,6 @@ CTaskDialog(
     int nTaskDialogOptions = TDF_ENABLE_HYPERLINKS | TDF_USE_COMMAND_LINKS,
     const CString& strFooter = _T(""));
 
- 
 CTaskDialog(
     const CString& strContent,
     const CString& strMainInstruction,
@@ -1630,7 +1619,7 @@ Los valores de *wParam* y *lParam* dependen el mensaje generado específico. Es 
 
 ## <a name="see-also"></a>Vea también
 
-[Clases](../../mfc/reference/mfc-classes.md)  
-[CObject (clase)](../../mfc/reference/cobject-class.md)  
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)  
-[Tutorial: Agregar una clase CTaskDialog a una aplicación](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)  
+[Clases](../../mfc/reference/mfc-classes.md)<br/>
+[CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
+[Tutorial: Agregar una clase CTaskDialog a una aplicación](../../mfc/walkthrough-adding-a-ctaskdialog-to-an-application.md)

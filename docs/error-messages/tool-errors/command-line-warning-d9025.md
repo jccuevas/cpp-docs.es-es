@@ -1,27 +1,17 @@
 ---
-title: Advertencia de la línea de comandos D9025 | Microsoft Docs
-ms.custom: ''
+title: Advertencia de la línea de comandos D9025
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - D9025
-dev_langs:
-- C++
 helpviewer_keywords:
 - D9025
 ms.assetid: 6edff72c-1508-46c2-99f4-0e4b3c5e60c9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 822d1ac0cc1e6b3e728d43b816e7a0a15eee9958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb9ab3152efe565501e91fbad5ebb279c4396968
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652431"
 ---
 # <a name="command-line-warning-d9025"></a>Advertencia de la línea de comandos D9025
 
@@ -35,6 +25,6 @@ Si aparece esta advertencia al compilar desde el entorno de desarrollo y no est�
 
 - Una opción puede especificarse en el código o en la configuración del proyecto. Si observa el compilador [páginas de propiedades de línea de comandos](../../ide/command-line-property-pages.md) y si ve las opciones en conflicto en el **todas las opciones** , a continuación, se establecen las opciones de páginas de propiedades del proyecto, en caso contrario, las opciones de campo se establecen en el código fuente.
 
-     Si las opciones se establecen en páginas de propiedades del proyecto, busque en la página de propiedades preprocesador del compilador (con el nodo del proyecto seleccionado en el Explorador de soluciones).  Si no ve la opción definida allí, revise la configuración de la página de propiedades preprocesador para cada archivo de código fuente (en el Explorador de soluciones) para asegurarse de que no se agrega no existe.
+   Si las opciones se establecen en páginas de propiedades del proyecto, busque en la página de propiedades preprocesador del compilador (con el nodo del proyecto seleccionado en el Explorador de soluciones).  Si no ve la opción definida allí, revise la configuración de la página de propiedades preprocesador para cada archivo de código fuente (en el Explorador de soluciones) para asegurarse de que no se agrega no existe.
 
-     Si las opciones se establecen en el código se podría establecer en el código o en los encabezados de windows.  Puede intentar crear un archivo preprocesado ([/P](../../build/reference/p-preprocess-to-a-file.md)) y buscar el símbolo.
+   Si las opciones se establecen en el código se podría establecer en el código o en los encabezados de windows.  Puede intentar crear un archivo preprocesado ([/P](../../build/reference/p-preprocess-to-a-file.md)) y buscar el símbolo.

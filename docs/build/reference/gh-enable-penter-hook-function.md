@@ -1,30 +1,20 @@
 ---
-title: -Gh (habilitar la función de enlace _penter) | Microsoft Docs
-ms.custom: ''
+title: /GH (Habilitar la función de enlace _penter)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _penter
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gh compiler option [C++]
 - Gh compiler option [C++]
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8b013d3d6506c1436a1f7f2245461980c0493b5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452317"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/GH (Habilitar la función de enlace _penter)
 
@@ -43,7 +33,7 @@ El `_penter` función no forma parte de cualquier biblioteca y depende de usted 
 A menos que se va a llamar explícitamente a `_penter`, no es necesario proporcionar un prototipo. La función debe aparecer como si tuviera el siguiente prototipo, y se debe insertar el contenido de todos los registros de entrada y extraer el contenido sin modificar al salir:
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 Esta declaración no está disponible para proyectos de 64 bits.
@@ -66,7 +56,7 @@ Esta declaración no está disponible para proyectos de 64 bits.
 
 El siguiente código, cuando se compila con **/Gh**, se muestra cómo `_penter` se llama dos veces; una vez al escribir la función `main` y una vez al escribir la función `x`.
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +67,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

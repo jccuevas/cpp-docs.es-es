@@ -1,32 +1,22 @@
 ---
-title: Estructura de InvokeModeOptions | Documentos de Microsoft
-ms.custom: ''
+title: Estructura InvokeModeOptions
 ms.date: 03/22/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
-dev_langs:
-- C++
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 315f1f0c49c4222bf525bbaf25c9ad0de8b9c7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511706"
 ---
-# <a name="invokemodeoptions-structure"></a>Estructura de InvokeModeOptions
+# <a name="invokemodeoptions-structure"></a>Estructura InvokeModeOptions
 
-Especifica si se activan todos los eventos en la cola de delegado, o para detener la activación después de que se produce un error. Los valores permitidos se especifican en el `InvokeMode` enum.
+Especifica si se activan todos los eventos de la cola de delegado, o detener la activación una vez que se produce un error. Los valores permitidos se especifican en el `InvokeMode` enum.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,5 +41,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft:: wrl Namespace](../windows/microsoft-wrl-namespace.md)
-[Microsoft::WRL::AgileEventSource (clase)](../windows/agileeventsource-class.md)
+[Microsoft::WRL (espacio de nombres)](../windows/microsoft-wrl-namespace.md)<br/>
+[Clase Microsoft::WRL::AgileEventSource](../windows/agileeventsource-class.md)

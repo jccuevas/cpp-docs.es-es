@@ -1,26 +1,16 @@
 ---
-title: Referencia de operadores MASM | Microsoft Docs
-ms.custom: ''
+title: Referencia de operadores MASM
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430465"
 ---
 # <a name="masm-operators-reference"></a>Referencia de operadores MASM
 
@@ -36,7 +26,7 @@ ms.locfileid: "43688181"
 
 ||||
 |-|-|-|
-|[! (not lógico en tiempo de ejecución)](operator-logical-not-masm-run-time.md)|[! = (tiempo de ejecución no es igual)](operator-not-equal-masm.md)|[&#124;&#124;(en tiempo de ejecución lógico o)](operator-logical-or.md)|
+|[\! (not lógico en tiempo de ejecución)](operator-logical-not-masm-run-time.md)|[\!= (tiempo de ejecución no es igual)](operator-not-equal-masm.md)|[&#124;&#124;(en tiempo de ejecución lógico o)](operator-logical-or.md)|
 |[& & (tiempo de ejecución lógico y)](operator-logical-and-masm-run-time.md)|[< (tiempo de ejecución menor que)](operator-less-than-masm-run-time.md)|[\<= (tiempo de ejecución menor o igual que)](operator-less-or-equal-masm-run-time.md)|
 |[== (igual runtime)](operator-equal-masm-run-time.md)|[> (mayor que el runtime)](operator-greater-than-masm-run-time.md)|[> = (tiempo de ejecución mayor o igual)](operator-greater-or-equal-masm-run-time.md)|
 |[& (tiempo de ejecución bit a bit y)](operator-bitwise-and.md)|||
@@ -54,7 +44,7 @@ ms.locfileid: "43688181"
 
 ||||
 |-|-|-|
-|[! (el carácter literal)](operator-logical-not-masm.md)|[% (tratado como texto)](operator-percent.md)||
+|[\! (el carácter literal)](operator-logical-not-masm.md)|[% (tratado como texto)](operator-percent.md)||
 |[;; (tratar como comentario)](operator-semicolons.md)|[&lt; &gt; (tratar como un literal)](operator-literal.md)|[& & (sustituya el valor de parámetro)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Varios

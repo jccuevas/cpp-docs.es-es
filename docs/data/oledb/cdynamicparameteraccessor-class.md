@@ -1,10 +1,6 @@
 ---
-title: CDynamicParameterAccessor (clase) | Microsoft Docs
-ms.custom: ''
+title: CDynamicParameterAccessor (clase)
 ms.date: 02/14/2018
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.CDynamicParameterAccessor
 - ATL::CDynamicParameterAccessor
@@ -77,8 +73,6 @@ f1_keywords:
 - SetParamString
 - CDynamicParameterAccessor::SetParamString
 - CDynamicParameterAccessor.SetParamString
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDynamicParameterAccessor class
 - CDynamicParameterAccessor class, constructor
@@ -96,21 +90,16 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: a92f52f7d97e3c89de3d147c2c1b798d4af6d3a4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b8c43a47eceb5213f292b825a771cd25e99efceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592665"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor (clase)
 
-Similar a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) , pero obtiene la información de parámetros que se puede establecer mediante una llamada a la [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) interfaz.
+Similar a [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) , pero obtiene la información de parámetros que se va a establecer llamando a la interfaz [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) .
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -152,375 +141,375 @@ Para obtener un ejemplo que muestra cómo utilizar esta clase para ejecutar un p
 
 ## <a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor:: CDynamicParameterAccessor
 
-El constructor.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+El constructor.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-typedef CDynamicParameterAccessor _ParamClass;  
-CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
-   DBLENGTH nBlobSize = 8000 )   
-   : CDynamicAccessor(eBlobHandling, nBlobSize )  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+typedef CDynamicParameterAccessor _ParamClass;
+CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
+   DBLENGTH nBlobSize = 8000 )
+   : CDynamicAccessor(eBlobHandling, nBlobSize )
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *eBlobHandling*<br/>
-Especifica cómo se controlan los datos de BLOB. El valor predeterminado es DBBLOBHANDLING_DEFAULT. Consulte [CDynamicAccessor:: Setblobhandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) para obtener una descripción de los valores DBBLOBHANDLINGENUM.  
-  
-*nBlobSize*<br/>
-El tamaño máximo de BLOB en bytes; datos de la columna a través de este valor se tratan como un BLOB. El valor predeterminado es 8000. Consulte [CDynamicAccessor:: Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) para obtener más información.  
-  
-### <a name="remarks"></a>Comentarios  
+Especifica cómo se controlan los datos de BLOB. El valor predeterminado es DBBLOBHANDLING_DEFAULT. Consulte [CDynamicAccessor:: Setblobhandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) para obtener una descripción de los valores DBBLOBHANDLINGENUM.
 
-Consulte la [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) constructor para obtener más información sobre el control de blobs. 
+*nBlobSize*<br/>
+El tamaño máximo de BLOB en bytes; datos de la columna a través de este valor se tratan como un BLOB. El valor predeterminado es 8000. Consulte [CDynamicAccessor:: Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) para obtener más información.
+
+### <a name="remarks"></a>Comentarios
+
+Consulte la [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) constructor para obtener más información sobre el control de blobs.
 
 ## <a name="getparam"></a> CDynamicParameterAccessor:: GetParam
 
-Recupera los datos que no son cadenas para un parámetro especificado desde el búfer de parámetro.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Recupera los datos que no son cadenas para un parámetro especificado desde el búfer de parámetro.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-template <class ctype>bool GetParam(DBORDINAL nParam,   
-   ctype* pData) const throw();  
+template <class ctype>bool GetParam(DBORDINAL nParam, 
+   ctype* pData) const throw();
 
-template <class ctype> bool GetParam(TCHAR* pParamName,   
-   ctype* pData) const throw();  
+template <class ctype> bool GetParam(TCHAR* pParamName, 
+   ctype* pData) const throw();
 
-void* GetParam(DBORDINAL nParam) const throw();  
+void* GetParam(DBORDINAL nParam) const throw();
 
-void* GetParam(TCHAR* pParamName) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+void* GetParam(TCHAR* pParamName) const throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *ctype*<br/>
-Un parámetro de plantilla que es el tipo de datos.  
-  
-*nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*pParamName*<br/>
-[in] El nombre del parámetro.  
-  
-*pData*<br/>
-[out] Puntero a la memoria que contiene los datos recuperados desde el búfer.  
-  
-### <a name="return-value"></a>Valor devuelto  
+Un parámetro de plantilla que es el tipo de datos.
 
-En las versiones sin plantilla, apunta a la memoria que contiene los datos recuperados desde el búfer. En las versiones con plantilla, devuelve **true** en caso de éxito o **false** en caso de error.  
-  
-Use `GetParam` para recuperar datos de parámetro que no sean del búfer. Use [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) para recuperar datos de parámetro de cadena desde el búfer.  
+*nParam*<br/>
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
+
+*pParamName*<br/>
+[in] El nombre del parámetro.
+
+*pData*<br/>
+[out] Puntero a la memoria que contiene los datos recuperados desde el búfer.
+
+### <a name="return-value"></a>Valor devuelto
+
+En las versiones sin plantilla, apunta a la memoria que contiene los datos recuperados desde el búfer. En las versiones con plantilla, devuelve **true** en caso de éxito o **false** en caso de error.
+
+Use `GetParam` para recuperar datos de parámetro que no sean del búfer. Use [GetParamString](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) para recuperar datos de parámetro de cadena desde el búfer.
 
 ## <a name="getparamcount"></a> CDynamicParameterAccessor:: Getparamcount
 
-Recupera el número de parámetros almacenados en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-DB_UPARAMS GetParamCount() const throw();  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
+Recupera el número de parámetros almacenados en el búfer.
 
-El número de parámetros.  
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+DB_UPARAMS GetParamCount() const throw();
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+El número de parámetros.
 
 ## <a name="getparamio"></a> CDynamicParameterAccessor:: Getparamio
 
-Determina si el parámetro especificado es un parámetro de entrada o salida.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Determina si el parámetro especificado es un parámetro de entrada o salida.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-bool GetParamIO(DBORDINAL nParam,   
-   DBPARAMIO* pParamIO) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+bool GetParamIO(DBORDINAL nParam, 
+   DBPARAMIO* pParamIO) const throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*pParamIO*<br/>
-Un puntero a la variable que contiene el `DBPARAMIO` (entrada o salida) de tipo del parámetro especificado. Se define como sigue:  
-  
-```cpp  
-typedef DWORD DBPARAMIO;  
-  
-enum DBPARAMIOENUM {  
-    DBPARAMIO_NOTPARAM   = 0,  
-    DBPARAMIO_INPUT      = 0x1,  
-    DBPARAMIO_OUTPUT     = 0x2  
-};  
-```  
-  
-### <a name="return-value"></a>Valor devuelto  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-Devuelve **true** en caso de éxito o **false** en caso de error.  
+*pParamIO*<br/>
+Un puntero a la variable que contiene el `DBPARAMIO` (entrada o salida) de tipo del parámetro especificado. Se define como sigue:
+
+```cpp
+typedef DWORD DBPARAMIO;
+
+enum DBPARAMIOENUM {
+    DBPARAMIO_NOTPARAM   = 0,
+    DBPARAMIO_INPUT      = 0x1,
+    DBPARAMIO_OUTPUT     = 0x2
+};
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
 
 ## <a name="getparamlength"></a> CDynamicParameterAccessor:: Getparamlength
 
-Recupera la longitud del parámetro especificado almacenado en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-bool GetParamLength(DBORDINAL nParam,  
-   DBLENGTH* pLength);  
+Recupera la longitud del parámetro especificado almacenado en el búfer.
 
-DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+bool GetParamLength(DBORDINAL nParam,
+   DBLENGTH* pLength);
+
+DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*pLength*<br/>
-[out] Un puntero a la variable que contiene la longitud en bytes del parámetro especificado.  
-  
-### <a name="remarks"></a>Comentarios  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-La primera invalidación devuelve **true** en caso de éxito o **false** en caso de error. La segunda invalidación apunta a la memoria que contiene la longitud del parámetro. 
+*pLength*<br/>
+[out] Un puntero a la variable que contiene la longitud en bytes del parámetro especificado.
+
+### <a name="remarks"></a>Comentarios
+
+La primera invalidación devuelve **true** en caso de éxito o **false** en caso de error. La segunda invalidación apunta a la memoria que contiene la longitud del parámetro.
 
 ## <a name="getparamname"></a> CDynamicParameterAccessor:: Getparamname
 
-Recupera el nombre del parámetro especificado.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Recupera el nombre del parámetro especificado.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-LPOLESTR GetParamName(DBORDINAL nParam) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+LPOLESTR GetParamName(DBORDINAL nParam) const throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-### <a name="return-value"></a>Valor devuelto  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-El nombre del parámetro especificado.  
+### <a name="return-value"></a>Valor devuelto
+
+El nombre del parámetro especificado.
 
 ## <a name="getparamstatus"></a> CDynamicParameterAccessor:: Getparamstatus
 
-Recupera el estado del parámetro especificado almacenado en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
-```cpp
-bool GetParamStatus(DBORDINAL nParam,  
-   DBSTATUS* pStatus);  
+Recupera el estado del parámetro especificado almacenado en el búfer.
 
-DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+### <a name="syntax"></a>Sintaxis
+
+```cpp
+bool GetParamStatus(DBORDINAL nParam,
+   DBSTATUS* pStatus);
+
+DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
+
 *pStatus*<br/>
-[out] Un puntero a la variable que contiene el estado DBSTATUS del parámetro especificado. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.  
-  
-### <a name="remarks"></a>Comentarios  
+[out] Un puntero a la variable que contiene el estado DBSTATUS del parámetro especificado. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.
+
+### <a name="remarks"></a>Comentarios
 
 La primera invalidación devuelve **true** en caso de éxito o **false** en caso de error. La segunda invalidación apunta a la memoria que contiene el estado del parámetro especificado.
 
 ## <a name="getparamstring"></a> CDynamicParameterAccessor:: Getparamstring
 
-Recupera los datos de cadena del parámetro especificado almacenado en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Recupera los datos de cadena del parámetro especificado almacenado en el búfer.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-bool GetParamString(DBORDINAL nParam,  
+bool GetParamString(DBORDINAL nParam,
    CSimpleStringA& strOutput) throw();
 
-bool GetParamString(DBORDINAL nParam,  
+bool GetParamString(DBORDINAL nParam,
    CSimpleStringW& strOutput) throw();
-   
-bool GetParamString(DBORDINAL nParam,  
-   CHAR* pBuffer,  
+
+bool GetParamString(DBORDINAL nParam,
+   CHAR* pBuffer,
    size_t* pMaxLen) throw();
 
-bool GetParamString(DBORDINAL nParam,  
-   WCHAR* pBuffer,  
-   size_t* pMaxLen) throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+bool GetParamString(DBORDINAL nParam,
+   WCHAR* pBuffer,
+   size_t* pMaxLen) throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*strOutput*<br/>
-[out] El ANSI (`CSimpleStringA`) o Unicode (`CSimpleStringW`) los datos del parámetro especificado de cadena. Debe pasar un parámetro de tipo `CString`, por ejemplo:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]  
-  
-*pBuffer*<br/>
-[out] Un puntero a ANSI (**CHAR**) o Unicode (**WCHAR**) los datos del parámetro especificado de cadena.  
-  
-*pMaxLen*<br/>
-[out] Un puntero al tamaño del búfer señalado por *pBuffer* (en caracteres, incluido el carácter nulo final).  
-  
-### <a name="remarks"></a>Comentarios  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-Devuelve **true** en caso de éxito o **false** en caso de error.  
-  
-Si *pBuffer* es NULL, este método establecerá el tamaño de búfer necesario en la memoria que apunta *pMaxLen* y devolver **true** sin copiar los datos.  
-  
-Este método se producirá un error si el búfer *pBuffer* no es lo suficientemente grande como para contener la cadena completa.  
-  
-Use `GetParamString` para recuperar datos de parámetro de cadena desde el búfer. Use [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) para recuperar datos de parámetro que no sean del búfer.  
+*strOutput*<br/>
+[out] El ANSI (`CSimpleStringA`) o Unicode (`CSimpleStringW`) los datos del parámetro especificado de cadena. Debe pasar un parámetro de tipo `CString`, por ejemplo:
+
+[!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]
+
+*pBuffer*<br/>
+[out] Un puntero a ANSI (**CHAR**) o Unicode (**WCHAR**) los datos del parámetro especificado de cadena.
+
+*pMaxLen*<br/>
+[out] Un puntero al tamaño del búfer señalado por *pBuffer* (en caracteres, incluido el carácter nulo final).
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
+
+Si *pBuffer* es NULL, este método establecerá el tamaño de búfer necesario en la memoria que apunta *pMaxLen* y devolver **true** sin copiar los datos.
+
+Este método se producirá un error si el búfer *pBuffer* no es lo suficientemente grande como para contener la cadena completa.
+
+Use `GetParamString` para recuperar datos de parámetro de cadena desde el búfer. Use [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) para recuperar datos de parámetro que no sean del búfer.
 
 ## <a name="getparamtype"></a> CDynamicParameterAccessor:: GetParamType
 
-Recupera el tipo de datos de un parámetro especificado.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Recupera el tipo de datos de un parámetro especificado.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-bool GetParamType(DBORDINAL nParam,  
-   DBTYPE* pType) const throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+bool GetParamType(DBORDINAL nParam,
+   DBTYPE* pType) const throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*PEscriba*<br/>
-[out] Un puntero a la variable que contiene el tipo de datos del parámetro especificado.  
-  
-### <a name="return-value"></a>Valor devuelto  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-Devuelve **true** en caso de éxito o **false** en caso de error.  
+*PEscriba*<br/>
+[out] Un puntero a la variable que contiene el tipo de datos del parámetro especificado.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
 
 ## <a name="setparam"></a> CDynamicParameterAccessor:: SetParam
 
-Establece el búfer de parámetro con los datos (que no son de cadena) especificados.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Establece el búfer de parámetro con los datos (que no son de cadena) especificados.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
 template <class ctype>
-bool SetParam(DBORDINAL nParam,  
-   constctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK) throw();  
+bool SetParam(DBORDINAL nParam,
+   constctype* pData,
+   DBSTATUS status = DBSTATUS_S_OK) throw();
 
-template <class ctype>  
-bool SetParam(TCHAR* pParamName,  
-   const ctype* pData,  
-   DBSTATUS status = DBSTATUS_S_OK) throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+template <class ctype>
+bool SetParam(TCHAR* pParamName,
+   const ctype* pData,
+   DBSTATUS status = DBSTATUS_S_OK) throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *ctype*<br/>
-Un parámetro de plantilla que es el tipo de datos.  
-  
-*nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Por ejemplo:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
-  
-*pParamName*<br/>
-[in] El nombre del parámetro.  
-  
-*pData*<br/>
-[in] Puntero a la memoria que contiene los datos se escriban en el búfer.  
-  
-*status*<br/>
-[in] El estado de la columna DBSTATUS. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.  
-  
-### <a name="return-value"></a>Valor devuelto  
+Un parámetro de plantilla que es el tipo de datos.
 
-Devuelve **true** en caso de éxito o **false** en caso de error.  
-  
-Use `SetParam` para establecer datos de parámetro que no sean en el búfer. Use [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) para establecer datos de parámetro de cadena en el búfer.  
+*nParam*<br/>
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Por ejemplo:
+
+[!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]
+
+*pParamName*<br/>
+[in] El nombre del parámetro.
+
+*pData*<br/>
+[in] Puntero a la memoria que contiene los datos se escriban en el búfer.
+
+*status*<br/>
+[in] El estado de la columna DBSTATUS. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
+
+Use `SetParam` para establecer datos de parámetro que no sean en el búfer. Use [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) para establecer datos de parámetro de cadena en el búfer.
 
 ## <a name="setparamlength"></a> CDynamicParameterAccessor:: Setparamlength
 
-Establece la longitud del parámetro especificado almacenado en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Establece la longitud del parámetro especificado almacenado en el búfer.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-bool SetParamLength(DBORDINAL nParam,  
-   DBLENGTH length);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+bool SetParamLength(DBORDINAL nParam,
+   DBLENGTH length);
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*length*<br/>
-[in] La longitud en bytes del parámetro especificado.  
-  
-### <a name="remarks"></a>Comentarios  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-Devuelve **true** en caso de éxito o **false** en caso de error. 
+*length*<br/>
+[in] La longitud en bytes del parámetro especificado.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
 
 ## <a name="setparamstatus"></a> CDynamicParameterAccessor:: Setparamstatus
 
-Establece el estado del parámetro especificado almacenado en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Establece el estado del parámetro especificado almacenado en el búfer.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-bool SetParamStatus(DBORDINAL nParam,  
-   DBSTATUS status);  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+bool SetParamStatus(DBORDINAL nParam,
+   DBSTATUS status);
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*status*<br/>
-[in] El estado DBSTATUS del parámetro especificado. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.  
-  
-### <a name="remarks"></a>Comentarios  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-Devuelve **true** en caso de éxito o **false** en caso de error. 
+*status*<br/>
+[in] El estado DBSTATUS del parámetro especificado. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
 
 ## <a name="setparamstring"></a> CDynamicParameterAccessor:: Setparamstring
 
-Establece los datos de cadena del parámetro especificado almacenado en el búfer.  
-  
-### <a name="syntax"></a>Sintaxis  
-  
+Establece los datos de cadena del parámetro especificado almacenado en el búfer.
+
+### <a name="syntax"></a>Sintaxis
+
 ```cpp
-bool SetParamString(DBORDINAL nParam,   
-   constCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,   
-   constWCHAR* pString,   
-   DBSTATUS status = DBSTATUS_S_OK) throw();  
-```  
-  
-#### <a name="parameters"></a>Parámetros  
+bool SetParamString(DBORDINAL nParam, 
+   constCHAR* pString, 
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam, 
+   constWCHAR* pString, 
+   DBSTATUS status = DBSTATUS_S_OK) throw();
+```
+
+#### <a name="parameters"></a>Parámetros
 
 *nParam*<br/>
-[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.  
-  
-*pString*<br/>
-[in] Un puntero a ANSI (**CHAR**) o Unicode (**WCHAR**) los datos del parámetro especificado de cadena. Vea DBSTATUS en oledb.h.  
-  
-*status*<br/>
-[in] El estado DBSTATUS del parámetro especificado. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617\(v=vs.85\)) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.  
-  
-### <a name="remarks"></a>Comentarios  
+[in] El número de parámetro (desplazamiento de 1). Parámetro 0 se reserva para los valores devueltos. El número de parámetro es el índice del parámetro en función de su orden en el SQL o una llamada al procedimiento almacenado. Consulte [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para obtener un ejemplo.
 
-Devuelve **true** en caso de éxito o **false** en caso de error.  
-  
-`SetParamString` se producirá un error si intenta establecer una cadena que es mayor que el tamaño máximo especificado para *pString*.  
-  
-Use `SetParamString` para establecer datos de parámetro de cadena en el búfer. Use [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para establecer datos de parámetro que no sean en el búfer. 
+*pString*<br/>
+[in] Un puntero a ANSI (**CHAR**) o Unicode (**WCHAR**) los datos del parámetro especificado de cadena. Vea DBSTATUS en oledb.h.
+
+*status*<br/>
+[in] El estado DBSTATUS del parámetro especificado. Para obtener información sobre los valores DBSTATUS, consulte [estado](/previous-versions/windows/desktop/ms722617) en el *referencia del programador de OLE DB*, o busque DBSTATUS en oledb.h.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve **true** en caso de éxito o **false** en caso de error.
+
+`SetParamString` se producirá un error si intenta establecer una cadena que es mayor que el tamaño máximo especificado para *pString*.
+
+Use `SetParamString` para establecer datos de parámetro de cadena en el búfer. Use [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) para establecer datos de parámetro que no sean en el búfer.
 
 ## <a name="see-also"></a>Vea también
 
@@ -528,4 +517,4 @@ Use `SetParamString` para establecer datos de parámetro de cadena en el búfer.
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor (Clase)](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)  
+[CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)

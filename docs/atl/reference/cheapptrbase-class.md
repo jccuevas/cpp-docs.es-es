@@ -1,10 +1,6 @@
 ---
-title: CHeapPtrBase (clase) | Microsoft Docs
-ms.custom: ''
+title: CHeapPtrBase (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CHeapPtrBase
 - ATLCORE/ATL::CHeapPtrBase
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLCORE/ATL::CHeapPtrBase::Free
 - ATLCORE/ATL::CHeapPtrBase::ReallocateBytes
 - ATLCORE/ATL::CHeapPtrBase::m_pData
-dev_langs:
-- C++
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063117"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538165"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase (clase)
 
@@ -76,7 +66,7 @@ La clase de asignación de memoria que utilice. De forma predeterminada, las rut
 |----------|-----------------|
 |[CHeapPtrBase::operator T *](#operator_t_star)|El operador de conversión.|
 |[CHeapPtrBase::operator &](#operator_amp)|El & operador.|
-|[CHeapPtrBase::operator ->](#operator_ptr)|El operador de puntero a miembro.|  
+|[CHeapPtrBase::operator ->](#operator_ptr)|El operador de puntero a miembro.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 

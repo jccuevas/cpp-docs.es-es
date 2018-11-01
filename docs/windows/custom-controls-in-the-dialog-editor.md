@@ -1,14 +1,8 @@
 ---
-title: Controles personalizados en el Editor de cuadro de diálogo (C++) | Microsoft Docs
-ms.custom: ''
+title: Controles personalizados en el Editor de cuadro de diálogo (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - Custom Control
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], templates
 - custom controls [C++], dialog boxes
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: f494b314-4000-4bbe-bbd0-4b18fb71ede1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c1bebca381bc9d6d644ac1aac95b902065268a9d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c48ad87948037fa843fdc16a016ae23bf139feb1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677102"
 ---
 # <a name="custom-controls-in-the-dialog-editor-c"></a>Controles personalizados en el Editor de cuadro de diálogo (C++)
 
@@ -59,5 +48,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

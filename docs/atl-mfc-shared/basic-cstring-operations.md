@@ -1,12 +1,6 @@
 ---
-title: Operaciones básicas de CString | Microsoft Docs
-ms.custom: ''
+title: Operaciones básicas de CString
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects, basic operations
 - string literals, CString operations
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 156191d09c88d8f19b3fe73108bcbca390b23f6e
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d1f16e470123bd52cb2656541aafaabdfc16af8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434080"
 ---
 # <a name="basic-cstring-operations"></a>Operaciones básicas de CString
 
@@ -112,8 +102,8 @@ Sin la conversión, `cs` se trata como un `void*` y `wcout` imprime la direcció
 
 ## <a name="see-also"></a>Vea también
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
-[CStringT (clase)](../atl-mfc-shared/reference/cstringt-class.md)   
-[Especialización de plantilla](../cpp/template-specialization-cpp.md)   
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[CStringT (clase)](../atl-mfc-shared/reference/cstringt-class.md)<br/>
+[Especialización de plantilla](../cpp/template-specialization-cpp.md)<br/>
 [Procedimiento para convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)
 

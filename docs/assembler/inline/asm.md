@@ -1,29 +1,20 @@
 ---
-title: __asm | Microsoft Docs
-ms.custom: ''
-ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
+title: __asm
+ms.date: 10/09/2018
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591290"
 ---
 # <a name="asm"></a>__asm
 
@@ -59,6 +50,8 @@ __asm int 3
 no se ha provocado el código nativo que se genere cuando se compila con **/CLR**; el compilador traducía la instrucción a una instrucción de salto CLR.
 
 `__asm int 3` ahora da lugar a la generación de código nativo para la función. Si desea que una función para provocar un punto de interrupción en el código y si desea que dicha función compile para MSIL, utilice [__debugbreak](../../intrinsics/debugbreak.md).
+
+Para ofrecer compatibilidad con versiones anteriores, **_asm** es un sinónimo de **__asm** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 ## <a name="example"></a>Ejemplo
 

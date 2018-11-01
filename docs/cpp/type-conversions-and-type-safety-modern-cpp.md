@@ -1,23 +1,14 @@
 ---
-title: Conversiones de tipos y seguridad de tipos (C++ moderno) | Microsoft Docs
-ms.custom: ''
+title: Conversiones de tipos y seguridad de tipos (C++ moderno)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae3b2d89c06d0e7b17b648907fa3d7734b51205c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136164"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471349"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversiones de tipos y seguridad de tipos (C++ moderno)
 
@@ -70,7 +61,7 @@ Un tipo entero con signo y su homólogo sin signo son siempre del mismo tamaño,
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +117,7 @@ El operador de conversión de estilo C es idéntico al operador de llamada () y,
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Para obtener más información, consulte [static_cast](../cpp/static-cast-operator.md).
+   Para obtener más información, consulte [static_cast](../cpp/static-cast-operator.md).
 
 - **dynamic_cast**, seguras, se comprueban en tiempo de ejecución de las conversiones de puntero a base a puntero a derivado de. Un **dynamic_cast** es más seguro que un **static_cast** para conversiones a tipo heredado, pero el tiempo de ejecución verificación implica cierta sobrecarga.
 
@@ -151,7 +142,7 @@ El operador de conversión de estilo C es idéntico al operador de llamada () y,
     //Output: d3 is null;
     ```
 
-     Para obtener más información, consulte [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Para obtener más información, consulte [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast**, para desechar el **const**- declaración de una variable o convertir un no -**const** variable **const**. Desechar **const**-ness mediante el uso de este operador es simplemente tan propensos a errores como está usando una conversión, salvo que con de estilo C **const cast** menos probable realizar la conversión accidentalmente. A veces es necesario desechar la **const**-declaración de una variable, por ejemplo, para pasar un **const** variable a una función que toma una que no sean de**const** parámetro. En el ejemplo siguiente se muestra cómo hacerlo.
 
@@ -164,14 +155,14 @@ El operador de conversión de estilo C es idéntico al operador de llamada () y,
     }
     ```
 
-     Para obtener más información, consulte [const_cast](../cpp/const-cast-operator.md).
+   Para obtener más información, consulte [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**, para las conversiones entre tipos no relación, como **puntero** a **int**.
 
     > [!NOTE]
     >  Este operador de conversión no se usa tan a menudo como los demás y no se garantiza que sea portable a otros compiladores.
 
-     El ejemplo siguiente se muestra cómo **reinterpret_cast** difiere **static_cast**.
+   El ejemplo siguiente se muestra cómo **reinterpret_cast** difiere **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +174,7 @@ El operador de conversión de estilo C es idéntico al operador de llamada () y,
                                        // However, it is not 64-bit safe.
     ```
 
-     Para obtener más información, consulte [reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md).
+   Para obtener más información, consulte [reinterpret_cast (operador)](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>Vea también
 

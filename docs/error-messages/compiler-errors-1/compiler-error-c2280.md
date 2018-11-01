@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C2280 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C2280
 ms.date: 04/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2280
 helpviewer_keywords:
 - C2280
-dev_langs:
-- C++
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b401ba3755113a71dd401efa8da1fe46adfe6a45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e1ec032878fefdc1992605df5ee1aa13c673d4cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572814"
 ---
 # <a name="compiler-error-c2280"></a>Error del compilador C2280
 

@@ -1,25 +1,15 @@
 ---
-title: Funciones globales de contexto de dispositivo | Microsoft Docs
-ms.custom: ''
+title: Funciones globales de contexto de dispositivo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
-dev_langs:
-- C++
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 25ceae897d3cc845ab06fd4d898c87518b15eacb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551208"
 ---
 # <a name="device-context-global-functions"></a>Funciones globales de contexto de dispositivo
 
@@ -53,7 +43,7 @@ Devuelve el identificador de contexto de dispositivo para el dispositivo especif
 
 Si la estructura es NULL y *hdc* es NULL, se crea un contexto de dispositivo de la pantalla de forma predeterminada.
 
-Si *hdc* no es NULL y *ptd* es NULL, la función devuelve existente *hdc*.  
+Si *hdc* no es NULL y *ptd* es NULL, la función devuelve existente *hdc*.
 
 ## <a name="requirements"></a>Requisitos
 

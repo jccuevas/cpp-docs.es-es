@@ -1,17 +1,11 @@
 ---
-title: Creación de una biblioteca de importación y archivos de exportación | Microsoft Docs
-ms.custom: ''
+title: Compilar bibliotecas de importación y archivos de exportación
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
 - VC.Project.VCLibrarianTool.GenerateDebug
 - VC.Project.VCLibrarianTool.ForceSymbolReferences
-dev_langs:
-- C++
 helpviewer_keywords:
 - OUT library manager option
 - INCLUDE library manager option
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556681"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilar bibliotecas de importación y archivos de exportación
 
@@ -52,9 +42,9 @@ Cuando se especifica/def, LIB crea los archivos de salida de las especificacione
 
 1. Un **__declspec (dllexport)** definición en uno de los *archivos (objfiles)* o *bibliotecas*
 
-2. Una especificación de/Export:*nombre* en la línea de comandos LIB
+1. Una especificación de/Export:*nombre* en la línea de comandos LIB
 
-3. Una definición en un **exportaciones** instrucción en un *archivo (deffile)*
+1. Una definición en un **exportaciones** instrucción en un *archivo (deffile)*
 
 Estos son los mismos métodos que se usa para especificar exportaciones al vincular un programa exportador. Un programa puede usar más de un método. Puede especificar las partes del comando LIB (por ejemplo, varios *archivos (objfiles)* o especificaciones/Export) en un archivo de comandos en el comando LIB, al igual que podía puede en un comando de LINK.
 

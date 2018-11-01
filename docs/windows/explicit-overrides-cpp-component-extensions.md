@@ -1,28 +1,18 @@
 ---
-title: Invalidaciones explícitas (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Invalidaciones explícitas (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 54f3d50b3a47890e6f3dd68c41832fa3d1e13e59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459831"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Invalidaciones explícitas (extensiones componentes de C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Invalidaciones explícitas (C++ / c++ / CLI y c++ / CX)
 
 En este tema se describe cómo reemplazar explícitamente un miembro de una clase base o interfaz. Solo debe usarse una invalidación con nombre (explícita) para invalidar un método con un método derivado tiene un nombre diferente.
 
@@ -37,16 +27,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>Parámetros
 
-*declarador de función reemplazar*  
+*declarador de función reemplazar*<br/>
 La lista Tipo, el nombre y el argumento devuelta de la función de reemplazo.  Tenga en cuenta que la función de reemplazo no deben tener el mismo nombre que la función que se va a reemplazar.
 
-*type*  
+*type*<br/>
 El tipo base que contiene una función para invalidar.
 
-*function*  
+*function*<br/>
 Una lista delimitada por comas de uno o más nombres de función para invalidar.
 
-*definición de función reemplazar*  
+*definición de función reemplazar*<br/>
 Las instrucciones del cuerpo de función que definen la función de reemplazo.
 
 ### <a name="remarks"></a>Comentarios
@@ -184,4 +174,4 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

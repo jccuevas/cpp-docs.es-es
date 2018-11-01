@@ -1,23 +1,13 @@
 ---
-title: Información general sobre las convenciones ABI de ARM | Microsoft Docs
-ms.custom: ''
+title: Información general de las convenciones ABI de ARM
 ms.date: 07/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: def07f92cc05828c132ba7d34d3dcc06d4aecf50
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436028"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Información general sobre las convenciones ABI de ARM32
 
@@ -153,11 +143,11 @@ La inicialización se lleva a cabo exactamente una vez, antes de que comience el
 
 1. El siguiente número de registro principal (NCRN) se establece en r0.
 
-2. Los registros de VFP se marcan como sin asignar.
+1. Los registros de VFP se marcan como sin asignar.
 
-3. La siguiente dirección de argumento apilado (NSAA) se establece en el SP actual.
+1. La siguiente dirección de argumento apilado (NSAA) se establece en el SP actual.
 
-4. Si se llama a una función que devuelve un resultado en la memoria, la dirección de ese resultado se sitúa en r0 y el NCRN se establece en r1.
+1. Si se llama a una función que devuelve un resultado en la memoria, la dirección de ese resultado se sitúa en r0 y el NCRN se establece en r1.
 
 ### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase B: relleno previo y extensión de argumentos
 
@@ -165,9 +155,9 @@ En cada argumento de la lista se aplica la primera regla que coincida de la sigu
 
 1. Si el argumento es un tipo compuesto cuyo tamaño no pueden averiguar estáticamente ni el llamador ni el destinatario de la llamada, el argumento se copia en la memoria y se reemplaza por un puntero en dicha copia.
 
-2. Si el argumento es un byte o media palabra de 16 bits, se completa con ceros o con signos hasta llegar a una palabra completa de 32 bits y se trata como un argumento de 4 bytes.
+1. Si el argumento es un byte o media palabra de 16 bits, se completa con ceros o con signos hasta llegar a una palabra completa de 32 bits y se trata como un argumento de 4 bytes.
 
-3. Si el argumento es un tipo compuesto, su tamaño se redondea al múltiplo más próximo de 4.
+1. Si el argumento es un tipo compuesto, su tamaño se redondea al múltiplo más próximo de 4.
 
 ### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase C: asignación de argumentos a registros y la pila
 
@@ -175,17 +165,17 @@ En cada uno de los argumentos de la lista se aplican las siguientes reglas cada 
 
 1. Si el argumento es de tipo VFP y existen suficientes registros de VFP sin asignar consecutivos del tipo adecuado, dicho argumento se asigna a la secuencia con el número más bajo de esos registros.
 
-2. Si el argumento es de tipo VFP, todos los demás registros sin asignar se marcan como no disponibles. La NSAA se ajusta hacia arriba hasta estar alineada correctamente para el tipo de argumento, y el argumento se copia en la pila, en la NSAA ajustada. Una vez hecho esto, la NSAA se incrementará en función del tamaño del argumento.
+1. Si el argumento es de tipo VFP, todos los demás registros sin asignar se marcan como no disponibles. La NSAA se ajusta hacia arriba hasta estar alineada correctamente para el tipo de argumento, y el argumento se copia en la pila, en la NSAA ajustada. Una vez hecho esto, la NSAA se incrementará en función del tamaño del argumento.
 
-3. Si el argumento requiere una alineación de 8 bytes, el NCRN se redondea al siguiente número de registro par más alto.
+1. Si el argumento requiere una alineación de 8 bytes, el NCRN se redondea al siguiente número de registro par más alto.
 
-4. Si el tamaño del argumento en palabras de 32 bits no es mayor que r4 menos NCRN, el argumento se copia en los registros principales, empezando por el NCRN, de manera que los bits menos significativos ocupan los registros con los números más bajos. El NCRN se incrementará en función del número de registros empleado.
+1. Si el tamaño del argumento en palabras de 32 bits no es mayor que r4 menos NCRN, el argumento se copia en los registros principales, empezando por el NCRN, de manera que los bits menos significativos ocupan los registros con los números más bajos. El NCRN se incrementará en función del número de registros empleado.
 
-5. Si el NCRN es menor que r4 y la NSAA equivale al SP, el argumento se divide entre los registros principales y la pila. La primera parte del argumento se copia en los registros principales, empezando por el NCRN, hasta llegar a r3 (inclusive). El resto del argumento se copia en la pila, empezando por la NSAA. El NCRN se establece en r4 y la NSAA se incrementa según el tamaño del argumento menos la cantidad pasada en los registros.
+1. Si el NCRN es menor que r4 y la NSAA equivale al SP, el argumento se divide entre los registros principales y la pila. La primera parte del argumento se copia en los registros principales, empezando por el NCRN, hasta llegar a r3 (inclusive). El resto del argumento se copia en la pila, empezando por la NSAA. El NCRN se establece en r4 y la NSAA se incrementa según el tamaño del argumento menos la cantidad pasada en los registros.
 
-6. Si el argumento requiere una alineación de 8 bytes, la NSAA se redondea a la siguiente dirección alineada de 8 bytes.
+1. Si el argumento requiere una alineación de 8 bytes, la NSAA se redondea a la siguiente dirección alineada de 8 bytes.
 
-7. El argumento se copia en la memoria, en la NSAA. La NSAA se incrementará en función del tamaño del argumento.
+1. El argumento se copia en la memoria, en la NSAA. La NSAA se incrementará en función del tamaño del argumento.
 
 Los registros de VFP no se usan en las funciones variádicas, y las reglas 1 y 2 de la fase C se omiten. Esto significa que una función variádica puede comenzar por una inserción opcional {r0-r3} para anteponer los argumentos de registro a cualquier otro argumento adicional que el llamador haya pasado y, luego, acceder a la lista de argumentos completa directamente desde la pila.
 
@@ -197,7 +187,7 @@ La pila debe tener una alineación de 4 bytes en todo momento, y de 8 bytes en
 
 Las funciones que deban usar un puntero de marco (por ejemplo, aquellas funciones que llaman a `alloca` o que modifican el puntero de la pila dinámicamente) deben establecer el puntero de marco en r11 en el prólogo de la función, y dejarlo tal cual hasta el epílogo. Las funciones que no requieran un puntero de marco deben realizar todas las actualizaciones de pila en el prólogo y dejar el puntero de pila tal cual hasta el epílogo.
 
-Las funciones que asignan 4 KB o más en la pila deben garantizar que todas las páginas previas a la página final se tocan en orden. Con esto se consigue que ningún código pueda “saltarse” las páginas de protección que Windows usa para expandir la pila. De esto se suele encargar la función auxiliar `__chkstk`, a la que se pasa la asignación de pila total en bytes dividida entre 4 en r4 y que, luego, devuelve la asignación de pila final en bytes de nuevo en r4.
+Las funciones que asignan 4 KB o más en la pila deben garantizar que todas las páginas previas a la página final se tocan en orden. Con esto se consigue que ningún código pueda “saltarse” las páginas de protección que Windows usa para expandir la pila. De esto se suele encargar la función del asistente `__chkstk`, a la que se pasa la asignación de pila total en bytes dividida entre 4 en r4 y que, luego, devuelve la asignación de pila final en bytes de nuevo en r4.
 
 ### <a name="red-zone"></a>Zona roja
 

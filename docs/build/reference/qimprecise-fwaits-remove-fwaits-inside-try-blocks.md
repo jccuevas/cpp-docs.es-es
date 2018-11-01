@@ -1,28 +1,18 @@
 ---
-title: -Qimprecise_fwaits (quitar comandos fwait en los bloques Try) | Microsoft Docs
-ms.custom: ''
+title: /Qimprecise_fwaits (Quitar comandos fwait en los bloques Try)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Qimprecise_fwaits
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98dc9416ecee69bca285ff54d6321144c4a3fd02
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eb01d39ccbbdac60d629f95b9eb821ca0f2f5731
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724430"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662402"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Quitar comandos fwait en los bloques Try)
 
@@ -54,6 +44,6 @@ Esta opción no tiene ningún efecto si **/fp: excepto** también no se especifi
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /Q (operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

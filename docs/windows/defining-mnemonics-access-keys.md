@@ -1,12 +1,6 @@
 ---
-title: Definir teclas de acceso | Microsoft Docs
-ms.custom: ''
+title: Definir teclas de acceso
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - access keys [C++], adding
 - keyboard shortcuts [C++], controls
@@ -20,17 +14,12 @@ helpviewer_keywords:
 - controls [C++], access keys
 - access keys [C++]
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6ab44d406d71eb1cc23c803f1074636e9e5cc38a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8682ab38abebe1c453ef562e8eaac0e627f5c4bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316242"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488925"
 ---
 # <a name="defining-mnemonics-access-keys"></a>Definir teclas de acceso
 
@@ -68,5 +57,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

@@ -1,28 +1,17 @@
 ---
-title: Copiar botones de una barra de herramientas (C++) | Microsoft Docs
-ms.custom: ''
+title: Copiar botones de una barra de herramientas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Toolbar editor [C++], copying buttons
 - toolbars [C++], copying buttons
 - toolbar buttons [C++], copying
 ms.assetid: 3a31e428-f125-44c6-8966-a8a3fac5b117
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 92002b41ace8fe68c80d2b607bb692f7fb9f9c62
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3fc517965ebac8c6071481a66243b51996289062
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487911"
 ---
 # <a name="copying-buttons-from-a-toolbar-c"></a>Copiar botones de una barra de herramientas (C++)
 
@@ -40,5 +29,5 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[Creación, migración y edición de botones de la barra de herramientas](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [Editor de barras de herramientas](../windows/toolbar-editor.md)

@@ -1,28 +1,17 @@
 ---
-title: Eliminar símbolos sin asignar | Microsoft Docs
-ms.custom: ''
+title: Eliminar símbolos sin asignar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], deleting
 - symbols [C++], unassigned
 - unassigned symbols
 ms.assetid: 47641c46-1bad-44fb-8f85-79ae36919f13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2c4b19cc2bf1ed60f02687b82a57745c328fc114
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 64ae86f3cc3c46e697e8c9ce95a873c5dd8429aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534724"
 ---
 # <a name="deleting-unassigned-symbols"></a>Eliminar símbolos sin asignar
 
@@ -39,7 +28,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Cambio de símbolos sin asignar](../windows/changing-unassigned-symbols.md)  
-[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)  
-[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)  
+[Cambio de símbolos sin asignar](../windows/changing-unassigned-symbols.md)<br/>
+[Restricciones de los nombres de símbolo](../windows/symbol-name-restrictions.md)<br/>
+[Restricciones de los valores de símbolo](../windows/symbol-value-restrictions.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)

@@ -1,27 +1,17 @@
 ---
-title: value_compare (clase) | Microsoft Docs
-ms.custom: ''
+title: value_compare (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - value_compare
-dev_langs:
-- C++
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4b7fff1bef091a9d47e6ea4dc0e53e86ce39ad7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627440"
 ---
 # <a name="valuecompare-class"></a>value_compare (Clase)
 
@@ -31,16 +21,16 @@ Proporciona un objeto de función que puede comparar los elementos de hash_map a
 
 ```cpp
 class value_compare
- : std::public binary_function<value_type, value_type, bool>
+    : std::public binary_function<value_type, value_type, bool>
 {
 public:
     bool operator()(
-    const value_type& left,
-    const value_type& right) const
- {
-    return (comp(left.first, right.first));
+        const value_type& left,
+        const value_type& right) const
+    {
+        return (comp(left.first, right.first));
+    }
 
-}
 protected:
     value_compare(const key_compare& c) : comp (c) { }
     key_compare comp;

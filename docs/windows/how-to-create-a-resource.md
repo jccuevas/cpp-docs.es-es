@@ -1,28 +1,17 @@
 ---
-title: 'Cómo: crear un recurso (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: crear un recurso (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbars [C++], resources
 - resource toolbars
 - resources [C++], creating
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9c12357acf3369192248784fc6593c9b5b91b863
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 75f7f722b354e60b86abdeb9a3f9a01469aefcf8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513709"
 ---
 # <a name="how-to-create-a-resource"></a>Cómo: Crear un recurso
 
@@ -33,7 +22,7 @@ ms.locfileid: "44316788"
 
 1. Con el foco en el archivo .rc en [vista de recursos](../windows/resource-view-window.md), haga clic en el **editar** menú y elija **Agregar recurso** (o haga clic en el archivo .rc en **devistaderecursos** y elija **Agregar recurso** en el menú contextual).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
 2. En el [cuadro de diálogo Agregar recurso](../windows/add-resource-dialog-box.md), elija el tipo de recurso que desee agregar al proyecto.
@@ -48,7 +37,7 @@ ms.locfileid: "44316788"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Para crear un recurso nuevo en la Vista de clases
 
-1. En [vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic en la clase y elija **agregar**, a continuación, haga clic en **Agregar recurso** en el menú contextual.
+1. En la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code), haga clic con el botón secundario en la clase y seleccione **Agregar**; a continuación, haga clic en **Agregar recurso** en el menú contextual.
 
 2. En el [cuadro de diálogo Agregar recurso](../windows/add-resource-dialog-box.md), elija el tipo de recurso que desee agregar al proyecto.
 
@@ -68,6 +57,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
-[Editores de recursos](../windows/resource-editors.md)  
-[Agregar recurso (cuadro de diálogo)](../windows/add-resource-dialog-box.md)
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

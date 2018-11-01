@@ -1,8 +1,6 @@
 ---
-title: Clase Platform::Collections::vector | Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::Vector (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -20,21 +18,15 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs:
-- C++
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499877"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
 
@@ -71,7 +63,7 @@ Los tipos permitidos son:
 
 El **Vector** clase es la implementación concreta de C++ de la [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interfaz.
 
-Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro, el error del compilador C3986 se genera. Puede corregir el error cambiando el parámetro o devolver el tipo de valor a [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
+Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro, el error del compilador C3986 se genera. Puedes corregir el error si cambias el tipo del parámetro o del valor devuelto a [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Para obtener más información, consulta [Colecciones (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Miembros
 
@@ -240,11 +232,11 @@ El elemento que se va a buscar.
 *index*<br/>
 Índice de base cero del elemento si parámetro *valor* se encuentra; en caso contrario, 0.
 
-El *índice* parámetro es 0 si el elemento es el primer elemento del Vector o no se encontró el elemento. Si el valor devuelto es `true`, se encontró el elemento y es el primer elemento; de lo contrario, no se encuentra el elemento.
+El *índice* parámetro es 0 si el elemento es el primer elemento del Vector o no se encontró el elemento. Si el valor devuelto es **true**, se encontró el elemento y es el primer elemento; en caso contrario, no se encontró el elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si se encontró el elemento especificado; de lo contrario, `false`.
+**True** si el elemento especificado se encuentra; en caso contrario, **false**.
 
 ### <a name="remarks"></a>Comentarios
 

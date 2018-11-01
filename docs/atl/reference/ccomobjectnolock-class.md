@@ -1,10 +1,6 @@
 ---
-title: CComObjectNoLock (clase) | Microsoft Docs
-ms.custom: ''
+title: CComObjectNoLock (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComObjectNoLock
 - ATLCOM/ATL::CComObjectNoLock
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLCOM/ATL::CComObjectNoLock::AddRef
 - ATLCOM/ATL::CComObjectNoLock::QueryInterface
 - ATLCOM/ATL::CComObjectNoLock::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 76b8b3b329f3282a53eacb4fe27d6cfa79e08b7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 85a5a71e330b8171a8e0e239d9afab43a6df1512
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467380"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock (clase)
 
@@ -112,7 +102,7 @@ Destructor.
 
 ### <a name="remarks"></a>Comentarios
 
-Libera todos los recursos asignados y llama a [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+Libera todos los recursos asignados y llama a [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
 

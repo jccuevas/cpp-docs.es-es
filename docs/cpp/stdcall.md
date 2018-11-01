@@ -1,27 +1,19 @@
 ---
-title: __stdcall | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __stdcall
+ms.date: 10/10/2018
 f1_keywords:
 - __stdcall_cpp
-dev_langs:
-- C++
+- __stdcall
+- _stdcall
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560646"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -46,6 +38,8 @@ En la lista siguiente se muestra la implementación de esta convención de llama
 |Convención de traducción de mayúsculas y minúsculas|Ninguna|
 
 El [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) especifica la opción del compilador **__stdcall** para todas las funciones no declaradas explícitamente con otra convención de llamada.
+
+Para ofrecer compatibilidad con versiones anteriores, **_stdcall** es un sinónimo de **__stdcall** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) es especificado.
 
 Las funciones declaradas con el **__stdcall** del mismo modo que las funciones declaradas con los valores de modificador devuelto [__cdecl](../cpp/cdecl.md).
 

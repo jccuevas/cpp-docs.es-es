@@ -1,29 +1,19 @@
 ---
-title: CComAutoCriticalSection (clase) | Microsoft Docs
-ms.custom: ''
+title: CComAutoCriticalSection (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComAutoCriticalSection
 - ATLCORE/ATL::CComAutoCriticalSection
 - ATLCORE/ATL::CComAutoCriticalSection::CComAutoCriticalSection
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1da9aeb0ff285893ed4f81277f379ad8bffcc65b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590910"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection (clase)
 
@@ -48,7 +38,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection` es similar a la clase [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), excepto `CComAutoCriticalSection` automáticamente inicializa el objeto de sección crítica en el constructor.
 
-Normalmente, se utiliza `CComAutoCriticalSection` a través de la `typedef` nombre [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Este nombre hace referencia a `CComAutoCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.  
+Normalmente, se utiliza `CComAutoCriticalSection` a través de la `typedef` nombre [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Este nombre hace referencia a `CComAutoCriticalSection` cuando [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) se está usando.
 
 El `Init` y `Term` métodos desde [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) no están disponibles cuando se usa esta clase.
 

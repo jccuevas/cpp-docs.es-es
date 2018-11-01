@@ -1,27 +1,17 @@
 ---
-title: Expresiones regulares (C++) | Microsoft Docs
-ms.custom: ''
+title: Expresiones regulares (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86c64ff0eda298ba330f3f1e1ff6d953fd859234
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443474"
 ---
 # <a name="regular-expressions-c"></a>Expresiones regulares (C++)
 
@@ -58,17 +48,17 @@ Un elemento puede ser algo de lo siguiente:
 
 - Una *expresión entre corchetes* con la forma "[`expr`]", que coincide con un carácter o con un elemento de intercalación en la secuencia de destino que se encuentra también en el conjunto definido por la expresión `expr`, o con la forma "[^`expr`]", que coincide con un carácter o un elemento de intercalación de la secuencia de destino que no está en el conjunto definido por la expresión `expr`.
 
-     La expresión `expr` puede contener cualquier combinación de lo siguiente:
+   La expresión `expr` puede contener cualquier combinación de lo siguiente:
 
-    -   Un carácter individual. Agrega ese carácter al conjunto definido por `expr`.
+   - Un carácter individual. Agrega ese carácter al conjunto definido por `expr`.
 
-    -   Un *intervalo de caracteres* con la forma "`ch1`-`ch2`". Agrega los caracteres representados por valores del intervalo cerrado [`ch1`, `ch2`] al conjunto definido por `expr`.
+   - Un *intervalo de caracteres* con la forma "`ch1`-`ch2`". Agrega los caracteres representados por valores del intervalo cerrado [`ch1`, `ch2`] al conjunto definido por `expr`.
 
-    -   Una *clase de carácter* con la forma "[:`name`:]". Agrega los caracteres de la clase con nombre al conjunto definido por `expr`.
+   - Una *clase de carácter* con la forma "[:`name`:]". Agrega los caracteres de la clase con nombre al conjunto definido por `expr`.
 
-    -   Una *clase de equivalencia* con la forma "[=`elt`=]". Agrega los elementos de intercalación que son equivalentes a `elt` al conjunto definido por `expr`.
+   - Una *clase de equivalencia* con la forma "[=`elt`=]". Agrega los elementos de intercalación que son equivalentes a `elt` al conjunto definido por `expr`.
 
-    -   Un *símbolo de intercalación* con la forma "[.`elt`.]". Agrega el elemento de intercalación `elt` al conjunto definido por `expr`.
+   - Un *símbolo de intercalación* con la forma "[.`elt`.]". Agrega el elemento de intercalación `elt` al conjunto definido por `expr`.
 
 - Un *delimitador*. El delimitador “^” coincide con el inicio de la secuencia de destino; el delimitador “$” coincide con el final de la secuencia de destino.
 
@@ -403,11 +393,11 @@ Un carácter ordinario es cualquier carácter válido que no tiene ningún signi
 
 En `ECMAScript`, los caracteres siguientes tienen significados especiales:
 
-- ^  $  \  .  \*  +  ?  (  )  [  ]  {  }  &#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
 
 En `basic` y `grep`, los caracteres siguientes tienen significados especiales:
 
-- .   [   \
+- .   \[   \
 
 También en `basic` y `grep`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:
 
@@ -419,7 +409,7 @@ También en `basic` y `grep`, los caracteres siguientes tienen significados espe
 
 En `extended` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales:
 
-- .   [   \   (   \*   +   ?   {   &#124;
+- .   \[   \   (   \*   +   ?   {   &#124;
 
 También en `extended` y `egrep` y `awk`, los caracteres siguientes tienen significados especiales cuando se utilizan en un contexto determinado:
 

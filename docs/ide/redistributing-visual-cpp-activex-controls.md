@@ -15,38 +15,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d62669ffef0ae1e5788dcf4086a1c5b58e7728ff
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5eea5ef50427e7398246d8da3d7977bb714d9b54
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383888"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Redistribuir controles ActiveX de Visual C++
-Visual C++ 6.0 proporciona controles ActiveX que se pueden usar en las aplicaciones que después se van a redistribuir. Estos controles ya no se incluyen en Visual C++. Según los contratos de licencia para Visual C++ 6.0, puede redistribuir estos controles con las aplicaciones desarrolladas en Visual C++.  
-  
+
+Visual C++ 6.0 proporciona controles ActiveX que se pueden usar en las aplicaciones que después se van a redistribuir. Estos controles ya no se incluyen en Visual C++. Según los contratos de licencia para Visual C++ 6.0, puede redistribuir estos controles con las aplicaciones desarrolladas en Visual C++.
+
 > [!NOTE]
->  Visual C++ 6.0 ya no recibe soporte de Microsoft.  
-  
- Para obtener una lista de los controles ActiveX de Visual C++ 6.0 redistribuibles, vea Common\Redist\Redist.txt en el disco 1 del CD del producto de Visual C++ 6.0.  
-  
- Al distribuir aplicaciones, debe instalar y registrar el archivo .ocx del control ActiveX (mediante Regsvr32.exe). Además, debe asegurarse de que el equipo de destino tiene las versiones actuales de los archivos de sistema siguientes (un asterisco indica que el archivo se tiene que registrar):  
-  
--   Asycfilt.dll  
-  
--   Comcat.dll \*  
-  
--   Oleaut32.dll \*  
-  
--   Olepro32.dll \*  
-  
--   Stdole2.tlb  
-  
- Si estos archivos DLL no están disponibles en el sistema de destino, se deben actualizar mediante el mecanismo indicado para actualizar el sistema operativo correspondiente. Puede descargar los Service Pack más recientes para los sistemas operativos de Windows de [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).  
-  
- Cuando se usa un control ActiveX que se conecta a una base de datos, también se debe replicar el nombre del origen de datos en el equipo de destino. Esto se puede hacer mediante programación con funciones como `ConfigDSN`.  
-  
- Algunos controles ActiveX redistribuibles tienen dependencias adicionales. Para cada archivo .ocx de la carpeta Os\System del CD de producto de Visual C++ 6.0, también hay un archivo .dep. Por cada archivo .ocx que quiera redistribuir, busque una o más entradas USES en el archivo .dep correspondiente. Si aparece un archivo, debe asegurarse de que esté en el equipo de destino. Los archivos DLL que admitan directamente un archivo .ocx tienen que registrarse. (Para que Regsvr32.exe funcione correctamente, el equipo de destino debe contener primero todos los archivos DLL que el control carga de manera estática). Además, si un archivo DLL que aparece como una dependencia tiene también un archivo .dep en la carpeta Os\System del CD de Visual C++ 6.0, también debe investigar las entradas USES en ese archivo.  
-  
-## <a name="see-also"></a>Vea también  
- [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md)
+>  Visual C++ 6.0 ya no recibe soporte de Microsoft.
+
+Para obtener una lista de los controles ActiveX de Visual C++ 6.0 redistribuibles, vea Common\Redist\Redist.txt en el disco 1 del CD del producto de Visual C++ 6.0.
+
+Al distribuir aplicaciones, debe instalar y registrar el archivo .ocx del control ActiveX (mediante Regsvr32.exe). Además, debe asegurarse de que el equipo de destino tiene las versiones actuales de los archivos de sistema siguientes (un asterisco indica que el archivo se tiene que registrar):
+
+- Asycfilt.dll
+
+- Comcat.dll \*
+
+- Oleaut32.dll \*
+
+- Olepro32.dll \*
+
+- Stdole2.tlb
+
+Si estos archivos DLL no están disponibles en el sistema de destino, se deben actualizar mediante el mecanismo indicado para actualizar el sistema operativo correspondiente. Puede descargar los Service Pack más recientes para los sistemas operativos de Windows de [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com).
+
+Cuando se usa un control ActiveX que se conecta a una base de datos, también se debe replicar el nombre del origen de datos en el equipo de destino. Esto se puede hacer mediante programación con funciones como `ConfigDSN`.
+
+Algunos controles ActiveX redistribuibles tienen dependencias adicionales. Para cada archivo .ocx de la carpeta Os\System del CD de producto de Visual C++ 6.0, también hay un archivo .dep. Por cada archivo .ocx que quiera redistribuir, busque una o más entradas USES en el archivo .dep correspondiente. Si aparece un archivo, debe asegurarse de que esté en el equipo de destino. Los archivos DLL que admitan directamente un archivo .ocx tienen que registrarse. (Para que Regsvr32.exe funcione correctamente, el equipo de destino debe contener primero todos los archivos DLL que el control carga de manera estática). Además, si un archivo DLL que aparece como una dependencia tiene también un archivo .dep en la carpeta Os\System del CD de Visual C++ 6.0, también debe investigar las entradas USES en ese archivo.
+
+## <a name="see-also"></a>Vea también
+
+[Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md)

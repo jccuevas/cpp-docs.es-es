@@ -1,28 +1,17 @@
 ---
-title: Estados del Editor de cuadro de diálogo (guías y cuadrículas) (C++) | Microsoft Docs
-ms.custom: ''
+title: Estados del Editor de cuadro de diálogo (guías y cuadrículas) (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Dialog Editor [C++], guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 22e27a5dddacf87a9768d7f6b8d27765d902b5ff
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a07c3c91551acadf8fc548efd816b48bcb3125e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461833"
 ---
-# <a name="dialog-editor-states-guides-and-grids-c"></a>Estados del Editor de cuadro de diálogo (guías y cuadrículas) (C++) 
+# <a name="dialog-editor-states-guides-and-grids-c"></a>Estados del Editor de cuadro de diálogo (guías y cuadrículas) (C++)
 
 Puede organizar los controles de cuadros de diálogo con el **diálogo** editor en uno de tres estados diferentes:
 
@@ -50,6 +39,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)  
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Distribución de los controles en los cuadros de diálogo](../windows/arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles (MFC)](../mfc/controls-mfc.md)

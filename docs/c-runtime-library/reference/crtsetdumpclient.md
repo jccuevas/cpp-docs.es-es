@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDumpClient
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d5fecc90b4b7259f1440a0a0d86277c769c4e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09f319f6298dbec6b229b2923bd86fc9b50314de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397228"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470753"
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 
@@ -60,21 +50,21 @@ Devuelve la función previamente definida de volcado de bloques de cliente.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtSetDumpClient** función permite que la aplicación enlace su propia función para volcar objetos almacenados en **_CLIENT_BLOCK** proceso de volcado de memoria de depuración de bloques de memoria en el tiempo de ejecución de C. Como resultado, cada vez que una depuración de volcado de memoria función como [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) o [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) vuelca un **_CLIENT_BLOCK** bloque de memoria, la aplicación se llama también a la función de volcado de memoria. **_CrtSetDumpClient** proporciona una aplicación con un método sencillo para detectar pérdidas de memoria y validar o notificar el contenido de los datos almacenados en **_CLIENT_BLOCK** bloques. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetDumpClient** se quitan durante el preprocesamiento.
+El **_CrtSetDumpClient** función permite que la aplicación enlace su propia función para volcar objetos almacenados en **_CLIENT_BLOCK** bloques de memoria en el tiempo de ejecución de C depuración el proceso de volcado de memoria. Como resultado, cada vez que una depuración de volcado función como [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) o [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) vuelca un **_CLIENT_BLOCK** bloque de memoria, la aplicación También se llama función de volcado de memoria. **_CrtSetDumpClient** proporciona una aplicación con un método sencillo para detectar pérdidas de memoria y validar o notificar el contenido de los datos almacenados en **_CLIENT_BLOCK** bloques. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetDumpClient** se quitan durante el preprocesamiento.
 
-El **_CrtSetDumpClient** función instala la nueva función de volcado definida por la aplicación especificada en *dumpClient* y devuelve la función de volcado definida previamente. Ejemplo de una función de volcado de bloque de cliente:
+El **_CrtSetDumpClient** función instala la nueva función de volcado de memoria definido por la aplicación especificada en *dumpClient* y devuelve la función de volcado definida previamente. Ejemplo de una función de volcado de bloque de cliente:
 
 ```C
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-El *userPortion* argumento es un puntero al principio de la parte de datos de usuario del bloque de memoria y *blockSize* especifica el tamaño de la memoria asignada bloque en bytes. La función de volcado de memoria de bloque de cliente debe devolver **void**. El puntero a la función de volcado de memoria de cliente que se pasa a **_CrtSetDumpClient** es de tipo **_CRT_DUMP_CLIENT**, tal como se define en Crtdbg.h:
+El *userPortion* argumento es un puntero al principio de la parte de datos de usuario del bloque de memoria y *blockSize* especifica el tamaño de la memoria asignada bloque en bytes. Debe devolver la función de volcado de bloque cliente **void**. El puntero a la función de volcado de memoria de cliente que se pasa a **_CrtSetDumpClient** es de tipo **_CRT_DUMP_CLIENT**, tal como se define en Crtdbg.h:
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Para obtener más información acerca de las funciones que operan en **_CLIENT_BLOCK** tipos de bloques de memoria, vea [funciones de enlace de bloque cliente](/visualstudio/debugger/client-block-hook-functions). La función [_CrtReportBlockType](crtreportblocktype.md) se puede usar para devolver información sobre los tipos y subtipos de bloques.
+Para obtener más información acerca de las funciones que operan en **_CLIENT_BLOCK** bloques de memoria, vea [funciones de enlace de bloque cliente](/visualstudio/debugger/client-block-hook-functions). La función [_CrtReportBlockType](crtreportblocktype.md) se puede usar para devolver información sobre los tipos y subtipos de bloques.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,7 +1,7 @@
 ---
 title: RuntimeClassFlags (estructura) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c3cb141576598aa39c718316048900622c4df41
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 90b590637935b7dbeaa0bb6a07ed84faeb0d0a1d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076184"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags (estructura)
 
@@ -33,15 +33,13 @@ Contiene el tipo de una instancia de un [RuntimeClass](../windows/runtimeclass-c
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <
-   unsigned int flags
->
+template <unsigned int flags>
 struct RuntimeClassFlags;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*flags*  
+*flags*<br/>
 Un [RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md) valor.
 
 ## <a name="members"></a>Miembros
@@ -65,7 +63,7 @@ Un [RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md)
 ## <a name="value-constant"></a>Runtimeclassflags (constante)
 
 Un campo que contenga un [RuntimeClassType (enumeración)](../windows/runtimeclasstype-enumeration.md) valor.
-  
+
 ```cpp
 static const unsigned int value = flags;
 ```

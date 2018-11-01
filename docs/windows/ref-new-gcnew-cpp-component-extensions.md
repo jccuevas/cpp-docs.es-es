@@ -1,33 +1,23 @@
 ---
-title: ref new, gcnew (extensiones de componente de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: ref new, gcnew (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - gcnew
 - ref new
 - gcnew_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dd78bcb7283cb08f4971192274686710fe22181f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641773"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new, gcnew (Extensiones de componentes de C++)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new, gcnew (C++ / c++ / CLI y c++ / CX)
 
 El **referencia nuevos** palabra clave agregada asigna una instancia de un tipo que se recolecta cuando el objeto deja de estar accesible y que devuelve un identificador ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) al objeto asignado.
 
@@ -84,7 +74,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;
@@ -99,4 +89,4 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

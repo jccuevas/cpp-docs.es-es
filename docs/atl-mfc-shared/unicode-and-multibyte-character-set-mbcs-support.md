@@ -1,12 +1,6 @@
 ---
-title: Unicode y juegos de caracteres Multibyte (MBCS) soporte de establecer | Microsoft Docs
-ms.custom: ''
+title: Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)
 ms.date: 1/09/2017
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], character set support
 - MBCS [C++], strings and MFC support
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 74f1f0f88828b5d6355c692aa8eaeecd5869bf57
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202939"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596656"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)
 
@@ -105,5 +95,5 @@ De forma similar, `CString` métodos se implementan mediante asignaciones de tip
 
 ## <a name="see-also"></a>Vea también
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
-[Manipulación de cadenas](../c-runtime-library/string-manipulation-crt.md)  
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Manipulación de cadenas](../c-runtime-library/string-manipulation-crt.md)

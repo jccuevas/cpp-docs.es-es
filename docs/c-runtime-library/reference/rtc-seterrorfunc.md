@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorFunc | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorFunc
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
-dev_langs:
-- C++
 helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514743"
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
-Designa una función como el controlador para notificar comprobaciones de errores en tiempo de ejecución (RTC). Esta función está desusada; usar **_RTC_SetErrorFuncW** en su lugar.
+Designa una función como el controlador para notificar comprobaciones de errores en tiempo de ejecución (RTC). Esta función está en desuso; usar **_RTC_SetErrorFuncW** en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -62,7 +52,7 @@ La función de error definida previamente. Si no hay ninguna función definida p
 
 ## <a name="remarks"></a>Comentarios
 
-No utilice esta función; en su lugar, use **_RTC_SetErrorFuncW**. Se conserva solo por motivos de compatibilidad con versiones anteriores.
+No use esta función; en su lugar, use **_RTC_SetErrorFuncW**. Se conserva solo por motivos de compatibilidad con versiones anteriores.
 
 ## <a name="requirements"></a>Requisitos
 

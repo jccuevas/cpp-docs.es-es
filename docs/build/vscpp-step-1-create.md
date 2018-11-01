@@ -1,25 +1,17 @@
 ---
-title: Cree un proyecto de aplicación de consola de C++ | Microsoft Docs
+title: Cree un proyecto de aplicación de consola de C++
 description: Crear una aplicación de consola Hola a todos en Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
-ms.technology:
-- devlang-C++
 ms.devlang: C++
-dev_langs:
-- C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7875d0e5c142304077ddcd3f7a1f5554da6d6248
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 96573240728eaf77e7f222486b2d9f515a8cfe69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131041"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619900"
 ---
 # <a name="create-a-c-console-app-project"></a>Cree un proyecto de aplicación de consola de C++
 

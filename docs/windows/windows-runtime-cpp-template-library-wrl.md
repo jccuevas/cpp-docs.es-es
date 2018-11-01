@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684829"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204618"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
 La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de plantillas que proporciona una manera de bajo nivel de crear y usar componentes de Windows Runtime.
 
 > [!NOTE]
-> WRL ahora ha sido reemplazada por C++ / c++ / WinRT, una proyección de 17 del lenguaje C ++ estándar para Windows Runtime APIs. C++ / c++ / WinRT está disponible en el SDK de Windows 10 desde la versión 1803 en adelante. C++ / c++ / WinRT se implementa completamente en archivos de encabezado y ha diseñado para proporcionar acceso de primera clase a la API de Windows moderna.
+> WRL ahora es reemplazada por C / c++ / WinRT, una proyección de 17 del lenguaje C ++ estándar para Windows Runtime APIs. C++ / c++ / WinRT está disponible en el SDK de Windows 10 desde la versión 1803 en adelante. C++ / c++ / WinRT se implementa completamente en archivos de encabezado y ha diseñado para proporcionar acceso de primera clase a la API de Windows moderna.
 
 > Con C / c++ / WinRT, puede consumir y crear con cualquier compilador de 17 C ++ conforme a los estándares de Windows en tiempo de ejecución APIs. C++ / c++ / WinRT normalmente funcione mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Se seguirá admitiendo C++ / c++ / CX y WRL, pero se recomienda encarecidamente que utilicen las nuevas aplicaciones C++ / c++ / WinRT. Para obtener más información, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
@@ -50,43 +50,43 @@ La biblioteca de plantillas C++ de Windows en tiempo de ejecución y C++ / c++ /
 
 Estos son algunos recursos que pueden ayudarle a trabajar inmediatamente con la biblioteca de plantillas C++ de Windows en tiempo de ejecución.
 
-[La biblioteca de Windows en tiempo de ejecución (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[La biblioteca de Windows en tiempo de ejecución (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 En este vídeo de Channel 9, obtenga más información sobre cómo la biblioteca de plantillas C++ de Windows en tiempo de ejecución ayuda a que escribir aplicaciones de plataforma Universal de Windows (UWP) y cómo crear y consumir los componentes de Windows en tiempo de ejecución.
 
-[Cómo: activar y usar un componente de tiempo de ejecución de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[Cómo: activar y usar un componente de tiempo de ejecución de Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para inicializar el tiempo de ejecución de Windows y activar y usar un componente de Windows en tiempo de ejecución.
 
-[Cómo: completar operaciones asincrónicas](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[Cómo: completar operaciones asincrónicas](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.
 
-[Cómo: controlar eventos](../windows/how-to-handle-events-using-wrl.md)  
+[Cómo: controlar eventos](../windows/how-to-handle-events-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para suscribirse y controlar los eventos de un objeto en tiempo de ejecución de Windows.
 
-[Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[Tutorial: Crear una aplicación de UWP mediante WRL y Media Foundation](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Obtenga información sobre cómo crear una aplicación UWP que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
-[Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[Cómo: crear un componente COM clásico](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Se muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente COM básico y una forma básica de cómo registrar y utilizar el componente COM de una aplicación de escritorio.
 
-[Procedimiento para crear instancias de componentes WRL directamente](../windows/how-to-instantiate-wrl-components-directly.md)  
-Aprenda a usar el [Microsoft::WRL::Make](../windows/make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) funciones para crear instancias de un componente desde el módulo que lo define.
+[Procedimiento para crear instancias de componentes WRL directamente](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
+Obtenga información sobre cómo utilizar las funciones [Microsoft::WRL::Make](../windows/make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) para crear instancias de un componente a partir del módulo que lo define.
 
-[Procedimiento para usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[Procedimiento para usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de Windows](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecución desde la WRL mediante la creación de un archivo IDL a partir de los metadatos .winmd.
 
-[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Se muestra cómo usar el [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.
 
-[Ejemplo de Bing Maps Trip Optimizer](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Ejemplo de Bing Maps Trip Optimizer](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Usa el `HttpRequest` clase que se define en [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación UWP completa.
 
-[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[Creación de un componente DLL en tiempo de ejecución de Windows con el ejemplo de C++](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para crear un componente DLL en proceso y utilizarlo desde C++ / c++ / CX, JavaScript y C#.
 
-[Ejemplo de juego marble maze con DirectX](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[Ejemplo de juego marble maze con DirectX](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para administrar la duración de los componentes de COM como DirectX y Media Foundation en el contexto de un completo juego en 3D.
 
-[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[Cómo enviar notificaciones de ejemplo de aplicaciones de escritorio](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Muestra cómo usar la biblioteca de plantillas C++ de Windows en tiempo de ejecución para trabajar con notificaciones del sistema de una aplicación de escritorio.
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Biblioteca de plantillas C++ de Windows en tiempo de ejecución y ATL
@@ -119,23 +119,23 @@ Biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona tipo
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md) es un *puntero inteligente* tipo que representa la interfaz especificada por el parámetro de plantilla. Utilice `ComPtr` para declarar una variable que pueda tener acceso a los miembros de un objeto que se derive de la interfaz. `ComPtr` mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.
+[ComPtr](../windows/comptr-class.md) es un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. Utilice `ComPtr` para declarar una variable que pueda tener acceso a los miembros de un objeto que se derive de la interfaz. `ComPtr` mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md) representa una clase con instancias que hereda un conjunto de interfaces especificadas. Un `RuntimeClass` objeto puede proporcionar una combinación de la compatibilidad con una o varias interfaces de COM en tiempo de ejecución de Windows o una referencia débil a un componente.
+[RuntimeClass](../windows/runtimeclass-class.md) representa una clase de la que se ha creado una instancia que hereda un conjunto de interfaces especificadas. Un `RuntimeClass` objeto puede proporcionar una combinación de la compatibilidad con una o varias interfaces de COM en tiempo de ejecución de Windows o una referencia débil a un componente.
 
 ### <a name="module"></a>Module
 
-[Módulo](../windows/module-class.md) representa una colección de objetos relacionados. Un objeto `Module` administra los generadores de clases, que crean objetos, y el registro, que habilita otras aplicaciones para utilizar un objeto.
+[Module](../windows/module-class.md) representa una colección de objetos relacionados. Un objeto `Module` administra los generadores de clases, que crean objetos, y el registro, que habilita otras aplicaciones para utilizar un objeto.
 
 ### <a name="callback"></a>Callback
 
-El [devolución de llamada](../windows/callback-function-windows-runtime-cpp-template-library.md) función crea un objeto cuya función miembro es un controlador de eventos (un método de devolución de llamada). Utilice la función `Callback` para escribir operaciones asincrónicas.
+La función [Callback](../windows/callback-function-windows-runtime-cpp-template-library.md) crea un objeto cuya función miembro es un controlador de eventos (un método de devolución de llamada). Utilice la función `Callback` para escribir operaciones asincrónicas.
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md) se usa para administrar *delegar* controladores de eventos. Usar biblioteca de plantillas C++ de Windows en tiempo de ejecución para implementar un delegado y usar `EventSource` para agregar, quitar o invocar a delegados.
+[EventSource](../windows/eventsource-class.md) se utiliza para administrar los controladores de eventos *delegados* . Usar biblioteca de plantillas C++ de Windows en tiempo de ejecución para implementar un delegado y usar `EventSource` para agregar, quitar o invocar a delegados.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -143,11 +143,11 @@ El [devolución de llamada](../windows/callback-function-windows-runtime-cpp-tem
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](../windows/ftmbase-class.md) representa un objeto de contador de referencias de subprocesamiento libre. `FtmBase` crea una tabla de interfaz global (GIT) y ayuda a administrar los objetos proxy y de cálculo de referencias.
+[FtmBase](../windows/ftmbase-class.md) representa un objeto de cálculo de referencias con subprocesamiento libre. `FtmBase` crea una tabla de interfaz global (GIT) y ayuda a administrar los objetos proxy y de cálculo de referencias.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md) es un tipo de puntero inteligente que representa un *referencia débil*, que hace referencia a un objeto que puede o no esté accesible. Un `WeakRef` objeto se puede usar solo el tiempo de ejecución de Windows y no COM clásico.
+[WeakRef](../windows/weakref-class.md) es un tipo puntero inteligente que representa una *referencia débil*y que hace referencia a un objeto al que se puede obtener o no acceso. Un `WeakRef` objeto se puede usar solo el tiempo de ejecución de Windows y no COM clásico.
 
 Un objeto `WeakRef` normalmente representa un objeto cuya existencia se controla mediante una aplicación o un subproceso externo. Por ejemplo, un objeto `WeakRef` puede hacer referencia a un objeto de archivo. Cuando se abre el archivo, `WeakRef` es válido y se puede tener acceso al archivo de referencia. Pero cuando se cierra el archivo, `WeakRef` no es válido y no se tiene acceso al archivo.
 

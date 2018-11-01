@@ -1,29 +1,19 @@
 ---
-title: Funciones globales de punto de conexión | Microsoft Docs
-ms.custom: ''
+title: Funciones globales de punto de conexión
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
 - atlbase/ATL::AtlUnadvise
 - atlbase/ATL::AtlAdviseSinkMap
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12976bcf796466f959807f7ac2fb52257889454b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628935"
 ---
 # <a name="connection-point-global-functions"></a>Funciones globales de punto de conexión
 
@@ -36,7 +26,7 @@ Estas funciones proporcionan compatibilidad para puntos de conexión y mapas de 
 |-|-|
 |[AtlAdvise](#atladvise)|Crea una conexión entre el punto de conexión de un objeto y el receptor de un cliente.|
 |[AtlUnadvise](#atlunadvise)|Finaliza la conexión establecida mediante `AtlAdvise`.|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconseja o no notifica las entradas de un mapa de receptores de eventos.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Aconseja o no notifica las entradas de un mapa de receptores de eventos.|
 
 ## <a name="requirements"></a>Requisitos
 

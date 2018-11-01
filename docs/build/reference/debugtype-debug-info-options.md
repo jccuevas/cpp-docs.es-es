@@ -1,29 +1,19 @@
 ---
-title: -DEBUGTYPE (opciones de información de depuración) | Microsoft Docs
-ms.custom: ''
+title: /DEBUGTYPE (Opciones de información de depuración)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /debugtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - /DEBUGTYPE linker option
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98edb5945c2cf01d90cd5dae1a750c0fdd37757f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f730e485b7dc29cb8fe98bdcc7ea50f5e8c622d7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676998"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (Opciones de información de depuración)
 
@@ -54,7 +44,7 @@ Para depurar el código en modo de usuario, que es típico para las aplicaciones
 
 ## <a name="see-also"></a>Vea también
 
-[/Debug (Generate Debug Info)](../../build/reference/debug-generate-debug-info.md)
-[/DRIVER (controlador de modo Kernel de Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)
-[/PROFILE (Profiler de las herramientas de rendimiento)](../../build/reference/profile-performance-tools-profiler.md) 
- [Herramientas de depuración para Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+[/DEBUG (Generar información de depuración)](../../build/reference/debug-generate-debug-info.md)<br/>
+[/DRIVER (Controlador de modo kernel de Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (Generador de perfiles de Herramientas de rendimiento)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[Herramientas de depuración para Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

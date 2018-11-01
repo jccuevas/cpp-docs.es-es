@@ -1,28 +1,18 @@
 ---
-title: IID_PPV_ARGS_Helper (función) | Microsoft Docs
-ms.custom: ''
+title: IID_PPV_ARGS_Helper (función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/IID_PPV_ARGS_Helper
-dev_langs:
-- C++
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 32970c9d30e1804071190ee5a57c42fd4b6334af
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: cae29c70c551701a351cdcf404342ed1634a0e3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467423"
 ---
 # <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper (función)
 
@@ -42,10 +32,10 @@ void** IID_PPV_ARGS_Helper(
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 El tipo del argumento *pp*.
 
-*perfil de puerto*  
+*perfil de puerto*<br/>
 Puntero indirecto doble.
 
 ## <a name="return-value"></a>Valor devuelto

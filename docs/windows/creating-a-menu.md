@@ -1,30 +1,19 @@
 ---
-title: Creación de un menú (C++) | Microsoft Docs
-ms.custom: ''
+title: Creación de un menú (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.menu
-dev_langs:
-- C++
 helpviewer_keywords:
 - mnemonics [C++], associating menu items
 - menus [C++], associating commands with mnemonic keys
 - menus [C++], creating
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b779e6b089410b818247471086fe987c37b1f36c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316268"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518565"
 ---
 # <a name="creating-a-menu-c"></a>Creación de un menú (C++)
 
@@ -37,8 +26,8 @@ ms.locfileid: "44316268"
 
 2. Seleccione el cuadro **Nuevo elemento** (el rectángulo que contiene "Escriba aquí") en la barra de menús.
 
-   ![Cuadro nuevo elemento en el editor de menús](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Cuadro Nuevo elemento
+   ![Cuadro nuevo elemento en el editor de menús](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Cuadro Nuevo elemento
 
 3. Escriba un nombre para el nuevo menú, por ejemplo, "Archivo".
 
@@ -46,8 +35,8 @@ Cuadro Nuevo elemento
 
    Tras asignar un nombre al nuevo menú en la barra de menús, el cuadro de nuevo elemento se desplaza hacia la derecha (para permitir agregar otro menú) y se abre otro cuadro de nuevo elemento debajo del primer menú, donde pueden agregarse otros comandos de menú.
 
-   ![Cuadro nuevo elemento expandido](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Cuadro Nuevo elemento con el foco desplazado al escribir el nombre del nuevo menú
+   ![Cuadro nuevo elemento expandido](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Cuadro Nuevo elemento con el foco desplazado al escribir el nombre del nuevo menú
 
    > [!NOTE]
    > Para crear un solo elemento de menú en la barra de menús, establezca la **emergente** propiedad **False**.

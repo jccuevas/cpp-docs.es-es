@@ -1,27 +1,16 @@
 ---
-title: Propiedad de tipo de acelerador (C++) | Microsoft Docs
-ms.custom: ''
+title: Propiedad de tipo de acelerador (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Type property
 - VIRTKEY
 ms.assetid: 8c349bc4-e6ad-43fa-959e-f29168af35b8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d38d5a78eb37a028f29da430a762604b2e50d632
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 00699f31b821aa508feec9ffe062d768f27ee5a2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315696"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475596"
 ---
 # <a name="accelerator-type-property-c"></a>Propiedad de tipo de acelerador (C++)
 
@@ -40,5 +29,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)  
+[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

@@ -1,10 +1,6 @@
 ---
-title: bitset (Clase) | Microsoft Docs
-ms.custom: ''
+title: bitset (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -21,8 +17,6 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a385ac850148caab582821b039fece5709f75b6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5e5d1e14e6cdf35c907b2bb1f7816fc07bbd416f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701667"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562843"
 ---
 # <a name="bitset-class"></a>bitset (Clase)
 
@@ -106,7 +96,7 @@ Un bit se establece si su valor es 1 y se restablece si su valor es 0. Voltear o
 
 |Clase de miembro|Descripción|
 |-|-|
-|[reference](#reference)|Clase de proxy que proporciona referencias a los bits que contiene un `bitset` y que se usa para acceder y manipular los bits individuales como una clase auxiliar para el `operator[]` de clase `bitset`.|
+|[reference](#reference)|Clase de proxy que proporciona referencias a los bits que contiene un `bitset` y que se usa para acceder y manipular los bits individuales como una clase del asistente para el `operator[]` de clase `bitset`.|
 
 ### <a name="operators"></a>Operadores
 
@@ -1206,7 +1196,7 @@ Bitset b3 = b1.flip( ) is: ( 11000 ).
 
 ## <a name="reference"></a>  bitset::reference
 
-Clase de proxy que proporciona referencias a los bits que contiene un conjunto de bits y que se usa para acceder y manipular los bits individuales como una clase auxiliar para el `operator[]` de clase bitset.
+Clase de proxy que proporciona referencias a los bits que contiene un conjunto de bits y que se usa para acceder y manipular los bits individuales como una clase del asistente para el `operator[]` de clase bitset.
 
 ```cpp
 class reference {
@@ -1234,7 +1224,7 @@ Una referencia al bit en el conjunto de bits especificado por la posición del a
 
 ### <a name="remarks"></a>Comentarios
 
-La clase `reference` solo existe como una clase auxiliar para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo **bool**, *x* y *y* los objetos de tipo **bitset\<**  *N* **>**, y *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
+La clase `reference` solo existe como una clase del asistente para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo **bool**, *x* y *y* los objetos de tipo **bitset\<**  *N* **>**, y *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
 
 |Operación|de esquema JSON|
 |---------------|----------------|

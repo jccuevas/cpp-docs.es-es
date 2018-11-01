@@ -1,29 +1,18 @@
 ---
-title: Llenar un área delimitada de una imagen con un Color (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Llenar un área delimitada de una imagen con un color (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
 - Image editor [C++], colors
 - Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 47b8837cafaab2501e201a747fd9463e1e00639e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 678d3275a41628b5ada28068a760ef60cc258776
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42580974"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451719"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Llenar un área delimitada de una imagen con un color (Editor de imágenes para iconos)
 
@@ -50,5 +39,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)

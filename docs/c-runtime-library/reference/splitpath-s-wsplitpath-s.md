@@ -1,10 +1,6 @@
 ---
-title: _splitpath_s, _wsplitpath_s | Microsoft Docs
-ms.custom: ''
+title: _splitpath_s, _wsplitpath_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsplitpath_s
 - _splitpath_s
@@ -26,8 +22,6 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5fd1407aa6c2b7630e0720eeec179ca27e7d31a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602909"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -100,7 +90,7 @@ errno_t _wsplitpath_s(
 Ruta de acceso completa.
 
 *Unidad*<br/>
-Unidad de letra, seguido de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
+Letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
 
 *driveNumberOfElements*<br/>
 El tamaño de la *unidad* búfer en caracteres de byte único o anchos. Si *unidad* es **NULL**, este valor debe ser 0.
@@ -118,7 +108,7 @@ Nombre de archivo base (sin extensión). Puede pasar **NULL** para este parámet
 El tamaño de la *fname* búfer en caracteres de byte único o anchos. Si *fname* es **NULL**, este valor debe ser 0.
 
 *ext*<br/>
-Extensión de nombre de archivo, incluido el período inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
+Extensión de nombre de archivo, incluido el punto inicial (**.**). Puede pasar **NULL** para este parámetro si no necesita la extensión de nombre de archivo.
 
 *extNumberOfElements*<br/>
 El tamaño de *ext* búfer en caracteres de byte único o anchos. Si *ext* es **NULL**, este valor debe ser 0.
@@ -143,11 +133,11 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 Si se da alguna de las condiciones anteriores, se invoca al controlador de parámetros no válidos, tal como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
 
-Si cualquiera de los búferes es demasiado corto como para contener el resultado, estas funciones borre todos los búferes para cadenas vacías, establezca **errno** a **ERANGE**y devolver **ERANGE**.
+Si alguno de los búferes es demasiado pequeño para contener el resultado, estas funciones borran todos los búferes en cadenas vacías, establecen **errno** a **ERANGE**y devolver **ERANGE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_splitpath_s** función divide una ruta de acceso en sus cuatro componentes. **_splitpath_s** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos a **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+El **_splitpath_s** función divide una ruta de acceso en los cuatro componentes respectivos. **_splitpath_s** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso. **_wsplitpath_s** es una versión con caracteres anchos de **_splitpath_s**; los argumentos de **_wsplitpath_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -166,7 +156,7 @@ En la tabla siguiente se enumeran los valores de las constantes de manifiesto.
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-Si la ruta de acceso completa no contiene un componente (por ejemplo, un nombre de archivo), **_splitpath_s** asigna una cadena vacía en el búfer correspondiente.
+Si la ruta de acceso completa no contiene ningún componente (por ejemplo, un nombre de archivo), **_splitpath_s** asigna una cadena vacía al búfer correspondiente.
 
 En C++, el uso de estas funciones se simplifica mediante sobrecargas de plantilla. Las sobrecargas pueden deducir la longitud del búfer automáticamente, lo que elimina la necesidad de especificar un argumento de tamaño. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

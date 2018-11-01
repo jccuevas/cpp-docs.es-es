@@ -1,78 +1,58 @@
 ---
-title: Punteros (C++) | Microsoft Docs
-ms.custom: ''
+title: Punteros (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declarators, pointers
 - declarations, pointers
 - pointers [C++]
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024117"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667875"
 ---
 # <a name="pointers-c"></a>Punteros (C++)
 
 Los punteros se declaran mediante la siguiente secuencia.
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*especificadores de clase de almacenamiento*] \[ *calificadores cv*] *especificadores de tipo* \[ *ms-modifier*]  *declarador* **;**
 
-donde se puede usar cualquier declarador de puntero válido para `declarator`. La sintaxis de un declarador de puntero simple es la siguiente:
+donde se puede usar cualquier declarador de puntero válido para *declarador*. La sintaxis de un declarador de puntero simple es la siguiente:
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*calificadores CV*] *identificador* \[ **=** *expresión*]
 
 1. Los especificadores de la declaración:
 
-    - Un especificador de clase de almacenamiento opcional. Para obtener más información, consulte [especificadores](../cpp/specifiers.md).
+   - Un especificador de clase de almacenamiento opcional. Para obtener más información, consulte [especificadores](../cpp/specifiers.md).
 
-    - Opcional **const** o **volátil** palabra clave se aplica al tipo del objeto al que se apunta.
+   - Opcional **const** o **volátil** palabra clave se aplica al tipo del objeto al que se apunta.
 
-    - El especificador de tipo: el nombre de un tipo que representa el tipo del objeto al que se apunta.
+   - El especificador de tipo: el nombre de un tipo que representa el tipo del objeto al que se apunta.
 
-2. El declarador:
+1. El declarador:
 
-    - Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificador opcional concreto de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-    - El operador `*`.
+   - El __\*__ operador.
 
-    - Opcional **const** o **volátil** palabra clave que se aplica al propio puntero.
+   - Opcional **const** o **volátil** palabra clave que se aplica al propio puntero.
 
-    - El identificador.
+   - El identificador.
 
-    - Un inicializador opcional.
+   - Un inicializador opcional.
 
-     El declarador de un puntero a función tiene el siguiente aspecto:
+El declarador de un puntero a función tiene el siguiente aspecto:
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *calificadores cv*] *identificador* **) (** *lista de argumentos* **)** \[ *cv opcionales*] \[ *especificación de excepción*] \[ **=** *expresión*] **;**
 
-- Para una matriz de punteros, la sintaxis es la siguiente:
+Para una matriz de punteros, la sintaxis es la siguiente:
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *identificador* **\[** \[ *expresión-constante*] **]**
 
-- Varios declaradores y sus inicializadores pueden aparecer juntos en una sola declaración en una lista separada por comas detrás del especificador de declaración.
+Varios declaradores y sus inicializadores pueden aparecer juntos en una sola declaración en una lista separada por comas detrás del especificador de declaración.
 
 Un ejemplo simple de una declaración de puntero es:
 

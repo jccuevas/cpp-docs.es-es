@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5ffa7666f9b976312bf1c3115d93204bdd8f8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 53f3e618378abd70506e2fed45767c7c856320b0
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853757"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821155"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -62,7 +62,7 @@ Incluye el encabezado estándar \<ratio> para definir constantes y plantillas qu
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
-   struct ratio // holds the ratio of Numerator to Denominator
+struct ratio // holds the ratio of Numerator to Denominator
 {
    static constexpr std::intmax_t num;
    static constexpr std::intmax_t den;
@@ -70,7 +70,7 @@ template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
 }
 ```
 
-La plantilla `ratio` define las constantes estáticas `num` y `den` que `num`  /  `den` == Numerador / Denominador y `num` y `den` no tienen ningún factor común. `num` / `den` es el valor representado por la clase de plantilla. Por lo tanto, `type` designa la creación de instancias `ratio<num, den>`.
+La plantilla `ratio` define las constantes estáticas `num` y `den` que `num`  /  `den` == numerador y denominador y `num` y `den` no tienen factores comunes. `num` / `den` es el valor representado por la clase de plantilla. Por lo tanto, `type` designa la creación de instancias `ratio<num, den>`.
 
 ### <a name="specializations"></a>Especializaciones
 

@@ -1,35 +1,25 @@
 ---
-title: Matrices (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Matrices (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
 - lang::array
-dev_langs:
-- C++
 helpviewer_keywords:
 - array keyword [C++]
 - arrays [C++], multidimensional
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: dbfcedd2bc17e21b94de46c63edd95bf58f576a7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1421434b1271d3c9caa11258647dd6ae357a2c0e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632068"
 ---
-# <a name="arrays-c-component-extensions"></a>Matrices (Extensiones de componentes de C++)
+# <a name="arrays-ccli-and-ccx"></a>Matrices (C++ / c++ / CLI y c++ / CX)
 
 El `Platform::Array<T>` tipo en C++ / c++ / CX, o la **matriz** palabra clave en C++ / c++ / CLI, declara una matriz de un tipo especificado y el valor inicial.
 
@@ -55,26 +45,26 @@ Las matrices son miembros de la `Platform` espacio de nombres. Las matrices solo
 El primer ejemplo de la sintaxis se utiliza el **referencia nuevos** palabra clave agregada para asignar una matriz. El segundo ejemplo declara una matriz local.
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
 *calificadores*<br/>
 (Opcional) Uno o varios de estos especificadores de clase de almacenamiento: [mutable](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
 
-*tipo de matriz*  
+*tipo de matriz*<br/>
 El tipo de la variable de matriz. Tipos válidos son clases de Windows Runtime y tipos fundamentales, las clases ref y structs, las clases de valor y las estructuras y punteros nativos (`type*`).
 
 *rank*<br/>
 (Opcional) El número de dimensiones de la matriz. Debe ser 1.
 
-*identifier*  
+*identifier*<br/>
 El nombre de la variable de matriz.
 
-*tipo de inicialización*  
+*tipo de inicialización*<br/>
 El tipo de los valores que inicializar la matriz. Por lo general, *tipo de matriz* y *tipo de inicialización* son del mismo tipo. Sin embargo, los tipos pueden ser diferentes si hay una conversión de *tipo de inicialización* a *tipo de matriz*— por ejemplo, si *tipo de inicialización* se deriva de *tipo de matriz*.
 
 *lista de inicialización*<br/>
@@ -111,29 +101,29 @@ int main() {
 El primer ejemplo de la sintaxis se utiliza el **gcnew** palabra clave para asignar una matriz. El segundo ejemplo declara una matriz local.
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
 *calificadores*<br/>
 (Opcional) Uno o varios de estos especificadores de clase de almacenamiento: [mutable](../cpp/mutable-data-members-cpp.md), [volátil](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [estático](../cpp/static-members-cpp.md).
 
-*tipo de matriz*  
+*tipo de matriz*<br/>
 El tipo de la variable de matriz. Tipos válidos son clases de Windows Runtime y tipos fundamentales, las clases ref y structs, las clases de valor y structs, punteros nativos (`type*`) y tipos nativos de POD (datos antiguos).
 
 *rank*<br/>
 (Opcional) El número de dimensiones de la matriz. El valor predeterminado es 1; el máximo es 32. Cada dimensión de la matriz es una matriz.
 
-*identifier*  
+*identifier*<br/>
 El nombre de la variable de matriz.
 
-*tipo de inicialización*  
+*tipo de inicialización*<br/>
 El tipo de los valores que inicializar la matriz. Por lo general, *tipo de matriz* y *tipo de inicialización* son del mismo tipo. Sin embargo, los tipos pueden ser diferentes si hay una conversión de *tipo de inicialización* a *tipo de matriz*— por ejemplo, si *tipo de inicialización* se deriva de *tipo de matriz*.
 
-*rango en la lista de tamaño*  
+*rango en la lista de tamaño*<br/>
 Una lista delimitada por comas del tamaño de cada dimensión de la matriz. Como alternativa, si la *lista de inicialización* parámetro se especifica, el compilador puede deducir el tamaño de cada dimensión y *rango en la lista de tamaño* puede omitirse.
 
 *lista de inicialización*<br/>
@@ -180,4 +170,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

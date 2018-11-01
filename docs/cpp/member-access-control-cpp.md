@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063359"
 ---
 # <a name="member-access-control-c"></a>Control de acceso a miembros (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 El acceso predeterminado es **privada** en una clase, y **pública** en una estructura o unión. Los especificadores de acceso de una clase se pueden usar cualquier número de veces en cualquier orden. La asignación de almacenamiento para objetos de tipos de clase depende de la implementación, pero se garantiza que a los miembros se les asignen direcciones de memoria sucesivamente superiores entre los especificadores de acceso.
 
-### <a name="member-access-control"></a>Control de acceso a miembros
+## <a name="member-access-control"></a>Control de acceso a miembros
 
 |Tipo de Acceso|Significado|
 |--------------------|-------------|
@@ -247,7 +247,6 @@ En los entramados de herencia múltiple con clases base virtuales, se puede acce
 ![Acceso a lo largo de rutas de acceso de un gráfico de herencia](../cpp/media/vc38v91.gif "vc38V91") a lo largo de rutas de acceso de un gráfico de herencia
 
 En la ilustración, se accede a un nombre declarado en la clase `VBase` siempre a través de la clase `RightPath`. La ruta de acceso derecha es más accesible porque `RightPath` declara `VBase` como clase base pública, mientras que `LeftPath` declara `VBase` como private.
-
 
 ## <a name="see-also"></a>Vea también
 

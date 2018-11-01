@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316216"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399852"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>Pestaña del Editor de cuadro de diálogo, cuadro de herramientas (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Controles](../mfc/controls-mfc.md)  
-[Clases de control](../mfc/control-classes.md)  
-[Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)  
-[Estilos de barra de desplazamiento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[Ejemplos de control Rich Edit](../mfc/rich-edit-control-examples.md)  
-[Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[Controles](../mfc/controls-mfc.md)<br/>
+[Clases de control](../mfc/control-classes.md)<br/>
+[Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)<br/>
+[Estilos de barra de desplazamiento](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[Ejemplos de control Rich Edit](../mfc/rich-edit-control-examples.md)<br/>
+[Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Tipos de controles de cuadro de diálogo y tipos de variable](../ide/dialog-box-controls-and-variable-types.md)

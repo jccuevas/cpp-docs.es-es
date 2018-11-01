@@ -1,10 +1,6 @@
 ---
-title: CComSafeArray (clase) | Microsoft Docs
-ms.custom: ''
+title: CComSafeArray (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -29,21 +25,15 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3cbe0ed66addab9ab4ff7a6175083730a8702a31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548699"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray (clase)
 
@@ -100,7 +90,7 @@ Tipo de datos que se va a almacenar en la matriz.
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Convierte un valor en un `SAFEARRAY` puntero.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Recupera un elemento de la matriz.|
-|[CComSafeArray::operator =](#operator_eq)|Operador de asignación.|  
+|[CComSafeArray::operator =](#operator_eq)|Operador de asignación.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -110,7 +100,7 @@ Tipo de datos que se va a almacenar en la matriz.
 
 ## <a name="remarks"></a>Comentarios
 
-`CComSafeArray` Proporciona un contenedor para el [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) (clase), lo que puede crear y administrar matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT fácilmente.
+`CComSafeArray` proporciona un contenedor para la clase [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , lo que facilita la creación y administración de matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.
 
 `CComSafeArray` simplifica el paso de matrices entre procesos y, además, proporciona seguridad adicional al comprobar los valores de índice de matriz con los limites superior e inferior.
 
@@ -159,7 +149,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Parámetros
 
 *psaSrc*<br/>
-Un puntero a un `SAFEARRAY` objeto.
+Puntero a un objeto `SAFEARRAY` .
 
 *ulCount*<br/>
 El número de objetos que se va a agregar a la matriz.
@@ -311,7 +301,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>Parámetros
 
 *pBound*<br/>
-Un puntero a un `SAFEARRAYBOUND` objeto.
+Puntero a un objeto `SAFEARRAYBOUND` .
 
 *uDims*<br/>
 El número de dimensiones de la matriz.
@@ -597,7 +587,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 Referencia a un objeto `CComSafeArray`.
 
 *psaSrc*<br/>
-Un puntero a un `SAFEARRAY` objeto.
+Puntero a un objeto `SAFEARRAY` .
 
 ### <a name="return-value"></a>Valor devuelto
 

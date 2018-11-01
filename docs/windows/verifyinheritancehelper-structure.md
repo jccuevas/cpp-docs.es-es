@@ -1,28 +1,30 @@
 ---
 title: VerifyInheritanceHelper (estructura) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+- implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a7b101091cefcdca65518c2a62bd274f7af4607
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2a011b0583d8221ec49d16236add978ac647acc3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610260"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788934"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper (estructura)
 
@@ -31,23 +33,19 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <
-   typename I,
-   typename Base
->
+template <typename I, typename Base>
 struct VerifyInheritanceHelper;
-template <
-   typename I
->
+
+template <typename I>
 struct VerifyInheritanceHelper<I, Nil>;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*I*  
+*I*<br/>
 Un tipo.
 
-*base*  
+*base*<br/>
 Otro tipo.
 
 ## <a name="remarks"></a>Comentarios
@@ -58,9 +56,9 @@ Comprueba si una interfaz se deriva de otra interfaz.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
-|----------|-----------------|
-|[VerifyInheritanceHelper::Verify (método)](../windows/verifyinheritancehelper-verify-method.md)|Prueba de las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.|
+Name                                       | Descripción
+------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
+[Verifyinheritancehelper](#verify) | Prueba de las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -72,6 +70,16 @@ Comprueba si una interfaz se deriva de otra interfaz.
 
 **Namespace:** wrl
 
-## <a name="see-also"></a>Vea también
+## <a name="verify"></a>Verifyinheritancehelper
 
-[Microsoft::WRL::Details (espacio de nombres)](../windows/microsoft-wrl-details-namespace.md)
+Admite la infraestructura WRL y no está pensado para utilizarse directamente desde el código.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Comentarios
+
+Prueba de las dos interfaces especificadas por los parámetros de plantilla actual y determina si una interfaz se deriva de la otra.
+
+Se genera un error si una interfaz no se derive de la otra.

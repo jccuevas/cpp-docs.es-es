@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b6d6bd580faf8c242ca5ac5e9b4b29ded9a7750a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059875"
 ---
 # <a name="key-wrl-apis-by-category"></a>API clave de WRL por categoría
+
 Las tablas siguientes muestran las principales clases, structs, funciones y macros de biblioteca de plantillas C++ de Windows en tiempo de ejecución. Se omiten las construcciones en clases y espacios de nombres de aplicación auxiliar. Estas listas aumentan la documentación de API, que está organizada por espacio de nombres.
-  
-### <a name="classes"></a>Clases
-  
+
+## <a name="classes"></a>Clases
+
 |Title|Descripción|
 |-----------|-----------------|
 |[ActivationFactory (clase)](../windows/activationfactory-class.md)|Habilita una o más clases que activa Windows Runtime.|
@@ -46,18 +47,18 @@ Las tablas siguientes muestran las principales clases, structs, funciones y macr
 |[SimpleActivationFactory (clase)](../windows/simpleactivationfactory-class.md)|Proporciona un mecanismo fundamental para crear una clase base de Windows Runtime o COM clásico.|
 |[SimpleClassFactory (clase)](../windows/simpleclassfactory-class.md)|Proporciona un mecanismo fundamental para crear una clase base.|
 |[WeakRef (clase)](../windows/weakref-class.md)|Representa una *referencia débil* que solo puede usar Windows en tiempo de ejecución, no COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
-  
-### <a name="structures"></a>Estructuras
-  
+
+## <a name="structures"></a>Estructuras
+
 |Title|Descripción|
 |-----------|-----------------|
 |[ChainInterfaces (estructura)](../windows/chaininterfaces-structure.md)|Especifica las funciones de comprobación e inicialización que se pueden aplicar a un conjunto de identificadores de interfaz.|
 |[CloakedIid (estructura)](../windows/cloakediid-structure.md)|Indica a la `RuntimeClass`, `Implements` y `ChainInterfaces` plantillas que la interfaz especificada no es accesible en la lista IID.|
 |[Implements (estructura)](../windows/implements-structure.md)|Implementa `QueryInterface` y `GetIid` para las interfaces especificadas.|
 |[MixIn (estructura)](../windows/mixin-structure.md)|Garantiza que una clase Runtime deriva de interfaces de Windows Runtime, si las hubiera, y luego de interfaces de COM clásico.|
-  
-### <a name="functions"></a>Funciones
-  
+
+## <a name="functions"></a>Funciones
+
 |Title|Descripción|
 |-----------|-----------------|
 |[ActivateInstance (función)](../windows/activateinstance-function.md)|Registra y recupera una instancia de un tipo especificado definido en un identificador de clase especificado.|
@@ -67,13 +68,14 @@ Las tablas siguientes muestran las principales clases, structs, funciones y macr
 |[CreateClassFactory (función)](../windows/createclassfactory-function.md)|Crea un generador que produce instancias de la clase especificada.|
 |[GetActivationFactory (función)](../windows/getactivationfactory-function.md)|Recupera un generador de activación para el tipo especificado por el parámetro de plantilla.|
 |[Make (función)](../windows/make-function.md)|Inicializa la clase en tiempo de ejecución de Windows especificada.|
-  
-### <a name="macros"></a>Macros
-  
+
+## <a name="macros"></a>Macros
+
 |Title|Descripción|
 |-----------|-----------------|
 |[ActivatableClass (macros)](../windows/activatableclass-macros.md)|Rellena una memoria caché interna que contiene una fábrica que puede crear una instancia de la clase especificada.|
 |[InspectableClass (macro)](../windows/inspectableclass-macro.md)|Establece el nivel de confianza y de nombre de clase en tiempo de ejecución.|
-  
+
 ## <a name="see-also"></a>Vea también
- [Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)
+
+[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

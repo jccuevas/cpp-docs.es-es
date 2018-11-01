@@ -1,27 +1,17 @@
 ---
-title: Las herramientas del vinculador LNK1313 Error | Documentos de Microsoft
-ms.custom: ''
+title: Error de las herramientas del vinculador LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604235"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Error de las herramientas del vinculador LNK1313
 
@@ -29,9 +19,9 @@ ms.locfileid: "34705093"
 
 ## <a name="remarks"></a>Comentarios
 
-La versión actual de Visual C++ no admite la vinculación de archivos .obj administrados o nativos nativo o mixto con archivos .obj compilados con **/CLR: pure**.
+La versión actual de Visual C++ no admite la vinculación de archivos .obj administrados/nativos nativo o mixto con archivos .obj compilados con **/CLR: pure**.
 
-El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+El **/CLR: pure** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,35 +1,23 @@
 ---
-title: Error del compilador C2143 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C2143
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2143
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6352c87748bafa635d8d6dae29bf37b78ac6c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0a7cbad52697ccedac75af73012f6dc69eec5a25
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582616"
 ---
 # <a name="compiler-error-c2143"></a>Error del compilador C2143
 
 error de sintaxis: falta 'token1' delante de 'token2'
 
 El compilador esperaba un token específico (es decir, un elemento del lenguaje que no sea espacio en blanco) y encontró otro token en su lugar.
-
-Para obtener información sobre este error cuando se produce cuando se usa un bloque try de función, vea [el artículo de Knowledge Base 241706](http://support.microsoft.com/kb/241706).
 
 Compruebe el [referencia del lenguaje C++](../../cpp/cpp-language-reference.md) para determinar dónde se encuentra código sintácticamente incorrecto. Dado que el compilador puede notificar este error después de que encuentre la línea que causa el problema, compruebe varias líneas de código que preceden el error.
 

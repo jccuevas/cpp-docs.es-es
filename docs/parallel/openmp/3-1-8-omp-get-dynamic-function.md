@@ -1,34 +1,25 @@
 ---
-title: 3.1.8 omp_get_dynamic (función) | Documentos de Microsoft
-ms.custom: ''
+title: 3.1.8 omp_get_dynamic (Función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c03e2daf-29c9-49e3-9b67-b980ad1ab195
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af7755173ab884a40a5f8a41f432f265cc1e6c32
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: d9476894e5aff4cc7bb9c67fbbeb14d185b65f5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566431"
 ---
 # <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic (Función)
-El **omp_get_dynamic ()** función devuelve un valor distinto de cero si realizar un ajuste dinámico de subprocesos está habilitado y lo contrario, devuelve 0. El formato es como se detalla a continuación:  
-  
-```  
-#include <omp.h>  
-int omp_get_dynamic(void);  
-```  
-  
- Si la implementación no implementa realizar un ajuste dinámico del número de subprocesos, esta función siempre devuelve 0.  
-  
-## <a name="cross-references"></a>Referencias cruzadas:  
-  
--   Para obtener una descripción de ajuste de subproceso dinámica, consulte [sección 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) en página 39.
+
+El **omp_get_dynamic ()** función devuelve un valor distinto de cero si realizar un ajuste dinámico de subprocesos está habilitado y lo contrario, devuelve 0. El formato es como se detalla a continuación:
+
+```
+#include <omp.h>
+int omp_get_dynamic(void);
+```
+
+Si la implementación no implementa un ajuste dinámico del número de subprocesos, esta función siempre devuelve 0.
+
+## <a name="cross-references"></a>Referencias cruzadas:
+
+- Para obtener una descripción de ajuste dinámico del subproceso, vea [sección 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) en página 39.

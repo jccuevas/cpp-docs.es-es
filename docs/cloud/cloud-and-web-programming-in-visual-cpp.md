@@ -1,23 +1,13 @@
 ---
-title: En la nube y Web de programación en Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Programación web y para la nube en Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-azure
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 310b6631167b36ee842c1f52c0c853746f7c3644
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683370"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486754"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Programación web y para la nube en Visual C++
 
@@ -27,7 +17,7 @@ En C++, existen varias opciones para conectarse a la Web y a la nube.
 
 - [Servicios móviles de Microsoft Azure](http://www.windowsazure.com/develop/mobile/)
 
-   Proporciona las API nativas que puede usar en aplicaciones de plataforma Universal de Windows (UWP) o aplicaciones de escritorio de Windows para conectarse a Microsoft Azure Mobile Services. Aunque la mayoría de los ejemplos del sitio web están en C#, también se puede utilizar C++. Para obtener más información, consulte [inicio rápido: agregar un servicio móvil mediante C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+   Proporciona las API nativas que puede usar en aplicaciones de plataforma Universal de Windows (UWP) o aplicaciones de escritorio de Windows para conectarse a Microsoft Azure Mobile Services. Aunque la mayoría de los ejemplos del sitio web están en C#, también se puede utilizar C++. Para obtener más información, vea [Inicio rápido: agregar un servicio móvil con C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Biblioteca de cliente de Microsoft Azure Storage para C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -52,11 +42,11 @@ En C++, existen varias opciones para conectarse a la Web y a la nube.
   - Realizar conexiones Websockets con servicios remotos
   - Una tarea asincrónica totalmente API basada en PPL, incluyendo un subproceso de threadpool integrado
 
-   Es compatible con el escritorio de Windows (7 +), Windows Server (2012 y versiones posteriores), plataforma Universal de Windows, Linux, OSX, Android y iOS. 
+   Es compatible con el escritorio de Windows (7 +), Windows Server (2012 y versiones posteriores), plataforma Universal de Windows, Linux, OSX, Android y iOS.
 
-- [Windows::Web::http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Una clase de cliente HTTP de Windows en tiempo de ejecución modelada en la clase .NET Framework del mismo nombre en el espacio de nombres System.Web. `HttpClient` es totalmente compatible con la carga y descarga asincrónica a través de HTTP y con los filtros de canalización que habilitan la inserción de controladores HTTP personalizados en la canalización. Windows SDK incluye filtros de ejemplo para redes de uso medido y autenticación de OAuth, entre otros. Para las aplicaciones que tienen como destino la plataforma Universal de Windows, se recomienda que use el `Windows::Web:HttpClient` clase. 
+   Una clase de cliente HTTP de Windows en tiempo de ejecución modelada en la clase .NET Framework del mismo nombre en el espacio de nombres System.Web. `HttpClient` es totalmente compatible con la carga y descarga asincrónica a través de HTTP y con los filtros de canalización que habilitan la inserción de controladores HTTP personalizados en la canalización. Windows SDK incluye filtros de ejemplo para redes de uso medido y autenticación de OAuth, entre otros. Para las aplicaciones que tienen como destino la plataforma Universal de Windows, se recomienda que use el `Windows::Web:HttpClient` clase.
 
 - [Interfaz IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

@@ -1,10 +1,6 @@
 ---
-title: IOleObjectImpl (clase) | Microsoft Docs
-ms.custom: ''
+title: IOleObjectImpl (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IOleObjectImpl
 - ATLCTL/ATL::IOleObjectImpl
@@ -48,23 +44,17 @@ f1_keywords:
 - ATLCTL/ATL::IOleObjectImpl::SetMoniker
 - ATLCTL/ATL::IOleObjectImpl::Unadvise
 - ATLCTL/ATL::IOleObjectImpl::Update
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fe5f3234738a16b4c072b667982d36032e30f7dd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0ea787f0998a26f67418957584e9d12152aa618
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107122"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614583"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl (clase)
 
@@ -400,7 +390,7 @@ Consulte [IOleObject::GetClientSite](/windows/desktop/api/oleidl/nf-oleidl-ioleo
 Recupera los datos desde el Portapapeles.
 
 ```
-STDMETHOD(GetClipboardData)(    
+STDMETHOD(GetClipboardData)(
     DWORD /* dwReserved */,
     IDataObject** /* ppDataObject */);
 ```

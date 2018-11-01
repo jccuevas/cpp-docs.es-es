@@ -17,22 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b926ab618a631ca1334e89da983f169b6a38e49b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 9c602717829db0b076add24b0db29b464068c68c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43204656"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409134"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>Navegar por la estructura de clases (Visual C++)
-Puede navegar por la estructura de clases de un proyecto, incluidas las funciones, la herencia y las interfaces mediante la **Vista de clases** o el **Examinador de objetos**. Para obtener más información, vea [Ver la estructura del código](/visualstudio/ide/viewing-the-structure-of-code).  
-  
- Puede ir a la declaración de una función si hace doble clic en el nombre de la función en la vista de clases. Puede ir a la declaración de una clase si hace doble clic en el nombre de la clase en la vista de clases.  
-  
-## <a name="see-also"></a>Vea también  
- [Agregar funcionalidad con los asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Agregar una clase](../ide/adding-a-class-visual-cpp.md)   
- [Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)   
- [Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)   
- [Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Controlador de mensajes de MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+
+Puede navegar por la estructura de clases de un proyecto, incluidas las funciones, la herencia y las interfaces mediante la **Vista de clases** o el **Examinador de objetos**. Para obtener más información, vea [Ver la estructura del código](/visualstudio/ide/viewing-the-structure-of-code).
+
+Puede ir a la declaración de una función si hace doble clic en el nombre de la función en la vista de clases. Puede ir a la declaración de una clase si hace doble clic en el nombre de la clase en la vista de clases.
+
+## <a name="see-also"></a>Vea también
+
+[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
+[Agregar una clase](../ide/adding-a-class-visual-cpp.md)<br>
+[Agregar una función miembro](../ide/adding-a-member-function-visual-cpp.md)<br>
+[Agregar una variable miembro](../ide/adding-a-member-variable-visual-cpp.md)<br>
+[Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
+[Controlador de mensajes de MFC](../mfc/reference/adding-an-mfc-message-handler.md)

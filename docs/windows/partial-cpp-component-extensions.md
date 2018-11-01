@@ -1,7 +1,7 @@
 ---
-title: Partial (extensiones de componentes de C++) | Microsoft Docs
+title: parcial (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92fd30b0b420080d33f9938bec4891ac80ac660d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8694c2fcad85bf3330ed9a5236bd53fa80ee8891
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597083"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083274"
 ---
-# <a name="partial--c-component-extensions"></a>partial (Extensiones de componentes de C++)
+# <a name="partial--ccli-and-ccx"></a>parcial (C++ / c++ / CLI y c++ / CX)
 
 El **parcial** palabra clave permite a las distintas partes de la misma clase ref a crearse independientemente y en distintos archivos.
 
@@ -41,22 +41,22 @@ Para una clase ref que tenga dos definiciones parciales, la **parcial** palabra 
 
 ```cpp
 partial class-key identifier {
-   /* The first part of the partial class definition. 
+   /* The first part of the partial class definition.
       This is typically auto-generated */
 }
 // ...
 class-key identifier {
-   /* The subsequent part(s) of the class definition. The same 
+   /* The subsequent part(s) of the class definition. The same
       identifier is specified, but the "partial" keyword is omitted. */
 }
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*clave de clase*  
+*clave de clase*<br/>
 Una palabra clave que declara una clase o struct que es compatible con el tiempo de ejecución de Windows. Cualquier **clase ref**, **clase de valor**, **ref struct**, o **struct de valor**.
 
-*identifier*  
+*identifier*<br/>
 El nombre del tipo definido.
 
 ### <a name="remarks"></a>Comentarios

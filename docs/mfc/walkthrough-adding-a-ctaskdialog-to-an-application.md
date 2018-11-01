@@ -1,26 +1,16 @@
 ---
-title: 'Tutorial: Agregar una clase CTaskDialog a una aplicación | Documentos de Microsoft'
-ms.custom: ''
-ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
+title: 'Tutorial: Agregar una clase CTaskDialog a una aplicación'
+ms.date: 09/19/2018
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4a0a3d93815a740be59960e6d3e0f9e9ed690923
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492298"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>Tutorial: Agregar una clase CTaskDialog a una aplicación
 
@@ -43,17 +33,17 @@ Necesita los componentes siguientes para completar este tutorial:
 
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Reemplazar un cuadro de mensaje de Windows por una clase CTaskDialog
 
-En el procedimiento siguiente se muestra el uso más básico de la clase `CTaskDialog`, que consiste en reemplazar el cuadro de mensaje de Windows. En este ejemplo también se cambia el icono asociado al cuadro de diálogo de tarea. Si se cambia el icono, la clase `CTaskDialog` parece idéntica al cuadro de mensaje de Windows.
+En el procedimiento siguiente se muestra el uso más básico de la clase `CTaskDialog`, que consiste en reemplazar el cuadro de mensaje de Windows. En este ejemplo también se cambia el icono asociado al cuadro de diálogo de tarea. Cambio del icono hace que el `CTaskDialog` aparecen mismo en el cuadro de mensajes de Windows.
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Para reemplazar un cuadro de mensaje de Windows con una clase CTaskDialog
 
 1. Cree un nuevo proyecto de aplicación MFC con la configuración predeterminada. Llámelo *MyProject*.
 
-2. Use el **Explorador de soluciones** para abrir el archivo MyProject.cpp.
+1. Use el **Explorador de soluciones** para abrir el archivo MyProject.cpp.
 
-3. Agregue `#include "afxtaskdialog.h"` después de la lista de incluye.
+1. Agregue `#include "afxtaskdialog.h"` después de la lista de incluye.
 
-4. Busque el método `CMyProjectApp::InitInstance`. Inserte las siguientes líneas de código antes de la instrucción `return TRUE;` . Este código crea las cadenas que se usan en el cuadro de mensaje de Windows o en la clase `CTaskDialog`.  
+1. Busque el método `CMyProjectApp::InitInstance`. Inserte las siguientes líneas de código antes de la instrucción `return TRUE;` . Este código crea las cadenas que se usan en el cuadro de mensaje de Windows o en la clase `CTaskDialog`.
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +51,7 @@ En el procedimiento siguiente se muestra el uso más básico de la clase `CTaskD
     CString emptyString;
     ```
 
-5. Agregue el código siguiente después del código del paso 4. Este código garantiza que el equipo del usuario admita la clase `CTaskDialog`. Si no se admite el cuadro de diálogo, la aplicación muestra en su lugar un cuadro de mensaje de Windows.
+1. Agregue el código siguiente después del código del paso 4. Este código garantiza que el equipo del usuario admita la clase `CTaskDialog`. Si no se admite el cuadro de diálogo, la aplicación muestra un cuadro de mensaje de Windows en su lugar.
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,25 +64,25 @@ En el procedimiento siguiente se muestra el uso más básico de la clase `CTaskD
     }
     ```
 
-6. Inserte el siguiente código entre corchetes después de la instrucción `if` del paso 5. Este código crea la clase `CTaskDialog`.
+1. Inserte el siguiente código entre corchetes después de la instrucción `if` del paso 5. Este código crea la clase `CTaskDialog`.
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. En la línea siguiente, agregue el código siguiente. Este código establece el icono de advertencia.
+1. En la línea siguiente, agregue el código siguiente. Este código establece el icono de advertencia.
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. En la línea siguiente, agregue el código siguiente. Este código muestra el cuadro de diálogo de tarea.
+1. En la línea siguiente, agregue el código siguiente. Este código muestra el cuadro de diálogo de tarea.
 
     ```cpp
     taskDialog.DoModal();
     ```
 
-Puede omitir el paso 7 si no quiere que la clase `CTaskDialog` muestre el mismo icono que el cuadro de mensaje de Windows. Si omite este paso, la clase `CTaskDialog` no tendrá icono cuando la aplicación la muestre.
+Puede evitar el paso 7 si no desea la `CTaskDialog` para mostrar el mismo icono como el cuadro de mensaje de Windows. Si ese paso, evita la `CTaskDialog` no tendrá icono cuando la aplicación lo muestra.
 
 Compile y ejecute la aplicación. La aplicación muestra el cuadro de diálogo de tareas después de iniciarse.
 
@@ -102,17 +92,17 @@ En el procedimiento siguiente se muestra cómo agregar funcionalidad a la clase 
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>Para agregar funcionalidad a la clase CTaskDialog
 
-1. Vaya a la **Vista de recursos**. Si no ve la **Vista de recursos**, puede abrirla desde el menú **Vista** .
+1. Vaya a la **Vista de recursos**. Si no ve el **vista de recursos**, puede abrirla desde el **vista** menú.
 
-2. Expanda la **Vista de recursos** hasta que pueda seleccionar la carpeta **Tabla de cadenas** . Expándala y haga doble clic en la entrada **Tabla de cadenas** .
+1. Expanda la **Vista de recursos** hasta que pueda seleccionar la carpeta **Tabla de cadenas** . Expándala y haga doble clic en la entrada **Tabla de cadenas** .
 
-3. Desplácese a la parte inferior de la tabla de cadenas y agregue una nueva entrada. Cambie el identificador a `TEMP_LINE1`. Establezca el título en **Línea de comandos 1**.
+1. Desplácese a la parte inferior de la tabla de cadenas y agregue una nueva entrada. Cambie el identificador a `TEMP_LINE1`. Establezca el título en **Línea de comandos 1**.
 
-4. Agregue otra entrada nueva. Cambie el identificador a `TEMP_LINE2`. Establezca el título en **Línea de comandos 2**.
+1. Agregue otra entrada nueva. Cambie el identificador a `TEMP_LINE2`. Establezca el título en **Línea de comandos 2**.
 
-5. Vuelva a MyProject.cpp.
+1. Vuelva a MyProject.cpp.
 
-6. Después de `CString emptyString;`, agregue el código siguiente:
+1. Después de `CString emptyString;`, agregue el código siguiente:
 
     ```cpp
     CString expandedLabel("Hide extra information");
@@ -120,7 +110,7 @@ En el procedimiento siguiente se muestra cómo agregar funcionalidad a la clase 
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. Busque la instrucción `taskDialog.DoModal()` y reemplácela por el código siguiente. Este código actualiza el cuadro de diálogo de tarea y agrega nuevos controles:
+1. Busque la instrucción `taskDialog.DoModal()` y reemplácela por el código siguiente. Este código actualiza el cuadro de diálogo de tarea y agrega nuevos controles:
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +123,13 @@ En el procedimiento siguiente se muestra cómo agregar funcionalidad a la clase 
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. Agregue la siguiente línea de código que muestra al usuario el cuadro de diálogo de tarea y recupera la selección del usuario:
+1. Agregue la siguiente línea de código que muestra al usuario el cuadro de diálogo de tarea y recupera la selección del usuario:
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. Inserte el código siguiente detrás de la llamada a `taskDialog.DoModal()`. Esta sección de código procesa la entrada del usuario:
+1. Inserte el código siguiente detrás de la llamada a `taskDialog.DoModal()`. Esta sección de código procesa la entrada del usuario:
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,7 +161,7 @@ En el procedimiento siguiente se muestra cómo agregar funcionalidad a la clase 
     }
     ```
 
-En el código del paso 9, reemplace los comentarios que comienzan con PROCESS IF por el código que quiere ejecutar en las condiciones especificadas.
+En el código en el paso 9, reemplace los comentarios que comienzan con `PROCESS IF` con el código que desea ejecutar en las condiciones especificadas.
 
 Compile y ejecute la aplicación. La aplicación muestra el cuadro de diálogo de tarea que usa los controles nuevos y la información adicional.
 
@@ -181,11 +171,11 @@ En el procedimiento siguiente se muestra cómo mostrar una clase `CTaskDialog` s
 
 ### <a name="to-display-a-ctaskdialog-without-creating-a-ctaskdialog-object"></a>Para mostrar una clase CTaskDialog sin crear un objeto CTaskDialog
 
-1. Abra el archivo MyProject.cpp si todavía no está abierto.
+1. Si no está abierta, abra el archivo MyProject.cpp.
 
-2. Vaya al corchete de cierre de la instrucción `if (CTaskDialog::IsSupported())` .
+1. Vaya al corchete de cierre de la instrucción `if (CTaskDialog::IsSupported())` .
 
-3. Inserte el código siguiente inmediatamente antes del corchete de cierre de la instrucción `if` (antes del bloque `else` ):
+1. Inserte el código siguiente inmediatamente antes del corchete de cierre de la instrucción `if` (antes del bloque `else` ):
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,12 +185,12 @@ En el procedimiento siguiente se muestra cómo mostrar una clase `CTaskDialog` s
         TEMP_LINE2);
     ```
 
-Compile y ejecute la aplicación. La aplicación muestra dos cuadros de diálogo de tarea. El primer cuadro de diálogo es del procedimiento Para agregar funcionalidad a la clase CTaskDialog; el segundo cuadro de diálogo es del último procedimiento.
+Compile y ejecute la aplicación. La aplicación muestra dos cuadros de diálogo de tarea. Es el primer cuadro de diálogo desde el **para agregar funcionalidad a la clase CTaskDialog** procedimiento; el segundo cuadro de diálogo es desde el último procedimiento.
 
-En estos ejemplos no se muestran todas las opciones disponibles para una clase `CTaskDialog`, pero le ayudarán a empezar a trabajar. Vea [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) para obtener una descripción completa de la clase.
+Estos ejemplos no muestran todas las opciones disponibles para un `CTaskDialog`, pero le ayudarán a empezar a trabajar. Vea [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) para obtener una descripción completa de la clase.
 
 ## <a name="see-also"></a>Vea también
 
-[Cuadros de diálogo](../mfc/dialog-boxes.md)  
-[CTaskDialog (clase)](../mfc/reference/ctaskdialog-class.md)  
-[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)  
+[Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
+[CTaskDialog (clase)](../mfc/reference/ctaskdialog-class.md)<br/>
+[CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

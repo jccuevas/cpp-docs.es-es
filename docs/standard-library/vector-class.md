@@ -1,10 +1,6 @@
 ---
-title: vector (Clase) | Microsoft Docs
-ms.custom: ''
+title: vector (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -47,8 +43,6 @@ f1_keywords:
 - vector/std::vector::shrink_to_fit
 - vector/std::vector::size
 - vector/std::vector::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::vector [C++], allocator_type
 - std::vector [C++], const_iterator
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 501f6547378b5461fe314410f54a6cc7d64c1221
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583370"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -370,7 +360,7 @@ const_reference back() const;
 
 Si el valor devuelto de `back` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `back` se asigna a `reference`, el objeto de vector se puede modificar.
 
-Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
+Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -402,7 +392,6 @@ Devuelve un iterador de acceso aleatorio al primer elemento del vector.
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -443,7 +432,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1_Iter = c1.begin();
- *c1_Iter = 20;
+    *c1_Iter = 20;
     for (; c1_Iter != c1.end(); c1_Iter++)
     {
         cout << " " << *c1_Iter;
@@ -789,7 +778,6 @@ Devuelve un puntero al primer elemento del vector.
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -825,7 +813,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1 ptr = c1.data();
- *c1 ptr = 20;
+    *c1 ptr = 20;
     for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
     {
         cout << " " << *c1 ptr;
@@ -1165,7 +1153,7 @@ Referencia al primer elemento en el objeto de vector. Si el vector está vacío,
 
 Si el valor devuelto de `front` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `front` se asigna a una **referencia**, el objeto de vector se puede modificar.
 
-Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
+Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento en un vector vacío.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1410,7 +1398,7 @@ Si la posición especificada es mayor o igual que el tamaño del contenedor, el 
 
 Si el valor devuelto de `operator[]` se asigna a `const_reference`, el objeto vector no se puede modificar. Si el valor devuelto de `operator[]` se asigna a una referencia, el objeto vector se puede modificar.
 
-Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Vea [Iteradores comprobados](../standard-library/checked-iterators.md) para obtener más información.
+Al compilar con [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) definido como 1 o 2, se produce un error de tiempo de ejecución si intenta tener acceso a un elemento fuera de los límites del vector.  Vea [Checked Iterators](../standard-library/checked-iterators.md) para obtener más información.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1516,17 +1504,17 @@ Se puede usar un tipo **pointer** para modificar el valor de un elemento.
 
 int main( )
 {
-   using namespace std;
-   vector<int> v;
-   v.push_back( 11 );
-   v.push_back( 22 );
+    using namespace std;
+    vector<int> v;
+    v.push_back( 11 );
+    v.push_back( 22 );
 
-   vector<int>::pointer ptr = &v[0];
-   cout << *ptr << endl;
-   ptr++;
-   cout << *ptr << endl;
- *ptr = 44;
-   cout << *ptr << endl;
+    vector<int>::pointer ptr = &v[0];
+    cout << *ptr << endl;
+    ptr++;
+    cout << *ptr << endl;
+    *ptr = 44;
+    cout << *ptr << endl;
 }
 ```
 
@@ -1554,7 +1542,6 @@ Agrega un elemento al final del vector.
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

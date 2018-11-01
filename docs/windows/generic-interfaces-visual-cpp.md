@@ -1,29 +1,19 @@
 ---
-title: Interfaces genéricas (Visual C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Interfaces genéricas (C++ / c++ / CLI)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: abad906c7fcc5c86a6901757ddfbb5dfeff2ec29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 68c5a53d3de38479adbdcb49e823513f295a2095
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493956"
 ---
-# <a name="generic-interfaces-visual-c"></a>Interfaces genéricas (Visual C++)
+# <a name="generic-interfaces-ccli"></a>Interfaces genéricas (C++ / c++ / CLI)
 
 Las restricciones que se aplican a parámetros de tipo en las clases son los mismos que los que se aplican a parámetros de tipo en interfaces (consulte [clases genéricas (C++ / c++ / CLI)](../windows/generic-classes-cpp-cli.md)).
 
@@ -42,31 +32,31 @@ Para obtener más información sobre las interfaces, vea [clase de interfaz](../
 
 ## <a name="remarks"></a>Comentarios
 
-*Atributos*  
+*Atributos*<br/>
 (Opcional) Información declarativa adicional. Para obtener más información sobre los atributos y clases de atributos, vea **atributos**.
 
-*clave de clase*  
+*clave de clase*<br/>
 **clase** o **typename**
 
-*tipo de-parámetro-identificadores*  
+*tipo de-parámetro-identificadores*<br/>
 Lista separada por comas de identificadores.
 
-*tipo de parámetro restricciones cláusulas*  
+*tipo de parámetro restricciones cláusulas*<br/>
 Toma la forma especificada en [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)
 
-*modificadores de accesibilidad*  
+*modificadores de accesibilidad*<br/>
 (Opcional) Modificadores de accesibilidad (por ejemplo, **public, private**).
 
-*identifier*  
+*identifier*<br/>
 El nombre de la interfaz.
 
-*base-list*  
+*base-list*<br/>
 (Opcional) Una lista que contiene una o varias interfaces base explícitas separadas por comas.
 
-*cuerpo de la interfaz*  
+*cuerpo de la interfaz*<br/>
 Declaraciones de los miembros de interfaz.
 
-*declaradores*  
+*declaradores*<br/>
 (Opcional) Declaraciones de variables en función de este tipo.
 
 ## <a name="example"></a>Ejemplo
@@ -124,7 +114,7 @@ public ref class List1 : public IList<ItemType> {
 
    virtual ItemType MoveFirst() {
       current = first;
-      if (first != nullptr)  
+      if (first != nullptr)
         return first->get_Item();
       else
          return ItemType();
@@ -144,21 +134,21 @@ public ref class List1 : public IList<ItemType> {
    }
 
    virtual bool AtEnd() {
-      if (current == nullptr )  
+      if (current == nullptr )
         return true;
       else
         return false;
    }
 
    virtual ItemType Current() {
-       if (current != nullptr)  
+       if (current != nullptr)
          return current->get_Item();
        else
          throw gcnew ElementNotFoundException();
    }
 
    virtual void MoveNext() {
-      if (current != nullptr)  
+      if (current != nullptr)
        current = current->next;
       else
         throw gcnew ElementNotFoundException();
@@ -187,7 +177,7 @@ ref class List2 : public IList<ItemType> {
    }
 
    virtual bool Add(ItemType item) {
-      if (count < 256)  
+      if (count < 256)
          item_array[count++] = item;
       else
         return false;
@@ -195,21 +185,21 @@ ref class List2 : public IList<ItemType> {
    }
 
    virtual bool AtEnd() {
-      if (current >= count)  
+      if (current >= count)
         return true;
       else
         return false;
    }
 
    virtual ItemType Current() {
-      if (current < count)  
+      if (current < count)
         return item_array[current];
       else
         throw gcnew ElementNotFoundException();
    }
 
    virtual void MoveNext() {
-      if (current < count)  
+      if (current < count)
          ++current;
       else
          throw gcnew ElementNotFoundException();
@@ -221,7 +211,7 @@ generic <typename ItemType>
 void AddStringsAndDisplay(IList<ItemType>^ list, ItemType item1, ItemType item2) {
    list->Add(item1);
    list->Add(item2);
-   for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())  
+   for (list->MoveFirst(); ! list->AtEnd(); list->MoveNext())
    Console::WriteLine(list->Current());
 }
 
@@ -279,10 +269,10 @@ public:
 
    virtual void Display() {
       Console::WriteLine("The integer field contains: {0}", myField);
-   } 
+   }
 };
 
-public ref struct MyStringClass: IMySpecializedString { 
+public ref struct MyStringClass: IMySpecializedString {
    String^ myField;
 
 public:

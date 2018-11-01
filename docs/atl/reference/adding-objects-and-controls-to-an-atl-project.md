@@ -1,14 +1,8 @@
 ---
-title: Adición de objetos y controles a un proyecto ATL | Microsoft Docs
-ms.custom: ''
+title: Adición de objetos y controles a un proyecto ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.controls
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding objects
 - wizards [C++], ATL projects
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506137"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Adición de objetos y controles a un proyecto ATL
 
@@ -41,16 +31,16 @@ Puede usar uno de los asistentes de código ATL para agregar un objeto o un cont
 > [!NOTE]
 > Antes de agregar un objeto ATL al proyecto, debe revisar los detalles y requisitos para el objeto en los temas de ayuda relacionados.
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Para agregar un objeto o un control mediante el Asistente para controles ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Para agregar un objeto o un control mediante el Asistente para controles ATL
 
-1. En el Explorador de soluciones, haga clic en el nodo de proyecto y haga clic en **agregar** en el menú contextual. Haga clic en **Agregar clase**.
+1. En **el Explorador de soluciones**, haga clic en el nodo del proyecto y haga clic en **agregar** en el menú contextual. Haga clic en **Agregar clase**.
 
    El [Agregar clase](../../ide/add-class-dialog-box.md) aparece el cuadro de diálogo.
 
-2. Con la carpeta ATL seleccionada en el panel de categorías, seleccione un objeto que se va a insertar en el panel Plantillas. Haga clic en **abierto**. Aparece el Asistente de código para el objeto seleccionado.
+1. Con el **ATL** carpeta seleccionada en el **categorías** panel, seleccione un objeto que se va a insertar en el **plantillas** panel. Haga clic en **abierto**. Aparece el Asistente de código para el objeto seleccionado.
 
    > [!NOTE]
-   >  Si desea agregar un objeto ATL a un proyecto MFC, debe agregar compatibilidad con ATL al proyecto existente. Puede hacerlo siguiendo las instrucciones de [agregar compatibilidad con ATL a un proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Si desea agregar un objeto ATL a un proyecto MFC, debe agregar compatibilidad con ATL al proyecto existente. Puede hacerlo siguiendo las instrucciones de [agregar compatibilidad con ATL a un proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
    Como alternativa, si se intenta agregar un objeto ATL a un proyecto MFC sin agregar previamente compatibilidad con ATL, Visual Studio le pedirá que especifique si desea que la compatibilidad agregada a su proyecto. Haga clic en **Sí** para agregar compatibilidad con ATL al proyecto y abrir el asistente ATL seleccionado.
 
@@ -62,4 +52,3 @@ Puede usar uno de los asistentes de código ATL para agregar un objeto o un cont
 [Aspectos básicos de los objetos ATL COM](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Programar con ATL y código en tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md)
-

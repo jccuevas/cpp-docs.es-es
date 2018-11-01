@@ -1,30 +1,20 @@
 ---
-title: 'TN026: Rutinas DDX y DDV | Microsoft Docs'
-ms.custom: ''
+title: 'TN026: Rutinas DDX y DDV'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
-dev_langs:
-- C++
 helpviewer_keywords:
 - DDX (dialog data exchange), procedures
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18377d423ab150773ef5438f39c8e74914b5c425
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 89916e60d9677240f2d70e37e9a80e6ad7a76fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317425"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581914"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: Rutinas DDX y DDV
 
@@ -224,23 +214,23 @@ Cada campo está delimitado por un carácter ';'. A continuación se describen l
 
    - *promptN*
 
-     Cadena que se coloca encima del elemento de edición (con & de acelerador).
+      Cadena que se coloca encima del elemento de edición (con & de acelerador).
 
    - *fmtN*
 
-     Carácter de formato para el tipo de argumento, uno de:
+      Carácter de formato para el tipo de argumento, uno de:
 
-     |Carácter|Tipo|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | long int (es decir, long)
-     U | Long sin signo (es decir, DWORD)
-     f | float
-     F | double
-     s | cadena
+      |Carácter|Tipo|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | long int (es decir, long)|
+      |U | Long sin signo (es decir, DWORD)|
+      |f | float|
+      |F | double|
+      |s | cadena|
 
 ## <a name="see-also"></a>Vea también
 
-[Notas técnicas por número](../mfc/technical-notes-by-number.md)  
-[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)  
+[Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
+[Notas técnicas por categoría](../mfc/technical-notes-by-category.md)

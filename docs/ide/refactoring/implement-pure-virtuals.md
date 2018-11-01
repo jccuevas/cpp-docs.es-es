@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328031"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442765"
 ---
 # <a name="implement-pure-virtuals"></a>Implementar virtuales puras
-**Qué:** Permite generar inmediatamente el código necesario para implementar todos los métodos virtuales puros en una clase. 
+**Qué:** Permite generar inmediatamente el código necesario para implementar todos los métodos virtuales puros en una clase.
 
-**Cuándo:** quiere heredar de una clase con funciones virtuales puras.  
+**Cuándo:** quiere heredar de una clase con funciones virtuales puras.
 
 **Por qué:** Podría implementar manualmente todas las funciones virtuales puras una por una, pero esta característica generará de manera automática todas las firmas de método.
 

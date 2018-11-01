@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c375a10d1c8dadca643ac428422eb388c16cdae6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 81a5c4cac614f70aa422e56a3c1c61fa2b6bd24e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313941"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861920"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Nuevo &lt;dispositivo&gt; imagen en el cuadro de diálogo de tipo (C++) (Editor de imágenes para iconos)
 
@@ -54,6 +54,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Iconos y cursores: recursos de imagen para dispositivos de presentación](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)  
-[Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)  
+[Iconos y cursores: recursos de imagen para dispositivos de presentación](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)<br/>
+[Imagen (menú)](../windows/image-menu-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

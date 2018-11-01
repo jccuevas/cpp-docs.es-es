@@ -1,10 +1,6 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s | Microsoft Docs
-ms.custom: ''
+title: strcat_s, wcscat_s, _mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414014"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621317"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 
@@ -115,7 +105,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 ## <a name="remarks"></a>Comentarios
 
-El **strcat_s** función anexa *strSource* a *strDestination* y termina la cadena resultante con un carácter nulo. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDestination*. El comportamiento de **strcat_s** es indefinido si las cadenas de origen y de destino se superponen.
+El **strcat_s** función anexa *strSource* a *strDestination* y termina la cadena resultante con un carácter nulo. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDestination*. El comportamiento de **strcat_s** es indefinido si las cadenas de origen y destino se superponen.
 
 Observe que el segundo parámetro es el tamaño total del búfer, no el tamaño restante:
 
@@ -126,7 +116,7 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** y **_mbscat_s** son versiones de caracteres multibyte y anchos de **strcat_s**. Los argumentos y el valor devuelto de **wcscat_s** son caracteres anchos cadenas; los de **_mbscat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcscat_s** y **_mbscat_s** son versiones de caracteres anchos y caracteres multibyte de **strcat_s**. Los argumentos y el valor devuelto de **wcscat_s** son caracteres anchos cadenas; los de **_mbscat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 Si *strDestination* es un puntero nulo o no está terminada en null, o si *strSource* es un **NULL** puntero, o si la cadena de destino es demasiado pequeña, el parámetro no válido se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
 

@@ -1,30 +1,20 @@
 ---
-title: -Zo (mejorar la depuración optimizada) | Microsoft Docs
-ms.custom: ''
+title: /Zo (Mejorar la depuración optimizada)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - -Zo
 - /Zo
-dev_langs:
-- C++
 helpviewer_keywords:
 - Zo compiler option [C++]
 - /Zo compiler option [C++]
 - -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e93d8debbab26dc61b4c27de713b94d7bc6c417
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7524a8a8c509470030a1850c3995e5997b61caca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497505"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (Mejorar la depuración optimizada)
 
@@ -58,6 +48,6 @@ El **/Zo** conmutador está disponible a partir de Visual Studio 2013 Update 3 y
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)
-[/Z7, / Zi, /ZI (formato de información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md)
-[editar y continuar](/visualstudio/debugger/edit-and-continue)
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[/Z7, /Zi, /ZI (Formato de la información de depuración)](../../build/reference/z7-zi-zi-debug-information-format.md)<br/>
+[Editar y continuar](/visualstudio/debugger/edit-and-continue)

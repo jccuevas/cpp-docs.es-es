@@ -1,26 +1,15 @@
 ---
-title: Cambiar la fuente del texto de una imagen (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Cambiar la fuente o el texto de una imagen (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - fonts, changing on an image
 ms.assetid: b8849d40-d401-4e06-808f-e615cb2bee3b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0898d8a787c6d2c14f341a31e202738d666cdf86
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2bbd8096a2957099acc8c06d501f3ad407b9a974
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43678469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495529"
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>Cambiar la fuente o el texto de una imagen (Editor de imágenes para iconos)
 
@@ -32,7 +21,7 @@ El procedimiento siguiente es un ejemplo de cómo:
 
 ### <a name="to-change-the-font-of-text-on-an-image"></a>Para cambiar la fuente del texto de una imagen
 
-1. Cree una aplicación de formularios de Windows de C++. Para obtener más información, consulte [crear un proyecto de aplicación Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5\(v=vs.100\)). Un `app.ico` archivo se agrega al proyecto de forma predeterminada.
+1. Cree una aplicación de formularios de Windows de C++. Para obtener más información, consulte [crear un proyecto de aplicación Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). Un `app.ico` archivo se agrega al proyecto de forma predeterminada.
 
 2. En **el Explorador de soluciones**, haga doble clic en el archivo app.ico. El [Editor de imágenes](../windows/image-editor-for-icons.md) se abrirá.
 
@@ -56,5 +45,5 @@ El procedimiento siguiente es un ejemplo de cómo:
 
 ## <a name="see-also"></a>Vea también
 
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Toolbar](../windows/toolbar-image-editor-for-icons.md)

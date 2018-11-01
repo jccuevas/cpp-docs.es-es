@@ -1,31 +1,21 @@
 ---
-title: -MANIFESTUAC (insertar información de UAC en el manifiesto) | Microsoft Docs
-ms.custom: ''
+title: /MANIFESTUAC (Incrustar información de UAC en el manifiesto)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UACUIAccess
 - VC.Project.VCLinkerTool.UACExecutionLevel
 - VC.Project.VCLinkerTool.EnableUAC
-dev_langs:
-- C++
 helpviewer_keywords:
 - /MANIFESTUAC linker option
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715148"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625100"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incrustar información de UAC en el manifiesto)
 
@@ -50,7 +40,7 @@ Una cadena que contiene los valores de `level` y `uiAccess`. Para obtener más i
 Uno de *asInvoker*, *highestAvailable*, o *requireAdministrator*. El valor predeterminado es asInvoker. Para obtener más información, vea la sección Comentarios más adelante en este tema.
 
 *_uiAccess*<br/>
-`true` si desea que la aplicación omita los niveles de protección de la interfaz de usuario y dirija las entradas de datos a ventanas con un nivel de permisos superior en el escritorio; de lo contrario, `false`. Tiene como valor predeterminado `false`. Establézcalo en `true` solo para aplicaciones relacionadas con la accesibilidad de la interfaz de usuario.
+**True** si desea que la aplicación para omitir los niveles de protección de interfaz de usuario e impulsar la entrada a las ventanas de nivel de permisos superior en el escritorio; de lo contrario, **false**. El valor predeterminado es **false**. Establecido en **true** solo para las aplicaciones de accesibilidad de interfaz de usuario.
 
 ## <a name="remarks"></a>Comentarios
 

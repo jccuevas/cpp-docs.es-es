@@ -1,10 +1,6 @@
 ---
-title: _scalb, _scalbf | Microsoft Docs
-ms.custom: ''
+title: _scalb, _scalbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scalb
 - _scalbf
@@ -25,24 +21,18 @@ f1_keywords:
 - scalb
 - _scalb
 - _scalbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - _scalb function
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: c3f776ec27c365601d4fe57fb6cf0a5c9b9e0cbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551039"
 ---
 # <a name="scalb-scalbf"></a>_scalb, _scalbf
 
@@ -73,7 +63,7 @@ Exponente de entero largo.
 
 Devuelve un valor exponencial si es correcto. En caso de desbordamiento (según cuál sea el signo de *x*), **_scalb** devuelve **HUGE_VAL**; el **errno** variable se establece en  **ERANGE**.
 
-Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 

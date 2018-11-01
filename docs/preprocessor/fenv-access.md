@@ -1,40 +1,30 @@
 ---
-title: fenv_access | Microsoft Docs
-ms.custom: ''
+title: fenv_access
 ms.date: 03/12/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eeb138a8b2598c209005031a3ccd3104fead48dc
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664040"
 ---
 # <a name="fenvaccess"></a>fenv_access
 Deshabilita (**en**) o habilita (**desactivar**) las optimizaciones que pudieran cambiar el entorno de punto flotante marcar las pruebas y los cambios de modo.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **#pragma fenv_access (** { **en** | **desactivar** } **)**  
+> **#pragma fenv_access (** { **en** | **desactivar** } **)**
 
 ## <a name="remarks"></a>Comentarios
 
-De forma predeterminada, **fenv_access** es **desactivar**. Si el compilador puede suponer el código de no tener acceso o manipular el entorno de punto flotante, que puede realizar muchas optimizaciones de código de punto flotante. Establecer **fenv_access** a **en** para informar al compilador que el código tiene acceso a la del entorno de punto flotante para probar las marcas de estado, excepciones, o para establecer las marcas de modo de control. El compilador deshabilita estas optimizaciones para que el código puede acceder al entorno de punto flotante constantemente. 
+De forma predeterminada, **fenv_access** es **desactivar**. Si el compilador puede suponer el código de no tener acceso o manipular el entorno de punto flotante, que puede realizar muchas optimizaciones de código de punto flotante. Establecer **fenv_access** a **en** para informar al compilador que el código tiene acceso a la del entorno de punto flotante para probar las marcas de estado, excepciones, o para establecer las marcas de modo de control. El compilador deshabilita estas optimizaciones para que el código puede acceder al entorno de punto flotante constantemente.
 
 Para obtener más información sobre el comportamiento de punto flotante, vea [/fp (Especificar comportamiento de punto flotante)](../build/reference/fp-specify-floating-point-behavior.md).
 

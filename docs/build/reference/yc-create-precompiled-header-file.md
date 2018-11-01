@@ -1,18 +1,12 @@
 ---
-title: -Yc (crear archivo de encabezado precompilado) | Microsoft Docs
-ms.custom: ''
+title: /Yc (Crear archivo de encabezado precompilado)
 ms.date: 11/04/2016
-ms.technology:
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
 - /yc
 - VC.Project.VCCLWCECompilerTool.PrecompiledHeaderThrough
 - VC.Project.VCCLWCECompilerTool.UsePrecompiledHeader
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderThrough
-dev_langs:
-- C++
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5288e748956a405073697ddd7331a73b95d8650
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536847"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crear archivo de encabezado precompilado)
 
@@ -38,8 +28,8 @@ Indica al compilador que cree un archivo de encabezado precompilado (.pch) que r
 
 ## <a name="syntax"></a>Sintaxis
 
-> __/Yc__
->  __/Yc__*nombre de archivo*
+> __/Yc__<br/>
+> __/Yc__*nombre de archivo*
 
 ## <a name="arguments"></a>Argumentos
 

@@ -1,5 +1,5 @@
 ---
-title: Clases OLE DB | Documentos de Microsoft
+title: Clases OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,16 +17,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7831b06d116828cf5a4e6b714661082555899cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efdc77adac947af81be9595ffabc313610e11ce9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345109"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425228"
 ---
 # <a name="ole-db-classes"></a>Clases OLE DB
-La compatibilidad de OLE DB en MFC actualmente consta de la clase [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` muestra registros de base de datos en controles, a través de una vista de formulario directamente conectada a un [CRowset](../data/oledb/crowset-class.md) objeto. Para obtener más información acerca de las plantillas de consumidor OLE DB, vea [lista de plantillas OLE DB consumidor](../data/oledb/ole-db-consumer-templates-reference.md).  
-  
-## <a name="see-also"></a>Vea también  
- [Información general de clases](../mfc/class-library-overview.md)
+
+La compatibilidad de OLE DB en MFC consta actualmente de la clase [COLEDBRecordView](../mfc/reference/coledbrecordview-class.md). `COleDBRecordView` Muestra los registros de base de datos en controles, a través de una vista de formulario conectado directamente a un [CRowset](../data/oledb/crowset-class.md) objeto. Para obtener más información acerca de las plantillas de consumidor OLE DB, consulte [lista de plantillas OLE DB consumidor](../data/oledb/ole-db-consumer-templates-reference.md).
+
+## <a name="see-also"></a>Vea también
+
+[Información general de clases](../mfc/class-library-overview.md)
 

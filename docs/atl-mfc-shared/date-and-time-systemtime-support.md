@@ -1,14 +1,8 @@
 ---
-title: 'Fecha y hora: compatibilidad con SYSTEMTIME | Microsoft Docs'
-ms.custom: ''
+title: 'Fecha y hora: compatibilidad con SYSTEMTIME'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SYSTEMTIME
-dev_langs:
-- C++
 helpviewer_keywords:
 - system time
 - FILETIME structure, with CTime class
@@ -17,22 +11,18 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae20f0ea5697883f361a1933601c24095b74d733
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6074eff2db45bfa69f83d7c45be1203dd19cc987
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549921"
 ---
 # <a name="date-and-time-systemtime-support"></a>Fecha y hora: compatibilidad con SYSTEMTIME
 
 El [CTime](../atl-mfc-shared/reference/ctime-class.md) clase tiene constructores que aceptan horas de archivo y sistema de Win32. Si usa objetos `CTime` con estos propósitos, deberá modificar sus correspondientes inicializaciones en consecuencia, tal y como se describe en este artículo.
 
-Para obtener información acerca de la estructura SYSTEMTIME, vea [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Para obtener información acerca de la estructura FILETIME, vea [FILETIME](../mfc/reference/filetime-structure.md).
+Para obtener información acerca de la estructura SYSTEMTIME, vea [SYSTEMTIME](../mfc/reference/systemtime-structure.md). Para obtener información acerca de la estructura FILETIME, vea [FILETIME](../mfc/reference/filetime-structure.md).
 
 Aunque MFC sigue ofreciendo constructores `CTime` que toman argumentos de hora en el estilo de MS-DOS, a partir de la versión 3.0 de MFC, la clase `CTime` también admitirá un constructor que toma una estructura `SYSTEMTIME` de Win32 y otra estructura `FILETIME` de Win32.
 
@@ -57,4 +47,3 @@ Lo más probable es que no usará `CTime` `FILETIME` inicialización directament
 ## <a name="see-also"></a>Vea también
 
 [Fecha y hora](../atl-mfc-shared/date-and-time.md)
-

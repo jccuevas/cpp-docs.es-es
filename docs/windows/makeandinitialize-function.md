@@ -1,26 +1,16 @@
 ---
-title: MakeAndInitialize (función) | Microsoft Docs
-ms.custom: ''
+title: MakeAndInitialize (Función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
-dev_langs:
-- C++
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 196834a5181164d141c1b9ee025cee5b6f1a5bd9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61c923675aa7b5653aacb9ba2c51dec6105498a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591051"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448626"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize (Función)
 
@@ -38,66 +28,66 @@ typename TArg5,
 typename TArg6,
 typename TArg7,
 typename TArg8,
-typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
+typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Una clase especificada por el usuario que hereda de `WRL::RuntimeClass`.
 
-*TArg1*  
+*TArg1*<br/>
 Tipo de argumento 1 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg2*  
+*TArg2*<br/>
 Tipo de argumento 2 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg3*  
+*TArg3*<br/>
 Tipo de argumento 3 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg4*  
+*TArg4*<br/>
 Tipo de argumento 4 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg5*  
+*TArg5*<br/>
 Tipo de argumento 5 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg6*  
+*TArg6*<br/>
 Tipo de argumento 6 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg7*  
+*TArg7*<br/>
 Tipo de argumento 7 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg8*  
+*TArg8*<br/>
 Tipo de argumento 8 que se pasa a la clase en tiempo de ejecución especificado.
 
-*TArg9*  
+*TArg9*<br/>
 Tipo de argumento 9 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg1*  
+*Arg1*<br/>
 Argumento 1 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg2*  
+*Arg2*<br/>
 Argumento 2 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg3*  
+*Arg3*<br/>
 Argumento 3 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg4*  
+*Arg4*<br/>
 Argumento 4 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg5*  
+*Arg5*<br/>
 Argumento 5 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg6*  
+*Arg6*<br/>
 Argumento 6 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg7*  
+*Arg7*<br/>
 Argumento 7 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg8*  
+*Arg8*<br/>
 Argumento 8 que se pasa a la clase en tiempo de ejecución especificado.
 
-*Arg9*  
+*Arg9*<br/>
 Argumento 9 que se pasa a la clase en tiempo de ejecución especificado.
 
 ## <a name="return-value"></a>Valor devuelto

@@ -1,10 +1,6 @@
 ---
-title: nan, nanf, nanl | Microsoft Docs
-ms.custom: ''
+title: nan, nanf, nanl
 ms.date: 94/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -26,23 +22,17 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610267"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -58,7 +48,7 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Parámetros
 
-*Entrada*<br/>
+*entrada*<br/>
 Valor de cadena.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -67,7 +57,7 @@ El **nan** funciones devuelven un valor NaN reservado.
 
 ## <a name="remarks"></a>Comentarios
 
-El **nan** funciones devuelven un valor de punto flotante que corresponde a un valor NaN quiet (que no sea de señalización). El *entrada* valor se omite. Para obtener información sobre cómo se representa un NaN en la salida, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+El **nan** las funciones devuelven un valor de punto flotante que corresponde a un NaN silencioso (que no sea de señalización). El *entrada* valor se omite. Para obtener información sobre cómo se representa un NaN en la salida, vea [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Requisitos
 

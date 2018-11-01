@@ -1,28 +1,18 @@
 ---
-title: Move (función) | Microsoft Docs
-ms.custom: ''
+title: Move (función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Move
-dev_langs:
-- C++
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9fc1d0c7ed8655037eebfc12097789253b3027e9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a53dbbe54cef2ac2557648e66e5d8dafc4fb4768
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591365"
 ---
 # <a name="move-function"></a>Move (función)
 
@@ -39,10 +29,10 @@ inline typename RemoveReference<T>::Type&& Move(
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Tipo del argumento.
 
-*arg*  
+*arg*<br/>
 Para mover un argumento.
 
 ## <a name="return-value"></a>Valor devuelto

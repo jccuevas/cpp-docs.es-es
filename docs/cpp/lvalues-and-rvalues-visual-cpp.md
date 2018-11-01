@@ -1,26 +1,16 @@
 ---
-title: 'Categorías de valor: Lvalues y Rvalues (Visual C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Categorías de valor: Lvalues y Rvalues (Visual C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45558f9546b996d824d8cf9e8782b7323dcb91fb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546359"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues y Rvalues (Visual C++)
 
@@ -30,7 +20,7 @@ El estándar C ++ 17 define las categorías de valor de expresión como sigue:
 
 - Un *glvalue* es una expresión cuya evaluación determina la identidad de un objeto, el campo de bits o la función.
 - Un *prvalue* es una expresión cuya evaluación Inicializa un objeto o un campo de bits, o calcula el valor del operando de un operador, como especificado por el contexto donde aparece.
-- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). [Ejemplo: determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
+- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). [Ejemplo: determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
 - Un *lvalue* es un glvalue que no sea un xvalue.
 - Un *rvalue* es un prvalue o un xvalue.
 
@@ -52,24 +42,24 @@ En el ejemplo siguiente se muestran varios usos correctos e incorrectos de valor
 // lvalues_and_rvalues2.cpp
 int main()
 {
-int i, j, *p;
+    int i, j, *p;
 
-// Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
-i = 7;
+    // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+    i = 7;
 
-// Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
-7 = i; // C2106
-j * 4 = 7; // C2106
+    // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+    7 = i; // C2106
+    j * 4 = 7; // C2106
 
-// Correct usage: the dereferenced pointer is an lvalue.
-*p = i;
+    // Correct usage: the dereferenced pointer is an lvalue.
+    *p = i;
 
-const int ci = 7;
-// Incorrect usage: the variable is a non-modifiable lvalue (C3892).
-ci = 9; // C3892
+    const int ci = 7;
+    // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+    ci = 9; // C3892
 
-// Correct usage: the conditional operator returns an lvalue.
-((i < 3) ? i : j) = 7;
+    // Correct usage: the conditional operator returns an lvalue.
+    ((i < 3) ? i : j) = 7;
 }
 ```
 

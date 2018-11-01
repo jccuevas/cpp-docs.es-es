@@ -1,27 +1,17 @@
 ---
-title: Las palabras clave y directivas pragma de optimización | Microsoft Docs
-ms.custom: ''
+title: Directivas pragma y palabras clave de optimización
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - keywords [C++], for optimization
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 154bfe9242c4a5737e7a539b33316d9fcd0d913f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1d975d72385396e37a1c1fd3587a7b91fdd680a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706087"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504408"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Directivas pragma y palabras clave de optimización
 
@@ -31,7 +21,7 @@ Varias directivas pragma que usar en el código de C o C++ y palabras clave afec
 
 - [__assume](../../intrinsics/assume.md)
 
-- [en línea, inline, o \__forceinline](../../cpp/inline-functions-cpp.md)
+- [inline, __inline, o \__forceinline](../../cpp/inline-functions-cpp.md)
 
 - [#pragma auto_inline](../../preprocessor/auto-inline.md)
 

@@ -1,10 +1,6 @@
 ---
-title: IPropertyPageImpl (clase) | Microsoft Docs
-ms.custom: ''
+title: IPropertyPageImpl (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IPropertyPageImpl
 - ATLCTL/ATL::IPropertyPageImpl
@@ -30,23 +26,17 @@ f1_keywords:
 - ATLCTL/ATL::IPropertyPageImpl::m_pPageSite
 - ATLCTL/ATL::IPropertyPageImpl::m_ppUnk
 - ATLCTL/ATL::IPropertyPageImpl::m_size
-dev_langs:
-- C++
 helpviewer_keywords:
 - property pages
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b07609b792b7080e2c4c432ed435381007ba286
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bf97699917732f8ce94d1541b6a93e00325b28c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605821"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl (clase)
 
@@ -127,7 +117,7 @@ El [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaz p
 Crea la ventana del cuadro de diálogo para la página de propiedades.
 
 ```
-HRESULT Activate(  
+HRESULT Activate(
     HWND hWndParent,
     LPCRECT pRect,
     BOOL bModal);

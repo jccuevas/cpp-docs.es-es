@@ -1,30 +1,20 @@
 ---
-title: SimpleClassFactory (clase) | Microsoft Docs
-ms.custom: ''
+title: SimpleClassFactory (clase)
 ms.date: 09/7/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory
 - module/Microsoft::WRL::SimpleClassFactory::CreateInstance
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b20cbb906676705113bd1a84884cc5719b8272bf
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: e73c4cc8088fb5200ae2ae76dcbed773db76863b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500586"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (clase)
 
@@ -39,7 +29,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Parámetros
 
-*base*  
+*base*<br/>
 Una clase base.
 
 ## <a name="remarks"></a>Comentarios
@@ -102,15 +92,15 @@ STDMETHOD( CreateInstance )(
 
 #### <a name="parameters"></a>Parámetros
 
-*pUnkOuter*  
+*pUnkOuter*<br/>
 Debe ser `nullptr`; en caso contrario, el valor devuelto es CLASS_E_NOAGGREGATION.
 
 SimpleClassFactory no admite la agregación. Si se admite la agregación y el objeto se crea formaba parte de un agregado, *pUnkOuter* sería un puntero al control `IUnknown` interfaz del agregado.
 
-*riid*  
+*riid*<br/>
 Identificador del objeto para crear la interfaz.
 
-*ppvObject*  
+*ppvObject*<br/>
 Cuando finalice esta operación, puntero a una instancia del objeto especificado por el *riid* parámetro.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -1,32 +1,22 @@
 ---
-title: ActivatableClass (Macros) | Microsoft Docs
-ms.custom: ''
+title: ActivatableClass (Macros)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - ActivatableClass
 - ActivatableClassWithFactory
 - ActivatableClassWithFactoryEx
-dev_langs:
-- C++
 helpviewer_keywords:
 - ActivatableClassWithFactory
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 398149d0d65b0dcf4c914d8f35e4c6faf209173f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1b50d9ba59ef8aebe4eca388ee30449f4ddd53de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606992"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660673"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass (Macros)
 
@@ -53,13 +43,13 @@ ActivatableClassWithFactoryEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*  
+*nombre de clase*<br/>
 Nombre de la clase para crear.
 
-*Factory*  
+*Factory*<br/>
 Generador que se va a crear una instancia de la clase especificada.
 
-*Nombre de servidor*  
+*Nombre de servidor*<br/>
 Un nombre que especifica un subconjunto de fábricas del módulo.
 
 ## <a name="remarks"></a>Comentarios

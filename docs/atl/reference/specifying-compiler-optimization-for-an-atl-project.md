@@ -1,30 +1,20 @@
 ---
-title: Especificación de la optimización del compilador para un proyecto ATL | Microsoft Docs
-ms.custom: ''
+title: Especificación de la optimización del compilador para un proyecto ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.optimization
 - vc.appwiz.ATL.vtable
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL_DISABLE_NO_VTABLE macro
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 18c1f404576a7e011698f0b553a2436bab8089a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522307"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Especificación de la optimización del compilador para un proyecto ATL
 
@@ -51,7 +41,7 @@ Si no define _ATL_DISABLE_NO_VTABLE, la macro ATL_NO_VTABLE se expande a `declsp
 
 Debe utilizar ATL_NO_VTABLE y por consiguiente `declspec(novtable)`, únicamente con clases base que no se puede crear directamente. No se debe usar `declspec(novtable)` con la clase más derivada en el proyecto, dado que esta clase (normalmente [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), o [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Inicializa el puntero vtable para el proyecto.
 
-No debe llamar a funciones virtuales desde el constructor de cualquier objeto que usa `declspec(novtable)`. Debe mover esas llamadas a la [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) método.  
+No debe llamar a funciones virtuales desde el constructor de cualquier objeto que usa `declspec(novtable)`. Debe mover esas llamadas a la [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) método.
 
 Si no está seguro de si debe utilizar el `declspec(novtable)` modificador, puede quitar la macro ATL_NO_VTABLE de cualquier definición de clase, o puede deshabilitar globalmente mediante la especificación
 

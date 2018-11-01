@@ -1,78 +1,70 @@
 ---
-title: 'Cómo: convertir entre System:: GUID y _GUID | Documentos de Microsoft'
+title: 'Cómo: Realizar la conversión entre System::Guid y _GUID'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - System::GUID
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 7986fb615f8d57de63a1f50a8ca844e208e5907e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7aa89557c1aeac4b7093ff6fc0bbd3937e99b0b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33127448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635700"
 ---
 # <a name="how-to-convert-between-systemguid-and-guid"></a>Cómo: Realizar la conversión entre System::Guid y _GUID
-El ejemplo de código siguiente muestra cómo convertir entre una <xref:System.Guid> y `_GUID`.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// convert_guids.cpp  
-// compile with: /clr  
-#include <windows.h>  
-#include <stdio.h>  
-  
-using namespace System;  
-  
-Guid FromGUID( _GUID& guid ) {  
-   return Guid( guid.Data1, guid.Data2, guid.Data3,   
-                guid.Data4[ 0 ], guid.Data4[ 1 ],   
-                guid.Data4[ 2 ], guid.Data4[ 3 ],   
-                guid.Data4[ 4 ], guid.Data4[ 5 ],   
-                guid.Data4[ 6 ], guid.Data4[ 7 ] );  
-}  
-  
-_GUID ToGUID( Guid& guid ) {  
-   array<Byte>^ guidData = guid.ToByteArray();  
-   pin_ptr<Byte> data = &(guidData[ 0 ]);  
-  
-   return *(_GUID *)data;  
-}  
-  
-int main() {  
-   _GUID ng = {0x11111111,0x2222,0x3333,0x44,0x55,0x55,0x55,0x55,0x55,0x55,0x55};  
-   Guid mg;  
-  
-   Console::WriteLine( (mg = FromGUID( ng )).ToString() );  
-   _GUID ng2 = ToGUID( mg );  
-  
-   printf_s(  "%x-%x-%x-", ng2.Data1, ng2.Data2, ng2.Data3 );  
-   for (int i = 0 ; i < 8 ; i++) {  
-      if (i == 2)  
-         printf_s("-");  
-      printf_s("%x", ng2.Data4[i]);  
-   }  
-   printf_s("\n");  
-}  
-```  
-  
-```Output  
-11111111-2222-3333-4455-555555555555  
-11111111-2222-3333-4455-555555555555  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Ejemplo de código siguiente muestra cómo convertir entre una <xref:System.Guid> y un `_GUID`.
+
+## <a name="example"></a>Ejemplo
+
+```
+// convert_guids.cpp
+// compile with: /clr
+#include <windows.h>
+#include <stdio.h>
+
+using namespace System;
+
+Guid FromGUID( _GUID& guid ) {
+   return Guid( guid.Data1, guid.Data2, guid.Data3,
+                guid.Data4[ 0 ], guid.Data4[ 1 ],
+                guid.Data4[ 2 ], guid.Data4[ 3 ],
+                guid.Data4[ 4 ], guid.Data4[ 5 ],
+                guid.Data4[ 6 ], guid.Data4[ 7 ] );
+}
+
+_GUID ToGUID( Guid& guid ) {
+   array<Byte>^ guidData = guid.ToByteArray();
+   pin_ptr<Byte> data = &(guidData[ 0 ]);
+
+   return *(_GUID *)data;
+}
+
+int main() {
+   _GUID ng = {0x11111111,0x2222,0x3333,0x44,0x55,0x55,0x55,0x55,0x55,0x55,0x55};
+   Guid mg;
+
+   Console::WriteLine( (mg = FromGUID( ng )).ToString() );
+   _GUID ng2 = ToGUID( mg );
+
+   printf_s(  "%x-%x-%x-", ng2.Data1, ng2.Data2, ng2.Data3 );
+   for (int i = 0 ; i < 8 ; i++) {
+      if (i == 2)
+         printf_s("-");
+      printf_s("%x", ng2.Data4[i]);
+   }
+   printf_s("\n");
+}
+```
+
+```Output
+11111111-2222-3333-4455-555555555555
+11111111-2222-3333-4455-555555555555
+```
+
+## <a name="see-also"></a>Vea también
+
+[Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

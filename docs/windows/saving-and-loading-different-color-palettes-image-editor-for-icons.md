@@ -1,14 +1,8 @@
 ---
-title: Guardar y cargar diferentes paletas (Editor de imágenes para iconos) de Color | Microsoft Docs
-ms.custom: ''
+title: Guardar y cargar diferentes paletas de colores (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - color palettes [C++]
 - palettes
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - colors [C++], Image editor
 - Image editor [C++], palettes
 ms.assetid: 694b6346-e606-4f19-aa01-9b4ceb47f423
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 3ac4a7f23e6f37891851740ed65356d7d2bec3c0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 847004210d5c0672fe013c51e59de5c9f849f977
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42593628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447988"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>Guardar y cargar diferentes paletas de colores (Editor de imágenes para iconos)
 
@@ -55,5 +44,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)

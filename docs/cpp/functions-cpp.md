@@ -1,12 +1,6 @@
 ---
-title: Funciones (C++) | Microsoft Docs
-ms.custom: ''
+title: Funciones (C++)
 ms.date: 01/25/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 777bffab922bc7122444110a32874f9b77171b0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022365"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626153"
 ---
 # <a name="functions-c"></a>Funciones (C++)
 
@@ -101,7 +91,7 @@ Los elementos opcionales de una declaración de función son los siguientes:
 
     ```
 
-     Para obtener más información, consulte [programa y vinculación](../cpp/program-and-linkage-cpp.md).
+   Para obtener más información, consulte [programa y vinculación](../cpp/program-and-linkage-cpp.md).
 
 1. **inline**, que indica al compilador que reemplace cada llamada a la función con el código de la función. La inserción en línea puede mejorar el rendimiento en escenarios donde una función se ejecuta rápidamente y se invoca varias veces en una sección del código crítica para el rendimiento.
 
@@ -112,7 +102,7 @@ Los elementos opcionales de una declaración de función son los siguientes:
     }
     ```
 
-     Para obtener más información, consulte [funciones Inline](../cpp/inline-functions-cpp.md).
+   Para obtener más información, consulte [funciones Inline](../cpp/inline-functions-cpp.md).
 
 1. Un `noexcept` expresión, que especifica si la función puede producir una excepción. En el ejemplo siguiente, la función no produce una excepción si el `is_pod` expresión se evalúa como **true**.
 
@@ -123,7 +113,7 @@ Los elementos opcionales de una declaración de función son los siguientes:
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Para obtener más información, consulte [noexcept](../cpp/noexcept-cpp.md).
+   Para obtener más información, consulte [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Solo funciones miembro) Los calificadores cv, que especifica si la función es **const** o **volátil**.
 
@@ -263,7 +253,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 Cuando **automática** se usa junto con un tipo de valor devuelto final, simplemente sirve como marcador de posición para que la expresión decltype y no lleva a cabo la deducción de tipos.
-
 
 ## <a name="function-local-variables"></a>Variables locales de función
 

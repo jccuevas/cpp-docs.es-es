@@ -1,42 +1,24 @@
 ---
-title: Reenvío de tipos (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Reenvío de tipos (C++/CLI)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d10c025c22523e6329f051fcfbe76988337992a2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628922"
 ---
 # <a name="type-forwarding-ccli"></a>Reenvío de tipos (C++/CLI)
 
 *Reenvío de tipos* permite pasar un tipo de un ensamblado (ensamblado A) a otro ensamblado (ensamblado B), que no es necesario volver a compilar los clientes que utilizan el ensamblado A.
 
-## <a name="all-platforms"></a>Todas las plataformas
-
-Esta característica no se admite en todos los runtimes.
-
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
 Esta característica no se admite en el tiempo de ejecución de Windows.
-
-### <a name="requirements"></a>Requisitos
-
-Opción del compilador: `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -44,17 +26,17 @@ El ejemplo de código siguiente muestra cómo usar el reenvío de tipos.
 
 ### <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*new*  
+*new*<br/>
 El ensamblado en el que va a mover la definición de tipo.
 
-*type*  
+*type*<br/>
 Tipo cuya definición que se va a mover a otro ensamblado.
 
 ### <a name="remarks"></a>Comentarios
@@ -97,7 +79,7 @@ Por lo tanto, si un archivo de código fuente que se usa para generar el ensambl
 
 3. Eliminar el `MyClass` escriba definición desde el código fuente que se usa para compilar A.dll y reemplácelo con lo siguiente:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

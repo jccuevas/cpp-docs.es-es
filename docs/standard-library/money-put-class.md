@@ -1,10 +1,6 @@
 ---
-title: money_put (Clase) | Microsoft Docs
-ms.custom: ''
+title: money_put (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmon/std::money_put
 - xlocmon/std::money_put::char_type
@@ -12,8 +8,6 @@ f1_keywords:
 - xlocmon/std::money_put::string_type
 - xlocmon/std::money_put::do_put
 - xlocmon/std::money_put::put
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::money_put [C++]
 - std::money_put [C++], char_type
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 61f4590a7f11401601c0e11e493b49cb442cdb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108907"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664196"
 ---
 # <a name="moneyput-class"></a>money_put (Clase)
 
@@ -107,7 +97,6 @@ virtual iter_type do_put(
     ios_base& _Iosbase,
     CharType _Fill,
     const string_type& val) const;
-
 
 virtual iter_type do_put(
     iter_type next,
@@ -230,7 +219,6 @@ iter_type put(
     ios_base& _Iosbase,
     CharType _Fill,
     const string_type& val) const;
-
 
 iter_type put(
     iter_type next,

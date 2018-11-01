@@ -1,28 +1,18 @@
 ---
-title: Atributo de tipos de parámetros (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Tipos de parámetro de atributo (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 84c97dc0eb449ed0a2e835c46e77981dda0b67e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 09a13fa2f8d6db89824262a921adb338b151c995
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611911"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50599334"
 ---
-# <a name="attribute-parameter-types--c-component-extensions"></a>Tipos de parámetros de atributo (Extensiones de componentes de C++)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Tipos de parámetro de atributo (C++ / c++ / CLI y c++ / CX)
 
 El compilador deben conocer los valores pasados a los atributos en tiempo de compilación.  Parámetros de atributo pueden ser de los siguientes tipos:
 

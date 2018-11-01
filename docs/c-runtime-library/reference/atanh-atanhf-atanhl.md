@@ -1,10 +1,6 @@
 ---
-title: atanh, atanhf, atanhl | Microsoft Docs
-ms.custom: ''
+title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,23 +22,17 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435366"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -68,16 +58,16 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **atanh** funciones devuelven la tangente hiperbólica inversa (arcotangente hiperbólica) de *x*. Si *x* es mayor que 1 o menor que -1, **errno** está establecido en **EDOM** y el resultado es un valor NaN reservado. Si *x* es igual a 1 o -1, un infinito positivo o negativo se devuelve, respectivamente, y **errno** está establecido en **ERANGE**.
+El **atanh** funciones devuelven la tangente hiperbólica inversa (arcotangente hiperbólica) de *x*. Si *x* es mayor que 1 o menor que -1, **errno** está establecido en **EDOM** y el resultado es un valor NaN. Si *x* es igual a 1 o -1, un infinito positivo o negativo se devuelve, respectivamente, y **errno** está establecido en **ERANGE**.
 
-|Entrada|Excepción SEH|**Matherr** (excepción)|
+|Entrada|Excepción SEH|**_Matherr** excepción|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|ninguna|ninguna|
 |*X* ≥ 1; *x* ≤ -1|ninguna|ninguna|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **atanh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **atanh** siempre toma y devuelve **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **atanh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **atanh** siempre toma y devuelve **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

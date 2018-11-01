@@ -1,32 +1,22 @@
 ---
-title: CFileTimeSpan (clase) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CFileTimeSpan (clase)
+ms.date: 10/18/2018
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan::CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan::GetTimeSpan
 - ATLTIME/ATL::CFileTimeSpan::SetTimeSpan
-dev_langs:
-- C++
 helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 06a9f4275ff6acfcef7b7173fbfc6f9abf89b4f3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468931"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan (clase)
 
@@ -93,10 +83,10 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` existente.
 
-*nSpan*  
+*nSpan*<br/>
 Un período de tiempo en milisegundos.
 
 ### <a name="remarks"></a>Comentarios
@@ -125,7 +115,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Un objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -142,7 +132,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +149,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Un objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -176,7 +166,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Un objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -193,7 +183,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -210,7 +200,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -227,7 +217,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Un objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -244,7 +234,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Un objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -261,7 +251,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -278,7 +268,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -295,7 +285,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*  
+*intervalo*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -312,13 +302,12 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*nSpan*  
+*nSpan*<br/>
 El nuevo valor para el intervalo de tiempo en milisegundos.
 
 ## <a name="see-also"></a>Vea también
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)   
-[CFileTime (clase)](../../atl-mfc-shared/reference/cfiletime-class.md)   
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[CFileTime (clase)](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

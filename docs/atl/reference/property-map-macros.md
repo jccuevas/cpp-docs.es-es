@@ -1,10 +1,6 @@
 ---
-title: Macros de mapa de propiedades | Microsoft Docs
-ms.custom: ''
+title: Macros de mapa de propiedades
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
 - atlcom/ATL::PROP_DATA_ENTRY
@@ -12,21 +8,15 @@ f1_keywords:
 - atlcom/ATL::PROP_ENTRY_TYPE_EX
 - atlcom/ATL::PROP_PAGE
 - atlcom/ATL::END_PROP_MAP
-dev_langs:
-- C++
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 594b02d777d87decfc218064678dbecdf8ecf0c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7422c38bd21a458dccafa6d34fd4d6522f96132a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513826"
 ---
 # <a name="property-map-macros"></a>Macros de mapa de propiedades
 
@@ -39,7 +29,7 @@ Estas macros definen asignaciones de propiedad y entradas.
 |[PROP_ENTRY_TYPE](#prop_entry_type)|Escribe una descripción, la propiedad DISPID y la propiedad página de propiedades CLSID en la asignación de propiedad.|
 |[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|Escribe una descripción de propiedad, propiedad DISPID, CLSID, de página de propiedades y `IDispatch` IID en la asignación de propiedad.|
 |[PROP_PAGE](#prop_page)|Escribe una CLSID de la página de propiedades en la asignación de propiedad.|
-|[END_PROP_MAP](#end_prop_map)|Marca el final de la asignación de propiedades ATL.|  
+|[END_PROP_MAP](#end_prop_map)|Marca el final de la asignación de propiedades ATL.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -83,7 +73,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *szDesc*<br/>
 [in] Descripción de propiedad.
 
-*Miembro*<br/>
+*member*<br/>
 [in] El miembro de datos que contiene la extensión; Por ejemplo, `m_sizeExtent`.
 
 *vt*<br/>

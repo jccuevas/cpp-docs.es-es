@@ -1,25 +1,15 @@
 ---
-title: Ordenación parcial de plantillas de función (C++) | Microsoft Docs
-ms.custom: ''
+title: Ordenación parcial de plantillas de función (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e5b550cd0b76aa0a2e061536ae6bb0ea61063909
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10b920e4d5f999c3a2c9649ceabb0369813cc401
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438862"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>Ordenación parcial de plantillas de función (C++)
 
@@ -31,23 +21,23 @@ Utilice el proceso siguiente para determinar si un candidato de plantilla de fun
 
 1. Considere dos plantillas de función, T1 y T2.
 
-2. Reemplace los parámetros de T1 con un tipo único hipotético X.
+1. Reemplace los parámetros de T1 con un tipo único hipotético X.
 
-3. Con la lista de parámetros de T1, vea si T2 es una plantilla válida para esa lista de parámetros. Omita cualquier conversión implícita.
+1. Con la lista de parámetros de T1, vea si T2 es una plantilla válida para esa lista de parámetros. Omita cualquier conversión implícita.
 
-4. Repita el mismo proceso con T1 y T2 a la inversa.
+1. Repita el mismo proceso con T1 y T2 a la inversa.
 
-5. Si una plantilla es una lista de argumentos de plantilla válida para otra plantilla pero no al revés, esa plantilla se considera menos especializada que la otra plantilla. Si las dos plantillas anterior paso formulario argumentos válidos para entre sí, a continuación, se consideran especializadas por igual, y da como resultado una llamada ambigua cuando se intenta utilizarlos.
+1. Si una plantilla es una lista de argumentos de plantilla válida para otra plantilla pero no al revés, esa plantilla se considera menos especializada que la otra plantilla. Si las dos plantillas anterior paso formulario argumentos válidos para entre sí, a continuación, se consideran especializadas por igual, y da como resultado una llamada ambigua cuando se intenta utilizarlos.
 
-6. Según estas reglas:
+1. Según estas reglas:
 
-     1. Una especialización de plantilla para un tipo concreto se considera más especializada que una que toma un argumento de tipo genérico.
+   1. Una especialización de plantilla para un tipo concreto se considera más especializada que una que toma un argumento de tipo genérico.
 
-     2. Una plantilla que toma solo __T\*__  es más especializado que toma un solo __T__, porque el tipo de un hipotético __X\*__  es un argumento válido para un __T__ argumento de plantilla, pero __X__ no es un argumento válido para un __T\*__  argumento de plantilla.
+   1. Una plantilla que toma solo __T\*__  es más especializado que toma un solo __T__, porque el tipo de un hipotético __X\*__  es un argumento válido para un __T__ argumento de plantilla, pero __X__ no es un argumento válido para un __T\*__  argumento de plantilla.
 
-     3. __const T__ es más especializado que __T__, porque __const X__ es un argumento válido para un __T__ argumento de plantilla, pero __X__ es no es un argumento válido para un __const T__ argumento de plantilla.
+   1. __const T__ es más especializado que __T__, porque __const X__ es un argumento válido para un __T__ argumento de plantilla, pero __X__ es no es un argumento válido para un __const T__ argumento de plantilla.
 
-     4. __const T\*__  es más especializado que __T\*__, porque __const X\*__  es un argumento válido para un __T\*__  argumento de plantilla, pero __X\*__  no es un argumento válido para un __const T\*__  argumento de plantilla.
+   1. __const T\*__  es más especializado que __T\*__, porque __const X\*__  es un argumento válido para un __T\*__  argumento de plantilla, pero __X\*__  no es un argumento válido para un __const T\*__  argumento de plantilla.
 
 ## <a name="example"></a>Ejemplo
 

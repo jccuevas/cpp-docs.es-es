@@ -1,26 +1,15 @@
 ---
-title: Propiedad modificador de acelerador (C++) | Microsoft Docs
-ms.custom: ''
+title: Propiedad modificador de acelerador (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 793e02b4ac083d6fe84ba2cc76ee340bcf2484e9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f9dfcbde68d2b3d1ebdd1b94aa40339bbc0ff4e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316060"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650712"
 ---
 # <a name="accelerator-modifier-property-c"></a>Propiedad modificador de acelerador (C++)
 
@@ -43,5 +32,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)  
+[Establecimiento de las propiedades de los aceleradores](../windows/setting-accelerator-properties.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

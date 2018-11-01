@@ -1,15 +1,9 @@
 ---
-title: 'Cómo: incluir recursos en tiempo de compilación (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: incluir recursos en tiempo de compilación (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.including
 - vc.resvw.resource.including
-dev_langs:
-- C++
 helpviewer_keywords:
 - comments [C++], compiled files
 - resources [C++], including at compile time
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 81f5136ab18143f91a94525f6797e7711abc426a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8d6cfc2f18ec12354619c01ed79b740554ec4d95
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495152"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>Cómo: Incluir recursos en tiempo de compilación
 
@@ -63,5 +52,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

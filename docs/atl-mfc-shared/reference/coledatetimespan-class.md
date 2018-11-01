@@ -1,10 +1,6 @@
 ---
-title: COleDateTimeSpan (clase) | Microsoft Docs
-ms.custom: ''
+title: COleDateTimeSpan (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -23,8 +19,6 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_span
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_status
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespan
 - time span
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ee7ccca718a05529e5ebc88bccc7d23d258810c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43758367"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509336"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan (clase)
 
@@ -124,7 +114,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dateSpan*  
+*dateSpan*<br/>
 `COleDateTimeSpan` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -154,10 +144,10 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 El número de días que se copiará en el nuevo `COleDateTimeSpan` objeto.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Indique los valores de día y hora que se copiará en el nuevo `COleDateTimeSpan` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -189,7 +179,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pFormat*  
+*pFormat*<br/>
 Cadena de un formato similar a la `printf` cadena de formato. Códigos de formato, precedidos por un porcentaje (`%`) inicie sesión, se reemplazan por la correspondiente `COleDateTimeSpan` componente. Otros caracteres en la cadena de formato se copian sin cambios a la cadena devuelta. El valor y el significado de los códigos de formato para `Format` se enumeran a continuación:
 
 - **%H** horas del día actual
@@ -204,7 +194,7 @@ Los códigos de formato de cuatro enumerados anteriormente son los códigos úni
 
 -
 
-*nID*  
+*nID*<br/>
 El identificador de recurso para la cadena de formato de control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -217,10 +207,10 @@ Llamar a estas funciones para crear una representación con formato del valor de
 
 A continuación se muestra una breve descripción de los formularios para esta función:
 
-**Formato (** *pFormat* **)**  
+**Formato (** *pFormat* **)**<br/>
 El valor utilizando la cadena de formato que contiene códigos de formato especiales que van precedidos por un signo de porcentaje (%), da formato a este formulario como en `printf`. La cadena de formato se pasa como un parámetro a la función.
 
-**Formato (** *nID* **)**  
+**Formato (** *nID* **)**<br/>
 El valor utilizando la cadena de formato que contiene códigos de formato especiales que van precedidos por un signo de porcentaje (%), da formato a este formulario como en `printf`. La cadena de formato es un recurso. El Id. de este recurso de cadena se pasa como parámetro.
 
 ### <a name="example"></a>Ejemplo
@@ -388,11 +378,11 @@ El estado de este `COleDateTimeSpan` valor.
 El valor devuelto se define mediante el `DateTimeSpanStatus` tipo enumerado, que se define dentro de la `COleDateTimeSpan` clase.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:
@@ -585,11 +575,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Comentarios
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:
@@ -694,7 +684,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Indique los valores de intervalo de fecha y el intervalo de tiempo que se copiará en esto `COleDateTimeSpan` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -731,7 +721,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*status*  
+*status*<br/>
 El nuevo valor de estado para esta `COleDateTimeSpan` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -739,11 +729,11 @@ El nuevo valor de estado para esta `COleDateTimeSpan` objeto.
 El *estado* el valor del parámetro se define mediante el `DateTimeSpanStatus` tipo enumerado, que se define dentro de la `COleDateTimeSpan` clase.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Para obtener una breve descripción de estos valores de estado, consulte la lista siguiente:
@@ -763,9 +753,9 @@ Para obtener una breve descripción de estos valores de estado, consulte la list
 
 ## <a name="see-also"></a>Vea también
 
-[COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md)   
-[CTime (clase)](../../atl-mfc-shared/reference/ctime-class.md)   
-[CTimeSpan (clase)](../../atl-mfc-shared/reference/ctimespan-class.md)   
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+[COleDateTime (clase)](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[CTime (clase)](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[CTimeSpan (clase)](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

@@ -1,10 +1,6 @@
 ---
-title: wcrtomb | Microsoft Docs
-ms.custom: ''
+title: wcrtomb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb function
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eca27e81cbb1df26d04059974cdc1ce5313bafa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659256"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -78,17 +68,17 @@ Devuelve el número de bytes necesarios para representar el carácter multibyte 
 
 ## <a name="remarks"></a>Comentarios
 
-El **wcrtomb** función convierte un carácter ancho, comenzando en el estado de conversión especificada contenido en *mbstate*, desde el valor contenido en *wchar*, en el dirección representada por *mbchar*. El valor devuelto es el número de bytes necesarios para representar el carácter multibyte correspondiente, pero no devolverá más de **MB_CUR_MAX** bytes.
+El **wcrtomb** función convierte un carácter ancho, comenzando en el estado de conversión especificado contenido en *mbstate*, desde el valor contenido en *wchar*, en el dirección representada por *mbchar*. El valor devuelto es el número de bytes necesarios para representar el carácter multibyte correspondiente, pero no devolverá más de **MB_CUR_MAX** bytes.
 
 Si *mbstate* es null, interno **mbstate_t** objeto que contiene el estado de conversión de *mbchar* se utiliza. Si la secuencia de caracteres *wchar* no tiene un multibyte correspondiente representación de caracteres, se devuelve -1 y el **errno** está establecido en **EILSEQ**.
 
-El **wcrtomb** función difiere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por su capacidad de reinicio. El estado de la conversión se almacena en *mbstate* para llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación podría utilizar **wcsrlen** en lugar de **wcsnlen**, si una llamada subsiguiente a **wcsrtombs** se usaron en lugar de **wcstombs**.
+El **wcrtomb** función difiere de [wctomb, _wctomb_l](wctomb-wctomb-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** lugar **wcsnlen**, si una llamada subsiguiente a **wcsrtombs** se usaron en lugar de **wcstombs**.
 
 En C++, esta función tiene una sobrecarga de plantilla que invoca a un homólogo más reciente y seguro de esta función. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-El **wcrtomb** función es segura para subprocesos siempre y cuando no llama a ninguna función en el subproceso actual **setlocale** mientras se está ejecutando esta función y mientras el *mbstate* es null.
+El **wcrtomb** función es segura para subprocesos siempre y cuando ninguna función en el subproceso actual llame a **setlocale** mientras se está ejecutando esta función y mientras la *mbstate* es null.
 
 ## <a name="example"></a>Ejemplo
 

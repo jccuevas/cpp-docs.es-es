@@ -1,29 +1,18 @@
 ---
-title: Establecer el tamaño de cuadro combinado y de su lista desplegable | Microsoft Docs
-ms.custom: ''
+title: Establecer el tamaño de un cuadro combinado y de su lista desplegable
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
-dev_langs:
-- C++
 helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8ecc04f0e8bda3045dcad141fa3fe467039c3f23
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 091c01e669259b87e320f94f880f6e1643726452
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605565"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677362"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Establecer el tamaño de un cuadro combinado y de su lista desplegable
 
@@ -61,6 +50,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Adición de valores a un control de cuadro combinado](../windows/adding-values-to-a-combo-box-control.md)  
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Adición de valores a un control de cuadro combinado](../windows/adding-values-to-a-combo-box-control.md)<br/>
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

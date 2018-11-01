@@ -1,30 +1,20 @@
 ---
-title: -EXPORT (exporta una función) | Microsoft Docs
-ms.custom: ''
+title: /EXPORT (Exporta una función)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
-dev_langs:
-- C++
 helpviewer_keywords:
 - /EXPORT linker option
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a26df26849302ae1cce449f92cdeb5ee6dfd9baa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703864"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456139"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (Exporta una función)
 
@@ -70,9 +60,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
 
-2. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
 
-3. Escriba la opción en el **opciones adicionales** cuadro.
+1. Escriba la opción en el **opciones adicionales** cuadro.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 

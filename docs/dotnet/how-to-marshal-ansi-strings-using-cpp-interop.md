@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: serializar cadenas ANSI mediante la interoperabilidad de C++ | Documentos de Microsoft'
+title: 'Cómo: serializar cadenas ANSI mediante la interoperabilidad de C++ | Microsoft Docs'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -19,89 +19,93 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3690ca242b8c50c84c6eb4a8a7a437937268c6b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a1a0cd8b9da5812e404f70dc999dfaf1606666
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33129400"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383368"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Cómo: serializar cadenas ANSI mediante la interoperabilidad de C++
-Este tema muestra cómo pueden ser cadenas ANSI pasado utilizando la interoperabilidad de C++, pero .NET Framework <xref:System.String> representa las cadenas en formato Unicode, por lo que la conversión a ANSI requiere un paso adicional. Para interoperar con otros tipos de cadena, vea los temas siguientes:  
-  
--   [Cómo: Serializar cadenas Unicode mediante la interoperabilidad de C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
-  
--   [Cómo: Serializar cadenas COM mediante la interoperabilidad de C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
-  
- El siguiente código, se ejemplos utilizan la [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma implementar administrados y funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si está definido en archivos independientes. Dado que no es necesario que los archivos que contienen únicamente funciones no administradas pueden compilarse con [/clr (compilación de Common Language Runtime)](../build/reference/clr-common-language-runtime-compilation.md), pueden conservar sus características de rendimiento.  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo se muestra cómo pasar una cadena ANSI de administrada a una función no administrada usando <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Este método asigna memoria en el montón no administrado y devuelve la dirección después de realizar la conversión. Esto significa que no es necesario fijar (debido a memoria en el montón del GC no se pasa a la función no administrada) y que el valor IntPtr devuelto desde <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> debe liberar de forma explícita o una memoria de la pérdida de resultados.  
-  
-```  
-// MarshalANSI1.cpp  
-// compile with: /clr  
-#include <iostream>  
-#include <stdio.h>  
-  
-using namespace std;  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma unmanaged  
-  
-void NativeTakesAString(const char* p) {  
-   printf_s("(native) received '%s'\n", p);  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   String^ s = gcnew String("sample string");  
-   IntPtr ip = Marshal::StringToHGlobalAnsi(s);  
-   const char* str = static_cast<const char*>(ip.ToPointer());  
-  
-   Console::WriteLine("(managed) passing string...");  
-   NativeTakesAString( str );  
-  
-   Marshal::FreeHGlobal( ip );  
-}  
-```  
-  
-## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el cálculo de referencias de datos necesarios para tener acceso a una cadena ANSI en una función administrada que llama a una función no administrada. La función administrada, al recibir la cadena nativa, puede usarla directamente o convertirla en una cadena administrada mediante el <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> método, tal como se muestra.  
-  
-```  
-// MarshalANSI2.cpp  
-// compile with: /clr  
-#include <iostream>  
-#include <vcclr.h>  
-  
-using namespace std;  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-#pragma managed  
-  
-void ManagedStringFunc(char* s) {  
-   String^ ms = Marshal::PtrToStringAnsi(static_cast<IntPtr>(s));  
-   Console::WriteLine("(managed): received '{0}'", ms);  
-}  
-  
-#pragma unmanaged  
-  
-void NativeProvidesAString() {  
-   cout << "(native) calling managed func...\n";  
-   ManagedStringFunc("test string");  
-}  
-  
-#pragma managed  
-  
-int main() {  
-   NativeProvidesAString();  
-}  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+Este tema muestra cómo cadenas ANSI se pueden pasar mediante la interoperabilidad de C++, pero .NET Framework <xref:System.String> representa cadenas en formato Unicode, por lo que la conversión a ANSI es un paso adicional. Para interoperar con otros tipos de cadena, vea los temas siguientes:
+
+- [Cómo: Serializar cadenas Unicode mediante la interoperabilidad de C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+
+- [Cómo: Serializar cadenas COM mediante la interoperabilidad de C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+
+Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma para implementar administrados y las funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si se definen en archivos independientes. Dado que no es necesario que los archivos que contienen solo las funciones no administradas se compilan con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md), pueden conservar sus características de rendimiento.
+
+## <a name="example"></a>Ejemplo
+
+En el ejemplo se muestra cómo pasar una cadena ANSI de administrado a una función no administrada mediante <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>. Este método asigna memoria en el montón no administrado y devuelve la dirección después de realizar la conversión. Esto significa que no es necesario fijar (porque la memoria del montón GC no se pasa a la función no administrada) y que el IntPtr devuelto desde <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> debe liberarse de manera explícita o una memoria perder los resultados.
+
+```
+// MarshalANSI1.cpp
+// compile with: /clr
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma unmanaged
+
+void NativeTakesAString(const char* p) {
+   printf_s("(native) received '%s'\n", p);
+}
+
+#pragma managed
+
+int main() {
+   String^ s = gcnew String("sample string");
+   IntPtr ip = Marshal::StringToHGlobalAnsi(s);
+   const char* str = static_cast<const char*>(ip.ToPointer());
+
+   Console::WriteLine("(managed) passing string...");
+   NativeTakesAString( str );
+
+   Marshal::FreeHGlobal( ip );
+}
+```
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente muestra el cálculo de referencias de datos necesarios para tener acceso a una cadena ANSI en una función administrada que llama a una función no administrada. La función administrada, al recibir la cadena nativa, puede usarla directamente o convertirla en una cadena administrada mediante el <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> método, como se muestra.
+
+```
+// MarshalANSI2.cpp
+// compile with: /clr
+#include <iostream>
+#include <vcclr.h>
+
+using namespace std;
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+#pragma managed
+
+void ManagedStringFunc(char* s) {
+   String^ ms = Marshal::PtrToStringAnsi(static_cast<IntPtr>(s));
+   Console::WriteLine("(managed): received '{0}'", ms);
+}
+
+#pragma unmanaged
+
+void NativeProvidesAString() {
+   cout << "(native) calling managed func...\n";
+   ManagedStringFunc("test string");
+}
+
+#pragma managed
+
+int main() {
+   NativeProvidesAString();
+}
+```
+
+## <a name="see-also"></a>Vea también
+
+[Usar la interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

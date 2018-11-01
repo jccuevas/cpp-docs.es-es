@@ -1,10 +1,6 @@
 ---
-title: EXP, expf, expl | Documentos de Microsoft
-ms.custom: ''
+title: EXP, expf, expl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expf
 - expl
@@ -27,8 +23,6 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9569eee475a80fc5c08c2ec1d099cf627c7b5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596760"
 ---
 # <a name="exp-expf-expl"></a>EXP, expf, expl
 
@@ -78,12 +68,12 @@ Valor del punto flotante a exponentiate la base del logaritmo natural *e* por.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **exp** funciones devuelven el valor exponencial del parámetro de punto flotante, *x*, si se realiza correctamente. Es decir, el resultado es *e*<sup>*x*</sup>, donde *e* es la base del logaritmo natural. Si se produce desbordamiento, la función devuelve INF (infinito) y en subdesbordamiento, **exp** devuelve 0.
+El **exp** funciones devuelven el valor exponencial del parámetro de punto flotante, *x*, si se realiza correctamente. Es decir, el resultado es *e*<sup>*x*</sup>, donde *e* es la base del logaritmo natural. En caso de desbordamiento, la función devuelve INF (infinito) y en caso de subdesbordamiento, **exp** devuelve 0.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± Valor NaN reservado, indeterminado|Ninguna|_DOMAIN|
-|± Infinito|INVALID|_DOMAIN|
+|+ NaN reservado, indeterminado|Ninguna|_DOMAIN|
+|+ Infinito|INVALID|_DOMAIN|
 |x ≥ 7,097827e+002|INEXACTO+DESBORDAMIENTO|OVERFLOW|
 |X ≤ -7,083964e+002|INEXACTO+SUBDESBORDAMIENTO|DESBORDAMIENTO|
 

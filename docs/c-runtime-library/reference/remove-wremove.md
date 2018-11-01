@@ -1,10 +1,6 @@
 ---
-title: remove, _wremove | Microsoft Docs
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406438"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613980"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -75,7 +65,7 @@ Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-d
 
 ## <a name="remarks"></a>Comentarios
 
-La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_Eliminar**; el *ruta de acceso* argumento pasado a **_wremove** es una cadena de caracteres anchos. **_wremove** y **_Eliminar** se comportan exactamente igual. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
+La función **remove** elimina el archivo especificado por *path*. **_wremove** es una versión con caracteres anchos de **_quitar**; el *ruta* argumento **_wremove** es una cadena de caracteres anchos. **_wremove** y **_quitar** se comportan exactamente igual. Para poder eliminar un archivo, primero se deben cerrar todos los controladores correspondientes.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

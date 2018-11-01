@@ -1,29 +1,18 @@
 ---
-title: Insertar cuadro de diálogo de Control ActiveX (C++) | Microsoft Docs
-ms.custom: ''
+title: Insertar cuadro de diálogo de Control ActiveX (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.insertActiveXControls
-dev_langs:
-- C++
 helpviewer_keywords:
 - Insert ActiveX Control dialog box [C++]
 - ActiveX controls [C++], adding to dialog boxes
 ms.assetid: 06638ea3-0726-40da-a989-9b89292d0e3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 16777dc2354787057e3cfe6afb329268272a16e2
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 495245141b62850067196c81bfe4c6f984dcfa88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592756"
 ---
 # <a name="insert-activex-control-dialog-box-c"></a>Insertar cuadro de diálogo de Control ActiveX (C++)
 
@@ -47,6 +36,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de cuadros de diálogo (pestaña, cuadro de herramientas)](../windows/dialog-editor-tab-toolbox.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Editor de cuadros de diálogo (pestaña, cuadro de herramientas)](../windows/dialog-editor-tab-toolbox.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)

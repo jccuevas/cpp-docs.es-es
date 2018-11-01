@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Trabajar con proyectos y soluciones (C++) | Microsoft Docs'
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,18 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339140"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235157"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Tutorial: Trabajar con proyectos y soluciones (C++)
 
 A continuación puede encontrar información de cómo crear un proyecto de C++ en Visual Studio, agregar código y compilar y ejecutar el proyecto. El proyecto de este tutorial es un programa que realiza un seguimiento de cuántos jugadores están jugando a distintos juegos de cartas.
 
-En Visual Studio, el trabajo se organiza en proyectos y soluciones. Una solución puede contener más de un proyecto; por ejemplo, un archivo DLL y una aplicación ejecutable que haga referencia a ese archivo DLL. Para obtener más información, vea [Soluciones y proyectos](/visualstudio/ide/solutions-and-projects-in-visual-studio).
+En Visual Studio, el trabajo se organiza en proyectos y soluciones. Una solución puede tener más de un proyecto; por ejemplo, un archivo DLL y una aplicación ejecutable que haga referencia a ese archivo DLL. Para obtener más información, vea [Soluciones y proyectos](/visualstudio/ide/solutions-and-projects-in-visual-studio).
 
 ## <a name="before-you-start"></a>Antes de empezar
 
@@ -42,13 +42,16 @@ Para crear un proyecto, primero elija una plantilla del tipo de proyecto. Para c
 
 ### <a name="to-create-a-project"></a>Para crear un proyecto
 
-1. En la barra de menús, seleccione **Archivo > Nuevo > Proyecto**.
+1. En la barra de menús, elija **Archivo** > **Nuevo** > **Proyecto**.
 
 1. En el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**, expanda **Instalado** y seleccione **Visual C++**, si todavía no está abierto.
 
 1. En la lista de plantillas instaladas en el panel central, seleccione **Aplicación de consola de Windows**.
 
-1. Escriba un nombre para el proyecto en el cuadro **Nombre**. Para este ejemplo, escriba **Game**.
+   > [!NOTE]
+   > En versiones anteriores de Visual Studio, a la plantilla instalada se le denomina **Aplicación de consola Win32**.
+
+1. Escriba un nombre para el proyecto en el cuadro **Nombre**. Para este ejemplo, escriba *Game*.
 
    Puede aceptar la ubicación predeterminada en la lista desplegable **Ubicación**, escribir otra ubicación o hacer clic en el botón **Examinar** para ir a un directorio donde quiera guardar el proyecto.
 
@@ -66,9 +69,9 @@ Esta parte del tutorial muestra cómo agregar una clase al proyecto. Al agregar 
 
 ### <a name="to-add-a-class-to-a-project"></a>Para agregar una clase a un proyecto
 
-1. Si en Visual Studio no se muestra la ventana **Explorador de soluciones**, en la barra de menús, seleccione **Ver > Explorador de soluciones**.
+1. Si en Visual Studio no se muestra la ventana **Explorador de soluciones**, en la barra de menús, seleccione **Ver** > **Explorador de soluciones**.
 
-1. En el **Explorador de soluciones**, seleccione el proyecto **Game**. En la barra de menús, seleccione **Proyecto > Agregar clase**.
+1. En el **Explorador de soluciones**, seleccione el proyecto **Game**. En la barra de menús, seleccione **Proyecto** > **Agregar clase**.
 
 1. En el cuadro de diálogo **Agregar clase**, escriba *Cardgame* en el cuadro **Nombre de clase**. No modifique los nombres y valores del archivo predeterminado. Elija el botón **Aceptar** .
 
@@ -88,17 +91,15 @@ Esta parte del tutorial muestra cómo agregar una clase al proyecto. Al agregar 
 
       `Cardgame();`
 
-      Modifique este constructor para tomar un parámetro del tipo `int`, denominado *players*.
+      Modifique el constructor para tomar un parámetro del tipo `int`, denominado *players*.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
-      `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
 
    - Después del destructor predeterminado, agregue una declaración insertada para una función miembro `static int` denominada *GetParticipants* que no tome parámetros y devuelva el valor `totalParticipants`.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
-      `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
 
-   El archivo Cardgame.h se debería parecer a este al cambiarlo:
+   El archivo Cardgame.h debería ser similar al código siguiente después de cambiarlo:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -109,20 +110,20 @@ Esta parte del tutorial muestra cómo agregar una clase al proyecto. Al agregar 
        static int totalParticipants;
    public:
        Cardgame(int players);
-       ~Cardgame(void);
+       ~Cardgame();
        static int GetParticipants() { return totalParticipants; }
    };
    ```
 
-   La línea `#pragma once` indica al compilador que incluya el archivo de encabezado solo una vez. Para obtener más información, vea [once](../preprocessor/once.md). Para obtener información sobre otras palabras clave de C++ de este archivo de encabezado, vea [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) y [public](../cpp/public-cpp.md).
+   La línea `#pragma once` indica al compilador que incluya el archivo de encabezado solo una vez. Para obtener más información, vea [once](../preprocessor/once.md). Para obtener información sobre otras palabras clave de C++ del archivo de encabezado anterior, vea [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) y [public](../cpp/public-cpp.md).
 
 1. Haga clic en la pestaña **Cardgame.cpp** en la parte superior del panel de edición para abrirla para la edición.
 
-1. Elimine todo lo que contenga el archivo y sustitúyalo por este código:
+1. Elimine todo lo que contenga el archivo y sustitúyalo por el código:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -144,7 +145,7 @@ Esta parte del tutorial muestra cómo agregar una clase al proyecto. Al agregar 
    ```
 
    > [!NOTE]
-   > Puede utilizar la función de autocompletar mientras escribe código. Por ejemplo, si escribe este código en el teclado, puede escribir *pl* o *tot*, y después presionar Ctrl+Barra espaciadora. La finalización automática escribe `players` o `totalParticipants` por usted.
+   > Puede utilizar la función de autocompletar mientras escribe código. Por ejemplo, si escribe este código en el teclado, puede escribir *pl* o *tot*, y después presionar **Ctrl**+**Barra espaciadora**. La finalización automática escribe `players` o `totalParticipants` por usted.
 
 ## <a name="add-test-code-to-your-main-function"></a>Agregar el código de prueba a la función principal
 
@@ -152,14 +153,14 @@ Agregue código a la aplicación para probar las funciones nuevas.
 
 ### <a name="to-add-test-code-to-the-project"></a>Para agregar código de prueba al proyecto
 
-1. En la ventana del editor de Game.cpp, reemplace el código existente por este:
+1. En la ventana del editor de **Game.cpp**, reemplace el código existente por:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
    ```cpp
    // Game.cpp : Defines the entry point for the console application.
    //
 
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -179,7 +180,7 @@ Agregue código a la aplicación para probar las funciones nuevas.
        return 0;
    }
    ```
-Este código agrega una función de prueba, `PlayGames`, al código fuente y la llama en `main`. 
+El código agrega una función de prueba, `PlayGames`, al código fuente y la llama en `main`.
 
 ## <a name="build-and-run-your-app-project"></a>Compilar y ejecutar el proyecto de aplicación
 
@@ -187,17 +188,17 @@ Después, compile el proyecto y ejecute la aplicación.
 
 ### <a name="to-build-and-run-the-project"></a>Para compilar y ejecutar el proyecto
 
-1. En la barra de menús, elija **Compilar > Compilar solución**.
+1. En la barra de menús, elija **Compilar** > **Compilar solución**.
 
-   El resultado de una compilación se mostrará en la ventana **Salida**. Si la compilación es correcta, el resultado debería ser similar a este:
+   El resultado de una compilación se mostrará en la ventana **Salida**. Si la compilación es correcta, el resultado debería ser similar a:
 
    ```Output
    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>  stdafx.cpp
-   1>  Game.cpp
-   1>  Cardgame.cpp
-   1>  Generating Code...
-   1>  Game.vcxproj -> C:\Users\username\Source\Repos\Game\Debug\Game.exe
+   1>pch.cpp
+   1>Cardgame.cpp
+   1>Game.cpp
+   1>Generating Code...
+   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
    ```
 
@@ -205,7 +206,7 @@ Después, compile el proyecto y ejecute la aplicación.
 
    Si la compilación no es correcta, compare el código con el que se muestra en los pasos anteriores.
 
-1. Para ejecutar el proyecto, en la barra de menús, seleccione **Depurar > Iniciar sin depurar**. Debe aparecer una ventana de consola y el resultado debería ser similar a este:
+1. Para ejecutar el proyecto, en la barra de menús, seleccione **Depurar** > **Iniciar sin depurar**. Debe aparecer una ventana de consola y el resultado debería ser similar a:
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
@@ -219,10 +220,10 @@ Enhorabuena, ha compilado correctamente un proyecto de aplicación y la solució
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Anterior:** [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
-**Siguiente:** [Tutorial: Compilar un proyecto (C++)](../ide/walkthrough-building-a-project-cpp.md).
+**Anterior:** [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Siguiente:** [Tutorial: Compilar un proyecto (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)  
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)
+[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
+[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>

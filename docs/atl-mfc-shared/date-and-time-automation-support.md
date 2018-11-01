@@ -1,12 +1,6 @@
 ---
-title: 'Fecha y hora: compatibilidad de automatización | Microsoft Docs'
-ms.custom: ''
+title: 'Fecha y hora: compatibilidad de automatización'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - adding dates
 - calculating dates and times
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - calculations, date and time
 - time [Visual Studio], Automation support
 ms.assetid: 6eee94c4-943d-4ffc-bf7c-bdda89337ab0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 5aeefe2594fcb71e8b399e017fc10f8c1c5650a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552690"
 ---
 # <a name="date-and-time-automation-support"></a>Fecha y hora: compatibilidad de automatización
 
@@ -57,11 +47,8 @@ El segundo método, crea dos `COleDateTime` objetos, `oletime1` y `oletime2`y lo
 
 CRT calcula correctamente una diferencia de 23 horas. `COleDateTimeSpan` calcula una diferencia de 24 horas.
 
-Tenga en cuenta que se usa una solución alternativa cerca del final del ejemplo para mostrar correctamente la fecha usando `COleDateTime::Format`. Consulte el artículo de Knowledge Base "Error: se produce un error en Format para `COleDateTime` y `COleDateTimeSpan`" (Q167338).
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>Vea también
 
 [Fecha y hora](../atl-mfc-shared/date-and-time.md)
-

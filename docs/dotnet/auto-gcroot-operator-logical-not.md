@@ -20,59 +20,63 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 107ac80f84d949a96132a4fc05c90ad7a7e20fbc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d470974a6f50f7040a46a3f64f9fd431e2796545
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33103377"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161377"
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator!
-Operador para el uso de `auto_gcroot` en una expresión condicional.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-bool operator!() const;  
-```  
-  
-## <a name="return-value"></a>Valor devuelto  
- `true` Si el objeto ajustado no es válido; `false` en caso contrario.  
-  
-## <a name="example"></a>Ejemplo  
-  
-```  
-// msl_auto_gcroot_operator_not.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s;  
-   if ( s ) Console::WriteLine( "s is valid" );  
-   if ( !s ) Console::WriteLine( "s is invalid" );  
-   s = "something";  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-   s.reset();  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-}  
-```  
-  
-```Output  
-s is invalid  
-now s is valid  
-now s is invalid  
-```  
-  
-## <a name="requirements"></a>Requisitos  
- **Archivo de encabezado** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>Vea también  
- [auto_gcroot (miembros)](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+
+Operador para el uso de `auto_gcroot` en una expresión condicional.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+bool operator!() const;
+```
+
+## <a name="return-value"></a>Valor devuelto
+
+**True** si no es válido; el objeto ajustado **false** en caso contrario.
+
+## <a name="example"></a>Ejemplo
+
+```cpp
+// msl_auto_gcroot_operator_not.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s;
+   if ( s ) Console::WriteLine( "s is valid" );
+   if ( !s ) Console::WriteLine( "s is invalid" );
+   s = "something";
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+   s.reset();
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+}
+```
+
+```Output
+s is invalid
+now s is valid
+now s is invalid
+```
+
+## <a name="requirements"></a>Requisitos
+
+**Archivo de encabezado** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>Vea también
+
+[auto_gcroot (Miembros)](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

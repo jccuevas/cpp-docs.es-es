@@ -1,14 +1,8 @@
 ---
-title: Editar recursos gráficos (C++ Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Editar recursos gráficos (C++ Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], editing
 - graphics [C++]
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c46f8391f39d65c84860f8c0ca62f69288d834c8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 066ba931ed49a81acb55490401f553746e253261
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578924"
 ---
 # <a name="editing-graphical-resources-c-image-editor-for-icons"></a>Editar recursos gráficos (C++ Editor de imágenes para iconos)
 
@@ -76,5 +65,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

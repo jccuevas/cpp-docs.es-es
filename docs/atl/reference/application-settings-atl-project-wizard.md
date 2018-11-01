@@ -1,27 +1,17 @@
 ---
-title: Asistente para proyectos de configuración de la aplicación, ATL | Microsoft Docs
-ms.custom: ''
+title: Configuración de la aplicación, Asistente para proyectos ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.atl.com.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4cff60e5316202842b2ee22c5c6ba10813839b5d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e026db8c1d2caacd9af15fb923d194750c9d8217
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035856"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622136"
 ---
 # <a name="application-settings-atl-project-wizard"></a>Configuración de la aplicación, Asistente para proyectos ATL
 
@@ -31,15 +21,15 @@ Use la **configuración de la aplicación** página del Asistente para proyectos
 
 Elija uno de los tres tipos de servidor:
 
-- **Biblioteca de vínculos dinámicos (DLL)**  
+- **Biblioteca de vínculos dinámicos (DLL)**
 
    Seleccione esta opción para crear un servidor en proceso.
 
-- **Archivo ejecutable (EXE)**  
+- **Archivo ejecutable (EXE)**
 
    Seleccione esta opción para crear un servidor fuera de proceso local. Esta opción no permite la compatibilidad con MFC ni COM + 1.0. No se permite para la combinación de código auxiliar y proxy.
 
-- **Servicio (EXE)**  
+- **Servicio (EXE)**
 
    Seleccione esta opción para crear una aplicación de Windows que se ejecuta en segundo plano cuando se inicia Windows. Esta opción no permite la compatibilidad con MFC ni COM + 1.0 o no se admite para la combinación de código auxiliar y proxy.
 
@@ -48,15 +38,15 @@ Elija uno de los tres tipos de servidor:
 > [!NOTE]
 > Todas las opciones adicionales están disponibles para proyectos de archivos DLL solo.
 
-- **Permitir la combinación de código auxiliar y proxy**  
+- **Permitir la combinación de código auxiliar y proxy**
 
    Seleccione el **permitir la combinación de código auxiliar y proxy** casilla de verificación por comodidad cuando se requiere la serialización de interfaces. Esta opción coloca el código proxy y código auxiliar generado por MIDL en el mismo archivo ejecutable como el servidor.
 
-- **Compatibilidad con MFC**  
+- **Compatibilidad con MFC**
 
    Seleccione esta opción para especificar que el objeto que incluye compatibilidad con MFC. Esta opción vincula el proyecto a las bibliotecas MFC para que puede tener acceso a cualquiera de las clases y funciones que contienen.
 
-- **Compatibilidad con COM + 1.0**  
+- **Compatibilidad con COM + 1.0**
 
    Seleccione esta opción para modificar la configuración de compilación del proyecto para admitir los componentes de COM + 1.0. Además de la lista estándar de bibliotecas, el asistente agrega la biblioteca específicos del componente de COM + 1.0 Comsvcs.lib.
 

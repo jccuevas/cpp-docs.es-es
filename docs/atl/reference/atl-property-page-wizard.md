@@ -1,7 +1,7 @@
 ---
 title: Asistente para páginas de propiedades ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094200"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250424"
 ---
 # <a name="atl-property-page-wizard"></a>Asistente para páginas de propiedades ATL
 
 Este asistente [agrega una página de propiedades en un proyecto ATL](../../atl/reference/adding-an-atl-property-page.md) o a un proyecto MFC con compatibilidad con ATL. Una página de propiedades ATL proporciona una interfaz de usuario para establecer las propiedades (o llamar a los métodos) de uno o más objetos COM.
+
+> [!WARNING]
+> En Visual Studio 2017 versión 15.9 este asistente de código está en desuso y se quitará en una versión futura de Visual Studio. Este asistente se utiliza habitualmente. Compatibilidad general para ATL y MFC no se ve afectado por la eliminación de este asistente. Si gustaría compartir sus comentarios sobre esta condición de desuso, complete [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -1,28 +1,18 @@
 ---
-title: RemoveReference (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: RemoveReference (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::RemoveReference
-dev_langs:
-- C++
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d73c9f99eec3fd3ec01d4ae5d41418c67cb472f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fcb4d132198fff8dd6e2d55011f0c3a174b73f40
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613699"
 ---
 # <a name="removereference-structure"></a>RemoveReference (estructura)
 
@@ -33,15 +23,17 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 ```cpp
 template<class T>
 struct RemoveReference;
+
 template<class T>
 struct RemoveReference<T&>;
+
 template<class T>
 struct RemoveReference<T&&>;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Una clase.
 
 ## <a name="remarks"></a>Comentarios

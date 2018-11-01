@@ -1,28 +1,17 @@
 ---
-title: -utf-8 (establecer origen y ejecutable juegos a UTF-8 de caracteres) | Microsoft Docs
-ms.custom: ''
+title: / UTF-8 (establecer origen y el ejecutable juegos de caracteres en UTF-8)
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - /utf-8
-dev_langs:
-- C++
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1193af2891a2cd3150fdb1cee9dd6957a1fe271
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636532"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (establecer origen y el ejecutable juegos de caracteres en UTF-8)
 
@@ -54,6 +43,6 @@ De forma predeterminada, Visual Studio detecta una marca de orden de bytes para 
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (establecer juego de caracteres de ejecución)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/Source-CharSet (establecer juego de caracteres de origen)](../../build/reference/source-charset-set-source-character-set.md)
- [ /Validate/CharSet (validar los caracteres compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/ Execution-CharSet (establecer juego de caracteres de ejecución)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/source/charset (Establecer el juego de caracteres de origen)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/validate/charset (Validar los caracteres compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

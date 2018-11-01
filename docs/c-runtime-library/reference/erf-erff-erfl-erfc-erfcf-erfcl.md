@@ -1,10 +1,6 @@
 ---
-title: erf, erff, erfl, erfc, erfcf, erfcl | Microsoft Docs
-ms.custom: ''
+title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,23 +22,17 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450074"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -90,17 +80,17 @@ Valor de punto flotante.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **erf** funciones devuelven una función de error de la Gauss *x*. El **erfc** funciones devuelven el Gauss complementaria función de error de *x*.
+El **erf** funciones devuelven una función de error de la Gauss *x*. El **erfc** funciones devuelven el Gauss complementaria de función de error de *x*.
 
 ## <a name="remarks"></a>Comentarios
 
-El **erf** funciones calculan la función error de Gauss de *x*, que se define como:
+El **erf** funciones calculan la función de error de Gauss *x*, que se define como:
 
 ![Función de error de x](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-La función error de Gauss complementaria se define como 1 - ERF. El **erf** funciones devuelven un valor en el intervalo de -1,0 y 1,0. No se devuelve ningún error. El **erfc** funciones devuelven un valor en el intervalo de 0 a 2. Si *x* es demasiado grande para **erfc**, **errno** variable se establece en **ERANGE**.
+La función de error de Gauss complementaria se define como 1 - ERF. El **erf** funciones devuelven un valor en el intervalo de -1,0 y 1,0. No se devuelve ningún error. El **erfc** funciones devuelven un valor en el intervalo de 0 a 2. Si *x* es demasiado grande para **erfc**, **errno** variable se establece en **ERANGE**.
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **erf** y **erfc** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **erf** y **erfc** siempre toman y devuelven un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **erf** y **erfc** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **erf** y **erfc** siempre toman y devuelven un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

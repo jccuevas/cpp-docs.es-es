@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDbgFlag | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDbgFlag
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDbgFlag
 apilocation:
@@ -32,8 +28,6 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413504d8941aab1585ff03d361f8081fef4529a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1113854f1b41081ddcf59444786109fb5eabc65d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621096"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -90,7 +80,7 @@ Devuelve el estado anterior de **_crtDbgFlag**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtSetDbgFlag** función permite que la aplicación controlar cómo el administrador del montón de depuración realiza un seguimiento de las asignaciones de memoria mediante la modificación de los campos de bits de la **_crtDbgFlag** marca. Mediante el establecimiento (la activación) de los bits, la aplicación puede indicar al administrador del montón de depuración que realice operaciones especiales de depuración, como por ejemplo: comprobar si existen pérdidas de memoria cuando se cierra la aplicación y notificarlas si las hay; simular condiciones de memoria insuficiente especificando que los bloques de memoria liberados permanezcan en la lista vinculada del montón; y comprobar la integridad del montón examinando cada bloque de memoria de cada solicitud de asignación. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetDbgFlag** se quitan durante el preprocesamiento.
+El **_CrtSetDbgFlag** función permite que la aplicación controlar cómo el administrador del montón de depuración realiza el seguimiento de las asignaciones de memoria modificando los campos de bits de la **_crtDbgFlag** marca. Mediante el establecimiento (la activación) de los bits, la aplicación puede indicar al administrador del montón de depuración que realice operaciones especiales de depuración, como por ejemplo: comprobar si existen pérdidas de memoria cuando se cierra la aplicación y notificarlas si las hay; simular condiciones de memoria insuficiente especificando que los bloques de memoria liberados permanezcan en la lista vinculada del montón; y comprobar la integridad del montón examinando cada bloque de memoria de cada solicitud de asignación. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtSetDbgFlag** se quitan durante el preprocesamiento.
 
 En la tabla siguiente se muestran los campos de bits de **_crtDbgFlag** y se describe su comportamiento. Dado que el establecimiento de los bits da lugar a más resultados de diagnóstico y menor velocidad de ejecución del programa, estos bits no se establecen (están desactivados) de forma predeterminada. Para obtener más información sobre estos campos de bits, consulte [Funciones que indican el estado del montón](/visualstudio/debugger/crt-debug-heap-details).
 
@@ -98,7 +88,7 @@ En la tabla siguiente se muestran los campos de bits de **_crtDbgFlag** y se des
 |---------------|-------------|-----------------|
 |**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Habilita las asignaciones del montón de depuración y el uso de identificadores de tipo de bloque de memoria, como **_CLIENT_BLOCK**. OFF: agrega nuevas asignaciones a la lista vinculada del montón, pero establece el tipo del bloque en **_IGNORE_BLOCK**.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
 |**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: llama a [_CrtCheckMemory](crtcheckmemory.md) en cada solicitud de asignación y desasignación. OFF: **_CrtCheckMemory** se debe llamar explícitamente.<br /><br /> Las macros de comprobación de la frecuencia del montón no tienen ningún efecto cuando esta marca está establecida.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Incluye **_CRT_BLOCK** operaciones de diferencia de tipos en estado de memoria y detección de pérdidas. OFF: estas operaciones omiten la memoria que usa internamente la biblioteca en tiempo de ejecución.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Incluye **_CRT_BLOCK** tipos en estado de detección y la memoria de la pérdida de diferencia las operaciones. OFF: estas operaciones omiten la memoria que usa internamente la biblioteca en tiempo de ejecución.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
 |**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: mantiene los bloques de memoria liberados en la lista vinculada del montón, les asigna el tipo **_FREE_BLOCK** y los rellena con el valor de byte 0xDD. OFF: no mantiene los bloques liberados en la lista vinculada del montón.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
 |**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: realiza la comprobación automática de pérdidas cuando se cierra el programa con una llamada a [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) y genera un informe de errores si la aplicación no ha liberado toda la memoria que había asignado. OFF: no se realiza automáticamente la comprobación de pérdidas cuando se cierra el programa.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
 
@@ -106,7 +96,7 @@ En la tabla siguiente se muestran los campos de bits de **_crtDbgFlag** y se des
 
 Puede especificar la frecuencia con la biblioteca de tiempo de ejecución de C realiza la validación del montón de depuración (**_CrtCheckMemory**) en función del número de llamadas a **malloc**, **realloc**, **libre**, y **_msize**.
 
-**_CrtSetDbgFlag** , a continuación, examina los 16 bits superiores de la *newFlag* parámetro para un valor. El valor especificado es el número de **malloc**, **realloc**, **libre**, y **_msize** llama entre **_CrtCheckMemory**  llamadas. Hay cuatro macros predefinidas para hacerlo.
+**_CrtSetDbgFlag** , a continuación, inspecciona los 16 bits superiores de la *newFlag* parámetro para un valor. El valor especificado es el número de **malloc**, **realloc**, **libre**, y **_msize** llama entre **_CrtCheckMemory**  llamadas. Hay cuatro macros predefinidas para hacerlo.
 
 |Macro|Número de llamadas a malloc, realloc, free y _msize entre llamadas a _CrtCheckMemory|
 |-----------|------------------------------------------------------------------------------------------|
@@ -115,7 +105,7 @@ Puede especificar la frecuencia con la biblioteca de tiempo de ejecución de C r
 |_CRTDBG_CHECK_EVERY_1024_DF|1024|
 |_CRTDBG_CHECK_DEFAULT_DF|0 (de forma predeterminada, no se comprueba el montón)|
 
-De forma predeterminada, **_CrtCheckMemory** se llama una vez cada 1.024 veces se llama a **malloc**, **realloc**, **libre**, y **_ msize**.
+De forma predeterminada, **_CrtCheckMemory** se llama una vez cada 1.024 veces llama a **malloc**, **realloc**, **libre**, y **_ msize**.
 
 Por ejemplo, puede especificar una comprobación del motón cada 16 **malloc**, **realloc**, **libre**, y **_msize** operaciones con el código siguiente:
 
@@ -136,21 +126,21 @@ int main( )
 }
 ```
 
-Los 16 bits superiores de la *newFlag* parámetro se ignora cuando se especifica _CRTDBG_CHECK_ALWAYS_DF. En este caso, **_CrtCheckMemory** se llama cada vez que se llama **malloc**, **realloc**, **libre**, y **_msize**.
+Los 16 bits superiores de la *newFlag* parámetro se omite cuando se especifica _CRTDBG_CHECK_ALWAYS_DF. En este caso, **_CrtCheckMemory** se llama cada vez que se llama **malloc**, **realloc**, **libre**, y **_msize**.
 
-*newFlag* es el nuevo estado para aplicar a la **_crtDbgFlag** y es una combinación de los valores para cada uno de los campos de bits.
+*newFlag* es el estado nueva que se aplicará a la **_crtDbgFlag** y es una combinación de los valores para cada uno de los campos de bits.
 
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>Para cambiar estos campos de bits y crear un nuevo estado para la marca
 
-1. Llame a **_CrtSetDbgFlag** con *newFlag* igual a **_CRTDBG_REPORT_FLAG** obtener actual **_crtDbgFlag** estado de error y almacenar el valor devuelto en una variable temporal.
+1. Llame a **_CrtSetDbgFlag** con *newFlag* igual a **definido como _CRTDBG_REPORT_FLAG** obtener actual **_crtDbgFlag** de estado y almacenar el valor devuelto en una variable temporal.
 
-1. Activar cualquier bit haciendo un bit a bit **o** de la variable temporal con la máscara de bits correspondiente (representada en el código de aplicación mediante constantes del manifiesto).
+1. Activar cualquier bit por bit a bit **o** de la variable temporal con la máscara de bits correspondiente (representada en el código de aplicación mediante constantes del manifiesto).
 
 1. Desactive los demás bits realizando la operación **AND** a la variable con un **NOT** bit a bit de las máscaras de bits adecuadas.
 
-1. Llame a **_CrtSetDbgFlag** con *newFlag* igual que el valor almacenado en la variable temporal para establecer el nuevo estado de **_crtDbgFlag**.
+1. Llame a **_CrtSetDbgFlag** con *newFlag* igual al valor almacenado en la variable temporal para establecer el estado nueva para **_crtDbgFlag**.
 
-El código siguiente muestra cómo simular bajo de memoria condiciones manteniendo liberados bloques de memoria en la lista vinculada del montón y evitar que **_CrtCheckMemory** desde que se llama en cada solicitud de asignación:
+El código siguiente muestra cómo simular poca memoria condiciones manteniendo liberar bloques de memoria en la lista vinculada del montón y evitar **_CrtCheckMemory** desde que se llama en cada solicitud de asignación:
 
 ```C
 // Get the current state of the flag
@@ -171,9 +161,9 @@ _CrtSetDbgFlag( tmpFlag );
 
 Para obtener información general sobre la administración de memoria y el montón de depuración, consulte [Detalles del montón de depuración de CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Para deshabilitar una marca con la **_CrtSetDbgFlag** función, debe **AND** la variable con el bit a bit **no** de la máscara de bits.
+Para deshabilitar una marca con el **_CrtSetDbgFlag** función, debe **AND** la variable con el bit a bit **no** de la máscara de bits.
 
-Si *newFlag* no es un valor válido, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve el estado anterior de **_crtDbgFlag**.
+Si *newFlag* no es un valor válido, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve el estado anterior de **_crtDbgFlag**.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C2555 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C2555
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2555
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f91ec33db2d3a7b6772556233a3c99b501ede76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc6c3a3a29665ccf65b77a3d9866986cb0a46b9e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528861"
 ---
 # <a name="compiler-error-c2555"></a>Error del compilador C2555
 
@@ -43,11 +33,9 @@ is
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];
 ```
 
-Para obtener más información sobre el error C2555, consulte el artículo de Knowledge Base Q240862.
-
 El ejemplo siguiente genera C2555:
 
-```
+```cpp
 // C2555.cpp
 // compile with: /c
 struct X {

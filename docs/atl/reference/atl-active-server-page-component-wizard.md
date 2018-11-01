@@ -1,34 +1,27 @@
 ---
-title: Asistente para componentes de páginas de Active Server ATL | Microsoft Docs
-ms.custom: ''
+title: Asistente para componentes de páginas Active Server ATL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 80d7eefaa4b12d5aab8970f4b3c81fc644226e07
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510869"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>Asistente para componentes de páginas Active Server ATL
 
 Este asistente, inserta en el proyecto de un componente de páginas Active Server (ASP). Microsoft Internet Information Services (IIS) utiliza los componentes ASP como parte de su arquitectura de desarrollo de páginas Web.
 
 Con este asistente, puede especificar que el componente de subprocesamiento del modelo y su compatibilidad con la agregación. También puede indicar la compatibilidad con la interfaz de la información de errores, puntos de conexión y el cálculo de referencias de subprocesamiento libre.
+
+> [!WARNING]
+> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -44,27 +37,27 @@ Si cambia el **coclase** nombre en la sección de COM, el cambio se refleja en e
 
 Proporciona información sobre la clase de C++ creada para el objeto.
 
-- **Nombre corto**  
+- **Nombre corto**
 
    Establece el nombre de raíz para el objeto. El nombre que proporcione determina la `Class` y **coclase** nombres, el **archivo .cpp** y **archivo .h** nombres, el **interfaz**nombre, el **tipo** nombres y el **ProgID**, a menos que cambie estos campos individualmente.
 
-- **Archivo .h**  
+- **Archivo .h**
 
    Establece el nombre del archivo de encabezado para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el nombre que se proporciona en **nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija, o bien para anexar la declaración de clase a un archivo existente. Si selecciona un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **finalizar** en el asistente.
 
    El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la declaración de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.
 
-- **Clase**  
+- **Clase**
 
    Establece el nombre de la clase que se va a crear. Este nombre se basa en el nombre que se proporciona en **nombre corto**, precedidos por 'C', el prefijo habitual para un nombre de clase.
 
-- **Archivo .cpp**  
+- **Archivo .cpp**
 
    Establece el nombre del archivo de implementación para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el nombre que se proporciona en **nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija. El archivo no se guarda en la ubicación seleccionada hasta que haga clic en **Finalizar** en el asistente.
 
    El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la implementación de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.
 
-- **Con atributos**  
+- **Con atributos**
 
    Indica si el objeto utiliza atributos. Si va a agregar un objeto a un proyecto ATL con atributos, esta opción está activada y no está disponible para cambiar. Es decir, puede agregar solo los objetos con atributos a un proyecto creado con el soporte técnico de atributo.
 
@@ -78,19 +71,19 @@ Proporciona información sobre la clase de C++ creada para el objeto.
 
 Proporciona información sobre la funcionalidad de COM para el objeto.
 
-- **Coclase**  
+- **Coclase**
 
    Establece el nombre de la clase de componente que contiene una lista de interfaces que admite el objeto. Si su proyecto o este objeto utiliza atributos, no se puede cambiar esta opción ya que ATL no incluye el **coclase** atributo.
 
-- **Type**  
+- **Type**
 
    Establece la descripción del objeto que va a aparecer en el registro para la coclase.
 
-- **Interface**  
+- **Interface**
 
    Establece la interfaz que crea para el objeto. Esta interfaz contiene los métodos personalizados.
 
-- **Id. de programa**  
+- **Id. de programa**
 
    Establece el nombre que se pueden usar los contenedores en lugar del CLSID del objeto.
 

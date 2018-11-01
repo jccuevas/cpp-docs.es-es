@@ -1,27 +1,17 @@
 ---
-title: Las herramientas del vinculador LNK2005 Error | Microsoft Docs
-ms.custom: ''
+title: Error de las herramientas del vinculador LNK2005
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2005
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b4f75b90254c702ecb2afb65108278a59df69ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667290"
 ---
 # <a name="linker-tools-error-lnk2005"></a>Error de las herramientas del vinculador LNK2005
 
@@ -121,14 +111,3 @@ Estas son algunas causas comunes de este error.
     ```
 
    Para corregir este problema, agregue [/Force: Multiple](../../build/reference/force-force-file-output.md) a opciones de línea de comandos del vinculador y asegúrese de que uuid.lib es la primera biblioteca al que hace referencia.
-
-## <a name="additional-information"></a>Información adicional
-
-Si usa una versión anterior del conjunto de herramientas, consulte estos artículos de Knowledge Base para obtener más información acerca de las causas concretas de este error:
-
-- [Se produce un error de LNK2005 cuando la biblioteca CRT y las bibliotecas MFC están vinculadas en el orden incorrecto en Visual C++](https://support.microsoft.com/kb/148652)
-
-- [CORRECCIÓN: Delete sobrecargado Global operador causas LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Recibir errores LNK2005 cuando se compila un proyecto ejecutable (.exe) de ATL de Visual C++](https://support.microsoft.com/kb/184235).
-

@@ -1,29 +1,19 @@
 ---
-title: __stosb | Microsoft Docs
-ms.custom: ''
+title: __stosb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __stosb
-dev_langs:
-- C++
 helpviewer_keywords:
 - rep stosb instruction
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a685633b6e23a21d46ad3256188fea3ee16ccc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 25b037d17c1648816fe97fc5140aa0bfa7284f05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465213"
 ---
 # <a name="stosb"></a>__stosb
 
@@ -74,9 +64,9 @@ Esta rutina solo está disponible como función intrínseca.
 #include <stdio.h>
 #include <intrin.h>
 
-#pragma intrinsic(__stosb)  
+#pragma intrinsic(__stosb)
 
-int main()  
+int main()
 {
     unsigned char c = 0x40; /* '@' character */
     unsigned char s[] = "*********************************";
@@ -86,12 +76,12 @@ int main()
     printf_s("%s\n", s);
 
 }
-```  
+```
 
 ```Output
-*********************************  
-*@@@@@@**************************  
-```  
+*********************************
+*@@@@@@**************************
+```
 
 **FIN de Específicos de Microsoft**
 

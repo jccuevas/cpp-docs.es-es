@@ -1,10 +1,6 @@
 ---
-title: CTokenGroups (clase) | Microsoft Docs
-ms.custom: ''
+title: CTokenGroups (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CTokenGroups
 - ATLSECURITY/ATL::CTokenGroups
@@ -17,21 +13,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenGroups::GetPTOKEN_GROUPS
 - ATLSECURITY/ATL::CTokenGroups::GetSidsAndAttributes
 - ATLSECURITY/ATL::CTokenGroups::LookupSid
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d14a839cded7d22236912ba52a733a9ce15f7aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9bd5b5dd8f8c233ac324e4c50a6291347bb954e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496345"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups (clase)
 
@@ -230,7 +220,7 @@ Este método enumerará todos los `CSid` objetos incluidos en el `CTokenGroups` 
 Recupera los atributos asociados con un `CSid` objeto.
 
 ```
-bool LookupSid(  
+bool LookupSid(
     const CSid& rSid,
     DWORD* pdwAttributes = NULL) const throw();
 ```

@@ -1,10 +1,6 @@
 ---
-title: stack (Clase) | Microsoft Docs
-ms.custom: ''
+title: stack (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stack/std::stack::container_type
 - stack/std::stack::size_type
@@ -14,8 +10,6 @@ f1_keywords:
 - stack/std::stack::push
 - stack/std::stack::size
 - stack/std::stack::top
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::stack [C++], container_type
 - std::stack [C++], size_type
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437393"
 ---
 # <a name="stack-class"></a>stack (Clase)
 
@@ -221,7 +211,7 @@ After a pop, the element at the top of the stack is 20.
 
 ## <a name="push"></a>  stack::push
 
-Agrega un elemento al extremo superior de la pila.
+Agrega un elemento a la parte superior de la pila.
 
 ```cpp
 void push(const Type& val);

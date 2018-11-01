@@ -1,31 +1,21 @@
 ---
-title: '-FU (nombre #using archivo) | Microsoft Docs'
-ms.custom: ''
+title: '/FU (Asignar nombre al archivo #using obligatorio)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForcedUsingFiles
 - /FU
 - VC.Project.VCNMakeTool.ForcedUsingAssemblies
-dev_langs:
-- C++
 helpviewer_keywords:
 - -FU compiler option [C++]
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73edbed02a665d7e66478052c0fee13a227658aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492097"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (Asignar nombre al archivo #using obligatorio)
 
@@ -62,6 +52,6 @@ Para obtener información sobre cómo crear un ensamblado o módulo para common 
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

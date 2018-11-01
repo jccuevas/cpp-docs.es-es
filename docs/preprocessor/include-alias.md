@@ -1,29 +1,19 @@
 ---
-title: include_alias | Microsoft Docs
-ms.custom: ''
+title: include_alias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42544503"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573178"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +21,7 @@ Especifica que *short_filename* es que se usará como un alias para *long_filena
 
 ## <a name="syntax"></a>Sintaxis
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*, *short_filename*)
 
 ## <a name="remarks"></a>Comentarios
@@ -59,7 +49,7 @@ El alias que se esté buscando debe coincidir exactamente con la especificación
 ```
 
 no se realiza ninguna operación de alias (sustitución), ya que las cadenas del archivo de encabezado no coinciden exactamente. Además, los nombres de encabezado utilizados como argumentos para el `/Yu` y `/Yc` opciones del compilador, o el `hdrstop` pragma, no se sustituyen. Por ejemplo, si el archivo de código fuente contiene la siguiente directiva,
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +101,7 @@ Observe también que no se admite la transitividad. Dadas las siguientes directi
 #include "one.h"
 ```
 
-el compilador busca el archivo TWO.H en lugar de THREE.H.  
+el compilador busca el archivo TWO.H en lugar de THREE.H.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,32 +1,22 @@
 ---
-title: Especificar archivos DLL para carga retrasada | Microsoft Docs
-ms.custom: ''
+title: Especificar archivos DLL para carga retrasada
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - DELAYLOAD linker option
 - delayed loading of DLLs
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e9becc0a686d3add5db140b239f1997f81a45be
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 986dab0621127c90097808025825930bf9974a7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549869"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Especificar archivos DLL para carga retrasada
 
-Puede especificar qué archivos DLL retrasar la carga con el [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` opción del vinculador. Si no piensa usar su propia versión de una función auxiliar, también debe vincular el programa con delayimp.lib (para aplicaciones de escritorio) o dloadhelper.lib (para aplicaciones de la tienda).
+Puede especificar qué archivos DLL retrasar la carga con el [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` opción del vinculador. Si no piensa usar su propia versión de una función del asistente, también debe vincular el programa con delayimp.lib (para aplicaciones de escritorio) o dloadhelper.lib (para aplicaciones de la tienda).
 
 El siguiente es un ejemplo sencillo de retraso de la carga de un archivo DLL:
 

@@ -1,28 +1,18 @@
 ---
-title: naked (C++) | Microsoft Docs
-ms.custom: ''
+title: naked (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - naked_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 951760d7f9566c084bbe3d5a574d006020576c61
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018387"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478382"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -39,7 +29,6 @@ __declspec(naked) declarator
 ## <a name="remarks"></a>Comentarios
 
 Dado que el **naked** atributo solo es pertinente para la definición de una función y no es un modificador de tipo, funciones naked deben utilizar la sintaxis de atributo extendido y la [__declspec](../cpp/declspec.md) palabra clave.
-
 
 El compilador no puede generar una función insertada para una función marcada con el atributo naked, incluso si la función está marcada también con la [__forceinline](inline-functions-cpp.md) palabra clave.
 

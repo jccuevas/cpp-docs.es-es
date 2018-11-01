@@ -1,30 +1,20 @@
 ---
-title: -Fi (Preprocesar el nombre de archivo de salida) | Microsoft Docs
-ms.custom: ''
+title: /Fi (Preprocesar el nombre del archivo de salida)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Fi
-dev_langs:
-- C++
 helpviewer_keywords:
 - Fi compiler option (C++)
 - -Fi compiler option (C++)
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfe9e54dbafbcbd27763060dc9d81b21bac2503d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d4de722ad33a9c9e5e7c37176bbe5d7031b68a39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450185"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (Preprocesar el nombre del archivo de salida)
 
@@ -59,5 +49,5 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 ## <a name="see-also"></a>Vea también
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[/P (Preprocesar para archivo)](../../build/reference/p-preprocess-to-a-file.md)
-[especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+[/P (Preprocesar para archivo)](../../build/reference/p-preprocess-to-a-file.md)<br/>
+[Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)

@@ -1,15 +1,13 @@
 ---
-title: __ptr32, __ptr64 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __ptr32, __ptr64
+ms.date: 10/09/2018
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
-dev_langs:
-- C++
+- __ptr32
+- __ptr64
+- _ptr32
+- _ptr64
 helpviewer_keywords:
 - __ptr64 keyword [C++]
 - _ptr32 keyword [C++]
@@ -18,16 +16,12 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116001"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588479"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
 
@@ -46,6 +40,8 @@ En un sistema de 32 bits, un puntero declarado con **__ptr64** se trunca a un pu
 
 > [!NOTE]
 > No puede usar **__ptr32** o **__ptr64** cuando se compila con **/CLR: pure**. En caso contrario, se generará Error del compilador C2472. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
+
+Para ofrecer compatibilidad con versiones anteriores, **_ptr32** y **_ptr64** son sinónimos para **__ptr32** y **__ptr64** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) se especifica.
 
 ## <a name="example"></a>Ejemplo
 

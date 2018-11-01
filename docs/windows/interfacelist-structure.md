@@ -1,28 +1,18 @@
 ---
-title: InterfaceList (estructura) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: InterfaceList (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceList
-dev_langs:
-- C++
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 61a8e7b36448a485705b914fbb37892271d7d9fc
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e0dd2a39e4764d6d33c824ca0bd1e0976fbb6ee3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472455"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (estructura)
 
@@ -31,19 +21,16 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-template <
-   typename T,
-   typename U
->
+template <typename T, typename U>
 struct InterfaceList;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*T*  
+*T*<br/>
 Un nombre de interfaz la primera interfaz en la lista recursiva.
 
-*U*  
+*U*<br/>
 Un nombre de interfaz las interfaces restantes en la lista recursiva.
 
 ## <a name="remarks"></a>Comentarios

@@ -1,10 +1,6 @@
 ---
-title: CAtlModule (clase) | Microsoft Docs
-ms.custom: ''
+title: CAtlModule (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlModule
 - ATLBASE/ATL::CAtlModule
@@ -21,21 +17,15 @@ f1_keywords:
 - ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceS
 - ATLBASE/ATL::CAtlModule::m_libid
 - ATLBASE/ATL::CAtlModule::m_pGIT
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093446"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456828"
 ---
 # <a name="catlmodule-class"></a>CAtlModule (clase)
 
@@ -262,7 +252,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceD(  
+HRESULT WINAPI UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -299,7 +289,7 @@ Este método llama a [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregi
 Este método es invocado por `UpdateRegistryFromResourceD` para realizar la actualización del registro.
 
 ```
-inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(  
+inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -329,12 +319,12 @@ Este método proporciona la implementación de [CAtlModule:: UpdateRegistryFromR
 Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado. Este método se vincula estáticamente para el componente de registro de ATL.
 
 ```
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -367,4 +357,4 @@ Similar a [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresource
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Clases de módulo](../../atl/atl-module-classes.md)<br/>
-[Componente de registro (registrador)](../../atl/atl-registry-component-registrar.md)  
+[Componente de registro (registrador)](../../atl/atl-registry-component-registrar.md)

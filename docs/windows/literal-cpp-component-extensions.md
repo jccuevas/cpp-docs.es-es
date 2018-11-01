@@ -1,7 +1,7 @@
 ---
-title: literal (extensiones de componentes de C++) | Microsoft Docs
+title: literal (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 626f05dff87bcff2d10d0726bcc10dfa767117d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596451"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069928"
 ---
-# <a name="literal-c-component-extensions"></a>literal (Extensiones de componentes de C++)
+# <a name="literal-ccli-and-ccx"></a>literal (C++ / c++ / CLI y c++ / CX)
 
 Una variable (miembro de datos) marcados como **literal** en un **/CLR** compilación es el equivalente nativo de un **static const** variable.
 
@@ -91,11 +91,11 @@ public ref struct A {
 Tenga en cuenta la diferencia en los metadatos de `sc` y `lit`: el `modopt` directiva se aplica a `sc`, lo que significa que se puede hacer caso omiso otros compiladores.
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>Ejemplo
@@ -137,4 +137,4 @@ Opción del compilador: `/clr`
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

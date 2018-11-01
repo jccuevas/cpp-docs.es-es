@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220221"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054454"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) y [15.8](#update_158) de Visual Studio 2017
 
@@ -227,9 +227,9 @@ En el ejemplo siguiente se muestra el comportamiento correspondiente de C++14:
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ En el ejemplo siguiente se muestra el comportamiento de C++17 en la versión 15.
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Esta nueva advertencia C4768 se muestra en algunos encabezados de Windows SDK que se enviaron con la versión 15.3 de Visual Studio 2017 o una posterior (por ejemplo, la versión 10.0.15063.0, también conocida como RS2 SDK). Sin embargo, las versiones posteriores de los encabezados de Windows SDK (concretamente, ShlObj.h y ShlObj_core.h) se han corregido para que no generen esta advertencia. Cuando se le muestre esta advertencia en los encabezados de Windows SDK, puede hacer lo siguiente:
 
 1. Cambie al Windows SDK más reciente incluido en la versión 15.5 de Visual Studio 2017.
-2. Desactive la advertencia de #include de la instrucción del encabezado de Windows SDK:
+
+1. Desactive la advertencia de #include de la instrucción del encabezado de Windows SDK:
 
 ```cpp
    #pragma warning (push)
@@ -1374,7 +1375,7 @@ Ahora, los miembros de datos de static constexpr están alineados de forma impl�
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1587,7 +1588,7 @@ Para corregir el error, cambie la expresión B() a B\<T>().
 
 ### <a name="constexpr-aggregate-initialization"></a>Inicialización de agregado de constexpr
 
-Las versiones anteriores del compilador de C++ trataban incorrectamente la inicialización de agregado de constexpr; aceptaban código no válido en el que la lista de inicialización de agregados contenía demasiados elementos y producía generación de código incorrecta. El siguiente código es un ejemplo de esto: 
+Las versiones anteriores del compilador de C++ trataban incorrectamente la inicialización de agregado de constexpr; aceptaban código no válido en el que la lista de inicialización de agregados contenía demasiados elementos y producía generación de código incorrecta. El siguiente código es un ejemplo de esto:
 
 ```cpp
 #include <array>
@@ -1689,15 +1690,14 @@ Para corregir el error, cambie la instrucción `return` por `return this->base_v
 
 El estándar de C++ no permite a los usuarios agregar declaraciones o definiciones de reenvío en el espacio de nombres `std`. Ahora, si se agregan declaraciones o definiciones al espacio de nombres `std` o a un espacio de nombres situado dentro del espacio de nombres std, se produce un comportamiento indefinido.
 
-Microsoft tiene previsto trasladar en algún momento la ubicación donde se definen ciertos tipos STL. Cuando esto suceda, se interrumpirá el código existente que agrega declaraciones de reenvío al espacio de nombres `std`. Una nueva advertencia, C4643, permite identificar estos problemas de origen. La advertencia se habilita en el modo **/default** y está desactivada de forma predeterminada. Afectará a los programas que se compilen con **/Wall** o **/WX**. 
+Microsoft tiene previsto trasladar en algún momento la ubicación donde se definen ciertos tipos STL. Cuando esto suceda, se interrumpirá el código existente que agrega declaraciones de reenvío al espacio de nombres `std`. Una nueva advertencia, C4643, permite identificar estos problemas de origen. La advertencia se habilita en el modo **/default** y está desactivada de forma predeterminada. Afectará a los programas que se compilen con **/Wall** o **/WX**.
 
-El código siguiente ahora genera la advertencia C4643: *El estándar C++ no admite reenvíos declarando "vector" en el espacio de nombres std*. 
-
+El código siguiente ahora genera la advertencia C4643: *El estándar C++ no admite reenvíos declarando "vector" en el espacio de nombres std*.
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 Para corregir el error, use una directiva **include** en vez de una declaración de reenvío:
@@ -1713,106 +1713,106 @@ El estándar de C++ sugiere que un compilador debería emitir un diagnóstico cu
 Sin este error, el programa siguiente se compilará, pero generará un bucle infinito:
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 Para evitar el bucle infinito, deléguelo a otro constructor:
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>offsetof con expresiones constantes
 
-[offsetof](c-runtime-library/reference/offsetof-macro.md) tradicionalmente se ha implementado con una macro que requiere un [reinterpret_cast](cpp/reinterpret-cast-operator.md). En los contextos que requieran una expresión constante, no es un proceso válido, pero el compilador de Microsoft C++ tradicionalmente lo ha permitido. La macro offsetof que se distribuye como parte de la STL usa correctamente una función intrínseca del compilador (**__builtin_offsetof**), pero muchas personas han empleado el truco de la macro para definir su propio **offsetof**.  
+[offsetof](c-runtime-library/reference/offsetof-macro.md) tradicionalmente se ha implementado con una macro que requiere un [reinterpret_cast](cpp/reinterpret-cast-operator.md). En los contextos que requieran una expresión constante, no es un proceso válido, pero el compilador de Microsoft C++ tradicionalmente lo ha permitido. La macro offsetof que se distribuye como parte de la STL usa correctamente una función intrínseca del compilador (**__builtin_offsetof**), pero muchas personas han empleado el truco de la macro para definir su propio **offsetof**.
 
 En la versión 15.8 de Visual Studio 2017, el compilador restringe las áreas en las que pueden aparecer estos reinterpret_casts en el modo predeterminado a fin de que el código pueda ajustarse al comportamiento estándar de C++. En el modo [/permissive-](build/reference/permissive-standards-conformance.md), las restricciones son aún más estrictas. El uso del resultado de una macro offsetof en lugares donde se requieren expresiones constantes puede generar un código que emita la advertencia C4644 *el uso del patrón offsetof basado en macros en las expresiones de constante no es estándar; use el patrón offsetof definido en la biblioteca estándar de C++ en su lugar* o la advertencia C2975 *invalid template argument, expected compile-time constant expression* (argumento de plantilla no válido. Se esperaba una expresión constante en tiempo de compilación).
 
-El código siguiente genera C4644 en los modos **/default** y **/std:c++17**, y C2975 en el modo **/permissive-**: 
+El código siguiente genera C4644 en los modos **/default** y **/std:c++17**, y C2975 en el modo **/permissive-**:
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 Para corregir el error, use **offsetof** tal y como se define mediante \<cstddef>:
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>Calificadores cv en las clases base sujetas a la expansión de paquete
 
-Las versiones anteriores del compilador de Microsoft C++ no detectaban que una clase base tenía calificadores cv si esta también estaba sujeta a una expansión de paquete. 
+Las versiones anteriores del compilador de Microsoft C++ no detectaban que una clase base tenía calificadores cv si esta también estaba sujeta a una expansión de paquete.
 
-En la versión 15.8 de Visual Studio 2017, en el modo **/permissive-**, el código siguiente genera la advertencia C3770 *'const S': is not a valid base class* ("Const S": No es una clase base válida): 
+En la versión 15.8 de Visual Studio 2017, en el modo **/permissive-**, el código siguiente genera la advertencia C3770 *'const S': is not a valid base class* ("Const S": No es una clase base válida):
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>Palabra clave template y nested-name-specifiers
 
-En el modo **/permissive-**, el compilador ahora requiere que la palabra clave `template` preceda a un template-name si va después de un nested-name-specifier dependiente. 
+En el modo **/permissive-**, el compilador ahora requiere que la palabra clave `template` preceda a un template-name si va después de un nested-name-specifier dependiente.
 
 El siguiente código en el modo **/permissive-** ahora genera la advertencia C7510: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled* ("foo": El nombre de la plantilla dependiente debe tener el prefijo "template". Nota: Vea la referencia a la creación de instancias de la plantilla de clase "X" que se está compilando):
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 Para corregir el error, agregue la palabra clave `template` a la instrucción `Base<T>::foo<int>();`, como se muestra en el ejemplo siguiente:
@@ -1822,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>Vea también

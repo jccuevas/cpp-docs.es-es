@@ -1,7 +1,7 @@
 ---
 title: CSocketAddr (clase) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 705cbd051f7c5761ae9a2aabfe919519681ef089
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040861"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990222"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr (clase)
 
@@ -62,7 +62,7 @@ class CSocketAddr
 
 Esta clase proporciona una versión IP independiente del enfoque para buscar las direcciones de red para su uso con Windows sockets funciones de la API y los contenedores de socket en las bibliotecas.
 
-Los miembros de esta clase que se usan para buscar las direcciones de red use la función de la API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo).
+Los miembros de esta clase que se usan para buscar las direcciones de red use la función de la API Win32 [getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo). La versión ANSI o UNICODE de la función se denomina dependiendo de si se compila el código de ANSI o UNICODE.
 
 Esta clase es compatible con ambas direcciones de red IPv4 andIPv6.
 
@@ -88,15 +88,15 @@ Llame a este método para convertir el nombre de host proporcionado en la direcc
 
 ```
 int FindAddr(
-    const char *szHost,
-    const char *szPortOrServiceName,
+    const TCHAR *szHost,
+    const TCHAR *szPortOrServiceName,
     int flags,
     int addr_family,
     int sock_type,
     int ai_proto);
 
 int FindAddr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
     int flags,
     int addr_family,
@@ -141,10 +141,10 @@ Llame a este método para convertir el nombre de host de IPv4 en la dirección d
 
 ```
 int FindINET4Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -175,10 +175,10 @@ Llame a este método para convertir el nombre de host de IPv6 en la dirección d
 
 ```
 int FindINET6Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -208,7 +208,7 @@ Este método llama a la función de la API Win32 [getaddrinfo](/windows/desktop/
 Llame a este método para devolver un puntero a un elemento específico de la `addrinfo` lista.
 
 ```
-addrinfo* const GetAddrInfoint nIndex = 0) const;
+addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ```
 
 ### <a name="parameters"></a>Parámetros

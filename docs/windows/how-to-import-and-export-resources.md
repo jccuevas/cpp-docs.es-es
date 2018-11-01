@@ -1,15 +1,9 @@
 ---
-title: 'Cómo: importar y exportar recursos (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'Cómo: importar y exportar recursos (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.importing
 - vc.resvw.resource.importing
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], exporting
 - graphics [C++], exporting
@@ -22,17 +16,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 3c9329dc-dcb8-4edd-a600-78e3e572bd89
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a6b975b932545d62b62db0b44bad549a3570a602
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e35526b1b2f0455970a06f42ff2d67c171f3804
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318556"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555277"
 ---
 # <a name="how-to-import-and-export-resources"></a>Cómo: Importar y exportar recursos
 
@@ -70,5 +59,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)

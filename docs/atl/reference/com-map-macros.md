@@ -1,28 +1,18 @@
 ---
-title: Macros de mapa COM | Microsoft Docs
-ms.custom: ''
+title: Macros de mapa COM
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_COM_MAP
 - atlcom/ATL::END_COM_MAP
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e3358ff9f3f2aa5f3dde81c5eb218278178822ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563883"
 ---
 # <a name="com-map-macros"></a>Macros de mapa COM
 
@@ -31,7 +21,7 @@ Estas macros definen los mapas de interfaz COM.
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Marca el principio de las entradas del mapa de interfaz COM.|
-|[END_COM_MAP](#end_com_map)|Marca el final de las entradas de mapa de interfaz COM.|  
+|[END_COM_MAP](#end_com_map)|Marca el final de las entradas de mapa de interfaz COM.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -52,7 +42,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>Comentarios
 
-[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) solo devuelve punteros para las interfaces en el mapa COM. Iniciar el mapa de interfaz con la macro BEGIN_COM_MAP, agregar entradas para cada una de las interfaces con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o uno de sus variantes y complete el mapa con el [END_COM_MAP](#end_com_map) macro.  
+[CComObjectRootEx:: InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) solo devuelve punteros para las interfaces en el mapa COM. Iniciar el mapa de interfaz con la macro BEGIN_COM_MAP, agregar entradas para cada una de las interfaces con la [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) macro o uno de sus variantes y complete el mapa con el [END_COM_MAP](#end_com_map) macro.
 
 ### <a name="example"></a>Ejemplo
 

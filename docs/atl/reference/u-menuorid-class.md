@@ -1,30 +1,20 @@
 ---
-title: _U_MENUorID (clase) | Microsoft Docs
-ms.custom: ''
+title: _U_MENUorID (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
 - ATL::_U_MENUorID
 - _U_MENUorID
-dev_langs:
-- C++
 helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dacb747978fd77d5ad8a464acc675c3509f5a815
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499741"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID (clase)
 
@@ -57,7 +47,7 @@ class _U_MENUorID
 
 Esta clase de adaptador de argumento permite identificadores (unidades) o identificadores de menú (HMENUs) que se pasará a una función sin necesidad de realizar una conversión explícita por parte del autor de la llamada.
 
-Esta clase está diseñada para la implementación de contenedores a la API de Windows, especialmente la [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) y [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funciones, que aceptan un argumento HMENU que puede ser una ventana secundaria identificador (UINT) en lugar de un identificador de menú. Por ejemplo, puede ver esta clase en uso como un parámetro a [CWindowImpl:: Create](cwindowimpl-class.md#create).  
+Esta clase está diseñada para la implementación de contenedores a la API de Windows, especialmente la [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) y [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) funciones, que aceptan un argumento HMENU que puede ser una ventana secundaria identificador (UINT) en lugar de un identificador de menú. Por ejemplo, puede ver esta clase en uso como un parámetro a [CWindowImpl:: Create](cwindowimpl-class.md#create).
 
 La clase define dos sobrecargas del constructor: uno acepta un argumento UINT y otra que acepta un argumento HMENU. HMENU del constructor y el resultado almacenado en el miembro de datos única de la clase, simplemente se convierte el argumento UINT [m_hMenu](#_u_menuorid__m_hmenu). El argumento del constructor HMENU se almacena directamente sin conversión.
 

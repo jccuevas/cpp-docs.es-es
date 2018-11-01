@@ -1,29 +1,19 @@
 ---
-title: intrínseco | Microsoft Docs
-ms.custom: ''
+title: intrinsic
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
-dev_langs:
-- C++
 helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c222a939ccb00dc3b7466a1cb1a83abe7ea4036
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541065"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677466"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -86,7 +76,7 @@ Las funciones de punto flotante enumeradas a continuación no tienen formas intr
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- Las funciones de punto flotante enumeradas a continuación tienen formas intrínsecas auténticas cuando se especifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), y [/fp: Fast](../build/reference/fp-specify-floating-point-behavior.md) (o cualquier otra opción que incluya/Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)y/O2):
+Las funciones de punto flotante enumeradas a continuación tienen formas intrínsecas auténticas cuando se especifica [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), y [/fp: Fast](../build/reference/fp-specify-floating-point-behavior.md) (o cualquier otra opción que incluya/Og: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)y/O2):
 
 |||||
 |-|-|-|-|
@@ -100,5 +90,5 @@ Consulte [función #pragma](../preprocessor/function-c-cpp.md) para obtener info
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
-[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)  
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)

@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a880d8cac05ea662feafa4c309f70bb91179fb2c
-ms.sourcegitcommit: 6784c1d5081dbe4d8119379647a34666328e1fdf
+ms.openlocfilehash: 9e04cd1d5599663c878d7e9b06d9b0bd05a76242
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34798936"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433912"
 ---
 # <a name="specify-custom-build-tools"></a>Especificar las herramientas de compilación personalizadas
 
@@ -90,5 +90,5 @@ Al compilar el proyecto, el sistema de compilación compara las marcas de tiempo
 
 ## <a name="see-also"></a>Vea también
 
-[Macros comunes para propiedades y comandos de compilación](../ide/common-macros-for-build-commands-and-properties.md)  
-[Solucionar problemas de personalizaciones de compilación](../ide/troubleshooting-build-customizations.md)  
+[Macros comunes para propiedades y comandos de compilación](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[Solucionar problemas de personalizaciones de compilación](../ide/troubleshooting-build-customizations.md)

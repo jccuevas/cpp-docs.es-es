@@ -1,7 +1,7 @@
 ---
 title: Componentes de escritorio COM de ATL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065626"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062306"
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de escritorio COM de ATL
 
-La referencia de ATL documenta Active Template Library (ATL), un conjunto de clases C++ basadas en plantillas que simplifican la programación de objetos de modelo de objetos componentes (COM). Para aprovechar completamente las de ATL, familiarizado con COM. es muy recomendable.
+La referencia de ATL documenta Active Template Library (ATL), un conjunto de clases C++ basadas en plantillas que simplifican la programación de objetos de modelo de objetos componentes (COM). COM es una especificación binaria para crear y consumir los componentes de software en Windows. Para aprovechar completamente las de ATL, familiarizado con COM. es muy recomendable. Para obtener más información acerca de COM, consulte [modelo de objetos componentes (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -61,4 +61,4 @@ Le guía a través de la creación de un control y enseña los fundamentos de AT
 Código de ejemplo que muestra cómo utilizar ATL para escribir objetos COM.
 
 [Plantillas OLE DB](../data/oledb/ole-db-templates.md)<br/>
-Proporciona material de referencia sobre las plantillas de consumidor y proveedor OLE DB, un conjunto de clases de plantilla que implementan las interfaces OLE DB más comunes.  
+Proporciona material de referencia sobre las plantillas de consumidor y proveedor OLE DB, un conjunto de clases de plantilla que implementan las interfaces OLE DB más comunes.

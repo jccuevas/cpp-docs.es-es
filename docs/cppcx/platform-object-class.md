@@ -1,8 +1,6 @@
 ---
-title: 'Clase Platform:: Object | Microsoft Docs'
-ms.custom: ''
+title: Platform::Object (Clase)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -11,21 +9,15 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs:
-- C++
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82f9cf473a1b38e3a77b43bc5fde30057c7b1a8a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106553"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493618"
 ---
 # <a name="platformobject-class"></a>Platform::Object (Clase)
 
@@ -86,7 +78,7 @@ Objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Es`true` si los objetos son iguales; de lo contrario, es `false`.
+**True** si los objetos son iguales; en caso contrario **false**.
 
 ## <a name="gethashcode"></a>  GetHashCode (método)
 
@@ -168,7 +160,7 @@ Segundo objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`true` si los dos objetos son iguales; de lo contrario, `false`.
+**True** si los dos objetos son iguales; en caso contrario, **false**.
 
 ## <a name="tostring"></a>  Object:: ToString (método) (C++ / c++ / CX)
 
@@ -196,6 +188,7 @@ public:
     };
 };
 ```
+
 ## <a name="see-also"></a>Vea también
 
 [Plataforma Namespace](platform-namespace-c-cx.md)

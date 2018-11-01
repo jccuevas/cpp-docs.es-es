@@ -1,28 +1,18 @@
 ---
-title: New (nueva ranura en vtable) (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: New (nueva ranura en vtable) (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5ac6b6401870e29ec10b17ff2c06fb970328af82
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b143b2ead1165382d0959f4e4c90f1d2e7ea936a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487170"
 ---
-# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (nueva ranura en vtable) (Extensiones de componentes de C++)
+# <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>New (nueva ranura en vtable) (C++ / c++ / CLI y c++ / CX)
 
 El **nuevo** palabra clave indica que un miembro virtual obtendrá una nueva ranura en vtable.
 
@@ -115,5 +105,6 @@ E::f() called
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)  
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+
 [Especificadores de invalidación](../windows/override-specifiers-cpp-component-extensions.md)

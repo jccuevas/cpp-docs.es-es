@@ -1,25 +1,15 @@
 ---
-title: las expresiones lambda de constexpr en C++ | Microsoft Docs
-ms.custom: ''
+title: expresiones lambda de constexpr en C++
 ms.date: 07/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506605"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>expresiones lambda de constexpr en C++
 
@@ -38,7 +28,9 @@ ms.locfileid: "46066601"
         return [n] { return n + 1; }();
     }
 ```
+
 Una expresión lambda es implícitamente **constexpr** si su resultado satisface los requisitos de un **constexpr** función:
+
 ```cpp
     auto answer = [](int n)
     {
@@ -47,6 +39,7 @@ Una expresión lambda es implícitamente **constexpr** si su resultado satisface
 
     constexpr int response = answer(10);
 ```
+
 Si una expresión lambda es implícita o explícitamente **constexpr**y convertirlo en un puntero de función, la función resultante es también **constexpr**:
 
 ```cpp

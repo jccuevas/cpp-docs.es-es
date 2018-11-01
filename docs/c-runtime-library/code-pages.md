@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113726"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060512"
 ---
 # <a name="code-pages"></a>Páginas de códigos
 
@@ -43,7 +43,7 @@ La biblioteca en tiempo de ejecución de Microsoft usa los siguientes tipos de p
     setlocale ( LC_ALL, "" );
     ```
 
-     también establece la configuración regional a la página de códigos ANSI predeterminada del sistema.
+   también establece la configuración regional a la página de códigos ANSI predeterminada del sistema.
 
 - Página de códigos de configuración regional. El comportamiento de un número de rutinas en tiempo de ejecución depende de la configuración regional actual, que incluye la página de códigos de esta. (Para obtener más información, vea [Locale-Dependent Routines](../c-runtime-library/locale.md) [Rutinas dependientes de la configuración regional]). De manera predeterminada, todas las rutinas dependientes de la configuración regional en la biblioteca en tiempo de ejecución de Microsoft usan la página de códigos que corresponde a la configuración regional "C". En tiempo de ejecución, puede cambiar o consultar la página de códigos de la configuración regional en uso con una llamada a [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 

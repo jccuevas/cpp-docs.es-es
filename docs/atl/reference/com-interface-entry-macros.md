@@ -1,10 +1,6 @@
 ---
-title: Macros de entrada de la interfaz COM | Microsoft Docs
-ms.custom: ''
+title: Macros de entrada de la interfaz COM
 ms.date: 03/28/2017
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlcom/ATL::COM_INTERFACE_ENTRY
 - atlcom/ATL::COM_INTERFACE_ENTRY_IID
@@ -19,25 +15,19 @@ f1_keywords:
 - atlcom/ATL::COM_INTERFACE_ENTRY_FUNC
 - atlcom/ATL::COM_INTERFACE_ENTRY_FUNC_BLIND
 - atlcom/ATL::COM_INTERFACE_ENTRY_NOINTERFACE
-dev_langs:
-- C++
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 631e7a6f3676114e5d0bcac745dce58df1daf1ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085230"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578144"
 ---
-# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY  
+# <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
-Estas macros escriba interfaces de un objeto en su mapa COM para que sean accesibles para `QueryInterface`. El orden de las entradas de mapa COM es las interfaces de orden se comprobará para un IID coincidente durante `QueryInterface`.  
+Estas macros escriba interfaces de un objeto en su mapa COM para que sean accesibles para `QueryInterface`. El orden de las entradas de mapa COM es las interfaces de orden se comprobará para un IID coincidente durante `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +45,7 @@ Estas macros escriba interfaces de un objeto en su mapa COM para que sean accesi
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Procesa el mapa COM de la clase base cuando llega a esta entrada en el mapa COM el procesamiento.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Un mecanismo general para enlazar con de ATL `QueryInterface` lógica.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Igual que [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), salvo que consultar los IID da como resultado una llamada a *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Devuelve E_NOINTERFACE y finaliza el procesamiento de mapa COM cuando se consulta la interfaz especificada.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Devuelve E_NOINTERFACE y finaliza el procesamiento de mapa COM cuando se consulta la interfaz especificada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -70,6 +60,7 @@ Escribe las interfaces en el mapa de interfaz COM.
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
@@ -88,6 +79,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** atlcom.h
@@ -356,7 +348,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 *almacenamiento de datos*<br/>
 [in] Un parámetro que se pasa a la *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] El puntero de función que va a devolver *iid*.
 
 ### <a name="remarks"></a>Comentarios
@@ -380,7 +372,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 *almacenamiento de datos*<br/>
 [in] Un parámetro que se pasa a la *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] La función que se llama cuando se procesa esta entrada en el mapa COM.
 
 ### <a name="remarks"></a>Comentarios
@@ -406,4 +398,3 @@ Puede usar esta macro para impedir que una interfaz que se usan en un caso concr
 
 La interfaz se construirán IID anexando *x* a `IID_`. Por ejemplo, si *x* es `IPersistStorage`, será el IID `IID_IPersistStorage`.
 
-  

@@ -1,29 +1,19 @@
 ---
-title: this (puntero) | Microsoft Docs
-ms.custom: ''
+title: this (Puntero)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - this_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb7198b22491a94eb2f00fecec83ec296ce03450
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070592"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535010"
 ---
 # <a name="this-pointer"></a>this (Puntero)
 
@@ -32,7 +22,7 @@ El **esto** puntero es un puntero accesible únicamente dentro de las funciones 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +171,7 @@ int main()
 
 El tipo de **esto** en un miembro de función se describe mediante la sintaxis siguiente, donde *cv-qualifier-list* se determina a partir del declarador de funciones miembro y puede ser **const**o **volátil** (o ambos), y *tipo de clase* es el nombre de la clase:
 
-*tipo de clase [cv-qualifier-list]* **\* const esto**
+*tipo de clase [cv-qualifier-list]* **&#42; const esto**
 
 En otras palabras, **esto** siempre es un puntero const; no se pueden reasignar.  El **const** o **volátil** calificadores usadas en la declaración de función miembro se aplican a la instancia de clase apuntada **esto** en el ámbito de esa función.
 

@@ -1,12 +1,6 @@
 ---
-title: Establecer el ancho de una barra de desplazamiento Horizontal | Microsoft Docs
-ms.custom: ''
+title: Establecer el ancho de una barra de desplazamiento horizontal
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - list controls [C++], scroll bar width
 - CListBox::SetHorizontalExtent
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 671da02bd1b836cd482c057c09ab31d27b42843f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 393571b79d27485e840d150549208c899e8ed1d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625958"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>Establecer el ancho de una barra de desplazamiento horizontal
 
@@ -46,5 +35,5 @@ MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)  
+[Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
 [Controles](../mfc/controls-mfc.md)

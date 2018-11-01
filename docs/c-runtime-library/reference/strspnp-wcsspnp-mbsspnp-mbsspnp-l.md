@@ -1,10 +1,6 @@
 ---
-title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l | Microsoft Docs
-ms.custom: ''
+title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635297"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -102,13 +92,13 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_strspnp**, **_wcsspnp**, y **_mbsspnp** devuelven un puntero al primer carácter de *str* que no pertenecen al conjunto de caracteres de *charset*. Cada una de estas funciones devuelve **NULL** si *str* constar únicamente de caracteres de *charset*. Para cada una de estas rutinas, no hay ningún valor devuelto reservado para indicar un error.
+**_strspnp**, **_wcsspnp**, y **_mbsspnp** devuelven un puntero al primer carácter en *str* que no pertenece al conjunto de caracteres en *charset*. Cada una de estas funciones devuelve **NULL** si *str* consta únicamente de caracteres de *charset*. Para cada una de estas rutinas, no hay ningún valor devuelto reservado para indicar un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsspnp** función devuelve un puntero al carácter multibyte que es el primer carácter en *str* que no pertenecen al conjunto de caracteres de *charset*. **_mbsspnp** reconoce las secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. En la búsqueda no se incluyen los caracteres nulos de finalización.
+El **_mbsspnp** función devuelve un puntero al carácter multibyte que es el primer carácter en *str* que no pertenece al conjunto de caracteres en *charset*. **_mbsspnp** reconoce secuencias de caracteres multibyte según la [página de códigos multibyte](../../c-runtime-library/code-pages.md) actualmente en uso. En la búsqueda no se incluyen los caracteres nulos de finalización.
 
-Si el valor *str* o *charset* es un puntero nulo, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **NULL** y establece **errno** a **EINVAL**.
+Si bien *str* o *charset* es un puntero nulo, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve **NULL** y establece **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -116,9 +106,9 @@ Si el valor *str* o *charset* es un puntero nulo, esta función invoca el contro
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** y **_wcsspnp** son caracteres de byte único y versiones de caracteres anchos de **_mbsspnp**. **_strspnp** y **_wcsspnp** se comportan de forma idéntica a **_mbsspnp** en caso contrario, se proporcionan solo para esta asignación y no debe usarse para cualquier otro motivo. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** y **_wcsspnp** son caracteres de byte único y las versiones de caracteres anchos de **_mbsspnp**. **_strspnp** y **_wcsspnp** se comportan de forma idéntica a **_mbsspnp** en caso contrario, que se proporcionan solo para esta asignación y no debe usarse para cualquier otro motivo. Para obtener más información, vea [Usar asignaciones de texto genérico](../../c-runtime-library/using-generic-text-mappings.md) y [Asignaciones de texto genérico](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** es idéntica, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** es idéntico, salvo que usa el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

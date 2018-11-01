@@ -1,32 +1,22 @@
 ---
-title: Símbolos de programación de bases de datos MFC | Microsoft Docs
-ms.custom: ''
+title: Símbolos de la programación de bases de datos de MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC database programming symbols
 - symbols [C++], MFC
 - databases [C++], MFC programming model
 ms.assetid: 3f676a2c-cf07-415e-a336-680abdc42a5e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 2be9838ebcffc01b0e558dbcf21370585b9b9422
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501274"
 ---
 # <a name="mfc-database-programming-symbols"></a>Símbolos de la programación de bases de datos de MFC
+
 Los símbolos de esta tabla solo aparecen en un proyecto de MFC cuando se ha agregado compatibilidad con la base de datos. Admite la conexión de MFC con servidores SQL Server y la programación de la base de datos.
-  
+
 |||
 |-|-|
 |AFX_IDP_SQL_API_CONFORMANCE|AFX_IDP_SQL_BOOKMARKS_ NOT_ENABLED|
@@ -43,10 +33,12 @@ Los símbolos de esta tabla solo aparecen en un proyecto de MFC cuando se ha agr
 |AFX_IDP_SQL_ROW_FETCH|AFX_IDP_SQL_ROW_UPDATE_ NOT_SUPPORTED|
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
-  
+
 ## <a name="requirements"></a>Requisitos
- MFC
-  
+
+MFC
+
 ## <a name="see-also"></a>Vea también
- [Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)  
- [Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)
+
+[Símbolos predefinidos de MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)

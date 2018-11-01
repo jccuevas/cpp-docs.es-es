@@ -1,10 +1,6 @@
 ---
-title: CAtlArray (clase) | Microsoft Docs
-ms.custom: ''
+title: CAtlArray (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlArray
 - ATLCOLL/ATL::CAtlArray
@@ -26,21 +22,15 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442684"
 ---
 # <a name="catlarray-class"></a>CAtlArray (clase)
 
@@ -90,7 +80,7 @@ El código utilizado para copiar o mover elementos.
 
 |||
 |-|-|
-|[operador&#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|  
+|[operador&#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|
 
 ### <a name="typedefs"></a>Typedefs
 

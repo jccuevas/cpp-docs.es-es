@@ -1,25 +1,15 @@
 ---
-title: -WINMDFILE (especificar archivo de winmd) | Microsoft Docs
-ms.custom: ''
+title: /WINMDFILE (especificar archivo winmd)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
-dev_langs:
-- C++
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdea558f1c9a56e68a8e2e61703b92ea569a0629
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 74958e51925b9ed6d1382efe76fe587eed73f4e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656059"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (especificar archivo winmd)
 
@@ -45,6 +35,6 @@ Use el valor que se especifica en `filename` para reemplazar el nombre de archiv
 
 ## <a name="see-also"></a>Vea también
 
-[/WINMD (generar metadatos de Windows)](../../build/reference/winmd-generate-windows-metadata.md)
-[establecer opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
+[/WINMD (Generar metadatos de Windows)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
+[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
 [Opciones del vinculador](../../build/reference/linker-options.md)

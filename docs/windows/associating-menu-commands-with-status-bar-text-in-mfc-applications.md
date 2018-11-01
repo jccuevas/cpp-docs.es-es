@@ -1,27 +1,16 @@
 ---
-title: Asociar comandos de menú a texto de la barra de estado en aplicaciones MFC | Microsoft Docs
-ms.custom: ''
+title: Asociar comandos de menú a texto de la barra de estado en aplicaciones MFC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - status bars [C++], associating menu items
 - menus [C++], status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 16de276478485cb52b11b3f1bbb869c5b75d05a4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fc39695358a9c1f2f62878487a5e4fedf5db2b82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468892"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>Asociar comandos de menú a texto de la barra de estado en aplicaciones MFC
 
@@ -39,6 +28,6 @@ MFC
 
 ## <a name="see-also"></a>Vea también
 
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
-[Adición de comandos a un menú](../windows/adding-commands-to-a-menu.md)  
+[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[Adición de comandos a un menú](../windows/adding-commands-to-a-menu.md)<br/>
 [Editor de menús](../windows/menu-editor.md)

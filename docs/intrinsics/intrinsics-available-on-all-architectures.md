@@ -1,31 +1,21 @@
 ---
-title: Intrínsecos disponibles en todas las arquitecturas | Documentos de Microsoft
-ms.custom: ''
+title: Intrínsecos disponibles en todas las arquitecturas
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473286"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Intrínsecos disponibles en todas las arquitecturas
 
 El compilador de Microsoft C/C++ y la biblioteca de tiempo de ejecución de C Universal (UCRT) hacen que algunos intrínsecos disponibles en todas las arquitecturas.
 
-## <a name="compiler-intrinsics"></a>Funciones intrínsecas del compilador
+## <a name="compiler-intrinsics"></a>Intrínsecos del compilador
 
 Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64 y ARM:
 
@@ -97,7 +87,7 @@ Los siguientes intrínsecos están disponibles con las arquitecturas x86, AMD64 
 |[__umulh](../intrinsics/umulh.md)|intrin.h|
 |[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
-## <a name="ucrt-intrinsics"></a>Funciones intrínsecas del UCRT
+## <a name="ucrt-intrinsics"></a>Funciones intrínsecas UCRT
 
 Las siguientes funciones UCRT tienen formas intrínsecas en todas las arquitecturas:
 

@@ -1,48 +1,39 @@
 ---
-title: A.26 mediante el threadprivate (directiva) | Documentos de Microsoft
-ms.custom: ''
+title: A.26 Usar la directiva threadprivate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 6eda76c2-c4f1-4208-a900-e0ea98a53eca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b74325ec96702838aaaf9be62d398178c8c2902
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 8ea810f8fbf8076b28464faafb72f5797d4a1a66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465434"
 ---
 # <a name="a26---using-the-threadprivate-directive"></a>A.26 Usar la directiva threadprivate
-Los ejemplos siguientes muestran cómo utilizar el `threadprivate` directiva ([punto 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) en la página 23) para proporcionar un contador independiente a cada subproceso.  
-  
- **Ejemplo 1:**  
-  
-```  
-int counter = 0;  
-#pragma omp threadprivate(counter)  
-  
-int sub()  
-{  
-    counter++;  
-    return(counter);  
-}  
-```  
-  
- **Ejemplo 2:**  
-  
-```  
-int sub()  
-{  
-    static int counter = 0;  
-    #pragma omp threadprivate(counter)  
-    counter++;  
-    return(counter);  
-}  
+
+Los ejemplos siguientes muestran cómo usar el `threadprivate` directiva ([punto 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) en la página 23) para proporcionar a cada subproceso un contador independiente.
+
+**Ejemplo 1:**
+
+```
+int counter = 0;
+#pragma omp threadprivate(counter)
+
+int sub()
+{
+    counter++;
+    return(counter);
+}
+```
+
+**Ejemplo 2:**
+
+```
+int sub()
+{
+    static int counter = 0;
+    #pragma omp threadprivate(counter)
+    counter++;
+    return(counter);
+}
 ```

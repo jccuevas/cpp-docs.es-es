@@ -1,26 +1,16 @@
 ---
-title: CompareStringOrdinal (método) | Microsoft Docs
-ms.custom: ''
+title: CompareStringOrdinal (Método)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
-dev_langs:
-- C++
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 952de0ca136d29eb0b170856410b18a1d65120c1
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 61ca0cb6d8afc07b73e33a2e5bc3dc10daacc210
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42612893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593380"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal (Método)
 
@@ -31,15 +21,15 @@ Admite la infraestructura WRL y no está pensado para utilizarse directamente de
 ```cpp
 inline INT32 CompareStringOrdinal(
    HSTRING lhs,
-   HSTRING rhs)  
+   HSTRING rhs)
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*  
+*LHS*<br/>
 La primera HSTRING para comparar.
 
-*RHS*  
+*RHS*<br/>
 El segundo HSTRING para comparar.
 
 ## <a name="return-value"></a>Valor devuelto

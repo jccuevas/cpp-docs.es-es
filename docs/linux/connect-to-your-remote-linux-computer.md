@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207671"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061293"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conectarse al equipo Linux remoto
 
@@ -29,7 +29,7 @@ Al crear un proyecto de Linux C++ en Visual Studio, el código se copia al equip
    ![Administrador de conexiones](media/settings_connectionmanager.png)
 
    En cualquier caso, aparecerá la ventana **Conectar con el sistema remoto**.
-   
+
    ![Conectar con el sistema remoto](media/connect.png)
 
 1. Especifique la siguiente información:
@@ -41,7 +41,7 @@ Al crear un proyecto de Linux C++ en Visual Studio, el código se copia al equip
    | **Nombre de usuario**           | Usuario como el que se autentica
    | **Tipo de autenticación** | Se admite contraseña o clave privada
    | **Contraseña**            | Contraseña para el nombre de usuario especificado
-   | **Archivo de clave privada**    | Clave privada creada para la conexión ssh
+   | **Archivo de clave privada**    | Archivo de clave privada creado para la conexión ssh
    | **Frase de contraseña**          | Frase de contraseña usada con la clave privada seleccionada anteriormente
 
 1. Haga clic en el botón **Conectar** para intentar la conexión con el equipo remoto.  Si se produce un error en la conexión, se marcan en rojo los cuadros de entrada que deben cambiarse.

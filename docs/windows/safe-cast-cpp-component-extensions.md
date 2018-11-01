@@ -1,32 +1,22 @@
 ---
-title: safe_cast (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: safe_cast (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
 - stdcli::language::safe_cast
-dev_langs:
-- C++
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 85a27fceabcac9c5fa3b36fae4990da7dcd65deb
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a65b39cbd658787324c1951fd1a53e4257f33a4a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222931"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443750"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (Extensiones de componentes de C++)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++ / c++ / CLI y c++ / CX)
 
 El **safe_cast** operación devuelve la expresión especificada como el tipo especificado, si se realiza correctamente; en caso contrario, produce `InvalidCastException`.
 
@@ -37,11 +27,7 @@ El **safe_cast** operación devuelve la expresión especificada como el tipo esp
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
@@ -51,19 +37,15 @@ expression
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador de tipo*  
+*identificador de tipo*<br/>
 El tipo de conversión *expresión* a. Identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
-*Expresión*  
+*Expresión*<br/>
 Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
 ### <a name="remarks"></a>Comentarios
@@ -115,24 +97,20 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador de tipo*  
+*identificador de tipo*<br/>
 Identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
-*Expresión*  
+*Expresión*<br/>
 Expresión que evalúa a un identificador de un tipo de valor o referencia, un tipo de valor o una referencia de seguimiento a una referencia o tipo de valor.
 
 ### <a name="remarks"></a>Comentarios
 
-La expresión `safe_cast<` *identificador de tipo*`>(`*expresión* `)` convierte la expresión de operando a un objeto de tipo de identificador de tipo.
+La expresión `safe_cast<` *identificador de tipo*`>(`*expresión* `)` convierte el operando *expresión* a un objeto de tipo *Id. de tipo*.
 
 El compilador aceptará un [static_cast](../cpp/static-cast-operator.md) en la mayoría de los lugares que aceptará un **safe_cast**.  Sin embargo, **safe_cast** garantiza que genera MSIL comprobable, mientras que un **static_cast** podría generar MSIL no comprobable.  Consulte [código puro y comprobable (C++ / c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) y [Peverify.exe (herramienta PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) para obtener más información sobre códigos comprobables.
 
@@ -148,7 +126,7 @@ Para obtener más información sobre **safe_cast**, consulte:
 
 - [Conversiones de estilo C con /clr (C++ / c++ / CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [Cómo: Usar safe_cast en C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [Cómo: Usar safe_cast en C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Requisitos
 
@@ -188,4 +166,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

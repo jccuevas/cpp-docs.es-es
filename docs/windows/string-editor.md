@@ -1,14 +1,8 @@
 ---
-title: Editor de cadenas (C++) | Microsoft Docs
-ms.custom: ''
+title: Editor de cadenas (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.string.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - String editor
 - string tables
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - resource editors [C++], String editor
 - strings [C++], editing
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 94f4aaeae3acb225c2fdc457af135e3534f8d381
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: add153f84259985066397b6340fb4281a11beb17
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513664"
 ---
 # <a name="string-editor-c"></a>Editor de cadenas (C++)
 
@@ -55,7 +44,7 @@ Con el editor de cadenas, puede:
    > [!NOTE]
    > Windows no permite la creación de tablas de cadenas vacías. Si crea una tabla de cadenas sin entradas, se elimina automáticamente al guardar el archivo de recursos.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -63,7 +52,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)  
-[Cadenas](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)  
+[Editores de recursos](../windows/resource-editors.md)<br/>
+[Cadenas](https://msdn.microsoft.com/library/windows/desktop/ms646979.aspx)<br/>
 [Acerca de las cadenas](/windows/desktop/menurc/about-strings)
 

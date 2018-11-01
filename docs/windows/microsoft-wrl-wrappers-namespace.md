@@ -1,28 +1,18 @@
 ---
-title: Wrappers Namespace | Microsoft Docs
-ms.custom: ''
+title: Microsoft::WRL::Wrappers (Espacio de nombres)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers
-dev_langs:
-- C++
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 51964bb2d4cb13394f9efb0e36d572cf9309637d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: eac85d10351a141ce561da4272d033644128608f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535491"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers (Espacio de nombres)
 
@@ -47,11 +37,11 @@ namespace Microsoft::WRL::Wrappers;
 |Name|Descripción|
 |----------|-----------------|
 |[CriticalSection (clase)](../windows/criticalsection-class.md)|Representa un objeto de sección crítica.|
-|[Event (clase) (Biblioteca de plantillas C++ de Windows en tiempo de ejecución)](../windows/event-class-windows-runtime-cpp-template-library.md)|Representa un evento.|
+|[Event (clase) (WRL)](../windows/event-class-wrl.md)|Representa un evento.|
 |[HandleT (clase)](../windows/handlet-class.md)|Representa un identificador a un objeto.|
 |[HString (clase)](../windows/hstring-class.md)|Proporciona compatibilidad para manipular los identificadores HSTRING.|
 |[HStringReference (clase)](../windows/hstringreference-class.md)|Representa un objeto HSTRING que se crea a partir de una cadena existente.|
-|[Mutex (clase)](../windows/mutex-class1.md)|Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.|
+|[Mutex (clase)](../windows/mutex-class.md)|Representa un objeto de sincronización que controla de forma exclusiva un recurso compartido.|
 |[RoInitializeWrapper (clase)](../windows/roinitializewrapper-class.md)|Inicializa el tiempo de ejecución de Windows.|
 |[Semaphore (clase)](../windows/semaphore-class.md)|Representa un objeto de sincronización que controla un recurso compartido que puede admitir un número limitado de usuarios.|
 |[SRWLock (clase)](../windows/srwlock-class.md)|Representa un bloqueo fino de lector/escritor.|

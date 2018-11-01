@@ -1,28 +1,19 @@
 ---
-title: '-Zc: noexceptTypes (reglas C ++ 17 noexcept) | Microsoft Docs'
+title: '/ Zc: noexcepttypes (reglas c ++ 17 noexcept)'
 ms.date: 11/14/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:noexceptTypes
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc:noexceptTypes
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 78657b293562e82e4691ae54f8ee60d490d78ba7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462236"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/ Zc: noexcepttypes (reglas c ++ 17 noexcept)
 
@@ -90,6 +81,6 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (ajuste)](../../build/reference/zc-conformance.md)
+[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)

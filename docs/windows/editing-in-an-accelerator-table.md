@@ -1,27 +1,16 @@
 ---
-title: Edición en una tabla de aceleradores (C++) | Microsoft Docs
-ms.custom: ''
+title: Edición en una tabla de aceleradores (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - keyboard shortcuts [C++], editing in an accelerator table
 ms.assetid: 545b650b-4f26-4b20-8431-d942548443bd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0fc9352993491c10599b0b7937561104b91ba76c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3955a74f9387c5f89d4217436e16e76b53bc3f6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463012"
 ---
 # <a name="editing-in-an-accelerator-table-c"></a>Edición en una tabla de aceleradores (C++)
 
@@ -52,5 +41,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)  
+[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

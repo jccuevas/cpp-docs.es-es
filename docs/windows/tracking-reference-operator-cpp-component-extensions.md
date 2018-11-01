@@ -1,31 +1,21 @@
 ---
-title: Seguimiento de operador de referencia (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Operador de referencia de seguimiento (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
 f1_keywords:
 - '%'
-dev_langs:
-- C++
 helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c6fef4562545b03e212d0e4e58742a1209a6ab81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50437978"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>Operador de referencia de seguimiento (Extensiones de componentes de C++)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>Operador de referencia de seguimiento (C++ / c++ / CLI y c++ / CX)
 
 Un *referencia de seguimiento* (`%`) se comporta como una referencia de C++ normal (`&`), salvo que cuando un objeto se asigna a una referencia de seguimiento, se incrementa el recuento de referencias del objeto.
 
@@ -61,13 +51,13 @@ En el siguiente ejemplo se muestra cómo pasar un ^ a una función que toma un %
 ref class Foo sealed {};
 
     // internal or private
-    void UseFooHelper(Foo% f)  
+    void UseFooHelper(Foo% f)
     {
         auto x = %f;
     }
 
     // public method on ABI boundary
-    void UseFoo(Foo^ f)  
+    void UseFoo(Foo^ f)
     {
         if (f != nullptr) { UseFooHelper(*f); }
     }

@@ -1,10 +1,6 @@
 ---
-title: CStrBufT (clase) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
+title: CStrBufT (clase)
+ms.date: 10/18/2018
 f1_keywords:
 - CStrBufT
 - ATLSIMPSTR/ATL::CStrBufT
@@ -12,23 +8,17 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CStrBufT::SetLength
 - ATLSIMPSTR/ATL::CStrBufT::AUTO_LENGTH
 - ATLSIMPSTR/ATL::CStrBufT::SET_LENGTH
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], custom memory management
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcf0675b81d684fdf8b78e865bf754d45ef4888c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e33bea159d2915b86fc77381f69dc2a745af68f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492826"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT (clase)
 
@@ -43,7 +33,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Parámetros
 
-*TCharType*  
+*TCharType*<br/>
 El tipo de carácter de la `CStrBufT` clase. Puede ser uno de los siguientes:
 
 - **char** (para las cadenas de caracteres ANSI)
@@ -121,13 +111,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*str*  
+*str*<br/>
 El objeto de cadena asociado con el búfer. Normalmente, el desarrollador usará las definiciones de tipos predefinidos de `CStrBuf` (variante de TCHAR), `CStrBufA` (**char** variante) y `CStrBufW` (**wchar_t** variante).
 
-*nMinLength*  
+*nMinLength*<br/>
 La longitud mínima del búfer de caracteres.
 
-*dwFlags*  
+*dwFlags*<br/>
 Determina si la longitud de cadena se determina automáticamente. Puede ser uno de los siguientes:
 
 - Longitud de cadena AUTO_LENGTH es automáticamente determina cuándo [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) se llama. Debe ser la cadena terminada en null. Valor predeterminado.
@@ -212,7 +202,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Parámetros
 
-*nLength*  
+*nLength*<br/>
 La nueva longitud del búfer de caracteres del objeto de cadena.
 
 > [!NOTE]
@@ -236,6 +226,6 @@ typedef CSimpleStringT<TCharType> StringType;
 
 ## <a name="see-also"></a>Vea también
 
-[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)   
+[Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
 

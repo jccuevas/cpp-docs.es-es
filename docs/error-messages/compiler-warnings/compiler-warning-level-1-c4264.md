@@ -1,27 +1,17 @@
 ---
-title: Compilador advertencia (nivel 1) C4264 | Microsoft Docs
-ms.custom: ''
+title: Advertencia del compilador (nivel 1) C4264
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4264
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4264
 ms.assetid: 315a13c1-ca54-4a90-9d2b-dd996463af5d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0985ff20e52910bbe8ddbe788a16b8e85a6d7d7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c28d9dc2e7cb218935bc76059cc0a24a75bafc5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657748"
 ---
 # <a name="compiler-warning-level-1-c4264"></a>Advertencia del compilador (nivel 1) C4264
 

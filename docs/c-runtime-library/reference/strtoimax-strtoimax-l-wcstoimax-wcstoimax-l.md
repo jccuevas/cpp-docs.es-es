@@ -1,10 +1,6 @@
 ---
-title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l | Microsoft Docs
-ms.custom: ''
+title: strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstoimax
 - _wcstoimax_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _wcstoimax_l
 - _strtoimax_l
 - _tcstoimax_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtoimax funciton
 - conversion functions
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 58ee8f4cbceaa2972de9a40a4192b1175b25488d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0a320f90b2c0f8653109a6ae0056c4c0cdd7455
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578157"
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax, _strtoimax_l, wcstoimax, _wcstoimax_l
 
@@ -107,11 +97,11 @@ Para obtener más información sobre los códigos de retorno, consulte [errno, _
 
 ## <a name="remarks"></a>Comentarios
 
-El **strtoimax** función convierte *strSource* a una **intmax_t**. La versión con caracteres anchos de **strtoimax** es **wcstoimax**; su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Ambas funciones dejan de leer la cadena *strSource* en el primer carácter que no se reconocen como parte de un número. Puede tratarse del carácter nulo final, o puede ser el primer carácter numérico que es mayor o igual que *base*.
+El **strtoimax** función convierte *strSource* a un **intmax_t**. La versión con caracteres anchos de **strtoimax** es **wcstoimax**; su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual. Ambas funciones dejan de leer la cadena *strSource* en el primer carácter que no se reconocen como parte de un número. Esto puede ser el carácter nulo final, o puede ser el primer carácter numérico que es mayor o igual a *base*.
 
-La configuración regional **LC_NUMERIC** valor de la categoría determina el reconocimiento del carácter base en *strSource*; para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las funciones que no tienen la **_l** sufijo usar la configuración regional actual; **_strtoimax_l** y **_wcstoimax_l** son idénticas a las funciones correspondientes que no tienen la **_l** sufijo salvo que usan en su lugar la configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La configuración regional **LC_NUMERIC** valor de la categoría determina el reconocimiento del carácter base en *strSource*; para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las funciones que no tienen la **_l** sufijo usar la configuración regional actual. **_strtoimax_l** y **_wcstoimax_l** son idénticas a las funciones correspondientes que no tienen la **_l** sufijo, salvo que usan la configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación que apunta a *endptr*. Si no se puede realizar ninguna conversión (no válidos se encontraron dígitos o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación que apunta a *endptr*.
+Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación en la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación en la que apunta *endptr*.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -124,7 +114,7 @@ Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se alma
 
 > [*espacio en blanco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*dígitos* &#124; *letras*]  
 
-A *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *dígitos* son uno o más dígitos decimales; *letras* son una o varias de las letras "a" a "z" (o 'A' a la 'Z'). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* está entre 2 y 36, se usa como base del número. Si *base* es 0, los caracteres iniciales de la cadena que señala *strSource* se utilizan para determinar la base. Si el primer carácter es «0» y el segundo carácter no es «x» ni «X», la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter que se examinan es '0', se supone un entero octal y un carácter '8' o '9' debería detener la búsqueda.
+Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *dígitos* son uno o más dígitos decimales; *letras* son una o varias de las letras 'a' a 'z' (o 'A' a 'Z'). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* está entre 2 y 36, se puede usar como base del número. Si *base* es 0, los caracteres iniciales de la cadena señalada por *strSource* se usan para determinar la base. Si el primer carácter es «0» y el segundo carácter no es «x» ni «X», la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter examinado es "0", se supone un entero octal y un carácter "8" o "9" detendrían el análisis.
 
 ## <a name="requirements"></a>Requisitos
 

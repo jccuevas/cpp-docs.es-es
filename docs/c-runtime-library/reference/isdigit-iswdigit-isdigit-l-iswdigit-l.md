@@ -1,10 +1,6 @@
 ---
-title: isdigit, iswdigit, _isdigit_l, _iswdigit_l | Microsoft Docs
-ms.custom: ''
+title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -30,8 +26,6 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7701b287d6ec4de757249aca5ccd252b38c58267
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bffe54bb68eaf7a26c338ad52522ff9b48335aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636584"
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
@@ -88,9 +78,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter de dígito decimal. **IsDigit** devuelve un valor distinto de cero si *c* es un dígito decimal (0 - 9). **iswdigit** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un carácter de dígito decimal. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un carácter de dígito decimal. **IsDigit** devuelve un valor distinto de cero si *c* es un dígito decimal (0 - 9). **iswdigit** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un carácter de dígito decimal. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
 
-Las versiones de estas funciones que tienen la **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 El comportamiento de **isdigit** y **_isdigit_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
 

@@ -1,31 +1,19 @@
 ---
-title: Aplicaciones de escritorio (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Aplicaciones de escritorio (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 78f50948e96ede8c15e0ac89a591197722dd5b1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584036"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
 
 Un *aplicación de escritorio* en C++ es una aplicación nativa que puede acceder al conjunto completo de API de Windows y se ejecuta en una ventana o en la consola del sistema. Pueden ejecutar aplicaciones de escritorio de C++ en Windows XP a Windows 10 (aunque no es ya no es compatible oficialmente con Windows XP y hay muchas API de Windows que se han introducido desde entonces).
 
-Una aplicación de escritorio es distinta de una aplicación plataforma Universal de Windows (UWP), que puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de desktop vs. Las aplicaciones de UWP, vea [elija su tecnología](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx).
-
+Una aplicación de escritorio es distinta de una aplicación plataforma Universal de Windows (UWP), que puede ejecutar en equipos que ejecutan Windows 10 y también en XBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de desktop vs. Las aplicaciones de UWP, vea [elija su tecnología](https://msdn.microsoft.com/library/windows/desktop/dn614993).
 
 ### <a name="desktop-bridge"></a>Puente de escritorio
 
@@ -35,7 +23,7 @@ En Visual Studio 2017 versión 15.4 y versiones posterior, puede crear un proyec
 
 ### <a name="terminology"></a>Terminología
 
-- Un *Win32* aplicación es una aplicación de escritorio de C++ que pueden hacer uso de nativo de Windows [las API de C de Windows o COM APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT y la API de biblioteca estándar y 3ª bibliotecas de terceros. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabajar explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 puede compilarse como una (x86) 32 bits o 64 bits (x64) binario. En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
+- Un *Win32* aplicación es una aplicación de escritorio de C++ que pueden hacer uso de nativo de Windows [las API de C de Windows o COM APIs](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT y la API de biblioteca estándar y 3ª bibliotecas de terceros. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabajar explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 puede compilarse como una (x86) 32 bits o 64 bits (x64) binario. En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
 
 - El [modelo de objetos componentes (COM)](/windows/desktop/com/the-component-object-model) es una especificación que permite que los programas escritos en lenguajes diferentes se comuniquen entre sí. La interfaz de Windows muchos componentes se implementan como objetos COM y siguen las reglas COM estándar para la creación de objetos, destrucción de detección y el objeto.  Usar objetos COM desde aplicaciones de escritorio de C++ es relativamente sencillo, pero escribir su propio objeto COM es más avanzado. El [Active Template Library (ATL)](../atl/atl-com-desktop-components.md) proporciona macros y funciones auxiliares que simplifican el desarrollo de COM.
 

@@ -1,28 +1,18 @@
 ---
-title: Atributo de destinos (extensiones de componentes de C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
+title: Destinos de atributo (C++ / c++ / CLI y c++ / CX)
+ms.date: 10/12/2018
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8d191b284350be13111f07c4bd9d4f06ce67eb2b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467709"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Destinos de atributo (Extensiones de componentes de C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Destinos de atributo (C++ / c++ / CLI y c++ / CX)
 
 Especificadores de uso del atributo le permiten especificar los destinos de atributo.  Cada atributo se define para que se aplican a determinados elementos del lenguaje. Por ejemplo, un atributo puede definirse para que solo se aplican a las clases y structs.  La siguiente lista muestra los elementos sintácticos en el que se puede usar un atributo personalizado. Combinaciones de estos valores (utilizando lógica o) se pueden usar.
 
@@ -230,8 +220,8 @@ Especificadores de uso del atributo son necesarias en las situaciones siguientes
 - Para especificar que un atributo se aplica al descriptor de acceso de una propiedad, no la propiedad:
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 

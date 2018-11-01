@@ -1,12 +1,6 @@
 ---
-title: Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa | Microsoft Docs
-ms.custom: ''
+title: Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 ms.date: 07/10/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, security
 - security [C++]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0800812e39d4d5240b87b24961585610814cd367
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631049"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 
@@ -31,7 +21,7 @@ En este artículo contiene instrucciones para desarrolladores ayudar a identific
 
 Las instrucciones proporcionadas en este artículo está relacionado con las clases de vulnerabilidades representadas por:
 
-1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. El `/Qspectre` también está disponible en Visual Studio 2015 Update 3 a través de conmutador [4338871 KB](https://support.microsoft.com/help/4338871). La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. 
+1. CVE-2017-5753, también conocido como variante 1. Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa que se produce como resultado una predicción de bifurcación condicional. El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que proporciona una mitigación de tiempo de compilación para un conjunto limitado de modelos de codificación potencialmente vulnerables. El `/Qspectre` también está disponible en Visual Studio 2015 Update 3 a través de conmutador [4338871 KB](https://support.microsoft.com/help/4338871). La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso.
 
 2. CVE-2018-3639, también conocido como [especulativa Store omisión (SSB)](https://aka.ms/sescsrdssb). Esta clase de vulnerabilidad de hardware está relacionado con los canales de lado que pueden surgir debido a la ejecución especulativa de una carga por delante de un almacén dependiente como resultado de una predicción de acceso de memoria.
 
@@ -55,9 +45,9 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-En este ejemplo, `ReadByte` es proporcionar un búfer, un tamaño de búfer y un índice en ese búfer. El parámetro de índice, según lo especificado por `untrusted_index`, proporcionado por una menor contexto con privilegios, como un proceso sin derechos administrativos. Si `untrusted_index` es menor que `buffer_size`, a continuación, se lee el carácter que ocupa ese índice de `buffer` y se utiliza para el índice en una región compartida de memoria que hace referencia `shared_buffer`. 
+En este ejemplo, `ReadByte` es proporcionar un búfer, un tamaño de búfer y un índice en ese búfer. El parámetro de índice, según lo especificado por `untrusted_index`, proporcionado por una menor contexto con privilegios, como un proceso sin derechos administrativos. Si `untrusted_index` es menor que `buffer_size`, a continuación, se lee el carácter que ocupa ese índice de `buffer` y se utiliza para el índice en una región compartida de memoria que hace referencia `shared_buffer`.
 
-Desde una perspectiva arquitectónica, esta secuencia de código es perfectamente segura tal como se garantiza que `untrusted_index` siempre será menor que `buffer_size`. Sin embargo, en la presencia de ejecución especulativa, es posible que la CPU se errores de predicción de la rama condicional y ejecutará el cuerpo de if instrucción incluso cuando `untrusted_index` es mayor o igual que `buffer_size`. Por consiguiente, la CPU anticipa puede leer un byte más allá de los límites de `buffer` (que puede ser un secreto) y, a continuación, se podría usar ese valor de byte para calcular la dirección de una carga posterior a través de `shared_buffer`. 
+Desde una perspectiva arquitectónica, esta secuencia de código es perfectamente segura tal como se garantiza que `untrusted_index` siempre será menor que `buffer_size`. Sin embargo, en la presencia de ejecución especulativa, es posible que la CPU se errores de predicción de la rama condicional y ejecutará el cuerpo de if instrucción incluso cuando `untrusted_index` es mayor o igual que `buffer_size`. Por consiguiente, la CPU anticipa puede leer un byte más allá de los límites de `buffer` (que puede ser un secreto) y, a continuación, se podría usar ese valor de byte para calcular la dirección de una carga posterior a través de `shared_buffer`.
 
 Mientras que la CPU finalmente detectará esta predicción, pueden quedar residuales efectos secundarios en la memoria caché de CPU que ofrecen información sobre el valor de bytes que se leyó fuera de los límites de `buffer`. Estos efectos pueden ser detectados por una menor contexto privilegiado que se ejecuta en el sistema por sondeo rapidez cada caché línea `shared_buffer` se tiene acceso. Los pasos que se pueden realizar para lograr esto son:
 
@@ -73,14 +63,14 @@ Los pasos anteriores proporcionan un ejemplo del uso de una técnica conocida co
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>¿Qué escenarios de software pueden verse afectados?
 
-Desarrollo de software seguro mediante un proceso como el [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) normalmente requiere que los desarrolladores a identificar los límites de confianza que existen en su aplicación. Existe un límite de confianza en lugares donde una aplicación puede interactuar con los datos proporcionados por un contexto de menor confianza, por ejemplo, otro proceso en el sistema o un proceso en modo usuario sin derechos administrativos en el caso de un controlador de dispositivo de modo kernel. La nueva clase de vulnerabilidades relacionadas con canales de lado de la ejecución especulativa es relevante para muchos de los límites de confianza en los modelos de seguridad de software existente que aislar código y los datos en un dispositivo. 
+Desarrollo de software seguro mediante un proceso como el [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) normalmente requiere que los desarrolladores a identificar los límites de confianza que existen en su aplicación. Existe un límite de confianza en lugares donde una aplicación puede interactuar con los datos proporcionados por un contexto de menor confianza, por ejemplo, otro proceso en el sistema o un proceso en modo usuario sin derechos administrativos en el caso de un controlador de dispositivo de modo kernel. La nueva clase de vulnerabilidades relacionadas con canales de lado de la ejecución especulativa es relevante para muchos de los límites de confianza en los modelos de seguridad de software existente que aislar código y los datos en un dispositivo.
 
 En la tabla siguiente proporciona un resumen de los modelos de seguridad de software donde los desarrolladores que deba preocuparse acerca de estas vulnerabilidades que se producen:
 
 |Límite de confianza|Descripción|
 |----------------|----------------|
-|Límites de máquina virtual|Las aplicaciones que aislar las cargas de trabajo en máquinas virtuales independientes que reciben datos de confianza desde otra máquina virtual pueden estar en peligro.| 
-|Límite del núcleo|Un controlador de dispositivo de modo kernel que recibe los datos de confianza de un proceso en modo usuario no administrativo puede estar en peligro.| 
+|Límites de máquina virtual|Las aplicaciones que aislar las cargas de trabajo en máquinas virtuales independientes que reciben datos de confianza desde otra máquina virtual pueden estar en peligro.|
+|Límite del núcleo|Un controlador de dispositivo de modo kernel que recibe los datos de confianza de un proceso en modo usuario no administrativo puede estar en peligro.|
 |Límite de proceso|Una aplicación que recibe los datos de confianza de otro proceso que se ejecuta en el sistema local, como a través de una llamada a procedimiento remoto (RPC), memoria compartida u otras comunicaciones entre procesos (IPC) mecanismos pueden estar en peligro.|
 |Límite de enclave|Una aplicación que se ejecuta dentro de un enclave seguro (por ejemplo, Intel SGX) que recibe datos de confianza desde fuera el enclave puede estar en peligro.|
 |Límites de los lenguajes|Una aplicación que interpreta o Just In Time (JIT) compila y ejecuta el código no seguro que se escriben un lenguaje de nivel superior puede estar en peligro.|
@@ -133,7 +123,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 
 ### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>Matriz fuera de los límites de carga alimentar una bifurcación
 
-Este patrón de codificación implica el caso donde una predicción de bifurcación condicional puede dar lugar a un fuera de los límites acceso a una matriz de punteros de función, lo que, a continuación, lleva a una rama en el destino indirecta de direcciones que se leyó fuera de los límites. El siguiente fragmento de código proporciona un ejemplo que se muestra cómo hacerlo. 
+Este patrón de codificación implica el caso donde una predicción de bifurcación condicional puede dar lugar a un fuera de los límites acceso a una matriz de punteros de función, lo que, a continuación, lleva a una rama en el destino indirecta de direcciones que se leyó fuera de los límites. El siguiente fragmento de código proporciona un ejemplo que se muestra cómo hacerlo.
 
 En este ejemplo, se proporciona un identificador de mensaje que no se confía para DispatchMessage a través de la `untrusted_message_id` parámetro. Si `untrusted_message_id` es menor que `MAX_MESSAGE_ID`, a continuación, se usa para indexar una matriz de punteros de función y la rama para el destino de bifurcación correspondiente. Este código es seguro su arquitectura, pero si la CPU errores de predicción de la rama condicional, podría causar `DispatchTable` indexando `untrusted_message_id` cuando su valor es mayor o igual que `MAX_MESSAGE_ID`, provocando así un acceso fuera de los límites. Esto podría dar lugar a ejecución especulativa desde una dirección de destino de rama que se deriva más allá de los límites de la matriz que podría provocar la divulgación de información según el código que se ejecuta anticipa.
 
@@ -188,7 +178,7 @@ Debe tenerse en cuenta que en ambos ejemplos implican la modificación especulat
 
 ## <a name="speculative-type-confusion"></a>Confusión de tipo especulativa
 
-Esta categoría se ocupa de patrones que pueden dar lugar a una confusión especulativa de tipo de codificación. Esto se produce cuando se tiene acceso a memoria con un tipo incorrecto a lo largo de una ruta de acceso que no es arquitectura durante la ejecución especulativa. Predicción de bifurcación condicional y omisión de la tienda especulativa pueden provocar confusión de un tipo especulativa. 
+Esta categoría se ocupa de patrones que pueden dar lugar a una confusión especulativa de tipo de codificación. Esto se produce cuando se tiene acceso a memoria con un tipo incorrecto a lo largo de una ruta de acceso que no es arquitectura durante la ejecución especulativa. Predicción de bifurcación condicional y omisión de la tienda especulativa pueden provocar confusión de un tipo especulativa.
 
 Para la omisión de la tienda especulativas, esto puede ocurrir en escenarios donde un compilador vuelve a usar una ubicación de la pila para las variables de varios tipos. Esto es porque el almacén de arquitectura de una variable de tipo `A` puede omitirse, lo que permite la carga de tipo `A` anticipa ejecutar antes de que se asigna a la variable. Si la variable anteriormente almacenada es de un tipo diferente, esto puede crear las condiciones de una confusión especulativa de tipo.
 
@@ -341,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>Barrera de especulación a través de la instrumentación en tiempo de compilador
 
-El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que inserta automáticamente una barrera de especulación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. Es importante tener en cuenta que esta marca no cubre todos los modelos de codificación potencialmente vulnerables y por lo tanto los desarrolladores no deben confiar en ella como una solución completa para esta clase de vulnerabilidades.
+El compilador de Visual C++ en Visual Studio 2017 (empezando por la versión 15.5.5) incluye compatibilidad con la `/Qspectre` relacionados con CVE-2017-5753 conmutador que inserta automáticamente una barrera de especulación para un conjunto limitado de modelos de codificación potencialmente vulnerables. La documentación de la [/qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) marca proporciona más información sobre sus efectos y uso. Es importante tener en cuenta que esta marca no cubre todos los modelos de codificación potencialmente vulnerables y por lo tanto los desarrolladores no deben confiar en ella como una solución completa para esta clase de vulnerabilidades.
 
 ### <a name="masking-array-indices"></a>Los índices de matriz de enmascaramiento
 
@@ -368,6 +358,5 @@ Otra técnica que puede utilizarse para mitigar vulnerabilidades de canal latera
 
 ## <a name="see-also"></a>Vea también
 
-[Instrucciones para mitigar las vulnerabilidades de canal lateral de ejecución especulativa](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)
-
+[Instrucciones para mitigar las vulnerabilidades de canal lateral de ejecución especulativa](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [Mitigar vulnerabilidades de hardware de canal de lado de ejecución especulativa](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

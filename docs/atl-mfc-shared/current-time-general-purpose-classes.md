@@ -1,12 +1,6 @@
 ---
-title: 'Hora actual: Clases de propósito General | Microsoft Docs'
-ms.custom: ''
+title: 'Hora actual: Clases de propósito General'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - time, setting current
 - current time, CTime object
@@ -14,22 +8,18 @@ helpviewer_keywords:
 - initializing objects, with the current time
 - time, getting current
 ms.assetid: c39e6775-6a92-4b27-95a7-5c86ed371d8a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fff4c581b91ed789b501d3866eb9b3b259a662b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: e883a47243feb7ad1555748ffdda9b8ae9594644
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539261"
 ---
 # <a name="current-time-general-purpose-classes"></a>Hora actual: Clases de propósito General
 
 El siguiente procedimiento muestra cómo crear un `CTime` objeto e inicializarlo con la hora actual.
 
-#### <a name="to-get-the-current-time"></a>Para obtener la hora actual
+### <a name="to-get-the-current-time"></a>Para obtener la hora actual
 
 1. Asignar un `CTime` objeto, como se indica a continuación:
 
@@ -38,7 +28,7 @@ El siguiente procedimiento muestra cómo crear un `CTime` objeto e inicializarlo
    > [!NOTE]
    > Sin inicializar `CTime` objetos no se inicializan con una hora válida.
 
-2. Llame a la `CTime::GetCurrentTime` función para obtener la hora actual del sistema operativo. Esta función devuelve un `CTime` objeto que puede usarse para establecer el valor de `CTime`, como sigue:
+1. Llame a la `CTime::GetCurrentTime` función para obtener la hora actual del sistema operativo. Esta función devuelve un `CTime` objeto que puede usarse para establecer el valor de `CTime`, como sigue:
 
    [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]
 

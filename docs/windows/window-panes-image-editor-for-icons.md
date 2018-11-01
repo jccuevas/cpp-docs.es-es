@@ -1,30 +1,19 @@
 ---
-title: Paneles de ventana (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Paneles de la ventana (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
-dev_langs:
-- C++
 helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 02cc8fed4056199787c3108d287945bb8a0ae7dd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f29766095048e4e06d16d37f2792ab18282eadf0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594111"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474339"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>Paneles de la ventana (Editor de imágenes para iconos)
 
@@ -46,5 +35,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)

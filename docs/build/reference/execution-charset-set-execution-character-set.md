@@ -1,30 +1,19 @@
 ---
-title: -ejecución-juego de caracteres (juego de caracteres de ejecución conjunto) | Microsoft Docs
-ms.custom: ''
+title: / Execution-CharSet (establecer juego de caracteres de ejecución)
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - execution-charset
 - /execution-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3cd7acf018930c013f477cf4c3a8b3260a8d53ec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663975"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-CharSet (establecer juego de caracteres de ejecución)
 
@@ -38,10 +27,10 @@ Le permite especificar el juego para el ejecutable de caracteres de ejecución.
 
 ## <a name="arguments"></a>Argumentos
 
-**IANA_name**<br/>
+*IANA_name*<br/>
 Asigne el carácter definido por la IANA.
 
-**CPID**<br/>
+*CPID*<br/>
 Identificador de la página de códigos.
 
 ## <a name="remarks"></a>Comentarios
@@ -66,6 +55,6 @@ Si desea establecer el juego de caracteres de origen y el juego de caracteres de
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/ Source-CharSet (establecer juego de caracteres de origen)](../../build/reference/source-charset-set-source-character-set.md)
-[/UTF-8 (establecer origen y ejecutable juegos a UTF-8 de caracteres)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
- [ /Validate/CharSet (validar los caracteres compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/source/charset (Establecer el juego de caracteres de origen)](../../build/reference/source-charset-set-source-character-set.md)<br/>
+[/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate/charset (Validar los caracteres compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

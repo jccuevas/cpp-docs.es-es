@@ -1,27 +1,17 @@
 ---
-title: Especificar la ruta de acceso | Microsoft Docs
-ms.custom: ''
+title: Especificar la ruta de acceso
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - names [C++], compiler output files
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d86052d6ca6e40926ed8d99990520044cef351d3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f83adcb87994d13edd1c1579183377a365e2051e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638365"
 ---
 # <a name="specifying-the-pathname"></a>Especificar la ruta de acceso
 
@@ -48,6 +38,6 @@ CL /FmPRN HELLO.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[Archivo de salida (/ F) opciones](../../build/reference/output-file-f-options.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

@@ -1,9 +1,6 @@
 ---
-title: Implementa la estructura | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2018
-ms.technology:
-- cpp-windows
+title: Implements (estructura)
+ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Implements
@@ -11,8 +8,6 @@ f1_keywords:
 - implements/Microsoft::WRL::Implements::CastToUnknown
 - implements/Microsoft::WRL::Implements::FillArrayWithIid
 - implements/Microsoft::WRL::Implements::IidCount
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Implements structure
 - Microsoft::WRL::Implements::CanCastTo method
@@ -20,17 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 18616b1010dfe6a23861c512b1113c30fe5251ce
-ms.sourcegitcommit: b4432d30f255f0cb58dce69cbc8cbcb9d44bc68b
+ms.openlocfilehash: a12633c341d3d1efcb8a8a50055db0116c138a9c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45535358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492565"
 ---
 # <a name="implements-structure"></a>Implements (estructura)
 
@@ -40,66 +30,83 @@ Implementa `QueryInterface` y `GetIid` para las interfaces especificadas.
 
 ```cpp
 template <
-   typename I0,
-   typename I1 = Details::Nil,
-   typename I2 = Details::Nil,
-   typename I3 = Details::Nil,
-   typename I4 = Details::Nil,
-   typename I5 = Details::Nil,
-   typename I6 = Details::Nil,
-   typename I7 = Details::Nil,
-   typename I8 = Details::Nil,
-   typename I9 = Details::Nil
+    typename I0,
+    typename I1 = Details::Nil,
+    typename I2 = Details::Nil,
+    typename I3 = Details::Nil,
+    typename I4 = Details::Nil,
+    typename I5 = Details::Nil,
+    typename I6 = Details::Nil,
+    typename I7 = Details::Nil,
+    typename I8 = Details::Nil,
+    typename I9 = Details::Nil
 >
-struct __declspec(novtable) Implements : Details::ImplementsHelper<RuntimeClassFlags<WinRt>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8, I9>::TypeT>, Details::ImplementsBase;
+struct __declspec(novtable) Implements :
+    Details::ImplementsHelper<
+        RuntimeClassFlags<WinRt>,
+        typename Details::InterfaceListHelper<
+            I0, I1, I2, I3, I4, I5, I6, I7, I8, I9
+        >::TypeT
+    >,
+    Details::ImplementsBase;
+
 template <
-   int flags,
-   typename I0,
-   typename I1,
-   typename I2,
-   typename I3,
-   typename I4,
-   typename I5,
-   typename I6,
-   typename I7,
-   typename I8
+    int flags,
+    typename I0,
+    typename I1,
+    typename I2,
+    typename I3,
+    typename I4,
+    typename I5,
+    typename I6,
+    typename I7,
+    typename I8
 >
-struct __declspec(novtable) Implements<RuntimeClassFlags<flags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : Details::ImplementsHelper<RuntimeClassFlags<flags>, typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT>, Details::ImplementsBase;
+struct __declspec(novtable) Implements<
+        RuntimeClassFlags<flags>,
+        I0, I1, I2, I3, I4, I5, I6, I7, I8> :
+    Details::ImplementsHelper<
+        RuntimeClassFlags<flags>,
+        typename Details::InterfaceListHelper<
+            I0, I1, I2, I3, I4, I5, I6, I7, I8
+        >::TypeT
+    >,
+    Details::ImplementsBase;
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*I0*  
+*I0*<br/>
 El identificador de interfaz de cero. (Obligatorio)
 
-*I1*  
+*I1*<br/>
 El primer identificador de interfaz. (Opcional)
 
-*I2*  
+*I2*<br/>
 El segundo identificador de interfaz. (Opcional)
 
-*I3*  
+*I3*<br/>
 El tercer identificador de interfaz. (Opcional)
 
-*I4*  
+*I4*<br/>
 El cuarto identificador de interfaz. (Opcional)
 
-*I5*  
+*I5*<br/>
 El quinto identificador de interfaz. (Opcional)
 
-*I6*  
+*I6*<br/>
 El sexto ID de interfaz. (Opcional)
 
-*I7*  
+*I7*<br/>
 El séptimo ID de interfaz. (Opcional)
 
-*I8*  
+*I8*<br/>
 El identificador de identificador de octava interfaz. (Opcional)
 
-*I9*  
+*I9*<br/>
 El noveno ID de interfaz. (Opcional)
 
-*flags*  
+*flags*<br/>
 Marcas de configuración para la clase. Uno o varios [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) enumeraciones que se especifican en un [RuntimeClassFlags](../windows/runtimeclassflags-structure.md) estructura.
 
 ## <a name="remarks"></a>Comentarios
@@ -163,10 +170,10 @@ __forceinline HRESULT CanCastTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*riid*  
+*riid*<br/>
 Una referencia a un identificador de interfaz.
 
-*PPV*  
+*PPV*<br/>
 Si es correcto, un puntero a la interfaz especificada por *riid*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -206,10 +213,10 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Parámetros
 
-*index*  
+*index*<br/>
 Índice de base cero que indica el elemento de matriz inicial para esta operación. Cuando se complete esta operación, *índice* se incrementa en 1.
 
-*IID*  
+*IID*<br/>
 Una matriz de tipo IID.
 
 ### <a name="remarks"></a>Comentarios

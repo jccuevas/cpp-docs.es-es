@@ -39,12 +39,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8732b7da770625377c556f26e98c0a5f2e5073b6
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 7f9937d9f93af6179d890f1e9160dd8900cd9f14
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895245"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375620"
 ---
 # <a name="regular-expressions-ccli"></a>Eexpresiones regulares (C++/CLI)
 
@@ -66,7 +66,7 @@ En el siguiente ejemplo de código se muestra el análisis de una cadena sencill
 using namespace System;
 using namespace System::Text::RegularExpressions;
 
-int main( )  
+int main( )
 {
    int words = 0;
    String^ pattern = "[a-zA-Z]*";
@@ -78,7 +78,7 @@ int main( )
    for( Match^ match = regex->Match( line );
         match->Success; match = match->NextMatch( ) )
    {
-      if( match->Value->Length > 0 )  
+      if( match->Value->Length > 0 )
       {
          words++;
          Console::WriteLine( "{0}", match->Value );
@@ -88,7 +88,7 @@ int main( )
 
    return 0;
 }
-```  
+```
 
 ## <a name="parse_split"></a> Analizar cadenas mediante el método Split
 
@@ -101,7 +101,7 @@ En el ejemplo de código siguiente se muestra cómo utilizar el método <xref:Sy
 // compile with: /clr
 using namespace System;
 
-int main()  
+int main()
 {
    String^ delimStr = " ,.:\t";
    Console::WriteLine( "delimiter : '{0}'", delimStr );
@@ -112,12 +112,12 @@ int main()
    Console::WriteLine( "text : '{0}'", line );
    words = line->Split( delimiter );
    Console::WriteLine( "Number of Words : {0}", words->Length );
-   for (int word=0; word<words->Length; word++)  
+   for (int word=0; word<words->Length; word++)
       Console::WriteLine( "{0}", words[word] );
 
    return 0;
 }
-```  
+```
 
 ## <a name="regex_simple"></a> Usar expresiones regulares para buscar coincidencias simples
 
@@ -133,7 +133,7 @@ El ejemplo de código siguiente usa expresiones regulares para buscar coincidenc
 using namespace System;
 using namespace System::Text::RegularExpressions;
 
-int main()  
+int main()
 {
    array<String^>^ sentence =
    {
@@ -144,18 +144,18 @@ int main()
    };
 
    String^ matchStr = "cow";
-   for (int i=0; i<sentence->Length; i++)  
+   for (int i=0; i<sentence->Length; i++)
    {
       Console::Write( "{0,24}", sentence[i] );
       if ( Regex::IsMatch( sentence[i], matchStr,
-                     RegexOptions::IgnoreCase ) )  
+                     RegexOptions::IgnoreCase ) )
          Console::WriteLine("  (match for '{0}' found)", matchStr);
       else
          Console::WriteLine("");
    }
    return 0;
 }
-```  
+```
 
 ## <a name="regex_extract"></a> Usar expresiones regulares para extraer campos de datos
 
@@ -171,7 +171,7 @@ En el ejemplo de código siguiente se muestra el uso de expresiones regulares pa
 using namespace System;
 using namespace System::Text::RegularExpressions;
 
-int main()  
+int main()
 {
     array<String^>^ address=
     {
@@ -183,12 +183,12 @@ int main()
 
     Regex^ emailregex = gcnew Regex("(?<user>[^@]+)@(?<host>.+)");
 
-    for (int i=0; i<address->Length; i++)  
+    for (int i=0; i<address->Length; i++)
     {
         Match^ m = emailregex->Match( address[i] );
         Console::Write("\n{0,25}", address[i]);
 
-        if ( m->Success )   
+        if ( m->Success )
         {
             Console::Write("   User='{0}'",
             m->Groups["user"]->Value);
@@ -202,7 +202,7 @@ int main()
     Console::WriteLine("");
     return 0;
 }
-```  
+```
 
 ## <a name="regex_rearrange"></a> Usar expresiones regulares para reorganizar los datos
 
@@ -219,7 +219,7 @@ La <xref:System.Text.RegularExpressions.Regex> clase se utiliza para construir u
 using namespace System;
 using namespace Text::RegularExpressions;
 
-int main()  
+int main()
 {
    array<String^>^ name =
    {
@@ -231,11 +231,11 @@ int main()
 
    Regex^ reg = gcnew Regex("(?<last>\\w*)\\s*,\\s*(?<first>\\w*)");
 
-   for ( int i=0; i < name->Length; i++ )  
+   for ( int i=0; i < name->Length; i++ )
    {
       Console::Write( "{0,-20}", name[i] );
       Match^ m = reg->Match( name[i] );
-      if ( m->Success )  
+      if ( m->Success )
       {
          String^ first = m->Groups["first"]->Value;
          String^ last = m->Groups["last"]->Value;
@@ -246,7 +246,7 @@ int main()
    }
    return 0;
 }
-```  
+```
 
 ## <a name="regex_search"></a> Usar expresiones regulares para buscar y reemplazar
 
@@ -263,7 +263,7 @@ Este código reemplaza todos los dígitos de una cadena con caracteres de subray
 using namespace System::Text::RegularExpressions;
 using namespace System;
 
-int main()  
+int main()
 {
    String^ before = "The q43uick bro254wn f0ox ju4mped";
    Console::WriteLine("original  : {0}", before);
@@ -278,7 +278,7 @@ int main()
 
    return 0;
 }
-```  
+```
 
 ## <a name="regex_validate"></a> Usar expresiones regulares para validar el formato de datos
 
@@ -294,7 +294,7 @@ En el ejemplo de código siguiente se muestra el uso de expresiones regulares pa
 using namespace System;
 using namespace Text::RegularExpressions;
 
-int main()  
+int main()
 {
    array<String^>^ number =
    {
@@ -310,22 +310,22 @@ int main()
 
    String^ regStr = "^\\d{3}-\\d{3}-\\d{4}$";
 
-   for ( int i = 0; i < number->Length; i++ )  
+   for ( int i = 0; i < number->Length; i++ )
    {
       Console::Write( "{0,14}", number[i] );
 
-      if ( Regex::IsMatch( number[i], regStr ) )  
+      if ( Regex::IsMatch( number[i], regStr ) )
          Console::WriteLine(" - valid");
       else
          Console::WriteLine(" - invalid");
    }
    return 0;
 }
-```  
+```
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Expresiones regulares de .NET Framework](/dotnet/standard/base-types/regular-expressions)  
+[Expresiones regulares de .NET Framework](/dotnet/standard/base-types/regular-expressions)
 
 ## <a name="see-also"></a>Vea también
 

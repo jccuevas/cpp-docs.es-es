@@ -1,27 +1,16 @@
 ---
-title: Buscar una entrada en una tabla de aceleradores (C++) | Microsoft Docs
-ms.custom: ''
+title: Buscar una entrada en una tabla de aceleradores (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - searching, in accelarator tables
 - accelerator tables [C++], finding entries
 ms.assetid: 98146b12-571e-48ea-a660-eb6b1834a79b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 01785329b23ced8dd9ea5b22387f418173815ac8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b4fa5f12bb5c966d68be631adf33b0e03b22afd0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642252"
 ---
 # <a name="finding-an-entry-in-an-accelerator-table"></a>Buscar una entrada en una tabla de aceleradores
 
@@ -44,5 +33,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)  
+[Edición de tablas de aceleradores](../windows/editing-accelerator-tables.md)<br/>
 [Editor de aceleradores](../windows/accelerator-editor.md)

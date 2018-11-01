@@ -1,29 +1,19 @@
 ---
-title: path (Clase) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
+title: path (Clase)
+ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
-dev_langs:
-- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618223"
 ---
 # <a name="path-class"></a>path (Clase)
 
-El **ruta** clase almacena un objeto de tipo `string_type`, llamado `myname` aquí a efectos de la exposición, que se puede usar como una ruta de acceso. `string_type` es un sinónimo de `basic_string<value_type>`, donde `value_type` es un sinónimo de **char** en Windows o **wchar_t** en Posix.
+El **ruta** clase almacena un objeto de tipo `string_type`, llamado `myname` aquí a efectos de la exposición, que se puede usar como una ruta de acceso. `string_type` es un sinónimo de `basic_string<value_type>`, donde `value_type` es un sinónimo de **wchar_t** en Windows o **char** en POSIX.
 
 Para obtener más información y ejemplos de código, vea [Exploración del sistema de archivos (C++)](../standard-library/file-system-navigation.md).
 

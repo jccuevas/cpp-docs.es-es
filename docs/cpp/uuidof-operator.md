@@ -1,29 +1,21 @@
 ---
-title: operador __uuidof | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
+title: __uuidof (Operador)
+ms.date: 10/10/2018
 f1_keywords:
 - __LIBID_cpp
 - __uuidof_cpp
-dev_langs:
-- C++
+- __uuidof
+- _uuidof
 helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 84fd779d50fb481cffc97b61a65f255c6c8f52a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e593d023c486aa504f0b5eee8578fa8c307bcc8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432713"
 ---
 # <a name="uuidof-operator"></a>__uuidof (Operador)
 
@@ -50,7 +42,9 @@ Utilice esta palabra clave para extraer el GUID asociado a lo siguiente:
 - Un bloque de biblioteca creado con el [módulo](../windows/module-cpp.md) atributo.
 
 > [!NOTE]
->  En una compilación de depuración, **__uuidof** siempre Inicializa un objeto dinámicamente (en tiempo de ejecución). En una versión de lanzamiento, **__uuidof** puede inicializar estáticamente (en tiempo de compilación) un objeto.
+> En una compilación de depuración, **__uuidof** siempre Inicializa un objeto dinámicamente (en tiempo de ejecución). En una versión de lanzamiento, **__uuidof** puede inicializar estáticamente (en tiempo de compilación) un objeto.
+
+Para ofrecer compatibilidad con versiones anteriores, **_uuidof** es un sinónimo de **__uuidof** a menos que la opción de compilador [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) es especificado.
 
 ## <a name="example"></a>Ejemplo
 

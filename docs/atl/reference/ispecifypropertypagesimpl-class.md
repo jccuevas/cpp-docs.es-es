@@ -1,31 +1,21 @@
 ---
-title: ISpecifyPropertyPagesImpl (clase) | Microsoft Docs
-ms.custom: ''
+title: ISpecifyPropertyPagesImpl (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ISpecifyPropertyPagesImpl
 - ATLCOM/ATL::ISpecifyPropertyPagesImpl
 - ATLCOM/ATL::ISpecifyPropertyPagesImpl::GetPages
-dev_langs:
-- C++
 helpviewer_keywords:
 - property pages, CLSIDs associated with
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb4611c52f65595eb84248507dfb3a85d1ab26fa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fcabbcd2d5977a28f46b3d8ebfc47e8fd978f3cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035973"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470793"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl (clase)
 
@@ -38,7 +28,7 @@ Esta clase implementa `IUnknown` y proporciona una implementación predeterminad
 
 ```
 template<class T>
-class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
+class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
    : public ISpecifyPropertyPages
 ```
 

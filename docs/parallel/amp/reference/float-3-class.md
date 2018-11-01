@@ -84,211 +84,208 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fdc665fea4aefe744850a5b2ca2565cb32fae3c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9b1f57232848f21c2e65496dfb227674c8a57cdb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047569"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437396"
 ---
 # <a name="float3-class"></a>float_3 (Clase)
-Representa un vector corto de tres valores de coma flotante.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-class float_3;  
-```  
-  
-## <a name="members"></a>Miembros  
-  
-### <a name="public-typedefs"></a>Definiciones de tipos públicas  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|`value_type`||  
-  
-### <a name="public-constructors"></a>Constructores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|[Constructor float_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|  
-  
-### <a name="public-methods"></a>Métodos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|float_3:: get_X||  
-|float_3:: get_xy||  
-|float_3::get_xyz||  
-|float_3::get_xz||  
-|float_3:: get_xzy||  
-|float_3:: get_Y||  
-|float_3::get_yx||  
-|float_3::get_yxz||  
-|float_3::get_yz||  
-|float_3::get_yzx||  
-|float_3::get_z||  
-|float_3::get_zx||  
-|float_3::get_zxy||  
-|float_3::get_zy||  
-|float_3::get_zyx||  
-|float_3::ref_b||  
-|float_3::ref_g||  
-|float_3::ref_r||  
-|float_3:: ref_x||  
-|float_3:: ref_y||  
-|float_3::ref_z||  
-|float_3:: set_X||  
-|float_3:: set_xy||  
-|float_3:: set_xyz||  
-|float_3::set_xz||  
-|float_3:: set_xzy||  
-|float_3:: set_y||  
-|float_3:: set_yx||  
-|float_3::set_yxz||  
-|float_3:: set_yz||  
-|float_3:: set_yzx||  
-|float_3::set_z||  
-|float_3::set_zx||  
-|float_3::set_zxy||  
-|float_3:: set_zy||  
-|float_3::set_zyx||  
-  
-### <a name="public-operators"></a>Operadores públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|float_3::operator-||  
-|float_3::operator--||  
-|float_3::operator*=||  
-|float_3::operator/=||  
-|float_3::operator++||  
-|float_3::operator+=||  
-|float_3::operator=||  
-|float_3::operator-=||  
-  
-### <a name="public-constants"></a>Constantes públicas  
-  
-|nombre|Descripción|  
-|----------|-----------------|  
-|[cambio de tamaño constante](#float_3__size)||  
-  
-### <a name="public-data-members"></a>Miembros de datos públicos  
-  
-|Name|Descripción|  
-|----------|-----------------|  
-|float_3:: b||  
-|float_3:: BG||  
-|float_3:: BGR||  
-|float_3:: br||  
-|float_3:: brg||  
-|float_3:: g||  
-|float_3:: GB||  
-|float_3::gbr||  
-|float_3:: GR||  
-|float_3:: GRB||  
-|float_3:: r||  
-|float_3:: RB||  
-|float_3::rbg||  
-|float_3:: RG||  
-|float_3:: RGB||  
-|float_3:: x||  
-|float_3:: XY||  
-|float_3:: XYZ||  
-|float_3:: XZ||  
-|float_3:: xzy||  
-|float_3:: y||  
-|float_3:: YX||  
-|float_3:: YXZ||  
-|float_3:: YZ||  
-|float_3:: yzx||  
-|float_3:: z||  
-|float_3:: ZX||  
-|float_3:: zxy||  
-|float_3:: ZY||  
-|float_3:: ZYX||  
-  
-## <a name="inheritance-hierarchy"></a>Jerarquía de herencia  
- `float_3`  
-  
-## <a name="requirements"></a>Requisitos  
- **Encabezado:** amp_short_vectors.h  
-  
- **Namespace:** Concurrency:: Graphics  
-  
-##  <a name="ctor"></a> float_3 
 
- El constructor predeterminado, inicializa todos los elementos con 0.  
-  
-```  
+Representa un vector corto de tres valores de coma flotante.
+
+## <a name="syntax"></a>Sintaxis
+
+```
+class float_3;
+```
+
+## <a name="members"></a>Miembros
+
+### <a name="public-typedefs"></a>Definiciones de tipos públicas
+
+|Name|Descripción|
+|----------|-----------------|
+|`value_type`||
+
+### <a name="public-constructors"></a>Constructores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|[Constructor float_3](#ctor)|Sobrecargado. El constructor predeterminado, inicializa todos los elementos con 0.|
+
+### <a name="public-methods"></a>Métodos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|float_3:: get_X||
+|float_3:: get_xy||
+|float_3::get_xyz||
+|float_3::get_xz||
+|float_3:: get_xzy||
+|float_3:: get_Y||
+|float_3::get_yx||
+|float_3::get_yxz||
+|float_3::get_yz||
+|float_3::get_yzx||
+|float_3::get_z||
+|float_3::get_zx||
+|float_3::get_zxy||
+|float_3::get_zy||
+|float_3::get_zyx||
+|float_3::ref_b||
+|float_3::ref_g||
+|float_3::ref_r||
+|float_3:: ref_x||
+|float_3:: ref_y||
+|float_3::ref_z||
+|float_3:: set_X||
+|float_3:: set_xy||
+|float_3:: set_xyz||
+|float_3::set_xz||
+|float_3:: set_xzy||
+|float_3:: set_y||
+|float_3:: set_yx||
+|float_3::set_yxz||
+|float_3:: set_yz||
+|float_3:: set_yzx||
+|float_3::set_z||
+|float_3::set_zx||
+|float_3::set_zxy||
+|float_3:: set_zy||
+|float_3::set_zyx||
+
+### <a name="public-operators"></a>Operadores públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|float_3::operator-||
+|float_3::operator--||
+|float_3::operator*=||
+|float_3::operator/=||
+|float_3::operator++||
+|float_3::operator+=||
+|float_3::operator=||
+|float_3::operator-=||
+
+### <a name="public-constants"></a>Constantes públicas
+
+|nombre|Descripción|
+|----------|-----------------|
+|[cambio de tamaño constante](#float_3__size)||
+
+### <a name="public-data-members"></a>Miembros de datos públicos
+
+|Name|Descripción|
+|----------|-----------------|
+|float_3:: b||
+|float_3:: BG||
+|float_3:: BGR||
+|float_3:: br||
+|float_3:: brg||
+|float_3:: g||
+|float_3:: GB||
+|float_3::gbr||
+|float_3:: GR||
+|float_3:: GRB||
+|float_3:: r||
+|float_3:: RB||
+|float_3::rbg||
+|float_3:: RG||
+|float_3:: RGB||
+|float_3:: x||
+|float_3:: XY||
+|float_3:: XYZ||
+|float_3:: XZ||
+|float_3:: xzy||
+|float_3:: y||
+|float_3:: YX||
+|float_3:: YXZ||
+|float_3:: YZ||
+|float_3:: yzx||
+|float_3:: z||
+|float_3:: ZX||
+|float_3:: zxy||
+|float_3:: ZY||
+|float_3:: ZYX||
+
+## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
+
+`float_3`
+
+## <a name="requirements"></a>Requisitos
+
+**Encabezado:** amp_short_vectors.h
+
+**Namespace:** Concurrency:: Graphics
+
+##  <a name="ctor"></a> float_3
+
+El constructor predeterminado, inicializa todos los elementos con 0.
+
+```
 float_3() restrict(amp,
     cpu);
 
- 
 float_3(
-    float _V0,  
-    float _V1,  
+    float _V0,
+    float _V1,
     float _V2) restrict(amp,
     cpu);
 
- 
 float_3(
     float _V) restrict(amp,
     cpu);
 
- 
 float_3(
     const float_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_3(
     const uint_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_3(
     const int_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_3(
     const unorm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_3(
     const norm_3& _Other) restrict(amp,
     cpu);
 
- 
 explicit inline float_3(
     const double_3& _Other) restrict(amp,
     cpu);
-```  
-  
-### <a name="parameters"></a>Parámetros  
-*_V0*<br/>
-El valor para inicializar el elemento 0.  
-  
-*_V1*<br/>
-El valor para inicializar el elemento 1.  
-  
-*_V2*<br/>
-El valor para inicializar el elemento 2.  
-  
-*_V*<br/>
-El valor de inicialización.  
-  
-*_Otro*<br/>
-El objeto usado para inicializar.  
-  
-##  <a name="float_3__size"></a> Tamaño 
+```
 
-```  
-static const int size = 3;  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)
+### <a name="parameters"></a>Parámetros
+
+*_V0*<br/>
+El valor para inicializar el elemento 0.
+
+*_V1*<br/>
+El valor para inicializar el elemento 1.
+
+*_V2*<br/>
+El valor para inicializar el elemento 2.
+
+*_V*<br/>
+El valor de inicialización.
+
+*_Otro*<br/>
+El objeto usado para inicializar.
+
+##  <a name="float_3__size"></a> Tamaño
+
+```
+static const int size = 3;
+```
+
+## <a name="see-also"></a>Vea también
+
+[Concurrency::graphics (espacio de nombres)](concurrency-graphics-namespace.md)

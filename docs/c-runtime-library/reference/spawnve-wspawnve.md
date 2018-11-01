@@ -1,10 +1,6 @@
 ---
-title: _spawnve, _wspawnve | Microsoft Docs
-ms.custom: ''
+title: _spawnve, _wspawnve
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _spawnve
 - _wspawnve
@@ -26,8 +22,6 @@ f1_keywords:
 - _spawnve
 - _wspawnve
 - spawnve
-dev_langs:
-- C++
 helpviewer_keywords:
 - _spawnve function
 - spawnve function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39d048d1d79135cd40e7821a71e57aa83b286d28
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03fa25f5800928aad7185c98a331d06b1c39779b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562024"
 ---
 # <a name="spawnve-wspawnve"></a>_spawnve, _wspawnve
 
@@ -88,7 +78,7 @@ Matriz de punteros a la configuración del entorno.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de un sincrónico **_spawnve** o **_wspawnve** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso . El valor devuelto de una asincrónica **_spawnve** o **_wspawnve** (**_P_NOWAIT** o **_P_NOWAITO** especificado para  *modo*) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la **salir** rutina con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los siguientes valores.
+El valor devuelto de un valor sincrónico **_spawnve** o **_wspawnve** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso . El valor devuelto de asincrónico **_spawnve** o **_wspawnve** (**_P_NOWAIT** o **_P_NOWAITO** especificado para  *modo*) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente el **salir** rutinarias con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (no se inicia el proceso de nuevo). En este caso, **errno** se establece en uno de los siguientes valores.
 
 |||
 |-|-|
@@ -104,7 +94,7 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 Cada una de estas funciones crea y ejecuta un proceso nuevo, pasando una matriz de punteros a los argumentos de la línea de comandos y una matriz de punteros a la configuración del entorno.
 
-Estas funciones validan sus parámetros. Si el valor *cmdname* o *argv* es un puntero nulo, o si *argv* señala a un puntero nulo, o *argv*[0] es una cadena vacía, no válido se invoca el controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
+Estas funciones validan sus parámetros. Si bien *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a un puntero nulo o *argv*[0] es una cadena vacía, el no válido se invoca el controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
 
 ## <a name="requirements"></a>Requisitos
 

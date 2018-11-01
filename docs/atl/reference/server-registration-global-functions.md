@@ -1,29 +1,19 @@
 ---
-title: Funciones globales de registro de servidor | Microsoft Docs
-ms.custom: ''
+title: Funciones globales de registro de servidor
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
 - atlbase/ATL::AtlComModuleUnregisterServer
 - atlbase/ATL::AtlComModuleRegisterClassObjects
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
-dev_langs:
-- C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50441800"
 ---
 # <a name="server-registration-global-functions"></a>Funciones globales de registro de servidor
 
@@ -38,7 +28,7 @@ Estas funciones proporcionan compatibilidad para registrar y anular el registro 
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Esta función se invoca para anular el registro de todos los objetos del mapa de objetos.|
 |[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Esta función se invoca para registrar los objetos de clase.|
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Esta función se invoca para revocar los objetos de clase desde un módulo COM.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Esta función se llama para obtener el objeto de clase.|  
+|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Esta función se llama para obtener el objeto de clase.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -125,7 +115,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 Puntero al módulo COM.
 
 *dwClsContext*<br/>
-Especifica el contexto en el que se ejecutará el objeto de clase. Los valores posibles son CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Consulte [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) para obtener más detalles.
+Especifica el contexto en el que se ejecutará el objeto de clase. Los valores posibles son CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER o CLSCTX_LOCAL_SERVER. Consulte [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) para obtener más detalles.
 
 *dwFlags*<br/>
 Determina los tipos de conexión para el objeto de clase. Los valores posibles son REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE o REGCLS_MULTI_SEPARATE. Consulte [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) para obtener más detalles.

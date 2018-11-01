@@ -1,10 +1,6 @@
 ---
-title: _CrtMemCheckpoint | Microsoft Docs
-ms.custom: ''
+title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589522"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -59,7 +49,7 @@ Puntero a **_CrtMemState** estructura que se rellena con el punto de comprobaci�
 
 ## <a name="remarks"></a>Comentarios
 
-El **_CrtMemCheckpoint** función crea una instantánea del estado actual del montón de depuración en un momento dado. Esta instantánea la pueden usar otras funciones de estado del montón, como [_CrtMemDifference](crtmemdifference.md), para ayudar a detectar pérdidas de memoria y otros problemas. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtMemState** se quitan durante el preprocesamiento.
+El **_CrtMemCheckpoint** función crea una instantánea del estado actual del montón de depuración en un momento dado. Esta instantánea la pueden usar otras funciones de estado del montón, como [_CrtMemDifference](crtmemdifference.md) , para ayudar a detectar pérdidas de memoria y otros problemas. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtMemState** se quitan durante el preprocesamiento.
 
 La aplicación debe pasar un puntero a una instancia asignada previamente de la **_CrtMemState** estructura, definida en Crtdbg.h, en el *estado* parámetro. Si **_CrtMemCheckpoint** encuentra un error durante la creación del punto de comprobación, la función genera una **_CRT_WARN** depurar informes que describe el problema.
 

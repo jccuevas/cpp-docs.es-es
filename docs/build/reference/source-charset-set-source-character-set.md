@@ -1,29 +1,18 @@
 ---
-title: -origen-charset (establecer el juego de caracteres origen) | Microsoft Docs
-ms.custom: ''
+title: / Source-CharSet (establecer juego de caracteres de origen)
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - source-charset
 - /source-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c36f898c005a989a7be78e436b560fe9a0536b57
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663832"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-CharSet (establecer juego de caracteres de origen)
 
@@ -67,6 +56,6 @@ Si desea establecer el juego de caracteres de origen y el juego de caracteres de
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (establecer juego de caracteres de ejecución)](../../build/reference/execution-charset-set-execution-character-set.md)
-[/UTF-8 (establecer origen y ejecutable juegos a UTF-8 de caracteres)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
- [ /Validate/CharSet (validar compatible caracteres)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[/ Execution-CharSet (establecer juego de caracteres de ejecución)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
+[/validate/charset (Validar los caracteres compatibles)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

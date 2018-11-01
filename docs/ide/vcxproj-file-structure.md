@@ -1,7 +1,7 @@
 ---
 title: Estructura de los archivos .vcxproj y .props | Microsoft Docs
 ms.custom: ''
-ms.date: 04/27/2017
+ms.date: 09/18/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 957d9e1063c71e342339eb4e6a6c913eeb5a8f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337355"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374093"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Estructura de los archivos .vcxproj y .props
 
-MSBuild es el sistema de proyectos predeterminado en Visual Studio; cuando se selecciona **Archivo | Nuevo proyecto** en Visual C++ se crea un proyecto de MSBuild cuya configuración se almacena en un archivo de proyecto XML con la extensión `.vcxproj`. El archivo de proyecto también puede importar archivos .props y .targets en los que se puede almacenar la configuración. En la mayoría de los casos, nunca tendrá que editar manualmente el archivo de proyecto y, en realidad, no debería modificarlo de forma manual a menos que tenga un buen conocimiento de MSBuild. Siempre que sea posible, debe usar las páginas de propiedades de Visual Studio para modificar la configuración del proyecto (vea [Trabajar con propiedades de proyecto](working-with-project-properties.md). Pero en algunos casos es posible que tenga que modificar manualmente un archivo de proyecto o una hoja de propiedades. Para esos escenarios, este artículo contiene información básica sobre la estructura del archivo.
+[MSBuild](../build/msbuild-visual-cpp.md) es el sistema de proyectos predeterminado en Visual Studio; cuando se selecciona **Archivo** > **Nuevo proyecto** en Visual C++ se crea un proyecto de MSBuild cuya configuración se almacena en un archivo de proyecto XML con la extensión `.vcxproj`. El archivo de proyecto también puede importar archivos .props y .targets en los que se puede almacenar la configuración. En la mayoría de los casos, nunca tendrá que editar manualmente el archivo de proyecto y, en realidad, no debería modificarlo de forma manual a menos que tenga un buen conocimiento de MSBuild. Siempre que sea posible, debe usar las páginas de propiedades de Visual Studio para modificar la configuración del proyecto (vea [Trabajar con propiedades de proyecto](working-with-project-properties.md). Pero en algunos casos es posible que tenga que modificar manualmente un archivo de proyecto o una hoja de propiedades. Para esos escenarios, este artículo contiene información básica sobre la estructura del archivo.
 
 **Importante:**
 
@@ -43,6 +43,8 @@ Si decide editar manualmente un archivo .vcxproj, tenga en cuenta estos hechos:
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
+   "Incompatible" significa que no se garantiza que las macros funcionen para todas las operaciones del IDE. Las macros que no cambian su valor en distintas configuraciones deberían funcionar, pero podrían no conservarse si un elemento se mueve a un proyecto o filtro diferente. Las macros que cambian su valor para las distintas configuraciones causarán problemas porque el IDE no espera que las rutas de acceso a elementos de proyecto sean diferentes para configuraciones de proyecto distintas.
+
 1. Para que las propiedades del proyecto se agreguen, eliminen o modifiquen de manera correcta cuando se edita en el cuadro de diálogo **Propiedades del proyecto**, el archivo debe contener grupos independientes para cada configuración de proyecto y las condiciones deben tener este formato:
 
    ```xml
@@ -58,7 +60,9 @@ Puede inspeccionar el contenido de un archivo .vcxproj mediante cualquier editor
 Lo primero que debe tener en cuenta es que los elementos de nivel superior aparecen en un orden concreto. Por ejemplo:
 
 - La mayoría de los grupos de propiedades y grupos de definición de elemento aparecen después de la importación de Microsoft.Cpp.Default.props.
+
 - Todos los destinos se importan al final del archivo.
+
 - Hay varios grupos de propiedad, cada uno con una etiqueta única, y aparecen en un orden concreto.
 
 El orden de los elementos en el archivo de proyecto es muy importante, porque MSBuild se basa en un modelo de evaluación secuencial.  Si el archivo de proyecto, incluidos todos los archivos .props y .targets importados, consta de varias definiciones de una propiedad, la última definición invalida las anteriores. En el ejemplo siguiente, se establecerá el valor "xyz" durante la compilación porque el motor de MSBUild lo encuentra en último lugar durante su evaluación.
@@ -72,20 +76,20 @@ En el fragmento de código siguiente se muestra un archivo .vcxproj mínimo. Cua
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
-   <ItemGroup Label="ProjectConfigurations" />
-   <PropertyGroup Label="Globals" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
-   <PropertyGroup Label="Configuration" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-   <ImportGroup Label="ExtensionSettings" />
-   <ImportGroup Label="PropertySheets" />
-   <PropertyGroup Label="UserMacros" />
-   <PropertyGroup />
-   <ItemDefinitionGroup />
-   <ItemGroup />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-   <ImportGroup Label="ExtensionTargets" />
- </Project>
+  <ItemGroup Label="ProjectConfigurations" />
+  <PropertyGroup Label="Globals" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
+  <PropertyGroup Label="Configuration" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
 ```
 
 En las secciones siguientes se describe el propósito de cada uno de estos elementos y por qué se ordenan de esta forma:
@@ -112,23 +116,27 @@ El grupo de elementos `ProjectConfigurations` no se usa en tiempo de compilació
 
 En el fragmento de código siguiente se muestra una configuración de proyecto. En este ejemplo, "Debug|x64" es el nombre de la configuración. El nombre de la configuración de proyecto debe estar en el formato $(Configuración)|$(Plataforma). Un nodo de configuración del proyecto puede tener dos propiedades: Configuration y Platform. Estas propiedades se establecerán de manera automática con los valores especificados aquí cuando la configuración está activa.
 
-   ```xml
-   <ProjectConfiguration Include="Debug|x64">
-     <Configuration>Debug</Configuration>
-     <Platform>x64</Platform>
-   </ProjectConfiguration>
-   ```
+```xml
+<ProjectConfiguration Include="Debug|x64">
+  <Configuration>Debug</Configuration>
+  <Platform>x64</Platform>
+</ProjectConfiguration>
+```
 
 El IDE espera encontrar una configuración de proyecto para cualquier combinación de valores Configuration y Configuration que se usen en todos los elementos ProjectConfiguration. A menudo, esto significa que es posible que un proyecto tenga configuraciones de proyecto sin sentido para satisfacer este requisito. Por ejemplo, si un proyecto tiene estas configuraciones:
 
 - Debug|Win32
+
 - Retail|Win32
+
 - Optimización de 32 bits especial|Win32
 
 también debe tener estas configuraciones, aunque "Optimización de 32 bits especial" no tenga sentido para x64:
 
 - Depuración|x64
+
 - Retail|x64
+
 - Optimización de 32 bits especial|x64
 
 Puede deshabilitar los comandos de compilación e implementación para cualquier configuración en el **Administrador de configuración de soluciones**.
@@ -136,7 +144,7 @@ Puede deshabilitar los comandos de compilación e implementación para cualquier
 ### <a name="globals-propertygroup-element"></a>Elemento PropertyGroup Globals
 
 ```xml
- <PropertyGroup Label="Globals" />
+<PropertyGroup Label="Globals" />
 ```
 
 `Globals` contiene la configuración de nivel de proyecto, como ProjectGuid, RootNamespace y ApplicationType/ ApplicationTypeRevision. Las dos últimas suelen definir el sistema operativo de destino. Un proyecto solo puede tener como destino un único sistema operativo porque las referencias y los elementos de proyecto no pueden tener condiciones en la actualidad. Normalmente estas propiedades no se reemplazan en otros lugares del archivo de proyecto. Este grupo no depende de la configuración y, por tanto, normalmente solo hay un grupo Globals en el archivo de proyecto.
@@ -202,7 +210,7 @@ Este grupo de propiedades debe aparecer después `<Import Project="$(VCTargetsPa
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>Elementos ItemDefinitionGroup por cada configuración
 
 ```xml
- <ItemDefinitionGroup />
+<ItemDefinitionGroup />
 ```
 
 Contiene definiciones de elementos. Estas deben seguir las mismas reglas de condiciones que los elementos PropertyGroup sin etiqueta para cada configuración.
@@ -217,34 +225,35 @@ Contiene los elementos (archivos de código fuente, etc.) del proyecto. No se ad
 
 Los metadatos deben tener condiciones de configuración para cada configuración, incluso si son las mismas. Por ejemplo:
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="stdafx.cpp">
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
-     </ClCompile>
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="stdafx.cpp">
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+  </ClCompile>
+</ItemGroup>
+```
 
 En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres comodín en los elementos de proyecto.
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="*.cpp"> <!--Error-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="*.cpp"> <!--Error-->
+</ItemGroup>
+```
 
 En la actualidad, el sistema de proyectos de Visual C++ no admite las macros en los elementos de proyecto.
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
+</ItemGroup>
+```
 
 Las referencias se especifican en un ItemGroup y tienen estas limitaciones:
 
 - Las referencias no son compatibles con las condiciones.
+
 - Las metadatos de referencias no son compatibles con las condiciones.
 
 ### <a name="microsoftcpptargets-import-element"></a>Elemento de importación Microsoft.Cpp.targets
@@ -293,5 +302,5 @@ Para crear una hoja de propiedades propia, copie uno de los archivos .props de l
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajar con configuraciones de proyecto](working-with-project-properties.md)  
-[Archivos XML de página de propiedades](property-page-xml-files.md)  
+[Trabajar con configuraciones de proyecto](working-with-project-properties.md)<br/>
+[Archivos XML de página de propiedades](property-page-xml-files.md)

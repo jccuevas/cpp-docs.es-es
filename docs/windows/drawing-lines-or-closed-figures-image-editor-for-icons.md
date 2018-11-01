@@ -1,27 +1,16 @@
 ---
-title: Dibujar líneas o figuras cerradas (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Dibujar líneas o figuras cerradas (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], drawing lines
 - shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c6c5652f61211ebd4d33de6f2dce07bd49b4f0a0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a33376529faadd2433f704505aa0be8d4cc03033
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449080"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>Dibujar líneas o figuras cerradas (Editor de imágenes para iconos)
 
@@ -63,7 +52,7 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)  
-[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)  
-[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)  
+[Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
+[Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
+[Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
 [Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)

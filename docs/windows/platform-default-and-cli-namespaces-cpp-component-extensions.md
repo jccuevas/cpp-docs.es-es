@@ -1,7 +1,7 @@
 ---
-title: Plataforma, predeterminado y cli (extensiones de componentes de C++) de espacios de nombres | Microsoft Docs
+title: Plataforma, predeterminado y cli de espacios de nombres (C++ / c++ / CLI y c++ / CX) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194654"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328030"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Espacios de nombres de plataforma, predeterminado y CLI (Extensiones de componentes de C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Plataforma, predeterminado y cli de espacios de nombres (C++ / c++ / CLI y c++ / CX)
 
 Un espacio de nombres califica los nombres de los elementos de lenguaje de modo que no entren en conflicto con nombres que por lo demás son idénticos en otra parte del código fuente. Por ejemplo, un conflicto de nombres podría evitar que el compilador reconociera [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md). El compilador utiliza los espacios de nombres, pero no se conservan en el ensamblado compilado.
 
 ## <a name="all-runtimes"></a>Todos los runtimes
 
-Visual C++ proporciona un espacio de nombres predeterminado para el proyecto cuando se crea. Puede cambiar manualmente el espacio de nombres, aunque en tiempo de ejecución de Windows el nombre del archivo .winmd debe coincidir con el nombre del espacio de nombres raíz.
+Visual Studio proporciona un espacio de nombres predeterminado para el proyecto cuando se crea el proyecto. Puede cambiar manualmente el espacio de nombres, aunque en C++ / c++ / CX, el nombre del archivo .winmd debe coincidir con el nombre del espacio de nombres raíz.
 
 ## <a name="windows-runtime"></a>Windows en tiempo de ejecución
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+[Extensiones de componentes de .NET y UWP](../windows/component-extensions-for-runtime-platforms.md)

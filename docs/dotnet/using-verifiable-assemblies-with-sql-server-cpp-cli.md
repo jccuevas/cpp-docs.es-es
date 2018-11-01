@@ -1,26 +1,15 @@
 ---
-title: Usar ensamblados comprobables con SQL Server (C++ / c++ / CLI) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
+title: Utilizar ensamblados comprobables con SQL Server (C++/CLI)
+ms.date: 10/17/2019
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: bbd42d3d51921ccab01dfdcaed9ad988e22ae9a8
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 419b3de739de22597fffc7a607e2bf73561e3000
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50472667"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizar ensamblados comprobables con SQL Server (C++/CLI)
 
@@ -34,7 +23,8 @@ SQL Server proporciona extensiones a Transact-SQL (T-SQL) para que pueda instala
 
 - Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.
 
-Modo seguro requiere que los ensamblados ejecutados tengan seguridad de tipos comprobable.
+> [!IMPORTANT]
+> En desuso de Visual Studio 2015 y Visual Studio 2017 no admite la **/CLR: pure** y **/CLR: safe** creación de proyectos que se pueda comprobar. Si necesita código comprobable, se recomienda que trasladar el código en C#.
 
 Para crear y cargar un ensamblado comprobable en SQL Server, use los comandos CREATE ASSEMBLY y DROP ASSEMBLY de Transact-SQL como sigue:
 
@@ -42,19 +32,20 @@ Para crear y cargar un ensamblado comprobable en SQL Server, use los comandos CR
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
   PERMISSION_SET <permissions>
 DROP ASSEMBLY <assemblyName>
-```  
+```
 
 El comando PERMISSION_SET especifica el contexto de seguridad y puede tener los valores UNRESTRICTED, SAFE o EXTENDED.
 
 Además, puede usar el comando CREATE FUNCTION para enlazar a los nombres de método en una clase:
 
 ```sql
-CREATE FUNCTION <FunctionName>(<FunctionParams>)  
+CREATE FUNCTION <FunctionName>(<FunctionParams>)
 RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]
-```  
+```
 
 ## <a name="example"></a>Ejemplo
+
 El siguiente script SQL (por ejemplo, "MyScript.sql" con nombre) carga un ensamblado en SQL Server y pone a disposición un método de una clase:
 
 ```sql
@@ -69,23 +60,22 @@ with permission_set safe
 -- Create function on assembly with no external access
 drop function GetQuoteNoEA
 go
-create function GetQuoteNoEA(@sym nvarchar(10))  
+create function GetQuoteNoEA(@sym nvarchar(10))
 returns real
 external name stockNoEA:StockQuotes::GetQuote
 go
 
 -- To call the function
-select dbo.GetQuoteNoEA('MSFT')  
+select dbo.GetQuoteNoEA('MSFT')
 go
-```  
+```
 
 Secuencias de comandos SQL se pueden ejecutar interactivamente en el analizador de consultas SQL o en la línea de comandos con la utilidad sqlcmd.exe. La siguiente línea de comandos se conecta a MyServer, utiliza la base de datos de forma predeterminada, usa una conexión de confianza, introduce MyScript.sql y genera MyResult.txt.
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
-```  
+```
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: migrar a/CLR: safe (C++ / c++ / CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
 [Clases y structs](../cpp/classes-and-structs-cpp.md)

@@ -1,10 +1,6 @@
 ---
-title: exit, _Exit, _exit | Microsoft Docs
-ms.custom: ''
+title: exit, _Exit, _exit
 ms.date: 1/02/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _exit
 - exit
@@ -28,31 +24,25 @@ f1_keywords:
 - process/_Exit
 - stdlib/exit
 - stdlib/_Exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit function
 - _exit function
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d26cc39039b95b8c12e429d333918e83628b2619
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451758"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
 Finaliza el proceso de llamada. El **salir** función lo finaliza después de la limpieza; **_exit** y **_Exit** lo finalizan inmediatamente.
 
 > [!NOTE]
-> No utilice este método para cerrar una aplicación plataforma Universal de Windows (UWP), excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación para UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](https://developer.microsoft.com/en-us/windows/apps).
+> No utilice este método para cerrar una aplicación plataforma Universal de Windows (UWP), excepto en las pruebas o escenarios de depuración. No se permiten formas mediante programación o con la interfaz de usuario para cerrar una aplicación de Store según la [las directivas de Microsoft Store](/legal/windows/agreements/store-policies). Para obtener más información, consulte [ciclo de vida de aplicación para UWP](/windows/uwp/launch-resume/app-lifecycle). Para más información sobre las aplicaciones de Windows 10, consulte [Guías de procedimientos para aplicaciones de Windows 10](https://developer.microsoft.com/windows/apps).
 
 ## <a name="syntax"></a>Sintaxis
 

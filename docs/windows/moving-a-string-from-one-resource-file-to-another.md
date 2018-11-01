@@ -1,29 +1,18 @@
 ---
-title: Mover una cadena de un archivo de recursos a otro (C++) | Microsoft Docs
-ms.custom: ''
+title: Mover una cadena de un archivo de recursos a otro (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], moving between files
 - resource script files [C++], moving strings
 - string editing, moving strings between resources
 - String editor [C++], moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c99b5640d2ea855ade7f3f39ba233b3e5ff2ef04
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e89a0d44dc824c72710f8a047a18771ba8da492b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649819"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Mover una cadena de un archivo de recursos a otro (C++)
 
@@ -43,7 +32,7 @@ ms.locfileid: "44318868"
    > [!NOTE]
    > Si el **ID** o **valor** de conflictos con una cadena desplazada **ID** o **valor** en el archivo de destino, ya sea el **ID** o **valor** de los cambios de la cadena desplazada. Si existe una cadena con el mismo **ID**, el **ID** de los cambios de la cadena desplazada. Si existe una cadena con el mismo **valor**, **valor** de los cambios de la cadena desplazada.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Para obtener información sobre cómo agregar recursos a proyectos administrados (aquellos que tienen como destino common language runtime), consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [Tutorial: adaptar Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -51,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editor de cadenas](../windows/string-editor.md)  
-[Archivos de recursos](../windows/resource-files-visual-studio.md)  
-[Personalizar los diseños de ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[Editor de cadenas](../windows/string-editor.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
+[Personalizar los diseños de ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

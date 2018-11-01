@@ -1,16 +1,10 @@
 ---
-title: -Os, -Ot (favorecer código pequeño, favorecer código rápido) | Microsoft Docs
-ms.custom: ''
+title: /Os, /Ot (Favorecer código pequeño, favorecer código rápido)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.FavorSizeOrSpeed
 - /os
 - VC.Project.VCCLCompilerTool.FavorSizeOrSpeed
-dev_langs:
-- C++
 helpviewer_keywords:
 - favor fast code compiler option [C++]
 - /Os compiler option [C++]
@@ -23,16 +17,12 @@ helpviewer_keywords:
 - Os compiler option [C++]
 - -Os compiler option [C++]
 ms.assetid: 9a340806-fa15-4308-892c-355d83cac0f2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a6e2f6c8b18f2af6a78857225e153cf57365fa9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa404641a42b0209e8436ca206e59a3b5f425133
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565963"
 ---
 # <a name="os-ot-favor-small-code-favor-fast-code"></a>/Os, /Ot (Favorecer código pequeño, favorecer código rápido)
 
@@ -110,6 +100,6 @@ sub    eax, ecx
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)
-[opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)

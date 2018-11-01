@@ -1,12 +1,6 @@
 ---
-title: Mediante la interoperabilidad de C++ (PInvoke implícito) | Documentos de Microsoft
-ms.custom: ''
+title: Utilizar la interoperabilidad de C++ (PInvoke implícito)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -26,21 +20,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a095f252c4e46e212e42a7ab4cf3cb8d5ef6f53d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464596"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>Utilizar la interoperabilidad de C++ (PInvoke implícito)
 
-A diferencia de otros lenguajes. NET, Visual C++ tiene compatibilidad con esta interoperabilidad que permite que el código administrado y que existe en la misma aplicación e incluso en el mismo archivo (con la [managed, unmanaged](../preprocessor/managed-unmanaged.md) pragma (directivas)). De este modo, los desarrolladores de Visual C++ pueden integrar la funcionalidad de .NET en las aplicaciones de Visual C++ existentes sin que esto afecte al resto de la aplicación.
+A diferencia de otros lenguajes. NET, Visual C++ tiene compatibilidad de interoperabilidad que permite que exista código administrado y en la misma aplicación e incluso en el mismo archivo (con el [managed, unmanaged](../preprocessor/managed-unmanaged.md) pragmas). De este modo, los desarrolladores de Visual C++ pueden integrar la funcionalidad de .NET en las aplicaciones de Visual C++ existentes sin que esto afecte al resto de la aplicación.
 
 También puede llamar a funciones no administradas desde una operación de compilación administrada mediante [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
@@ -58,19 +47,19 @@ La interoperabilidad de C++ es preferible a PInvoke explícito porque proporcion
 
 ## <a name="c-com-interop"></a>Interoperabilidad COM de C++
 
-Las características de interoperabilidad admitidas por Visual C++ ofrecen una ventaja concreta con respecto a otros lenguajes de .NET en lo que se refiere a la interoperabilidad con componentes COM. En lugar de limitarse a las restricciones de .NET Framework [Tlbimp.exe (importador de la biblioteca de tipos)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), como la compatibilidad limitada para los tipos de datos y la exposición obligada de cada miembro de cada interfaz COM, la interoperabilidad de C++ permite COM componentes para acceder a él creará y no requiere ensamblados de interoperabilidad independientes. A diferencia de Visual Basic y C#, Visual C++ puede utilizar objetos COM directamente usando los mecanismos de COM habituales (como **CoCreateInstance** y **QueryInterface**). Esto es posible debido a las características de interoperabilidad de C++ que hacen que el compilador inserte automáticamente el código de transición para mover desde funciones administrado al no administradas y viceversa.
+Las características de interoperabilidad admitidas por Visual C++ ofrecen una ventaja concreta con respecto a otros lenguajes de .NET en lo que se refiere a la interoperabilidad con componentes COM. En lugar de limitarse a las restricciones de .NET Framework [Tlbimp.exe (importador de biblioteca)](/dotnet/framework/tools/tlbimp-exe-type-library-importer), como la compatibilidad limitada para tipos de datos y la exposición obligatoria de todos los miembros de cada interfaz COM, interoperabilidad de C++ permite que COM acceder a los componentes se y no requiere ensamblados de interoperabilidad independientes. A diferencia de Visual Basic y C#, Visual C++ puede utilizar objetos COM directamente mediante los mecanismos de COM habituales (como **CoCreateInstance** y **QueryInterface**). Esto es posible debido a las características de interoperabilidad de C++ que hacen que el compilador insertar automáticamente el código de transición para mover de administrado los funciones y viceversa.
 
-Mediante la interoperabilidad de C++, componentes COM pueden utilizarse tal y como se usan normalmente o se pueden ajustar dentro de las clases de C++. Estas clases contenedoras se denominan contenedores RCW personalizado o CRCW y tienen dos ventajas con respecto a COM directamente en el código de aplicación:
+Mediante la interoperabilidad de C++, componentes COM pueden utilizarse como normalmente se usan o pueden colocarse dentro de las clases de C++. Estas clases contenedoras se denominan contenedores RCW personalizado o CRCW y tienen dos ventajas con respecto a COM directamente en el código de aplicación:
 
 - La clase resultante se puede utilizar en lenguajes distintos de Visual C++.
 
-- Se pueden ocultar los detalles de la interfaz COM desde el código de cliente administrado. Tipos de datos de .NET pueden usarse en lugar de tipos nativos y los detalles de la serialización de datos pueden realizarse de forma transparente dentro de CRCW.
+- Pueden ocultar los detalles de la interfaz COM desde el código de cliente administrado. Tipos de datos de .NET pueden usarse en lugar de tipos nativos y los detalles de la serialización de datos pueden realizarse de forma transparente dentro de CRCW.
 
-Independientemente de si se utiliza COM directamente o a través de CRCW, deben calcularse de tipos de argumento que no sean de tipos simples, de bits/bytes.
+Independientemente de si se usa COM directamente o a través de CRCW, se deben serializar los tipos de argumento que no sean de tipos simples.
 
 ## <a name="blittable-types"></a>Tipos que pueden transferirse en bloque de bits
 
-Para las API no administradas que usan tipos intrínsecos simples (vea [bits/bytes y tipos no](/dotnet/framework/interop/blittable-and-non-blittable-types)), no se requiere ninguna codificación especial porque estos tipos de datos tienen la misma representación en memoria, pero requieren tipos de datos más complejos serialización de datos explícitos. Para obtener un ejemplo, vea [Cómo: llamar a DLL nativas de PInvoke de uso de código administrado](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
+Para las API no administradas que usan tipos intrínsecos simples (vea [Non-bits/bytes tipos](/dotnet/framework/interop/blittable-and-non-blittable-types)), no se requiere ninguna codificación especial porque estos tipos de datos tienen la misma representación en memoria, pero requieren tipos de datos más complejos serialización de datos explícitos. Para obtener un ejemplo, vea [Cómo: llamar a archivos DLL nativos desde administrado código Using PInvoke](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -154,7 +143,7 @@ Done
 
 - [Cómo: Envolver una clase nativa para usarla en C#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-Para obtener información sobre cómo usar delegados en un escenario de interoperabilidad, consulte [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).
+Para obtener información sobre el uso de delegados en un escenario de interoperabilidad, vea [delegate (extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md).
 
 ## <a name="see-also"></a>Vea también
 
