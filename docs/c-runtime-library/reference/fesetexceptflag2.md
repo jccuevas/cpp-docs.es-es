@@ -1,11 +1,6 @@
 ---
-title: fesetexceptflag | Documentos de Microsoft
-ms.custom: ''
+title: fesetexceptflag
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetexceptflag
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eef8ba1c91e6db4f0d620ef820a6487b3b17e649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615883"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -67,7 +56,7 @@ Si todas las marcas de estado de excepción especificadas se establecen correcta
 
 ## <a name="remarks"></a>Comentarios
 
-El **fesetexceptflag** función establece el estado de los indicadores de estado de excepción de punto flotante especificado por *excepts* con los correspondientes valores establecidos el **fexcept_t** objeto señalado por *pstatus*.  No genera las excepciones. El *pstatus* puntero debe señalar a válido **fexcept_t** objeto o posterior comportamiento es indefinido. El **fesetexceptflag** función admite estos valores de macros de excepción en *excepts*, definida en \<fenv.h >:
+El **fesetexceptflag** función establece el estado de las marcas de estado de excepción de punto flotante especificado por *excepts* a los valores correspondientes establecidos en el **fexcept_t** objeto que apunta *pstatus*.  No genera las excepciones. El *pstatus* puntero debe señalar a una **fexcept_t** objeto o el comportamiento posterior es indefinido. El **fesetexceptflag** admite estos valores de macro de excepción en la función *excepts*, definido en \<fenv.h >:
 
 |Macro de excepción|Descripción|
 |---------------------|-----------------|
@@ -78,7 +67,7 @@ El **fesetexceptflag** función establece el estado de los indicadores de estado
 |FE_UNDERFLOW|El resultado de una operación de punto flotante anterior era demasiado pequeño para representarlo con completa precisión; se ha creado un valor no normalizado.|
 |FE_ALLEXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|
 
-El *excepts* argumento puede ser cero, una de las macros de excepción de punto flotante admitidos o bit a bit o de dos o más de las macros. El efecto de cualquier otro valor de argumento es indefinido.
+El *excepts* argumento puede ser cero, una de las macros de excepción de punto flotante admitidas o bit a bit o de dos o más de las macros. El efecto de cualquier otro valor de argumento es indefinido.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 
