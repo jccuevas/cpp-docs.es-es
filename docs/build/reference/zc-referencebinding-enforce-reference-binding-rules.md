@@ -1,15 +1,9 @@
 ---
-title: /Zc:referenceBinding (exigir reglas de enlace de referencia) | Documentos de Microsoft
-ms.custom: ''
+title: '/ Zc: referencebinding (aplicar reglas de enlace de referencias)'
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - referenceBinding
 - /Zc:referenceBinding
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - referenceBinding
@@ -17,34 +11,30 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30038f6ff73eaa2d9536c3685927458a70209864
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: baf2106f015a4e8557cb8469d300709694e06d84
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378885"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428332"
 ---
-# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (exigir reglas de enlace de referencia)
+# <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/ Zc: referencebinding (aplicar reglas de enlace de referencias)
 
-Cuando el **/Zc:referenceBinding** se especifica la opción, el compilador no permite una referencia de valor l no es const enlazar a un archivo temporal.
+Cuando el **/Zc: referencebinding** se especifica la opción, el compilador no permite una referencia de valor l no constante enlazar a un archivo temporal.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/Zc:referenceBinding**[**-**]
+> **/ Zc: referencebinding**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
-Si **/Zc:referenceBinding** se especifica, el compilador sigue la sección 8.5.3 del estándar C ++ 11 y no admite expresiones que enlazan un tipo definido por el usuario temporal con una referencia de valor l no constantes. De forma predeterminada, o si **/Zc:referenceBinding-** se especifica, el compilador permite estas expresiones como una extensión de Microsoft, pero se emite una advertencia de nivel 4. Seguridad de código, portabilidad y conformidad, recomendamos que use **/Zc:referenceBinding**.
+Si **/Zc: referencebinding** se especifica, el compilador sigue la sección 8.5.3 de C ++ 11 estándar y no admite expresiones que enlazan un tipo definido por el usuario temporal a una referencia de valor l no constante. De forma predeterminada, o si **/Zc:referenceBinding-** se especifica, el compilador permite tales expresiones como una extensión de Microsoft, pero se emite una advertencia de nivel 4. Para la seguridad del código, portabilidad y la conformidad, recomendamos que use **/Zc: referencebinding**.
 
-El **/Zc:referenceBinding** opción está desactivada de forma predeterminada. El [/ permisivo-](permissive-standards-conformance.md) opción del compilador implícitamente establece esta opción, pero se puede invalidar usando **/Zc:referenceBinding-**.
+El **/Zc: referencebinding** opción está desactivada de forma predeterminada. El [/ permissive-](permissive-standards-conformance.md) opción del compilador implícitamente establece esta opción, pero se pueden invalidar utilizando **/Zc:referenceBinding-**.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo muestra la extensión de Microsoft que permite a un archivo temporal de un tipo definido por el usuario se puede enlazar a una referencia de valor l no constantes.
+En este ejemplo se muestra la extensión de Microsoft que permite a un archivo temporal de un tipo definido por el usuario que se enlaza a una referencia de valor l no constante.
 
 ```cpp
 // zcreferencebinding.cpp
@@ -69,11 +59,11 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. Seleccione el **propiedades de configuración** > **C/C++** > **línea de comandos** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
-1. Modificar el **opciones adicionales** propiedad para incluir **/Zc:referenceBinding** y, a continuación, elija **Aceptar**.
+1. Modificar el **opciones adicionales** propiedad incluir **/Zc: referencebinding** y, a continuación, elija **Aceptar**.
 
 ## <a name="see-also"></a>Vea también
 

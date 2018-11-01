@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Microsoft Docs
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399701"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434463"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -61,11 +51,11 @@ Denominador.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**imaxdiv** llamar con argumentos de tipo [intmax_t](../../c-runtime-library/standard-types.md) devuelve una estructura de tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) formada por el cociente y el resto.
+**imaxdiv** llamado con argumentos de tipo [intmax_t](../../c-runtime-library/standard-types.md) devuelve una estructura de tipo [imaxdiv_t](../../c-runtime-library/standard-types.md) que compone el cociente y el resto.
 
 ## <a name="remarks"></a>Comentarios
 
-El **imaxdiv** función divide *número* por *denom* y, por tanto, calcula el cociente y el resto. El **imaxdiv_t** estructura contiene el cociente, **intmax_t** **quot**y el resto, **intmax_t** **rem**. El signo del cociente es el mismo que el del cociente matemático. Su valor absoluto es el entero más grande que es menor que el valor absoluto del cociente matemático. Si el denominador es 0, el programa se cierra con un mensaje de error.
+El **imaxdiv** función divide *número* por *denom* y, por tanto, se calcula el cociente y el resto. El **imaxdiv_t** estructura contiene el cociente, **intmax_t** **quot**y el resto, **intmax_t** **rem**. El signo del cociente es el mismo que el del cociente matemático. Su valor absoluto es el entero más grande que es menor que el valor absoluto del cociente matemático. Si el denominador es 0, el programa se cierra con un mensaje de error.
 
 ## <a name="requirements"></a>Requisitos
 

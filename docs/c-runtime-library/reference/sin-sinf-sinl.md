@@ -1,10 +1,6 @@
 ---
-title: seno, sinf, sinl | Documentos de Microsoft
-ms.custom: ''
+title: sin, sinf, sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407582"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430367"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Calcula el seno de un valor de punto flotante.
+Calcula el seno del valor de punto flotante.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -72,7 +62,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **sen** funciones devuelven el seno de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se produce una pérdida de significado en el resultado.
+El **pecado** funciones devuelven el seno de *x*. Si *x* es mayor o igual que 263 o menor o igual que -263, se produce una pérdida de significado en el resultado.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
@@ -83,13 +73,13 @@ Para obtener más información sobre los códigos de retorno, consulte [errno, _
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **sen** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **sen** siempre toma y devuelve **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **pecado** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **pecado** siempre toma y devuelve **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-|-|-|
-|**sen**, **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
+|**seno**, **sinf**, **sinl**|\<math.h>|\<cmath> o \<math.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

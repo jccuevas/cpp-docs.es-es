@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb78f8dee494fd213df6db16e2800cb9090bdf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397280"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429262"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -70,7 +60,7 @@ Accesibilidad de lectura y escritura que se va a determinar para el intervalo de
 
 ## <a name="remarks"></a>Comentarios
 
-A partir de la biblioteca CRT en Visual Studio 2010, el *tamaño* y *acceso* se omiten los parámetros, y **_CrtIsValidPointer** solo comprueba que el especificado*dirección* no es null. No se recomienda usar esta función porque puede realizar la prueba sin ningún problema. En las versiones anteriores a Visual Studio 2010, la función comprueba que el intervalo de memoria que empieza en *dirección* y se extiende por *tamaño* bytes es válido para la accesibilidad especificadas o las operaciones. Cuando *acceso* está establecida en TRUE, se comprueba el intervalo de memoria para lectura y escritura. Cuando *acceso* es FALSE, sólo se valida el intervalo de memoria para su lectura. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsValidPointer** se quitan durante el preprocesamiento.
+A partir de la biblioteca de CRT en Visual Studio 2010, el *tamaño* y *acceso* se omiten los parámetros, y **_CrtIsValidPointer** solo comprueba que el especificado *dirección* no es null. No se recomienda usar esta función porque puede realizar la prueba sin ningún problema. En las versiones anteriores de Visual Studio 2010, la función simplemente comprueba que el intervalo de memoria que empieza en *dirección* y se extiende por *tamaño* bytes es válido para las operaciones de accesibilidad especificadas. Cuando *acceso* está establecida en TRUE, el intervalo de memoria se comprueba para operaciones de lectura y escritura. Cuando *acceso* es FALSE, el intervalo de memoria solo se comprueba para su lectura. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsValidPointer** se quitan durante el preprocesamiento.
 
 Dado que esta función devuelve TRUE o FALSE, se puede pasar a una de las macros [_ASSERT](assert-asserte-assert-expr-macros.md) para crear un mecanismo sencillo de control de errores de depuración. En el ejemplo siguiente se genera un error de aserción si el intervalo de memoria no es válido para operaciones de lectura y escritura:
 
@@ -78,7 +68,7 @@ Dado que esta función devuelve TRUE o FALSE, se puede pasar a una de las macros
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 ```
 
-Para obtener más información acerca de cómo **_CrtIsValidPointer** puede utilizarse con otras macros y funciones de depuración, consulte [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información acerca de cómo **_CrtIsValidPointer** puede utilizarse con otras macros y funciones de depuración, vea [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

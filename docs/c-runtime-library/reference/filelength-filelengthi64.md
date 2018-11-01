@@ -1,10 +1,6 @@
 ---
-title: _filelength, _filelengthi64 | Microsoft Docs
-ms.custom: ''
+title: _filelength, _filelengthi64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _filelengthi64
 - _filelength
@@ -25,8 +21,6 @@ f1_keywords:
 - _filelength
 - _filelengthi64
 - filelengthi64
-dev_langs:
-- C++
 helpviewer_keywords:
 - filelengthi64 function
 - lengths, file
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33943eb81658b065116d30592f25ef004d4bfc1b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5434a6ea2155b75f1c034202477a67db36da8b3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399337"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430491"
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
 
@@ -68,7 +58,7 @@ Se destina al descriptor de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Ambos **_filelength** y **_filelengthi64** devolver la longitud del archivo, en bytes, del archivo de destino asociado con *fd*. Si *fd* es un descriptor de archivo no válido, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, ambas funciones devuelven-1 L para indicar un error y establecer **errno** a **EBADF**.
+Ambos **_filelength** y **_filelengthi64** devuelven la longitud del archivo, en bytes, del archivo de destino asociado con *fd*. Si *fd* es un descriptor de archivo no válido, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, ambas funciones devuelven-1 L para indicar un error y establecer **errno** a **EBADF**.
 
 ## <a name="requirements"></a>Requisitos
 

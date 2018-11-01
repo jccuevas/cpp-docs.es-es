@@ -1,10 +1,6 @@
 ---
-title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft Docs
-ms.custom: ''
+title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nextafterf
 - _nextafterf
@@ -42,8 +38,6 @@ f1_keywords:
 - math/nexttoward
 - math/nexttowardf
 - math/nexttowardl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _nextafter function
 - nextafter function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c68d039ff1318ea082d409078a55c8d337a48de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444869"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -102,13 +92,13 @@ Valor de punto flotante al que se va.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el siguiente valor de punto flotante puede representar de tipo de valor devuelto después de *x* en la dirección de *y*. Si *x* y *y* son iguales, la función devuelve *y*, convertido en el tipo de valor devuelto con ninguna excepción activada. Si *x* no es igual a *y*, y el resultado es cero, o un desnormalizados el **FE_UNDERFLOW** y **FE_INEXACT** Estados de excepción de punto flotante se establecen, y se devuelve el resultado correcto. Si el valor *x* o *y* es un NAN, entonces el valor devuelto es uno de los valores de entrada NaN. Si *x* es finito y el resultado es infinito o no se puede representar en el tipo, se devuelve un signo correcto infinito ni NAN, la **FE_OVERFLOW** y **FE_INEXACT** se establecen los Estados de excepción de punto flotante, y **errno** está establecido en **ERANGE**.
+Devuelve el siguiente valor de punto flotante representable del tipo de valor devuelto después *x* en la dirección de *y*. Si *x* y *y* son iguales, la función devuelve *y*, convertido al tipo de valor devuelto, sin ninguna excepción activada. Si *x* no es igual a *y*, y el resultado es cero, o un valor desnormalizado el **FE_UNDERFLOW** y **FE_INEXACT** Estados de excepción de punto flotante se han establecido, y se devuelve el resultado correcto. Si bien *x* o *y* es un NAN, entonces el valor devuelto es uno de los NaN de entrada. Si *x* es finito y el resultado es infinito o no se puede representar en el tipo, se devuelve un firmada correctamente infinito o NAN, la **FE_OVERFLOW** y **FE_INEXACT** se establecen los Estados de excepción de punto flotante y **errno** está establecido en **ERANGE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **nextafter** y **nexttoward** familias de función son equivalentes, salvo por el tipo de parámetro *y*. Si *x* y *y* son iguales, el valor devuelto es *y* convierte al tipo de valor devuelto.
+El **nextafter** y **nexttoward** familias de función son equivalentes, salvo por el tipo de parámetro *y*. Si *x* y *y* son iguales, el valor devuelto es *y* convertir al tipo de valor devuelto.
 
-Como C++ permite las sobrecargas, si incluye \<cmath > se pueden llamar a las sobrecargas de **nextafter** y **nexttoward** que devuelven **float** y **long** **doble** tipos. En un programa C, **nextafter** y **nexttoward** siempre devuelven **doble**.
+Como C++ permite las sobrecargas, si incluye \<cmath > puede llamar a sobrecargas de **nextafter** y **nexttoward** que devuelven **float** y **long** **doble** tipos. En un programa C, **nextafter** y **nexttoward** siempre devuelven **doble**.
 
 El **_nextafter** y **_nextafterf** funciones son específicas de Microsoft. El **_nextafterf** función sólo está disponible cuando se compila para x64.
 

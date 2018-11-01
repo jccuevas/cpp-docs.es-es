@@ -1,21 +1,13 @@
 ---
-title: Origen de la organización del código (plantillas de C++) | Microsoft Docs
-ms.custom: ''
+title: Organización de código fuente (plantillas de C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: b694ba9324d82eaf0c14912f49f9962062702335
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 94e386b6301519b98b101adfca699b7f3128e3c2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434450"
 ---
 # <a name="source-code-organization-c-templates"></a>Organización de código fuente (plantillas de C++)
 

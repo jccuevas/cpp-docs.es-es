@@ -1,10 +1,6 @@
 ---
-title: _ftime_s, _ftime32_s, _ftime64_s | Microsoft Docs
-ms.custom: ''
+title: _ftime_s, _ftime32_s, _ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435482"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -75,20 +65,20 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 ## <a name="remarks"></a>Comentarios
 
-El **_ftime_s** función obtiene la hora local actual y la almacena en la estructura que señala *timeptr*. El **_timeb**, **__timeb32**, y **__timeb64** estructuras se definen en SYS\Timeb.h. Contienen cuatro campos, que se enumeran en la tabla siguiente.
+El **_ftime_s** función obtiene la hora local actual y lo almacena en la estructura que señala *timeptr*. El **_timeb**, **__timeb32**, y **__timeb64** estructuras se definen en sys\timeb. Contienen cuatro campos, que se enumeran en la tabla siguiente.
 
 |Campo|Descripción|
 |-|-|
 |**dstflag**|Distinto de cero si el horario de verano está en vigor para la zona horaria local. (Consulte [_tzset](tzset.md) para obtener una explicación de cómo se determina el horario de verano).|
 |**millitm**|Fracción de segundo en milisegundos.|
 |**time**|La hora en segundos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC).|
-|**Zona horaria**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **zona horaria** se establece el valor de la variable global **_timezone** (consulte **_tzset**).|
+|**Zona horaria**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **timezone** se establece el valor de la variable global **_timezone** (consulte **_tzset**).|
 
-El **_ftime64_s** función, que usa el **__timeb64** estructura, permite expresar una hasta 23:59:59, 31 de diciembre de 3000, UTC; las fechas de creación del archivo, mientras que **_ftime32_s** solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
+El **_ftime64_s** función, que usa el **__timeb64** estructura, permite la creación del archivo fechas expresarse a través de 23:59:59, 31 de diciembre de 3000, UTC; mientras que **_ftime32_s** solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 
-El **_ftime_s** función es equivalente a **_ftime64_s**, y **_timeb** contiene uno de 64 bits, a menos que **_USE_32BIT_TIME_T** es define, en cuyo caso el comportamiento anterior está en vigor; **_ftime_s** usa uno de 32 bits y **_timeb** contiene un tiempo de 32 bits.
+El **_ftime_s** es equivalente a la función **_ftime64_s**, y **_timeb** contiene una hora de 64 bits, a menos que **_USE_32BIT_TIME_T** es define, en cuyo caso el comportamiento anterior está en vigor; **_ftime_s** usa un tiempo de 32 bits y **_timeb** contiene un tiempo de 32 bits.
 
-**_ftime_s** valida sus parámetros. Si pasa un puntero nulo como *timeptr*, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece **errno** a **EINVAL**.
+**_ftime_s** valida sus parámetros. Si pasa un puntero nulo como *timeptr*, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función establece **errno** a **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
