@@ -1,10 +1,6 @@
 ---
-title: _strdate_s, _wstrdate_s | Microsoft Docs
-ms.custom: ''
+title: _strdate_s, _wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629013"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -92,23 +82,23 @@ Cero si es correcto. Si se produce un error, el valor devuelto es un código de 
 |*buffer*|*numberOfElements*|Volver|Contenido de *búfer*|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(cualquiera)|**EINVAL**|No modificado|
-|No **NULL** (que señala al búfer válido)|0|**EINVAL**|No modificado|
-|No **NULL** (que señala al búfer válido)|0 < *numberOfElements* < 9|**EINVAL**|Cadena vacía|
-|No **NULL** (que señala al búfer válido)|*numberOfElements* > = 9|0|Fecha actual con el formato especificado en la sección de comentarios|
+|No **NULL** (apunta al búfer válido)|0|**EINVAL**|No modificado|
+|No **NULL** (apunta al búfer válido)|0 < *numberOfElements* < 9|**EINVAL**|Cadena vacía|
+|No **NULL** (apunta al búfer válido)|*numberOfElements* > = 9|0|Fecha actual con el formato especificado en la sección de comentarios|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 
-Pasar a un no válido no **NULL** valor para el búfer se produciría una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
+Pasando un no válido no **NULL** valor para el búfer, se producirá una infracción de acceso si el *numberOfElements* parámetro es mayor que 9.
 
-Pasar valores de tamaño que es mayor que el tamaño real de la *búfer* dará como resultado de saturación del búfer.
+Pasar valores para el tamaño que es mayor que el tamaño real de la *búfer* dará como resultado de la saturación del búfer.
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones proporcionan versiones más seguras de **_strdate** y **_wstrdate**. El **_strdate_s** función copia la fecha actual del sistema en el búfer señalado por *búfer*, con el formato **mm**/**dd** / **yy**, donde **mm** es de dos dígitos que representa el mes, **dd** es de dos dígitos que representa el día y **AA**  es los dos últimos dígitos del año. Por ejemplo, la cadena **/12/05/99** representa el 5 de diciembre de 1999. El búfer debe tener una longitud mínima de 9 caracteres.
+Estas funciones proporcionan versiones más seguras de **_strdate** y **_wstrdate**. El **_strdate_s** función copia la fecha actual del sistema en el búfer señalado por *búfer*, con el formato **mm**/**dd** / **yy**, donde **mm** son dos dígitos que representa el mes, **dd** son dos dígitos que representa el día, y **AA**  es los dos últimos dígitos del año. Por ejemplo, la cadena **05/12/99** representa 5 de diciembre de 1999. El búfer debe tener una longitud mínima de 9 caracteres.
 
 **_wstrdate_s** es una versión con caracteres anchos de **_strdate_s**; el argumento y el valor devuelto de **_wstrdate_s** son cadenas de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
-Si *búfer* es un **NULL** puntero, o si *numberOfElements* es inferior a 9 caracteres, se invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establecen **errno** a **EINVAL** si el búfer es **NULL** o si *numberOfElements*es menor o igual que 0, o un conjunto **errno** a **ERANGE** si *numberOfElements* es inferior a 9.
+Si *búfer* es un **NULL** puntero, o si *numberOfElements* es inferior a 9 caracteres, se invoca el controlador de parámetros no válidos, como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven -1 y establezca **errno** a **EINVAL** si el búfer es **NULL** o si *numberOfElements*es menor o igual que 0, o un conjunto **errno** a **ERANGE** si *numberOfElements* es inferior a 9.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

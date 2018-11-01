@@ -1,26 +1,17 @@
 ---
-title: 'Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++) | Microsoft Docs'
+title: 'Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821262"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591014"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++)
 
@@ -64,7 +55,7 @@ En este conjunto de tareas, crear un proyecto para el archivo DLL, agregue el c�
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>Para crear un proyecto DLL en Visual Studio 2017 versión 15.3 o posterior
 
-1. En la barra de menús, elija **archivo** > **New** > **proyecto** para abrir el **nuevo proyecto** cuadro de diálogo.
+1. En la barra de menús, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.
 
 1. En el panel izquierdo de la **nuevo proyecto** cuadro de diálogo, expanda **instalado** y **Visual C++** si es necesario y, a continuación, elija **Windows Desktop** . En el panel central, seleccione **Asistente de escritorio de Windows**. Escriba `MathLibrary` en el **nombre** cuadro para especificar un nombre para el proyecto.
 
@@ -405,7 +396,7 @@ Presione cualquier tecla para cerrar la ventana de comandos.
 
 Ahora que ha creado un archivo DLL y una aplicación cliente, puede experimentar. Intente establecer puntos de interrupción en el código de la aplicación cliente y ejecutar la aplicación en el depurador. Vea Qué sucede cuando entre en una llamada a la biblioteca. Agregar otras funciones a la biblioteca o escribir otra aplicación de cliente que utiliza el archivo DLL.
 
-Al implementar la aplicación, también debe implementar los archivos DLL utiliza. La manera más sencilla para que los archivos DLL que se compila o que incluyen de terceros estén disponibles para la aplicación es colocarlos en el mismo directorio que la aplicación, también conocido como *implementación local de la aplicación*. Para obtener más información acerca de la implementación, consulte [implementación en Visual C++](..\ide\deployment-in-visual-cpp.md).
+Al implementar la aplicación, también debe implementar los archivos DLL utiliza. La manera más sencilla para que los archivos DLL que se compila o que incluyen de terceros estén disponibles para la aplicación es colocarlos en el mismo directorio que la aplicación, también conocido como *implementación local de la aplicación*. Para obtener más información sobre la implementación, vea [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vea también
 
