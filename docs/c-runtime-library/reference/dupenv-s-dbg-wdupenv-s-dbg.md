@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404310"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579606"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -95,13 +85,13 @@ Número de línea en el archivo de código fuente o **NULL**.
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.
 
-Estas funciones validan sus parámetros; Si *búfer* o *varname* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+Estas funciones validan sus parámetros; Si *búfer* o *varname* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
 
-Si estas funciones no pueden asignar suficiente memoria, establecen *búfer* a **NULL** y *numberOfElements* en 0 y devuelven **ENOMEM**.
+Si estas funciones no pueden asignar suficiente memoria, establece *búfer* a **NULL** y *numberOfElements* en 0 y devuelven **ENOMEM**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_dupenv_s_dbg** y **_wdupenv_s_dbg** funciones son idénticas a **_dupenv_s** y **_wdupenv_s** salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md), para asignar memoria para el valor de la variable de entorno. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
+El **_dupenv_s_dbg** y **_wdupenv_s_dbg** funciones son idénticas a **_dupenv_s** y **_wdupenv_s** , salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md)para asignar memoria para el valor de la variable de entorno. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
 
 En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la marca **_CRTDBG_MAP_ALLOC**. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_dupenv_s** y **_wdupenv_s** se reasignan a **_dupenv_s_dbg** y **_wdupenv_s_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información sobre los tipos de bloques, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 

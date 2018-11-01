@@ -1,27 +1,17 @@
 ---
-title: Error del compilador C3850 | Microsoft Docs
-ms.custom: ''
+title: Error del compilador C3850
 ms.date: 09/05/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3850
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: daa4b6128672b47891c563acfd4399952a17e7e6
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572671"
 ---
 # <a name="compiler-error-c3850"></a>Error del compilador C3850
 
@@ -33,7 +23,7 @@ Los caracteres representados como nombres de carácter universal deben represent
 
 En el código compilado como C, un nombre de carácter universal no puede representar un carácter en el rango de 0000 a 009F, inclusivo, con las excepciones 0024 ('$'), 0040 ('\@') y 0060 ('' ').
 
-En el código compilado como C++, un nombre de carácter universal puede usar cualquier punto de código Unicode válido en una cadena o un literal de carácter. Fuera de un literal, un nombre de carácter universal no puede representar un carácter de control en los rangos de 0000 a 001F o de 007F a 009F, ambos inclusivos, ni un miembro del juego de caracteres de origen básico.  Para obtener más información, consulte [juegos de caracteres](../../cpp/character-sets.md).
+En el código compilado como C++, un nombre de carácter universal puede usar cualquier punto de código Unicode válido en una cadena o un literal de carácter. Fuera de un literal, un nombre de carácter universal no puede representar un carácter de control en los rangos de 0000 a 001F o de 007F a 009F, ambos inclusivos, ni un miembro del juego de caracteres de origen básico.  Para obtener más información, vea [Character Sets](../../cpp/character-sets.md).
 
 ## <a name="example"></a>Ejemplo
 

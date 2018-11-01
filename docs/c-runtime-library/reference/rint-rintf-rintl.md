@@ -1,10 +1,6 @@
 ---
-title: rint, rintf, rintl | Microsoft Docs
-ms.custom: ''
+title: rint, rintf, rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,23 +22,17 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609487"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -68,16 +58,16 @@ Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **rint** funciones devuelven un valor de punto flotante que representa el entero más cercano a *x*. Valores a medio camino se redondean según la configuración actual del modo de redondeo de punto flotante, el mismo que el **nearbyint** funciones. A diferencia de la **nearbyint** funciones, la **rint** funciones pueden producir el **FE_INEXACT** excepciones de punto flotante si el resultado es distinto en el valor del argumento. No se devuelve ningún error.
+El **rint** funciones devuelven un valor de punto flotante que representa el entero más cercano al *x*. Los valores a medio camino se redondean según la configuración actual del modo de redondeo de punto flotante, el mismo que el **nearbyint** funciones. A diferencia de la **nearbyint** funciones, la **rint** funciones pueden generar el **FE_INEXACT** excepción de punto flotante si el resultado es diferente en el valor del argumento. No se devuelve ningún error.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|**_matherr** excepción|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|ninguna|ninguna|
 |Desnormalizados|EXCEPTION_FLT_UNDERFLOW|ninguna|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **rint** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **rint** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **rint** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **rint** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

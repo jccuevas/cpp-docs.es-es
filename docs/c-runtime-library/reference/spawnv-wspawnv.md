@@ -1,10 +1,6 @@
 ---
-title: _spawnv, _wspawnv | Microsoft Docs
-ms.custom: ''
+title: _spawnv, _wspawnv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnv
 - _spawnv
@@ -25,8 +21,6 @@ f1_keywords:
 - wspawnv
 - _spawnv
 - _wspawnv
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnv function
 - processes, creating
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ba46190ddf3707761ecf1e8537c336015426776d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4f6e24135a040e0b081016041192d2ae196d1037
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576755"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -82,7 +72,7 @@ Matriz de punteros a argumentos. El argumento *argv*[0] suele ser un puntero a u
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de un sincrónico **_spawnv** o **_wspawnv** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso. El valor devuelto de una asincrónica **_spawnv** o **_wspawnv** (**_P_NOWAIT** o **_P_NOWAITO** especificado para *modo* ) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la **salir** rutina con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los siguientes valores.
+El valor devuelto de un valor sincrónico **_spawnv** o **_wspawnv** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso. El valor devuelto de asincrónico **_spawnv** o **_wspawnv** (**_P_NOWAIT** o **_P_NOWAITO** especificado para *modo* ) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente el **salir** rutinarias con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (no se inicia el proceso de nuevo). En este caso, **errno** se establece en uno de los siguientes valores.
 
 |||
 |-|-|
@@ -98,7 +88,7 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 Cada una de estas funciones crea y ejecuta un proceso nuevo, y pasa una matriz de punteros a los argumentos de la línea de comandos.
 
-Estas funciones validan sus parámetros. Si el valor *cmdname* o *argv* es un puntero nulo, o si *argv* señala a un puntero nulo, o *argv*[0] es una cadena vacía, no válido se invoca el controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
+Estas funciones validan sus parámetros. Si bien *cmdname* o *argv* es un puntero nulo, o si *argv* apunta a un puntero nulo o *argv*[0] es una cadena vacía, el no válido se invoca el controlador de parámetros, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
 
 ## <a name="requirements"></a>Requisitos
 

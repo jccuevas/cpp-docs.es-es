@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc, _FCmulcc, _LCmulcc | Documentos de Microsoft
-ms.custom: ''
+title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,22 +25,16 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656773"
 ---
 # <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
@@ -62,18 +51,18 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Uno de los operandos complejos para multiplicar.
+Uno de los operandos complejos se va a multiplicar.
 
 *y*<br/>
-El otro operando complejo para multiplicar.
+El otro operando complejo se va a multiplicar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-A **_Dcomplex**, **_Fcomplex**, o **_Lcomplex** estructura que representa el producto complejo de los números complejos *x* y *y*.
+Un **_Dcomplex**, **_Fcomplex**, o **_Lcomplex** estructura que representa el producto complejo de los números complejos *x* y *y*.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que los operadores aritméticos integrados no funcionan en la implementación de Microsoft de los tipos complejos, el **_Cmulcc**, **_FCmulcc**, y **_LCmulcc** funciones simplificar la multiplicación de tipos complejos.
+Dado que los operadores aritméticos integrados no funcionan en la implementación de Microsoft de los tipos complejos, el **_Cmulcc**, **_FCmulcc**, y **_LCmulcc** funciones Simplifique la multiplicación de tipos complejos.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -81,7 +70,7 @@ Dado que los operadores aritméticos integrados no funcionan en la implementaci�
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Estas funciones son específicos de Microsoft. Los tipos de **_Dcomplex**, **_Fcomplex**, y **_Lcomplex** son equivalentes específicos de Microsoft para los tipos nativos no implementados de C99 **_Complex dobles** , **float _Complex**, y **_Complex long double**, respectivamente. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Estas funciones son específicas de Microsoft. Los tipos de **_Dcomplex**, **_Fcomplex**, y **_Lcomplex** son equivalentes específicos de Microsoft para los tipos nativos no está implementados de C99 **double _Complex** , **float _Complex**, y **long double _Complex**, respectivamente. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,29 +1,18 @@
 ---
-title: Selección de primer plano o los colores de fondo (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Seleccionar el color de primer plano y el color de fondo (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], colors
 - colors [C++], Image editor
 ms.assetid: 95b3673e-1f1f-40fe-9afd-da914a6d005f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a4ede6b0fa9f53865defb5dbe5f7eb164589c5bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0189b493af0b62f98704b1816050ddbf238e9aa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619471"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>Seleccionar el color de primer plano y el color de fondo (Editor de imágenes para iconos)
 

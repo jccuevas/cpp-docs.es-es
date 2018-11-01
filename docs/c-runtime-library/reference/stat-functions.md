@@ -1,10 +1,6 @@
 ---
-title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstat64
 - _stati64
@@ -78,8 +74,6 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -112,16 +106,12 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ce367bdee78be1610a36c887a04f2130375114
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 316012479ec374cc5f40061384475008fe04e331
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418018"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637286"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 
@@ -190,7 +180,7 @@ Puntero a la estructura que almacena los resultados.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se obtiene la información de estado de archivo. Un valor devuelto de -1 indica un error, en cuyo caso **errno** está establecido en **ENOENT**, que indica que el nombre de archivo o ruta de acceso no se encontró. Un valor devuelto de **EINVAL** indica un parámetro no válido; **errno** también se establece en **EINVAL** en este caso.
+Cada una de estas funciones devuelve 0 si se obtiene la información de estado de archivo. Un valor devuelto de -1 indica un error, en cuyo caso **errno** está establecido en **ENOENT**, que indica que el nombre de archivo o ruta de acceso no se pudo encontrar. Un valor devuelto de **EINVAL** indica un parámetro no válido; **errno** también se establece en **EINVAL** en este caso.
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre este y otros códigos de retorno.
 
@@ -198,18 +188,18 @@ Si es posterior a la medianoche del 1 de enero de 1970 y antes de 23:59:59, 31 d
 
 ## <a name="remarks"></a>Comentarios
 
-El **_stat** función obtiene información sobre el archivo o directorio especificado por *ruta de acceso* y lo almacena en la estructura que señala *búfer*. **_stat** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso.
+El **_stat** función obtiene información sobre el archivo o directorio especificado por *ruta* y lo almacena en la estructura que señala *búfer*. **_stat** controla automáticamente argumentos de cadena de caracteres multibyte según corresponda, reconociendo las secuencias de caracteres multibyte según la página de códigos multibyte actualmente en uso.
 
-**_wstat** es una versión con caracteres anchos de **_stat**; el *ruta de acceso* argumento pasado a **_wstat** es una cadena de caracteres anchos. **_wstat** y **_stat** se comportan exactamente igual, salvo que **_wstat** no controla las cadenas de caracteres multibyte.
+**_wstat** es una versión con caracteres anchos de **_stat**; el *ruta* argumento **_wstat** es una cadena de caracteres anchos. **_wstat** y **_stat** se comportan exactamente igual, salvo que **_wstat** no controla las cadenas de caracteres multibyte.
 
-Variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits, y longitudes de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño de la hora de utiliza el tipo; el segundo sufijo es **i32** o **i64**, que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits.
+Variaciones de estas funciones admiten tipos de tiempo de 32 o 64 bits, y longitudes de archivos de 32 o 64 bits. El primer sufijo numérico (**32** o **64**) indica el tamaño del tiempo usa el tipo; el segundo sufijo es **i32** o **i64**, que indica si el tamaño del archivo se representa como un entero de 32 bits o 64 bits.
 
-**_stat** es equivalente a **_stat64i32**, y **struct** **_stat** contiene una hora de 64 bits. Esto es así a menos que **_USE_32BIT_TIME_T** se define, en cuyo caso el comportamiento anterior está en vigor; **_stat** usa uno de 32 bits, y **struct** **_stat** contiene un tiempo de 32 bits. Lo mismo puede decirse de **_stati64**.
+**_stat** es equivalente a **_stat64i32**, y **struct** **_stat** contiene una hora de 64 bits. Esto es así a menos que **_USE_32BIT_TIME_T** se define, en cuyo caso el comportamiento anterior está en vigor; **_stat** usa un tiempo de 32 bits y **struct** **_stat** contiene un tiempo de 32 bits. Lo mismo puede decirse de **_stati64**.
 
 > [!NOTE]
-> **_wstat** no funciona con vínculos simbólicos de Windows Vista. En estos casos, **_wstat** siempre notificará un tamaño de archivo de 0. **_stat** funcione correctamente con los vínculos simbólicos.
+> **_wstat** no funciona con vínculos simbólicos de Windows Vista. En estos casos, **_wstat** siempre notificará un tamaño de archivo de 0. **_stat** funciona correctamente con vínculos simbólicos.
 
-Esta función valida sus parámetros. Si el valor *ruta de acceso* o *búfer* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Esta función valida sus parámetros. Si bien *ruta* o *búfer* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>Tipo de tiempo y variaciones de tipo de longitud de archivo de _stat
 
@@ -241,16 +231,16 @@ El **_stat** estructura, definida en SYS\STAT. H, incluye los siguientes campos.
 **st_gid**|Identificador numérico del grupo que posee el archivo (específico de UNIX). Este campo siempre será cero en sistemas Windows. Un archivo redirigido se clasifica como archivo Windows.
 **st_atime**|Hora del último acceso del archivo. Válido en NTFS, pero no en unidades de disco con formato FAT.
 **st_ctime**|Hora de creación del archivo. Válido en NTFS, pero no en unidades de disco con formato FAT.
-**st_dev**|Número de unidad del disco que contiene el archivo (igual que **st_rdev**).
-**st_ino**|Número del nodo de información (la **inode**) para el archivo (específico de UNIX). En sistemas de archivos UNIX, la **inode** describe la fecha del archivo y marcas de tiempo, permisos y contenido. Cuando los archivos están vinculados entre sí, comparten el mismo **inode**. El **inode**y, por tanto, **st_ino**, no tiene ningún significado en los sistemas de archivos FAT, HPFS o NTFS.
-**st_mode**|Máscara de bits para información de modo de archivo. El **_S_IFDIR** bit se establece si *ruta de acceso* especifica un directorio; el **_S_IFREG** bit se establece si *ruta de acceso* especifica un archivo normal o un dispositivo. Los bits de lectura y escritura de usuario se establecen según el modo de permiso del archivo; los bits de ejecución de usuario se establecen según la extensión del nombre de archivo.
+**st_dev**|Número del disco que contiene el archivo de unidad (igual que **st_rdev**).
+**st_ino**|Número del nodo de información (el **inode**) para el archivo (específico de UNIX). En sistemas de archivos UNIX, la **inode** describe la fecha del archivo y las marcas de tiempo, los permisos y contenido. Cuando los archivos están vinculados entre sí, comparten el mismo **inode**. El **inode**y por lo tanto, **st_ino**, no tiene ningún significado en los sistemas de archivos FAT, HPFS o NTFS.
+**st_mode**|Máscara de bits para información de modo de archivo. El **_S_IFDIR** bit se establece si *ruta* especifica un directorio; el **_S_IFREG** bit se establece si *ruta* especifica un archivo normal o un dispositivo. Los bits de lectura y escritura de usuario se establecen según el modo de permiso del archivo; los bits de ejecución de usuario se establecen según la extensión del nombre de archivo.
 **st_mtime**|Hora de la última modificación del archivo.
 **st_nlink**|Siempre 1 en sistemas de archivos que no son NTFS.
-**st_rdev**|Número de unidad del disco que contiene el archivo (igual que **st_dev**).
-**st_size**|Tamaño del archivo en bytes; un entero de 64 bits para variaciones con la **i64** sufijo.
+**st_rdev**|Número del disco que contiene el archivo de unidad (igual que **st_dev**).
+**st_size**|Tamaño del archivo en bytes; un entero de 64 bits para variaciones con el **i64** sufijo.
 **st_uid**|Identificador numérico del usuario propietario del archivo (específico de UNIX). Este campo siempre será cero en los sistemas Windows. Un archivo redirigido se clasifica como archivo Windows.
 
-Si *ruta de acceso* hace referencia a un dispositivo, el **st_size**, varios campos de tiempo, **st_dev**, y **st_rdev** campos en el **_stat**  estructura carecen de sentido. Dado que STAT. H usa el tipo [_dev_t](../../c-runtime-library/standard-types.md) que se define en TYPES.H, debe incluir TYPES.H antes de STAT.H en su código.
+Si *ruta* hace referencia a un dispositivo, el **st_size**, varios campos de tiempo, **st_dev**, y **st_rdev** campos en el **_stat**  estructura tienen sentido. Dado que STAT. H usa el tipo [_dev_t](../../c-runtime-library/standard-types.md) que se define en TYPES.H, debe incluir TYPES.H antes de STAT.H en su código.
 
 ## <a name="requirements"></a>Requisitos
 
