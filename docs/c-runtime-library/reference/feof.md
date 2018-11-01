@@ -1,10 +1,6 @@
 ---
-title: feof | Microsoft Docs
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580705"
 ---
 # <a name="feof"></a>feof
 
@@ -53,20 +43,20 @@ int feof(
 
 ### <a name="parameters"></a>Parámetros
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **feof** función devuelve un valor distinto de cero si se ha intentado una operación de lectura leer más allá del final del archivo; en caso contrario, devuelve 0. Si el puntero de la secuencia es **NULL**, la función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **feof** devuelve 0.
+El **feof** función devuelve un valor distinto de cero si una operación de lectura ha intentado leer más allá del final del archivo; de lo contrario, devuelve 0. Si el puntero del flujo es **NULL**, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y **feof** devuelve 0.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **feof** rutina (se implementa como una función y como una macro) determina si el final de *flujo* se ha pasado. Cuando se pasa el final del archivo, leer las operaciones devuelven un indicador de fin de archivo hasta que la secuencia está cerrada o hasta que [rebobinar](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), o  **clearerr** se llama con ella.
+El **feof** rutina (se implementa como una función y como macro) determina si el final de *flujo* se ha pasado. Cuando se pasa el final del archivo, leer las operaciones devuelven un indicador de fin de archivo hasta que la secuencia está cerrada o hasta que [rebobinar](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), o  **clearerr** se denomina en él.
 
-Por ejemplo, si un archivo contiene 10 bytes y leer 10 bytes desde el archivo **feof** devolverá 0 porque, aunque el puntero de archivo está al final del archivo, no ha intentado leer más allá del final. Solo una vez que vuelva a intenta leer un byte 11 hará **feof** devuelve un valor distinto de cero.
+Por ejemplo, si un archivo contiene 10 bytes y se leen 10 bytes desde el archivo, **feof** devolverá 0 porque, aunque el puntero de archivo es el final del archivo, no se ha intentado leer más allá del final. Sólo después de intentar leer un byte 11 **feof** devuelven un valor distinto de cero.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,10 +1,6 @@
 ---
-title: _ismbbblank, _ismbbblank_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbblank_l
 - _ismbbblank
@@ -21,19 +17,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4d2849eca58c7fa3d7fc8250ab3bad0d346e4a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646269"
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
 
@@ -64,7 +54,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbblank** devuelve un valor distinto de cero si *c* representa un carácter de espacio (0 x 20), un carácter de tabulación horizontal (0 x 09) o un carácter específico de la configuración regional que se usa para separar las palabras dentro de una línea de texto para que **isspace** es true; en caso contrario, devuelve 0. **_ismbbblank** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbblank_l** es idéntica, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** devuelve un valor distinto de cero si *c* representa un carácter de espacio (0 x 20), un carácter de tabulación horizontal (0 x 09) o un carácter específico de configuración regional que se usa para separar las palabras dentro de una línea de texto para qué **isspace** es true; de lo contrario, devuelve 0. **_ismbbblank** usa la configuración regional actual para cualquier comportamiento dependiente de la configuración regional. **_ismbbblank_l** es idéntico, salvo que usa la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 
