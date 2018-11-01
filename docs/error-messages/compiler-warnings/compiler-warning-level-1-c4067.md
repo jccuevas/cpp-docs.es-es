@@ -1,35 +1,25 @@
 ---
-title: Compilador advertencia (nivel 1) C4067 | Documentos de Microsoft
-ms.custom: ''
+title: Compilador advertencia (nivel 1) C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541198"
 ---
 # <a name="compiler-warning-level-1-c4067"></a>Compilador advertencia (nivel 1) C4067
 
-> tokens inesperados directiva de preprocesador siguiente: se esperaba una nueva línea
+> símbolos (token) inesperado siguiente directiva del preprocesador; se esperaba una nueva línea
 
 ## <a name="remarks"></a>Comentarios
 
-El compilador encontró y omitió caracteres adicionales después de una directiva de preprocesador. Esto puede deberse a algún carácter inesperado, aunque una causa común es el carácter punto y coma después de la directiva. Los comentarios no se realiza esta advertencia. El **/Za** opción del compilador habilita esta advertencia para las directivas de preprocesador más que el valor predeterminado.
+El compilador encontró y omite caracteres adicionales después de una directiva de preprocesador. Esto puede deberse a algún carácter inesperado, aunque una causa común es un punto y coma aislado después de la directiva. Los comentarios no causan esta advertencia. El **/Za** habilita la opción del compilador esta advertencia para las directivas de preprocesador más que el valor predeterminado.
 
 ## <a name="example"></a>Ejemplo
 
@@ -49,7 +39,7 @@ int main()
 }
 ```
 
-Para resolver esta advertencia, elimine los caracteres extraños o muévalos a un bloque de comentario. Ciertas advertencias C4067 pueden deshabilitarse mediante la eliminación de la **/Za** opción del compilador.
+Para resolver esta advertencia, elimine los caracteres extraños o moverlos a un bloque de comentario. Se pueden deshabilitar determinadas advertencias C4067 quitando el **/Za** opción del compilador.
 
 ```cpp
 // C4067b.cpp

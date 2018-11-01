@@ -1,11 +1,6 @@
 ---
-title: ilogb, ilogbf, ilogbl2 | Microsoft Docs
-ms.custom: ''
+title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398184"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551988"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -82,22 +73,22 @@ Valor especificado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve el exponente de base 2 de *x* como iniciado **int** valor.
+Si se realiza correctamente, devuelve el exponente de base 2 de *x* como con signo **int** valor.
 
 De lo contrario, devuelve uno de los valores siguientes, definidos en \<math.h>:
 
 |Entrada|Resultado|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±inf, ±nan, indefinida|FP_ILOGBNAN|
+|±inf, ±nan, indefinido|FP_ILOGBNAN|
 
 Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ilogb** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **ilogb** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ilogb** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **ilogb** siempre toma y devuelve un **doble**.
 
-Llamar a esta función es similar a llamar al equivalente de **logb** función, a continuación, convertir el valor devuelto a **int**.
+Llamar a esta función es similar a llamar al equivalente de **logb** función y luego convertir el valor devuelto a **int**.
 
 ## <a name="requirements"></a>Requisitos
 

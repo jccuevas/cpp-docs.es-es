@@ -1,10 +1,6 @@
 ---
-title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l | Microsoft Docs
-ms.custom: ''
+title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strncmp
 - _mbsncmp
@@ -33,8 +29,6 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a64d7248151287f4f2af38e666db62f9a15d833f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417358"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523782"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
 
@@ -115,25 +105,25 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto indica la relación de las subcadenas de *string1* y *string2* como se indica a continuación.
+El valor devuelto indica la relación de las subcadenas de *string1* y *cadena2* como sigue.
 
 |Valor devuelto|Descripción|
 |------------------|-----------------|
-|< 0|*cadena1* subcadena menor *string2* subcadena|
-|0|*cadena1* subcadena idéntica a *string2* subcadena|
-|> 0|*cadena1* subcadena mayor *string2* subcadena|
+|< 0|*cadena1* subcadena menor *cadena2* subcadena|
+|0|*cadena1* idéntico de la subcadena *cadena2* subcadena|
+|> 0|*cadena1* subcadena mayor *cadena2* subcadena|
 
 Un error de validación de parámetros, **_mbsncmp** y **_mbsncmp_l** devolver **_NLSCMPERROR**, que se define en \<string.h > y \< MBSTRING.h >.
 
 ## <a name="remarks"></a>Comentarios
 
-El **strncmp** función realiza una comparación ordinal de a lo sumo *recuento* caracteres de *string1* y *string2* y Devuelve un valor que indica la relación entre las subcadenas. **strncmp** es una versión entre mayúsculas y minúsculas de **_strnicmp**. **wcsncmp** y **_mbsncmp** son versiones entre mayúsculas y minúsculas de **_wcsnicmp** y **_mbsnicmp**.
+El **strncmp** función realiza una comparación ordinal de a lo sumo *recuento* caracteres de *string1* y *cadena2* y Devuelve un valor que indica la relación entre las subcadenas. **strncmp** es una versión entre mayúsculas y minúsculas de **_strnicmp**. **wcsncmp** y **_mbsncmp** son versiones con mayúsculas y minúsculas de **_wcsnicmp** y **_mbsnicmp**.
 
-**wcsncmp** y **_mbsncmp** son versiones de caracteres multibyte y anchos de **strncmp**. Los argumentos de **wcsncmp** son caracteres anchos cadenas; los de **_mbsncmp** son cadenas de caracteres multibyte. **_mbsncmp** reconoce secuencias de caracteres multibyte según una página de códigos multibyte y devuelve **_NLSCMPERROR** produce un error.
+**wcsncmp** y **_mbsncmp** son versiones de caracteres anchos y caracteres multibyte de **strncmp**. Los argumentos de **wcsncmp** son caracteres anchos cadenas; los de **_mbsncmp** son cadenas de caracteres multibyte. **_mbsncmp** reconoce secuencias de caracteres multibyte según una página de códigos multibyte y devuelve **_NLSCMPERROR** produce un error.
 
-Además, **_mbsncmp** y **_mbsncmp_l** validan parámetros. Si *string1* o *string2* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsncmp** y **_mbsncmp_l** devolver **_NLSCMPERROR** y establecer **errno** a  **EINVAL**. **strncmp** y **wcsncmp** no validan sus parámetros. Por lo demás, estas funciones se comportan exactamente igual.
+Además, **_mbsncmp** y **_mbsncmp_l** validar los parámetros. Si *string1* o *cadena2* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **_mbsncmp** y **_mbsncmp_l** devolver **_NLSCMPERROR** y establecer **errno** a  **EINVAL**. **strncmp** y **wcsncmp** no validan sus parámetros. Por lo demás, estas funciones se comportan exactamente igual.
 
-El comportamiento de comparación de **_mbsncmp** y **_mbsncmp_l** se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional. Esta opción controla la detección de los bytes iniciales y finales de caracteres multibyte. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md). El **_mbsncmp** función usa la configuración regional actual para este comportamiento dependiente de la configuración regional. El **_mbsncmp_l** función es idéntica, salvo que usa el *configuración regional* parámetro en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md). Si la configuración regional es una configuración regional de un solo byte, el comportamiento de estas funciones es idéntico a **strncmp**.
+El comportamiento de comparación de **_mbsncmp** y **_mbsncmp_l** se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional. Esta opción controla la detección de los bytes iniciales y finales de caracteres multibyte. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md). El **_mbsncmp** función usa la configuración regional actual para este comportamiento dependiente de la configuración regional. El **_mbsncmp_l** función es idéntica, salvo que usa el *configuración regional* parámetro en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md). Si la configuración regional es un solo byte, el comportamiento de estas funciones es idéntico a **strncmp**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

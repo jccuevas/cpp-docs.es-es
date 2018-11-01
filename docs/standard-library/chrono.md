@@ -1,10 +1,6 @@
 ---
-title: '&lt;chrono&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;chrono&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -13,25 +9,19 @@ f1_keywords:
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
-dev_langs:
-- C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d701b290100f812f3c7845096960561cb101472
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847499"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544552"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Incluya el encabezado estándar \<chrono> para definir las clases y funciones que representan y manipulan las duraciones de tiempo e instantes de tiempo.
 
-A partir de Visual Studio 2015, la implementación de `steady_clock` ha cambiado para cumplir los requisitos estándar de C++ para steadiness y monotonicity. `steady_clock` ahora se basa en QueryPerformanceCounter() y `high_resolution_clock` ahora es un typedef para `steady_clock`. Como resultado, en Visual C++ `steady_clock::time_point` es ahora un typedef para `chrono::time_point<steady_clock>`; sin embargo, esto no es necesariamente así en otras implementaciones.
+A partir de Visual Studio 2015, la implementación de `steady_clock` ha cambiado para cumplir los requisitos del estándar de C++ en cuanto a estabilidad y monotonía. `steady_clock` ahora se basa en QueryPerformanceCounter() y `high_resolution_clock` ahora es un typedef para `steady_clock`. Como resultado, en Visual C++ `steady_clock::time_point` es ahora un typedef para `chrono::time_point<steady_clock>`; sin embargo, esto no es necesariamente así en otras implementaciones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -99,9 +89,9 @@ Para obtener más información sobre los tipos de relación que se usan en los s
 |Literal|Descripción|
 |-------------|-----------------|
 |operador chrono::hours "" h (unsigned long long Val)|Especifica horas como un valor entero.|
-|chrono:: Duration\<proporción double,\<3600 >> operador "" h (long double Val)|Especifica horas como un valor de coma flotante.|
+|chrono:: Duration\<doble, proporción\<3600 >> operador "" h (long double Val)|Especifica horas como un valor de coma flotante.|
 |chrono::minutes (operador "" min)(unsigned long long Val)|Especifica minutos como un valor entero.|
-|chrono:: Duration\<proporción double,\<60 >> (operador "" min) (long double Val)|Especifica minutos como un valor de coma flotante.|
+|chrono:: Duration\<doble, proporción\<60 >> (operador "" min) (long double Val)|Especifica minutos como un valor de coma flotante.|
 |operador chrono::seconds "" s(unsigned long long Val)|Especifica minutos como un valor entero.|
 |operador chrono::duration\<double> "" s(long double Val)|Especifica segundos como un valor de coma flotante.|
 |operador chrono::milliseconds "" ms(unsigned long long Val)|Especifica milisegundos como un valor entero.|
