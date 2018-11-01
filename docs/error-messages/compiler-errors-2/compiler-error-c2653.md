@@ -1,41 +1,31 @@
 ---
-title: C2653 de Error del compilador | Documentos de Microsoft
-ms.custom: ''
+title: Error del compilador C2653
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2653
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8e1df7dd6337b1a3e363a5744181b12d94c879b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234972"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471154"
 ---
-# <a name="compiler-error-c2653"></a>C2653 de Error del compilador
+# <a name="compiler-error-c2653"></a>Error del compilador C2653
 
 > '*identificador*': no es un nombre de clase o espacio de nombres
 
 La sintaxis del lenguaje requiere una clase, estructura, unión o nombre del espacio de nombres.
 
-Este error puede producirse cuando se usa un nombre que no se ha declarado como una clase, estructura, unión o espacio de nombres delante de un operador de ámbito. Para corregir este problema, declare el nombre o incluir el encabezado que declara el nombre antes de usarlo.
+Este error puede producirse cuando se usa un nombre que no se ha declarado como una clase, estructura, unión o espacio de nombres delante de un operador de ámbito. Para corregir este problema, declare el nombre o incluir el encabezado que declara el nombre antes de utilizarse.
 
-También es posible si se intenta definir C2653 una *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres anidado de ámbito. Compuesta espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. Se admiten los espacios de nombres compuestas a partir de Visual Studio 2015 Update 3 cuando se especifica la [/std:c ++ más reciente](../../build/reference/std-specify-language-standard-version.md) opción del compilador. A partir de Visual C++ 2017 versión 15,5, el compilador admite las definiciones de espacio de nombres compuestos cuando el [/std:c ++ 17](../../build/reference/std-specify-language-standard-version.md) se especifica la opción.
+También es posible si se intenta definir C2653 un *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres con ámbito anidado. Compuesta de espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. Se admiten los espacios de nombres compuestas a partir de Visual Studio 2015 Update 3 cuando se especifica la [/std: c ++ más reciente](../../build/reference/std-specify-language-standard-version.md) opción del compilador. A partir de Visual C++ 2017 versión 15.5, el compilador admite las definiciones de espacio de nombres compuestos cuando el [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) se especifica la opción.
 
 ## <a name="examples"></a>Ejemplos
 
-Este ejemplo genera C2653 porque se usa pero no declara un nombre de ámbito. El compilador espera que una clase, estructura, unión o nombre de espacio de nombres antes de un operador de ámbito (::).
+Este ejemplo genera C2653 porque se usa pero no declara un nombre de ámbito. El compilador espera una clase, estructura, unión o espacio de nombres antes de un operador de ámbito (::).
 
 ```cpp
 // C2653.cpp
@@ -48,7 +38,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-En el código que no se compila para C ++ 17 o estándares más adelante, espacios de nombres anidados deben utilizar una declaración de espacio de nombres explícito en cada nivel de anidamiento:
+En el código que no se compila para C ++ 17 o posterior estándares, espacios de nombres anidados deben usar una declaración de espacio de nombres explícito en cada nivel de anidamiento:
 
 ```cpp
 // C2653b.cpp
