@@ -1,10 +1,6 @@
 ---
-title: _read | Microsoft Docs
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405814"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658450"
 ---
 # <a name="read"></a>_read
 
@@ -70,19 +60,19 @@ Número máximo de bytes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_read** devuelve el número de bytes leídos, que puede ser menor que *recuento* si hay menos de *recuento* bytes restante en el archivo o si el archivo se abre en modo de texto, en cuyo caso cada carro valor devuelto y par '\r\n' de avance de línea se sustituye por un carácter de avance de línea único '\n'. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.
+**_read** devuelve el número de bytes leídos, que puede ser menor que *recuento* si hay menos de *recuento* bytes restante en el archivo o si el archivo se abrió en modo de texto, en cuyo caso cada carro retorno par '\r\n' de avance de línea se reemplaza por un carácter de avance de línea '\n'. Solo se cuenta el carácter de avance de línea en el valor devuelto. El reemplazo no afecta al puntero de archivo.
 
-Si la función intenta leer al final del archivo, devuelve 0. Si *fd* es no válida, el archivo no está abierto para lectura, o el archivo está bloqueado, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EBADF**.
+Si la función intenta leer al final del archivo, devuelve 0. Si *fd* es no válido, el archivo no está abierto para lectura, o el archivo está bloqueado, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EBADF**.
 
 Si *buffer* es **NULL**, se invoca al controlador de parámetros no válidos. Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EINVAL**.
 
-Para obtener más información sobre este y otros códigos de retorno, consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Para más información sobre este y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_preguntas** función lee un máximo de *recuento* bytes en *búfer* desde el archivo asociado a *fd*. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.
+El **_read** función lee un máximo de *recuento* bytes en *búfer* desde el archivo asociado *fd*. La operación de lectura se inicia en la posición actual del puntero de archivo asociado al archivo en cuestión. Después de la operación de lectura, el puntero de archivo señala al siguiente carácter no leído.
 
-Si el archivo se abre en modo de texto, la operación de lectura finaliza cuando **_read** encuentra un carácter CTRL+Z, que se trata como un indicador de fin de archivo. Use [_lseek](lseek-lseeki64.md) para borrar el indicador de fin de archivo.
+Si el archivo se abrió en modo de texto, la lectura finaliza cuando **_read** encuentra un carácter CTRL+Z, que se trata como un indicador de fin de archivo. Use [_lseek](lseek-lseeki64.md) para borrar el indicador de fin de archivo.
 
 ## <a name="requirements"></a>Requisitos
 

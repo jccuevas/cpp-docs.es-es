@@ -1,10 +1,6 @@
 ---
-title: imaxabs | Microsoft Docs
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666259"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -60,7 +50,7 @@ Valor entero.
 El **imaxabs** función devuelve el valor absoluto del argumento. No se devuelve ningún error.
 
 > [!NOTE]
-> Dado que el intervalo de enteros negativos que se puede representar mediante el uso de **intmax_t** es mayor que el intervalo de enteros que se pueden representar, es posible proporcionar un argumento a **imaxabs** que no se puede convertir. Si el valor devuelto no puede representar el valor absoluto del argumento de tipo, el comportamiento de **imaxabs** no está definido.
+> Dado que el intervalo de enteros negativos que puede representarse mediante **intmax_t** es mayor que el intervalo de enteros positivos que se pueden representar, es posible proporcionar un argumento a **imaxabs** que no se puede convertir. Si el valor devuelto no puede representar el valor absoluto del argumento de tipo, el comportamiento de **imaxabs** es indefinido.
 
 ## <a name="requirements"></a>Requisitos
 

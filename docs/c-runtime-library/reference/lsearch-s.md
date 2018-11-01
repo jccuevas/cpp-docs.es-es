@@ -1,10 +1,6 @@
 ---
-title: _lsearch_s | Microsoft Docs
-ms.custom: ''
+title: _lsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lsearch_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _lsearch_s
 - lsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - linear searching
 - values, searching for
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12315350b62673abb0a838f9d30830354c58da73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404203"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677011"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -79,7 +69,7 @@ Tamaño de cada elemento de la matriz expresado en bytes.
 *compare*<br/>
 Puntero a la rutina de comparación. El segundo parámetro es un puntero a la clave de búsqueda. El tercer parámetro es un puntero a un elemento de la matriz que se va a comparar con la clave.
 
-*Contexto*<br/>
+*context*<br/>
 Un puntero a un objeto al que se podría obtener acceso en la función de comparación.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -99,11 +89,11 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 
 ## <a name="remarks"></a>Comentarios
 
-El **_lsearch_s** función realiza una búsqueda lineal para el valor *clave* en una matriz de *número* elementos, cada uno de los *ancho* bytes. A diferencia de **bsearch_s**, **_lsearch_s** no requiere que la matriz se ordenen. Si *clave* no se encuentra, a continuación, **_lsearch_s** lo agrega al final de la matriz y se incrementa *número*.
+El **_lsearch_s** función realiza una búsqueda lineal del valor *clave* en una matriz de *número* elementos, cada uno de *ancho* bytes. A diferencia de **bsearch_s**, **_lsearch_s** no requiere la matriz esté ordenada. Si *clave* no se encuentra, a continuación, **_lsearch_s** lo agrega al final de la matriz e incrementa *número*.
 
-El *comparar* función es un puntero a una rutina proporcionada por el usuario que compara dos elementos de la matriz y devuelve un valor que especifica la relación. El *comparar* función también toma el puntero en el contexto como el primer argumento. **_lsearch_s** llamadas *comparar* una o varias veces durante la búsqueda, pasar punteros a dos elementos de la matriz en cada llamada. *comparar* debe comparar los elementos y, a continuación, devolver uno distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
+El *comparar* función es un puntero a una rutina proporcionada por el usuario que compara dos elementos de matriz y devuelve un valor que especifica su relación. El *comparar* función también toma el puntero en el contexto como primer argumento. **_lsearch_s** llamadas *comparar* una o varias veces durante la búsqueda, pasando punteros a dos elementos de la matriz en cada llamada. *comparar* debe comparar los elementos y, a continuación, devolver uno distinto de cero (es decir, los elementos son diferentes) o 0 (es decir, los elementos son idénticos).
 
-El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto y el *comparar* función necesita tener acceso a los miembros del objeto. Por ejemplo, el código de la *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto correspondiente de ese objeto. La adición de la *contexto* puntero hace **_lsearch_s** más segura, porque puede usarse contexto adicional para evitar errores de reentrada asociados con el uso de variables estáticas para disponer de datos para el *comparar* función.
+El *contexto* puntero puede ser útil si la estructura de datos de búsqueda es parte de un objeto y el *comparar* función necesita tener acceso a los miembros del objeto. Por ejemplo, el código de la *comparar* función puede convertir el puntero void en los miembros de tipo y el acceso de objeto adecuado de ese objeto. La adición de la *contexto* hace que el puntero **_lsearch_s** más seguro, ya que puede usarse contexto adicional para evitar errores de reentrada asociados al uso de variables estáticas para que los datos disponibles en el *comparar* función.
 
 ## <a name="requirements"></a>Requisitos
 

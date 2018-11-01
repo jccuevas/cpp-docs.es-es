@@ -1,12 +1,7 @@
 ---
-title: Palabras clave (C++) | Microsoft Docs
+title: Palabras clave (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659321"
 ---
 # <a name="keywords-c"></a>Palabras clave (C++)
 
@@ -85,7 +76,7 @@ Las palabras clave son identificadores reservados predefinidos que tienen un sig
 
 En Microsoft C++, los identificadores con dos caracteres de subrayado iniciales se reservan para las implementaciones del compilador. Por consiguiente, la convención de Microsoft es que las palabras clave específicas de Microsoft vayan precedidas por subrayados dobles. Estas palabras no se pueden utilizar como nombres de identificador.
 
-Las extensiones de Microsoft están habilitadas de manera predeterminada. Para asegurarse de que los programas sean totalmente portables, puede deshabilitar las extensiones de Microsoft especificando la [/Za \(deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md) opción durante la compilación. Al hacerlo, se deshabilita algunas palabras clave de Microsoft específicos.
+Las extensiones de Microsoft están habilitadas de manera predeterminada. Para asegurarse de que los programas sean totalmente portables, puede deshabilitar las extensiones de Microsoft especificando la opción [/Za \(Deshabilitar las extensiones del lenguaje)](../build/reference/za-ze-disable-language-extensions.md) durante la compilación. Al hacerlo, se deshabilitan algunas las palabras clave específicas de Microsoft.
 
 Con las extensiones de Microsoft habilitadas, puede usar las palabras clave específicas de Microsoft en los programas. Para la compatibilidad con ANSI, estas palabras clave van precedidas por un subrayado doble. Compatibilidad con versiones anteriores, se admiten las versiones de un solo subrayado de muchas de las palabras clave con doble subrayado. Además, **__cdecl** está disponible sin subrayado inicial.
 

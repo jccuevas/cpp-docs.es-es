@@ -1,10 +1,6 @@
 ---
-title: isspace, iswspace, _isspace_l, _iswspace_l | Microsoft Docs
-ms.custom: ''
+title: isspace, iswspace, _isspace_l, _iswspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 404fee8d74cec18c277f6c076a7cc41065a8b242
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd93b196c23be5e91852e8c02d75055c1051b912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590464"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
@@ -83,7 +73,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter de espacio. **isspace** devuelve un valor distinto de cero si *c* es un carácter de espacio en blanco (0 x 09-0x0D o 0 x 20). El resultado de la condición de prueba para la **isspace** función depende de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para cualquier comportamiento que dependa de la configuración regional; las versiones que tienen la **_l** sufijo son idénticas salvo que usan el configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un carácter de espacio. **isspace** devuelve un valor distinto de cero si *c* es un carácter de espacio en blanco (0 x 09-0x0D o 0 x 20). El resultado de la condición de prueba para el **isspace** función depende de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; las versiones que tienen el **_l** sufijo son idénticas salvo que usan el configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 **iswspace** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un carácter de espacio en blanco estándar.
 
