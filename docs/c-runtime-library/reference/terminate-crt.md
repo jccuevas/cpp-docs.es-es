@@ -1,10 +1,6 @@
 ---
-title: terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - terminate
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c743439b487f091b760e3747c47b471832e1ff3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438645"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Llamadas [anular](abort.md) o una función especifique mediante **set_terminate**.
+Las llamadas [anular](abort.md) o una función que especifique mediante **set_terminate**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -59,7 +49,7 @@ El **finalizar** función se usa con control de excepciones de C++ y se llama en
 
 - Cuando la pila se daña después de producir una excepción.
 
-**terminar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamando a **set_terminate** con el nombre de la función como su argumento. **terminar** llama a la última función especificada como argumento a **set_terminate**. Para más información, vea [Excepciones de C++ no controladas](../../cpp/unhandled-cpp-exceptions.md).
+**Finalizar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamar a **set_terminate** con el nombre de la función como su argumento. **Finalizar** llama a la última función especificada como argumento a **set_terminate**. Para más información, vea [Excepciones de C++ no controladas](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Requisitos
 
