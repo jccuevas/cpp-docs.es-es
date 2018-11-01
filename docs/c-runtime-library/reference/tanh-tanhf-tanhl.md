@@ -1,10 +1,6 @@
 ---
-title: TANH, tanhf, tanhl | Documentos de Microsoft
-ms.custom: ''
+title: TANH, tanhf, tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408525"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432400"
 ---
 # <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
 
@@ -73,13 +63,13 @@ long double tanh( long double x );  // C++ only
 
 El **tanh** funciones devuelven la tangente hiperbólica de *x*. No se devuelve ningún error.
 
-|Entrada|Excepción SEH|**Matherr** (excepción)|
+|Entrada|Excepción SEH|**_Matherr** excepción|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|ninguna|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **tanh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **tanh** siempre toma y devuelve **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **tanh** que toman y devuelven **float** o **largo** **doble** valores. En un programa C, **tanh** siempre toma y devuelve **doble**.
 
 ## <a name="requirements"></a>Requisitos
 
