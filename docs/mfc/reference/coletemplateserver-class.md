@@ -1,10 +1,6 @@
 ---
-title: COleTemplateServer (clase) | Microsoft Docs
-ms.custom: ''
+title: COleTemplateServer (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleTemplateServer
 - AFXDISP/COleTemplateServer
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXDISP/COleTemplateServer::ConnectTemplate
 - AFXDISP/COleTemplateServer::Unregister
 - AFXDISP/COleTemplateServer::UpdateRegistry
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleTemplateServer [MFC], COleTemplateServer
 - COleTemplateServer [MFC], ConnectTemplate
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aef24acf61aae2d6690e5f302822ce52aaa4917a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427165"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528653"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer (clase)
 
@@ -177,7 +167,7 @@ Si el `regFileTypeId` subcadena está vacía o si la llamada a `GetDocString` se
 
 La información de los argumentos *rglpszRegister* y *rglpszOverwrite* se escribe en el registro mediante una llamada a [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass). La información de forma predeterminada, que se registra cuando los dos argumentos son NULL, es adecuada para la mayoría de las aplicaciones. Para obtener información sobre la estructura de la información de estos argumentos, vea `AfxOleRegisterServerClass`.
 
-Para obtener más información, consulte [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Para obtener más información, consulta [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ## <a name="see-also"></a>Vea también
 
