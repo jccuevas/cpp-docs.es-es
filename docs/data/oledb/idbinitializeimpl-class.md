@@ -1,10 +1,6 @@
 ---
-title: IDBInitializeImpl (clase) | Microsoft Docs
-ms.custom: ''
+title: IDBInitializeImpl (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: reference
 f1_keywords:
 - ATL.IDBInitializeImpl<T>
 - ATL::IDBInitializeImpl<T>
@@ -35,8 +31,6 @@ f1_keywords:
 - IDBInitializeImpl<T>::m_pCUtlPropInfo
 - IDBInitializeImpl.m_pCUtlPropInfo
 - ATL::IDBInitializeImpl::m_pCUtlPropInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - IDBInitializeImpl class
 - IDBInitializeImpl constructor
@@ -45,17 +39,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 92d71bc780e66d4a61d74605aeb5c316b181beba
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b8411dd204eb3fbeb23508913eea6a580c655530
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081769"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512709"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
 

@@ -1,27 +1,17 @@
 ---
-title: Las operaciones de arrastrar y colocar del Control de árbol | Microsoft Docs
-ms.custom: ''
+title: Operaciones de arrastrar y colocar del control de árbol
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], drag and drop operations
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9b53196ded40bffd0a74f91df5ac938fc1616efa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519371"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operaciones de arrastrar y colocar del control de árbol
 

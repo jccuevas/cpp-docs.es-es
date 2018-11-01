@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcat_s, _mbsnbcat_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcat_s, _mbsnbcat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
@@ -26,8 +22,6 @@ f1_keywords:
 - mbsnbcat_s
 - _mbsnbcat_s_l
 - mbsnbcat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsncat function
 - mbsnbcat_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead47b21a066d7e55c22d6bc8fba63cb73a0224
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497339"
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s, _mbsnbcat_s_l
 
@@ -99,7 +89,7 @@ Tamaño de la *dest* búfer en bytes.
 Cadena de origen de caracteres multibyte terminada en NULL.
 
 *count*<br/>
-Número de bytes de *src* para anexar a *dest*.
+Número de bytes desde *src* para anexar a *dest*.
 
 *locale*<br/>
 Configuración regional que se va a usar.
@@ -120,9 +110,9 @@ Si se produce alguna de las condiciones de error, la función genera un error de
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbcat_s** función anexa a *dest*, como máximo, la primera *recuento* bytes de *src*. Si el byte que precede inmediatamente al carácter nulo en *dest* es un byte inicial, se sobrescribe el byte inicial de *src*. En caso contrario, el byte inicial de *src* sobrescribe el carácter nulo de terminación de *dest*. Si aparece un byte nulo en *src* antes de *recuento* bytes se anexan, **_mbsnbcat_s** anexa todos los bytes de *src*, hasta el valor null carácter. Si *recuento* es mayor que la longitud de *src*, la longitud de *src* se utiliza en lugar de *recuento*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
+El **_mbsnbcat_s** función anexa a *dest*, a lo sumo, la primera *recuento* bytes de *src*. Si el byte que precede inmediatamente al carácter nulo en *dest* es un byte inicial, se sobrescribe el byte inicial de *src*. En caso contrario, el byte inicial de *src* sobrescribe el carácter nulo de terminación de *dest*. Si aparece un byte nulo en *src* antes *recuento* bytes se anexan, **_mbsnbcat_s** anexa todos los bytes de *src*, hasta el valor null carácter. Si *recuento* es mayor que la longitud de *src*, la longitud de *src* se utiliza en lugar de *recuento*. La cadena resultante se termina con un carácter nulo. Si la copia tiene lugar entre cadenas que se superponen, el comportamiento es indefinido.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen la **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale, _wsetlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usan la configuración regional actual y las que tienen el **_l** sufijo en su lugar, use el parámetro de configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden inferir automáticamente la longitud de búfer, lo que elimina la necesidad de especificar un argumento de tamaño, y pueden usar automáticamente funciones más recientes y seguras para reemplazar las funciones anteriores no seguras. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
