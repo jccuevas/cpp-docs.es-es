@@ -1,14 +1,8 @@
 ---
-title: Seleccionar un Color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Seleccionar un color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b9f99170e41d3a436f0926e5a9bf59e1240335eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 65994c7242ffcc46cbb4eb23841f7269c9352400
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519683"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Seleccionar un color de una imagen para utilizarlo en otro sitio (Editor de imágenes para iconos)
 
