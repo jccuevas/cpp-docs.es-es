@@ -1,10 +1,6 @@
 ---
-title: toupper, _toupper, towupper, _toupper_l, _towupper_l | Microsoft Docs
-ms.custom: ''
+title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _toupper_l
 - towupper
@@ -29,8 +25,6 @@ f1_keywords:
 - _toupper
 - _totupper
 - toupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - _toupper function
 - towupper function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73157691cc1635d038339d9fe707aa535e1df93f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608927"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -100,13 +90,13 @@ Si *c* es un carácter ancho para el que **iswlower** es distinto de cero y no h
 
 No se reserva ningún valor devuelto para indicar un error.
 
-En orden para **toupper** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [islower](islower-iswlower-islower-l-iswlower-l.md) debe devolver es distinto de cero.
+En orden para **toupper** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [islower](islower-iswlower-islower-l-iswlower-l.md) debe devolver cero.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas rutinas convierte una determinada letra minúscula en una letra mayúscula si es posible y pertinente. La conversión del tipo de **towupper** es específico de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el **_l** sufijo usar el conjunto actual configuración regional. Las versiones de estas funciones con el **_l** sufijo toman la configuración regional como parámetro y que utilice el conjunto actual configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas rutinas convierte una determinada letra minúscula en una letra mayúscula si es posible y pertinente. La conversión del tipo **towupper** es específico de la configuración regional. Solo se convierten los caracteres pertinentes para la configuración regional actual. Las funciones sin el **_l** sufijo usar el conjunto actual configuración regional. Las versiones de estas funciones con el **_l** sufijo toman la configuración regional como parámetro y usarlo en lugar de establecida actualmente configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En orden para **toupper** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [isupper](isupper-isupper-l-iswupper-iswupper-l.md) debe devolver es distinto de cero.
+En orden para **toupper** para proporcionar a los resultados esperados, [__isascii](isascii-isascii-iswascii.md) y [isupper](isupper-isupper-l-iswupper-iswupper-l.md) debe devolver cero.
 
 [Rutinas de conversión de datos](../../c-runtime-library/data-conversion.md)
 
@@ -118,7 +108,7 @@ En orden para **toupper** para proporcionar a los resultados esperados, [__isasc
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** y **_towupper_l** no tienen dependen de la configuración regional y no están diseñadas para ser llamado directamente. Se proporcionan para uso interno exclusivo **_totupper_l**.
+> **_toupper_l** y **_towupper_l** no tienen dependen de la configuración regional y no están diseñados para ser llamado directamente. Se proporcionan para uso interno **_totupper_l**.
 
 ## <a name="requirements"></a>Requisitos
 

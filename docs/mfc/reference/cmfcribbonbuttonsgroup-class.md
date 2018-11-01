@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonButtonsGroup (clase) | Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonButtonsGroup (clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::RemoveAll
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetImages
 - AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetParentCategory
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], CMFCRibbonButtonsGroup
 - CMFCRibbonButtonsGroup [MFC], AddButton
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e19b01aa2fa268064f9e6a5c51c56d26be22d1a6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592744"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup (clase)
 
@@ -87,7 +77,7 @@ El grupo se deriva [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseele
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCRibbonButtonsGroup` clase. En el ejemplo se muestra cómo construir un `CMFCRibbonButtonsGroup` objeto, asignar imágenes para el grupo de botones de cinta de opciones y agregar un botón al grupo de botones de la cinta. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonButtonsGroup` . En el ejemplo se muestra cómo construir un `CMFCRibbonButtonsGroup` objeto, asignar imágenes para el grupo de botones de cinta de opciones y agregar un botón al grupo de botones de la cinta. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
