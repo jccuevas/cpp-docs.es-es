@@ -1,29 +1,18 @@
 ---
-title: Establecer el tamaño de cuadro combinado y de su lista desplegable | Microsoft Docs
-ms.custom: ''
+title: Establecer el tamaño de un cuadro combinado y de su lista desplegable
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
-dev_langs:
-- C++
 helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8bd2a81c10855dfe1d409b34612956616018dab7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 091c01e669259b87e320f94f880f6e1643726452
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677362"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>Establecer el tamaño de un cuadro combinado y de su lista desplegable
 
