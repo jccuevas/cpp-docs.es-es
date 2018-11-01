@@ -1,27 +1,17 @@
 ---
-title: Advertencia del compilador C4958 | Documentos de Microsoft
-ms.custom: ''
+title: Advertencia del compilador C4958
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4958
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6e32acc4ec45275976e7fb56f993b10ba8a2a855
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7d4ac6f21cfcfe0f37eb17ff81eabd3e6341a7d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477407"
 ---
 # <a name="compiler-warning-c4958"></a>Advertencia del compilador C4958
 
@@ -31,9 +21,9 @@ ms.locfileid: "34704878"
 
 El uso de la aritmética de puntero producirá una imagen no comprobable.
 
-Para obtener más información, consulte [código puro y comprobable (C++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Para obtener más información, consulte [código puro y comprobable (C++ / c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-El **/CLR: safe** opción del compilador está en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+El **/CLR: safe** opción del compilador está en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
 Esta advertencia se emite como un error y puede deshabilitarse con pragma [warning](../../preprocessor/warning.md) o la opción del compilador [/wd](../../build/reference/compiler-option-warning-level.md) .
 

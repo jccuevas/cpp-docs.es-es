@@ -1,10 +1,6 @@
 ---
-title: unbounded_buffer (clase) | Microsoft Docs
-ms.custom: ''
+title: Clase unbounded_buffer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - unbounded_buffer
 - AGENTS/concurrency::unbounded_buffer
@@ -22,19 +18,13 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::resume_propagation
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
-dev_langs:
-- C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 79bab3c41df2f3cbc5b11522b394a2785e64cddc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163002"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495243"
 ---
 Un bloque de mensajería `unbounded_buffer` es un bloque `propagator_block` de destino único, de varios orígenes y ordenado capaz de almacenar un número ilimitado de mensajes.
 

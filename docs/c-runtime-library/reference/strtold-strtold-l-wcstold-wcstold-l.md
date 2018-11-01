@@ -1,10 +1,6 @@
 ---
-title: strtold, _strtold_l, wcstold, _wcstold_l | Microsoft Docs
-ms.custom: ''
+title: strtold, _strtold_l, wcstold, _wcstold_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -30,19 +26,13 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs:
-- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a5018f9245da77fbadb301a8fa45d1f0f7b4117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fce60775ee1ef6def214e559779004d4de95453c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417082"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484583"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold, _strtold_l, wcstold, _wcstold_l
 
@@ -86,13 +76,13 @@ Configuración regional que se va a usar.
 
 **strtold** devuelve el valor del número de punto flotante como un **largo** **doble**, excepto cuando la representación produciría desbordamiento, en ese caso, la función devuelve +/-**HUGE_VALL**. El inicio de sesión de **HUGE_VALL** coincide con el signo del valor que no se puede representar. **strtold** devuelve 0 si se puede realizar ninguna conversión o se produce un subdesbordamiento.
 
-**wcstold** devuelve valores de manera parecida a **strtold**. Para ambas funciones, **errno** está establecido en **ERANGE** si se produce desbordamiento o subdesbordamiento y se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+**wcstold** devuelve valores de manera parecida a **strtold**. Para ambas funciones, **errno** está establecido en **ERANGE** si se produce desbordamiento o subdesbordamiento y se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada función convierte la cadena de entrada *strSource* a una **largo** **doble**. El **strtold** función deja de leer la cadena *strSource* en el primer carácter que no se reconoce como parte de un número. Este puede ser el carácter nulo de terminación. La versión con caracteres anchos de **strtold** es **wcstold**; su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+Cada función convierte la cadena de entrada *strSource* a un **largo** **doble**. El **strtold** función deja de leer la cadena *strSource* en el primer carácter que no se reconoce como parte de un número. Este puede ser el carácter nulo de terminación. La versión con caracteres anchos de **strtold** es **wcstold**; su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -101,15 +91,15 @@ Cada función convierte la cadena de entrada *strSource* a una **largo** **doble
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-El **LC_NUMERIC** valor de la categoría de la configuración regional actual determina el reconocimiento del carácter base en *strSource*. Para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las funciones sin el **_l** sufijo usar la configuración regional actual; **_strtold_l** y **_wcstold_l** son idénticas a **_strtold** y **_wcstold** salvo que usan en su lugar la configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El **LC_NUMERIC** valor de la categoría de la configuración regional actual determina el reconocimiento del carácter base en *strSource*. Para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las funciones sin el **_l** sufijo usar la configuración regional actual. **_strtold_l** y **_wcstold_l** son idénticas a **_strtold** y **_wcstold** , salvo que usan la configuración regional que pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación que apunta a *endptr*. Si no se puede realizar ninguna conversión (no válidos se encontraron dígitos o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación que apunta a *endptr*.
+Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación en la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación en la que apunta *endptr*.
 
 **strtold** espera *strSource* para que apunte a una cadena de la forma siguiente:
 
-[*espacio en blanco*] [*inicio de sesión*] [*dígitos*] [. *dígitos*] [{**d.** &#124; **d.** &#124; **e** &#124; **E**} [*inicio de sesión* ]*dígitos*]
+[*espacio en blanco*] [*sesión*] [*dígitos*] [. *dígitos*] [{**d.** &#124; **d.** &#124; **e** &#124; **E**} [*inicio de sesión* ]*dígitos*]
 
-A *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *inicio de sesión* sea más (**+**) o un signo menos (**-**); y *dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra inicial (**d**, **D**, **e** o **E**) y un entero con signo optativo. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.
+Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten; *sesión* sea plus (**+**) o un signo menos (**-**); y *dígitos* son uno o más dígitos decimales. Si no aparece ningún dígito antes del carácter de base, debe aparecer al menos uno después del carácter de base. Los dígitos decimales pueden ir seguidos de un exponente, que consta de una letra inicial (**d**, **D**, **e** o **E**) y un entero con signo optativo. Si no aparece ni una parte exponencial ni un carácter de base, se supone que un carácter de base sigue al último dígito de la cadena. El primer carácter que no se ajusta a este formato detiene el análisis.
 
 ## <a name="requirements"></a>Requisitos
 

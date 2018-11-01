@@ -1,28 +1,17 @@
 ---
-title: Recortar o ampliar una imagen completa (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Recortar o ampliar una imagen completa (Editor de imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], cropping
 - images [C++], extending
 - Image editor [C++], cropping or extending images
 ms.assetid: 21cdaff5-6636-4ad9-a2f0-ca2228321927
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d6e507fbb352279d406861b7ae1b2cf29aaa943c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2a091fd04aa56daa2b215e6ad7aed8003519c201
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394912"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474118"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>Recortar o ampliar una imagen completa (Editor de imágenes para iconos)
 
