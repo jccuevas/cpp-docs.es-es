@@ -1,33 +1,23 @@
 ---
-title: Compatibilidad con Unicode en el compilador y el vinculador | Documentos de Microsoft
-ms.custom: ''
+title: Compatibilidad con Unicode en el compilador y el vinculador
 ms.date: 12/15/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UseUnicodeResponseFiles
 - VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
 - VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode, Visual C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec0b84cd62f3fcca378ab55de16006925e685b37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494983"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Compatibilidad con Unicode en el compilador y el vinculador
 
-La mayoría herramientas de compilación de Visual C++ admiten Unicode entradas y salidas.
+Mayoría de las herramientas de compilación de Visual C++ admite Unicode entradas y salidas.
 
 ## <a name="filenames"></a>Nombres de archivo
 
@@ -35,9 +25,9 @@ Los nombres de archivo especificado en la línea de comandos o en las directivas
 
 ## <a name="source-code-files"></a>Archivos de código fuente
 
-Se admiten caracteres Unicode en identificadores, macros, literales de cadena y carácter y en comentarios.  También se admiten nombres de carácter universal.
+Se admiten caracteres Unicode en identificadores, macros, literales de cadena y carácter y en los comentarios.  También se admiten nombres de carácter universal.
 
-Unicode se puede especificar en un archivo de código fuente en las codificaciones siguientes:
+Unicode se puede especificar en un archivo de código fuente con las codificaciones siguientes:
 
 - UTF-16 little endian con o sin marca de orden de bytes (BOM)
 
@@ -51,11 +41,11 @@ Durante la compilación, el compilador genera diagnósticos en la consola en UTF
 
 ## <a name="linker-response-files-and-def-files"></a>Archivos de respuesta del vinculador y. DEF (archivos)
 
-Archivos de respuesta y DEF (archivos) pueden ser UTF-16 con una lista de materiales o ANSI.
+DEF (archivos) y los archivos de respuesta pueden ser UTF-16 con una marca BOM o ANSI.
 
-## <a name="asm-and-cod-dumps"></a>ASM y volcados de .cod
+## <a name="asm-and-cod-dumps"></a>volcados de memoria .asm y .cod
 
-ASM y volcados de .cod están en ANSI predeterminada por compatibilidad con MASM. Use [/FAu](../../build/reference/fa-fa-listing-file.md) para generar UTF-8. Tenga en cuenta que si especifica **/FAs**, el origen entremezclados siguiendo solo se imprimirán directamente y puede ser confusa, por ejemplo, si el código fuente es UTF-8 y no se especifica **/FAsu**.
+volcados de memoria .asm y .cod están en ANSI de manera predeterminada para la compatibilidad con MASM. Use [/FAu](../../build/reference/fa-fa-listing-file.md) para generar UTF-8. Tenga en cuenta que si especifica **/FAS**, la fuente entremezclada se imprimirá directamente y podrá aparecer confusa, por ejemplo, si el código fuente es UTF-8 y no se especificó **/FAsu**.
 
 ## <a name="see-also"></a>Vea también
 

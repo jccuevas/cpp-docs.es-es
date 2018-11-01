@@ -1,10 +1,6 @@
 ---
-title: _putc_nolock, _putwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _putc_nolock, _putwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putc_nolock
 - _putwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _putwc_nolock
 - _putc_nolock
 - putc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - puttc_nolock function
 - putc_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5975c25c015bb77c627eda3483566f358aedbedb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510921"
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
 
@@ -73,7 +63,7 @@ wint_t _putwc_nolock(
 *c*<br/>
 Carácter que se va a escribir.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -82,9 +72,9 @@ Vea **putc, putwc**.
 
 ## <a name="remarks"></a>Comentarios
 
-**_putc_nolock** y **_putwc_nolock** son idénticas a las versiones sin el **_nolock** sufijo salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_putc_nolock** y **_putwc_nolock** son idénticas a las versiones sin el **_nolock** sufijo, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
-**_putwc_nolock** es la versión con caracteres anchos de **_putc_nolock**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **_putc_nolock** no admite actualmente la salida en un flujo UNICODE.
+**_putwc_nolock** es la versión de caracteres anchos de **_putc_nolock**; las dos funciones se comportan exactamente igual si el flujo se abre en modo ANSI. **_putc_nolock** no admite actualmente la salida en un flujo UNICODE.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -99,7 +89,7 @@ Vea **putc, putwc**.
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados con la consola, **stdin**, **stdout**, y **stderr**, se deben redirigir antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

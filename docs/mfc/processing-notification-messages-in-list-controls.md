@@ -1,26 +1,16 @@
 ---
-title: Procesar mensajes de notificación en los controles de lista | Microsoft Docs
-ms.custom: ''
+title: Procesar mensajes de notificación en los controles de lista
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ab312a1ef64ce64ba39b43df722f9aaafa6dcb4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 427abe5259334588b566656abd70acf22b923809
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410746"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490095"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>Procesar mensajes de notificación en los controles de lista
 

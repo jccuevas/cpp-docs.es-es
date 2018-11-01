@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcpy_s, _mbsnbcpy_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404122"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493501"
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -106,16 +96,16 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si es correcto; **EINVAL** si se pasó un parámetro incorrecto.
+Cero si se realiza correctamente; **EINVAL** si se pasó un parámetro incorrecto.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_mbsnbcpy_s** función copias *recuento* bytes a partir de *strSource* a *strDest*. Si *recuento* supera el tamaño de *strDest*, cualquiera de las cadenas de entrada es un puntero nulo, o *sizeInBytes* o *recuento* es 0, la función se invoca el controlador de parámetros no válidos como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función devuelve **EINVAL**. Si las cadenas de origen y de destino se superponen, el comportamiento de **_mbsnbcpy_s** no está definido.
+El **_mbsnbcpy_s** función copias *recuento* bytes a partir de *strSource* a *strDest*. Si *recuento* supera el tamaño de *strDest*, ya sea de las cadenas de entrada es un puntero nulo, o *sizeInBytes* o *recuento* es 0, la función invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, la función devuelve **EINVAL**. Si las cadenas de origen y destino superponer el comportamiento de **_mbsnbcpy_s** es indefinido.
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> A diferencia de la versión no segura de esta función, **_mbsnbcpy_s** no realice cualquier relleno null y null siempre termina la cadena.
+> A diferencia de la versión no segura de esta función, **_mbsnbcpy_s** hacer cualquier relleno nulo y siempre es null no termina la cadena.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

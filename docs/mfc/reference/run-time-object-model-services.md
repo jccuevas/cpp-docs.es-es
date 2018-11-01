@@ -1,27 +1,17 @@
 ---
-title: Servicios del modelo de objeto de tiempo de ejecución | Microsoft Docs
-ms.custom: ''
+title: Servicios del modelo de objetos en tiempo de ejecución
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 63d933798a3ecffd20ed7189649f7b1556c9de15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50064569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519280"
 ---
 # <a name="run-time-object-model-services"></a>Servicios del modelo de objetos en tiempo de ejecución
 
