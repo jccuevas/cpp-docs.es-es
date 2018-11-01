@@ -1,10 +1,6 @@
 ---
-title: isgraph, iswgraph, _isgraph_l, _iswgraph_l | Microsoft Docs
-ms.custom: ''
+title: isgraph, iswgraph, _isgraph_l, _iswgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isgraph
 - iswgraph
@@ -31,8 +27,6 @@ f1_keywords:
 - _istgraph_l
 - _istgraph
 - iswgraph
-dev_langs:
-- C++
 helpviewer_keywords:
 - isgraph function
 - _istgraph_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b60e022471bdfa7cbbddb6b5263f757438572a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664807"
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -84,9 +74,9 @@ Entero que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un carácter imprimible que no sea un espacio. **isgraph** devuelve un valor distinto de cero si *c* es un carácter imprimible que no sea un espacio. **iswgraph** devuelve un valor distinto de cero si *c* es un carácter ancho imprimible que no sea un espacio de carácter ancho. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un carácter imprimible que no sea un espacio. **isgraph** devuelve un valor distinto de cero si *c* es un carácter imprimible que no sea un espacio. **iswgraph** devuelve un valor distinto de cero si *c* es un carácter ancho imprimible que no sea un espacio de carácter ancho. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
 
-Las versiones de estas funciones que tienen la **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 El comportamiento de **isgraph** y **_isgraph_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
 
