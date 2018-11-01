@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidHeapPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidHeapPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bc4be3f464cb48647985a96550a8b9ea13ce5ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662012"
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -53,16 +43,16 @@ int _CrtIsValidHeapPointer(
 
 ### <a name="parameters"></a>Parámetros
 
-*UserData*<br/>
+*userData*<br/>
 Puntero al principio de un bloque de memoria asignado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_CrtIsValidHeapPointer** devuelve TRUE si el puntero especificado se encuentra en el montón que comparten todas las instancias de la biblioteca de CRT. En las versiones de CRT anteriores a Visual Studio 2010, devuelve TRUE si el puntero especificado se encuentra en el montón local. De lo contrario, la función devuelve el FALSE.
+**_CrtIsValidHeapPointer** devuelve TRUE si el puntero especificado está en el montón que comparten todas las instancias de la biblioteca de CRT. En las versiones de CRT anteriores a Visual Studio 2010, devuelve TRUE si el puntero especificado se encuentra en el montón local. De lo contrario, la función devuelve el FALSE.
 
 ## <a name="remarks"></a>Comentarios
 
-No se recomienda usar esta función. A partir de la biblioteca CRT de Visual Studio 2010, todas las bibliotecas CRT comparten un montón del SO, el *montón del proceso*. El **_CrtIsValidHeapPointer** función informa de si el puntero se asignó en un montón de CRT, pero no que se asignó mediante la biblioteca de CRT del llamador. Por ejemplo, tenga en cuenta un bloque asignado mediante la versión de Visual Studio 2010 de la biblioteca CRT. Si el **_CrtIsValidHeapPointer** función exportada por la versión de Visual Studio 2012 de la biblioteca CRT comprueba el puntero, devuelve TRUE. Esta prueba ya no es útil. En versiones anteriores a Visual Studio 2010 de la biblioteca CRT, la función se usa para garantizar que una dirección de memoria concreta está en el montón local. El montón local hace referencia al montón creado y administrado por una instancia determinada de la biblioteca en tiempo de ejecución de C. Si una biblioteca de vínculos dinámicos (DLL) contiene un vínculo estático a la biblioteca en tiempo de ejecución, tiene su propia instancia del montón en tiempo de ejecución y, por consiguiente, su propio montón, independiente del montón local de la aplicación. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsValidHeapPointer** se quitan durante el preprocesamiento.
+No se recomienda usar esta función. A partir de la biblioteca CRT de Visual Studio 2010, todas las bibliotecas CRT comparten un montón del SO, el *montón del proceso*. El **_CrtIsValidHeapPointer** función notifica si el puntero se asignó en un montón de CRT, pero no que se ha asignado por la biblioteca CRT del autor de la llamada. Por ejemplo, tenga en cuenta un bloque asignado mediante la versión de Visual Studio 2010 de la biblioteca CRT. Si el **_CrtIsValidHeapPointer** función exportada por la versión de Visual Studio 2012 de la biblioteca CRT comprueba el puntero, devuelve TRUE. Esta prueba ya no es útil. En versiones anteriores a Visual Studio 2010 de la biblioteca CRT, la función se usa para garantizar que una dirección de memoria concreta está en el montón local. El montón local hace referencia al montón creado y administrado por una instancia determinada de la biblioteca en tiempo de ejecución de C. Si una biblioteca de vínculos dinámicos (DLL) contiene un vínculo estático a la biblioteca en tiempo de ejecución, tiene su propia instancia del montón en tiempo de ejecución y, por consiguiente, su propio montón, independiente del montón local de la aplicación. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, las llamadas a **_CrtIsValidHeapPointer** se quitan durante el preprocesamiento.
 
 Dado que esta función devuelve TRUE o FALSE, se puede pasar a una de las macros [_ASSERT](assert-asserte-assert-expr-macros.md) para crear un mecanismo sencillo de control de errores de depuración. En el ejemplo siguiente se genera un error de aserción si la dirección especificada no se está en el montón local:
 
@@ -70,7 +60,7 @@ Dado que esta función devuelve TRUE o FALSE, se puede pasar a una de las macros
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-Para obtener más información acerca de cómo **_CrtIsValidHeapPointer** puede utilizarse con otras macros y funciones de depuración, consulte [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Para obtener más información acerca de cómo **_CrtIsValidHeapPointer** puede utilizarse con otras macros y funciones de depuración, vea [Macros para los informes](/visualstudio/debugger/macros-for-reporting). Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Requisitos
 

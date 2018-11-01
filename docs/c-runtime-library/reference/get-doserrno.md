@@ -1,10 +1,6 @@
 ---
-title: _get_doserrno | Microsoft Docs
-ms.custom: ''
+title: _get_doserrno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_doserrno
 apilocation:
@@ -23,49 +19,43 @@ apitype: DLLExport
 f1_keywords:
 - _get_doserrno
 - get_doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cef2c068fad2f18cb1d11d33e551588800cb64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d28b9ec47108f7051a908f874584bbfddf5d6a3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399574"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605171"
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 
-Obtiene el valor de error devuelto por el sistema operativo antes de que se traduce en un **errno** valor.
+Obtiene el valor de error devuelto por el sistema operativo antes de se traduce en un **errno** valor.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```C
-errno_t _get_doserrno( 
-   int * pValue 
+errno_t _get_doserrno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>Parámetros
 
 *pValue*<br/>
-Un puntero a un entero que se rellenará con el valor actual de la **_doserrno** macro global.
+Un puntero a un entero que se va a rellenar con el valor actual de la **_doserrno** macro global.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si **_get_doserrno** se realiza correctamente, devuelve cero; en caso contrario, devuelve un código de error. Si *pValue* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Si **_get_doserrno** se realiza correctamente, devuelve cero; en caso contrario, devuelve un código de error. Si *pValue* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_doserrno** macro global está establecida en cero durante la inicialización de CRT, antes de proceso comienza la ejecución. Se establece en el valor de error de sistema operativo devuelto por una llamada de función de nivel de sistema que devuelve un error de sistema operativo, y nunca se restablece a cero durante la ejecución. Al escribir código para comprobar el valor de error devuelto por una función, desactive siempre **_doserrno** utilizando [_set_doserrno](set-doserrno.md) antes de la llamada de función. Porque otra llamada de función sobrescriba **_doserrno**, compruebe el valor mediante el uso de **_get_doserrno** inmediatamente después de la llamada de función.
+El **_doserrno** macro global está establecida en cero durante la inicialización de CRT, comienza la ejecución antes de proceso. Se establece en el valor de error de sistema operativo devuelto por una llamada de función de nivel de sistema que devuelve un error de sistema operativo, y nunca se restablece a cero durante la ejecución. Cuando escriba código para comprobar el valor de error devuelto por una función, borre siempre **_doserrno** utilizando [_set_doserrno](set-doserrno.md) antes de la llamada de función. Dado que otra llamada de función podría sobrescribir **_doserrno**, compruebe el valor mediante el uso de **_get_doserrno** inmediatamente después de la llamada de función.
 
-Se recomienda [_get_errno](get-errno.md) en lugar de **_get_doserrno** para códigos de error portátil.
+Se recomienda [_get_errno](get-errno.md) en lugar de **_get_doserrno** para códigos de error portables.
 
 Los valores posibles de **_doserrno** se definen en \<errno.h >.
 

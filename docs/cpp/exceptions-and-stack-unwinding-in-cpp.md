@@ -1,23 +1,13 @@
 ---
-title: Excepciones y desenredo de pila en C++ | Microsoft Docs
-ms.custom: ''
+title: Excepciones y desenredo de pila en C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a413179ca2c44d1a66ae1702c690039383d1045
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 43d7945d53a0bd9993e75c04cceb3c8f5fec8ae2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569720"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Excepciones y desenredo de pila en C++
 
@@ -38,82 +28,82 @@ En el mecanismo de excepciones de C++, el control se mueve desde la instrucción
 En el ejemplo siguiente se muestra cómo se desenreda la pila cuando se produce una excepción. La ejecución del subproceso salta de la instrucción throw de `C` a la instrucción catch de `main` y desenreda cada función a lo largo del recorrido. Observe el orden en que se crean los objetos `Dummy` y se destruyen después cuando salen del ámbito. Observe también que ninguna función se completa excepto `main`, que contiene la instrucción catch. La función `A` nunca vuelve de la llamada a `B()` y `B` nunca vuelve de la llamada a `C()`. Si quita los comentarios de la definición del puntero de `Dummy` y la correspondiente instrucción delete, y ejecuta después el programa, observe que el puntero nunca se elimina. Esto muestra lo que puede suceder cuando las funciones no proporcionan una garantía de excepción. Para obtener más información, vea Diseñar para excepciones. Si marca como comentario la instrucción catch, puede observar lo que sucede cuando un programa finaliza debido a una excepción no controlada.
 
 ```cpp
-#include <string>
-#include <iostream>
-using namespace std;
+#include <string>
+#include <iostream>
+using namespace std;
 
-class MyException{};
-class Dummy
+class MyException{};
+class Dummy
 {
-    public:
-    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }
-    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }
-    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }
-    void PrintMsg(string s) { cout << s  << MyName <<  endl; }
-    string MyName; 
-    int level;
+    public:
+    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }
+    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }
+    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }
+    void PrintMsg(string s) { cout << s  << MyName <<  endl; }
+    string MyName; 
+    int level;
 };
 
-void C(Dummy d, int i)
-{ 
-    cout << "Entering FunctionC" << endl;
-    d.MyName = " C";
-    throw MyException();   
+void C(Dummy d, int i)
+{ 
+    cout << "Entering FunctionC" << endl;
+    d.MyName = " C";
+    throw MyException();   
 
-    cout << "Exiting FunctionC" << endl;
+    cout << "Exiting FunctionC" << endl;
 }
 
-void B(Dummy d, int i)
+void B(Dummy d, int i)
 {
-    cout << "Entering FunctionB" << endl;
-    d.MyName = "B";
-    C(d, i + 1);   
-    cout << "Exiting FunctionB" << endl; 
+    cout << "Entering FunctionB" << endl;
+    d.MyName = "B";
+    C(d, i + 1);   
+    cout << "Exiting FunctionB" << endl; 
 }
 
-void A(Dummy d, int i)
-{ 
-    cout << "Entering FunctionA" << endl;
-    d.MyName = " A" ;
-  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!
-    B(d, i + 1);
- //   delete pd; 
-    cout << "Exiting FunctionA" << endl;   
+void A(Dummy d, int i)
+{ 
+    cout << "Entering FunctionA" << endl;
+    d.MyName = " A" ;
+  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!
+    B(d, i + 1);
+ //   delete pd; 
+    cout << "Exiting FunctionA" << endl;   
 }
 
-int main()
+int main()
 {
-    cout << "Entering main" << endl;
-    try
-    {
-        Dummy d(" M");
-        A(d,1);
-    }
-    catch (MyException& e)
-    {
-        cout << "Caught an exception of type: " << typeid(e).name() << endl;
-    }
+    cout << "Entering main" << endl;
+    try
+    {
+        Dummy d(" M");
+        A(d,1);
+    }
+    catch (MyException& e)
+    {
+        cout << "Caught an exception of type: " << typeid(e).name() << endl;
+    }
 
-    cout << "Exiting main." << endl;
-    char c;
-    cin >> c;
+    cout << "Exiting main." << endl;
+    char c;
+    cin >> c;
 }
 
-/* Output:
-    Entering main
-    Created Dummy: M
-    Copy created Dummy: M
-    Entering FunctionA
-    Copy created Dummy: A
-    Entering FunctionB
-    Copy created Dummy: B
-    Entering FunctionC
-    Destroyed Dummy: C
-    Destroyed Dummy: B
-    Destroyed Dummy: A
-    Destroyed Dummy: M
-    Caught an exception of type: class MyException
-    Exiting main.
+/* Output:
+    Entering main
+    Created Dummy: M
+    Copy created Dummy: M
+    Entering FunctionA
+    Copy created Dummy: A
+    Entering FunctionB
+    Copy created Dummy: B
+    Entering FunctionC
+    Destroyed Dummy: C
+    Destroyed Dummy: B
+    Destroyed Dummy: A
+    Destroyed Dummy: M
+    Caught an exception of type: class MyException
+    Exiting main.
 
 */
 ```

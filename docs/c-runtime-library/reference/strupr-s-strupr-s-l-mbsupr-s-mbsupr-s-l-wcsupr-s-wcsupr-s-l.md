@@ -1,10 +1,6 @@
 ---
-title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Microsoft Docs
-ms.custom: ''
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strupr_s
 - _strupr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _wcsupr_s_l
 - _strupr_s
 - _strupr_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsupr_s_l function
 - strupr_s_l function
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad2ff06320b3251e80935776246927e4cadb50c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569707"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
@@ -158,11 +148,11 @@ Configuración regional que se va a usar.
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error de valor distinto de cero si se produce un error.
 
-Estas funciones validan sus parámetros. Si *str* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones devuelven **ERANGE** y establecer **errno** a **ERANGE**.
+Estas funciones validan sus parámetros. Si *str* es un **NULL** se invoca el puntero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, las funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**. Si *numberOfElements* es menor que la longitud de la cadena, las funciones devuelven **ERANGE** y establecer **errno** a **ERANGE**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strupr_s** función convierte, en su lugar, cada minúscula de *str* a mayúsculas. **_wcsupr_s** es la versión con caracteres anchos de **_strupr_s**. **_mbsupr_s** es la versión del juego de caracteres multibyte de **_strupr_s**.
+El **_strupr_s** función convierte, en su lugar, cada minúscula de *str* a mayúsculas. **_wcsupr_s** es la versión de caracteres anchos de **_strupr_s**. **_mbsupr_s** es la versión de caracteres multibyte de **_strupr_s**.
 
 La conversión viene determinada por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo use la configuración regional actual; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 

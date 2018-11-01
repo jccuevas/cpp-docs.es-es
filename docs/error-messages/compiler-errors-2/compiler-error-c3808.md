@@ -1,37 +1,27 @@
 ---
-title: Error del compilador C3808 | Documentos de Microsoft
-ms.custom: ''
+title: Error del compilador C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587738"
 ---
 # <a name="compiler-error-c3808"></a>Error del compilador C3808
 
-> '*tipo*': una clase con el atributo ComImport no puede definir el miembro '*miembro*', solo abstracta o se permiten funciones de dllimport
+> '*tipo*': una clase con el atributo ComImport no puede definir el miembro '*miembro*', solo abstracta o se permiten funciones dllimport
 
 ## <a name="remarks"></a>Comentarios
 
-Un tipo que deriva de <xref:System.Runtime.InteropServices.ComImportAttribute> no se puede definir *miembro*.
+Un tipo que derive de <xref:System.Runtime.InteropServices.ComImportAttribute> no se puede definir *miembro*.
 
-El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admiten en Visual Studio de 2017.
+El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
 ## <a name="example"></a>Ejemplo
 

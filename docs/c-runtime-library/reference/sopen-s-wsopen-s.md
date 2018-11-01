@@ -1,10 +1,6 @@
 ---
-title: _sopen_s, _wsopen_s | Microsoft Docs
-ms.custom: ''
+title: _sopen_s, _wsopen_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sopen_s
 - _wsopen_s
@@ -26,8 +22,6 @@ f1_keywords:
 - wsopen_s
 - _wsopen_s
 - sopen_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - sopen_s function
 - _wsopen_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c94219ff0b357e7627528d68938ec430fd8dc14
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b26f8e15efe3e0a044de4c3b2d19f70510a91f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418489"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660374"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 
@@ -95,7 +85,7 @@ Un valor devuelto distinto de cero indica un error; en ese caso **errno** se est
 |valor de errno|Condición|
 |-|-|
 **EACCES**| La ruta de acceso proporcionada es un directorio o el archivo es de solo lectura, pero se intentó realizar una operación de abrir para escribir.
-**EEXIST**| **_O_CREAT** y **_O_EXCL** se especificaron marcas, pero *filename* ya existe.
+**EEXIST**| **_O_CREAT** y **_O_EXCL** marcas se han especificado, pero *filename* ya existe.
 **EINVAL**| No válido *oflag*, *shflag*, o *pmode* argumento, o *pfh* o *filename* era un puntero nulo.
 **EMFILE**|No hay más descriptores de archivo disponibles.
 **ENOENT**|No se encuentra el archivo o la ruta de acceso.
@@ -108,7 +98,7 @@ Si se produce un error, se devuelve -1 a través de *pfh* (a menos que *pfh* es 
 
 ## <a name="remarks"></a>Comentarios
 
-El **_sopen_s** función abre el archivo especificado por *filename* y prepara el archivo para lectura o escritura, compartida tal como se define por *oflag* y *shflag* . **_wsopen_s** es una versión con caracteres anchos de **_sopen_s**; el *filename* argumento pasado a **_wsopen_s** es una cadena de caracteres anchos. **_wsopen_s** y **_sopen_s** se comportan exactamente igual.
+El **_sopen_s** función abre el archivo especificado por *filename* y prepara el archivo para lectura o escritura, compartida según se define en *oflag* y *shflag* . **_wsopen_s** es una versión con caracteres anchos de **_sopen_s**; el *filename* argumento **_wsopen_s** es una cadena de caracteres anchos. **_wsopen_s** y **_sopen_s** se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -116,7 +106,7 @@ El **_sopen_s** función abre el archivo especificado por *filename* y prepara e
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-La expresión de entero *oflag* se forma combinando una o varias constantes manifiestos, que se definen en \<fcntl.h >. Cuando dos o más constantes forman el argumento *oflag*, se combinan con el operador OR bit a bit ( **&#124;** ).
+La expresión de entero *oflag* se forma combinando una o más constantes manifiesto, que se definen en \<fcntl.h >. Cuando dos o más constantes forman el argumento *oflag*, éstas se combinan con el operador OR bit a bit ( **&#124;** ).
 
 |*oflag* constante|Comportamiento|
 |-|-|
@@ -132,7 +122,7 @@ La expresión de entero *oflag* se forma combinando una o varias constantes mani
 **_O_RDWR**|Abre un archivo tanto para lectura como para escritura. No se puede especificar con **_O_RDONLY** o **_O_WRONLY**.
 **_O_SEQUENTIAL**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.
 **_O_TEXT**|Abre un archivo en modo de texto (traducido). (Para obtener más información, vea [E/S de archivo en modo binario y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [fopen](fopen-wfopen.md)).
-**_O_TRUNC**|Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizar con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** el **_O_TRUNC** marca destruye el contenido del archivo especificado.
+**_O_TRUNC**|Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizado con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** el **_O_TRUNC** marca destruye el contenido del archivo especificado.
 **_O_WRONLY**|Abre un archivo únicamente para escribir en él. No se puede especificar con **_O_RDONLY** o **_O_RDWR**.
 **_O_U16TEXT**|Abre un archivo en modo Unicode UTF-16.
 **_O_U8TEXT**|Abre un archivo en modo Unicode UTF-8.
@@ -140,11 +130,11 @@ La expresión de entero *oflag* se forma combinando una o varias constantes mani
 
 Para especificar el modo de acceso de archivo, debe especificar **_O_RDONLY**, **_O_RDWR**, o **_O_WRONLY**. No existe un valor predeterminado para el modo de acceso.
 
-Cuando se abre un archivo en modo Unicode mediante **_O_WTEXT**, **_O_U8TEXT**, o **_O_U16TEXT**, entrada funciones traducen los datos que se leen desde el archivo a datos UTF-16 almacenados como de tipo **wchar_t**. Las funciones que escriben en un archivo abierto en modo Unicode esperan que haya búferes que contengan datos UTF-16 almacenados como de tipo **wchar_t**. Si el archivo está codificado como UTF-8, los datos UTF-16 se traducen a UTF-8 cuando se escriben, y el contenido codificado en UTF-8 del archivo se traduce a UTF-16 cuando se lee. Si se intenta leer o escribir un número impar de bytes en el modo Unicode, se producirá un error de validación de parámetros. Para leer o escribir datos almacenados en el programa como UTF-8, use un modo de archivo binario o de texto en lugar de un modo Unicode. Cualquier traducción de codificación que sea necesaria es su responsabilidad.
+Cuando se abre un archivo en modo Unicode mediante **_O_WTEXT**, **_O_U8TEXT**, o **_O_U16TEXT**, entrada funciones traducen los datos que se leen desde el archivo a datos UTF-16 almacena como tipo **wchar_t**. Las funciones que escriben en un archivo abierto en modo Unicode esperan que haya búferes que contienen datos UTF-16 almacenados como tipo **wchar_t**. Si el archivo está codificado como UTF-8, los datos UTF-16 se traducen a UTF-8 cuando se escriben, y el contenido codificado en UTF-8 del archivo se traduce a UTF-16 cuando se lee. Si se intenta leer o escribir un número impar de bytes en el modo Unicode, se producirá un error de validación de parámetros. Para leer o escribir datos almacenados en el programa como UTF-8, use un modo de archivo binario o de texto en lugar de un modo Unicode. Cualquier traducción de codificación que sea necesaria es su responsabilidad.
 
-Si **_sopen_s** se llama con **_O_WRONLY** | **_O_APPEND** (modo anexar) y **_O_WTEXT**, **_O_ U16TEXT**, o **_O_U8TEXT**, primero se intentará abrir el archivo para lectura y escritura, leer la lista de materiales, y vuelva a abrirlo solamente para escritura. Si no se puede abrir el archivo para lectura y escritura, abre el archivo solamente para escritura y usa el valor predeterminado como opción del modo Unicode.
+Si **_sopen_s** se llama con **_O_WRONLY** | **_O_APPEND** (modo anexar) y **_O_WTEXT**, **_O_ U16TEXT**, o **_O_U8TEXT**, primero intenta abrir el archivo para lectura y escritura, leer la lista de materiales, a continuación, vuelva a abrirlo únicamente para escritura. Si no se puede abrir el archivo para lectura y escritura, abre el archivo solamente para escritura y usa el valor predeterminado como opción del modo Unicode.
 
-El argumento *shflag* es una expresión constante compuesta por una de las constantes de manifiesto siguientes, que se definen en \<share.h >.
+El argumento *shflag* es una expresión constante compuesta por una de las siguientes constantes de manifiesto, que se definen en \<share.h >.
 
 |*shflag* constante|Comportamiento|
 |-|-|
@@ -153,7 +143,7 @@ El argumento *shflag* es una expresión constante compuesta por una de las const
 **_SH_DENYRD**|Deniega el acceso de lectura a un archivo.
 **_SH_DENYNO**|Permite el acceso de lectura y escritura.
 
-El *pmode* argumento siempre es necesario, a diferencia de en **_sopen**. Cuando se especifica **_O_CREAT**, si el archivo no existe, *pmode* especifica la configuración de permisos del archivo, que se establece cuando el nuevo archivo se cierra por primera vez. En caso contrario, *pmode* se omite. *pmode* es una expresión de entero que contiene una o ambas de las constantes de manifiesto **_S_IWRITE** y **_S_IREAD**, que se definen en \<sys\stat >. Cuando ambas constantes se proporcionan, se combinan con el operador bit a bit OR. El significado de *pmode* es como sigue.
+El *pmode* argumento siempre es necesario, a diferencia de **_sopen**. Al especificar **_O_CREAT**, si el archivo no existe, *pmode* especifica la configuración de permisos del archivo, que se establece cuando el nuevo archivo se cierra por primera vez. En caso contrario, *pmode* se omite. *pmode* es una expresión de entero que contiene una o ambas constantes del manifiesto **_S_IWRITE** y **_S_IREAD**, que se definen en \<sys\stat >. Cuando ambas constantes se proporcionan, se combinan con el operador bit a bit OR. El significado de *pmode* es como sigue.
 
 |*pmode*|Significado|
 |-|-|

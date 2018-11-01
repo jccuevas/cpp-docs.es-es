@@ -1,11 +1,6 @@
 ---
-title: ctan, ctanf, ctanl | Microsoft Docs
-ms.custom: ''
+title: ctan, ctanf, ctanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ctan
 - ctanf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/ctan
 - complex/ctanf
 - complex/ctanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctan function
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c272e34202f81a9f16eab5b57da35c548790c417
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396432"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661755"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -74,21 +63,21 @@ _Lcomplex ctanl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo que representa el ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
 La tangente de *z*.
 
-|Entrada|Excepción SEH|**_matherr** (excepción)|
+|Entrada|Excepción SEH|**_matherr** excepción|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|ninguna|_DOMAIN|
-|± ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
+|+ ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **ctan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ctan** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ctan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ctan** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
