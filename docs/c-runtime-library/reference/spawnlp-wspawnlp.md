@@ -1,10 +1,6 @@
 ---
-title: _spawnlp, _wspawnlp | Microsoft Docs
-ms.custom: ''
+title: _spawnlp, _wspawnlp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wspawnlp
 - _spawnlp
@@ -25,8 +21,6 @@ f1_keywords:
 - _wspawnlp
 - wspawnlp
 - _spawnlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wspawnlp function
 - _spawnlp function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f894fc32631052e275a78cd279f750628b3258f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5379d47fc6ecbc21b523764f3fd0fbb6ef727a9a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590871"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 
@@ -84,11 +74,11 @@ Modo de ejecución para el proceso de llamada.
 Ruta de acceso del archivo que se va a ejecutar.
 
 *arg0*, *arg1*,... *argn*<br/>
-Lista de punteros a argumentos. El *arg0* argumento suele ser un puntero a *cmdname*. Los argumentos *arg1* a través de *argn* son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Después de *argn*, debe haber un **NULL** puntero para marcar el final de la lista de argumentos.
+Lista de punteros a argumentos. El *arg0* argumento suele ser un puntero a *cmdname*. Los argumentos *arg1* a través de *argn* son punteros a las cadenas de caracteres que forman la nueva lista de argumentos. Siga *argn*, debe haber un **NULL** puntero para marcar el final de la lista de argumentos.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El valor devuelto de un sincrónico **_spawnlp** o **_wspawnlp** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso . El valor devuelto de una asincrónica **_spawnlp** o **_wspawnlp** (**_P_NOWAIT** o **_P_NOWAITO** especificado para  *modo*) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente a la **salir** rutina con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (el nuevo proceso no se inicia). En este caso, **errno** se establece en uno de los siguientes valores.
+El valor devuelto de un valor sincrónico **_spawnlp** o **_wspawnlp** (**_P_WAIT** especificado para *modo*) es el estado de salida del nuevo proceso . El valor devuelto de asincrónico **_spawnlp** o **_wspawnlp** (**_P_NOWAIT** o **_P_NOWAITO** especificado para  *modo*) es el identificador de proceso. El estado de salida es 0 si el proceso finalizó normalmente. Puede establecer el estado de salida en un valor distinto de cero si el proceso generado llama específicamente el **salir** rutinarias con un argumento distinto de cero. Si el nuevo proceso no estableció explícitamente un estado de salida positivo, un estado de salida positivo indica un resultado anormal con una anulación o una interrupción. Un valor devuelto de -1 indica un error (no se inicia el proceso de nuevo). En este caso, **errno** se establece en uno de los siguientes valores.
 
 |||
 |-|-|
@@ -102,9 +92,9 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones crea y ejecuta un proceso nuevo, pasando cada argumento de línea de comandos como parámetro independiente y usando la **ruta de acceso** variable de entorno para buscar el archivo para ejecutar.
+Cada una de estas funciones crea y ejecuta un proceso nuevo, pasando cada argumento de línea de comandos como parámetro independiente y usando el **ruta** variable de entorno para buscar el archivo para ejecutar.
 
-Estas funciones validan sus parámetros. Si el valor *cmdname* o *arg0* es una cadena vacía o un puntero nulo, estas funciones generan una excepción de parámetro no válido, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
+Estas funciones validan sus parámetros. Si bien *cmdname* o *arg0* es una cadena vacía o un puntero nulo, estas funciones generan una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL**y devuelven -1. No se genera ningún proceso nuevo.
 
 ## <a name="requirements"></a>Requisitos
 
