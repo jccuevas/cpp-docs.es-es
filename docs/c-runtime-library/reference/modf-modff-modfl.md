@@ -1,10 +1,6 @@
 ---
-title: modf, modff, modfl | Microsoft Docs
-ms.custom: ''
+title: modf, modff, modfl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - modff
 - modf
@@ -30,23 +26,17 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs:
-- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87cddb8b565cdc369e6b1e9679583db64039bb49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478070"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -79,11 +69,11 @@ Esta función devuelve la parte fraccionaria con signo de *x*. No se devuelve ni
 
 ## <a name="remarks"></a>Comentarios
 
-El **modf** funciones desglosar el valor de punto flotante *x* en fracciones y partes enteras, cada uno de los cuales tiene el mismo signo que *x*. La parte fraccionaria firmada de *x* se devuelve. La parte entera se almacena como un valor de punto flotante en *intptr*.
+El **modf** funciones desglosar el valor de punto flotante *x* en fracciones y partes de enteros, cada uno de los cuales tiene el mismo signo que *x*. La parte fraccionaria con signo de *x* se devuelve. La parte entera se almacena como un valor de punto flotante en *intptr*.
 
 **modf** tiene una implementación que usa Extensiones SIMD de transmisión por secuencias 2 (SSE2). Consulte [_set_SSE2_enable](set-sse2-enable.md) para obtener información y conocer las restricciones sobre el uso de la implementación de SSE2.
 
-C++ permite las sobrecargas, es posible llamar a las sobrecargas de **modf** que toman y devuelven **float** o **largo** **doble** parámetros. En un programa C, **modf** siempre toma dos valores double y devuelve un valor de tipo double.
+C++ permite las sobrecargas, es posible llamar a las sobrecargas de **modf** que toman y devuelven **float** o **largo** **doble** parámetros. En un programa C, **modf** siempre toma dos valores double y devuelve un valor double.
 
 ## <a name="requirements"></a>Requisitos
 
