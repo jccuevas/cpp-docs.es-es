@@ -1,10 +1,6 @@
 ---
-title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft Docs
-ms.custom: ''
+title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctohira
 - _mbctohira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctokata_l
 - mbctohira_l
 - _mbctokata_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctokata function
 - _mbctokata_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403097"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637806"
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -102,9 +92,9 @@ El **_mbctohira** y **_mbctokata** funciones prueban un carácter *c* y, si es p
 |**_mbctohira**, **_mbctohira_l**|Katakana multibyte a Hiragana multibyte.|
 |**_mbctokata**, **_mbctokata_l**|Hiragana multibyte a Katakana multibyte.|
 
-El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usar la configuración regional actual para este comportamiento dependiente de la configuración regional y las que tienen la **_l** sufijo en su lugar Utilice el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones son idénticas, salvo que las que no tienen la **_l** sufijo usar la configuración regional actual para este comportamiento dependiente de la configuración regional y las que tienen el **_l** sufijo Use el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-En versiones anteriores, **_mbctohira** se llamaba **jtohira** y **_mbctokata** se llamaba **jtokata**. Para código nuevo, use los nuevos nombres.
+En versiones anteriores, **_mbctohira** se denominaba **jtohira** y **_mbctokata** se denominaba **jtokata**. Para código nuevo, use los nuevos nombres.
 
 ## <a name="requirements"></a>Requisitos
 

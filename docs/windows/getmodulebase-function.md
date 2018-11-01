@@ -1,26 +1,16 @@
 ---
-title: GetModuleBase (función) | Microsoft Docs
-ms.custom: ''
+title: GetModuleBase (Función)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
-dev_langs:
-- C++
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afa76ad23c509689dd693bb0f3e13dbb7adb4d54
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 40289903eba2ce7ac35d4d0b208c3b609efb09f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650819"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase (Función)
 Recupera un [ModuleBase](../windows/modulebase-class.md) puntero que permite aumentar y disminuir el recuento de referencias de un [RuntimeClass](../windows/runtimeclass-class.md) objeto.

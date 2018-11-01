@@ -1,35 +1,25 @@
 ---
-title: C2429 de Error del compilador | Documentos de Microsoft
-ms.custom: ''
+title: Error del compilador C2429
 ms.date: 11/16/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2429
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2429
 ms.assetid: 57ff6df9-5cf1-49f3-8bd8-4e550dfd65a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 032df433b28e83f720fe76952a541b59bda889f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 972ec6591132443ef4d1297598d6de7216f59663
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227822"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586698"
 ---
-# <a name="compiler-error-c2429"></a>C2429 de Error del compilador
+# <a name="compiler-error-c2429"></a>Error del compilador C2429
 
-> '*característica de lenguaje*'requiere la marca de compilador'*opción del compilador*'
+> '*característica del lenguaje*'requiere la marca de compilador'*opción del compilador*'
 
-La característica de lenguaje requiere una opción del compilador específico para soporte técnico.
+La característica de lenguaje requiere una opción de compilador específica para obtener soporte técnico.
 
-El error **C2429: característica de lenguaje 'anidado de espacio de nombres-definición' requiere la marca de compilador ' / std:c ++ 17'** se genera si se intenta definir una *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más ámbito anidado espacios de nombres, a partir de Visual Studio 2015 Update 5. (En Visual Studio 2017 versión 15.3, el **/std:c ++ más reciente** conmutador es necesario.) Compuesta espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. El compilador admite las definiciones de espacio de nombres compuestos cuando el [/std:c ++ 17](../../build/reference/std-specify-language-standard-version.md) se especifica la opción del compilador:
+El error **C2429: característica del lenguaje 'anidado de namespace-definition' requiere la marca de compilador ' / std: c ++ 17"** se genera si se intenta definir una *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres con ámbito anidado, a partir de Visual Studio 2015 Update 5. (En Visual Studio 2017 versión 15.3, el **/std: c ++ más reciente** modificador es necesario.) Compuesta de espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. El compilador admite las definiciones de espacio de nombres compuestos cuando el [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) se especificó la opción del compilador:
 
 ```cpp
 // C2429a.cpp

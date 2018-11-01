@@ -1,10 +1,6 @@
 ---
-title: _ismbbkprint, _ismbbkprint_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkprint
 - _ismbbkprint_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkprint
 - _ismbbkprint
 - ismbbkprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkprint function
 - ismbbkprint_l function
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399506"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645983"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -71,7 +61,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_ismbbkprint** devuelve un valor distinto de cero si el entero *c* es un texto no ASCII o signo de puntuación no ASCII o 0 si no lo está. Por ejemplo, en la página de códigos 932 únicamente, **_ismbbkprint** comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF). **_ismbbkprint** usa la configuración regional actual para la configuración de caracteres dependientes de la configuración regional. **_ismbbkprint_l** es idéntica, salvo que usa la configuración regional pasada en. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** devuelve un valor distinto de cero si el entero *c* es un texto no ASCII o signo de puntuación no ASCII o 0 si no lo está. Por ejemplo, solo en la página de códigos 932, **_ismbbkprint** comprueba si hay caracteres o signos de puntuación katakana (intervalo: 0xA1 - 0xDF). **_ismbbkprint** utiliza la configuración regional actual para la configuración de caracteres dependientes de la configuración regional. **_ismbbkprint_l** es idéntico, salvo que usa la configuración regional pasada en. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Requisitos
 

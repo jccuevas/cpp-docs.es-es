@@ -1,10 +1,6 @@
 ---
-title: _putw | Microsoft Docs
-ms.custom: ''
+title: _putw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putw
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _putw
 - putw
-dev_langs:
-- C++
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5e33bc207fe83795c31f6c8b61d931985760e3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404017"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602688"
 ---
 # <a name="putw"></a>_putw
 
@@ -60,18 +50,18 @@ int _putw(
 *binint*<br/>
 Entero binario que se generará.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el valor escrito. Un valor devuelto de **EOF** podría indicar un error. Dado que **EOF** también es un valor entero legítimo, utilice **ferror** para comprobar un error. Si *flujo* es un puntero nulo, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EOF**.
+Devuelve el valor escrito. Un valor devuelto de **EOF** podría indicar un error. Dado que **EOF** también es un valor entero legítimo, use **ferror** para comprobar un error. Si *secuencia* es un puntero nulo, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EOF**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_putw** función escribe un valor binario de tipo **int** a la posición actual del *secuencia.* **_putw** no afecta a la alineación de los elementos en la secuencia ni tampoco suponga ninguna alineación especial. **_putw** es principalmente para la compatibilidad con bibliotecas anteriores. Pueden producirse problemas de portabilidad con **_putw** porque el tamaño de un **int** y el orden de bytes de un **int** varía según los sistemas.
+El **_putw** función escribe un valor de tipo binario **int** a la posición actual del *secuencia.* **_putw** no afecta a la alineación de los elementos de la secuencia ni tampoco supone ninguna alineación especial. **_putw** sirve principalmente para la compatibilidad con bibliotecas anteriores. Pueden producirse problemas de portabilidad con **_putw** porque el tamaño de un **int** y el orden de bytes en un **int** difieren entre sistemas.
 
 ## <a name="requirements"></a>Requisitos
 

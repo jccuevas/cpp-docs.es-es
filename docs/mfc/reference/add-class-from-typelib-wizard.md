@@ -1,35 +1,25 @@
 ---
-title: Agregar clases a partir de la biblioteca de tipos | Microsoft Docs
-ms.custom: ''
+title: Asistente para agregar clases de la biblioteca de tipos
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654342"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Asistente para agregar clases de la biblioteca de tipos
 
 Use este asistente para agregar una clase MFC desde una biblioteca de tipos disponible. El asistente crea una clase para cada interfaz que agregue de la biblioteca de tipos seleccionada.
 
 > [!WARNING]
-> En Visual Studio 2017 versión 15.9 este asistente de código está en desuso y se quitará en una versión futura de Visual Studio. Este asistente se utiliza habitualmente. Compatibilidad general para ATL y MFC no se ve afectado por la eliminación de este asistente. Si gustaría compartir sus comentarios sobre esta condición de desuso, complete [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
+> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 - **Agregar clase desde**
 
@@ -69,7 +59,7 @@ Use este asistente para agregar una clase MFC desde una biblioteca de tipos disp
 
 - **Clase**
 
-   Especifica el nombre de la clase seleccionada en el cuadro **Clases generadas** que el asistente agrega al hacer clic en **Finalizar**. Puede editar el nombre de la **clase** cuadro.
+   Especifica el nombre de la clase seleccionada en el cuadro **Clases generadas** que el asistente agrega al hacer clic en **Finalizar**. Se puede modificar el nombre en el cuadro **Clase**.
 
 - **Archivo**
 
