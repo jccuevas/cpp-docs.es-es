@@ -1,23 +1,13 @@
 ---
-title: C.2 reglas | Microsoft Docs
-ms.custom: ''
+title: C.2 Reglas
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404779"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642811"
 ---
 # <a name="c2-rules"></a>C.2 Reglas
 
@@ -199,18 +189,18 @@ La notación se describe en la sección 6.1 del estándar C. Este apéndice gram
 &nbsp;&nbsp;&nbsp;&nbsp;*Directiva threadprivate*
 
 *Directiva de threadprivate*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *lista de variables***)** *nueva línea* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# pragma omp threadprivate (** *lista de variables***)** *nueva línea*
 
 *cláusula de datos*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**privada (** *lista de variables* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***lista de variables***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***lista de variables***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *lista de variables***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***lista de variables***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***lista de variables***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *lista de variables***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**compartido (** *lista de variables* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**predeterminado (compartido)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**valor predeterminado (ninguna)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**reducción (***operador de reducción***:***lista de variables***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***lista de variables***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**reducción (***operador de reducción***:***lista de variables***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***lista de variables***)**
 
 *operador de reducción*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Uno de:  **+  \* -& ^ &#124; & &&#124;&#124;**

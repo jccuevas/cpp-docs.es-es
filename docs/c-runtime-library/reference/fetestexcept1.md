@@ -1,11 +1,6 @@
 ---
-title: fetestexcept | Documentos de Microsoft
-ms.custom: ''
+title: fetestexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fetestexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0450fcaddf8ca05484d0b2bd122ff006eb8355f1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ae170e4c5826e2053b330d81773b75f176303332
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667446"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -75,7 +64,7 @@ Use la función fetestexcept para determinar las excepciones que ha generado una
 |FE_UNDERFLOW|El resultado de una operación de punto flotante anterior era demasiado pequeño para representarlo con completa precisión; se ha creado un valor no normalizado.|
 |FE_ALLEXCEPT|Operación OR bit a bit de todas las excepciones de punto flotante admitidas.|
 
-Especificado *excepts* argumento puede ser 0, una de las macros de excepción de punto flotante admitidos o bit a bit o de dos o más de las macros. El efecto de cualquier otro *excepts* el valor del argumento es indefinido.
+Especificado *excepts* argumento debe ser 0, una de las macros de excepción de punto flotante admitidas o bit a bit OR de dos o más de las macros. El efecto de cualquier otro *excepts* el valor del argumento es indefinido.
 
 Para usar esta función, debe desactivar las optimizaciones de punto flotante que podrían impedir el acceso mediante la directiva `#pragma fenv_access(on)` antes de la llamada. Para obtener más información, consulta [fenv_access](../../preprocessor/fenv-access.md).
 
