@@ -1,28 +1,18 @@
 ---
-title: Directivas de Macro MASM de ensamblado insertado | Microsoft Docs
-ms.custom: ''
+title: Directivas de macro de MASM de ensamblado insertado
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - directives, macros
 - inline assembly, macro directives
 - macros, directives
 - MASM (Microsoft Macro Assembler), inline assembly macro directives
 ms.assetid: 83643a09-1699-40a8-8ef2-13502bc4ac2c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35ad22a9a4b79a31665ab6b156f8174d395bb0ee
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 7e1bed782d28a5bf7c934c3f57f50aae70038578
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "43687978"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508932"
 ---
 # <a name="masm-macro-directives-in-inline-assembly"></a>Directivas de macro de MASM de ensamblado insertado
 

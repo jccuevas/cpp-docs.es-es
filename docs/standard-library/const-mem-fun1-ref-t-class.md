@@ -1,27 +1,17 @@
 ---
-title: const_mem_fun1_ref_t (Clase) | Microsoft Docs
-ms.custom: ''
+title: const_mem_fun1_ref_t (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::const_mem_fun1_ref_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2dafffcaee1dc4ba9bc87c2bfaa60dee45ca234
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516455"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t (Clase)
 
@@ -56,11 +46,11 @@ Una función binaria adaptable.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` para que devuelva ( `left`.\* *Pm*)( `right`) **const**.
+La clase de plantilla almacena una copia de *Pm*, que debe ser un puntero a una función miembro de clase `Type`, en un objeto de miembro privado. Define su función miembro `operator()` para que devuelva ( `left`.\* Pm)( `right`) **const**.
 
 ## <a name="example"></a>Ejemplo
 
-Normalmente, no se usa el constructor de `const_mem_fun1_ref_t` directamente; la función auxiliar `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obtener ejemplos de cómo usar adaptadores de funciones miembro.
+Normalmente, no se usa el constructor de `const_mem_fun1_ref_t` directamente; la función del asistente `mem_fun_ref` se usa para adaptar funciones miembro. Vea [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) para obtener ejemplos de cómo usar adaptadores de funciones miembro.
 
 ## <a name="requirements"></a>Requisitos
 

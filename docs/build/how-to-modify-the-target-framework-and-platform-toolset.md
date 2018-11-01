@@ -1,27 +1,18 @@
 ---
-title: 'Cómo: modificar plataforma de destino y el conjunto de herramientas de plataforma | Microsoft Docs'
+title: 'Cómo: Modificar plataforma de destino y el conjunto de herramientas de la plataforma'
 ms.custom: conceptual
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.modifytargetframeworkandplatformtoolset
-dev_langs:
-- C++
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60fa9bd3d6db9d90e5d7f3bc94e7686e5cf9481e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7759cf13e95fab97ee5a7b77e22c690a69fde41a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708453"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523128"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Cómo: Modificar plataforma de destino y el conjunto de herramientas de la plataforma
 
@@ -35,7 +26,7 @@ Cuando se cambia la versión de .Net Framework de destino, también cambia el co
 > [!NOTE]
 >  Para cambiar el conjunto de herramientas de la plataforma de destino, debe tener la versión asociada de Visual Studio o Windows Platform SDK instalado. Por ejemplo, para definir como destino la plataforma Itanium con el conjunto de herramientas de la plataforma de **Windows7.1SDK** , debe tener instalado [Microsoft Windows SDK para Windows 7 y .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) ; sin embargo, podría utilizar otra versión compatible de Visual Studio para realizar el trabajo de desarrollo, siempre que el destino sea el conjunto de herramientas correcto de versión y plataforma de .NET Framework.
 
-Puede extender la plataforma de destino aún más creando un conjunto de herramientas personalizado de la plataforma. Para obtener más información, consulte [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) en el blog de Visual C++.
+Puede extender la plataforma de destino aún más creando un conjunto de herramientas personalizado de la plataforma. Para obtener más información, vea [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) en el blog de Visual C++.
 
 ### <a name="to-change-the-target-framework"></a>Para cambiar la versión de .NET Framework de destino
 

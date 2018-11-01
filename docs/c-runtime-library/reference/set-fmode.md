@@ -1,10 +1,6 @@
 ---
-title: _set_fmode | Microsoft Docs
-ms.custom: ''
+title: _set_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_fmode
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64b8be6d678a6907fc63018c99dd38d2fc8407ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: df6efcf3fd89ec87ad098200d1d9ba3d6b52c7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500365"
 ---
 # <a name="setfmode"></a>_set_fmode
 
@@ -49,8 +39,8 @@ Establece el modo de traducción de archivos predeterminado para las operaciones
 ## <a name="syntax"></a>Sintaxis
 
 ```C
-errno_t _set_fmode( 
-   int mode 
+errno_t _set_fmode( 
+   int mode 
 );
 ```
 
@@ -61,13 +51,13 @@ El modo de traducción de archivo deseado: **_O_TEXT** o **_O_BINARY**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si *modo* no **_O_TEXT** o **_O_BINARY** o **_O_WTEXT**, se invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error. Si *modo* no **_O_TEXT** o **_O_BINARY** o **_O_WTEXT**, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="remarks"></a>Comentarios
 
-La función establece la variable global [_fmode](../../c-runtime-library/fmode.md). Esta variable especifica el modo de traducción de archivo predeterminado para las operaciones de E/S de archivos **_open** y **_pipe**.
+La función establece la variable global [_fmode](../../c-runtime-library/fmode.md). Esta variable especifica el modo de traducción de archivos predeterminado para las operaciones de E/S de archivo **_open** y **_pipe**.
 
-**_O_TEXT** y **_O_BINARY** están definidas en Fcntl.h. **EINVAL** se definen en Errno.h.
+**_O_TEXT** y **_O_BINARY** se definen en Fcntl.h. **EINVAL** se definen en Errno.h.
 
 ## <a name="requirements"></a>Requisitos
 
