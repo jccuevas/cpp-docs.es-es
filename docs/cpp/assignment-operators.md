@@ -1,10 +1,6 @@
 ---
-title: Operadores de asignación | Microsoft Docs
-ms.custom: ''
+title: Operadores de asignación
 ms.date: 03/05/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - =
 - '*='
@@ -17,8 +13,6 @@ f1_keywords:
 - '&='
 - ^=
 - '|='
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], C++
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1429bcb9f4002cb65cc14000d3bcf62004000566
-ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
+ms.openlocfilehash: d435ea051610f9ffa496f41f364ffc1c81694b61
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307924"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617404"
 ---
 # <a name="assignment-operators"></a>Operadores de asignación
 
@@ -55,7 +45,7 @@ ms.locfileid: "49307924"
 *expresión* *operador de asignación* *expresión*
 
 *operador de asignación* : uno de<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * = o = % = +=-= \< \<= >> = & = ^ =   \|=</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>= * = o = % = +=-= \< \<= >> = & = ^ =   \|=</strong>
 
 ## <a name="remarks"></a>Comentarios
 
