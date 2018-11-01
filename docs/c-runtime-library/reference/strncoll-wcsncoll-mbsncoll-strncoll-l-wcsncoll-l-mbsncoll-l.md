@@ -1,10 +1,6 @@
 ---
-title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l | Microsoft Docs
-ms.custom: ''
+title: _strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strncoll
 - _mbsncoll_l
@@ -40,8 +36,6 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 888484a80cc7c39921b973450afdaa361518432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415912"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658541"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll, _wcsncoll, _mbsncoll, _strncoll_l, _wcsncoll_l, _mbsncoll_l
 
@@ -135,21 +125,21 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor que indica la relación mutua de las subcadenas de *string1* y *string2*, como se indica a continuación.
+Cada una de estas funciones devuelve un valor que indica la relación de las subcadenas de *string1* y *cadena2*, como se indica a continuación.
 
 |Valor devuelto|Relación de string1 y string2|
 |------------------|----------------------------------------|
-|< 0|*cadena1* es menor que *string2*.|
-|0|*cadena1* es idéntico a *string2*.|
-|> 0|*cadena1* es mayor que *string2*.|
+|< 0|*cadena1* es menor que *cadena2*.|
+|0|*cadena1* es idéntico al *cadena2*.|
+|> 0|*cadena1* es mayor que *cadena2*.|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR**. Usar **_NLSCMPERROR**, incluya STRING.h o MBSTRING.h. **_wcsncoll** puede producir un error si el valor *string1* o *string2* contiene códigos de caracteres anchos que están fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsncoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsncoll**, establezca **errno** en 0 y, a continuación, comprobar **errno** después de llamar a **_wcsncoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR**. Para usar **_NLSCMPERROR**, incluya STRING.h o MBSTRING.h. **_wcsncoll** puede producir un error si *string1* o *cadena2* contiene códigos de caracteres anchos que están fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **_wcsncoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **_wcsncoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **_wcsncoll**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de la primera *recuento* caracteres de *string1* y *string2*, según la página de códigos que se encuentra actualmente en Use. Use estas funciones solo cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos sean distintos en la página de códigos y cuando la diferencia influya en la comparación de cadenas. El orden del conjunto de caracteres depende de la configuración regional. Las versiones de estas funciones que no tienen la **_l** uso de sufijo la configuración regional actual, pero las versiones que tienen la **_l** sufijo usar la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de la primera *recuento* caracteres de *string1* y *cadena2*, según la página de códigos que está actualmente en Utilice. Use estas funciones solo cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos sean distintos en la página de códigos y cuando la diferencia influya en la comparación de cadenas. El orden del conjunto de caracteres depende de la configuración regional. Las versiones de estas funciones que no tienen la **_l** sufijo se usa la configuración regional actual, pero las versiones que tienen el **_l** sufijo usar la configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2* es un puntero nulo, o *recuento* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si bien *string1* o *cadena2* es un puntero nulo, o *recuento* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

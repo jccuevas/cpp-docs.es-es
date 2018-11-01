@@ -1,10 +1,6 @@
 ---
-title: _open, _wopen | Microsoft Docs
-ms.custom: ''
+title: _open, _wopen
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _open
 - _wopen
@@ -25,8 +21,6 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs:
-- C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf1d5cca5f729e0b3e2ee55cd6d8778450bdead1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2395b1aa48b7802a508ab0cb8be1ef35a1a81564
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405346"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612998"
 ---
 # <a name="open-wopen"></a>_open, _wopen
 
@@ -94,7 +84,7 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [err
 
 ## <a name="remarks"></a>Comentarios
 
-El **_open** función abre el archivo especificado por *filename* y prepararlo para la lectura o escritura, tal y como especifica *oflag*. **_wopen** es una versión con caracteres anchos de **_open**; el *filename* argumento pasado a **_wopen** es una cadena de caracteres anchos. **_wopen** y **_open** se comportan exactamente igual.
+El **_open** función abre el archivo especificado por *filename* y prepararlo para la lectura o escritura, según lo especificado por *oflag*. **_wopen** es una versión con caracteres anchos de **_open**; el *filename* argumento **_wopen** es una cadena de caracteres anchos. **_wopen** y **_open** se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
@@ -118,7 +108,7 @@ El **_open** función abre el archivo especificado por *filename* y prepararlo p
 **_O_RDWR**|Abre un archivo tanto para lectura como para escritura. No se puede especificar con **_O_RDONLY** o **_O_WRONLY**.
 **_O_SEQUENTIAL**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.
 **_O_TEXT**|Abre un archivo en modo de texto (traducido). (Para obtener más información, vea [E/S de archivo en modo binario y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [fopen](fopen-wfopen.md)).
-**_O_TRUNC**|Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizar con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** el **_O_TRUNC** marca destruye el contenido del archivo especificado.
+**_O_TRUNC**|Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizado con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** el **_O_TRUNC** marca destruye el contenido del archivo especificado.
 **_O_WRONLY**|Abre un archivo únicamente para escribir en él. No se puede especificar con **_O_RDONLY** o **_O_RDWR**.
 **_O_U16TEXT**|Abre un archivo en modo Unicode UTF-16.
 **_O_U8TEXT**|Abre un archivo en modo Unicode UTF-8.
@@ -126,15 +116,15 @@ El **_open** función abre el archivo especificado por *filename* y prepararlo p
 
 Para especificar el modo de acceso de archivo, debe especificar **_O_RDONLY**, **_O_RDWR**, o **_O_WRONLY**. No existe un valor predeterminado para el modo de acceso.
 
-Si **_O_WTEXT** se utiliza para abrir un archivo para leerlo, **_open** lee el principio del archivo y comprobar si hay una marca de orden de bytes (BOM). Si hay una BOM, el archivo se considera como UTF-8 o UTF-16LE (esto depende de la BOM). Si no hay BOM, el archivo se considera ANSI. Cuando se abre un archivo para escribir en él mediante **_O_WTEXT**, se usa UTF-16. Independientemente de cualquier configuración anterior la marca BOM o, si **_O_U8TEXT** es usa, el archivo siempre se abrirá como UTF-8; si **_O_U16TEXT** es usa, el archivo se abre siempre como UTF-16.
+Si **_O_WTEXT** se usa para abrir un archivo para leerlo, **_open** lee el principio del archivo y comprobar si hay una marca de orden de bytes (BOM). Si hay una BOM, el archivo se considera como UTF-8 o UTF-16LE (esto depende de la BOM). Si no hay BOM, el archivo se considera ANSI. Cuando se abre un archivo para escribir en él mediante **_O_WTEXT**, se usa UTF-16. Independientemente de cualquier configuración anterior BOM o, si **_O_U8TEXT** es utilizado, el archivo siempre se abrirá como UTF-8; si **_O_U16TEXT** es utilizado, el archivo siempre se abrirá como UTF-16.
 
-Cuando se abre un archivo en modo Unicode mediante **_O_WTEXT**, **_O_U8TEXT**, o **_O_U16TEXT**, entrada funciones traducen los datos que se leen desde el archivo a datos UTF-16 almacenados como de tipo **wchar_t**. Las funciones que escriben en un archivo abierto en modo Unicode esperan que haya búferes que contengan datos UTF-16 almacenados como de tipo **wchar_t**. Si el archivo está codificado como UTF-8, los datos UTF-16 se traducen a UTF-8 cuando se escriben, y el contenido codificado en UTF-8 del archivo se traduce a UTF-16 cuando se lee. Si se intenta leer o escribir un número impar de bytes en el modo Unicode, se producirá un error de validación de parámetros. Para leer o escribir datos almacenados en el programa como UTF-8, use un modo de archivo binario o de texto en lugar de un modo Unicode. Cualquier traducción de codificación que sea necesaria es su responsabilidad.
+Cuando se abre un archivo en modo Unicode mediante **_O_WTEXT**, **_O_U8TEXT**, o **_O_U16TEXT**, entrada funciones traducen los datos que se leen desde el archivo a datos UTF-16 almacena como tipo **wchar_t**. Las funciones que escriben en un archivo abierto en modo Unicode esperan que haya búferes que contienen datos UTF-16 almacenados como tipo **wchar_t**. Si el archivo está codificado como UTF-8, los datos UTF-16 se traducen a UTF-8 cuando se escriben, y el contenido codificado en UTF-8 del archivo se traduce a UTF-16 cuando se lee. Si se intenta leer o escribir un número impar de bytes en el modo Unicode, se producirá un error de validación de parámetros. Para leer o escribir datos almacenados en el programa como UTF-8, use un modo de archivo binario o de texto en lugar de un modo Unicode. Cualquier traducción de codificación que sea necesaria es su responsabilidad.
 
-Si **_open** se llama con **_O_WRONLY** | **_O_APPEND** (modo anexar) y **_O_WTEXT**, **_O_ U16TEXT**, o **_O_U8TEXT**, primero se intentará abrir el archivo para lectura y escritura, leer la lista de materiales, y vuelva a abrirlo solamente para escritura. Si no se puede abrir el archivo para lectura y escritura, abre el archivo solamente para escritura y usa el valor predeterminado como opción del modo Unicode.
+Si **_open** se llama con **_O_WRONLY** | **_O_APPEND** (modo anexar) y **_O_WTEXT**, **_O_ U16TEXT**, o **_O_U8TEXT**, primero intenta abrir el archivo para lectura y escritura, leer la lista de materiales, a continuación, vuelva a abrirlo únicamente para escritura. Si no se puede abrir el archivo para lectura y escritura, abre el archivo solamente para escritura y usa el valor predeterminado como opción del modo Unicode.
 
-Cuando se usan dos o más constantes del manifiesto para formar el *oflag* argumento, estas constantes se combinan con el operador OR bit a bit ( **&#124;** ). Para obtener una descripción sobre los modos de texto y binario, vea [E/S de archivo de modo binario y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Cuando se usan dos o más constantes de manifiesto para formar el *oflag* argumento, estas constantes se combinan con el operador OR bit a bit ( **&#124;** ). Para obtener una descripción sobre los modos de texto y binario, vea [E/S de archivo de modo binario y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-El *pmode* se requiere el argumento solo cuando **_O_CREAT** se especifica. Si el archivo ya existe, *pmode* se omite. En caso contrario, *pmode* especifica la configuración de permisos de archivo, que se establece cuando el nuevo archivo se cierra por primera vez. **_open** aplica la máscara de permisos de archivo actual a *pmode* antes de que se establecen los permisos. (Para obtener más información, consulte [_umask](umask.md).) *pmode* es una expresión de entero que contiene una o ambas de las siguientes constantes de manifiesto, que se definen en \<sys\stat >.
+El *pmode* argumento es obligatorio solo cuando **_O_CREAT** se especifica. Si el archivo ya existe, *pmode* se omite. En caso contrario, *pmode* especifica la configuración de permisos de archivo, que se establece cuando el nuevo archivo se cierra por primera vez. **_abrir** aplica la máscara de permisos de archivo actual a *pmode* antes de que se establecen los permisos. (Para obtener más información, consulte [_umask](umask.md).) *pmode* es una expresión de entero que contiene una o ambas de las siguientes constantes de manifiesto, que se definen en \<sys\stat >.
 
 |*pmode*|Significado|
 |-|-|
@@ -142,9 +132,9 @@ El *pmode* se requiere el argumento solo cuando **_O_CREAT** se especifica. Si e
 **_S_IWRITE**|Escritura permitida. (De hecho, se permiten la lectura y escritura).
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|Lectura y escritura permitidas.
 
-Cuando ambas constantes se proporcionan, se combinan con el operador OR bit a bit ( **&#124;** ). En Windows, todos los archivos se pueden leer; es decir, el permiso de solo escritura no está disponible. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** son equivalentes.
+Cuando ambas constantes se proporcionan, se unen con el operador OR bit a bit ( **&#124;** ). En Windows, todos los archivos se pueden leer; es decir, el permiso de solo escritura no está disponible. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** son equivalentes.
 
-Si un valor distinto de una combinación de **_S_IREAD** y **_S_IWRITE** especificado para *pmode*, incluso si especificaría válido *pmode*en otro sistema operativo, o si cualquier valor distinto de los permitidos *oflag* valores se especifica, la función genera una aserción en modo de depuración e invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
+Si un valor distinto de cualquier combinación de **_S_IREAD** y **_S_IWRITE** se especifica para *pmode*, incluso si especificaría válido *pmode*en otro sistema operativo, o si cualquier valor distinto de los permitidos *oflag* se especifican valores, la función genera una aserción en modo de depuración e invoca el controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y establece **errno** a **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -153,7 +143,7 @@ Si un valor distinto de una combinación de **_S_IREAD** y **_S_IWRITE** especif
 |**_open**|\<io.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 |**_wopen**|\<io.h> o \<wchar.h>|\<fcntl.h>, \<sys\types.h>, \<sys\stat.h>|
 
-**_open** y **_wopen** son extensiones de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+**_abrir** y **_wopen** son extensiones de Microsoft. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliotecas
 

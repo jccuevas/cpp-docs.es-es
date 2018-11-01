@@ -1,11 +1,6 @@
 ---
-title: carg, cargf, cargl | Microsoft Docs
-ms.custom: ''
+title: carg, cargf, cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665600"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -74,7 +63,7 @@ long double cargl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -83,7 +72,7 @@ El argumento (también conocida como fase) de *z*. El resultado se encuentra en 
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **carg** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float** o **largo** **doble** valores. En un programa C, **carg** siempre tiene un **_Dcomplex** valor determinado y devuelve un **doble** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **carg** que toman **_Fcomplex** o **_Lcomplex** valores y devuelven **float** o **largo** **doble** valores. En un programa C, **carg** siempre toma un **_Dcomplex** valor y devuelve un **doble** valor.
 
 ## <a name="requirements"></a>Requisitos
 

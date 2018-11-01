@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s, _wdupenv_s | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -28,8 +24,6 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a918b866b0b43fb0e6b31e2deb5d9861dabe9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646515"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
 
@@ -87,26 +77,26 @@ Nombre de la variable de entorno.
 
 Devuelve cero si se ejecuta correctamente; devuelve un código de error si se produce un error.
 
-Estas funciones validan sus parámetros; Si *búfer* o *varname* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
+Estas funciones validan sus parámetros; Si *búfer* o *varname* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, las funciones establecen **errno** a **EINVAL** y devolver **EINVAL**.
 
-Si estas funciones no pueden asignar suficiente memoria, establecen *búfer* a **NULL** y *numberOfElements* en 0 y devuelven **ENOMEM**.
+Si estas funciones no pueden asignar suficiente memoria, establece *búfer* a **NULL** y *numberOfElements* en 0 y devuelven **ENOMEM**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_dupenv_s** función busca en la lista de variables de entorno para *varname*. Si se encuentra la variable, **_dupenv_s** asigna un búfer y copia el valor de la variable en el búfer. Dirección y la longitud del búfer se devuelven en *búfer* y *numberOfElements*. Al asignar el búfer, **_dupenv_s** constituye una alternativa más conveniente para [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+El **_dupenv_s** función busca en la lista de variables de entorno para *varname*. Si se encuentra la variable, **_dupenv_s** asigna un búfer y copia el valor de la variable en el búfer. Dirección y la longitud del búfer se devuelven en *búfer* y *numberOfElements*. Mediante la asignación del búfer en Sí, **_dupenv_s** proporciona una alternativa más conveniente para [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Es responsabilidad del programa de llamada liberar memoria llamando a [free](free.md).
 
 Si la variable no se encuentra, a continuación, *búfer* está establecido en **NULL**, *numberOfElements* se establece en 0, y el valor devuelto es 0 porque esta situación no se considera un error condición.
 
-Si no está interesado en el tamaño del búfer puede pasar **NULL** para *numberOfElements*.
+Si no está interesado en el tamaño del búfer se puede pasar **NULL** para *numberOfElements*.
 
-**_dupenv_s** no distingue mayúsculas de minúsculas en el sistema operativo Windows. **_dupenv_s** usa la copia del entorno indicado por la variable global **_environ** para tener acceso al entorno. Vea los comentarios de [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obtener una explicación de **_environ**.
+**_dupenv_s** no distingue mayúsculas de minúsculas en el sistema operativo de Windows. **_dupenv_s** usa la copia del entorno indicado por la variable global **_environ** para tener acceso al entorno. Vea los comentarios de [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obtener una explicación de **_environ**.
 
 El valor de *búfer* es una copia del valor de la variable de entorno; modificarlo no tiene ningún efecto en el entorno. Use la función [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) para modificar el valor de una variable de entorno.
 
-**_wdupenv_s** es una versión con caracteres anchos de **_dupenv_s**; los argumentos de **_wdupenv_s** son cadenas de caracteres anchos. El **_wenviron** (variable global) es una versión con caracteres anchos de **_environ**. Vea los comentarios de [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obtener más información sobre **_wenviron**.
+**_wdupenv_s** es una versión con caracteres anchos de **_dupenv_s**; los argumentos de **_wdupenv_s** son cadenas de caracteres anchos. El **_wenviron** variable global es una versión con caracteres anchos de **_environ**. Vea los comentarios de [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) para obtener más información sobre **_wenviron**.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

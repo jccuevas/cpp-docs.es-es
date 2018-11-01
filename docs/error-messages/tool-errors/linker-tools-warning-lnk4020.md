@@ -1,31 +1,21 @@
 ---
-title: Las herramientas del vinculador LNK4020 advertencia | Documentos de Microsoft
-ms.custom: ''
+title: Advertencia LNK4020 de las herramientas del vinculador
 ms.date: 05/29/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4020
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4020
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e55239b90910f6c151949c53939d4f8ed7c15c5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7810fd9a97a8f6e22ad362819a024358a9f4b07c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609747"
 ---
-# <a name="linker-tools-warning-lnk4020"></a>Herramientas del vinculador LNK4020 de advertencia
+# <a name="linker-tools-warning-lnk4020"></a>Advertencia LNK4020 de las herramientas del vinculador
 
-> un registro de tipo de '*filename*' está dañado; algunos símbolos y tipos no estén accesibles desde el depurador
+> en un registro de tipo '*filename*' está dañado; pueden que algunos símbolos y tipos de no ser accesibles desde el depurador
 
 El archivo PDB *filename* tiene un registro de tipo está dañado.
 
-Este problema suele ser secundario a otros problemas de compilación; a menos que esto sea el primer problema notificado de compilación, tratar con otros errores y advertencias de la primera. Si se trata el primer problema notificado, deberá limpiar los directorios de compilación y recompile el proyecto. Si utiliza procesos de compilación paralela, vea si el error persiste si se serializa la compilación.
+Este problema suele ser secundario a otros problemas de compilación; a menos que este es el primer número de compilación notificadas, tratar con otros errores y advertencias de la primera. Si este es el primer problema notificado, deberá limpiar los directorios de compilación y vuelva a compilar el proyecto. Si utiliza los procesos de compilación paralela, vea si el error persiste al serializar la compilación.
