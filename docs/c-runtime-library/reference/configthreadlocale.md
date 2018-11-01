@@ -1,10 +1,6 @@
 ---
-title: _configthreadlocale | Microsoft Docs
-ms.custom: ''
+title: _configthreadlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _configthreadlocale
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7531a5849bc1e86d469a12747b5c4648b76c9117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395782"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648388"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -60,7 +50,7 @@ Opción que se va a establecer. Una de las opciones que se citan en la tabla sig
 
 ## <a name="return-value"></a>Valor devuelto
 
-El estado anterior de la configuración regional por subproceso (**_DISABLE_PER_THREAD_LOCALE** o **_ENABLE_PER_THREAD_LOCALE**), o -1 en caso de error.
+El estado de configuración regional por subproceso anterior (**_DISABLE_PER_THREAD_LOCALE** o **_ENABLE_PER_THREAD_LOCALE**), o -1 en caso de error.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -68,15 +58,15 @@ El **_configurethreadlocale** función se utiliza para controlar el uso de confi
 
 |||
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Hace que el subproceso actual use una configuración regional específica del subproceso. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a la configuración regional de solo del subproceso.
-**_DISABLE_PER_THREAD_LOCALE**|Hace que el subproceso actual use la configuración regional global. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a otros subprocesos que utilizan la configuración regional global.
+**_ENABLE_PER_THREAD_LOCALE**|Hace que el subproceso actual use una configuración regional específica del subproceso. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a la configuración regional de sólo del subproceso.
+**_DISABLE_PER_THREAD_LOCALE**|Hace que el subproceso actual use la configuración regional global. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a otros subprocesos mediante la configuración regional global.
 **0**|Recupera el valor actual de este subproceso concreto.
 
 Estas funciones afectan al comportamiento de **setlocale**, **_tsetlocale**, **_wsetlocale**, y **_setmbcp**. Cuando la configuración regional por subproceso está deshabilitado, cualquier llamada subsiguiente a **setlocale** o **_wsetlocale** cambia la configuración regional de todos los subprocesos que utilizan la configuración regional global. Cuando se habilita la configuración regional por subproceso, **setlocale** o **_wsetlocale** solo afecta a la configuración regional del subproceso actual.
 
-Si usa **_configurethreadlocale** para habilitar una configuración regional por subproceso, se recomienda llamar a **setlocale** o **_wsetlocale** para establecer la configuración regional preferida en ese subproceso inmediatamente después.
+Si usas **_configurethreadlocale** para habilitar una configuración regional de cada subproceso, se recomienda llamar **setlocale** o **_wsetlocale** para establecer la configuración regional preferida en ese subproceso inmediatamente después.
 
-Si *per_thread_locale_type* no es uno de los valores enumerados en la tabla, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve -1.
+Si *per_thread_locale_type* no es uno de los valores enumerados en la tabla, esta función invoca al controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve -1.
 
 ## <a name="requirements"></a>Requisitos
 

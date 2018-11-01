@@ -1,26 +1,16 @@
 ---
-title: Códigos de salida BSCMAKE | Microsoft Docs
-ms.custom: ''
+title: Códigos de salida de BSCMAKE
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit codes
 - BSCMAKE, exit codes
 ms.assetid: 1a5ca9d8-a217-43c8-9780-2a41d458b8c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbb5b5f9e61cab7abdd1ba9a8594176680e95f77
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3be28721be20c7067737a421afa57c97275a040d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45720868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552079"
 ---
 # <a name="bscmake-exit-codes"></a>Códigos de salida de BSCMAKE
 
