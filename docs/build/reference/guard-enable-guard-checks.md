@@ -1,23 +1,13 @@
 ---
-title: -GUARD (habilitar comprobaciones de restricción) | Microsoft Docs
-ms.custom: ''
+title: /GUARD (habilitar comprobaciones de restricción)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71dc4a3a1f2c08d3bac2fcf5c474768f438feccd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 730e26477f4684ca6339a25a945ae04ff5a823c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394991"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565911"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (habilitar comprobaciones de restricción)
 
