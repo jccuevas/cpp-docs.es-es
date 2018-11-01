@@ -1,10 +1,6 @@
 ---
-title: _searchenv_s, _wsearchenv_s | Microsoft Docs
-ms.custom: ''
+title: _searchenv_s, _wsearchenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14dee908cdf1cc0d564047035a72f501df130b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410920"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505682"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -111,7 +101,7 @@ Si *filename* es una cadena vacía, el valor devuelto es **ENOENT**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*filename*|*VarName*|*ruta de acceso*|*numberOfElements*|Valor devuelto|Contenido de *ruta de acceso*|
+|*filename*|*VarName*|*ruta de acceso*|*numberOfElements*|Valor devuelto|Contenido de *pathname*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |any|any|**NULL**|any|**EINVAL**|N/D|
 |**NULL**|any|any|any|**EINVAL**|no cambia|
@@ -121,13 +111,13 @@ Si se da alguna de estas condiciones de error, se invoca al controlador de pará
 
 ## <a name="remarks"></a>Comentarios
 
-El **_searchenv_s** búsquedas rutinarias para el archivo de destino en el dominio especificado. El *varname* variable puede ser cualquier entorno o una variable definida por el usuario que especifica una lista de rutas de acceso de directorios, como **ruta de acceso**, **LIB**, y **INCLUDE** . Dado que **_searchenv_s** distingue mayúsculas de minúsculas, *varname* debe coincidir con el caso de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno se define en el entorno del proceso, la función devuelve cero y la *pathname* variable se ha modificado.
+El **_searchenv_s** búsquedas rutinarias para el archivo de destino en el dominio especificado. El *varname* variable puede ser cualquier entorno o una variable definida por el usuario que especifica una lista de rutas de acceso de directorio, como **ruta**, **LIB**, y **INCLUDE** . Dado que **_searchenv_s** distingue mayúsculas de minúsculas *varname* debe coincidir con el caso de la variable de entorno. Si *varname* no coincide con el nombre de una variable de entorno definido en el entorno del proceso, la función devuelve cero y el *pathname* se modifica la variable.
 
-La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso creada recientemente se copia en *pathname*. Si el *filename* no se encuentra el archivo, *pathname* contiene una cadena vacía terminada en null.
+La rutina busca el archivo primero en el directorio de trabajo actual. Si no encuentra el archivo, busca en los directorios especificados por la variable de entorno. Si el archivo de destino está en uno de esos directorios, la ruta de acceso recién creada se copia en *pathname*. Si el *filename* no se encuentra el archivo, *pathname* contiene una cadena vacía terminada en null.
 
-El *pathname* búfer debe ser al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud total del nombre de ruta de acceso construido. En caso contrario, **_searchenv_s** puede saturar el *pathname* búfer produciendo un comportamiento inesperado.
+El *pathname* búfer debe ser al menos **_MAX_PATH** caracteres de longitud para dar cabida a la longitud total del nombre de ruta de acceso construido. En caso contrario, **_searchenv_s** puede saturar el *pathname* resultante en un comportamiento inesperado del búfer.
 
-**_wsearchenv_s** es una versión con caracteres anchos de **_searchenv_s**; los argumentos a **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y **_searchenv_s** se comportan exactamente igual.
+**_wsearchenv_s** es una versión con caracteres anchos de **_searchenv_s**; los argumentos de **_wsearchenv_s** son cadenas de caracteres anchos. **_wsearchenv_s** y **_searchenv_s** se comportan exactamente igual.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
