@@ -1,10 +1,6 @@
 ---
-title: isblank, iswblank, _isblank_l, _iswblank_l | Microsoft Docs
-ms.custom: ''
+title: isblank, iswblank, _isblank_l, _iswblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -30,19 +26,13 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs:
-- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2787be85aa4e12bf22d1be14f90568891b83824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497323"
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -77,7 +67,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de un espacio o un carácter de tabulación horizontal o forma parte de un conjunto de configuración regional de caracteres que se utilizan para separar las palabras dentro de una línea de texto. **ISBLANK** devuelve un valor distinto de cero si *c* es un carácter de espacio (0 x 20) o carácter de tabulación horizontal (0 x 09). El resultado de la condición de prueba para la **isblank** depende de las funciones del **LC_CTYPE** categoría de configuración de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para cualquier comportamiento que dependa de la configuración regional; las versiones que tienen la **_l** sufijo son idénticas salvo que usan el configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de un espacio o un carácter de tabulación horizontal o forma parte de un conjunto específico de configuración regional de caracteres que se usan para separar las palabras dentro de una línea de texto. **ISBLANK** devuelve un valor distinto de cero si *c* es un carácter de espacio (0 x 20) o el carácter de tabulación horizontal (0 x 09). El resultado de la condición de prueba para el **isblank** depende de las funciones de la **LC_CTYPE** categoría de configuración de la configuración regional; para obtener más información, vea [setlocale, _wsetlocale](setlocale-wsetlocale.md). Las versiones de estas funciones que no tienen la **_l** sufijo usan la configuración regional actual para cualquier comportamiento dependiente de la configuración regional; las versiones que tienen el **_l** sufijo son idénticas salvo que usan el configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 **iswblank** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a un espacio estándar o carácter de tabulación horizontal.
 
