@@ -1,10 +1,6 @@
 ---
-title: wcsrtombs_s | Microsoft Docs
-ms.custom: ''
+title: wcsrtombs_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsrtombs_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcsrtombs_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94e27965d1660f4c344d0026bbfce8685a935c7a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459064"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -80,7 +70,7 @@ El tamaño en bytes de la *mbstr* búfer.
 Apunta a la cadena de caracteres anchos que se va a convertir.
 
 *count*<br/>
-El número máximo de bytes que se almacenará en la *mbstr* búfer, o [_TRUNCATE](../../c-runtime-library/truncate.md).
+El número máximo de bytes que se almacenará en el *mbstr* búfer, o [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *mbstate*<br/>
 Un puntero a un **mbstate_t** objeto de estado de conversión.
@@ -93,7 +83,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |---------------------|------------------------------|
 |*mbstr* es **NULL** y *sizeInBytes* > 0|**EINVAL**|
 |*wcstr* es **NULL**|**EINVAL**|
-|El búfer de destino es demasiado pequeño para contener la cadena convertida (a menos que *recuento* es **_TRUNCATE**; vea las notas siguientes)|**ERANGE**|
+|El búfer de destino es demasiado pequeño para contener la cadena convertida (a menos que *recuento* es **_TRUNCATE**; vea Comentarios más abajo)|**ERANGE**|
 
 Si se produce alguna de estas condiciones, se invoca la excepción de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve un código de error y establece **errno** como se indica en la tabla.
 
@@ -105,28 +95,28 @@ El **wcsrtombs_s** función convierte una cadena de caracteres anchos que apunta
 
 - Se encuentre un carácter ancho que no se pueda convertir
 
-- El número de bytes almacenados en el *mbstr* almacenar en búfer es igual a *recuento*.
+- El número de bytes almacenados en el *mbstr* búfer equals *recuento*.
 
 La cadena de destino siempre termina en nulo (aun en caso de error).
 
-Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **wcsrtombs_s** convierte tanto de la cadena como quepan en el búfer de destino, dejando espacio para un valor null terminador.
+Si *recuento* es el valor especial [_TRUNCATE](../../c-runtime-library/truncate.md), a continuación, **wcsrtombs_s** convierte tanto de la cadena como cabe en el búfer de destino, dejando espacio para un valor null terminador.
 
-Si **wcsrtombs_s** convierte correctamente la cadena de origen, coloca el tamaño en bytes de la cadena convertida, incluido el terminador null, en  *&#42;pReturnValue* (proporciona  *pReturnValue* no **NULL**). Esto ocurre incluso si la *mbstr* argumento es **NULL** y proporciona una manera de determinar el tamaño de búfer necesario. Tenga en cuenta que si *mbstr* es **NULL**, *recuento* se omite.
+Si **wcsrtombs_s** convierte correctamente la cadena de origen, pone el tamaño en bytes de la cadena convertida, incluido el terminador nulo, en  *&#42;pReturnValue* (proporcionado  *pReturnValue* no **NULL**). Esto ocurre incluso si la *mbstr* argumento es **NULL** y proporciona una manera de determinar el tamaño de búfer necesario. Observe que si *mbstr* es **NULL**, *recuento* se omite.
 
 Si **wcsrtombs_s** encuentra un carácter ancho que no se puede convertir en un carácter multibyte, pone -1  *\*pReturnValue*, Establece el búfer de destino en una cadena vacía, establece **errno** a **EILSEQ**y devuelve **EILSEQ**.
 
-Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcsrtombs_s** no está definido. **wcsrtombs_s** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
+Si las secuencias señaladas por *wcstr* y *mbstr* se superponen, el comportamiento de **wcsrtombs_s** es indefinido. **wcsrtombs_s** se ve afectado por la categoría LC_TYPE de la configuración regional actual.
 
 > [!IMPORTANT]
-> Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres anchos que se va a convertir.
+> Asegúrese de que *wcstr* y *mbstr* no se superponen y que *recuento* refleja correctamente el número de caracteres anchos a convertir.
 
-El **wcsrtombs_s** función difiere de [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) por su capacidad de reinicio. El estado de la conversión se almacena en *mbstate* para llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación podría utilizar **wcsrlen** en lugar de **wcslen**, si una llamada subsiguiente a **wcsrtombs_s** se usaron en lugar de **wcstombs_s**.
+El **wcsrtombs_s** función difiere de [wcstombs_s, _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) por su capacidad de reinicio. El estado de conversión se almacena en *mbstate* en las llamadas posteriores a la misma o a otras funciones reiniciables. Los resultados no están definidos cuando se combina el uso de funciones reiniciables y no reiniciables. Por ejemplo, una aplicación usaría **wcsrlen** lugar **wcslen**, si una llamada subsiguiente a **wcsrtombs_s** se usaron en lugar de **wcstombs_s**.
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para más información, vea [Sobrecargas de plantilla seguras](../../c-runtime-library/secure-template-overloads.md).
 
 ## <a name="exceptions"></a>Excepciones
 
-El **wcsrtombs_s** función es segura para subprocesos siempre y cuando no llama a ninguna función en el subproceso actual **setlocale** mientras se está ejecutando esta función y la *mbstate* es null.
+El **wcsrtombs_s** función es segura para subprocesos siempre y cuando ninguna función en el subproceso actual llame a **setlocale** mientras se está ejecutando esta función y el *mbstate* es null.
 
 ## <a name="example"></a>Ejemplo
 

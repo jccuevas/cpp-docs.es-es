@@ -1,14 +1,8 @@
 ---
-title: Información general de la biblioteca de clases | Microsoft Docs
-ms.custom: ''
+title: Información general de la biblioteca de clases
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
-dev_langs:
-- C++
 helpviewer_keywords:
 - grouping MFC classes
 - MFC, class library
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa88ab8e096ed095554d77172aff78db61187da7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e2bf534abcacbbb4997971376d3831705ab2310
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468637"
 ---
 # <a name="class-library-overview"></a>Información general de la biblioteca de clases
 
