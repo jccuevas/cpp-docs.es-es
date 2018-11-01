@@ -1,26 +1,16 @@
 ---
-title: Controlar mensajes reflejados | Microsoft Docs
-ms.custom: ''
+title: Controlar los mensajes reflejados
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - message handling [MFC], reflected messages
 - reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99fc9c30ea85ba3f94fa811464f023da0eeea37e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9b580c0c8b8fc970d69f5c57f69bbbbe65e22497
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449873"
 ---
 # <a name="handling-reflected-messages"></a>Controlar los mensajes reflejados
 

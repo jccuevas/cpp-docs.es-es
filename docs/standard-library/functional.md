@@ -1,30 +1,20 @@
 ---
-title: '&lt;functional&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;functional&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <functional>
 - functional/std::<functional>
 - std::<functional>
-dev_langs:
-- C++
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3e838bf10b710caf12b5dcd51cad4cf625d887e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457322"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -114,19 +104,19 @@ Cada contenedor de llamadas tiene un constructor de movimientos y un constructor
 |Función|Descripción|
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Enlaza argumentos a un objeto al que se puede llamar.|
-|[bind1st](../standard-library/functional-functions.md#bind1st)|Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.|
-|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.|
+|[bind1st](../standard-library/functional-functions.md#bind1st)|Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.|
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.|
 |[bit_and](../standard-library/functional-functions.md#bit_and)|Devuelve el AND lógico bit a bit (operador binario&) de los dos parámetros.|
 |[bit_not](../standard-library/functional-functions.md#bit_not)|Devuelve el complemento lógico bit a bit (operador~) del parámetro.|
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Devuelve el OR lógico bit a bit (operador &#124;) de los dos parámetros.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Devuelve el XOR lógico bit a bit (operador ^) de los dos parámetros.|
 |[cref](../standard-library/functional-functions.md#cref)|Construye un `reference_wrapper` const a partir de un argumento.|
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Genera un contenedor de llamadas simple.|
-|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funciones de plantilla auxiliar utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.|
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Función de plantilla auxiliar utilizada para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.|
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.|
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Función de plantilla del asistente utilizada para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.|
 |[not1](../standard-library/functional-functions.md#not1)|Devuelve el complemento de un predicado unario.|
 |[not2](../standard-library/functional-functions.md#not2)|Devuelve el complemento de un predicado binario.|
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Función de plantilla auxiliar utilizada para convertir punteros a funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.|
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|Función de plantilla del asistente utilizada para convertir punteros a funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.|
 |[ref](../standard-library/functional-functions.md#ref)|Construye un `reference_wrapper` a partir de un argumento.|
 |[swap](../standard-library/functional-functions.md#swap)|Intercambia dos objetos `function`.|
 

@@ -1,10 +1,6 @@
 ---
-title: _pipe | Microsoft Docs
-ms.custom: ''
+title: _pipe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pipe
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - pipe
 - _pipe
-dev_langs:
-- C++
 helpviewer_keywords:
 - pipes, creating
 - _pipe function
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e3e636bc5aac889e3c3a16b856525d4d7268e262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5db59fecd84ae291e5651b1cec1be31c815e53a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405132"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453988"
 ---
 # <a name="pipe"></a>_pipe
 
@@ -62,12 +52,12 @@ int _pipe(
 ### <a name="parameters"></a>Parámetros
 
 *PFD*<br/>
-Puntero a una matriz de dos **int** para contener leer y escribir los descriptores de archivo.
+Puntero a una matriz de dos **int** para contener leer y escribir descriptores de archivo.
 
 *psize*<br/>
 Cantidad de memoria que se va a reservar.
 
-*modo de texto*<br/>
+*TextMode*<br/>
 Modo de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -76,7 +66,7 @@ Si la operación se realiza correctamente, devuelve 0. Devuelve -1 para indicar 
 
 - **EMFILE**, lo que indica que no hay más descriptores de archivo están disponibles.
 
-- **/EnFile**, lo que indica un desbordamiento de la tabla de archivos de sistema.
+- **/EnFile**, lo que indica un desbordamiento de la tabla del sistema de archivos.
 
 - **EINVAL**, lo que indica que la matriz *PFD* es un puntero nulo, o como un valor no válido para *textmode* se pasó.
 
@@ -86,17 +76,17 @@ Para obtener más información sobre estos y otros códigos de retorno, consulte
 
 El **_pipe** función crea un *canalización*, que es un canal de E/S artificial que un programa que se usa para pasar información a otros programas. Una canalización se parece a un archivo porque tiene un puntero de archivo, un descriptor de archivo, o las dos cosas, y con se puede leer o escribir mediante las funciones de entrada y salida estándar de la biblioteca estándar. Sin embargo, una canalización no representa un archivo o un dispositivo específico. En lugar de ello, representa almacenamiento temporal en memoria que es independiente de la propia memoria del programa y que el sistema operativo controla totalmente.
 
-**_pipe** es similar a **_open** pero abre la canalización de lectura y escritura y no devuelve dos descriptores en lugar de uno de archivo. El programa puede usar los dos extremos de la canalización, o cerrar la que no necesita. Por ejemplo, el procesador de comandos de Windows crea una canalización cuando ejecuta un comando como **PROGRAM1** | **PROGRAM2**.
+**_pipe** es similar a **_open** pero abre la canalización de lectura y escritura y devuelve dos descriptores en lugar de uno de archivo. El programa puede usar los dos extremos de la canalización, o cerrar la que no necesita. Por ejemplo, el procesador de comandos de Windows crea una canalización cuando ejecuta un comando como **PROGRAM1** | **PROGRAM2**.
 
-El estándar de salida descriptor de **PROGRAM1** se adjunta al descriptor de escritura de la canalización. El descriptor de entrada estándar de **PROGRAM2** se adjunta al descriptor de lectura de la canalización. Así no es necesario crear archivos temporales para pasar información a otros programas.
+El estándar de salida de descriptor de **PROGRAM1** se adjunta al descriptor de escritura de la canalización. El descriptor de entrada estándar de **PROGRAM2** se adjunta al descriptor de lectura de la canalización. Así no es necesario crear archivos temporales para pasar información a otros programas.
 
-El **_pipe** función devuelve dos descriptores de archivo de la canalización en el *PFD* argumento. El elemento *PFD*[0] contiene el descriptor de lectura y el elemento *PFD*[1] contiene el descriptor de escritura. Los descriptores de archivo de canalización se usan de la misma forma que otros descriptores de archivo. (Las funciones de salida y entrada de bajo nivel **_preguntas** y **_write** puede leer y escribir en una canalización.) Para detectar la condición de final de la canalización, busque un **_read** solicitud que devuelve el valor 0 como el número de bytes leídos.
+El **_pipe** función devuelve dos descriptores de archivo a la canalización en el *PFD* argumento. El elemento *PFD*[0] contiene el descriptor de lectura y el elemento *PFD*[1] contiene el descriptor de escritura. Los descriptores de archivo de canalización se usan de la misma forma que otros descriptores de archivo. (Las funciones de salida y entrada de bajo nivel **_read** y **_write** puede leer y escribir en una canalización.) Para detectar la condición de final de canalización, busque un **_read** solicitud que devuelve 0 como el número de bytes leídos.
 
-El *psize* argumento especifica la cantidad de memoria, en bytes, que se va a reservar para la canalización. El *textmode* argumento especifica el modo de traducción de la canalización. La constante de manifiesto **_O_TEXT** especifica una traducción de texto y la constante **_O_BINARY** especifica la traducción binaria. (Vea [fopen, _wfopen](fopen-wfopen.md) para ver una descripción de los modos de texto y binario.) Si el *textmode* argumento es 0, **_pipe** usa el modo de traducción predeterminado especificado por la variable de modo predeterminado [_fmode](../../c-runtime-library/fmode.md).
+El *psize* argumento especifica la cantidad de memoria, en bytes, que se reserva para la canalización. El *textmode* argumento especifica el modo de traducción de la canalización. La constante de manifiesto **_O_TEXT** especifica una traducción de texto y la constante **_O_BINARY** especifica la traducción binaria. (Vea [fopen, _wfopen](fopen-wfopen.md) para ver una descripción de los modos de texto y binario.) Si el *textmode* argumento es 0, **_pipe** usa el modo de traducción predeterminado especificado por la variable de modo predeterminado [_fmode](../../c-runtime-library/fmode.md).
 
-En programas multiproceso, no se realiza ningún bloqueo. Los descriptores de archivo que se devuelven se han abierto recientemente y no debe hacer referencia a cualquier subproceso hasta después de la **_pipe** llamada está completa.
+En programas multiproceso, no se realiza ningún bloqueo. Los descriptores de archivo que se devuelven se han abierto recientemente y no debe hacerse referencia a cualquier subproceso hasta después de la **_pipe** llamada completada.
 
-Para usar el **_pipe** funcionar para la comunicación entre un proceso primario y un proceso secundario, cada proceso debe tener solo un descriptor abierto en la canalización. Los descriptores deben ser opuestos: si el elemento primario tiene un descriptor de lectura abierto, el elemento secundario debe tener abierto un descriptor de escritura. La manera más fácil de hacerlo es bit a bit a o (**|**) la **_O_NOINHERIT** marca con *textmode*. A continuación, utilice **_dup** o **_dup2** para crear una copia heredable del descriptor de canalización que se van a pasar al formulario secundario. Cierre el descriptor original y, a continuación, genere el proceso secundario. Después de la llamada de generación, cierre el descriptor duplicado en el proceso primario. Para obtener más información, vea el ejemplo 2 que figura más adelante en este artículo.
+Para usar el **_pipe** de función para la comunicación entre un proceso primario y un proceso secundario, cada proceso debe tener solo un descriptor abierto en la canalización. Los descriptores deben ser opuestos: si el elemento primario tiene un descriptor de lectura abierto, el elemento secundario debe tener abierto un descriptor de escritura. La manera más fácil de hacerlo es a bit a bit o (**|**) la **_O_NOINHERIT** marca con *textmode*. A continuación, utilice **_dup** o **_dup2** para crear una copia heredable del descriptor de canalización que se van a pasar al elemento secundario. Cierre el descriptor original y, a continuación, genere el proceso secundario. Después de la llamada de generación, cierre el descriptor duplicado en el proceso primario. Para obtener más información, vea el ejemplo 2 que figura más adelante en este artículo.
 
 En el sistema operativo Windows, una canalización se destruye cuando se han cerrado todos sus descriptores. (Cuando se han cerrado todos los descriptores de lectura en la canalización, si se escribe en la canalización se produce un error). Todas las operaciones de lectura y escritura en la canalización esperan hasta que hay suficientes datos o suficiente espacio en búfer para llevar a cabo la solicitud de E/S.
 
