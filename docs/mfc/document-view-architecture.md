@@ -1,12 +1,6 @@
 ---
-title: Arquitectura de vista-documento | Microsoft Docs
-ms.custom: ''
+title: Arquitectura de vista-documento
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42c56ddea19266251bb12c06f6423c278f14bd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509284"
 ---
 # <a name="documentview-architecture"></a>Arquitectura documento/vista
 
@@ -89,7 +79,7 @@ Documentos, sus vistas asociadas y las ventanas de marco de las vistas que se cr
 
 - [Uso de clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [Ejemplos](../visual-cpp-samples.md)
+- [Muestras](../visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vea también
 

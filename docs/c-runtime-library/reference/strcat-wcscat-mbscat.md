@@ -1,10 +1,6 @@
 ---
-title: strcat, wcscat, _mbscat | Microsoft Docs
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546398"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
@@ -109,12 +99,12 @@ Cada una de estas funciones devuelve la cadena de destino (*strDestination*). No
 
 ## <a name="remarks"></a>Comentarios
 
-El **strcat** función anexa *strSource* a *strDestination* y termina la cadena resultante con un carácter nulo. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDestination*. El comportamiento de **strcat** es indefinido si las cadenas de origen y de destino se superponen.
+El **strcat** función anexa *strSource* a *strDestination* y termina la cadena resultante con un carácter nulo. El carácter inicial de *strSource* sobrescribe el carácter nulo de terminación de *strDestination*. El comportamiento de **strcat** es indefinido si las cadenas de origen y destino se superponen.
 
 > [!IMPORTANT]
-> Dado que **strcat** no comprueba si hay espacio suficiente en *strDestination* antes de anexar *strSource*, es una posible causa de saturaciones de búfer. Considere la posibilidad de usar [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) en su lugar.
+> Dado que **strcat** no comprueba si hay espacio suficiente en *strDestination* antes de anexar *strSource*, es una posible causa de saturaciones del búfer. Considere la posibilidad de usar [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) en su lugar.
 
-**wcscat** y **_mbscat** son versiones de caracteres multibyte y anchos de **strcat**. Los argumentos y el valor devuelto de **wcscat** son caracteres anchos cadenas; los de **_mbscat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcscat** y **_mbscat** son versiones de caracteres anchos y caracteres multibyte de **strcat**. Los argumentos y el valor devuelto de **wcscat** son caracteres anchos cadenas; los de **_mbscat** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan los homólogos seguros más recientes de estas funciones. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
