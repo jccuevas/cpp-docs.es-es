@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft Docs
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545592"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -62,9 +52,9 @@ Descriptor de archivo que hace referencia al dispositivo que se va a probar.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_isatty** función determina si *fd* está asociado a un dispositivo de caracteres (un terminal, consola, impresora o puerto serie).
+El **_isatty** función determina si *fd* está asociado con un dispositivo de caracteres (un terminal, consola, impresora o puerto serie).
 
-Esta función valida el *fd* parámetro. Si *fd* es un puntero de archivo incorrecto, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EBADF**.
+Esta función valida el *fd* parámetro. Si *fd* es un puntero de archivo incorrecto, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve 0 y establece **errno** a **EBADF**.
 
 ## <a name="requirements"></a>Requisitos
 

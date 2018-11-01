@@ -1,10 +1,6 @@
 ---
-title: atol, _atol_l, _wtol, _wtol_l | Microsoft Docs
-ms.custom: ''
+title: atol, _atol_l, _wtol, _wtol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atol
 - _wtol_l
@@ -31,8 +27,6 @@ f1_keywords:
 - _wtol
 - _ttol
 - _wtol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstol function
 - atol function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: deb23d856fc0ec5aecfdb726256394d5135a18d4
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450711"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537194"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -93,9 +83,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada función devuelve el **largo** valor generado mediante la interpretación de los caracteres de entrada como un número. El valor devuelto es 0L para **atol** si la entrada no se puede convertir en un valor de ese tipo.
+Cada función devuelve el **largo** valor genera al interpretar los caracteres de entrada como un número. El valor devuelto es 0L para **atol** si la entrada no se puede convertir en un valor de ese tipo.
 
-En el caso de desbordamiento con valores enteros positivos grandes, **atol** devuelve **LONG_MAX**; en el caso de desbordamiento con valores enteros negativos grandes, **LONG_MIN** es Devuelve. En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si se pasa el parámetro es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
+En el caso de desbordamiento con valores enteros positivos grandes, **atol** devuelve **LONG_MAX**; en caso de desbordamiento con valores enteros negativos grandes, **LONG_MIN** es Devuelve. En todos los casos de fuera de intervalo, **errno** está establecido en **ERANGE**. Si el parámetro pasado es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones establecen **errno** a **EINVAL** y devuelven 0.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -103,13 +93,13 @@ Estas funciones convierten una cadena de caracteres en un valor entero largo (**
 
 La cadena de entrada es una secuencia de caracteres que se puede interpretar como un valor numérico del tipo especificado. La función deja de leer la cadena de entrada en el primer carácter que no reconoce como parte de un número. Es posible que este carácter sea el carácter nulo ("\0" o L"\0") que termina la cadena.
 
-El *str* argumento pasado a **atol** tiene la forma siguiente:
+El *str* argumento **atol** tiene el formato siguiente:
 
-> [*espacio en blanco*] [*inicio de sesión*] [*dígitos*]]
+> [*espacio en blanco*] [*sesión*] [*dígitos*]]
 
-A *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *inicio de sesión* sea más (+) o menos (-); y *dígitos* es uno o más dígitos.
+Un *espacio en blanco* consta de caracteres de espacio o tabulación, que se omiten; *sesión* sea más (+) o menos (-); y *dígitos* son uno o más dígitos.
 
-**_wtol** es idéntico a **atol** salvo que toma una cadena de caracteres anchos.
+**_wtol** es idéntico al **atol** salvo que toma una cadena de caracteres anchos.
 
 Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
@@ -129,7 +119,7 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 
 ## <a name="example"></a>Ejemplo
 
-Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos utilizando la **atol** (función).
+Este programa muestra cómo se pueden convertir números almacenados como cadenas en valores numéricos con el **atol** función.
 
 ```C
 // crt_atol.c

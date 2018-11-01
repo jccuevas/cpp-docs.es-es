@@ -1,10 +1,6 @@
 ---
-title: _unlink, _wunlink | Microsoft Docs
-ms.custom: ''
+title: _unlink, _wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411014"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544204"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -71,13 +61,13 @@ Nombre del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. En caso contrario, la función devuelve -1 y establece **errno** a **EACCES**, lo que significa que la ruta de acceso especifica un archivo de sólo lectura, o a **ENOENT**, lo que significa que el archivo o la ruta de acceso no se encuentra o la ruta de acceso especificó un directorio.
+Cada una de estas funciones devuelve 0 si se realiza correctamente. En caso contrario, la función devuelve -1 y establece **errno** a **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura, o a **ENOENT**, lo que significa que el archivo o la ruta de acceso no se encuentra o la ruta de acceso especifica un directorio.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_unlink** función elimina el archivo especificado por *filename*. **_wunlink** es una versión con caracteres anchos de **_unlink**; el *filename* argumento pasado a **_wunlink** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
+El **_unlink** función elimina el archivo especificado por *filename*. **_wunlink** es una versión con caracteres anchos de **_unlink**; el *filename* argumento **_wunlink** es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

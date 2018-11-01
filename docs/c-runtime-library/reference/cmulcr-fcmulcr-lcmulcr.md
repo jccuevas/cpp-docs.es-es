@@ -1,11 +1,6 @@
 ---
-title: _Cmulcr, _FCmulcr, _LCmulcr | Documentos de Microsoft
-ms.custom: ''
+title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcr
 - _FCmulcr
@@ -30,22 +25,16 @@ f1_keywords:
 - complex/_Cmulcr
 - complex/_FCmulcr
 - complex/_LCmulcr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bbd42e4c543d4bc42afa023d62b328a143c90374
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507489"
 ---
 # <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
@@ -62,18 +51,18 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>Parámetros
 
 *x*<br/>
-Uno de los operandos complejos para multiplicar.
+Uno de los operandos complejos se va a multiplicar.
 
 *y*<br/>
-El operando punto flotante que se va a multiplicar.
+El operando de punto flotante se va a multiplicar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-A **_Dcomplex**, **_Fcomplex**, o **_Lcomplex** estructura que representa el producto complejo del número complejo *x* y número de punto de flaoting *y*.
+Un **_Dcomplex**, **_Fcomplex**, o **_Lcomplex** estructura que representa el producto complejo del número complejo *x* y número de punto de flaoting *y*.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que los operadores aritméticos integrados no funcionan en la implementación de Microsoft de los tipos complejos, el **_Cmulcr**, **_FCmulcr**, y **_LCmulcr** funciones simplificar la multiplicación de tipos complejos con tipos de punto flotante.
+Dado que los operadores aritméticos integrados no funcionan en la implementación de Microsoft de los tipos complejos, el **_Cmulcr**, **_FCmulcr**, y **_LCmulcr** funciones Simplifique la multiplicación de los tipos complejos mediante tipos de punto flotante.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -81,7 +70,7 @@ Dado que los operadores aritméticos integrados no funcionan en la implementaci�
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Estas funciones son específicos de Microsoft. Los tipos de **_Dcomplex**, **_Fcomplex**, y **_Lcomplex** son equivalentes específicos de Microsoft para los tipos nativos no implementados de C99 **_Complex dobles** , **float _Complex**, y **_Complex long double**, respectivamente. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+Estas funciones son específicas de Microsoft. Los tipos de **_Dcomplex**, **_Fcomplex**, y **_Lcomplex** son equivalentes específicos de Microsoft para los tipos nativos no está implementados de C99 **double _Complex** , **float _Complex**, y **long double _Complex**, respectivamente. Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 

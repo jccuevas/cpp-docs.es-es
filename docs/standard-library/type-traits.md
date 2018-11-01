@@ -1,28 +1,18 @@
 ---
-title: '&lt;type_traits&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;type_traits&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <type_traits>
-dev_langs:
-- C++
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2e374ad9c0024b602c07ea91e53d45c9bf0742f8
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514691"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -38,7 +28,7 @@ Define las plantillas que proporcionan constantes en tiempo de compilación que 
 
 Las clases y plantillas de \<type_traits > se utilizan para admitir la inferencia, clasificación y transformación en tiempo de compilación para detectar errores relacionados con el tipo y que le ayudarán a optimizar el código genérico. Estas clases y plantillas incluyen rasgos de tipo unario que describen una propiedad de un tipo, rasgos de tipo binario que describen la relación entre los tipos y rasgos de transformación que modifican una propiedad de un tipo.
 
-Para admitir rasgos de tipo, se define una clase auxiliar, `integral_constant`. Tiene especializaciones de plantilla `true_type` y `false_type` que forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *es true*, se deriva públicamente (ya sea de forma directa o indirecta) de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *es false*, se deriva públicamente (ya sea de forma directa o indirecta) de [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Para admitir rasgos de tipo, se define una clase del asistente, `integral_constant`. Tiene especializaciones de plantilla `true_type` y `false_type` que forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *es true*, se deriva públicamente (ya sea de forma directa o indirecta) de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *es false*, se deriva públicamente (ya sea de forma directa o indirecta) de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificador de tipo* o *rasgo de transformación* es una plantilla que toma uno o más argumentos de plantilla y tiene un miembro `type`, que es un sinónimo del tipo modificado.
 
@@ -62,7 +52,7 @@ using add_const_t = typename add_const<T>::type;
 
 ### <a name="classes"></a>Clases
 
-Definiciones de tipos y clase auxiliar
+Definiciones de tipos y clase del asistente
 
 |||
 |-|-|
