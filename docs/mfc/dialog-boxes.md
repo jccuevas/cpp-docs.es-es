@@ -1,12 +1,6 @@
 ---
-title: Cuadros de diálogo | Microsoft Docs
-ms.custom: ''
+title: Cuadros de diálogo
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - modeless dialog boxes [MFC], MFC dialog boxes
 - MFC, dialog boxes
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f26f5cad47815c25602eba836a482e6f6cecc85d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 400107a7b61ae28ca1d3ec69ee3217d58f55d9e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665080"
 ---
 # <a name="dialog-boxes"></a>Cuadros de diálogo
 
@@ -73,7 +63,7 @@ La mayoría de los cuadros de diálogo son modales, que requieren que el usuario
 
 - Crear una aplicación cuya interfaz de usuario es un cuadro de diálogo: vea la [CMNCTRL1](../visual-cpp-samples.md) o [CMNCTRL2](../visual-cpp-samples.md) programas de ejemplo. El Asistente para aplicaciones proporciona esta opción también.
 
-- [Ejemplos](../mfc/dialog-sample-list.md)
+- [Muestras](../mfc/dialog-sample-list.md)
 
 ## <a name="see-also"></a>Vea también
 
