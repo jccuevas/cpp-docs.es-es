@@ -1,11 +1,6 @@
 ---
-title: casinh, casinhf, casinhl | Microsoft Docs
-ms.custom: ''
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393971"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580801"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
@@ -74,16 +63,16 @@ _Lcomplex casinhl(
 
 ### <a name="parameters"></a>Parámetros
 
-*Z*<br/>
+*z*<br/>
 Número complejo que representa un ángulo en radianes.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El seno hiperbólico inverso de *z*, en radianes. El resultado no está enlazado a lo largo del eje real y en el intervalo [-iπ/2 + 2/iπ] en el eje imaginario.
+El seno hiperbólico inverso de *z*, en radianes. El resultado es independiente en el eje real y en el intervalo [-iπ/2 + 2/iπ] en el eje imaginario.
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **casinh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **casinh** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **casinh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **casinh** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
