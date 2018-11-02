@@ -1,10 +1,6 @@
 ---
-title: '&lt;functional&gt; (Funciones) | Microsoft Docs'
-ms.custom: ''
+title: '&lt;functional&gt; (Funciones)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::bind
 - xfunctional/std::bind1st
@@ -22,8 +18,6 @@ f1_keywords:
 - xfunctional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bind [C++]
 - std::bind1st
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 696f937686e9ff3a45f8132da8a8d79857d989da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585216"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; (Funciones)
 
@@ -160,7 +150,7 @@ int main()
 
 ## <a name="bind1st"></a>  bind1st
 
-Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.
+Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado.
 
 ```cpp
 template <class Operation, class Type>
@@ -169,7 +159,7 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+*func*<br/>
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
 *left*<br/>
@@ -254,7 +244,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bind2nd"></a>  bind2nd
 
-Función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.
+Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado.
 
 ```cpp
 template <class Operation, class Type>
@@ -263,7 +253,7 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+*func*<br/>
 El objeto de función binaria que se va a convertir en un objeto de función unaria.
 
 *right*<br/>
@@ -625,7 +615,7 @@ int main()
 
 ## <a name="mem_fun"></a>  mem_fun
 
-Funciones de plantilla auxiliar utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.
+Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero.
 
 ```cpp
 template <class Result, class Type>
@@ -712,7 +702,7 @@ int main( )
 
 ## <a name="mem_fun_ref"></a>  mem_fun_ref
 
-Las funciones de plantilla auxiliares usadas para crear adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.
+Las funciones de plantilla del asistente usadas para crear adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de referencia.
 
 ```cpp
 template <class Result, class Type>
@@ -898,7 +888,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Parámetros
 
-*Func*<br/>
+*func*<br/>
 Predicado binario que se va a negar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -965,7 +955,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 
 ## <a name="ptr_fun"></a>  ptr_fun
 
-Funciones de plantilla auxiliares usadas para convertir punteros de funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.
+Funciones de plantilla del asistente usadas para convertir punteros de funciones unarias y binarias, respectivamente, en funciones unarias y binarias adaptables.
 
 ```cpp
 template <class Arg, class Result>
@@ -988,7 +978,7 @@ La segunda función de plantilla devuelve la función binaria [pointer_to_binary
 
 ### <a name="remarks"></a>Comentarios
 
-Un puntero de función es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo, al enlazar un valor a este o al usarlo con un negador, debe proporcionarse con los tipos anidados que hacen posible dicha adaptación. La conversión de punteros de función unarios y binarios mediante la función auxiliar `ptr_fun` permite a los adaptadores de función trabajar con punteros de función unarios y binarios.
+Un puntero de función es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo, al enlazar un valor a este o al usarlo con un negador, debe proporcionarse con los tipos anidados que hacen posible dicha adaptación. La conversión de punteros de función unarios y binarios mediante la función del asistente `ptr_fun` permite a los adaptadores de función trabajar con punteros de función unarios y binarios.
 
 ### <a name="example"></a>Ejemplo
 
