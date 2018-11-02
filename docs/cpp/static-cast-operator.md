@@ -1,27 +1,17 @@
 ---
-title: static_cast (operador) | Microsoft Docs
-ms.custom: ''
+title: static_cast (Operador)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c60eee337ba565c43217bf6afbcf7d9344337695
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090044"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601713"
 ---
 # <a name="staticcast-operator"></a>static_cast (Operador)
 
@@ -35,7 +25,7 @@ static_cast <type-id> ( expression )
 
 ## <a name="remarks"></a>Comentarios
 
-En Standard C++, no se realiza ninguna comprobación de tipo en tiempo de ejecución como ayuda para garantizar la seguridad de la conversión. En C++/CX, se realiza una comprobación en tiempo de compilación y en tiempo de ejecución. Para obtener más información, consulte [conversión](casting.md).
+En Standard C++, no se realiza ninguna comprobación de tipo en tiempo de ejecución como ayuda para garantizar la seguridad de la conversión. En C++/CX, se realiza una comprobación en tiempo de compilación y en tiempo de ejecución. Para obtener más información, consulta [Conversión](casting.md).
 
 El **static_cast** operador puede usarse para realizar operaciones como convertir un puntero a una clase base a un puntero a una clase derivada. Estas conversiones no siempre son seguras.
 

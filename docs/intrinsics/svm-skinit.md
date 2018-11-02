@@ -1,28 +1,18 @@
 ---
-title: __svm_skinit | Microsoft Docs
-ms.custom: ''
+title: __svm_skinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_skinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fa468fddd24bd622d839bb1882af99d393a3d99
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426138"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591222"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -46,7 +36,7 @@ void __svm_skinit(
 
 ## <a name="remarks"></a>Comentarios
 
-El `__svm_skinit` función es equivalente a la `SKINIT` instrucción máquina. Esta función forma parte de un sistema de seguridad que utiliza el procesador y un módulo de plataforma segura (TPM) para comprobar y cargar el software de confianza llama a un núcleo de seguridad (SK). Un monitor de máquina virtual es un ejemplo de un núcleo de seguridad. El sistema de seguridad comprueba los componentes de programa carga durante el proceso de inicialización y protege los componentes de la manipulación mediante otro programa, acceso a los dispositivos o las interrupciones si el equipo es un multiprocesador.
+La función `__svm_skinit` equivale a la instrucción máquina `SKINIT` . Esta función forma parte de un sistema de seguridad que utiliza el procesador y un módulo de plataforma segura (TPM) para comprobar y cargar el software de confianza llama a un núcleo de seguridad (SK). Un monitor de máquina virtual es un ejemplo de un núcleo de seguridad. El sistema de seguridad comprueba los componentes de programa carga durante el proceso de inicialización y protege los componentes de la manipulación mediante otro programa, acceso a los dispositivos o las interrupciones si el equipo es un multiprocesador.
 
 El `SLB` parámetro especifica la dirección física de un bloque de 64 KB de memoria denominada el *bloque de cargador seguro* (SLB). El SLB contiene un programa llamado el cargador seguro que establece el entorno operativo para el equipo y posteriormente se carga el núcleo de seguridad.
 
