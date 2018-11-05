@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054454"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204748"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157) y [15.8](#update_158) de Visual Studio 2017
 
@@ -121,7 +121,7 @@ En versiones anteriores de Visual Studio, el compilador siempre proporcionaba un
 
 ### <a name="deprecating-vestigial-library-parts"></a>Desuso de vestigios de elementos de biblioteca
 
-[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) Varias características de la biblioteca estándar de C++ se han reemplazado por nuevas características a lo largo de los años, o bien se ha detectado que eran problemáticas o no eran muy útiles. Estas características están oficialmente en desuso en C++17.
+[P0174R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html) Varias características de la biblioteca de C++ Standard se han reemplazado por características nuevas a lo largo de los años, o bien se ha detectado que eran problemáticas o no muy útiles. Estas características están oficialmente en desuso en C++17.
 
 ### <a name="removing-allocator-support-in-stdfunction"></a>Eliminación de la compatibilidad con el asignador en std::function
 
