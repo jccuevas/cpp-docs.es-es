@@ -31,7 +31,7 @@ El punto de partida habitual para un programador de C++ es un "Hello, world!", a
 
 ## <a name="create-your-app-project"></a>Crear el proyecto de aplicación
 
-Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, las configuraciones y reglas utilizadas para compilar sus aplicaciones y administra la relación entre todos los archivos del proyecto y todos los archivos externos. Para crear su aplicación, primero, creará un nuevo proyecto y solución.
+Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, las configuraciones y reglas utilizadas para compilar sus aplicaciones y administra la relación entre todos los archivos del proyecto y todos los archivos externos. Para crear la aplicación, en primer lugar, creará un nuevo proyecto y solución.
 
 1. En Visual Studio, abra el menú **archivo**  y elija **nuevo > proyecto** para abrir el cuadro de diálogo **nuevo proyecto** .
 
