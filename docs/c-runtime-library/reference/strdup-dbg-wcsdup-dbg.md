@@ -1,10 +1,6 @@
 ---
-title: _strdup_dbg, _wcsdup_dbg | Microsoft Docs
-ms.custom: ''
+title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup_dbg
 - _wcsdup_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - strdup_dbg
 - _strdup_dbg
 - wcsdup_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsdup_dbg function
 - stdup_dbg function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531164"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Versiones de [_strdup y _wcsdup](strdup-wcsdup-mbsdup.md) que usan la versión de depuración **malloc**.
+Las versiones de [_strdup y _wcsdup](strdup-wcsdup-mbsdup.md) que usan la versión de depuración **malloc**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -78,7 +68,7 @@ Cadena de origen terminada en NULL.
 Tipo de bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre de archivo de código fuente que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
 Número de línea en el archivo de código fuente que se solicitó la operación de asignación o **NULL**.
@@ -89,7 +79,7 @@ Cada una de estas funciones devuelve un puntero a la ubicación de almacenamient
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strdup_dbg** y **_wcsdup_dbg** funciones son idénticas a **_strdup** y **_wcsdup** salvo que, cuando **_ DEPURAR** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**, para asignar memoria para la cadena duplicada. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
+El **_strdup_dbg** y **_wcsdup_dbg** funciones son idénticas a **_strdup** y **_wcsdup** , salvo que, cuando **_ DEPURAR** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**para asignar memoria para la cadena duplicada. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
 
 En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la marca **_CRTDBG_MAP_ALLOC**. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_strdup** y **_wcsdup** se reasignan a **_strdup_dbg** y **_ wcsdup_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información sobre los tipos de bloques, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 

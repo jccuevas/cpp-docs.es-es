@@ -1,28 +1,18 @@
 ---
-title: ATL COM + 1.0 componente Asistente | Microsoft Docs
-ms.custom: ''
+title: Asistente para componentes ATL COM+ 1.0
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513781"
 ---
 # <a name="atl-com-10-component-wizard"></a>Asistente para componentes ATL COM+ 1.0
 
@@ -31,7 +21,7 @@ Use este asistente para agregar un objeto al proyecto que admita servicios COM +
 Puede especificar si el objeto admite interfaces duales y automatización. También puede indicar la compatibilidad con la interfaz de la información de error, control de objeto mejorada, transacciones y asincrónica message Queue Server.
 
 > [!WARNING]
-> En Visual Studio 2017 versión 15.9 este asistente de código está en desuso y se quitará en una versión futura de Visual Studio. Este asistente se utiliza habitualmente. Compatibilidad general para ATL y MFC no se ve afectado por la eliminación de este asistente. Si gustaría compartir sus comentarios sobre esta condición de desuso, complete [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
+> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
 
 ## <a name="remarks"></a>Comentarios
 

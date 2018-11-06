@@ -1,10 +1,6 @@
 ---
-title: memcpy_s, wmemcpy_s | Microsoft Docs
-ms.custom: ''
+title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607160"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -87,13 +77,13 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |any|any|any|0|0|No modificado|
 |**NULL**|any|any|distinto de cero|**EINVAL**|No modificado|
 |any|any|**NULL**|distinto de cero|**EINVAL**|*dest* se pone a cero|
-|any|< *Recuento*|any|distinto de cero|**ERANGE**|*dest* se pone a cero|
+|any|< *recuento*|any|distinto de cero|**ERANGE**|*dest* se pone a cero|
 
 ## <a name="remarks"></a>Comentarios
 
-**memcpy_s** copias *recuento* bytes a partir de *src* a *dest*; **wmemcpy_s** copias *recuento* caracteres anchos (dos bytes). Si el origen y destino se superponen, el comportamiento de **memcpy_s** no está definido. Use **memmove_s** para controlar las áreas superpuestas.
+**memcpy_s** copias *recuento* bytes a partir de *src* a *dest*; **wmemcpy_s** copias *recuento* caracteres anchos (dos bytes). Si el origen y destino se superponen, el comportamiento de **memcpy_s** es indefinido. Use **memmove_s** para controlar las áreas superpuestas.
 
-Estas funciones validan sus parámetros. Si *recuento* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *recuento*, estas funciones invocan el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y establecer **errno** al valor devuelto.
+Estas funciones validan sus parámetros. Si *recuento* es distinto de cero y *dest* o *src* es un puntero nulo, o *destSize* es menor que *recuento*, estas funciones invocan el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** o **ERANGE** y establecer **errno** al valor devuelto.
 
 ## <a name="requirements"></a>Requisitos
 

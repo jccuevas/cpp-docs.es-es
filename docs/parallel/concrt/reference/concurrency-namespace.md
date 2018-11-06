@@ -1,10 +1,6 @@
 ---
-title: simultaneidad Namespace | Microsoft Docs
-ms.custom: ''
+title: concurrency (Espacio de nombres)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629858"
 ---
 # <a name="concurrency-namespace"></a>concurrency (Espacio de nombres)
 
@@ -155,7 +145,7 @@ namespace concurrency;
 |[ITopologyExecutionResource (estructura)](itopologyexecutionresource-structure.md)|Una interfaz a un recurso de ejecución definido por el Administrador de recursos.|
 |[ITopologyNode (estructura)](itopologynode-structure.md)|Una interfaz a un nodo de topología definido por el Administrador de recursos. Un nodo contiene uno o varios recursos de ejecución.|
 |[IUMSCompletionList (estructura)](iumscompletionlist-structure.md)|Representa una lista de finalización UMS. Cuando se bloquea un subproceso UMS, el contexto de programación designado del programador se envía de forma que se puede tomar una decisión sobre qué programar en la raíz del procesador virtual subyacente mientras se bloquea el subproceso original. Cuando el subproceso original se desbloquea, el sistema operativo lo pone en cola de la lista de finalización, que es accesible a través de esta interfaz. El programador puede consultar la lista de finalización en el contexto de programación designado o en cualquier otro lugar que busca trabajo.|
-|[IUMSScheduler (estructura)](iumsscheduler-structure.md)|Una interfaz a una abstracción de un programador de trabajo que desea que el Administrador de recursos del runtime de simultaneidad controle los subprocesos programables de modo de usuario (UMS). El Administrador de recursos usa esta interfaz para comunicarse con los programadores de subprocesos UMS. La interfaz `IUMSScheduler` hereda de la interfaz `IScheduler`.|
+|[IUMSScheduler (estructura)](iumsscheduler-structure.md)|Una interfaz a una abstracción de un programador de trabajo que desea que el Administrador de recursos del runtime de simultaneidad controle los subprocesos programables de modo de usuario (UMS). El Administrador de recursos usa esta interfaz para comunicarse con los programadores de subprocesos UMS. La interfaz `IUMSScheduler` hereda de la interfaz `IScheduler` .|
 |[IUMSThreadProxy (estructura)](iumsthreadproxy-structure.md)|Una abstracción para un subproceso de ejecución. Si desea conceder subprocesos programables en modo usuario (UMS) al programador, establezca el valor para el elemento de directiva de programador `SchedulerKind` en `UmsThreadDefault` e implemente la interfaz `IUMSScheduler`. Los subprocesos UMS se admiten únicamente en sistemas operativos de 64 bits con Windows 7 o una versión posterior.|
 |[IUMSUnblockNotification (estructura)](iumsunblocknotification-structure.md)|Representa una notificación del Administrador de recursos indicando que un proxy del subproceso que había bloqueado y desencadenado un valor devuelto al contexto de programación designado del programador, se ha desbloqueado y está listo para su programación. Esta interfaz no es válida una vez que el contexto de ejecución asociado del proxy del subproceso, devuelto desde el método `GetContext`, se vuelve a programar.|
 |[IVirtualProcessorRoot (estructura)](ivirtualprocessorroot-structure.md)|Una abstracción para un subproceso de hardware en el que un proxy del subproceso puede ejecutarse.|
@@ -179,7 +169,7 @@ namespace concurrency;
 |[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|La usa la directiva `SchedulingProtocol` para describir el algoritmo de programación que utilizará el programador. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|Se usa para denotar el estado en el que se encuentra un proxy del subproceso, cuando se ejecuta un cambio de contexto cooperativo en un proxy del subproceso diferente.|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|Describe el estado de ejecución de un objeto `task_group` o `structured_task_group`. Numeroso métodos que esperan tareas programadas para que se complete un grupo de tareas, devuelven un valor de este tipo.|
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows en tiempo de ejecución en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|La utiliza la directiva `WinRTInitialization` para describir si se iniciará y cómo se iniciará Windows Runtime en subprocesos del programador para una aplicación que se ejecuta en sistemas operativos con Windows 8 o una versión posterior. Para obtener más información sobre las directivas del programador disponibles, vea [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|
 
 ### <a name="functions"></a>Funciones
 

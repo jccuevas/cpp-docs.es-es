@@ -1,10 +1,6 @@
 ---
-title: _countof (Macro) | Microsoft Docs
-ms.custom: ''
+title: _countof (Macro)
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,26 +16,20 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536141"
 ---
 # <a name="countof-macro"></a>_countof (Macro)
 
-Calcula el número de elementos de una matriz asignada estáticamente.
+Calcula el número de elementos en una matriz asignada estáticamente.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,13 +44,13 @@ Nombre de una matriz.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El número de elementos de la matriz, expresada como un **size_t**.
+El número de elementos de la matriz, expresado como un **size_t**.
 
 ## <a name="remarks"></a>Comentarios
 
-**_countof** se implementa como una macro de preprocesador de estilo funciones. La versión de C++ tiene máquinas plantillas adicionales para detectar en tiempo de compilación si se pasa un puntero en lugar de una matriz declarada estáticamente.
+**_countof** se implementa como una macro de preprocesador de tipo función. La versión de C++ tiene la maquinaria de plantilla adicional para detectar en tiempo de compilación si se pasa un puntero en lugar de una matriz declarada de forma estática.
 
-Asegúrese de que *matriz* es en realidad una matriz, no es un puntero. En C, **_countof** genera resultados erróneos si *matriz* es un puntero. En C++, **_countof** no se puede compilar si *matriz* es un puntero.  Una matriz se pasa como un parámetro a una función *decae a un puntero*, lo que significa que dentro de la función, no se puede usar **_countof** para determinar el alcance de la matriz.
+Asegúrese de que *matriz* es realmente una matriz, no un puntero. En C, **_countof** produce resultados erróneos si *matriz* es un puntero. En C++, **_countof** no se puede compilar si *matriz* es un puntero.  Una matriz se pasa como parámetro a una función *decae a un puntero*, lo que significa que dentro de la función, no se puede usar **_countof** para determinar el alcance de la matriz.
 
 ## <a name="requirements"></a>Requisitos
 

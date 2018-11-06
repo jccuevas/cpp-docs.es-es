@@ -1,27 +1,18 @@
 ---
-title: Error recuperable A2057 de ML | Microsoft Docs
-ms.custom: ''
+title: Error recuperable A2057 de ML
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
 f1_keywords:
 - A2057
-dev_langs:
-- C++
 helpviewer_keywords:
 - A2057
 ms.assetid: 13c47848-3f4d-4145-a00c-5418ff176ba3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f90298295e7ee68cbdaed9cd12a0865c413333d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 56a5fc255ba95ece1df7ff00f5494053de5a262e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43685271"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552066"
 ---
 # <a name="ml-nonfatal-error-a2057"></a>Error recuperable A2057 de ML
 

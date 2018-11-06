@@ -1,23 +1,13 @@
 ---
-title: Intrínsecos del compilador y lenguaje ensamblador | Microsoft Docs
-ms.custom: ''
+title: Intrínsecos del compilador y del lenguaje ensamblador
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c01792485b3357105cdd7d84535164620d8bf1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 07fad5e677b999f215e2d379c5ebf4183f210c99
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600686"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Intrínsecos del compilador y del lenguaje ensamblador
 

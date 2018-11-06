@@ -1,10 +1,6 @@
 ---
-title: set_terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: set_terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - set_terminate
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - set_terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_terminate function
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493917"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -57,15 +47,15 @@ Puntero a una función de finalización que se escribe.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero a la función anterior registrada por **set_terminate** para que la función anterior puede restaurarse más tarde. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
+Devuelve un puntero a la función anterior registrada por **set_terminate** para que la función anterior se puede restaurar más adelante. Si no se ha establecido ninguna función anterior, el valor devuelto puede utilizarse para restaurar el comportamiento predeterminado; Este valor puede ser **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **set_terminate** función instala *termFunction* como la función llamada a **finalizar**. **set_terminate** se utiliza con control de excepciones de C++ y se puede llamar en cualquier momento en el programa antes de que se produce la excepción. **terminar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamando a **set_terminate** con el nombre de la función como su argumento. **terminar** llama a la última función especificada como argumento a **set_terminate**. Después de realizar ninguna deseado tareas de limpieza, *termFunction* debe salir del programa. Si no existe (si vuelve a quien), [anular](abort.md) se llama.
+El **set_terminate** función instalaciones *termFunction* como la función llamada por **finalizar**. **set_terminate** se usa con el control de excepciones de C++ y se puede llamar en cualquier momento en el programa antes de que se produce la excepción. **Finalizar** llamadas [anular](abort.md) de forma predeterminada. Puede cambiar este comportamiento predeterminado escribiendo su propia función de finalización y llamar a **set_terminate** con el nombre de la función como su argumento. **Finalizar** llama a la última función especificada como argumento a **set_terminate**. Después de llevar a cabo cualquier tarea de limpieza, de deseada *termFunction* debe salir del programa. Si no existe (si se devuelve a su llamador), [anular](abort.md) se llama.
 
 En un entorno multiproceso, las funciones de finalización se mantienen por separado para cada subproceso. Cada subproceso nuevo debe instalar su propia función de finalización. Por lo tanto, cada subproceso se encarga de su propio control de finalización.
 
-El **terminate_function** tipo está definido en el controlador de eventos. H como un puntero a una función definida por el usuario de terminación, *termFunction* que devuelve **void**. La función personalizada *termFunction* puede no toman ningún argumento y no debe devolver al llamador. Si es así, [anular](abort.md) se llama. No se puede producir una excepción desde *termFunction*.
+El **terminate_function** tipo está definido en el controlador de eventos. H como un puntero a una función de finalización definida por el usuario, *termFunction* que devuelve **void**. La función personalizada *termFunction* puede tomar ningún argumento y no debe devolver al llamador. Si es así, [anular](abort.md) se llama. No se puede producir una excepción desde *termFunction*.
 
 ```cpp
 typedef void ( *terminate_function )( );
@@ -74,7 +64,7 @@ typedef void ( *terminate_function )( );
 > [!NOTE]
 > El **set_terminate** función solo funciona fuera del depurador.
 
-Hay una sola **set_terminate** controlador para vinculados dinámicamente todos los archivos DLL o exe; incluso si se llama a **set_terminate** el controlador puede reemplazarse por otro, o que puede sustituir un controlador establecido por otro Archivo DLL o EXE.
+Solo hay un **set_terminate** controlador para todos los dinámicamente exe y DLL vinculados; incluso si se llama a **set_terminate** el controlador puede reemplazarse por otro, o que puede sustituir un controlador establecido por otro Archivo DLL o EXE.
 
 ## <a name="requirements"></a>Requisitos
 

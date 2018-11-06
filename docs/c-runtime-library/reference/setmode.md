@@ -1,10 +1,6 @@
 ---
-title: _setmode | Microsoft Docs
-ms.custom: ''
+title: _setmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmode
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _setmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode [C++], console output
 - files [C++], modes
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 59aed27ec4803cd1709635da44ef37d748342e29
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617443"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -68,18 +58,18 @@ Nuevo modo de traducción.
 
 Si es correcto, devuelve el modo de traducción anterior.
 
-Si se pasan parámetros no válidos a esta función, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** como **EBADF**, lo que indica un descriptor de archivo no válido o **EINVAL**, que indica un válido *modo* argumento.
+Si se pasan parámetros no válidos a esta función, se invoca al controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve -1 y establece **errno** como **EBADF**, lo que indica un descriptor de archivo no válido, o **EINVAL**, que indica un no válido *modo* argumento.
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_setmode** función establece en *modo* el modo de traducción de archivo indicado por *fd*. Pasar **_O_TEXT** como *modo* establece texto (Esto es, traducido) modo. Carro retorno-combinaciones de línea (CR-LF) se convierten en una sola línea carácter de salto en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Pasar **_O_BINARY** establece binario (sin traducir) el modo, en el que se eliminan las traducciones.
+El **_setmode** la función establece *modo* el modo de traducción de archivo indicado por *fd*. Pasar **_O_TEXT** como *modo* establece el texto (que es, traducido) modo. Combinaciones de fuentes (CR-LF) de carro y de retorno de línea se traducen en una sola línea, carácter de avance en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Pasar **_O_BINARY** establece binario (sin traducir) el modo, en el que estas conversiones se suprimen.
 
-También puede pasar **_O_U16TEXT**, **_O_U8TEXT**, o **_O_WTEXT** para habilitar el modo Unicode, como se muestra en el segundo ejemplo más adelante en este documento. **_setmode** se utiliza normalmente para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero se puede usar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo de un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
+También puede pasar **_O_U16TEXT**, **_O_U8TEXT**, o **_O_WTEXT** para habilitar el modo Unicode, como se muestra en el segundo ejemplo más adelante en este documento. **_setmode** normalmente se usa para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero puede usar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo para un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
 
 > [!CAUTION]
-> Si escribe datos en una secuencia de archivo, vaciar explícitamente el código mediante el uso de [fflush](fflush.md) antes de usar **_setmode** para cambiar el modo. Si no vuelca el código, podría producirse un comportamiento inesperado. Si no ha escrito datos en el flujo, no será necesario volcarlo.
+> Si escribe datos en una secuencia de archivo explícitamente vuelque el código mediante el uso de [fflush](fflush.md) antes de usar **_setmode** para cambiar el modo. Si no vuelca el código, podría producirse un comportamiento inesperado. Si no ha escrito datos en el flujo, no será necesario volcarlo.
 
 ## <a name="requirements"></a>Requisitos
 

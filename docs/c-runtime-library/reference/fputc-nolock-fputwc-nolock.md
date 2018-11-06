@@ -1,10 +1,6 @@
 ---
-title: _fputc_nolock, _fputwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _fputc_nolock, _fputwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputwc_nolock
 - _fputc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - fputtc_nolock
 - _fputwc_nolock
 - _fputtc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputwc_nolock function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2ef3afffe1cbd8764e389f613b3679e3fa5a580
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579778"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock, _fputwc_nolock
 
@@ -72,7 +62,7 @@ wint_t _fputwc_nolock(
 *c*<br/>
 Carácter que se va a escribir.
 
-*Secuencia*<br/>
+*secuencia*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -81,7 +71,7 @@ Cada una de estas funciones devuelve el carácter escrito. Para obtener informac
 
 ## <a name="remarks"></a>Comentarios
 
-**_fputc_nolock** y **_fputwc_nolock** son idénticas a **fputc** y **fputwc**, respectivamente, salvo que no están protegidas contra interferencias de otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
+**_fputc_nolock** y **_fputwc_nolock** son idénticas a **fputc** y **fputwc**, respectivamente, salvo que no están protegidas contra las interferencias otros subprocesos. Pueden ser más rápidas porque no incurren en la sobrecarga de bloquear otros subprocesos. Use estas funciones solo en contextos seguros para subprocesos como aplicaciones de un único subproceso o donde el ámbito de llamada ya controle el aislamiento de subprocesos.
 
 Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_nolock** no admite actualmente la salida en un flujo UNICODE.
 
@@ -98,7 +88,7 @@ Las dos funciones se comportan igual si el flujo se abre en modo ANSI. **_fputc_
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> o \<wchar.h>|
 
-La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Los identificadores de secuencia estándar que están asociados a la consola:**stdin**, **stdout**, y **stderr**: se deben redirigir antes funciones de tiempo de ejecución de C puedan usarlos en las aplicaciones UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
+La consola no se admite en aplicaciones de la plataforma Universal de Windows (UWP). Identificadores estándar de flujo que están asociados con la consola —**stdin**, **stdout**, y **stderr**: se debe redireccionar antes las funciones de tiempo de ejecución de C puedan usarlos en aplicaciones para UWP . Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Ejemplo
 

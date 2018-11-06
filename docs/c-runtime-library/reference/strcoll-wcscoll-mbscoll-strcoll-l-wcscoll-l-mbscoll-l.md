@@ -1,10 +1,6 @@
 ---
-title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l | Microsoft Docs
-ms.custom: ''
+title: strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscoll
 - _mbscoll
@@ -31,8 +27,6 @@ f1_keywords:
 - _mbscoll
 - _tcscoll
 - _ftcscoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - mbscoll function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae72b4cbb2b001a332d41a74883a0e2a9d20a181
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451929"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625192"
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -109,7 +99,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve un valor que indica la relación de *string1* a *string2*, como se indica a continuación.
+Cada una de estas funciones devuelve un valor que indica la relación de *string1* a *cadena2*, como se indica a continuación.
 
 |Valor devuelto|Relación de string1 y string2|
 |------------------|----------------------------------------|
@@ -117,15 +107,15 @@ Cada una de estas funciones devuelve un valor que indica la relación de *string
 |0|*cadena1* idéntico al *cadena2*|
 |> 0|*cadena1* mayor *cadena2*|
 
-Cada una de estas funciones devuelve **_NLSCMPERROR** produce un error. Usar **_NLSCMPERROR**, incluir una de las cadenas. H o MBSTRING. H. **wcscoll** puede producir un error si el valor *string1* o *string2* es **NULL** o contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **wcscoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **wcscoll**, establezca **errno** en 0 y, a continuación, comprobar **errno** después de llamar a **wcscoll**.
+Cada una de estas funciones devuelve **_NLSCMPERROR** produce un error. Para usar **_NLSCMPERROR**, incluir una de las cadenas. H o MBSTRING. H. **wcscoll** puede producir un error si *string1* o *cadena2* es **NULL** o contiene códigos de caracteres anchos fuera del dominio de la secuencia de intercalación. Cuando se produce un error, **wcscoll** pueden establecer **errno** a **EINVAL**. Para comprobar si hay un error en una llamada a **wcscoll**, establezca **errno** en 0 y, a continuación, compruebe **errno** después de llamar a **wcscoll**.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de *string1* y *string2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
+Cada una de estas funciones realiza una comparación entre mayúsculas y minúsculas de *string1* y *cadena2* según la página de códigos actualmente en uso. Estas funciones solo se deben usar cuando el orden del juego de caracteres y el orden de los caracteres lexicográficos son distintos en la página de códigos actual, y la diferencia influye en la comparación de cadenas.
 
-Todas estas funciones validan sus parámetros. Si el valor *string1* o *string2* es un puntero nulo, o si *recuento* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos , como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
+Todas estas funciones validan sus parámetros. Si bien *string1* o *cadena2* es un puntero nulo, o si *recuento* es mayor que **INT_MAX**, se invoca el controlador de parámetros no válidos , como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md) . Si la ejecución puede continuar, estas funciones devuelven **_NLSCMPERROR** y establecer **errno** a **EINVAL**.
 
-La comparación de las dos cadenas es una operación dependiente de la configuración regional, ya que cada configuración regional tiene distintas reglas para ordenar los caracteres. Las versiones de estas funciones sin el **_l** sufijo use configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas a la función correspondiente sin el sufijo salvo que usan la configuración regional que se pasa como un parámetro en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La comparación de las dos cadenas es una operación dependiente de la configuración regional, ya que cada configuración regional tiene distintas reglas para ordenar los caracteres. Las versiones de estas funciones sin el **_l** sufijo usar configuración regional del subproceso actual para este comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas a la función correspondiente sin el sufijo, salvo que usan la configuración regional que se pasa como un parámetro en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

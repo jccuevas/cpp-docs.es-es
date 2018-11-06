@@ -1,18 +1,12 @@
 ---
-title: Clase integer_sequence | Microsoft Docs
-ms.custom: ''
+title: Clase integer_sequence
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::index_sequence
 - type_traits/std::make_index_sequence
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::index_sequence
 - std::make_index_sequence
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 909bcb8446c7d876828a6d020cd20a7398ec04d5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f9ce63aeba4db7c49aee36bc9b847e6832d26f8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638725"
 ---
 # <a name="integersequence-class"></a>Clase integer_sequence
 
@@ -59,7 +49,7 @@ Paquete de parámetros sin tipo que representa una secuencia de valores de tipo 
 
 ## <a name="remarks"></a>Comentarios
 
-Los paquetes de parámetros que se pasan directamente a una función pueden desempaquetarse sin aplicaciones auxiliares de biblioteca especiales. Cuando un paquete de parámetros forma parte de un tipo que se pasa a una función y se necesitan índices para acceder a los elementos, la manera más fácil de descomprimirlo es usar `integer_sequence` y sus alias de tipo relacionados `make_integer_sequence`, `index_sequence`, `make_index_sequence` y `index_sequence_for`.
+Los paquetes de parámetros que se pasan directamente a una función pueden desempaquetarse sin asistentes de biblioteca especiales. Cuando un paquete de parámetros forma parte de un tipo que se pasa a una función y se necesitan índices para acceder a los elementos, la manera más fácil de descomprimirlo es usar `integer_sequence` y sus alias de tipo relacionados `make_integer_sequence`, `index_sequence`, `make_index_sequence` y `index_sequence_for`.
 
 ## <a name="example"></a>Ejemplo
 
@@ -67,7 +57,7 @@ El siguiente ejemplo se basa en la propuesta original [N3658](http://open-std.or
 
 En la función `a2t`, `index_sequence` es un alias de `integer_sequence` según el tipo entero `size_t`. `make_index_sequence` es un alias que, en tiempo de compilación, crea `index_sequence` de base cero con el mismo número de elementos que la matriz que el llamador pasa. `a2t` pasa `index_sequence` por valor a `a2t_`, donde la expresión `a[I]...` desempaqueta `I` y, a continuación, los elementos se suministran a `make_tuple`, que los consume como argumentos individuales. Por ejemplo, si la secuencia contiene tres elementos, se llama a `make_tuple` como make_tuple(a[0], a[1], a[2]). Los elementos de matriz pueden ser cualquier tipo.
 
-La función apply acepta [std::tuple](../standard-library/tuple-class.md) y genera integer_sequence mediante la clase auxiliar `tuple_size`. Tenga en cuenta que [std::decay_t](../standard-library/decay-class.md)_ es necesario porque [tuple_size](../standard-library/tuple-size-class-tuple.md) no funciona con tipos de referencia. La función `apply_` desempaqueta los miembros de la tupla y los reenvía como argumentos independientes a una llamada de función. En este ejemplo, la función es una expresión lambda sencilla que imprime los valores.
+La función apply acepta [std::tuple](../standard-library/tuple-class.md) y genera integer_sequence mediante la clase del asistente `tuple_size`. Tenga en cuenta que [std::decay_t](../standard-library/decay-class.md)_ es necesario porque [tuple_size](../standard-library/tuple-size-class-tuple.md) no funciona con tipos de referencia. La función `apply_` desempaqueta los miembros de la tupla y los reenvía como argumentos independientes a una llamada de función. En este ejemplo, la función es una expresión lambda sencilla que imprime los valores.
 
 ```
 

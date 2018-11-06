@@ -1,10 +1,6 @@
 ---
-title: _fullpath_dbg, _wfullpath_dbg | Microsoft Docs
-ms.custom: ''
+title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wfullpath_dbg
 - _fullpath_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -35,20 +29,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488015"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
-Versiones de [_fullpath, _wfullpath](fullpath-wfullpath.md) que usan la versión de depuración **malloc** para asignar memoria.
+Las versiones de [_fullpath, _wfullpath](fullpath-wfullpath.md) que usan la versión de depuración **malloc** para asignar memoria.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -79,14 +69,14 @@ Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa
 *relPath*<br/>
 Nombre de ruta de acceso relativa.
 
-*maxLength*<br/>
-Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Esta longitud se muestra en bytes para **_fullpath** y en caracteres anchos (**wchar_t**) para **_wfullpath**.
+*MaxLength*<br/>
+Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Es esta longitud en bytes para **_fullpath** pero, en caracteres anchos (**wchar_t**) para **_wfullpath**.
 
 *blockType*<br/>
 Tipo de bloque de memoria solicitado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
 Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
@@ -97,7 +87,7 @@ Cada función devuelve un puntero a un búfer que contiene el nombre de ruta de 
 
 ## <a name="remarks"></a>Comentarios
 
-El **_fullpath_dbg** y **_wfullpath_dbg** funciones son idénticas a **_fullpath** y **_wfullpath** salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**, para asignar memoria si **NULL** se pasa como el primer parámetro. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
+El **_fullpath_dbg** y **_wfullpath_dbg** funciones son idénticas a **_fullpath** y **_wfullpath** , salvo que, cuando **_DEBUG** está definido, estas funciones usan la versión de depuración **malloc**, **_malloc_dbg**para asignar memoria si **NULL** se pasa como primer parámetro. Para obtener información sobre las características de depuración de **_malloc_dbg**, consulte [_malloc_dbg](malloc-dbg.md).
 
 En la mayoría de los casos, no es necesario llamar a estas funciones explícitamente en la mayoría. En su lugar, puede definir la **_CRTDBG_MAP_ALLOC** marca. Cuando **_CRTDBG_MAP_ALLOC** está definido, las llamadas a **_fullpath** y **_wfullpath** se reasignan a **_fullpath_dbg** y **_wfullpath_dbg**, respectivamente, con el *existen* establecido en **_NORMAL_BLOCK**. Por lo tanto, no es necesario llamar a estas funciones explícitamente a menos que desee marcar los bloques del montón como **_CLIENT_BLOCK**. Para obtener más información, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details).
 

@@ -1,10 +1,6 @@
 ---
-title: round, roundf, roundl | Microsoft Docs
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407244"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591783"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -75,15 +65,15 @@ Valor de punto flotante que se va a redondear.
 
 ## <a name="return-value"></a>Valor devuelto
 
-El **de ida y vuelta** funciones devuelven un valor de punto flotante que representa el entero más cercano a *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
+El **redondear** funciones devuelven un valor de punto flotante que representa el entero más cercano al *x*. Los valores que se encuentran a medio camino se redondean en cero, independientemente de la configuración del modo de redondeo del punto flotante. No se devuelve ningún error.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|+ **QNAN**, **IND**|ninguna|**_DOMINIO**|
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **de ida y vuelta** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **de ida y vuelta** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **redondear** que toman y devuelven **float** y **largo** **doble** valores. En un programa C, **redondear** siempre toma y devuelve un **doble**.
 
 ## <a name="requirements"></a>Requisitos
 

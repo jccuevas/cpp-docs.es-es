@@ -1,29 +1,19 @@
 ---
-title: 'TN028: Compatibilidad con la Ayuda contextual | Microsoft Docs'
-ms.custom: ''
+title: 'TN028: Compatibilidad con la ayuda contextual'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.help
-dev_langs:
-- C++
 helpviewer_keywords:
 - context-sensitive Help [MFC], MFC applications
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2bc7b3db974a34022089facb2536cf12c49b48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533424"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: Compatibilidad con la ayuda contextual
 
@@ -135,7 +125,7 @@ LOWORD(lParam) contiene la coordenada del eje x del dispositivo donde se hizo cl
 HIWORD(lParam) contiene la coordenada del eje y.
 
 *wParam*<br/>
-no se usa y será igual cero. Si el valor devuelto es distinto de cero, se denomina WinHelp con ese contexto. Si el valor devuelto es cero, se consulta la Ayuda de la ventana primaria.
+No se usa y será igual cero. Si el valor devuelto es distinto de cero, se denomina WinHelp con ese contexto. Si el valor devuelto es cero, se consulta la Ayuda de la ventana primaria.
 
 En muchos casos, puede aprovechar el código de prueba de posicionamiento puede que ya tenga. Vea la implementación de `CToolBar::OnHelpHitTest` para obtener un ejemplo de controlar el mensaje WM_HELPHITTEST (el código aprovecha el código de prueba de posicionamiento usado en los botones e información sobre herramientas en `CControlBar`).
 

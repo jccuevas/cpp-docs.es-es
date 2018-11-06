@@ -1,16 +1,10 @@
 ---
-title: -vmm, - vms, - vmv (representación de propósito General) | Microsoft Docs
-ms.custom: ''
+title: / VMM, - vms, - vmv (representación de propósito General)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
 - /vmv
-dev_langs:
-- C++
 helpviewer_keywords:
 - Virtual Inheritance compiler option
 - general purpose representation compiler options
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9cd0fb1eae8638f91ad97aec2ef24e0a578e7d7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd7b47245e3359bbc938578f2bcd07b8b295909
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385552"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578443"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv (Representación de propósito general)
 
@@ -54,8 +44,8 @@ Estas opciones se describen en la siguiente tabla.
 
 |Opción|Descripción|
 |------------|-----------------|
-|**/ VMM**|Especifica la representación más general de un puntero a un miembro de una clase como aquella que usa la herencia múltiple.<br /><br /> El correspondiente [palabra clave de herencia](../../cpp/inheritance-keywords.md) y el argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) es **herencia múltiple**.<br /><br /> Esta representación es mayor que el necesario para la herencia única.<br /><br /> Si el modelo de herencia de una definición de clase para el que se declara un puntero a un miembro es virtual, el compilador genera un error.|
-|**/ VMs**|Especifica la representación más general de un puntero a un miembro de una clase como aquella que no usa la herencia única o ninguna herencia.<br /><br /> El correspondiente [palabra clave de herencia](../../cpp/inheritance-keywords.md) y el argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) es **herencia única**.<br /><br /> Se trata de la representación más pequeña posible de un puntero a un miembro de una clase.<br /><br /> Si el modelo de herencia de una definición de clase para el que se declara un puntero a un miembro es múltiple o virtual, el compilador genera un error.|
+|**/vmm**|Especifica la representación más general de un puntero a un miembro de una clase como aquella que usa la herencia múltiple.<br /><br /> El correspondiente [palabra clave de herencia](../../cpp/inheritance-keywords.md) y el argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) es **herencia múltiple**.<br /><br /> Esta representación es mayor que el necesario para la herencia única.<br /><br /> Si el modelo de herencia de una definición de clase para el que se declara un puntero a un miembro es virtual, el compilador genera un error.|
+|**/vms**|Especifica la representación más general de un puntero a un miembro de una clase como aquella que no usa la herencia única o ninguna herencia.<br /><br /> El correspondiente [palabra clave de herencia](../../cpp/inheritance-keywords.md) y el argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) es **herencia única**.<br /><br /> Se trata de la representación más pequeña posible de un puntero a un miembro de una clase.<br /><br /> Si el modelo de herencia de una definición de clase para el que se declara un puntero a un miembro es múltiple o virtual, el compilador genera un error.|
 |**/vmv**|Especifica la representación más general de un puntero a un miembro de una clase como aquella que usa la herencia virtual. Nunca produce un error y es el valor predeterminado.<br /><br /> El correspondiente [palabra clave de herencia](../../cpp/inheritance-keywords.md) y el argumento [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) es **virtual_inheritance**.<br /><br /> Esta opción requiere un puntero de mayor tamaño y el código adicional para interpretar el puntero que las otras opciones.|
 
 Al especificar una de estas opciones de modelo de herencia, se utiliza ese modelo para todos los punteros a miembros de clase, independientemente de su tipo de herencia o si el puntero se declara antes o después de la clase. Por lo tanto, si siempre usa clases de herencia única, puede reducir el tamaño del código al compilar con **/VMs**; sin embargo, si desea usar el caso más general (a costa de la representación de datos más grande), compile con **/vmv**.

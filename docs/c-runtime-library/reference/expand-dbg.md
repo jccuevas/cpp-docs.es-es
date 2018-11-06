@@ -1,10 +1,6 @@
 ---
-title: _expand_dbg | Microsoft Docs
-ms.custom: ''
+title: _expand_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 023bda761454a6a1e18ce68c8e7576af2759abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc3aa2b7e39b52eb71ac10a9b5c4a221ba6fb70c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663806"
 ---
 # <a name="expanddbg"></a>_expand_dbg
 
@@ -58,7 +48,7 @@ void *_expand_dbg(
 
 ### <a name="parameters"></a>Parámetros
 
-*UserData*<br/>
+*userData*<br/>
 Puntero al bloque de memoria asignado previamente.
 
 *newSize*<br/>
@@ -68,7 +58,7 @@ Nuevo tamaño solicitado para el bloque (en bytes).
 Tipo solicitado para el bloque cuyo tamaño ha cambiado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó la operación de expansión o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de expansión o **NULL**.
 
 *linenumber*<br/>
 Número de línea en el archivo de origen que se solicitó la operación de expansión o **NULL**.
@@ -77,15 +67,15 @@ El *filename* y *linenumber* parámetros solo están disponibles cuando **_expan
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se finaliza correctamente, **_expand_dbg** devuelve un puntero al bloque de memoria cuyo tamaño ha cambiado. Dado que la memoria no se mueve, la dirección es la misma que la de userData. Si se produjo un error o no se pudo expandir el bloque al tamaño solicitado, devuelve **NULL**. Si se produce un error, **errno** con información del sistema operativo sobre la naturaleza del error. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Se completa correctamente, **_expand_dbg** devuelve un puntero al bloque de memoria cuyo tamaño ha cambiado. Dado que la memoria no se mueve, la dirección es la misma que la de userData. Si se produjo un error o no se pudo expandir el bloque al tamaño solicitado, devuelve **NULL**. Si se produce un error, **errno** es con la información del sistema operativo sobre la naturaleza del error. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-El **_expand_dbg** función es una versión de depuración de la _[expanda](expand.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_expand_dbg** se reduce a una llamada a **_expandir sitio**. Ambos **_expandir sitio** y **_expand_dbg** cambiar el tamaño de un bloque de memoria del montón base, pero **_expand_dbg** admite varias características de depuración: búferes situados a cada lado del usuario parte del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar el seguimiento de tipos de asignación concretos, y *filename*/*linenumber* información para determinar el origen de solicitudes de asignación.
+El **_expand_dbg** función es una versión de depuración de la _[expanda](expand.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_expand_dbg** se reduce a una llamada a **_expand**. Ambos **_expand** y **_expand_dbg** cambiar el tamaño de un bloque de memoria del montón base, pero **_expand_dbg** admite varias características de depuración: búferes situados a cada lado del usuario parte del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar un seguimiento de los tipos de asignación concretos, y *filename*/*linenumber* información para determinar el origen de solicitudes de asignación.
 
-**_expand_dbg** cambia el tamaño de bloque de memoria especificado con un poco más de espacio que solicitado *newSize*. *newSize* podría ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. El cambio de tamaño es realiza expandiendo o contrayendo el bloque de memoria original. **_expand_dbg** no mueve el bloque de memoria, como hace el [_realloc_dbg](realloc-dbg.md) (función).
+**_expand_dbg** cambia el tamaño de bloque de memoria especificado con un poco más de espacio solicitado *newSize*. *newSize* podría ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. El cambio de tamaño es realiza expandiendo o contrayendo el bloque de memoria original. **_expand_dbg** no mueve el bloque de memoria, como hace el [_realloc_dbg](realloc-dbg.md) función.
 
-Cuando *newSize* es mayor que el bloque original se expande el tamaño, el bloque de memoria. Durante una extensión, si el bloque de memoria no se puede expandir para adaptarse al tamaño solicitado, **NULL** se devuelve. Cuando *newSize* es menor que el bloque original contraer el tamaño, el bloque de memoria hasta que se obtenga el nuevo tamaño.
+Cuando *newSize* es mayor que el bloque original se expande en tamaño, el bloque de memoria. Durante una extensión, si el bloque de memoria no se puede expandir para adaptarse al tamaño solicitado, **NULL** se devuelve. Cuando *newSize* es menor que el bloque original se contrata tamaño, el bloque de memoria hasta que se obtenga el nuevo tamaño.
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

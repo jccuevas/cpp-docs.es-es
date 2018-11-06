@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451763"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629130"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,19 +45,19 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Parámetros
 
-*UserData*<br/>
+*userData*<br/>
 Puntero al bloque de memoria cuyo tamaño se va a determinar.
 
 *blockType*<br/>
-Tipo de bloque de memoria especificado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
+Tipo del bloque de memoria especificado: **_CLIENT_BLOCK** o **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cuando se finaliza correctamente, **_msize_dbg** devuelve el tamaño (en bytes) del bloque de memoria especificado; de lo contrario devuelve **NULL**.
+Se completa correctamente, **_msize_dbg** devuelve el tamaño (en bytes) del bloque de memoria especificado; de lo contrario, devuelve **NULL**.
 
 ## <a name="remarks"></a>Comentarios
 
-**_msize_dbg** es una versión de depuración de la _[msize](msize.md) (función). Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_msize_dbg** se reduce a una llamada a **_msize**. Ambos **_msize** y **_msize_dbg** calcular el tamaño de un bloque de memoria del montón base, pero **_msize_dbg** agrega dos características de depuración: incluye los búferes situados a cada lado del usuario parte del bloque de memoria en el tamaño devuelto y permite realizar cálculos de tamaño para los tipos de bloques concretos.
+**_msize_dbg** es una versión de depuración de la _[msize](msize.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_msize_dbg** se reduce a una llamada a **_msize**. Ambos **_msize** y **_msize_dbg** calcular el tamaño de un bloque de memoria del montón base, pero **_msize_dbg** agrega dos características de depuración: incluye los búferes situados a cada lado parte del bloque de memoria en el tamaño devuelto y permite que los cálculos de tamaño para los tipos de bloques concretos del usuario.
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

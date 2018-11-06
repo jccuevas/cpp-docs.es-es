@@ -1,23 +1,13 @@
 ---
-title: /HIGHENTROPYVA (compatibilidad con ASLR de 64 bits) | Microsoft Docs
-ms.custom: ''
+title: /HIGHENTROPYVA (Compatibilidad con ASLR de 64 bits)
 ms.date: 06/12/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 66fe8f20631d576264eab836f822a414c1244d5b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a8bd1b2231530c0f1632b244edaf36ee14ed65b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534802"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (Compatibilidad con ASLR de 64 bits)
 

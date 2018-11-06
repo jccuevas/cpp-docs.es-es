@@ -1,24 +1,17 @@
 ---
-title: Conversión boxing (C++ / c++ / CX) | Microsoft Docs
-ms.custom: ''
+title: Conversión boxing (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108389"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491044"
 ---
 # <a name="boxing-ccx"></a>Conversión boxing (C++/CX)
 
-*Conversión boxing* es el ajuste de una variable de tipo de valor como [DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), o un tipo escalar fundamental como `int`: en una clase ref cuando la variable se pasa a un método que toma [ Platform:: Object ^](../cppcx/platform-object-class.md) como tipo de entrada.
+*Boxing* es el ajuste de una variable de tipo de valor como [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)(o un tipo escalar fundamental como `int`) en una clase ref cuando la variable se pasa a un método que toma [Platform::Object^](../cppcx/platform-object-class.md) como tipo de entrada.
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Pasar un tipo de valor a un parámetro de tipo Object^
 

@@ -1,10 +1,6 @@
 ---
-title: _get_timezone | Microsoft Docs
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613920"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -55,18 +45,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Parámetros
 
-*Segundos*<br/>
+*segundos*<br/>
 Diferencia en segundos entre la hora UTC y la hora local.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cero si se realiza correctamente, o un **errno** valor si se produce un error.
+Cero si es correcto o un **errno** valor si se produce un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_get_timezone** función recupera la diferencia en segundos entre la hora UTC y la hora local como un número entero. El valor predeterminado es 28.800 segundos, hora del Pacífico (ocho horas por detrás de la hora UTC).
+El **_get_timezone** función recupera la diferencia en segundos entre la hora UTC y la hora local como un entero. El valor predeterminado es 28.800 segundos, hora del Pacífico (ocho horas por detrás de la hora UTC).
 
-Si *segundos* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
+Si *segundos* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función establece **errno** a **EINVAL** y devuelve **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

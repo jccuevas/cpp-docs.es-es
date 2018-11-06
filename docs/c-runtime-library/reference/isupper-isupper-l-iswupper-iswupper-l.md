@@ -1,10 +1,6 @@
 ---
-title: isupper, _isupper_l, iswupper, _iswupper_l | Microsoft Docs
-ms.custom: ''
+title: isupper, _isupper_l, iswupper, _iswupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -27,8 +23,6 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d58fc8e10fbc533787fe0e7b99194e282bb906f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 498644fc2de8a687e2b9b63a88591385055db6c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402106"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588440"
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -83,9 +73,9 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas rutinas devuelve un valor distinto de cero si *c* es una representación concreta de una letra mayúscula. **IsUpper** devuelve un valor distinto de cero si *c* es un carácter en mayúscula (A - Z). **iswupper** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a una letra mayúscula, o si *c* es uno de un juego de caracteres anchos definido por la implementación para el que ni **iswcntrl**, **iswdigit**, **iswpunct**, o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
+Cada una de estas rutinas devuelve distinto de cero si *c* es una representación concreta de una letra mayúscula. **IsUpper** devuelve un valor distinto de cero si *c* es un carácter en mayúscula (A - Z). **iswupper** devuelve un valor distinto de cero si *c* es un carácter ancho que corresponde a una letra mayúscula, o si *c* es el juego de caracteres anchos definido por la implementación para el que ni **iswcntrl**, **iswdigit**, **iswpunct**, o **iswspace** es distinto de cero. Cada una de estas rutinas devuelve 0 si *c* no satisface la condición de prueba.
 
-Las versiones de estas funciones que tienen la **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+Las versiones de estas funciones que tienen el **_l** sufijo usar la configuración regional que se pasa en lugar de la configuración regional actual de su comportamiento dependiente de la configuración regional. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 El comportamiento de **isupper** y **_isupper_l** es indefinido si *c* no es EOF o en el intervalo de 0 a 0xFF, incluidos. Cuando se usa una biblioteca de depuración CRT y *c* no es uno de estos valores, las funciones generan una aserción.
 

@@ -1,10 +1,6 @@
 ---
-title: _chmod, _wchmod | Microsoft Docs
-ms.custom: ''
+title: _chmod, _wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399961"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595135"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -79,11 +69,11 @@ El **_chmod** función cambia la configuración de permisos del archivo especifi
 **_S_IWRITE**|Escritura permitida. (De hecho, se permiten la lectura y escritura).
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|Lectura y escritura permitidas.
 
-Cuando ambas constantes se proporcionan, se combinan con el bit a bit u operador (**|**). Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Tenga en cuenta que todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** son equivalentes.
+Cuando ambas constantes se proporcionan, se unen con el bit a bit o un operador (**|**). Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. Tenga en cuenta que todos los archivos son siempre legibles; es decir, no es posible conceder permisos de solo escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** son equivalentes.
 
-**_wchmod** es una versión con caracteres anchos de **_chmod**; el *filename* argumento pasado a **_wchmod** es una cadena de caracteres anchos. **_wchmod** y **_chmod** se comportan exactamente igual.
+**_wchmod** es una versión con caracteres anchos de **_chmod**; el *filename* argumento **_wchmod** es una cadena de caracteres anchos. **_wchmod** y **_chmod** se comportan exactamente igual.
 
-Esta función valida sus parámetros. Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente pasa por alto los. Si *filename* es **NULL**, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve -1.
+Esta función valida sus parámetros. Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omitirá. Si *filename* es **NULL**, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, **errno** está establecido en **EINVAL** y la función devuelve -1.
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 

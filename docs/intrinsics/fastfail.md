@@ -1,23 +1,13 @@
 ---
-title: __fastfail | Microsoft Docs
-ms.custom: ''
+title: __fastfail
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6699585db899fc2601ac4945c4b2c57edbf5f309
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379182"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521390"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -33,7 +23,7 @@ void __fastfail(unsigned int code);
 
 #### <a name="parameters"></a>Parámetros
 
-*Código*<br/>
+*code*<br/>
 [in] Un `FAST_FAIL_<description>` constante simbólica de winnt.h o wdm.h que indica el motivo de la terminación del proceso.
 
 ## <a name="return-value"></a>Valor devuelto

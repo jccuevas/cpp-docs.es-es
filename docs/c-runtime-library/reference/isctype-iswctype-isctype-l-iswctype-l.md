@@ -1,10 +1,6 @@
 ---
-title: _isctype, iswctype, _isctype_l, _iswctype_l | Microsoft Docs
-ms.custom: ''
+title: _isctype, iswctype, _isctype_l, _iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563168"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Pruebas *c* para la propiedad ctype especificada por el *desc* argumento. Para cada valor válido de *desc*, hay una rutina equivalente de clasificación de caracteres anchos.
+Pruebas *c* para la propiedad ctype especificada por el *desc* argumento. Para cada valor válido de *desc*, hay una rutina de clasificación de caracteres anchos equivalente.
 
 ## <a name="syntax"></a>Sintaxis
 

@@ -1,29 +1,18 @@
 ---
-title: Agregar una imagen para otro dispositivo de presentación (Editor de imágenes para iconos) | Microsoft Docs
-ms.custom: ''
+title: Agregar una imagen para otro dispositivo de presentación (Editar imágenes para iconos)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Device Image command
 - display devices [C++], adding images
 - cursors [C++], adding
 - icons, adding
 ms.assetid: 394f87dd-ea19-49d8-bb9e-139cd28b69c2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 84000e25e9638699e5f2a521023c762b9c3c9a9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 663bd16cf74419b4e43ab89f12eb0a53b17e291a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640614"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Agregar una imagen para otro dispositivo de presentación (Editar imágenes para iconos)
 

@@ -1,10 +1,6 @@
 ---
-title: strtoull, _strtoull_l, wcstoull, _wcstoull_l | Microsoft Docs
-ms.custom: ''
+title: strtoull, _strtoull_l, wcstoull, _wcstoull_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strtoull_l
 - _wcstoull_l
@@ -30,8 +26,6 @@ f1_keywords:
 - wcstoull
 - _strtoull_l
 - strtoull
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtoull function
 - _tcstoull_l function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _strtoull_l function
 - wcstoull function
 ms.assetid: 36dac1cc-e901-40a0-8802-63562d6d01df
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5080946188858e4a0dcd9eb6b2aa0029f1c343e7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f23799b43a356600f48fb0fbf32b4604966c416b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677557"
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 
@@ -98,17 +88,17 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**strtoull** devuelve el valor convertido, si hay alguno, o **ULLONG_MAX** si se produce desbordamiento. **strtoull** devuelve 0 si no se puede realizar ninguna conversión. **wcstoull** devuelve valores de manera parecida a **strtoull**. Para ambas funciones, **errno** está establecido en **ERANGE** si se produce desbordamiento o subdesbordamiento.
+**strtoull** devuelve el valor convertido, si existe, o **ULLONG_MAX** en caso de desbordamiento. **strtoull** devuelve 0 si no se puede realizar ninguna conversión. **wcstoull** devuelve valores de manera parecida a **strtoull**. Para ambas funciones, **errno** está establecido en **ERANGE** si se produce desbordamiento o subdesbordamiento.
 
 Para obtener más información sobre los códigos de retorno, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones convierte la cadena de entrada *strSource* a una **sin signo** **largo** **largo** valor entero.
+Cada una de estas funciones convierte la cadena de entrada *strSource* a un **sin signo** **largo** **largo** valor entero.
 
-**strtoull** deja de leer la cadena *strSource* en el primer carácter que no se reconoce como parte de un número. Puede tratarse del carácter nulo final, o puede ser el primer carácter numérico que es mayor o igual que *base*. La configuración de la **LC_NUMERIC** categoría de la configuración regional determina el reconocimiento del carácter base en *strSource*; para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoull** y **wcstoull** usan la configuración regional actual; **_strtoull_l** y **_wcstoull_l** en su lugar, utilice la configuración regional que se pasa en pero son idénticas en caso contrario. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+**strtoull** deja de leer la cadena *strSource* en el primer carácter que no se reconoce como parte de un número. Esto puede ser el carácter nulo final, o puede ser el primer carácter numérico que es mayor o igual a *base*. La configuración de la **LC_NUMERIC** categoría de la configuración regional determina el reconocimiento del carácter base en *strSource*; para obtener más información, consulte [setlocale, _wsetlocale](setlocale-wsetlocale.md). **strtoull** y **wcstoull** usan la configuración regional actual. **_strtoull_l** y **_wcstoull_l** en su lugar, use la configuración regional que se pasa, pero son idénticos en caso contrario. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
-Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación que apunta a *endptr*. Si no se puede realizar ninguna conversión (no válidos se encontraron dígitos o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación que apunta a *endptr*.
+Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación en la que apunta *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación en la que apunta *endptr*.
 
 **wcstoull** es una versión con caracteres anchos de **strtoull** y su *strSource* argumento es una cadena de caracteres anchos. Por lo demás, estas funciones se comportan exactamente igual.
 
@@ -123,7 +113,7 @@ Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se alma
 
 > [*espacio en blanco*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*dígitos* &#124; *letras*]  
 
-A *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten. *dígitos* son uno o más dígitos decimales. *letras* son una o varias de las letras "a" a "z" (o 'A' a la 'Z'). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* está entre 2 y 36, se usa como base del número. Si *base* es 0, los caracteres iniciales de la cadena que apunta a *strSource* se utilizan para determinar la base. Si el primer carácter es «0» y el segundo carácter no es «x» ni «X», la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter que se examinan es '0', se supone un entero octal y un carácter '8' o '9' detiene el análisis. **strtoull** permite un signo más (**+**) o un signo (**-**) prefijo; un signo menos inicial inicio de sesión indica que se niega el valor devuelto.
+Un *espacio en blanco* puede constar de caracteres de espacio y tabulación, que se omiten. *dígitos* son uno o más dígitos decimales. *letras* son una o varias de las letras 'a' a 'z' (o 'A' a 'Z'). El primer carácter que no se ajusta a este formato detiene el análisis. Si *base* está entre 2 y 36, se puede usar como base del número. Si *base* es 0, los caracteres iniciales de la cadena que se apunta a *strSource* se usan para determinar la base. Si el primer carácter es «0» y el segundo carácter no es «x» ni «X», la cadena se interpreta como un entero octal. Si el primer carácter es 0 y el segundo carácter es 'x' o 'X', la cadena se interpreta como entero hexadecimal. Si el primer carácter está entre 1 y 9, la cadena se interpreta como entero decimal. A las letras de la "a" a la "z" (o de la "A" a la "Z") se les asignan los valores del 10 al 35. Solo se admiten las letras cuyos valores asignados son menores que *base*. El primer carácter que está fuera del intervalo de la base detiene el análisis. Por ejemplo, si *base* es 0 y el primer carácter examinado es "0", se supone un entero octal y un carácter '8' o '9' detiene el análisis. **strtoull** permite un signo más (**+**) o signo menos (**-**) prefijo; un signo menos inicial indica que el valor devuelto es negativo.
 
 ## <a name="requirements"></a>Requisitos
 

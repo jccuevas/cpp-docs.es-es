@@ -1,28 +1,18 @@
 ---
-title: pointer_to_unary_function (Clase) | Microsoft Docs
-ms.custom: ''
+title: pointer_to_unary_function (Clase)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::pointer_to_unary
-dev_langs:
-- C++
 helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9543ed9bec188ab810bbfd3e0ac52a764fc2fdd
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dc8a324d27870f615b810a3e86c355fadaf5c78d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558332"
 ---
 # <a name="pointertounaryfunction-class"></a>pointer_to_unary_function (Clase)
 
@@ -59,7 +49,7 @@ Un puntero de función unaria es un objeto de función y puede pasarse a cualqui
 
 ## <a name="example"></a>Ejemplo
 
-El constructor de `pointer_to_unary_function` no suele usarse directamente. Vea la función auxiliar [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_unary_function`.
+El constructor de `pointer_to_unary_function` no suele usarse directamente. Vea la función del asistente [ptr_fun](../standard-library/functional-functions.md#ptr_fun) para obtener un ejemplo de cómo declarar y usar el predicador del adaptador de `pointer_to_unary_function`.
 
 ## <a name="requirements"></a>Requisitos
 

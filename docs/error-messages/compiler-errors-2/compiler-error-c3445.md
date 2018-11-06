@@ -1,35 +1,25 @@
 ---
-title: C3445 de Error del compilador | Documentos de Microsoft
-ms.custom: ''
+title: Error del compilador C3445
 ms.date: 04/10/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3445
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c37f04b907183b883772fd144ae0179683f088f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eddeb5a56c953ca0864e29187fbe28c53bdee24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256771"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574219"
 ---
-# <a name="compiler-error-c3445"></a>C3445 de Error del compilador
+# <a name="compiler-error-c3445"></a>Error del compilador C3445
 
-> lista de inicialización de copia de '*tipo*' no se puede utilizar un constructor explícito
+> lista de inicialización de copia de '*tipo*' no se puede usar un constructor explícito
 
-Según el estándar C ++ 17 ISO, el compilador es necesario tener en cuenta un constructor explícito para la resolución de sobrecarga en la inicialización de la lista de copia, pero debe generar un error si se elige esa sobrecarga.
+Según la norma ISO C ++ 17 estándar, el compilador es necesario tener en cuenta un constructor explícito para la resolución de sobrecarga de inicialización de la lista de copia, pero debe generar un error si se elige realmente esa sobrecarga.
 
-A partir de Visual Studio de 2017, el compilador no encuentra errores relacionados con la creación de objetos mediante el uso de una lista de inicializadores que no se encontraron mediante Visual Studio 2015. Estos errores pudieron provocar errores o un comportamiento indefinido en tiempo de ejecución.
+A partir de Visual Studio 2017, el compilador no encuentra errores relacionados con la creación de objetos mediante el uso de una lista de inicializadores que no se encontraron con Visual Studio 2015. Estos errores podrían provocar bloqueos o un comportamiento indefinido en tiempo de ejecución.
 
 ## <a name="example"></a>Ejemplo
 
@@ -50,7 +40,7 @@ int main()
 }
 ```
 
-Para corregir el error, utilice en su lugar la inicialización directa:
+Para corregir el error, use en su lugar la inicialización directa:
 
 ```cpp
 // C3445b.cpp

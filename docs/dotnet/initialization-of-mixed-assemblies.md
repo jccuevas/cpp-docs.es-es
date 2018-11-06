@@ -1,12 +1,6 @@
 ---
-title: Inicialización de ensamblados mixtos | Microsoft Docs
-ms.custom: ''
+title: Inicialización de ensamblados mixtos
 ms.date: 03/09/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - mixed assemblies [C++], loader lock
 - loader lock [C++]
@@ -16,23 +10,18 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665015"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>Inicialización de ensamblados mixtos
 
 Los desarrolladores de Windows siempre deben ser precavido a la hora de bloqueo del cargador cuando se ejecuta código durante `DllMain`. Sin embargo, hay algunas consideraciones adicionales que entran en juego cuando se trabaja con C / c++ / clr ensamblados de modo mixto.
 
-Código de [DllMain](/windows/desktop/Dlls/dllmain) no debe tener acceso al CLR. Esto significa que `DllMain` no debe hacer llamadas a funciones administradas directa o indirectamente; no se debe declarar ni implementar código administrado en `DllMain`; y no se debe producir la recolección de elementos no usados ni la carga automática de bibliotecas dentro de `DllMain`.
+El código de [DllMain](/windows/desktop/Dlls/dllmain) no debe tener acceso al CLR. Esto significa que `DllMain` no debe hacer llamadas a funciones administradas directa o indirectamente; no se debe declarar ni implementar código administrado en `DllMain`; y no se debe producir la recolección de elementos no usados ni la carga automática de bibliotecas dentro de `DllMain`.
 
 ## <a name="causes-of-loader-lock"></a>Causas del bloqueo del cargador
 

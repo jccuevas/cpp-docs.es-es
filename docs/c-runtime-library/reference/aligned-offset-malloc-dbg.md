@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc_dbg | Microsoft Docs
-ms.custom: ''
+title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507542"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -67,26 +57,26 @@ Valor de la alineación, que debe ser un entero potencia de 2.
 Desplazamiento en la asignación de memoria para imponer la alineación.
 
 *filename*<br/>
-Puntero al nombre del archivo de origen que solicitó la operación de asignación o **NULL**.
+Puntero al nombre del archivo de código fuente que solicitó la operación de asignación o **NULL**.
 
 *linenumber*<br/>
 Número de línea en el archivo de origen que se solicitó la operación de asignación o **NULL**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Un puntero al bloque de memoria que se asignó o **NULL** si la operación produce un error.
+Un puntero al bloque de memoria que se ha asignado o **NULL** si la operación produjo un error.
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_offset_malloc_dbg** es una versión de depuración de la [_aligned_offset_malloc](aligned-offset-malloc.md) (función). Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_offset_malloc_dbg** se reduce a una llamada a **_aligned_offset_malloc**. Ambos **_aligned_offset_malloc** y **_aligned_offset_malloc_dbg** asignar un bloque de memoria del montón base, pero **_aligned_offset_malloc_dbg** ofrece varios características de depuración: búferes situados a cada lado de la parte de usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar el seguimiento de tipos de asignación concretos, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación.
+**_aligned_offset_malloc_dbg** es una versión de depuración de la [_aligned_offset_malloc](aligned-offset-malloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_offset_malloc_dbg** se reduce a una llamada a **_aligned_offset_malloc**. Ambos **_aligned_offset_malloc** y **_aligned_offset_malloc_dbg** asignan un bloque de memoria del montón base, pero **_aligned_offset_malloc_dbg** ofrece varios las características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar un seguimiento de los tipos de asignación concretos, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación.
 
-**_aligned_offset_malloc_dbg** asigna el bloque de memoria con un poco más de espacio que solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
+**_aligned_offset_malloc_dbg** asigna el bloque de memoria con un poco más de espacio solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
 
-**_aligned_offset_malloc_dbg** es útil en situaciones donde la alineación se necesita en un elemento anidado, por ejemplo, si se necesitara la alineación en una clase anidada.
+**_aligned_offset_malloc_dbg** resulta útil en situaciones donde la alineación se necesita en un elemento anidado; por ejemplo, si se necesitara la alineación en una clase anidada.
 
 **_aligned_offset_malloc_dbg** se basa en **malloc**; para obtener más información, consulte [malloc](malloc.md).
 
-Esta función establece **errno** a **ENOMEM** si produce un error en la asignación de memoria o si el tamaño solicitado es mayor que **_HEAP_MAXREQ**. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_offset_malloc** valida sus parámetros. Si *alineación* no es una potencia de 2 o si *desplazamiento* es mayor o igual que *tamaño* y distinto de cero, esta función invoca el controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **NULL** y establece **errno** a **EINVAL**.
+Esta función establece **errno** a **ENOMEM** si produjo un error en la asignación de memoria o si el tamaño solicitado es mayor que **_HEAP_MAXREQ**. Para obtener más información acerca de **errno**, consulte [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Además, **_aligned_offset_malloc** valida sus parámetros. Si *alineación* no es una potencia de 2 o si *desplazamiento* es mayor o igual a *tamaño* y distinto de cero, esta función invoca al controlador de parámetros no válidos, tal y como se describe en [ Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, esta función devuelve **NULL** y establece **errno** a **EINVAL**.
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 

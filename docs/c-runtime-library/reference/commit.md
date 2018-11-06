@@ -1,10 +1,6 @@
 ---
-title: _commit | Microsoft Docs
-ms.custom: ''
+title: _commit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _commit
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e9bc746c347bfb60fb78edbf025b676f8218c66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394836"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523076"
 ---
 # <a name="commit"></a>_commit
 
@@ -62,13 +52,13 @@ Descriptor de archivo que hace referencia al archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_commit** devuelve 0 si el archivo se generó correctamente vacía en el disco. Un valor devuelto de -1 indica un error.
+**_confirmar** devuelve 0 si el archivo correctamente se vacía en el disco. Un valor devuelto de -1 indica un error.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_commit** función obliga al sistema operativo para escribir el archivo asociado a *fd* en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.
+El **_confirmar** función fuerza el sistema operativo para escribir el archivo asociado *fd* en el disco. Esta llamada se asegura de que el archivo especificado se vacíe inmediatamente, no a discreción del sistema operativo.
 
-Si *fd* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**.
+Si *fd* es un descriptor de archivo no válido, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve -1 y **errno** está establecido en **EBADF**.
 
 ## <a name="requirements"></a>Requisitos
 

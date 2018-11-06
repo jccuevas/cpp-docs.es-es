@@ -1,11 +1,6 @@
 ---
-title: tgamma, tgammaf, tgammal | Microsoft Docs
-ms.custom: ''
+title: tgamma, tgammaf, tgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7861b297646f4a704134e0d874fad8c924a7ebc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cfe455b0e9e83cd5283d36fed33ca168bc97d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409880"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570669"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -84,7 +73,7 @@ Valor para buscar el valor gamma de.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, devuelve el valor gamma de *x*.
+Si es correcto, devuelve el valor gamma de *x*.
 
 Puede producirse un error de intervalo si la magnitud de *x* es demasiado grande o demasiado pequeño para el tipo de datos. Puede producirse un error de dominio o intervalo si *x* < = 0.
 
@@ -92,7 +81,7 @@ Puede producirse un error de intervalo si la magnitud de *x* es demasiado grande
 |-----------|------------|
 |x = ± 0|±INFINITY|
 |x = entero negativo|NaN|
-|x = - infinito|NaN|
+|x = - INFINITY|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |error de dominio|NaN|
@@ -104,7 +93,7 @@ Los errores se notifican tal como se especifica en [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Comentarios
 
-Como C++ permite las sobrecargas, puede llamar a sobrecargas de **tgamma** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **tgamma** siempre toma y devuelve un **doble**.
+Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **tgamma** que toman y devuelven **float** y **largo** **doble** tipos. En un programa C, **tgamma** siempre toma y devuelve un **doble**.
 
 Si x es un número natural, esta función devuelve el factorial de (x-1).
 
