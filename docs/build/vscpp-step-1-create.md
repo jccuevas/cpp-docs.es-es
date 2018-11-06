@@ -1,4 +1,4 @@
----
+﻿---
 title: Cree un proyecto de aplicación de consola de C++
 description: Crear una aplicación de consola Hola a todos en Visual C++
 ms.custom: mvc
@@ -110,7 +110,7 @@ El control de la lista desplegable no aparece en el cuadro de edición de propie
 
 [Volver](#make-your-project-a-console-app)
 
-### <a name="add-a-source-code-file-issues"></a> Problemas al agregar un archivo de código fuente
+### <a name="add-a-source-code-file-issues"></a>Problemas al agregar un archivo de código fuente
 
 Está bien si asigna a el archivo de código fuente un nombre diferente. Sin embargo, no agregue más de un archivo de código fuente que contenga el mismo código a su proyecto.
 
@@ -118,7 +118,7 @@ Si agrega el tipo de archivo incorrecto al proyecto, por ejemplo, un archivo de 
 
 [Volver atrás](#add-a-source-code-file).
 
-### <a name="add-code-to-the-source-file-issues"></a> Problemas al agregar contenido a un archivo de código fuente
+### <a name="add-code-to-the-source-file-issues"></a>Problemas al agregar contenido a un archivo de código fuente
 
 Si accidentalmente ha cerrado la ventana del editor del archivo de código fuente, para abrirla de nuevo, haga doble clic en HelloWorld.cpp en la ventana de **Explorador de soluciones** .
 
