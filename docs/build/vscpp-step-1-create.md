@@ -1,4 +1,4 @@
----
+﻿---
 title: Cree un proyecto de aplicación de consola de C++
 description: Crear una aplicación de consola Hola a todos en Visual C++
 ms.custom: mvc
@@ -15,7 +15,7 @@ ms.locfileid: "50619900"
 ---
 # <a name="create-a-c-console-app-project"></a>Cree un proyecto de aplicación de consola de C++
 
-El habitual punto inicial para un programador de C++ es un "Hello, world!" aplicación que se ejecuta en la línea de comandos. Eso es lo que creará en Visual Studio en este paso.
+El punto de partida habitual para un programador de C++ es un "Hello, world!", aplicación que se ejecuta en la línea de comandos. Eso es lo que creará en Visual Studio en este paso.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -25,7 +25,7 @@ El habitual punto inicial para un programador de C++ es un "Hello, world!" aplic
 
 Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, las configuraciones y reglas utilizadas para compilar sus aplicaciones y administra la relación entre todos los archivos del proyecto y todos los archivos externos. Para crear la aplicación, en primer lugar, creará un nuevo proyecto y solución.
 
-1. En Visual Studio, abra el **archivo** menú y elija **nuevo > proyecto** para abrir el **nuevo proyecto** cuadro de diálogo.
+1. En Visual Studio, abra el menú **archivo**  y elija **nuevo > proyecto** para abrir el cuadro de diálogo **nuevo proyecto** .
 
    ![Abra el cuadro de diálogo nuevo proyecto](../build/media/vscpp-file-new-project.gif "abrir el cuadro de diálogo nuevo proyecto")
 
@@ -43,7 +43,7 @@ Visual Studio puede crear todo tipo de aplicaciones y componentes de Windows y o
 
 1. En Visual Studio, abra el menú **proyecto**  y elija **propiedades** para abrir el cuadro de diálogo **páginas de propiedades HelloWorld** .
 
-1. En el **páginas de propiedades** cuadro de diálogo, en **propiedades de configuración**, seleccione **vinculador**, **sistema**y, a continuación, seleccione el cuadro de edición situado junto a el **subsistema** propiedad. En el menú desplegable que aparece, seleccione **consola (/ SUBSYSTEM: CONSOLE)**. Elija **Aceptar** para guardar los cambios.
+1. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, seleccione **vinculador > sistema**, a continuación, seleccione el cuadro de edición situado junto a la propiedad **subsistema** . En el menú desplegable que aparece, seleccione **consola (/ SUBSYSTEM: CONSOLE)**. Elija **Aceptar** para guardar los cambios.
 
    ![Abra el cuadro de diálogo páginas de propiedades](../build/media/vscpp-properties-linker-subsystem.gif "abrir el cuadro de diálogo páginas de propiedades")
 
@@ -53,7 +53,7 @@ Ahora Visual Studio sabe como compilar el proyecto para que se ejecute en una ve
 
 ## <a name="add-a-source-code-file"></a>Agregar un archivo de código fuente
 
-1. En **el Explorador de soluciones**, seleccione el proyecto HelloWorld. En la barra de menús, elija **proyecto**, **Agregar nuevo elemento** para abrir el **Agregar nuevo elemento** cuadro de diálogo.
+1. En **el Explorador de soluciones**, seleccione el proyecto HelloWorld. En la barra de menús, elija **Proyecto > Agregar nuevo elemento** para abrir el cuadro de diálogo **Agregar nuevo elemento** .
 
 1. En el cuadro de diálogo **Agregar nuevo elemento** , y seleccione **Visual C++** en **instalado** si no está ya seleccionado. En el panel central, seleccione **archivo C++ (.cpp)**. Cambiar el **nombre** a *HelloWorld.cpp*. Elija **agregar** para cerrar el cuadro de diálogo y crear el archivo.
 
