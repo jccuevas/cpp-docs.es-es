@@ -1,16 +1,10 @@
 ---
-title: Características de seguridad de CRT | Microsoft Docs
-ms.custom: ''
+title: Características de seguridad de CRT
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs:
-- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99c449f9f96abbc335c58c6d46d81b55b5156c76
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ebbb09bc724fe1d3b2f06a27cb6708acb7566b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023870"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538365"
 ---
 # <a name="security-features-in-the-crt"></a>Características de seguridad de CRT
 
@@ -66,7 +56,7 @@ Al definir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` como 1, se elimina la adver
 
 En el caso de estas funciones en desuso sin sobrecargas de plantillas seguras, debe considerar en última instancia actualizar manualmente el código para usar las versiones seguras.
 
-Otro origen de las advertencias sobre desuso, no relacionadas con la seguridad, son las funciones POSIX. Reemplace los nombres de funciones POSIX por sus equivalentes estándar (por ejemplo, cambie [access](../c-runtime-library/reference/access-crt.md) por [_access](../c-runtime-library/reference/access-waccess.md)), o bien deshabilite las advertencias sobre desuso relacionadas con POSIX mediante la definición de `_CRT_NONSTDC_NO_WARNINGS`. Para obtener más información, consulte [Compatibilidad](compatibility.md).
+Otro origen de las advertencias sobre desuso, no relacionadas con la seguridad, son las funciones POSIX. Reemplace los nombres de funciones POSIX por sus equivalentes estándar (por ejemplo, cambie [access](../c-runtime-library/reference/access-crt.md) por [_access](../c-runtime-library/reference/access-waccess.md)), o bien deshabilite las advertencias sobre desuso relacionadas con POSIX mediante la definición de `_CRT_NONSTDC_NO_WARNINGS`. Para obtener más información, vea [Compatibilidad](compatibility.md).
 
 ## <a name="additional-security-features"></a>Características de seguridad adicionales
 

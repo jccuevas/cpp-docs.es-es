@@ -1,29 +1,19 @@
 ---
-title: Propiedades del enlazador (C++ para Linux) | Microsoft Docs
-ms.custom: ''
+title: Propiedades del enlazador (C++ para Linux)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580679"
 ---
 # <a name="linker-properties-linux-c"></a>Propiedades del enlazador (C++ para Linux)
 
 ## <a name="general"></a>General
 
-Property | Description | Opciones
+Propiedad. | Descripción | Opciones
 --- | ---| ---
 Archivo de salida | La opción invalida el nombre y la ubicación predeterminados del programa que crea el enlazador. (-o)
 Mostrar progreso | Imprime los mensajes de progreso del enlazador.
@@ -42,7 +32,7 @@ Copiar salida | Especifica si debe copiarse en la máquina local el archivo de s
 
 ## <a name="input"></a>Entrada
 
-Property | Description | Opciones
+Propiedad. | Descripción | Opciones
 --- | ---| ---
 Omitir bibliotecas predeterminadas específicas | Especifica uno o más nombres de las bibliotecas predeterminadas que se ignorarán. (--exclude-libs lib,lib)
 Omitir bibliotecas predeterminadas | Omite las bibliotecas predeterminadas y busca solo en las bibliotecas especificadas.
@@ -52,14 +42,14 @@ Dependencias adicionales | Especifica elementos adicionales que se agregarán a 
 
 ## <a name="debugging"></a>Depuración
 
-Property | Description | Opciones
+Propiedad. | Descripción | Opciones
 --- | ---| ---
 Información del símbolo de depurador | Información del símbolo de depurador del archivo de salida. | **Incluir todos**<br>**Omitir solo información del símbolo del depurador**<br>**Omitir información de todos los símbolos**<br>
 Nombre de archivo de asignaciones | La opción Asignar indica al enlazador que cree un archivo de asignaciones con el nombre especificado por el usuario. (-Map=)
 
 ## <a name="advanced"></a>Avanzadas
 
-Property | Description | Opciones
+Propiedad. | Descripción | Opciones
 --- | ---| ---
 Marcar variables como de solo lectura después de la reubicación | Esta opción marca las variables como de solo lectura después de la reubicación.
 Habilitar enlace de función inmediata | Esta opción marca el objeto para el enlace de función inmediata.

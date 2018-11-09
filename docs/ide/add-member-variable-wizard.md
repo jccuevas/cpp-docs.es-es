@@ -1,27 +1,17 @@
 ---
-title: Asistente para agregar variables miembro | Microsoft Docs
-ms.custom: ''
+title: Asistente para agregar variables miembro
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.variable.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e53f9075648d5ea0d2c02e98be30c3c43a87f335
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ea9b52c7448ee46a15c5da541784378d2b625d88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598593"
 ---
 # <a name="add-member-variable-wizard"></a>Asistente para agregar variables miembro
 

@@ -1,10 +1,6 @@
 ---
-title: Propiedades de entrada y salida de la herramienta Manifiesto (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: Propiedades de entrada y salida de la herramienta Manifiesto (Visual C++)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -13,19 +9,13 @@ f1_keywords:
 - VC.Project.VCManifestTool.DependencyInformationFile
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
-dev_langs:
-- C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4320339021f0de25d49cba3fbe1f5e4377cd062
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201224"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624710"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrada y salida, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;NombreDeProyecto&gt; (Cuadro de diálogo)
 
@@ -73,6 +63,6 @@ Especifica si la aplicación es compatible con PPP. De forma predeterminada, el 
 
 ## <a name="see-also"></a>Vea también
 
-[Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br/>
+[ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [Páginas de propiedades de la herramienta Manifiesto](../ide/manifest-tool-property-pages.md)<br/>
 [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)<br/>
