@@ -1,12 +1,6 @@
 ---
-title: Determinar qué archivos DLL se redistribuirán | Microsoft Docs
-ms.custom: ''
+title: Determinar qué archivos DLL se redistribuirán
 ms.date: 06/08/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a7b52e2c4d45d92f10b535b9d2d23b5a1e1a043
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452603"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>Determinar qué archivos DLL se redistribuirán
 
@@ -47,7 +37,7 @@ No puede redistribuir todos los archivos que se incluyen en Visual Studio; únic
 
 En la tabla siguiente se describen algunos de los archivos DLL de Visual C++ de los que su aplicación puede depender.
 
-|Biblioteca de Visual C++|Description|Se aplica a|
+|Biblioteca de Visual C++|Descripción|Se aplica a|
 |--------------------------|-----------------|----------------|
 |vcruntime*versión*.dll|Biblioteca en tiempo de ejecución para código nativo.|Aplicaciones que usan los servicio de inicio y finalización normales del lenguaje C y C++.|
 |vccorlib*versión*.dll|Biblioteca en tiempo de ejecución para código administrado.|Aplicaciones que usan los servicios del lenguaje C++ para código administrado.|

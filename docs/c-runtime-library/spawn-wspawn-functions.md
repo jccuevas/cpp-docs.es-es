@@ -1,10 +1,6 @@
 ---
-title: _spawn, _wspawn (Funciones) | Microsoft Docs
-ms.custom: ''
+title: _spawn, _wspawn (Funciones)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
@@ -26,8 +22,6 @@ f1_keywords:
 - _tspawnv
 - _tspawnle
 - wspawn
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tspawnve function
 - _spawn functions
@@ -51,18 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cafa9e91ce16c2b18d80699363b615d55932bdb4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533801"
 ---
-# <a name="spawn-wspawn-functions"></a>Funciones _spawn y _wspawn
+# <a name="spawn-wspawn-functions"></a>_spawn, _wspawn (Funciones)
 
 Cada una de las funciones `_spawn` crea y ejecuta un nuevo proceso:
 

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 5ceb3b21d59bef3dcbe9d5b53e6a9b779b8b381f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f681907360812f51b34b187ee0ece776816cc82
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509323"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264611"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Enlazar columnas dinámicamente en un proveedor
 
 Asegúrese de que realmente necesita enlace dinámico de columnas. Puede necesitarlo si:
 
-- Las columnas de conjunto de filas no se definen en tiempo de compilación.
+- Las columnas de conjunto de filas no están definidas en tiempo de compilación.
 
-- Admite un elemento como marcadores que agrega las columnas.
+- Admite un elemento, como el marcador que se agrega columnas.
 
 ## <a name="to-implement-dynamic-column-binding"></a>Para implementar el enlace dinámico de columnas
 

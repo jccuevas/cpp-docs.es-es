@@ -1,23 +1,13 @@
 ---
-title: Funciones de la biblioteca | Microsoft Docs
-ms.custom: ''
+title: Funciones de la biblioteca
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6595b2ea3ac15f6461e65aee8671d5be17e1b84
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5ac2f67eb69cadfdc5b45022ad2fdf82a8612bf2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664287"
 ---
 # <a name="library-functions"></a>Funciones de la biblioteca
 

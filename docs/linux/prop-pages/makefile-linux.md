@@ -1,23 +1,13 @@
 ---
 title: Propiedades generales (proyecto de archivos Make de C++ para Linux) | Microsoft Docs
-ms.custom: ''
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705704"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524597"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Propiedades del proyecto de archivos Make (C++ para Linux)
 
@@ -25,7 +15,7 @@ A continuación se muestra una lista parcial de las propiedades disponibles en u
 
 ## <a name="general"></a>General
 
-Property | Description | Opciones
+Propiedad. | Descripción | Opciones
 --- | ---| ---
 Directorio de salida | Especifica una ruta de acceso relativa al directorio de archivos de salida; puede incluir variables de entorno.
 Directorio intermedio | Especifica una ruta de acceso relativa al directorio de archivos intermedios; puede incluir variables de entorno.
@@ -47,37 +37,37 @@ Vea [Propiedades del proyecto Copiar orígenes (C++ para Linux)](copy-sources-pr
 
 ### <a name="pre-build-event"></a>Evento anterior a la compilación
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Línea de comandos | Especifica una línea de comandos para ejecutar la herramienta de eventos anteriores a la compilación.
-Description | Especifica una descripción que se mostrará para la herramienta de eventos anteriores a la compilación.
+Descripción | Especifica una descripción que se mostrará para la herramienta de eventos anteriores a la compilación.
 Usar en la compilación | Especifica si este evento de compilación se excluirá de la compilación en la configuración actual.
 Archivos adicionales para copiar | Especifica archivos adicionales para copiar en el sistema remoto. También se puede proporcionar la lista en forma de pares de asignaciones de local a remoto usando esta sintaxis: rutaDeAccesoLocalCompleta1:=rutaDeAccesoRemotaCompleta1;rutaDeAccesoLocalCompleta2:=rutaDeAccesoRemotaCompleta2, donde un archivo local se puede copiar en la ubicación remota especificada del sistema remoto.
 
 ### <a name="post-build-event"></a>Evento posterior a la compilación
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Línea de comandos | Especifica una línea de comandos para ejecutar la herramienta de eventos posteriores a la compilación.
-Description | Especifica una descripción que se mostrará para la herramienta de eventos posteriores a la compilación.
+Descripción | Especifica una descripción que se mostrará para la herramienta de eventos posteriores a la compilación.
 Usar en la compilación | Especifica si este evento de compilación se excluirá de la compilación en la configuración actual.
 Archivos adicionales para copiar | Especifica archivos adicionales para copiar en el sistema remoto. También se puede proporcionar la lista en forma de pares de asignaciones de local a remoto usando esta sintaxis: rutaDeAccesoLocalCompleta1:=rutaDeAccesoRemotaCompleta1;rutaDeAccesoLocalCompleta2:=rutaDeAccesoRemotaCompleta2, donde un archivo local se puede copiar en la ubicación remota especificada del sistema remoto.
 
 ### <a name="remote-pre-build-event"></a>Evento remoto anterior a la compilación
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Línea de comandos | Especifica una línea de comandos para que la ejecute la herramienta de eventos anteriores a la compilación en el sistema remoto.
-Description | Especifica una descripción que se mostrará para la herramienta de eventos anteriores a la compilación.
+Descripción | Especifica una descripción que se mostrará para la herramienta de eventos anteriores a la compilación.
 Usar en la compilación | Especifica si este evento de compilación se excluirá de la compilación en la configuración actual.
 Archivos adicionales para copiar | Especifica archivos adicionales que se copiarán del sistema remoto. También se puede proporcionar la lista en forma de pares de asignaciones de remoto a local usando la sintaxis siguiente: rutaDeAccesoRemotaCompleta1:=rutaDeAccesoLocalCompleta1;rutaDeAccesoRemotaCompleta2:=rutaDeAccesoLocalCompleta2, donde un archivo remoto se puede copiar en la ubicación especificada de la máquina local.
 
 ### <a name="remote-post-build-event"></a>Evento remoto posterior a la compilación
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Línea de comandos | Especifica una línea de comandos para que la ejecute la herramienta de eventos posteriores a la compilación en el sistema remoto.
-Description | Especifica una descripción que se mostrará para la herramienta de eventos posteriores a la compilación.
+Descripción | Especifica una descripción que se mostrará para la herramienta de eventos posteriores a la compilación.
 Usar en la compilación | Especifica si este evento de compilación se excluirá de la compilación en la configuración actual.
 Archivos adicionales para copiar | Especifica archivos adicionales que se copiarán del sistema remoto. También se puede proporcionar la lista en forma de pares de asignaciones de remoto a local usando la sintaxis siguiente: rutaDeAccesoRemotaCompleta1:=rutaDeAccesoLocalCompleta1;rutaDeAccesoRemotaCompleta2:=rutaDeAccesoLocalCompleta2, donde un archivo remoto se puede copiar en la ubicación especificada de la máquina local.
 
@@ -87,7 +77,7 @@ Archivos adicionales para copiar | Especifica archivos adicionales que se copiar
 
 Las propiedades de IntelliSense se pueden establecer en el nivel de proyecto o de archivo para proporcionar pistas sobre el motor de IntelliSense. No afectan a la compilación.
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Ruta de acceso de búsqueda de inclusión | Especifica la ruta de acceso de búsqueda de inclusión para resolver archivos incluidos.
 Archivos de inclusión forzados | Especifica los archivos de inclusión forzada.
@@ -97,7 +87,7 @@ Opciones adicionales | Especifica modificadores de compilador adicionales que In
 
 ### <a name="build"></a>Compilar
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Línea de comandos de Compilar | Especifica la línea de comandos que se ejecuta para el comando "Compilar".
 Línea de comandos de Recompilar todo | Especifica la línea de comandos que se ejecuta para el comando "Recompilar todo".
@@ -105,7 +95,7 @@ Línea de comandos de limpieza | Especifica la línea de comandos que se ejecuta
 
 ### <a name="remote-build"></a>Compilación remota
 
-Property | Description
+Propiedad. | Descripción
 --- | ---
 Línea de comandos de Compilar | Especifica la línea de comandos que se ejecuta para el comando "Compilar". Esto se ejecuta en el sistema remoto.
 Línea de comandos de Recompilar todo | Especifica la línea de comandos que se ejecuta para el comando "Recompilar todo". Esto se ejecuta en el sistema remoto.

@@ -1,15 +1,9 @@
 ---
 title: Macros comunes para propiedades y comandos de compilación
-ms.custom: ''
 ms.date: 05/29/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -98,16 +92,12 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 278cb34a49650d88b9e7de9efd8456ff430aca63
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 3ccd5b7a8fe8a04b69a963e8edc3811cc3fd2772
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569932"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628584"
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>Macros comunes para propiedades y comandos de compilación
 
@@ -121,7 +111,7 @@ Para mostrar las macros disponibles actualmente, en cualquier página de propied
 
 En esta tabla se describe un subconjunto de uso frecuente de las macros disponibles. Esta lista está muy lejos de ser exhaustiva. Para obtener detalles sobre cómo se crean y usan las definiciones de propiedades de MSBuild como macros en los archivos .props, .targets y .vcxproj, vea [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties).
 
-|Macro|Description|
+|Macro|Descripción|
 |-----------|-----------------|
 |**$(Configuration)**|El nombre de la configuración del proyecto actual (por ejemplo, "Depuración").|
 |**$(DevEnvDir)**|El directorio de instalación de Visual Studio (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\".|
@@ -158,7 +148,7 @@ En esta tabla se describe un subconjunto de uso frecuente de las macros disponib
 
 El sistema de compilación de C++ se ha cambiado significativamente entre Visual Studio 2008 y Visual Studio 2010. Muchas macros que se usaban en los tipos de proyectos anteriores se han cambiado por otras nuevas. Estas macros ya no se usan o se han reemplazado por una o varias propiedades equivalentes o valores de [macro de metadatos de elemento](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(**_nombre_**)**). Las macros que se marcan como "migradas" se pueden actualizar mediante la herramienta de migración de proyectos. Si el proyecto que contiene la macro se migra desde Visual Studio 2008 o una versión anterior a Visual Studio 2010, Visual Studio convierte la macro a la macro equivalente actual. En las versiones posteriores de Visual Studio no se pueden convertir proyectos de Visual Studio 2008 y versiones anteriores al nuevo tipo de proyecto. Debe convertir estos proyectos en dos pasos: en primer lugar convertirlos a Visual Studio 2010 y, después, convertir el resultado a la versión más reciente de Visual Studio. Para obtener más información, vea [Información general sobre posibles problemas de actualización](../porting/overview-of-potential-upgrade-issues-visual-cpp.md).
 
-|Macro|Description|
+|Macro|Descripción|
 |-----------|-----------------|
 |**$(InputDir)**|(Migrada). El directorio del archivo de entrada (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\". Si el proyecto es la entrada, esta macro equivale a **$(ProjectDir)**.|
 |**$(InputExt)**|(Migrada). La extensión de archivo del archivo de entrada. Incluye el "." antes de la extensión de archivo. Si el proyecto es la entrada, esta macro equivale a **$(ProjectExt)**. Para los archivos de código fuente, se trata de **%(Extension)**.|

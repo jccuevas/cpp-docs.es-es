@@ -1,28 +1,18 @@
 ---
-title: Compatibilidad con cálculos matemáticos complejos de C | Microsoft Docs
-ms.custom: ''
+title: Compatibilidad con cálculos matemáticos complejos de C
 ms.date: 03/30/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.complex
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 661e1367ea64713cf7a143f276cd195d54fecf85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452616"
 ---
 # <a name="c-complex-math-support"></a>Compatibilidad con cálculos matemáticos complejos de C
 
@@ -50,7 +40,7 @@ El encabezado math.h define un tipo independiente, **struct _complex**, que se u
 
 ## <a name="trigonometric-functions"></a>Funciones trigonométricas
 
-|Función|Description|
+|Función|Descripción|
 |-|-|
 |[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Permite calcular el arcocoseno complejo de un número complejo.|
 |[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Permite calcular el arcoseno complejo de un número complejo.|
@@ -61,7 +51,7 @@ El encabezado math.h define un tipo independiente, **struct _complex**, que se u
 
 ## <a name="hyperbolic-functions"></a>Funciones hiperbólicas
 
-|Función|Description|
+|Función|Descripción|
 |-|-|
 |[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Permite calcular el arcocoseno hiperbólico complejo de un número complejo.|
 |[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Permite calcular el arcoseno hiperbólico complejo de un número complejo.|
@@ -72,7 +62,7 @@ El encabezado math.h define un tipo independiente, **struct _complex**, que se u
 
 ## <a name="exponential-and-logarithmic-functions"></a>Funciones exponenciales y logarítmicas
 
-|Función|Description|
+|Función|Descripción|
 |-|-|
 |[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Permite calcular el valor exponencial complejo de base *e* de un número complejo.|
 |[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Permite calcular el logaritmo natural complejo de base *e* de un número complejo.|
@@ -80,7 +70,7 @@ El encabezado math.h define un tipo independiente, **struct _complex**, que se u
 
 ## <a name="power-and-absolute-value-functions"></a>Funciones de potencias y valores absolutos
 
-|Función|Description|
+|Función|Descripción|
 |-|-|
 |[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Permite calcular el valor complejo absoluto (también denominado "norma vectorial", "módulo" o "magnitud") de un número complejo.|
 |[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Permite calcular la función de potencia compleja x<sup>y</sup>.|
@@ -88,7 +78,7 @@ El encabezado math.h define un tipo independiente, **struct _complex**, que se u
 
 ## <a name="manipulation-functions"></a>Funciones de manipulación
 
-|Función|Description|
+|Función|Descripción|
 |-|-|
 |[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Permite construir un número complejo a partir de elementos reales e imaginarios.|
 |[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Permite calcular el argumento (también denominado "ángulo de fase") de un número complejo.|
@@ -102,7 +92,7 @@ El encabezado math.h define un tipo independiente, **struct _complex**, que se u
 
 Dado que los números complejos no son un tipo nativo del compilador de Microsoft, los operadores aritméticos estándar no se definen en los tipos complejos. Para mayor comodidad, estas funciones de la biblioteca de cálculos matemáticos complejos se proporcionan para permitir una manipulación limitada de los números complejos del código de usuario:
 
-|Función|Description|
+|Función|Descripción|
 |-|-|
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Permite multiplicar dos números complejos.|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Permite multiplicar un número complejo y un número de punto flotante.|
