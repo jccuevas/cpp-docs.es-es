@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: 7fcd948fc093253c3565e7d4d35237d87ba4bdb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6a750d3c2c6c409a1b7d3ce40ef13566b522cff
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571254"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265170"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Hacer referencia a una propiedad en un proveedor
 
-Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734) en el *referencia del programador de OLE DB*.
+Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734) en el **referencia del programador de OLE DB**.
 
 En el siguiente ejemplo se da por supuesto que está intentando obtener una propiedad del conjunto de filas. El código para el uso de la sesión o el comando es similar, pero usa una interfaz diferente.
 
@@ -25,7 +25,7 @@ Crear un [CDBPropSet](../../data/oledb/cdbpropset-class.md) utilizando el grupo 
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-Llame a [AddProperty](../../data/oledb/cdbpropset-addproperty.md), pasándole el identificador de propiedad y un valor que se asignará a la propiedad. El tipo del valor depende de la propiedad que se usa.
+Llame a [AddProperty](../../data/oledb/cdbpropset-addproperty.md), pasándole el identificador de propiedad y un valor que se asignará a la propiedad. El tipo del valor depende de la propiedad que está usando.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
