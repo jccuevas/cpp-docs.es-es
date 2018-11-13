@@ -1,27 +1,17 @@
 ---
-title: Páginas de propiedades Línea de comandos | Microsoft Docs
-ms.custom: ''
+title: páginas de propiedades Línea de comandos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.project.AdditionalOptionsPage
-dev_langs:
-- C++
 helpviewer_keywords:
 - Command Line property pages
 ms.assetid: e1721b6c-8b39-4b44-a41e-69b5bb470cc9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54a9f68c1cd750cd3d0e5c638d1ab101a8588a61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a00193e3ae952cd3f89dca5e3a226410a25ea468
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618210"
 ---
 # <a name="command-line-property-pages"></a>páginas de propiedades Línea de comandos
 

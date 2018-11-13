@@ -1,12 +1,6 @@
 ---
-title: Algoritmos | Microsoft Docs
-ms.custom: ''
+title: Algoritmos
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063034"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648037"
 ---
 # <a name="algorithms"></a>Algoritmos
 
@@ -35,7 +25,7 @@ La descripción de las funciones de plantilla de algoritmo emplea varias frases 
 
 - La frase "en el intervalo \[ *A*, *B*)" significa la secuencia de cero o más valores discretos que comienzan con *A* hasta, pero no incluyendo *B* . Un intervalo es válido únicamente si *B* sea accesible desde *A;* puede almacenar *A* en un objeto *N* (*N*  =  *A*), incrementar el objeto cero o más veces (++*N*), y tiene el objeto son iguales a *B* después de un número finito de incrementos (*N*   ==  *B*).
 
-- La frase "cada *N* en el intervalo \[ *A*, *B*)" significa que *N* comienza con el valor *un*y se incrementa cero o más veces hasta que es igual al valor *B*. El caso N** == B* no está en el intervalo.
+- La frase "cada *N* en el intervalo \[ *A*, *B*)" significa que *N* comienza con el valor *un*y se incrementa cero o más veces hasta que es igual al valor *B*. El caso N* == *B* no está en el intervalo.
 
 - La frase "el valor más bajo de *N* en el intervalo \[ *A*, *B*) tal que *X*" significa que la condición *X* se determina para cada *N* en el intervalo \[ *A*, *B*) hasta que la condición *X*se cumple.
 

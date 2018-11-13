@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584633"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264728"
 ---
 # <a name="provider-support-for-bookmarks"></a>Compatibilidad del proveedor con los marcadores
 
@@ -60,7 +60,7 @@ También deberá enlazar el mapa en el `CRowsetImpl` clase. Agregue la macro COM
 
 Por último, controle el `IColumnsInfo::GetColumnsInfo` llamar. Las macros PROVIDER_COLUMN_ENTRY utilizaría normalmente para hacer esto. Sin embargo, un consumidor desea utilizar marcadores. Debe poder cambiar las columnas que devuelve el proveedor dependiendo de si el consumidor solicita un marcador.
 
-Para controlar la `IColumnsInfo::GetColumnsInfo` llamar, elimine el `PROVIDER_COLUMN` asignar en el `CTextData` clase. La macro PROVIDER_COLUMN_MAP define una función `GetColumnInfo`. Se necesita definir su propio `GetColumnInfo` función. La declaración de función debe tener este aspecto:
+Para controlar la `IColumnsInfo::GetColumnsInfo` llamar, elimine el mapa PROVIDER_COLUMN el `CTextData` clase. La macro PROVIDER_COLUMN_MAP define una función `GetColumnInfo`. Definir las suyas propias `GetColumnInfo` función. La declaración de función debe tener este aspecto:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-A continuación, implemente el `GetColumnInfo` funcionando en el archivo CustomRS.cpp como sigue:
+A continuación, implemente el `GetColumnInfo` funcionando en el *personalizado*RS.cpp archivo como sigue:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` comprueba primero si una propiedad denominada `DBPROP_IRowsetLocate` está establecido. OLE DB tiene propiedades para cada una de las interfaces opcionales del objeto de conjunto de filas. Si el consumidor desea usar una de estas interfaces opcionales, Establece una propiedad en true. El proveedor, a continuación, puede comprobar esta propiedad y tomar medidas especiales que se basan en.
 
-En su implementación, obtenga la propiedad mediante el puntero al objeto de comando. El `pThis` puntero representa la clase de conjunto de filas o un comando. Dado que utiliza plantillas, debe pasarlo como un `void` puntero o el código no se compila.
+En su implementación, obtenga la propiedad mediante el puntero al objeto de comando. El `pThis` puntero representa la clase de conjunto de filas o un comando. Dado que utiliza plantillas, debe pasarlo como un **void** puntero o el código no se compila.
 
-Especifique una matriz estática para que contenga la información de columna. Si el consumidor no desea que la columna de marcador, se desperdicia una entrada de la matriz. Puede asignar dinámicamente esta matriz, pero tendría que asegurarse de que lo destruirá correctamente. En este ejemplo se define y utiliza las macros ADD_COLUMN_ENTRY y ADD_COLUMN_ENTRY_EX para insertar la información en la matriz. Puede agregar las macros al archivo CustomRS.H tal como se muestra en el código siguiente:
+Especifique una matriz estática para contener la información de columna. Si el consumidor no desea que la columna de marcador, se desperdicia una entrada de la matriz. Puede asignar dinámicamente esta matriz, pero tendría que asegurarse de que lo destruirá correctamente. En este ejemplo se define y utiliza las macros ADD_COLUMN_ENTRY y ADD_COLUMN_ENTRY_EX para insertar la información en la matriz. Puede agregar las macros para los *personalizado*RS. Archivo de H tal como se muestra en el código siguiente:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -238,7 +237,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 
 El **mientras** bucle contiene código para llamar a la `Compare` método en el `IRowsetLocate` interfaz. El código que se debe pasar siempre porque se están comparando los mismos marcadores. Además, almacene un marcador en una variable temporal para que pueda usar después la **mientras** bucle de llamar a la `MoveToBookmark` función en las plantillas de consumidor. El `MoveToBookmark` llamadas de función el `GetRowsAt` método `IRowsetLocate`.
 
-También deberá actualizar el registro de usuario en el consumidor. Agregue una entrada en la clase para controlar un marcador y una entrada en el `COLUMN_MAP`:
+También deberá actualizar el registro de usuario en el consumidor. Agregue una entrada en la clase para controlar un marcador y una entrada en COLUMN_MAP:
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -263,7 +262,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-Cuando haya actualizado el código, debe ser capaz de generar y ejecutar el proveedor con el `IRowsetLocate` interfaz.
+Cuando se ha actualizado el código, debe ser capaz de generar y ejecutar el proveedor con el `IRowsetLocate` interfaz.
 
 ## <a name="see-also"></a>Vea también
 

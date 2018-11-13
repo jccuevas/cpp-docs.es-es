@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 4883edf08097f8dcdb18b821e9a0ca37f1ff6b0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 50df9f13b814eb00b309460894d704238bc3e7dc
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469672"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264781"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Leer cadenas desde el proveedor OLE DB
 
-El `RCustomRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo al proveedor mediante una llamada a [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_szCommandText`. `Execute` lee el nombre del archivo `m_szCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abre el archivo y las llamadas `fgets` para recuperar las cadenas. Para cada conjunto de cadenas se lee, `Execute` crea una instancia del registro de usuario (`CAgentMan`) y lo coloca en una matriz.
+El `CCustomRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo al proveedor mediante una llamada a [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_strCommandText`. `Execute` lee el nombre del archivo `m_strCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abre el archivo y las llamadas `fgets` para recuperar las cadenas. Para cada conjunto de cadenas se lee, `Execute` crea una instancia del registro de usuario (modificado `CCustomWindowsFile` desde [almacenar cadenas en el proveedor OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) y lo coloca en una matriz.
 
 Si no se puede abrir el archivo, `Execute` debe devolver DB_E_NOTABLE. Si devuelve E_FAIL en su lugar, el proveedor no funcionará con muchos consumidores y no se transfiera OLE DB [las pruebas de conformidad](../../data/oledb/testing-your-provider.md).
 
@@ -22,7 +22,7 @@ Si no se puede abrir el archivo, `Execute` debe devolver DB_E_NOTABLE. Si devuel
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CustomRS.h
-class RCustomRowset : public CRowsetImpl< RCustomRowset, CAgentMan, CRCustomCommand>
+class CCustomRowset : public CRowsetImpl< CCustomRowset, CCustomWindowsFile, CCustomCommand>
 {
 public:
     HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
@@ -35,22 +35,22 @@ public:
         FILE* pFile = NULL;
         TCHAR szString[sizeOfBuffer];
         TCHAR szFile[sizeOfFile];
-        size_t nLength;        errcodeerr;
+        size_t nLength;
 
         ObjectLock lock(this);
 
         // From a filename, passed in as a command text, scan the file
         // placing data in the data array.
-        if (!m_szCommandText)
+        if (!m_strCommandText)
         {
             ATLTRACE("No filename specified");
             return E_FAIL;
         }
 
         // Open the file
-        _tcscpy_s(szFile, sizeOfFile, m_szCommandText);
+        _tcscpy_s(szFile, sizeOfFile, m_strCommandText);
         if (szFile[0] == _T('\0') ||
-            ((err = fopen_s(&pFile, &szFile[0], "r")) == 0))
+            (fopen_s(&pFile, (char*)&szFile[0], "r") == 0))
         {
             ATLTRACE("Could not open file");
             return DB_E_NOTABLE;
@@ -59,20 +59,20 @@ public:
         // Scan and parse the file.
         // The file should contain two strings per record
         LONG cFiles = 0;
-        while (fgets(szString, sizeOfBuffer, pFile) != NULL)
+        while (fgets((char*)szString, sizeOfBuffer, pFile) != NULL)
         {
-            nLength = strnlen(szString, sizeOfBuffer);
+            nLength = strnlen((char*)szString, sizeOfBuffer);
             szString[nLength-1] = '\0';   // Strip off trailing CR/LF
-            CAgentMan am;
-            _tcscpy_s(am.szCommand, am.sizeOfCommand, szString);
-            _tcscpy_s(am.szCommand2, am.sizeOfCommand2, szString);
+            CCustomWindowsFile am;
+            _tcscpy_s(am.szCommand, am.iSize, szString);
+            _tcscpy_s(am.szCommand2, am.iSize, szString);
 
-            if (fgets(szString, sizeOfBuffer, pFile) != NULL)
+            if (fgets((char*)szString, sizeOfBuffer, pFile) != NULL)
             {
-                nLength = strnlen(szString, sizeOfBuffer);
+                nLength = strnlen((char*)szString, sizeOfBuffer);
                 szString[nLength-1] = '\0'; // Strip off trailing CR/LF
-                _tcscpy_s(am.szText, am.sizeOfText, szString);
-                _tcscpy_s(am.szText2, am.sizeOfText2, szString);
+                _tcscpy_s(am.szText, am.iSize, szString);
+                _tcscpy_s(am.szText2, am.iSize, szString);
             }
 
             am.dwBookmark = ++cFiles;
@@ -88,8 +88,12 @@ public:
             *pcRowsAffected = cFiles;
         return S_OK;
     }
-}
+};
 ```
+
+Cuando esto sucede, el proveedor debería estar listo para compilar y ejecutar. Para probar el proveedor, se necesita un consumidor con funcionalidad de coincidencia. [Implementar un consumidor sencillo](../../data/oledb/implementing-a-simple-consumer.md) se muestra cómo crear un consumidor de prueba de este tipo. Ejecute el consumidor de prueba con el proveedor y compruebe que el consumidor de prueba recupera las cadenas apropiadas del proveedor.
+
+Cuando haya comprobado correctamente el proveedor, puede ampliar su funcionalidad mediante la implementación de interfaces adicionales. Se muestra un ejemplo en [mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 653736b52c116f1c72856bf0c12e9deff05e0cfb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14acaa6ad96f74b2a3f88ca366a43caa9199a1d8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676205"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265040"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Admitir el subprocesamiento libre en un proveedor
 
@@ -39,7 +39,7 @@ HRESULT MyObject::MyMethod(void)
 
 Para obtener más información acerca de cómo proteger las secciones críticas con `Lock` y `Unlock`, consulte [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-También debe comprobar que los métodos de invalidación (como `Execute`) son seguros para subprocesos.
+Compruebe que los métodos de invalidación (como `Execute`) son seguros para subprocesos.
 
 ## <a name="see-also"></a>Vea también
 

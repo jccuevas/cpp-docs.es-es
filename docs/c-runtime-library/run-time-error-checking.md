@@ -1,28 +1,18 @@
 ---
-title: Comprobación de errores en tiempo de ejecución | Microsoft Docs
-ms.custom: ''
+title: Comprobar errores en tiempo de ejecución
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.runtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eaa4972a12729a5697db3574fcf89b0fb2b252ff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 348698faa1f91e4d98acc762538fc1cbdb798e0b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068460"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435652"
 ---
 # <a name="run-time-error-checking"></a>Comprobar errores en tiempo de ejecución
 

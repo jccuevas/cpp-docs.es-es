@@ -1,25 +1,15 @@
 ---
-title: Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración | Microsoft Docs
-ms.custom: ''
+title: Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31369f6aad04a0bd7077e9718e0b85776ca39556
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377817"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509114"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración
 
@@ -46,4 +36,4 @@ Una vez instalados los archivos DLL de Visual C++, puede ejecutar un depurador r
 [Implementación en Visual C++](../ide/deployment-in-visual-cpp.md)<br>
 [Opciones de la línea de comandos de Windows Installer](/windows/desktop/Msi/command-line-options)<br>
 [Ejemplos de implementación](../ide/deployment-examples.md)<br>
-[Depuración remota](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging.md)
