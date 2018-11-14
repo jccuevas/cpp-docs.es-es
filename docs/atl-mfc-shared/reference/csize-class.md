@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7451b462087d6430c642ddbe3b7cf8141a792f2e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431921"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329376"
 ---
 # <a name="csize-class"></a>CSize (clase)
 
@@ -173,11 +173,17 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Consulte las siguientes descripciones de los operadores individuales:
 
-- **operador + (** `size` **)** esta operación agrega dos `CSize` valores.
+- **operador + (** *tamaño* **)**
 
-- **operador + (** `point` **)** esta operación desplazamientos (mueve) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) valor vieron `CSize` valor. El **cx** y **cy** los miembros de este `CSize` se agregan valor a la **x** y **y** miembros de datos de la **punto**  valor. De forma análoga a la versión de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+  Esta operación agrega dos `CSize` valores.
 
-- **operador + (** `lpRect` **)** esta operación desplazamientos (mueve) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) valor vieron `CSize` valor. El **cx** y **cy** los miembros de este `CSize` se agregan valor a la **izquierdo**, **superior**, **derecha**, y **inferior** miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+- **operador + (** *punto* **)**
+
+  Esta operación desplazamientos (mueve) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) valor vieron `CSize` valor. El `cx` y `cy` los miembros de este `CSize` se agregan valor a la `x` y `y` miembros de datos de la `POINT` valor. De forma análoga a la versión de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+
+- **operador + (** *lpRect* **)**
+
+   Esta operación desplazamientos (mueve) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) valor vieron `CSize` valor. El `cx` y `cy` los miembros de este `CSize` se agregan valor a la `left`, `top`, `right`, y `bottom` miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
 
 ### <a name="example"></a>Ejemplo
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 El cuarto operador, el unario menos, cambia el signo de la `CSize` valor. Consulte las siguientes descripciones de los operadores individuales:
 
-- **operador-(** `size` **)** esta operación de resta dos `CSize` valores.
+- **operador-(** *tamaño* **)**
 
-- **operador-(** `point` **)** esta operación desplazamientos (mueve) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valor por el inverso aditivo de este `CSize` valor. El **cx** y **cy** esto `CSize` se restan valor a la **x** y **y** miembros de datos de la **punto**  valor. De forma análoga a la versión de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+  Esta operación de resta dos `CSize` valores.
 
-- **operador-(** `lpRect` **)** esta operación desplazamientos (mueve) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) o [CRect](../../atl-mfc-shared/reference/crect-class.md) valor por el inverso aditivo de este `CSize` valor. El **cx** y **cy** los miembros de este `CSize` se restan valor a la **izquierdo**, **superior**, **derecha**, y **inferior** miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+- **operador-(** *punto* **)**
 
-- **operador-()** esta operación devuelve el inverso aditivo de este `CSize` valor.
+  Esta operación desplazamientos (mueve) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valor por el inverso aditivo de este `CSize` valor. El `cx` y `cy` esto `CSize` se restan valor a la `x` y `y` miembros de datos de la `POINT` valor. De forma análoga a la versión de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+
+- **operador-(** *lpRect* **)**
+
+  Esta operación desplazamientos (mueve) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) o [CRect](../../atl-mfc-shared/reference/crect-class.md) valor por el inverso aditivo de este `CSize` valor. El `cx` y `cy` los miembros de este `CSize` se restan valor a la `left`, `top`, `right`, y `bottom` miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+
+- **operador-)**
+
+  Esta operación devuelve el inverso aditivo de este `CSize` valor.
 
 ### <a name="example"></a>Ejemplo
 

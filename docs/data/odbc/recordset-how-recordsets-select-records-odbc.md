@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618457"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329480"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: Cómo se seleccionan los registros (ODBC)
 
@@ -61,9 +61,8 @@ Cuando se llama a un objeto recordset [abierto](../../mfc/reference/crecordset-c
 
 - El [ordenación](../../data/odbc/recordset-sorting-records-odbc.md) orden para el conjunto de registros, si lo hay, contenido en el [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) miembro de datos. El marco de trabajo utiliza esta cadena para construir una instancia de SQL **ORDER BY** cláusula.
 
-
-    > [!TIP]
-    >  Para usar la instrucción SQL **GROUP BY** cláusula (y posiblemente la **HAVING** cláusula), anexe las cláusulas al final de la cadena de filtro.
+   > [!TIP]
+   > Para usar la instrucción SQL **GROUP BY** cláusula (y posiblemente la **HAVING** cláusula), anexe las cláusulas al final de la cadena de filtro.
 
 - Los valores de cualquier [los miembros de datos de parámetro](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) que especifique para la clase. Establecer valores de parámetro antes de llamar a `Open` o `Requery`. El marco de trabajo enlaza los valores de parámetro "?" marcadores de posición en la cadena SQL. En tiempo de compilación, especifique la cadena con marcadores de posición. En tiempo de ejecución, el marco de trabajo se rellena en los detalles en función de los valores de parámetro pasados.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cerrno header
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
-ms.openlocfilehash: cc8294f83f9d414228f660cf8e600f456d7b16d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16a3858f25afd6a5d26f611f5398361bf82ee13a
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632448"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51517663"
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
 
@@ -21,7 +21,6 @@ Incluye el encabezado \<errno.h> de la biblioteca estándar de C y agrega los no
 
 ```cpp
 #include <cerrno>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

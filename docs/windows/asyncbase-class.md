@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599679"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556925"
 ---
 # <a name="asyncbase-class"></a>AsyncBase (clase)
 
@@ -116,7 +114,7 @@ Name                                         | Descripción
 [Put_id](#put-id)                 | Establece el identificador de la operación asincrónica.
 [Putoncomplete](#putoncomplete)   | Establece la dirección del controlador de eventos de finalización en el valor especificado.
 [Putonprogress](#putonprogress)   | Establece la dirección del controlador de eventos de progreso en el valor especificado.
-[Asyncbase](#start)                   | Inicia la operación asincrónica.
+
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -130,6 +128,7 @@ Name                                                                         | D
 [Asyncbase](#oncancel)                                             | Cuando se invalida en una clase derivada, cancela una operación asincrónica.
 [Asyncbase](#onclose)                                               | Cuando se invalida en una clase derivada, cierra una operación asincrónica.
 [Asyncbase](#onstart)                                               | Cuando se invalida en una clase derivada, comienza una operación asincrónica.
+[Asyncbase](#start)                                                   | Inicia la operación asincrónica.
 [Trytransitiontocompleted](#trytransitiontocompleted)             | Indica si se ha completado la operación asincrónica actual.
 [Trytransitiontoerror](#trytransitiontoerror)                     | Indica si el código de error especificado puede modificar el estado de error interno.
 
@@ -504,7 +503,7 @@ S_OK si la operación se inicia o ya está iniciado; en caso contrario, E_ILLEGA
 
 ### <a name="remarks"></a>Comentarios
 
-`Start()` es una implementación predeterminada de `IAsyncInfo::Start`, y no se realiza ningún trabajo real. Para iniciar una operación asincrónica, invalidar el `OnStart()` método virtual puro.
+`Start()` es un método protegido que no es visible externamente, dado que las operaciones asincrónicas "" hot"inicio" antes de devolver al llamador.
 
 ## <a name="trytransitiontocompleted"></a>Trytransitiontocompleted
 

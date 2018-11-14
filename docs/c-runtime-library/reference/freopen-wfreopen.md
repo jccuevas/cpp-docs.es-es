@@ -29,12 +29,12 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: 4fa5afb1baea33178c987b45e8b7dace4e4515eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649532"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332509"
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 
@@ -88,12 +88,12 @@ El **freopen** función cierra el archivo asociado actualmente *secuencia* y rea
 
 |*mode*|Access|
 |-|-|
-**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra el **freopen** llamar se produce un error.
-**"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.
-**"a"**|Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe.
-**"r+"**|Abre para lectura y escritura. El archivo debe existir.
-**"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido.
-**"a+"**|Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe.
+| **"r"** | Abre para lectura. Si el archivo no existe o no se encuentra el **freopen** llamar se produce un error. |
+| **"w"** | Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido. |
+| **"a"** | Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe. |
+| **"r+"** | Abre para lectura y escritura. El archivo debe existir. |
+| **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
+| **"a+"** | Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe. |
 
 Use la **"w"** y **"w +"** tipos con cuidado, ya que podrían destruir archivos existentes.
 
@@ -105,8 +105,8 @@ Cuando el **"r +"**, **"w +"**, o **"a +"** se especifica el tipo de acceso, se 
 
 |*modo* modificador|Modo de traducción|
 |-|-|
-**t**|Abra en modo de texto (traducido).
-**b**|Abra en modo binario (sin traducir); las traducciones que implican los caracteres de retorno de carro y avance de línea se suprimen.
+| **t** | Abra en modo de texto (traducido). |
+| **b** | Abra en modo binario (sin traducir); las traducciones que implican los caracteres de retorno de carro y avance de línea se suprimen. |
 
 En el modo de texto (traducido), combinaciones de retorno-salto de línea (CR-LF) de transporte se convierten en caracteres de avance de línea (LF) en la entrada; Los caracteres de LF se traducen a combinaciones CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o para escribir y leer con **"a +"**, la biblioteca en tiempo de ejecución comprueba un CTRL+Z al final del archivo y lo quita, si es posible. Esto se hace porque utilizar [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para desplazarse por un archivo puede provocar [fseek](fseek-fseeki64.md) para que se comporte de forma incorrecta cerca del final del archivo. El **t** opción es una extensión de Microsoft que no debe usarse si desea usarse la portabilidad ANSI.
 

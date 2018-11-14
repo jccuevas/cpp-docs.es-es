@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: cb0f7813a351f272d5417955fb98719d889a64ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9717649c1bd4f956da8bc926e8f492f4eccff74
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561218"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556847"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Obtener metadatos con conjuntos de filas de esquema
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 El [CRestrictions](../../data/oledb/crestrictions-class.md) clase proporciona la compatibilidad con las restricciones. Después de crear una instancia del conjunto de filas de esquema, llame a [CRestrictions:: Open](../../data/oledb/crestrictions-open.md). Este método devuelve un conjunto de resultados basado en las restricciones especificadas.
 
-Para especificar restricciones, consulte [Apéndice B: Schema Rowsets](/previous-versions/windows/desktop/ms712921) y buscar el conjunto de filas que esté usando. Por ejemplo, `CColumns` corresponde a la [conjunto de filas COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); ese tema enumeran las columnas de restricción en el conjunto de filas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Debe seguir este orden al especificar las restricciones.
+Para especificar restricciones, consulte [Apéndice B: Schema Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) y buscar el conjunto de filas que esté usando. Por ejemplo, `CColumns` corresponde a la [conjunto de filas COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); ese tema enumeran las columnas de restricción en el conjunto de filas COLUMNS: TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Debe seguir este orden al especificar las restricciones.
 
 Por lo tanto, por ejemplo, si desea restringir por nombre de tabla, TABLE_NAME es la tercera columna de restricción y, a continuación, llame `Open`, especificando el nombre de tabla deseado como tercer parámetro de restricción, tal como se muestra en el ejemplo siguiente.
 
@@ -82,7 +82,7 @@ Por lo tanto, por ejemplo, si desea restringir por nombre de tabla, TABLE_NAME e
 
 Para la referencia del conjunto de filas de esquema, se proporcionan definiciones de tipos en las plantillas OLE DB (consulte [clases de conjunto de filas de esquema y clases Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).
 
-Para obtener más información sobre los conjuntos de filas de esquema OLE DB, incluidas las columnas de restricción, consulte [Apéndice B: Schema Rowsets](/previous-versions/windows/desktop/ms712921) en el **referencia del programador de OLE DB**.
+Para obtener más información sobre los conjuntos de filas de esquema OLE DB, incluidas las columnas de restricción, consulte [Apéndice B: Schema Rowsets](https://docs.microsoft.com/previous-versions/windows/desktop/ms712921(v=vs.85)) en el **referencia del programador de OLE DB**.
 
 Para obtener ejemplos más complejos de cómo usar las clases de conjunto de filas de esquema, vea el [CatDB](https://github.com/Microsoft/VCSamples) y [DBViewer](https://github.com/Microsoft/VCSamples) ejemplos.
 

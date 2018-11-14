@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604299"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326165"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (marcas de carga dependiente de conjunto de forma predeterminada)
 
@@ -27,9 +27,8 @@ Establece las marcas de carga predeterminado utiliza cuando `LoadLibrary` se usa
 
 ### <a name="arguments"></a>Argumentos
 
-|||
-|-|-|
-*loadflags*|Un valor entero de 16 bits de "C"-style opcional en decimal, octal con un cero inicial o hexadecimal con uno de los principales `0x`, que especifica las marcas de carga dependiente que se aplicará a todos los [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) llamadas. El valor predeterminado es 0.
+*loadflags*<br/>
+Un valor entero de 16 bits de "C"-style opcional en decimal, octal con un cero inicial o hexadecimal con uno de los principales `0x`, que especifica las marcas de carga dependiente que se aplicará a todos los [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) llamadas. El valor predeterminado es 0.
 
 ## <a name="remarks"></a>Comentarios
 

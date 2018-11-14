@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: ec770f594836073fe340b0661e0427c058533b22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677531"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524526"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo (estructura)
 
@@ -83,7 +83,6 @@ Llame a esta función para recuperar el número de la primera página que se imp
 
 ```
 UINT GetFromPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -100,7 +99,6 @@ Llame a esta función para recuperar el número de la última página del docume
 
 ```
 UINT GetMaxPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -117,7 +115,6 @@ Llame a esta función para recuperar el número de la primera página del docume
 
 ```
 UINT GetMinPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -134,7 +131,6 @@ Llame a esta función para recuperar el desplazamiento al imprimir varios elemen
 
 ```
 UINT GetOffsetPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,7 +147,6 @@ Llame a esta función para recuperar el número de la última página que se van
 
 ```
 UINT GetToPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: ac8a1b43b3bf8bde8f910e72b601bf7d94e0d19d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480295"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326971"
 ---
 # <a name="pointers-to-members"></a>Punteros a miembros
 
@@ -25,28 +25,40 @@ Las declaraciones de punteros a miembros son casos especiales de declaraciones d
 ```
 
 1. El especificador de declaración:
-  - Un especificador de clase de almacenamiento opcional.
 
-  - Opcional **const** o **volátil** especificadores.
+   - Un especificador de clase de almacenamiento opcional.
 
-  - El especificador de tipo: el nombre de un tipo.  Este es el tipo del miembro al que se señala, no la clase.
+   - Opcional **const** o **volátil** especificadores.
+
+   - El especificador de tipo: el nombre de un tipo.  Este es el tipo del miembro al que se señala, no la clase.
 
 1. El declarador:
 
-  - Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
-1. El nombre completo de la clase que contiene los miembros a los que se señala.
-  - El operador ::.
-  - El <strong>\*</strong> operador.
-  - Opcional **const** o **volátil** especificadores.
-  - El identificador que denomina el puntero a miembro.
+   - Un modificador opcional específico de Microsoft. Para obtener más información, consulte [modificadores específicos de Microsoft](../cpp/microsoft-specific-modifiers.md).
 
-  - Un inicializador opcional:
-  - El **=** operador.
-  - El **&** operador.
-  - Nombre completo de la clase.
-  - El operador `::`.
-  - El nombre de un miembro no estático de la clase del tipo adecuado.
-  - Como siempre, se permiten varios declaradores (y cualesquiera inicializadores asociados) en una sola declaración.
+   - El nombre completo de la clase que contiene los miembros a los que se señala.
+
+   - El __::__ operador.
+
+   - El __\*__ operador.
+
+   - Opcional **const** o **volátil** especificadores.
+
+   - El identificador que denomina el puntero a miembro.
+
+1. Un inicializador opcional:
+
+   - El **=** operador.
+
+   - El **&** operador.
+
+   - Nombre completo de la clase.
+
+   - El __::__ operador.
+
+   - El nombre de un miembro no estático de la clase del tipo adecuado.
+
+Como siempre, se permiten varios declaradores (y cualesquiera inicializadores asociados) en una sola declaración.
 
 Un puntero a un miembro de una clase se diferencia de un puntero normal porque tiene información del tipo de miembro y de la clase a la que pertenece el miembro. Un puntero normal identifica (tiene la dirección de) un solo objeto en memoria. Un puntero a un miembro de una clase identifica ese miembro en cualquier instancia de la clase. En el ejemplo siguiente se declara una clase, `Window`, y algunos punteros a los datos de miembros.
 

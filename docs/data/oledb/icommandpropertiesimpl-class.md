@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: b1411f3df97aeaf66abcccc5be78c734e3a71f19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603494"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556158"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl (Clase)
 
-Proporciona una implementación de la [ICommandProperties](/previous-versions/windows/desktop/ms723044) interfaz.
+Proporciona una implementación de la [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -67,15 +67,15 @@ Devuelve todos los conjuntos de propiedades solicitado mediante la asignación d
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
-   const DBPROPIDSET rgPropertyIDSets[], 
-   ULONG * pcPropertySets, 
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG * pcPropertySets,
    DBPROPSET ** prgPropertySets);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119) en el *referencia del programador OLE DB*.
+Consulte [ICommandProperties:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -88,13 +88,13 @@ Establece las propiedades para el objeto de comando.
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497) en el *referencia del programador OLE DB*.
+Consulte [ICommandProperties:: SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

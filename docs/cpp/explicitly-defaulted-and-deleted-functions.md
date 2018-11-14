@@ -2,12 +2,12 @@
 title: Funciones establecidas como valor predeterminado y eliminadas explícitamente
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662610"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327023"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funciones establecidas como valor predeterminado y eliminadas explícitamente
 
@@ -36,12 +36,12 @@ Esto es útil en el caso de tipos simples, pero los tipos complejos suelen defin
    - No se genera automáticamente ningún operador de asignación de movimiento.
 
 > [!NOTE]
->  Además, el estándar C++11 especifica las reglas adicionales siguientes:
+> Además, el estándar C++11 especifica las reglas adicionales siguientes:
 >
 > - Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está en desuso.
 > - Si se declara explícitamente un operador de asignación de copia o un destructor, la generación automática del constructor de copia está desusada.
 >
->  En ambos casos, Visual Studio sigue generando automáticamente las funciones necesarias de forma implícita y no emite ninguna advertencia.
+> En ambos casos, Visual Studio sigue generando automáticamente las funciones necesarias de forma implícita y no emite ninguna advertencia.
 
 Las consecuencias de estas reglas también pueden propagarse a las jerarquías de objetos. Por ejemplo, si por cualquier motivo una clase base no puede tener un constructor predeterminado que se pueda llamar desde una clase derivada, es decir, un **pública** o **protegido** constructor que no toma ningún parámetro, a continuación, en una clase que se deriva de no puede generar automáticamente su propio constructor predeterminado.
 

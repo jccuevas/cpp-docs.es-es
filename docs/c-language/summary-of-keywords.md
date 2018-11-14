@@ -2,16 +2,17 @@
 title: Resumen de palabras clave
 ms.date: 11/04/2016
 ms.assetid: 341d8297-03eb-4351-9ed0-138ec59b375c
-ms.openlocfilehash: 0a21e6e81efb19d7895abb4df903b4156df165b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 780cb80a3c311239eed825101bb1d12be0b58a56
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495607"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325923"
 ---
 # <a name="summary-of-keywords"></a>Resumen de palabras clave
 
-*keyword* : uno de<br/>
+*keyword* : uno de
+
 |||||
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641108"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333272"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 
@@ -208,7 +208,7 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cuad
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON_** notificación **(**`id`**,**`memberFxn`**)**
+**ON\_**_notificación_ **(** _id_, _memberFxn_ **)**
 
 donde `id` especifica el identificador de ventana secundaria del control de cuadro combinado que se envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 

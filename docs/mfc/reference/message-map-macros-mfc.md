@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474274"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327452"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
 
@@ -250,27 +250,8 @@ El nombre de la función de controlador de mensajes a la que se asigna el comand
 
 ### <a name="remarks"></a>Comentarios
 
-Un formulario extendido de controladores de mensajes de comando está disponible para los usos avanzados. La macro ON_COMMAND_EX se usa para dichos controladores de mensajes y proporciona un superconjunto de la funcionalidad [ON_COMMAND] (#on_command).  Las funciones miembro de controlador de comandos extendido toman un único parámetro, un tipo UINT que contiene el identificador de comando y devuelven un valor booleano. El valor devuelto debe ser TRUE para
-
-Esta macro asigna un mensaje de comando a una función miembro extendido de controlador de comandos.
-
-### <a name="syntax"></a>Sintaxis
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parámetros
-
-*identificador*<br/>
-Identificador del comando.
-
-*memberFxn*<br/>
-El nombre de la función de controlador de mensajes a la que se asigna el comando.
-
-### <a name="remarks"></a>Comentarios
-
 Un formulario extendido de controladores de mensajes de comando está disponible para los usos avanzados. La macro ON_COMMAND_EX se usa para dichos controladores de mensajes y proporciona un superconjunto de la [ON_COMMAND](message-map-macros-mfc.md#on_command) funcionalidad. Las funciones miembro de controlador de comandos extendido toman un único parámetro, un tipo UINT que contiene el identificador de comando y devuelven un valor booleano. El valor devuelto debe ser TRUE para indicar que el comando se ha controlado; enrutamiento en caso contrario, continuará a otros objetos de destino del comando.
+
 Para obtener más información, vea la nota técnica [TN006: mapas de mensajes] tm006-message-maps.md).
 
 ### <a name="requirements"></a>Requisitos

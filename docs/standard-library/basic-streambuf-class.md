@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565729"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524682"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf (Clase)
 
@@ -457,7 +457,7 @@ Si la función no se ejecuta correctamente, devuelve **traits_type::eof** o inic
 
 ### <a name="remarks"></a>Comentarios
 
-Si _ *Meta* no es igual a **traits_type::eof**, la función miembro virtual protegida intenta insertar el elemento **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) en el flujo de salida. Puede hacerlo de varias maneras:
+Si  *\_Meta* no son iguales a **traits_type:: EOF**, la función miembro virtual protegida intenta insertar el elemento **traits_type::** [ to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) en el flujo de salida. Puede hacerlo de varias maneras:
 
 - Si hay una `write position` disponible, puede almacenar el elemento en la posición de escritura e incrementar el puntero siguiente para el búfer de salida.
 
@@ -492,7 +492,7 @@ Si la función no se ejecuta correctamente, devuelve **traits_type::eof** o inic
 
 ### <a name="remarks"></a>Comentarios
 
-Si _ *Meta* es igual a **traits_type::eof**, el elemento que se va a devolver es realmente el que ya está en el flujo por delante del elemento actual. De lo contrario, ese elemento se sustituye por **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La función puede devolver un elemento de distintas maneras:
+Si  *\_Meta* igual a **traits_type:: EOF**, el elemento que se va a devolver es realmente el ya está en el flujo por delante del elemento actual. En caso contrario, ese elemento se sustituye por **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La función puede devolver un elemento de distintas maneras:
 
 - Si hay una posición de devolución disponible, puede almacenar el elemento en ella y reducir el puntero siguiente para el búfer de entrada.
 
@@ -689,15 +689,12 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 3
-
 ```
 
 ```Output
-
-      33
+33
 51
 ```
 
@@ -967,14 +964,11 @@ int main( )
 }
 ```
 
-```Output
-
+```Input
 aa
-
 ```
 
 ```Output
-
 aa97
 ```
 

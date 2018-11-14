@@ -7,12 +7,12 @@ ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 03446a9b4e1ec3a0425104b9e755efb902f79219
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598801"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518689"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS
 
@@ -62,7 +62,6 @@ Puede filtrar por patrón, por ejemplo, **vcpkg search ta**:
 botan       2.0.1      A cryptography library written in C++11
 portaudio   19.0.6.00  PortAudio Portable Cross-platform Audio I/O API P...
 taglib      1.11.1-2   TagLib Audio Meta-Data Library
-
 ```
 
 ### <a name="install-a-library-on-your-local-machine"></a>Instalación de una biblioteca en el equipo local
@@ -81,7 +80,6 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
-
 ```
 
 Para los proyectos de CMAKE, use CMAKE_TOOLCHAIN_FILE para que las bibliotecas estén disponibles con `find_package()`. Por ejemplo:

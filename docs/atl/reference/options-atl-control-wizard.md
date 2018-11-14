@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443763"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522316"
 ---
 # <a name="options-atl-control-wizard"></a>Opciones, Asistente para controles ATL
-
-Inserte aquí "Resultados de búsqueda" resumen.
 
 Utilice esta página del Asistente para definir el tipo de control que se va a crear y el nivel de compatibilidad con la interfaz contiene.
 
@@ -29,17 +27,17 @@ El tipo de control que desea crear.
 
 - **Control compuesto**: un control ActiveX que puede contener (similar a un cuadro de diálogo) otros controles ActiveX o controles de Windows. Un control compuesto incluye lo siguiente:
 
-   - Una plantilla para el cuadro de diálogo que implementa el control compuesto.
+  - Una plantilla para el cuadro de diálogo que implementa el control compuesto.
 
-   - Un recurso personalizado, registro, lo que se registra automáticamente el control compuesto cuando se invoca.
+  - Un recurso personalizado, registro, lo que se registra automáticamente el control compuesto cuando se invoca.
 
-   - Una clase de C++ que implementa el control compuesto.
+  - Una clase de C++ que implementa el control compuesto.
 
-   - Una interfaz COM, expuesta por el control compuesto.
+  - Una interfaz COM, expuesta por el control compuesto.
 
-   - Una página de prueba HTML que contiene el control compuesto.
+  - Una página de prueba HTML que contiene el control compuesto.
 
-   De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) es verdadera, para indicar que se trata de un control con ventana. Implementa un mapa de receptores. Para obtener más información, consulte [compatibilidad con controles DHTML](../../atl/atl-support-for-dhtml-controls.md).
+    De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) es verdadera, para indicar que se trata de un control con ventana. Implementa un mapa de receptores. Para obtener más información, consulte [compatibilidad con controles DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Control DHTML**: control DHTML ATL An especifica la interfaz de usuario mediante HTML. La clase de UI DHTML contiene un mapa COM. De forma predeterminada, este control establece [CComControlBase:: M_bwindowonly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) es verdadera, para indicar que se trata de un control con ventana.
 

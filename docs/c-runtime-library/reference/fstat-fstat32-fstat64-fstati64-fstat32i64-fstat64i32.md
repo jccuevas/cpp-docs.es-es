@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677791"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331248"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32
 
@@ -107,14 +107,14 @@ El **_fstat** función obtiene información sobre el archivo abierto asociado *f
 
 |Campo|Significado|
 |-|-|
-**st_atime**|Hora del último acceso al archivo.
-**st_ctime**|Hora de creación del archivo.
-**st_dev**|Si un dispositivo, *fd*; de lo contrario, 0.
-**st_mode**|Máscara de bits para información de modo de archivo. El **_S_IFCHR** bit se establece si *fd* hace referencia a un dispositivo. El **_S_IFREG** bit se establece si *fd* hace referencia a un archivo normal. Los bits de lectura y escritura se establecen según el modo de permiso del archivo. **_S_IFCHR** y otras constantes se definen en sys\stat.
-**st_mtime**|Hora de la última modificación del archivo.
-**st_nlink**|Siempre 1 en sistemas de archivos que no son NTFS.
-**st_rdev**|Si un dispositivo, *fd*; de lo contrario, 0.
-**st_size**|Tamaño del archivo en bytes.
+| **st_atime** | Hora del último acceso al archivo. |
+| **st_ctime** | Hora de creación del archivo. |
+| **st_dev** | Si un dispositivo, *fd*; de lo contrario, 0. |
+| **st_mode** | Máscara de bits para información de modo de archivo. El **_S_IFCHR** bit se establece si *fd* hace referencia a un dispositivo. El **_S_IFREG** bit se establece si *fd* hace referencia a un archivo normal. Los bits de lectura y escritura se establecen según el modo de permiso del archivo. **_S_IFCHR** y otras constantes se definen en sys\stat. |
+| **st_mtime** | Hora de la última modificación del archivo. |
+| **st_nlink** | Siempre 1 en sistemas de archivos que no son NTFS. |
+| **st_rdev** | Si un dispositivo, *fd*; de lo contrario, 0. |
+| **st_size** | Tamaño del archivo en bytes. |
 
 Si *fd* hace referencia a un dispositivo, el **st_atime**, **st_ctime**, **st_mtime**, y **st_size** campos son no es significativo.
 

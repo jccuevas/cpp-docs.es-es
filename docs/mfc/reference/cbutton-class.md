@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662857"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333542"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -153,13 +153,13 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON_** notificación **(**`id`, `memberFxn` **)**
+**ON\_**_notificación_ **(** _id_, _memberFxn_ **)**
 
-donde `id` especifica el identificador de ventana secundaria del control que envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
+donde *id* especifica el identificador de ventana secundaria del control que envía la notificación y *memberFxn* es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
 Prototipo de función del elemento primario es el siguiente:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Las entradas de mapa de mensajes posibles son los siguientes:
 

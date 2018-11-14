@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 45e7f7e86344f1928bb007e5f2bde1c0eca1f745
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a01a090d4302983f7d53e051cf4d8a72bd739b4a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632237"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556743"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl (Clase)
 
-Proporciona una implementación de la [IAccessor](/previous-versions/windows/desktop/ms719672) interfaz.
+Proporciona una implementación de la [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -91,7 +91,7 @@ Unidad de almacenamiento para obtener información de columna. El valor predeter
 
 ## <a name="remarks"></a>Comentarios
 
-Esto es obligatorio en los conjuntos de filas y los comandos. OLE DB requiere que los proveedores implementar un HACCESSOR, que es una etiqueta a una matriz de [DBBINDING](/previous-versions/windows/desktop/ms716845) estructuras. HACCESSORs proporcionadas por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un `ATLBINDINGS` en `IAccessorImpl`de definición de plantilla. `BindType` Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su `DBBINDING` de matriz, así como un indicadores de descriptores de acceso y el recuento de referencia.
+Esto es obligatorio en los conjuntos de filas y los comandos. OLE DB requiere que los proveedores implementar un HACCESSOR, que es una etiqueta a una matriz de [DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) estructuras. HACCESSORs proporcionadas por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un `ATLBINDINGS` en `IAccessorImpl`de definición de plantilla. `BindType` Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su `DBBINDING` de matriz, así como un indicadores de descriptores de acceso y el recuento de referencia.
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl:: IAccessorImpl
 
@@ -116,7 +116,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) en el *referencia del programador OLE DB*.
+Consulte [IAccessor::AddRefAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms714978(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl:: CreateAccessor
 
@@ -135,7 +135,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969) en el *referencia del programador OLE DB*.
+Consulte [IAccessor:: CreateAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms720969(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="getbindings"></a> IAccessorImpl:: Getbindings
 
@@ -152,7 +152,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) en el *referencia del programador OLE DB*.
+Consulte [IAccessor::GetBindings](https://docs.microsoft.com/previous-versions/windows/desktop/ms721253(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="releaseaccessor"></a> IAccessorImpl:: ReleaseAccessor
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717) en el *referencia del programador OLE DB*.
+Consulte [IAccessor:: ReleaseAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719717(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

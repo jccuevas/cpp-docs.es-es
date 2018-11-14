@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558735"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327426"
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelación en la biblioteca PPL
 
@@ -90,13 +90,12 @@ En el ejemplo siguiente se muestra el primer patrón básico para la cancelació
 La función `cancel_current_task` se inicia; por consiguiente, no necesita regresar de manera explícita de la función o bucle actual.
 
 > [!TIP]
-
->  Como alternativa, puede llamar a la [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) función en lugar de `cancel_current_task`.
+> Como alternativa, puede llamar a la [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) función en lugar de `cancel_current_task`.
 
 Es importante llamar a `cancel_current_task` cuando responda a la cancelación porque pasa la tarea al estado cancelado. Si regresa prematuramente de la función en lugar de llamar a `cancel_current_task`, la operación pasa al estado completado y se ejecuta cualquier continuación basada en valores.
 
 > [!CAUTION]
->  Nunca inicie `task_canceled` desde su código. En su lugar, llame a `cancel_current_task`.
+> Nunca inicie `task_canceled` desde su código. En su lugar, llame a `cancel_current_task`.
 
 Cuando finaliza una tarea en el estado cancelado, la [concurrency::task::get](reference/task-class.md#get) método inicie una excepción [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (A la inversa, [concurrency::task::wait](reference/task-class.md#wait) devuelve [task_status:: Canceled](reference/concurrency-namespace-enums.md#task_group_status) y no produce una excepción.) En el ejemplo siguiente se muestra este comportamiento para una continuación basada en tareas. Siempre se llama a una continuación basada en tareas, incluso cuando se cancela la tarea anterior.
 
@@ -107,8 +106,7 @@ Dado que las continuaciones basadas en valores heredan el token de su tarea ante
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Si no se pasa un token de cancelación a la `task` constructor o la [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) función, esa tarea no es cancelable. Además, debe pasar el mismo token de cancelación al constructor de cualquier tarea anidada (es decir, las tareas que se crean en el cuerpo de otra tarea) para cancelar todas las tareas a la vez.
+> Si no se pasa un token de cancelación a la `task` constructor o la [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) función, esa tarea no es cancelable. Además, debe pasar el mismo token de cancelación al constructor de cualquier tarea anidada (es decir, las tareas que se crean en el cuerpo de otra tarea) para cancelar todas las tareas a la vez.
 
 Puede que desee ejecutar código arbitrario cuando se cancele un token de cancelación. Por ejemplo, si el usuario elige un **cancelar** botón en la interfaz de usuario para cancelar la operación, se podía deshabilitar dicho botón hasta que el usuario inicie otra operación. El ejemplo siguiente muestra cómo usar el [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) método para registrar una función de devolución de llamada que se ejecuta cuando se cancela un token de cancelación.
 
@@ -123,11 +121,10 @@ El documento [paralelismo de tareas](../../parallel/concrt/task-parallelism-conc
 Estos comportamientos no se ven afectados por una tarea con errores (es decir, una que produce una excepción). En este caso, se cancela una continuación basada en valores; no se cancela una continuación basada en tareas.
 
 > [!CAUTION]
->  Una tarea que se crea en otra tarea (es decir, una tarea anidada) no hereda el token de cancelación de la tarea principal. Solo una continuación basada en valores hereda el token de cancelación de la tarea anterior.
+> Una tarea que se crea en otra tarea (es decir, una tarea anidada) no hereda el token de cancelación de la tarea principal. Solo una continuación basada en valores hereda el token de cancelación de la tarea anterior.
 
 > [!TIP]
-
->  Use la [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) método cuando se llama a un constructor o una función que toma un `cancellation_token` objeto y no desea que la operación se pueda cancelar.
+> Use la [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) método cuando se llama a un constructor o una función que toma un `cancellation_token` objeto y no desea que la operación se pueda cancelar.
 
 También puede proporcionar un token de cancelación al constructor de un objeto `task_group` o `structured_task_group`. Un aspecto importante que debe tener en cuenta es que los grupos de tareas secundarios heredan este token de cancelación. Para obtener un ejemplo que muestra este concepto mediante el uso de la [Concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) función que se ejecuta para llamar a `parallel_for`, consulte [Cancelar algoritmos paralelos](#algorithms) más adelante en este documento.
 

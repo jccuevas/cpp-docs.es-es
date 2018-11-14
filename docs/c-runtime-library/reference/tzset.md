@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661765"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330260"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ El **_tzset** función usa la configuración actual de la variable de entorno **
 
 |Parámetro|Descripción|
 |-|-|
-*tzn*|Nombre de la zona horaria de tres letras, por ejemplo PST. Debe especificar el desplazamiento correcto de la hora local a la hora UTC.
-*hh*|Diferencia en horas entre las hora UTC y la hora local. Signo (+) opcional para valores positivos.
-*mm*|Minutos. Separada de *hh* por dos puntos (**:**).
-*ss*|Segundos. Separada de *mm* por dos puntos (**:**).
-*dzn*|Zona del horario de verano de tres letras, por ejemplo PDT. Si el horario de verano nunca está en vigor en el grado de emplazamiento, establezca **TZ** sin un valor para *dzn*. La biblioteca en tiempo de ejecución de C usa las reglas de Estados Unidos para implementar el cálculo del horario de verano (DST).
+| *tzn* | Nombre de la zona horaria de tres letras, por ejemplo PST. Debe especificar el desplazamiento correcto de la hora local a la hora UTC. |
+| *hh* | Diferencia en horas entre las hora UTC y la hora local. Signo (+) opcional para valores positivos. |
+| *mm* | Minutos. Separada de *hh* por dos puntos (**:**). |
+| *ss* | Segundos. Separada de *mm* por dos puntos (**:**). |
+| *dzn* | Zona del horario de verano de tres letras, por ejemplo PDT. Si el horario de verano nunca está en vigor en el grado de emplazamiento, establezca **TZ** sin un valor para *dzn*. La biblioteca en tiempo de ejecución de C usa las reglas de Estados Unidos para implementar el cálculo del horario de verano (DST). |
 
 > [!NOTE]
 > Tenga cuidado al calcular el signo de la diferencia de hora. Dado que la diferencia de hora es el desplazamiento de la hora local respecto a la hora UTC (y no a la inversa), el signo puede ser el contrario de lo que cabría esperar intuitivamente. En el caso de las zonas horarias que van por delante de UTC, la diferencia de hora es negativa; en el caso de las que van por detrás de la hora UTC, la diferencia es positiva.

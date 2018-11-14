@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648102"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525410"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray (clase)
 
@@ -408,7 +408,7 @@ Subyacente `VARIANT` valor en el `COleSafeArray` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
-La función separa los datos en una matriz segura estableciendo el valor de VARTYPE del objeto en VT_EMPTY. Es responsabilidad del llamante liberar la matriz mediante una llamada a la función Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).
+La función separa los datos en una matriz segura estableciendo el valor de VARTYPE del objeto en VT_EMPTY. Es responsabilidad del llamante liberar la matriz mediante una llamada a la función Windows [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear).
 
 En caso de error, la función produce un [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -674,7 +674,7 @@ Puntero a los datos que se va a asignar a la matriz. VT_BSTR, VT_UNKNOWN y VT_DI
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función llama automáticamente a las funciones de Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) y [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) antes y después de asignar el elemento. Si el elemento de datos es una cadena, un objeto o una variante, la función lo copia correctamente y si el elemento existente es una cadena, un objeto o una variante, se borra correctamente.
+Esta función llama automáticamente a las funciones de Windows [SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock) y [SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) antes y después de asignar el elemento. Si el elemento de datos es una cadena, un objeto o una variante, la función lo copia correctamente y si el elemento existente es una cadena, un objeto o una variante, se borra correctamente.
 
 Tenga en cuenta que puede tener múltiples bloqueos en una matriz, por lo que puede colocar elementos en una matriz, mientras que la matriz está bloqueada por otras operaciones.
 

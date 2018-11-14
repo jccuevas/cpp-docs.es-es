@@ -3,12 +3,12 @@ title: Biblioteca de plantillas de Windows Runtime C++ (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 777e8226a12b3e57c136ea54d301ff7c9eb890a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 484718ee044b752c381d54b471a33e58ca470d80
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641940"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520665"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
 
@@ -16,7 +16,7 @@ La biblioteca de plantillas de C++ de Windows Runtime (WRL) es una biblioteca de
 
 > [!NOTE]
 > WRL ahora es reemplazada por C / c++ / WinRT, una proyección de 17 del lenguaje C ++ estándar para Windows Runtime APIs. C++ / c++ / WinRT está disponible en el SDK de Windows 10 desde la versión 1803 en adelante. C++ / c++ / WinRT se implementa completamente en archivos de encabezado y ha diseñado para proporcionar acceso de primera clase a la API de Windows moderna.
-
+>
 > Con C / c++ / WinRT, puede consumir y crear con cualquier compilador de 17 C ++ conforme a los estándares de Windows en tiempo de ejecución APIs. C++ / c++ / WinRT normalmente funcione mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Se seguirá admitiendo C++ / c++ / CX y WRL, pero se recomienda encarecidamente que utilicen las nuevas aplicaciones C++ / c++ / WinRT. Para obtener más información, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 ## <a name="benefits"></a>Ventajas
@@ -65,7 +65,7 @@ Obtenga información sobre cómo utilizar las funciones [Microsoft::WRL::Make](.
 Muestra cómo utilizar componentes personalizados de Windows en tiempo de ejecución desde la WRL mediante la creación de un archivo IDL a partir de los metadatos .winmd.
 
 [Tutorial: Conectar mediante tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
-Se muestra cómo usar el [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.
+Se muestra cómo usar el [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) y [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) interfaces junto con las tareas para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.
 
 [Ejemplo de Bing Maps Trip Optimizer](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 Usa el `HttpRequest` clase que se define en [Tutorial: conectar usando tareas y solicitudes HTTP XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) en el contexto de una aplicación UWP completa.

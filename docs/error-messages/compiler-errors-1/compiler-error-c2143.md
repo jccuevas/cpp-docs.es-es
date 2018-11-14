@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 0a7cbad52697ccedac75af73012f6dc69eec5a25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582616"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520119"
 ---
 # <a name="compiler-error-c2143"></a>Error del compilador C2143
 
@@ -33,7 +33,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 De forma predeterminada, C++ supone que `Ty::PutFuncType` no es una plantilla; por lo tanto, la siguiente `<` se interpreta como un menor-que el inicio de sesión.  Debe indicar al compilador explícitamente que `PutFuncType` es una plantilla para que pueda analizar correctamente el corchete angular de cierre. Para corregir este error, utilice el `template` palabra clave en nombre del tipo dependientes, como se muestra aquí:
@@ -46,7 +45,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 C2143 puede producirse cuando **/CLR** se usa y un `using` directiva tiene un error de sintaxis:

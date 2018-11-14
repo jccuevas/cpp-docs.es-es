@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463393"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525281"
 ---
 # <a name="mfc-classes"></a>Clases de MFC
 
@@ -1012,7 +1012,7 @@ Se utiliza para servidores de edición visual OLE, servidores de automatización
 Se utiliza para un caso especial del cuadro de diálogo Editar vínculos de OLE, que se debe utilizar cuando se necesita actualizar solo los objetos existentes vinculados o incrustados en un documento.
 
 [COleVariant (clase)](../../mfc/reference/colevariant-class.md)<br/>
-Encapsula el tipo de datos [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
+Encapsula el tipo de datos [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 [CPagerCtrl (clase)](../../mfc/reference/cpagerctrl-class.md)<br/>
 La clase `CPagerCtrl` ajusta el control de paginación de Windows, que puede desplazar en la vista una ventana contenida que no cabe en la ventana contenedora.

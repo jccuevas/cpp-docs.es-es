@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497472"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524305"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl (clase)
 
@@ -151,7 +151,7 @@ Un valor HRESULT estándar.
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-Un miembro único y un conjunto opcional de nombres de argumento se asigna a un conjunto correspondiente de entero de envío (DISPID), que se puede usar en las llamadas subsiguientes a [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Un miembro único y un conjunto opcional de nombres de argumento se asigna a un conjunto correspondiente de entero de envío (DISPID), que se puede usar en las llamadas subsiguientes a [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDispatch:: GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) en el SDK de Windows.
+Consulte [IDispatch:: GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) en el SDK de Windows.
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDispatch:: GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) en el SDK de Windows.
+Consulte [IDispatch:: GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) en el SDK de Windows.
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>Parámetros
 
 *PTI*<br/>
-[in] Un puntero a la [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaz que contiene el tipo definido por el usuario.
+[in] Un puntero a la [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaz que contiene el tipo definido por el usuario.
 
 *HRT*<br/>
 [in] Identificador de la descripción del tipo van a recuperar.
@@ -215,7 +215,7 @@ El tipo de variante.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ITypeInfo:: GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
+Consulte [ITypeInfo:: GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

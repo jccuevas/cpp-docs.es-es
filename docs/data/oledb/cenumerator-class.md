@@ -22,21 +22,21 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: c148bdb0a897e19bc3f3aeb7ed40e905073336b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428608"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556684"
 ---
 # <a name="cenumerator-class"></a>CEnumerator (Clase)
 
-Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.
+Usa un objeto de enumerador OLE DB que expone el [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interfaz para devolver un conjunto de filas que describe todos los orígenes de datos y enumeradores.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
-class CEnumerator : 
+class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Comentarios
 
-Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](/previous-versions/windows/desktop/ms715969) interfaz.
+Este nombre se asigna a la `SOURCES_NAME` miembro de la [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85)) interfaz.
 
 ## <a name="getmoniker"></a> CEnumerator:: GetMoniker
 
@@ -90,7 +90,7 @@ Analiza el nombre para mostrar para extraer el componente de la cadena que se pu
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
@@ -108,7 +108,7 @@ Un HRESULT estándar.
 
 ## <a name="open"></a> CEnumerator:: Open
 
-Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200).
+Enlaza el moniker del enumerador, si uno se especifica, recupera el conjunto de filas del enumerador mediante una llamada a [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)).
 
 ### <a name="syntax"></a>Sintaxis
 

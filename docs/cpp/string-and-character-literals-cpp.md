@@ -16,12 +16,12 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 787756dd3e886afb6afa87ed3871158bddcbf3ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614596"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329844"
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 
@@ -49,7 +49,7 @@ int main()
 
     // Raw string literals containing unescaped \ and "
     auto R0 =   R"("Hello \ world")"; // const char*
-    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
+    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
     auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
@@ -106,15 +106,22 @@ Literales de caracteres se codifican de forma diferente en función de su prefij
 
 Hay tres tipos de secuencias de escape: simple, octal, hexadecimal. Las secuencias de escape pueden ser cualquiera de las siguientes:
 
-|Valor|Secuencia de escape|Valor|Secuencia de escape|
-|-----------|---------------------|-----------|---------------------|
-|Nueva línea|\n|Barra diagonal inversa|\\\|
-|Tabulación horizontal|\t|interrogación|? o \\?|
-|Tabulación vertical|\v|Comilla simple|\\'|
-|Retroceso|\b|Comilla doble|\\"|
-|Retorno de carro|\r|Carácter nulo|\0|
-|Avance de página|\f|Octal|\ooo|
-|Alerta (campana)|\a|Hexadecimal|\xhhh|
+|Valor|Secuencia de escape|
+|-----------|---------------------|
+| Nueva línea | \\N |
+| Barra diagonal inversa | \\\\ |
+| Tabulación horizontal | \\t |
+| interrogación | ? o \\? |
+| Tabulación vertical | \\V |
+| Comilla simple | \\' |
+| Retroceso | \\B |
+| Comilla doble | \\" |
+| Retorno de carro | \\R |
+| Carácter nulo | \\0 |
+| Avance de página | \\F |
+| Octal | \\OOO |
+| Alerta (campana) | \\a |
+| Hexadecimal | \\xhhh |
 
 El código siguiente muestra algunos ejemplos de caracteres de escape mediante literales de carácter ordinario. La misma sintaxis de la secuencia de escape es válida para los otros tipos literales de carácter.
 
@@ -253,7 +260,7 @@ Un literal de cadena sin formato es una matriz terminada en null, de cualquier t
 // represents the string: An unescaped \ character
 const char* raw_narrow = R"(An unescaped \ character)";
 const wchar_t* raw_wide = LR"(An unescaped \ character)";
-const char*       raw_utf8  = u8R"(An unescaped \ character)";
+const char*       raw_utf8  = u8R"(An unescaped \ character)";
 const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```

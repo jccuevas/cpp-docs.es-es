@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: d15a1ffda81c41e48eaf4a12c95f83d06c5af900
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f384da3eee0c7bca80d8d6c61f8d8cf0cfaece92
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530278"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327010"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Cómo: Diseñar para la seguridad de las excepciones
 
@@ -26,60 +26,60 @@ Independientemente de cómo una función controla una excepción, para ayudar a 
 Cuando se encapsula la administración de recursos manual en las clases, use una clase que no haga nada más que administrar cada recurso; de lo contrario, podrían producirse pérdidas. Use [inteligente punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.
 
 ```cpp
-// old-style new/delete version
-class NDResourceClass {
+// old-style new/delete version
+class NDResourceClass {
 private:
-    int*   m_p;
-    float* m_q;
+    int*   m_p;
+    float* m_q;
 public:
-    NDResourceClass() : m_p(0), m_q(0) {
-        m_p = new int;
-        m_q = new float;
-    }
+    NDResourceClass() : m_p(0), m_q(0) {
+        m_p = new int;
+        m_q = new float;
+    }
 
-    ~NDResourceClass() {
-        delete m_p;
-        delete m_q;
-    }
-    // Potential leak! When a constructor emits an exception, 
-    // the destructor will not be invoked.   
+    ~NDResourceClass() {
+        delete m_p;
+        delete m_q;
+    }
+    // Potential leak! When a constructor emits an exception,
+    // the destructor will not be invoked.
 };
 
-// shared_ptr version
-#include <memory>
+// shared_ptr version
+#include <memory>
 
-using namespace std;
+using namespace std;
 
-class SPResourceClass {
+class SPResourceClass {
 private:
-    shared_ptr<int> m_p;
-    shared_ptr<float> m_q;
+    shared_ptr<int> m_p;
+    shared_ptr<float> m_q;
 public:
-    SPResourceClass() : m_p(new int), m_q(new float) { }
-    // Implicitly defined dtor is OK for these members, 
-    // shared_ptr will clean up and avoid leaks regardless.
+    SPResourceClass() : m_p(new int), m_q(new float) { }
+    // Implicitly defined dtor is OK for these members,
+    // shared_ptr will clean up and avoid leaks regardless.
 };
 
-// A more powerful case for shared_ptr
+// A more powerful case for shared_ptr
 
-class Shape {
-    // ...
+class Shape {
+    // ...
 };
 
-class Circle : public Shape {
-    // ...
+class Circle : public Shape {
+    // ...
 };
 
-class Triangle : public Shape {
-    // ...
+class Triangle : public Shape {
+    // ...
 };
 
-class SPShapeResourceClass {
+class SPShapeResourceClass {
 private:
-    shared_ptr<Shape> m_p;
-    shared_ptr<Shape> m_q;
+    shared_ptr<Shape> m_p;
+    shared_ptr<Shape> m_q;
 public:
-    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }
+    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }
 };
 ```
 

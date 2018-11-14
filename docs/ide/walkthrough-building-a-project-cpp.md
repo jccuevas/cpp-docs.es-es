@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618368"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524162"
 ---
 # <a name="walkthrough-building-a-project-c"></a>Tutorial: Compilar un proyecto (C++)
 
@@ -27,15 +27,15 @@ En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual
 
 1. En Game.cpp, elimine el punto y coma de la última línea para que tenga un aspecto similar a la instrucción:
 
-    `return 0`
+   `return 0`
 
 1. En la barra de menús, elija **Compilar** > **Compilar solución**.
 
 1. Un mensaje en la ventana **Lista de errores** indica que se produjo un error en la compilación del proyecto. La descripción se parecerá al mensaje de error:
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  Para ver la información de ayuda sobre este error, resáltelo en la ventana **Lista de errores** y después presione la tecla **F1**.
+   Para ver la información de ayuda sobre este error, resáltelo en la ventana **Lista de errores** y después presione la tecla **F1**.
 
 1. Vuelva a agregar el punto y coma al final de la línea que tiene el error de sintaxis:
 
@@ -43,7 +43,7 @@ En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual
 
 1. En la barra de menús, elija **Compilar** > **Compilar solución**.
 
-  Un mensaje en la ventana **Salida** indica que el proyecto se compiló correctamente.
+   Un mensaje en la ventana **Salida** indica que el proyecto se compiló correctamente.
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

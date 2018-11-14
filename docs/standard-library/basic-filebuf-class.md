@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500534"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332652"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf (Clase)
 
@@ -504,11 +504,11 @@ El carácter que se va a insertar en el búfer o `traits_type::eof`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función no se ejecuta correctamente, devuelve `traits_type::eof`. De lo contrario, devuelve **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Si la función no se ejecuta correctamente, devuelve `traits_type::eof`. De lo contrario, devuelve **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*).
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida vuelve a colocar un elemento en el búfer de entrada y luego lo convierte en el elemento actual (al que apunta el siguiente puntero). Si _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), el elemento que se va a devolver es realmente el que ya estaba en el flujo por delante del elemento actual. De lo contrario, ese elemento se sustituye por **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). La función puede devolver un elemento de distintas maneras:
+La función miembro virtual protegida vuelve a colocar un elemento en el búfer de entrada y luego lo convierte en el elemento actual (al que apunta el siguiente puntero). Si  *\_Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), el elemento que se va a devolver es realmente el ya está en el flujo por delante del elemento actual. En caso contrario, ese elemento se sustituye por **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). La función puede devolver un elemento de distintas maneras:
 
 - Si está disponible una posición de devolución y el elemento almacenado es igual a `ch`, puede disminuir el puntero siguiente del búfer de entrada.
 
