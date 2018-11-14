@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594524"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520484"
 ---
 # <a name="general-property-page-project"></a>Página de propiedades General (Proyecto)
 
@@ -110,29 +110,29 @@ Las propiedades de la sección Valores predeterminados del proyecto representan 
 
 - **Tipo de configuración**
 
-   Se puede elegir entre varios tipos de configuración diferentes:
+  Se puede elegir entre varios tipos de configuración diferentes:
 
-   - **Aplicación (.exe)**
+  - **Aplicación (.exe)**
 
-      Muestra el conjunto de herramientas del vinculador (Compilador de C/C++, MIDL, Compilador de recursos, Vinculador, BSCMake, Generador del proxy de Servicios web XML; eventos personalizados de compilación, previos a la compilación, previos a la vinculación y posteriores a la compilación).
+     Muestra el conjunto de herramientas del vinculador (Compilador de C/C++, MIDL, Compilador de recursos, Vinculador, BSCMake, Generador del proxy de Servicios web XML; eventos personalizados de compilación, previos a la compilación, previos a la vinculación y posteriores a la compilación).
 
-   - **Biblioteca dinámica (.dll)**
+  - **Biblioteca dinámica (.dll)**
 
-      Muestra el conjunto de herramientas del vinculador, especifica la opción /DLL del vinculador y agrega la definición _WINDLL a CL.
+     Muestra el conjunto de herramientas del vinculador, especifica la opción /DLL del vinculador y agrega la definición _WINDLL a CL.
 
-   - **Archivo Make**
+  - **Archivo Make**
 
-      Muestra el conjunto de herramientas para los archivos Make (NMake).
+     Muestra el conjunto de herramientas para los archivos Make (NMake).
 
-   - **Biblioteca estática (.lib)**
+  - **Biblioteca estática (.lib)**
 
-      Muestra el conjunto de herramientas de bibliotecario (igual que el conjunto de herramientas del vinculador, con la diferencia de que incluye un bibliotecario en lugar de un vinculador y se omite el Generador del proxy de servicios web XML).
+     Muestra el conjunto de herramientas de bibliotecario (igual que el conjunto de herramientas del vinculador, con la diferencia de que incluye un bibliotecario en lugar de un vinculador y se omite el Generador del proxy de servicios web XML).
 
-   - **Utilidad**
+  - **Utilidad**
 
-      Muestra el conjunto de herramientas de utilidades (MIDL; eventos personalizados de compilación, previos a la compilación, previos a la vinculación y posteriores a la compilación).
+     Muestra el conjunto de herramientas de utilidades (MIDL; eventos personalizados de compilación, previos a la compilación, previos a la vinculación y posteriores a la compilación).
 
-   Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
+  Para obtener acceso a esta propiedad mediante programación, vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>.
 
 - **Uso de MFC**
 
