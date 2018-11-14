@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542017"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524006"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Proyectos Abrir carpeta en Visual C++
 
@@ -33,7 +33,8 @@ Puede usar cualquier sistema de compilación en Visual C++ y seguir disfrutando 
 ## <a name="configuring-open-folder-projects"></a>Configuración de proyectos Abrir carpeta
 
 Puede personalizar un proyecto Abrir carpeta a través de tres archivos JSON:
-|||
+
+| | |
 |-|-|
 |CppProperties.json|Especifique la información de configuración personalizada para la exploración. Cree este archivo, si es necesario, en la carpeta raíz del proyecto.|
 |launch.vs.json|Especifique argumentos de la línea de comandos. Se accede a través del elemento del menú contextual del **Explorador de soluciones** **Configuración de depuración e inicio**.|
@@ -58,6 +59,7 @@ IntelliSense y el comportamiento de exploración dependen en parte de la configu
   ]
 }
 ```
+
 Una configuración puede tener cualquiera de las propiedades siguientes:
 
 |||
@@ -135,6 +137,7 @@ Se pueden definir variables de entorno personalizadas en CppProperties.json de f
   ]
 }
 ```
+
 También se puede definir una propiedad **environments** dentro de una configuración, para que solo se aplique a esa configuración y reemplace las variables globales del mismo nombre. En el ejemplo siguiente, la configuración x64 define una variable **INCLUDE** local que invalida el valor global:
 
 ```json
@@ -186,6 +189,7 @@ Todas las variables de entorno personalizadas y predeterminadas también están 
 #### <a name="macros"></a>Macros
 
 Dentro de CppProperties.json tiene acceso a las macros integradas siguientes:
+
 |||
 |-|-|
 |`${workspaceRoot}`| la ruta de acceso completa a la carpeta del área de trabajo.|
@@ -258,11 +262,13 @@ Esto crea (o abre) el archivo `tasks.vs.json` en la carpeta .vs que Visual Studi
   ]
 }
 ```
+
 Después de guardar tasks.vs.json, puede hacer clic con el botón derecho en cualquier archivo .cpp de la carpeta, seleccionar **Mostrar nombre de archivo** en el menú contextual y ver el nombre de archivo mostrado en la ventana Salida.
 
 #### <a name="appliesto"></a>appliesTo
 
 Puede crear tareas para cualquier archivo o carpeta si especifica su nombre en el campo `appliesTo`, por ejemplo `"appliesTo" : "hello.cpp"`. Las máscaras de archivo siguientes se pueden usar como valores:
+
 |||
 |-|-|
 |`"*"`| tarea disponible para todos los archivos y carpetas del área de trabajo|
@@ -340,4 +346,3 @@ Al guardar este archivo, el nombre de la configuración nueva aparece en la list
 ## <a name="see-also"></a>Vea también
 
 [IDE y herramientas para desarrollo de Visual C++](ide-and-tools-for-visual-cpp-development.md)
-

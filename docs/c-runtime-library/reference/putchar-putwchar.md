@@ -28,12 +28,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 69ae5d7a24d7cf440d1dfb5ad716ee106f91576c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483364"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327062"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -57,7 +57,7 @@ Carácter que se va a escribir.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, **putc** y **putchar** devolver ** EOF`; **putwc` y **putwchar** devolver **WEOF**. Para las cuatro rutinas, use [ferror](ferror.md) o [feof](feof.md) para comprobar si hay un error o una condición de final de archivo. Si se pasa un puntero nulo para *secuencia*, estas funciones generan una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** o **WEOF** y establecer **errno** a **EINVAL**.
+Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, **putc** y **putchar** devolver **EOF**; **putwc** y **putwchar** devolver **WEOF**. Para las cuatro rutinas, use [ferror](ferror.md) o [feof](feof.md) para comprobar si hay un error o una condición de final de archivo. Si se pasa un puntero nulo para *secuencia*, estas funciones generan una excepción de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, devuelven **EOF** o **WEOF** y establecer **errno** a **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644332"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524565"
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
 
@@ -657,7 +657,7 @@ Para usar correctamente esta función:
 - El archivo IMAGEHLP. Archivo DLL debe estar en la ruta de acceso. Si no tiene este archivo DLL, la función mostrará un mensaje de error. Consulte [bibliotecas de Ayuda de la imagen](/windows/desktop/Debug/image-help-library) para obtener información sobre el conjunto de funciones proporcionado IMAGEHLP.
 
 - Los módulos que tienen los marcos en la pila deben incluir información de depuración. Si no contienen información de depuración, la función seguirá generando un seguimiento de pila, pero el seguimiento será menos detallado.
-### <a name="requirements"></a>Requisitos
+  ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
 

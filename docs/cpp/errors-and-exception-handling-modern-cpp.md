@@ -3,12 +3,12 @@ title: Controlar errores y excepciones (C++ moderno)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668000"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523293"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Controlar errores y excepciones (C++ moderno)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 Las excepciones de C++ son similares a las de lenguajes como C# y Java. En el **intente** bloquear, si es una excepción *produce* será *detectada* por los primeros asociados **catch** bloque cuyo tipo coincide con el de la excepción. En otras palabras, la ejecución salta de la **throw** instrucción a la **catch** instrucción. Si no se encuentra ningún bloque catch utilizable, `std::terminate` se invoca y se cierra el programa. En C++, se puede producir cualquier tipo; Sin embargo, recomendamos que lance un tipo que deriva directa o indirectamente de `std::exception`. En el ejemplo anterior, el tipo de excepción, [invalid_argument](../standard-library/invalid-argument-class.md), se define en la biblioteca estándar en el [ \<stdexcept >](../standard-library/stdexcept.md) archivo de encabezado. C++ no proporciona y no requiere un **finalmente** bloque para asegurarse de que todos los recursos se liberan si se produce una excepción. La adquisición de recursos es la expresión de inicialización (RAII), que utiliza punteros inteligentes, proporciona la funcionalidad necesaria para la limpieza de recursos. Para obtener más información, consulte [Cómo: diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md). Para obtener información sobre el mecanismo de desenredo de pila en C++, vea [excepciones y desenredo de pila](../cpp/exceptions-and-stack-unwinding-in-cpp.md).

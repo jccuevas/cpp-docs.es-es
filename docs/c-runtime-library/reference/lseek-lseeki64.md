@@ -29,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 19a312bcc3cdeea82bcebce6da95e26ef88992b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541692"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326100"
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 
@@ -78,9 +78,9 @@ El **_lseek** función mueve el puntero de archivo asociado *fd* a una nueva ubi
 
 |*origen* valor||
 |-|-|
-**SEEK_SET**|Inicio del archivo.
-**SEEK_CUR**|Posición actual del puntero de archivo.
-**SEEK_END**|Final de archivo.
+| **SEEK_SET** | Inicio del archivo. |
+| **SEEK_CUR** | Posición actual del puntero de archivo. |
+| **SEEK_END** | Final de archivo. |
 
 Puede usar **_lseek** a colocar el puntero en cualquier lugar en un archivo o más allá del final del archivo.
 

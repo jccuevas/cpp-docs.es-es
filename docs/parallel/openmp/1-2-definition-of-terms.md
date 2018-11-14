@@ -2,12 +2,12 @@
 title: 1.2 Definición de términos
 ms.date: 11/04/2016
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-ms.openlocfilehash: ac117a03f784e617e5db246f4bda28e350d2e7a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cd8bcc47a7fc9d1d0683c220ccd5ef1edac2b4e9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597215"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326035"
 ---
 # <a name="12-definition-of-terms"></a>1.2 Definición de términos
 
@@ -63,7 +63,7 @@ Los siguientes términos se usan en este documento:
 
 - bloque estructurado
 
-   Un bloque estructurado es una instrucción (simple o compuesta) que tiene una sola entrada y una salida única. Instrucción no es un bloque estructurado si hay un salto dentro o fuera de esa instrucción (incluidos una llamada a **longjmp**(3C) o el uso de **throw**, pero una llamada a **salir** se permite). Una instrucción compuesta es un bloque estructurado si su ejecución siempre comienza en la apertura **{** y siempre termina en el cierre **}**. Una instrucción de expresión, la instrucción de selección, la instrucción de iteración, o **intente** bloque es un bloque estructurado si obtuvo la correspondiente instrucción compuesta escribiéndolo en **{** y **}** sería un bloque estructurado. Una instrucción de salto, la instrucción con etiqueta o la instrucción de declaración no es un bloque estructurado.
+   Un bloque estructurado es una instrucción (simple o compuesta) que tiene una sola entrada y una salida única. Instrucción no es un bloque estructurado si hay un salto dentro o fuera de esa instrucción (incluidos una llamada a **longjmp**(3C) o el uso de **throw**, pero una llamada a **salir** se permite). Una instrucción compuesta es un bloque estructurado si su ejecución siempre comienza en la apertura **{** y siempre termina en el cierre **}**. Una instrucción de expresión, la instrucción de selección, la instrucción de iteración, o **intente** bloque es un bloque estructurado si obtuvo la correspondiente instrucción compuesta escribiéndolo en **{** y **}**  sería un bloque estructurado. Una instrucción de salto, la instrucción con etiqueta o la instrucción de declaración no es un bloque estructurado.
 
 - Equipo
 

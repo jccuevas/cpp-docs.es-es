@@ -1,6 +1,6 @@
 ---
 title: CRect (clase)
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471492"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520041"
 ---
 # <a name="crect-class"></a>CRect (clase)
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator! =](#operator_neq)|Determina si `CRect` no es igual a un rectángulo.|
 |[CRect::operator &amp;](#operator_amp)|Crea la intersección de `CRect` y un rectángulo y devuelve el resultado `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Conjuntos de `CRect` igual a la intersección de `CRect` y un rectángulo.|
-|[CRect::operator |](#operator_or)|Crea la unión de `CRect` y un rectángulo y devuelve el resultado `CRect`.|
-|[CRect::operator |=](#operator_or_eq)|Conjuntos de `CRect` igual que la unión de `CRect` y un rectángulo.|
+|[CRect::operator&#124;](#operator_or)|Crea la unión de `CRect` y un rectángulo y devuelve el resultado `CRect`.|
+|[CRect::operator &#124;=](#operator_or_eq)|Conjuntos de `CRect` igual que la unión de `CRect` y un rectángulo.|
 |[CRect::operator +](#operator_add)|Agrega los desplazamientos especificados a `CRect` o infla `CRect` y devuelve el resultado `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Agrega los desplazamientos especificados a `CRect` o infla `CRect`.|
 |[CRect::operator =](#operator_eq)|Copia las dimensiones de un rectángulo a `CRect`.|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 Un `CRect` objeto se puede pasar como un parámetro de función siempre que sea un `RECT` estructura, `LPCRECT`, o `LPRECT` se pueden pasar.
 
 > [!NOTE]
->  Esta clase se deriva el `tagRECT` estructura. (El nombre `tagRECT` es un nombre menos usados para la `RECT` estructura.) Esto significa que los miembros de datos (`left`, `top`, `right`, y `bottom`) de la `RECT` estructura son miembros de datos accesibles de `CRect`.
+> Esta clase se deriva el `tagRECT` estructura. (El nombre `tagRECT` es un nombre menos usados para la `RECT` estructura.) Esto significa que los miembros de datos (`left`, `top`, `right`, y `bottom`) de la `RECT` estructura son miembros de datos accesibles de `CRect`.
 
 Un `CRect` contiene variables de miembro que definen los puntos de la parte superior izquierda e inferior derecha de un rectángulo.
 
@@ -443,11 +443,11 @@ Distinto de cero si los dos rectángulos tienen el mismo superior, izquierdo, in
 ### <a name="example"></a>Ejemplo
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ El valor resultante puede ser negativo.
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -578,7 +574,6 @@ La intersección es el rectángulo más grande contenido en ambos rectángulos e
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ Un rectángulo está vacío si el ancho o alto es 0 o negativo. Difiere de `IsRe
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ Difiere de `IsRectEmpty`, que determina si el rectángulo está vacío.
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ Coordenada x absoluta de la esquina superior izquierda del rectángulo.
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ Un `POINT` estructura que especifica la esquina superior izquierda absoluta del 
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);

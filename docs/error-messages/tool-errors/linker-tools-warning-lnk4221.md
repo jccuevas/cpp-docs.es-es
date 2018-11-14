@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4221
 ms.assetid: 8e2eb2de-9532-4b85-908a-8c9ff5c4cccb
-ms.openlocfilehash: b44ba8f0b88beda3e81d9baf59e5348ad4949b01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baea8643001c550aeb3cb35dc6fe414e4330c0c1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460975"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523473"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>Advertencia de las herramientas del vinculador LNK4221
 
@@ -31,7 +31,6 @@ int function()
 {
    return 0;
 }
-
 ```
 
 Para compilar los archivos y crea dos archivos de objeto, ejecute **cl /c a.cpp b.cpp** en un símbolo del sistema. Si vincula los archivos objeto ejecutando **vincular/lib out a.obj b.obj**, recibirá la advertencia LNK4221. Si vincula los objetos mediante la ejecución de **vincular/lib out b.obj a.obj**, no recibirá una advertencia.

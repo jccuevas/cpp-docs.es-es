@@ -8,12 +8,12 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 8a3155e7d9c2cc08ca0f3fe77d40d95d8ea447fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5a0b24bb08a9485b2d212058fa8f0bd82e5842
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561387"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326633"
 ---
 # <a name="ifexists-statement"></a>__if_exists (Instrucción)
 
@@ -22,7 +22,7 @@ El **__if_exists** instrucción comprueba si existe el identificador especificad
 ## <a name="syntax"></a>Sintaxis
 
 ```
-__if_exists ( identifier ) { 
+__if_exists ( identifier ) {
 statements
 };
 ```

@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648674"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333363"
 ---
 # <a name="iosbase-class"></a>ios_base (Clase)
 
@@ -914,7 +914,7 @@ Las marcas de formato anterior
 
 ### <a name="remarks"></a>Comentarios
 
-La primera función miembro llama eficazmente a [marcas](#flags)(_ *máscara* &#124; \_ *marcas*) (conjunto de bits seleccionados) y, a continuación, devuelve las marcas de formato anterior. La segunda función miembro llama eficazmente a **marcas**(\_ *máscara* **& fmtfl, marcas de & ~**`_Mask`) (reemplace bits seleccionadas en una máscara) y, a continuación, devuelve las marcas de formato anterior.
+La primera función miembro llama eficazmente a [marcas](#flags)(  *\_máscara* &#124;  *\_marcas*) (conjunto de bits seleccionados) y, a continuación, devuelve el marcas de formato anterior. La segunda función miembro llama eficazmente a `flags(_Mask & fmtfl, flags & ~_Mask)` (reemplace bits seleccionadas en una máscara) y, a continuación, devuelve las marcas de formato anterior.
 
 ### <a name="example"></a>Ejemplo
 

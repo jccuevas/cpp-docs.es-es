@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: 4ca3feb2a71efa60229afdbf918109a5d5d59cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a76ecaf78b117b0c1acabd9fcd50c9ae0f73b98
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539599"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332067"
 ---
 # <a name="compiler-error-c2338"></a>Error del compilador C2338
 
@@ -21,11 +21,11 @@ Este error puede deberse a un `static_assert` error durante la compilación. El 
 
 Este mensaje de error también puede generarse mediante proveedores externos al compilador. En la mayoría de los casos, estos errores notificados por un proveedor de atributos de archivo DLL, como ATLPROV. Algunas formas habituales de este mensaje se incluyen:
 
-> '*atributo*' proveedor de atributos Atl: error ATL*número* *mensaje*
+- '*atributo*' proveedor de atributos Atl: error ATL*número* *mensaje*
 
-> Uso incorrecto del atributo '*atributo*'
+- Uso incorrecto del atributo '*atributo*'
 
-> '*uso*': formato incorrecto para el atributo 'usage'
+- '*uso*': formato incorrecto para el atributo 'usage'
 
 Estos errores suelen ser irrecuperables y pueden ir seguidos de un error irrecuperable del compilador.
 

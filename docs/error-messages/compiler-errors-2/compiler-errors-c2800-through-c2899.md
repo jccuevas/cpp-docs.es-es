@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601115"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332080"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>Errores de compilador C2800 a C2899
 
@@ -74,7 +74,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2812](compiler-error-c2812.md)|no se admite #import con/CLR: pure y/CLR: safe|
 |[Error del compilador C2813](compiler-error-c2813.md)|No se admite #import con /MP|
 |[Error del compilador C2814](compiler-error-c2814.md)|'*miembro*': un tipo nativo no puede anidarse dentro de un tipo administrado o WinRT '*clase*'|
-|[Error del compilador C2815](compiler-error-c2815.md)|'operator delete': el primer parámetro formal debe ser ' void *', pero '* tipo *' se usó|
+|[Error del compilador C2815](compiler-error-c2815.md)|'operator delete': el primer parámetro formal debe ser ' void \*', pero '*tipo*' se usó|
 |C2816 de Error del compilador|Obsoleto.|
 |[Error del compilador C2817](compiler-error-c2817.md)|tipo de valor devuelto para 'operator delete' debe ser 'void'|
 |[Error del compilador C2818](compiler-error-c2818.md)|aplicación de sobrecargado 'operator ->' es recursiva mediante el tipo '*clase*'|
@@ -83,7 +83,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error del compilador C2821](compiler-error-c2821.md)|primer parámetro formal para 'operator new' debe ser 'size_t'|
 |C2822 de Error del compilador|no se admite desenredo local en esta plataforma|
 |[Error del compilador C2823](compiler-error-c2823.md)|un definición de tipo plantilla/genérico no es válido|
-|[Error del compilador C2824](compiler-error-c2824.md)|tipo de valor devuelto para 'operator new' debe ser ' void *'|
+|[Error del compilador C2824](compiler-error-c2824.md)|tipo de valor devuelto para 'operator new' debe ser ' void \*'|
 |[Error del compilador C2825](compiler-error-c2825.md)|'*identificador*': debe ser una clase o espacio de nombres cuando seguido de '::'|
 |Error del compilador C2826|Obsoleto.|
 |[Error del compilador C2827](compiler-error-c2827.md)|' operador *operador*' no se puede invalidar globalmente por un tipo unario|

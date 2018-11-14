@@ -33,12 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554181"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326269"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp, _wmktemp
 
@@ -82,7 +82,7 @@ El **_mktemp** función crea un nombre de archivo único modificando el *nametem
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-El *nametemplate no* argumento tiene el formato *base ** XXXXXX*, donde *base* es la parte del nuevo nombre de archivo que se proporciona y cada X es un marcador de posición de un carácter proporcionado por **_mktemp**. Cada carácter marcador de posición de *nametemplate no* debe ser una x mayúscula. **_mktemp** conserva *base* y reemplaza la primera X final por un carácter alfabético. **_mktemp** reemplaza los siguientes modificadores x con un valor de cinco dígitos; este valor es un número único que identifica la llamada a proceso, o en programas multiproceso, el subproceso de llamada.
+El *nametemplate no* argumento tiene el formato *base*XXXXXX, donde *base* es la parte del nuevo nombre de archivo que se proporciona y cada X es un marcador de posición de un carácter proporcionado por **_mktemp**. Cada carácter marcador de posición de *nametemplate no* debe ser una x mayúscula. **_mktemp** conserva *base* y reemplaza la primera X final por un carácter alfabético. **_mktemp** reemplaza los siguientes modificadores x con un valor de cinco dígitos; este valor es un número único que identifica la llamada a proceso, o en programas multiproceso, el subproceso de llamada.
 
 Cada llamada correcta a **_mktemp** modifica *nametemplate no*. En cada llamada posterior realizada desde el mismo proceso o subproceso con el mismo *nametemplate no* argumento, **_mktemp** busca los nombres de archivo que coinciden con los nombres devueltos por **_mktemp** en llamadas anteriores. Si no existe ningún archivo para un determinado nombre **_mktemp** devuelve ese nombre. Si existen archivos de todos los nombres devuelven previamente, **_mktemp** crea un nuevo nombre si se reemplaza el carácter alfabético que emplea en el nombre devuelto anteriormente por la siguiente letra minúscula disponible, en orden, de 'a' a 'z'. Por ejemplo, si *base* es:
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 49955f12c5e9d4105d9fdbe0ec16bbd302672546
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468736"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523356"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividad abierta de bases de datos (ODBC)
 
 La biblioteca Microsoft Foundation Classes (MFC) proporciona clases para la programación con ODBC (Open Database Connectivity, Conectividad abierta de bases de datos). A partir de Visual Studio 2015 y ODBC de SQL Server 2012 es la mejor manera de conectarse a orígenes de datos SQL.
 
-Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK en MSDN.
+Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK en MSDN.
 
 
 ## <a name="in-this-section"></a>En esta sección
@@ -58,7 +58,7 @@ Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [O
 
 ## <a name="odbc-database-tasks"></a>Tareas de base de datos ODBC
 
-Estas tareas se basan en MFC [ODBC](odbc-basics.md) clases. Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK.
+Estas tareas se basan en MFC [ODBC](odbc-basics.md) clases. Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
 
 - [Instalar y empezar a trabajar con ODBC](installing-and-getting-started-with-odbc.md)
 

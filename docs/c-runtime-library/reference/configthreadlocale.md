@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648388"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326048"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ El estado de configuración regional por subproceso anterior (**_DISABLE_PER_THR
 
 El **_configurethreadlocale** función se utiliza para controlar el uso de configuraciones regionales específicas del subproceso. Utilice uno de estos *per_thread_locale_type* opciones para especificar o determinar el estado de la configuración regional por subproceso:
 
-|||
+| Opción | Descripción |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|Hace que el subproceso actual use una configuración regional específica del subproceso. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a la configuración regional de sólo del subproceso.
-**_DISABLE_PER_THREAD_LOCALE**|Hace que el subproceso actual use la configuración regional global. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a otros subprocesos mediante la configuración regional global.
-**0**|Recupera el valor actual de este subproceso concreto.
+| **_ENABLE_PER_THREAD_LOCALE** | Hace que el subproceso actual use una configuración regional específica del subproceso. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a la configuración regional de sólo del subproceso. |
+| **_DISABLE_PER_THREAD_LOCALE** | Hace que el subproceso actual use la configuración regional global. Las llamadas subsiguientes a **setlocale** en este subproceso afectan a otros subprocesos mediante la configuración regional global. |
+| **0** | Recupera el valor actual de este subproceso concreto. |
 
 Estas funciones afectan al comportamiento de **setlocale**, **_tsetlocale**, **_wsetlocale**, y **_setmbcp**. Cuando la configuración regional por subproceso está deshabilitado, cualquier llamada subsiguiente a **setlocale** o **_wsetlocale** cambia la configuración regional de todos los subprocesos que utilizan la configuración regional global. Cuando se habilita la configuración regional por subproceso, **setlocale** o **_wsetlocale** solo afecta a la configuración regional del subproceso actual.
 

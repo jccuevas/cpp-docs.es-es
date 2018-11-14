@@ -4,12 +4,12 @@ ms.date: 10/18/2018
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 07c32e30aa36d6e59122340da0b1026e7025780d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4f7b3931dc8ed8bd7206c7f30ce4b65633f08b6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612503"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518989"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Proyectos de CMake en Visual C++
 
@@ -38,8 +38,11 @@ A partir de Visual Studio 2017, en el componente **Herramientas de Visual C++ pa
 Al seleccionar **Archivo | Abrir | Carpeta** para abrir una carpeta que contiene un archivo CMakeLists.txt, sucede lo siguiente:
 
 - Visual Studio agrega un elemento de menú **CMake** al menú principal, con los comandos para ver y modificar scripts de CMake.
+
 - En el **Explorador de soluciones** se muestra la estructura de carpetas y archivos.
+
 - Visual Studio ejecuta CMake.exe y genera la caché de CMake para la *configuración* predeterminada, que es Debug x86. La línea de comandos de CMake se muestra en la **ventana de Salida**, junto con una salida adicional de CMake.  **Visual Studio 2017 versión 15.7 y versiones posteriores**: la generación automática de caché se puede deshabilitar en el cuadro de diálogo **Herramientas | Opciones | CMake | General**.
+
 - En segundo plano, Visual Studio empieza a indexar los archivos de código fuente para habilitar IntelliSense, la información de exploración, la refactorización y así sucesivamente. Mientras trabaja, Visual Studio supervisa los cambios en el editor y también en el disco para mantener sincronizado su índice con los orígenes.
 
 Puede abrir carpetas que contengan cualquier número de proyectos de CMake. Visual Studio detecta y configura todos los archivos CMakeLists.txt "raíz" en el área de trabajo. Las operaciones de CMake (configurar, compilar, depurar) así como IntelliSense y la exploración de C++ están disponibles para todos los proyectos de CMake del área de trabajo.
@@ -77,7 +80,9 @@ No se importa todo el contenido de la caché.  Propiedades como el generador y l
 Para compilar un proyecto de CMake, tienes estas opciones:
 
 1. Seleccione el destino en la lista desplegable **Depurar** y presione **F5**, o bien haga clic en el botón **Ejecutar** (el triángulo de color verde). Primero se compila el proyecto de manera automática, como una solución de Visual Studio.
+
 1. Haga clic con el botón derecho en CMakeLists.txt y seleccione **Compilar** en el menú contextual. Si tiene varios destinos en la estructura de carpetas, puede elegir compilarlos todos o solo un destino específico.
+
 1. en el menú principal, seleccione **Compilar | Compilar solución** (**F7** o **Ctrl+Mayús+B**). Asegúrese de que hay un destino de CMake seleccionado en la lista desplegable **Elemento de inicio** de la barra de herramientas **General**.
 
 ![Comando Compilar del menú de CMake](media/cmake-build-menu.png "Comando Compilar del menú de CMake")
@@ -182,20 +187,25 @@ En el ejemplo siguiente se muestra un ejemplo de configuración, que se puede us
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
 1. **name**: el nombre que aparece en la lista desplegable de configuración de C++. Este valor de propiedad también se puede usar como una macro, `${name}`, para especificar otros valores de propiedad. Para obtener un ejemplo, vea la definición de **buildRoot** en CMakeSettings.json.
 
 1. **generator**: se asigna al modificador **-G** y especifica el generador que se va a usar. Esta propiedad también se puede usar como una macro, `${generator}`, para especificar otros valores de propiedad. En la actualidad, Visual Studio admite los generadores de CMake siguientes:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+   - "Ninja"
+
+   - "Visual Studio 14 2015"
+
+   - "Visual Studio 14 2015 ARM"
+
+   - "Visual Studio 14 2015 Win64"
+
+   - "Visual Studio 15 2017"
+
+   - "Visual Studio 15 2017 ARM"
+
+   - "Visual Studio 15 2017 Win64"
 
 Como Ninja está diseñado para velocidades de compilación rápidas en lugar de flexibilidad y funcionamiento, se establece como el valor predeterminado. Pero es posible que algunos proyectos de CMake no se puedan generar correctamente mediante Ninja. Si esto ocurre, puede indicar a CMake que en su lugar genere un proyecto de Visual Studio.
 
@@ -232,11 +242,17 @@ CMakeSettings.json también admite el consumo de variables de entorno en cualqui
 También se puede acceder a las macros integradas dentro de este archivo:
 
 - `${workspaceRoot}`: proporciona la ruta de acceso completa de la carpeta de área de trabajo.
+
 - `${workspaceHash}`: hash de ubicación del área de trabajo; es útil para crear un identificador único para el área de trabajo actual (por ejemplo, para usarlo en las rutas de acceso de carpeta).
+
 - `${projectFile}`: la ruta de acceso completa del archivo CMakeLists.txt raíz.
+
 - `${projectDir}`: la ruta de acceso completa de la carpeta del archivo CMakeLists.txt raíz.
+
 - `${thisFile}`: la ruta de acceso completa del archivo CMakeSettings.json.
+
 - `${name}`: el nombre de la configuración
+
 - `${generator}`: el nombre del generador de CMake que se usa en esta configuración.
 
 ### <a name="ninja-command-line-arguments"></a>Argumentos de la línea de comandos de Ninja
@@ -393,9 +409,11 @@ Si necesita más información sobre el estado de caché de CMake para diagnostic
 ![Compilación de archivo único de CMake](media/cmake-single-file-compile.png)
 
 ## <a name="run-cmake-from-the-command-line"></a>Ejecutar CMake desde la línea de comandos
+
 Si ha instalado CMake desde el instalador de Visual Studio, puede ejecutarlo desde la línea de comandos siguiendo estos pasos:
 
 1. Ejecute el vsdevcmd.bat adecuado (x86/x64). Vea [Compilar en la línea de comandos](../build/building-on-the-command-line.md) para obtener más información.
-1. Cambie a la carpeta de salida.
-1. Ejecute CMake para compilar o configurar la aplicación.
 
+1. Cambie a la carpeta de salida.
+
+1. Ejecute CMake para compilar o configurar la aplicación.

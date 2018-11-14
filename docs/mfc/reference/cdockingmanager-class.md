@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 6a920c92a0a3b3948ad89e31cfaf317f54ad6724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438046"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519989"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager (clase)
 
@@ -280,13 +280,13 @@ Las sugerencias siguientes se aplican a `CDockingManager` objetos:
 
 - [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) admite estos modos de acoplamiento:
 
-    - `AFX_DOCK_TYPE::DT_IMMEDIATE`
+  - `AFX_DOCK_TYPE::DT_IMMEDIATE`
 
-    - `AFX_DOCK_TYPE::DT_STANDARD`
+  - `AFX_DOCK_TYPE::DT_STANDARD`
 
-    - `AFX_DOCK_TYPE::DT_SMART`
+  - `AFX_DOCK_TYPE::DT_SMART`
 
-   Estos modos de acoplamiento se definen mediante [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) y se establecen mediante una llamada a [CDockingManager::SetDockingMode](#setdockingmode).
+  Estos modos de acoplamiento se definen mediante [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) y se establecen mediante una llamada a [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Si desea crear un panel no flotante, invariable, llame a la [CDockingManager::AddPane](#addpane) método. Este método registra el panel con el Administrador de acoplamiento, que es responsable del diseño del panel.
 

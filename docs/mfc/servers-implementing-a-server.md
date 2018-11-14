@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566766"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518968"
 ---
 # <a name="servers-implementing-a-server"></a>Servidores: Implementar un servidor
 
@@ -22,11 +22,11 @@ El código del servidor que proporciona el Asistente para la aplicación se divi
 
 - Definir recursos de servidor:
 
-   - El recurso de menú que se utiliza cuando el servidor está modificando un elemento incrustado en su propia ventana.
+  - El recurso de menú que se utiliza cuando el servidor está modificando un elemento incrustado en su propia ventana.
 
-   - Los recursos de menú y barra de herramientas usa cuando el servidor está activo en su lugar.
+  - Los recursos de menú y barra de herramientas usa cuando el servidor está activo en su lugar.
 
-   Para obtener más información acerca de estos recursos, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
+  Para obtener más información acerca de estos recursos, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
 
 - Definir una clase de elemento derivado de `COleServerItem`. Para obtener más información sobre los elementos del servidor, consulte [servidores: elementos del servidor](../mfc/servers-server-items.md).
 

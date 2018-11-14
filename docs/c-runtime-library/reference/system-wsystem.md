@@ -29,12 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624671"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328661"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -65,10 +65,10 @@ Si *comando* es **NULL** y se encuentra el intérprete de comandos, devuelve un 
 
 |||
 |-|-|
-**E2BIG**|La lista de argumentos (que es dependiente del sistema) es demasiado grande.
-**ENOENT**|No se encuentra el intérprete de comandos.
-**ENOEXEC**|El archivo de intérprete de comandos no se puede ejecutar porque el formato no es válido.
-**ENOMEM**|No hay suficiente memoria disponible para ejecutar el comando, la memoria disponible se ha dañado o existe un bloque no válido que indica que el proceso que realiza la llamada no se asignó correctamente.
+| **E2BIG** | La lista de argumentos (que es dependiente del sistema) es demasiado grande. |
+| **ENOENT** | No se encuentra el intérprete de comandos. |
+| **ENOEXEC** | El archivo de intérprete de comandos no se puede ejecutar porque el formato no es válido. |
+| **ENOMEM** | No hay suficiente memoria disponible para ejecutar el comando, la memoria disponible se ha dañado o existe un bloque no válido que indica que el proceso que realiza la llamada no se asignó correctamente. |
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos códigos de retorno.
 

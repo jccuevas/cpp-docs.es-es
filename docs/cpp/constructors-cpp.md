@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460884"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523161"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -127,7 +127,6 @@ Puede evitar que el compilador genere un constructor predeterminado implícito s
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 Un constructor predeterminado generado por el compilador se definirá como elimina si ningún miembro de clase no puede construir de forma predeterminada. Por ejemplo, todos los miembros de tipo de clase y sus miembros de tipo de clase, deben tener un constructor predeterminado y los destructores que son accesibles. Escribe todos los miembros de datos de referencia, así como **const** los miembros deben tener un inicializador de miembro predeterminado.

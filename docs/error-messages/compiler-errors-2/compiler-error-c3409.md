@@ -1,21 +1,23 @@
 ---
 title: Error del compilador C3409
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - C3409
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 2a677da40b64a19c4d2a27436344eec7adb80c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600894"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330091"
 ---
 # <a name="compiler-error-c3409"></a>Error del compilador C3409
 
-no se permite el bloque de atributos vacío
+> no se permite el bloque de atributos vacío
+
+## <a name="remarks"></a>Comentarios
 
 Los corchetes se interpretaron en el compilador como un [atributo](../../windows/cpp-attributes-reference.md) bloque, pero no hay atributos que se han encontrado.
 
@@ -29,19 +31,15 @@ El compilador puede generar este error cuando utilice corchetes como parte de la
 
    1. Quite el bloque de atributos.
 
-1. Si los corchetes forman parte de una expresión lambda:
+1. Si los corchetes forman parte de una expresión lambda, asegúrese de que la expresión lambda sigue las reglas de sintaxis válida.
 
-   1. Asegúrese de que la expresión lambda sigue las reglas de sintaxis válida.
-
-         Para obtener más información sobre la sintaxis de expresiones lambda, vea [sintaxis de expresión Lambda](../../cpp/lambda-expression-syntax.md).
-
-    2.
+   Para obtener más información sobre la sintaxis de expresiones lambda, vea [sintaxis de expresión Lambda](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="example"></a>Ejemplo
 
 El ejemplo siguiente genera el error C3409.
 
-```
+```cpp
 // C3409.cpp
 // compile with: /c
 #include <windows.h>
@@ -60,7 +58,7 @@ class b : public x {};
 
 En el ejemplo siguiente genera el error C3409 porque una expresión lambda usa la `mutable` especificación, pero no proporciona una lista de parámetros. El compilador no puede determinar si los corchetes son parte de la definición de una expresión lambda o de un bloque de atributos.
 
-```
+```cpp
 // C3409b.cpp
 
 int main()

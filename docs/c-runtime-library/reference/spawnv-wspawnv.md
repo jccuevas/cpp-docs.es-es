@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-ms.openlocfilehash: 4f6e24135a040e0b081016041192d2ae196d1037
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5939b3665bef4d07a4eaca262c38d4a20b83aed5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576755"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326854"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv, _wspawnv
 
@@ -76,11 +76,11 @@ El valor devuelto de un valor sincrónico **_spawnv** o **_wspawnv** (**_P_WAIT*
 
 |||
 |-|-|
-**E2BIG**|La lista de argumentos supera los 1024 bytes.
-**EINVAL**|*modo* argumento no es válido.
-**ENOENT**|El archivo o la ruta de acceso no se encuentra.
-**ENOEXEC**|El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido.
-**ENOMEM**|Memoria insuficiente para ejecutar el nuevo proceso.
+| **E2BIG** | La lista de argumentos supera los 1024 bytes. |
+| **EINVAL** | *modo* argumento no es válido. |
+| **ENOENT** | El archivo o la ruta de acceso no se encuentra. |
+| **ENOEXEC** | El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido. |
+| **ENOMEM** | Memoria insuficiente para ejecutar el nuevo proceso. |
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: c5ae31303d87840017320f580632e567be79e6a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464507"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518676"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Convenciones de nomenclatura y numeración de identificadores
 
@@ -89,13 +89,13 @@ Los motivos de estos límites de intervalo son las siguientes:
 
 - El marco interno de MFC se reserva estos intervalos:
 
-   - De 0x7000 a 0x7FFF (vea afxres.h)
+  - De 0x7000 a 0x7FFF (vea afxres.h)
 
-   - De 0xE000 a 0xEFFF (vea afxres.h)
+  - De 0xE000 a 0xEFFF (vea afxres.h)
 
-   - De 16000 a 18000 (vea afxribbonres.h)
+  - De 16000 a 18000 (vea afxribbonres.h)
 
-   Estos intervalos pueden cambiar en futuras implementaciones de MFC.
+  Estos intervalos pueden cambiar en futuras implementaciones de MFC.
 
 - Varios comandos del sistema de Windows utilizan el intervalo de 0xF000 a 0xFFFF.
 

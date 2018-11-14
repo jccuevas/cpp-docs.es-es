@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447546"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331092"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -75,9 +75,9 @@ El **fseek** y **_fseeki64** funciones mueve el puntero de archivo (si existe) a
 
 |valor de origen|Significado|
 |-|-|
-**SEEK_CUR**|Posición actual del puntero de archivo.
-**SEEK_END**|Final de archivo.
-**SEEK_SET**|Principio de archivo.
+| **SEEK_CUR** | Posición actual del puntero de archivo. |
+| **SEEK_END** | Final de archivo. |
+| **SEEK_SET** | Principio de archivo. |
 
 Puede usar **fseek** y **_fseeki64** a colocar el puntero en cualquier lugar en un archivo. El puntero también puede colocarse más allá del final del archivo. **fseek** y **_fseeki64** borra el indicador de fin de archivo y anulan el efecto de las anteriores [ungetc](ungetc-ungetwc.md) llama contra *secuencia*.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525624"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329415"
 ---
 # <a name="process-and-environment-control"></a>Control de proceso y de entorno
 
@@ -46,7 +46,7 @@ Utilice las rutinas del control de proceso para iniciar, detener, y administrar 
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Llamar a las funciones registradas por **atexit** y **_onexit**, vaciar todos los búferes, cerrar todos los archivos abiertos y terminar el proceso|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Terminar el proceso inmediatamente sin llamar a **atexit** o **_onexit** ni vaciar los búferes|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Obtener valor de la variable de entorno|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Obtener número de identificador del proceso|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Obtener número de identificador del proceso|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Restaurar el entorno de pila guardado; usarlo para ejecutar un valor **goto** no local|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Programar rutinas para su ejecución al finalizar el programa; usarlas para compatibilidad con Microsoft C/C++ versión 7.0 y anteriores|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Esperar al nuevo procesador de comandos y cerrar el flujo en la canalización asociada|

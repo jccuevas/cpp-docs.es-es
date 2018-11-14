@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438121"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333646"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (clase)
 
@@ -1194,7 +1194,7 @@ Un puntero a una cadena que se evalúa como la dirección URL, UNC del archivo e
 
 No todos los fotogramas activarán este evento, pero cada fotograma que se activa un [OnDownloadBegin](#ondownloadbegin) evento desencadenará correspondiente `OnDocumentComplete` eventos.
 
-La dirección URL indicada por *lpszURL* puede ser diferente de la dirección URL que se ha indicado el explorador para ir a, porque esta dirección URL es la dirección URL con formato canónico y completa. Por ejemplo, si una aplicación especifica una dirección URL con "www.microsoft.com" en una llamada a [Navigate](#navigate) o [Navigate2](#navigate2), la dirección URL pasada `OnNavigateComplete2` será "http://www.microsoft.com/". Además, si el servidor redirige el explorador a una dirección URL diferente, la dirección URL redirigida se verán aquí.
+La dirección URL indicada por *lpszURL* puede ser diferente de la dirección URL que se ha indicado el explorador para ir a, porque esta dirección URL es la dirección URL con formato canónico y completa. Por ejemplo, si una aplicación especifica una dirección URL con "www.microsoft.com" en una llamada a [Navigate](#navigate) o [Navigate2](#navigate2), la dirección URL pasada `OnNavigateComplete2` será "<http://www.microsoft.com/>". Además, si el servidor redirige el explorador a una dirección URL diferente, la dirección URL redirigida se verán aquí.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ Una expresión de cadena que se evalúa como la dirección URL, UNC nombre de ar
 
 El parámetro de dirección URL puede ser un PIDL en el caso de una entidad de espacio de nombre de shell para que no hay ninguna representación de la dirección URL.
 
-Tenga en cuenta que la dirección URL contenida en *strURL* puede ser diferente de la dirección URL que se ha indicado el explorador para ir a, porque esta dirección URL es la dirección URL con formato canónico y completa. Por ejemplo, si una aplicación especifica una dirección URL con "www.microsoft.com" en una llamada a [Navigate](#navigate) o [Navigate2](#navigate2), la dirección URL pasada `OnNavigateComplete2` será "http://www.microsoft.com/". Además, si el servidor redirige el explorador a una dirección URL diferente, la dirección URL redirigida se verán aquí.
+Tenga en cuenta que la dirección URL contenida en *strURL* puede ser diferente de la dirección URL que se ha indicado el explorador para ir a, porque esta dirección URL es la dirección URL con formato canónico y completa. Por ejemplo, si una aplicación especifica una dirección URL con "www.microsoft.com" en una llamada a [Navigate](#navigate) o [Navigate2](#navigate2), la dirección URL pasada `OnNavigateComplete2` será "<http://www.microsoft.com/>". Además, si el servidor redirige el explorador a una dirección URL diferente, la dirección URL redirigida se verán aquí.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

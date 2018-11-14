@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644828"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332223"
 ---
 # <a name="ltstringgt-operators"></a>Operadores de &lt;string&gt;
 
@@ -115,7 +115,7 @@ Cadena que es la concatenación de las cadenas de entrada.
 
 ### <a name="remarks"></a>Comentarios
 
-Las funciones sobrecargan `operator+` para concatenar dos objetos de clase de plantilla [basic_string (Clase)](../standard-library/basic-string-class.md). Todas devuelven de forma efectiva `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).
+Las funciones sobrecargan `operator+` para concatenar dos objetos de clase de plantilla [basic_string (Clase)](../standard-library/basic-string-class.md). Todas de forma efectiva devuelto `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Para obtener más información, consulte [anexar](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Ejemplo
 
@@ -575,7 +575,7 @@ Escribe el valor de la cadena especificada en el flujo de salida *_Ostr*.
 
 ### <a name="remarks"></a>Comentarios
 
-Las función de plantilla sobrecarga **operator<<** para insertar un objeto_ *Str* de la clase de plantilla [basic_string](../standard-library/basic-string-class.md) en la secuencia de \_ *Ostr.* La función devuelve eficazmente \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).
+Las sobrecargas de función de plantilla **operador <<** para insertar un objeto *str* de clase de plantilla [basic_string](../standard-library/basic-string-class.md) en la secuencia  *\_ Ostr*. La función devuelve eficazmente `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a> operator&gt;
 

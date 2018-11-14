@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 3df2252e1879fbbcdf6cc950fa8dd637894ba3f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664560"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523942"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Cómo: configurar proyectos de Visual C++ para tener como destino de 64 bits, x64 plataformas
 
@@ -43,18 +43,18 @@ Puede usar las configuraciones de proyecto en el IDE de Visual Studio para confi
 
 - Cuando esté abierto el cuadro de diálogo **Nueva plataforma de solución** mientras configure un proyecto para una plataforma de 64 bits como destino, en la lista desplegable **Copiar configuración de** , seleccione **Win32**. Esta configuración de proyecto se actualizará automáticamente en el nivel de proyecto:
 
-   - La opción de enlazador [/MACHINE](../build/reference/machine-specify-target-platform.md) se establece en **/MACHINE:X64**.
+  - La opción de enlazador [/MACHINE](../build/reference/machine-specify-target-platform.md) se establece en **/MACHINE:X64**.
 
-   - La opción**Registrar resultados** está desactivada. Para obtener más información, consulta [Linker Property Pages](../ide/linker-property-pages.md).
+  - La opción**Registrar resultados** está desactivada. Para obtener más información, consulta [Linker Property Pages](../ide/linker-property-pages.md).
 
-   - **Entorno de destino** se establece en **/env x64**. Para obtener más información, consulta [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
+  - **Entorno de destino** se establece en **/env x64**. Para obtener más información, consulta [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
 
-   - Se borra**Validar parámetros** y restablece en el valor predeterminado. Para obtener más información, consulta [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
+  - Se borra**Validar parámetros** y restablece en el valor predeterminado. Para obtener más información, consulta [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
 
-   - Si **Formato de la información de depuración** se estableció en **/ZI** en la configuración de proyecto de Win32, después, se establece en **/Zi** en la configuración de proyecto de 64 bits. Para obtener más información, consulte [/Z7, /Zi, /ZI (Formato de la información de depuración)](../build/reference/z7-zi-zi-debug-information-format.md).
+  - Si **Formato de la información de depuración** se estableció en **/ZI** en la configuración de proyecto de Win32, después, se establece en **/Zi** en la configuración de proyecto de 64 bits. Para obtener más información, consulte [/Z7, /Zi, /ZI (Formato de la información de depuración)](../build/reference/z7-zi-zi-debug-information-format.md).
 
-   > [!NOTE]
-   > No se cambia ninguna de estas propiedades de proyecto si se sobrescriben en el nivel de archivo.
+  > [!NOTE]
+  > No se cambia ninguna de estas propiedades de proyecto si se sobrescriben en el nivel de archivo.
 
 ## <a name="see-also"></a>Vea también
 

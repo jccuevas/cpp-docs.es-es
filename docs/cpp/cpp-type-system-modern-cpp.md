@@ -3,12 +3,12 @@ title: Sistema de tipos de C++ (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 3e500980fbb5e6397e992f53b58f28fa710e7af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602610"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521097"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 
@@ -86,7 +86,6 @@ Cualquier tipo integrado o definido por el usuario se puede calificar con la pal
 
 const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
-
 ```
 
 El **const** calificador se usa habitualmente en las declaraciones de función y la variable y "exactitud de const" es un concepto importante en C++; básicamente significa usar **const** para garantizar que, en tiempo de compilación que los valores no se modifican involuntariamente. Para obtener más información, consulte [const](../cpp/const-cpp.md).

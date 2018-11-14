@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657514"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333607"
 ---
 # <a name="hashset-class"></a>hash_set (Clase)
 
@@ -565,7 +565,7 @@ Es 0 si el objeto hash_set no contiene ningún elemento con una clave coincident
 
 La función miembro devuelve el número de elementos del intervalo siguiente:
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) ).
+\[ lower_bound (*clave*), upper_bound (*clave*)).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1534,7 +1534,7 @@ Para obtener más información sobre *rasgos* vea el [hash_set (clase)](../stand
 
 El objeto almacenado define la función miembro:
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 que devuelve **True** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.
 
@@ -2296,7 +2296,7 @@ Para obtener más información sobre *comparar*, vea la sección Comentarios de 
 
 El objeto almacenado define la función miembro:
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 que devuelve **True** si `_xVal` precede y no es igual a `_yVal` en el criterio de ordenación.
 

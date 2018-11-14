@@ -4,21 +4,22 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: ecc6018ef22b9c6b0ac64e379365555fb6b3d12f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 709c17138032a98ec2f8ff978d9b8364241989b1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589441"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326490"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitadores para etiquetas de documentación en Visual C++
 
 El uso de etiquetas de documentación requiere delimitadores, que indican al compilador dónde empieza y dónde acaba un comentario de documentación.
 
 Puede usar los siguientes tipos de delimitadores con las etiquetas de documentación XML:
-|||
+
+| | |
 |-|-|
-|`///`  | Este es el formato que se muestra en los ejemplos de documentación y que usan las plantillas de proyecto de Visual C++.  |
+| `///` | Este es el formato que se muestra en los ejemplos de documentación y que usan las plantillas de proyecto de Visual C++.  |
 | `/** */`  | Se trata de delimitadores de múltiples líneas.  |
 
 Hay varias reglas de formato cuando se usan los delimitadores `/** */`:

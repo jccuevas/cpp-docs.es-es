@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533879"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327348"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox (clase)
 
@@ -80,13 +80,13 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cuad
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON_** notificación **(**`id`, `memberFxn` **)**
+**ON\_**_notificación_ **(** _id_, _memberFxn_ **)**
 
 donde `id` especifica el identificador de ventana secundaria del control que envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
 Prototipo de función del elemento primario es el siguiente:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Hay solo una entrada de mapa de mensajes que pertenecen específicamente a `CCheckListBox` (pero Vea también las entradas de mapa de mensajes para [CListBox](../../mfc/reference/clistbox-class.md)):
 

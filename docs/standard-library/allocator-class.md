@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450679"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518871"
 ---
 # <a name="allocator-class"></a>allocator (Clase)
 
@@ -63,7 +63,7 @@ Todos los contenedores de la biblioteca estándar de C++ tienen un parámetro de
 
 Así, por ejemplo, un objeto de asignador puede asignar almacenamiento en un montón privado o en la memoria compartida, o puede optimizar los tamaños de objetos pequeños o grandes. También puede especificar, a través de las definiciones de tipo que proporciona, que el acceso a los elementos tiene que realizarse a través de objetos de descriptor de acceso especiales que administran la memoria compartida, o realizar una recolección automática de elementos no utilizados. Por lo tanto, una clase que asigna almacenamiento con un objeto de asignador debe usar estos tipos para declarar los objetos de puntero y referencia, tal como hacen los contenedores de la biblioteca estándar de C++.
 
-**(C_++98/03 solo)** Si deriva de la clase allocator, tendrá que proporcionar un struct [rebind](#rebind) cuyo typedef `_Other` haga referencia a la clase recién derivada.
+<strong>(C ++ 98/03 solo)</strong>  Al derivar de la clase allocator, tendrá que proporcionar un [Reenlazar](#rebind) struct, cuyo `_Other` typedef hace referencia a la clase recién derivada.
 
 Por lo tanto, un asignador define los siguientes tipos:
 

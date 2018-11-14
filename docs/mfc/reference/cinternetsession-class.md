@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586337"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519298"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (clase)
 
@@ -318,12 +318,12 @@ Puntero a una cadena terminada en null que especifica el nombre del usuario para
 *pstrPassword*<br/>
 Un puntero a una cadena terminada en null que especifica la contraseña que se utilizará para iniciar sesión. Si ambos *pstrPassword* y *pstrUserName* son NULL, la contraseña anónima predeterminada es el nombre de correo electrónico del usuario. Si *pstrPassword* es NULL (o una cadena vacía) pero *pstrUserName* no es NULL, se utiliza una contraseña en blanco. En la tabla siguiente describe el comportamiento de las cuatro configuraciones posibles de *pstrUserName* y *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Nombre de usuario se envía al servidor FTP|Contraseña que se envían al servidor FTP|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL o ""|NULL o ""|"anónimo"|Nombre de correo electrónico del usuario|
-|Cadena no nula|NULL o ""|*pstrUserName*|" "|
-|NULL|Cadena no nula|ERROR|ERROR||
-|Cadena no nula|Cadena no nula|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | Nombre de usuario se envía al servidor FTP | Contraseña que se envían al servidor FTP |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL o ""   |   NULL o ""   |         "anónimo"         |      Nombre de correo electrónico del usuario      |
+| Cadena no nula |   NULL o ""   |       *pstrUserName*        |             " "             |
+|      NULL       | Cadena no nula |            ERROR            |            ERROR            |
+| Cadena no nula | Cadena no nula |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 Número que identifica el puerto TCP/IP que se usará en el servidor.

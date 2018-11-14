@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618496"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327556"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ Realiza una ordenación rápida. Hay disponible una versión más segura de esta
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>Parámetros
 
-<br/>
+*base*<br/>
 Inicio de la matriz de destino.
 
 *Número*<br/>
@@ -68,7 +68,7 @@ El **qsort** función implementa un algoritmo de ordenación rápida para ordena
 **qsort** llamadas la *comparar* rutinaria uno o más veces durante la ordenación y pasa los punteros a dos elementos de matriz en cada llamada.
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 La rutina compara los elementos y devuelve uno de los siguientes valores.
@@ -81,7 +81,7 @@ La rutina compara los elementos y devuelve uno de los siguientes valores.
 
 La matriz se clasifica en orden ascendente, de acuerdo con la función de comparación. Para clasificar una matriz en orden decreciente, invierta el sentido de "mayor que" y "menor que" en la función de comparación.
 
-Esta función valida sus parámetros. Si *comparar* o *número* es **NULL**, o si *base* es **NULL** y **número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** está establecido en **EINVAL**.
+Esta función valida sus parámetros. Si *comparar* o *número* es **NULL**, o si *base* es **NULL** y *número* es distinto de cero, o si *ancho* es menor que cero, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, la función devuelve y **errno** está establecido en **EINVAL**.
 
 ## <a name="requirements"></a>Requisitos
 

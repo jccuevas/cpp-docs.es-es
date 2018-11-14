@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651326"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330624"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (Clase)
 
@@ -39,8 +39,12 @@ Estos métodos tienen accesibilidad interna, es decir, solo están accesibles de
 
 |nombre|Descripción|
 |----------|-----------------|
-
-|[Writeonlyarray](#begin)| Un iterador que apunta al primer elemento de la matriz. | | [Writeonlyarray](#data)| Un puntero al búfer de datos. | | [Writeonlyarray](#end)| Un iterador que apunta a uno más allá del último elemento de la matriz. | | [Fastpass](#fastpass)| Indica si la matriz puede usar el mecanismo FastPass, que es una optimización realizada de forma transparente por el sistema. No utilices esto en el código | | [Writeonlyarray](#length)| Devuelve el número de elementos de la matriz. | | [Writeonlyarray](#set)| Establece el elemento especificado en el valor especificado. |
+|[Writeonlyarray](#begin)|Un iterador que apunta al primer elemento de la matriz.|
+|[Writeonlyarray](#data)|Puntero al búfer de datos.|
+|[Writeonlyarray](#end)|Un iterador que apunta a uno más allá del último elemento de la matriz.|
+|[Fastpass](#fastpass)|Indica si la matriz puede usar el mecanismo FastPass, que es una optimización realizada por el sistema de manera transparente. No utilices esto en tu código|
+|[Writeonlyarray](#length)|Devuelve el número de elementos de la matriz.|
+|[Writeonlyarray](#set)|Establece el elemento especificado en el valor indicado.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

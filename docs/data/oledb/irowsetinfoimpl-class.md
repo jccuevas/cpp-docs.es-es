@@ -26,23 +26,23 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 39c4f441e7b18fd93510620f1052677cdd0e881e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580289"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556210"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl (Clase)
 
-Proporciona una implementación para el [IRowsetInfo](/previous-versions/windows/desktop/ms724541) interfaz.
+Proporciona una implementación para el [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo,  
+   public IRowsetInfo, 
    public CUtlProps<PropClass>
 ```
 
@@ -87,7 +87,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611) en el *referencia del programador OLE DB*.
+Consulte [IRowsetInfo:: GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl:: Getreferencedrowset
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145) en el *referencia del programador OLE DB*. El *iOrdinal* parámetro debe ser una columna de marcador.
+Consulte [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) en el *referencia del programador OLE DB*. El *iOrdinal* parámetro debe ser una columna de marcador.
 
 ## <a name="getspecification"></a> Irowsetinfoimpl:: Getspecification
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746) en el *referencia del programador OLE DB*.
+Consulte [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 

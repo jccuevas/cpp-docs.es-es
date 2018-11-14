@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471102"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524643"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 
@@ -112,10 +112,10 @@ Si se ha cambiado la hora de modificación de archivo, cada una de estas funcion
 
 |valor de errno|Condición|
 |-|-|
-**EACCES**|La ruta de acceso especifica un directorio o un archivo de solo lectura
-**EINVAL**|No válido *veces* argumento
-**EMFILE**|Demasiados archivos abiertos (se debe abrir el archivo para cambiar su hora de modificación)
-**ENOENT**|Ruta de acceso o nombre de archivo no encontrado
+| **EACCES** | La ruta de acceso especifica un directorio o un archivo de solo lectura |
+| **EINVAL** | No válido *veces* argumento |
+| **EMFILE** | Demasiados archivos abiertos (se debe abrir el archivo para cambiar su hora de modificación) |
+| **ENOENT** | Ruta de acceso o nombre de archivo no encontrado |
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
@@ -123,14 +123,14 @@ La fecha de un archivo se puede cambiar si la fecha de modificación es posterio
 
 ## <a name="remarks"></a>Comentarios
 
-El **_utime** función establece la hora de modificación para el archivo especificado por *filename **.* El proceso debe tener acceso de escritura al archivo para cambiar la hora. En el sistema operativo Windows, puede cambiar la hora de acceso y la hora de modificación en el **_utimbuf** estructura. Si *veces* es un **NULL** puntero, la hora de modificación se establece en la hora local actual. En caso contrario, *veces* debe apuntar a una estructura de tipo **_utimbuf**, definida en SYS\UTIME. H.
+El **_utime** función establece la hora de modificación para el archivo especificado por *filename*. El proceso debe tener acceso de escritura al archivo para cambiar la hora. En el sistema operativo Windows, puede cambiar la hora de acceso y la hora de modificación en el **_utimbuf** estructura. Si *veces* es un **NULL** puntero, la hora de modificación se establece en la hora local actual. En caso contrario, *veces* debe apuntar a una estructura de tipo **_utimbuf**, definida en SYS\UTIME. H.
 
 El **_utimbuf** estructura almacena los tiempos de acceso y de modificación de archivos utilizados por **_utime** para cambiar las fechas de modificación del archivo. La estructura tiene los siguientes campos, que son de tipo **time_t**:
 
-|Campo||
-|-|-|
-**actime**|Hora de acceso a archivos
-**modtime**|Hora de modificación de archivos
+| Campo |   |
+|-------|---|
+| **actime** | Hora de acceso a archivos |
+| **modtime** | Hora de modificación de archivos |
 
 Las versiones específicas de la **_utimbuf** estructura (**_utimebuf32** y **__utimbuf64**) se definen mediante las versiones de 32 bits y 64 bits del tipo de hora. Se usan en las versiones específicas de 32 y 64 bits de esta función. **_utimbuf** forma predeterminada usa un tipo en tiempo de 64 bits, a menos que **_USE_32BIT_TIME_T** está definido.
 

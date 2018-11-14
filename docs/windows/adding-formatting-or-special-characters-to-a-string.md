@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493852"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328336"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Agregar formato o caracteres especiales a un recurso de cadena (C++)
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493852"
 
    |Para obtener esto|Escriba lo siguiente|
    |-----------------|---------------|
-   |Nueva línea|\n|
-   |Retorno de carro|\r|
-   |Tab|\t|
-   |Barra diagonal inversa (\\)|\\\|
-   |Carácter ASCII|\ddd (notación octal)|
-   |alerta (campana)|\a|
+   | Nueva línea | \\N |
+   | Retorno de carro | \\R |
+   | Tab | \\t |
+   | Barra diagonal inversa (\\) | \\\\ |
+   | Carácter ASCII | \\ddd (notación octal) |
+   | alerta (campana) | \\a |
 
 > [!NOTE]
 > El **cadena** editor no admite el conjunto completo de caracteres ASCII con escape. Solo se pueden usarlos mencionados anteriormente.
