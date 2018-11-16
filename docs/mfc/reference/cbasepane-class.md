@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525423"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694795"
 ---
 # <a name="cbasepane-class"></a>CBasePane (clase)
 
@@ -1566,7 +1566,7 @@ Identificador de una estructura de posición de ventana aplazada, o NULL.
 
 ### <a name="remarks"></a>Comentarios
 
-Si se pasa NULL como el *hdwp* parámetro, este método mueve la ventana con normalidad. Si pasa un identificador, este método realiza un movimiento de ventana aplazada. Puede obtener un identificador llamando [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) o almacenando el valor devuelto de una llamada anterior a este método.
+Si se pasa NULL como el *hdwp* parámetro, este método mueve la ventana con normalidad. Si pasa un identificador, este método realiza un movimiento de ventana aplazada. Puede obtener un identificador llamando [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) o almacenando el valor devuelto de una llamada anterior a este método.
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 

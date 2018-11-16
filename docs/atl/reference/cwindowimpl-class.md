@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 0a1d0c79e97cf9f9cb0c2b0c6b140654deb4c227
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454657"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694171"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl (clase)
 
@@ -210,7 +210,7 @@ El resultado del procesamiento del mensaje.
 
 ### <a name="remarks"></a>Comentarios
 
-De forma predeterminada, `DefWindowProc` llamadas la [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/función para enviar la información del mensaje al procedimiento de ventana especificado en [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+De forma predeterminada, `DefWindowProc` llamadas la [CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca) Win32/función para enviar la información del mensaje al procedimiento de ventana especificado en [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 La función sin parámetros recupera automáticamente los parámetros necesarios desde el mensaje actual.
 

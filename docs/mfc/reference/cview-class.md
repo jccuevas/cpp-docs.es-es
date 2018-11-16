@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669084"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694392"
 ---
 # <a name="cview-class"></a>CView (clase)
 
@@ -548,7 +548,7 @@ La implementación predeterminada es no hacer nada y devolver un valor ficticio 
 
 Reemplace esta función para implementar el efecto de una derecha del botón del mouse arrastrar y colocar. Derecha del botón del mouse arrastrar y colocar normalmente muestra un menú de opciones cuando se suelta el botón del mouse adecuado.
 
-El reemplazo de `OnDropEx` debe consultar la derecha del botón del mouse. Puede llamar a [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) o almacenar el estado de la derecha del botón del mouse desde el [OnDragEnter](#ondragenter) controlador.
+El reemplazo de `OnDropEx` debe consultar la derecha del botón del mouse. Puede llamar a [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) o almacenar el estado de la derecha del botón del mouse desde el [OnDragEnter](#ondragenter) controlador.
 
 - Si el botón del mouse secundario está inactivo, el reemplazo debe mostrar un menú emergente que ofrece compatibilidad con los efectos de colocar el origen de colocación.
 

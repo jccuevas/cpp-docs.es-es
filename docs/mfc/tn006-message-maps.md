@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463314"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693680"
 ---
 # <a name="tn006-message-maps"></a>TN006: Mapas de mensajes
 
@@ -237,7 +237,7 @@ Para uso avanzado [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_cont
 > [!NOTE]
 > ClassWizard no admite la creación de un controlador ON_CONTROL o ON_CONTROL_RANGE en la interfaz de usuario. También debe escribir manualmente con el editor de texto. ClassWizard analizará estas entradas y le permiten examinar ellos al igual que otras entradas de mapa de mensajes.
 
-Utilice el método más eficaz los controles comunes de Windows [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) para las notificaciones de control complejo. Esta versión de MFC tiene compatibilidad directa para el nuevo mensaje mediante el uso de las macros de mensajes ON_NOTIFY y ON_NOTIFY_RANGE. Consulte la documentación del producto para obtener más información sobre estas macros.
+Utilice el método más eficaz los controles comunes de Windows [WM_NOTIFY](/windows/desktop/controls/wm-notify) para las notificaciones de control complejo. Esta versión de MFC tiene compatibilidad directa para el nuevo mensaje mediante el uso de las macros de mensajes ON_NOTIFY y ON_NOTIFY_RANGE. Consulte la documentación del producto para obtener más información sobre estas macros.
 
 ## <a name="see-also"></a>Vea también
 

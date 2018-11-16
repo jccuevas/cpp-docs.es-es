@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604293"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693443"
 ---
 # <a name="idle-loop-processing"></a>Procesamiento de bucles inactivos
 
 Muchas aplicaciones realizan un procesamiento largo "en"segundo plano. A veces, las consideraciones de rendimiento exigir el uso de multithreading para dicho trabajo. Subprocesos implican una sobrecarga adicional de desarrollo, por lo que no se recomiendan para tareas sencillas, como el trabajo en tiempo de inactividad que realiza MFC en el [OnIdle](../mfc/reference/cwinthread-class.md#onidle) función. En este artículo se centra en el procesamiento en inactividad. Para obtener más información sobre multithreading, vea [temas de Multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-Algunos tipos de procesamiento en segundo plano ha terminado correctamente durante los intervalos que el usuario en caso contrario, no está interactuando con la aplicación. En una aplicación desarrollada para el sistema operativo Microsoft Windows, una aplicación puede realizar el procesamiento en tiempo de inactividad al dividir un proceso largo en muchos pequeños fragmentos. Después de procesar cada fragmento, la aplicación cede el control de ejecución para Windows usando una [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) bucle.
+Algunos tipos de procesamiento en segundo plano ha terminado correctamente durante los intervalos que el usuario en caso contrario, no está interactuando con la aplicación. En una aplicación desarrollada para el sistema operativo Microsoft Windows, una aplicación puede realizar el procesamiento en tiempo de inactividad al dividir un proceso largo en muchos pequeños fragmentos. Después de procesar cada fragmento, la aplicación cede el control de ejecución para Windows usando una [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) bucle.
 
 En este artículo se explica dos formas de procesamiento en inactividad en la aplicación:
 
@@ -37,7 +37,7 @@ En este artículo se explica dos formas de procesamiento en inactividad en la ap
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage en el bucle de mensajes MFC
 
-En una aplicación desarrollada con MFC, un bucle principal del mensaje en el `CWinThread` clase contiene un bucle de mensajes que llama a la [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) API Win32. Este bucle también llama a la `OnIdle` función miembro de `CWinThread` entre los mensajes. Una aplicación puede procesar los mensajes en este tiempo de inactividad invalidando el `OnIdle` función.
+En una aplicación desarrollada con MFC, un bucle principal del mensaje en el `CWinThread` clase contiene un bucle de mensajes que llama a la [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) API Win32. Este bucle también llama a la `OnIdle` función miembro de `CWinThread` entre los mensajes. Una aplicación puede procesar los mensajes en este tiempo de inactividad invalidando el `OnIdle` función.
 
 > [!NOTE]
 >  `Run`, `OnIdle`, y otras funciones miembro son ahora miembros de clase `CWinThread` en lugar de la clase `CWinApp`. La clase `CWinApp` se deriva de la clase `CWinThread`.

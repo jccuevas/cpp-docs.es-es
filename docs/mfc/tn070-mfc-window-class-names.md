@@ -7,12 +7,12 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: d59dc052cc253c8d036de0559018065e4ba7457d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533622"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692673"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: Nombres de clases de ventana
 
@@ -28,7 +28,7 @@ Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-Los dígitos hexadecimales que reemplacen el `%x` caracteres rellenan los datos desde el [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura. MFC utiliza esta técnica para que varias clases de C++ que requieren idénticos **WNDCLASS** estructuras pueden compartir la misma clase de ventana registrada. A diferencia de la mayoría de aplicaciones Win32 simple, las aplicaciones de MFC tienen solo una **WNDPROC**, por lo que puede compartir fácilmente **WNDCLASS** estructuras para ahorrar tiempo y memoria. Los valores pueden reemplazables para el `%x` caracteres que se muestran anteriormente son los siguientes:
+Los dígitos hexadecimales que reemplacen el `%x` caracteres rellenan los datos desde el [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura. MFC utiliza esta técnica para que varias clases de C++ que requieren idénticos **WNDCLASS** estructuras pueden compartir la misma clase de ventana registrada. A diferencia de la mayoría de aplicaciones Win32 simple, las aplicaciones de MFC tienen solo una **WNDPROC**, por lo que puede compartir fácilmente **WNDCLASS** estructuras para ahorrar tiempo y memoria. Los valores pueden reemplazables para el `%x` caracteres que se muestran anteriormente son los siguientes:
 
 - **WNDCLASS.hInstance**
 

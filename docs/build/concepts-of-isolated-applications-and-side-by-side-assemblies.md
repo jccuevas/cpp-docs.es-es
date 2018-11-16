@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 6453e68b07013bc5f5799b7252ad9a88e73250f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac354ed34bc3ab849eecf9256b447308f449abfe
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532943"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693579"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Conceptos de aplicaciones aisladas y ensamblados simultáneos
 
@@ -22,7 +22,7 @@ Un ensamblado simultáneo puede ser compartido o privado. Los[ensamblados en par
 
 ## <a name="manifests-and-search-order"></a>Manifiestos y orden de búsqueda
 
-Tanto las aplicaciones aisladas como los ensamblados en paralelo se describen mediante [manifiestos](https://msdn.microsoft.com/library/aa375365). Un manifiesto es un documento XML que puede ser un archivo externo o que puede estar incrustado en una aplicación o un ensamblado como recurso. El archivo de manifiesto de una aplicación aislada se utiliza para administrar los nombres y las versiones de los ensamblados en paralelo compartidos con los que se debe enlazar la aplicación en tiempo de ejecución. El manifiesto de un ensamblado simultáneo especifica los nombres, versiones, recursos y ensamblados dependientes de los ensamblados en paralelo. En los ensamblados simultáneos compartidos, el manifiesto se instala en la carpeta %WINDIR%\WinSxS\Manifests\. En el caso de los ensamblados privados, es recomendable que incluya el manifiesto en el archivo DLL como recurso con el identificador 1. También puede asignar al ensamblado privado el nombre del archivo DLL. Para obtener más información, consulte [acerca de los ensamblados privados](/windows/desktop/SbsCs/about-private-assemblies-).
+Tanto las aplicaciones aisladas como los ensamblados en paralelo se describen mediante [manifiestos](/windows/desktop/sbscs/manifests). Un manifiesto es un documento XML que puede ser un archivo externo o que puede estar incrustado en una aplicación o un ensamblado como recurso. El archivo de manifiesto de una aplicación aislada se utiliza para administrar los nombres y las versiones de los ensamblados en paralelo compartidos con los que se debe enlazar la aplicación en tiempo de ejecución. El manifiesto de un ensamblado simultáneo especifica los nombres, versiones, recursos y ensamblados dependientes de los ensamblados en paralelo. En los ensamblados simultáneos compartidos, el manifiesto se instala en la carpeta %WINDIR%\WinSxS\Manifests\. En el caso de los ensamblados privados, es recomendable que incluya el manifiesto en el archivo DLL como recurso con el identificador 1. También puede asignar al ensamblado privado el nombre del archivo DLL. Para obtener más información, consulte [acerca de los ensamblados privados](/windows/desktop/SbsCs/about-private-assemblies-).
 
 En tiempo de ejecución, Windows utiliza la información de ensamblado del manifiesto de la aplicación para buscar y cargar el ensamblado simultáneo correspondiente. Si una aplicación aislada especifica una dependencia de ensamblado, el sistema operativo buscará primero el ensamblado entre los ensamblados compartidos que se encuentran en la memoria caché de ensamblados en la carpeta %WINDIR%\WinSxS\ nativa. Si no se encuentra el ensamblado necesario, el sistema operativo buscará un ensamblado privado en una carpeta de la estructura de directorios de la aplicación. Para obtener más información, vea [Assembly Searching Sequence (Secuencia de búsqueda de ensamblados)](/windows/desktop/SbsCs/assembly-searching-sequence).
 

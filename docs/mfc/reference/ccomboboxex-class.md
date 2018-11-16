@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501639"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694249"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (clase)
 
@@ -247,7 +247,7 @@ El número de elementos que quedan en el control. Si *iÍndice* es válido, la f
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro implementa la funcionalidad del mensaje [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), tal y como se describe en el SDK de Windows. Cuando se llama a DeleteItem, un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) se enviará el mensaje de notificación CBEN_DELETEITEM a la ventana primaria.
+Esta función miembro implementa la funcionalidad del mensaje [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), tal y como se describe en el SDK de Windows. Cuando se llama a DeleteItem, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) se enviará el mensaje de notificación CBEN_DELETEITEM a la ventana primaria.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ El índice donde se insertó el nuevo elemento si es correcto; en caso contrario
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se llama a `InsertItem`, un [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) de mensajes con [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) se enviará una notificación a la ventana primaria.
+Cuando se llama a `InsertItem`, un [WM_NOTIFY](/windows/desktop/controls/wm-notify) de mensajes con [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) se enviará una notificación a la ventana primaria.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

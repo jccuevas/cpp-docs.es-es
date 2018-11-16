@@ -2,12 +2,12 @@
 title: Visibilidad de espacios de nombres y tipos (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440527"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693899"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>Visibilidad de espacios de nombres y tipos (C++/CX)
 
@@ -40,7 +40,7 @@ Utiliza los modificadores de acceso siguientes para controlar tanto la visibilid
 
 ## <a name="windows-runtime-namespaces"></a>Espacios de nombres en tiempo de ejecución de Windows
 
-La API de Windows consta de tipos que se declaran en el Windows::\* espacios de nombres. Estos espacios de nombres se reservan para Windows y no se les puede agregar tipos. En el **Explorador de objetos**, puedes ver estos espacios de nombres en el archivo windows.winmd. Para documentación sobre estos espacios de nombres, vea [API de Windows](https://msdn.microsoft.com/library/windows/apps/br211377).
+La API de Windows consta de tipos que se declaran en el Windows::\* espacios de nombres. Estos espacios de nombres se reservan para Windows y no se les puede agregar tipos. En el **Explorador de objetos**, puedes ver estos espacios de nombres en el archivo windows.winmd. Para documentación sobre estos espacios de nombres, vea [API de Windows](/uwp/api/).
 
 ## <a name="ccx-namespaces"></a>C++/CX (espacio de nombres)
 
