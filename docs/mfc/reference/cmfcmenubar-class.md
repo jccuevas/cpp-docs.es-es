@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: cb1143b51dafd9711e058134a9338e28ffcb44b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599893"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694368"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (clase)
 
@@ -391,7 +391,7 @@ Distinto de cero si el método es correcto; en caso contrario, es 0.
 
 Debe usar esta función en lugar de [CMFCMenuBar::Create](#create) cuando desee especificar estilos además el estilo de barra de herramientas. Algunos estilos adicionales usados con frecuencia son TBSTYLE_TRANSPARENT y CBRS_TOP.
 
-Para obtener listas de estilos adicionales, vea [Control de barra de herramientas y los estilos de botón](/windows/desktop/Controls/toolbar-control-and-button-styles), [estilos de control comunes](/windows/desktop/Controls/common-control-styles), y [estilos de ventana comunes](https://msdn.microsoft.com/library/windows/desktop/ms632600).
+Para obtener listas de estilos adicionales, vea [Control de barra de herramientas y los estilos de botón](/windows/desktop/Controls/toolbar-control-and-button-styles), [estilos de control comunes](/windows/desktop/Controls/common-control-styles), y [estilos de ventana comunes](/windows/desktop/winmsg/window-styles).
 
 ### <a name="example"></a>Ejemplo
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484024"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693300"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Finalizar subprocesos en MFC
 
@@ -34,7 +34,7 @@ Hacer que un subproceso puede terminar dos situaciones normales: la función con
 
 Para un subproceso de trabajo, la terminación normal es simple: salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un **devolver** instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.
 
-Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) en el SDK de Windows. El único parámetro que `PostQuitMessage` es el código de salida del subproceso. En cuanto a los subprocesos de trabajo, 0 suele significar terminación sin errores.
+Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) en el SDK de Windows. El único parámetro que `PostQuitMessage` es el código de salida del subproceso. En cuanto a los subprocesos de trabajo, 0 suele significar terminación sin errores.
 
 ##  <a name="_core_premature_thread_termination"></a> Terminación prematura de subprocesos
 

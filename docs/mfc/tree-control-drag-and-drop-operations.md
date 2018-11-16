@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519371"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693313"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Operaciones de arrastrar y colocar del control de árbol
 
@@ -19,7 +19,7 @@ Un control de árbol ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) envía u
 
 Obtener una imagen para mostrar durante una operación de arrastre mediante una llamada a la [función miembro CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) función miembro. El control de árbol crea un mapa de bits arrastrar basado en la etiqueta del elemento que se está arrastrando. A continuación, el control de árbol crea una lista de imágenes, agrega el mapa de bits y devuelve un puntero a la [CImageList](../mfc/reference/cimagelist-class.md) objeto.
 
-Debe proporcionar el código que realmente se arrastra el elemento. Normalmente, esto implica usar las capacidades de arrastrar de las funciones de la lista de imágenes y el procesamiento del [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) y [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (o [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) mensajes enviados después de que ha comenzado la operación de arrastre. Para obtener más información acerca de las funciones de la lista de imágenes, consulte [CImageList](../mfc/reference/cimagelist-class.md) en el *referencia de MFC* y [listas de imágenes](https://msdn.microsoft.com/library/windows/desktop/bb761389) en el SDK de Windows. Para obtener más información acerca de cómo arrastrar un elemento de control de árbol, vea [arrastrar el elemento de vista de árbol](/windows/desktop/Controls/tree-view-controls), también en el SDK de Windows.
+Debe proporcionar el código que realmente se arrastra el elemento. Normalmente, esto implica usar las capacidades de arrastrar de las funciones de la lista de imágenes y el procesamiento del [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) y [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (o [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) mensajes enviados después de que ha comenzado la operación de arrastre. Para obtener más información acerca de las funciones de la lista de imágenes, consulte [CImageList](../mfc/reference/cimagelist-class.md) en el *referencia de MFC* y [listas de imágenes](/windows/desktop/controls/image-lists) en el SDK de Windows. Para obtener más información acerca de cómo arrastrar un elemento de control de árbol, vea [arrastrar el elemento de vista de árbol](/windows/desktop/Controls/tree-view-controls), también en el SDK de Windows.
 
 Si los elementos de un control de árbol que se van a ser los destinos de una operación de arrastrar y colocar, necesita saber cuándo está el cursor del mouse sobre un elemento de destino. Puede averiguar mediante una llamada a la [HitTest](../mfc/reference/ctreectrl-class.md#hittest) función miembro. Especifique un punto y un entero o la dirección de un [TVHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) estructura que contiene las coordenadas del cursor del mouse actuales. La función que devuelve el entero o la estructura contiene una marca que indica la ubicación del cursor del mouse en relación con el control de árbol. Si el cursor está sobre un elemento en el control de árbol, la estructura contiene el identificador del elemento así.
 

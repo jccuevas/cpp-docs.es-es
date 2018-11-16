@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661271"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694535"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 
@@ -254,7 +254,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreatePrimaryToken` las llamadas [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) para crear un nuevo token principal.
+`CreatePrimaryToken` las llamadas [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) para crear un nuevo token principal.
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ Puntero a un [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-pro
 Puntero a un [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) estructura que especifica cómo debe aparecer la ventana principal del nuevo proceso.
 
 *dwCreationFlags*<br/>
-Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) para obtener una lista de marcas.
+Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) para obtener una lista de marcas.
 
 *bLoadProfile*<br/>
 Si es TRUE, se carga el perfil del usuario con [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
@@ -312,7 +312,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreateProcessAsUser` usa el `CreateProcessAsUser` función de Win32 para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto. Vea la descripción de la [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) función para ver una explicación detallada de los parámetros necesarios.
+`CreateProcessAsUser` usa el `CreateProcessAsUser` función de Win32 para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto. Vea la descripción de la [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) función para ver una explicación detallada de los parámetros necesarios.
 
 Para que se realice correctamente, este método la `CAccessToken` debe contener objeto AssignPrimaryToken (a menos que sea un token restringido) y IncreaseQuota privilegios.
 
@@ -348,7 +348,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreateRestrictedToken` usa el [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) función de Win32 para crear un nuevo `CAccessToken` objeto, con restricciones.
+`CreateRestrictedToken` usa el [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) función de Win32 para crear un nuevo `CAccessToken` objeto, con restricciones.
 
 > [!IMPORTANT]
 >  Cuando se usa `CreateRestrictedToken`, asegúrese de lo siguiente: el token existente es válido (y no se ha introducido por el usuario) y *SidsToDisable* y *PrivilegesToDelete* son válidas (y no se ha introducido por el usuario). Si el método devuelve FALSE, deniegue la funcionalidad.

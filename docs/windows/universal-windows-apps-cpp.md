@@ -2,12 +2,12 @@
 title: Aplicaciones Windows universales (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481905"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693092"
 ---
 # <a name="universal-windows-apps-c"></a>Aplicaciones Windows universales (C++)
 
@@ -32,8 +32,9 @@ C++ / c++ / WinRT es una nueva, encabezado basada en la biblioteca proyección d
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Aplicaciones UWP que usan la biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)
 
-La biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona las interfaces de COM de bajo nivel mediante el cual puede tener acceso a código ISO C++ en tiempo de ejecución de Windows en un entorno sin excepciones. En la mayoría de los casos, se recomienda usar C++ / c++ / WinRT o C++ / c++ / CX en lugar de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para el desarrollo de aplicaciones UWP. Para obtener información acerca de la biblioteca de plantillas C++ de Windows en tiempo de ejecución, vea [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](../windows/windows-runtime-cpp-template-library-wrl.md).
+La biblioteca de plantillas C++ de Windows en tiempo de ejecución proporciona las interfaces de COM de bajo nivel mediante el cual puede tener acceso a código ISO C++ en tiempo de ejecución de Windows en un entorno sin excepciones. En la mayoría de los casos, se recomienda usar C++ / c++ / WinRT o C++ / c++ / CX en lugar de la biblioteca de plantillas de C++ de Windows en tiempo de ejecución para el desarrollo de aplicaciones UWP. Para obtener información acerca de la biblioteca de plantillas C++ de Windows en tiempo de ejecución, vea [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](windows-runtime-cpp-template-library-wrl.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Información general de la programación para Windows en C++](overview-of-windows-programming-in-cpp.md)<br/>

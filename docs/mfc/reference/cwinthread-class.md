@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477329"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694197"
 ---
 # <a name="cwinthread-class"></a>CWinThread (clase)
 
@@ -445,7 +445,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 Mensaje publicado se asigna al controlador de mensajes adecuado mediante la macro ON_THREAD_MESSAGE del mapa de mensajes.
 
 > [!NOTE]
-> Cuando se llama a [PostThreadMessage](https://msdn.microsoft.com/library/windows/desktop/ms644946), el mensaje se coloca en la cola de mensajes del subproceso. Sin embargo, dado que los mensajes publicados de este modo no están asociados a una ventana, MFC no enviará ellos a los controladores de mensaje o un comando. Para controlar estos mensajes, invalide el `PreTranslateMessage()` función de sus derivadas CWinApp clase y controlar los mensajes manualmente.
+> Cuando se llama a [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea), el mensaje se coloca en la cola de mensajes del subproceso. Sin embargo, dado que los mensajes publicados de este modo no están asociados a una ventana, MFC no enviará ellos a los controladores de mensaje o un comando. Para controlar estos mensajes, invalide el `PreTranslateMessage()` función de sus derivadas CWinApp clase y controlar los mensajes manualmente.
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -543,7 +543,7 @@ virtual BOOL PumpMessage();
 
 ### <a name="remarks"></a>Comentarios
 
-`PumpMessage` Contiene el bucle de mensajes del subproceso. `PumpMessage` llama a `CWinThread` al bombeo de mensajes del subproceso. Puede llamar a `PumpMessage` directamente para forzar mensajes para procesarse, o puede invalidar `PumpMessage` para cambiar su comportamiento predeterminado.
+`PumpMessage` contiene el bucle de mensajes del subproceso. `PumpMessage` llama a `CWinThread` al bombeo de mensajes del subproceso. Puede llamar a `PumpMessage` directamente para forzar mensajes para procesarse, o puede invalidar `PumpMessage` para cambiar su comportamiento predeterminado.
 
 Una llamada a `PumpMessage` directamente y reemplazar su comportamiento predeterminado se recomienda sólo para usuarios avanzados.
 

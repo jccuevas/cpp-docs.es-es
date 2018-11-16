@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596669"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694340"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>Parámetros
 
 *lpWndClass*<br/>
-Puntero a un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura que contiene información acerca de la clase de ventana que se registrarán. Para obtener más información sobre esta estructura, consulte el SDK de Windows.
+Puntero a un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura que contiene información acerca de la clase de ventana que se registrarán. Para obtener más información sobre esta estructura, consulte el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parámetros
 
 *nClassStyle*<br/>
-Especifica el estilo de clase de Windows o una combinación de estilos, creados mediante el uso de la operación bit a bit OR ( **&#124;**) operador para la clase de ventana. Para obtener una lista de estilos de clase, vea el [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura en el SDK de Windows. Si es NULL, los valores predeterminados se establecerá como sigue:
+Especifica el estilo de clase de Windows o una combinación de estilos, creados mediante el uso de la operación bit a bit OR ( **&#124;**) operador para la clase de ventana. Para obtener una lista de estilos de clase, vea el [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura en el SDK de Windows. Si es NULL, los valores predeterminados se establecerá como sigue:
 
 - Establece el estilo del mouse en CS_DBLCLKS, que envía haga doble clic en los mensajes al procedimiento de ventana cuando el usuario hace doble clic del mouse.
 

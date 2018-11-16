@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 706e7cd290e41ba9f3761f43688dc89fad5f3b74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579327"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678592"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (clase)
 
@@ -226,7 +226,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::GetDocument](#getdocument)|Devuelve el `COleDocument` objeto que contiene el elemento está presente.|
 |[COleClientItem::GetDrawAspect](#getdrawaspect)|Obtiene la vista actual del elemento para la representación.|
 |[COleClientItem::GetExtent](#getextent)|Devuelve los límites del rectángulo del elemento OLE.|
-|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|Recupera un identificador de un icono asociado con el servidor de CLSID determinado.|
+|[COleClientItem::GetIconFromRegistry](#geticonfromregistry)|Recupera un identificador a un icono asociado con el servidor de CLSID determinado.|
 |[COleClientItem::GetIconicMetafile](#geticonicmetafile)|Obtiene el metarchivo usado para dibujar el icono del elemento.|
 |[COleClientItem::GetInPlaceWindow](#getinplacewindow)|Devuelve un puntero a la ventana de edición en contexto del elemento.|
 |[COleClientItem::GetItemState](#getitemstate)|Obtiene el estado del elemento actual.|

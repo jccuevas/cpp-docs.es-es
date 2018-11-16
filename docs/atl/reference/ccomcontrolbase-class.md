@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447962"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694587"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase (clase)
 
@@ -1547,7 +1547,7 @@ Devuelve TRUE si el control recibe el foco; correctamente en caso contrario, FAL
 
 ### <a name="remarks"></a>Comentarios
 
-Para un control con ventana, la función de la API de Windows [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) se llama. Para un control sin ventanas, [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) se llama. A través de esta llamada, un control sin ventana recibe el foco de teclado y puede responder a mensajes de ventana.
+Para un control con ventana, la función de la API de Windows [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) se llama. Para un control sin ventanas, [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) se llama. A través de esta llamada, un control sin ventana recibe el foco de teclado y puede responder a mensajes de ventana.
 
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty
 

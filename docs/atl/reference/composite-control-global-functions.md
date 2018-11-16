@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694184"
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de Control compuesto
 
@@ -490,7 +490,7 @@ Siempre devuelve TRUE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función simplemente llama a [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) tal como se describe en el SDK de Windows.
+Esta función simplemente llama a [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) tal como se describe en el SDK de Windows.
 
 Llame a esta función para limpiar después de que se hayan destruido todas las ventanas de host existente si llama a [AtlAxWinInit](#atlaxwininit) y ya no necesita crear ventanas de host. Si no llama a esta función, la clase de ventana se anula automáticamente cuando finaliza el proceso.
 

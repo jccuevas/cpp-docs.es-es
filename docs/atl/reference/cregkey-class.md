@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605094"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694860"
 ---
 # <a name="cregkey-class"></a>CRegKey (clase)
 
@@ -892,7 +892,7 @@ Especifica los componentes del descriptor de seguridad para establecer. El valor
 |DACL_SECURITY_INFORMATION|Establece la lista de la clave control de acceso discrecional (DACL). La clave debe tener acceso WRITE_DAC o el proceso de llamada debe ser el propietario del objeto.|
 |GROUP_SECURITY_INFORMATION|Establece el identificador de la clave principal del grupo seguridad (SID). La clave debe tener acceso WRITE_OWNER o el proceso de llamada debe ser el propietario del objeto.|
 |OWNER_SECURITY_INFORMATION|Establece el propietario de la clave SID. La clave debe tener acceso WRITE_OWNER o el proceso de llamada debe ser el propietario del objeto o tener el privilegio SE_TAKE_OWNERSHIP_NAME habilitado.|
-|SACL_SECURITY_INFORMATION|Establece la lista de control de acceso de la clave del sistema (SACL). La clave debe tener acceso ACCESS_SYSTEM_SECURITY. La manera adecuada de obtener este acceso es habilitar el SE_SECURITY_NAME [privilegio](https://msdn.microsoft.com/library/windows/desktop/aa379306) en el token de acceso actual del llamador, abrir el identificador para el acceso ACCESS_SYSTEM_SECURITY y, a continuación, deshabilite el privilegio.|
+|SACL_SECURITY_INFORMATION|Establece la lista de control de acceso de la clave del sistema (SACL). La clave debe tener acceso ACCESS_SYSTEM_SECURITY. La manera adecuada de obtener este acceso es habilitar el SE_SECURITY_NAME [privilegio](/windows/desktop/secauthz/privileges) en el token de acceso actual del llamador, abrir el identificador para el acceso ACCESS_SYSTEM_SECURITY y, a continuación, deshabilite el privilegio.|
 
 *PSD*<br/>
 Puntero a un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) estructura que especifica los atributos de seguridad para establecer la clave especificada.
