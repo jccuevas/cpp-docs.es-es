@@ -1,6 +1,6 @@
 ---
 title: Información general sobre C++ AMP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663793"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176996"
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 
@@ -362,7 +362,7 @@ En las aplicaciones típicas, están relacionados con los elementos de un icono 
 
 El siguiente diagrama representa una matriz bidimensional de muestreo de datos que se organizan en teselas.
 
-![Indexar valores en una extensión del mosaico](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![Indexar valores en una extensión del mosaico](../../parallel/amp/media/camptiledgridexample.png "indexar valores en una extensión del mosaico")
 
 El siguiente ejemplo de código usa los datos de muestreo del diagrama anterior. El código reemplaza cada valor en el icono de la media de los valores en el icono.
 

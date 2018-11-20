@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563662"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176814"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane (clase)
 
@@ -350,11 +350,11 @@ Para usar el control `CMFCTasksPane` de la aplicación, siga estos pasos:
 
 En la siguiente ilustración se muestra un control de panel de tareas típicas. El primer grupo es un *especial* grupo y su título es un color más oscuro. El tercer grupo está contraído. El último grupo está alineado en la parte inferior del panel de tareas y no tiene título, y la última tarea del grupo es una etiqueta sencilla:
 
-![Ejemplo de panel de tareas](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![Ejemplo de panel de tareas](../../mfc/reference/media/nexttaskpane.png "ejemplo del panel de tareas")
 
 Puede personalizar la apariencia del panel de tareas ajustando varios márgenes y desplazamientos. En la siguiente ilustración se explica el significado de estas variables:
 
-![Grupo de tareas personalizado](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![Grupo de tareas personalizado](../../mfc/reference/media/nexttaskgrpcustom.png "grupo de tareas personalizado")
 
 ## <a name="example"></a>Ejemplo
 

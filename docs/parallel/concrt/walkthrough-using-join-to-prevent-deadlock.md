@@ -1,18 +1,18 @@
 ---
 title: 'Tutorial: Usar la clase join para evitar un interbloqueo'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498840"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175926"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Tutorial: Usar la clase join para evitar un interbloqueo
 
@@ -48,7 +48,7 @@ Este tutorial contiene las siguientes secciones:
 
 El problema de la cena de los filósofos ilustra cómo se produce el interbloqueo en una aplicación. En este problema, cinco filósofos están sentados a una mesa redonda. Cada filósofo alterna entre pensar y comer. Cada filósofo debe compartir un palillo con el vecino sentado a la izquierda y otro palillo con el vecino sentado a la derecha. En la siguiente ilustración se muestra este diseño.
 
-![El problema de los filósofos cena](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![El problema de los filósofos cena](../../parallel/concrt/media/dining_philosophersproblem.png "el problema cena de los filósofos")
 
 Para comer, un filósofo debe tener en la mano dos palillos. Si cada filósofo tiene un solo palillo y está esperando a que le den otro, ninguno puede comer y todos se quedan sin comer.
 

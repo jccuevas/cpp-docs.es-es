@@ -2,14 +2,15 @@
 title: Crear declaración o definición
 ms.date: 10/19/2018
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
-ms.openlocfilehash: 56f15ba040314b07450dc8730a913a18361e092f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ae3ebc23303554a35eea17c7e28850a4a1499a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456971"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693131"
 ---
 # <a name="create-declaration--definition"></a>Crear declaración o definición
+
 **Qué:** Permite generar inmediatamente la declaración o definición de una función.
 
 **Caso**: Tiene una función que necesita una declaración, o viceversa.

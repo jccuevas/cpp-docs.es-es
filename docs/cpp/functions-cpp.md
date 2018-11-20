@@ -1,6 +1,6 @@
 ---
 title: Funciones (C++)
-ms.date: 01/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: 777bffab922bc7122444110a32874f9b77171b0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626153"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176489"
 ---
 # <a name="functions-c"></a>Funciones (C++)
 
@@ -125,7 +125,8 @@ Los elementos opcionales de una declaración de función son los siguientes:
 
 La ilustración siguiente muestra las partes de una definición de función. El área sombreada es el cuerpo de la función.
 
-![Partes de una definición de función](../cpp/media/vc38ru1.gif "vc38RU1") partes de una definición de función
+![Partes de una definición de función](../cpp/media/vc38ru1.gif "partes de una definición de función") <br/>
+Elementos de una definición de función
 
 ## <a name="function-definitions"></a>Definiciones de función
 

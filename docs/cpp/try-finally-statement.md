@@ -1,6 +1,6 @@
 ---
 title: try-finally (Instrucción)
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326930"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175930"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 
@@ -68,7 +68,8 @@ Si se produce una excepción en el **__try** bloque, el sistema operativo debe b
 
 Por ejemplo, suponga que una serie de llamadas de función vincula la función A a la función D, como se muestra en la ilustración siguiente. Cada función tiene un controlador de finalización. Si se produce una excepción en la función D y se controla en A, se llama a los controladores de finalización en este orden mientras el sistema desenreda la pila: D, C, B.
 
-![Orden de terminación&#45;ejecución del controlador](../cpp/media/vc38cx1.gif "vc38CX1") orden de ejecución de controlador de terminación
+![Orden de terminación&#45;ejecución del controlador](../cpp/media/vc38cx1.gif "orden de terminación&#45;ejecución del controlador") <br/>
+Orden de terminación-ejecución de controladores
 
 > [!NOTE]
 > El comportamiento de try-finally es diferente de otros lenguajes que admiten el uso de **finalmente**, como C#.  Una sola **__try** puede tener, pero no ambos, de **__finally** y **__except**.  Si se van a usar ambos conjuntamente, una instrucción try-except externa debe incluir la instrucción try-finally interna.  Las reglas que especifican cuándo se ejecuta cada bloque también son diferentes.

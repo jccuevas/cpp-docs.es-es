@@ -1,16 +1,16 @@
 ---
 title: Personalización del teclado y del mouse
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487395"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175690"
 ---
 # <a name="keyboard-and-mouse-customization"></a>Personalización del teclado y del mouse
 
@@ -22,7 +22,8 @@ En el **personalización** cuadro de diálogo, el usuario puede cambiar los cont
 
 La siguiente ilustración muestra el **teclado** pestaña de la **personalización** cuadro de diálogo.
 
-![Pestaña teclado del cuadro de diálogo Personalizar](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab") teclado en la ficha personalización
+![Pestaña teclado del cuadro de diálogo Personalizar](../mfc/media/mfcnextkeyboardtab.png "pestaña teclado del cuadro de diálogo Personalizar") <br/>
+Ficha de personalización del teclado
 
 El usuario interactúa con la pestaña de teclado para asignar uno o más métodos abreviados de teclado a un comando. Los comandos disponibles se muestran en el lado izquierdo de la pestaña. El usuario puede seleccionar cualquier comando disponible en el menú. Comandos de menú sólo pueden asociarse con un método abreviado de teclado. Cuando el usuario introduce un nuevo acceso directo, el **asignar** se habilita el botón. Cuando el usuario hace clic en este botón, la aplicación asocia el comando seleccionado a ese método abreviado.
 
@@ -36,7 +37,8 @@ Si utiliza al Asistente para crear la aplicación, el Asistente inicializará el
 
 La siguiente ilustración muestra el **Mouse** pestaña de la **personalización** cuadro de diálogo.
 
-![Pestaña mouse del cuadro de diálogo Personalizar](../mfc/media/mfcnextmousetab.png "mfcnextmousetab") ficha personalización de Mouse
+![Pestaña mouse del cuadro de diálogo Personalizar](../mfc/media/mfcnextmousetab.png "pestaña mouse del cuadro de diálogo Personalizar") <br/>
+Personalización del mouse
 
 El usuario interactúa con esta pestaña para asignar un menú de comandos para el mouse, haga doble clic en acción. El usuario selecciona una vista del lado izquierdo de la ventana y, a continuación, utiliza los controles en el lado derecho para asociar un comando a la acción de doble clic. Después de que el usuario hace clic en **cerrar**, la aplicación ejecuta el comando asociado cada vez que el usuario hace doble clic en cualquier lugar en la vista.
 

@@ -1,17 +1,17 @@
 ---
 title: dynamic_cast (Operador)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - dynamic_cast_cpp
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-ms.openlocfilehash: 75085fe6dd1478fee769e23938c55c6300429d86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529160"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176970"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast (Operador)
 
@@ -121,7 +121,8 @@ int main() {
 }
 ```
 
-![Jerarquía que muestra herencia múltiple de clases](../cpp/media/vc39011.gif "vc39011") jerarquía de clases que muestra herencia múltiple
+![Jerarquía que muestra herencia múltiple de clases](../cpp/media/vc39011.gif "jerarquía que muestra herencia múltiple de clases") <br/>
+Jerarquía de clases que muestra herencia múltiple
 
 Un puntero a un objeto de tipo `D` se puede convertir de manera segura a `B` o a `C`. Sin embargo, si `D` se convierte para que apunte a un objeto `A`, ¿qué instancia de `A` resultaría? Esto produciría un error de conversión ambigua. Para eludir este problema, puede realizar dos conversiones no ambiguas. Por ejemplo:
 
@@ -141,13 +142,15 @@ void f() {
 
 Se pueden introducir más ambigüedades cuando se utilizan clases base virtuales. Considere la jerarquía de clases que se muestra en la ilustración siguiente.
 
-![Clase de la jerarquía que muestra clases base virtuales](../cpp/media/vc39012.gif "vc39012") clase jerarquía que muestra clases Base virtuales
+![Clase de la jerarquía que muestra clases base virtuales](../cpp/media/vc39012.gif "jerarquía que muestra clases base virtuales") <br/>
+Jerarquía de clases que muestra clases base virtuales
 
 En esta jerarquía, `A` es una clase base virtual. Dada una instancia de clase `E` y un puntero a la `A` subobjeto, un **dynamic_cast** a un puntero a `B` se producirá un error debido a la ambigüedad. Primero debe convertir de nuevo al objeto `E` completo y después volver a subir por la jerarquía, de forma no ambigua, hasta llegar al objeto `B` correcto.
 
 Considere la jerarquía de clases que se muestra en la ilustración siguiente.
 
-![Clase de la jerarquía que muestra clases base duplicadas](../cpp/media/vc39013.gif "vc39013") clase jerarquía que muestra clases Base duplicadas
+![Clase de la jerarquía que muestra clases base duplicadas](../cpp/media/vc39013.gif "jerarquía que muestra clases base duplicadas") <br/>
+Jerarquía de clases que muestra clases base duplicadas
 
 Dado un objeto de tipo `E` y un puntero al subobjeto `D`, para navegar desde el subobjeto `D` hasta el subobjeto `A` situado más a la izquierda, se pueden realizar tres conversiones. Puede realizar un **dynamic_cast** la conversión de la `D` puntero a un `E` puntero y, a continuación, una conversión (ya sea **dynamic_cast** o una conversión implícita) desde `E`a `B`y, por último, una conversión implícita de `B` a `A`. Por ejemplo:
 

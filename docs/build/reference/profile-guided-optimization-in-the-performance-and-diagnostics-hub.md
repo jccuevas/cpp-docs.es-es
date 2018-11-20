@@ -1,13 +1,13 @@
 ---
 title: Optimización guiada por perfiles del concentrador Rendimiento y diagnósticos
-ms.date: 03/14/2018
+ms.date: 11/19/2018
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
-ms.openlocfilehash: 57e0c32b401f2c1c3216a120bc86efa649ee0104
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8c0467e1a3051609f52053894ea59064e40a3ac
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580861"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176203"
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>En el concentrador de diagnósticos y rendimiento de Visual Studio 2013 la optimización guiada por perfiles
 
@@ -45,21 +45,21 @@ A continuación, establezca la configuración de compilación de la aplicación 
 
 Abra el concentrador rendimiento y diagnósticos, en la barra de menús, elija **analizar**, **rendimiento y diagnósticos**. Esto abre una página de la sesión de diagnósticos con las herramientas de análisis disponibles para el tipo de proyecto.
 
-![PGO en el Hub rendimiento y diagnósticos](../../build/reference/media/pgofig0hub.png "PGOFig0Hub")
+![PGO en el Hub rendimiento y diagnósticos](../../build/reference/media/pgofig0hub.png "PGO en el Hub rendimiento y diagnósticos")
 
 En **herramientas disponibles**, seleccione el **optimización guiada por perfiles** casilla de verificación. Elija la **iniciar** botón para iniciar el complemento PGO.
 
-![Página de introducción de PGO](../../build/reference/media/pgofig1start.png "PGOFig1Start")
+![Página de introducción de PGO](../../build/reference/media/pgofig1start.png "página de introducción de PGO")
 
 El **optimización guiada por perfiles** página describen los pasos que el complemento usa para mejorar el rendimiento de la aplicación. Elija la **iniciar** botón.
 
-![Página de instrumentación de PGO](../../build/reference/media/pgofig2instrument.png "PGOFig2Instrument")
+![Página de instrumentación de PGO](../../build/reference/media/pgofig2instrument.png "página de instrumentación de PGO")
 
 En el **instrumentación** sección, usa el **aprendizaje se habilita inicialmente** posibilidad de elegir si se debe incluir la fase de inicio de la aplicación como parte de la formación. Si no se selecciona esta opción, los datos de aprendizaje no se registran en una aplicación instrumentada en ejecución hasta que no se habilite explícitamente el aprendizaje.
 
 Elija la **instrumento** botón para compilar la aplicación con un conjunto especial de opciones del compilador. El compilador inserta instrucciones de sondeo en el código generado. Estas instrucciones registran los datos de generación de perfiles durante la fase de aprendizaje.
 
-![Página compilación instrumentada de PGO](../../build/reference/media/pgofig3build.PNG "PGOFig3Build")
+![Página compilación instrumentada de PGO](../../build/reference/media/pgofig3build.PNG "página compilación instrumentada de PGO")
 
 Cuando la compilación instrumentada de la aplicación se completa, la aplicación se inicia automáticamente.
 
@@ -67,22 +67,22 @@ Si hay errores o advertencias se producen durante la compilación, corríjalos y
 
 Cuando se inicia la aplicación, puede usar el **iniciar aprendizaje** y **pausar aprendizaje** vínculos en el **entrenamiento** sección para controlar cuándo se registra la información de generación de perfiles. Puede usar el **detener aplicación** y **Iniciar aplicación** vínculos para detener y reiniciar la aplicación.
 
-![Página de aprendizaje de PGO](../../build/reference/media/pgofig4training.PNG "PGOFig4Training")
+![Página de aprendizaje de PGO](../../build/reference/media/pgofig4training.PNG "página de aprendizaje de PGO")
 
 Durante la formación, recorra los escenarios de usuario para capturar la información de generación de perfiles que el complemento PGO necesita para optimizar el código. Cuando haya completado el aprendizaje, cierre la aplicación o elija el **detener aplicación** vínculo. Elija la **analizar** botón para iniciar el paso de análisis.
 
 Cuando se completa, el análisis del **Analysis** sección muestra un informe de la información de generación de perfiles que se capturaron durante la fase de aprendizaje del escenario de usuario. Puede usar este informe para examinar las funciones a las que más llamó la aplicación y a las que dedicó más tiempo. El complemento PGO usa la información para determinar en qué funciones de la aplicación se va a optimizar la velocidad y en cuáles el tamaño. El complemento PGO configura optimizaciones de compilación a fin de crear la aplicación más pequeña y rápida para los escenarios de usuario registrados durante el aprendizaje.
 
-![Página de análisis de PGO](../../build/reference/media/pgofig5analyze.png "PGOFig5Analyze")
+![Página de análisis de PGO](../../build/reference/media/pgofig5analyze.png "página de análisis de PGO")
 
 Si el aprendizaje capturó la información de generación de perfiles esperada, puede elegir **guardar cambios** para guardar los datos de perfil analizados en el proyecto para optimizar futuras compilaciones. Para descartar los datos de perfil y comenzar el aprendizaje sobre desde el principio, elija **rehacer el aprendizaje**.
 
 El archivo de datos de perfil se guarda en el proyecto en un **datos de entrenamiento de PGO** carpeta. Estos datos se usan para controlar la configuración de optimización de compilación del compilador en la aplicación.
 
-![Archivo de datos PGO en el Explorador de soluciones](../../build/reference/media/pgofig6data.png "PGOFig6Data")
+![Archivo de datos PGO en el Explorador de soluciones](../../build/reference/media/pgofig6data.png "archivo de datos PGO en el Explorador de soluciones")
 
 Después del análisis, el complemento PGO establece opciones de compilación en el proyecto para usar los datos de perfil para optimizar selectivamente la aplicación durante la compilación. Puede seguir modificando y compilando la aplicación con los mismos datos de perfil. Cuando se compila la aplicación, los resultados de la compilación notifican cuántas funciones e instrucciones se optimizaron usando los datos de perfil.
 
-![Diagnósticos de salida de PGO](../../build/reference/media/pgofig7diagnostics.png "PGOFig7Diagnostics")
+![Diagnósticos de salida de PGO](../../build/reference/media/pgofig7diagnostics.png "diagnósticos de salida de PGO")
 
 Si realiza cambios de código significativos durante el desarrollo, es posible que tenga que volver a aplicar el entrenamiento a la aplicación para obtener las mejores optimizaciones. Se recomienda volver a aplicar el entrenamiento a la aplicación cuando los resultados de la compilación notifican que menos del 80 % de las funciones o instrucciones se optimizaron usando los datos de perfil.

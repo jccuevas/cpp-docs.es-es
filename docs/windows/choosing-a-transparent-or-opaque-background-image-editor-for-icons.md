@@ -1,6 +1,6 @@
 ---
 title: Elegir un fondo transparente u opaco (Editor de imágenes para iconos)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653536"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175436"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Elegir un fondo transparente u opaco (Editor de imágenes para iconos)
 
@@ -21,7 +21,7 @@ Al mover o copiar una selección de una imagen, son los píxeles de la selecció
 
 Puede cambiar de un fondo transparente (valor predeterminado) a un fondo opaco y viceversa. Cuando se usa una herramienta de selección, el **fondo transparente** y **fondo opaco** opciones aparecen en la **opción** selector en la **delEditordeimágenes** barra de herramientas (como se muestra a continuación).
 
-![Opciones de fondo &#45; opaca o transparente](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![Opciones de fondo &#45; opaca o transparente](../windows/media/vcimageeditoropaqtranspback.gif "en segundo plano opciones &#45; opaca o transparente")<br/>
 **Opciones transparentes y opacas** en el **barra de herramientas del Editor de imágenes**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Para cambiar entre un fondo transparente y opaco
@@ -32,9 +32,9 @@ Puede cambiar de un fondo transparente (valor predeterminado) a un fondo opaco y
 
    - `Transparent Background (T)`: Imagen existente se muestra en las partes de la selección que coinciden con el color de fondo actual.
 
-\- o -
+   \- o -
 
-- En el **imagen** menú, active o desactive **dibujar figuras opacas**.
+1. En el **imagen** menú, active o desactive **dibujar figuras opacas**.
 
 Puede cambiar el color de fondo mientras una selección ya está en vigor para cambiar qué partes de la imagen son transparentes.
 

@@ -1,6 +1,6 @@
 ---
 title: Administrar ventanas secundarias MDI
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629416"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176802"
 ---
 # <a name="managing-mdi-child-windows"></a>Administrar ventanas secundarias MDI
 
@@ -25,7 +25,8 @@ Ventanas de marco principal MDI (una por aplicación) contienen una ventana secu
 
 En una ventana de marco MDI, la ventana de marco administra la ventana MDICLIENT, cambiar la posición junto con las barras de control. La ventana MDICLIENT, a su vez, administra todas las ventanas de marco secundarias MDI. En la siguiente ilustración muestra la relación entre una ventana marco MDI, su ventana MDICLIENT y sus ventanas de marco de documento secundarias.
 
-![Ventanas secundarias en una ventana marco MDI](../mfc/media/vc37gb1.gif "vc37gb1") Windows de marco MDI y elementos secundarios.
+![Ventanas secundarias en una ventana marco MDI](../mfc/media/vc37gb1.gif "ventanas secundarias en una ventana marco MDI") <br/>
+Ventanas marco de MDI y ventanas secundarias
 
 Una ventana marco MDI también funciona junto con la ventana secundaria MDI actual, si hay alguno. La ventana de marco MDI delega los mensajes de comando al formulario secundario MDI antes de intentar controlar propio.
 

@@ -2,16 +2,16 @@
 title: Instalar compatibilidad con C++ en Visual Studio 2017
 description: Instalar la compatibilidad de Visual Studio para Visual C++
 ms.custom: mvc
-ms.date: 09/17/2018
+ms.date: 11/19/2018
 ms.topic: tutorial
 ms.devlang: C++
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 019eadee35829bb546de0a69707520dc98f4077e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507242"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175748"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Instalar compatibilidad con C++ en Visual Studio
 
@@ -45,11 +45,11 @@ En general, recomendamos encarecidamente que use Visual Studio 2017, incluso par
 
 1. Busque el archivo de instalador que descargó y ejecútelo. Se pueden mostrar en el explorador o se puede encontrar en la carpeta de descargas. El instalador necesita privilegios de administrador para ejecutarse. Es posible que vea un **User Account Control** cuadro de diálogo que le pide que conceder permiso para permitir que el programa de instalación realizar cambios en el sistema; elija **Sí**. Si tiene problemas, busque el archivo descargado en el Explorador de archivos, haga doble clic en el icono de programa de instalación y elija **ejecutar como administrador** en el menú contextual.
 
-   ![Ejecute el instalador de Visual Studio 2017](../build/media/vscpp-concierge-run-installer.gif "ejecute el instalador de Visual Studio")
+   ![Descargue e instale el instalador de Visual Studio](../build/media/vscpp-concierge-run-installer.gif "descargue e instale el instalador de Visual Studio")
 
 1. El instalador muestra una lista de las cargas de trabajo, que son grupos de opciones relacionadas para áreas de desarrollo específicas. Compatibilidad de C++ ahora forma parte de las cargas de trabajo opcionales que no están instaladas de forma predeterminada.
 
-   ![Desarrollo de escritorio con C++](../build/media/desktop-development-with-cpp.png "desarrollo de escritorio con C++")
+   ![Desarrollo de escritorio con la carga de trabajo de C++](../build/media/desktop-development-with-cpp.png "desarrollo de escritorio con C++")
 
    Para C++, seleccione el **desarrollo de escritorio con C++** carga de trabajo y, a continuación, elija **instalar**.
 

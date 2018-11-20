@@ -1,6 +1,6 @@
 ---
 title: Barras de cuadro de diálogo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MFC, control bars
 - CDialogBar class [MFC], dialog bars
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 3a3276e9b5d0e1ab8d8e77fae983d24ff1e4b4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557415"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175358"
 ---
 # <a name="dialog-bars"></a>Barras de cuadro de diálogo
 
@@ -21,7 +21,8 @@ Una barra de cuadro de diálogo es una barra de herramientas, un tipo de [barra 
 
 Hay varias diferencias claves entre una barra de herramientas y un `CDialogBar` objeto. Un `CDialogBar` objeto se crea a partir de un recurso de plantilla de cuadro de diálogo, que puede crear con el editor de cuadro de diálogo de Visual C++ y que puede contener cualquier tipo de control de Windows. El usuario puede tabular desde el control al control. Y puede especificar un estilo de alineación para alinear la barra de cuadro de diálogo con cualquier parte de la ventana de marco principal o incluso a dejarlo en su lugar, si se cambia el tamaño del elemento primario. La siguiente ilustración muestra una barra de cuadro de diálogo con una variedad de controles.
 
-![Barra de cuadro de diálogo VC](../mfc/media/vc378t1.gif "vc378t1") una barra de cuadro de diálogo
+![Barra de cuadro de diálogo VC](../mfc/media/vc378t1.gif "barra de cuadro de diálogo VC") <br/>
+Una barra de cuadro de diálogo
 
 En otros aspectos, trabajar con un `CDialogBar` objeto es similar a trabajar con un cuadro de diálogo no modal. Usar el editor de cuadro de diálogo para diseñar y crear el recurso de cuadro de diálogo.
 

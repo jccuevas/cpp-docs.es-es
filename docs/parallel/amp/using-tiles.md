@@ -1,13 +1,13 @@
 ---
 title: Usar mosaicos
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588524"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176099"
 ---
 # <a name="using-tiles"></a>Usar mosaicos
 
@@ -27,7 +27,7 @@ Para aprovechar las ventajas del mosaico, el algoritmo debe dividir el dominio d
 
 El siguiente diagrama representa una matriz de 8 x 9 de datos que se organizan en mosaicos de 2 x 3.
 
-![8&#45;por&#45;matriz 9 dividido en 2&#45;por&#45;3 iconos](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;por&#45;matriz 9 dividido en 2&#45;por&#45;3 iconos](../../parallel/amp/media/usingtilesmatrix.png "8&#45;por&#45;matriz 9 dividido en 2&#45;por&#45;3 iconos")
 
 En el ejemplo siguiente se muestra el icono global, y los índices locales de esta matriz en mosaico. Un `array_view` objeto se crea mediante el uso de los elementos de tipo `Description`. El `Description` contiene la información global, icono y los índices locales del elemento de la matriz. El código en la llamada a `parallel_for_each` establece los valores de la información global, icono y los índices locales de cada elemento. La salida muestra los valores en el `Description` estructuras.
 

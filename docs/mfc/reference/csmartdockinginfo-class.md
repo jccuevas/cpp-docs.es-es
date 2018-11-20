@@ -1,6 +1,6 @@
 ---
 title: CSmartDockingInfo (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524671"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176775"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo (clase)
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Los identificadores de marco inteligente internamente los marcadores de acoplamiento. La siguiente ilustración muestra los marcadores de acoplamiento inteligentes estándares:
 
-![Marcadores estándares de acoplamiento inteligente](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Marcadores estándares de acoplamiento inteligente](../../mfc/reference/media/nextsdmarkers.png "marcadores estándares de acoplamiento inteligente")
 
 En esta ilustración, la imagen de la izquierda muestra un marcador de acoplamiento inteligente de grupo central que no tienen acoplamiento a una pestaña habilitada. La imagen en la parte central muestra un marcador de acoplamiento inteligente del borde derecho. La imagen de la derecha muestra un marcador de acoplamiento inteligente de grupo central que tienen acoplamiento a una pestaña habilitada. El marcador de acoplamiento inteligente de grupo central tiene un mapa de bits principal y cinco inteligente acoplamiento mapas de bits de marcador.
 
@@ -93,7 +93,7 @@ Puede personalizar los siguientes parámetros de marcadores de acoplamiento inte
 
 En la siguiente ilustración se muestra un ejemplo de marcadores de acoplamiento inteligente que se han personalizado:
 
-![Marcadores personalizados de acoplamiento inteligente](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Marcadores personalizados de acoplamiento inteligente](../../mfc/reference/media/nextsdmarkerscustom.png "marcadores personalizados de acoplamiento inteligente")
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

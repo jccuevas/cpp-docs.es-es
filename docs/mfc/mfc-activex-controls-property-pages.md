@@ -1,6 +1,6 @@
 ---
 title: 'Controles ActiveX MFC: Páginas de propiedades'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656188"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176463"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: Páginas de propiedades
 
@@ -32,7 +32,8 @@ Páginas de propiedades del control ActiveX se muestran de dos maneras:
 
 El cuadro de diálogo de propiedades (que se muestra en la ilustración siguiente) consta de un área para mostrar la página de propiedades actual, las pestañas para cambiar entre páginas de propiedades y una colección de botones que realizan tareas comunes como cerrar el cuadro de diálogo de la página de propiedad, Cancelar los cambios realizados o aplicar inmediatamente los cambios en el control ActiveX.
 
-![Cuadro de diálogo Propiedades de Circ3](../mfc/media/vc373i1.gif "vc373i1") cuadro de diálogo Propiedades
+![Cuadro de diálogo Propiedades de Circ3](../mfc/media/vc373i1.gif "cuadro de diálogo Propiedades de Circ3") <br/>
+Cuadro de diálogo Propiedades
 
 En este artículo se trata temas relacionados con el uso de páginas de propiedades en un control ActiveX. Se incluyen los siguientes:
 

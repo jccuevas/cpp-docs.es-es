@@ -1,15 +1,15 @@
 ---
 title: Algoritmos paralelos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445596"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176450"
 ---
 # <a name="parallel-algorithms"></a>Algoritmos paralelos
 
@@ -247,7 +247,7 @@ En la tabla siguiente se resume las propiedades importantes de los tres algoritm
 
 La siguiente ilustración muestra las propiedades importantes de los tres algoritmos de ordenación paralelas más gráficamente.
 
-![Comparación de los algoritmos de ordenación](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![Comparación de los algoritmos de ordenación](../../parallel/concrt/media/concrt_parallel_sorting.png "comparación de los algoritmos de ordenación")
 
 Estos algoritmos de ordenación paralela siguen las reglas de cancelación y control de excepciones. Para obtener más información acerca de la cancelación y control de excepciones en el Runtime de simultaneidad, consulte [Cancelar algoritmos paralelos](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms) y [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 

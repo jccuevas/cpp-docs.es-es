@@ -1,16 +1,16 @@
 ---
 title: Identificar los elementos del proyecto de Control DHTML
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533697"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175718"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificar los elementos del proyecto de Control DHTML
 
@@ -26,7 +26,7 @@ Un control DHTML es similar a cualquier control ATL, excepto:
 
 El siguiente gráfico ilustra la relación entre el archivo DLL, el control DHTML, el explorador Web y el recurso HTML.
 
-![Elementos de un proyecto de control DHTML](../atl/media/vc52en1.gif "vc52en1")
+![Elementos de un proyecto de control DHTML](../atl/media/vc52en1.gif "elementos de un proyecto de control DHTML")
 
 > [!NOTE]
 >  Los nombres de este gráfico son marcadores de posición. Los nombres de los recursos HTML y las interfaces expuestas en el control se basan en los nombres que se les asigna en el Asistente para controles ATL.
@@ -47,7 +47,7 @@ En este gráfico, los elementos son:
 
 El Asistente para controles ATL genera un control con el código de forma predeterminada en el recurso HTML y el archivo. cpp. Puede compilar y ejecutar el control como el generado por el asistente y, a continuación, el control de vista en el explorador Web o el Control ActiveX Test Container. La siguiente imagen muestra el control DHTML ATL predeterminado con tres botones en el contenedor de prueba:
 
-![Control DHTML ATL](../atl/media/vc52en2.gif "vc52en2")
+![Control DHTML ATL](../atl/media/vc52en2.gif "control DHTML ATL")
 
 Consulte [crear un Control de DHTML ATL](../atl/creating-an-atl-dhtml-control.md) para empezar a crear un control DHTML. Consulte [Probar propiedades y eventos con un contenedor de prueba](../mfc/testing-properties-and-events-with-test-container.md) para obtener información sobre cómo obtener acceso a Test Container.
 

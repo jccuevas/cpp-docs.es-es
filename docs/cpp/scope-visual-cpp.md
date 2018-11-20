@@ -1,6 +1,6 @@
 ---
 title: Ámbito (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506618"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176762"
 ---
 # <a name="scope-c"></a>Ámbito (C++)
 
@@ -41,7 +41,8 @@ Existen seis tipos de ámbito:
 
 Puede ocultar un nombre declarándolo en un bloque delimitado. En la ilustración siguiente, `i` se declara dentro del bloque interno, ocultando de esta manera la variable asociada a `i` en el ámbito de bloque externo.
 
-![Bloque&#45;ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "vc38SF1") ámbito de bloque y ocultación de nombre
+![Bloque&#45;ocultación de nombres de ámbito](../cpp/media/vc38sf1.png "bloque&#45;ocultación de nombres de ámbito") <br/>
+Ámbito de bloque y ocultación de nombres
 
 El resultado del programa que se muestra en la figura es:
 

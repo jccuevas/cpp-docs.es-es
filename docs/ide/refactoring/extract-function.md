@@ -2,14 +2,15 @@
 title: Extraer función
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-ms.openlocfilehash: 41a488b067bce750224f3785e311f91d43dc31ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571033"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692325"
 ---
 # <a name="extract-function"></a>Extraer función
+
 **Qué:** permite convertir un fragmento de código en su propia función.
 
 **Cuándo:** tiene un fragmento de código existente en alguna función que se debe llamar desde otra.

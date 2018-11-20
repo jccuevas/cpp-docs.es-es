@@ -1,6 +1,6 @@
 ---
 title: Clase CNetDirecciónCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654692"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176243"
 ---
 # <a name="cnetaddressctrl-class"></a>Clase CNetDirecciónCtrl
 
@@ -64,7 +64,7 @@ El `CNetAddressCtrl` clase se deriva el [CEdit](../../mfc/reference/cedit-class.
 
 La figura siguiente muestra un cuadro de diálogo que contiene un control de dirección de red. El texto cuadro (1) para el control de dirección de red contiene una dirección de red no válido. Se muestra el mensaje de recuadro informativo (2) si la dirección de red no es válida.
 
-![Cuadro de diálogo con un control de dirección de red y un recuadro informativo. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Cuadro de diálogo con un control de dirección de red y un recuadro informativo. ](../../mfc/reference/media/cnetaddctrl.png "Cuadro de diálogo con un control de dirección de red y un recuadro informativo.")
 
 ## <a name="example"></a>Ejemplo
 

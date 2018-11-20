@@ -1,24 +1,24 @@
 ---
 title: Diseñador de la cinta de opciones (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521403"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175839"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
 
 El diseñador de la cinta de opciones permite crear y personalizar las cintas de opciones de las aplicaciones MFC. Una cinta de opciones es un elemento de la interfaz de usuario (IU) que organiza los comandos en grupos lógicos. Estos grupos aparecen en pestañas independientes en una banda a lo largo de la parte superior de la ventana. La cinta de opciones reemplaza a la barra de menús y a las barras de herramientas. Una cinta de opciones puede mejorar considerablemente la facilidad de uso de la aplicación. Para obtener más información, consulte [cintas](/windows/desktop/uxguide/cmd-ribbons). En la siguiente ilustración se muestra una cinta de opciones.
 
-![Control de recursos de cinta de opciones de MFC](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![Control de recursos de cinta de opciones MFC](../mfc/media/ribbon_no_callouts.png "Control de recursos de cinta de opciones MFC")
 
 En versiones anteriores de Visual Studio, las cintas de opciones tenían que crearse escribiendo código que utiliza las clases de la cinta de opciones MFC como [CMFCRibbonBar (clase)](../mfc/reference/cmfcribbonbar-class.md). En Visual Studio 2010 y versiones posteriores, el Diseñador de cinta de opciones proporciona un método alternativo para la creación de las cintas de opciones. En primer lugar, cree y personalice una cinta de opciones como un recurso. A continuación, cargue el recurso de cinta de opciones desde el código en la aplicación MFC. Incluso puede usar los recursos de cinta de opciones y las clases de cinta de opciones MFC juntos. Por ejemplo, puede crear un recurso de cinta y, a continuación, agregar mediante programación más elementos a ella en tiempo de ejecución mediante código.
 
@@ -71,7 +71,7 @@ Para abrir una cinta de opciones en el diseñador de la cinta de opciones, haga 
 
 En la siguiente ilustración se muestran los distintos componentes del diseñador de la cinta de opciones.
 
-![Diseñador de la cinta de MFC](../mfc/media/ribbon_designer.png "ribbon_designer")
+![Diseñador de la cinta MFC](../mfc/media/ribbon_designer.png "Diseñador de la cinta MFC")
 
 - **Cuadro de herramientas:** contiene controles que se pueden arrastrar a la superficie del diseñador.
 
@@ -95,7 +95,7 @@ Los temas siguientes describen cómo usar las características del diseñador de
 
 ## <a name="definitions-of-ribbon-elements"></a>Definiciones de elementos de la cinta de opciones
 
-![Cinta de MFC](../mfc/media/ribbon.png "cinta de opciones")
+![Cinta de MFC](../mfc/media/ribbon.png "cinta de MFC")
 
 - **Botón de la aplicación:** el botón que aparece en la esquina superior izquierda de una cinta de opciones. El botón Aplicación reemplaza al menú Archivo y está visible incluso cuando se minimiza la cinta de opciones. Al hacer clic en el botón, se muestra un menú con una lista de comandos.
 

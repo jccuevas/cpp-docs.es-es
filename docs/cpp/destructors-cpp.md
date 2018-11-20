@@ -1,6 +1,6 @@
 ---
 title: Destructores (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5c56a6ffc43f8fa00ffd540a5922d8ac279475ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586022"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175878"
 ---
 # <a name="destructors-c"></a>Destructores (C++)
 
@@ -152,8 +152,7 @@ B1 dtor
 
 Los destructores de las clases base virtuales se llaman en orden inverso al de su aparición en un gráfico acíclico dirigido (recorrido con prioridad de profundidad, de izquierda a derecha y en postorden). La ilustración siguiente representa un gráfico de herencia.
 
-![Gráfico de herencia que muestra clases base virtuales](../cpp/media/vc392j1.gif "vc392J1")
-
+![Gráfico de herencia que muestra clases base virtuales](../cpp/media/vc392j1.gif "gráfico de herencia que muestra clases base virtuales") <br/>
 Gráfico de herencia que muestra clases base virtuales
 
 A continuación se enumeran los encabezados de las clases que se muestran en la ilustración.

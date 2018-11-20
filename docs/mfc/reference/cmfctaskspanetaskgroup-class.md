@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPaneTaskGroup (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539612"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176593"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup (clase)
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 La siguiente ilustración muestra un grupo de tareas expandido:
 
-![Grupo de tareas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Grupo de tareas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "grupo de tareas, expandido")
 
 La siguiente ilustración muestra un grupo de tareas contraído:
 
-![Grupo de tareas contraído](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Grupo de tareas contraído](../../mfc/reference/media/nexttaskgrpcollapse.png "grupo de tareas contraído")
 
 La siguiente ilustración muestra un grupo de tareas sin título:
 
-![Grupo de tareas sin título](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Grupo de tareas sin título](../../mfc/reference/media/nexttaskgrpnocapt.png "grupo de tareas sin título")
 
 La siguiente ilustración muestra dos grupos de tareas. El primer grupo de tareas está marcado como especial estableciendo el `m_bIsSpecial` marca en TRUE, mientras que el segundo grupo de tareas no es especial. Tenga en cuenta cómo el título para el primer grupo de tareas es más oscuro que el segundo grupo de tareas:
 
-![Grupo de tareas especiales](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Grupo de tareas especiales](../../mfc/reference/media/nexttaskgrpspecial.png "grupo de tareas especial")
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

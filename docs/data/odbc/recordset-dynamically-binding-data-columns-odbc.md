@@ -1,6 +1,6 @@
 ---
 title: 'Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469686"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175670"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)
 
@@ -78,7 +78,7 @@ Enlazar dinámicamente, se agrega las columnas en tiempo de ejecución requiere 
 
    Un enfoque consiste en crear una o varias listas dinámicas, uno para los nombres de las nuevas columnas, otra para los valores de resultado y una tercera para sus tipos de datos (si es necesario). Estas listas, especialmente la lista de valores, proporcionan la información y el almacenamiento necesario para el enlace. La ilustración siguiente muestra la creación de las listas.
 
-   ![Creación de listas de columnas para enlazarlas dinámicamente](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Creación de listas de columnas para enlazarlas dinámicamente](../../data/odbc/media/vc37w61.gif "generar listas de columnas para enlazarlas dinámicamente")<br/>
    Compilar listas de columnas para enlazarlas dinámicamente
 
 1. Agregue una llamada de función RFX en su conjunto de registros principal `DoFieldExchange` función para cada columna de agregado. Estas llamadas RFX realizan el trabajo de captura un registro, incluidas las columnas adicionales y enlazar las columnas a los miembros de datos del conjunto de registros o el almacenamiento asignado dinámicamente para ellos.

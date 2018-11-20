@@ -1,17 +1,17 @@
 ---
 title: Expresiones lambda en C++
-ms.date: 07/19/2017
+ms.date: 11/19/2018
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 44255df8633ad677587129dd27c0bdc23a616d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493813"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176268"
 ---
 # <a name="lambda-expressions-in-c"></a>Expresiones lambda en C++
 
@@ -43,7 +43,7 @@ void abssort(float* x, unsigned n) {
 
 En esta ilustración se muestran las partes de una expresión lambda:
 
-![Los elementos estructurales de una expresión lambda](../cpp/media/lambdaexpsyntax.png "LambdaExpSyntax")
+![Los elementos estructurales de una expresión lambda](../cpp/media/lambdaexpsyntax.png "elementos estructurales de una expresión lambda")
 
 1. *cláusula de captura* (también conocido como el *lambda-introducer* en la especificación de C++.)
 

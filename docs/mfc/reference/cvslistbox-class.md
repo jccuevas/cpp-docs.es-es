@@ -1,6 +1,6 @@
 ---
 title: CVSListBox (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513768"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176217"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox (clase)
 
@@ -81,7 +81,7 @@ La `CVSListBox` clase proporciona un conjunto de botones de edición que permite
 
 La siguiente es una imagen del control de lista modificable. La segunda entrada de lista, que se titula "Item2", está seleccionada para su edición.
 
-![Control CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![Control CVSListBox](../../mfc/reference/media/cvslistbox.png "control CVSListBox")
 
 Si utiliza el editor de recursos para agregar un control de lista modificable, tenga en cuenta que el **cuadro de herramientas** panel del editor no proporciona un control de lista modificable predefinido. En su lugar, agregue un control estático como el **cuadro grupo** control. El marco de trabajo usa el control estático como un marcador de posición para especificar el tamaño y posición del control de lista modificable.
 

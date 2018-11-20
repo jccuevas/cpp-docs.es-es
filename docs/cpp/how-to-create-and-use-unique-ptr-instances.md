@@ -1,15 +1,15 @@
 ---
 title: 'Cómo: Crear y usar instancias de unique_ptr'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610254"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174900"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Cómo: Crear y usar instancias de unique_ptr
 
@@ -17,7 +17,7 @@ Un [unique_ptr](../standard-library/unique-ptr-class.md) no comparte el puntero.
 
 El diagrama siguiente muestra la transferencia de propiedad entre dos instancias de `unique_ptr`.
 
-![Transferencia de la propiedad de un único&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")
+![Transferencia de la propiedad de un único&#95;ptr](../cpp/media/unique_ptr.png "transferencia de la propiedad de un único&#95;ptr")
 
 `unique_ptr` se define en el `<memory>` encabezado en la biblioteca estándar de C++. Es exactamente tan eficaz como un puntero sin formato y se pueden usar en contenedores de la biblioteca estándar de C++. La adición de `unique_ptr` instancias para contenedores de la biblioteca estándar de C++ es eficaz porque el constructor de movimiento de la `unique_ptr` elimina la necesidad de una operación de copia.
 
