@@ -1,18 +1,18 @@
 ---
 title: Semántica de las expresiones
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490966"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175797"
 ---
 # <a name="semantics-of-expressions"></a>Semántica de las expresiones
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Orden de evaluación en una expresión](../cpp/media/vc38zv1.gif "vc38ZV1") orden de evaluación de expresión
+![Orden de evaluación en una expresión](../cpp/media/vc38zv1.gif "orden de evaluación en una expresión") <br/>
+Orden de evaluación de expresión
 
 El orden en que se evalúa la expresión mostrada en la ilustración anterior viene determinado por la prioridad y la asociatividad de los operadores:
 
@@ -55,7 +56,8 @@ El orden en que se evalúa la expresión mostrada en la ilustración anterior vi
 
 Cuando se utilizan paréntesis para agrupar subexpresiones, se modifica la prioridad, así como el orden en que se evalúa la expresión, como se muestra en la ilustración siguiente.
 
-![Orden de evaluación de expresión con paréntesis](../cpp/media/vc38zv2.gif "vc38ZV2") orden de expresión-evaluación con paréntesis
+![Orden de evaluación de expresión con paréntesis](../cpp/media/vc38zv2.gif "orden de evaluación de expresión con paréntesis") <br/>
+Orden de expresión-evaluación con paréntesis
 
 Las expresiones como las de la ilustración anterior se evalúan simplemente para que se apliquen sus efectos secundarios (en este caso, para transferir información al dispositivo de salida estándar).
 
@@ -68,7 +70,7 @@ El lenguaje C++ indica ciertas compatibilidades al especificar operandos. En la 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
 |*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *Tipo*&<br /> `const` *Tipo*&<br /> `volatile` *Tipo*&<br /> `volatile const` *Tipo*<br /> `volatile const` *Tipo*&|
-|*Tipo*\*|*Tipo*\*<br /> `const` *Tipo*\*<br /> `volatile` *Tipo*\*<br /> `volatile const` *Tipo*\*|
+|*Tipo* \*|*Tipo* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
 |`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *Tipo*&|
 |`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *Tipo*&|
 

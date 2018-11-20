@@ -1,6 +1,6 @@
 ---
 title: CRectTracker (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473377"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176515"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (clase)
 
@@ -237,7 +237,7 @@ Los controladores de tamaño aparecen en los lados y las esquinas del rectángul
 
 Un rectángulo tiene 8 controladores de tamaño con el número 0-7. Cada controlador de tamaño se representa mediante un poco en la máscara; el valor de ese bit es 2 ^ *n*, donde *n* es el número de identificador de cambio de tamaño. Bits 0-3 se corresponden con los controladores de tamaño de la esquina, comenzando en la parte superior izquierda de mover hacia la derecha. Desde la parte superior agujas del reloj de controladores de tamaño de bits se corresponden con el lado del 4 al 7. Controla el cambio de tamaño de un rectángulo y sus correspondientes cambiar el tamaño de los números de identificador y los valores, se muestra en la siguiente ilustración:
 
-![Cambiar el tamaño de los números de asas](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Cambiar el tamaño de los números de asas](../../mfc/reference/media/vc35dp1.gif "números de asas de cambio de tamaño")
 
 La implementación predeterminada de `GetHandleMask` devuelve la máscara de bits para que aparezcan los manipuladores de cambio de tamaño. Si el bit único está activado, se dibujará el controlador de tamaño correspondiente.
 

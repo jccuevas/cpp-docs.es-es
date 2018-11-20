@@ -1,18 +1,18 @@
 ---
 title: Contenedores de documentos activos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510843"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176788"
 ---
 # <a name="active-document-containers"></a>Contenedores de documentos activos
 
@@ -54,7 +54,7 @@ El objeto de marco, los objetos de vista y el objeto contenedor pueden implement
 
 En la siguiente ilustración muestra las relaciones conceptuales entre un contenedor y sus componentes (a la izquierda) y el documento activo y sus vistas (a la derecha). El documento activo administra el almacenamiento y datos, y la vista se muestra o imprime, opcionalmente, esos datos. Las interfaces en negrita son las necesarias para la participación del documento activo; esos negrita y cursiva son opcionales. Todas las demás interfaces son necesarios.
 
-![Interfaces de contenedor de documentos activos](../mfc/media/vc37gj1.gif "vc37gj1")
+![Interfaces de contenedor de documentos activos](../mfc/media/vc37gj1.gif "interfaces de contenedor de documentos activos")
 
 Un documento que admite una sola vista puede implementar los componentes de la vista y el documento (es decir, sus interfaces correspondientes) en una clase concreta individual. Además, un sitio de contenedor que sólo admite una vista a la vez puede combinar el sitio de documento y la vista en una clase único sitio concreto. Objeto de marco del contenedor, sin embargo, debe ser distintos, y el componente del documento del contenedor sólo se incluye aquí para ofrecer una imagen completa de la arquitectura; no se ve afectado por la arquitectura de contención de documentos activos.
 

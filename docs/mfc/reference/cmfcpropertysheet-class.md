@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531617"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176411"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet (clase)
 
@@ -112,15 +112,15 @@ Realice los pasos siguientes para usar la clase `CMFCPropertySheet` en la aplica
 
 La siguiente ilustración muestra una hoja de propiedades que se encuentra en el estilo de una barra de herramientas incrustada de Microsoft Outlook. La barra de herramientas de Outlook aparece en el lado izquierdo de la hoja de propiedades.
 
-![Controles de color de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Controles de color de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "controles de color de CMFCPropertySheet")
 
 La siguiente ilustración muestra una hoja de propiedades que contiene un [CMFCPropertyGridCtrl (clase)](../../mfc/reference/cmfcpropertygridctrl-class.md) objeto. Ese objeto es una hoja de propiedades del estilo de una hoja de propiedades de controles comunes estándar.
 
-![Controles de propiedad y lista de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Controles de propiedad y lista de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "controles de propiedad y lista de CMFCPropertySheet")
 
 La siguiente ilustración muestra una hoja de propiedades que se encuentra en el estilo de un control de árbol.
 
-![Árbol de propiedades](../../mfc/reference/media/proptree.png "proptree")
+![Árbol de la propiedad](../../mfc/reference/media/proptree.png "propiedad árbol")
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

@@ -1,6 +1,6 @@
 ---
 title: Documentos de varias páginas
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587673"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176385"
 ---
 # <a name="multipage-documents"></a>Documentos de varias páginas
 
@@ -68,7 +68,8 @@ Se puede realizar procesamiento relacionado con la impresión en otras funciones
 
 La siguiente ilustración se muestran los pasos implicados en el proceso de impresión y se muestra dónde cada uno de `CView`de impresión de miembro se llama a funciones. El resto de este artículo explica la mayoría de estos pasos con más detalle. Elementos adicionales del proceso de impresión se describen en el artículo [asignar recursos GDI](../mfc/allocating-gdi-resources.md).
 
-![Proceso de bucle de impresión](../mfc/media/vc37c71.gif "vc37c71") el bucle de impresión
+![Proceso de bucle de impresión](../mfc/media/vc37c71.gif "proceso de bucle de impresión") <br/>
+El bucle de impresión
 
 ##  <a name="_core_pagination"></a> Paginación
 

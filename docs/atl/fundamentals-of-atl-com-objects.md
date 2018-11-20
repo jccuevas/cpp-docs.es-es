@@ -1,24 +1,24 @@
 ---
 title: Aspectos básicos de los objetos ATL COM
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
 - ATL, COM
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 243b7f84fc20e1c002e866ae0720ab9521d24748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af732b381ab0c6c507d1d651b096e3976ab2d4b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437259"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176502"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Aspectos básicos de los objetos ATL COM
 
 La siguiente ilustración muestra la relación entre las clases e interfaces que se usan para definir un objeto COM de ATL.
 
-![Estructura ATL](../atl/media/vc307y1.gif "vc307y1")
+![Estructura ATL](../atl/media/vc307y1.gif "estructura ATL")
 
 > [!NOTE]
 >  Este diagrama muestra que `CComObject` se deriva de `CYourClass` , mientras que `CComAggObject` y `CComPolyObject` incluyen `CYourClass` como una variable de miembro.

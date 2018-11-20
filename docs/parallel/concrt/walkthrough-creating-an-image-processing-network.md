@@ -1,16 +1,16 @@
 ---
 title: 'Tutorial: Crear una red de procesamiento de imagen'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643643"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176177"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Crear una red de procesamiento de imagen
 
@@ -134,7 +134,7 @@ Si la aplicación requiere que varios de mensaje bloquea procesar el mensaje, en
 
 La siguiente ilustración muestra la red de procesamiento de imágenes:
 
-![Red de procesamiento de imágenes](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![Red de procesamiento de imágenes](../../parallel/concrt/media/concrt_imageproc.png "red de procesamiento de imágenes")
 
 La `countdown_event` objeto en este ejemplo habilita la red de procesamiento de imágenes informar a la aplicación principal cuando se han procesado todas las imágenes. El `countdown_event` clase utiliza un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto que se va a señalar cuando un valor de contador llega a cero. La aplicación principal incrementa el contador cada vez que TI envía un nombre de archivo a la red. El nodo terminal de la red disminuye el contador después de procesar cada imagen. Una vez que la aplicación principal atraviesa el directorio especificado, espera el `countdown_event` objeto para indicar que el contador llegue a cero.
 
@@ -152,7 +152,7 @@ En el código siguiente se muestra el ejemplo completo. El `wmain` función admi
 
 La siguiente ilustración muestra la salida de ejemplo. Cada imagen de origen está por encima de su correspondiente imagen modificada.
 
-![Ejemplo de salida para el ejemplo](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![Ejemplo de salida para el ejemplo](../../parallel/concrt/media/concrt_imageout.png "ejemplo de salida para el ejemplo")
 
 `Lighthouse` creado por Tom Alphin y, por tanto, se convierte a escala de grises. `Chrysanthemum`, `Desert`, `Koala`, y `Tulips` tiene rojo como color dominante y, por tanto, tienen los componentes de color azul y verde que se quita y se oscurecerá. `Hydrangeas`, `Jellyfish`, y `Penguins` coinciden con los criterios predeterminados y, por tanto, son sepia tonos.
 

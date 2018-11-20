@@ -1,17 +1,17 @@
 ---
 title: Conversiones estándar
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575453"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176984"
 ---
 # <a name="standard-conversions"></a>Conversiones estándar
 
@@ -189,7 +189,8 @@ El primer caso es cuando la clase base especificada es accesible y la conversió
 
 Si una clase base es accesible depende del tipo de herencia utilizada en la derivación. Considere la herencia que se muestra en la siguiente ilustración.
 
-![Gráfico de herencia que muestra base&#45;clase accesibilidad](../cpp/media/vc38xa1.gif "vc38XA1") gráfico de herencia para la ilustración de accesibilidad de clase Base
+![Gráfico de herencia que muestra base&#45;clase accesibilidad](../cpp/media/vc38xa1.gif "gráfico de herencia que muestra base&#45;accesibilidad de clase") <br/>
+Gráfico de herencia para ilustrar la accesibilidad de clase base
 
 En la tabla siguiente se muestra la accesibilidad de la clase base para la situación que se muestra en la ilustración.
 

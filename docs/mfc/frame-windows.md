@@ -1,6 +1,6 @@
 ---
 title: Ventanas de marco
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619939"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175384"
 ---
 # <a name="frame-windows"></a>Ventanas de marco
 
@@ -30,7 +30,8 @@ Cuando una aplicación se ejecuta en Windows, el usuario interactúa con documen
 
 El marco de trabajo MFC utiliza ventanas de marco para contener vistas. Los dos componentes, marco y contenido, se representan y administran mediante dos clases distintas en MFC. Una clase de ventana de marco administra el marco y una clase de vista administra el contenido. La ventana de vista es un elemento secundario de la ventana de marco. Dibujo y otra interacción del usuario con el documento tienen lugar en el área de cliente de la vista, no el área de cliente de la ventana de marco. La ventana de marco proporciona un marco visible alrededor de una vista, junto con una barra de título y los controles de ventana estándar como un menú de control, los botones para minimizar y maximizar la ventana y los controles para cambiar el tamaño de la ventana. El "contenido" constan del área de cliente de la ventana, que está totalmente ocupado por una ventana secundaria, la vista. En la siguiente ilustración muestra la relación entre una ventana de marco y una vista.
 
-![Vista de la ventana de marco](../mfc/media/vc37fx1.gif "vc37fx1") ventana de marco y vista
+![Vista de la ventana de marco](../mfc/media/vc37fx1.gif "vista de la ventana de marco") <br/>
+Vista y ventana de marco
 
 ## <a name="frame-windows-and-splitter-windows"></a>Marco Windows y Windows divisor
 

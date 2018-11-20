@@ -1,29 +1,34 @@
 ---
 title: Administrador de visualización
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521377"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175579"
 ---
 # <a name="visualization-manager"></a>Administrador de visualización
 
 El administrador visual es un objeto que controla la apariencia de una aplicación completa. Actúa como una sola clase donde puede colocar todo el código de dibujo de la aplicación. La biblioteca MFC incluye varios administradores visuales. También puede crear su propio administrador visual si desea crear una vista personalizada para su aplicación. Las siguientes imágenes muestran la misma aplicación cuando se habilitan los administradores visuales diferentes:
 
-![MyApp tal y como se presenta CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") MyApp que utiliza el administrador visual CMFCVisualManagerWindows
+![MyApp tal y como se presenta CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MyApp tal y como se presenta CMFCVisualManagerWindows") <br/>
+MyApp que utiliza el administrador visual CMFCVisualManagerWindows
 
-![MyApp tal y como se presenta CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") MyApp que utiliza el administrador visual CMFCVisualManagerVS2005
+![MyApp tal y como se presenta CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MyApp tal y como se presenta CMFCVisualManagerVS2005") <br/>
+MyApp que utiliza el administrador visual CMFCVisualManagerVS2005
 
-![MyApp tal y como se presenta CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") MyApp que utiliza el administrador visual CMFCVisualManagerOfficeXP
+![MyApp tal y como se presenta CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MyApp tal y como se presenta CMFCVisualManagerOfficeXP") <br/>
+MyApp que utiliza el administrador visual CMFCVisualManagerOfficeXP
 
-![MyApp tal y como se presenta CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp que utiliza el administrador visual CMFCVisualManagerOffice2003
+![MyApp tal y como se presenta CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "MyApp tal y como se presenta CMFCVisualManagerOffice2003") <br/>
+MyApp que utiliza el administrador visual CMFCVisualManagerOffice2003
 
-![MyApp tal y como se presenta CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") MyApp que utiliza el administrador visual CMFCVisualManagerOffice2007
+![MyApp tal y como se presenta CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MyApp tal y como se presenta CMFCVisualManagerOffice2007") <br/>
+MyApp que utiliza el administrador visual CMFCVisualManagerOffice2007
 
 De forma predeterminada, el administrador visual mantiene el código de dibujo de varios elementos de interfaz gráfica de usuario. Para proporcionar elementos de interfaz de usuario personalizados, debe invalidar los métodos de dibujo relacionados del Administrador de visual. Para obtener la lista de estos métodos, consulte [CMFCVisualManager (clase)](../mfc/reference/cmfcvisualmanager-class.md). Los métodos que se pueden invalidar para proporcionar una apariencia personalizada son todos los métodos que empiezan por `OnDraw`.
 

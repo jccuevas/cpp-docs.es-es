@@ -1,17 +1,17 @@
 ---
 title: Arquitectura de plantillas de proveedores OLE DB
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557042"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175644"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Arquitectura de plantillas de proveedores OLE DB
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557042"
 
 La arquitectura del proveedor OLE DB incluye un objeto de origen de datos y una o varias sesiones. El objeto de origen de datos es el objeto inicial que debe crear una instancia de cada proveedor. Cuando una aplicación de consumidor necesita datos, comparte crea el objeto de origen de datos para iniciar el proveedor. El objeto de origen de datos crea un objeto de sesión (mediante el `IDBCreateSession` interfaz) a través de que el consumidor se conecta con el objeto de origen de datos. Los programadores de ODBC pueden pensar en el objeto de origen de datos es equivalente a la `HENV` y el objeto de sesión como equivalente a la `HDBC`.
 
-![Arquitectura de proveedor](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![Arquitectura de proveedor](../../data/oledb/media/vc4twb1.gif "arquitectura de proveedor")
 
 Junto con los archivos de origen creados por el **Asistente para proveedores OLE DB**, las plantillas OLE DB implementan un objeto de origen de datos. Una sesión es un objeto que corresponde a OLE DB `TSession`.
 

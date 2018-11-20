@@ -1,6 +1,6 @@
 ---
 title: Implementación de barra de estado en MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496289"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175380"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>Implementación de barra de estado en MFC
 
@@ -33,7 +33,8 @@ A partir de la versión 4.0 de MFC, las barras de estado se implementan mediante
 
 La siguiente ilustración muestra una barra de estado que muestra varios indicadores.
 
-![Barra de estado](../mfc/media/vc37dy1.gif "vc37dy1") una barra de estado
+![Barra de estado](../mfc/media/vc37dy1.gif "barra de estado") <br/>
+Una barra de estado
 
 Al igual que la barra de herramientas, el objeto de barra de estado está incrustado en su ventana de marco principal y se crea automáticamente cuando se construye la ventana de marco. La barra de estado, al igual que todas las barras de control, se destruye automáticamente también cuando se destruye el marco primario.
 

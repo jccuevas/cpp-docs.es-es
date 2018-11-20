@@ -1,6 +1,6 @@
 ---
 title: CDC (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CDC
 - AFXWIN/CDC
@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 40de8b3aca3cca7acb2fefa352f9358a16f43e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492087"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176921"
 ---
 # <a name="cdc-class"></a>CDC (clase)
 
@@ -3242,7 +3242,7 @@ Un puntero a un `CBrush` objeto si es correcto; de lo contrario, NULL.
 
 Un pincel de medios tonos muestra píxeles que o bien son los colores de primer y segundo plano para crear un patrón interpolado. El siguiente es un ejemplo de un patrón interpolado creado por un pincel de medios tonos.
 
-![Detalle de un trazo del lápiz interpolado](../../mfc/reference/media/vc318s1.gif "vc318s1")
+![Detalle de un trazo del lápiz interpolado](../../mfc/reference/media/vc318s1.gif "detalle de un trazo del lápiz interpolado")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 

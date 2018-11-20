@@ -1,16 +1,16 @@
 ---
 title: biblioteca de agentes asincrónicos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629286"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175865"
 ---
 # <a name="asynchronous-agents-library"></a>biblioteca de agentes asincrónicos
 
@@ -26,7 +26,7 @@ La biblioteca de agentes se compone de tres componentes: *agentes asincrónicos*
 
 En la siguiente ilustración, se muestra cómo dos agentes utilizan bloques de mensajes y funciones de paso de mensajes para comunicar. En esta ilustración, `agent1` envía un mensaje a `agent2` utilizando el [Concurrency:: Send](reference/concurrency-namespace-functions.md#send) función y un [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) objeto. `agent2` usa el [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) función para leer el mensaje. `agent2` utiliza el mismo método para enviar un mensaje a `agent1`. Las flechas de líneas discontinuas representan el flujo de datos entre los agentes. Las flechas de líneas continuas conectan los agentes con los bloques de mensajes en los que escriben o que leen.
 
-![Los componentes de la biblioteca de agentes](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![Los componentes de la biblioteca de agentes](../../parallel/concrt/media/agent_librarycomp.png "los componentes de la biblioteca de agentes")
 
 Más adelante en este tema figura un ejemplo de código en el que se implementa esta ilustración.
 

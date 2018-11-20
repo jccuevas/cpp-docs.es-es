@@ -1,6 +1,6 @@
 ---
 title: CReBarCtrl (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 - AFXCMN/CReBarCtrl
@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: ec3dcec2aa122f44c2b9aa6083f6faaa64157770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502536"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177035"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl (clase)
 
@@ -189,7 +189,7 @@ La siguiente ilustración muestra un control rebar que tiene tres bandas:
 
 - Banda 2 contiene un cuadro combinado y cuatro botones estándares.
 
-     ![Ejemplo de un menú Rebar](../../mfc/reference/media/vc4scc1.gif "vc4scc1")
+   ![Ejemplo de un menú Rebar](../../mfc/reference/media/vc4scc1.gif "ejemplo de un menú Rebar")
 
 ## <a name="rebar-control"></a>Control rebar
 

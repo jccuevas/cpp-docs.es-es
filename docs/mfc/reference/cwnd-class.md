@@ -1,6 +1,6 @@
 ---
 title: CWnd (clase)
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 365ecea539d47892b8697bb7b6ce2015bc18cda3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694899"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177113"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -5688,10 +5688,10 @@ A continuación muestra los distintos iconos de sistema que se pueden usar en un
 
 |||
 |-|-|
-|![Detener &#40;x&#41; icono](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND MB_ICONSTOP y MB_ICONERROR|
-|![Ayudar a &#40; &#41; icono](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|
-|![Importante &#40; &#33; &#41; icono](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION y MB_ICONWARNING|
-|![Información &#40;&#41; icono](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK y MB_ICONINFORMATION|
+|![Detener &#40;x&#41; icono](../../mfc/reference/media/vc364f1.gif "detener &#40;x&#41; icono")|MB_ICONHAND MB_ICONSTOP y MB_ICONERROR|
+|![¿Ayudar a &#40;? &#41; icono](../../mfc/reference/media/vc364f2.gif "ayuda &#40;?&#41; icono")|MB_ICONQUESTION|
+|![Importante &#40; &#33; &#41; icono](../../mfc/reference/media/vc364f3.gif "importante &#40; &#33; &#41; icono")|MB_ICONEXCLAMATION y MB_ICONWARNING|
+|![Información &#40;&#41; icono](../../mfc/reference/media/vc364f4.gif "información &#40;&#41; icono")|MB_ICONASTERISK y MB_ICONINFORMATION|
 
 ### <a name="example"></a>Ejemplo
 

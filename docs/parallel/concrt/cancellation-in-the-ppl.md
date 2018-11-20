@@ -1,6 +1,6 @@
 ---
 title: Cancelación en la biblioteca PPL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327426"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177022"
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelación en la biblioteca PPL
 
@@ -57,7 +57,7 @@ En este documento se explica el rol de cancelación de la biblioteca de patrones
 
 PPL usa tareas y grupos de tareas para administrar tareas y cálculos específicos. Puede anidar grupos de tareas al formulario *árboles* de trabajo paralelo. En la ilustración siguiente se muestra un árbol de trabajo paralelo. En esta ilustración, `tg1` y `tg2` representan grupos de tareas; `t1`, `t2`, `t3`, `t4` y `t5` representan el trabajo que realizan los grupos de tareas.
 
-![Un árbol de trabajo paralelo](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![Un árbol de trabajo paralelo](../../parallel/concrt/media/parallelwork_trees.png "un árbol de trabajo paralelo")
 
 En el ejemplo siguiente se muestra el código necesario para crear el árbol de la ilustración. En este ejemplo, `tg1` y `tg2` son [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objetos; `t1`, `t2`, `t3`, `t4`, y `t5` son [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) objetos.
 

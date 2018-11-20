@@ -1,15 +1,15 @@
 ---
 title: Implementación de una página de propiedades (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669097"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176476"
 ---
 # <a name="example-implementing-a-property-page"></a>Ejemplo: Implementar una página de propiedades
 
@@ -58,7 +58,7 @@ Haga clic en **Aceptar** que el Asistente para generar la página de propiedades
 
 Ahora que se ha generado la página de propiedades, deberá agregar algunos controles para el recurso de cuadro de diálogo que representa la página. Agregue un cuadro de edición, un control de texto estático y una casilla de verificación y establezca sus identificadores como se muestra a continuación:
 
-![Edición de un recurso de cuadro de diálogo](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![Edición de un recurso de cuadro de diálogo](../atl/media/ppgresourcelabeled.gif "modificar un recurso de cuadro de diálogo")
 
 Estos controles se usará para mostrar el nombre de archivo del documento y su estado de solo lectura.
 

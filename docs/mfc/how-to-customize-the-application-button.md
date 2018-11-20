@@ -1,21 +1,21 @@
 ---
 title: 'Cómo: Personalizar el botón Aplicación'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592795"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175332"
 ---
 # <a name="how-to-customize-the-application-button"></a>Cómo: Personalizar el botón Aplicación
 
 Al hacer clic en el botón de la aplicación, se muestra un menú de comandos. Normalmente, el menú contiene comandos relacionados con el archivo como **abierto**, **guardar**, **impresión**, y **Exit**.
 
-![Botón de aplicación de cinta de opciones de MFC](../mfc/media/application_button.png "application_button")
+![Botón de aplicación de cinta de opciones MFC](../mfc/media/application_button.png "botón de aplicación de cinta de opciones MFC")
 
 Para personalizar el botón de la aplicación, ábralo en el **propiedades** , modificar sus propiedades y, a continuación, obtener una vista previa del control de la cinta de opciones.
 
@@ -57,4 +57,3 @@ El menú de la aplicación no aparece en la superficie de diseño. Para verlo, d
 ## <a name="see-also"></a>Vea también
 
 [Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
-

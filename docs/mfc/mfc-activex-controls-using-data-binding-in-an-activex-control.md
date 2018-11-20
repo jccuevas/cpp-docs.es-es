@@ -1,6 +1,6 @@
 ---
 title: 'Controles ActiveX de MFC: utilizar enlace de datos en un control ActiveX'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518494"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175814"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Controles ActiveX de MFC: utilizar enlace de datos en un control ActiveX
 
@@ -30,7 +30,8 @@ Uno de los usos más eficaces de controles ActiveX es el enlace de datos, lo que
 
 Este artículo trata sobre el lado del control de la tarea. Implementación de las interacciones de enlace de datos con la base de datos es responsabilidad del contenedor del control. Cómo administrar las interacciones de la base de datos en el contenedor queda fuera del ámbito de esta documentación. En el resto de este artículo, se explica cómo preparar el control de enlace de datos.
 
-![Diagrama conceptual de los datos&#45;control enlazado a](../mfc/media/vc374v1.gif "vc374v1") diagrama Conceptual de un Control enlazado a datos
+![Diagrama conceptual de los datos&#45;control enlazado a](../mfc/media/vc374v1.gif "diagrama Conceptual de los datos&#45;control enlazado a") <br/>
+Diagrama conceptual de un Control enlazado a datos
 
 La `COleControl` clase proporciona dos funciones miembro que hacen que un proceso sencillo para implementar de enlace de datos. La primera función, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), se usa para solicitar permiso para cambiar el valor de propiedad. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la segunda función, se llama después de que el valor de propiedad ha cambiado correctamente.
 

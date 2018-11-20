@@ -1,6 +1,6 @@
 ---
 title: Varios tipos de documentos, vistas y ventanas de marco
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - static splitter windows [MFC]
 - multiple views [MFC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 3c1422aed5535d30a2f9fb79300f6093326d2ef3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9c26413d45dfa03087bf9909bf8004064766a00
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669110"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175803"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Varios tipos de documentos, vistas y ventanas de marco
 
@@ -64,7 +64,8 @@ MFC admite tres interfaces de usuario comunes que requieren varias vistas en el 
 
 En la siguiente imagen, dividida en las partes a, b y c, se muestran los tres modelos de interfaz de usuario en el orden descrito anteriormente.
 
-![Varios&#45;ver las interfaces de usuario](../mfc/media/vc37a71.gif "vc37a71") Interfaces de usuario de varias vistas
+![Varios&#45;ver las interfaces de usuario](../mfc/media/vc37a71.gif "varios&#45;ver las interfaces de usuario") <br/>
+Interfaces de usuarios de varias vistas
 
 Para proporcionar estos modelos, el marco de trabajo implementa el comando Nueva ventana y proporciona la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como se describe en [Ventanas divisoras](#_core_splitter_windows). Se pueden implementar otros modelos teniendo estos como punto de partida. Para ver programas de ejemplo que ilustran distintas configuraciones de vistas, ventanas de marco y divisores, vea [MFC Samples](../visual-cpp-samples.md)(Ejemplos de MFC).
 
