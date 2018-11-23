@@ -1,13 +1,13 @@
 ---
 title: 'Guía de migración: Spy++'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 9e36bbefb2ab851350e17c0561addb680593f457
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487820"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177009"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 
@@ -25,7 +25,7 @@ El archivo del proyecto, dos antiguos archivos .dsw de Visual C++ 6.0, se convir
 
 Después de actualizar los dos proyectos, nuestra solución tenía el siguiente aspecto:
 
-![La solución Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![Solución Spy&#43;&#43;](../porting/media/spyxxsolution.PNG "The Spy&#43;&#43; Solution")
 
 Tenemos dos proyectos, uno con un gran número de archivos de C++ y otro con un archivo DLL escrito en C.
 

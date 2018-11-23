@@ -1,16 +1,16 @@
 ---
 title: IDE y herramientas para desarrollo de Visual C++
 description: El IDE de Visual Studio admite el desarrollo de C++ en Windows, Linux, Android e iOS con un editor de código, un depurador, marcos de pruebas, analizadores estáticos y otras herramientas de programación.
-ms.date: 09/27/2018
+ms.date: 11/18/2018
 helpviewer_keywords:
 - Visual C++, development tools
 ms.assetid: 56eabafb-1956-4f0f-bec5-29b887763559
-ms.openlocfilehash: e24ba58cf0cf94f1505adaf056f64580b8f7829e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5dd7f681d05d36215c4086165165122a05be23c
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473364"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693963"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE y herramientas de compilación para el desarrollo de Visual C++
 
@@ -105,14 +105,24 @@ También puede implementar un escritorio de C++ nativo en otro equipo. Para obte
 
 Para obtener más información sobre la implementación de un programa de C++/CLI, vea [Guía de implementación para desarrolladores](/dotnet/framework/deployment/deployment-guide-for-developers).
 
+## <a name="in-this-section"></a>En esta sección
+
+|||
+|-|-|
+|[Escribir y refactorizar código (C++)](writing-and-refactoring-code-cpp.md)| Cómo usar el editor de código de C++ para escribir, refactorizar y examinar el código.|
+|[Herramientas y características de Visual C++ en las ediciones de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)|Muestra qué características están disponibles en las diferentes ediciones de Visual Studio.|
+|[Proyectos Abrir carpeta de C++ en Visual Studio](non-msbuild-projects.md).|Explica cómo usar cualquier sistema arbitrario de compilación de C++ desde Visual Studio.|
+|[Proyectos CMake en Visual C++](cmake-tools-for-visual-cpp.md)|Explica cómo compilar proyectos de CMake en Visual Studio.|
+|[Creación y administración de proyectos de Visual C++ basados en MSBuild](creating-and-managing-visual-cpp-projects.md)|Proporciona información general sobre los proyectos de C++ basados en MSBuild en Visual Studio y vínculos a otros artículos en los que se explica cómo crearlos y administrarlos.|
+|[Implementar aplicaciones de escritorio](deploying-native-desktop-applications-visual-cpp.md)|Proporciona información general sobre la implementación de aplicaciones de C++ y vínculos a otros artículos que describen de forma detallada la implementación.|
+|[Agregar funciones con los Asistentes para código (C++)](adding-functionality-with-code-wizards-cpp.md)| Agregue clases, archivos o elementos de interfaz de usuario a un proyecto mediante asistentes que le guían.|
+|[Documentación XML (Visual C++)](xml-documentation-visual-cpp.md)| Cree documentación XML para las API.|
+|[Compilar proyectos de C++ en Visual Studio](building-cpp-projects-in-visual-studio.md)|Cómo usar el IDE de Visual Studio para compilar proyectos.|
+
 ## <a name="related-articles"></a>Artículos relacionados
 
 |||
 |-|-|
-|[Herramientas y características de Visual C++ en las ediciones de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)|Muestra qué características están disponibles en las diferentes ediciones de Visual Studio.|
-|[Creación y administración de proyectos de Visual C++ basados en MSBuild](creating-and-managing-visual-cpp-projects.md)|Proporciona información general sobre los proyectos de C++ basados en MSBuild en Visual Studio y vínculos a otros artículos en los que se explica cómo crearlos y administrarlos.|
-|[Proyectos CMake en Visual C++](cmake-tools-for-visual-cpp.md)|Se describe cómo crear proyectos de CMake u otros proyectos que no sean de MSBuild en Visual C++.|
-|[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)|Describe cómo compilar proyectos de C++.|
-|[Implementar aplicaciones de escritorio](deploying-native-desktop-applications-visual-cpp.md)|Proporciona información general sobre la implementación de aplicaciones de C++ y vínculos a otros artículos que describen de forma detallada la implementación.|
+|[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)|Información detallada sobre la compilación de proyectos de C++.|
 |[Guía de migración y actualización de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)|Información detallada sobre cómo actualizar aplicaciones de C++ que se crearon en versiones anteriores de Visual Studio, y también cómo migrar las aplicaciones que se crearon con herramientas distintas a Visual Studio.|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Describe las principales características de Visual C++ en Visual Studio y vínculos al resto de la documentación sobre Visual C++.|

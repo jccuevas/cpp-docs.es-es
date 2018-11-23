@@ -1,59 +1,89 @@
 ---
-title: Implementar un punto de conexión (Visual C++)
-ms.date: 11/04/2016
+title: Implementar un punto de conexión
+ms.date: 11/12/2018
+f1_keywords:
+- vc.codewiz.impl.cp.overview
 helpviewer_keywords:
-- Implement Connection Point Wizard [C++]
 - connection points [C++], implementing
+- implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 45e3dfcfc7e7bcb9fcbe14e08a8c238fe9bec5a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568329"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693287"
 ---
-# <a name="implementing-a-connection-point-visual-c"></a>Implementar un punto de conexión (Visual C++)
+# <a name="implement-a-connection-point"></a>Implementar un punto de conexión
 
-Para implementar un punto de conexión mediante el Asistente para implementar puntos de conexión, debe haber creado un proyecto como una aplicación COM de ATL o como una aplicación MFC que sea compatible con ATL. Puede usar el [Asistente para proyectos ATL](../atl/reference/atl-project-wizard.md) para crear una aplicación ATL, o bien [agregar un objeto ATL a una aplicación MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad con ATL para una aplicación MFC.
-
-> [!NOTE]
->  Para obtener información sobre cómo implementar puntos de conexión para un proyecto MFC, vea [Puntos de conexión](../mfc/connection-points.md).
-
-Una vez creado el proyecto, para implementar un punto de conexión, primero debe agregar un objeto ATL. Vea [Agregar controles y objetos a un proyecto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obtener una lista de los asistentes que agregan objetos a los proyectos ATL.
+Para implementar un punto de conexión mediante el Asistente para implementar puntos de conexión, debe haber creado un proyecto como una aplicación COM de ATL o como una aplicación MFC que sea compatible con ATL. Puede usar el [Asistente para proyectos ATL](../atl/reference/atl-project-wizard.md) para crear una aplicación ATL, o bien [agregar un objeto ATL a la aplicación MFC](../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad de ATL con una aplicación MFC.
 
 > [!NOTE]
->  El asistente no admite cuadros de diálogo de ATL, servicios web XML creados con Servidor ATL, objetos de rendimiento ni contadores de rendimiento.
+> Para obtener información sobre cómo implementar puntos de conexión para un proyecto MFC, vea [Puntos de conexión](../mfc/connection-points.md).
 
-Un objeto conectable (es decir, un origen) puede exponer un punto de conexión para cada una de sus interfaces de salida. Cada interfaz de salida se puede implementar mediante un cliente en un objeto (es decir, un receptor). Para obtener más información, vea [Puntos de conexión en ATL](../atl/atl-connection-points.md).
+Una vez creado el proyecto, para implementar un punto de conexión, primero debe agregar un objeto ATL. Vea [Adición de objetos y controles a un proyecto ATL](../atl/reference/adding-objects-and-controls-to-an-atl-project.md) para obtener una lista de los asistentes que agregan objetos al proyecto ATL.
 
-### <a name="to-implement-a-connection-point"></a>Para implementar un punto de conexión
+> [!NOTE]
+> El asistente no admite cuadros de diálogo de ATL, servicios web XML creados con servidor ATL, objetos de rendimiento ni contadores de rendimiento.
+
+Un objeto conectable (es decir, un origen) puede mostrar un punto de conexión para cada una de sus interfaces de salida. Cada interfaz de salida se puede implementar mediante un cliente en un objeto (es decir, un receptor). Para obtener más información, vea [Puntos de conexión en ATL](../atl/atl-connection-points.md).
+
+**Para implementar un punto de conexión:**
 
 1. En la Vista de clases, haga clic con el botón derecho en el nombre de clase para el objeto ATL.
 
-1. Haga clic en **Agregar** desde el menú contextual y después en **Agregar punto de conexión** para mostrar el [Asistente para implementar puntos de conexión](../ide/implement-connection-point-wizard.md).
+1. Elija **Agregar** en el menú contextual y luego **Agregar punto de conexión** para mostrar el [Asistente para implementar puntos de conexión](#implement-connection-point-wizard).
 
-1. Seleccione las interfaces de punto de conexión que se van a implementar desde las bibliotecas de tipos adecuadas y haga clic en **Finalizar**.
+1. Seleccione las interfaces de punto de conexión que se van a implementar desde las bibliotecas de tipos adecuadas y luego **Finalizar**.
 
 1. En la Vista de clases, examine las clases de proxy creadas para cada punto de conexión. Las clases aparecen como CProxy*NombreDeInterfaz*\<T> y se derivan de [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md).
 
 1. Haga doble clic en la clase de punto de conexión para mostrar la definición de clase del punto de conexión.
 
-   - Si implementa un punto de conexión para la interfaz de un proyecto propio, aparecerá la definición siguiente:
+   - Si implementa un punto de conexión para la interfaz de un proyecto propio, aparece la definición siguiente:
 
-        ```
-        template< class T >
-        class CProxyInterfaceName :
-           public IConnectionPointImpl< T, &IID_InterfaceName >
-        {
-        public:
-        };
-        ```
+     ```cpp
+     template< class T >
+     class CProxyInterfaceName :
+     public IConnectionPointImpl< T, &IID_InterfaceName >
+     {
+     public:
+     };
+     ```
 
-         If you implement a local interface, methods and properties appear in the class body.
+   - Si implementa una interfaz local, en el cuerpo de la clase aparecerán métodos y propiedades.
 
    - Si implementa un punto de conexión para otra interfaz, la definición incluye los métodos de la interfaz, precedidos de `Fire_`.
 
-## <a name="see-also"></a>Vea también
+## <a name="in-this-section"></a>En esta sección
 
-[Agregar funcionalidad con los Asistentes para código](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[Agregar puntos de conexión a un objeto](../atl/adding-connection-points-to-an-object.md)
+- [Asistente para implementar puntos de conexión](#implement-connection-point-wizard)
+
+## <a name="implement-connection-point-wizard"></a>Asistente para implementar puntos de conexión
+
+Este asistente implementa un punto de conexión para un objeto COM. Un objeto conectable (es decir, un origen) puede mostrar un punto de conexión para sus propias interfaces o para cualquier interfaz de salida. En Visual C++ y Windows se proporcionan bibliotecas de tipos que tienen interfaces de salida. Cada interfaz de salida se puede implementar mediante un cliente en un objeto (es decir, un receptor).
+
+Para obtener más información, vea [Puntos de conexión en ATL](../atl/atl-connection-points.md).
+
+- **Bibliotecas de tipos disponibles**
+
+  Muestra las bibliotecas de tipos disponibles que contienen las definiciones de interfaz para las que se pueden implementar puntos de conexión. Seleccione el botón de puntos suspensivos para buscar un archivo que contenga la biblioteca de tipos que se va a usar.
+
+- **Ubicación**
+
+  Muestra la ubicación de la biblioteca de tipos seleccionada actualmente en la lista **Bibliotecas de tipos disponibles**.
+
+- **Interfaces**
+
+  Muestra las interfaces cuyas definiciones se encuentran en la biblioteca de tipos seleccionada actualmente en el cuadro **Bibliotecas de tipos disponibles**.
+
+  |Botón de transferencia|Descripción|
+  |---------------------|-----------------|
+  |**>**|Agrega el nombre de interfaz seleccionado actualmente en la lista **Interfaces** a la lista **Implementar puntos de conexión**.|
+  |**>>**|Agrega todos los nombres de interfaz disponibles en la lista **Interfaces** a la lista **Implementar puntos de conexión**.|
+  |**\<**|Quita el nombre de interfaz seleccionado actualmente en la lista **Implementar puntos de conexión**.|
+  |**\<\<**|Quita todos los nombres de interfaz que se muestran actualmente en la lista **Implementar puntos de conexión**.|
+
+- **Implementar puntos de conexión**
+
+  Muestra los nombres de las interfaces para las que se implementan los puntos de conexión al seleccionar **Finalizar**.

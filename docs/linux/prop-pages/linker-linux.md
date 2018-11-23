@@ -2,12 +2,12 @@
 title: Propiedades del enlazador (C++ para Linux)
 ms.date: 9/26/2017
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: db2fc37189ca05835888faed26b242abc0fe5fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580679"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678345"
 ---
 # <a name="linker-properties-linux-c"></a>Propiedades del enlazador (C++ para Linux)
 
@@ -35,7 +35,7 @@ Copiar salida | Especifica si debe copiarse en la máquina local el archivo de s
 Propiedad. | Descripción | Opciones
 --- | ---| ---
 Omitir bibliotecas predeterminadas específicas | Especifica uno o más nombres de las bibliotecas predeterminadas que se ignorarán. (--exclude-libs lib,lib)
-Omitir bibliotecas predeterminadas | Omite las bibliotecas predeterminadas y busca solo en las bibliotecas especificadas.
+Omitir bibliotecas predeterminadas | Omite las bibliotecas predeterminadas y busca solo en las bibliotecas especificadas de forma explícita.
 Forzar referencias de símbolo sin definir | Obliga a que los símbolos se especifiquen en el archivo de salida como no definidos. (-u symbol --undefined=symbol)
 Dependencias de biblioteca | Esta opción permite especificar bibliotecas adicionales para agregarlas a la línea de comandos del enlazador. La biblioteca adicional se agregará al final de la línea de comandos del enlazador, con el prefijo "lib" y la extensión ".a".  (-lFILE)
 Dependencias adicionales | Especifica elementos adicionales que se agregarán a la línea de comandos del vínculo.

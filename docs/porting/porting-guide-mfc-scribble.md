@@ -1,13 +1,13 @@
 ---
 title: 'Guía de migración: Scribble de MFC'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539768"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175657"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 
@@ -31,7 +31,7 @@ Tenga en cuenta que también puede ejecutar devenv en la línea de comandos medi
 
 Al abrir un archivo de proyecto antiguo en Visual Studio 2017, Visual Studio ofrece la opción de convertir el archivo del proyecto a la versión más reciente, lo cual aceptamos. Se mostró el siguiente cuadro de diálogo:
 
-![Revisar cambios de proyectos y soluciones](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Revisar cambios de proyecto y solución](../porting/media/scribbleprojectupgrade.PNG "Review Project and Solution Changes")
 
 Se produjo un error por el que se nos informaba de que el destino de Itanium no estaba disponible y no se realizaría la conversión.
 
@@ -43,7 +43,7 @@ En el momento en que se creó el proyecto de Scribble anterior, Itanium era una 
 
 A continuación, Visual Studio mostró un informe de migración de todos los problemas con el antiguo archivo de proyecto.
 
-![Informe de actualización](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Informe de actualización](../porting/media/scribblemigrationreport.PNG "Upgrade Report")
 
 En este caso, todos los problemas eran advertencias y Visual Studio realizó los cambios pertinentes en el archivo del proyecto. La gran diferencia en lo que se refiere al proyecto es que la herramienta de compilación cambió de vcbuild a msbuild. Este cambio se introdujo por primera vez en Visual Studio 2010. Otros de los cambios incluyen una determinada reorganización de la secuencia de elementos en el propio archivo de proyecto. Ninguno de los problemas requirió atención adicional para este proyecto simple.
 

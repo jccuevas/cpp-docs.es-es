@@ -1,21 +1,21 @@
 ---
 title: Estados de secuencia
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481177"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175566"
 ---
 # <a name="stream-states"></a>Estados de secuencia
 
 En la siguiente ilustración se muestran los estados válidos y las transiciones de estado de una secuencia.
 
-![Secuencia](../c-runtime-library/media/stream.gif "secuencia")
+![Diagrama de estado de secuencia](../c-runtime-library/media/stream.gif "Stream state diagram")
 
 Cada uno de los círculos indica un estado estable. Cada una de las líneas indica una transición que se puede producir como resultado de una llamada de función que opera en la secuencia. Hay cinco grupos de funciones que pueden provocar transiciones de estado.
 
