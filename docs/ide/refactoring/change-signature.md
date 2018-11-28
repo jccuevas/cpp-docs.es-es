@@ -2,12 +2,12 @@
 title: Cambiar firma
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 97f70f7fdf6cb8a130427d8920152d44c1cb1349
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693541"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281953"
 ---
 # <a name="change-signature"></a>Cambiar firma
 
@@ -38,7 +38,7 @@ ms.locfileid: "51693541"
    | Botón | Descripción
    | ------ | ---
    | **Up/Down**    | Mueve el parámetro seleccionado hacia arriba y hacia abajo en la lista.
-   | **Add**        | Agrega un parámetro a nuevo la lista
+   | **Add**        | Agrega un parámetro nuevo a la lista
    | **Remove**     | Quita el parámetro seleccionado de la lista.
    | **Modificar**     | Modifica el parámetro seleccionado, cambiando su tipo, nombre y si es opcional, y cuál debería ser su valor insertado.
    | **Revertir**     | Restaura el parámetro seleccionado a su estado original.
