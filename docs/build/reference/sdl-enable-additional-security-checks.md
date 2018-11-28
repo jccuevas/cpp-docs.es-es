@@ -1,15 +1,15 @@
 ---
 title: /sdl (habilitar comprobaciones adicionales de seguridad)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
+ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587465"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389947"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (habilitar comprobaciones adicionales de seguridad)
 
@@ -49,7 +49,17 @@ Cuando **/sdl** está habilitada, el compilador genera código para realizar est
 
 - Realiza una inmunización de puntero limitada. En las expresiones que no implican desreferenciación y en los tipos que no tienen un destructor definido por el usuario, las referencias de puntero se establecen en una dirección no válida después de una llamada a `delete`. Esto ayuda a evitar la reutilización de las referencias de puntero obsoletas.
 
-- Realiza la inicialización del miembro de clase. Se inicializan automáticamente todos los miembros de clase a cero en la creación de instancias de objetos (antes de que se ejecute el constructor). Esto ayuda a evitar el uso de los datos sin inicializar asociados a los miembros de clase que el constructor no inicializa explícitamente.
+- Realiza la inicialización de puntero de miembro de clase. Automáticamente inicializa los miembros de tipo de puntero a la clase **nullptr** en las instancias de objeto (antes de que se ejecute el constructor). Esto ayuda a impedir el uso de punteros no inicializados que el constructor no inicializa explícitamente. Se llama a la inicialización de puntero de miembro generado por el compilador siempre y cuando:
+
+  - El objeto no está asignado mediante un personalizado (definido por el usuario) `operator new`
+
+  - El objeto no está asignado como parte de una matriz (por ejemplo `new A[x]`)
+
+  - La clase no está administrada o importada
+
+  - La clase tiene un constructor predeterminado definido por el usuario.
+
+  Para inicializar la función de inicialización de la clase generada por el compilador, debe ser un miembro de un puntero, no una propiedad o una constante.
 
 ## <a name="remarks"></a>Comentarios
 

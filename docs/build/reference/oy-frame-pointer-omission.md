@@ -1,6 +1,6 @@
 ---
 title: /Oy (Omisión de puntero de marco)
-ms.date: 09/22/2017
+ms.date: 11/19/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.OmitFramePointers
 - /oy
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - suppress frame pointer creation
 - /Oy compiler option [C++]
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
-ms.openlocfilehash: d6d896079c08ed2cf595b95ed41045885c83b5bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 343b0e026c2932e97d4a8d4472ba2035d6302661
+ms.sourcegitcommit: 3da2cb3ec85e77ddfd4d2a55edb133d580ce4f18
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431738"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330395"
 ---
 # <a name="oy-frame-pointer-omission"></a>/Oy (Omisión de puntero de marco)
 
@@ -32,9 +32,9 @@ Suprime la creación de punteros de marcos en la pila de llamadas.
 
 Esta opción acelera las llamadas de función, ya que no es necesario configurar y quitar punteros de marco. También libera un registro de uso general.
 
-**/Oy** permite la omisión de puntero de marco y **/Oy-** deshabilita la omisión. **/Oy** solo está disponible en x86 compiladores.
+**/Oy** permite la omisión de puntero de marco y **/Oy-** deshabilita la omisión. En x64 compiladores, **/Oy** y **/Oy-** no están disponibles.
 
-Si el código requiere direccionamiento basado en EBP, puede especificar el **/Oy-** opción después de la **/Ox** o utilizar [optimizar](../../preprocessor/optimize.md) con el "**y**" y **desactivar** argumentos para obtener una optimización máxima con dicho direccionamiento. El compilador detecta la mayoría de las situaciones en las que se requiere el direccionamiento basado en EBP (por ejemplo, con las funciones `_alloca` y `setjmp` y con el control de excepciones estructurado).
+Si el código requiere direccionamiento basado en el marco, puede especificar el **/Oy-** opción después de la **/Ox** o utilizar [optimizar](../../preprocessor/optimize.md) con el "**y**"y **desactivar** argumentos para obtener una optimización máxima con direccionamiento basado en el marco. El compilador detecta la mayoría de las situaciones donde se requiere el direccionamiento basado en fotogramas (por ejemplo, con el `_alloca` y `setjmp` funciones y con control de excepciones estructurado).
 
 El [/Ox (habilitar más las optimizaciones de velocidad)](../../build/reference/ox-full-optimization.md) y [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) opciones implican **/Oy**. Especificar **/Oy-** después de la **/Ox**, **/O1**, o **/O2** opción deshabilita **/Oy**, ya sea explícita o implícita.
 
@@ -44,11 +44,9 @@ El **/Oy** facilita la opción del compilador con el depurador más difícil por
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
 
-1. Haga clic en la carpeta **C/C++** .
+1. Seleccione el **propiedades de configuración** > **C o C++** > **optimización** página de propiedades.
 
-1. Haga clic en el **optimización** página de propiedades.
-
-1. Modificar el **Omitir punteros de marcos** propiedad. Esta propiedad solo agrega o quita el **/Oy** opción. Si desea agregar el **/Oy-** opción, haga clic en **línea de comandos** y modificar **opciones adicionales**.
+1. Modificar el **Omitir punteros de marcos** propiedad. Esta propiedad solo agrega o quita el **/Oy** opción. Si desea agregar el **/Oy-** opción, seleccione el **línea de comandos** propiedad página y modificar **opciones adicionales**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
@@ -56,8 +54,6 @@ El **/Oy** facilita la opción del compilador con el depurador más difícil por
 
 ## <a name="see-also"></a>Vea también
 
-[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)
-
-[Opciones del compilador](../../build/reference/compiler-options.md)
-
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)<br/>
+[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
+[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
