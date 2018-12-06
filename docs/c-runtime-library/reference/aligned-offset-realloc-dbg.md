@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-ms.openlocfilehash: e5ffb37227e1e20f32e065290056da05e7dcd065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7684a752f489eb726b2105b1055b6da1e86e9cd1
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625867"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977828"
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 
@@ -72,7 +72,7 @@ Número de línea en el archivo de código fuente donde el **aligned_offset_real
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_offset_realloc_dbg** es una versión de depuración de la [_aligned_offset_realloc](aligned-offset-realloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_offset_realloc_dbg** se reduce a una llamada a **_aligned_offset_realloc**. Ambos **_aligned_offset_realloc** y **_aligned_offset_realloc_dbg** reasignan un bloque de memoria del montón base, pero **_aligned_offset_realloc_dbg** contempla varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar un seguimiento de los tipos de asignación concretos, y *filename*/*linenumber*  información para determinar el origen de las solicitudes de asignación.
+**_aligned_offset_realloc_dbg** es una versión de depuración de la [_aligned_offset_realloc](aligned-offset-realloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_offset_realloc_dbg** se reduce a una llamada a **_aligned_offset_realloc**. Ambos **_aligned_offset_realloc** y **_aligned_offset_realloc_dbg** reasignan un bloque de memoria del montón base, pero **_aligned_offset_realloc_dbg** contempla varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de solicitudes de asignación. Seguimiento de los tipos de asignación concretos con un parámetro de tipo de bloque no es una característica de depuración compatibles para las asignaciones de alineado. Las asignaciones de alineado aparecerá como un tipo de bloque _NORMAL_BLOCK.
 
 Al igual que [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc_dbg** permite una estructura se alinean con un desplazamiento dentro de la estructura.
 

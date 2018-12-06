@@ -4,14 +4,14 @@ description: Compilar y ejecutar una aplicación de consola Hola a todos en Visu
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
-ms.devlang: C++
+ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 89681b4f6b2ff2780cc8dc1947e2ad758d294b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467839"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977737"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar y ejecutar un proyecto de aplicación de consola de C++
 
@@ -19,7 +19,7 @@ Cuando se crea un proyecto de aplicación de consola de C++ y se especificó el 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Hacer que Visual Studio con el desarrollo de escritorio con la carga de trabajo de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, siga los pasos de [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md).
+- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, siga los pasos de [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md).
 
 - Crear un "Hello, World!" proyecto y escriba su código fuente. Si aún no lo ha hecho todavía, siga los pasos de [cree un proyecto de aplicación de consola C++](../build/vscpp-step-1-create.md).
 
@@ -41,7 +41,7 @@ Si Visual Studio tiene este aspecto, está listo para compilar y ejecutar la apl
 
 ¡Enhorabuena! Ha creado su primer "Hello, world!" ¡aplicación de consola en Visual Studio! Presione una tecla para cerrar la ventana de consola y vuelva a Visual Studio.
 
-[Tenido un problema.](#build-and-run-your-code-in-visual-studio-issues)
+[He tenido un problema.](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>Ejecutar el código en una ventana de comandos
 
@@ -59,7 +59,7 @@ Normalmente, se ejecuta aplicaciones de consola en el símbolo del sistema, no e
 
 Enhorabuena, ha compilado y ejecutar una aplicación de consola en Visual Studio.
 
-[Tenido un problema.](#run-your-code-in-a-command-window-issues)
+[He tenido un problema.](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -67,7 +67,7 @@ Una vez que ha creado y ejecutado esta sencilla aplicación, está listo para lo
 
 ## <a name="troubleshooting-guide"></a>Guía de solución de problemas
 
-Venir aquí para las soluciones a problemas comunes al crear su primer proyecto de C++.
+Consulte aquí para encontrar soluciones a los problemas más comunes al crear su primer proyecto de C++.
 
 ### <a name="build-and-run-your-code-in-visual-studio-issues"></a>Compilar y ejecutar el código en problemas de Visual Studio
 

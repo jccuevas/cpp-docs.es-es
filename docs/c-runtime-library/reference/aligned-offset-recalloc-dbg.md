@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-ms.openlocfilehash: 0b314b4aca080877b4e41723a8d2010fd8e835ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627973"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977802"
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -76,7 +76,7 @@ Número de línea en el archivo de origen que se solicitó la operación realloc
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_offset_realloc_dbg** es una versión de depuración de la [_aligned_offset_recalloc](aligned-offset-recalloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_offset_recalloc_dbg** se reduce a una llamada a **_aligned_offset_recalloc**. Ambos **_aligned_offset_recalloc** y **_aligned_offset_recalloc_dbg** reasignan un bloque de memoria del montón base, pero **_aligned_offset_recalloc_dbg** contempla varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar un seguimiento de los tipos de asignación concretos, y *filename*/*linenumber*  información para determinar el origen de las solicitudes de asignación.
+**_aligned_offset_realloc_dbg** es una versión de depuración de la [_aligned_offset_recalloc](aligned-offset-recalloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_offset_recalloc_dbg** se reduce a una llamada a **_aligned_offset_recalloc**. Ambos **_aligned_offset_recalloc** y **_aligned_offset_recalloc_dbg** reasignan un bloque de memoria del montón base, pero **_aligned_offset_recalloc_dbg** contempla varias características de depuración: búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de solicitudes de asignación. Seguimiento de los tipos de asignación concretos con un parámetro de tipo de bloque no es una característica de depuración compatibles para las asignaciones de alineado. Las asignaciones de alineado aparecerá como un tipo de bloque _NORMAL_BLOCK.
 
 **_aligned_offset_realloc_dbg** reasigna el bloque de memoria especificado con un poco más de espacio solicitado *newSize*. *newSize* podría ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. La reasignación podría hacer que el bloque de memoria original se ponga en una ubicación distinta del montón y cambiar el tamaño del bloque de memoria. Si se mueve el bloque de memoria, el contenido del bloque original se sobrescribe.
 

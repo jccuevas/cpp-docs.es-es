@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545956"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977776"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ Es un error reasignar memoria y cambiar la alineación del bloque.
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_realloc_dbg** es una versión de depuración de la [_aligned_realloc](aligned-realloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_realloc_dbg** se reduce a una llamada a **_aligned_realloc**. Ambos **_aligned_realloc** y **_aligned_realloc_dbg** reasignan un bloque de memoria del montón base, pero **_aligned_realloc_dbg** admite varias características de depuración : búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, un parámetro de tipo de bloque para realizar un seguimiento de los tipos de asignación concretos, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación.
+**_aligned_realloc_dbg** es una versión de depuración de la [_aligned_realloc](aligned-realloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_realloc_dbg** se reduce a una llamada a **_aligned_realloc**. Ambos **_aligned_realloc** y **_aligned_realloc_dbg** reasignan un bloque de memoria del montón base, pero **_aligned_realloc_dbg** admite varias características de depuración : búferes situados a cada lado de la parte del usuario del bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación. Seguimiento de los tipos de asignación concretos con un parámetro de tipo de bloque no es una característica de depuración compatibles para las asignaciones de alineado. Las asignaciones de alineado aparecerá como un tipo de bloque _NORMAL_BLOCK.
 
 **_aligned_realloc_dbg** reasigna el bloque de memoria especificado con un poco más de espacio solicitado *newSize*. *newSize* podría ser mayor o menor que el tamaño del bloque de memoria asignado originalmente. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. La reasignación podría hacer que el bloque de memoria original se ponga en una ubicación distinta del montón y cambiar el tamaño del bloque de memoria. Si se mueve el bloque de memoria, el contenido del bloque original se sobrescribe.
 
