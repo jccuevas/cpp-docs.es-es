@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631878"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977815"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ Un puntero al bloque de memoria que se ha asignado o NULL si la operación produ
 
 ## <a name="remarks"></a>Comentarios
 
-**_aligned_malloc_dbg** es una versión de depuración de la [_aligned_malloc](aligned-malloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_malloc_dbg** se reduce a una llamada a `_aligned_malloc`. Ambos `_aligned_malloc` y **_aligned_malloc_dbg** asignan un bloque de memoria del montón base, pero **_aligned_malloc_dbg** ofrece varias características de depuración: búferes situados a cada lado de la parte del usuario en el bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación.
+**_aligned_malloc_dbg** es una versión de depuración de la [_aligned_malloc](aligned-malloc.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_aligned_malloc_dbg** se reduce a una llamada a `_aligned_malloc`. Ambos `_aligned_malloc` y **_aligned_malloc_dbg** asignan un bloque de memoria del montón base, pero **_aligned_malloc_dbg** ofrece varias características de depuración: búferes situados a cada lado de la parte del usuario en el bloque para comprobar si hay pérdidas, y *filename*/*linenumber* información para determinar el origen de las solicitudes de asignación. Seguimiento de los tipos de asignación concretos con un parámetro de tipo de bloque no es una característica de depuración compatibles para las asignaciones de alineado. Las asignaciones de alineado aparecerá como un tipo de bloque _NORMAL_BLOCK.
 
 **_aligned_malloc_dbg** asigna el bloque de memoria con un poco más de espacio solicitado *tamaño*. El administrador del montón de depuración usa el espacio adicional para vincular los bloques de memoria de depuración, y para proporcionar a la aplicación información de encabezado de depuración y sobrescribir los búferes. Cuando se asigna el bloque, la parte del usuario de bloque se rellena con el valor 0xCD y cada uno de los búferes sobrescritos se rellena con 0xFD.
 
