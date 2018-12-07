@@ -10,7 +10,7 @@ La documentación de Visual Basic y Visual C# se encuentra en un repositorio ind
 
 Le agradecemos sus contribuciones para ayudarnos a mejorar la documentación de Visual C++. Para ver una guía completa sobre cómo colaborar en docs.microsoft.com, vea el artículo [Guía para colaboradores de Microsoft Docs: información general](https://docs.microsoft.com/contribute). Para obtener más información sobre cómo colaborar en la documentación de Visual C++, vea la guía de [colaboración](CONTRIBUTING.md).
 
-Varias áreas de características de Visual C++ tienen sus propias carpetas en este repositorio, como `standard-library` para temas de la biblioteca estándar de C++, `ide` para temas específicos de C++ del entorno de desarrollo interactivo (IDE) de Visual Studio, etc. La subcarpeta `/media` de cada carpeta contiene archivos de imágenes prediseñadas para los temas. En la guía de [colaboración](CONTRIBUTING.md) encontrará más información.
+Varias áreas de características de Visual C++ tienen sus propias carpetas en este repositorio, como `standard-library` para temas de la biblioteca estándar de C++, `ide` para temas específicos de C++ del entorno de desarrollo interactivo (IDE) de Visual Studio, etc. La subcarpeta `/media` de cada carpeta contiene archivos de imágenes prediseñadas para los temas. En la [guía de contribución](CONTRIBUTING.md) encontrará más información.
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Código de conducta del código abierto de Microsoft
 
