@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178648"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpDrawItemStruct*<br/>
-Un puntero largo a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estructura. La estructura contiene información sobre el elemento que se va a dibujar y el tipo de dibujo necesaria.
+Un puntero largo a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estructura. La estructura contiene información sobre el elemento que se va a dibujar y el tipo de dibujo necesaria.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*pSize*|[out] Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe la descripción de un rectángulo.|
+|*pSize*|[out] Puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que recibe la descripción de un rectángulo.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*pSize*|[in] Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que describe un rectángulo delimitador.|
+|*pSize*|[in] Puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que describe un rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
 

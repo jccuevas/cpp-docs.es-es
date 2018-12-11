@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179011"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx (clase)
 
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpCreateStruct*<br/>
-[in] Un puntero a la [CREATESTRUCT (estructura)](../../mfc/reference/createstruct-structure.md) para el nuevo marco.
+[in] Un puntero a la [CREATESTRUCT (estructura)](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) para el nuevo marco.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in] El borde del marco que se mueve. Vea el parámetro *wParam* en [WM_SIZING notificación](/windows/desktop/winmsg/wm-sizing).
 
 *pRect*<br/>
-[in, out] Puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) o [RECT](../../mfc/reference/rect-structure1.md) estructura que contiene las coordenadas del marco.
+[in, out] Puntero a un [CRect](../../atl-mfc-shared/reference/crect-class.md) o [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura que contiene las coordenadas del marco.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>Parámetros
 
 *lpwndpos*<br/>
-[in] Puntero a un [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) estructura que contiene el nuevo tamaño y posición.
+[in] Puntero a un [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) estructura que contiene el nuevo tamaño y posición.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parámetros
 
 *pMsg*<br/>
-[in] Un puntero a un [MSG](../../mfc/reference/msg-structure1.md) estructura que contiene el mensaje que se va a procesar.
+[in] Un puntero a un [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) estructura que contiene el mensaje que se va a procesar.
 
 ### <a name="return-value"></a>Valor devuelto
 

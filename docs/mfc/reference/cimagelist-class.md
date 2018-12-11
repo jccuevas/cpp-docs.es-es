@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500768"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178595"
 ---
 # <a name="cimagelist-class"></a>CImageList (clase)
 
@@ -694,7 +694,7 @@ Un puntero al contexto del dispositivo de destino. Debe eliminar este [CDC](../.
 Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que contiene las coordenadas x e y donde se dibujará la imagen.
 
 *sz*<br/>
-Un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que indica el tamaño de la imagen que se va a dibujar.
+Un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que indica el tamaño de la imagen que se va a dibujar.
 
 *ptOrigin*<br/>
 Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que contiene las coordenadas x e y especificación de la esquina superior izquierda de la operación de dibujo con respecto a la imagen en Sí. No se dibujan los píxeles de la imagen que están a la izquierda de la coordenada x y versiones posteriores de la coordenada y.

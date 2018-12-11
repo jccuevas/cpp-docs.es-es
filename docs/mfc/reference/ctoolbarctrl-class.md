@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463016"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178985"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (clase)
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *pSize*<br/>
-Un puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe el tamaño de los elementos.
+Un puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que recibe el tamaño de los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1247,7 +1247,7 @@ La información de estado del botón si se realiza correctamente o - 1 en caso c
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función resulta especialmente útil si desea recuperar más de uno de los Estados del botón. Para recuperar sólo un estado, use una de las funciones miembro siguientes: [IsButtonEnabled tal](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), o [IsButtonIndeterminate](#isbuttonindeterminate). Sin embargo, el `GetState` función miembro es la única manera de detectar el estado del botón TBSTATE_WRAP.
+Esta función resulta especialmente útil si desea recuperar más de uno de los Estados del botón. Para recuperar sólo un estado, use una de las funciones miembro siguientes: [IsButtonEnabled tal](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), o [IsButtonIndeterminate](#isbuttonindeterminate). Sin embargo, el `GetState` función miembro es la única manera de detectar el estado del botón TBSTATE_WRAP.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 

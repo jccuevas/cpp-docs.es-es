@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624606"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178179"
 ---
 # <a name="cbitmap-class"></a>CBitmap (clase)
 
@@ -155,7 +155,7 @@ Aunque un mapa de bits no se puede seleccionar directamente para un dispositivo 
 
 Cuando termine con el objeto `CBitmap` creado por la función `CreateBitmap` , seleccione primero el mapa de bits fuera del contexto del dispositivo y elimine luego el objeto `CBitmap` .
 
-Para obtener más información, vea la descripción de la `bmBits` campo el `BITMAP` estructura. La estructura [BITMAP](../../mfc/reference/bitmap-structure.md) se describe en la función miembro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
+Para obtener más información, vea la descripción de la `bmBits` campo el `BITMAP` estructura. La estructura [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) se describe en la función miembro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
 ##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parámetros
 
 *lpBitmap*<br/>
-Apunta a un [mapa de bits](../../mfc/reference/bitmap-structure.md) estructura que contiene información sobre el mapa de bits.
+Apunta a un [mapa de bits](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estructura que contiene información sobre el mapa de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parámetros
 
 *pBitMap*<br/>
-Puntero a un [estructura de mapa de bits](../../mfc/reference/bitmap-structure.md) estructura que recibirá las propiedades de imagen. Este parámetro no debe ser NULL.
+Puntero a un [mapa de bits](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estructura que recibirá las propiedades de imagen. Este parámetro no debe ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 

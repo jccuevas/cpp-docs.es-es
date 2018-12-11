@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525756"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178335"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (clase)
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |Name|Descripción|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|Contiene el [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) se usa para pintar el área de cliente.|
+|[CPaintDC::m_ps](#m_ps)|Contiene el [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) se usa para pintar el área de cliente.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -71,7 +71,7 @@ Para obtener más información sobre el uso de `CPaintDC`, consulte [contextos d
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-Construye un `CPaintDC` prepara la ventana de la aplicación para dibujar el objeto y almacena el [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) estructura en el [m_ps](#m_ps) variable miembro.
+Construye un `CPaintDC` prepara la ventana de la aplicación para dibujar el objeto y almacena el [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) estructura en el [m_ps](#m_ps) variable miembro.
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` es una variable de miembro público del tipo [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).
+`m_ps` es una variable de miembro público del tipo [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct).
 
 ```
 PAINTSTRUCT m_ps;

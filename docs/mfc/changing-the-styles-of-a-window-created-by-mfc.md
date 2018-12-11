@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693223"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177915"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Cambiar los estilos de una ventana creada por MFC
 
@@ -46,7 +46,7 @@ Para las ventanas de marco principal, también puede especificar si la ventana t
 
 Si va a cambiar atributos de ventana en una aplicación existente, siga las instrucciones en el resto de este artículo en su lugar.
 
-Para cambiar los atributos de ventana predeterminado utilizados por una aplicación de marco de trabajo creada con el Asistente para aplicaciones, reemplace la ventana [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) función miembro virtual. `PreCreateWindow` permite que una aplicación tenga acceso el proceso de creación normalmente se administra internamente por la [CDocTemplate](../mfc/reference/cdoctemplate-class.md) clase. Las llamadas de framework `PreCreateWindow` justo antes de crear la ventana. Modificando el [CREATESTRUCT](../mfc/reference/createstruct-structure.md) estructura pasada a `PreCreateWindow`, la aplicación puede modificar los atributos utilizados para crear la ventana. Por ejemplo, para asegurarse de que una ventana no utiliza un título, utilice la siguiente operación bit a bit:
+Para cambiar los atributos de ventana predeterminado utilizados por una aplicación de marco de trabajo creada con el Asistente para aplicaciones, reemplace la ventana [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) función miembro virtual. `PreCreateWindow` permite que una aplicación tenga acceso el proceso de creación normalmente se administra internamente por la [CDocTemplate](../mfc/reference/cdoctemplate-class.md) clase. Las llamadas de framework `PreCreateWindow` justo antes de crear la ventana. Modificando el [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estructura pasada a `PreCreateWindow`, la aplicación puede modificar los atributos utilizados para crear la ventana. Por ejemplo, para asegurarse de que una ventana no utiliza un título, utilice la siguiente operación bit a bit:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

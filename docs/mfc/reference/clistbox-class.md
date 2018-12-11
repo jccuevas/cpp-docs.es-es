@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656097"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178621"
 ---
 # <a name="clistbox-class"></a>CListBox (clase)
 
@@ -339,7 +339,7 @@ Un puntero largo a un `COMPAREITEMSTRUCT` estructura.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Indica la posición relativa de los dos elementos que se describe en el [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) estructura. Puede ser cualquiera de los siguientes valores:
+Indica la posición relativa de los dos elementos que se describe en el [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) estructura. Puede ser cualquiera de los siguientes valores:
 
 |Valor|Significado|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpDeleteItemStruct*<br/>
-Un puntero largo a un Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) estructura que contiene información sobre el elemento eliminado.
+Un puntero largo a un Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) estructura que contiene información sobre el elemento eliminado.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpDrawItemStruct*<br/>
-Un puntero largo a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estructura que contiene información sobre el tipo de dibujo necesaria.
+Un puntero largo a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estructura que contiene información sobre el tipo de dibujo necesaria.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Especifica el índice de base cero del elemento.
 
 *lpRect*<br/>
-Especifica un puntero largo a un [estructura RECT](../../mfc/reference/rect-structure1.md) que recibe las coordenadas de cliente del cuadro de lista del elemento.
+Especifica un puntero largo a un [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que recibe las coordenadas de cliente del cuadro de lista del elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -991,7 +991,7 @@ Llame a esta función antes de agregar un gran número de elementos a un `CListB
 
 Esta función le ayuda a acelerar la inicialización de los cuadros de lista que tiene un gran número de elementos (más de 100). Asigna previamente la cantidad especificada de memoria para que las siguientes [AddString](#addstring), [InsertString](#insertstring), y [Dir](#dir) funciones toman el menor tiempo posible. Puede utilizar las estimaciones para los parámetros. Si ha sobreestimado, se asigna memoria adicional; Si subestima, la asignación normal se usa para los elementos que superan el importe asignados previamente.
 
-Sólo Windows 95/98: el *nitems con* parámetro está limitado a los valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista está limitado únicamente por la memoria disponible.
+Windows 95/98 solo: El *nitems con* parámetro está limitado a los valores de 16 bits. Esto significa que los cuadros de lista no pueden contener más de 32.767 elementos. Aunque el número de elementos está restringido, el tamaño total de los elementos de un cuadro de lista está limitado únicamente por la memoria disponible.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpMeasureItemStruct*<br/>
-Un puntero largo a un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estructura.
+Un puntero largo a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estructura.
 
 ### <a name="remarks"></a>Comentarios
 

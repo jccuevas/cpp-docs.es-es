@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557825"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178413"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Controles personalizados
 
@@ -88,7 +88,7 @@ Mediante el uso de dibujar los controles puede generar las clases de control reu
     // insert code to delete an item from this combo box
     ```
 
-Para obtener más información sobre las estructuras dibujado por el propietario ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), y [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) consulte la documentación de MFC para `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, y `CWnd::OnDeleteItem` respectivamente.
+Para obtener más información sobre las estructuras dibujado por el propietario ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), y [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) consulte la documentación de MFC para `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, y `CWnd::OnDeleteItem` respectivamente.
 
 ## <a name="using-self-draw-controls-and-menus"></a>Uso de menús y controles de dibujar automáticamente
 

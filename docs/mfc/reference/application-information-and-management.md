@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694340"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178348"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -114,7 +114,7 @@ El primer formulario del `AfxBeginThread` crea un subproceso de trabajo. El segu
 
 Multithreading se debe habilitar la aplicación; en caso contrario, se producirá un error en esta función. Para obtener más información sobre la habilitación de multithreading, consulte [/MD, / MT, /LD (utilizar la biblioteca de tiempo de ejecución)](../../build/reference/md-mt-ld-use-run-time-library.md) en *opciones del compilador de Visual C++*.
 
-Para obtener más información sobre `AfxBeginThread`, consulte los artículos [Multithreading: crear subprocesos de trabajo](../../parallel/multithreading-creating-worker-threads.md) y [Multithreading: crear subprocesos de la interfaz de usuario](../../parallel/multithreading-creating-user-interface-threads.md).
+Para obtener más información sobre `AfxBeginThread`, consulte los artículos [Multithreading: Crear subprocesos de trabajo](../../parallel/multithreading-creating-worker-threads.md) y [Multithreading: Crear subprocesos de interfaz de usuario](../../parallel/multithreading-creating-user-interface-threads.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -164,7 +164,7 @@ Elimina el objeto de subproceso de la memoria.
 
 Debe llamarse desde dentro del subproceso que se finalice.
 
-Para obtener más información sobre `AfxEndThread`, consulte el artículo [Multithreading: Finalizar subprocesos](../../parallel/multithreading-terminating-threads.md).
+Para obtener más información sobre `AfxEndThread`, consulte el artículo [Multithreading: Terminar subprocesos](../../parallel/multithreading-terminating-threads.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -567,9 +567,9 @@ Si no se especifica una ruta de acceso y se omite la extensión de nombre de arc
 
 - El directorio actual.
 
-- **Windows 95/98:** el directorio del sistema de Windows. **Windows NT:** el directorio del sistema de Windows de 32 bits. El nombre de este directorio es SYSTEM32.
+- **Windows 95/98:** El directorio del sistema de Windows. **Windows NT:** El directorio del sistema de Windows de 32 bits. El nombre de este directorio es SYSTEM32.
 
-- **Sólo en Windows NT:** directorio del sistema de Windows de los 16 bits. No hay ninguna función de Win32 que obtiene la ruta de acceso de este directorio, pero se va a buscar. El nombre de este directorio es el sistema.
+- **Sólo en Windows NT:** El directorio del sistema de Windows de 16 bits. No hay ninguna función de Win32 que obtiene la ruta de acceso de este directorio, pero se va a buscar. El nombre de este directorio es el sistema.
 
 - El directorio de Windows.
 
@@ -715,7 +715,7 @@ El nombre registrado para una clase `AfxRegisterWndClass` depende exclusivamente
 
 Si se llama a `AfxRegisterWndClass` para varias clases derivadas de CWnd con parámetros idénticos, en lugar de obtener una clase de ventana independiente para cada clase, cada clase comparte la misma clase de ventana. Esto puede causar problemas si se usa el estilo de clase CS_CLASSDC. En lugar de varias clases de ventana CS_CLASSDC, terminará con una clase de ventana CS_CLASSDC y todas las ventanas de C++ que usen ese recurso compartido de clase el mismo controlador de dominio. Para evitar este problema, llame a [AfxRegisterClass](#afxregisterclass) para registrar la clase.
 
-Consulte la nota técnica [TN001: registro de la clase de ventana](../../mfc/tn001-window-class-registration.md) para obtener más información sobre el registro de la clase de ventana y el `AfxRegisterWndClass` función.
+Consulte la nota técnica [TN001: Registro de la clase de ventana](../../mfc/tn001-window-class-registration.md) para obtener más información sobre el registro de la clase de ventana y el `AfxRegisterWndClass` función.
 
 ### <a name="example"></a>Ejemplo
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Parámetros
 
 *lpwsaData*<br/>
-Un puntero a un [WSADATA](../../mfc/reference/wsadata-structure.md) estructura. Si *lpwsaData* no es igual a NULL, a continuación, la dirección de la `WSADATA` estructura se rellena mediante la llamada a `WSAStartup`. Esta función también garantiza que `WSACleanup` es llamado automáticamente antes de que termine la aplicación.
+Un puntero a un [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) estructura. Si *lpwsaData* no es igual a NULL, a continuación, la dirección de la `WSADATA` estructura se rellena mediante la llamada a `WSAStartup`. Esta función también garantiza que `WSACleanup` es llamado automáticamente antes de que termine la aplicación.
 
 ### <a name="return-value"></a>Valor devuelto
 
