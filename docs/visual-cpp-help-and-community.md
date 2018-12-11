@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 3b01c58349aa1dff1c782b051156250fd495df91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460013"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178101"
 ---
 # <a name="visual-c-help-and-community"></a>Ayuda y comunidad de Visual C++
 
@@ -45,4 +45,4 @@ Muchas de las secciones de la documentación también están disponibles en form
 |[Blog del equipo de Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Contiene entradas sobre diversos temas publicados por los expertos del equipo del producto Visual C++.|
 |[Channel 9](https://channel9.msdn.com/)|Contiene vídeos de conferencias y entrevistas. Utilice el cuadro de búsqueda de la página principal de Channel 9 para buscar contenido de C++.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Contiene artículos y noticias sobre Visual Studio y herramientas de desarrollo relacionadas.|
-|[Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc) y [comunidad de desarrolladores](https://developercommunity.visualstudio.com)|Foros oficiales de Microsoft donde puede publicar preguntas sobre C++ y obtener respuestas de Microsoft y de expertos de la comunidad.|
+|[Foros de MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) y [comunidad de desarrolladores](https://developercommunity.visualstudio.com)|Foros oficiales de Microsoft donde puede publicar preguntas sobre C++ y obtener respuestas de Microsoft y de expertos de la comunidad.|
