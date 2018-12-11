@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481450"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178797"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (clase)
 
@@ -844,7 +844,7 @@ Contiene uno de los siguientes valores de la `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas del borde.
+Puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas del borde.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Parámetros
 
 *LPC*<br/>
-Un puntero a un Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estructura.
+Un puntero a un Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estructura.
 
 *pContext*<br/>
 Un puntero a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estructura.
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parámetros
 
 *tbpFlags*<br/>
-Marcas que controlan el estado actual del botón del progreso. Especifique solo uno de los siguientes indicadores porque todos los Estados son mutuamente excluyentes: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Marcas que controlan el estado actual del botón del progreso. Especifique solo una de las marcas siguientes porque todos los Estados son mutuamente excluyentes: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Comentarios
 

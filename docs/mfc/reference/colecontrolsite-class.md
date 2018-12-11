@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437809"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178931"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite (clase)
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Parámetros
 
 *lpmsg*<br/>
-Un puntero a un [estructura MSG](../../mfc/reference/msg-structure1.md). Esta estructura contiene el mensaje de Windows desencadenar el `SetFocus` solicitud para el control contenido en el sitio del control actual.
+Un puntero a un [estructura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Esta estructura contiene el mensaje de Windows desencadenar el `SetFocus` solicitud para el control contenido en el sitio del control actual.
 
 ### <a name="return-value"></a>Valor devuelto
 

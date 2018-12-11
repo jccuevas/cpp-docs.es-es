@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176921"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179063"
 ---
 # <a name="cdc-class"></a>CDC (clase)
 
@@ -913,7 +913,7 @@ Especifica la coordenada y del punto que define el punto de conexión del arco (
 Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar cualquier un LPRECT o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
 
 *ptStart*<br/>
-Especifica el punto (en unidades lógicas) de inicio de las coordenadas x e y del punto que define el arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un [punto](../../mfc/reference/point-structure1.md) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
+Especifica el punto (en unidades lógicas) de inicio de las coordenadas x e y del punto que define el arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 *ptEnd*<br/>
 Especifica las coordenadas x e y del punto que define el punto de final del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
@@ -980,10 +980,10 @@ Especifica la coordenada x del punto que define el punto de conexión del arco (
 Especifica la coordenada y del punto que define el punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
 *lpRect*<br/>
-Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura de datos o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
+Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura de datos o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
 
 *ptStart*<br/>
-Especifica el punto (en unidades lógicas) de inicio de las coordenadas x e y del punto que define el arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un [punto](../../mfc/reference/point-structure1.md) estructura de datos o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
+Especifica el punto (en unidades lógicas) de inicio de las coordenadas x e y del punto que define el arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura de datos o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 *ptEnd*<br/>
 Especifica las coordenadas x e y del punto que define el punto de final del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco. Puede pasar un `POINT` estructura de datos o un `CPoint` objeto para este parámetro.
@@ -1169,7 +1169,7 @@ Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar cualqu
 Especifica las coordenadas x e y del punto que define la cuerda inicial del punto (en unidades lógicas). Este punto no tiene que estar exactamente sobre la presión simultánea. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 *ptEnd*<br/>
-Especifica las coordenadas x e y del punto que define punto final de la cuerda (en unidades lógicas). Este punto no tiene que estar exactamente sobre la presión simultánea. Puede pasar un [punto](../../mfc/reference/point-structure1.md) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
+Especifica las coordenadas x e y del punto que define punto final de la cuerda (en unidades lógicas). Este punto no tiene que estar exactamente sobre la presión simultánea. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpSize*<br/>
-Apunta a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Apunta a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Señala a una matriz de [punto](../../mfc/reference/point-structure1.md) estructuras o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objetos.
+Señala a una matriz de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructuras o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objetos.
 
 *nCount*<br/>
 El número de puntos de la matriz.
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto. Este parámetro se usa para el caso sencillo de conversión de un rectángulo de puntos de dispositivos a los puntos de lógicos.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto. Este parámetro se usa para el caso sencillo de conversión de un rectángulo de puntos de dispositivos a los puntos de lógicos.
 
 *lpSize*<br/>
-Apunta a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Apunta a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
+Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
 
 *clrTopLeft*<br/>
 Especifica el color de los lados superiores e izquierdos del rectángulo tridimensional.
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas lógicas de un rectángulo, en este caso, la posición final del rectángulo que se va a dibujar.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas lógicas de un rectángulo, en este caso, la posición final del rectángulo que se va a dibujar.
 
 *size*<br/>
 Especifica el desplazamiento desde la esquina superior izquierda del borde externo a la esquina superior izquierda del borde interno (es decir, el grosor del borde) de un rectángulo.
 
 *lpRectLast*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas lógicas de la posición de un rectángulo, en este caso, la posición original del rectángulo que se va a dibujar.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas lógicas de la posición de un rectángulo, en este caso, la posición original del rectángulo que se va a dibujar.
 
 *sizeLast*<br/>
 Especifica el desplazamiento desde la esquina superior izquierda del borde externo a la esquina superior izquierda del borde interno (es decir, el grosor del borde) del rectángulo original que se va a dibujar.
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas lógicas del rectángulo va a dibujar.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas lógicas del rectángulo va a dibujar.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1675,7 +1675,7 @@ Especifica la coordenada y lógica de la esquina superior izquierda del icono.
 Identifica el identificador del icono que se va a dibujar.
 
 *punto*<br/>
-Especifica las coordenadas x e y lógica de la esquina superior izquierda del icono. Puede pasar un [punto](../../mfc/reference/point-structure1.md) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
+Especifica las coordenadas x e y lógica de la esquina superior izquierda del icono. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1833,7 +1833,7 @@ Apunta a la cadena que se va a dibujar. Si *nCount* es -1, debe ser la cadena te
 Especifica el número de caracteres de la cadena. Si *nCount* es -1, a continuación, *lpszString* se supone que es un puntero largo a una cadena terminada en null y `DrawText` calcula automáticamente el recuento de caracteres.
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el rectángulo (en coordenadas lógicas) en el que el texto es para dar formato.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el rectángulo (en coordenadas lógicas) en el que el texto es para dar formato.
 
 *str*<br/>
 Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene los caracteres especificados que se va a dibujar.
@@ -1890,7 +1890,7 @@ Apunta a la cadena que se va a dibujar. Si *nCount* es -1, la cadena debe ser te
 Especifica el número de caracteres de la cadena. Si *nCount* es -1, a continuación, *lpszString* se supone que es un puntero largo a una cadena terminada en null y `DrawText` calcula automáticamente el recuento de caracteres.
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el rectángulo (en coordenadas lógicas) en el que el texto es para dar formato.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene el rectángulo (en coordenadas lógicas) en el que el texto es para dar formato.
 
 *str*<br/>
 Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene los caracteres especificados que se va a dibujar.
@@ -2301,7 +2301,7 @@ Especifica el tipo de rectángulo. Este parámetro puede ser uno, ambos o ningun
 - ETO_OPAQUE especifica que el color de fondo actual rellena el rectángulo. (Puede establecer y consultar el color de fondo actual con el [SetBkColor](#setbkcolor) y [función miembro GetBkColor](#getbkcolor) funciones miembro.)
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura que determina las dimensiones del rectángulo. Este parámetro puede ser NULL. También puede pasar un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura que determina las dimensiones del rectángulo. Este parámetro puede ser NULL. También puede pasar un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
 
 *lpszString*<br/>
 Apunta a la cadena de caracteres especificada va a dibujar. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura que contiene las coordenadas lógicas del rectángulo va a rellenar. También puede pasar un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura que contiene las coordenadas lógicas del rectángulo va a rellenar. También puede pasar un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto para este parámetro.
 
 *pBrush*<br/>
 Identifica el pincel utilizado para rellenar el rectángulo.
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura de datos o un `CRect` objeto para este parámetro.
+Especifica el rectángulo delimitador (en unidades lógicas). Puede pasar un puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura de datos o un `CRect` objeto para este parámetro.
 
 *CLR* especifica el color que se usará para rellenar el rectángulo.
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene las coordenadas lógicas de las esquinas superior izquierda e inferior derecha del rectángulo. También puede pasar un `CRect` objeto para este parámetro.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que contiene las coordenadas lógicas de las esquinas superior izquierda e inferior derecha del rectángulo. También puede pasar un `CRect` objeto para este parámetro.
 
 *pBrush*<br/>
 Identifica el pincel que se usará para el rectángulo de tramas.
@@ -2767,10 +2767,10 @@ Especifica el primer carácter del intervalo de caracteres de la fuente actual p
 Especifica el último carácter del intervalo de caracteres de la fuente actual para el que se devuelve el ancho de un carácter.
 
 *lpabc*<br/>
-Señala a una matriz de [ABC](../../mfc/reference/abc-structure.md) estructuras que reciben el ancho de un carácter cuando se devuelve la función. Esta matriz debe contener al menos tantos `ABC` las estructuras como hay caracteres en el intervalo especificado por el *nFirstChar* y *nLastChar* parámetros.
+Señala a una matriz de [ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc) estructuras que reciben el ancho de un carácter cuando se devuelve la función. Esta matriz debe contener al menos tantos `ABC` las estructuras como hay caracteres en el intervalo especificado por el *nFirstChar* y *nLastChar* parámetros.
 
 *lpABCF*<br/>
-Apunta a un búfer proporcionada por la aplicación con una matriz de [ABCFLOAT](../../mfc/reference/abcfloat-structure.md) estructuras para recibir el ancho de un carácter cuando se devuelve la función. Los anchos devueltos por esta función se encuentran en el formato de punto flotante de IEEE.
+Apunta a un búfer proporcionada por la aplicación con una matriz de [ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat) estructuras para recibir el ancho de un carácter cuando se devuelve la función. Los anchos devueltos por esta función se encuentran en el formato de punto flotante de IEEE.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a la [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que va a recibir las dimensiones del rectángulo.
+Apunta a la [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que va a recibir las dimensiones del rectángulo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpColorAdjust*<br/>
-Apunta a un [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) estructura de datos para recibir los valores de ajuste de color.
+Apunta a un [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) estructura de datos para recibir los valores de ajuste de color.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Señala a una matriz de [punto](../../mfc/reference/point-structure1.md) estructuras de datos o `CPoint` se colocan los objetos donde los extremos de línea y la curva de puntos de control.
+Señala a una matriz de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructuras de datos o `CPoint` se colocan los objetos donde los extremos de línea y la curva de puntos de control.
 
 *lpTypes*<br/>
 Apunta a una matriz de bytes donde se colocan los tipos de vértice. Los valores son uno de los siguientes:
@@ -3531,7 +3531,7 @@ Siempre que se producen tipos PT_BEZIERTO en conjuntos de tres. El punto en la r
 - PT_CLOSEFIGURE especifica que la ilustración se cierra automáticamente después de la línea correspondiente o se dibuja la curva. La figura está cerrada, dibuje una línea desde el extremo de línea o curva al punto correspondiente al último PT_MOVETO.
 
 *nCount*<br/>
-Especifica el número total de [punto](../../mfc/reference/point-structure1.md) estructuras de datos que se pueden colocar en el *lpPoints* matriz. Este valor debe ser el mismo que el número de bytes que se puede colocar en el *lpTypes* matriz.
+Especifica el número total de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructuras de datos que se pueden colocar en el *lpPoints* matriz. Este valor debe ser el mismo que el número de bytes que se puede colocar en el *lpTypes* matriz.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3578,7 +3578,7 @@ Debe ser el punto en la región de recorte. Si el punto no está en la región d
 
 No todos los dispositivos admiten la función `GetPixel`. Para obtener más información, vea la capacidad de trama RC_BITBLT bajo el [GetDeviceCaps](#getdevicecaps) función miembro.
 
-El `GetPixel` función miembro tiene dos formas. La primera toma dos valores de coordenadas; la segunda acepta un [punto](../../mfc/reference/point-structure1.md) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+El `GetPixel` función miembro tiene dos formas. La primera toma dos valores de coordenadas; la segunda acepta un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3841,7 +3841,7 @@ Un puntero a un entero que recibe un recuento del número máximo de caracteres 
 Un puntero a una matriz de enteros que recibe las extensiones de glifo parcial. Cada elemento de la matriz proporciona la distancia, en unidades lógicas, entre el principio de la matriz de índices de glifo y uno de los glifos que se ajusta en el espacio especificado por *nMaxExtent*. Aunque esta matriz debe tener al menos tantos elementos como los índices de glifo especificados por *cgi*, la función rellena la matriz con las extensiones solo para índices de glifo tantos como se especifican mediante *lpnFit*. Si *lpnDx* es NULL, la función no calculará los anchos de la cadena parcial.
 
 *lpSize*<br/>
-Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe las dimensiones de la matriz de índices de glifo en unidades lógicas. Este valor no puede ser NULL.
+Puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que recibe las dimensiones de la matriz de índices de glifo en unidades lógicas. Este valor no puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3871,7 +3871,7 @@ Un puntero a una matriz de índices de glifo de las extensiones son va a recuper
 Especifica el número de glifos en la matriz señalada por *pgiIn*.
 
 *lpSize*<br/>
-Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe las dimensiones de la matriz de índices de glifo en unidades lógicas. Este valor no puede ser NULL.
+Puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que recibe las dimensiones de la matriz de índices de glifo en unidades lógicas. Este valor no puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpSize*<br/>
-Apunta a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Apunta a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpSize*<br/>
-Apunta a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Apunta a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Apunta a una matriz de puntos. Cada punto de la matriz es un [punto](../../mfc/reference/point-structure1.md) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
+Apunta a una matriz de puntos. Cada punto de la matriz es un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *nCount*<br/>
 El número de puntos de la matriz.
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto. Este parámetro se usa para el caso común de asignación de un rectángulo de coordenadas lógicas a unidades de dispositivo.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto. Este parámetro se usa para el caso común de asignación de un rectángulo de coordenadas lógicas a unidades de dispositivo.
 
 *lpSize*<br/>
-Apunta a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o un [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
+Apunta a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o un [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -4713,7 +4713,7 @@ Especifica la coordenada y del punto de conexión del arco (en unidades lógicas
 Especifica el rectángulo delimitador. Puede pasar un `CRect` objeto o un puntero a un `RECT` estructura para este parámetro.
 
 *ptStart*<br/>
-Especifica el punto inicial del arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un [punto](../../mfc/reference/point-structure1.md) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
+Especifica el punto inicial del arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 *ptEnd*<br/>
 Especifica el punto de conexión del arco. Este punto no tiene que estar exactamente en el arco. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Señala a una matriz de [punto](../../mfc/reference/point-structure1.md) estructuras de datos que contienen los puntos de conexión y puntos de control de la spline(s).
+Señala a una matriz de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructuras de datos que contienen los puntos de conexión y puntos de control de la spline(s).
 
 *nCount*<br/>
 Especifica el número de puntos en el *lpPoints* matriz. Este valor debe ser uno más de tres veces el número de curvas spline para dibujar, porque cada spline Bzier requiere dos puntos de control y un punto de conexión y la curva polinomial inicial requiere un punto de partida adicional.
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Señala a una matriz de [punto](../../mfc/reference/point-structure1.md) señala las estructuras de datos que contiene el control y los puntos de conexión.
+Señala a una matriz de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) señala las estructuras de datos que contiene el control y los puntos de conexión.
 
 *nCount*<br/>
 Especifica el número de puntos en el *lpPoints* matriz. Este valor debe ser tres veces el número de curvas spline para dibujar, porque cada spline Bzier requiere dos puntos de control y un punto de conexión.
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Señala a una matriz de [punto](../../mfc/reference/point-structure1.md) estructuras de datos que contiene los puntos de conexión para cada línea segmento y los puntos de conexión y puntos para cada spline Bzier de control.
+Señala a una matriz de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructuras de datos que contiene los puntos de conexión para cada línea segmento y los puntos de conexión y puntos para cada spline Bzier de control.
 
 *lpTypes*<br/>
 Señala a una matriz que especifica cómo cada punto en el *lpPoints* se utiliza la matriz. Valores pueden ser uno de los siguientes:
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Parámetros
 
 *lpPoints*<br/>
-Señala a una matriz de [punto](../../mfc/reference/point-structure1.md) estructuras de datos que contiene los vértices de la línea.
+Señala a una matriz de [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructuras de datos que contiene los vértices de la línea.
 
 *nCount*<br/>
 Especifica el número de puntos de la matriz.
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Parámetros
 
 *lpColorAdjust*<br/>
-Apunta a un [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) estructura de datos que contiene los valores de ajuste de color.
+Apunta a un [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) estructura de datos que contiene los valores de ajuste de color.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6219,7 +6219,7 @@ Especifica la coordenada y, en unidades lógicas, del punto debe establecerse.
 Especifica el color que se usa para pintar el punto.
 
 *punto*<br/>
-Especifica las coordenadas x e y lógica del punto debe establecerse. Puede pasar un [punto](../../mfc/reference/point-structure1.md) estructura de datos o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
+Especifica las coordenadas x e y lógica del punto debe establecerse. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura de datos o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -6328,10 +6328,10 @@ Especifica el modo de ajuste. Puede ser cualquiera de los siguientes valores:
 |COLORONCOLOR|Elimina los píxeles. Este modo elimina se eliminaron todas las líneas de píxeles sin intentar mantener su información.|
 |MEDIOS TONOS|Asigna píxeles desde el rectángulo de origen en bloques de píxeles en el rectángulo de destino. El color medio sobre el bloque de destino de píxeles aproxima el color de los píxeles de origen.|
 ||Después de establecer el modo de ajuste de SEMITONOS, una aplicación debe llamar a la función de Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) para establecer el origen del pincel. Si se produce un error al hacerlo, se produce un error de alineación del pincel.|
-|STRETCH_ANDSCANS|**Windows 95/98**: igual que BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95/98**: igual que COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95/98**: igual que los medios TONOS.|
-|STRETCH_ORSCANS|**Windows 95/98**: igual que WHITEONBLACK|
+|STRETCH_ANDSCANS|**Windows 95/98**: Igual que BLACKONWHITE|
+|STRETCH_DELETESCANS|**Windows 95/98**: Igual que COLORONCOLOR|
+|STRETCH_HALFTONE|**Windows 95/98**: Igual que los medios TONOS.|
+|STRETCH_ORSCANS|**Windows 95/98**: Igual que WHITEONBLACK|
 |WHITEONBLACK|Realiza una operación booleana o con los valores de color para los píxeles se eliminaron y existentes. Si el mapa de bits es un mapa de bits monocromo, este modo conserva píxeles blancos a costa de los píxeles negros.|
 
 ### <a name="return-value"></a>Valor devuelto

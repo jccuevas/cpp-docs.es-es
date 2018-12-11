@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547490"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178244"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl (clase)
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 El tipo de datos del control que se va a crear. Debe ser un [tipo](https://msdn.microsoft.com/library/system.type) tipo de datos.
 
 *dwStyle*<br/>
-Estilo de ventana que se va a aplicar al control. Especificar una combinación de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actualmente, se admiten solo los siguientes estilos: WS_TABSTOP, WS_VISIBLE, WS_DISABLED y WS_GROUP.
+Estilo de ventana que se va a aplicar al control. Especificar una combinación de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actualmente, se admiten solo los estilos siguientes: WS_TABSTOP, WS_VISIBLE, WS_DISABLED y WS_GROUP.
 
 *Rect*<br/>
-Un [estructura RECT](../../mfc/reference/rect-structure1.md) que define las coordenadas de las esquinas superior izquierda e inferior derecha del control (primera sobrecarga solo).
+Un [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que define las coordenadas de las esquinas superior izquierda e inferior derecha del control (primera sobrecarga solo).
 
 *nPlaceHolderID*<br/>
 El identificador del control de marcador de posición estático se coloca en el Editor de recursos. El control de formularios de Windows recién creado reemplaza al control estático, suponiendo que su posición, el orden z y los estilos (segunda sobrecarga solo).
