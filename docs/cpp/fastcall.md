@@ -1,6 +1,6 @@
 ---
 title: __fastcall
-ms.date: 10/09/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __fastcall_cpp
 - __fastcall
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-ms.openlocfilehash: 19cc8efb98660e8cdb3f6d9b03f0b7bd85a34949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480046"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627369"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -29,11 +29,11 @@ El **__fastcall** convención de llamada especifica que los argumentos para func
 |Convención de traducción de mayúsculas y minúsculas|No se lleva a cabo una traducción de mayúsculas y minúsculas.|
 
 > [!NOTE]
->  Las futuras versiones del compilador pueden utilizar distintos registros para almacenar parámetros.
+> Las futuras versiones del compilador pueden utilizar distintos registros para almacenar parámetros.
 
 Mediante el [/GR](../build/reference/gd-gr-gv-gz-calling-convention.md) opción del compilador hace que cada función del módulo compile como **__fastcall** a menos que la función se declara con un atributo en conflicto, o el nombre de la función `main` .
 
-El **__fastcall** palabra clave acepta y omite los compiladores que tienen como destino ARM y x64 arquitecturas; en un x64 chip, por convención, los cuatro primeros argumentos se pasan en registros cuando sea posible y se pasan argumentos adicionales en la pila. Para obtener más información, consulte [general de x64 convenciones de llamada](../build/overview-of-x64-calling-conventions.md). En un chip ARM, se puede pasar hasta cuatro argumentos enteros y ocho argumentos de punto flotante en los registros; los argumentos adicionales se pasan en la pila.
+El **__fastcall** palabra clave acepta y omite los compiladores que tienen como destino ARM y x64 arquitecturas; en un x64 chip, por convención, los cuatro primeros argumentos se pasan en registros cuando sea posible y se pasan argumentos adicionales en la pila. Para obtener más información, consulte [x64 la convención de llamada](../build/x64-calling-convention.md). En un chip ARM, se puede pasar hasta cuatro argumentos enteros y ocho argumentos de punto flotante en los registros; los argumentos adicionales se pasan en la pila.
 
 En el caso de funciones de clase no estáticas, si la función se define fuera de línea, no es necesario especificar el modificador de convención de llamada en la definición fuera de línea. Es decir, para los métodos miembro no estáticos de clase, en el momento de la definición se supone la convención de llamada especificada durante la declaración. Dada esta definición de clase:
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514639"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627470"
 ---
 # <a name="international-enabling"></a>Internacionalización
 
@@ -27,7 +27,7 @@ Código de C y C++ más tradicional hace suposiciones sobre la manipulación de 
 
    - Use las mismas funciones de tiempo de ejecución portables que hagan que MFC portables en cada entorno.
 
-   - Hacer que cadenas literales y caracteres portables en cada entorno, mediante la `_T` macro. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   - Hacer que cadenas literales y caracteres portables en cada entorno, mediante la `_T` macro. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    - Tomar precauciones al analizar cadenas en MBCS. Estas precauciones no son necesarios en Unicode. Para obtener más información, consulte [sugerencias de programación para MBCS](../text/mbcs-programming-tips.md).
 

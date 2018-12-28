@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437275"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627350"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Compatibilidad con los juegos de caracteres multibyte (MBCS)
 
@@ -46,7 +46,7 @@ MFC y la biblioteca en tiempo de ejecución de C admiten la programación de un 
 
 ### <a name="mbcsunicode-portability"></a>Portabilidad de MBCS/Unicode
 
-Si se utiliza el archivo de encabezado Tchar.h, se pueden compilar aplicaciones de un solo byte, MBCS y Unicode a partir de los mismos códigos fuente. Tchar.h define macros con el prefijo *_tcs* , que se asignan a `str`, `_mbs`, o `wcs` funciones, según corresponda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar Unicode, definir el símbolo `_UNICODE`. De forma predeterminada, `_MBCS` está definido para aplicaciones MFC. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+Con el archivo de encabezado tchar.h, puede crear un solo byte, MBCS y Unicode, las aplicaciones de las mismas fuentes. Tchar.h define macros con el prefijo *_tcs* , que se asignan a `str`, `_mbs`, o `wcs` funciones, según corresponda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar Unicode, definir el símbolo `_UNICODE`. De forma predeterminada, `_UNICODE` está definido para aplicaciones MFC. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Comportamiento es indefinido si se definen conjuntamente `_UNICODE` y `_MBCS`.

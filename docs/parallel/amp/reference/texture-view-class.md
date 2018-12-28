@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: e7099c247a68823fbe5467f47c6afe1dc5a33abc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544461"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657505"
 ---
 # <a name="textureview-class"></a>texture_view (Clase)
 
@@ -82,7 +82,7 @@ El rango de la `texture_view`.
 |Name|Descripción|
 |----------|-----------------|
 |[operator()](#operator_call)|Sobrecargado. Obtiene el valor del elemento por índice.|
-|[operator[]](#operator_at)|Sobrecargado. Obtiene el valor del elemento por índice.|
+|[operator\[\]](#operator_at)|Sobrecargado. Obtiene el valor del elemento por índice.|
 |[operator=](#operator_eq)|Sobrecargado. Operador de asignación.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -473,7 +473,7 @@ void set(
 *_Index*<br/>
 Índice del elemento que se va a establecer, posiblemente multidimensional.
 
-*valor*<br/>
+*value*<br/>
 Valor que se establecerá el elemento.
 
 ##  <a name="value_type"></a> value_type

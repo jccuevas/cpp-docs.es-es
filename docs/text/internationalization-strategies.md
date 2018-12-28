@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501327"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626687"
 ---
 # <a name="internationalization-strategies"></a>Estrategias de internacionalización
 
@@ -30,7 +30,7 @@ Dependiendo de sus sistemas operativos de destino y mercados, tendrá varias est
 
    Use la funcionalidad específica de MBCS. Las cadenas pueden contener caracteres de byte único, los caracteres de doble byte o ambos. La biblioteca de tiempo de ejecución de C proporciona funciones, macros y tipos de datos para la programación solo MBCS. MFC está totalmente habilitado para MBCS.
 
-- Se escribe el código fuente de la aplicación para la portabilidad completa, al volver a compilar con el símbolo `_UNICODE` o el símbolo `_MBCS` definido, puede generar versiones que usan alguno. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Se escribe el código fuente de la aplicación para la portabilidad completa, al volver a compilar con el símbolo `_UNICODE` o el símbolo `_MBCS` definido, puede generar versiones que usan alguno. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Utilice totalmente portables tipos C para funciones, macros y datos de tiempo de ejecución. La flexibilidad de MFC es compatible con cualquiera de estas estrategias.
 

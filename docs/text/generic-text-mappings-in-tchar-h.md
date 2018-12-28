@@ -1,5 +1,5 @@
 ---
-title: Asignaciones de texto genérico en TCHAR.H
+title: Asignaciones de texto genérico en tchar.h
 ms.date: 11/04/2016
 f1_keywords:
 - tchar.h
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 969894502689dd5aeeeaa27404bafc3c483c1336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667589"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627512"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en TCHAR.H
+# <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en tchar.h
 
-Para simplificar la conversión de código para uso internacional, la biblioteca de tiempo de ejecución de Microsoft proporciona asignaciones de texto genérico específicas de Microsoft para muchos tipos de datos, rutinas y otros objetos. Puede usar estas asignaciones, que se definen en Tchar.h, para escribir código genérico que se puede compilar para un solo byte, multibyte, o juegos de caracteres de Unicode, dependiendo de una constante de manifiesto que define mediante un `#define` instrucción. Las asignaciones de texto genérico son extensiones de Microsoft que no son compatibles con ANSI.
+Para simplificar la conversión de código para uso internacional, la biblioteca de tiempo de ejecución de Microsoft proporciona asignaciones de texto genérico específicas de Microsoft para muchos tipos de datos, rutinas y otros objetos. Puede usar estas asignaciones, que se definen en tchar.h, para escribir código genérico que se puede compilar para un solo byte, multibyte, o juegos de caracteres de Unicode, dependiendo de una constante de manifiesto que define mediante un `#define` instrucción. Las asignaciones de texto genérico son extensiones de Microsoft que no son compatibles con ANSI.
 
-Utilizando el archivo Tchar.h, puede compilar aplicaciones de Unicode de las mismas fuentes, juego de caracteres Multibyte (MBCS) y un byte. Tchar.h define macros (que tienen el prefijo `_tcs`) que, con las definiciones de preprocesador correctas, se asignan a las funciones `str`, `_mbs` o `wcs`, según proceda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar Unicode, definir el símbolo `_UNICODE`. Para compilar una aplicación de un solo byte, no hay que definir ningún símbolo (opción predeterminada). De forma predeterminada, `_MBCS` está definido para aplicaciones MFC.
+Utilizando el archivo tchar.h, puede compilar aplicaciones de Unicode de las mismas fuentes, juego de caracteres Multibyte (MBCS) y un byte. Tchar.h define macros (que tienen el prefijo `_tcs`) que, con las definiciones de preprocesador correctas, se asignan a `str`, `_mbs`, o `wcs` funciones, según corresponda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar Unicode, definir el símbolo `_UNICODE`. Para compilar una aplicación de un solo byte, no hay que definir ningún símbolo (opción predeterminada). De forma predeterminada, `_MBCS` está definido para aplicaciones MFC.
 
-El tipo de datos `_TCHAR` se define de forma condicional en Tchar.h. Si el símbolo `_UNICODE` se define para la compilación, `_TCHAR` se define como **wchar_t**; en caso contrario, para compilaciones MBCS y de un solo byte, se define como **char**. (**wchar_t**, el tipo de datos de caracteres anchos Unicode básico es el equivalente de 16 bits a un 8 bits con signo **char**.) Para aplicaciones internacionales, se ha de utilizar la familia de funciones `_tcs`, que se ejecuta en unidades `_TCHAR`, no en bytes. Por ejemplo, `_tcsncpy` copias `n` `_TCHARs`, no `n` bytes.
+El `_TCHAR` tipo de datos se define de forma condicional en tchar.h. Si el símbolo `_UNICODE` se define para la compilación, `_TCHAR` se define como **wchar_t**; en caso contrario, para compilaciones MBCS y de un solo byte, se define como **char**. (**wchar_t**, el tipo de datos de caracteres anchos Unicode básico es el equivalente de 16 bits a un 8 bits con signo **char**.) Para aplicaciones internacionales, se ha de utilizar la familia de funciones `_tcs`, que se ejecuta en unidades `_TCHAR`, no en bytes. Por ejemplo, `_tcsncpy` copias `n` `_TCHARs`, no `n` bytes.
 
 Dado que algunas funciones de control de cadenas de juego de caracteres de byte único (SBCS) reciben parámetros `char*` (con signo), se genera una advertencia del compilador indicando que el tipo no coincide cuando se define `_MBCS`. Hay tres formas de evitar esta advertencia:
 
-1. Use fragmentos de código thunk de función inline con seguridad de tipos en Tchar.h. Éste es el comportamiento predeterminado.
+1. Use el código thunk de función de inline con seguridad de tipos en tchar.h. Éste es el comportamiento predeterminado.
 
-1. Use las macros directas en Tchar.h definiendo `_MB_MAP_DIRECT` en la línea de comandos. Si lo hace, deberá hacer coincidir los tipos manualmente. Este es el método más rápido, pero no garantiza la seguridad de tipos.
+1. Use las macros directas en tchar.h definiendo `_MB_MAP_DIRECT` en la línea de comandos. Si lo hace, deberá hacer coincidir los tipos manualmente. Este es el método más rápido, pero no garantiza la seguridad de tipos.
 
-1. Use fragmentos de código thunk de función de biblioteca vinculada estáticamente con seguridad de tipos en Tchar.h. Para ello, defina la constante `_NO_INLINING` en la línea de comandos. Este es el método más lento, pero garantiza prácticamente la seguridad de tipos.
+1. Use el código thunk de función de biblioteca vinculada estáticamente con seguridad de tipos en tchar.h. Para ello, defina la constante `_NO_INLINING` en la línea de comandos. Este es el método más lento, pero garantiza prácticamente la seguridad de tipos.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Directivas de preprocesador para asignaciones de texto genérico
 
@@ -43,7 +43,7 @@ Dado que algunas funciones de control de cadenas de juego de caracteres de byte 
 |`_MBCS`|Carácter multibyte|`_tcsrev` se asigna a `_mbsrev`|
 |Ninguno (la opción predeterminada no tiene definidos `_UNICODE` ni `_MBCS`)|SBCS (ASCII)|`_tcsrev` se asigna a `strrev`|
 
-Por ejemplo, la función de texto genérico `_tcsrev`, definida en Tchar.h, se asigna a `_mbsrev` si se ha definido `_MBCS` en el programa, o a `_wcsrev` si se ha definido `_UNICODE`. De lo contrario, `_tcsrev` se asigna a `strrev`. Las asignaciones de otros tipos de datos se proporcionan en Tchar.h para mayor comodidad en la programación, pero `_TCHAR` es la más útil.
+Por ejemplo, la función de texto genérico `_tcsrev`, que se define en tchar.h, se asigna a `_mbsrev` si se ha definido `_MBCS` en el programa, o `_wcsrev` si se ha definido `_UNICODE`. De lo contrario, `_tcsrev` se asigna a `strrev`. Asignaciones de otros tipos de datos se proporcionan en tchar.h para mayor comodidad de programación, pero `_TCHAR` es el más útil.
 
 ### <a name="generic-text-data-type-mappings"></a>Asignaciones de tipos de datos de texto genérico
 
