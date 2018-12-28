@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: 81e51f136a42c0d0db12744735521ae2b3cdb5f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dcb194c72ca2a64317cddda8a1559e78edc0978f
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510713"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626674"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>Utilizar tipos de datos de TCHAR.H con código _MBCS
 
@@ -43,7 +43,7 @@ A continuación se presentan tres soluciones para evitar este conflicto de tipos
     #define _USE_INLINING
     ```
 
-   Este método provoca que un código thunk de función insertada, proporcionado en Tchar.h, para asignar la rutina de texto genérico directamente a la rutina de MBCS adecuada. El siguiente fragmento de código de Tchar.h proporciona un ejemplo de cómo hacerlo.
+   Este método provoca que un código thunk de función insertada, proporcionado en tchar.h, para asignar la rutina de texto genérico directamente a la rutina de MBCS adecuada. El siguiente fragmento de código de tchar.h proporciona un ejemplo de cómo hacerlo.
 
     ```cpp
     __inline char *_tcsrev(char *_s1)
@@ -58,7 +58,7 @@ A continuación se presentan tres soluciones para evitar este conflicto de tipos
     #define _MB_MAP_DIRECT
     ```
 
-   Este enfoque proporciona una alternativa rápida si no desea usar el comportamiento predeterminado o si no se puede usar la inserción. Hace que la rutina de texto genérico para una macro asignarse directamente a la versión MBCS de la rutina, como se muestra en el siguiente ejemplo de Tchar.h.
+   Este enfoque proporciona una alternativa rápida si no desea usar el comportamiento predeterminado o si no se puede usar la inserción. Hace que la rutina de texto genérico para una macro asignarse directamente a la versión MBCS de la rutina, como se muestra en el siguiente ejemplo de tchar.h.
 
     ```cpp
     #define _tcschr _mbschr
@@ -68,4 +68,4 @@ A continuación se presentan tres soluciones para evitar este conflicto de tipos
 
 ## <a name="see-also"></a>Vea también
 
-[Asignaciones de texto genérico en TCHAR.H](../text/generic-text-mappings-in-tchar-h.md)
+[Asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md)

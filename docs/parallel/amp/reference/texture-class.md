@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486600"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657544"
 ---
 # <a name="texture-class"></a>texture (Clase)
 
@@ -76,7 +76,7 @@ El rango de la textura.
 |Name|Descripción|
 |----------|-----------------|
 |[operator()](#operator_call)|Devuelve el valor del elemento especificado por los parámetros.|
-|[operator[]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
+|[operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
 |[operator=](#operator_eq)|Copia especificado [textura](texture-class.md) objeto a ésta.|
 
 ### <a name="public-constants"></a>Constantes públicas
@@ -335,7 +335,7 @@ El índice del elemento.
 *_Rank*<br/>
 El rango del índice.
 
-*valor*<br/>
+*value*<br/>
 Nuevo valor del elemento.
 
 ##  <a name="ctor"></a> Textura

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638235"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587894"
 ---
 # <a name="opt-optimizations"></a>/OPT (Optimizaciones)
 
@@ -67,7 +67,7 @@ De forma predeterminada, el **/OPT:LBR** opción se establece cuando no está ha
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando se usa en la línea de comandos, el vinculador tiene como valor predeterminado **LBR/OPT: REF, Firewall de Windows,**. Si **/DEBUG** se especifica, el valor predeterminado es **/OPT: NOREF NOICR, NOLBR**.
+Cuando se usa en la línea de comandos, el vinculador tiene como valor predeterminado **LBR/OPT: REF, Firewall de Windows,**. Si **/DEBUG** se especifica, el valor predeterminado es **NOLBR/OPT: NOREF NOICF,**.
 
 El **/OPT** optimizaciones generalmente disminuir el tamaño de imagen y aumentar la velocidad del programa. Estas mejoras pueden ser considerables en programas más grandes, motivo por el que están habilitadas de forma predeterminada para las compilaciones comerciales.
 

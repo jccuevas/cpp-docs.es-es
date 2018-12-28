@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 01e5866866bfc9cf81b243c569e527ab5019b928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df9335fa2fc66ebba73b5c92ecd8007ca435f499
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437954"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627272"
 ---
 # <a name="unicode-programming-summary"></a>Resumen de la programación con Unicode
 
@@ -22,11 +22,11 @@ Para disfrutar de las ventajas de la compatibilidad en tiempo de ejecución de C
 
 - Especificar el punto de entrada.
 
-   En el **salida** página de la **vinculador** carpeta del proyecto [páginas de propiedades](../ide/property-pages-visual-cpp.md) cuadro de diálogo, establezca el **punto de entrada** símbolos para `wWinMainCRTStartup`.
+   En el **avanzadas** página de la **vinculador** carpeta del proyecto [páginas de propiedades](../ide/property-pages-visual-cpp.md) cuadro de diálogo, establezca el **punto de entrada** símbolos para `wWinMainCRTStartup`.
 
 - Utilizar tipos y funciones portables en tiempo de ejecución.
 
-   Para el control de cadenas de Unicode se han de utilizar las funciones en tiempo de ejecución de C adecuadas. Puede usar el `wcs` familia de funciones, pero es posible que prefiera totalmente portables (habilitadas internacionalmente) `_TCHAR` macros. Todas estas macros tienen el prefijo con `_tcs`; sustituyen, uno a uno, para el `str` familia de funciones. Estas funciones se describen en detalle en la [internacionalización](../c-runtime-library/internationalization.md) sección de la *referencia de la biblioteca de tiempo de ejecución*. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   Para el control de cadenas de Unicode se han de utilizar las funciones en tiempo de ejecución de C adecuadas. Puede usar el `wcs` familia de funciones, pero es posible que prefiera totalmente portables (habilitadas internacionalmente) `_TCHAR` macros. Todas estas macros tienen el prefijo con `_tcs`; sustituyen, uno a uno, para el `str` familia de funciones. Estas funciones se describen en detalle en la [internacionalización](../c-runtime-library/internationalization.md) sección de la *referencia de la biblioteca de tiempo de ejecución*. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Use `_TCHAR` y los tipos de datos portables relacionados que se describe en [compatibilidad con Unicode](../text/support-for-unicode.md).
 
@@ -87,7 +87,7 @@ En resumen, MFC y la biblioteca en tiempo de ejecución proporcionan la siguient
 
 - La biblioteca en tiempo de ejecución proporciona versiones de Unicode de todas las funciones de control de cadenas. La biblioteca en tiempo de ejecución también proporciona versiones portables apropiadas tanto para Unicode como para MBCS. Estos son los `_tcs` macros.)
 
-- Tchar.h proporciona tipos de datos portables y la `_T` macro para convertir cadenas literales y caracteres. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Tchar.h proporciona tipos de datos portables y la `_T` macro para convertir cadenas literales y caracteres. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - La biblioteca en tiempo de ejecución proporciona una versión con caracteres anchos de `main`. Use `wmain` para hacer que su aplicación compatible con Unicode.
 

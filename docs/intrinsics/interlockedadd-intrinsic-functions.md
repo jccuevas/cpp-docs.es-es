@@ -1,6 +1,6 @@
 ---
 title: Funciones intrínsecas _InterlockedAdd
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 0952a7727a433a718eac2f1873249327647599dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461599"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626911"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAdd
 
 **Específicos de Microsoft**
 
-Realizar una suma atómica, lo que garantiza que la operación se realiza correctamente cuando varios subprocesos tienen acceso a una variable compartida.
+Estas funciones realizan una suma atómica, que se asegura de que la operación completa correctamente cuando más de un subproceso tiene acceso a una variable compartida.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -105,13 +105,13 @@ Ambas funciones devuelven el resultado de la suma.
 
 ## <a name="remarks"></a>Comentarios
 
-Las versiones de estas funciones con los sufijos `_acq` o `_rel` realizan una suma entrelazada tras la adquisición o la liberación de semántica. La adquisición de semántica significa que el resultado de la operación resulta visible para todos los subprocesos y procesadores antes de cualquier lectura y escritura de memoria posterior. La adquisición es útil al entrar en una sección crítica. La liberación de semántica significa que todas las lecturas y escrituras de memoria resultan visibles a todos los subprocesos y procesadores antes de que sea visible el resultado de la operación. La liberación es útil al salir de una sección crítica. Los intrínsecos con un sufijo `_nf` ("sin límite") no actúan como una barrera de memoria.
+Las versiones de estas funciones con los sufijos `_acq` o `_rel` realizan una suma entrelazada tras la adquisición o la liberación de semántica. *Semántica de adquisición* significa que el resultado de la operación se hace visible para todos los subprocesos y procesadores antes de cualquier memoria posterior las lecturas y escrituras. La adquisición es útil al entrar en una sección crítica. *Semántica de liberación* significa que toda la memoria, lecturas y escrituras se ven obligado a ser visibles para todos los subprocesos y procesadores antes de que el resultado de la operación se hace visibles propio. La liberación es útil al salir de una sección crítica. Los intrínsecos con un `_nf` sufijo ("sin límite") no actúan como una barrera de memoria.
 
 Estas rutinas solo están disponibles como intrínsecos.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // interlockedadd.cpp
 // Compile with: /Oi /EHsc
 // processor: ARM
@@ -132,13 +132,13 @@ int main()
 
 ## <a name="output"></a>Salida
 
-```
+```Output
 0xffffff00 0xff0000 0xffffff00
 ```
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 // interlockedadd64.cpp
 // compile with: /Oi /EHsc
 // processor: ARM
@@ -162,7 +162,7 @@ int main()
 
 ## <a name="output"></a>Salida
 
-```
+```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff
 ```
@@ -172,4 +172,4 @@ Return value: ffff00ffffffff
 ## <a name="see-also"></a>Vea también
 
 [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
-[Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

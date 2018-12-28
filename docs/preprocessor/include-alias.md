@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573178"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587881"
 ---
 # <a name="includealias"></a>include_alias
 
-Especifica que *short_filename* es que se usará como un alias para *long_filename*.
+Especifica que, cuando *alias_filename* se encuentra en un `#include` la directiva, el compilador sustituye *actual_filename* en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias ("*long_filename*","*short_filename*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*, *short_filename*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias ("*alias_filename*","*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
 
 ## <a name="remarks"></a>Comentarios
 
-Algunos sistemas de archivos permiten nombres de archivo de encabezado más largos que el límite de sistema de archivos FAT 8.3. No basta con que el compilador trunque los nombres más largos a 8.3, porque los ocho primeros caracteres de los nombres de archivo de encabezado más largos pueden no ser únicos. Cada vez que el compilador encuentra la *long_filename* cadena, sustituye *short_filename*y busca el archivo de encabezado *short_filename* en su lugar. Esta directiva pragma debe aparecer antes de las directivas `#include` correspondientes. Por ejemplo:
+El **include_alias** directiva pragma permite sustituir los archivos que tienen nombres diferentes o las rutas de acceso para los nombres de archivo incluidos archivos de código fuente. Por ejemplo, algunos sistemas de archivos permiten nombres de archivo de encabezado más largo que el límite del sistema de archivos FAT 8.3. No basta con que el compilador trunque los nombres más largos a 8.3, porque los ocho primeros caracteres de los nombres de archivo de encabezado más largos pueden no ser únicos. Cada vez que el compilador encuentra la *alias_filename* cadena, sustituye *actual_filename*y busca el archivo de encabezado *actual_filename* en su lugar. Esta directiva pragma debe aparecer antes de las directivas `#include` correspondientes. Por ejemplo:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ Además, la directiva siguiente genera un error:
 Tenga en cuenta que el nombre de archivo indicado en mensajes de error, o como el valor de predefinido `__FILE__` macro, es el nombre del archivo después de haber realizado la sustitución. Por ejemplo, puede ver la salida después de las siguientes directivas:
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 Un error en VERYLONGFILENAME. H, genera el mensaje de error siguiente:
@@ -101,7 +101,7 @@ Observe también que no se admite la transitividad. Dadas las siguientes directi
 #include "one.h"
 ```
 
-el compilador busca el archivo TWO.H en lugar de THREE.H.
+el compilador busca el archivo two.h en lugar de Three.h.
 
 ## <a name="see-also"></a>Vea también
 
