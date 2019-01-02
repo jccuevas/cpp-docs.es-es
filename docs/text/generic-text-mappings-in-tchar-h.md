@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627512"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978301"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Asignaciones de texto genérico en tchar.h
 
 Para simplificar la conversión de código para uso internacional, la biblioteca de tiempo de ejecución de Microsoft proporciona asignaciones de texto genérico específicas de Microsoft para muchos tipos de datos, rutinas y otros objetos. Puede usar estas asignaciones, que se definen en tchar.h, para escribir código genérico que se puede compilar para un solo byte, multibyte, o juegos de caracteres de Unicode, dependiendo de una constante de manifiesto que define mediante un `#define` instrucción. Las asignaciones de texto genérico son extensiones de Microsoft que no son compatibles con ANSI.
 
-Utilizando el archivo tchar.h, puede compilar aplicaciones de Unicode de las mismas fuentes, juego de caracteres Multibyte (MBCS) y un byte. Tchar.h define macros (que tienen el prefijo `_tcs`) que, con las definiciones de preprocesador correctas, se asignan a `str`, `_mbs`, o `wcs` funciones, según corresponda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar Unicode, definir el símbolo `_UNICODE`. Para compilar una aplicación de un solo byte, no hay que definir ningún símbolo (opción predeterminada). De forma predeterminada, `_MBCS` está definido para aplicaciones MFC.
+Utilizando el archivo tchar.h, puede compilar aplicaciones de Unicode de las mismas fuentes, juego de caracteres Multibyte (MBCS) y un byte. Tchar.h define macros (que tienen el prefijo `_tcs`) que, con las definiciones de preprocesador correctas, se asignan a `str`, `_mbs`, o `wcs` funciones, según corresponda. Para compilar MBCS, se ha de definir el símbolo `_MBCS`. Para compilar Unicode, definir el símbolo `_UNICODE`. Para compilar una aplicación de un solo byte, no hay que definir ningún símbolo (opción predeterminada). De forma predeterminada, `_UNICODE` está definido para aplicaciones MFC.
 
 El `_TCHAR` tipo de datos se define de forma condicional en tchar.h. Si el símbolo `_UNICODE` se define para la compilación, `_TCHAR` se define como **wchar_t**; en caso contrario, para compilaciones MBCS y de un solo byte, se define como **char**. (**wchar_t**, el tipo de datos de caracteres anchos Unicode básico es el equivalente de 16 bits a un 8 bits con signo **char**.) Para aplicaciones internacionales, se ha de utilizar la familia de funciones `_tcs`, que se ejecuta en unidades `_TCHAR`, no en bytes. Por ejemplo, `_tcsncpy` copias `n` `_TCHARs`, no `n` bytes.
 

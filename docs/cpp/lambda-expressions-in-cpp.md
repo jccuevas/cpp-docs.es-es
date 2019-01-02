@@ -6,12 +6,12 @@ helpviewer_keywords:
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 1b8568d69fea002e59925e1e9354407457954e42
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176268"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978314"
 ---
 # <a name="lambda-expressions-in-c"></a>Expresiones lambda en C++
 
@@ -55,7 +55,7 @@ En esta ilustración se muestran las partes de una expresión lambda:
 
 1. *trailing-return-type* opcional.
 
-1. *cuerpo de lambda*)
+1. *cuerpo de lambda*.
 
 ### <a name="capture-clause"></a>Cláusula capture
 
@@ -102,9 +102,9 @@ void f(Args... args) {
 
 Para usar expresiones lambda en el cuerpo de un método de clase, pase el **esto** puntero en la cláusula de captura para proporcionar acceso a los métodos y miembros de datos de la clase envolvente.
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **esto** puntero se puede capturar por valor especificando `*this` en la cláusula de captura. Captura por valor significa que toda la *cierre*, que es el objeto de función anónima que encapulates la expresión lambda, se copia en cada sitio de llamada que se invoca la expresión lambda. Captura por valor es útil cuando la expresión lambda se ejecutará en las operaciones asincrónicas o paralelas, especialmente en ciertas arquitecturas de hardware, como NUMA.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): El **esto** puntero se puede capturar por valor especificando `*this` en la cláusula de captura. Captura por valor significa que toda la *cierre*, que es el objeto de función anónima que encapulates la expresión lambda, se copia en cada sitio de llamada que se invoca la expresión lambda. Captura por valor es útil cuando la expresión lambda se ejecutará en las operaciones asincrónicas o paralelas, especialmente en ciertas arquitecturas de hardware, como NUMA.
 
-Para obtener un ejemplo que muestra cómo usar expresiones lambda con métodos de clase, vea "Ejemplo: uso de una Lambda expresión en un método" en [ejemplos de expresiones Lambda](../cpp/examples-of-lambda-expressions.md).
+Para ver un ejemplo de cómo usar expresiones lambda con métodos de clase, consulte “Ejemplo: Uso de una expresión Lambda en un método"en [ejemplos de expresiones Lambda](../cpp/examples-of-lambda-expressions.md).
 
 Al usar la cláusula de captura, se recomienda tener en cuenta estos aspectos importantes, especialmente cuando se usan expresiones lambda con multithreading:
 
@@ -324,7 +324,7 @@ Para obtener más información, consulte [generate_n](../standard-library/algori
 
 ## <a name="constexpr-lambda-expressions"></a>expresiones lambda de constexpr
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): una expresión lambda se puede declarar como `constexpr` o se usan en una expresión constante cuando la inicialización de cada miembro de datos que TI captura o presenta se permite dentro de una expresión constante.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Una expresión lambda se puede declarar como `constexpr` o se usan en una expresión constante cuando se permite la inicialización de cada miembro de datos que captura o se introduce dentro de una expresión constante.
 
 ```cpp
     int y = 32;
