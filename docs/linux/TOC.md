@@ -12,5 +12,6 @@
 ## [Propiedades de C/C++ (Linux)](prop-pages/c-cpp-linux.md)
 ## [Propiedades del enlazador](prop-pages/linker-linux.md)
 ## [Propiedades de evento de compilación (Linux)](prop-pages/build-events-linux.md)
-## [Propiedades de paso de compilación personalizada (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Propiedades de paso de compilación personalizada (Linux)](prop-pages/custom-build-step-linux.md)
 ## [Propiedades de proyecto de archivos Make (Linux)](prop-pages/makefile-linux.md)
+## [Propiedades de archivo remoto (Linux)](prop-pages/remote-ar-linux.md)
