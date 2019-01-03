@@ -18,6 +18,6 @@
 #### [Comparación de caracteres](character-comparison.md)
 #### [Desbordamiento de búfer](buffer-overflow.md)
 ## [Compatibilidad con ANSI](support-for-ansi.md)
-## [Asignaciones de texto genérico en TCHAR.H](generic-text-mappings-in-tchar-h.md)
+## [Asignaciones de texto genérico en tchar.h](generic-text-mappings-in-tchar-h.md)
 ### [Uso de tipos de datos de TCHAR.H con código _MBCS](using-tchar-h-data-types-with-mbcs-code.md)
-## [Procedimiento para convertir entre distintos tipos de cadenas](how-to-convert-between-various-string-types.md)
+## [Cómo: Convertir entre distintos tipos de cadenas](how-to-convert-between-various-string-types.md)
