@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333233"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031296"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -160,25 +160,25 @@ Las siguientes opciones se pueden anexar a *modo* para especificar comportamient
 
 Los caracteres válidos para el *modo* cadena que se usa en **fopen** y **_fdopen** corresponden a *oflag* argumentos que se usan en [_open](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
-|Los caracteres de *modo* cadena|Equivalente *oflag* valor para _open/_sopen|
+|Los caracteres de *modo* cadena|Equivalente *oflag* valor \_abrir /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (normalmente **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**W**|**_O_WRONLY** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (normalmente **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_APPEND**)|
+|**a +**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (normalmente  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_crear** )|
+|**r**|**\_O\_RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**W**|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (normalmente  **\_O\_RDWR** &#124;  **\_O\_crear** &#124;  **\_ O\_TRUNC**)|
+|**b**|**\_O\_BINARIO**|
+|**t**|**\_O\_TEXTO**|
 |**c**|Ninguna|
 |**n**|Ninguna|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**S**|**\_O\_SECUENCIAL**|
+|**R**|**\_O\_RANDOM**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_TEMPORAL**|
+|**CCS = UNICODE**|**\_O\_WTEXT**|
+|**CCS = UTF-8**|**\_O\_UTF8**|
+|**CCS = UTF-16LE**|**\_O\_UTF16**|
 
 Si usas **rb** modo, no es necesario trasladar su código y, si espera que leer la mayor parte de un archivo grande o no se preocupa sobre el rendimiento de red, también puede considerar si va a utilizar memoria archivos Win32 asignados como una opción.
 

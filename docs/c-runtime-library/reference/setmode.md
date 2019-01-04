@@ -26,12 +26,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 887936299dce0a13738f9dd891a168785d17c979
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617443"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031283"
 ---
 # <a name="setmode"></a>_setmode
 
@@ -66,7 +66,12 @@ Para obtener más información sobre estos y otros códigos de retorno, vea [_do
 
 El **_setmode** la función establece *modo* el modo de traducción de archivo indicado por *fd*. Pasar **_O_TEXT** como *modo* establece el texto (que es, traducido) modo. Combinaciones de fuentes (CR-LF) de carro y de retorno de línea se traducen en una sola línea, carácter de avance en la entrada. Los caracteres de salto de línea se traducen a combinaciones CR-LF en la salida. Pasar **_O_BINARY** establece binario (sin traducir) el modo, en el que estas conversiones se suprimen.
 
-También puede pasar **_O_U16TEXT**, **_O_U8TEXT**, o **_O_WTEXT** para habilitar el modo Unicode, como se muestra en el segundo ejemplo más adelante en este documento. **_setmode** normalmente se usa para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero puede usar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo para un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
+También puede pasar **_O_U16TEXT**, **_O_U8TEXT**, o **_O_WTEXT** para habilitar el modo Unicode, como se muestra en el segundo ejemplo más adelante en este documento.
+
+> [!CAUTION]
+> Es el modo Unicode de funciones de impresión ancho (por ejemplo, `wprintf`) y no se admite para las funciones de impresión estrechas. Uso de una función de impresión estrecha en una secuencia de modo Unicode desencadena una aserción.
+
+**_setmode** normalmente se usa para modificar el modo de traducción predeterminado de **stdin** y **stdout**, pero puede usar en cualquier archivo. Si aplica **_setmode** al descriptor de archivo para un flujo, llame a **_setmode** antes de realizar cualquier operación de entrada o salida en la secuencia.
 
 > [!CAUTION]
 > Si escribe datos en una secuencia de archivo explícitamente vuelque el código mediante el uso de [fflush](fflush.md) antes de usar **_setmode** para cambiar el modo. Si no vuelca el código, podría producirse un comportamiento inesperado. Si no ha escrito datos en el flujo, no será necesario volcarlo.
