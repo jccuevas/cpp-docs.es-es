@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 40983509aa9c97cbbd6b778282720c45416ec525
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178101"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978262"
 ---
 # <a name="visual-c-help-and-community"></a>Ayuda y comunidad de Visual C++
 
@@ -28,7 +28,7 @@ Aquí se explica dónde obtener información sobre cómo escribir código de C++
 |Title|Descripción|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Contiene documentación de referencia y conceptual sobre Visual C++. Forma parte de MSDN Library.|
-|[Centro para desarrolladores de Windows](https://developer.microsoft.com/windows/)|Contiene información sobre cómo utilizar C++ y otros lenguajes para desarrollar aplicaciones para Windows 8. Forma parte del Centro de desarrollo de Windows; el contenido de C++ está bajo el nodo Documentos > Referencia del lenguaje.|
+|[Centro para desarrolladores de Windows](https://developer.microsoft.com/windows/)|Contiene información sobre cómo utilizar C++ y otros lenguajes para desarrollar aplicaciones para Windows 10. Forma parte del Centro de desarrollo de Windows; el contenido de C++ está bajo el nodo Documentos > Referencia del lenguaje.|
 
 ### <a name="online-and-offline-documentation"></a>Documentación en línea y sin conexión
 
