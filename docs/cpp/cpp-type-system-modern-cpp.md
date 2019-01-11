@@ -3,12 +3,12 @@ title: Sistema de tipos de C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176346"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220678"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 
@@ -16,11 +16,11 @@ El concepto de *tipo* es muy importante en C++. Cada variable, argumento de func
 
 ## <a name="terminology"></a>Terminología
 
-**Variable**: el vínculo simbólico nombre de una cantidad de datos para que el nombre se puede utilizar para tener acceso a los datos que hace referencia en el ámbito del código donde se define. En C++, *variable* generalmente se usa para hacer referencia a las instancias de tipos de datos escalares, mientras que las instancias de otros tipos normalmente se denominan *objetos*.
+**Variable**: El vínculo simbólico nombre de una cantidad de datos para que el nombre se puede utilizar para tener acceso a los datos que hace referencia en el ámbito del código donde se define. En C++, *variable* generalmente se usa para hacer referencia a las instancias de tipos de datos escalares, mientras que las instancias de otros tipos normalmente se denominan *objetos*.
 
-**Objeto**: por simplicidad y coherencia, este artículo usa el término *objeto* para hacer referencia a cualquier instancia de una clase o estructura, y cuando se usa en el sentido general incluye todos los tipos, incluso las variables escalares.
+**Objeto**: Por simplicidad y coherencia, este artículo usa el término *objeto* para hacer referencia a cualquier instancia de una clase o estructura, y cuando se usa en el sentido general incluye todos los tipos, incluso las variables escalares.
 
-**Tipo POD** (datos antiguos): esta categoría informal de tipos de datos en C++ hace referencia a tipos que son escalares (consulte la sección de tipos fundamentales) o son *clases POD*. Una clase POD no tiene ningún miembro de datos estático que no sea también POD, y no tiene ningún constructor definido por el usuario, ningún destructor definido por el usuario ni ningún operador de asignación definido por el usuario. Además, las clases POD no tienen funciones virtuales, clases base ni ningún miembro de datos no estático privado o protegido. Los tipos POD suelen utilizarse para el intercambio de datos externos, por ejemplo, con un módulo escrito en lenguaje C (que solo tiene tipos POD).
+**Tipo POD** (datos antiguos sin formato): Esta categoría informal de tipos de datos en C++ hace referencia a tipos que son escalares (consulte la sección de tipos fundamentales) o son *clases POD*. Una clase POD no tiene ningún miembro de datos estático que no sea también POD, y no tiene ningún constructor definido por el usuario, ningún destructor definido por el usuario ni ningún operador de asignación definido por el usuario. Además, las clases POD no tienen funciones virtuales, clases base ni ningún miembro de datos no estático privado o protegido. Los tipos POD suelen utilizarse para el intercambio de datos externos, por ejemplo, con un módulo escrito en lenguaje C (que solo tiene tipos POD).
 
 ## <a name="specifying-variable-and-function-types"></a>Especificar tipos de variable y función
 
@@ -159,7 +159,7 @@ Para obtener más información sobre los punteros en general, vea [punteros](../
 
 En la programación Win32 clásica de C y C++, la mayoría de las funciones utilizan definiciones de tipos y macros #define (definidas en `windef.h`) específicas de Windows para especificar los tipos de parámetros y los valores devueltos. Estos tipos de datos de Windows son principalmente solo nombres especiales (alias) dados a los tipos integrados de C o C++. Para obtener una lista completa de estas definiciones de tipos y definiciones del preprocesador, vea [tipos de datos de Windows](/windows/desktop/WinProg/windows-data-types). Algunas de estas definiciones de tipos, como HRESULT y LCID, son útiles y significativas. Otras, como INT, no tienen ningún significado especial y son solo alias para los tipos fundamentales de C++. Otros tipos de datos de Windows tienen nombres que se provienen de la época de programación de C y de los procesadores de 16 bits, y no tienen ningún propósito o significado en el hardware y sistemas operativos modernos. También hay tipos de datos especiales asociados con la biblioteca en tiempo de ejecución de Windows, aparece como [tipos de datos base en tiempo de ejecución de Windows](/windows/desktop/WinRT/base-data-types). En el lenguaje C++ actual, la regla general establece una preferencia por los tipos fundamentales de C++, a menos que el tipo de Windows comunique un significado adicional sobre cómo debe interpretarse el valor.
 
-## <a name="more-information"></a>Obtener más información
+## <a name="more-information"></a>Más información
 
 Para obtener más información sobre el sistema de tipos de C++, vea los temas siguientes.
 
@@ -170,6 +170,6 @@ Para obtener más información sobre el sistema de tipos de C++, vea los temas s
 
 ## <a name="see-also"></a>Vea también
 
-[Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

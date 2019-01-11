@@ -3,12 +3,12 @@ title: Controlar errores y excepciones (C++ moderno)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523293"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220574"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Controlar errores y excepciones (C++ moderno)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-Las excepciones de C++ son similares a las de lenguajes como C# y Java. En el **intente** bloquear, si es una excepción *produce* será *detectada* por los primeros asociados **catch** bloque cuyo tipo coincide con el de la excepción. En otras palabras, la ejecución salta de la **throw** instrucción a la **catch** instrucción. Si no se encuentra ningún bloque catch utilizable, `std::terminate` se invoca y se cierra el programa. En C++, se puede producir cualquier tipo; Sin embargo, recomendamos que lance un tipo que deriva directa o indirectamente de `std::exception`. En el ejemplo anterior, el tipo de excepción, [invalid_argument](../standard-library/invalid-argument-class.md), se define en la biblioteca estándar en el [ \<stdexcept >](../standard-library/stdexcept.md) archivo de encabezado. C++ no proporciona y no requiere un **finalmente** bloque para asegurarse de que todos los recursos se liberan si se produce una excepción. La adquisición de recursos es la expresión de inicialización (RAII), que utiliza punteros inteligentes, proporciona la funcionalidad necesaria para la limpieza de recursos. Para obtener más información, consulte [Cómo: diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md). Para obtener información sobre el mecanismo de desenredo de pila en C++, vea [excepciones y desenredo de pila](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Las excepciones de C++ son similares a las de lenguajes como C# y Java. En el **intente** bloquear, si es una excepción *produce* será *detectada* por los primeros asociados **catch** bloque cuyo tipo coincide con el de la excepción. En otras palabras, la ejecución salta de la **throw** instrucción a la **catch** instrucción. Si no se encuentra ningún bloque catch utilizable, `std::terminate` se invoca y se cierra el programa. En C++, se puede producir cualquier tipo; Sin embargo, recomendamos que lance un tipo que deriva directa o indirectamente de `std::exception`. En el ejemplo anterior, el tipo de excepción, [invalid_argument](../standard-library/invalid-argument-class.md), se define en la biblioteca estándar en el [ \<stdexcept >](../standard-library/stdexcept.md) archivo de encabezado. C++ no proporciona y no requiere un **finalmente** bloque para asegurarse de que todos los recursos se liberan si se produce una excepción. La adquisición de recursos es la expresión de inicialización (RAII), que utiliza punteros inteligentes, proporciona la funcionalidad necesaria para la limpieza de recursos. Para obtener más información, vea [Cómo: Diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md). Para obtener información sobre el mecanismo de desenredo de pila en C++, vea [excepciones y desenredo de pila](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
 
 ## <a name="basic-guidelines"></a>Directrices básicas
 
@@ -70,7 +70,7 @@ Control de errores sólido es un desafío en cualquier lenguaje de programación
 
 - Utilice excepciones cuando el código que controla el error se podría separar el código que detecta el error por uno o más llamadas de función intermedias. Considere la posibilidad de utilizar códigos de error en su lugar en bucles críticos para el rendimiento cuando el código que controla el error está estrechamente acoplado al código que lo detecta.
 
-- Para cada función que pudiera producir o propagar una excepción, proporcione uno de las tres garantías de excepción: la garantía segura, la garantía básica o la garantía nothrow (noexcept). Para obtener más información, consulte [Cómo: diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md).
+- Para cada función que pudiera producir o propagar una excepción, proporcione uno de las tres garantías de excepción: la garantía segura, la garantía básica o la garantía nothrow (noexcept). Para obtener más información, vea [Cómo: Diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md).
 
 - Producir excepciones por valor, se detectan por referencia. No se atrapan no puede controlar.
 
@@ -100,7 +100,7 @@ Especificaciones de excepciones se incluyeron en C++ como una manera de especifi
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: Interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Cómo: La interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

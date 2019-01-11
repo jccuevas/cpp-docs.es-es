@@ -3,12 +3,12 @@ title: Formato de cadena y E/s (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: 816eb71dae011f853a6e7ade1a1a2a8144a457c5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326191"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220509"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>Formato de cadena y de E/S (C++ moderno)
 
@@ -42,11 +42,11 @@ Esto puede ser demasiado complejo en muchos casos. Como alternativa, puede utili
 
 Algunas ventajas de Boost.Format son:
 
-- Seguro: Seguro y produce una excepción para errores, por ejemplo, la especificación de muy pocos o demasiados elementos.
+- Seguridad: Seguridad de tipos y produce una excepción para errores, por ejemplo, la especificación de muy pocos o demasiados elementos.
 
 - Extensible: Funciona para cualquier tipo que se puede transmitir.
 
-- Adecuado: Posix estándar y cadenas de formato similares.
+- Conveniente: Posix estándar y cadenas de formato similares.
 
 Aunque Boost.Format está compilado en C++ [iostreams](../standard-library/iostream-programming.md), que son seguros y extensible, no optimizado para el rendimiento. Cuando necesite la optimización del rendimiento, considere la posibilidad de C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) y [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), que son rápidos y fáciles de usar. Sin embargo, no son extensibles ni están seguros frente a vulnerabilidades. (Las versiones seguras existen, pero incurren en una ligera disminución del rendimiento. Para obtener más información, consulte [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) y [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
@@ -64,7 +64,7 @@ El código siguiente muestra algunas de la mejora de las características de for
 
 ## <a name="see-also"></a>Vea también
 
-[Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

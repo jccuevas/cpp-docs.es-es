@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Interfaz entre código excepcional y no excepcional'
+title: Procedimiento La interfaz entre código excepcional y no excepcional
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: b6da1142ee04668033a516f2c20c4a2354ff5598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8ff92f965f48faa7954ae0364ec7877428e519c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576688"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220635"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Cómo: Interfaz entre código excepcional y no excepcional
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>Procedimiento La interfaz entre código excepcional y no excepcional
 
 En este artículo se describe cómo implementar el control de excepciones coherente en un módulo de C++ y cómo traducir esas excepciones a códigos de error, y vicecersa, en los límites de la excepción.
 
@@ -19,7 +19,7 @@ A veces, un módulo de C++ tiene que servir de interfaz con código que no usa l
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>Llamar a funciones sin excepciones desde C++
 
-Cuando se llama a una función sin excepciones desde C++, la idea es ajustar esa función en una función de C++ que detecte cualquier error y posiblemente inicie una excepción. Cuando diseñe una función contenedora, decida primero qué tipo de garantías de excepción va a proporcionar: ningún throw, segura o básica. En segundo lugar, diseñe la función para liberar correctamente todos los recursos, por ejemplo, los identificadores de archivo, si se produce una excepción. Normalmente, esto significa que utiliza punteros inteligentes o administradores de recursos similares para poseer los recursos. Para obtener más información acerca de las consideraciones de diseño, vea [Cómo: diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md).
+Cuando se llama a una función sin excepciones desde C++, la idea es ajustar esa función en una función de C++ que detecte cualquier error y posiblemente inicie una excepción. Cuando diseñe una función contenedora, decida primero qué tipo de garantías de excepción va a proporcionar: ningún throw, segura o básica. En segundo lugar, diseñe la función para liberar correctamente todos los recursos, por ejemplo, los identificadores de archivo, si se produce una excepción. Normalmente, esto significa que utiliza punteros inteligentes o administradores de recursos similares para poseer los recursos. Para obtener más información acerca de las consideraciones de diseño, vea [Cómo: Diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -236,5 +236,5 @@ Para obtener más información sobre las expresiones lambda, vea [Expresiones la
 
 ## <a name="see-also"></a>Vea también
 
-[Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Cómo: Diseñar para la seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md)<br/>
+[Controlar errores y excepciones (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Cómo: Diseño de seguridad de las excepciones](../cpp/how-to-design-for-exception-safety.md)<br/>
