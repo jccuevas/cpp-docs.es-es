@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Crear y usar instancias de shared_ptr'
+title: Procedimiento Crear y usar instancias de shared_ptr
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176281"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220600"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>Cómo: Crear y usar instancias de shared_ptr
+# <a name="how-to-create-and-use-sharedptr-instances"></a>Procedimiento Crear y usar instancias de shared_ptr
 
 El tipo `shared_ptr` es puntero inteligente de la biblioteca estándar de C++ que está diseñado para escenarios en los que más de un propietario tendrá que administrar la duración del objeto en memoria. Después de inicializar `shared_ptr`, puede copiarlo, pasarlo por valor en argumentos de función y asignarlo a otras instancias de `shared_ptr`. Todas las instancias apuntan al mismo objeto y el acceso compartido a un "bloque de control" aumenta o disminuye el recuento de referencias siempre que un nuevo `shared_ptr` se agrega, se sale del ámbito o se restablece. Cuando el recuento de referencias llega a cero, el bloque de control elimina el recurso de memoria y se elimina a sí mismo.
 
@@ -67,4 +67,4 @@ En el ejemplo siguiente se muestra cómo `shared_ptr` sobrecarga distintos opera
 
 ## <a name="see-also"></a>Vea también
 
-[Punteros inteligentes](../cpp/smart-pointers-modern-cpp.md)
+[Punteros inteligentes (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)

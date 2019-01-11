@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Crear y usar instancias de unique_ptr'
+title: Procedimiento Crear y usar instancias de unique_ptr
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174900"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220587"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>Cómo: Crear y usar instancias de unique_ptr
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>Procedimiento Crear y usar instancias de unique_ptr
 
 Un [unique_ptr](../standard-library/unique-ptr-class.md) no comparte el puntero. No se puede copiar a otro `unique_ptr`, pasan por valor a una función o utilizar en ningún algoritmo de la biblioteca estándar de C++ que requiere la realización de copias. Un `unique_ptr` solo se puede mover. Esto significa que la propiedad del recurso de memoria se transfiere a otro `unique_ptr` y el `unique_ptr` original deja de poseerlo. Se recomienda limitar un objeto a un propietario, porque la propiedad múltiple agrega complejidad a la lógica del programa. Por lo tanto, cuando necesite un puntero inteligente para un objeto de C++ sin formato, use `unique_ptr`, y cuando construya un `unique_ptr`, utilice el [make_unique](../standard-library/memory-functions.md#make_unique) función auxiliar.
 
@@ -53,5 +53,5 @@ Para obtener más ejemplos, vea [make_unique](../standard-library/memory-functio
 
 ## <a name="see-also"></a>Vea también
 
-[Punteros inteligentes](../cpp/smart-pointers-modern-cpp.md)<br/>
+[Punteros inteligentes (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

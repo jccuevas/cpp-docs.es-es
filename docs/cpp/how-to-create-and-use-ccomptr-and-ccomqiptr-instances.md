@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Crear y usar instancias de CComPtr y CComQIPtr'
+title: Procedimiento Crear y usar instancias de CComPtr y CComQIPtr
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518708"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220559"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Cómo: Crear y usar instancias de CComPtr y CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Procedimiento Crear y usar instancias de CComPtr y CComQIPtr
 
 En la programación clásica de Windows, a menudo las bibliotecas se implementan como objetos COM (o más concretamente, como servidores COM). Muchos componentes del sistema operativo Windows se implementan como servidores COM y muchos colaboradores proporcionan bibliotecas en este formato. Para obtener información sobre los conceptos básicos de COM, vea [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
@@ -39,4 +39,4 @@ ATL también proporciona `CComQIPtr`, que tiene una sintaxis más sencilla para 
 
 ## <a name="see-also"></a>Vea también
 
-[Punteros inteligentes](../cpp/smart-pointers-modern-cpp.md)
+[Punteros inteligentes (C++ moderno)](../cpp/smart-pointers-modern-cpp.md)
