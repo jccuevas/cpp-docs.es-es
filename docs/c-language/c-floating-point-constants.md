@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: d7879f3382016e098db0c8073322b99d596e8f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bde8ecdfa7e93160a86829c466ab9a78b71d48e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664924"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220379"
 ---
 # <a name="c-floating-point-constants"></a>Constantes de punto flotante de C
 
@@ -48,7 +48,7 @@ Se pueden omitir los dígitos que hay delante del separador decimal (la parte en
 
 En los ejemplos siguientes se muestran algunas formas de constantes y expresiones de punto flotante:
 
-```
+```C
 15.75
 1.575E1   /* = 15.75   */
 1575e-2   /* = 15.75   */
@@ -60,16 +60,16 @@ Las constantes de punto flotante son positivas a menos que vayan precedidas de u
 
 Una constante de punto flotante sin un sufijo **f**, **F**, **l** o **L** tiene el tipo `double`. Si el sufijo es la letra **f** o **F**, la constante tiene el tipo `float`. Si el sufijo es la letra **l** o **L**, tiene el tipo `long double`. Por ejemplo:
 
-```
-100L  /* Has type long double  */
-100F  /* Has type float        */
+```C
+10.0L  /* Has type long double  */
+10.0F  /* Has type float        */
 ```
 
 Tenga en cuenta que el compilador deMicrosoft C representa internamente `long double` igual que el tipo `double`. Vea [Almacenamiento de tipos básicos](../c-language/storage-of-basic-types.md) para obtener información sobre los tipos `double`, `float` y `long double`.
 
 Se puede omitir la parte entera de la constante de punto flotante, como se muestra en los ejemplos siguientes. El número .75 se puede expresar de muchas maneras, incluidas las siguientes:
 
-```
+```C
 .0075e2
 0.075e1
 .075e1
