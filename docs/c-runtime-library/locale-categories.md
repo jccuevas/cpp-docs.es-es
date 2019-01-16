@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521360"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220197"
 ---
 # <a name="locale-categories"></a>Categorías de configuración regional
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ Las categorías de configuración regional son constantes de manifiesto utilizad
 |---------------------|-------------------------------|
 |`LC_ALL`|Todos los comportamientos específicos de la configuración regional (todas las categorías)|
 |`LC_COLLATE`|Comportamiento de las funciones `strcoll` y `strxfrm`|
-|`LC_CTYPE`|Comportamiento de las funciones de control de caracteres (excepto **isdigit**, `isxdigit`, `mbstowcs` y `mbtowc`, que no se ven afectadas)|
+|`LC_CTYPE`|Comportamiento de las funciones de control de caracteres (excepto `isdigit`, `isxdigit`, `mbstowcs` y `mbtowc`, que no se ven afectadas)|
 |`LC_MAX`|Igual a `LC_TIME`|
 |`LC_MIN`|Igual a `LC_ALL`|
 |`LC_MONETARY`|Información de formato de moneda devuelta por la función `localeconv`|
