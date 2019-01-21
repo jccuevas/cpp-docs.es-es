@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 78abe5e3b491ec0d658a40628dadc81e334c212f
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597543"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417647"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Especificar comportamiento de punto flotante)
 
@@ -57,7 +57,7 @@ En **/fp: Fast**, el compilador genera código diseñada para ejecutarse en el e
 
 **/ fp: Fast** está destinado a los programas que no requieren el orden de código de origen estricta y el redondeo de expresiones de punto flotante y no confían en las reglas estándar para controlar los valores especiales como NaN. Si el código de punto flotante requiere la conservación del código fuente de ordenación y el redondeo, o se basa en el comportamiento estándar de valores especiales, use [/fp: precisa](#precise). Si el código obtiene acceso o modifica el entorno para cambiar los modos de redondeo de punto flotante, sin máscara a excepciones de punto flotante, o comprobar el estado de punto flotante, utilice [/fp: strict](#strict).
 
-#### <a name="except"></a>Con la excepción
+#### <a name="except"></a>except
 
 El **/fp: excepto** opción genera código para garantizar que las excepciones de punto flotante sin máscara se generan en el punto exacto en el que se producen, y que no se genera ninguna excepción de punto flotante adicional. De forma predeterminada, el **/fp: strict** opción habilita **/fp: excepto**, y **/fp: precisa** no lo hace. El **/fp: excepto** no es compatible con la opción **/fp: Fast**. La opción se puede deshabilitar explícitamente por nosotros de **/fp: excepto-**.
 
@@ -71,13 +71,13 @@ El [/Za](../../build/reference/za-ze-disable-language-extensions.md) no es compa
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Uso de directivas pragma para controlar el comportamiento de punto flotante
 
-El compilador proporciona tres directivess pragma para invalidar el comportamiento de punto flotante especificado en la línea de comandos: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), y [fp_contract](../../preprocessor/fp-contract.md). Puede utilizar estos pragmas para controlar el comportamiento de punto flotante en el nivel de función, no dentro de una función. Tenga en cuenta que estas pragmas no corresponden directamente a la **/FP** opciones. Esta tabla se muestra cómo el **/FP** directivas pragma y opciones se asignan entre sí. Para obtener más información, consulte la documentación para las directivas pragma y opciones individuales.
+El compilador ofrece tres directivas pragma para invalidar el comportamiento de punto flotante especificado en la línea de comandos: [float_control](../../preprocessor/float-control.md), [fenv_access](../../preprocessor/fenv-access.md), y [fp_contract](../../preprocessor/fp-contract.md). Puede utilizar estos pragmas para controlar el comportamiento de punto flotante en el nivel de función, no dentro de una función. Tenga en cuenta que estas pragmas no corresponden directamente a la **/FP** opciones. Esta tabla se muestra cómo el **/FP** directivas pragma y opciones se asignan entre sí. Para obtener más información, consulte la documentación para las directivas pragma y opciones individuales.
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/ fp: Fast**|Desactivar|Desactivar|Desactivar|el|
-|**/ fp: precisa**|el|Desactivar|Desactivar|el|
-|**/ fp: excepto**|el|el|el|Desactivar|
+|**/fp:fast**|Desactivar|Desactivar|Desactivar|el|
+|**/fp:precise**|el|Desactivar|Desactivar|el|
+|**/fp:except**|el|el|el|Desactivar|
 
 ### <a name="the-default-floating-point-environment"></a>El entorno de punto flotante predeterminada
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544204"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417621"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -61,7 +61,7 @@ Nombre del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si se realiza correctamente. En caso contrario, la función devuelve -1 y establece **errno** a **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura, o a **ENOENT**, lo que significa que el archivo o la ruta de acceso no se encuentra o la ruta de acceso especifica un directorio.
+Cada una de estas funciones devuelve 0 si se realiza correctamente. En caso contrario, la función devuelve -1 y establece **errno** a **EACCES**, lo que significa que la ruta de acceso especifica un archivo de solo lectura o un directorio, o a **ENOENT**, lo que significa que el archivo o la ruta de acceso no se encuentra.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 
