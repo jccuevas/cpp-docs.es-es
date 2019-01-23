@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d9d9ab0bca9ae2be9854c1c14f0e0b77191f012e
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334669"
----
 # [Información general de la programación para Windows en C++](overview-of-windows-programming-in-cpp.md)
 # [Aplicaciones de escritorio de Windows en C++](desktop-applications-visual-cpp.md)
 ## [Aplicaciones de consola de Windows en C++](console-applications-in-visual-cpp.md)
