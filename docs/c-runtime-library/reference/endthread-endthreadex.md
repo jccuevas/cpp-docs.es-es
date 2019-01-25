@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 48a2ce90b6bc90d40f6071898e1e5182502e938f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597488"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893307"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -62,7 +62,7 @@ Puede llamar a **_endthread** o **_endthreadex** explícitamente para terminar e
 > [!NOTE]
 > En el caso de un archivo ejecutable vinculado a Libcmt.lib, no llame a la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32 porque esto impide que el sistema en tiempo de ejecución reclame los recursos asignados. **_endthread** y **_endthreadex** reclamar recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.
 
-**_endthread** cierra automáticamente el identificador de subproceso. (Este comportamiento difiere de Win32 **ExitThread** API.) Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API.
+**_endthread** cierra automáticamente el identificador de subproceso. (Este comportamiento difiere de Win32 **ExitThread** API.) Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API.
 
 Al igual que Win32 **ExitThread** API, **_endthreadex** no cierra el identificador de subproceso. Por lo tanto, cuando usa **_beginthreadex** y **_endthreadex**, debe cerrar el identificador de subproceso mediante una llamada a Win32 **CloseHandle** API.
 
