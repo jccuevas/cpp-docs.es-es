@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609424"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893618"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl (clase)
 
@@ -106,7 +106,7 @@ TRUE si el objeto es una extensión de complemento; en caso contrario, FALSE.
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Este método implementa la función de Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
+Este método implementa la función de Win32 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Este método implementa la función de Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).
+Este método implementa la función de Win32 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Este método implementa la función de Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
+Este método implementa la función de Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -183,7 +183,7 @@ CreatePropertyPages(
 *lpProvider*<br/>
 [in] Puntero a la `IPropertySheetCallback` interfaz.
 
-*identificador*<br/>
+*handle*<br/>
 [in] Especifica el identificador se utiliza para enrutar el mensaje de notificación MMCN_PROPERTY_CHANGE a la clase de datos adecuado.
 
 *pUnk*<br/>
@@ -218,7 +218,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 [in] El formato (texto, texto enriquecido o texto enriquecido con elementos OLE) del Portapapeles.
 
 *pStream*<br/>
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-El [RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) estructura del objeto de datos del complemento.
+El [RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) estructura del objeto de datos del complemento.
 
 ```
 RESULTDATAITEM m_resultDataItem;

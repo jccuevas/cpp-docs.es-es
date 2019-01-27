@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: cec3a0fce1147ca58f2ee2c51b9d728d81dddda4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31dd9ed1d30633b8f7078794dad06d51ec119f2
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601414"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893446"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT (clase)
 
@@ -52,13 +52,13 @@ La clase derivada de `CAtlExeModuleT`.
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|El constructor.|
-|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Destructor.|
+|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[A CAtlExeModuleT:: InitializeCom](#initializecom)|Inicializa com|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|Inicializa com|
 |[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Analiza la línea de comandos y realiza el registro, si es necesario.|
 |[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|Este método se llama inmediatamente después de que se cierra el bucle de mensajes.|
 |[CAtlExeModuleT::PreMessageLoop](#premessageloop)|Este método se llama inmediatamente antes de entrar en el bucle de mensajes.|
@@ -114,7 +114,7 @@ CAtlExeModuleT() throw();
 
 Si no se pudo inicializar el módulo del archivo EXE, WinMain devolverá inmediatamente sin más procesamiento.
 
-##  <a name="dtor"></a>  CAtlExeModuleT:: ~ CAtlExeModuleT
+##  <a name="dtor"></a>  CAtlExeModuleT::~CAtlExeModuleT
 
 Destructor.
 
@@ -126,7 +126,7 @@ Destructor.
 
 Libera todos los recursos asignados.
 
-##  <a name="initializecom"></a>  A CAtlExeModuleT:: InitializeCom
+##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom
 
 Inicializa com
 
@@ -284,7 +284,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección. El valor predeterminado es SW_HIDE.
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sección. El valor predeterminado es SW_HIDE.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección.
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sección.
 
 ### <a name="return-value"></a>Valor devuelto
 

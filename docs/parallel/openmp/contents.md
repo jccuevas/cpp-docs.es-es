@@ -2,12 +2,12 @@
 title: Contenido
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: ec387a0a4bd30905f27c11dfd66a511e1b0f1b71
+ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397295"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55064988"
 ---
 # <a name="contents"></a>Contenido
 
@@ -15,107 +15,7 @@ ms.locfileid: "54397295"
 
 [2. Directivas](../../parallel/openmp/2-directives.md)
 
-[2.1 Formato de directivas](../../parallel/openmp/2-1-directive-format.md)
-
-[2.2 Compilación condicional](../../parallel/openmp/2-2-conditional-compilation.md)
-
-[2.3 parallel (construcción)](../../parallel/openmp/2-3-parallel-construct.md)
-
-[2.4 Construcciones de uso compartido](../../parallel/openmp/2-4-work-sharing-constructs.md)
-
-[2.4.1 for (construcción)](../../parallel/openmp/2-4-1-for-construct.md)
-
-[2.4.2 sections (construcción)](../../parallel/openmp/2-4-2-sections-construct.md)
-
-[2.4.3 single (construcción)](../../parallel/openmp/2-4-3-single-construct.md)
-
-[2.5 Construcciones de uso compartido paralelas combinadas](../../parallel/openmp/2-5-combined-parallel-work-sharing-constructs.md)
-
-[2.5.1 parallel for (construcción)](../../parallel/openmp/2-5-1-parallel-for-construct.md)
-
-[2.5.2 parallel sections (construcción)](../../parallel/openmp/2-5-2-parallel-sections-construct.md)
-
-[2.6 Directivas maestras y de sincronización](../../parallel/openmp/2-6-master-and-synchronization-directives.md)
-
-[2.6.1 master (construcción)](../../parallel/openmp/2-6-1-master-construct.md)
-
-[2.6.2 critical (construcción)](../../parallel/openmp/2-6-2-critical-construct.md)
-
-[2.6.3 barrier (directiva)](../../parallel/openmp/2-6-3-barrier-directive.md)
-
-[2.6.4 atomic (construcción)](../../parallel/openmp/2-6-4-atomic-construct.md)
-
-[2.6.5 flush (directiva)](../../parallel/openmp/2-6-5-flush-directive.md)
-
-[2.6.6 ordered (construcción)](../../parallel/openmp/2-6-6-ordered-construct.md)
-
-[2.7 Entorno de datos](../../parallel/openmp/2-7-data-environment.md)
-
-[2.7.1 threadprivate (directiva)](../../parallel/openmp/2-7-1-threadprivate-directive.md)
-
-[2.7.2 Cláusulas de atributos de uso compartido de datos](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)
-
-[2.7.2.1 private](../../parallel/openmp/2-7-2-1-private.md)
-
-[2.7.2.2 firstprivate](../../parallel/openmp/2-7-2-2-firstprivate.md)
-
-[2.7.2.3 lastprivate](../../parallel/openmp/2-7-2-3-lastprivate.md)
-
-[2.7.2.4 shared](../../parallel/openmp/2-7-2-4-shared.md)
-
-[2.7.2.5 default](../../parallel/openmp/2-7-2-5-default.md)
-
-[2.7.2.6 reduction](../../parallel/openmp/2-7-2-6-reduction.md)
-
-[2.7.2.7 copyin](../../parallel/openmp/2-7-2-7-copyin.md)
-
-[2.7.2.8 copyprivate](../../parallel/openmp/2-7-2-8-copyprivate.md)
-
-[2.8 Enlace de directivas](../../parallel/openmp/2-8-directive-binding.md)
-
-[2.9 Anidamiento de directivas](../../parallel/openmp/2-9-directive-nesting.md)
-
 [3. Funciones de biblioteca en tiempo de ejecución](../../parallel/openmp/3-run-time-library-functions.md)
-
-[3.1 Funciones de entorno de ejecución](../../parallel/openmp/3-1-execution-environment-functions.md)
-
-[3.1.1 omp_set_num_threads (función)](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)
-
-[3.1.2 omp_get_num_threads (función)](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)
-
-[3.1.3 omp_get_max_threads (función)](../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)
-
-[3.1.4 omp_get_thread_num (función)](../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)
-
-[3.1.5 omp_get_num_procs (función)](../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)
-
-[3.1.6 omp_in_parallel (función)](../../parallel/openmp/3-1-6-omp-in-parallel-function.md)
-
-[3.1.7 omp_set_dynamic (función)](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)
-
-[3.1.8 omp_get_dynamic (función)](../../parallel/openmp/3-1-8-omp-get-dynamic-function.md)
-
-[3.1.9 omp_set_nested (función)](../../parallel/openmp/3-1-9-omp-set-nested-function.md)
-
-[3.1.10 omp_get_nested (función)](../../parallel/openmp/3-1-10-omp-get-nested-function.md)
-
-[3.2 Funciones de bloqueo](../../parallel/openmp/3-2-lock-functions.md)
-
-[3.2.1 omp_init_lock y omp_init_nest_lock (funciones)](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)
-
-[3.2.2 omp_destroy_lock y omp_destroy_nest_lock (funciones)](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)
-
-[3.2.3 omp_set_lock y omp_set_nest_lock (funciones)](../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)
-
-[3.2.4 omp_unset_lock y omp_unset_nest_lock (funciones)](../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)
-
-[3.2.5 omp_test_lock y omp_test_nest_lock (funciones)](../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)
-
-[3.3 Rutinas temporales](../../parallel/openmp/3-3-timing-routines.md)
-
-[3.3.1 omp_get_wtime (función)](../../parallel/openmp/3-3-1-omp-get-wtime-function.md)
-
-[3.3.2 omp_get_wtick (función)](../../parallel/openmp/3-3-2-omp-get-wtick-function.md)
 
 [4. Variables de entorno](../../parallel/openmp/4-environment-variables.md)
 

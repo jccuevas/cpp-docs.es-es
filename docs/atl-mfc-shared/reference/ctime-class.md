@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178127"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893982"
 ---
 # <a name="ctime-class"></a>CTime (clase)
 
@@ -48,7 +48,7 @@ class CTime
 
 |Name|Descripción|
 |----------|-----------------|
-|[CTime:: CTime](#ctime)|Construye `CTime` objetos de varias maneras.|
+|[CTime::CTime](#ctime)|Construye `CTime` objetos de varias maneras.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -57,8 +57,8 @@ class CTime
 |[CTime::Format](#format)|Convierte un `CTime` objeto en una cadena con formato, según la zona horaria local.|
 |[CTime::FormatGmt](#formatgmt)|Convierte un `CTime` objeto en una cadena con formato, según la hora UTC.|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Convierte la información de hora almacenada en el `CTime` objeto a una estructura DBTIMESTAMP compatible con Win32.|
-|[CTime::GetAsSystemTime](#getassystemtime)|Convierte la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.|
-|[CTime:: GetCurrentTime](#getcurrenttime)|Crea un `CTime` objeto que representa la hora actual (función miembro estática).|
+|[CTime::GetAsSystemTime](#getassystemtime)|Convierte la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura.|
+|[CTime::GetCurrentTime](#getcurrenttime)|Crea un `CTime` objeto que representa la hora actual (función miembro estática).|
 |[CTime::GetDay](#getday)|Devuelve el representan día por el `CTime` objeto.|
 |[CTime::GetDayOfWeek](#getdayofweek)|Devuelve el día de la semana representado por la `CTime` objeto.|
 |[CTime::GetGmtTm](#getgmttm)|Divide un `CTime` objeto en componentes, según la hora UTC.|
@@ -75,9 +75,9 @@ class CTime
 
 |||
 |-|-|
-|[operador + -](#operator_add_-)|Estos operadores de suma y resta `CTimeSpan` y `CTime` objetos.|
-|[operador +=, =](#operator_add_eq_-_eq)|Estos operadores de suma y resta un `CTimeSpan` objetos hacia y desde este `CTime` objeto.|
-|[operador =](#operator_eq)|El operador de asignación.|
+|[operator + -](#operator_add_-)|Estos operadores de suma y resta `CTimeSpan` y `CTime` objetos.|
+|[operator +=, -=](#operator_add_eq_-_eq)|Estos operadores de suma y resta un `CTimeSpan` objetos hacia y desde este `CTime` objeto.|
+|[operator =](#operator_eq)|El operador de asignación.|
 |[operador ==, <, etcetera.](#ctime_comparison_operators)|Operadores de comparación.|
 
 ## <a name="remarks"></a>Comentarios
@@ -130,7 +130,7 @@ Estos operadores comparan dos veces absolutas y devuelve TRUE si la condición e
 
 [!code-cpp[NVC_ATLMFC_Utilities#161](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]
 
-##  <a name="ctime"></a>  CTime:: CTime
+##  <a name="ctime"></a>  CTime::CTime
 
 Crea un nuevo `CTime` objeto inicializado con el tiempo especificado.
 
@@ -153,7 +153,7 @@ Indica un `CTime` objeto que ya existe.
 *time*<br/>
 Un `__time64_t` el valor de hora, que es el número de segundos después del 1 de enero de 1970 UTC. Tenga en cuenta que esto también se ajuste a la hora local. Por ejemplo, si se encuentra en Nueva York y crear un `CTime` pasando un parámetro de 0, [CTime::GetMonth](#getmonth) devolverá 12.
 
-*nYear*, *nMonth*, *Ndía*, *Nhora*, *nmín*, *nSec*<br/>
+*nYear*, *nMonth*, *nDay*, *nHour*, *nMin*, *nSec*<br/>
 Indica los valores de fecha y hora en que se copiará en el nuevo `CTime` objeto.
 
 *nDST*<br/>
@@ -168,13 +168,13 @@ Indica si el horario de verano está vigente. Puede tener uno de estos tres valo
 *wDosDate*, *wDosTime*<br/>
 Los valores de fecha y hora de MS-DOS para convertirse en un valor de fecha y hora y copiar en el nuevo `CTime` objeto.
 
-*St*<br/>
-Un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `CTime` objeto.
+*st*<br/>
+Un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `CTime` objeto.
 
-*FT*<br/>
-Un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `CTime` objeto.
+*ft*<br/>
+Un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estructura para convertirse en un valor de fecha y hora y copiar en el nuevo `CTime` objeto.
 
-*DBTS*<br/>
+*dbts*<br/>
 Una referencia a una estructura DBTIMESTAMP que contiene la hora local actual.
 
 ### <a name="remarks"></a>Comentarios
@@ -193,9 +193,9 @@ Cada constructor se describe a continuación:
    |---------------|-----------|
    |*nYear*|1970-3000|
    |*nMonth*|1-12|
-   |*Ndía*|1-31|
-   |*Nhora*|0-23|
-   |*nmín.*|0-59|
+   |*nDay*|1-31|
+   |*nHour*|0-23|
+   |*nMin*|0-59|
    |*nSec*|0-59|
 
    Este constructor realiza la conversión apropiada a la hora UTC. La versión de depuración de la biblioteca Microsoft Foundation Class aserciones si uno o varios de los componentes de tiempo están fuera del intervalo. Debe validar los argumentos antes de llamar a. Este constructor espera una hora local.
@@ -209,7 +209,7 @@ Cada constructor se describe a continuación:
    > [!NOTE]
    > El constructor utilizando `DBTIMESTAMP` parámetro solo está disponible cuando se incluye OLEDB.h.
 
-Para obtener más información, consulte el [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) y [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estructura en el SDK de Windows. Consulte también el [MS-DOS fecha y hora](/windows/desktop/SysInfo/ms-dos-date-and-time) entrada en el SDK de Windows.
+Para obtener más información, consulte el [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) y [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estructura en el SDK de Windows. Consulte también el [MS-DOS fecha y hora](/windows/desktop/SysInfo/ms-dos-date-and-time) entrada en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 
@@ -287,7 +287,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*DBTS*<br/>
+*dbts*<br/>
 Una referencia a una estructura DBTIMESTAMP que contiene la hora local actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -304,7 +304,7 @@ Almacena la hora resultante en la que se hace referencia *dbts* estructura. El `
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-Llame a esta función miembro para convertir la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura.
+Llame a esta función miembro para convertir la información de hora almacenada en el `CTime` objeto a una compatible con Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura.
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *timeDest*<br/>
-Una referencia a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que va a contener el valor de fecha y hora convertido de la `CTime` objeto.
+Una referencia a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que va a contener el valor de fecha y hora convertido de la `CTime` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -327,7 +327,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 [!code-cpp[NVC_ATLMFC_Utilities#151](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]
 
-##  <a name="getcurrenttime"></a>  CTime:: GetCurrentTime
+##  <a name="getcurrenttime"></a>  CTime::GetCurrentTime
 
 Devuelve un `CTime` objeto que representa la hora actual.
 
@@ -586,7 +586,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo de tiempo*<br/>
+*timeSpan*<br/>
 La `CTimeSpan` objeto se va a sumar o restar.
 
 *time*<br/>
@@ -615,7 +615,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 La `CTimeSpan` objeto se va a sumar o restar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -643,7 +643,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 La `CArchive` objeto que se va a actualizar.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694600"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894463"
 ---
 # <a name="cwindow-class"></a>CWindow (clase)
 
@@ -196,12 +196,12 @@ class CWindow
 |[CWindow::ChildWindowFromPoint](#childwindowfrompoint)|Recupera la ventana secundaria que contiene el punto especificado.|
 |[CWindow::ChildWindowFromPointEx](#childwindowfrompointex)|Recupera un tipo determinado de la ventana secundaria que contiene el punto especificado.|
 |[CWindow::ClientToScreen](#clienttoscreen)|Convierte las coordenadas de cliente a coordenadas de pantalla.|
-|[CWindow:: Create](#create)|Crea una ventana.|
+|[CWindow::Create](#create)|Crea una ventana.|
 |[CWindow::CreateCaret](#createcaret)|Crea una nueva forma para el símbolo del sistema.|
 |[CWindow::CreateGrayCaret](#creategraycaret)|Crea un rectángulo gris para el símbolo del sistema.|
 |[CWindow::CreateSolidCaret](#createsolidcaret)|Crea un rectángulo sólido para el símbolo del sistema.|
 |[CWindow::DeferWindowPos](#deferwindowpos)|Actualiza la estructura de posición de la ventana de varios especificada para la ventana especificada.|
-|[API CWindow:: DestroyWindow](#destroywindow)|Destruye la ventana asociada con el `CWindow` objeto.|
+|[CWindow::DestroyWindow](#destroywindow)|Destruye la ventana asociada con el `CWindow` objeto.|
 |[CWindow::Detach](#detach)|Desasocia la ventana de la `CWindow` objeto.|
 |[CWindow::DlgDirList](#dlgdirlist)|Rellena un cuadro de lista con los nombres de todos los archivos que coincidan con una ruta de acceso especificada o nombre de archivo.|
 |[CWindow::DlgDirListComboBox](#dlgdirlistcombobox)|Rellena un cuadro combinado con los nombres de todos los archivos que coincidan con una ruta de acceso especificada o nombre de archivo.|
@@ -252,7 +252,7 @@ class CWindow
 |[CWindow::GetWindowRect](#getwindowrect)|Recupera las dimensiones de delimitador de la ventana.|
 |[CWindow::GetWindowRgn](#getwindowrgn)|Obtiene una copia de la región de ventana de una ventana.|
 |[CWindow::GetWindowText](#getwindowtext)|Recupera el texto de la ventana.|
-|[CWindow:: Getwindowtextlength](#getwindowtextlength)|Recupera la longitud del texto de la ventana.|
+|[CWindow::GetWindowTextLength](#getwindowtextlength)|Recupera la longitud del texto de la ventana.|
 |[CWindow::GetWindowThreadID](#getwindowthreadid)|Recupera el identificador del subproceso que creó la ventana especificada.|
 |[CWindow::GetWindowWord](#getwindowword)|Recupera un valor de 16 bits en un desplazamiento especificado en la memoria de ventana extra.|
 |[CWindow::GotoDlgCtrl](#gotodlgctrl)|Establece el foco de teclado a un control en el cuadro de diálogo.|
@@ -317,7 +317,7 @@ class CWindow
 |[CWindow::SetWindowPlacement](#setwindowplacement)|Establece el estado de visualización y posiciones.|
 |[CWindow::SetWindowPos](#setwindowpos)|Establece el tamaño, posición y orden Z.|
 |[CWindow::SetWindowRgn](#setwindowrgn)|Establece la región de ventana de una ventana.|
-|[CWindow:: SetWindowText](#setwindowtext)|Cambia el texto de la ventana.|
+|[CWindow::SetWindowText](#setwindowtext)|Cambia el texto de la ventana.|
 |[CWindow::SetWindowWord](#setwindowword)|Establece un valor de 16 bits en un desplazamiento especificado en la memoria de ventana extra.|
 |[CWindow::ShowCaret](#showcaret)|Muestra el símbolo de intercalación del sistema.|
 |[CWindow::ShowOwnedPopups](#showownedpopups)|Muestra u oculta las ventanas emergentes que pertenecen a la ventana.|
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) en el SDK de Windows.
+Consulte [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) en el SDK de Windows.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -538,7 +538,7 @@ Consulte [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen
 
 La segunda versión de este método permite convertir las coordenadas de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
-##  <a name="create"></a>  CWindow:: Create
+##  <a name="create"></a>  CWindow::Create
 
 Crea una ventana.
 
@@ -562,7 +562,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] El identificador de la ventana principal o propietaria.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Una variable de tipo [_U_RECT](../../atl/reference/u-rect-class.md) especifican la posición de la ventana. El valor predeterminado es NULL. Si este parámetro es NULL, el valor de `CWindow::rcDefault` se utiliza.
 
 *szWindowName*<br/>
@@ -669,9 +669,9 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) en el SDK de Windows.
+Consulte [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) en el SDK de Windows.
 
-##  <a name="destroywindow"></a>  API CWindow:: DestroyWindow
+##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
 Destruye la ventana asociada con el `CWindow` objeto y establece [m_hWnd](#m_hwnd) en NULL.
 
@@ -928,7 +928,7 @@ HRESULT GetDlgControl(
 *nID*<br/>
 [in] El identificador de recurso del control que se va a recuperar.
 
-*IID*<br/>
+*iid*<br/>
 [in] El identificador de la interfaz que le gustaría obtener desde el control.
 
 *ppCtrl*<br/>
@@ -970,7 +970,7 @@ HRESULT GetDlgHost(
 *nID*<br/>
 [in] El identificador de recurso del control que se va a recuperar.
 
-*IID*<br/>
+*iid*<br/>
 [in] El identificador de la interfaz que le gustaría obtener desde el control.
 
 *ppHost*<br/>
@@ -1456,11 +1456,11 @@ Si el texto se copia correctamente, el valor devuelto es TRUE. en caso contrario
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) en el SDK de Windows.
+Consulte [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) en el SDK de Windows.
 
 La segunda versión de este método le permite almacenar el texto en una cadena BSTR; la tercera versión le permite almacenar el resultado en un [CString](../../atl-mfc-shared/reference/cstringt-class.md), puesto que `CSimpleString` es la clase base de `CString`.
 
-##  <a name="getwindowtextlength"></a>  CWindow:: Getwindowtextlength
+##  <a name="getwindowtextlength"></a>  CWindow::GetWindowTextLength
 
 Recupera la longitud del texto de la ventana.
 
@@ -1751,7 +1751,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Bloque*<br/>
+*bLock*<br/>
 [in] Si TRUE (el valor predeterminado), se bloqueará la ventana. En caso contrario, se desbloqueará.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2619,7 +2619,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 
 Consulte [SetWindowRgn](/windows/desktop/api/winuser/nf-winuser-setwindowrgn) en el SDK de Windows.
 
-##  <a name="setwindowtext"></a>  CWindow:: SetWindowText
+##  <a name="setwindowtext"></a>  CWindow::SetWindowText
 
 Cambia el texto de la ventana.
 
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) en el SDK de Windows.
+Consulte [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 

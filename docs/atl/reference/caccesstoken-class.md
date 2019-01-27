@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694535"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894252"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 
@@ -150,14 +150,14 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*que hToken*<br/>
+*hToken*<br/>
 Un identificador para el token de acceso.
 
 ### <a name="remarks"></a>Comentarios
 
 En las compilaciones de depuración, se producirá un error de aserción si el `CAccessToken` objeto ya tiene una propiedad de un token de acceso.
 
-##  <a name="dtor"></a>  CAccessToken:: ~ CAccessToken
+##  <a name="dtor"></a>  CAccessToken::~CAccessToken
 
 Destructor.
 
@@ -215,7 +215,7 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Puntero a la nueva `CAccessToken` objeto.
 
-*Sil*<br/>
+*sil*<br/>
 Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token de nuevo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -224,7 +224,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreateImpersonationToken` las llamadas [duplicar el elemento](https://msdn.microsoft.com/library/windows/desktop/aa446616) para crear un nuevo token de suplantación.
+`CreateImpersonationToken` las llamadas [duplicar el elemento](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) para crear un nuevo token de suplantación.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -661,7 +661,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Las llamadas del [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) función de Win32.
+Las llamadas del [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) función de Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -781,7 +781,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*PEscriba*<br/>
+*pType*<br/>
 Dirección de la [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variable que, si se ejecuta correctamente, recibe el tipo del token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1056,7 +1056,7 @@ Indica si la comprobación de acceso es que debe realizarse en el contexto de se
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
-*Sil*<br/>
+*sil*<br/>
 Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1093,7 +1093,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando `PrivilegeCheck` que devuelve el `Attributes` miembro de cada [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) estructura se establece en SE_PRIVILEGE_USED_FOR_ACCESS si está habilitado el privilegio correspondiente. Este método llama a la [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) función de Win32.
+Cuando `PrivilegeCheck` que devuelve el `Attributes` miembro de cada [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) estructura se establece en SE_PRIVILEGE_USED_FOR_ACCESS si está habilitado el privilegio correspondiente. Este método llama a la [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) función de Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

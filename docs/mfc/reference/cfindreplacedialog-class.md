@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571189"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894411"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog (clase)
 
@@ -81,7 +81,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Comentarios
 
-A diferencia de los otros Windows cuadros de diálogo comunes, `CFindReplaceDialog` objetos son no modales, lo que permite a los usuarios interactuar con otras ventanas mientras están en la pantalla. Hay dos tipos de `CFindReplaceDialog` objetos: buscar cuadros de diálogo y los cuadros de diálogo Buscar y reemplazar. Aunque los cuadros de diálogo permiten al usuario que la entrada de búsqueda y buscar y reemplazar cadenas, no realizan alguna de la búsqueda o reemplazo de funciones. Debe agregarlas a la aplicación.
+A diferencia de los otros Windows cuadros de diálogo comunes, `CFindReplaceDialog` objetos son no modales, lo que permite a los usuarios interactuar con otras ventanas mientras están en la pantalla. Hay dos tipos de `CFindReplaceDialog` objetos: Buscar cuadros de diálogo y los cuadros de diálogo Buscar y reemplazar. Aunque los cuadros de diálogo permiten al usuario que la entrada de búsqueda y buscar y reemplazar cadenas, no realizan alguna de la búsqueda o reemplazo de funciones. Debe agregarlas a la aplicación.
 
 Para construir un `CFindReplaceDialog` de objeto, utilice el constructor proporcionado (que no tiene ningún argumento). Puesto que se trata de un cuadro de diálogo no modal, asignar el objeto en el montón mediante el **nuevo** operador, en lugar de en la pila.
 
@@ -89,7 +89,7 @@ Una vez un `CFindReplaceDialog` se ha construido el objeto, debe llamar a la [cr
 
 Use la [m_fr](#m_fr) estructura para inicializar el cuadro de diálogo antes de llamar a `Create`. El `m_fr` estructura es de tipo [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Para obtener más información sobre esta estructura, consulte el SDK de Windows.
 
-En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) funcionar y utilizar el [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensajes en el marco ventana que controla este mensaje registrado.
+En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) funcionar y utilizar el [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) macros de mapa de mensajes en el marco ventana que controla este mensaje registrado.
 
 Puede determinar si el usuario ha decidido terminar el cuadro de diálogo con el `IsTerminating` función miembro.
 
@@ -175,7 +175,7 @@ Distinto de cero si el objeto de cuadro de diálogo se creó correctamente; en c
 
 ### <a name="remarks"></a>Comentarios
 
-En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) función cuyo valor devuelto es un número de mensaje único para la instancia de la aplicación. La ventana de marco debe tener una entrada de asignación de mensaje que declara la función de devolución de llamada ( `OnFindReplace` en el ejemplo siguiente) que controla este mensaje registrado. El fragmento de código siguiente es un ejemplo de cómo hacer esto para una clase de ventana de marco denominada `CMyRichEditView`:
+En el orden de la ventana primaria recibir una notificación de solicitudes de búsqueda y reemplazo, debe usar el Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) función cuyo valor devuelto es un número de mensaje único para la instancia de la aplicación. La ventana de marco debe tener una entrada de asignación de mensaje que declara la función de devolución de llamada ( `OnFindReplace` en el ejemplo siguiente) que controla este mensaje registrado. El fragmento de código siguiente es un ejemplo de cómo hacer esto para una clase de ventana de marco denominada `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

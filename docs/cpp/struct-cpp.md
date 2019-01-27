@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 9b70a4caea2b9aa5d86c0e97b97eae784594ec87
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326113"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893345"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -20,7 +20,7 @@ El **struct** palabra clave define un tipo de estructura o una variable de un ti
 ## <a name="syntax"></a>Sintaxis
 
 ```
-[template-spec] struct[ms-decl-spec] [tag [: base-list ]]
+[template-spec] struct [ms-decl-spec] [tag [: base-list ]]
 {
    member-list
 } [declarators];
@@ -29,26 +29,26 @@ El **struct** palabra clave define un tipo de estructura o una variable de un ti
 
 #### <a name="parameters"></a>Parámetros
 
-*especificación de plantilla*<br/>
+*template-spec*<br/>
 Especificaciones de plantilla opcionales. Para obtener más información, consulte [especificaciones de plantilla](templates-cpp.md).
 
 *struct*<br/>
 El **struct** palabra clave.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Especificación opcional de clase de almacenamiento. Para obtener más información, consulte el [__declspec](../cpp/declspec.md) palabra clave.
 
-*Etiqueta*<br/>
+*tag*<br/>
 Nombre del tipo dado a la estructura. La etiqueta se convierte en una palabra reservada dentro del ámbito de la estructura. La etiqueta es opcional. Si se omite, se define una estructura anónima. Para obtener más información, consulte [tipos de clase anónima](../cpp/anonymous-class-types.md).
 
 *base-list*<br/>
 La lista opcional de clases o de estructuras de la que esta estructura derivará sus miembros. Consulte [clases Base](../cpp/base-classes.md) para obtener más información. Cada nombre de clase o estructura base puede ir precedido por un especificador de acceso ([pública](../cpp/public-cpp.md), [privada](../cpp/private-cpp.md), [protegido](../cpp/protected-cpp.md)) y el [virtual](../cpp/virtual-cpp.md) palabra clave. Vea la tabla de acceso a miembros de [controlar el acceso a los miembros de clase](member-access-control-cpp.md) para obtener más información.
 
-*lista de miembros*<br/>
+*member-list*<br/>
 Lista de miembros de la estructura. Consulte [información general sobre miembros de clase](../cpp/class-member-overview.md) para obtener más información. La única diferencia es que **struct** se utiliza en lugar de **clase**.
 
-*declaradores*<br/>
-Lista de declaradores que especifican los nombres de la clase. Las listas de declaradores declaran una o más instancias del tipo de estructura. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la clase son **pública**. Las listas de inicializadores son comunes en estructuras porque son miembros de datos **pública** de forma predeterminada.  Consulte [información general de los declaradores](../cpp/overview-of-declarators.md) para obtener más información.
+*declarators*<br/>
+Lista de declaradores que especifican los nombres de la estructura. Las listas de declaradores declaran una o más instancias del tipo de estructura. Los declaradores pueden incluir listas de inicializadores si todos los miembros de datos de la estructura son **pública**. Las listas de inicializadores son comunes en estructuras porque son miembros de datos **pública** de forma predeterminada.  Consulte [información general de los declaradores](../cpp/overview-of-declarators.md) para obtener más información.
 
 ## <a name="remarks"></a>Comentarios
 

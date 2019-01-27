@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500417"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894151"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -121,7 +121,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::HitTest](#hittest)|Prueba en un punto para determinar si está dentro del rectángulo delimitador de la herramienta especificada. Si es así, recupera información acerca de la herramienta.|
 |[CToolTipCtrl::Pop](#pop)|Quita una ventana de sugerencia de la herramienta muestra la vista.|
 |[CToolTipCtrl::Popup](#popup)|Hace que el control de información sobre herramientas actual que se muestra en las coordenadas del último mensaje de mouse.|
-|[CToolTipCtrl:: RelayEvent](#relayevent)|Pasa un mensaje del mouse a un control de información sobre herramientas para el procesamiento.|
+|[CToolTipCtrl::RelayEvent](#relayevent)|Pasa un mensaje del mouse a un control de información sobre herramientas para el procesamiento.|
 |[CToolTipCtrl::SetDelayTime](#setdelaytime)|Establece la inicial, emergente y reshow las duraciones de un control de información sobre herramientas.|
 |[CToolTipCtrl::SetMargin](#setmargin)|Establece la parte superior, izquierda, inferior y los márgenes derechos de una ventana de sugerencia de la herramienta.|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Establece el ancho máximo de una ventana de información sobre herramientas.|
@@ -203,7 +203,7 @@ BOOL AddTool(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDText*<br/>
@@ -360,7 +360,7 @@ void DelTool(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -498,7 +498,7 @@ void GetText(
 *str*<br/>
 Hacer referencia a un `CString` objeto que recibe el texto de la herramienta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -586,7 +586,7 @@ BOOL GetToolInfo(
 *ToolInfo*<br/>
 Hacer referencia a un `TOOLINFO` objeto que recibe el texto de la herramienta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -613,10 +613,10 @@ BOOL HitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
-*PT*<br/>
+*pt*<br/>
 Puntero a un `CPoint` objeto que contiene las coordenadas del punto que va a probarse.
 
 *lpToolInfo*<br/>
@@ -682,7 +682,7 @@ En el ejemplo de código siguiente se muestra una ventana de información sobre 
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  CToolTipCtrl:: RelayEvent
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
 
 Pasa un mensaje del mouse a un control de información sobre herramientas para el procesamiento.
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parámetros
 
 *lpMsg*<br/>
-Puntero a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estructura que contiene el mensaje de retransmisión.
+Puntero a un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estructura que contiene el mensaje de retransmisión.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 El nuevo color de fondo.
 
 ### <a name="remarks"></a>Comentarios
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 Color del texto nuevo.
 
 ### <a name="remarks"></a>Comentarios
@@ -860,7 +860,7 @@ void SetToolRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -919,7 +919,7 @@ void UpdateTipText(
 *lpszText*<br/>
 Puntero al texto de la herramienta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>

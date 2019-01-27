@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468931"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894164"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan (clase)
 
@@ -47,14 +47,14 @@ class CFileTimeSpan
 
 |Name|Descripción|
 |----------|-----------------|
-|[CFileTimeSpan::operator-](#operator_-)|Realiza la resta en una `CFileTimeSpan` objeto.|
-|[CFileTimeSpan::operator! =](#operator_neq)|Compara dos objetos `CFileTimeSpan` para determinar si no son iguales.|
+|[CFileTimeSpan::operator -](#operator_-)|Realiza la resta en una `CFileTimeSpan` objeto.|
+|[CFileTimeSpan::operator !=](#operator_neq)|Compara dos objetos `CFileTimeSpan` para determinar si no son iguales.|
 |[CFileTimeSpan::operator +](#operator_add)|Realiza la adición de un `CFileTimeSpan` objeto.|
 |[CFileTimeSpan::operator +=](#operator_add_eq)|Realiza la adición de un `CFileTimeSpan` de objeto y asignar el resultado al objeto actual.|
 |[CFileTimeSpan::operator &lt;](#operator_lt)|Compara dos `CFileTimeSpan` objetos para determinar el número más bajo.|
 |[CFileTimeSpan::operator &lt;=](#operator_lt_eq)|Compara dos `CFileTimeSpan` objetos para determinar la igualdad o el número más bajo.|
 |[CFileTimeSpan::operator =](#operator_eq)|El operador de asignación.|
-|[CFileTimeSpan::operator =](#operator_-_eq)|Realiza la resta en una `CFileTimeSpan` de objeto y asignar el resultado al objeto actual.|
+|[CFileTimeSpan::operator -=](#operator_-_eq)|Realiza la resta en una `CFileTimeSpan` de objeto y asignar el resultado al objeto actual.|
 |[CFileTimeSpan::operator ==](#operator_eq_eq)|Compara dos objetos `CFileTimeSpan` para determinar si son iguales.|
 |[CFileTimeSpan::operator &gt;](#operator_gt)|Compara dos `CFileTimeSpan` objetos para determinar el mayor.|
 |[CFileTimeSpan::operator &gt;=](#operator_gt_eq)|Compara dos `CFileTimeSpan` objetos para determinar la igualdad o la más grande.|
@@ -83,7 +83,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` existente.
 
 *nSpan*<br/>
@@ -105,7 +105,7 @@ LONGLONG GetTimeSpan() const throw();
 
 Devuelve el intervalo de tiempo en milisegundos.
 
-##  <a name="operator_-"></a>  CFileTimeSpan::operator-
+##  <a name="operator_-"></a>  CFileTimeSpan::operator -
 
 Realiza la resta en una `CFileTimeSpan` objeto.
 
@@ -115,14 +115,14 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
-Un objeto `CFileTimeSpan`.
+*span*<br/>
+Objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve un `CFileTimeSpan` objeto que representa el resultado de la diferencia entre los dos intervalos de tiempo.
 
-##  <a name="operator_neq"></a>  CFileTimeSpan::operator! =
+##  <a name="operator_neq"></a>  CFileTimeSpan::operator !=
 
 Compara dos objetos `CFileTimeSpan` para determinar si no son iguales.
 
@@ -132,7 +132,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -149,8 +149,8 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
-Un objeto `CFileTimeSpan`.
+*span*<br/>
+Objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -166,8 +166,8 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
-Un objeto `CFileTimeSpan`.
+*span*<br/>
+Objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -183,7 +183,7 @@ bool operator<(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -200,7 +200,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -217,14 +217,14 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
-Un objeto `CFileTimeSpan`.
+*span*<br/>
+Objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve el texto actualizado `CFileTimeSpan` objeto.
 
-##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator =
+##  <a name="operator_-_eq"></a>  CFileTimeSpan::operator -=
 
 Realiza la resta en una `CFileTimeSpan` de objeto y asigna el resultado al objeto actual.
 
@@ -234,8 +234,8 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
-Un objeto `CFileTimeSpan`.
+*span*<br/>
+Objeto `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -251,7 +251,7 @@ bool operator==(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -268,7 +268,7 @@ bool operator>(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -285,7 +285,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*intervalo*<br/>
+*span*<br/>
 Objeto `CFileTimeSpan` que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -307,7 +307,7 @@ El nuevo valor para el intervalo de tiempo en milisegundos.
 
 ## <a name="see-also"></a>Vea también
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [CFileTime (clase)](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
