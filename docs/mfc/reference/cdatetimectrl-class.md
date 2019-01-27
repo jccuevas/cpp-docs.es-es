@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5acac454bd0b22b994b74a052bd3cf0b0eee2614
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178530"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894346"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (clase)
 
@@ -74,14 +74,14 @@ class CDateTimeCtrl : public CWnd
 |[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|Recupera información sobre el control de selector de fecha y hora actual.|
 |[CDateTimeCtrl::GetIdealSize](#getidealsize)|Devuelve el tamaño ideal de control de selector de fecha y hora en que se requiere para mostrar la fecha actual o la hora.|
 |[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|Recupera el color de una parte determinada del calendario del mes en el control de selector de fecha y hora.|
-|[CDateTimeCtrl:: GetMonthCalCtrl](#getmonthcalctrl)|Recupera el `CMonthCalCtrl` objeto asociado con el control de selector de fecha y hora.|
+|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|Recupera el `CMonthCalCtrl` objeto asociado con el control de selector de fecha y hora.|
 |[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|Recupera la fuente utilizada actualmente por la fecha y el control de calendario mensual del control de selector de tiempo secundarias.|
 |[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|Obtiene el estilo del control de selector de fecha y hora actual.|
 |[CDateTimeCtrl::GetRange](#getrange)|Recupera actual mínimo y máximo permitido de tiempos del sistema para un control de selector de fecha y hora.|
 |[CDateTimeCtrl::GetTime](#gettime)|Recupera el tiempo seleccionado actualmente de un control de selector de fecha y hora y lo coloca en un determinado `SYSTEMTIME` estructura.|
-|[CDateTimeCtrl:: SetFormat](#setformat)|Establece la visualización de un control de selector de fecha y hora con arreglo a una cadena de formato especificado.|
+|[CDateTimeCtrl::SetFormat](#setformat)|Establece la visualización de un control de selector de fecha y hora con arreglo a una cadena de formato especificado.|
 |[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|Establece el color de una parte determinada del calendario mensual dentro de un control de selector de fecha y hora.|
-|[CDateTimeCtrl:: SetMonthCalFont](#setmonthcalfont)|Establece la fuente que utilizará el control de calendario mensual de fecha y hora selector del control secundario.|
+|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|Establece la fuente que utilizará el control de calendario mensual de fecha y hora selector del control secundario.|
 |[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|Establece el estilo del control de selector de fecha y hora actual.|
 |[CDateTimeCtrl::SetRange](#setrange)|Establece las horas de sistema permitido mínimo y máximo para un control de selector de fecha y hora.|
 |[CDateTimeCtrl::SetTime](#settime)|Establece el tiempo en un control de selector de fecha y hora.|
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica la combinación de estilos de control de tiempo fecha. Consulte [estilos de fecha y hora selector Control](/windows/desktop/Controls/date-and-time-picker-control-styles) en el SDK de Windows para obtener más información sobre los estilos de selector de fecha y hora.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que es la posición y el tamaño del control de selector de fecha y hora.
 
 *pParentWnd*<br/>
@@ -243,7 +243,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [DTM_GET
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]
 
-##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl:: GetMonthCalCtrl
+##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl::GetMonthCalCtrl
 
 Recupera el `CMonthCalCtrl` objeto asociado con el control de selector de fecha y hora.
 
@@ -353,7 +353,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 En la primera versión, una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que recibirá la información de hora del sistema. En la segunda versión, una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que recibirá la información de hora del sistema.
 
 *pTimeDest*<br/>
-Un puntero a la [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura para recibir la información de hora del sistema. No debe ser NULL.
+Un puntero a la [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura para recibir la información de hora del sistema. No debe ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -403,7 +403,7 @@ El ejemplo de código siguiente recupera el tamaño ideal para mostrar el contro
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-##  <a name="setformat"></a>  CDateTimeCtrl:: SetFormat
+##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat
 
 Establece la visualización de un control de selector de fecha y hora con arreglo a una cadena de formato especificado.
 
@@ -470,7 +470,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [DTM_SET
 
   Vea el ejemplo de [CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor).
 
-##  <a name="setmonthcalfont"></a>  CDateTimeCtrl:: SetMonthCalFont
+##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont
 
 Establece la fuente que utilizará el control de calendario mensual de fecha y hora selector del control secundario.
 
@@ -583,7 +583,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contiene al que se establecerá el control.
 
 *pTimeNew*<br/>
-En la segunda versión anterior, un puntero a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contiene la hora a la que se establecerá el control. En la tercera versión anterior, un puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la hora a la que se establecerá el control.
+En la segunda versión anterior, un puntero a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contiene la hora a la que se establecerá el control. En la tercera versión anterior, un puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la hora a la que se establecerá el control.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -599,7 +599,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [DTM_SET
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CMonthCalCtrl (clase)](../../mfc/reference/cmonthcalctrl-class.md)

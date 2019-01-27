@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626790"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894216"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -121,7 +121,7 @@ Es más seguro usar **_beginthreadex** que **_beginthread**. Si el subproceso qu
 
 Puede llamar a [_endthread](endthread-endthreadex.md) o **_endthreadex** explícitamente para terminar el subproceso; sin embargo, **_endthread** o **_endthreadex** se denomina automáticamente cuando el subproceso vuelve de la rutina que se pasa como un parámetro. Si se finaliza un subproceso con una llamada a **_endthread** o **_endthreadex** ayuda a garantiza una recuperación correcta de los recursos asignados para el subproceso.
 
-**_endthread** automáticamente cierra el identificador de subproceso, aunque **_endthreadex** no lo hace. Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Este comportamiento difiere de la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32.
+**_endthread** automáticamente cierra el identificador de subproceso, aunque **_endthreadex** no lo hace. Por lo tanto, cuando usa **_beginthread** y **_endthread**, no cierre explícitamente el identificador de subproceso mediante una llamada a Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API. Este comportamiento difiere de la API [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) de Win32.
 
 > [!NOTE]
 > Un archivo ejecutable vinculado con Libcmt.lib, no llame a Win32 **ExitThread** API para que no impiden que el sistema de tiempo de ejecución reclamar recursos asignados. **_endthread** y **_endthreadex** reclamar recursos de subprocesos asignados y, a continuación, llame a **ExitThread**.

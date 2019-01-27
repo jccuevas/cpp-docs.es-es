@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694587"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894437"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase (clase)
 
@@ -113,7 +113,7 @@ class ATL_NO_VTABLE CComControlBase
 |Name|Descripción|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|El constructor.|
-|[CComControlBase:: ~ CComControlBase](#dtor)|Destructor.|
+|[CComControlBase::~CComControlBase](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -124,12 +124,12 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Comprueba que el *iVerb* utilizado por el parámetro `IOleObjectImpl::DoVerb` hace que la interfaz de usuario del control activar y devuelve TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Muestra las páginas de propiedades del control.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Llame a este método para indicar al contenedor para volver a dibujar el control o notificar a los receptores de advise registrado que ha cambiado la vista del control.|
-|[CComControlBase:: GetAmbientAppearance](#getambientappearance)|Recupera DISPID_AMBIENT_APPEARANCE, la apariencia actual para el control: 0 para plana y 1 para 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Recupera DISPID_AMBIENT_APPEARANCE, la apariencia actual para el control: 0 para plana y 1 para 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Recupera DISPID_AMBIENT_AUTOCLIP, una marca que indica si el contenedor admite recorte automática del área de visualización de control.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Recupera DISPID_AMBIENT_BACKCOLOR, el color de fondo ambiente para todos los controles, definido por el contenedor.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Recupera DISPID_AMBIENT_CHARSET, el ambiente juego de caracteres para todos los controles, definidos por el contenedor.|
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|Recupera DISPID_AMBIENT_CODEPAGE, el ambiente juego de caracteres para todos los controles, definidos por el contenedor.|
-|[CComControlBase:: GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera DISPID_AMBIENT_DISPLAYASDEFAULT, una marca que es TRUE si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto, un control de botón debe dibujarse a sí mismo con un marco más grueso.|
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|Recupera DISPID_AMBIENT_DISPLAYASDEFAULT, una marca que es TRUE si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto, un control de botón debe dibujarse a sí mismo con un marco más grueso.|
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|Recupera DISPID_AMBIENT_DISPLAYNAME, el nombre del contenedor se ha proporcionado para el control.|
 |[CComControlBase::GetAmbientFont](#getambientfont)|Recupera un puntero al contenedor del ambiente `IFont` interfaz.|
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|Recupera un puntero al contenedor del ambiente `IFontDisp` interfaz de envío.|
@@ -151,7 +151,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetZoomInfo](#getzoominfo)|Recupera la x e y valores de numerador y denominador del factor de zoom para activa un control de edición en contexto.|
 |[CComControlBase::InPlaceActivate](#inplaceactivate)|Hace que el control pase del estado inactivo al verbo en el estado que *iVerb* indica.|
 |[CComControlBase::InternalGetSite](#internalgetsite)|Llame a este método para consultar el sitio del control para un puntero a la interfaz identificada.|
-|[CComControlBase:: OnDraw](#ondraw)|Invalide este método para dibujar el control.|
+|[CComControlBase::OnDraw](#ondraw)|Invalide este método para dibujar el control.|
 |[CComControlBase::OnDrawAdvanced](#ondrawadvanced)|El valor predeterminado `OnDrawAdvanced` prepara un contexto de dispositivo normalizado para dibujar, a continuación, llama a la clase de control `OnDraw` método.|
 |[CComControlBase::OnKillFocus](#onkillfocus)|Comprueba que el control está activo en contexto y tiene un sitio válido de control, a continuación, informa al contenedor que el control ha perdido el foco.|
 |[CComControlBase::OnMouseActivate](#onmouseactivate)|Comprueba que la interfaz de usuario está en modo de usuario, a continuación, activa el control.|
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::m_bUIActive](#m_buiactive)|Marca que indica la interfaz de usuario del control, como menús y barras de herramientas está activa.|
 |[CComControlBase::m_bUsingWindowRgn](#m_busingwindowrgn)|Marca que indica que el control está usando la región de ventana proporcionado por el contenedor.|
 |[CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)|Marca que indica el control ha sido sin ventanas, pero puede o no ser sin ventana ahora.|
-|[CComControlBase:: M_bwindowonly](#m_bwindowonly)|Marca que indica que el control debe ser división de particiones, incluso si el contenedor admite controles sin ventana.|
+|[CComControlBase::m_bWindowOnly](#m_bwindowonly)|Marca que indica que el control debe ser división de particiones, incluso si el contenedor admite controles sin ventana.|
 |[CComControlBase::m_bWndLess](#m_bwndless)|Marca que indica que el control está activo.|
 |[CComControlBase::m_hWndCD](#m_hwndcd)|Contiene una referencia al identificador de ventana asociado al control.|
 |[CComControlBase::m_nFreezeEvents](#m_nfreezeevents)|Un recuento del número de veces que el contenedor inmovilizado eventos (no acepta eventos) sin un descongelar intermedia de eventos (aceptación de eventos).|
@@ -235,7 +235,7 @@ El identificador de la ventana asociada con el control.
 
 Inicializa el tamaño del control a las unidades HIMETRIC 5080 X 5080 (2 "X 2") e inicializa el `CComControlBase` valores de miembro de datos como NULL o FALSE.
 
-##  <a name="dtor"></a>  CComControlBase:: ~ CComControlBase
+##  <a name="dtor"></a>  CComControlBase::~CComControlBase
 
 Destructor.
 
@@ -258,10 +258,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 El GUID de la interfaz que se solicita.
 
-*PPV*<br/>
+*ppv*<br/>
 Un puntero al puntero de interfaz identificado por *iid*, o NULL si no se encuentra la interfaz.
 
 ### <a name="remarks"></a>Comentarios
@@ -356,7 +356,7 @@ Si el control está activo (el miembro de datos de la clase de control [CComCont
 
 [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]
 
-##  <a name="getambientappearance"></a>  CComControlBase:: GetAmbientAppearance
+##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
 Recupera DISPID_AMBIENT_APPEARANCE, la apariencia actual para el control: 0 para plana y 1 para 3D.
 
@@ -404,7 +404,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color de fondo*<br/>
+*BackColor*<br/>
 La propiedad DISPID_AMBIENT_BACKCOLOR.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -445,7 +445,7 @@ La propiedad DISPID_AMBIENT_CODEPAGE.
 
 Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
-##  <a name="getambientdisplayasdefault"></a>  CComControlBase:: GetAmbientDisplayAsDefault
+##  <a name="getambientdisplayasdefault"></a>  CComControlBase::GetAmbientDisplayAsDefault
 
 Recupera DISPID_AMBIENT_DISPLAYASDEFAULT, una marca que es TRUE si el contenedor marcó el control en este sitio para que sea un botón predeterminado y, por lo tanto, un control de botón debe dibujarse a sí mismo con un marco más grueso.
 
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Parámetros
 
 *ppFont*<br/>
-Un puntero al contenedor del ambiente [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) interfaz de envío.
+Un puntero al contenedor del ambiente [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) interfaz de envío.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -531,7 +531,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color de primer plano*<br/>
+*ForeColor*<br/>
 La propiedad DISPID_AMBIENT_FORECOLOR.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -603,7 +603,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de la propiedad de contenedor va a recuperar.
 
 *var*<br/>
@@ -800,7 +800,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parámetros
 
-*inserción de dependencias*<br/>
+*di*<br/>
 La estructura que va a contener el factor de zoom numerador y denominador. Para obtener más información, consulte [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md).
 
 ### <a name="remarks"></a>Comentarios
@@ -1037,7 +1037,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  Para usar a este miembro de datos dentro de la clase de control, debe declararlo como un miembro de datos en la clase del control. La clase del control no heredará a este miembro de datos de la clase base porque se declara dentro de una unión en la clase base.
 
-##  <a name="m_bwindowonly"></a>  CComControlBase:: M_bwindowonly
+##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly
 
 Marca que indica que el control debe ser división de particiones, incluso si el contenedor admite controles sin ventana.
 
@@ -1239,7 +1239,7 @@ CComPtr<IOleAdviseHolder>
 
 La interfaz `m_spOleAdviseHolder` implementa el [IOleObject::Advise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-advise) y [IOleObject::Unadvise](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-unadvise) métodos para establecer y eliminar las conexiones de consulta en el contenedor. El contenedor del control debe implementar un receptor con notificación permitiendo la [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) interfaz.
 
-##  <a name="ondraw"></a>  CComControlBase:: OnDraw
+##  <a name="ondraw"></a>  CComControlBase::OnDraw
 
 Invalide este método para dibujar el control.
 
@@ -1249,7 +1249,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parámetros
 
-*inserción de dependencias*<br/>
+*di*<br/>
 Una referencia a la [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) estructura que contiene información de dibujo como el aspecto de dibujo, los límites del control, y si se ha optimizado el dibujo o no.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1276,7 +1276,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
 
 ### <a name="parameters"></a>Parámetros
 
-*inserción de dependencias*<br/>
+*di*<br/>
 Una referencia a la [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md) estructura que contiene información de dibujo como el aspecto de dibujo, los límites del control, y si se ha optimizado el dibujo o no.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1460,7 +1460,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*ADVF*<br/>
+*advf*<br/>
 Aconsejar a los marcadores que especifican cómo la llamada a [IAdviseSink:: OnDataChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-ondatachange) se realiza. Los valores son de la [ADVF](/windows/desktop/api/objidl/ne-objidl-tagadvf) enumeración.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1477,7 +1477,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 
 ### <a name="parameters"></a>Parámetros
 
-*PMK*<br/>
+*pmk*<br/>
 Puntero en el nuevo moniker del control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1517,7 +1517,7 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
 *dwAspect*<br/>
 El aspecto o la vista del control.
 
-*lIndex*<br/>
+*lindex*<br/>
 La parte de la vista que ha cambiado. Sólo -1 es válido.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1526,7 +1526,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`SendOnViewChange` las llamadas [IAdviseSink:: OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). El único valor de *lindex* admite actualmente es -1, que indica que toda la vista es de interés.
+`SendOnViewChange` calls [IAdviseSink::OnViewChange](/windows/desktop/api/objidl/nf-objidl-iadvisesink-onviewchange). El único valor de *lindex* admite actualmente es -1, que indica que toda la vista es de interés.
 
 ##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus
 

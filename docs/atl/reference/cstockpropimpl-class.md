@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332431"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894008"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl (clase)
 
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>Parámetros
 
 *ppPicture*<br/>
-Variable que recibe un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.
+Variable que recibe un puntero a las propiedades de la imagen. Consulte [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -864,7 +864,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 TRUE si el control está habilitado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -954,7 +954,7 @@ Reservado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve E_FAIL.
+Returns E_FAIL.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parámetros
 
 *pPicture*<br/>
-Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.
+Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1094,7 +1094,7 @@ Identificador de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve E_FAIL.
+Returns E_FAIL.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parámetros
 
 *pPicture*<br/>
-Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.
+Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
 

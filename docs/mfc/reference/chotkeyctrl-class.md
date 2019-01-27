@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178140"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894515"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl (clase)
 
@@ -67,7 +67,7 @@ Este control (y, por tanto, la `CHotKeyCtrl` clase) está disponible solo para p
 
 Cuando el usuario ha elegido una combinación de teclas, la aplicación puede recuperar la combinación de teclas especificada desde el control y usar el mensaje del mensaje WM_SETHOTKEY para establecer la tecla de acceso rápido en el sistema. Cada vez que el usuario presiona la tecla de acceso rápido a partir de entonces, desde cualquier parte del sistema, la ventana especificada en el mensaje del mensaje WM_SETHOTKEY recibe un mensaje WM_SYSCOMMAND especificar SC_HOTKEY. Este mensaje activa la ventana que lo recibe. La tecla de acceso rápido sigue siendo válida hasta que la aplicación que llama el mensaje WM_SETHOTKEY salidas.
 
-Este mecanismo es diferente de la compatibilidad con clave activo que depende el mensaje WM_HOTKEY y el Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) y [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funciones.
+Este mecanismo es diferente de la compatibilidad con clave activo que depende el mensaje WM_HOTKEY y el Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) y [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) funciones.
 
 Para obtener más información sobre el uso de `CHotKeyCtrl`, consulte [controles](../../mfc/controls-mfc.md) y [usar CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 
@@ -110,7 +110,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control clave activa. Aplicar cualquier combinación de los estilos de control. Consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows para obtener más información.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control clave activo. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 *pParentWnd*<br/>
@@ -150,7 +150,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control clave activa. Aplicar cualquier combinación de los estilos de control. Para obtener más información, consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -192,7 +192,7 @@ Los marcadores modificadores son los siguientes:
 |Marcar|Clave correspondiente|
 |----------|-----------------------|
 |HOTKEYF_ALT|tecla ALT|
-|HOTKEYF_CONTROL|Tecla CTRL|
+|HOTKEYF_CONTROL|CTRL key|
 |HOTKEYF_EXT|Clave extendido|
 |HOTKEYF_SHIFT|Tecla MAYÚS|
 
@@ -232,7 +232,7 @@ static CString GetKeyName(
 
 ### <a name="parameters"></a>Parámetros
 
-*VK*<br/>
+*vk*<br/>
 El código de tecla virtual.
 
 *fExtended*<br/>
@@ -273,7 +273,7 @@ Los marcadores modificadores son los siguientes:
 |Marcar|Clave correspondiente|
 |----------|-----------------------|
 |HOTKEYF_ALT|tecla ALT|
-|HOTKEYF_CONTROL|Tecla CTRL|
+|HOTKEYF_CONTROL|CTRL key|
 |HOTKEYF_EXT|Clave extendido|
 |HOTKEYF_SHIFT|Tecla MAYÚS|
 
@@ -300,15 +300,15 @@ Matriz de marcas que especifica las combinaciones de teclas no válidas. Puede s
 
 - HKCOMB_C CTRL
 
-- HKCOMB_CA CTRL + ALT
+- HKCOMB_CA CTRL+ALT
 
 - Claves HKCOMB_NONE sin modificar
 
-- MAYÚS HKCOMB_S
+- HKCOMB_S SHIFT
 
 - HKCOMB_SA MAYÚS+ALT
 
-- MAYÚS+CTRL HKCOMB_SC
+- HKCOMB_SC SHIFT+CTRL
 
 - HKCOMB_SCA MAYÚS + CTRL + ALT
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694184"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893865"
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de Control compuesto
 
@@ -52,7 +52,7 @@ Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y par
 
 **Encabezado:** atlhost.h
 
-##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
 Crea un cuadro de diálogo modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario.
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifica la ventana propietaria del cuadro de diálogo.
 
 *lpDialogProc*<br/>
-[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Para obtener más información sobre la edición de scripts de recursos, consulte [Cómo: abrir un archivo de Script de recursos en formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obtener más información sobre las instrucciones de definición de recursos de control, vea [parámetros comunes de Control](/windows/desktop/menurc/common-control-parameters) en Windows SDK: SDK Tools.
+Para obtener más información sobre la edición de scripts de recursos, consulte [Cómo: Abrir un archivo de Script de recursos en formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obtener más información sobre las instrucciones de definición de recursos de control, vea [parámetros comunes de Control](/windows/desktop/menurc/common-control-parameters) en Windows SDK: SDK Tools.
 
 Para obtener más información sobre los cuadros de diálogo en general, consulte [cuadro de diálogo](/windows/desktop/api/winuser/nf-winuser-dialogboxa) y [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) en el SDK de Windows.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifica la ventana propietaria del cuadro de diálogo.
 
 *lpDialogProc*<br/>
-[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Identificador de la ventana que hospeda el control.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] El `IUnknown` del contenedor del control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Identificador de la ventana que hospeda el control.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] El `IUnknown` del control hospedado.
 
 ### <a name="return-value"></a>Valor devuelto
