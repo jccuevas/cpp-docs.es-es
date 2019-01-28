@@ -2,12 +2,12 @@
 title: 4. Variables de entorno
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397334"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087202"
 ---
 # <a name="4-environment-variables"></a>4. Variables de entorno
 
@@ -46,14 +46,14 @@ setenv OMP_SCHEDULE "dynamic"
 
 ### <a name="cross-references"></a>Referencias cruzadas
 
-- [para](2-4-1-for-construct.md) directiva
-- [paralelo para](2-5-1-parallel-for-construct.md) directiva
+- [para](2-directives.md#241-for-construct) directiva
+- [paralelo para](2-directives.md#251-parallel-for-construct) directiva
 
 ## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 
 El `OMP_NUM_THREADS` variable de entorno establece el número predeterminado de subprocesos que se utilizarán durante la ejecución. `OMP_NUM_THREADS` se omite si dicho número se cambia explícitamente mediante una llamada a la `omp_set_num_threads` rutina de biblioteca. También se omite si no hay explícita `num_threads` cláusula en una `parallel` directiva.
 
-El valor de la `OMP_NUM_THREADS` variable de entorno debe ser un entero positivo. Su efecto depende de si está habilitado el ajuste dinámico del número de subprocesos. Para un conjunto completo de reglas sobre la interacción entre el `OMP_NUM_THREADS` entorno ajuste dinámico y variable de subprocesos, vea la sección 2.3.
+El valor de la `OMP_NUM_THREADS` variable de entorno debe ser un entero positivo. Su efecto depende de si está habilitado el ajuste dinámico del número de subprocesos. Para un conjunto completo de reglas sobre la interacción entre el `OMP_NUM_THREADS` entorno ajuste dinámico y variable de subprocesos, vea [sección 2.3](2-directives.md#23-parallel-construct).
 
 El número de subprocesos que desea utilizar está definido por la implementación si:
 
@@ -69,9 +69,9 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>Referencias cruzadas
 
-- [num_threads](2-3-parallel-construct.md) cláusula
-- [omp_set_num_threads ()](3-1-1-omp-set-num-threads-function.md) (función)
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+- [num_threads](2-directives.md#23-parallel-construct) cláusula
+- [omp_set_num_threads ()](3-run-time-library-functions.md#311-omp_set_num_threads-function) (función)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
 ## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 
@@ -87,8 +87,8 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>Referencias cruzadas
 
-- [Regiones en paralelo](2-3-parallel-construct.md)
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) function
+- [Regiones en paralelo](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) function
 
 ## <a name="44-ompnested"></a>4.4 OMP_NESTED
 
@@ -102,4 +102,4 @@ setenv OMP_NESTED TRUE
 
 ### <a name="cross-reference"></a>Referencia cruzada
 
-- [omp_set_nested ()](3-1-9-omp-set-nested-function.md) (función)
+- [omp_set_nested ()](3-run-time-library-functions.md#319-omp_set_nested-function) (función)
