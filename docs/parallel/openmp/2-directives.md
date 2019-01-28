@@ -2,12 +2,12 @@
 title: 2. Directivas
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894255"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087345"
 ---
 # <a name="2-directives"></a>2. Directivas
 
@@ -111,12 +111,12 @@ Restricciones para el `parallel` directiva son los siguientes:
 ### <a name="cross-references"></a>Referencias cruzadas
 
 - `private`, `firstprivate`, `default`, `shared`, `copyin`, y `reduction` cláusulas ([sección 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md) variable de entorno
-- [omp_set_dynamic ()](3-1-7-omp-set-dynamic-function.md) función de biblioteca
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) variable de entorno
-- [omp_set_nested ()](3-1-9-omp-set-nested-function.md) (función)
-- [OMP_NESTED](4-4-omp-nested.md) variable de entorno
-- [omp_set_num_threads ()](3-1-1-omp-set-num-threads-function.md) función de biblioteca
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variable de entorno
+- [omp_set_dynamic ()](3-run-time-library-functions.md#317-omp_set_dynamic-function) función de biblioteca
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variable de entorno
+- [omp_set_nested ()](3-run-time-library-functions.md#319-omp_set_nested-function) (función)
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) variable de entorno
+- [omp_set_num_threads ()](3-run-time-library-functions.md#311-omp_set_num_threads-function) función de biblioteca
 
 ## <a name="24-work-sharing-constructs"></a>2.4 construcciones de uso compartido
 
@@ -227,7 +227,7 @@ Restricciones para el `for` directiva son los siguientes:
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - `private`, `firstprivate`, `lastprivate`, y `reduction` cláusulas ([sección 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md) variable de entorno
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) variable de entorno
 - [ordenar](#266-ordered-construct) construir
 - [programación](d-using-the-schedule-clause.md) cláusula
 
@@ -520,7 +520,7 @@ Restricciones para el `ordered` directiva son los siguientes:
 
 En esta sección se presenta una directiva y varias cláusulas para controlar el entorno de datos durante la ejecución de las regiones en paralelo, como sigue:
 
-- Un `threadprivate` directiva (consulte la sección siguiente) se proporciona para hacer que variables estáticas del ámbito de bloque, ámbito de espacio de nombres o ámbito de archivo local a un subproceso.
+- Un [threadprivate](#271-threadprivate-directive) directiva se proporciona para hacer que variables estáticas del ámbito de bloque, ámbito de espacio de nombres o ámbito de archivo local a un subproceso.
 
 - Las cláusulas que se pueden especificar en las directivas para controlar los atributos de uso compartido de las variables de la duración de las construcciones paralelas o uso compartido se describen en [sección 2.7.2](#272-data-sharing-attribute-clauses).
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
-- [subprocesos dinámicos](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) variable de entorno
+- [subprocesos dinámicos](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) variable de entorno
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 cláusulas de atributos uso compartido de datos
 

@@ -2,12 +2,12 @@
 title: 3. Funciones de biblioteca en tiempo de ejecución
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 7d48338683037c06ca208bff32c5c2e9b546a9fe
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065027"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087319"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funciones de biblioteca en tiempo de ejecución
 
@@ -49,7 +49,7 @@ El `omp_set_num_threads` función establece el número predeterminado de subproc
 void omp_set_num_threads(int num_threads);
 ```
 
-El valor del parámetro *num_threads* debe ser un entero positivo. Su efecto depende de si está habilitado el ajuste dinámico del número de subprocesos. Para un conjunto completo de reglas sobre la interacción entre el `omp_set_num_threads` función y realizar un ajuste dinámico de subprocesos, vea la sección 2.3.
+El valor del parámetro *num_threads* debe ser un entero positivo. Su efecto depende de si está habilitado el ajuste dinámico del número de subprocesos. Para un conjunto completo de reglas sobre la interacción entre el `omp_set_num_threads` función y realizar un ajuste dinámico de subprocesos, vea [sección 2.3](2-directives.md#23-parallel-construct).
 
 Esta función tiene los efectos que se ha descrito anteriormente, cuando se llama desde una parte del programa donde el `omp_in_parallel` función devuelve cero. Si se llama desde una parte del programa donde el `omp_in_parallel` función devuelve un valor distinto de cero, el comportamiento de esta función es indefinido.
 
@@ -60,7 +60,7 @@ Esta llamada tiene prioridad sobre la `OMP_NUM_THREADS` variable de entorno. El 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
 - [omp_get_dynamic](#318-omp_get_dynamic-function) function
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) variable de entorno
-- [num_threads](2-3-parallel-construct.md) cláusula
+- [num_threads](2-directives.md#23-parallel-construct) cláusula
 
 ### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads () (función)
 
@@ -78,8 +78,8 @@ Si el número de subprocesos no se ha establecido explícitamente por el usuario
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
-- [num_threads](2-3-parallel-construct.md)
-- [parallel](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
+- [parallel](2-directives.md#23-parallel-construct)
 
 ### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads () (función)
 
@@ -107,7 +107,7 @@ El `omp_get_max_threads` valor devuelto de la función puede utilizarse para asi
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [omp_set_num_threads](#311-omp_set_num_threads-function)
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
-- [num_threads](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
 
 ### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num () (función)
 
