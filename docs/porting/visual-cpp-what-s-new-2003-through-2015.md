@@ -2,12 +2,12 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51520187"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894359"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -648,7 +648,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     error C2668: 'function' : ambiguous call to overloaded function.
    ```
 
-   Ejemplo 1: llamada ambigua a una función sobrecargada (antes)
+   Ejemplo 1: llamada ambigua a una función sobrecargada (antes)
 
    ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -1836,7 +1836,7 @@ Un trígrafo se compone de dos signos de interrogación consecutivos (??) seguid
 
 **Reconocimiento de valores altos de PPP.** De forma predeterminada, las aplicaciones MFC ahora son compatibles con valores altos de PPP. Si una aplicación es compatible con valores altos de PPP (muchos puntos por pulgada), el sistema operativo puede escalar ventanas, texto y otros elementos de la interfaz de usuario a la resolución de pantalla actual. Esto significa que es más probable que una imagen escalada se distribuya correctamente y no se muestre recortada o pixelada.
 
-**Administrador de reinicio.** El administrador de reinicio guarda documentos automáticamente y reinicia la aplicación si se ha cerrado o se reinicia de forma inesperada. Por ejemplo, puede usar el administrador de reinicio para iniciar la aplicación después de que se cierre por una actualización automática. Para más información sobre cómo configurar la aplicación para usar el administrador de reinicio, vea **Cómo: Agregar compatibilidad con el Administrador de reinicio**.
+**Administrador de reinicio.** El administrador de reinicio guarda documentos automáticamente y reinicia la aplicación si se ha cerrado o se reinicia de forma inesperada. Por ejemplo, puede usar el administrador de reinicio para iniciar la aplicación después de que se cierre por una actualización automática. Para obtener más información sobre cómo configurar la aplicación para usar el Administrador de reinicio, vea **Procedimiento: Agregar compatibilidad con el Administrador de reinicio**.
 
 **CTaskDialog.** La clase `CTaskDialog` se puede usar en lugar del cuadro de mensaje `AfxMessageBox` estándar. La clase `CTaskDialog` muestra y reúne más información que el cuadro de mensaje estándar.
 
@@ -2197,7 +2197,7 @@ El compilador tiene cambios importantes en esta versión.
 
 - Información sobre cómo ejecutar una aplicación de Extensiones administradas para C++ generada con el compilador de la versión actual en una versión anterior del entorno de ejecución.
 - Preguntas más frecuentes sobre las Extensiones administradas para C++.
-- Se ha agregado un tutorial que muestra cómo trasladar una aplicación nativa existente para usar las Extensiones administradas para C++: Walkthrough: Porting an Existing Native C++ Application to Interoperate with .NET Framework Components (Tutorial: Trasladar una aplicación de C++ nativa existente para que interactúe con componentes de .NET Framework).
+- Se ha agregado un tutorial en el que se muestra cómo portar una aplicación nativa existente para utilizar las Extensiones administradas para C++: Tutorial: Portabilidad de una aplicación C++ nativa existente para interoperar con componentes de .NET Framework.
 - Ahora puede crear un delegado en un método de un tipo de valor.
 - La conformidad del compilador con el estándar de C++ se ha mejorado significativamente para Visual C++ .NET 2003.
 - Se ha agregado la opción del compilador `/arch`.
