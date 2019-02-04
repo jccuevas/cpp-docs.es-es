@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031296"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702913"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Compruebe siempre el valor devuelto para ver si el puntero es NULL antes de real
 
 **fopen** admite secuencias de archivo Unicode. Para abrir un archivo Unicode, pase un **ccs** marca que especifica la codificación deseada a **fopen**, como se indica a continuación.
 
-> **ARCHIVO *fp = fopen ("newfile.txt", "rt +, ccs =**_codificación_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 Los valores permitidos de *codificación* son **UNICODE**, **UTF-8**, y **UTF-16LE**.
 
@@ -156,29 +156,29 @@ Las siguientes opciones se pueden anexar a *modo* para especificar comportamient
 | **R** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
 | **T** | Especifica un archivo como temporal. Si es posible, no se vuelca en el disco. |
 | **D** | Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo. |
-| **CCS =**_codificación_ | Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
+| **ccs=**_encoding_ | Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
 
 Los caracteres válidos para el *modo* cadena que se usa en **fopen** y **_fdopen** corresponden a *oflag* argumentos que se usan en [_open](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
 |Los caracteres de *modo* cadena|Equivalente *oflag* valor \_abrir /\_sopen|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_APPEND**)|
-|**a +**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (normalmente  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_crear** )|
+|**a+**|**\_O\_RDWR** &#124; **\_O\_APPEND** (usually **\_O\_RDWR** &#124; **\_O\_APPEND** &#124; **\_O\_CREAT** )|
 |**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**W**|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (normalmente  **\_O\_RDWR** &#124;  **\_O\_crear** &#124;  **\_ O\_TRUNC**)|
-|**b**|**\_O\_BINARIO**|
-|**t**|**\_O\_TEXTO**|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
+|**t**|**\_O\_TEXT**|
 |**c**|Ninguna|
 |**n**|Ninguna|
 |**S**|**\_O\_SECUENCIAL**|
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|
 |**D**|**\_O\_TEMPORAL**|
-|**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Si usas **rb** modo, no es necesario trasladar su código y, si espera que leer la mayor parte de un archivo grande o no se preocupa sobre el rendimiento de red, también puede considerar si va a utilizar memoria archivos Win32 asignados como una opción.
 

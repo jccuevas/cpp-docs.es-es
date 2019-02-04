@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677024"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702939"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -61,26 +62,26 @@ wchar_t *_wgetdcwd(
 
 ### <a name="parameters"></a>Parámetros
 
-*Unidad*<br/>
+*drive*<br/>
 Entero no negativo que especifica la unidad (0 = unidad predeterminada, 1 = A, 2 = B, etc.).
 
-Si la unidad especificada no está disponible, o no se puede determinar la clase de unidad (por ejemplo, extraíble, fija, CD-ROM, disco RAM o unidad de red), se invoca el controlador de parámetros no válidos, como se describe en [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Si la unidad especificada no está disponible, o el tipo de unidad (por ejemplo, extraíble, fija, CD-ROM, disco RAM o unidad de red) no puede determinarse, se invoca el controlador de parámetros no válidos. Para más información, consulte [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Ubicación de almacenamiento de la ruta de acceso o **NULL**.
 
 Si **NULL** se especifica, esta función asigna un búfer de al menos *maxlen* tamaño mediante el uso de **malloc**y el valor devuelto de **_getdcwd**es un puntero al búfer asignado. Se puede liberar el búfer mediante una llamada a **libre** y pasándole el puntero.
 
-*MAXLEN*<br/>
+*maxlen*<br/>
 Un entero positivo distinto de cero que especifica la longitud máxima de la ruta de acceso en caracteres: **char** para **_getdcwd** y **wchar_t** para **_wgetdcwd**.
 
-Si *maxlen* no es mayor que cero, el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md), se invoca.
+Si *maxlen* es menor o igual a cero, se invoca el controlador de parámetros no válidos. Para más información, consulte [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Valor devuelto
 
 Puntero a una cadena que representa la ruta de acceso completa del directorio de trabajo actual en la unidad especificada, o **NULL**, lo que indica un error.
 
-Si *búfer* se especifica como **NULL** y no hay memoria suficiente para asignar *maxlen* caracteres, se produce un error y **errno** es establecido en **ENOMEM**. Si supera la longitud de la ruta de acceso, que incluye el carácter nulo final, *maxlen*, se produce un error y **errno** está establecido en **ERANGE**. Para obtener más información sobre estos códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si *búfer* se especifica como **NULL** y no hay memoria suficiente para asignar *maxlen* caracteres, se produce un error y **errno** es establecido en **ENOMEM**. Si se supera la longitud de la ruta, incluido el carácter nulo de terminación *maxlen*, se produce un error, y **errno** está establecido en **ERANGE**. Para obtener más información sobre estos códigos de error, vea [errno, _doserrno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Comentarios
 

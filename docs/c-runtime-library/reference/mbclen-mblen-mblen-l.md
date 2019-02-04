@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen, _mblen_l, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434391"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702965"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Obtiene la longitud y determina la validez de un carácter multibyte.
 
@@ -55,6 +58,10 @@ Obtiene la longitud y determina la validez de un carácter multibyte.
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-**_mbclen** devuelve 1 o 2, según si el carácter multibyte *c* es 1 o 2 bytes. No hay ningún error devuelto para **_mbclen**. Si *mbstr* no **NULL**, **mblen** devuelve la longitud, en bytes, del carácter multibyte. Si *mbstr* es **NULL** o señala al carácter null de caracteres anchos, **mblen** devuelve 0. Si el objeto que *mbstr* puntos que no forma un carácter multibyte válido en los primeros *recuento* caracteres, **mblen** devuelve -1.
+**_mbclen** devuelve 1 o 2, según si el carácter multibyte *c* es 1 o 2 bytes. No hay ningún error devuelto para **_mbclen**. Si *mbstr* no **NULL**, **mblen** devuelve la longitud, en bytes, del carácter multibyte. Si *mbstr* es **NULL** o señala al carácter null de caracteres anchos, **mblen** devuelve 0. Cuando el objeto que *mbstr* puntos que no forman un carácter multibyte válido en los primeros *recuento* caracteres, **mblen** devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -91,7 +98,7 @@ El **_mbclen** función devuelve la longitud, en bytes, del carácter multibyte 
 
 **mblen** devuelve la longitud en bytes de *mbstr* si es un carácter multibyte válido y determina la validez del carácter multibyte asociada con la página de códigos. **mblen** examina *recuento* bytes o menos en *mbstr*, pero no más de **MB_CUR_MAX** bytes.
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por la **LC_CTYPE** valor de la categoría de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el **_l** sufijo usar la configuración regional actual para este comportamiento dependiente de la configuración regional. El **_l** versiones con sufijo comportan del mismo, pero usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Asignaciones de rutina de texto genérico
 
