@@ -3,25 +3,29 @@ title: Ver y editar recursos en un Editor de recursos (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vs.resourceview
+- vc.resvw.resource.previewing
+- vs.resvw.resource.previewing
 helpviewer_keywords:
 - resources [C++], viewing
 - layouts, previewing resource
 - resource editors [C++], viewing resources
 - .rc files [C++], viewing resources
 - resources [C++], editing
+- properties [C++], resources
+- resources [C++], properties
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-ms.openlocfilehash: b33b7b52f494971451298e0827327cc86e60e7f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ab58d37f3f188c3d65740b218cb9b2ac799714
+ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582634"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742666"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor-c"></a>Ver y editar recursos en un Editor de recursos (C++)
 
 Cada tipo de recurso tiene un **recursos** editor de ese tipo de recurso específico. Puede reorganizar, cambiar el tamaño, agregar controles y características o modificar otros aspectos de un recurso con el editor asociado. También puede editar un recurso en [formato de texto](../windows/how-to-open-a-resource-script-file-in-text-format.md) y [formato binario](../windows/opening-a-resource-for-binary-editing.md).
 
-Algunos tipos de recursos son archivos individuales que se pueden importar y usar de diversas maneras; Estos incluyen los mapas de bits, iconos, cursores, barras de herramientas y los archivos html. Estos recursos tienen nombres de archivo, así como [identificadores de recursos](../windows/symbols-resource-identifiers.md). Otros, como cuadros de diálogo, menús y las tablas de cadenas en los proyectos de Win32, sólo existen como parte de un archivo de recursos (.rc) de la secuencia de comandos o el archivo de recursos (.rct) de la plantilla.
+Algunos tipos de recursos son archivos individuales que se pueden importar y usar de diversas maneras; Estos incluyen los mapas de bits, iconos, cursores, barras de herramientas y los archivos html. Estos recursos tienen nombres de archivo y [identificadores de recursos](../windows/symbols-resource-identifiers.md). Otros, como cuadros de diálogo, menús y las tablas de cadenas en los proyectos de Win32, sólo existen como parte de un archivo de recursos (.rc) de la secuencia de comandos o el archivo de recursos (.rct) de la plantilla.
 
 > [!NOTE]
 > Propiedades de un recurso [puede modificarse mediante la ventana propiedades](../windows/changing-the-properties-of-a-resource.md).
@@ -34,14 +38,14 @@ Puede obtener acceso a los recursos de Win32 en el [vista de recursos](../window
 
 1. Seleccione **vista de recursos** desde el **vista** menú.
 
-2. Si el **vista de recursos** ventana no es la ventana de nivel superior, haga clic en el **vista de recursos** tab para colocarlo en la parte superior.
+1. Si el **vista de recursos** ventana no es la ventana de nivel superior, seleccione el **vista de recursos** tab para colocarlo en la parte superior.
 
-3. Desde **vista de recursos**, expanda la carpeta del proyecto que contiene recursos que desea ver. Por ejemplo, si desea ver un recurso de cuadro de diálogo, expanda el **diálogo** carpeta.
+1. Desde **vista de recursos**, expanda la carpeta del proyecto que contiene recursos que desea ver. Por ejemplo, si desea ver un recurso de cuadro de diálogo, expanda el **diálogo** carpeta.
 
    > [!NOTE]
    > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
-4. Haga doble clic en el recurso, por ejemplo, **IDD_ABOUTBOX**.
+1. Haga doble clic en el recurso, por ejemplo, **IDD_ABOUTBOX**.
 
    El recurso se abrirá en el editor correspondiente. Por ejemplo, para los recursos de cuadro de diálogo, el recurso se abrirá dentro de la **diálogo** editor.
 
@@ -64,13 +68,68 @@ Para obtener información sobre cómo agregar recursos a proyectos administrados
 
 ### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Para ver un recurso administrado en un editor de recursos
 
-1. En **el Explorador de soluciones**, haga doble clic en el recurso, por ejemplo, **Bitmap1.bmp**.
+En **el Explorador de soluciones**, haga doble clic en el recurso, por ejemplo, **Bitmap1.bmp**.
 
    El recurso se abrirá en el editor correspondiente.
 
 ### <a name="to-delete-an-existing-managed-resource"></a>Para eliminar un recurso administrado existente
 
-1. En **el Explorador de soluciones**, haga clic en el recurso que desea eliminar y elija **eliminar** en el menú contextual.
+En **el Explorador de soluciones**, haga clic en el recurso que desea eliminar y elija **eliminar** en el menú contextual.
+
+## <a name="changing-the-properties-of-resources"></a>Cambiar las propiedades de recursos
+
+### <a name="to-edit-the-properties-of-a-resource"></a>Para editar las propiedades de un recurso
+
+1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el recurso que desea editar y elija **propiedades** en el menú contextual.
+
+   > [!NOTE]
+   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
+
+1. En el [ventana propiedades](/visualstudio/ide/reference/properties-window), cambiar las propiedades del recurso.
+
+### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>Para deshacer un cambio realizado en las propiedades de un recurso
+
+1. Asegúrese de que el recurso tiene el foco **vista de recursos**.
+
+1. Elija **deshacer** desde el **editar** menú.
+
+## <a name="previewing-resources"></a>Vista previa de recursos
+
+Obtener una vista previa de los recursos para que pueda ver recursos gráficos sin abrirlos. Obtener una vista previa también es útil para los archivos ejecutables después de que haya compilado ya que cambian los identificadores de recursos a los números. Dado que estos identificadores numéricos a menudo no proporcionan suficiente información, vista previa de los recursos ayuda a identificarlos con rapidez.
+
+Puede obtener una vista previa del diseño visual de los siguientes tipos de recursos:
+
+- Bitmap
+
+- Cuadro de diálogo
+
+- Iconos
+
+- Menú
+
+- Cursor
+
+- Barra de herramientas
+
+La función de vista previa no se aplica a los recursos del acelerador, manifiesto, tabla de cadenas e información de versión.
+
+### <a name="to-preview-resources"></a>Para obtener una vista previa de recursos
+
+1. En [vista de recursos](../windows/resource-view-window.md) o una ventana de documento, seleccione el recurso, por ejemplo, **IDD_ABOUTBOX**.
+
+   > [!NOTE]
+   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
+
+1. En el [ventana propiedades](/visualstudio/ide/reference/properties-window), seleccione el **páginas de propiedades** botón.
+
+   \- o -
+
+   En el **vista** menú, seleccione **páginas de propiedades**.
+
+   El **página de propiedades** para el recurso se abrirá una vista previa de ese recurso. A continuación, puede usar el **seguridad** y **hacia abajo** teclas de flecha para navegar por el árbol de control en **vista de recursos** o la ventana de documento. El **página de propiedades** permanecerá abierta y mostrará todos los recursos que tiene el foco y pueden obtener una vista previa.
+
+> [!NOTE]
+> Para obtener una vista previa de recursos requiere Win32.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -78,4 +137,5 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
+[Cómo: Abrir un archivo de script de recursos fuera de un proyecto (independiente)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
 [Editores de recursos](../windows/resource-editors.md)
