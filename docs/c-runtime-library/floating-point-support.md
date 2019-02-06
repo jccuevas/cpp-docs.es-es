@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con cálculos matemáticos y el punto flotante
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558241"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703134"
 ---
 # <a name="math-and-floating-point-support"></a>Compatibilidad con cálculos matemáticos y el punto flotante
 
@@ -69,7 +69,6 @@ Las versiones anteriores de 16 bits de Microsoft C/C++ y Microsoft Visual C++ ad
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Establece el modo de redondeo de punto flotante especificado
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Determina las marcas de estado de excepción de punto flotante que se establecen
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Restaura un entorno de punto flotante y después genera excepciones anteriores
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina si un valor es finito
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Calcula el límite inferior
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Calcula una multiplicación y suma fusionadas
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Calcula el máximo de los argumentos
@@ -87,7 +86,11 @@ Las versiones anteriores de 16 bits de Microsoft C/C++ y Microsoft Visual C++ ad
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Calcula el exponente en base 2 del entero
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Calcula el valor absoluto de un tipo de entero
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Calcula el cociente y el resto de dos valores enteros
+[isfinite, _finite y _finitef](../c-runtime-library/reference/finite-finitef.md)|Determina si un valor es finito
+[isgreater, isgreaterequal, isless, islessequal, islessgreater y isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Compara el orden de dos valores de punto flotante
+[isinf](../c-runtime-library/reference/isinf.md)|Determina si un valor de punto flotante es infinito
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Prueba un valor de punto flotante para NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Prueba si un valor de punto flotante es finito y no es subnormal
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Calcula la función Bessel
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Calcula x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Calcula el logaritmo natural del valor absoluto de la función gamma
@@ -118,6 +121,7 @@ Las versiones anteriores de 16 bits de Microsoft C/C++ y Microsoft Visual C++ ad
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Multiplica un número de punto flotante por una potencia integral de **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Establece la palabra de control de punto flotante
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Habilita o deshabilita las instrucciones de SSE2
+[signbit](../c-runtime-library/reference/signbit.md)|Prueba el bit de signo de un valor de punto flotante
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Calcula el seno
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Calcula el seno hiperbólico
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Calcula la raíz cuadrada
@@ -134,3 +138,4 @@ Las versiones anteriores de 16 bits de Microsoft C/C++ y Microsoft Visual C++ ad
 ## <a name="see-also"></a>Vea también
 
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Tipos primitivos de punto flotante](../c-runtime-library/reference/floating-point-primitives.md)<br/>
