@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477160"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850139"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Las aplicaciones auxiliares y variables globales de análisis de direcciones URL de Internet
 
@@ -104,7 +104,7 @@ Por ejemplo, `AfxParseURL` analiza las direcciones URL del formulario *service:/
 
 *strServer* == "server"
 
-*strObject* == "/ dir/dir/object/object.ext"
+*strObject* == "/dir/dir/object/object.ext"
 
 *nPort* == #port
 
@@ -214,10 +214,6 @@ Analiza una cadena de dirección URL y devuelve el tipo de servicio y sus compon
 
   **Encabezado** afxinet.h
 
-## <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
 Utilice esta función global para determinar el tipo de un identificador de Internet.
@@ -274,11 +270,6 @@ La lista siguiente incluye los tipos posibles de Internet devueltos por `AfxGetI
 
 **Encabezado:** afxinet.h
 
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Se produce una excepción de Internet.
@@ -308,9 +299,9 @@ Usted es responsable de determinar la causa según el código de error del siste
 
 **Encabezado:** afxinet.h
 
-### <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
 [CInternetException (clase)](cinternetexception-class.md)<br/>
-[THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

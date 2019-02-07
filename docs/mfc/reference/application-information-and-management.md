@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178348"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850303"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -138,10 +138,6 @@ CContextMenuManager* afxContextMenuManager;
 
 **Encabezado:** afxcontextmenumanager.h
 
-### <a name="see-also"></a>Vea también
-
-[CContextMenuManager (clase)](ccontextmenumanager-class.md)
-
 ##  <a name="afxendthread"></a>  AfxEndThread
 
 Llame a esta función para terminar el subproceso actualmente en ejecución.
@@ -209,10 +205,6 @@ Los módulos se buscan en este orden:
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxwin.h
-
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
@@ -463,7 +455,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a un objeto que se deriva de `CWnd`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -490,11 +482,6 @@ Este método es útil cuando tiene que validar que un parámetro de función o m
 
 **Encabezado:** afxpriv.h
 
-### <a name="see-also"></a>Vea también
-
-[CWnd (clase)](cwnd-class.md)<br/>
-[CFrameWndEx (clase)](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 
 Determina si la ventana dada es un objeto de barra de herramientas.
@@ -507,7 +494,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a un objeto que se deriva de `CWnd`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -522,11 +509,6 @@ Este método devuelve `TRUE` si *conquistado* deriva `CMFCToolBar`. Este método
 
 **Encabezado:** afxpriv.h
 
-### <a name="see-also"></a>Vea también
-
-[CWnd (clase)](cwnd-class.md)<br/>
-[CMFCToolBar (clase)](cmfctoolbar-class.md)
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Puntero a la plantilla global [manager teclado](ckeyboardmanager-class.md).
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxkeyboardmanager.h
-
-### <a name="see-also"></a>Vea también
-
-[Macros, funciones globales y Variables globales](mfc-macros-and-globals.md)<br/>
-[CKeyboardManager (clase)](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **Encabezado:** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>Vea también
-
-[CMenuTearOffManager (clase)](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
 Puntero a la plantilla global [manager mouse](cmousemanager-class.md).
@@ -630,10 +603,6 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmousemanager.h
-
-### <a name="see-also"></a>Vea también
-
-[CMouseManager (clase)](cmousemanager-class.md)
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -735,7 +704,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE indica que la información del registro se dirige al nodo HKCU; FALSE indica que la aplicación escribe información del registro en el nodo de forma predeterminada. El nodo de valor predeterminado es **HKEY_CLASSES_ROOT** ( **HKCR**).
 
 ### <a name="remarks"></a>Comentarios
@@ -787,10 +756,6 @@ CShellManager* afxShellManager;
 
 **Encabezado:** afxshellmanager.h
 
-### <a name="see-also"></a>Vea también
-
-[CShellManager (clase)](cshellmanager-class.md)
-
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
 Llame a esta función su `CWinApp::InitInstance` invalidar para inicializar Windows Sockets.
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxusertoolsmanager.h
-
-### <a name="see-also"></a>Vea también
-
-[CUserToolsManager (clase)](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -879,5 +840,14 @@ Si se llama a `AfxWinInit` usted mismo, debe declarar una instancia de un `CWinA
 
 ## <a name="see-also"></a>Vea también
 
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CWinApp (clase)](../../mfc/reference/cwinapp-class.md)
+[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
+[CWinApp (clase)](cwinapp-class.md)<br/>
+[CContextMenuManager (clase)](ccontextmenumanager-class.md)<br/>
+[CWnd (clase)](cwnd-class.md)<br/>
+[CFrameWndEx (clase)](cframewndex-class.md)<br/>
+[CMFCToolBar (clase)](cmfctoolbar-class.md)<br/>
+[CKeyboardManager (clase)](ckeyboardmanager-class.md)<br/>
+[CMenuTearOffManager (clase)](cmenutearoffmanager-class.md)<br/>
+[CMouseManager (clase)](cmousemanager-class.md)<br/>
+[CShellManager (clase)](cshellmanager-class.md)<br/>
+[CUserToolsManager (clase)](cusertoolsmanager-class.md)
