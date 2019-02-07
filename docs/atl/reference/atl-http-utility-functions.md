@@ -2,12 +2,12 @@
 title: Funciones de utilidad HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481723"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849653"
 ---
 # <a name="atl-http-utility-functions"></a>Funciones de utilidad HTTP ATL
 
@@ -75,10 +75,6 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 ### <a name="remarks"></a>Comentarios
 
 Se comporta como la versión actual de [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) pero no requiere WinInet o Internet Explorer para instalarse.
-
-### <a name="see-also"></a>Vea también
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 Un valor de color RGB.
 
 *pbOut*<br/>
@@ -279,7 +275,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Parámetros
 
-*St*<br/>
+*st*<br/>
 La hora del sistema se obtendrán como una cadena de formato HTTP.
 
 *strTime*<br/>
@@ -287,5 +283,6 @@ Una referencia a una variable de cadena para recibir el HTTP de fecha y hora com
 
 ## <a name="see-also"></a>Vea también
 
-[Conceptos](../../atl/active-template-library-atl-concepts.md)<br/>
-[Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)
+[Conceptos](../active-template-library-atl-concepts.md)<br/>
+[Componentes de escritorio COM de ATL](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

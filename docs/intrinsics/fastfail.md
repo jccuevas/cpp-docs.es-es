@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521390"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849481"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ Internamente, `__fastfail` se implementa mediante el uso de varios mecanismos es
 |x86|int 0x29|ecx|
 |x64|int 0x29|rcx|
 |ARM|Código de operación 0xDEFB|r0|
+|ARM64|0xF003 OpCode|x0|
 
 Una solicitud de error rápido es independiente y normalmente solo requiere dos instrucciones para ejecutarse. Una vez que se ha ejecutado una solicitud de error rápido, el kernel toma las medidas oportunas. En el código en modo de usuario no hay ninguna dependencia de memoria, aparte del puntero de la instrucción cuando se provoca un evento de error rápido. Esto maximiza la fiabilidad, incluso si hay daños graves en la memoria.
 
@@ -56,7 +57,7 @@ La compatibilidad con el mecanismo de error rápido nativo comenzó en Windows 
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`__fastfail`|x86, x 64, ARM|
+|`__fastfail`|x86, x64, ARM, ARM64|
 
 **Archivo de encabezado** \<intrin.h >
 

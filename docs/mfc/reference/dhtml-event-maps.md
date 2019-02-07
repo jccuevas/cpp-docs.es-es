@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 75ceaf3d0532a557f5227e64edece2155aacb72f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 306fb718e7c333e6ff603b7c6c88c10f03f567b5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519874"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850342"
 ---
 # <a name="dhtml-event-maps"></a>DHTML (Mapas de eventos)
 
@@ -93,7 +93,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos DHTML. Esta clase debe derivar directa o indirectamente de [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e incluyen el [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dentro de su definición de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -118,7 +118,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos DHTML. Esta clase debe derivar directa o indirectamente de [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e incluyen el [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dentro de su definición de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -165,7 +165,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 El DISPID de controlar el evento.
 
 *elemName*<br/>
@@ -192,7 +192,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *controlName*<br/>
@@ -219,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *elemName*<br/>
@@ -246,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *elemName*<br/>
@@ -916,7 +916,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *elemName*<br/>
@@ -979,10 +979,10 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). El mapa de eventos DHTML incrustado debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).
 
-*Nombredemapa*<br/>
+*mapName*<br/>
 Especifica la página cuyo evento asignarlo. Esto coincide con *Nombredemapa* en el [URL_EVENT_ENTRY](#url_event_entry) macro definir realmente el recurso de dirección URL o HTML.
 
 ### <a name="remarks"></a>Comentarios
@@ -1011,7 +1011,7 @@ BEGIN_URL_ENTRIES(className)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene la asignación de entrada de evento de dirección URL. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mapa de entrada de eventos de la dirección URL debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).
 
 ### <a name="remarks"></a>Comentarios
@@ -1054,7 +1054,7 @@ END_DHTML_URL_EVENT_MAP(className)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Debe coincidir con *className* en las correspondientes [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) macro.
 
 ### <a name="example"></a>Ejemplo
@@ -1107,13 +1107,13 @@ URL_EVENT_ENTRY(className, url,  mapName)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene la asignación de entrada de evento de dirección URL. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mapa de entrada de eventos de la dirección URL debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).
 
-*Dirección URL*<br/>
+*url*<br/>
 El recurso de dirección URL o HTML para la página.
 
-*Nombredemapa*<br/>
+*mapName*<br/>
 Especifica la página cuya dirección URL es *url*. Esto coincide con *Nombredemapa* en el [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map) macro que se asigna a los eventos de esta página.
 
 ### <a name="remarks"></a>Comentarios
@@ -1148,6 +1148,6 @@ Debe usarse junto con [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inli
 
 **Encabezado:** afxdhtml.h
 
-### <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
 [Macros y funciones globales](mfc-macros-and-globals.md)

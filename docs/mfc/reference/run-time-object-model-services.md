@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519215"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850290"
 ---
 # <a name="run-time-object-model-services"></a>Servicios del modelo de objetos en tiempo de ejecución
 
@@ -25,7 +25,7 @@ Creación de objetos dinámicos le permite crear un objeto de una clase especifi
 
 En la tabla siguiente se enumera las macros MFC que admiten la creación dinámica, la serialización y la información de clases en tiempo de ejecución.
 
-Para obtener más información sobre estos servicios de objeto de tiempo de ejecución y la serialización, vea el artículo [CObject (clase): acceso a información de clase de tiempo de ejecución](../../mfc/accessing-run-time-class-information.md).
+Para obtener más información sobre estos servicios de objeto de tiempo de ejecución y la serialización, vea el artículo [CObject (clase): Acceso a la información de clase en tiempo de ejecución](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="run-time-object-model-services-macros"></a>Macros de servicios del modelo de objetos de tiempo de ejecución
 
@@ -79,11 +79,6 @@ Use esta macro para determinar si la biblioteca de controles comunes la función
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Vea también
-
-[Aislamiento de la biblioteca de controles comunes de MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
-
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
 Determina si la biblioteca de controles comunes implementa la API especificada (se trata de la versión Unicode de [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
@@ -107,11 +102,6 @@ Use esta macro para determinar si la biblioteca de controles comunes la función
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>Vea también
-
-[Aislamiento de la biblioteca de controles comunes de MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
 Agrega la capacidad para tener acceso a información de tiempo de ejecución acerca de la clase de un objeto al derivar una clase de `CObject`.
@@ -122,7 +112,7 @@ DECLARE_DYNAMIC(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -153,7 +143,7 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -189,7 +179,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de control.
 
 ### <a name="remarks"></a>Comentarios
@@ -199,10 +189,6 @@ El nombre de la clase de control.
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxctl.h
-
-### <a name="see-also"></a>Vea también
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
@@ -216,23 +202,18 @@ DECLARE_PROPPAGEIDS( class_name )
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de control que posee las páginas de propiedades.
 
 ### <a name="remarks"></a>Comentarios
 
 Use el `DECLARE_PROPPAGEIDS` macro al final de la declaración de clase. A continuación, en el archivo .cpp que define las funciones miembro de la clase, use la `BEGIN_PROPPAGEIDS` (macro), las entradas de macro para cada una de las páginas de propiedades del control y el `END_PROPPAGEIDS` macro para declarar el final de la lista de la página de propiedades.
 
-Para obtener más información sobre las páginas de propiedades, vea el artículo [controles ActiveX: páginas de propiedades](../mfc-activex-controls-property-pages.md).
+Para obtener más información sobre las páginas de propiedades, vea el artículo [controles ActiveX: Páginas de propiedades](../mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxctl.h
-
-### <a name="see-also"></a>Vea también
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -244,7 +225,7 @@ DECLARE_SERIAL(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -281,10 +262,10 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
-*BASE_CLASS_NAME*<br/>
+*base_class_name*<br/>
 El nombre de la clase base.
 
 ### <a name="remarks"></a>Comentarios
@@ -313,10 +294,10 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
-*BASE_CLASS_NAME*<br/>
+*base_class_name*<br/>
 El nombre real de la clase base.
 
 ### <a name="remarks"></a>Comentarios
@@ -352,7 +333,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
 *external_name*<br/>
@@ -382,12 +363,6 @@ El identificador de clase OLE es un identificador único de 128 bits para el obj
 
 **Encabezado:** afxdisp.h
 
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[Clave CLSID](/windows/desktop/com/clsid-key-hklm)
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Implementa el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la clase del control.
@@ -400,7 +375,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de control.
 
 *idsUserTypeName*<br/>
@@ -422,11 +397,6 @@ El `GetUserTypeNameID` función miembro devuelve la cadena de recurso que identi
 
 **Encabezado:** afxctl.h
 
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
-
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
 Genera el código de C++ necesario para una dinámica `CObject`-derivados de clase con acceso de tiempo de ejecución para el nombre de clase y la posición dentro de la jerarquía.
@@ -437,10 +407,10 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
-*BASE_CLASS_NAME*<br/>
+*base_class_name*<br/>
 El nombre de la clase base.
 
 *wSchema*<br/>
@@ -474,7 +444,7 @@ RUNTIME_CLASS(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase (no está entrecomillada comillas).
 
 ### <a name="remarks"></a>Comentarios
@@ -501,7 +471,7 @@ DECLARE_OLECREATE(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -526,7 +496,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre real de la clase.
 
 *external_name*<br/>
@@ -549,5 +519,7 @@ El identificador de clase OLE es un identificador único de 128 bits para el obj
 
 ## <a name="see-also"></a>Vea también
 
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
+[Aislamiento de la biblioteca de controles comunes de MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[Clave CLSID](/windows/desktop/com/clsid-key-hklm)
 

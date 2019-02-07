@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522095"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851687"
 ---
 # <a name="exception-processing"></a>Procesamiento de excepciones
 
@@ -314,7 +314,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ### <a name="parameters"></a>Parámetros
 
-*Causa*<br/>
+*cause*<br/>
 Especifica un entero que indica el motivo de la excepción. Para obtener una lista de los valores posibles, vea [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
 
 *lpszArchiveName*<br/>
@@ -337,7 +337,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>Parámetros
 
-*Causa*<br/>
+*cause*<br/>
 Especifica un entero que indica el motivo de la excepción. Para obtener una lista de los valores posibles, vea [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).
 
 *lOsError*<br/>
@@ -371,12 +371,6 @@ Esta función se invoca cuando se usan argumentos no válidos.
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
-
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[CInvalidArgException (clase)](cinvalidargexception-class.md)<br/>
-[THROW](#throw)
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
@@ -456,16 +450,16 @@ void AFXAPI AfxThrowOleDispatchException(
 
 ### <a name="parameters"></a>Parámetros
 
-*WCode*<br/>
+*wCode*<br/>
 Un código de error específico para su aplicación.
 
-*lpszDescripción*<br/>
+*lpszDescription*<br/>
 Verbal descripción del error.
 
 *nDescriptionID*<br/>
 Identificador de recurso para la descripción del error.
 
-*nIDAyuda*<br/>
+*nHelpID*<br/>
 Un contexto de ayuda para obtener ayuda de la aplicación (. Archivo HLP).
 
 ### <a name="remarks"></a>Comentarios
@@ -491,10 +485,10 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="parameters"></a>Parámetros
 
-*SC*<br/>
+*sc*<br/>
 Un código de estado OLE que indica el motivo de la excepción.
 
-*recursos humanos*<br/>
+*hr*<br/>
 Identificador de un código de resultado que indica el motivo de la excepción.
 
 ### <a name="remarks"></a>Comentarios
@@ -520,14 +514,14 @@ void AFXAPI AfxThrowDaoException(
 *nAfxDaoError*<br/>
 Un valor entero que representa un código de error extendido de DAO, que puede ser uno de los valores anuncie [CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror).
 
-*SCODE*<br/>
+*scode*<br/>
 Un código de error OLE de DAO de tipo SCODE. Para obtener información, consulte [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode).
 
 ### <a name="remarks"></a>Comentarios
 
 También se llama el marco de trabajo `AfxThrowDaoException`. En la llamada, puede pasar uno de los parámetros o ambos. Por ejemplo, si desea generar uno de los errores se definen en **CDaoException::nAfxDaoError** pero no preocupa la *scode* parámetro, pase un código válido en el *nAfxDaoError* parámetro y aceptar el valor predeterminado de *scode*.
 
-Para obtener información acerca de las excepciones relacionadas con las clases DAO de MFC, vea la clase `CDaoException` en este libro y el artículo [excepciones: excepciones de base de datos](../../mfc/exceptions-database-exceptions.md).
+Para obtener información acerca de las excepciones relacionadas con las clases DAO de MFC, vea la clase `CDaoException` en este libro y el artículo [excepciones: Excepciones de base de datos](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -549,10 +543,10 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Un valor de tipo RETCODE, definir el tipo de error que provocó la excepción que se produzca.
 
-*PDB*<br/>
+*pdb*<br/>
 Un puntero a la `CDatabase` objeto que representa la conexión de origen de datos que está asociada la excepción.
 
-*HStmt*<br/>
+*hstmt*<br/>
 Identificador de ODBC HSTMT que especifica el identificador de instrucción que está asociada la excepción.
 
 ### <a name="remarks"></a>Comentarios
@@ -587,5 +581,6 @@ Vea el ejemplo de [CATCH](#catch).
 
 ## <a name="see-also"></a>Vea también
 
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CException (clase)](../../mfc/reference/cexception-class.md)
+[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
+[CException (clase)](cexception-class.md)<br/>
+[CInvalidArgException (clase)](cinvalidargexception-class.md)
