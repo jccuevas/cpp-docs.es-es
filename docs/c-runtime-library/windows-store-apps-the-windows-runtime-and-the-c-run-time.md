@@ -1,13 +1,13 @@
 ---
 title: Aplicaciones de la Plataforma universal de Windows, Windows Runtime y tiempo de ejecución de C
-ms.date: 11/04/2016
+ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ea6e3e5017fcbef997a1e844e9f84e9c385bd31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441137"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763900"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Aplicaciones de la Plataforma universal de Windows, Windows Runtime y tiempo de ejecución de C
 
@@ -24,10 +24,6 @@ Windows Runtime no admite las siguientes características de CRT:
 - La mayoría de las funciones de cadena y carácter multibyte.
 
    Sin embargo, se admiten texto Unicode y ANSI.
-
-- Los argumentos de aplicaciones de consola y de la línea de comandos.
-
-   Sin embargo, las aplicaciones de escritorio tradicionales siguen admitiendo los argumentos de consola y de la línea de comandos.
 
 - Variables de entorno.
 
@@ -48,3 +44,4 @@ Para obtener una lista completa de las funciones de CRT que no están disponible
 [Compatibilidad](../c-runtime-library/compatibility.md)<br/>
 [Funciones de CRT no compatibles con Windows Runtime](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Rutinas en tiempo de ejecución Universal C por categoría](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Creación de una aplicación de consola de la Plataforma universal de Windows](/windows/uwp/launch-resume/console-uwp)
