@@ -1,6 +1,6 @@
 ---
 title: Macros y funciones globales para las plantillas de consumidor OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557120"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149003"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros y funciones globales para las plantillas de consumidor OLE DB
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Comentarios
 
-Si *hErr* no es S_OK, `AtlTraceErrorRecords` vuelca la información de registro de Error de OLE DB para el dispositivo de volcado de memoria (el **depurar** la ficha de la ventana de salida o un archivo). La información de registro de Error que se obtiene desde el proveedor, incluye el número de fila, origen, descripción, archivo de ayuda, contexto y GUID para cada entrada de registro de error. `AtlTraceErrorRecords` Esta información sólo en las compilaciones de depuración de volcados de memoria. En las compilaciones de versión es un código auxiliar vacío que se ha optimizado fuera.
-
-#### <a name="see-also"></a>Vea también
-
-[CDBErrorInfo (Clase)](../../data/oledb/cdberrorinfo-class.md)
+Si *hErr* no es S_OK, `AtlTraceErrorRecords` vuelca la información de registro de Error de OLE DB para el dispositivo de volcado de memoria (el **depurar** la ficha de la ventana de salida o un archivo). La información de registro de Error que se obtiene desde el proveedor, incluye el número de fila, origen, descripción, archivo de ayuda, contexto y GUID para cada entrada de registro de error. `AtlTraceErrorRecords` Esta información sólo en las compilaciones de depuración de volcados de memoria. En las compilaciones de versión es un código auxiliar vacío que se ha optimizado fuera. Para obtener más información, consulte [CDBErrorInfo (clase)](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -219,7 +215,7 @@ BEGIN_ACCESSOR(num, bAuto)
 *num*<br/>
 [in] El número de desplazamiento de cero para el descriptor de acceso en esta asignación de descriptor de acceso.
 
-*bSelección*<br/>
+*bAuto*<br/>
 [in] Especifica si este descriptor de acceso es un descriptor de acceso automático o manual un descriptor de acceso. Si **true**, el descriptor de acceso es automático; si **false**, el descriptor de acceso es manual. Un descriptor de acceso automático significa que los datos se capturan en las operaciones de movimiento.
 
 #### <a name="remarks"></a>Comentarios
@@ -618,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 
 #### <a name="parameters"></a>Parámetros
 
-*Variable*<br/>
+*variable*<br/>
 [in] La variable esté enlazado con la columna de marcador.
 
 #### <a name="example"></a>Ejemplo
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>Vea también
-
-[CBookmark (Clase)](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+Para obtener más información, consulte [utilizar marcadores](using-bookmarks.md) y [CBookmark (clase)](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -1469,7 +1462,7 @@ Se usa con un descriptor de acceso en un conjunto de filas. La macro BEGIN_COLUM
 
 #### <a name="example"></a>Ejemplo
 
-Consulte [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
+See [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
 
 ### <a name="define_command"></a> DEFINE_COMMAND
 
