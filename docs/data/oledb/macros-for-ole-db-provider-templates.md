@@ -1,6 +1,6 @@
 ---
 title: Macros para plantillas de proveedores OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557056"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151122"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros para plantillas de proveedores OLE DB
 
@@ -114,7 +114,7 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] La propiedad GUID.
 
 #### <a name="example"></a>Ejemplo
@@ -133,7 +133,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] La propiedad GUID.
 
 *flags*<br/>
@@ -204,7 +204,7 @@ END_PROPERTY_SET(guid)
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] La propiedad GUID.
 
 #### <a name="example"></a>Ejemplo
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [in] Valor [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) que se puede usar con el GUID del conjunto de propiedades para identificar una propiedad.
 
-*valor*<br/>
+*value*<br/>
 [in] El valor de la propiedad de tipo `DWORD`.
 
 #### <a name="remarks"></a>Comentarios
@@ -359,7 +359,7 @@ PROVIDER_COLUMN_ENTRY (name, ordinal, member)
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
 *member*<br/>
@@ -380,10 +380,10 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] El tipo de datos en [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *member*<br/>
@@ -412,7 +412,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
 *flags*<br/>
@@ -421,16 +421,16 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *colSize*<br/>
 [in] El tamaño de columna.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] Indica el tipo de datos del valor. Consulte la `wType` descripción en [estructuras DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
 *precision*<br/>
 [in] Indica la precisión que se utilizará al obtener los datos si *dbType* es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Consulte la `bPrecision` descripción en [estructuras DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*Escala*<br/>
+*scale*<br/>
 [in] Indica la escala que se utilizará al obtener los datos si dbType es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Consulte la `bScale` descripción en [estructuras DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)).
 
-*GUID*<br/>
+*guid*<br/>
 Un conjunto de filas de esquema GUID. Consulte [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.
 
 #### <a name="remarks"></a>Comentarios
@@ -452,7 +452,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
 *size*<br/>
@@ -484,7 +484,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
 *member*<br/>
@@ -513,10 +513,10 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
-*DbType*<br/>
+*dbtype*<br/>
 [in] El tipo de datos en [DBTYPE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
 *size*<br/>
@@ -544,7 +544,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *name*<br/>
 [in] El nombre de columna.
 
-*Ordinal*<br/>
+*ordinal*<br/>
 [in] El número de columna. A menos que la columna es una columna de marcador, el número de columna no debe ser 0.
 
 *member*<br/>
@@ -583,9 +583,9 @@ Denota el final de la asignación de esquema.
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>Vea también
+#### <a name="remarks"></a>Comentarios
 
-[IDBSchemaRowsetImpl (Clase)](../../data/oledb/idbschemarowsetimpl-class.md)
+Para obtener más información, consulte [IDBSchemaRowsetImpl (clase)](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
@@ -600,10 +600,10 @@ SCHEMA_ENTRY(guid,
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*guid*<br/>
 Un conjunto de filas de esquema GUID. Consulte [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) en el *referencia del programador de OLE DB* para obtener una lista de conjuntos de filas de esquema y sus GUID.
 
-*RowsetClass*<br/>
+*rowsetClass*<br/>
 La clase que se crearán para representar el conjunto de filas de esquema.
 
 #### <a name="remarks"></a>Comentarios
