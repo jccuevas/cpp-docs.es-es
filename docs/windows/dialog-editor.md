@@ -4,18 +4,31 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
+- vc.editors.dialog
 helpviewer_keywords:
 - resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
 - dialog boxes [C++], editing
+- controls [C++], showing or hiding Dialog editor toolbar
+- toolbars [C++], showing
+- toolbars [C++], hiding
+- Dialog Editor [C++], showing or hiding toolbar
+- events [C++], viewing for controls
+- Windows messages [C++], controls
+- messages [C++], viewing for dialog boxes
+- Dialog Editor [C++], accessing code
+- code [C++], switching from Dialog Editor
+- controls [C++], jumping to code
+- Dialog Editor [C++], switching between controls and code
+- Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 9ca532e1691a5d92280c89067a943b7d2e27e3f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540886"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264899"
 ---
 # <a name="dialog-editor-c"></a>Cuadro de diálogo Editor (C++)
 
@@ -35,17 +48,11 @@ A partir de Visual Studio 2015, puede usar el editor de cuadro de diálogo para 
 
 - [Crear un cuadro de diálogo del que los usuarios no puedan salir en tiempo de ejecución](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
 
-- [Mostrar u ocultar la barra de herramientas del Editor de cuadros de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-
-- [Cambiar entre el Editor de cuadros de diálogo y el código](../windows/switching-between-dialog-box-controls-and-code.md)
-
 - [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
 
 - [Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)
 
 - [Probar un cuadro de diálogo](../windows/testing-a-dialog-box.md)
-
-- [Teclas de aceleración del Editor de cuadros de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md)
 
 - [Solucionar problemas del Editor de cuadros de diálogo](../windows/troubleshooting-the-dialog-editor.md)
 
@@ -54,6 +61,73 @@ A partir de Visual Studio 2015, puede usar el editor de cuadro de diálogo para 
 
 Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 
+## <a name="dialog-editor-toolbar"></a>Barra de herramientas del Editor de cuadros de diálogo
+
+Al abrir el **diálogo** editor en un proyecto de C++, el **Editor de cuadro de diálogo** barra de herramientas aparece automáticamente en la parte superior de la solución.
+
+|Iconos|Significado|Iconos|Significado|
+|----------|-------------|----------|-------------|
+|![Botón de cuadro de diálogo de prueba](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Probar cuadro de diálogo|![Botón espaciar horizontalmente](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Horizontalmente|
+|![Botón Alinear lados izquierdos](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Alinear lados izquierdos|![Botón Espaciar verticalmente](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Verticalmente|
+|![Botón Alinear lados derechos](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Alinear lados derechos|![Asegúrese de mismo ancho botón](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Igualar ancho|
+|![Botón Alinear lados superiores](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Alinear lados superiores|![Botón de la misma altura de Make](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Igualar alto|
+|![Botón Alinear lados inferiores](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Alinear lados inferiores|![Botón de tamaño de la misma marca](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Igualar tamaño|
+|![Botón Centrar verticalmente](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Botón Alternar cuadrícula](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Alternar cuadrícula|
+|![Botón Centrar horizontalmente](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Botón Alternar guías](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Alternar guías|
+
+El **Editor de cuadro de diálogo** barra de herramientas contiene botones para organizar el diseño de controles en el cuadro de diálogo, por ejemplo tamaño y la alineación. **Cuadro de diálogo Editor** botones de barra de herramientas se corresponden con los comandos de la **formato** menú.
+
+Cuando esté en el **diálogo** editor, puede alternar la presentación de la **Editor de cuadro de diálogo** barra de herramientas, selecciónelo en la lista de ventanas y barras de herramientas disponibles.
+
+- Para mostrar u ocultar la barra de herramientas del editor de cuadro de diálogo, en el **vista** menú, seleccione **las barras de herramientas**, a continuación, elija **Editor de cuadro de diálogo** desde el submenú.
+
+   > [!NOTE]
+   > El **Editor de cuadro de diálogo** barra de herramientas se muestra de forma predeterminada al abrir un recurso de cuadro de diálogo en el editor de cuadro de diálogo; sin embargo, si cierra explícitamente la barra de herramientas, debe invocarse la próxima vez que abra un recurso de cuadro de diálogo.
+
+## <a name="switch-between-dialog-box-controls-and-code"></a>Cambiar entre los controles de cuadro de diálogo y el código
+
+En las aplicaciones MFC, puede hacer doble clic en los controles de cuadro de diálogo para saltar al código de su controlador o para crear rápidamente código auxiliar de funciones del controlador.
+
+Con un control seleccionado, haga clic en el **eventos de control** botón o la **mensajes** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window) para ver una lista completa de eventos y mensajes de Windows está disponible para el elemento seleccionado. Elija en la lista para crear o editar funciones de controlador.
+
+- Para saltar al código desde el editor de cuadro de diálogo, haga doble clic en un control en el cuadro de diálogo para saltar a la declaración de su función de control de mensajes más recientemente implementada. (Para las clases de cuadro de diálogo basado en ATL, siempre se salta a la definición del constructor.)
+
+- Para ver los eventos de un control con un control seleccionado, elija la **eventos de control** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window).
+
+   > [!NOTE]
+   > Elegir el **eventos de control** botón cuando el *cuadro de diálogo* tiene foco expone una lista de todos los controles en el cuadro de diálogo, que, a continuación, se puede expandir para modificar los eventos para los controles individuales.
+
+   Cuando un solo control tiene el foco en el cuadro de diálogo, puede haga clic en él y seleccione **Add Event Handler** en el menú contextual. Esto le permite especificar la clase a la que se agrega el controlador. Para obtener más información, consulte [agregando un controlador de eventos](../ide/adding-an-event-handler-visual-cpp.md).
+
+- Para ver los mensajes para un cuadro de diálogo con el cuadro de diálogo seleccionado, elija la **mensajes** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window).
+
+## <a name="accelerator-keys"></a>Teclas de aceleración
+
+A continuación son el valor predeterminado de las teclas de aceleración para los comandos del editor de cuadro de diálogo. Para cambiar las teclas de método abreviado, seleccione **opciones** en el **herramientas** menú, a continuación, elija **teclado** bajo el **entorno** carpeta. Para obtener más información, vea [Identificar y personalizar métodos abreviados de teclado](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+
+> [!NOTE]
+> Las opciones disponibles en los cuadros de diálogo, así como los nombres y las ubicaciones de los comandos de menú que se ven, podrían diferir de lo que se describe en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+
+|Comando|Teclas|Descripción|
+|-------------|----------|-----------------|
+|Format.AlignBottoms|**CTRL** + **MAYÚS** + **flecha abajo**|Alinea el borde inferior de los controles seleccionados con el control dominante|
+|Format.AlignCenters|**MAYÚS** + **F9**|Alinea los centros verticales de los controles seleccionados con el control dominante|
+|Format.AlignLefts|**CTRL** + **MAYÚS** + **flecha izquierda**|Alinea el borde izquierdo de los controles seleccionados con el control dominante|
+|Format.AlignMiddles|**F9**|Alinea los centros horizontales de los controles seleccionados con el control dominante|
+|Format.AlignRights|**CTRL** + **MAYÚS** + **flecha derecha**|Alinea el borde derecho de los controles seleccionados con el control dominante|
+|Format.AlignTops|**CTRL** + **MAYÚS** + **flecha arriba**|Alinea el borde superior de los controles seleccionados con el control dominante|
+|Format.ButtonBottom|**Ctrl** + **B**|Coloca los botones seleccionados a lo largo de la parte inferior central del cuadro de diálogo|
+|Format.ButtonRight|**Ctrl** + **R**|Coloca los botones seleccionados en la esquina superior derecha del cuadro de diálogo|
+|Format.CenterHorizontal|**CTRL** + **MAYÚS** + **F9**|Centra los controles horizontalmente en el cuadro de diálogo|
+|Format.CenterVertical|**Ctrl** + **F9**|Centra los controles verticalmente en el cuadro de diálogo|
+|Format.CheckMnemonics|**CTRL** + **M**|Comprobaciones de unicidad de las teclas de acceso|
+|Format.SizeToContent|**MAYÚS** + **F7**|Cambia el tamaño de los controles seleccionados para ajustar el texto del título|
+|Format.SpaceAcross|**Alt** + **Flecha izquierda**|Distribuye uniformemente los controles seleccionados horizontalmente|
+|Format.SpaceDown|**ALT** + **flecha abajo**|Un espaciado uniforme a los controles seleccionados verticalmente|
+|Format.TabOrder|**Ctrl** + **D**|Establece el orden de los controles en el cuadro de diálogo|
+|Format.TestDialog|**Ctrl** + **T**|Se ejecuta el cuadro de diálogo para probar la apariencia y comportamiento|
+|Format.ToggleGuides|**Ctrl** + **G**|Ciclos entre ninguna cuadrícula, directrices y cuadrícula de cuadro de diálogo de edición|
+
 ## <a name="requirements"></a>Requisitos
 
 Win32
@@ -61,6 +135,8 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
+[Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
+[Cómo: Crear un recurso](../windows/how-to-create-a-resource.md)<br/>
 [Controles](../mfc/controls-mfc.md)<br/>
 [Clases de control](../mfc/control-classes.md)<br/>
 [Clases de cuadro de diálogo](../mfc/dialog-box-classes.md)<br/>
