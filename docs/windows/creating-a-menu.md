@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905776"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320528"
 ---
 # <a name="creating-menus-c"></a>Creación de menús (C++)
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905776"
 
 Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 
-## <a name="to-create-a-standard-menu"></a>Para crear un menú estándar
+## <a name="create-a-standard-menu"></a>Crear un menú estándar
 
 1. Desde el **vista** menú, seleccione **vista de recursos** y, a continuación, haga doble clic en el **menú** de encabezado y elija **Agregar recurso**. Elija **Menú**.
 
@@ -59,7 +69,7 @@ Para obtener información sobre cómo agregar recursos a proyectos administrados
    > [!NOTE]
    > Para crear un solo elemento de menú en la barra de menús, establezca la **emergente** propiedad **False**.
 
-## <a name="to-create-a-submenu"></a>Para crear un submenú
+## <a name="create-a-submenu"></a>Crear un submenú
 
 1. Seleccione el comando de menú para el que desea crear un submenú.
 
@@ -75,7 +85,7 @@ Seleccione un nombre en el menú de existentes y presione la **insertar** clave.
 
 Haga doble clic en la barra de menús y elija **Insertar nuevo** en el menú contextual.
 
-## <a name="to-add-commands-to-a-menu"></a>Para agregar comandos a un menú
+## <a name="add-commands-to-a-menu"></a>Agregar comandos a un menú
 
 1. Crear un menú.
 
@@ -104,7 +114,7 @@ Haga doble clic en la barra de menús y elija **Insertar nuevo** en el menú con
 
    El cuadro de elemento nuevo se selecciona para que pueda crear comandos de menú adicionales.
 
-## <a name="to-create-pop-up-menus"></a>Para crear menús emergentes
+## <a name="create-pop-up-menus"></a>Crear menús emergentes
 
 Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se utilizan con frecuencia. Pueden ser contextuales con respecto a la ubicación del puntero. Utilizar menús emergentes en la aplicación requiere compilar el menú y, a continuación, conectarlo al código de la aplicación.
 
@@ -150,6 +160,52 @@ El menú contextual y elija **ver como emergente** en el menú contextual.
 
    > [!NOTE]
    > Para cambiar a la vista de la barra de menús, haga clic en **ver como emergente** nuevo (que quita la marca de verificación y devuelve la vista de la barra de menús).
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>Editar varios menús o comandos de menú
+
+### <a name="to-select-multiple-menu-commands"></a>Para seleccionar varios comandos de menú
+
+Puede seleccionar varios nombres de los menús o comandos de menú para ejecutar operaciones masivas, como eliminar o cambiar las propiedades.
+
+Mientras mantiene presionada la **Ctrl** clave, seleccione los menús o comandos de submenú que desee.
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>Para mover y copiar menús y comandos de menú
+
+Puede mover o copiar menús y comandos de menú mediante el método de arrastrar y colocar o usando los comandos del menú contextual (menú que se abre al hacer clic con el botón derecho).
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Para mover o copiar menús o comandos de menú mediante el método de arrastrar y colocar
+
+1. Arrastre o copie el elemento que desee mover a:
+
+   - Una nueva ubicación en el menú actual.
+
+   - Otro menú. (Puede navegar a otros menús arrastrando el puntero del mouse sobre ellos).
+
+1. Arrastre el comando de menú cuando la guía de inserción muestre la posición que desee.
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Para mover o copiar menús o comandos de menú mediante los comandos de menú contextual
+
+1. Haga clic con el botón derecho en uno o varios menús o comandos de menú.
+
+1. En el menú contextual, elija **Cortar** (para mover) o **Copiar**.
+
+1. Si va a mover los elementos al menú de otro recurso o archivo de script de recursos, [abrirlo en otra ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+1. Seleccione la posición del menú o comando de menú al que desee mover o copiar.
+
+1. En el menú contextual, elija **Pegar**. El elemento movido o copiado se coloca antes del elemento que seleccione.
+
+   > [!NOTE]
+   > También puede arrastrar, copiar y pegar en otros menús de otras ventanas de menú.
+
+### <a name="to-delete-a-menu-or-menu-command"></a>Para eliminar un menú o un comando de menú
+
+1. Haga clic con el botón derecho en un nombre de menú o de comando.
+
+1. Seleccione **Eliminar** en el menú contextual.
+
+   > [!NOTE]
+   > De forma similar, puede utilizar el menú contextual para realizar otras acciones, como Copiar, Cortar, Pegar, Insertar nuevo, Insertar separador, Editar IDs, Ver como emergente, Comprobar teclas de acceso, etc.
 
 ## <a name="requirements"></a>Requisitos
 

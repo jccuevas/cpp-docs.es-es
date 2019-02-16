@@ -1,6 +1,6 @@
 ---
 title: Filtrar Administrar los recursos (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150797"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320632"
 ---
 # <a name="how-to-manage-resources-c"></a>Filtrar Administrar los recursos (C++)
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="to-copy-resources"></a>Para copiar recursos
+## <a name="copy-resources"></a>Copiar recursos
 
 Puede copiar los recursos de un archivo a otro sin modificarlas o puede cambiar el idioma o la condición de un recurso al copiarlo.
 
@@ -77,7 +75,7 @@ Puede usar el método de arrastrar y colocar entre archivos .rc que estén abier
    > [!NOTE]
    > Para evitar conflictos con los nombres de símbolos o valores en el archivo existente, Visual C++ puede cambiar valor de símbolo del recurso transferido o nombre de símbolo y el valor cuando se copia al nuevo archivo.
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>Para cambiar el idioma o la condición de un recurso al copiarlo
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>Cambiar el idioma o la condición de un recurso al copiarlo
 
 Al copiar un recurso, puede cambiar sus propiedades de idioma, condición o ambas.
 
@@ -91,23 +89,21 @@ El idioma y la condición de un recurso se muestran entre paréntesis después d
 IDD_AboutBox (Finnish - XX33)
 ```
 
-Para copiar un recurso existente y cambiar su idioma o condición:
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Para copiar un recurso existente y cambiar su idioma o su condición
 
 1. En el archivo .rc o en la [vista de recursos](../windows/resource-view-window.md) ventana, haga clic en el recurso que van a copiar.
 
-1. Elija **Insertar copia** en el menú contextual.
-
-1. En el **Insertar copia de recursos** cuadro de diálogo:
+1. Elija **Insertar copia** desde el menú contextual y defina la siguiente:
 
    - Para el **lenguaje** cuadro de lista, seleccione el idioma.
 
    - En el **condición** , escriba la condición.
 
-## <a name="to-edit-managed-resource-files"></a>Para editar archivos de recursos administrados
+## <a name="edit-resources"></a>Editar recursos
 
 Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un archivo de recursos administrado al proyecto desde el **Agregar nuevo elemento** cuadro de diálogo, el **Editor de recursos administrados** se abre de forma predeterminada.
 
-## <a name="to-import-and-export-resources"></a>Para importar y exportar recursos
+## <a name="import-and-export-resources"></a>Importar y exportar recursos
 
 Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de herramientas), archivos HTML y recursos personalizados para usarlos en Visual C++. Puede exportar los mismos tipos de archivos desde un proyecto de Visual C++ para separar archivos que se pueden usar fuera del entorno de desarrollo.
 
@@ -131,9 +127,7 @@ Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de h
 
 1. En **recursos** ver, haga clic en el recurso que desea exportar.
 
-1. Seleccione **exportar** en el menú contextual.
-
-1. En el **Exportar recurso** diálogo cuadro, acepte el nombre de archivo actual o escriba uno nuevo.
+1. Seleccione **exportar** en el menú contextual y acepte el nombre de archivo actual o escriba uno nuevo.
 
 1. Navegue hasta la carpeta donde desea guardar el archivo y elija **exportar**.
 
@@ -144,4 +138,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-[Editores de recursos](../windows/resource-editors.md)
+[Creación de recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>

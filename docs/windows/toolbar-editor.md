@@ -1,6 +1,6 @@
 ---
 title: Barra de herramientas del Editor (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.toolbar.F1
 - vc.editors.toolbar
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 61b4d3ba6fc70e78c6f794528822eb66fb94de7e
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: 7ef08551960c9308a84b9838249a3d9ff4950d98
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905789"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320619"
 ---
 # <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
 
@@ -66,23 +66,6 @@ El **barra de herramientas** ventana del editor muestra dos vistas de una imagen
 ![Editor de la barra de herramientas](../mfc/media/vctoolbareditor.gif "vcToolbarEditor") barra de herramientas del Editor
 
 El **barra de herramientas** editor es similar a la **imagen** editor en la funcionalidad. Los elementos de menú, las herramientas gráficas y cuadrícula de mapa de bits son los mismos que los de la **imagen** editor. Hay un comando de menú en el **imagen** menú para que pueda cambiar entre el **barra de herramientas** editor y la **imagen** editor. Para obtener más información sobre el uso de la **gráficos** barra de herramientas, **colores** paleta, o **imagen** menú, vea [Editor de imágenes](../windows/image-editor-for-icons.md).
-
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
-
-Con el **barra de herramientas** editor, puede:
-
-## <a name="create-new-toolbars"></a>Crear nuevas barras de herramientas
-
-1. En **recursos** ver, haga clic en el archivo .rc y, a continuación, elija **Agregar recurso** en el menú contextual. (Si tiene una barra de herramientas existente en el archivo .rc, puede hacer simplemente clic en el **barra de herramientas** carpeta y seleccione **insertar Toolbar** en el menú contextual.)
-
-   > [!NOTE]
-   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
-
-1. En el **Agregar recurso** cuadro de diálogo, seleccione **barra de herramientas** en el **tipo de recurso** lista y luego elija **New**.
-
-   Si un signo más (**+**) aparece junto a la **barra de herramientas** tipo de recurso, significa que están disponibles plantillas de barra de herramientas. Seleccione el signo más para expandir la lista de plantillas, seleccione una plantilla y elija **New**.
-
-## <a name="convert-bitmaps-to-toolbar-resources"></a>Convertir mapas de bits a recursos de la barra de herramientas
 
 Puede crear una nueva barra de herramientas en un proyecto de C++ mediante la conversión de un mapa de bits. El gráfico de mapa de bits se convierte a las imágenes de botón para una barra de herramientas. Normalmente, el mapa de bits contiene varias imágenes de botón en un mapa de bits única, con una imagen para cada botón. Las imágenes pueden tener cualquier tamaño como el valor predeterminado es 16 píxeles de ancho y el alto de la imagen. Puede especificar el tamaño de las imágenes de botón en el **nuevo recurso de barra de herramientas** cuadro de diálogo cuando se elige **barra de herramientas del Editor** desde el **imagen** menú mientras está en el editor de imágenes.
 
@@ -97,7 +80,32 @@ El cuadro de diálogo tiene las siguientes propiedades:
 |**Ancho del botón**|Proporciona un espacio para escribir el ancho de los botones de barra de herramientas que está convirtiendo de un recurso de mapa de bits a un recurso de barra de herramientas. Las imágenes se recortan al ancho y alto especificados, y se ajustan los colores para utilizar colores de la barra de herramientas estándar (16 colores).|
 |**Alto de botón**|Proporciona un espacio para escribir el alto de los botones de barra de herramientas que está convirtiendo de un recurso de mapa de bits a un recurso de barra de herramientas. Las imágenes se recortan al ancho y alto especificados, y se ajustan los colores para utilizar colores de la barra de herramientas estándar (16 colores).|
 
-### <a name="to-convert-bitmaps-to-a-toolbar"></a>Convertir mapas de bits a una barra de herramientas
+De forma predeterminada, se muestra un botón nuevo o en blanco en el extremo derecho de la barra de herramientas. Puede mover este botón antes de editarlo. Cuando se crea un nuevo botón, aparece otro botón en blanco a la derecha del botón editado. Cuando se guarda una barra de herramientas, no se guarda el botón en blanco.
+
+Las propiedades de un botón de barra de herramientas son:
+
+|Property|Descripción|
+|--------------|-----------------|
+|**ID**|Define el identificador del botón. La lista desplegable proporciona comunes **ID** nombres.|
+|**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|
+|**Height**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomienda 15 píxeles.|
+|**Preguntar**|Define el mensaje que se muestra en la barra de estado. Agregar un nombre y \n agrega una información sobre herramientas a ese botón de barra de herramientas. Para obtener más información, consulte [creación de una información sobre herramientas](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
+
+**Ancho** y **alto** se aplican a todos los botones. Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho máximo de 2048. Por lo que si se establece el ancho del botón en 512, solo puede tener cuatro botones y si se establece el ancho en 513, solo puede tener tres botones.
+
+## <a name="how-to"></a>Tema de procedimientos
+
+El **barra de herramientas** editor le permite:
+
+### <a name="to-create-new-toolbars"></a>Para crear nuevas barras de herramientas
+
+1. En **recursos** ver, haga clic en el archivo .rc y, a continuación, elija **Agregar recurso** en el menú contextual. (Si tiene una barra de herramientas existente en el archivo .rc, puede hacer simplemente clic en el **barra de herramientas** carpeta y seleccione **insertar Toolbar** en el menú contextual.)
+
+1. En el **Agregar recurso** cuadro de diálogo, seleccione **barra de herramientas** en el **tipo de recurso** lista y luego elija **New**.
+
+   Si un signo más (**+**) aparece junto a la **barra de herramientas** tipo de recurso, significa que están disponibles plantillas de barra de herramientas. Seleccione el signo más para expandir la lista de plantillas, seleccione una plantilla y elija **New**.
+
+### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Convertir mapas de bits a los recursos de la barra de herramientas
 
 1. Abrir un recurso de mapa de bits existente en el [editor de imágenes](../windows/image-editor-for-icons.md). (Si el mapa de bits no está en el archivo .rc, haga clic en el archivo .rc, elija **importación** en el menú contextual, navegue hasta el mapa de bits que se va a agregar al archivo .rc y luego seleccione **abierto**.)
 
@@ -112,31 +120,13 @@ El cuadro de diálogo tiene las siguientes propiedades:
 
 También puede cambiar los identificadores de comando de los botones de la barra de herramientas nueva mediante el [ventana propiedades](/visualstudio/ide/reference/properties-window).
 
-## <a name="create-move-and-edit-toolbar-buttons"></a>Crear, mover y editar botones de la barra de herramientas
+### <a name="to-create-move-and-edit-toolbar-buttons"></a>Para crear, mover y editar botones de barra de herramientas
 
-Puede crear fácilmente, mover, copiar y editar botones de la barra de herramientas.
+Puede crear fácilmente, mover, copiar y editar botones de la barra de herramientas:
 
-De forma predeterminada, se muestra un botón nuevo o en blanco en el extremo derecho de la barra de herramientas. Puede mover este botón antes de editarlo. Cuando se crea un nuevo botón, aparece otro botón en blanco a la derecha del botón editado. Cuando se guarda una barra de herramientas, no se guarda el botón en blanco.
-
-Las propiedades de un botón de barra de herramientas son:
-
-|Property|Descripción|
-|--------------|-----------------|
-|**ID**|Define el identificador del botón. La lista desplegable proporciona comunes **ID** nombres.|
-|**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|
-|**Height**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomienda 15 píxeles.|
-|**Preguntar**|Define el mensaje que se muestra en la barra de estado. Agregar un nombre y \n agrega una información sobre herramientas a ese botón de barra de herramientas. Para obtener más información, consulte [creación de una información sobre herramientas](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
-
-**Ancho** y **alto** se aplican a todos los botones. Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho máximo de 2048. Por lo que si se establece el ancho del botón en 512, solo puede tener cuatro botones y si se establece el ancho en 513, solo puede tener tres botones.
-
-Consulte las siguientes acciones:
-
-### <a name="to-create-a-new-toolbar-button"></a>Para crear un nuevo botón de barra de herramientas
+#### <a name="to-create-a-new-toolbar-button"></a>Para crear un nuevo botón de barra de herramientas
 
 1. En [vista de recursos](../windows/resource-view-window.md) expanda la carpeta de recursos (por ejemplo, *Project1.rc*).
-
-   > [!NOTE]
-   > Si el proyecto no contuviera un archivo .rc, vea [Crear un nuevo archivo de script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
 1. Expanda el **barra de herramientas** carpeta y seleccione una barra de herramientas para editar.
 
@@ -148,7 +138,7 @@ Consulte las siguientes acciones:
 
 También puede copiar y pegar una imagen en una barra de herramientas como un botón nuevo.
 
-### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para agregar una imagen a una barra de herramientas como un botón
+#### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Para agregar una imagen a una barra de herramientas como un botón
 
 1. En [vista de recursos](../windows/resource-view-window.md), abra la barra de herramientas haciendo doble clic en él.
 
@@ -165,21 +155,21 @@ También puede copiar y pegar una imagen en una barra de herramientas como un bo
 
    La imagen aparecerá en la barra de herramientas como un botón nuevo.
 
-### <a name="to-move-a-toolbar-button"></a>Para mover un botón de barra de herramientas
+#### <a name="to-move-a-toolbar-button"></a>Para mover un botón de barra de herramientas
 
 En el **barra de herramientas Vista** panel, arrastre el botón que desea mover a su nueva ubicación en la barra de herramientas.
 
-### <a name="to-copy-buttons-from-a-toolbar"></a>Copiar botones de una barra de herramientas
+#### <a name="to-copy-buttons-from-a-toolbar"></a>Copiar botones de una barra de herramientas
 
 1. Mantenga presionada la **Ctrl** clave.
 
 1. En el **barra de herramientas Vista** panel, arrastre el botón a su nueva ubicación en la barra de herramientas o en una ubicación en otra barra de herramientas.
 
-### <a name="to-delete-a-toolbar-button"></a>Para eliminar un botón de barra de herramientas
+#### <a name="to-delete-a-toolbar-button"></a>Para eliminar un botón de barra de herramientas
 
 Seleccione el botón de barra de herramientas y arrástrela fuera de la barra de herramientas.
 
-### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Para insertar o quitar espacio entre los botones de una barra de herramientas
+#### <a name="to-insert-or-remove-space-between-buttons-on-a-toolbar"></a>Para insertar o quitar espacio entre los botones de una barra de herramientas
 
 En general, para insertar un espacio entre los botones, arrástrelos fuera de ellas en la barra de herramientas. Para quitar espacio, arrástrelos hacia entre sí.
 
@@ -193,13 +183,13 @@ En general, para insertar un espacio entre los botones, arrástrelos fuera de el
 > [!NOTE]
 > Si no hay ningún espacio en el lado del botón que arrastra fuera del, y arrastra el botón más de la mitad pasado el botón adyacente, el **barra de herramientas** editor también inserta un espacio en el lado opuesto del botón que le operación de arrastre.
 
-### <a name="to-change-the-properties-of-a-toolbar-button"></a>Para cambiar las propiedades de un botón de barra de herramientas
+#### <a name="to-change-the-properties-of-a-toolbar-button"></a>Para cambiar las propiedades de un botón de barra de herramientas
 
 1. En un proyecto de C++, seleccione el botón de barra de herramientas.
 
 1. Escriba el nuevo identificador en el **ID** propiedad en el [ventana propiedades](/visualstudio/ide/reference/properties-window), o use la lista desplegable para seleccionar un nuevo **ID**.
 
-### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Para crear una información sobre herramientas para un botón de barra de herramientas
+#### <a name="to-create-a-tool-tip-for-a-toolbar-button"></a>Para crear una información sobre herramientas para un botón de barra de herramientas
 
 1. Seleccione el botón de barra de herramientas.
 

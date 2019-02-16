@@ -1,6 +1,6 @@
 ---
 title: Filtrar Administrar los símbolos
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226376"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320593"
 ---
 # <a name="how-to-manage-symbols"></a>Filtrar Administrar los símbolos
 
@@ -50,12 +50,10 @@ Para los símbolos asociados a un único recurso, también puede usar el **propi
 
 Normalmente todos los símbolos se guardan las definiciones en `Resource.h`. Sin embargo, puede que necesite cambiar este nombre de archivo de inclusión para, por ejemplo, poder trabajar con más de un archivo de recursos en el mismo directorio.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
-
 > [!NOTE]
 > Si el proyecto no contuviera un archivo .rc, vea [crear un nuevo archivo de Script de recursos](../windows/how-to-create-a-resource-script-file.md).
 
-## <a name="symbol-name-restrictions"></a>Restricciones de nombre de símbolo
+## <a name="symbol-name-restrictions"></a>Restricciones de los nombres de símbolo
 
 Las restricciones en los nombres de símbolos son las siguientes:
 
@@ -93,7 +91,7 @@ Los nombres de símbolo tienen prefijos descriptivos que indican el tipo de recu
 
 Puede usar el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md) para cambiar los nombres de los símbolos no estén asignados a un recurso.
 
-## <a name="symbol-value-restrictions"></a>Restricciones de valor de símbolo
+## <a name="symbol-value-restrictions"></a>Restricciones de los valores de símbolo
 
 Un valor de símbolo puede ser cualquier entero expresado de la forma normal para las directivas de preprocesador #define. A continuación se muestran algunos ejemplos de valores de símbolo:
 
@@ -142,7 +140,7 @@ Para obtener más información sobre los intervalos numéricos, vea [TN023: Recu
 
 El nuevo valor se almacena en el archivo de encabezado de símbolos la próxima vez que guarde el proyecto. Solo el nombre del símbolo permanece visible en el cuadro de identificador. el signo igual y el valor no se muestran después de que va a validar.
 
-## <a name="change-or-delete-unassigned-symbols"></a>Cambiar o eliminar símbolos sin asignar
+## <a name="change-or-delete-symbols"></a>Cambiar o eliminar símbolos
 
 Mientras se encuentre en el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md), puede editar o eliminar símbolos existentes que ya no están asignados a un recurso u objeto.
 
@@ -162,7 +160,7 @@ En el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dia
    > [!NOTE]
    > Antes de eliminar un símbolo sin usar en un archivo de recursos, asegúrese de que no se usa en ninguna otra parte del programa o en archivos de recursos incluidos en el tiempo de compilación.
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>Incluir compartidos (de sólo lectura) o calculados símbolos
+## <a name="include-symbols"></a>Incluir símbolos
 
 La primera vez que el entorno de desarrollo lee un archivo de recursos creado por otra aplicación, marca todos los archivos de encabezado incluidos como de solo lectura. Aunque puede usar el [incluye recursos de cuadro de diálogo](../windows/resource-includes-dialog-box.md) para agregar archivos de encabezado de símbolos de solo lectura adicionales.
 
@@ -217,6 +215,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
+[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Creación de símbolos](../windows/creating-new-symbols.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>
-[Visualización de símbolos de recursos](../windows/viewing-resource-symbols.md)<br/>
