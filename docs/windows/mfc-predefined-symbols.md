@@ -1,6 +1,6 @@
 ---
 title: Símbolos predefinidos de MFC
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - MFC symbols
 - symbols [C++], MFC
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: bf97ba0c4a6d29dfa0a3341f421da609b0c7ee70
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764069"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320866"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos de MFC
 
@@ -281,4 +281,5 @@ MFC
 ## <a name="see-also"></a>Vea también
 
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)
+[Símbolos predefinidos de ATL](../windows/atl-predefined-symbols.md)<br/>
+[Símbolos predefinidos de Win32](../windows/win32-predefined-symbols.md)<br/>

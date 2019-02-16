@@ -1,6 +1,6 @@
 ---
 title: Teclas de aceleración (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232128"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320515"
 ---
 # <a name="accelerator-keys-c"></a>Teclas de aceleración (C++)
-
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
 
 ## <a name="predefined-accelerator-keys"></a>Teclas de aceleración predefinidas
 
@@ -79,7 +77,7 @@ Hay una serie de teclas de aceleración predefinidas que pueden formar parte de 
 |VK_XBUTTON1|Windows: Botón del mouse X1|
 |VK_XBUTTON2|Windows: Botón del mouse X2|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Asociar una tecla de aceleración a un elemento de menú
+## <a name="accelerator-key-association"></a>Acelerador de la asociación de clave
 
 Muchas veces se desea que un elemento de menú y una combinación de teclado ejecuten el mismo comando de programa. Para hacerlo, asigne el mismo identificador (Id.) de recurso al elemento de menú y a una entrada de la tabla de aceleradores de la aplicación. A continuación, edite el título del elemento de menú para que muestre el nombre del acelerador. Para obtener más información sobre los elementos de menú y las teclas de aceleración, vea [asociar una tecla de aceleración a un elemento de menú](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editor de aceleradores](../windows/accelerator-editor.md)<br/>
-[Editores de recursos](../windows/resource-editors.md)

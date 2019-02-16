@@ -1,37 +1,37 @@
 ---
 title: Trabajar con archivos de recursos (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 276a63f01eba3cfc8c4fd45e0f875d78ada1942a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a989eddd0800062ecfaabf9de857e4ab04e873bd
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483322"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320489"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
 
 > [!WARNING]
 > Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++. Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](/windows/uwp/app-resources/).
 >
-> Para obtener información sobre cómo agregar recursos a C++ / c++ / proyectos de la CLI, consulte [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
+> Para obtener información sobre cómo agregar recursos a C++ / c++ / CLI (administrado) de proyectos, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
 
-Los recursos se pueden componer de gran variedad de elementos, incluidos elementos de interfaz que proporcionan información al usuario (por ejemplo, un mapa de bits, un icono o un cursor), recursos personalizados que contienen los datos que necesita una aplicación, recursos de versión que usan las API de instalación y recursos de menú y cuadro de diálogo.
+Los recursos pueden estar formados por una amplia gama de elementos, incluidos elementos de la interfaz que proporcionan información al usuario (por ejemplo un mapa de bits, icono o cursor), los recursos personalizados que contienen datos de que una aplicación necesita, recursos de la versión que se usan las API, de instalación y los recursos de cuadro de diálogo y menús.
 
 Puede agregar recursos nuevos al proyecto y modificarlos con el editor de recursos apropiado. La mayoría de asistentes de Visual C++ generarán automáticamente un archivo .rc para el proyecto.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="in-this-section"></a>En esta sección
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-Describe los archivos de recursos y cómo se usan en aplicaciones de escritorio de Windows. También proporciona vínculos a temas en los que se describe cómo usar los archivos de recursos.
+Describe los archivos de recursos y cómo se usan en aplicaciones de escritorio de Windows. También proporciona vínculos a artículos que describen cómo usar los archivos de recursos.
 
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)<br/>
+[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
 Describe los símbolos y proporciona información sobre el uso del cuadro de diálogo **Símbolos de recursos** para administrar los símbolos de los proyectos.
 
 [Editores de recursos](../windows/resource-editors.md)<br/>

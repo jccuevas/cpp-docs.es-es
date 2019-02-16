@@ -1,16 +1,16 @@
 ---
 title: Identificadores de símbolo predefinidos
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: cb2f80315e0480c3fcb73092123cad88712dff05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7402bf7aaaf7c72382b57963d5d759adaa71115
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477303"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320801"
 ---
 # <a name="predefined-symbol-ids"></a>Identificadores de símbolo predefinidos
 
@@ -35,4 +35,6 @@ Win32, MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Símbolos: Identificadores de recursos](../windows/symbols-resource-identifiers.md)
+[Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
+[Creación de símbolos](../windows/creating-new-symbols.md)<br/>
+[Administrar los símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
