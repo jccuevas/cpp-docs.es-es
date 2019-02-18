@@ -1,6 +1,6 @@
 ---
-title: Usar una herramienta de dibujo
-ms.date: 11/04/2016
+title: Filtrar Usar una herramienta de dibujo
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320554"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336558"
 ---
-# <a name="using-a-drawing-tool"></a>Usar una herramienta de dibujo
+# <a name="how-to-use-a-drawing-tool"></a>Procedimiento Usar una herramienta de dibujo
 
 El **imagen** editor a mano alzado del dibujo y el borrado de las herramientas de todo el trabajo de la misma manera: seleccione la herramienta y, si es necesario, [seleccionar los colores de primer plano y fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y opciones de tamaño y forma. A continuación, mueva el puntero a la imagen y haga clic o arrastre para dibujar y borrar.
+
+## <a name="drawing-tools"></a>Herramientas de dibujo
 
 Cuando se selecciona el **borrador** herramienta, **pincel** herramienta, o **aerógrafo** herramienta, el selector de opciones muestra las opciones de la herramienta.
 
@@ -34,7 +36,7 @@ Cuando se selecciona el **borrador** herramienta, **pincel** herramienta, o **ae
 
 Puede seleccionar las herramientas de dibujo desde el **Editor de imágenes** barra de herramientas o el **imagen** menú.
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para seleccionar y usar una herramienta de dibujo de la barra de herramientas del Editor de imágenes
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>Para seleccionar y usar una herramienta de dibujo de la barra de herramientas del Editor de imágenes
 
 1. Seleccione un botón en el **Editor de imágenes** barra de herramientas.
 
@@ -65,7 +67,7 @@ Puede seleccionar las herramientas de dibujo desde el **Editor de imágenes** ba
 
 1. En el submenú en cascada, elija la herramienta que desea usar.
 
-## <a name="drawing-lines-or-closed-figures"></a>Dibujar líneas o figuras cerradas
+## <a name="lines-or-closed-figures"></a>Las líneas o figuras cerradas
 
 El editor de imágenes de las herramientas de dibujo de líneas y figuras cerradas todas funcionan de la misma manera: sitúe el cursor en un punto y arrastrar a otra. Para las líneas, estos puntos son los puntos de conexión. Figuras cerradas, estos puntos son las esquinas opuestas de un rectángulo delimitador en la ilustración.
 
@@ -97,7 +99,7 @@ Las líneas se dibujan con un ancho determinado por la selección de pincel actu
 
 1. Arrastre el puntero a la esquina diagonalmente opuesta.
 
-## <a name="create-a-custom-brush"></a>Crear un pincel personalizado
+## <a name="custom-brushes"></a>Pinceles predeterminados
 
 Un pincel personalizado es una parte rectangular de una imagen que recoger y usar como uno de los **imagen** pincel predefinido del editor. Todas las operaciones que puede realizar en una selección, puede realizar en un pincel personalizado también.
 
@@ -105,11 +107,7 @@ Un pincel personalizado es una parte rectangular de una imagen que recoger y usa
 
 1. [Seleccione la parte de la imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) que desea usar para un pincel.
 
-1. Que contiene el **MAYÚS** clave hacia abajo, elija en la selección y arrastre el puntero sobre la imagen.
-
-   \- o -
-
-1. Desde el **imagen** menú, elija **usar la selección como pincel**.
+1. Mantenga el **MAYÚS** clave hacia abajo, elija en la selección y arrastre el puntero sobre la imagen. O desde el **imagen** menú, elija **usar la selección como pincel**.
 
    La selección se convierte en un pincel personalizado que distribuye los colores de la selección en la imagen. Copias de la selección se dejan a lo largo de la trayectoria de arrastre. Cuanto más lentamente arrastre, se realizan las copias más.
 
@@ -138,8 +136,6 @@ Presione el **signo** (**+**) clave duplicar el tamaño del pincel, o el **signo
 
 Presione **Esc** o elija otra herramienta de dibujo.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ## <a name="requirements"></a>Requisitos
 
 Ninguna
@@ -149,4 +145,4 @@ Ninguna
 [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [Editar recursos gráficos](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)
+[Uso de colores](../windows/working-with-color-image-editor-for-icons.md)
