@@ -1,6 +1,6 @@
 ---
 title: Cuadro de diálogo Editor (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264899"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336701"
 ---
 # <a name="dialog-editor-c"></a>Cuadro de diálogo Editor (C++)
 
@@ -38,28 +38,18 @@ Uno de los primeros pasos para crear un cuadro de diálogo nuevo (o una plantill
 
 Es posible almacenar un cuadro de diálogo como una plantilla para poder reutilizado más adelante. También es posible alternar entre el diseño del cuadro de diálogo y la edición del código que lo implementa.
 
-Asimismo, en el Editor de cuadros de diálogo se pueden editar las propiedades de uno o varios controles. Puede cambiar el orden de tabulación, es decir, el orden en que se obtienen los controles centrarse cuando la **ficha** se presiona la tecla o puede definir una clave de acceso (una combinación de teclas) que permite a los usuarios elegir un control mediante el teclado. Para obtener una lista de las teclas de acceso predefinidas, vea [Teclas de aceleración del Editor de cuadros de diálogo](../windows/accelerator-keys-for-the-dialog-editor.md).
+Asimismo, en el Editor de cuadros de diálogo se pueden editar las propiedades de uno o varios controles. Puede cambiar el orden de tabulación, es decir, el orden en que se obtienen los controles centrarse cuando la **ficha** se presiona la tecla o puede definir una clave de acceso (una combinación de teclas) que permite a los usuarios elegir un control mediante el teclado.
 
 El **diálogo** editor también permite usar controles personalizados, incluidos los controles ActiveX. Además, se puede editar una [vista de formulario](../mfc/reference/cformview-class.md), [vistas de registros](../data/record-views-mfc-data-access.md)o [barras de cuadro de diálogo](../mfc/dialog-bars.md).
 
 A partir de Visual Studio 2015, puede usar el editor de cuadro de diálogo para definir diseños dinámicos, que especifican cómo los controles moverán y cambiar el tamaño cuando el usuario cambia el tamaño de un cuadro de diálogo. Para obtener más información, vea [Dynamic Layout](../mfc/dynamic-layout.md).
 
-- [Crear un nuevo cuadro de diálogo](../windows/creating-a-new-dialog-box.md)
-
-- [Crear un cuadro de diálogo del que los usuarios no puedan salir en tiempo de ejecución](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [Cómo: Crear un cuadro de diálogo](../windows/creating-a-new-dialog-box.md)
 
 - [Controles de cuadros de diálogo](../windows/controls-in-dialog-boxes.md)
 
-- [Agregar controladores de eventos para controles de cuadros de diálogo](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [Probar un cuadro de diálogo](../windows/testing-a-dialog-box.md)
-
-- [Solucionar problemas del Editor de cuadros de diálogo](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > Al usar el **diálogo** editor, en muchos casos, puede hacer clic en el botón secundario del mouse para mostrar un menú contextual de comandos usados con frecuencia.
-
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+   > Al usar el **diálogo** editor, en muchos casos, puede seleccionar el botón secundario del mouse para mostrar un menú contextual de comandos usados con frecuencia.
 
 ## <a name="dialog-editor-toolbar"></a>Barra de herramientas del Editor de cuadros de diálogo
 

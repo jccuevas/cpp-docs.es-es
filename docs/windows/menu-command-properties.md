@@ -1,6 +1,6 @@
 ---
-title: Propiedades de comando de menú (C++)
-ms.date: 11/04/2016
+title: Comandos de menú (C++)
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320580"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336610"
 ---
-# <a name="menu-command-properties-c"></a>Propiedades de comando de menú (C++)
+# <a name="menu-commands-c"></a>Comandos de menú (C++)
 
 La siguiente información se organiza según el **menú** propiedades que aparecen en la [ventana propiedades](/visualstudio/ide/reference/properties-window) cuando se selecciona un comando de menú. Están ordenadas alfabéticamente, aunque el **propiedades** ventana también le permite ver estas propiedades por categoría.
 
@@ -47,8 +47,6 @@ La siguiente información se organiza según el **menú** propiedades que aparec
 
 A menudo quiere que un elemento de menú u una combinación de teclado ejecuten el mismo comando de programa. Se emiten comandos idéntico utilizando el **menú** editor para asignar el mismo identificador de recurso para el comando de menú y a una entrada en la tabla de aceleradores de la aplicación. A continuación, edite el [Título](../windows/menu-command-properties.md) del comando de menú para que muestre el nombre del acelerador.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
-
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Para asociar un comando de menú a una tecla de aceleración
 
 1. En el editor de **menús** , seleccione el comando de menú que quiere.
@@ -59,13 +57,13 @@ Para obtener información sobre cómo agregar recursos a proyectos administrados
 
    - Escriba el nombre de la tecla modificadora (**Ctrl**, **Alt**, o **MAYÚS**) seguido por un signo más (**+**) y el nombre, la carta, o símbolo de la tecla adicional.
 
-       Por ejemplo, para asignar **Ctrl**+**O** a la **abierto** comando el **archivo** menú, modifique el comando de menú  **Título** para que quede como el siguiente texto:
+   Por ejemplo, para asignar **Ctrl**+**O** a la **abierto** comando el **archivo** menú, modifique el comando de menú  **Título** para que quede como el siguiente texto:
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       El comando de menú en el **menú** editor se actualiza para reflejar el nuevo título a medida que lo escribe.
+   El comando de menú en el **menú** editor se actualiza para reflejar el nuevo título a medida que lo escribe.
 
 1. [Cree la entrada de la tabla de aceleradores](../windows/adding-an-entry-to-an-accelerator-table.md) en el editor **Acelerador** y asígnele el mismo identificador que el comando de menú. Use una combinación de teclas que le resulte sencilla de recordar.
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editor de menús](../windows/menu-editor.md)<br/>
-[Adición de comandos a un menú](../windows/adding-commands-to-a-menu.md)<br/>
 [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

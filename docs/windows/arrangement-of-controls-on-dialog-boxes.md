@@ -1,6 +1,6 @@
 ---
-title: Organización de los controles en cuadros de diálogo (C++) | Microsoft Docs
-ms.date: 11/04/2016
+title: Cómo Organizar los controles (C++) | Microsoft Docs
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.grouping
 - vc.editors.dialog.combo
@@ -80,14 +80,14 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 99667898428fe9532d59277bfedafd24927304dc
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: d9bd73c9cc81b113f222bbc090c62200c93554b2
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264886"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336636"
 ---
-# <a name="arrangement-of-controls-on-dialog-boxes-c"></a>Organización de los controles en cuadros de diálogo (C++)
+# <a name="how-to-arrange-controls-c"></a>Cómo Organizar los controles (C++)
 
 El **diálogo** editor proporciona herramientas de diseño que alinean y ajustar automáticamente el tamaño de controles. Para la mayoría de las tareas, puede usar el [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Todos los **Editor de cuadro de diálogo** comandos de la barra de herramientas también están disponibles en el **formato** menú y la mayoría tiene [teclas de método abreviado](../windows/accelerator-keys-for-the-dialog-editor.md).
 
@@ -95,7 +95,7 @@ Muchos comandos de diseño para los cuadros de diálogo están disponibles solo 
 
 La ubicación, alto y ancho del control actual se muestran en la esquina inferior derecha de la barra de estado. Cuando se selecciona el cuadro de diálogo completa, la barra de estado muestra la posición del cuadro de diálogo como un todo y su alto y ancho.
 
-## <a name="dialog-editor-states-guides-and-grids"></a>Estados del editor de cuadro de diálogo (guías y cuadrículas)
+## <a name="guides-and-grids"></a>Guías y cuadrículas
 
 Puede organizar los controles de cuadros de diálogo con el **diálogo** editor en uno de tres estados diferentes:
 
@@ -119,26 +119,27 @@ El **configuración de la guía** cuadro de diálogo tiene las siguientes propie
 |**Ancho: DLU**|Establece el ancho de la cuadrícula de diseño en DLU. Una DLU horizontal es el ancho promedio de la fuente del cuadro de diálogo dividido por cuatro.|
 |**Alto: DLU**|Establece el alto de la cuadrícula de diseño en DLU. Una vertical equivale al alto medio de la fuente del cuadro de diálogo dividido por ocho.|
 
-### <a name="create-and-set-guides-and-margins"></a>Crear y establecer las guías y márgenes
+### <a name="to-create-edit-and-delete-guides-and-margins"></a>Para crear, editar y eliminar guías y márgenes
 
 Si está moviendo los controles, agregar controles o reorganizar un diseño actual, las guías pueden ayudarle a alinear los controles con precisión dentro de un cuadro de diálogo. Las guías aparecen en azul las líneas de puntos en el cuadro de diálogo que aparece en el editor y flechas correspondientes en las reglas en la parte superior y en el lado izquierdo de la **diálogo** editor.
 
-Cuando se crea un cuadro de diálogo, se proporcionan cuatro márgenes. Los márgenes son guías modificadas, que aparecen como líneas de puntos azules.
+Cuando se crea un cuadro de diálogo, se proporcionan cuatro márgenes. Los márgenes son guías modificadas, que aparecen como líneas de puntos azules. Consulte las siguientes acciones:
 
-|Proceso|Pasos|
-|----------------|----------------|
-|Para crear una guía|Dentro de la regla, seleccione una vez para crear a una guía. (Un solo clic crea una nueva guía; hacer doble clic en los lanzamientos de la **configuración de la guía** cuadro de diálogo en el que puede especificar la configuración de la guía.)|
-|Para establecer una guía|En el cuadro de diálogo, haga clic en la guía y arrástrelo a una nueva posición. (También puede hacer clic en la flecha de la regla para arrastrar a la guía asociada.)<br/><br/>Las coordenadas de la guía se muestran en la barra de estado en la parte inferior de la ventana y en la regla. Mueva el puntero sobre la flecha de la regla para mostrar la posición exacta de la guía.|
-|Para eliminar una guía|Arrastre a la guía fuera del cuadro de diálogo.<br/><br/>\- o -<br/><br/>Arrastre la flecha correspondiente fuera de la regla.|
-|Para mover los márgenes|Arrastre el margen a la nueva posición.<br/><br/>Para que desaparezca un margen, mueva el margen a una posición cero. Para devolver el margen, coloque el puntero sobre el margen de la posición cero y mueva el margen a posición.|
+- Para crear a una guía, dentro de la regla, seleccione una vez para crear a una guía. (Un solo clic crea una nueva guía; hacer doble clic en los lanzamientos de la **configuración de la guía** cuadro de diálogo en el que puede especificar la configuración de la guía.)
 
-### <a name="align-controls-on-a-guide"></a>Alinear controles en una guía
+- Para establecer a una guía, en el cuadro de diálogo, seleccione a la guía y arrástrelo a una nueva posición. (También puede seleccionar la flecha de la regla para arrastrar a la guía asociada.) Las coordenadas de la guía se muestran en la barra de estado en la parte inferior de la ventana y en la regla. Mueva el puntero sobre la flecha de la regla para mostrar la posición exacta de la guía.
+
+- Para mover los márgenes, arrastre el margen a la nueva posición. Para que desaparezca un margen, mueva el margen a una posición cero. Para devolver el margen, coloque el puntero sobre el margen de la posición cero y mueva el margen a posición.
+
+- Para eliminar a una guía, arrastre a la guía fuera del cuadro de diálogo o la flecha correspondiente fuera de la regla.
+
+### <a name="to-align-controls-on-a-guide"></a>Para alinear controles en una guía
 
 Los controladores de tamaño de los controles se ajustan a las guías cuando se mueven los controles y las guías se ajustan a los controles, si no hay ningún control previamente ajustados a la guía. Cuando se mueve una guía, también se mueven los controles que se ajustan a él. Controles ajustados a más de una guía cambian de tamaño cuando se mueve una de las guías.
 
 Las marcas de graduación en las reglas que determinan el espaciado de las guías y los controles se definen mediante unidades de cuadro de diálogo (DLU). Las unidades se basan en el tamaño de la fuente del cuadro de diálogo, normalmente de 8 puntas MS Shell Dlg. Una DLU horizontal es el ancho promedio de la fuente del cuadro de diálogo dividido por cuatro. Una vertical equivale al alto medio de la fuente dividido por ocho.
 
-Para cambiar el tamaño de un grupo de controles con guías:
+#### <a name="to-size-a-group-of-controls-with-guides"></a>Para cambiar el tamaño de un grupo de controles con guías
 
 1. Ajustar un lado del control (o controles) a una guía.
 
@@ -148,13 +149,11 @@ Para cambiar el tamaño de un grupo de controles con guías:
 
 1. Mueva una de las guías para cambiar el tamaño del control (o controles).
 
-Para cambiar los intervalos de las marcas de graduación:
+#### <a name="to-change-the-intervals-of-the-tick-marks"></a>Cambiar los intervalos de las marcas de graduación
 
-1. Desde el **formato** menú, elija **configuración de la guía**.
+Desde el **formato** menú, elija **configuración de la guía**, a continuación, en el **espaciado de cuadrícula** , especifique un nuevo ancho y alto en DLU.
 
-1. En el **configuración de la guía** cuadro de diálogo el **espaciado de cuadrícula** , especifique un nuevo ancho y alto en DLU.
-
-### <a name="disable-guides"></a>Deshabilitar guías
+### <a name="to-disable-guides"></a>Deshabilitar guías
 
 Puede usar las teclas especiales junto con el mouse para deshabilitar el efecto de las guías de ajuste. Mediante el **Alt** clave deshabilita los efectos de ajuste de la Guía seleccionada. Mover una guía con el **MAYÚS** clave impide que los controles ajustados mover con la guía.
 
@@ -170,25 +169,17 @@ Puede usar las teclas especiales junto con el mouse para deshabilitar el efecto 
 > [!TIP]
 > Es un acceso directo para desactivar las guías en el **formato** menú, seleccione **Alternar guías**.
 
-### <a name="modify-the-layout-grid"></a>Modificar la cuadrícula de diseño
+### <a name="to-modify-the-layout-grid"></a>Para modificar la cuadrícula de diseño
 
 Cuando se coloca u organizar controles en un cuadro de diálogo, puede usar la cuadrícula de diseño para una ubicación más precisa. Cuando la cuadrícula está activada, los controles aparecen en "Ajustar a" las líneas de puntos de la cuadrícula como si estuvieran imantados. Puede activar y desactivar la esta característica "Ajustar a la cuadrícula" y cambiar el tamaño de las celdas de cuadrícula de diseño.
 
-Para activar y desactivar la cuadrícula de diseño:
-
-1. Desde el **formato** menú, elija **configuración de la guía**.
-
-1. En el **configuración de la guía** cuadro de diálogo, active o desactive el **cuadrícula** botón.
+- Para activar la cuadrícula de diseño o desactivar, desde el **formato** menú, elija **configuración de la guía**, a continuación, active o desactive el **cuadrícula** botón.
 
    Todavía puede controlar la cuadrícula en persona **diálogo** ventanas del editor mediante el **Alternar cuadrícula** situado en la [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
-Para cambiar el tamaño de la cuadrícula de diseño:
+- Para cambiar el tamaño de la cuadrícula de diseño, desde el **formato** menú, elija **configuración de la guía**, a continuación, escriba el alto y ancho en DLU para las celdas de la cuadrícula. El alto o ancho mínimo es de 4 DLU.
 
-1. Desde el **formato** menú, elija **configuración de la guía**.
-
-1. En el **configuración de la guía** diálogo cuadro, escriba el alto y ancho en DLU para las celdas de la cuadrícula. El alto o ancho mínimo es de 4 DLU.
-
-## <a name="selecting-controls"></a>Seleccionar controles
+## <a name="select-controls"></a>Seleccionar controles
 
 Seleccione los controles de tamaño, alinear, mover, copiar, o eliminarlas y, a continuación, complete la operación que desee. En la mayoría de los casos, deberá seleccionar más de un control para utilizar las herramientas de ajuste de tamaño y alineación de la [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
 
@@ -196,7 +187,7 @@ Cuando se selecciona un control, tiene un borde sombreado alrededor de ella con 
 
 Al cambiar el tamaño o alinear varios controles, el **diálogo** editor usa el "control dominante" para determinar cómo los otros controles o un tamaño alineados. De forma predeterminada, el control dominante es el primer control seleccionado.
 
-### <a name="to-select-multiple-controls"></a>Para seleccionar varios controles
+### <a name="to-select-controls"></a>Seleccionar controles
 
 1. En el [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox), seleccione el **puntero** herramienta.
 
@@ -208,33 +199,28 @@ Al cambiar el tamaño o alinear varios controles, el **diálogo** editor usa el 
 
    - Mantenga presionada la **Ctrl** clave y seleccione los controles que le gustaría incluir en la selección.
 
-### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Para quitar un control de un grupo de controles seleccionados o para agregar un control a un grupo de controles seleccionados
+1. Para agregar o quitar un control de grupo de controles seleccionados, mantenga presionada la **MAYÚS** clave y se selecciona el control que desea agregar o quitar.
 
-Con un grupo de controles seleccionados, mantenga presionada la **MAYÚS** clave y se selecciona el control que desea quitar o agregar a la selección existente.
+> [!NOTE]
+> Manteniendo presionada la tecla el **Ctrl** clave y seleccione un control dentro de una selección hará que controlan el control dominante en esa selección.
 
-   > [!NOTE]
-   > Manteniendo presionada la tecla el **Ctrl** clave y seleccione un control dentro de una selección hará que controlan el control dominante en esa selección.
+### <a name="to-select-a-dominant-control"></a>Para seleccionar un control dominante
 
-### <a name="to-specify-the-dominant-control"></a>Para especificar el control dominante
+- Para especificar el control dominante, mantenga presionada la **Ctrl** clave y se selecciona el control que desea usar para influir en el tamaño o la ubicación de otros controles *primera*.
 
-Mantenga presionada la **Ctrl** clave y se selecciona el control que desea usar para influir en el tamaño o la ubicación de otros controles *primera*.
+- Para cambiar el control dominante, anule la selección actual mediante la selección fuera de todos los controles seleccionados actualmente y repita el procedimiento anterior, seleccione primero un control diferente.
 
 > [!NOTE]
 > Los controladores de tamaño del control dominante son sólidos, mientras que los de los controles subordinados serán huecos. Todos los aún más el cambio de tamaño o la alineación se basa en el control dominante.
 
-### <a name="to-change-the-dominant-control"></a>Para cambiar el control dominante
+## <a name="size-controls"></a>Tamaño de los controles
 
-1. Desactive la selección actual haciendo clic fuera de todos los controles seleccionados actualmente.
+Use los controladores de tamaño para cambiar el tamaño de un control. Cuando el puntero se coloca en un controlador de tamaño, cambia la forma para indicar las instrucciones que aparecen en el que se puede cambiar el tamaño del control. Controladores de tamaño Active son sólidas y si un controlador de tamaño está vacío, el control no puede cambiarse a lo largo de ese eje.
 
-1. Repita el procedimiento anterior, seleccione primero un control diferente.
+> [!TIP]
+> También puede cambiar el tamaño de un control ajustando el control a las guías o los márgenes o moviendo un control ajustado y guía fuera de otra.
 
-## <a name="sizing-controls"></a>Ajustar el tamaño de controles
-
-Use los controladores de tamaño para cambiar el tamaño de un control. Cuando el puntero se coloca en un controlador de tamaño, cambia la forma para indicar las instrucciones que aparecen en el que se puede cambiar el tamaño del control. Controladores de tamaño activos son sólidos; Si un controlador de tamaño está vacío, el control no puede cambiarse a lo largo de ese eje.
-
-También puede cambiar el tamaño de un control ajustando el control a las guías o los márgenes o moviendo un control ajustado y guía fuera de otra.
-
-### <a name="to-size-an-individual-control"></a>Para cambiar el tamaño de un control individual
+### <a name="to-size-a-control"></a>Para cambiar el tamaño de un control
 
 1. Seleccione el control.
 
@@ -245,13 +231,12 @@ También puede cambiar el tamaño de un control ajustando el control a las guía
    - Controladores de tamaño en las esquinas cambiar el tamaño horizontal y vertical.
 
    > [!TIP]
-   > Puede cambiar el tamaño la unidad de control de un cuadro de diálogo (DLU) a la vez, mantenga presionada la **MAYÚS** clave y usar el **flecha derecha** y **flecha abajo** claves.
+   > Puede cambiar el tamaño la unidad de control de un cuadro de diálogo (DLU) a la vez, mantenga presionada la **MAYÚS** clave y usar el **derecha** y **hacia abajo** teclas de dirección.
 
-### <a name="to-automatically-size-a-control-to-fit-the-text-within-it"></a>Para cambiar automáticamente el tamaño de un control para ajustar el texto dentro de él
+> [!TIP]
+> Para cambiar automáticamente el tamaño de un control para ajustar el texto dentro de ella, abra el **formato** menú o haga clic en el control y elija **tamaño al contenido**.
 
-Elija **tamaño al contenido** desde el **formato** menú o haga clic en el control y elija **tamaño al contenido** en el menú contextual.
-
-### <a name="to-make-controls-the-same-width-height-or-size"></a>Para hacer que controla el mismo ancho, alto o tamaño
+### <a name="to-make-controls-the-same-size"></a>Para que los controles del mismo tamaño
 
 Puede cambiar el tamaño de un grupo de controles en función del tamaño del control principal.
 
@@ -261,21 +246,9 @@ Puede cambiar el tamaño de un grupo de controles en función del tamaño del co
 
 1. Desde el **formato** menú, elija **Igualar tamaño**, a continuación, elija **ambos**, **alto**, o **ancho**.
 
-### <a name="to-set-the-size-of-the-combo-box-and-its-drop-down-list"></a>Para establecer el tamaño combinado de la casilla y su lista desplegable
+### <a name="combo-box"></a>Cuadro combinado
 
 Puede ajustar el tamaño de un cuadro combinado cuando se agrega al cuadro de diálogo. También puede especificar el tamaño del cuadro de lista desplegable. Para obtener más información, consulte [agregar valores a un Control de cuadro combinado](../windows/adding-values-to-a-combo-box-control.md).
-
-#### <a name="to-size-a-combo-box"></a>Para cambiar el tamaño de un cuadro combinado
-
-1. Seleccione el control de cuadro combinado en el cuadro de diálogo.
-
-   Inicialmente, solo los controladores de tamaño de la derecha e izquierda están activos.
-
-1. Use los controladores de tamaño para establecer el ancho del cuadro combinado.
-
-También puede establecer el tamaño vertical de la parte desplegable del cuadro combinado.
-
-#### <a name="to-set-the-size-of-the-combo-box-drop-down-list"></a>Para establecer el tamaño combinado de la lista desplegable del cuadro
 
 1. Seleccione el botón de flecha de lista desplegable situado a la derecha del cuadro combinado.
 
@@ -289,56 +262,21 @@ También puede establecer el tamaño vertical de la parte desplegable del cuadro
 
 1. Seleccione la flecha desplegable para cerrar la parte de la lista desplegable del cuadro combinado.
 
-### <a name="to-set-the-width-of-a-horizontal-scroll-bar-and-make-it-appear"></a>Para establecer el ancho de una barra de desplazamiento horizontal y hacer que aparezca
+### <a name="horizontal-scroll-bar"></a>Barra de desplazamiento horizontal
 
 Cuando se agrega un cuadro de lista con una barra de desplazamiento horizontal para un cuadro de diálogo mediante clases de MFC, la barra de desplazamiento no aparecerá automáticamente en la aplicación.
 
-Establecer un ancho máximo para el elemento más amplio mediante una llamada a [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) en el código.
+Establecer un ancho máximo para el elemento más amplio mediante una llamada a [CListBox:: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) en el código. Establecer este valor, la barra de desplazamiento no aparecerá, incluso cuando los elementos del cuadro de lista son más amplio que el cuadro.
 
-   Establecer este valor, la barra de desplazamiento no aparecerá, incluso cuando los elementos del cuadro de lista son más amplio que el cuadro.
+## <a name="align-controls"></a>Alinear controles
 
-## <a name="group-radio-buttons-on-a-dialog-box"></a>Agrupar los botones de radio en un cuadro de diálogo
+1. Seleccione los controles que desee alinear. Asegúrese de seleccionar el control que se va a ser dominante en primer lugar o establecerlo el control dominante antes de ejecutar la alineación o ajustar el tamaño de comando.
 
-Al agregar botones de radio a un cuadro de diálogo, tratarlos como un grupo estableciendo una **grupo** propiedad en el **propiedades** ventana para el primer botón en el grupo. Después, aparecerá un id. de control para ese botón de opción en el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), lo que le permite agregar una variable miembro para el grupo de botones de radio.
-
-Puede tener más de un grupo de botones de radio en un cuadro de diálogo y se debe agregar cada grupo mediante el siguiente procedimiento.
-
-### <a name="to-add-a-group-of-radio-buttons-to-a-dialog-box"></a>Para agregar un grupo de botones de radio a un cuadro de diálogo
-
-1. Seleccione el control de botón de radio en el [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) y elija la ubicación en el cuadro de diálogo donde desee colocar el control.
-
-1. Repita el paso 1 para agregar tantos botones de radio como necesite. Asegúrese de que los botones de radio del grupo sean consecutivos en el orden de tabulación.
-
-1. En la [Ventana Propiedades](/visualstudio/ide/reference/properties-window), establezca la propiedad **Grupo** del *primer* botón de radio en el orden de tabulación en **True**.
-
-   Al cambiar la propiedad **Grupo** a **True** se agrega el estilo WS_GROUP a la entrada del botón en el objeto de diálogo del script de recursos y se asegura que un usuario solo puede seleccionar un botón de radio cada vez en el grupo de botones (cuando el usuario hace clic en un botón de radio, se borran los demás miembros del grupo).
-
-   > [!NOTE]
-   > Solo el primer botón de radio del grupo debe tener la propiedad **Grupo** establecida en **True**. Si dispone de otros controles que no forman parte del grupo de botones, establezca la propiedad **Grupo** del primer control *que se encuentra fuera del grupo* también en **True** . Puede identificar rápidamente el primer control fuera del grupo presionando **Ctrl**+**d.** para ver el orden de tabulación.
-
-### <a name="to-add-a-member-variable-for-the-radio-button-group"></a>Para agregar una variable miembro para el grupo de botones de radio
-
-1. Haga clic con el botón secundario en el primer control de botón de radio en el orden de tabulación (el control dominante y el otro con la propiedad **Grupo** establecida en True).
-
-1. Elija **Agregar variable** en el menú contextual.
-
-1. En el [Asistente para agregar variables miembro](../ide/add-member-variable-wizard.md), active la casilla **Variable de control** y luego seleccione el botón de radio **Valor** .
-
-1. En el cuadro **Nombre de variable** , escriba un nombre para la nueva variable miembro.
-
-1. En el **tipo de Variable** cuadro de lista, seleccione **int** o tipo `int`.
-
-1. Ahora puede modificar el código para especificar qué botón de radio debe aparecer seleccionado. Por ejemplo, `m_radioBox1 = 0;` selecciona el primer botón de radio del grupo.
-
-## <a name="to-align-groups-of-controls"></a>Para alinear grupos de controles
-
-1. Seleccione los controles que desee alinear. Asegúrese de seleccionar el control que desea que el control dominante en primer lugar o establecerlo el control dominante antes de ejecutar la alineación o ajustar el tamaño de comando.
-
-   La posición final del grupo de controles depende de la posición del control principal. Para obtener más información sobre cómo seleccionar el control dominante, vea [especificar el Control dominante](../windows/specifying-the-dominant-control.md).
+   La posición final del grupo de controles depende de la posición del control principal.
 
 1. Desde el **formato** menú, elija **alinear**y, a continuación, elija una de las alineaciones siguientes:
 
-   |Valor|Descripción|
+   |Alineación|Descripción|
    |-----|-----------|
    |`Lefts`|Alinea los controles seleccionados a lo largo de los lados izquierdos.|
    |`Centers`|Alinea los controles seleccionados horizontalmente a lo largo de sus puntos centrales.|
@@ -347,7 +285,7 @@ Puede tener más de un grupo de botones de radio en un cuadro de diálogo y se d
    |`Middles`|Alinea los controles seleccionados verticalmente a lo largo de sus puntos medios.|
    |`Bottoms`|Alinea los controles seleccionados a lo largo de su borde inferior.|
 
-### <a name="to-even-the-spacing-between-controls"></a>Incluso el espaciado entre controles
+### <a name="to-even-spacing-between-controls"></a>Incluso el espaciado entre controles
 
 El **diálogo** editor le permite a los controles del espacio uniformemente entre los controles más externos seleccionados.
 
@@ -355,33 +293,34 @@ El **diálogo** editor le permite a los controles del espacio uniformemente entr
 
 1. Desde el **formato** menú, elija **espaciar uniformemente**y, a continuación, elija una de las alineaciones siguientes:
 
-   - `Across`: espacio controles uniformemente entre el extremo izquierdo y el extremo derecho control seleccionado.
+   |Espaciado|Descripción|
+   |---|---|
+   |`Across`|Controles de espacio uniformemente entre el extremo izquierdo y el extremo derecho control seleccionado.|
+   |`Down`|Controles de espacio uniformemente entre el primer y el más bajo control seleccionado.|
 
-   - `Down`: espacio controles uniformemente entre el primer y el más bajo control seleccionado.
-
-### <a name="to-center-controls-in-a-dialog-box"></a>Para centrar controles en un cuadro de diálogo
+### <a name="to-center-controls"></a>Para centrar controles
 
 1. Seleccione el control o controles que desea reorganizar.
 
 1. Desde el **formato** menú, elija **centrar en el cuadro de diálogo**y, a continuación, elija una de las distribuciones siguientes:
 
-   - `Vertical`: los controles verticalmente en el cuadro de diálogo del centro.
+   |Organización|Descripción|
+   |---|---|
+   |`Vertical`|Centrar controles verticalmente en el cuadro de diálogo.|
+   |`Horizontal`|Centrar controles horizontalmente en el cuadro de diálogo.|
 
-   - `Horizontal`: Centrar controles horizontalmente en el cuadro de diálogo.
-
-### <a name="to-arrange-push-buttons-along-the-right-or-bottom-of-a-dialog-box"></a>Organizar botones de comando a la derecha o inferior de un cuadro de diálogo
+### <a name="to-arrange-push-buttons"></a>Organizar botones de comando
 
 1. Seleccione uno o varios botones de comando.
 
 1. Desde el **formato** menú, elija **organizar botones**y, a continuación, elija una de las distribuciones siguientes:
 
-   - `Right`: alinea los botones de inserción en el borde derecho del cuadro de diálogo.
+   |Organización|Descripción|
+   |---|---|
+   |`Right`|Alinea los botones de inserción en el borde derecho del cuadro de diálogo.|
+   |`Bottom`|Alinea los botones de inserción en el borde inferior del cuadro de diálogo.|
 
-   - `Bottom`: alinea los botones de inserción en el borde inferior del cuadro de diálogo.
-
-       Si selecciona un control que no sea un botón de comando, su posición no se ve afectada.
-
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
+   Si selecciona un control que no sea un botón de comando, su posición no se ve afectada.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -1,6 +1,6 @@
 ---
-title: Agregar, editar o eliminar controles
-ms.date: 11/04/2016
+title: Cómo Agregar, editar o eliminar los controles
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.controls.activex
@@ -43,44 +43,39 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 87acb2c8356508358f68c1ae4c8d5deaa94ecd9a
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264873"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336571"
 ---
-# <a name="adding-editing-or-deleting-controls"></a>Agregar, editar o eliminar controles
+# <a name="how-to-add-edit-or-delete-controls"></a>Cómo Agregar, editar o eliminar los controles
 
 Mediante el **diálogo** editor, puede agregar, cambiar el tamaño, editar y eliminar los controles de cuadros de diálogo. También puede editar las propiedades de un control, como su identificador, o si está visible inicialmente en tiempo de ejecución.
 
 El **Editor de cuadro de diálogo** ficha aparece en la [ventana cuadro de herramientas](/visualstudio/ide/reference/toolbox) cuando está trabajando en el **diálogo** editor. También puede personalizar el **cuadro de herramientas** ventana para facilitar su uso. Para obtener más información, consulte [mediante el cuadro de herramientas](/visualstudio/ide/using-the-toolbox) y [mostrar u ocultar la ventana de cuadro de herramientas](showing-or-hiding-the-dialog-editor-toolbar.md).
 
-Puede usar el menú contextual de la **diálogo** registrado de editor para agregar rápidamente controles ActiveX a un cuadro de diálogo, y puede agregar controles ActiveX a la **cuadro de herramientas** para un acceso rápido.
+> [!TIP]
+> Al usar el **diálogo** editor, en muchos casos, puede seleccionar el botón secundario del mouse para mostrar un menú contextual de comandos usados con frecuencia.
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
-
-## <a name="to-add-a-control"></a>Para agregar un control
+## <a name="add-controls"></a>Agregar controles
 
 Para agregar controles al cuadro de diálogo de nuevo, arrastre controles desde el **cuadro de herramientas** en el cuadro de diálogo que se va a crear. Después, puede mover los controles o cambiar su tamaño y su forma.
 
 Puede agregar controles personalizados al cuadro de diálogo seleccionando el **Control personalizado** icono en el **cuadro de herramientas** y arrástrela al cuadro de diálogo. Para agregar un **Syslink** de control, agregue un control personalizado y cambie el control **clase** propiedad **Syslink**. Esta acción hará que las propiedades actualizar y mostrar el **Syslink** propiedades del control. Para obtener información sobre la clase contenedora MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
-### <a name="to-add-a-control-to-a-dialog-box"></a>Para agregar un control a un cuadro de diálogo
+### <a name="to-add-a-control"></a>Para agregar un control
 
 1. Asegúrese de que la ventana con pestañas de cuadro de diálogo sea el documento actual en el marco del editor. Si un cuadro de diálogo no se encuentra el documento actual, no verá el **pestaña del cuadro de diálogo Editor** en el **cuadro de herramientas**.
 
-1. En el **Editor de cuadro de diálogo** pestaña de la **cuadro de herramientas** ventana, seleccione el control que desee y, a continuación:
+1. En el **Editor de cuadro de diálogo** pestaña de la **cuadro de herramientas** ventana, seleccione el control que desee y, a continuación, ya sea:
 
-   Seleccione el cuadro de diálogo en la ubicación donde desea colocar el control. El control aparece donde ha seleccionado.
+   - Seleccione el cuadro de diálogo en la ubicación donde desea colocar el control. El control aparece donde ha seleccionado.
 
-   \- o -
+   - Arrastre y coloque el control desde el **cuadro de herramientas** ventana hasta la ubicación en el cuadro de diálogo.
 
-   Arrastre y coloque el control desde el **cuadro de herramientas** ventana hasta la ubicación en el cuadro de diálogo.
-
-   \- o -
-
-   Haga doble clic en el control en el **cuadro de herramientas** ventana (aparece en el cuadro de diálogo), a continuación, cambiar de posición el control a la ubicación que prefiera.
+   - Haga doble clic en el control en el **cuadro de herramientas** ventana (aparece en el cuadro de diálogo), a continuación, volver a colocar el control a la ubicación que prefiera.
 
 ### <a name="to-add-multiple-controls"></a>Para agregar varios controles
 
@@ -106,40 +101,7 @@ Puede agregar controles personalizados al cuadro de diálogo seleccionando el **
    > [!TIP]
    > Puede cambiar el tamaño del control después de colocarlo en el cuadro de diálogo, mueva los controladores de tamaño en el borde del control. Para obtener más información, consulte [controles individuales de ajuste de tamaño](../windows/sizing-individual-controls.md).
 
-### <a name="to-add-an-activex-control"></a>Para agregar un control ActiveX
-
-Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo. Para obtener más información, consulte [controles ActiveX MFC](../mfc/mfc-activex-controls.md) y [contenedores de controles ActiveX](../mfc/activex-control-containers.md).
-
-El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles ActiveX en el cuadro de diálogo al usar el [editor de cuadro de diálogo](../windows/dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
-
-|Property|Descripción|
-|---|---|
-|**ActiveX Control**|Muestra una lista de controles Active X. Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear uno (para obtener más información, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md)). Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.|
-|**Ruta de acceso**|Muestra el archivo donde se encuentra el control ActiveX.|
-
-#### <a name="to-see-the-activex-controls-available"></a>Para ver los controles ActiveX disponibles
-
-1. Abra un cuadro de diálogo en el editor del cuadro de diálogo.
-
-1. Con el botón secundario en cualquier lugar en el cuerpo del cuadro de diálogo.
-
-1. En el menú contextual, seleccione **insertar ActiveX Control**.
-
-   El **insertar ActiveX Control** aparece el cuadro de diálogo que muestra todos los controles ActiveX en el sistema. En la parte inferior del cuadro de diálogo, aparece la ruta de acceso al archivo del control ActiveX.
-
-#### <a name="to-add-an-activex-control-to-a-dialog-box"></a>Para agregar un control ActiveX a un cuadro de diálogo
-
-1. En el **insertar ActiveX Control** cuadro de diálogo, seleccione el control que desea agregar al cuadro de diálogo y seleccione **Aceptar**.
-
-   El control aparece en el cuadro de diálogo, en el que puede editar o crear controladores para él como lo haría con cualquier otro control.
-
-   > [!NOTE]
-   > Puede agregar controles ActiveX a la **cuadro de herramientas** ventana para facilitar el acceso.
-
-   > [!CAUTION]
-   > Puede que no sea legal distribuir todos los controles ActiveX en el sistema. Consulte el contrato de licencia para el software que instaló los controles o póngase en contacto con la compañía del software.
-
-## <a name="to-edit-a-control"></a>Para editar un control
+## <a name="edit-controls"></a>Controles de edición
 
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>Para editar las propiedades de un control o controles
 
@@ -158,21 +120,6 @@ El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles
 1. Asegúrese de que el control tiene el foco el **diálogo** editor.
 
 1. Elija **deshacer** desde el **editar** menú (si el foco no está en el control, el **deshacer** comando no estará disponible).
-
-### <a name="to-edit-properties-for-an-activex-control"></a>Para editar propiedades de un control ActiveX
-
-Controles ActiveX suministrados por proveedores independientes pueden estar equipados con sus propias propiedades y características. Propiedades de los controles ActiveX se muestran en el **propiedades** ventana. Además, se muestran las páginas de propiedades creadas por los programadores del control ActiveX en el **las páginas de propiedades** cuadro de diálogo (para ver el **página de propiedades** de un control ActiveX concreto, haga clic en el **Página de propiedades** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window)).
-
-Se muestran distintas pestañas en la página de propiedades para un control ActiveX, dependiendo de las hojas de propiedades que se incluyen como parte del control ActiveX.
-
-> [!NOTE]
-> El siguiente procedimiento se aplica al uso de la página de propiedades para editar controles ActiveX. También puede examinar y editar las propiedades de ActiveX en el nuevo **propiedades** ventana.
-
-1. Seleccione el **ActiveX** control.
-
-1. En el **vista** menú, seleccione **página de propiedades** y ver las propiedades.
-
-1. Realice los cambios necesarios en la página de propiedades.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Para definir una variable miembro para un control de cuadro de diálogo (que no sea un botón)
 
@@ -196,22 +143,17 @@ Para definir una variable miembro para cualquier control de cuadro de diálogo e
 
 También puede usar el **Variables miembro** pestaña en el [Asistente para clases MFC](../mfc/reference/mfc-class-wizard.md) para agregar nuevas variables miembro a una clase especificada y ver variables de miembro que ya se han definido.
 
-## <a name="to-delete-a-control"></a>Para eliminar un control
+## <a name="delete-controls"></a>Eliminar los controles
 
-En el cuadro de diálogo, seleccione el control y presione la **eliminar** clave.
+En el cuadro de diálogo, seleccione el control, a continuación, presione el **eliminar** clave o vaya a la **editar** menú y seleccione **eliminar**.
 
-   \- o -
+## <a name="other-issues"></a>Otros problemas
 
-En el **editar** menú, seleccione **eliminar**.
-
-   > [!TIP]
-   > Al usar el **diálogo** editor, en muchos casos, puede hacer clic en el botón secundario del mouse para mostrar un menú contextual de comandos usados con frecuencia.
-
-## <a name="known-issue"></a>Problema conocido
+### <a name="troubleshooting"></a>Solución de problemas
 
 Después de agregar un control común o un control rich edit a un cuadro de diálogo, pero no aparecerá cuando se prueba el cuadro de diálogo o no aparecerá el cuadro de diálogo.
 
-Para ver un ejemplo del problema:
+Para obtener un ejemplo del problema:
 
 1. Cree un proyecto de Win32, modifique la configuración de la aplicación para crear una aplicación de Windows (no una aplicación de consola).
 
@@ -225,7 +167,7 @@ Para ver un ejemplo del problema:
 
 1. Ejecute el programa.
 
-1. En el cuadro de diálogo **ayuda** menú, haga clic en el **sobre** comando; ningún cuadro de diálogo se muestra el cuadro.
+1. En el cuadro de diálogo **ayuda** menú, seleccione el **sobre** comando y observe que no se muestra ningún cuadro de diálogo.
 
 Actualmente, el **diálogo** editor no agrega automáticamente código al proyecto cuando arrastra y coloca los siguientes controles comunes o controles rich edit en un cuadro de diálogo. Ni Visual Studio proporciona un error o una advertencia cuando se produce este problema. Para solucionar el problema, agregue el código para el control manualmente.
 
@@ -245,6 +187,52 @@ Para utilizar controles RichEdit, debe llamar a `LoadLibrary`. Para obtener más
 > Para usar un control RichEdit con MFC, primero debe llamar a [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) para cargar el Control RichEdit 2.0 (RICHED20. Archivo DLL), o llamar a [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) para cargar el Control RichEdit 1.0 anterior (RICHED32. (DLL).
 >
 > Puede usar actual [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) clase con el control RichEdit 1.0 anterior, pero `CRichEditCtrl` sólo está diseñada para admitir el control RichEdit 2.0. Porque RichEdit 1.0 y 2.0 RichEdit son similares, funcionará la mayoría de los métodos. Sin embargo, observe que hay algunas diferencias entre los controles 1.0 y 2.0, por lo que algunos métodos podrían no funcionen correctamente o no funcionará en absoluto.
+
+### <a name="activex-controls"></a>Controles ActiveX
+
+Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo. Para obtener más información, consulte [controles ActiveX MFC](../mfc/mfc-activex-controls.md) y [contenedores de controles ActiveX](../mfc/activex-control-containers.md).
+
+Puede usar el menú contextual de la **diálogo** registrado de editor para agregar rápidamente controles ActiveX a un cuadro de diálogo, y puede agregar controles ActiveX a la **cuadro de herramientas** para un acceso rápido.
+
+El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles ActiveX en el cuadro de diálogo al usar el [editor de cuadro de diálogo](../windows/dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
+
+|Property|Descripción|
+|---|---|
+|**ActiveX Control**|Muestra una lista de controles Active X. Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear uno (para obtener más información, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md)). Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.|
+|**Ruta de acceso**|Muestra el archivo donde se encuentra el control ActiveX.|
+
+> [!CAUTION]
+> Puede que no sea legal distribuir todos los controles ActiveX en el sistema. Consulte el contrato de licencia para el software que instaló los controles o póngase en contacto con la compañía del software.
+
+#### <a name="to-add-an-activex-control"></a>Para agregar un control ActiveX
+
+1. Abrir un cuadro de diálogo el **diálogo** editor.
+
+1. Haga doble clic en cualquier lugar en el cuerpo del cuadro de diálogo y en el menú contextual, seleccione **insertar ActiveX Control**.
+
+   El **insertar ActiveX Control** aparece el cuadro de diálogo que muestra todos los controles ActiveX en el sistema. En la parte inferior del cuadro de diálogo, aparece la ruta de acceso al archivo del control ActiveX.
+
+1. Seleccione el control que desea agregar al cuadro de diálogo y elija **Aceptar**.
+
+   El control aparece en el cuadro de diálogo, en el que puede editar o crear controladores para él como lo haría con cualquier otro control.
+
+> [!NOTE]
+> Puede agregar controles ActiveX a la **cuadro de herramientas** ventana para facilitar el acceso.
+
+#### <a name="to-edit-properties-for-an-activex-control"></a>Para editar propiedades de un control ActiveX
+
+Controles ActiveX suministrados por proveedores independientes pueden estar equipados con sus propias propiedades y características. Propiedades de los controles ActiveX se muestran en el **propiedades** ventana. Además, se muestran las páginas de propiedades creadas por los programadores del control ActiveX en el **las páginas de propiedades** cuadro de diálogo (para ver el **página de propiedades** de un control ActiveX concreto, haga clic en el **Página de propiedades** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window)).
+
+Se muestran distintas pestañas en la página de propiedades para un control ActiveX, dependiendo de las hojas de propiedades que se incluyen como parte del control ActiveX.
+
+> [!NOTE]
+> El siguiente procedimiento se aplica al uso de la página de propiedades para editar controles ActiveX. También puede examinar y editar las propiedades de ActiveX en el nuevo **propiedades** ventana.
+
+1. Seleccione el **ActiveX** control.
+
+1. En el **vista** menú, seleccione **página de propiedades** y ver las propiedades.
+
+1. Realice los cambios necesarios en la página de propiedades.
 
 ## <a name="requirements"></a>Requisitos
 

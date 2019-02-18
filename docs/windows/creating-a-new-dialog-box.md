@@ -1,6 +1,6 @@
 ---
-title: Creación de un cuadro de diálogo (C++)
-ms.date: 11/04/2016
+title: Cómo Crear un cuadro de diálogo (C++)
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264821"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336480"
 ---
-# <a name="creating-a-dialog-box-c"></a>Creación de un cuadro de diálogo (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Cómo Crear un cuadro de diálogo (C++)
 
 La ubicación y el tamaño de un cuadro de diálogo de C++ y la ubicación y tamaño de los controles dentro de ella, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando seleccionarlas de estado de Visual Studio.
 
@@ -39,8 +39,6 @@ Al diseñar un cuadro de diálogo, también puede simular y probar su comportami
    > Las conexiones con el código del cuadro de diálogo realizadas mediante asistentes no se incluyen en la simulación.
 
 Cuando se prueba un cuadro de diálogo, normalmente se muestra en una ubicación relativa a la ventana principal del programa. Si ha configurado el cuadro de diálogo **Absolute Align** propiedad **True**, muestra el cuadro de diálogo en una posición relativa a la esquina superior izquierda de la pantalla.
-
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*. Para obtener información sobre cómo agregar manualmente archivos de recursos a proyectos administrados, acceder a los recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Para obtener información sobre la globalización y localización de recursos en aplicaciones administradas, vea [Globalizar y localizar aplicaciones de .NET Framework](/dotnet/standard/globalization-localization/index).
 
 ## <a name="to-create-a-new-dialog-box"></a>Para crear un nuevo cuadro de diálogo
 
@@ -82,7 +80,7 @@ Hay tres propiedades que se pueden establecer en el [ventana propiedades](/visua
 
 1. Cuando el **diálogo** editor es la ventana activa, en la barra de menús, elija **formato** > **Probar cuadro de diálogo**.
 
-1. Para finalizar la simulación, presione **Esc**, o elija simplemente el **cerrar** botón en el cuadro de diálogo que está probando.
+1. Para finalizar la simulación, presione **Esc** o seleccione el **cerrar** botón en el cuadro de diálogo que está probando.
 
 ## <a name="requirements"></a>Requisitos
 
