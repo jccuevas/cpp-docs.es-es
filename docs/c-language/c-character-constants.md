@@ -7,12 +7,12 @@ helpviewer_keywords:
 - constants, character
 - single quotation mark
 ms.assetid: 388ae7d7-2c3a-44d6-a507-63f541ecd2da
-ms.openlocfilehash: 684763b5ce3983b6efc44db9499c139c84f6e3aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d87b57726f741cc96f2180de33cae01403786ec
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507199"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152773"
 ---
 # <a name="c-character-constants"></a>Constantes de caracteres de C
 
@@ -28,7 +28,7 @@ Una "constante de carácter" se forma agregando un carácter individual del jueg
 
 *c-char-sequence c-char*
 
-*c-char*: cualquier miembro del juego de caracteres de origen, excepto la comilla simple (**'**), la barra diagonal inversa (**\\**) o el carácter de nueva línea
+*c-char*: Cualquier miembro del juego de caracteres de origen, excepto la comilla simple (**'**), la barra diagonal inversa (**\\**) o el carácter de nueva línea
 
 *escape-sequence*
 
