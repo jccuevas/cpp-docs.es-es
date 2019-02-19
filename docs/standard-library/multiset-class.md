@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678475"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418723"
 ---
 # <a name="multiset-class"></a>multiset (Clase)
 
@@ -114,7 +114,7 @@ Tipo que proporciona un objeto de función que puede comparar dos valores de ele
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la clase multiset. El valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -482,7 +482,7 @@ Número de elementos del conjunto múltiple cuyo criterio de ordenación coincid
 
 La función miembro devuelve el número de elementos *x* del intervalo
 
-\[ lower_bound (*clave*), upper_bound (*clave*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ### <a name="example"></a>Ejemplo
 
@@ -953,7 +953,7 @@ size_type erase(
 *Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
@@ -1171,7 +1171,7 @@ IList);
 |*Val*|Valor de un elemento que se va a insertar en el multiset.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que el multiset puede utilizar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
+|*First*|Posición del primer elemento que se va a copiar.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
@@ -1567,7 +1567,7 @@ multiset (
 |*Al*|Clase de asignador de almacenamiento que se va a utilizar para este objeto multiset, que toma como valor predeterminado `Allocator`.|
 |*Comp.*|Función de comparación de tipo `const Compare` que se utiliza para ordenar los elementos del multiset, que de forma predeterminada es `Compare`.|
 |*Derecha*|Multiset del que el multiset construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list de la que se van a copiar los elementos.|
 
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
