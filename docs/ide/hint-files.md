@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44566408a3afcfee7a15299a5845b5af385aeef8
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558787"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320697"
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 
@@ -123,7 +123,7 @@ En el código fuente siguiente, el tipo de parámetro para la función `FormatWi
 static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 ```
 
-**Estrategia:** definición NULL
+**Estrategia:** definición de null
 
 En esta situación, la estrategia consiste en tratar las anotaciones SAL como si no existieran. Para ello, especifique una indicación cuya cadena de reemplazo sea NULL. Por tanto, el sistema de análisis ignora las anotaciones y no se muestran en el explorador **Vista de clases**. (Visual C++ incluye un archivo de indicaciones integrado que oculta la anotación SAL).
 
@@ -175,7 +175,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
    return( pMap ); }
 ```
 
-**Estrategia:** identificar los elementos de mapa
+**Estrategia:** identificación de los elementos del mapa
 
 Especifique indicaciones para los elementos inicial, intermedio (si existe) y final de un mapa. Use las cadenas de reemplazo de mapas especiales (`@<`, `@=` y `@>`). Para obtener más información, vea la sección `Syntax` de este tema.
 
