@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248577"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676505"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 
 Este artículo contiene una lista por categorías de las opciones del compilador. Para acceder a una lista alfabética, vea [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Optimización
+## <a name="optimization"></a>Optimización
 
 |Opción|Propósito|
 |------------|-------------|
@@ -31,7 +31,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Oy](oy-frame-pointer-omission.md)|Omite el puntero de marco. (solo x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Muestra el código optimizado para una arquitectura especificada o para un intervalo de arquitecturas.|
 
-### <a name="code-generation"></a>Generación de código
+## <a name="code-generation"></a>Generación de código
 
 |Opción|Propósito|
 |------------|-------------|
@@ -68,11 +68,11 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Habilita los niveles de informe para la ejecución en paralelo automática.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|
 |[/Qspectre](qspectre.md)|Habilitar mitigaciones para CVE 2017-5753, para una clase de ataques de Spectre.|
-|[/ Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|
+|[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|
 |[/RTC](rtc-run-time-error-checks.md)|Habilita la comprobación de errores en tiempo de ejecución.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Selecciona cómo se interpreta la palabra clave volatile.|
 
-### <a name="output-files"></a>Archivos de salida
+## <a name="output-files"></a>Archivos de salida
 
 |Opción|Finalidad|
 |------------|-------------|
@@ -85,9 +85,9 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Fm](fm-name-mapfile.md)|Crea un archivo de asignaciones.|
 |[/Fo](fo-object-file-name.md)|Crea un archivo de objeto.|
 |[/Fp](fp-name-dot-pch-file.md)|Especifica el nombre de un archivo de encabezado precompilado.|
-|[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nombre generado los archivos .sbr explorador.|
+|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nombre generado los archivos .sbr explorador.|
 
-### <a name="preprocessor"></a>Preprocesador
+## <a name="preprocessor"></a>Preprocesador
 
 |Opción|Propósito|
 |------------|-------------|
@@ -105,7 +105,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/u](u-u-undefine-symbols.md)|Quita todas las macros predefinidas.|
 |[/X](x-ignore-standard-include-paths.md)|Omite el directorio de archivos de inclusión estándar.|
 
-### <a name="language"></a>Lenguaje
+## <a name="language"></a>Lenguaje
 
 |Opción|Propósito|
 |------------|-------------|
@@ -121,7 +121,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Za](za-ze-disable-language-extensions.md)|Deshabilita las extensiones del lenguaje|
 |[/Zc](zc-conformance.md)|Especifica un comportamiento estándar bajo [/Ze](za-ze-disable-language-extensions.md).|
 |[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
-|[/ZF](zf.md)|PDB mejora el tiempo de generación en las compilaciones en paralelo.|
+|[/Zf](zf.md)|PDB mejora el tiempo de generación en las compilaciones en paralelo.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
 |[/Zl](zl-omit-default-library-name.md)|Quita el nombre de la biblioteca predeterminada del archivo .obj.|
@@ -129,7 +129,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Zs](zs-syntax-check-only.md)|Comprueba únicamente la sintaxis.|
 |[/ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el tiempo de ejecución de Windows.|
 
-### <a name="linking"></a>Vinculación
+## <a name="linking"></a>Vinculación
 
 |Opción|Propósito|
 |------------|-------------|
@@ -143,7 +143,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/MT](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso mediante LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso para depuración mediante LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Varios
+## <a name="miscellaneous"></a>Varios
 
 |Opción|Propósito|
 |------------|-------------|
@@ -159,7 +159,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/J](j-default-char-type-is-unsigned.md)|Cambia el tipo `char` predeterminado.|
-|[/ JMC](jmc.md)|Admite la depuración nativa de C++ solo mi código.|
+|[/JMC](jmc.md)|Admite la depuración nativa de C++ solo mi código.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|El compilador y el vinculador producirán un binario que se puede ejecutar en el kernel de Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Compila varios archivos de código fuente simultáneamente.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Suprime la presentación de la pancarta de inicio de sesión.|
@@ -186,16 +186,16 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un archivo de encabezado precompilado durante la compilación.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Omite todas las demás opciones del compilador de encabezado precompilado en la generación actual.|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Especifica el límite de asignación de memoria del encabezado precompilado.|
-|[/ await](await-enable-coroutine-support.md)|Habilitar las extensiones de corrutinas (las funciones reanudables).|
-|[/ Source-CharSet](source-charset-set-source-character-set.md)|Establecer el juego de caracteres de origen.|
-|[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Establecer el juego de caracteres de ejecución.|
-|[/ UTF-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Conjunto de caracteres de origen y ejecución se establece en UTF-8.|
-|[/ Validate/CharSet](validate-charset-validate-for-compatible-characters.md)|Validar archivos UTF-8 únicamente caracteres compatibles.|
-|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla el formato de mensajes de diagnóstico.|
-|[/ permissive-](permissive-standards-conformance.md)|Establecer el modo de cumplimiento del estándar.|
-|[/ STD](std-specify-language-standard-version.md)|Selector de compatibilidad de la versión estándar de C++.|
+|[/await](await-enable-coroutine-support.md)|Habilitar las extensiones de corrutinas (las funciones reanudables).|
+|[/source-charset](source-charset-set-source-character-set.md)|Establecer el juego de caracteres de origen.|
+|[/execution-charset](execution-charset-set-execution-character-set.md)|Establecer el juego de caracteres de ejecución.|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Conjunto de caracteres de origen y ejecución se establece en UTF-8.|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Validar archivos UTF-8 únicamente caracteres compatibles.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla el formato de mensajes de diagnóstico.|
+|[/permissive-](permissive-standards-conformance.md)|Establecer el modo de cumplimiento del estándar.|
+|[/std](std-specify-language-standard-version.md)|Selector de compatibilidad de la versión estándar de C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Opciones del compilador en desuso y quitadas
+## <a name="deprecated-and-removed-compiler-options"></a>Opciones del compilador en desuso y quitadas
 
 |Opción|Propósito|
 |------------|-------------|
