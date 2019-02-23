@@ -30,76 +30,80 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: ce1cf1f6d0010475192ecf7ef3ce2416fac51dfd
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320632"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676414"
 ---
 # <a name="how-to-manage-resources-c"></a>Filtrar Administrar los recursos (C++)
 
-## <a name="copy-resources"></a>Copiar recursos
+Puede administrar los recursos para su proyecto:
 
-Puede copiar los recursos de un archivo a otro sin modificarlas o puede cambiar el idioma o la condición de un recurso al copiarlo.
+- Copiar y editar recursos.
+
+- Importación y exportación de recursos.
+
+## <a name="copy-and-edit-resources"></a>Copiar y editar recursos
+
+Puede copiar los recursos de un archivo a otro sin modificarlas o cambiar el idioma o la condición de un recurso al copiarlo.
 
 Puede copiar fácilmente recursos desde un recurso existente o un archivo ejecutable para el archivo de recursos actual. Para copiar los recursos, abra ambos archivos que contienen recursos al mismo tiempo y arrastrar elementos desde un archivo a otro o copiar y pegar entre los dos archivos. Este método funciona para archivos de recursos (.rc) de la secuencia de comandos y archivos de recursos (.rct) de la plantilla y, como archivos ejecutables (.exe).
 
 > [!NOTE]
 > Visual C++ incluye archivos de recursos de ejemplo que puede usar en su propia aplicación. Para obtener más información, consulte [CLIPART: Recursos comunes](https://github.com/Microsoft/VCSamples).
 
-Puede usar el método de arrastrar y colocar entre archivos .rc que estén abiertos [fuera del proyecto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).
+Puede usar el método de arrastrar y colocar entre archivos .rc que estén abiertos fuera del proyecto.
 
-### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>Para copiar recursos entre archivos mediante el método de arrastrar y colocar
+### <a name="to-copy-resources"></a>Para copiar recursos
 
-1. Abra ambos archivos de recursos independientes (para obtener más información, consulte [ver recursos en un archivo .rc fuera de un proyecto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Por ejemplo, abra *Source1.RF* y *Source2.rc*.
+1. Abra ambos archivos de recursos independientes (vea cómo [para abrir un archivo de script de recursos](/how-to-create-a-resource-script-file#use-resource-script-files)). Por ejemplo, abra *Source1.RF* y *Source2.rc*.
 
-1. Dentro del primer archivo .rc, seleccione el recurso que desea copiar. Por ejemplo, en *Source1.RF*, seleccione **IDD_DIALOG1**.
+1. En el primer archivo .rc, ya sea:
 
-1. Mantenga presionada la **Ctrl** clave y arrastre el recurso para el segundo archivo. rc. Por ejemplo, arrastre **IDD_DIALOG1** desde *Source1.RF* a *Source2.rc*.
+   - Utilice el método de arrastrar y colocar
 
-   > [!NOTE]
-   > Arrastrar el recurso sin mantener presionada la **Ctrl** tecla mueve el recurso, en lugar de copiarlo.
+      1. Seleccione el recurso que desea copiar. Por ejemplo, en *Source1.RF*, seleccione **IDD_DIALOG1**.
 
-### <a name="to-copy-resources-using-copy-and-paste"></a>Para copiar recursos con copiar y pegar
+      1. Mantenga presionada la **Ctrl** clave y arrastre el recurso para el segundo archivo. rc. Por ejemplo, arrastre **IDD_DIALOG1** desde *Source1.RF* a *Source2.rc*.
 
-1. Abra ambos archivos de recursos independientes (para obtener más información, consulte [ver recursos en un archivo .rc fuera de un proyecto](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Por ejemplo, *Source1.RF* y *Source2.rc*.
+         > [!TIP]
+         > Arrastrar el recurso sin mantener presionada la **Ctrl** tecla mueve el recurso, en lugar de copiarlo.
 
-1. En el archivo de origen desde el que desea copiar un recurso (por ejemplo, *Source1.RF*), haga clic en un recurso y elija **copia** en el menú contextual.
+   - Usar la copia y pegue el método
 
-1. Haga clic en el archivo de recursos en la que desea pegar el recurso (por ejemplo, *Source2.rc*). Elija **pegar** en el menú contextual.
+      1. Haga clic en el recurso con copiar (por ejemplo, *Source1.RF*) y elija **copia**.
 
-   > [!NOTE]
-   > No se puede arrastrar y soltar, copiar, cortar o pegar entre archivos de recursos en el proyecto (**vista de recursos**) y archivos .rc independientes (aquellas abiertos en ventanas de documento). Podría hacerlo en las versiones anteriores del producto.
+      1. Haga clic en el archivo de recursos en la que desea pegar el recurso (por ejemplo, *Source2.rc*) y elija **pegar**.
 
-   > [!NOTE]
-   > Para evitar conflictos con los nombres de símbolos o valores en el archivo existente, Visual C++ puede cambiar valor de símbolo del recurso transferido o nombre de símbolo y el valor cuando se copia al nuevo archivo.
+> [!NOTE]
+> No se puede arrastrar y soltar, copiar, cortar o pegar entre archivos de recursos en el proyecto (**vista de recursos**) y archivos .rc independientes (aquellas abiertos en ventanas de documento). Podría hacerlo en las versiones anteriores del producto.
 
-### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>Cambiar el idioma o la condición de un recurso al copiarlo
+> [!NOTE]
+> Para evitar conflictos con los nombres de símbolos o valores en el archivo existente, Visual C++ puede cambiar valor de símbolo del recurso transferido o nombre de símbolo y el valor cuando se copia al nuevo archivo.
 
 Al copiar un recurso, puede cambiar sus propiedades de idioma, condición o ambas.
 
-- El idioma del recurso identifica exactamente eso, el idioma del recurso. Está usando el lenguaje [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) para ayudar a identificar el recurso que está buscando. (Sin embargo, los recursos pueden tener diferencias para cada idioma que no estén relacionados con texto, por ejemplo, se compila aceleradores que solo funcionen en teclados japoneses o un mapa de bits que solo sea adecuado para localizadas en chino).
+- El idioma de un recurso especifica el idioma usado por [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) para ayudar a identificar el recurso que está buscando. Los recursos pueden tener diferencias para cada idioma que no estén relacionados con texto, por ejemplo, las compilaciones aceleradores que solo funcionen en teclados japoneses o un mapa de bits que solo sea adecuado para localizadas en chino.
 
 - La condición de un recurso es un símbolo definido que identifica una condición en la que esta copia concreta del recurso se va a utilizar.
 
-El idioma y la condición de un recurso se muestran entre paréntesis después del nombre del recurso en el **área de trabajo** ventana. En este ejemplo, el recurso denominado `IDD_AboutBox` usa `Finnish` como su idioma y su condición es `XX33`.
+El idioma y la condición de un recurso se muestran entre paréntesis después del nombre del recurso en el **área de trabajo** ventana. Aquí el recurso denominado `IDD_AboutBox` usa `Finnish` como su idioma y su condición es `XX33`:
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
 ```
 
-#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Para copiar un recurso existente y cambiar su idioma o su condición
+Para copiar un recurso existente y cambiar su idioma o su condición
 
-1. En el archivo .rc o en la [vista de recursos](../windows/resource-view-window.md) ventana, haga clic en el recurso que van a copiar.
-
-1. Elija **Insertar copia** desde el menú contextual y defina la siguiente:
+1. En el archivo .rc o en la [vista de recursos](../windows/resource-view-window.md) ventana, haga clic en el recurso que desea copiar y elija **Insertar copia**. A continuación, establezca lo siguiente:
 
    - Para el **lenguaje** cuadro de lista, seleccione el idioma.
 
    - En el **condición** , escriba la condición.
 
-## <a name="edit-resources"></a>Editar recursos
+### <a name="to-edit-resources"></a>Para editar recursos
 
 Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un archivo de recursos administrado al proyecto desde el **Agregar nuevo elemento** cuadro de diálogo, el **Editor de recursos administrados** se abre de forma predeterminada.
 
@@ -108,28 +112,24 @@ Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un ar
 Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de herramientas), archivos HTML y recursos personalizados para usarlos en Visual C++. Puede exportar los mismos tipos de archivos desde un proyecto de Visual C++ para separar archivos que se pueden usar fuera del entorno de desarrollo.
 
 > [!NOTE]
-> Los tipos de recursos como los aceleradores, los cuadros de diálogo y las tablas de cadenas no se pueden importar o exportar, porque no son tipos de archivos independientes.
+> Tipos de recursos como los aceleradores, los cuadros de diálogo y las tablas de cadenas no se pueden importar o exportar porque no son tipos de archivos independientes.
 
-### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>Para importar un recurso individual al archivo de recursos actual
+### <a name="to-import-a-resource-into-the-resource-script-file"></a>Para importar un recurso en el archivo de script de recursos
 
-1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el nodo para el script de recursos (* .rc) a la que desea agregar un recurso de archivo.
+1. En [vista de recursos](../windows/resource-view-window.md) haga clic en el nodo del archivo de script (.rc) de recursos al que desea agregar un recurso y seleccione **importación**.
 
-1. Seleccione **importación** en el menú contextual.
+1. Busque y seleccione el nombre de archivo de mapa de bits (.bmp), icono (.ico), cursor (.cur), el archivo html (.htm) u otro archivo para importar.
 
-1. Busque y seleccione el nombre de archivo del mapa de bits (.bmp), icono (.ico), cursor (.cur), archivo Html (.htm) o cualquier otro archivo que quiera importar.
+1. Seleccione **Aceptar** para agregar el recurso al archivo de script de recursos.
 
-1. Elija **Aceptar** para agregar el recurso al archivo seleccionado en **recursos** vista.
+> [!NOTE]
+> El proceso de importación funciona igual importar el tipo de recurso no ha seleccionado. El recurso importado se agrega automáticamente al nodo correcto de ese tipo de recurso.
 
-   > [!NOTE]
-   > El proceso de importación es el mismo, independientemente del tipo de recurso seleccionado. El recurso importado se agrega automáticamente al nodo correspondiente a ese tipo de recurso.
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Para exportar un recurso para su uso fuera de Visual C++
 
-### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>Para exportar un mapa de bits, un icono o un cursor como un archivo independiente (para usarlo fuera de Visual C++)
+1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el recurso que desea exportar y seleccione **exportar**. Puede aceptar el nombre de archivo actual o escriba uno nuevo.
 
-1. En **recursos** ver, haga clic en el recurso que desea exportar.
-
-1. Seleccione **exportar** en el menú contextual y acepte el nombre de archivo actual o escriba uno nuevo.
-
-1. Navegue hasta la carpeta donde desea guardar el archivo y elija **exportar**.
+1. Navegue hasta la carpeta donde desea guardar el archivo y seleccione **exportar**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -138,5 +138,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-[Creación de recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Cómo: Crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Cómo: Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>
