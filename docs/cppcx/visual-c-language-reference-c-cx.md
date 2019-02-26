@@ -16,7 +16,7 @@ C++ / c++ / CX es un conjunto de extensiones del lenguaje C++ que permiten la cr
 > [!NOTE]
 > **[C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) es la alternativa recomendada para C++ / c++ / CX**. Es una nueva, el estándar C ++ 17 proyección de lenguaje de Windows en tiempo de ejecución APIs, disponible en Windows 10 SDK más reciente de la versión 1803 en adelante. C++ / c++ / WinRT se implementa completamente en archivos de encabezado y ha diseñado para proporcionar acceso de primera clase a la API de Windows moderna.
 >
-> Con C / c++ / WinRT, puede consumir y crear con cualquier compilador de 17 C ++ conforme a los estándares de Windows en tiempo de ejecución APIs. C++ / c++ / WinRT normalmente funcione mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Se seguirá admitiendo C++ / c++ / CX y WRL, pero se recomienda encarecidamente que utilicen las nuevas aplicaciones C++ / c++ / WinRT. Para obtener más información, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
+> Con C / c++ / WinRT, puede consumir y crear con cualquier compilador de 17 C ++ conforme a los estándares de Windows en tiempo de ejecución APIs. C++ / c++ / WinRT normalmente funciona mejor y genera archivos binarios más pequeños que ninguna otra opción de idioma para el tiempo de ejecución de Windows. Se seguirá admitiendo C++ / c++ / CX y WRL, pero se recomienda encarecidamente que utilicen las nuevas aplicaciones C++ / c++ / WinRT. Para obtener más información, consulte [C++ / c++ / WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 Mediante el uso de C++ / c++ / CX, puede crear:
 
