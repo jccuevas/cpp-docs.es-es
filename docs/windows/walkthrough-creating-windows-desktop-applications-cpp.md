@@ -42,7 +42,7 @@ Siga estos pasos para crear su primer proyecto de escritorio de Windows y escrib
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el cuadro de dialogo **nuevo proyecto**, en el panel izquierdo, expanda **instalado** > **Visual C++**, a continuación, seleccione **Windows Desktop**. En el panel central, seleccione **Asistente de escritorio de Windows**.
+1. En el cuadro de diálogo **nuevo proyecto**, en el panel izquierdo, expanda **instalado** > **Visual C++**, a continuación, seleccione **Windows Desktop**. En el panel central, seleccione **Asistente de escritorio de Windows**.
 
    En el **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 
