@@ -11,7 +11,7 @@ ms.locfileid: "51694574"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
 
-Un *aplicación de escritorio* en C++ es una aplicación nativa que puede acceder al conjunto completo de API de Windows y se ejecuta en una ventana o en la consola del sistema. Pueden ejecutar aplicaciones de escritorio de C++ en Windows XP a Windows 10 (aunque ya no es compatible oficialmente con Windows XP y hay muchas API de Windows que se han introducido desde entonces).
+Una *aplicación de escritorio* en C++ es una aplicación nativa que puede acceder al conjunto completo de API de Windows y se ejecuta en una ventana o en la consola del sistema. Pueden ejecutar aplicaciones de escritorio de C++ en Windows XP a Windows 10 (aunque ya no es compatible oficialmente con Windows XP y hay muchas API de Windows que se han introducido desde entonces).
 
 Una aplicación de escritorio es distinta de una aplicación plataforma Universal de Windows (UWP), que puede ejecutar en equipos que ejecutan Windows 10 y también en xBox, Windows Phone, Surface Hub y otros dispositivos. Para obtener más información acerca de desktop vs. Las aplicaciones de UWP, vea [elija su tecnología](/windows/desktop/choose-your-technology).
 
