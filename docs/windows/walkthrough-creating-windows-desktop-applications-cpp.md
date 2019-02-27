@@ -96,7 +96,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
 
 ### <a name="to-start-a-windows-desktop-application"></a>Para iniciar una aplicación de escritorio de Windows
 
-1. Al igual que cada C aplicación y aplicación de C++ deben tener un `main` funcione como punto de partida, cada debe tener la aplicación de escritorio de Windows un `WinMain` función. `WinMain` tiene la siguiente sintaxis.
+1. Al igual que cada aplicación de C y de C++ deben tener una función `main`  como punto de partida, cada aplicación de escritorio de Windows debe tener una función `WinMain` . `WinMain` tiene la siguiente sintaxis.
 
    ```cpp
    int CALLBACK WinMain(
