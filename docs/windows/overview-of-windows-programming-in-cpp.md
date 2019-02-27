@@ -15,7 +15,7 @@ Existen varias categorías de aplicaciones de Windows que se pueden crear con C+
 
 ## <a name="command-line-console-applications"></a>Aplicaciones de línea de comandos (consola)
 
-Aplicaciones de consola C++ ejecutan desde la línea de comandos en una ventana de consola y pueden mostrar la salida de texto únicamente. Para obtener más información, consulte [aplicaciones de consola](console-applications-in-visual-cpp.md).
+Las aplicaciones de consola C++ se ejecutan desde la línea de comandos en una ventana de consola y pueden mostrar la salida de texto únicamente. Para obtener más información, consulte [aplicaciones de consola](console-applications-in-visual-cpp.md).
  
 ## <a name="native-desktop-client-applications"></a>Aplicaciones cliente de escritorio nativas
 
