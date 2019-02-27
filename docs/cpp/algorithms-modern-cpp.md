@@ -78,3 +78,5 @@ No es ningún secreto que CRT antiguo `rand()` función tiene muchos defectos, q
 [Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
+
+     //TEST
