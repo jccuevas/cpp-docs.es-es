@@ -66,17 +66,17 @@ Ya se ha creado el proyecto y se abre el archivo de origen en el editor. Para co
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
+1. En el cuadro de diálogo **nuevo proyecto**, en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
 
    En el **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 
    ![Denomine el proyecto DesktopApp](../build/media/desktop-app-new-project-name-150.png "denomine el proyecto DesktopApp")
 
-1. En el **Introducción** página de la **Asistente para aplicaciones Win32**, elija **siguiente**.
+1. En la página **Introducción** del **Asistente para aplicaciones Win32**, elija **siguiente**.
 
    ![Crear DesktopApp en Introducción al Asistente para aplicaciones Win32](../build/media/desktop-app-win32-wizard-overview-150.png "crear DesktopApp en Introducción al Asistente para aplicaciones Win32")
 
-1. En el **configuración de la aplicación** página, en **tipo de aplicación**, seleccione **aplicación Windows**. En **Opciones adicionales**, seleccione **Proyecto vacío**. Elija **finalizar** para crear el proyecto.
+1. En la pagina **configuración de la aplicación**, en **tipo de aplicación**, seleccione **aplicación Windows**. En **Opciones adicionales**, seleccione **Proyecto vacío**. Elija **finalizar** para crear el proyecto.
 
    ![Crear DesktopApp en el Asistente para configuración de la aplicación de Win32](../build/media/desktop-app-win32-wizard-settings-150.png "crear DesktopApp en el Asistente para configuración de la aplicación de Win32")
 
