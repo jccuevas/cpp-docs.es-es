@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320866"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954957"
 ---
 # <a name="mfc-predefined-symbols"></a>Símbolos predefinidos de MFC
 
@@ -23,12 +23,12 @@ Proyectos MFC siempre incluyen varios archivos de encabezado que es compatible c
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Los archivos de encabezado incluyen los valores de Id. de símbolos para los valores comunes de MFC. Estos símbolos solo están disponibles cuando se trabaja en un proyecto MFC. El prefijo AFX va seguido de los prefijos de nombre de símbolo estándar.
+Los archivos de encabezado incluyen los valores de Id. de símbolos para los valores comunes de MFC. Estos símbolos solo están disponibles cuando se trabaja en un proyecto MFC. El `AFX_` prefijo va seguido de los prefijos de nombre de símbolo estándar.
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ Los archivos de encabezado incluyen los valores de Id. de símbolos para los val
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>símbolos de la programación de bases de datos de MFC
+## <a name="mfc-database-programming"></a>MFC programación de base de datos
 
 Los símbolos de esta tabla solo aparecen en un proyecto de MFC cuando se ha agregado compatibilidad con la base de datos. Admite la conexión de MFC con servidores SQL Server y la programación de la base de datos.
 
@@ -232,9 +232,11 @@ Los símbolos de esta tabla solo aparecen en un proyecto de MFC cuando se ha agr
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>Símbolos de programación de Windows de MFC
+## <a name="mfc-windows-programming"></a>Programación de Windows MFC
 
-Estos símbolos también forman parte de los archivos de compatibilidad MFC, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan con los menús. Cuando se trabaja con menús en la **Editor de menús**, estos símbolos aparecen en la **ventana propiedad** asociados a comandos de menú comunes. Por ejemplo, si la aplicación tiene un **archivo** menú con un **Exit** comando, que se asociará con el símbolo ID_APP_EXIT comandos en el [ventana propiedades](/visualstudio/ide/reference/properties-window).
+Estos símbolos también forman parte de los archivos de compatibilidad MFC, pero admiten acciones y funciones de aplicación de Windows estándares. Estos símbolos se utilizan con los menús.
+
+Cuando se trabaja con menús en el **Editor de menús**, estos símbolos aparecen en la **ventana propiedad** asociados a comandos de menú comunes. Por ejemplo, si la aplicación tiene un **archivo** menú con un **Exit** comando, que se asociará con el símbolo ID_APP_EXIT comandos en el [ventana propiedades](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
