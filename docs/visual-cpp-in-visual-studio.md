@@ -2,18 +2,17 @@
 title: Visual C++ en Visual Studio
 description: Visual C++ es el nombre del compilador de Microsoft C++, el editor de código y las herramientas relacionadas del IDE de Visual Studio. Utilice Visual C++ para desarrollar programas para Windows, Linux, iOS y Android.
 ms.date: 09/26/2018
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327192"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809657"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ en Visual Studio
 
@@ -159,7 +158,7 @@ Programación para Common Language Runtime (CLR).
 
 ## <a name="third-party-open-source-c-libraries"></a>Bibliotecas de C++ de código abierto de terceros
 
-La herramienta de línea de comandos **vcpkg** multiplataforma simplifica mucho la detección e instalación de más de 900 bibliotecas de código abierto de C++. Para obtener más información, consulte [Vcpkg: Administrador de paquetes de C++ para Windows](vcpkg.md).
+La herramienta de línea de comandos **vcpkg** multiplataforma simplifica mucho la detección e instalación de más de 900 bibliotecas de código abierto de C++. Consulte [vcpkg: vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS](vcpkg.md).
 
 ## <a name="feedback-and-community"></a>Comentarios y comunidad
 

@@ -1,17 +1,16 @@
 ---
 title: Mejoras de conformidad de C++
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694405"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809755"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159) de Visual Studio 2017
 
@@ -790,7 +789,7 @@ void f()
 
 No se permiten argumentos predeterminados en definiciones fuera de línea de funciones miembro en clases de plantilla. El compilador emitirá una advertencia en **/permissive** y un error en **/permissive-**.
 
-En versiones anteriores de Visual Studio, el siguiente código con formato incorrecto podría generar un bloqueo en tiempo de ejecución. La versión 15.3 de Visual Studio 2017 produce la advertencia C5034: 'A\<T>::f': una definición fuera de línea de un miembro de una plantilla de clase no puede tener argumentos predeterminados:
+En versiones anteriores de Visual Studio, el siguiente código con formato incorrecto podría generar un bloqueo en tiempo de ejecución. En la versión 15.3 de Visual Studio 2017 se produce la advertencia C5034: 'A\<T>::f': an out-of-line definition of a member of a class template cannot have default arguments (una definición de fuera de línea de un miembro de una plantilla de clase no puede tener argumentos predeterminados):
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ Esta advertencia está desactivada de forma predeterminada en la versión 15.3, 
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype y llamadas a destructores eliminados
 
-En versiones anteriores de Visual Studio, el compilador no detectaba cuándo se produce una llamada a un destructor eliminado en el contexto de la expresión asociada a "decltype". En la versión 15.3 de Visual Studio 2017, el siguiente código produce el error C2280: "'A\<T>::~A(void)': se está intentando hacer referencia a una función eliminada":
+En versiones anteriores de Visual Studio, el compilador no detectaba cuándo se produce una llamada a un destructor eliminado en el contexto de la expresión asociada a "decltype". En la versión 15.3 de Visual Studio 2017, el código siguiente produce "error C2280: 'A\<T>::~A(void)': attempting to reference a deleted function" (intentando hacer referencia a una función eliminada):
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>Variables const no inicializadas
 
-La versión Visual Studio 2017 RTW tenía una regresión en la que el compilador de C++ no emitía un diagnóstico si no se inicializaba una variable "const". Esta regresión se ha corregido en Visual Studio 2017 versión 15.3. El siguiente código produce ahora la "advertencia C4132: "Valor": se debe inicializar el objeto const:
+La versión Visual Studio 2017 RTW tenía una regresión en la que el compilador de C++ no emitía un diagnóstico si no se inicializaba una variable "const". Esta regresión se ha corregido en Visual Studio 2017 versión 15.3. El código siguiente produce ahora la advertencia C4132: "Value": const object should be initialized (se debe inicializar el objeto "const"):
 
 ```cpp
 const int Value; //C4132
@@ -961,7 +960,7 @@ Los destructores privados hacen que un tipo sea no construible. `std::is_constru
 
 Esta llamada implica una llamada al destructor.
 
-### <a name="c2668-ambiguous-overload-resolution"></a>C2668: Resolución de sobrecarga ambigua del compilador
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668: Ambiguous overload resolution (resolución de sobrecarga ambigua)
 
 A veces, las versiones anteriores del compilador no eran capaces de detectar la ambigüedad cuando encontraban varios candidatos por medio tanto de declaraciones como de búsquedas dependientes de argumentos. Esto puede hacer que se elija la sobrecarga incorrecta y que ello derive en un comportamiento inesperado del entorno de ejecución. En el siguiente ejemplo, Visual Studio 2017 versión 15.3 muestra correctamente el error C2668, que informa de una llamada ambigua a una función sobrecargada:
 
@@ -1532,7 +1531,7 @@ struct D : B<T*> {
 };
 ```
 
-En la versión 15.7 de Visual Studio 2017, en el modo **/std:c++17**, se requiere la palabra clave `typename` en la instrucción `using` en D. Sin `typename`, se produce la advertencia del compilador C4346: *'B<T\*>::type': dependent name is not a type* (el nombre dependiente no es un tipo) y el error C2061: *syntax error: identifier 'type'* (error de sintaxis: identificador "tipo"):
+La versión 15.7 de Visual Studio 2017, en modo **/std:c++17**, requiere la palabra clave `typename` en la instrucción `using` de D. Sin `typename`, el compilador producirá la advertencia C4346: *'B<T\*>::type': dependent name is not a type* (el nombre dependiente no es un tipo) y el error C2061: *syntax error: identifier 'type'* (error de sintaxis: identificador "type"):
 
 ```cpp
 template<typename T>
@@ -1563,7 +1562,7 @@ int main() {
 
 En ediciones anteriores de Visual Studio, se permitía erróneamente sin ningún error una lista de inicialización de la clase base de constructor de plantilla variádica en la que faltaban los argumentos de plantilla. En Visual Studio 2017 versión 15.7, se genera un error del compilador.
 
-El siguiente ejemplo de código de Visual Studio de 2017 versión 15.7 genera el *error C2614: D.\<int>: inicialización de miembro no válida: "B" no es una base o miembro*
+En siguiente ejemplo de código en la versión 15.7 de Visual Studio 2017 produce el *error C2614: D\<int>: illegal member initialization: 'B' is not a base or member* (inicialización de miembro ilegal: "B" no es una base ni un miembro)
 
 ```cpp
 template<typename T>
@@ -1685,7 +1684,7 @@ El estándar de C++ no permite a los usuarios agregar declaraciones o definicion
 
 Microsoft tiene previsto trasladar en algún momento la ubicación donde se definen ciertos tipos STL. Cuando esto suceda, se interrumpirá el código existente que agrega declaraciones de reenvío al espacio de nombres `std`. Una nueva advertencia, C4643, permite identificar estos problemas de origen. La advertencia se habilita en el modo **/default** y está desactivada de forma predeterminada. Afectará a los programas que se compilen con **/Wall** o **/WX**.
 
-El código siguiente ahora genera la advertencia C4643: *El estándar C++ no admite reenvíos declarando "vector" en el espacio de nombres std*.
+El código siguiente ahora produce C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard* (El estándar C++ no admite reenvíos declarando "vector" en el espacio de nombres std).
 
 ```cpp
 namespace std {
@@ -1701,7 +1700,7 @@ Para corregir el error, use una directiva **include** en vez de una declaración
 
 ### <a name="constructors-that-delegate-to-themselves"></a>Constructores que se delegan a sí mismos
 
-El estándar de C++ sugiere que un compilador debería emitir un diagnóstico cuando un constructor de delegación se delegue a sí mismo. El compilador de C++ de Microsoft, en los modos [/std:c++17](build/reference/std-specify-language-standard-version.md) y [/std:c++latest](build/reference/std-specify-language-standard-version.md), ahora genera la advertencia C7535: *"%$S": El constructor de delegación se llama a sí mismo*.
+El estándar de C++ sugiere que un compilador debería emitir un diagnóstico cuando un constructor de delegación se delegue a sí mismo. El compilador de C++ de Microsoft en los modos [/std:c++17](build/reference/std-specify-language-standard-version.md) y [/std:c++latest](build/reference/std-specify-language-standard-version.md) ahora produce C7535: *'X::X': delegating constructor calls itself* (la delegación del constructor realiza una llamada a sí mismo).
 
 Sin este error, el programa siguiente se compilará, pero generará un bucle infinito:
 
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-El compilador genera la advertencia C5050 para ambos casos: *advertencia C5050: Posible entorno no compatible al importar el módulo 'm': las versiones de C++ no coinciden.  Actual "201402" versión del módulo "201703"*.
+Para ambos casos, el compilador genera la *advertencia C5050: Posible entorno no compatible al importar el módulo "m": no coinciden las versiones de C++.  Actual "201402" versión del módulo "201703"*.
 
-Además, el compilador genera la advertencia C7536 cada vez que se modifica el archivo .ifc. El encabezado de la interfaz del módulo contiene un hash SHA2 del contenido debajo de él. En la importación, se aplica un algoritmo hash al archivo .ifc de la misma manera y después se compara con el hash proporcionado en el encabezado; si no coinciden, se genera el error C7536: *error de las comprobaciones de integridad de IFC.  Se esperaba un algoritmo SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6'*.
+Además, el compilador genera la advertencia C7536 cada vez que se modifica el archivo .ifc. El encabezado de la interfaz del módulo contiene un hash SHA2 del contenido debajo de él. En la importación, se aplica un algoritmo hash al archivo .ifc de la misma manera y después se compara con el hash proporcionado en el encabezado; si no coinciden, se genera el error C7536: *error de las comprobaciones de integridad de IFC.  SHA2 esperado: "66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6"*.
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Ordenación parcial que incluye alias y contextos no deducidos
 
