@@ -66,7 +66,7 @@ Puede trabajar con *archivos de recursos* y *recursos* desde dentro del proyecto
 
 Para obtener más información sobre los recursos, consulte cómo [crear recursos](../windows/how-to-create-a-resource-script-file.md), [administrar recursos](../windows/how-to-copy-resources.md), y [incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md).
 
-## <a name="editable-resources"></a>Puede editables recursos
+## <a name="editable-resources"></a>Recursos editables
 
 Los siguientes tipos de archivos se pueden abrir para editar los recursos que contienen:
 
