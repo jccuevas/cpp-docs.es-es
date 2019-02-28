@@ -17,7 +17,7 @@ ms.locfileid: "54893904"
 
 Este tutorial muestra cómo crear una aplicación de escritorio tradicional de Windows en Visual Studio. Creará la aplicación de ejemplo usa la API de Windows para mostrar "Hola, escritorio de Windows" en una ventana. Puede utilizar el código que va a desarrollar en este tutorial como modelo para crear otras aplicaciones de escritorio de Windows.
 
-La API de Windows (también conocida como la API Win32, API de escritorio de Windows y API clásica de Windows) es un marco basada en el lenguaje C para crear aplicaciones de Windows. Ha sido existe desde la década de 1980 y se ha usado para crear aplicaciones de Windows durante décadas. Marcos de trabajo más avanzadas y más fácil de programa se han creado sobre la API de Windows, como MFC, ATL y .NET frameworks. Código más moderna para las aplicaciones para UWP y Store escritas en C++ / c++ / WinRT usa la API de Windows debajo. Para obtener más información acerca de la API de Windows, consulte [Windows API Index](/windows/desktop/apiindex/windows-api-list). Hay muchas maneras de crear aplicaciones de Windows, pero el proceso descrito anteriormente fue el primero.
+La API de Windows (también conocida como la API Win32, API de escritorio de Windows y API clásica de Windows) es un marco basada en el lenguaje C para crear aplicaciones de Windows. Ha estado en existencia desde la década de 1980 y se ha usado para crear aplicaciones de Windows durante décadas. Marcos de trabajo más avanzadas y más fácil de programa se han creado sobre la API de Windows, como MFC, ATL y .NET frameworks. Código más moderna para las aplicaciones para UWP y Store escritas en C++ / c++ / WinRT usa la API de Windows debajo. Para obtener más información acerca de la API de Windows, consulte [Windows API Index](/windows/desktop/apiindex/windows-api-list). Hay muchas maneras de crear aplicaciones de Windows, pero el proceso descrito anteriormente fue el primero.
 
 > [!IMPORTANT]
 > Por brevedad, se omiten algunas instrucciones de código en el texto. El [compilar el código](#build-the-code) sección al final de este documento muestra el código completo.
@@ -42,13 +42,13 @@ Siga estos pasos para crear su primer proyecto de escritorio de Windows y escrib
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo, expanda **instalado** > **Visual C++**, a continuación, seleccione **Windows Desktop**. En el panel central, seleccione **Asistente de escritorio de Windows**.
+1. En el cuadro de diálogo **nuevo proyecto**, en el panel izquierdo, expanda **instalado** > **Visual C++**, a continuación, seleccione **Windows Desktop**. En el panel central, seleccione **Asistente de escritorio de Windows**.
 
    En el **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 
    ![Denomine el proyecto DesktopApp](../build/media/desktop-app-new-project-name-153.png "denomine el proyecto DesktopApp")
 
-1. En el **proyecto de escritorio de Windows** cuadro de diálogo, en **tipo de aplicación**, seleccione **aplicación de Windows (.exe)**. En **Opciones adicionales**, seleccione **Proyecto vacío**. Elija **Aceptar** para crear el proyecto.
+1. En el cuadro de diálogo **proyecto de escritorio de Windows**, en **tipo de aplicación**, seleccione **aplicación de Windows (.exe)**. En **Opciones adicionales**, seleccione **Proyecto vacío**. Elija **Aceptar** para crear el proyecto.
 
    ![Crear DesktopApp en el Asistente para proyecto de escritorio de Windows](../build/media/desktop-app-new-project-wizard-153.png "crear DesktopApp en el Asistente para proyecto de escritorio de Windows")
 
@@ -72,11 +72,11 @@ Ya se ha creado el proyecto y se abre el archivo de origen en el editor. Para co
 
    ![Denomine el proyecto DesktopApp](../build/media/desktop-app-new-project-name-150.png "denomine el proyecto DesktopApp")
 
-1. En el **Introducción** página de la **Asistente para aplicaciones Win32**, elija **siguiente**.
+1. En la página **Introducción** del **Asistente para aplicaciones Win32**, elija **siguiente**.
 
    ![Crear DesktopApp en Introducción al Asistente para aplicaciones Win32](../build/media/desktop-app-win32-wizard-overview-150.png "crear DesktopApp en Introducción al Asistente para aplicaciones Win32")
 
-1. En el **configuración de la aplicación** página, en **tipo de aplicación**, seleccione **aplicación Windows**. En **Opciones adicionales**, seleccione **Proyecto vacío**. Elija **finalizar** para crear el proyecto.
+1. En la pagina **configuración de la aplicación**, en **tipo de aplicación**, seleccione **aplicación Windows**. En **Opciones adicionales**, seleccione **Proyecto vacío**. Elija **finalizar** para crear el proyecto.
 
    ![Crear DesktopApp en el Asistente para configuración de la aplicación de Win32](../build/media/desktop-app-win32-wizard-settings-150.png "crear DesktopApp en el Asistente para configuración de la aplicación de Win32")
 
@@ -96,7 +96,7 @@ A continuación, obtendrá información sobre cómo crear el código para una ap
 
 ### <a name="to-start-a-windows-desktop-application"></a>Para iniciar una aplicación de escritorio de Windows
 
-1. Al igual que cada C aplicación y aplicación de C++ deben tener un `main` funcione como punto de partida, cada debe tener la aplicación de escritorio de Windows un `WinMain` función. `WinMain` tiene la siguiente sintaxis.
+1. Al igual que cada aplicación de C y de C++ deben tener una función `main`  como punto de partida, cada aplicación de escritorio de Windows debe tener una función `WinMain` . `WinMain` tiene la siguiente sintaxis.
 
    ```cpp
    int CALLBACK WinMain(
