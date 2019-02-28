@@ -80,3 +80,4 @@ No es ningún secreto que CRT antiguo `rand()` función tiene muchos defectos, q
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
 
      //TEST
+     //NEW TEST
