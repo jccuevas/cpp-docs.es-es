@@ -1,22 +1,22 @@
 ---
 title: '&lt;type_traits&gt;'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514691"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006735"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Define las plantillas que proporcionan constantes en tiempo de compilación que aportan información sobre las propiedades de sus argumentos de tipo o crean tipos transformados.
+Define las plantillas para las constantes de tiempo de compilación que aportan información sobre las propiedades de sus argumentos de tipo, o generan tipos transformados.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,29 +26,33 @@ Define las plantillas que proporcionan constantes en tiempo de compilación que 
 
 ## <a name="remarks"></a>Comentarios
 
-Las clases y plantillas de \<type_traits > se utilizan para admitir la inferencia, clasificación y transformación en tiempo de compilación para detectar errores relacionados con el tipo y que le ayudarán a optimizar el código genérico. Estas clases y plantillas incluyen rasgos de tipo unario que describen una propiedad de un tipo, rasgos de tipo binario que describen la relación entre los tipos y rasgos de transformación que modifican una propiedad de un tipo.
+Las clases y plantillas de \<type_traits > se utilizan para admitir la inferencia, clasificación y transformación en tiempo de compilación. También se usan para detectar errores relacionados con el tipo y que le ayudarán a optimizar el código genérico. Rasgos de tipo unario describen una propiedad de un tipo, rasgos de tipo binario describen la relación entre los tipos y rasgos de transformación modifican una propiedad de un tipo.
 
-Para admitir rasgos de tipo, se define una clase del asistente, `integral_constant`. Tiene especializaciones de plantilla `true_type` y `false_type` que forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *es true*, se deriva públicamente (ya sea de forma directa o indirecta) de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *es false*, se deriva públicamente (ya sea de forma directa o indirecta) de [false_type](../standard-library/type-traits-typedefs.md#false_type).
+La clase auxiliar `integral_constant` y sus especializaciones de plantilla `true_type` y `false_type` forman las clases base para los predicados de tipo. Un *predicado de tipo* es una plantilla que toma uno o más argumentos de tipo. Cuando un predicado de tipo *cumple*, se deriva públicamente, directa o indirectamente, de [true_type](../standard-library/type-traits-typedefs.md#true_type). Cuando un predicado de tipo *contiene false*, se deriva públicamente, directa o indirectamente, de [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 Un *modificador de tipo* o *rasgo de transformación* es una plantilla que toma uno o más argumentos de plantilla y tiene un miembro `type`, que es un sinónimo del tipo modificado.
 
 ### <a name="alias-templates"></a>Plantillas de alias
 
-Para simplificar las expresiones de rasgos de tipo, se proporcionan [plantillas de alias](../cpp/aliases-and-typedefs-cpp.md) para `typename some_trait<T>::type`, donde " `some_trait`" es el nombre de clase de la plantilla. Por ejemplo, [add_const](../standard-library/add-const-class.md) tiene la plantilla de alias para su tipo `add_const_t` definida así:
+Para simplificar las expresiones de rasgos de tipo, [plantillas de alias](../cpp/aliases-and-typedefs-cpp.md) para `typename some_trait<T>::type` se proporcionan, donde *some_trait* es el nombre de clase de plantilla. Por ejemplo, [add_const](../standard-library/add-const-class.md) tiene la plantilla de alias para su tipo `add_const_t` definida así:
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-|||||
-|-|-|-|-|
-|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|
-|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|
-|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|
-|add_pointer_t|conditional_t|remove_const_t|result_of_t|
-|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|
-|add_volatile_t|enable_if_t|remove_extent_t||
+Estos son los alias proporcionados para el `type` miembros:
+
+||||
+|-|-|-|
+| add_const_t | add_cv_t | add_lvalue_reference_t |
+| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
+| aligned_storage_t | aligned_union_t | common_type_t |
+| conditional_t | decay_t | enable_if_t |
+| invoke_result_t | make_signed_t | make_unsigned_t |
+| remove_all_extents_t | remove_const_t | remove_cv_t |
+| remove_extent_t | remove_pointer_t | remove_reference_t |
+| remove_volatile_t | result_of_t | underlying_type_t |
 
 ### <a name="classes"></a>Clases
 
@@ -133,6 +137,10 @@ Propiedades de tipo
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Comprueba si el tipo se puede asignar mediante movimiento y se sabe que la asignación no se inicia.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Comprueba si el tipo se puede destruir y se sabe que el destructor no se inicia.|
 |`has_virtual_destructor`|Comprueba si el tipo tiene un destructor virtual.|
+| [is_invocable](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante los tipos de argumento especificados.<br/> Agregado en C ++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante los tipos de argumento especificados y el resultado es convertible al tipo especificado.<br/> Agregado en C ++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante el argumento especificado, tipos y se sabe que no producen excepciones.<br/> Agregado en C ++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Comprueba si se puede invocar un tipo que se puede llamar mediante el argumento especificado, tipos y se sabe que no se inicia las excepciones y el resultado es convertible al tipo especificado.<br/> Agregado en C ++ 17. |
 
 Consultas de propiedad de tipo
 
@@ -200,7 +208,8 @@ Otras transformaciones
 |[conditional](../standard-library/conditional-class.md)|Si la condición es true, genera el primer tipo especificado, de lo contrario, el segundo tipo especificado.|
 |[decay](../standard-library/decay-class.md)|Genera el tipo tal y como se pasa por valor. Crea un tipo que no es de referencia, const o volatile, o bien convierte un puntero al tipo.|
 |[enable_if](../standard-library/enable-if-class.md)|Si la condición es true, genera el tipo especificado, de lo contrario, no genera ningún tipo.|
-|[result_of](../standard-library/result-of-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados.|
+|[invoke_result](invoke-result-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados. <br/>Agregado en C ++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Determina el tipo de valor devuelto del tipo que se puede llamar que toma los tipos de argumento especificados. <br/>Agregado en C ++ 14, en desuso en C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Genera el tipo entero subyacente para un tipo de enumeración.|
 
 ## <a name="see-also"></a>Vea también

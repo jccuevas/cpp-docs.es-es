@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun_ref_t (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_ref_t
+- functional/std::const_mem_fun_ref_t
 helpviewer_keywords:
 - const_mem_fun_ref_t class
 ms.assetid: 316ddbaa-9f46-4931-8eba-ea4ca66360ef
-ms.openlocfilehash: 3f0a87b71f39847590c5fbc4e94038b216ec4b1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16025764cdcf28900c30ef53dced871998f8bd07
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515523"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006583"
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t (Clase)
 
-Clase de adaptadores que permite llamar a una función miembro **const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia.
+Clase de adaptadores que permite llamar a una función miembro **const** que no toma ningún argumento como un objeto de función unaria cuando se inicializa con un argumento de referencia. En desuso en C ++ 11, se ha quitado en C ++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,7 +31,7 @@ class const_mem_fun_ref_t
 
 ### <a name="parameters"></a>Parámetros
 
-*P. M.*<br/>
+*Pm*<br/>
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
 *left*<br/>
