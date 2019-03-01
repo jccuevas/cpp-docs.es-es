@@ -27,6 +27,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464098"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210541"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -164,7 +165,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Número que se va a convertir.
 
 *buffer*<br/>
@@ -187,7 +188,7 @@ El **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, y **_ui64toa** funciones convi
 > [!IMPORTANT]
 > Estas funciones pueden escribir más allá del final de un búfer que es demasiado pequeño. Para evitar las saturaciones del búfer, asegúrese de que *búfer* es lo suficientemente grande como para contener los dígitos convertidos más el carácter nulo final y un carácter de signo. Uso incorrecto de estas funciones puede provocar serios problemas de seguridad en el código.
 
-Debido a su potencial para problemas de seguridad, de forma predeterminada, estas funciones generan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **esta función o variable puede no ser segura. Considere el uso de** *safe_function* **en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.** Le recomendamos que cambie su código fuente para usar el *safe_function* sugerido por el mensaje de advertencia. Las funciones más seguras no escriben más caracteres que el tamaño de búfer especificado. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Debido a su potencial para problemas de seguridad, de forma predeterminada, estas funciones generan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **Esta función o variable puede no ser seguro. Considere el uso de** *safe_function* **en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS.** Le recomendamos que cambie su código fuente para usar el *safe_function* sugerido por el mensaje de advertencia. Las funciones más seguras no escriben más caracteres que el tamaño de búfer especificado. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
 Para usar estas funciones sin la advertencia de desuso, defina el **_CRT_SECURE_NO_WARNINGS** macro de preprocesador antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando el **/D_CRT_SECURE_NO_WARNINGS** opción del compilador para la **cl** comando. En caso contrario, defina la macro en los archivos de origen. Si usa encabezados precompilados, defina la macro en la parte superior del encabezado precompilado incluyen archivo, normalmente stdafx.h. Para definir la macro en el código fuente, utilice un **#define** Directiva antes de incluir los encabezados de CRT, como en este ejemplo:
 
@@ -198,7 +199,7 @@ Para usar estas funciones sin la advertencia de desuso, defina el **_CRT_SECURE_
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan a sus homólogos más seguros. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Los nombres Posix **itoa**, **ltoa**, y **ultoa** existe como alias para el **_itoa**, **_ltoa**, y **_ultoa** funciones. Los nombres Posix están en desuso porque no siguen las convenciones de nombres de función específicos de la implementación de ISO C. De forma predeterminada, estas funciones generan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **POSIX el nombre para este elemento está en desuso. En su lugar, use el nombre conforme a ISO C y C++:** *new_name*. Le recomendamos que cambie el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**, o **_ultoa_s**. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Los nombres Posix **itoa**, **ltoa**, y **ultoa** existe como alias para el **_itoa**, **_ltoa**, y **_ultoa** funciones. Los nombres Posix están en desuso porque no siguen las convenciones de nombres de función específicos de la implementación de ISO C. De forma predeterminada, estas funciones generan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **El nombre POSIX de este elemento está en desuso. En su lugar, use el nombre conforme a ISO C y C++:** *new_name*. Le recomendamos que cambie el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**, o **_ultoa_s**. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
 Para la portabilidad de código fuente, prefiere conservar los nombres Posix en el código. Para usar estas funciones sin la advertencia de desuso, defina ambos el **_CRT_NONSTDC_NO_WARNINGS** y **_CRT_SECURE_NO_WARNINGS** macros de preprocesador antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando el **/D_CRT_SECURE_NO_WARNINGS** y **/D_CRT_NONSTDC_NO_WARNINGS** opciones del compilador para el **cl**comando. En caso contrario, definir las macros en los archivos de origen. Si usa encabezados precompilados, definir las macros en la parte superior del encabezado precompilado incluyen archivo, normalmente stdafx.h. Para definir las macros en el código fuente, utilice **#define** directivas antes de incluir los encabezados de CRT, como en este ejemplo:
 

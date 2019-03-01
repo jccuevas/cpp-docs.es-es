@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 559110361b9d3d8c66ff261860f8885ff56d44d5
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: 352efc31010a9fe665348ca35adfd68835407e67
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006739"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210998"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; (Funciones)
 
@@ -63,16 +63,16 @@ Estas funciones están en desuso en C ++ 17:
 Enlaza argumentos a un objeto al que se puede llamar.
 
 ```cpp
-template <class Fty, class T1, class T2, ..., class TN>
-unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
+template <class FT, class T1, class T2, ..., class TN>
+unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 
-template <class Ret, class Fty, class T1, class T2, ..., class TN>
-unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
+template <class RTy, class FT, class T1, class T2, ..., class TN>
+unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*<br/>
+*Fey*<br/>
 El tipo del objeto al que se va a llamar.
 
 *TN*<br/>
@@ -86,11 +86,11 @@ El enésimo argumento de llamada.
 
 ### <a name="remarks"></a>Comentarios
 
-Los tipos `Fty, T1, T2, ..., TN` tienen que poder construirse mediante copia y `INVOKE(fn, t1, ..., tN)` debe ser una expresión válida para algunos valores `w1, w2, ..., wN`.
+Los tipos de `FT, T1, T2, ..., TN` debe construir de copia, y `INVOKE(fn, t1, ..., tN)` debe ser una expresión válida para algunos valores `w1, w2, ..., wN`.
 
-La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` vienen determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.
+La primera función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo de resultado débil. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` vienen determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada.
 
-La segunda función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo anidado `result_type` que es un sinónimo de `Ret`. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, Ret)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` están determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada y con un tipo de valor devuelto especificado.
+La segunda función de plantilla devuelve un contenedor de llamadas de reenvío `g` con un tipo anidado `result_type` que es un sinónimo de `RTy`. El efecto de `g(u1, u2, ..., uM)` es `INVOKE(f, v1, v2, ..., vN, RTy)`, donde `cv` son los calificadores cv de `g` y los valores y tipos de los argumentos enlazados `v1, v2, ..., vN` están determinados como se indica a continuación. Úselo para enlazar los argumentos con un objeto al que se puede llamar para crear un objeto al que se puede llamar con una lista de argumentos adaptada y con un tipo de valor devuelto especificado.
 
 Los valores de los argumentos enlazados `v1, v2, ..., vN` y sus tipos correspondientes `V1, V2, ..., VN` dependen del tipo del argumento correspondiente `ti` de tipo `Ti` en la llamada a `bind` y los calificadores cv `cv` del contenedor de llamadas `g` de la siguiente forma:
 
@@ -98,15 +98,15 @@ si `ti` es de tipo `reference_wrapper<T>`, el argumento `vi` es `ti.get()` y su 
 
 Si el valor de `std::is_bind_expression<Ti>::value` es **true** el argumento `vi` es `ti(u1, u2, ..., uM)` y su tipo `Vi` es `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
-si el valor `j` de `std::is_placeholder<Ti>::value` no es cero, el argumento `vi` es `uj` y su tipo `Vi` es `Uj&`;
+Si el valor `j` de `std::is_placeholder<Ti>::value` no es cero en el argumento `vi` es `uj` y su tipo `Vi` es `Uj&`;
 
 de lo contrario, el argumento `vi` es `ti` y su tipo `Vi` es `Ti` `cv` `&`.
 
 Por ejemplo, dada una función `f(int, int)`, la expresión `bind(f, _1, 0)` devuelve un contenedor de llamadas de reenvío `cw` de modo que `cw(x)` llama a `f(x, 0)`. La expresión `bind(f, 0, _1)` devuelve un contenedor de llamadas de reenvío `cw` de modo que `cw(x)` llama a `f(0, x)`.
 
-El número de argumentos en una llamada a `bind` además del argumento `fn` debe ser igual al número de argumentos que se puede pasar al objeto `fn` al que se puede llamar. Por tanto, `bind(cos, 1.0)` es correcto y `bind(cos)` y `bind(cos, _1, 0.0)` son incorrectos.
+El número de argumentos en una llamada a `bind` y el argumento `fn` debe ser igual al número de argumentos que se puede pasar al objeto que se puede llamar `fn`. Por ejemplo, `bind(cos, 1.0)` es correcta y ambos `bind(cos)` y `bind(cos, _1, 0.0)` son incorrectas.
 
-El número de argumentos de la llamada de función al contenedor de llamadas devuelto por `bind` debe ser al menos tan grande como el valor numerado más alto de `is_placeholder<PH>::value` para todos los argumentos de marcador de posición en la llamada a `bind`. Por tanto, `bind(cos, _2)(0.0, 1.0)` es correcto (y devuelve `cos(1.0)`) y `bind(cos, _2)(0.0)` es incorrecto.
+El número de argumentos de la llamada de función al contenedor de llamadas devuelto por `bind` debe ser al menos tan grande como el valor numerado más alto de `is_placeholder<PH>::value` para todos los argumentos de marcador de posición en la llamada a `bind`. Por ejemplo, `bind(cos, _2)(0.0, 1.0)` es correcto (y devuelve `cos(1.0)`), y `bind(cos, _2)(0.0)` es incorrecto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -161,7 +161,7 @@ int main()
 
 ## <a name="bind1st"></a> bind1st
 
-Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el primer argumento de la función binaria a un valor especificado. En desuso en C ++ 11, se ha quitado en C ++ 17.
+Una función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria. El primer argumento de la función binaria enlaza a un valor especificado. En desuso en C ++ 11, se ha quitado en C ++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -182,9 +182,9 @@ El objeto de función unaria resultante de enlazar el primer argumento del objet
 
 ### <a name="remarks"></a>Comentarios
 
-Los enlazadores de función son un tipo de adaptador de función y, ya que devuelven objetos de función, se pueden usar en determinados tipos de composición de funciones para crear expresiones más complicadas y eficaces.
+Los enlazadores de función son un tipo de adaptador de función. Ya que devuelven objetos de función, puede usarse en ciertos tipos de composición de funciones para construir expresiones más complicadas y eficaces.
 
-Si *func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind1st` ( `func`, `c`) es equivalente a la [binder1st](../standard-library/binder1st-class.md) constructor de clase `binder1st` <  `Operation`> ( `func`, `c`) y es más conveniente.
+Si *func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind1st( func, c )` es el mismo que el [binder1st](../standard-library/binder1st-class.md) constructor de clase `binder1st<Operation>( func, c )`y es más cómodo Utilice.
 
 ### <a name="example"></a>Ejemplo
 
@@ -255,7 +255,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bind2nd"></a> bind2nd
 
-Función de plantilla del asistente que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria enlazando el segundo argumento de la función binaria a un valor especificado. En desuso en C ++ 11, se ha quitado en C ++ 17.
+Una función de plantilla auxiliar que crea un adaptador para convertir un objeto de función binaria en un objeto de función unaria. Enlaza el segundo argumento de la función binaria a un valor especificado. En desuso en C ++ 11, se ha quitado en C ++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -272,13 +272,13 @@ El valor al que se enlazará el segundo argumento del objeto de función binaria
 
 ### <a name="return-value"></a>Valor devuelto
 
-El objeto de función unaria resultante de enlazar el segundo argumento del objeto de función binaria con el valor *derecho*.
+El resultado del objeto de función unario de enlazar el segundo argumento del objeto de función binaria a *derecho*.
 
 ### <a name="remarks"></a>Comentarios
 
-Los enlazadores de función son un tipo de adaptador de función y, ya que devuelven objetos de función, se pueden usar en determinados tipos de composición de funciones para crear expresiones más complicadas y eficaces.
+Los enlazadores de función son un tipo de adaptador de función. Ya que devuelven objetos de función, puede usarse en ciertos tipos de composición de funciones para construir expresiones más complicadas y eficaces.
 
-Si *func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind2nd` ( `func`, `c` ) es equivalente a la [binder2nd](../standard-library/binder2nd-class.md) constructor de clase **binder2nd\<operación >** ( `func`, `c` ) y más conveniente.
+Si *func* es un objeto de tipo `Operation` y `c` es una constante, a continuación, `bind2nd( func, c )` es el mismo que el [binder2nd](../standard-library/binder2nd-class.md) constructor de clase `binder2nd<Operation>( func, c )`y más conveniente usar.
 
 ### <a name="example"></a>Ejemplo
 
@@ -349,7 +349,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bit_and"></a> bit_and
 
-Objeto de función predefinido que realiza la operación AND bit a bit (`operator&` binario) sobre sus argumentos.
+Un objeto de función predefinido que realiza una operación AND bit a bit (binario `operator&`) sobre sus argumentos.
 
 ```cpp
 template <class Type = void>
@@ -389,7 +389,7 @@ El functor de `bit_and` está limitado a tipos enteros para los tipos de datos b
 
 ## <a name="bit_not"></a> bit_not
 
-Objeto de función predefinido que realiza la operación de complemento bit a bit (NOT) (`operator~`unario) sobre su argumento. Agregado en C ++ 14.
+Un objeto de función predefinido que realiza un operación (no) de complemento bit a bit (unario `operator~`) sobre su argumento. Agregado en C ++ 14.
 
 ```cpp
 template <class Type = void>
@@ -425,7 +425,7 @@ El functor de `bit_not` está limitado a tipos enteros para los tipos de datos b
 
 ## <a name="bit_or"></a> bit_or
 
-Objeto de función predefinido que realiza la operación OR bit a bit (`operator|`) sobre sus argumentos.
+Un objeto de función predefinido que realiza una operación OR bit a bit (`operator|`) sobre sus argumentos.
 
 ```cpp
 template <class Type = void>
@@ -465,7 +465,7 @@ El functor de `bit_or` está limitado a tipos enteros para los tipos de datos b�
 
 ## <a name="bit_xor"></a> bit_xor
 
-Objeto de función predefinido que realiza la operación XOR bit a bit (`operator^` binario) sobre sus argumentos.
+Un objeto de función predefinido que realiza una operación XOR bit a bit (binario `operator^`) sobre sus argumentos.
 
 ```cpp
 template <class Type = void>
@@ -620,50 +620,61 @@ struct Demo
 
     Demo(int const n) : n_{n} {}
 
-    void operator()(int const i, int const j) const
+    void operator()( int const i, int const j ) const
     {
         std::cout << "Demo operator( " << i << ", "
-            << j << " ) is " << i * j << std::endl;
+            << j << " ) is " << i * j << "\n";
     }
 
-    void difference(int const i) const 
+    void difference( int const i ) const
     {
         std::cout << "Demo.difference( " << i << " ) is "
-            << n_ - i << std::endl;
+            << n_ - i << "\n";
     }
 };
 
 void divisible_by_3(int const i)
 {
-    std::cout << i;
-    (i % 3) ? std::cout << " isn't divisible by 3."
-        : std::cout << " is divisible by 3.";
-    std::cout << std::endl;
+    std::cout << i << ( i % 3 == 0 ? " is" : " isn't" )
+        << " divisible by 3.\n";
 }
 
 int main()
 {
-    // Invoke a function object (call operator).
     Demo d{ 42 };
+    Demo * pd{ &d };
+
+    // Invoke a function object (call operator).
     std::invoke( d, 3, -7 );
 
-    // Invoke a member function.
-    std::invoke(&Demo::difference, d, 29);
+    // Invoke a member function or pointer to member function:
+    std::invoke( &Demo::difference, d, 29 );
+    std::invoke( &Demo::difference, pd, 13 );
 
-    // Invoke a data member.
-    std::cout << "n_: " << std::invoke(&Demo::n_, d) << '\n';
+    // Invoke a data member on an object or pointer to object:
+    std::cout << "d.n_: " << std::invoke( &Demo::n_, d ) << "\n";
+    std::cout << "pd->n_: " << std::invoke( &Demo::n_, pd ) << "\n";
 
-    // Invoke a stand-alone (free) function.
+    // Invoke a stand-alone (free) function:
     std::invoke( divisible_by_3, 42 );
 
-    // Invoke a lambda.
-    std::invoke( [](int const i){
-        std::cout << i; 
-        (i % 7) ? std::cout << " isn't divisible by 7."
-            : std::cout << " is divisible by 7.";
-        std::cout << std::endl;
-    }, 42 );
+    // Invoke a lambda:
+    auto divisible_by_7 = []( int const i ) {
+        std::cout << i << ( i % 7 == 0 ? " is" : " isn't" )
+            << " divisible by 7.\n";
+        };
+    std::invoke( divisible_by_7, 42 );
 }
+```
+
+```Output
+Demo operator( 3, -7 ) is -21
+Demo.difference( 29 ) is 13
+Demo.difference( 13 ) is 29
+d.n_: 42
+pd->n_: 42
+42 is divisible by 3.
+42 is divisible by 7.
 ```
 
 ## <a name="mem_fn"></a> mem_fn
@@ -671,13 +682,13 @@ int main()
 Genera un contenedor de llamadas simple.
 
 ```cpp
-template <class Ret, class Ty>
-unspecified mem_fn(Ret Ty::*pm);
+template <class RTy, class Ty>
+unspecified mem_fn(RTy Ty::*pm);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Ret*<br/>
+*RTy*<br/>
 Tipo de valor devuelto de la función encapsulada.
 
 *Ty*<br/>
@@ -685,11 +696,11 @@ El tipo del puntero de función miembro.
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve un contenedor simple de llamadas `cw`, con un tipo de resultado débil, de modo que la expresión `cw(t, a2, ..., aN)` es equivalente a `INVOKE(pm, t, a2, ..., aN)`. No produce ninguna excepción.
+La función de plantilla devuelve un contenedor de llamadas simple `cw`, con un tipo de resultado débil, tal que la expresión `cw(t, a2, ..., aN)` es el mismo que `INVOKE(pm, t, a2, ..., aN)`. No produce ninguna excepción.
 
-El contenedor de llamadas devuelto procede de `std::unary_function<cv Ty*, Ret>` (por lo tanto, define el tipo anidado `result_type` como sinónimo de *Ret* y el tipo anidado `argument_type` como sinónimo de `cv Ty*`) solo si el tipo  *Ty* es un puntero a función miembro con el calificador cv `cv` que no toma ningún argumento.
+El contenedor de llamadas devuelto procede de `std::unary_function<cv Ty*, RTy>` (y define el tipo anidado `result_type` como sinónimo de *RTy* y el tipo anidado `argument_type` como sinónimo de `cv Ty*`) solo si el tipo *Ty*  es un puntero a función miembro con el calificador cv `cv` que no toma ningún argumento.
 
-El contenedor de llamadas devuelto procede de `std::binary_function<cv Ty*, T2, Ret>` (por lo tanto, define el tipo anidado `result_type` como sinónimo de *Ret*, el tipo anidado `first argument_type` como sinónimo de `cv Ty*`y el tipo anidado `second argument_type`como sinónimo de `T2`) solo si el tipo *Ty* es un puntero a función miembro con el calificador cv `cv` que toma un argumento, de tipo `T2`.
+El contenedor de llamadas devuelto procede de `std::binary_function<cv Ty*, T2, RTy>` (y define el tipo anidado `result_type` como sinónimo de *RTy*, el tipo anidado `first argument_type` como sinónimo de `cv Ty*`y el tipo anidado `second argument_type` como sinónimo de `T2`) solo si el tipo *Ty* es un puntero a función miembro con el calificador cv `cv` que toma un argumento, de tipo `T2`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -731,25 +742,25 @@ int main()
 
 ## <a name="mem_fun"></a> mem_fun
 
-Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero. En desuso en C ++ 11 en favor de [mem_fn ()](#mem_fn) y [enlazar](#bind)y se quitan en C ++ 17.
+Funciones de plantilla del asistente utilizadas para construir adaptadores de objeto de función para las funciones miembro cuando se inicializan con argumentos de puntero. En desuso en C ++ 11 para [mem_fn ()](#mem_fn) y [enlazar](#bind)y se quitan en C ++ 17.
 
 ```cpp
 template <class Result, class Type>
-mem_fun_t<Result, Type> mem_fun (Result(Type::* pmem)());
+mem_fun_t<Result, Type> mem_fun (Result(Type::* pMem)());
 
 template <class Result, class Type, class Arg>
-mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg));
+mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg));
 
 template <class Result, class Type>
-const_mem_fun_t<Result, Type> mem_fun(Result (Type::* pmem)() const);
+const_mem_fun_t<Result, Type> mem_fun(Result (Type::* pMem)() const);
 
 template <class Result, class Type, class Arg>
-const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
+const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*pmem*<br/>
+*pMem*<br/>
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -822,21 +833,21 @@ Las funciones de plantilla del asistente usadas para crear adaptadores de objeto
 
 ```cpp
 template <class Result, class Type>
-mem_fun_ref_t<Result, Type> mem_fun_ref(Result (Type::* pmem)());
+mem_fun_ref_t<Result, Type> mem_fun_ref(Result (Type::* pMem)());
 
 template <class Result, class Type, class Arg>
-mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (Type::* pmem)(Arg));
+mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (Type::* pMem)(Arg));
 
 template <class Result, class Type>
-const_mem_fun_ref_t<Result, Type> mem_fun_ref(Result Type::* pmem)() const);
+const_mem_fun_ref_t<Result, Type> mem_fun_ref(Result Type::* pMem)() const);
 
 template <class Result, class Type, class Arg>
-const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) const);
+const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) const);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*pmem*<br/>
+*pMem*<br/>
 Un puntero a la función miembro de clase `Type` que se convertirá en un objeto de función.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -923,16 +934,16 @@ With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 
 ## <a name="not1"></a> not1
 
-Devuelve el complemento de un predicado unario. En desuso en favor de [not_fn](#not_fn) en C ++ 17.
+Devuelve el complemento de un predicado unario. En desuso para [not_fn](#not_fn) en C ++ 17.
 
 ```cpp
 template <class UnaryPredicate>
-unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
+unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*pred*<br/>
+*predicate*<br/>
 Predicado unario que se va a negar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -941,7 +952,7 @@ Un predicado unario que es la negación del predicado unario modificado.
 
 ### <a name="remarks"></a>Comentarios
 
-Si una `unary_negate` se construye a partir de un predicado unario **Pred**( *x*), devuelve **!Pred**( *x*).
+Si un `unary_negate` se construye a partir de un predicado unario `predicate( x )`, a continuación, devuelve `!predicate( x )`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -995,7 +1006,7 @@ The number of elements in v1 not greater than 10 is: 3.
 
 ## <a name="not2"></a> not2
 
-Devuelve el complemento de un predicado binario. En desuso en favor de [not_fn](#not_fn) en C ++ 17.
+Devuelve el complemento de un predicado binario. En desuso para [not_fn](#not_fn) en C ++ 17.
 
 ```cpp
 template <class BinaryPredicate>
@@ -1013,7 +1024,7 @@ Un predicado binario que es la negación del predicado binario modificado.
 
 ### <a name="remarks"></a>Comentarios
 
-Si una `binary_negate` se construye a partir de un predicado binario **BinPred**( *x*, *y*), devuelve ! **BinPred**( *x*, *y*).
+Si un `binary_negate` se construye a partir de un predicado binario `binary_predicate( x, y )`, a continuación, devuelve `!binary_predicate( x, y )`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1085,7 +1096,7 @@ Un objeto que se puede llamar para construir las llamadas de reenvío contenedor
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla devuelve un contenedor de llamadas equivalente a `return call_wrapper(std::forward<Callable>(func))` en función de esta clase solo exposition:
+La función de plantilla devuelve un contenedor de llamadas, como `return call_wrapper(std::forward<Callable>(func))`, en función de esta clase solo exposition:
 
 ```cpp
 class call_wrapper
@@ -1116,7 +1127,7 @@ private:
 
 El constructor explícito en el objeto que se puede llamar *func* requiere tipo `std::decay_t<Callable>` para satisfacer los requisitos de `MoveConstructible`, y `is_constructible_v<FD, Callable>` debe ser true. Inicializa el objeto que se puede llamar ajustado `fd` desde `std::forward<Callable>(func)`y se produce cualquier excepción producida por la construcción de `fd`.
 
-El contenedor expone los operadores de llamada que se distinguen por el valor l o categoría de referencia rvalue y const calificación, como se muestra aquí,
+El contenedor expone los operadores de llamada que se distinguen por categoría referencia lvalue o rvalue y calificación de const, como se muestra aquí:
 
 ```cpp
 template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
@@ -1125,7 +1136,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-Los dos primeros son equivalentes a `return !INVOKE(fd, std::forward<Args>(args)...)`, y los dos segundos equivalen a `return !INVOKE(std::move(fd), std::forward<Args>(args)...)`.
+Los dos primeros son los mismos que `return !std::invoke(fd, std::forward<Args>(args)...)`. Los segundos dos son los mismos que `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1194,7 +1205,7 @@ La segunda función de plantilla devuelve la función binaria [pointer_to_binary
 
 ### <a name="remarks"></a>Comentarios
 
-Un puntero de función es un objeto de función y puede pasarse a cualquier algoritmo de la biblioteca estándar de C++ que esté esperando una función como un parámetro, pero no es adaptable. Para usarlo como un adaptador, por ejemplo, al enlazar un valor a este o al usarlo con un negador, debe proporcionarse con los tipos anidados que hacen posible dicha adaptación. La conversión de punteros de función unarios y binarios mediante la función del asistente `ptr_fun` permite a los adaptadores de función trabajar con punteros de función unarios y binarios.
+Un puntero de función es un objeto de función. Se puede pasar a cualquier algoritmo que espera una función como un parámetro, pero no es adaptable. Información acerca de sus tipos anidados es necesaria usar un adaptador, por ejemplo, para enlazar un valor o para negar. La conversión de punteros de función unarios y binarios mediante la función del asistente `ptr_fun` permite a los adaptadores de función trabajar con punteros de función unarios y binarios.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1297,13 +1308,13 @@ tiger cougar
 Intercambia dos objetos `function`.
 
 ```cpp
-template <class Fty>
-void swap(function<Fty>& f1, function<Fty>& f2);
+template <class FT>
+void swap(function<FT>& f1, function<FT>& f2);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*Fty*<br/>
+*FT*<br/>
 Tipo controlado por los objetos de función.
 
 *f1*<br/>
