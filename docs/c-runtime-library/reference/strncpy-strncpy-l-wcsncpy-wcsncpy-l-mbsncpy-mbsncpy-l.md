@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507745"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210437"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -207,7 +208,7 @@ Para obtener más información sobre la compatibilidad de plataformas, vea [Comp
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra el uso de **strncpy** y cómo se puede usar incorrectamente para provocar errores de programa y problemas de seguridad. El compilador genera una advertencia para cada llamada a **strncpy** similar a **crt_strncpy_x86.c (15): advertencia C4996: 'strncpy': esta función o variable puede no ser segura. Considere la posibilidad de usar strncpy_s en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS. Consulte la ayuda en línea para obtener información detallada.**
+En el ejemplo siguiente se muestra el uso de **strncpy** y cómo se puede usar incorrectamente para provocar errores de programa y problemas de seguridad. El compilador genera una advertencia para cada llamada a **strncpy** similar a **crt_strncpy_x86.c (15): advertencia C4996: 'strncpy': Esta función o variable puede no ser segura. Considere la posibilidad de usar strncpy_s en su lugar. Para deshabilitar el desuso, utilice _CRT_SECURE_NO_WARNINGS. Consulte la ayuda en línea para obtener información detallada.**
 
 ```C
 // crt_strncpy_x86.c
