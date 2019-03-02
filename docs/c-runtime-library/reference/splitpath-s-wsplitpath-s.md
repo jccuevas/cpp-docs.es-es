@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _wsplitpath_s
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: 5a6770b7f5f0f8ee82cf86757d14e03b33c1f5d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87af8bac525844c06fdfc16d7d13a06eef4d61ab
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602909"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210450"
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s, _wsplitpath_s
 
@@ -89,7 +90,7 @@ errno_t _wsplitpath_s(
 *path*<br/>
 Ruta de acceso completa.
 
-*Unidad*<br/>
+*drive*<br/>
 Letra de unidad, seguida de dos puntos (**:**). Puede pasar **NULL** para este parámetro si no necesita la letra de unidad.
 
 *driveNumberOfElements*<br/>
@@ -123,7 +124,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 |---------------|------------------|
 |*ruta de acceso* es **NULL**|**EINVAL**|
 |*unidad* es **NULL**, *driveNumberOfElements* es distinto de cero|**EINVAL**|
-|*unidad* no es**NULL**, *driveNumberOfElements* es cero|**EINVAL**|
+|*drive* is non-**NULL**, *driveNumberOfElements* is zero|**EINVAL**|
 |*dir* es **NULL**, *dirNumberOfElements* es distinto de cero|**EINVAL**|
 |*dir* no es**NULL**, *dirNumberOfElements* es cero|**EINVAL**|
 |*fname* es **NULL**, *nameNumberOfElements* es distinto de cero|**EINVAL**|
