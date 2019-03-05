@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: e618f11e3c574e5f53dff150beeb313d26fd4a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293321"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Crear subprocesos de interfaz de usuario MFC
 
@@ -51,7 +51,7 @@ MFC proporciona dos versiones de `AfxBeginThread` por medio de sobrecarga de par
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Multithreading: Finalizar subprocesos](multithreading-terminating-threads.md)
+- [Multithreading: Terminar subprocesos](multithreading-terminating-threads.md)
 
 - [Multithreading: Crear subprocesos de trabajo](multithreading-creating-worker-threads.md)
 

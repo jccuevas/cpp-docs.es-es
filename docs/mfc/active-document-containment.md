@@ -8,12 +8,12 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: 22111a8b2f7048d9f62d9e3e2f6c270fdc9bace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1811febdb26091785f8b709e90f8cdd7a7f8afdd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258299"
 ---
 # <a name="active-document-containment"></a>Contención de documentos activos
 
@@ -40,4 +40,3 @@ Los usuarios de una aplicación de contenedor de documentos activos pueden crear
 ## <a name="see-also"></a>Vea también
 
 [MFC COM](../mfc/mfc-com.md)
-

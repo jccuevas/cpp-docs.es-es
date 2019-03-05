@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262108"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 
@@ -180,8 +180,8 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::GetControlState](#getcontrolstate)|Obtiene la visibilidad actual y Estados de un control determinado habilitados.|
 |[CFileDialog::GetEditBoxText](#geteditboxtext)|Obtiene el texto actual en un control de cuadro de edición.|
 |[CFileDialog::GetFileExt](#getfileext)|Devuelve la extensión del archivo seleccionado.|
-|[CFileDialog:: GetFileName](#getfilename)|Devuelve el nombre de archivo del archivo seleccionado.|
-|[CFileDialog:: GetFileTitle](#getfiletitle)|Devuelve el título del archivo seleccionado.|
+|[CFileDialog::GetFileName](#getfilename)|Devuelve el nombre de archivo del archivo seleccionado.|
+|[CFileDialog::GetFileTitle](#getfiletitle)|Devuelve el título del archivo seleccionado.|
 |[CFileDialog::GetFolderPath](#getfolderpath)|Recupera la ruta de acceso del directorio o carpeta abierta para un tipo de explorador **abrir** o **Guardar como** cuadro de diálogo común.|
 |[CFileDialog::GetIFileDialogCustomize](#getifiledialogcustomize)|Recupera el objeto interno de COM para un personalizado `CFileDialog` objeto.|
 |[CFileDialog::GetIFileOpenDialog](#getifileopendialog)|Recupera el objeto COM interno para un `CFileDialog` que se usa como un **abierto** cuadro de diálogo de archivo.|
@@ -204,7 +204,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|Establece el texto asociado a un control, como texto del botón o una etiqueta del cuadro de edición.|
 |[CFileDialog::SetControlState](#setcontrolstate)|Establece la visibilidad actual y Estados de un control determinado habilitados.|
 |[CFileDialog::SetControlText](#setcontroltext)|Establece el texto para el control especificado en un tipo de explorador **abierto** o **Guardar como** cuadro de diálogo común.|
-|[CFileDialog:: Setdefext](#setdefext)|Establece la extensión de nombre de archivo predeterminado para un tipo de explorador **abierto** o **Guardar como** cuadro de diálogo común.|
+|[CFileDialog::SetDefExt](#setdefext)|Establece la extensión de nombre de archivo predeterminado para un tipo de explorador **abierto** o **Guardar como** cuadro de diálogo común.|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|Establece el texto actual en un control de cuadro de edición.|
 |[CFileDialog::SetProperties](#setproperties)|Proporciona un almacén de propiedades que define los valores predeterminados que se van a usar para el elemento que se está guardando.|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Establece el estado seleccionado de un elemento determinado en un grupo de botones de opción o un cuadro combinado se encuentra en el cuadro de diálogo.|
@@ -247,11 +247,11 @@ La apariencia y la funcionalidad de la `CFileDialog` con Windows Vista o version
 
 Algunos `CFileDialog` métodos no se admiten en Windows Vista o posterior. Consulte el tema de los métodos individuales para obtener información sobre si se admite el método. Además, las siguientes funciones heredadas no se admiten en Windows Vista o posterior:
 
-- [CDialog:: OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
+- [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Los mensajes de windows para el `CFileDialog` clase varían en función de qué sistema operativo que está usando. Por ejemplo, no es compatible con Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) y [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para el `CFileDialog` clase. Sin embargo, Windows Vista y sistemas operativos posteriores son compatibles con ellos. Para obtener más información sobre los distintos mensajes que se generan y el orden en que se reciben, consulte [ejemplo CFileDialog: orden de eventos de registro](../../visual-cpp-samples.md).
+Los mensajes de windows para el `CFileDialog` clase varían en función de qué sistema operativo que está usando. Por ejemplo, no es compatible con Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) y [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para el `CFileDialog` clase. Sin embargo, Windows Vista y sistemas operativos posteriores son compatibles con ellos. Para obtener más información sobre los distintos mensajes que se generan y el orden en que se reciben, consulte [CFileDialog ejemplo: Orden de los eventos de registro](../../visual-cpp-samples.md).
 
 Para usar un `CFileDialog` de objetos, primero cree el objeto utilizando el `CFileDialog` constructor. Después de que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [CFileDialog::m_ofn](#m_ofn) estructura para inicializar los valores o los Estados de los controles de cuadro de diálogo. El `m_ofn` estructura es de tipo `OPENFILENAME`. Para obtener más información, consulte el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows.
 
@@ -427,7 +427,7 @@ Una ruta de acceso a la carpeta esté disponible para el usuario. Sólo puede se
 *fdap*<br/>
 Especifica dónde se coloca la carpeta en la lista.
 
-*PSI*<br/>
+*psi*<br/>
 Un puntero a un IShellItem que representa la carpeta esté disponible para el usuario. Sólo puede ser una carpeta.
 
 ### <a name="remarks"></a>Comentarios
@@ -690,7 +690,7 @@ El identificador del control contenedor.
 *dwIDItem*<br/>
 El identificador del elemento.
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 Una referencia a una variable que recibe uno de varios valores de la enumeración CDCONTROLSTATE que indica el estado actual del control.
 
 ### <a name="remarks"></a>Comentarios
@@ -710,7 +710,7 @@ HRESULT GetControlState(
 *dwIDCtl*<br/>
 El identificador del control.
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 Una referencia a una variable que recibe uno o más valores de la enumeración CDCONTROLSTATE que indica el estado actual del control.
 
 ### <a name="remarks"></a>Comentarios
@@ -753,7 +753,7 @@ Por ejemplo, si escribe el nombre del archivo son los datos. TXT, `GetFileExt` d
 
 Si `m_ofn.Flags` tiene la marca OFN_ALLOWMULTISELECT establecida, esta cadena contiene una secuencia de cadenas terminadas en null, con la primera cadena que se va a la ruta del directorio del grupo de archivos seleccionado, seguido de los nombres de todos los archivos seleccionados por el usuario. Para recuperar las rutas de acceso de archivo, use el [GetStartPosition](#getstartposition) y [GetNextPathName](#getnextpathname) funciones miembro.
 
-##  <a name="getfilename"></a>  CFileDialog:: GetFileName
+##  <a name="getfilename"></a>  CFileDialog::GetFileName
 
 Llame a esta función para recuperar el nombre del nombre de archivo especificado en el cuadro de diálogo.
 
@@ -771,7 +771,7 @@ El nombre del archivo incluye el prefijo y la extensión. Por ejemplo, `GetFileN
 
 Si `m_ofn.Flags` tiene la `OFN_ALLOWMULTISELECT` marcador establecido, debe llamar a [GetStartPosition](#getstartposition) y [GetNextPathName](#getnextpathname) para recuperar una ruta de acceso de archivo.
 
-##  <a name="getfiletitle"></a>  CFileDialog:: GetFileTitle
+##  <a name="getfiletitle"></a>  CFileDialog::GetFileTitle
 
 Llame a esta función para recuperar el título del archivo especificado en el cuadro de diálogo.
 
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Una referencia a un valor de posición devuelto por un método `GetNextPathName` o `GetStartPosition` llamada de función. Es NULL si se ha alcanzado el final de la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1392,7 +1392,7 @@ El identificador del control contenedor.
 *dwIDItem*<br/>
 El identificador del elemento.
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 Uno o más valores de la enumeración CDCONTROLSTATE que indican el estado nueva del control.
 
 ### <a name="remarks"></a>Comentarios
@@ -1456,7 +1456,7 @@ HRESULT SetControlState(
 *dwIDCtl*<br/>
 El identificador del control.
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 Uno o más valores de la enumeración CDCONTROLSTATE que indican el estado actual del control.
 
 ### <a name="remarks"></a>Comentarios
@@ -1489,7 +1489,7 @@ Ambas versiones de esta función son válidos para las aplicaciones que utilizan
 
 Para usar este método, debe crear el cuadro de diálogo con el estilo OFN_EXPLORER. En caso contrario, se producirá un error de la función con una aserción.
 
-##  <a name="setdefext"></a>  CFileDialog:: Setdefext
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt
 
 Llame a esta función para establecer la extensión de nombre de archivo predeterminado para un cuadro de diálogo común de tipo explorador abrir o guardar como.
 
@@ -1642,4 +1642,3 @@ Este ejemplo se actualiza el `CFileDialog` antes de mostrarla. Antes de actualiz
 
 [CCommonDialog (clase)](../../mfc/reference/ccommondialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

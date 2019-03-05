@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275290"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager (Estructura)
 
@@ -46,9 +46,9 @@ struct IResourceManager;
 |[IResourceManager::CreateNodeTopology](#createnodetopology)|Compilaciones de presente solo en modo de depuración del tiempo de ejecución, este método es un enlace de prueba diseñado para facilitar las pruebas del Administrador de recursos en diversas topologías de hardware, sin necesidad de hardware real coincide con la configuración. Con las compilaciones comerciales de tiempo de ejecución, este método devolverá sin realizar ninguna acción.|
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Devuelve el número de nodos disponibles para el Administrador de recursos.|
 |[IResourceManager::GetFirstNode](#getfirstnode)|Devuelve el primer nodo en el orden de enumeración como se define por el Administrador de recursos.|
-|[IResourceManager:: Reference](#reference)|Incrementa el recuento de referencias en la instancia del Administrador de recursos.|
+|[IResourceManager::Reference](#reference)|Incrementa el recuento de referencias en la instancia del Administrador de recursos.|
 |[IResourceManager::RegisterScheduler](#registerscheduler)|Registra a un programador con el Administrador de recursos. Una vez que el programador está registrado, que debe comunicarse con el Administrador de recursos mediante el `ISchedulerProxy` interfaz que se devuelve.|
-|[IResourceManager:: Release](#release)|Disminuye el recuento de referencias en la instancia del Administrador de recursos. El Administrador de recursos se destruye cuando su recuento de referencias llega a `0`.|
+|[IResourceManager::Release](#release)|Disminuye el recuento de referencias en la instancia del Administrador de recursos. El Administrador de recursos se destruye cuando su recuento de referencias llega a `0`.|
 
 ## <a name="remarks"></a>Comentarios
 

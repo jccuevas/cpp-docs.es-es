@@ -15,12 +15,12 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614973"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304454"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Objetos de datos y orígenes de datos: Creación y destrucción
 
@@ -70,7 +70,7 @@ Los orígenes de datos se crean cuando una aplicación tiene que copiar datos en
 
 Este escenario se implementa en los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md). Para cada clase derivada de `CView` de la aplicación, examine el código fuente para todas las funciones excepto `GetClipboardData` y `OnGetClipboardData`. Estas dos funciones están en las implementaciones de clase derivada `COleClientItem` o `COleServerItem`. Estos programas de ejemplo constituyen una buena muestra de cómo implementar estos conceptos.
 
-Otra situación en la que puede que quiera crear un objeto `COleDataSource` sucede cuando modifica el comportamiento predeterminado de una operación de arrastrar y colocar. Para obtener más información, consulte el [arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md) artículo.
+Otra situación en la que puede que quiera crear un objeto `COleDataSource` sucede cuando modifica el comportamiento predeterminado de una operación de arrastrar y colocar. Para obtener más información, consulte el [arrastrar y colocar: Personalizar](../mfc/drag-and-drop-customizing.md) artículo.
 
 ##  <a name="_core_destroying_data_sources"></a> Destruir orígenes de datos
 

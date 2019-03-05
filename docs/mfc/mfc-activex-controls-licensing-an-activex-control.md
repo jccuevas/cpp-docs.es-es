@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: Licencias de un control ActiveX'
+title: 'Controles ActiveX MFC: Licencias de un Control ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304631"
 ---
-# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles ActiveX MFC: Licencias de un control ActiveX
+# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles ActiveX MFC: Licencias de un Control ActiveX
 
 Las licencias de soporte técnico, una característica opcional de controles ActiveX, le permite controlar quién puede usar o distribuir el control. (Para obtener más información sobre problemas de licencias, consulte los problemas de licencias en [actualizar un ActiveX Control existente](../mfc/upgrading-an-existing-activex-control.md).)
 
 > [!IMPORTANT]
 > ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
 
-En este artículo se trata los temas siguientes:
+En este artículo se tratan los siguientes temas:
 
 - [Información general de la licencia de controles ActiveX](#_core_overview_of_activex_control_licensing)
 
@@ -126,4 +126,3 @@ Para obtener más información sobre problemas de licencias, consulte los proble
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Asistente para controles ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)
-

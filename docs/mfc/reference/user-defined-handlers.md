@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ON_MESSAGE macro [MFC]
 - user-defined handlers [MFC]
 ms.assetid: 99478294-bef0-4ba7-a369-25a6abdcdb62
-ms.openlocfilehash: 4d2102668b7cc964e6fe3bffdcc6931a2961a737
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7c735531e4e2bd4da37ef7ba89cc9c4f9222b47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262017"
 ---
 # <a name="user-defined-handlers"></a>Controladores definidos por el usuario
 
@@ -21,13 +21,12 @@ Las entradas de asignación siguientes corresponden a los prototipos de función
 
 |Entrada de asignación|Prototipo de función|
 |---------------|------------------------|
-|ON_MESSAGE ( \<mensaje >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
-|ON_REGISTERED_MESSAGE ( \<nMessageVariable >, \<memberFxn >)|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
-|ON_THREAD_MESSAGE ( \<mensaje >, \<memberFxn >)|afx_msg void memberFxn (WPARAM, LPARAM);|
-|ON_REGISTERED_THREAD_MESSAGE ( \<nMessageVariable >, \<memberFxn >)|afx_msg void memberFxn (WPARAM, LPARAM);|
+|ON_MESSAGE( \<message>, \<memberFxn> )|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
+|ON_REGISTERED_MESSAGE( \<nMessageVariable>, \<memberFxn> )|afx_msg LRESULT memberFxn (WPARAM, LPARAM);|
+|ON_THREAD_MESSAGE( \<message>, \<memberFxn> )|afx_msg void memberFxn (WPARAM, LPARAM);|
+|ON_REGISTERED_THREAD_MESSAGE( \<nMessageVariable>, \<memberFxn> )|afx_msg void memberFxn (WPARAM, LPARAM);|
 
 ## <a name="see-also"></a>Vea también
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

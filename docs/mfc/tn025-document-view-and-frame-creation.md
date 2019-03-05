@@ -1,5 +1,5 @@
 ---
-title: 'TN025: Creación de documentos, vistas y marcos'
+title: 'TN025: Documento, vista y creación de marco'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: aa8bc305848ce95e0b5bfef1ac6785b18bc84015
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284689"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025: Creación de documentos, vistas y marcos
+# <a name="tn025-document-view-and-frame-creation"></a>TN025: Documento, vista y creación de marco
 
 > [!NOTE]
 >  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.
@@ -25,7 +25,7 @@ Esta nota describe los problemas de creación y la propiedad para WinApps, DocTe
 
 Hay un `CWinApp` objeto en el sistema.
 
-Estáticamente se crea y se inicializa mediante la implementación interna del marco de trabajo de `WinMain`. Debe derivar de `CWinApp` en hacer algo útil (excepción: archivos DLL de extensión MFC no debe tener un `CWinApp` instancia, se realiza en `DllMain` en su lugar).
+Estáticamente se crea y se inicializa mediante la implementación interna del marco de trabajo de `WinMain`. Debe derivar de `CWinApp` que hacer nada útil (excepción: DLL de extensión MFC no debe tener un `CWinApp` instancia, se realiza en `DllMain` en su lugar).
 
 El `CWinApp` objeto posee una lista de plantillas de documento (un `CPtrList`). Hay uno o más plantilla de documento por aplicación. DocTemplates normalmente se cargan desde el archivo de recursos (es decir, una matriz de cadenas) en `CWinApp::InitInstance`.
 
@@ -71,4 +71,3 @@ Para una ventana de marco de MDI, el área de cliente se rellena con el control 
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

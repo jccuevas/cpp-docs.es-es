@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - template libraries
 ms.assetid: 5e80ec6e-a61c-41ce-b34b-9a6252c46265
-ms.openlocfilehash: 48040088b0dca44f47b16c26893546117dbc6bf2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1a6b0befcfd7ecf0a150653b5c32239b7f9543
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282675"
 ---
 # <a name="using-a-template-library"></a>Uso de una biblioteca de plantillas
 
@@ -20,4 +20,3 @@ Bibliotecas de plantillas como ATL se diferencian de bibliotecas de clases de C+
 ## <a name="see-also"></a>Vea también
 
 [Introducción a ATL](../atl/introduction-to-atl.md)
-

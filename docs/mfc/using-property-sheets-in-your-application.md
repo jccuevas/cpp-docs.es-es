@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301693"
 ---
 # <a name="using-property-sheets-in-your-application"></a>Usar hojas de propiedades en una aplicación
 
@@ -63,4 +63,3 @@ Para obtener un ejemplo de cómo usar las hojas de propiedades, vea el ejemplo G
 ## <a name="see-also"></a>Vea también
 
 [Hojas de propiedades](../mfc/property-sheets-mfc.md)
-

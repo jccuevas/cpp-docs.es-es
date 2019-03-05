@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517681"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292281"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu (clase)
 
@@ -327,7 +327,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE si el menú emergente puede mostrar entradas vacías; FALSE en caso contrario.
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in] Identificador de un recurso de menú.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] Un parámetro booleano que indica si se puede personalizar el menú. FALSE indica que el menú emergente es personalizable.
 
 *bOwnMessage*<br/>
@@ -518,7 +518,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el sonido, FALSE en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
@@ -707,7 +707,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de menú.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Parámetros
 
-*Botón*<br/>
+*button*<br/>
 [in] Una referencia al elemento de menú para agregar.
 
 *iInsertAt*<br/>
@@ -1202,7 +1202,7 @@ BOOL RemoveItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero del elemento que desea eliminar.
 
 ### <a name="return-value"></a>Valor devuelto

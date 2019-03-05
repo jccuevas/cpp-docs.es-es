@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301525"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox (clase)
 
@@ -126,7 +126,7 @@ virtual int AddItem(
 *dwData*<br/>
 [in] Un valor de 32 bits específicos de la aplicación que está asociado a la cadena. El valor predeterminado es 0.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de la posición que va a contener la cadena. Si el *iÍndice* parámetro es -1, la cadena se agrega al final de la lista. El valor predeterminado es -1.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +159,7 @@ virtual BOOL EditItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -196,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -217,7 +217,7 @@ virtual CString GetItemText(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -266,7 +266,7 @@ virtual BOOL RemoveItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -308,7 +308,7 @@ virtual void SetItemData(
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 *dwData*<br/>

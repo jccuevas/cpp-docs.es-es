@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262875"
 ---
 # <a name="parallel-algorithms"></a>Algoritmos paralelos
 
@@ -78,7 +78,7 @@ Este ejemplo genera la siguiente salida de ejemplo:
 
 Dado que el `parallel_for` algoritmo actúa en cada elemento en paralelo, puede variar el orden en que los valores se imprimen en la consola.
 
-Para obtener un ejemplo completo que usa el `parallel_for` algoritmo, vea [Cómo: escribir un bucle parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+Para obtener un ejemplo completo que usa el `parallel_for` algoritmo, vea [Cómo: Escribir un bucle parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
 
 [[Arriba](#top)]
 
@@ -104,7 +104,7 @@ Este ejemplo genera la siguiente salida de ejemplo:
 
 Dado que el `parallel_for_each` algoritmo actúa en cada elemento en paralelo, puede variar el orden en que los valores se imprimen en la consola.
 
-Para obtener un ejemplo completo que usa el `parallel_for_each` algoritmo, vea [Cómo: escribir un bucle parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+Para obtener un ejemplo completo que usa el `parallel_for_each` algoritmo, vea [Cómo: Escribir un bucle parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
 
 [[Arriba](#top)]
 
@@ -128,7 +128,7 @@ Este ejemplo produce el siguiente resultado:
 108 11.2 HelloHello
 ```
 
-Para obtener ejemplos completos que usan el `parallel_invoke` algoritmo, vea [Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) y [Cómo: usar Parallel.Invoke para ejecutar operaciones paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Para obtener ejemplos completos que usan el `parallel_invoke` algoritmo, vea [Cómo: Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) y [Cómo: Usar Parallel.Invoke para ejecutar operaciones paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 [[Arriba](#top)]
 
@@ -189,7 +189,7 @@ El ejemplo siguiente compara el tiempo necesario para calcular la suma de númer
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-Para obtener otro ejemplo que realiza una asignación y reduce las operaciones en paralelo, vea [Cómo: realizar Map y reducir las operaciones en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Para obtener otro ejemplo que realiza una asignación y reduce las operaciones en paralelo, vea [Cómo: Realizar la asignación y reducir las operaciones en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 [[Arriba](#top)]
 
@@ -199,16 +199,16 @@ Para paralelizar una operación en un origen de datos, es un paso esencial *part
 
 El `parallel_for`, `parallel_for_each`, y `parallel_transform` algoritmos proporcionan versiones sobrecargadas que toman un parámetro adicional, `_Partitioner`. Este parámetro define el tipo del particionador que divide el trabajo. Estos son los tipos de particionadores que la biblioteca PPL define:
 
-[Concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+[concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 Divide funciona en un número fijo de intervalos (normalmente el número de subprocesos de trabajo que están disponibles para trabajar en el bucle). Es similar este tipo particionador `static_partitioner`, pero mejora la afinidad de la memoria caché por la forma en los intervalos asigna a los subprocesos de trabajo. Este tipo particionador puede mejorar el rendimiento cuando se ejecuta un bucle en el mismo conjunto de datos varias veces (por ejemplo, un bucle dentro de un bucle) y se ajusta los datos en memoria caché. Este particionador no participan completamente en la cancelación. También no utiliza semántica bloquea cooperativa y, por tanto, no se puede usar con bucles en paralelo que tienen una dependencia directa.
 
-[Concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+[concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
 Divide funciona en un número inicial de intervalos (normalmente el número de subprocesos de trabajo que están disponibles para trabajar en el bucle). El tiempo de ejecución utiliza este tipo de forma predeterminada cuando no se llama a un algoritmo paralelo sobrecargado que toma un `_Partitioner` parámetro. Cada intervalo puede dividirse en subintervalos y, por tanto, habilita el equilibrio de carga para que se produzca. Cuando se completa una variedad de trabajo, el tiempo de ejecución redistribuye los subintervalos de trabajo de otros subprocesos en ese subproceso. Utilice a este particionador si la carga de trabajo no se encuentra en una de las otras categorías o requiere compatibilidad completa para la cancelación o bloqueo cooperativo.
 
-[Concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
+[concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
 Divide funciona en intervalos de modo que cada intervalo tenga al menos el número de iteraciones especificadas por el tamaño del fragmento determinado. Este tipo particionador participa en el equilibrio de carga; Sin embargo, el tiempo de ejecución no dividir los intervalos en subintervalos. Para cada trabajo, el tiempo de ejecución comprueba la cancelación y realiza el equilibrio de carga después `_Chunk_size` completar iteraciones.
 
-[Concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
+[concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
 Divide funciona en un número fijo de intervalos (normalmente el número de subprocesos de trabajo que están disponibles para trabajar en el bucle). Este tipo particionador puede mejorar el rendimiento porque no utiliza el robo de trabajo y, por tanto, tiene menos sobrecarga. Utilice este tipo particionador cada iteración de un bucle paralelo realiza una cantidad fija y uniforme de trabajo y no necesita compatibilidad con la cancelación o reenviar bloqueo cooperativo.
 
 > [!WARNING]
@@ -313,11 +313,11 @@ En este ejemplo, que se da por supuesto que es aceptable para asignar espacio de
 
 |Título|Descripción|
 |-----------|-----------------|
-|[Procedimiento para escribir un bucle parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Se muestra cómo usar el `parallel_for` algoritmo para realizar la multiplicación de matrices.|
-|[Procedimiento para escribir un bucle parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Se muestra cómo usar el `parallel_for_each` algoritmo para calcular el recuento de números primos en un [std:: Array](../../standard-library/array-class-stl.md) objetos en paralelo.|
-|[Procedimiento para usar parallel.invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Muestra cómo usar el algoritmo `parallel_invoke` para mejorar el rendimiento del algoritmo de ordenación bitónica.|
-|[Procedimiento para usar parallel.invoke para ejecutar operaciones paralelas](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Muestra cómo usar el algoritmo `parallel_invoke` para mejorar el rendimiento de un programa que realiza varias operaciones en un origen de datos compartido.|
-|[Procedimiento para realizar operaciones de asignación y reducción en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Se muestra cómo usar el `parallel_transform` y `parallel_reduce` algoritmos para realizar una asignación y reducir las operaciones que cuentan las apariciones de palabras en los archivos.|
+|[Cómo: Escribir un bucle parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Se muestra cómo usar el `parallel_for` algoritmo para realizar la multiplicación de matrices.|
+|[Cómo: Escribir un bucle parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Se muestra cómo usar el `parallel_for_each` algoritmo para calcular el recuento de números primos en un [std:: Array](../../standard-library/array-class-stl.md) objetos en paralelo.|
+|[Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Muestra cómo usar el algoritmo `parallel_invoke` para mejorar el rendimiento del algoritmo de ordenación bitónica.|
+|[Cómo: Usar parallel_invoke para ejecutar operaciones en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Muestra cómo usar el algoritmo `parallel_invoke` para mejorar el rendimiento de un programa que realiza varias operaciones en un origen de datos compartido.|
+|[Cómo: Realizar operaciones de asignación y reducción en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Se muestra cómo usar el `parallel_transform` y `parallel_reduce` algoritmos para realizar una asignación y reducir las operaciones que cuentan las apariciones de palabras en los archivos.|
 |[Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Describe la biblioteca PPL, que proporciona un modelo de programación imperativo que favorece la escalabilidad y facilidad de uso para desarrollar aplicaciones simultáneas.|
 |[Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)|Explica el rol de cancelación en PPL, cómo cancelar el trabajo paralelo y cómo se determina cuando se cancela un grupo de tareas.|
 |[Control de excepciones](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Explica el rol de control de excepciones en el Runtime de simultaneidad.|
@@ -343,4 +343,3 @@ En este ejemplo, que se da por supuesto que es aceptable para asignar espacio de
 [parallel_buffered_sort (función)](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort (función)](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

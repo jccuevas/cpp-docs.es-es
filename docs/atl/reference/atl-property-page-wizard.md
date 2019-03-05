@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258286"
 ---
 # <a name="atl-property-page-wizard"></a>Asistente para páginas de propiedades ATL
 
@@ -60,7 +60,7 @@ Proporciona información sobre la funcionalidad de COM para el objeto.
 
    Establece la descripción del objeto que va a aparecer en el registro
 
-- **Id. de programa**
+- **ProgID**
 
    Establece el nombre que se pueden usar los contenedores en lugar del CLSID del objeto.
 
@@ -68,5 +68,4 @@ Proporciona información sobre la funcionalidad de COM para el objeto.
 
 [Opciones, Asistente para páginas de propiedades ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Cadenas, Asistente para páginas de propiedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Ejemplo: Implementar una página de propiedades](../../atl/example-implementing-a-property-page.md)
-
+[Ejemplo: Implementación de una página de propiedades](../../atl/example-implementing-a-property-page.md)

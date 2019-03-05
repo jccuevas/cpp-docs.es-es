@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295336"
 ---
 # <a name="itarget-class"></a>ITarget (Clase)
 
@@ -55,7 +55,7 @@ El tipo de datos de la carga dentro de los mensajes aceptados por el bloque de d
 
 |Name|Descripción|
 |----------|-----------------|
-|[propagar](#propagate)|Cuando se invalida en una clase derivada, asincrónicamente pasa un mensaje desde un bloque de origen a este bloque de destino.|
+|[propagate](#propagate)|Cuando se invalida en una clase derivada, asincrónicamente pasa un mensaje desde un bloque de origen a este bloque de destino.|
 |[send](#send)|Cuando se invalida en una clase derivada, pasa sincrónicamente un mensaje al bloque de destino.|
 |[supports_anonymous_source](#supports_anonymous_source)|Cuando se invalida en una clase derivada, devuelve true o false dependiendo de si el bloque de mensajes acepta mensajes ofrecidos por un origen que no está vinculado a él. Si se devuelve el método invalidado **true**, el destino no puede posponer un mensaje ofrecido, ya que el consumo de un mensaje pospuesto en un momento posterior requiere el origen pueda identificarse en su registro de vínculo sourse.|
 
@@ -81,7 +81,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="dtor"></a> ~ ITarget
+##  <a name="dtor"></a> ~ITarget
 
 Destruye el objeto `ITarget`.
 
@@ -118,7 +118,7 @@ virtual message_status propagate(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -144,7 +144,7 @@ virtual message_status send(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>

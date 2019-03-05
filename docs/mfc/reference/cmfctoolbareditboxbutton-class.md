@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291618"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton (clase)
 
@@ -85,7 +85,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |[CMFCToolBarEditBoxButton::CanBeStretched](#canbestretched)|Especifica si un usuario puede expandir el botón durante la personalización. (Invalida [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|
 |[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|Copia las propiedades de otro botón de barra de herramientas a la actual. (Invalida [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
 |`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::CreateEdit](#createedit)|Crea un nuevo control de edición en el botón.|
-|`CMFCToolBarEditBoxButton::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCToolBarEditBoxButton::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCToolBarEditBoxButton::GetByCmd](#getbycmd)|Recupera el primer `CMFCToolBarEditBoxButton` objeto en la aplicación que tiene el identificador de comando especificado.|
 |[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)|Recupera el texto del primer control de barra de herramientas de cuadro de edición que tiene el identificador de comando especificado.|
 |[CMFCToolBarEditBoxButton::GetContextMenuID](#getcontextmenuid)|Recupera el identificador de recurso del menú contextual que está asociado con el botón.|
@@ -127,7 +127,7 @@ Para agregar un botón de cuadro de edición a una barra de herramientas, siga e
 
 3. En el controlador de mensajes que procesa el mensaje AFX_WM_RESETTOOLBAR, reemplazar el botón ficticio con el nuevo botón de cuadro combinado mediante [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Para obtener más información, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Para obtener más información, vea [Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -229,7 +229,7 @@ virtual CEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Especifica la ventana primaria del control de edición. No debe ser NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño y la posición del control de edición.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -463,7 +463,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Sin usar.
 
 *bDelay*<br/>
@@ -541,7 +541,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Especifica si el botón está visible. Si este parámetro es TRUE, el botón está visible. En caso contrario, el botón no está visible.
 
 ### <a name="remarks"></a>Comentarios
@@ -692,5 +692,4 @@ Este método establece [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoo
 [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit (clase)](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

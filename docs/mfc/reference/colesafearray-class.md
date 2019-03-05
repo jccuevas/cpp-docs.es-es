@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0833dca9311689063c2ebeadd3942d9f5ce376e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267165"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray (clase)
 
@@ -103,7 +103,7 @@ class COleSafeArray : public tagVARIANT
 |[COleSafeArray::Detach](#detach)|Desasocia la matriz de tipo VARIANT de la `COleSafeArray` objeto (de modo que no se liberarán los datos).|
 |[COleSafeArray::GetByteArray](#getbytearray)|Copia el contenido de la matriz segura en un [CByteArray](../../mfc/reference/cbytearray-class.md).|
 |[COleSafeArray::GetDim](#getdim)|Devuelve el número de dimensiones de la matriz.|
-|[Colesafearray:: GetElement](#getelement)|Recupera un único elemento de la matriz segura.|
+|[COleSafeArray::GetElement](#getelement)|Recupera un único elemento de la matriz segura.|
 |[COleSafeArray::GetElemSize](#getelemsize)|Devuelve el tamaño, en bytes, de un elemento en una matriz segura.|
 |[COleSafeArray::GetLBound](#getlbound)|Devuelve el límite inferior de cualquier dimensión de una matriz segura.|
 |[COleSafeArray::GetOneDimSize](#getonedimsize)|Devuelve el número de elementos de unidimensional `COleSafeArray` objeto.|
@@ -201,7 +201,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="parameters"></a>Parámetros
 
 *varSrc*<br/>
-Un objeto `VARIANT`. El *varSrc* parámetro debe tener el valor de VARTYPE [VT_ARRAY](/windows/desktop/api/wtypes/ne-wtypes-varenum).
+Objeto `VARIANT`. El *varSrc* parámetro debe tener el valor de VARTYPE [VT_ARRAY](/windows/desktop/api/wtypes/ne-wtypes-varenum).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -426,7 +426,7 @@ void GetByteArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parámetros
 
-*Bytes*<br/>
+*bytes*<br/>
 Una referencia a un [CByteArray](../../mfc/reference/cbytearray-class.md) objeto.
 
 ##  <a name="getdim"></a>  COleSafeArray::GetDim
@@ -445,7 +445,7 @@ El número de dimensiones de la matriz segura.
 
 [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]
 
-##  <a name="getelement"></a>  Colesafearray:: GetElement
+##  <a name="getelement"></a>  COleSafeArray::GetElement
 
 Recupera un único elemento de la matriz segura.
 

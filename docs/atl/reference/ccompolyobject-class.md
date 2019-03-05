@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495893"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277942"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject (clase)
 
@@ -38,7 +38,7 @@ class CComPolyObject : public IUnknown,
 
 #### <a name="parameters"></a>Parámetros
 
-*contenidos*<br/>
+*contained*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir del resto de interfaces que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -48,7 +48,7 @@ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Name|Descripción|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|El constructor.|
-|[CComPolyObject:: ~ CComPolyObject](#dtor)|Destructor.|
+|[CComPolyObject::~CComPolyObject](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -117,7 +117,7 @@ CComPolyObject(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 [in] Un puntero para el desconocido externo si el objeto es para agregarse o NULL si el objeto si no se agrega el objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -126,7 +126,7 @@ Inicializa el `CComContainedObject` miembro de datos, [m_contained](#m_contained
 
 El destructor disminuye el módulo recuento de bloqueos.
 
-##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject
+##  <a name="dtor"></a>  CComPolyObject::~CComPolyObject
 
 Destructor.
 
@@ -150,7 +150,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parámetros
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] Un puntero a un **CComPolyObject <** `contained` **>** puntero. Si `CreateInstance` es incorrecta, *pp* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -193,7 +193,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parámetros
 
-*contenidos*<br/>
+*contained*<br/>
 [in] La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir del resto de interfaces que desea admitir en el objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -215,13 +215,13 @@ HRESULT QueryInterface(Q** pp);
 *Q*<br/>
 La interfaz COM.
 
-*IID*<br/>
+*iid*<br/>
 [in] El identificador de la interfaz que se solicita.
 
 *ppvObject*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*. Si el objeto no admite esta interfaz, *ppvObject* se establece en NULL.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] Un puntero a la interfaz identificada por `__uuidof(Q)`.
 
 ### <a name="return-value"></a>Valor devuelto

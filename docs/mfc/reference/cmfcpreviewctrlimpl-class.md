@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295752"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Clase CMFCPreviewCtrlImpl
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Se destruye un objeto de control de vista previa.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Se destruye un objeto de control de vista previa.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Construye un objeto de control de vista previa.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -136,7 +136,7 @@ virtual BOOL Create(
 *hWndParent*<br/>
 Identificador de la ventana host proporcionada por el Shell de vista previa avanzada.
 
-*República Popular China*<br/>
+*prc*<br/>
 Especifica el tamaño inicial y la posición de la ventana.
 
 *pContext*<br/>
@@ -301,7 +301,7 @@ Color de fondo de ventana de vista previa.
 *clrText*<br/>
 Color del texto de la ventana de vista previa.
 
-*PLF*<br/>
+*plf*<br/>
 Fuente utilizada para mostrar texto en la ventana Vista previa.
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect
@@ -319,7 +319,7 @@ virtual void SetRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*República Popular China*<br/>
+*prc*<br/>
 Especifica el nuevo tamaño y posición del control de vista previa.
 
 *bRedraw*<br/>
@@ -329,7 +329,7 @@ Especifica si se debe dibujar el control.
 
 Normalmente, un nuevo rectángulo delimitador se establece cuando se cambia el tamaño del control host.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Se destruye un objeto de control de vista previa.
 
@@ -338,4 +338,3 @@ Se destruye un objeto de control de vista previa.
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

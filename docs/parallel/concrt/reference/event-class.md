@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480111"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264678"
 ---
 # <a name="event-class"></a>event (Clase)
 
@@ -43,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|Restablece el evento a un estado no señalado.|
 |[set](#set)|Señala el evento.|
-|[Espere](#wait)|Espera a que se señale el evento.|
+|[wait](#wait)|Espera a que se señale el evento.|
 |[wait_for_multiple](#wait_for_multiple)|Espera a que se señalen varios eventos.|
 
 ### <a name="public-constants"></a>Constantes públicas
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +159,7 @@ El número de eventos dentro de la matriz proporcionado por el parámetro `_PPEv
 *_FWaitAll*<br/>
 Si establece en el valor **true**, el parámetro especifica que todos los eventos dentro de la matriz proporcionan en el `_PPEvents` parámetro debe señalarse para satisfacer la espera. Si establece en el valor **false**, especifica que cualquier evento dentro de la matriz proporcionada en el `_PPEvents` parámetro se ha señalado satisfará la espera.
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 Indica el número de milisegundos antes de que se agote el tiempo de espera. El valor `COOPERATIVE_TIMEOUT_INFINITE` significa que no hay tiempo de espera.
 
 ### <a name="return-value"></a>Valor devuelto

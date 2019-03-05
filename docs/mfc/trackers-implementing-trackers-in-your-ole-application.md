@@ -1,5 +1,5 @@
 ---
-title: 'Seguimiento: Implementar el seguimiento en la aplicación OLE'
+title: 'Seguimiento: Implementar el seguimiento en una aplicación OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - trackers [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-ms.openlocfilehash: 19ffa94b7be4b96c57317f63d9cfd9242bff061f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f42ba8f8aa987225c6b545b60e92f00a4f7e3071
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613101"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287978"
 ---
-# <a name="trackers-implementing-trackers-in-your-ole-application"></a>Seguimiento: Implementar el seguimiento en la aplicación OLE
+# <a name="trackers-implementing-trackers-in-your-ole-application"></a>Seguimiento: Implementar el seguimiento en una aplicación OLE
 
 Objetos de seguimiento proporcionan una interfaz gráfica que permite a los usuarios interactuar con elementos de cliente OLE. Mediante el uso de estilos diferentes tracker, OLE cliente se pueden mostrar los elementos con bordes sombreados, controladores de tamaño o una variedad de otros efectos visuales. Este artículo se describe:
 
@@ -29,4 +29,3 @@ El artículo también explica el uso de estilos con herramientas de seguimiento.
 ## <a name="see-also"></a>Vea también
 
 [Seguimiento](../mfc/trackers.md)
-

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259794"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr (clase)
 
@@ -45,7 +45,7 @@ El tipo de puntero.
 |Name|Descripción|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|El constructor.|
-|[CAutoPtr:: ~ CAutoPtr](#dtor)|Destructor.|
+|[CAutoPtr::~CAutoPtr](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -59,7 +59,7 @@ El tipo de puntero.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAutoPtr::operator T *](#operator_t_star)|El operador de conversión.|
+|[CAutoPtr::operator T*](#operator_t_star)|El operador de conversión.|
 |[CAutoPtr::operator =](#operator_eq)|El operador de asignación.|
 |[CAutoPtr::operator ->](#operator_ptr)|El operador de puntero a miembro.|
 
@@ -143,7 +143,7 @@ La `CAutoPtr` objeto puede crearse mediante un puntero existente, en cuyo caso t
 
 Vea el ejemplo de la [CAutoPtr Introducción](../../atl/reference/cautoptr-class.md).
 
-##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr
+##  <a name="dtor"></a>  CAutoPtr::~CAutoPtr
 
 Destructor.
 
@@ -231,7 +231,7 @@ El operador de asignación se separa la `CAutoPtr` objeto desde el puntero actua
 
 Vea el ejemplo de la [CAutoPtr Introducción](../../atl/reference/cautoptr-class.md).
 
-##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;
+##  <a name="operator_ptr"></a>  CAutoPtr::operator -&gt;
 
 El operador de puntero a miembro.
 

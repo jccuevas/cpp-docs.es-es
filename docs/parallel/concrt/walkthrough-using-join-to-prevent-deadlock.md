@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Usar la clase join para evitar un interbloqueo'
+title: 'Tutorial: Usar una combinación para evitar el interbloqueo'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303058"
 ---
-# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Tutorial: Usar la clase join para evitar un interbloqueo
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Tutorial: Usar una combinación para evitar el interbloqueo
 
 En este tema usa el problema cena de los filósofos para ilustrar cómo se usa el [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clase para evitar el interbloqueo en la aplicación. En una aplicación de software, el *interbloqueo* se produce cuando dos o más procesos mantienen un recurso y esperan mutuamente a que el otro proceso libere algún otro recurso.
 
@@ -26,7 +26,7 @@ Lea los siguientes temas antes de iniciar este tutorial:
 
 - [Agentes asincrónicos](../../parallel/concrt/asynchronous-agents.md)
 
-- [Tutorial: Crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [Tutorial: Creación de una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -76,7 +76,7 @@ El método `pickup_chopsticks` ilustra dónde se puede producir el interbloqueo.
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `philosophers-deadlock.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc philosophers-deadlock.cpp**
+**cl.exe /EHsc philosophers-deadlock.cpp**
 
 [[Arriba](#top)]
 
@@ -148,7 +148,7 @@ plato ate 50 times.
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `philosophers-join.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc philosophers-join.cpp**
+**cl.exe /EHsc philosophers-join.cpp**
 
 [[Arriba](#top)]
 

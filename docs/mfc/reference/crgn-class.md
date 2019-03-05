@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279382"
 ---
 # <a name="crgn-class"></a>CRgn (clase)
 
@@ -226,13 +226,13 @@ BOOL CreateEllipticRgn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha del rectángulo delimitador de la elipse.
 
 *y2*<br/>
@@ -448,13 +448,13 @@ BOOL CreateRectRgn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda de la región.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda de la región.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha de la región.
 
 *y2*<br/>
@@ -528,13 +528,13 @@ BOOL CreateRoundRectRgn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda de la región.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda de la región.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha de la región.
 
 *y2*<br/>
@@ -543,7 +543,7 @@ Especifica la coordenada y lógica de la esquina inferior derecha de la región.
 *x3*<br/>
 Especifica el ancho de la elipse que se usa para crear las esquinas redondeadas.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica el alto de la elipse que se usa para crear las esquinas redondeadas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -705,7 +705,7 @@ Especifica el número de unidades para mover a la izquierda o derecha.
 *y*<br/>
 Especifica el número de unidades que se mueven hacia arriba o hacia abajo.
 
-*punto*<br/>
+*point*<br/>
 La coordenada x de *punto* especifica el número de unidades para mover a la izquierda o derecha. La coordenada y de *punto* especifica el número de unidades que se mueven hacia arriba o hacia abajo. El *punto* parámetro puede ser un `POINT` estructura o un `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -768,7 +768,7 @@ Especifica la coordenada x lógica del punto de prueba.
 *y*<br/>
 Especifica la coordenada y lógica de punto de prueba.
 
-*punto*<br/>
+*point*<br/>
 Las coordenadas x e y de *punto* especificar las coordenadas x e y del punto para probar el valor de. El *punto* parámetro puede ser un `POINT` estructura o un `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -817,13 +817,13 @@ void SetRectRgn(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda de la región rectangular.
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda de la región rectangular.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha de la región rectangular.
 
 *y2*<br/>
@@ -842,4 +842,3 @@ Use esta función en lugar de la `CreateRectRgn` la función miembro para evitar
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

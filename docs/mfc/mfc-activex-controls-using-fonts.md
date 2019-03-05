@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175826"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271312"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Controles ActiveX MFC: Usar fuentes
 
@@ -42,7 +42,7 @@ Propiedades de fuente estándar ya están implementadas por la clase [COleContro
 
 Acceso al objeto de fuente a través de la [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), y [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) funciones de `COleControl`. El usuario de control tendrá acceso el objeto de fuente a través de la `GetFont` y `SetFont` funciones en la misma manera que cualquier otra propiedad Get/Set. Cuando se requiere desde dentro de un control de acceso al objeto de fuente, utilice el `InternalGetFont` función.
 
-Como se describe en [controles ActiveX MFC: propiedades](../mfc/mfc-activex-controls-properties.md), agregar propiedades estándar es fácil con la [Asistente para agregar propiedades](../ide/names-add-property-wizard.md). Elija la propiedad de fuente y el Asistente para agregar propiedades inserta automáticamente la entrada de fuente estándar en mapa de envíos del control.
+Como se describe en [controles ActiveX MFC: Propiedades](../mfc/mfc-activex-controls-properties.md), agregar propiedades estándar es fácil con la [Asistente para agregar propiedades](../ide/names-add-property-wizard.md). Elija la propiedad de fuente y el Asistente para agregar propiedades inserta automáticamente la entrada de fuente estándar en mapa de envíos del control.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Para agregar la propiedad Font estándar mediante el Asistente para agregar propiedades
 
@@ -236,6 +236,5 @@ Una vez realizados estos cambios a su proyecto, recompile el proyecto y utilice 
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Usar imágenes en un control ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-
+[Controles ActiveX MFC: Usar imágenes en un Control ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Controles ActiveX MFC: Uso de páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)

@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 9e657bbf375a8babf1c03cc7254310956131d62b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285508"
 ---
 # <a name="catllist-class"></a>CAtlList (clase)
 
@@ -76,7 +76,7 @@ El código utilizado para copiar o mover elementos. Consulte [CElementTraits (cl
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|El constructor.|
-|[CAtlList:: ~ CAtlList](#dtor)|Destructor.|
+|[CAtlList::~CAtlList](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -134,7 +134,7 @@ POSITION AddHead(INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*<br/>
+*element*<br/>
 El nuevo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -181,7 +181,7 @@ POSITION AddTail(INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*<br/>
+*element*<br/>
 Elemento que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -254,7 +254,7 @@ El constructor para la `CAtlList` objeto. El tamaño de bloque es una medida de 
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  CAtlList:: ~ CAtlList
+##  <a name="dtor"></a>  CAtlList::~CAtlList
 
 Destructor.
 
@@ -278,7 +278,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*<br/>
+*element*<br/>
 El elemento que se encuentra en la lista.
 
 *posStartAfter*<br/>
@@ -334,7 +334,7 @@ const E& GetAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El valor de posición que se especifica un elemento determinado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -425,7 +425,7 @@ const E& GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Un valor de posición, devuelto por una llamada anterior a `GetNext`, [CAtlList::GetHeadPosition](#getheadposition), u otros `CAtlList` método.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -453,7 +453,7 @@ const E& GetPrev(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Un valor de posición, devuelto por una llamada anterior a `GetPrev`, [CAtlList::GetTailPosition](#gettailposition), u otros `CAtlList` método.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -533,10 +533,10 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El valor de posición después del cual se insertará el nuevo elemento.
 
-*Elemento*<br/>
+*element*<br/>
 El elemento que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -561,10 +561,10 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El nuevo elemento se insertará en la lista antes de este valor de posición.
 
-*Elemento*<br/>
+*element*<br/>
 El elemento que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -605,7 +605,7 @@ void MoveToHead(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El valor de la posición del elemento que se va a mover.
 
 ### <a name="remarks"></a>Comentarios
@@ -626,7 +626,7 @@ void MoveToTail(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El valor de la posición del elemento que se va a mover.
 
 ### <a name="remarks"></a>Comentarios
@@ -663,7 +663,7 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El valor de la posición del elemento que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -758,10 +758,10 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El valor de la posición correspondiente al elemento que se va a cambiar.
 
-*Elemento*<br/>
+*element*<br/>
 El nuevo valor del elemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -782,10 +782,10 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*POS1*<br/>
+*pos1*<br/>
 El primer valor de posición.
 
-*POS2*<br/>
+*pos2*<br/>
 El segundo valor de posición.
 
 ### <a name="remarks"></a>Comentarios

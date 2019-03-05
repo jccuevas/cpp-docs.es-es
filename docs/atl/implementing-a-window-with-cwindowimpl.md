@@ -11,12 +11,12 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: f9286598184cfb12c415de637fccc07011369fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1528e331a1431decb3916a06e67f0095615c2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501964"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295856"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>Implementar una ventana con CWindowImpl
 
@@ -69,4 +69,3 @@ En lugar de llamar `Create`, llame a `SubclassWindow` y pasar el identificador a
 ## <a name="see-also"></a>Vea también
 
 [Implementar una ventana](../atl/implementing-a-window.md)
-
