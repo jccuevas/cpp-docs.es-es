@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: Creación de subclases de un control de Windows'
+title: 'Controles ActiveX MFC: Creación de subclases de un Control de Windows'
 ms.date: 09/12/2018
 f1_keywords:
 - precreatewindow
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 24284af7766f0fd968ca08724440509bc171fba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277058"
 ---
-# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: Creación de subclases de un control de Windows
+# <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: Creación de subclases de un Control de Windows
 
 En este artículo se describe el proceso de creación de subclases de un control común de Windows para crear un control ActiveX. Creación de subclases de una existente Windows control es una forma rápida de desarrollar un control ActiveX. El nuevo control tendrán las capacidades del control de Windows con subclases, tales como dibujar y responder a clics del mouse. Ejemplo de los controles ActiveX de MFC [botón](../visual-cpp-samples.md) es un ejemplo de creación de subclases de un control de Windows.
 
@@ -98,4 +98,3 @@ Para un ejemplo de cómo se refleja los mensajes se procesan, consulte el ejempl
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

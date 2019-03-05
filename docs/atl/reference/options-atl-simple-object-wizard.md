@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273402"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Opciones, Asistente para objetos simples ATL
 
@@ -28,9 +28,9 @@ Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea 
    |Opción|Descripción|
    |------------|-----------------|
    |**Single**|Especifica que el objeto siempre se ejecuta en el subproceso COM principal. Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) y [InprocServer32](/windows/desktop/com/inprocserver32) para obtener más información.|
-   |**Apartamento**|Especifica que el objeto utiliza el apartamento de subproceso. Apartamento de subproceso equivalente al único. Se asigna a cada objeto de un componente de subprocesamiento controlado un apartamento de subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden usarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un bombeo de mensajes de Windows (valor predeterminado).<br /><br /> Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) para obtener más información.|
+   |**Apartment**|Especifica que el objeto utiliza el apartamento de subproceso. Apartamento de subproceso equivalente al único. Se asigna a cada objeto de un componente de subprocesamiento controlado un apartamento de subproceso, durante la vida del objeto; Sin embargo, varios subprocesos pueden usarse para varios objetos. Cada contenedor está asociado a un subproceso concreto y tiene un bombeo de mensajes de Windows (valor predeterminado).<br /><br /> Consulte [contenedores uniproceso](/windows/desktop/com/single-threaded-apartments) para obtener más información.|
    |**Ambos**|Especifica que el objeto puede usar apartamento o subprocesamiento libre, dependiendo del tipo de un subproceso creado.|
-   |**gratis**|Especifica que el objeto usa el subprocesamiento libre. Subprocesamiento libre es equivalente a un modelo de apartamento multiproceso. Consulte [apartamentos multiproceso](/windows/desktop/com/multithreaded-apartments) para obtener más información.|
+   |**Free**|Especifica que el objeto usa el subprocesamiento libre. Subprocesamiento libre es equivalente a un modelo de apartamento multiproceso. Consulte [apartamentos multiproceso](/windows/desktop/com/multithreaded-apartments) para obtener más información.|
    |**Neutral**|Especifica que el objeto sigue las directrices para apartamentos multiproceso, pero pueden ejecutar en cualquier tipo de subproceso.|
 
 - **Agregación**
@@ -68,4 +68,3 @@ Para obtener más información sobre los proyectos ATL y clases COM de ATL, vea 
 [Asistente para objetos simples ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Objeto simple ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Problemas de subprocesamiento de servidor en proceso](/windows/desktop/com/in-process-server-threading-issues)
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269648"
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 
@@ -58,7 +58,7 @@ Las partes importantes del código son los siguientes:
 
 - Iteración: La primera `for` bucle proporciona un mecanismo para recorrer en iteración los elementos de las matrices. El código que desea ejecutar para calcular las sumas se encuentra en la primera `for` bloque.
 
-- Índice: La `idx` variable tiene acceso a los elementos individuales de las matrices.
+- Índice: El `idx` variable tiene acceso a los elementos individuales de las matrices.
 
 Mediante C++ AMP, podría escribir el código siguiente en su lugar.
 
@@ -98,11 +98,11 @@ void CppAmpMethod() {
 
 Los mismos elementos básicos están presentes, pero se utilizan construcciones de C++ AMP:
 
-- Datos: Usar matrices de C++ para construir tres C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objetos. Se proporcionan cuatro valores para construir un `array_view` objeto: los valores de datos, el rango, el tipo de elemento y la longitud de la `array_view` objeto en cada dimensión. El rango y tipo se pasan como parámetros de tipo. Los datos y la longitud se pasan como parámetros del constructor. En este ejemplo, la matriz de C++ que se pasa al constructor es unidimensional. El rango y longitud que se usan para construir la forma rectangular de los datos en el `array_view` objeto y los valores se usan para rellenar la matriz de datos. La biblioteca en tiempo de ejecución también incluye el [array (clase)](../../parallel/amp/reference/array-class.md), que tiene una interfaz similar a la `array_view` clase y se explica más adelante en este artículo.
+- Datos: Utilice las matrices de C++ para construir tres C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objetos. Se proporcionan cuatro valores para construir un `array_view` objeto: los valores de datos, el rango, el tipo de elemento y la longitud de la `array_view` objeto en cada dimensión. El rango y tipo se pasan como parámetros de tipo. Los datos y la longitud se pasan como parámetros del constructor. En este ejemplo, la matriz de C++ que se pasa al constructor es unidimensional. El rango y longitud que se usan para construir la forma rectangular de los datos en el `array_view` objeto y los valores se usan para rellenar la matriz de datos. La biblioteca en tiempo de ejecución también incluye el [array (clase)](../../parallel/amp/reference/array-class.md), que tiene una interfaz similar a la `array_view` clase y se explica más adelante en este artículo.
 
 - Iteración: El [parallel_for_each (función) (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) proporciona un mecanismo para recorrer en iteración los elementos de datos, o *dominio del cálculo*. En este ejemplo, el dominio del cálculo especificado por `sum.extent`. El código que desea ejecutar se encuentra en una expresión lambda, o *función kernel*. El `restrict(amp)` indica que se usa solo el subconjunto del lenguaje C++ que C++ AMP pueda acelerar.
 
-- Índice: La [index (clase)](../../parallel/amp/reference/index-class.md) variable, `idx`, se declara con un rango de uno para que coincida con el rango de la `array_view` objeto. Con el índice, puede tener acceso a los elementos individuales de la `array_view` objetos.
+- Índice: El [index (clase)](../../parallel/amp/reference/index-class.md) variable, `idx`, se declara con un rango de uno para que coincida con el rango de la `array_view` objeto. Con el índice, puede tener acceso a los elementos individuales de la `array_view` objetos.
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>Dando formas e indexando datos: índice y extensión
 
@@ -457,13 +457,13 @@ void MathExample() {
 
 C++ AMP incluye una biblioteca de gráficos que se ha diseñado para la programación de gráficos acelerados. Esta biblioteca se usa únicamente en dispositivos que admiten la funcionalidad de gráficos nativos. Los métodos están en el [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md) y están incluidos en el \<amp_graphics.h > archivo de encabezado. Los componentes clave de la biblioteca de gráficos son:
 
-- [Texture (clase)](../../parallel/amp/reference/texture-class.md): puede usar la clase textura para crear texturas desde la memoria o desde un archivo. Las texturas se parecen a las matrices porque contienen datos, y se parecen a los contenedores en la biblioteca estándar de C++ con respecto a la asignación y construcción de copia. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../../standard-library/stl-containers.md). Los parámetros de plantilla para el `texture` clase son el tipo de elemento y el rango. El rango puede ser 1, 2 o 3. El tipo de elemento puede ser uno de los tipos de vector corto que se describen más adelante en este artículo.
+- [Texture (clase)](../../parallel/amp/reference/texture-class.md): Puede usar la clase textura para crear texturas desde la memoria o desde un archivo. Las texturas se parecen a las matrices porque contienen datos, y se parecen a los contenedores en la biblioteca estándar de C++ con respecto a la asignación y construcción de copia. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../../standard-library/stl-containers.md). Los parámetros de plantilla para el `texture` clase son el tipo de elemento y el rango. El rango puede ser 1, 2 o 3. El tipo de elemento puede ser uno de los tipos de vector corto que se describen más adelante en este artículo.
 
-- [writeonly_texture_view (clase)](../../parallel/amp/reference/writeonly-texture-view-class.md): proporciona acceso de solo escritura a cualquier textura.
+- [writeonly_texture_view (clase)](../../parallel/amp/reference/writeonly-texture-view-class.md): Proporciona acceso de solo escritura a cualquier textura.
 
-- Biblioteca de vectores cortos: Define un conjunto de tipos de vector corto de longitud 2, 3 y 4 que se basan en **int**, `uint`, **float**, **doble**, [norm ](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).
+- Biblioteca de vectores cortos: Define un conjunto de tipos de vector corto de longitud 2, 3 y 4 que se basan en **int**, `uint`, **float**, **doble**, [norma](../../parallel/amp/reference/norm-class.md), o [unorm](../../parallel/amp/reference/unorm-class.md).
 
-## <a name="universal-windows-platform-uwp-apps"></a>Aplicaciones de universal Windows Platform (UWP)
+## <a name="universal-windows-platform-uwp-apps"></a>Aplicaciones de Plataforma universal de Windows (UWP)
 
 Al igual que otras bibliotecas de C++, puede utilizar C++ AMP en sus aplicaciones para UWP. Estos artículos describe cómo incluir código de C++ AMP en aplicaciones que se crea mediante el uso de C++, C#, Visual Basic o JavaScript:
 

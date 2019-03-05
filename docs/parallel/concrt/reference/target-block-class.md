@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269453"
 ---
 # <a name="targetblock-class"></a>target_block (Clase)
 
@@ -70,7 +70,7 @@ El tipo de procesador para procesar los mensajes.
 
 |Name|Descripción|
 |----------|-----------------|
-|[propagar](#propagate)|Pasa de forma asincrónica un mensaje de un bloque de origen a este bloque de destino.|
+|[propagate](#propagate)|Pasa de forma asincrónica un mensaje de un bloque de origen a este bloque de destino.|
 |[send](#send)|Pasa sincrónicamente un mensaje de un bloque de origen a este bloque de destino.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
@@ -115,7 +115,7 @@ void async_send(_Inout_opt_ message<_Source_type>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que se envían.
 
 ##  <a name="decline_incoming_messages"></a> decline_incoming_messages
@@ -183,7 +183,7 @@ virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que debe procesarse.
 
 ##  <a name="process_message"></a> process_message
@@ -206,7 +206,7 @@ virtual message_status propagate(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -232,7 +232,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -252,7 +252,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 El método de filtro.
 
 ##  <a name="remove_sources"></a> remove_sources
@@ -279,7 +279,7 @@ virtual message_status send(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -325,10 +325,10 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que se envían.
 
-##  <a name="ctor"></a> target_block)
+##  <a name="ctor"></a> target_block
 
 Construye un objeto `target_block`.
 
@@ -336,7 +336,7 @@ Construye un objeto `target_block`.
 target_block();
 ```
 
-##  <a name="dtor"></a> ~ target_block
+##  <a name="dtor"></a> ~target_block
 
 Destruye el objeto `target_block`.
 

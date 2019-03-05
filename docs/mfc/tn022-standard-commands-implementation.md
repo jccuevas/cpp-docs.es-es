@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504343"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279377"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementación de comandos estándar
 
@@ -343,7 +343,7 @@ Para cada identificador de comando, hay una cadena de mensaje de la línea de me
 
    Debe elegir la orientación de mosaico predeterminado para la aplicación. Para ello, cambie el identificador para el elemento de menú de ventana "Mosaico" ID_WINDOW_TILE_HORZ o ID_WINDOW_TILE_VERT.
 
-- Windows ID_WINDOW_TILE_VERT iconos verticalmente.
+- ID_WINDOW_TILE_VERT   Tiles windows vertically.
 
    Este comando se implementa en `CMDIFrameWnd` al igual que ID_WINDOW_CASCADE, salvo que se usa un mensaje de Windows de MDI diferente para la operación.
 
@@ -468,19 +468,19 @@ Para cada identificador de comando, hay una cadena de mensaje de la línea de me
 
 Se utilizan varios identificadores de comando estándar como indicadores en barras de estado. Estos usan el mismo mecanismo de control de interfaz de usuario de comando de actualización para mostrar su estado actual de visual durante el tiempo de inactividad de la aplicación. Puesto que no se pueden seleccionar por el usuario (es decir, no se puede insertar un panel de barra de estado), entonces no tiene sentido tener un controlador ON_COMMAND para estos identificadores de comando.
 
-- ID_INDICATOR_CAPS: Indicador de bloqueo de CAP.
+- ID_INDICATOR_CAPS: Indicador de bloqueo del límite.
 
-- ID_INDICATOR_NUM: Indicador NUM lock.
+- ID_INDICATOR_NUM: Indicador de BLOQ NUM.
 
 - ID_INDICATOR_SCRL: Indicador de bloqueo Bloq Despl.
 
-- ID_INDICATOR_KANA: KANA indicador de bloqueo (se aplica sólo a los sistemas japonés).
+- ID_INDICATOR_KANA : KANA bloquea indicador (se aplica sólo a los sistemas japonés).
 
 Tres de estos se implementan en `CFrameWnd::OnUpdateKeyIndicator`, una aplicación auxiliar de implementación que usa el identificador de comando para asignar a la clave Virtual adecuada. Una implementación común habilita o deshabilita (para los paneles de estado deshabilitados = no hay texto) la `CCmdUI` objeto dependiendo de si la tecla Virtual correspondiente está bloqueada actualmente.
 
 No se recomienda la personalización de este controlador de comandos.
 
-- ID_INDICATOR_EXT: Indicador de select extendido.
+- ID_INDICATOR_EXT: Indicador seleccione extendido.
 
 - ID_INDICATOR_OVR: Indicador de sobrescritura.
 
@@ -488,10 +488,9 @@ No se recomienda la personalización de este controlador de comandos.
 
 Actualmente no hay ninguna implementación estándar para estos indicadores.
 
-Si decide implementar estos indicadores, se recomienda utilizar estos identificadores de indicador y mantener el orden de los indicadores de la barra de estado (es decir, en este orden: EXT, CAP, NUM, Bloq Despl, SOB, REC).
+Si decide implementar estos indicadores, se recomienda utilizar estos identificadores de indicador y mantener el orden de los indicadores de la barra de estado (es decir, en este orden: EXT, CAP, NUM, BLOQ DESPL, SOB, REC).
 
 ## <a name="see-also"></a>Vea también
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

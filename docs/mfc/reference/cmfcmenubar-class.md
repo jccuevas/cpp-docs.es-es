@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694368"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267373"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (clase)
 
@@ -464,7 +464,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Un parámetro booleano que indica si se deben habilitar las sombras en los menús emergentes.
 
 ### <a name="remarks"></a>Comentarios
@@ -878,7 +878,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 [in] *pTI*<br/>
 
@@ -994,10 +994,10 @@ void SetMaximizeMode(
 
 ### <a name="parameters"></a>Parámetros
 
-*bmáx*<br/>
+*bMax*<br/>
 [in] Un valor booleano que especifica el modo. Vea la sección Comentarios para obtener más información.
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a la ventana secundaria MDI que se va a cambiar.
 
 *bRecalcLayout*<br/>
@@ -1062,7 +1062,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ben*<br/>
+*bOn*<br/>
 [in] Un valor booleano que controla si se muestran los comandos de menú usados recientemente.
 
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands

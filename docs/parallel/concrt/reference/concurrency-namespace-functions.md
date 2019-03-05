@@ -33,19 +33,19 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436184"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278215"
 ---
 # <a name="concurrency-namespace-functions"></a>funciones del espacio de nombres de simultaneidad
 
 ||||
 |-|-|-|
 |[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|
-|[EnableTracing](#enabletracing)|[gratis](#free)|[GetExecutionContextId](#getexecutioncontextid)|
+|[EnableTracing](#enabletracing)|[Free](#free)|[GetExecutionContextId](#getexecutioncontextid)|
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|
 |[cancel_current_task](#cancel_current_task)|[clear](#clear)|[create_async](#create_async)|
@@ -57,7 +57,7 @@ ms.locfileid: "50436184"
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[Espere](#wait)|
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|
 |[when_all](#when_all)|[when_any](#when_any)|
 
 ##  <a name="alloc"></a>  Alloc
@@ -105,7 +105,7 @@ El tipo de los datos se envíen.
 *_Trg*<br/>
 Un puntero o referencia al destino al que se envían los datos.
 
-*_Datos*<br/>
+*_Data*<br/>
 Una referencia a los datos que se envían.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -243,7 +243,7 @@ En una aplicación para UWP, si `_Param` es de tipo iasyncoperation\<T > ^ o Win
 
 ##  <a name="disabletracing"></a>  DisableTracing
 
-Deshabilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW no está registrada de forma predeterminada.
+Deshabilita la traza en el runtime de simultaneidad. Esta función está desusada porque la traza de ETW no está registrada de forma predeterminada.
 
 ```
 __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) _CRTIMP HRESULT __cdecl DisableTracing();
@@ -392,7 +392,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
 
 *first*<br/>
 
-*Último*<br/>
+*last*<br/>
 
 ##  <a name="interruption_point"></a>  interruption_point
 
@@ -465,7 +465,7 @@ El primer origen.
 *_Item2*<br/>
 El segundo origen.
 
-*_Elementos*<br/>
+*_Items*<br/>
 Orígenes adicionales.
 
 *_PScheduleGroup*<br/>
@@ -518,7 +518,7 @@ El primer origen.
 *_Item2*<br/>
 El segundo origen.
 
-*_Elementos*<br/>
+*_Items*<br/>
 Orígenes adicionales.
 
 *_PScheduleGroup*<br/>
@@ -572,7 +572,7 @@ El primer origen.
 *_Item2*<br/>
 El segundo origen.
 
-*_Elementos*<br/>
+*_Items*<br/>
 Orígenes adicionales.
 
 *_PScheduleGroup*<br/>
@@ -601,7 +601,7 @@ La función que se invocará para ejecutar el trabajo representado por la `task_
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un objeto `task_handle`.
+Objeto `task_handle`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -669,10 +669,10 @@ El tipo de un asignador de memoria compatible de la biblioteca estándar de C++.
 *_Function*<br/>
 El tipo de operador de la comparación binaria.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a ordenar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar.
 
 *_Alloc*<br/>
@@ -757,7 +757,7 @@ El tipo del particionador que se usa para dividir el intervalo proporcionado.
 *first*<br/>
 El primer índice que se incluirán en la iteración.
 
-*Último*<br/>
+*last*<br/>
 El índice uno pasado el último índice que se incluirán en la iteración.
 
 *_Step*<br/>
@@ -766,7 +766,7 @@ El valor por el que paso a paso al recorrer en iteración desde `first` a `last`
 *_Func*<br/>
 La función que se ejecuta en cada iteración. Esto puede ser una expresión lambda, un puntero a función, o cualquier otro objeto que admite una versión del operador de llamada de función con la firma `void operator()(_Index_type)`.
 
-*_Crear*<br/>
+*_Part*<br/>
 Una referencia al objeto particionador. El argumento puede ser uno de `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ particionador](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` si un [affinity_partitioner](affinity-partitioner-class.md) se usa el objeto, la referencia debe ser un valor l no constante hacer referencia, por lo que el algoritmo puede almacenar el estado de futuras bucles para volver a usar.
 
 ### <a name="remarks"></a>Comentarios
@@ -804,13 +804,13 @@ El tipo de la función que se aplicará a cada elemento dentro del intervalo.
 *first*<br/>
 Un iterador que direcciona la posición del primer elemento que se incluirán en la iteración paralela.
 
-*Último*<br/>
+*last*<br/>
 Un iterador que direcciona la posición situada una posición después del último elemento que se incluirán en la iteración paralela.
 
 *_Func*<br/>
 Un objeto de función definida por el usuario que se aplica a cada elemento del intervalo.
 
-*_Crear*<br/>
+*_Part*<br/>
 Una referencia al objeto particionador. El argumento puede ser uno de `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ particionador](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` si un [affinity_partitioner](affinity-partitioner-class.md) se usa el objeto, la referencia debe ser un valor l no constante hacer referencia, por lo que el algoritmo puede almacenar el estado de futuras bucles para volver a usar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1078,10 +1078,10 @@ El tipo de un asignador de memoria compatible de la biblioteca estándar de C++.
 *_Function*<br/>
 El tipo de la función de proyección.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a ordenar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar.
 
 *_Alloc*<br/>
@@ -1147,10 +1147,10 @@ El tipo que se reducirá la entrada, que puede ser diferente del tipo de element
 *_Range_reduce_fun*<br/>
 El tipo de la función de reducción de intervalo. Esto debe ser un tipo de función con firma `_Reduce_type _Range_fun(_Forward_iterator, _Forward_iterator, _Reduce_type)`, _Reduce_type es el mismo que el tipo de identidad y el tipo de resultado de la reducción.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Un iterador de entrada dirige al primer elemento del intervalo que se reduzca.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Un iterador de entrada que direcciona el elemento que está una posición más allá del último elemento del intervalo que se reduzca.
 
 *_Identity*<br/>
@@ -1202,10 +1202,10 @@ El tipo de iterador del rango de entrada.
 *_Function*<br/>
 El tipo del functor de comparación binaria.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Iterador de acceso aleatorio que dirige a la posición del primer elemento del intervalo que se va a ordenar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Iterador de acceso aleatorio que dirige a la posición situada una posición después del último elemento del intervalo que se va a ordenar.
 
 *_Func*<br/>
@@ -1324,7 +1324,7 @@ Iterador de salida que direcciona la posición del primer elemento del intervalo
 *_Unary_op*<br/>
 Un objeto de función unario definido por el usuario que se aplica a cada elemento del intervalo de origen.
 
-*_Crear*<br/>
+*_Part*<br/>
 Una referencia al objeto particionador. El argumento puede ser uno de `const` [auto_partitioner](auto-partitioner-class.md)`&`, `const` [static_partitioner](static-partitioner-class.md)`&`, `const` [simple_ particionador](simple-partitioner-class.md) `&` o [affinity_partitioner](affinity-partitioner-class.md) `&` si un [affinity_partitioner](affinity-partitioner-class.md) se usa el objeto, la referencia debe ser un valor l no constante hacer referencia, por lo que el algoritmo puede almacenar el estado de futuras bucles para volver a usar.
 
 *first2*<br/>
@@ -1385,7 +1385,7 @@ El tipo de carga.
 *_Src*<br/>
 Un puntero o referencia al origen desde el que se esperan que los datos.
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 El tiempo máximo para el que el método debe para los datos, en milisegundos.
 
 *_Filter_proc*<br/>
@@ -1447,7 +1447,7 @@ El tipo de carga.
 *_Trg*<br/>
 Un puntero o referencia al destino al que se envían los datos.
 
-*_Datos*<br/>
+*_Data*<br/>
 Una referencia a los datos que se envían.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1532,7 +1532,7 @@ El vector simultáneo que proporciona los elementos deben intercambiar o el vect
 
 ### <a name="remarks"></a>Comentarios
 
-La función de plantilla es un algoritmo especializado en la clase contenedora `concurrent_vector` para ejecutar la función miembro `_A`. [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`). Se trata de instancias de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla `template <class T> void swap(T&, T&)`, en el algoritmo de la clase funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
+La función de plantilla es un algoritmo especializado en la clase contenedora `concurrent_vector` para ejecutar la función miembro `_A`. [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). Se trata de instancias de la ordenación parcial de plantillas de función por el compilador. Cuando las funciones de plantilla se sobrecargan de manera que la coincidencia de la plantilla con la llamada de la función no es única, el compilador selecciona la versión más especializada de la función de plantilla. La versión general de la función de plantilla `template <class T> void swap(T&, T&)`, en el algoritmo de la clase funciona mediante asignación y es una operación lenta. La versión especializada de cada contenedor es mucho más rápida, dado que puede funcionar con la representación interna de la clase contenedora.
 
 Este método no es seguro para la simultaneidad. Debe asegurarse de que otros subprocesos no están realizando operaciones en cualquiera de los vectores simultáneos cuando se llama a este método.
 
@@ -1600,10 +1600,10 @@ Tipo del objeto. Esto suele ser un bloque de mensajes o un agente.
 *_PObject*<br/>
 Un puntero al bloque de mensajes o agente denominado en el seguimiento.
 
-*_Nombre de*<br/>
+*_Name*<br/>
 El nombre para el objeto dado.
 
-##  <a name="try_receive"></a>  try_receive)
+##  <a name="try_receive"></a>  try_receive
 
 Una implementación try-receive general, que permite a un contexto buscar datos exactamente de un origen y filtrar los valores que se aceptan. Si los datos no están listos, el método devolverá **false**.
 
@@ -1649,7 +1649,7 @@ Un `bool` valor que indica si se colocó una carga en `_value`.
 
 Para obtener más información, consulte [Message Passing Functions](../../../parallel/concrt/message-passing-functions.md).
 
-##  <a name="wait"></a>  Espere
+##  <a name="wait"></a>  wait
 
 Hace una pausa en el contexto actual para un periodo de tiempo indicado.
 
@@ -1685,10 +1685,10 @@ auto when_all(
 *_Iterator*<br/>
 El tipo de iterador de entrada.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Posición del primer elemento del intervalo de elementos que se va a combinar en la tarea resultante.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Posición del primer elemento que supera el intervalo de elementos que se va a combinar en la tarea resultante.
 
 *_TaskOptions*<br/>
@@ -1737,10 +1737,10 @@ auto when_any(
 *_Iterator*<br/>
 El tipo de iterador de entrada.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Posición del primer elemento del intervalo de elementos que se va a combinar en la tarea resultante.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Posición del primer elemento que supera el intervalo de elementos que se va a combinar en la tarea resultante.
 
 *_TaskOptions*<br/>

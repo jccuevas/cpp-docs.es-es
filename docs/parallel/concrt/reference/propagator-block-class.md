@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272950"
 ---
 # <a name="propagatorblock-class"></a>propagator_block (Clase)
 
@@ -70,7 +70,7 @@ El tipo de procesador para procesar los mensajes.
 
 |Name|Descripción|
 |----------|-----------------|
-|[propagar](#propagate)|Pasa de forma asincrónica un mensaje de un bloque de origen a este bloque de destino.|
+|[propagate](#propagate)|Pasa de forma asincrónica un mensaje de un bloque de origen a este bloque de destino.|
 |[send](#send)|Inicia sincrónicamente un mensaje a este bloque. Lo llama un `ISource` bloque. Cuando se complete esta función, el mensaje ya se habrá propagado en el bloque.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
@@ -98,7 +98,7 @@ Para evitar la herencia múltiple, el `propagator_block` clase hereda de la `sou
 
 [ITarget](itarget-class.md)
 
-[source_block)](source-block-class.md)
+[source_block](source-block-class.md)
 
 `propagator_block`
 
@@ -161,7 +161,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que debe procesarse.
 
 ##  <a name="propagate"></a> propagar
@@ -176,7 +176,7 @@ virtual message_status propagate(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -204,7 +204,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -222,7 +222,7 @@ Construye un objeto `propagator_block`.
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block)
+##  <a name="dtor"></a> ~propagator_block
 
 Destruye un objeto `propagator_block`.
 
@@ -240,7 +240,7 @@ void register_filter(filter_method const& _Filter);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 El método de filtro.
 
 ##  <a name="remove_network_links"></a> remove_network_links
@@ -263,7 +263,7 @@ virtual message_status send(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>

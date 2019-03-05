@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-ms.openlocfilehash: b7f51ccd266fce1b5d614dfe2c725e20fde6f297
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575310"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273600"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits (clase)
 
@@ -64,7 +64,7 @@ static bool CompareElements(const T& element1, const T& element2);
 *element1*<br/>
 El primer elemento.
 
-*elemento Elemento2*<br/>
+*element2*<br/>
 El segundo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -88,7 +88,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 *element1*<br/>
 El primer elemento.
 
-*elemento Elemento2*<br/>
+*element2*<br/>
 El segundo elemento.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -97,9 +97,9 @@ Devuelve un entero basado en la tabla siguiente:
 
 |Condición|Valor devuelto|
 |---------------|------------------|
-|*element1* < *Elemento2*|<0|
-|*element1* == *Elemento2*|0|
-|*element1* > *Elemento2*|>0|
+|*element1* < *element2*|<0|
+|*element1* == *element2*|0|
+|*element1* > *element2*|>0|
 
 ### <a name="remarks"></a>Comentarios
 

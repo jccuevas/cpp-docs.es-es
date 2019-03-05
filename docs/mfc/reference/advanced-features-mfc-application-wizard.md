@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278228"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Características avanzadas, Asistente para aplicaciones MFC
 
@@ -21,7 +21,7 @@ En este tema se muestran las opciones de algunas características adicionales de
 
    Genera un conjunto de archivos de Ayuda de ayuda contextual, disponible mediante el uso de un menú de ayuda y F1 o haciendo clic en un **ayuda** botón en un cuadro de diálogo. Para agregar la compatibilidad con la Ayuda, se necesita el compilador de ayuda. Si no tiene el compilador de ayuda, puede volver a ejecutar el programa de instalación para instalarlo.
 
-   Consulte [ayuda HTML: ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) y [archivos de ayuda (Ayuda HTML)](../../ide/help-files-html-help.md) para obtener más información.
+   Consulte [ayuda HTML: Ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) y [archivos de ayuda (Ayuda HTML)](../../ide/help-files-html-help.md) para obtener más información.
 
 - **Vista previa de impresión y**
 
@@ -57,7 +57,7 @@ En este tema se muestran las opciones de algunas características adicionales de
 
 - **Compatibilidad con el Administrador de reinicio**
 
-   Agrega compatibilidad para la [Administrador de reinicio de Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo muestra cómo usar el Administrador de reinicio de MFC: [How Do I: Use el nuevo administrador de reinicio](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Agrega compatibilidad para la [Administrador de reinicio de Windows](/windows/desktop/RstMgr/using-restart-manager). Este vídeo muestra cómo usar el Administrador de reinicio de MFC: [¿Cómo lo hago?: Usar el nuevo administrador de reinicio](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Paneles de marco avanzados**
 
@@ -76,4 +76,3 @@ En este tema se muestran las opciones de algunas características adicionales de
 ## <a name="see-also"></a>Vea también
 
 [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)
-

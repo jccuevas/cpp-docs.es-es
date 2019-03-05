@@ -5,12 +5,12 @@ helpviewer_keywords:
 - aggregation [C++], creating aggregated objects
 - aggregate objects [C++], creating
 ms.assetid: fc29d7aa-fd53-4276-9c2f-37379f71b179
-ms.openlocfilehash: 5c655b8ced7738b30bf13d088cfadf11b5c65ef0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4be8d0e852da91b58125dc01d44eed4560b2b8d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277526"
 ---
 # <a name="creating-an-aggregated-object"></a>Crear un objeto agregado
 
@@ -32,4 +32,3 @@ Los delegados de agregación `IUnknown` llamadas, que proporciona un puntero par
 ## <a name="see-also"></a>Vea también
 
 [Aspectos básicos de los objetos ATL COM](../atl/fundamentals-of-atl-com-objects.md)
-

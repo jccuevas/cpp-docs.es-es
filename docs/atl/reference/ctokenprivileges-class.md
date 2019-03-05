@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80302d59d081b7cdf6f29960c3d8f4859b4ecbf4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280451"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges (clase)
 
@@ -45,7 +45,7 @@ class CTokenPrivileges
 |Name|Descripción|
 |----------|-----------------|
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|El constructor.|
-|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|Destructor.|
+|[CTokenPrivileges::~CTokenPrivileges](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -97,7 +97,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 *pszPrivilege*<br/>
 Puntero a una cadena terminada en null que especifica el nombre del privilegio, tal como se define en el archivo WINNT. Archivo de encabezado H.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Si es true, se habilita el privilegio. Si es false, se deshabilita el privilegio.
 
 *rPrivileges*<br/>
@@ -119,7 +119,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 La `CTokenPrivileges` objeto que se va a asignar al nuevo objeto.
 
 *rPrivileges*<br/>
@@ -129,7 +129,7 @@ El [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) par
 
 El `CTokenPrivileges` , opcionalmente, se puede crear el objeto utilizando un `TOKEN_PRIVILEGES` definida previamente o estructura `CTokenPrivileges` objeto.
 
-##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges
+##  <a name="dtor"></a>  CTokenPrivileges::~CTokenPrivileges
 
 Destructor.
 
@@ -311,7 +311,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 *rPrivileges*<br/>
 El [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges) estructura para asignar a la `CTokenPrivileges` objeto.
 
-*RHS*<br/>
+*rhs*<br/>
 La `CTokenPrivileges` objeto que se va a asignar al objeto.
 
 ### <a name="return-value"></a>Valor devuelto

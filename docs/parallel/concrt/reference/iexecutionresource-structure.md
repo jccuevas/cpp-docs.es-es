@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 56042c799f22b0e35bbd0d03d96d649e508f6e51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264942"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource (Estructura)
 
@@ -34,10 +34,10 @@ struct IExecutionResource;
 
 |Name|Descripción|
 |----------|-----------------|
-|[IExecutionResource:: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Devuelve el número de procesador virtual activada raíces y suscrito actualmente asociados con el subproceso de hardware subyacente que representa este recurso de ejecución de subprocesos externos.|
-|[IExecutionResource:: GetExecutionResourceId](#getexecutionresourceid)|Devuelve un identificador único para el subproceso de hardware que representa este recurso de ejecución.|
-|[IExecutionResource:: GetNodeId](#getnodeid)|Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.|
-|[IExecutionResource:: Remove](#remove)|Devuelve este recurso de ejecución para el Administrador de recursos.|
+|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Devuelve el número de procesador virtual activada raíces y suscrito actualmente asociados con el subproceso de hardware subyacente que representa este recurso de ejecución de subprocesos externos.|
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Devuelve un identificador único para el subproceso de hardware que representa este recurso de ejecución.|
+|[IExecutionResource::GetNodeId](#getnodeid)|Devuelve un identificador único para el nodo del procesador que pertenece este recurso de ejecución.|
+|[IExecutionResource::Remove](#remove)|Devuelve este recurso de ejecución para el Administrador de recursos.|
 
 ## <a name="remarks"></a>Comentarios
 

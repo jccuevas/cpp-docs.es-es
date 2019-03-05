@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: ebf1a80a695f1d25652f239f66d8d40c0e1099ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542225"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271182"
 ---
 # <a name="norm2-class"></a>norm_2 (Clase)
 
@@ -70,7 +70,7 @@ class norm_2;
 |norm_2::ref_g||
 |norm_2::ref_r||
 |norm_2::ref_x||
-|norm_2:: ref_y||
+|norm_2::ref_y||
 |norm_2::set_x||
 |norm_2::set_xy||
 |norm_2::set_y||
@@ -99,14 +99,14 @@ class norm_2;
 
 |Name|Descripción|
 |----------|-----------------|
-|norm_2:: g||
-|norm_2:: GR||
-|norm_2:: r||
-|norm_2:: RG||
-|norm_2:: x||
-|norm_2:: XY||
-|norm_2:: y||
-|norm_2:: YX||
+|norm_2::g||
+|norm_2::gr||
+|norm_2::r||
+|norm_2::rg||
+|norm_2::x||
+|norm_2::xy||
+|norm_2::y||
+|norm_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -116,7 +116,7 @@ class norm_2;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ##  <a name="ctor"></a> norm_2
 
@@ -185,7 +185,7 @@ El valor para inicializar el elemento 1.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ##  <a name="norm_2__size"></a> Tamaño

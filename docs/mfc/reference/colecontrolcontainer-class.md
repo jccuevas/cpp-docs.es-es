@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274991"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer (clase)
 
@@ -173,7 +173,7 @@ void AttachControlSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a un objeto `CWnd` .
 
 *nIDC*<br/>
@@ -196,7 +196,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de la propiedad de ambiente que se está cambiando.
 
 ### <a name="remarks"></a>Comentarios
@@ -218,7 +218,7 @@ virtual void CheckDlgButton(
 *nIDButton*<br/>
 El identificador del botón que se va a modificar.
 
-*nCompruebe*<br/>
+*nCheck*<br/>
 Especifica el estado del botón. Puede ser uno de los siguientes:
 
 - BST_CHECKED conjuntos que comprueban el estado del botón.
@@ -259,7 +259,7 @@ explicit COleControlContainer(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Un puntero a la ventana primaria del contenedor del control.
 
 ### <a name="remarks"></a>Comentarios
@@ -302,7 +302,7 @@ BOOL CreateControl(
 *pWndCtrl*<br/>
 Un puntero al objeto window que representa el control.
 
-*CLSID*<br/>
+*clsid*<br/>
 El identificador de clase única del control.
 
 *lpszWindowName*<br/>
@@ -311,7 +311,7 @@ Un puntero al texto que se mostrará en el control. Establece el valor de propie
 *dwStyle*<br/>
 Estilos de Windows. Los estilos disponibles aparecen en la **comentarios** sección.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control. Puede ser un `CRect` objeto o un `RECT` estructura.
 
 *nID*<br/>
@@ -419,7 +419,7 @@ virtual BOOL GetAmbientProp(
 *pSite*<br/>
 Un puntero a un sitio de control desde el que se recuperará la propiedad de ambiente.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de la propiedad de ambiente deseada.
 
 *pVarResult*<br/>
@@ -737,7 +737,7 @@ virtual void ScrollChildren(
 
 ### <a name="parameters"></a>Parámetros
 
-*DX*<br/>
+*dx*<br/>
 La cantidad, en píxeles, de desplazamiento a lo largo del eje x.
 
 *dy*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 El identificador del control.
 
-*nvalor*<br/>
+*nValue*<br/>
 El valor entero que se mostrará.
 
 *bSigned*<br/>

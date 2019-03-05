@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
-ms.openlocfilehash: 3d546c7fb11877fbd8cd71d698869ff384b84186
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c49df5a8c7f214b574b4f6118d182b63fec5dca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457760"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264968"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext (Estructura)
 
@@ -35,7 +35,7 @@ struct IExecutionContext;
 
 |Name|Descripción|
 |----------|-----------------|
-|[IExecutionContext:: Dispatch](#dispatch)|El método que se llama cuando un proxy del subproceso comienza a ejecutarse un contexto de ejecución determinado. Debe tratarse de la rutina de trabajo principal para el programador.|
+|[IExecutionContext::Dispatch](#dispatch)|El método que se llama cuando un proxy del subproceso comienza a ejecutarse un contexto de ejecución determinado. Debe tratarse de la rutina de trabajo principal para el programador.|
 |[IExecutionContext::GetId](#getid)|Devuelve un identificador único para el contexto de ejecución.|
 |[IExecutionContext::GetProxy](#getproxy)|Devuelve una interfaz para el proxy del subproceso que se está ejecutando en este contexto.|
 |[IExecutionContext::GetScheduler](#getscheduler)|Devuelve una interfaz para el programador al que pertenece este contexto de ejecución.|

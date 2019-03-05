@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267789"
 ---
 # <a name="crebar-class"></a>CReBar (clase)
 
@@ -37,7 +37,7 @@ class CReBar : public CControlBar
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|Agrega una banda a un control rebar.|
 |[CReBar::Create](#create)|Crea el control rebar y lo adjunta a la `CReBar` objeto.|
-|[CReBar:: GetReBarCtrl](#getrebarctrl)|Permite el acceso directo al control subyacente común.|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Permite el acceso directo al control subyacente común.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -151,7 +151,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
   Vea el ejemplo de [CReBar::AddBar](#addbar).
 
-##  <a name="getrebarctrl"></a>  CReBar:: GetReBarCtrl
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
 
 Esta función miembro permite el acceso directo al control subyacente común.
 
@@ -178,4 +178,3 @@ Para obtener más información sobre el uso de `CReBarCtrl` para personalizar su
 [Ejemplo MFCIE de MFC](../../visual-cpp-samples.md)<br/>
 [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175852"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266515"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Tutorial: Conectar usando tareas y solicitudes HTTP XML
 
@@ -24,7 +24,7 @@ Para obtener más información acerca de las tareas, consulte [paralelismo de ta
 
 En este documento se muestra primero cómo crear `HttpRequest` y sus clases auxiliares. A continuación, se muestra cómo utilizar esta clase desde una aplicación para UWP que usa C++ y XAML.
 
-Para obtener un ejemplo que usa `IXMLHTTPRequest2` pero no usa tareas, consulte [inicio rápido: conectarse usando la solicitud de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
+Para obtener un ejemplo que usa `IXMLHTTPRequest2` pero no usa tareas, consulte [inicio rápido: Conectar usando la solicitud de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
 >  `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` son las interfaces que se recomiendan para su uso en una aplicación para UWP. También puede adaptar este ejemplo para usarlo en una aplicación de escritorio.
@@ -77,7 +77,7 @@ En esta sección se muestra cómo utilizar el `HttpRequest` clase en una aplicac
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. En MainPage.xaml.h, declare el método `private` `ProcessHttpRequest`:
+4. En MainPage.xaml.h, declare el método `private``ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
@@ -112,6 +112,6 @@ Esta es la aplicación en ejecución:
 [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)<br/>
 [Programación asincrónica en C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Creación de operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Inicio rápido: Conectarse usando la solicitud de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
+[Inicio rápido: Conectar usando la solicitud de HTTP XML (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))
 [(Runtime de simultaneidad) de la clase de tarea](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event (clase)](../../parallel/concrt/reference/task-completion-event-class.md)

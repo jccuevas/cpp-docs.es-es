@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 2d37dcb430be9941444a90ac0a4ba34f3ee30515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272430"
 ---
 # <a name="norm-class"></a>norm (Clase)
 
@@ -35,15 +35,15 @@ class norm;
 
 |Name|Descripción|
 |----------|-----------------|
-|NORM::operator-||
-|NORM::operator--||
+|norm::operator-||
+|norm::operator--||
 |NORM::operator float|Operador de conversión. Convertir el número de la norma en flotante valor de punto.|
-|NORM::operator * =||
-|NORM::operator / =||
-|NORM::operator ++||
-|NORM::operator +=||
-|NORM::operator =||
-|NORM::operator =||
+|norm::operator*=||
+|norm::operator/=||
+|norm::operator++||
+|norm::operator+=||
+|norm::operator=||
+|norm::operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -53,7 +53,7 @@ class norm;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ##  <a name="ctor"></a> NORM
 
@@ -94,7 +94,7 @@ norm(
 *_V*<br/>
 El valor utilizado para inicializar.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ## <a name="see-also"></a>Vea también

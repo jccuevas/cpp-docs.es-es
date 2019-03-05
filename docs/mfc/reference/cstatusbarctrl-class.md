@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569742"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272846"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (clase)
 
@@ -80,9 +80,9 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::GetIcon](#geticon)|Recupera el icono de un elemento (también conocido como un panel) en el control de barra de estado actual.|
 |[CStatusBarCtrl::GetParts](#getparts)|Recupera un recuento de las partes de un control de barra de estado.|
 |[CStatusBarCtrl::GetRect](#getrect)|Recupera el rectángulo delimitador de un elemento en un control de barra de estado.|
-|[CStatusBarCtrl:: GetText](#gettext)|Recupera el texto de un elemento determinado de un control de barra de estado.|
-|[CStatusBarCtrl:: Gettextlength](#gettextlength)|Recuperar la longitud, en caracteres, del texto de un elemento determinado de un control de barra de estado.|
-|[CStatusBarCtrl:: GetTipText](#gettiptext)|Recupera el texto de información sobre herramientas para un panel en una barra de estado.|
+|[CStatusBarCtrl::GetText](#gettext)|Recupera el texto de un elemento determinado de un control de barra de estado.|
+|[CStatusBarCtrl::GetTextLength](#gettextlength)|Recuperar la longitud, en caracteres, del texto de un elemento determinado de un control de barra de estado.|
+|[CStatusBarCtrl::GetTipText](#gettiptext)|Recupera el texto de información sobre herramientas para un panel en una barra de estado.|
 |[CStatusBarCtrl::IsSimple](#issimple)|Comprueba un control de ventana de estado para determinar si se trata en el modo simple.|
 |[CStatusBarCtrl::SetBkColor](#setbkcolor)|Establece el color de fondo de una barra de estado.|
 |[CStatusBarCtrl::SetIcon](#seticon)|Establece el icono para un panel en una barra de estado.|
@@ -90,7 +90,7 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::SetParts](#setparts)|Establece el número de elementos en un control y la coordenada del borde derecho de cada parte de la barra de estado.|
 |[CStatusBarCtrl::SetSimple](#setsimple)|Especifica si un control de barra de estado muestra el texto simple o todos los elementos del control establecidos por una llamada anterior a `SetParts`.|
 |[CStatusBarCtrl::SetText](#settext)|Establece el texto en un elemento determinado de un control de barra de estado.|
-|[CStatusBarCtrl:: SetTipText](#settiptext)|Establece el texto de información sobre herramientas para un panel en una barra de estado.|
+|[CStatusBarCtrl::SetTipText](#settiptext)|Establece el texto de información sobre herramientas para un panel en una barra de estado.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -131,7 +131,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de barra de estado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -177,7 +177,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -244,7 +244,7 @@ Dirección de una matriz de enteros con tres elementos. El primer elemento recib
 *nHorz*<br/>
 Referencia a un entero que recibe el ancho del borde horizontal.
 
-*nvertir*<br/>
+*nVert*<br/>
 Referencia a un entero que recibe el ancho del borde vertical.
 
 *nSpacing*<br/>
@@ -354,7 +354,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  CStatusBarCtrl:: GetText
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText
 
 Recupera el texto de un elemento determinado de un control de barra de estado.
 
@@ -377,7 +377,7 @@ Dirección del búfer que recibe el texto. Este parámetro es una cadena termina
 *nPane*<br/>
 Índice de base cero del elemento en el que se va a recuperar el texto.
 
-*PEscriba*<br/>
+*pType*<br/>
 Puntero a un entero que recibe la información de tipo. El tipo puede ser uno de estos valores:
 
 - **0** el texto se dibuja con un borde a parecer inferior del plano de la barra de estado.
@@ -396,7 +396,7 @@ La longitud en caracteres, del texto o un [CString](../../atl-mfc-shared/referen
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  CStatusBarCtrl:: Gettextlength
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
 
 Recupera la longitud en caracteres, del texto de un elemento determinado de un control de barra de estado.
 
@@ -411,7 +411,7 @@ int GetTextLength(
 *nPane*<br/>
 Índice de base cero del elemento en el que se va a recuperar el texto.
 
-*PEscriba*<br/>
+*pType*<br/>
 Puntero a un entero que recibe la información de tipo. El tipo puede ser uno de estos valores:
 
 - **0** el texto se dibuja con un borde a parecer inferior del plano de la barra de estado.
@@ -430,7 +430,7 @@ La longitud, en caracteres, del texto.
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]
 
-##  <a name="gettiptext"></a>  CStatusBarCtrl:: GetTipText
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText
 
 Recupera el texto de información sobre herramientas para un panel en una barra de estado.
 
@@ -481,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CR*<br/>
+*cr*<br/>
 Valor COLORREF que especifica el nuevo color de fondo. Especifique el valor CLR_DEFAULT para hacer que la barra de estado utilizar su color de fondo predeterminado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -536,7 +536,7 @@ void SetMinHeight(int nMin);
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 Alto mínimo, en píxeles, del control.
 
 ### <a name="remarks"></a>Comentarios
@@ -613,7 +613,7 @@ Dirección de una cadena terminada en null que especifica el texto que se debe e
 *nPane*<br/>
 El índice de base cero del elemento que se debe establecer. Si este valor es 255, se asume que el control de barra de estado es un control simple que solo contiene un elemento.
 
-*nLas*<br/>
+*nType*<br/>
 Tipo de operación de dibujo. Consulte [mensaje SB_SETTEXT](/windows/desktop/Controls/sb-settext) para obtener una lista de valores posibles.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -628,7 +628,7 @@ El mensaje invalida la parte del control que ha cambiado, lo que hace que muestr
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]
 
-##  <a name="settiptext"></a>  CStatusBarCtrl:: SetTipText
+##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText
 
 Establece el texto de información sobre herramientas para un panel en una barra de estado.
 

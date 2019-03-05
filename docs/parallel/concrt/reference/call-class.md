@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: 5164d2787c86e6c909418f353c15c876d1397afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566106"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271962"
 ---
 # <a name="call-class"></a>Clase call
 
@@ -45,7 +45,7 @@ La firma de funciones que este bloque puede aceptar.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Llamar a](#ctor)|Sobrecargado. Construye un bloque de mensajería `call` .|
+|[call](#ctor)|Sobrecargado. Construye un bloque de mensajería `call` .|
 |[~ Llame al Destructor](#dtor)|Destruye el `call` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
@@ -112,7 +112,7 @@ call(
 *_Func*<br/>
 Una función que se invocará para cada mensaje aceptado.
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
@@ -129,7 +129,7 @@ El tipo `_Call_method` es un functor con firma `void (T const &)` que es invocad
 
 El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `call` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.
 
-##  <a name="dtor"></a> ~ llamar
+##  <a name="dtor"></a> ~call
 
 Destruye el `call` bloque de mensajería.
 
@@ -147,7 +147,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero para el mensaje que debe controlarse.
 
 ##  <a name="process_message"></a> process_message
@@ -160,7 +160,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero para el mensaje que debe controlarse.
 
 ##  <a name="propagate_message"></a> propagate_message
@@ -175,7 +175,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -197,7 +197,7 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>

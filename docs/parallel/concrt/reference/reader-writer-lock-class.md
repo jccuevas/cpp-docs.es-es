@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585996"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268660"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock (Clase)
 
@@ -104,7 +104,7 @@ A menudo es más seguro usar el [scoped_lock_read](#scoped_lock_read_class) cons
 
 Si hay escritores que esperan en el bloqueo, el lector esperará hasta que hayan adquirido y liberado el bloqueo todos los escritores en línea. Este bloqueo está orientado hacia los escritores y puede privar a los lectores bajo una carga continua de sistemas de escritura.
 
-##  <a name="ctor"></a> reader_writer_lock)
+##  <a name="ctor"></a> reader_writer_lock
 
 Construye un nuevo objeto `reader_writer_lock`.
 
@@ -112,7 +112,7 @@ Construye un nuevo objeto `reader_writer_lock`.
 reader_writer_lock();
 ```
 
-##  <a name="dtor"></a> ~ reader_writer_lock
+##  <a name="dtor"></a> ~reader_writer_lock
 
 Destruye el objeto `reader_writer_lock`.
 
@@ -145,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 La `reader_writer_lock` objeto a adquirir como un sistema de escritura.
 
-## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Destruye un `reader_writer_lock` de objetos y libera el bloqueo proporcionado en su constructor.
 
@@ -178,7 +178,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 *_Reader_writer_lock*<br/>
 La `reader_writer_lock` objeto adquirir como lector.
 
-## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock:: scoped_lock_read:: ~ scoped_lock_read (destructor)
+## <a name="a-namescopedlockreaddtor--readerwriterlockscopedlockreadscopedlockread-destructor"></a><a name="scoped_lock_read_dtor">  reader_writer_lock::scoped_lock_read::~scoped_lock_read Destructor
 
 Destruye un `scoped_lock_read` de objetos y libera el bloqueo proporcionado en su constructor.
 

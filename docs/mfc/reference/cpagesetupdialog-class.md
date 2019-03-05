@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178087"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277890"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog (clase)
 
@@ -325,7 +325,7 @@ virtual UINT OnDrawPage(
 *pDC*<br/>
 Puntero al contexto de dispositivo de impresora.
 
-*nha*<br/>
+*nMessage*<br/>
 Especifica un mensaje, que indica el área de la página que se está dibujando actualmente. Puede ser uno de los siguientes:
 
 - WM_PSD_FULLPAGERECT el área de página completa.
@@ -392,7 +392,7 @@ Indica la orientación del papel o sobre, y si la impresora es una matriz de pun
 
 - 0x01f sobre en modo vertical (matricial)
 
-*PSD*<br/>
+*pPSD*<br/>
 Puntero a una estructura `PAGESETUPDLG`. Para obtener más información sobre [PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda), consulte el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -408,4 +408,3 @@ Reemplace esta función para personalizar el dibujo de la imagen. Si reemplaza e
 [Ejemplo de MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [CCommonDialog (clase)](../../mfc/reference/ccommondialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178470"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269817"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton (clase)
 
@@ -111,7 +111,7 @@ class CMFCButton : public CButton
 |Name|Descripción|
 |----------|-----------------|
 |[CMFCButton::CleanUp](#cleanup)|Restablece las variables internas y libera los recursos asignados, como imágenes, mapas de bits e iconos.|
-|`CMFCButton::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCButton::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |`CMFCButton::DrawItem`|Lo llama el marco cuando un aspecto visual de un botón dibujado por el propietario ha cambiado. (Invalida [CButton::DrawItem](../../mfc/reference/cbutton-class.md#drawitem).)|
 |[CMFCButton::EnableFullTextTooltip](#enablefulltexttooltip)|Especifica si se debe mostrar el texto completo de una información sobre herramientas en una ventana grande de información sobre herramientas o una versión truncada del texto en una ventana pequeña información sobre herramientas.|
 |[CMFCButton::EnableMenuFont](#enablemenufont)|Especifica si la fuente del texto de botón es el mismo que la fuente del menú de aplicación.|
@@ -221,7 +221,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ben*<br/>
+*bOn*<br/>
 [in] TRUE para mostrar todo el texto; FALSE para el texto para mostrar que se trunca.
 
 ### <a name="remarks"></a>Comentarios
@@ -238,7 +238,7 @@ void EnableMenuFont(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ben*<br/>
+*bOn*<br/>
 [in] TRUE para utilizar la fuente del menú de aplicación como la fuente de texto del botón; FALSE para usar la fuente del sistema. El valor predeterminado es TRUE.
 
 *bRedraw*<br/>
@@ -258,7 +258,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para utilizar el tema de Windows actual para dibujar los bordes del botón; FALSE para no utilizar el tema de Windows. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -511,7 +511,7 @@ Utilice uno de los siguientes `CMFCButton::AlignStyle` valores de enumeración p
 
 El `CMFCButton` constructor inicializa este miembro para ALIGN_CENTER.
 
-##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk) |
+##  <a name="m_bWasDblClk"></a>  CMFCButton::m_bWasDblClk](#m_bWasDblClk)|
 
 Indica si el último, haga clic en el evento fue un doble clic. |
 
@@ -563,7 +563,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Una referencia a un rectángulo que delimita el botón.
 
 *uiState*<br/>
@@ -639,7 +639,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Una referencia a un rectángulo que delimita el botón.
 
 *strText*<br/>

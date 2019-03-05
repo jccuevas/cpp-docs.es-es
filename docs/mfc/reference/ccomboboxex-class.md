@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694249"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265943"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (clase)
 
@@ -72,12 +72,12 @@ class CComboBoxEx : public CComboBox
 |[CComboBoxEx::GetEditCtrl](#geteditctrl)|Recupera el identificador de la parte del control de edición de un `ComboBoxEx` control.|
 |[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Recupera los estilos extendidos que están en uso para un `ComboBoxEx` control.|
 |[CComboBoxEx::GetImageList](#getimagelist)|Recupera un puntero a la lista de imágenes asignada a un `ComboBoxEx` control.|
-|[CComboBoxEx:: GetItem](#getitem)|Recupera información de artículos un determinado `ComboBoxEx` elemento.|
+|[CComboBoxEx::GetItem](#getitem)|Recupera información de artículos un determinado `ComboBoxEx` elemento.|
 |[CComboBoxEx::HasEditChanged](#haseditchanged)|Determina si el usuario ha cambiado el contenido de la `ComboBoxEx` editar control escribiendo.|
-|[CComboBoxEx:: InsertItem](#insertitem)|Inserta un nuevo elemento en un `ComboBoxEx` control.|
+|[CComboBoxEx::InsertItem](#insertitem)|Inserta un nuevo elemento en un `ComboBoxEx` control.|
 |[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos dentro de un `ComboBoxEx` control.|
-|[CComboBoxEx:: SetImageList](#setimagelist)|Establece una lista de imágenes para un `ComboBoxEx` control.|
-|[CComboBoxEx:: SetItem](#setitem)|Establece los atributos de un elemento en un `ComboBoxEx` control.|
+|[CComboBoxEx::SetImageList](#setimagelist)|Establece una lista de imágenes para un `ComboBoxEx` control.|
+|[CComboBoxEx::SetItem](#setitem)|Establece los atributos de un elemento en un `ComboBoxEx` control.|
 |[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Establece el estilo visual de que el cuadro combinado extendido de control de cuadro.|
 
 ## <a name="remarks"></a>Comentarios
@@ -149,7 +149,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica la combinación de los estilos de cuadro combinado que se aplica al cuadro combinado. Consulte **comentarios** a continuación para obtener más información sobre los estilos.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que es la posición y tamaño del cuadro combinado.
 
 *pParentWnd*<br/>
@@ -209,7 +209,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Estilo del control de cuadro combinado. Consulte [crear](#create) para obtener una lista de estilos.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -238,7 +238,7 @@ int DeleteItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 Índice de base cero del elemento que se va a quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -317,7 +317,7 @@ Un puntero a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto. Si
 
 La `CImageList` objeto al que señala el valor devuelto es un objeto temporal y se destruyen durante la próxima vez que el procesamiento inactivo.
 
-##  <a name="getitem"></a>  CComboBoxEx:: GetItem
+##  <a name="getitem"></a>  CComboBoxEx::GetItem
 
 Recupera información de artículos un determinado `ComboBoxEx` elemento.
 
@@ -354,7 +354,7 @@ Distinto de cero si el usuario ha escrito en el cuadro de edición del control; 
 
 Esta función miembro implementa la funcionalidad del mensaje [CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged), tal y como se describe en el SDK de Windows.
 
-##  <a name="insertitem"></a>  CComboBoxEx:: InsertItem
+##  <a name="insertitem"></a>  CComboBoxEx::InsertItem
 
 Inserta un nuevo elemento en un `ComboBoxEx` control.
 
@@ -403,7 +403,7 @@ Consulte [estilos extendidos ComboBoxEx](/windows/desktop/Controls/comboboxex-co
 
 Para crear un cuadro combinado extendido el control con los estilos extendidos de windows, use [CreateEx](#createex).
 
-##  <a name="setimagelist"></a>  CComboBoxEx:: SetImageList
+##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList
 
 Establece una lista de imágenes para un `ComboBoxEx` control.
 
@@ -426,7 +426,7 @@ Esta función miembro implementa la funcionalidad del mensaje [CBEM_SETIMAGELIST
 
 La `CImageList` objeto al que señala el valor devuelto es un objeto temporal y se destruyen durante la próxima vez que el procesamiento inactivo.
 
-##  <a name="setitem"></a>  CComboBoxEx:: SetItem
+##  <a name="setitem"></a>  CComboBoxEx::SetItem
 
 Establece los atributos de un elemento en un `ComboBoxEx` control.
 

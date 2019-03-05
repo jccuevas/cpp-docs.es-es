@@ -7,20 +7,20 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: bdfb7879bc926435bdcd72d6776646c449ffef80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 871db7abd2682d557bf2e80e9cb97624f0dc53a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263642"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>Construcción de objetos en una fase y en dos fases
 
 Tiene la posibilidad de elegir entre dos técnicas para crear objetos gráficos, como lápices y pinceles:
 
-- *Construcción de una fase*: crea e inicializa el objeto en una fase, todo ello con el constructor.
+- *Construcción de una fase*: Construir e inicializar el objeto en una fase, todo ello con el constructor.
 
-- *Construcción en dos fases*: crea e inicializa el objeto en dos fases independientes. El constructor crea el objeto y lo inicializa una función de inicialización.
+- *Construcción en dos fases*: Construir e inicializar el objeto en dos fases independientes. El constructor crea el objeto y lo inicializa una función de inicialización.
 
 Construcción en dos fases siempre es más seguro. En la construcción de una fase, el constructor podría producir una excepción si se proporcionan argumentos incorrectos o se produce un error de asignación de memoria. Se evita este problema mediante la construcción de dos fases, aunque tiene comprobación de errores. En cualquier caso, destruir el objeto es el mismo proceso.
 
@@ -46,4 +46,3 @@ En el siguiente ejemplo se muestra ambos métodos de creación de un objeto pen:
 ## <a name="see-also"></a>Vea también
 
 [Objetos gráficos](../mfc/graphic-objects.md)
-

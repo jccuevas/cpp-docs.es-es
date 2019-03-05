@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: e9f083f37c2e92172b05b907d733f9dbdb27ce45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559749"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275966"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows (clase)
 
@@ -200,12 +200,12 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawEditBorder`).|
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Invalida [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`).|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|El marco llama a este método cuando dibuja el borde alrededor de una instancia de la [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Invalida [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|El marco de trabajo llama a esta función cuando dibuja la flecha de ordenación de un control de encabezado. (Invalida [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|El marco llama a este método cuando dibuja el borde alrededor de una instancia de la [clase CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Overrides [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|El marco de trabajo llama a esta función cuando dibuja la flecha de ordenación de un control de encabezado. (Overrides [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
 |[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`).|
 |[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`).|
 |[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`).|
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Lo llama el marco de trabajo cuando dibuja el borde de un botón de página de Outlook. (Invalida [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Lo llama el marco de trabajo cuando dibuja el borde de un botón de página de Outlook. (Overrides [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`).|
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`).|
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`).|
@@ -214,7 +214,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnDrawSpinButtons](#ondrawspinbuttons)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`).|
 |[CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`).|
 |[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|El marco llama a este método cuando dibuja el indicador de progreso la [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) objeto. (Invalida [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
-|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|El marco llama a este método cuando dibuja el cuadro de tamaño para un [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Invalida [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
+|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|El marco llama a este método cuando dibuja el cuadro de tamaño para un [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Overrides [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
 |[CMFCVisualManagerWindows::OnDrawTab](#ondrawtab)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawTab`).|
 |[CMFCVisualManagerWindows::OnDrawTabCloseButton](#ondrawtabclosebutton)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`).|
 |[CMFCVisualManagerWindows::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`).|
@@ -230,7 +230,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 |[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Invalida `CMFCVisualManagerOfficeXP::OnFillButtonInterior`).|
 |[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Invalida `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`).|
 |[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Invalida `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`).|
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|El marco llama a este método cuando rellena el interior de un botón de página de Outlook. (Invalida [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|El marco llama a este método cuando rellena el interior de un botón de página de Outlook. (Overrides [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
 |[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Invalida `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`).|
 |[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|El marco llama a este método cuando rellena el fondo de un [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. (Invalida [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
 |[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Invalida `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`).|
@@ -426,7 +426,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 ### <a name="parameters"></a>Parámetros
 
 [in] *pButton*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -549,7 +549,7 @@ virtual BOOL OnDrawBrowseButton(
 [in] *pDC*<br/>
 [in] *rect*<br/>
 [in] *pEdit*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 [in] *clrText*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
@@ -571,7 +571,7 @@ virtual void OnDrawButtonBorder(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -591,7 +591,7 @@ virtual void OnDrawButtonSeparator(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Comentarios
@@ -637,7 +637,7 @@ virtual void OnDrawCaptionButtonIcon(
 
 [in] *pDC*<br/>
 [in] *pButton*<br/>
-[in] *Id.*<br/>
+[in] *id*<br/>
 [in] *bSecuencias de ActiveX*<br/>
 [in] *bDeshabilitado*<br/>
 [in] *ptImage*<br/>
@@ -1336,7 +1336,7 @@ virtual void OnFillButtonInterior(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1483,7 +1483,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *Ben*<br/>
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

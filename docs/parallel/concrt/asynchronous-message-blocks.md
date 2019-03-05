@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-ms.openlocfilehash: b78b4db4dda33e0a94da3624ea1ffd8748a601f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586126"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274172"
 ---
 # <a name="asynchronous-message-blocks"></a>Bloques de mensajes asincrónicos
 
@@ -49,7 +49,7 @@ Este tema contiene las siguientes secciones:
 
 ##  <a name="sources_and_targets"></a> Orígenes y destinos
 
-Los orígenes y los destinos son dos participantes importantes en el paso de mensajes. Un *origen* hace referencia a un punto de conexión de comunicación que envía mensajes. Un *destino* hace referencia a un punto de conexión de comunicación que recibe mensajes. Puede considerar el origen como un punto de conexión del que se lee y el destino como un punto de conexión en el que se escribe. Las aplicaciones conectan los orígenes y los destinos entre sí para formar *redes de mensajería*.
+Los orígenes y los destinos son dos participantes importantes en el paso de mensajes. Un *origen* hace referencia a un punto de conexión de comunicación que envía mensajes. Un *destino* hace referencia a un punto de conexión de comunicación que recibe mensajes. Puede considerar el origen como un extremo del que se lee y el destino como un extremo en el que se escribe. Las aplicaciones conectan los orígenes y los destinos entre sí para formar *redes de mensajería*.
 
 La biblioteca de agentes usa dos clases abstractas para representar orígenes y destinos: [Concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) y [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md). Los tipos de bloques de mensajes que actúan como orígenes derivan de `ISource`; los tipos de bloques de mensajes que actúan como destinos derivan de `ITarget`. Los tipos de bloques de mensajes que actúan como orígenes y destinos derivan de `ISource` y de `ITarget`.
 
@@ -80,30 +80,30 @@ Almacena un mensaje en el que se puede escribir y del que se puede leer varias v
 [single_assignment](#single_assignment)<br/>
 Almacena un mensaje en el que se puede escribir una vez y del que se puede leer varias veces.
 
-[Llamar a](#call)<br/>
+[call](#call)<br/>
 Realiza trabajo cuando recibe un mensaje.
 
 [transformer](#transformer)<br/>
 Realiza trabajo cuando recibe datos y envía el resultado de ese trabajo a otro bloque de destino. La clase `transformer` puede actuar en diferentes tipos de entrada y salida.
 
-[elección](#choice)<br/>
+[choice](#choice)<br/>
 Selecciona el primer mensaje disponible en un conjunto de orígenes.
 
 [JOIN y multitype join](#join)<br/>
 Esperan por todos los mensajes que se van a recibir de un conjunto de orígenes y, a continuación, combinan los mensajes en un mensaje para otro bloque de mensajes.
 
-[Temporizador](#timer)<br/>
+[timer](#timer)<br/>
 Envía un mensaje a un bloque de destino de manera periódica.
 
 Estos tipos de bloques de mensajes tienen diferentes características que los hacen útiles en distintas situaciones. A continuación se indican algunas de estas características:
 
-- *Tipo de propagación*: si el bloque de mensajes actúa como un origen de datos, un receptor de datos o ambos.
+- *Tipo de propagación*: Si el bloque de mensajes actúa como un origen de datos, un receptor de datos o ambos.
 
-- *Orden de los mensajes*: si el bloque de mensajes mantiene el orden original en el que se envían o reciben mensajes. Cada tipo de bloque de mensajes predefinido mantiene el orden original en el que envía o recibe los mensajes.
+- *Orden de los mensajes*: Si el bloque de mensajes mantiene el orden original en el que se envían o reciben mensajes. Cada tipo de bloque de mensajes predefinido mantiene el orden original en el que envía o recibe los mensajes.
 
-- *Recuento de orígenes*: el número máximo de orígenes que puede leer el bloque de mensajes.
+- *Recuento de orígenes*: El número máximo de orígenes que puede leer el bloque de mensajes.
 
-- *Número de destino*: el número máximo de destinos que puede escribir el bloque de mensajes.
+- *Número de destino*: El número máximo de destinos que puede escribir el bloque de mensajes.
 
 En la siguiente tabla se muestra cómo se relacionan estas características con los diferentes tipos de bloques de mensajes.
 
@@ -139,7 +139,7 @@ Este ejemplo produce el siguiente resultado:
 334455
 ```
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `unbounded_buffer` de clases, vea [Cómo: implementar diversos patrones de productor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `unbounded_buffer` de clases, vea [Cómo: Implementar varios modelos productor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Arriba](#top)]
 
@@ -161,7 +161,7 @@ Este ejemplo produce el siguiente resultado:
 555555
 ```
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `overwrite_buffer` de clases, vea [Cómo: implementar diversos patrones de productor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `overwrite_buffer` de clases, vea [Cómo: Implementar varios modelos productor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md).
 
 [[Arriba](#top)]
 
@@ -181,7 +181,7 @@ Este ejemplo produce el siguiente resultado:
 333333
 ```
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `single_assignment` de clases, vea [Tutorial: implementar futuros](../../parallel/concrt/walkthrough-implementing-futures.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `single_assignment` de clases, vea [Tutorial: Implementar futuros](../../parallel/concrt/walkthrough-implementing-futures.md).
 
 [[Arriba](#top)]
 
@@ -201,7 +201,7 @@ Este ejemplo produce el siguiente resultado:
 334455
 ```
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `call` de clases, vea [Cómo: proporcionar funciones de trabajo a las clases call y transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `call` de clases, vea [Cómo: Proporcionar funciones de trabajo a las clases call y transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md).
 
 [[Arriba](#top)]
 
@@ -225,7 +225,7 @@ Este ejemplo produce el siguiente resultado:
 10.8914.5218.15
 ```
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `transformer` de clases, vea [Cómo: usar la clase transformer en una canalización de datos](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `transformer` de clases, vea [Cómo: Usar la clase transformer en una canalización de datos](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).
 
 [[Arriba](#top)]
 
@@ -255,7 +255,7 @@ Dado que la tarea que calcula los 35<sup>th</sup> no se garantiza que el número
 
 Este ejemplo se usa el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para calcular los números de Fibonacci en paralelo. Para obtener más información acerca de `parallel_invoke`, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `choice` de clases, vea [Cómo: seleccionar entre tareas completadas](../../parallel/concrt/how-to-select-among-completed-tasks.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `choice` de clases, vea [Cómo: Seleccionar tareas completadas](../../parallel/concrt/how-to-select-among-completed-tasks.md).
 
 [[Arriba](#top)]
 
@@ -287,7 +287,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 Este ejemplo se usa el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para calcular los números de Fibonacci en paralelo. Para obtener más información acerca de `parallel_invoke`, consulte [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
-Para obtener ejemplos completos que muestran cómo usar el `join` de clases, vea [Cómo: seleccionar entre tareas completadas](../../parallel/concrt/how-to-select-among-completed-tasks.md) y [Tutorial: usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Para obtener ejemplos completos que muestran cómo usar el `join` de clases, vea [Cómo: Seleccionar tareas completadas](../../parallel/concrt/how-to-select-among-completed-tasks.md) y [Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 [[Arriba](#top)]
 
@@ -313,7 +313,7 @@ Este ejemplo genera la siguiente salida de ejemplo:
 Computing fib(42)..................................................result is 267914296
 ```
 
-Para obtener un ejemplo completo que muestra cómo utilizar el `timer` de clases, vea [Cómo: enviar un mensaje a intervalos regulares](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
+Para obtener un ejemplo completo que muestra cómo utilizar el `timer` de clases, vea [Cómo: Enviar un mensaje a intervalos regulares](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md).
 
 [[Arriba](#top)]
 
@@ -340,7 +340,7 @@ bool (T const &)
 
 Para eliminar la copia innecesaria de datos, use el segundo formato cuando tenga un tipo agregado que se propaga por valor.
 
-Filtrado de mensajes admite el *dataflow* modelo de programación, en el que los componentes realizan cálculos cuando reciben datos. Para obtener ejemplos que utilizan las funciones de filtro para controlar el flujo de datos en una red de paso de mensajes, vea [Cómo: usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md), [Tutorial: crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), y [ Tutorial: Crear una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Filtrado de mensajes admite el *dataflow* modelo de programación, en el que los componentes realizan cálculos cuando reciben datos. Para obtener ejemplos que utilizan las funciones de filtro para controlar el flujo de datos en una red de paso de mensajes, vea [Cómo: Usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md), [Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md), y [Tutorial: Creación de una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Arriba](#top)]
 
@@ -352,11 +352,10 @@ Considere las uniones no expansivas y expansivas. Ambas usan la reserva de mensa
 
 Una unión expansiva, que también lee mensajes de entrada de varios orígenes, usa la reserva de mensajes para leer mensajes adicionales mientras espera recibir un mensaje de cada origen. Por ejemplo, considere una unión expansiva que recibe mensajes de los bloques de mensajes `A` y `B`. Si la unión expansiva recibe dos mensajes de B pero aún no ha recibido un mensaje de `A`, la unión expansiva guarda el identificador de mensaje único para el segundo mensaje de `B`. Una vez que la unión expansiva recibe un mensaje de `A` y propaga out estos mensajes, usa el identificador de mensaje guardado para ver si el segundo mensaje de `B` sigue estando disponible.
 
-Puede usar la reserva de mensajes al implementar sus propios tipos de bloques de mensajes. Para obtener un ejemplo sobre cómo crear un tipo de bloque de mensajes personalizado, consulte [Tutorial: crear un bloque de mensajes personalizado](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
+Puede usar la reserva de mensajes al implementar sus propios tipos de bloques de mensajes. Para obtener un ejemplo sobre cómo crear un tipo de bloque de mensajes personalizado, consulte [Tutorial: Creación de un bloque de mensajes personalizado](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md).
 
 [[Arriba](#top)]
 
 ## <a name="see-also"></a>Vea también
 
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274900"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Agregación y Macros de clase de fábrica
 
@@ -33,14 +33,14 @@ Estas macros proporcionan formas de controlar la agregación y de la declaració
 |[DECLARE_AGGREGATABLE](#declare_aggregatable)|Declara que el objeto puede ser agregados (predeterminado).|
 |[DECLARE_CLASSFACTORY](#declare_classfactory)|El generador de clases que se declara [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), el generador de clases ATL predeterminado.|
 |[DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex)|Declara el objeto de generador de clases que el generador de clases.|
-|[MACRO DECLARE_CLASSFACTORY2](#declare_classfactory2)|Declara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) sea el generador de clases.|
+|[DECLARE_CLASSFACTORY2](#declare_classfactory2)|Declara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) sea el generador de clases.|
 |[DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)|Declara [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) sea el generador de clases.|
 |[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)|Declara [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md) sea el generador de clases.|
 |[DECLARE_GET_CONTROLLING_UNKNOWN](#declare_get_controlling_unknown)|Declara un virtual `GetControllingUnknown` función.|
 |[DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable)|Declara que no se puede agregar el objeto.|
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Declara que debe agregarse el objeto.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Comprueba el valor del objeto desconocido externo y declara el objeto agregable o no agregables, según corresponda.|
-|[MACRO DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|El objeto externo se protege contra la eliminación durante la construcción de un objeto interno.|
+|[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|El objeto externo se protege contra la eliminación durante la construcción de un objeto interno.|
 |[DECLARE_VIEW_STATUS](#declare_view_status)|Especifica las marcas VIEWSTATUS al contenedor.|
 
 ## <a name="requirements"></a>Requisitos
@@ -121,7 +121,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 [in] El nombre de la clase que implementa el objeto de generador de clases.
 
 ### <a name="remarks"></a>Comentarios
@@ -134,7 +134,7 @@ El *cf* parámetro debe derivar de [CComClassFactory](../../atl/reference/ccomcl
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
-##  <a name="declare_classfactory2"></a>  MACRO DECLARE_CLASSFACTORY2
+##  <a name="declare_classfactory2"></a>  DECLARE_CLASSFACTORY2
 
 Declara [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) sea el generador de clases.
 
@@ -144,7 +144,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 ### <a name="parameters"></a>Parámetros
 
-*LIC*<br/>
+*lic*<br/>
 [in] Una clase que implementa `VerifyLicenseKey`, `GetLicenseKey`, y `IsLicenseValid`.
 
 ### <a name="remarks"></a>Comentarios
@@ -155,7 +155,7 @@ DECLARE_CLASSFACTORY2( lic )
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
-##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 (clase)
+##  <a name="ccomclassfactory2_class"></a>  CComClassFactory2 Class
 
 Esta clase implementa la [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2) interfaz.
 
@@ -168,7 +168,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 ### <a name="parameters"></a>Parámetros
 
-*licencia*<br/>
+*license*<br/>
 Una clase que implementa las funciones estáticas siguientes:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -209,7 +209,7 @@ Cuando se crean objetos en varios contenedores (en un servidor fuera de proceso)
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
-##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread (clase)
+##  <a name="ccomclassfactoryautothread_class"></a>  CComClassFactoryAutoThread Class
 
 Esta clase implementa la [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) interfaz y permite que los objetos que se creará en varios contenedores.
 
@@ -354,7 +354,7 @@ La ventaja de usar DECLARE_POLY_AGGREGATABLE es que no tenga ambos `CComAggObjec
 
 La macro DECLARE_POLY_AGGREGATABLE automáticamente se declara en el objeto si usa al Asistente para controles ATL para crear un control total.
 
-##  <a name="declare_protect_final_construct"></a>  MACRO DECLARE_PROTECT_FINAL_CONSTRUCT
+##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT
 
 Protege el objeto que se eliminen si (durante [FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) el objeto agregado interno incrementa el recuento de referencias, a continuación, disminuye el recuento a 0.
 

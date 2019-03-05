@@ -7,12 +7,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: 7e531937fc61898a6d2d432f74cb5608ea94fbc9
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: d91daeded9933abd73612a6a66a19a159bf36006
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277834"
 ---
 # <a name="structures-used-by-mfc"></a>Estructuras utilizadas por MFC
 
@@ -49,4 +49,3 @@ En la tabla siguiente se enumera las estructuras que se llaman desde diversas fu
 ## <a name="see-also"></a>Vea también
 
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

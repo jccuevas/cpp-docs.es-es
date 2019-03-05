@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493514"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276954"
 ---
 # <a name="activation-c"></a>Activación (C++)
 
@@ -40,11 +40,10 @@ Activación en contexto promueve un enfoque centrado en documentos para la creac
 
 MFC no admite la activación en contexto anidada. Si se crea una aplicación de contenedor y servidor y que servidor/contenedor está incrustado en otro contenedor y activado en contexto, no se puede in situ activar objetos incrustados dentro de él.
 
-¿Qué ocurre cuando el usuario hace doble clic en un elemento incrustado depende de los verbos definidos para el elemento. Para obtener información, consulte [activación: verbos](../mfc/activation-verbs.md).
+¿Qué ocurre cuando el usuario hace doble clic en un elemento incrustado depende de los verbos definidos para el elemento. Para obtener información, consulte [activación: Verbos](../mfc/activation-verbs.md).
 
 ## <a name="see-also"></a>Vea también
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contenedores](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)
-

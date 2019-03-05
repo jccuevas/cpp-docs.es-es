@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-ms.openlocfilehash: 5f358dbc61fc39928e877dbc3673a8b9f51917eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280297"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context (Clase)
 
@@ -36,7 +36,7 @@ class task_continuation_context : public details::_ContextCallback;
 |Name|Descripción|
 |----------|-----------------|
 |[get_current_winrt_context](#get_current_winrt_context)|Devuelve un objeto de contexto de continuación de tarea que representa el contexto actual del subproceso de winrt.|
-|[use_arbitrary](#use_arbitrary)|Crea un contexto de continuación de la tarea que permite elegir el contexto de ejecución para una continuación en el runtime.|
+|[use_arbitrary](#use_arbitrary)|Crea un contexto de continuación de la tarea que permite elegir el contexto de ejecución para una continuación en el tiempo de ejecución.|
 |[use_current](#use_current)|Devuelve un objeto de contexto de continuación de tarea que representa el contexto de ejecución actual.|
 |[use_default](#use_default)|Crea el contexto de continuación de tarea predeterminado.|
 |[use_synchronous_execution](#use_synchronous_execution)|Devuelve un objeto de contexto de continuación de tarea que representa el contexto de ejecución sincrónica.|
@@ -77,7 +77,7 @@ Este método es similar a la `use_current` método, pero también está disponib
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 
-Crea un contexto de continuación de la tarea que permite elegir el contexto de ejecución para una continuación en el runtime.
+Crea un contexto de continuación de la tarea que permite elegir el contexto de ejecución para una continuación en el tiempo de ejecución.
 
 ```
 static task_continuation_context use_arbitrary();

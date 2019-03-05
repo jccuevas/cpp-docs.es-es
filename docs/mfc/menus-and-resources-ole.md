@@ -18,12 +18,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 8b8e278564c2c293cabfcd56ab9ce2cdb4807e19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511740"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268530"
 ---
 # <a name="menus-and-resources-ole"></a>Menús y recursos (OLE)
 
@@ -39,7 +39,7 @@ Edición visual OLE impone requisitos adicionales en el menú y otros recursos p
 
 Esto requiere tres diseños de menú diferentes, uno para cada posible modo de la aplicación. Tablas de aceleradores también son necesarias para cada modo. Una aplicación contenedora puede o no puede admitir la activación en contexto; Si es así, necesita una nueva estructura de menú y tablas de aceleradores asociadas.
 
-Activación en contexto requiere que las aplicaciones de contenedor y servidor negocien el espacio de la barra de menú, barra de herramientas y el estado. Todos los recursos deben diseñarse teniendo esto en mente. El artículo [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md) se tratan en este tema en detalle.
+Activación en contexto requiere que las aplicaciones de contenedor y servidor negocien el espacio de la barra de menú, barra de herramientas y el estado. Todos los recursos deben diseñarse teniendo esto en mente. El artículo [menús y recursos: Combinar menús](../mfc/menus-and-resources-menu-merging.md) se tratan en este tema en detalle.
 
 Debido a estos problemas, las aplicaciones de documento OLE creadas con el Asistente para la aplicación pueden tener hasta cuatro menús independientes y recursos de la tabla de aceleradores. Se utilizan por las razones siguientes:
 
@@ -47,8 +47,8 @@ Debido a estos problemas, las aplicaciones de documento OLE creadas con el Asist
 |-------------------|---------|
 |IDR_MAINFRAME|Se utiliza en una aplicación MDI si ningún archivo está abierto o en una aplicación SDI, independientemente de los archivos abiertos. Se trata de un menú estándar utilizado en aplicaciones que no son compatibles con OLE.|
 |IDR_\<proyecto > tipo|Se utiliza en una aplicación MDI si los archivos están abiertos. Se utiliza cuando se ejecuta una aplicación independiente. Se trata de un menú estándar utilizado en aplicaciones que no son compatibles con OLE.|
-|IDR_\<proyecto > TYPE_SRVR_IP|Usa el servidor o contenedor cuando se abre un objeto en su lugar.|
-|IDR_\<proyecto > TYPE_SRVR_EMB|Usa una aplicación de servidor si se abre un objeto sin usar activación en contexto.|
+|IDR_\<project>TYPE_SRVR_IP|Usa el servidor o contenedor cuando se abre un objeto en su lugar.|
+|IDR_\<project>TYPE_SRVR_EMB|Usa una aplicación de servidor si se abre un objeto sin usar activación en contexto.|
 
 Cada uno de estos nombres de recursos representa un menú y, por lo general, una tabla de aceleradores. Un esquema similar debe usarse en aplicaciones MFC que no se crean con el Asistente para la aplicación.
 
@@ -63,4 +63,3 @@ Los siguientes artículos describen temas relacionados con la combinación neces
 ## <a name="see-also"></a>Vea también
 
 [OLE](../mfc/ole-in-mfc.md)
-

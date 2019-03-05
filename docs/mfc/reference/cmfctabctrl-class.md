@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281686"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -139,7 +139,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Especifica si el marco de trabajo es cambiar el tamaño de área de cliente de todas las ventanas de control de ficha cuando un elemento de interfaz de usuario de los cambios de control de ficha.|
 |[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Desinfla el tamaño del área de ficha especificado. (Invalida `CMFCBaseTabCtrl::CalcRectEdit`).|
 |[CMFCTabCtrl::Create](#create)|Crea el control de pestaña y lo adjunta a la `CMFCTabCtrl` objeto.|
-|`CMFCTabCtrl::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCTabCtrl::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Muestra u oculta el botón Cerrar ( **X**) en la pestaña activa.|
 |[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Habilita o deshabilita las etiquetas de pestaña editable. (Invalida [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|
 |[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|Reemplaza los dos botones que se desplazan de las pestañas de ventana con un botón que abre un menú de ventanas con pestañas.|
@@ -310,10 +310,10 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*Estilo*<br/>
+*style*<br/>
 [in] El estilo del control de ficha. Para obtener más información, vea la sección Comentarios.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que delimita el control de ficha.
 
 *pParentWnd*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] El identificador del control de ficha.
 
-*Ubicación*<br/>
+*location*<br/>
 [in] La ubicación de fichas. El valor predeterminado es LOCATION_BOTTOM. Para obtener más información, vea la sección Comentarios.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para mostrar el botón Cerrar en la pestaña activa; FALSE para mostrar el botón Cerrar en la esquina superior derecha del área de ficha. El valor predeterminado es TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar las etiquetas de pestaña modificable; FALSE para deshabilitar las etiquetas de pestaña editable.
 
 ### <a name="remarks"></a>Comentarios
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para mostrar un menú emergente de etiquetas de la ventana con pestañas; FALSE para mostrar los botones de desplazamiento hacia delante y hacia atrás. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [out] Cuando este método finaliza, el *rect* parámetro contiene un rectángulo que delimita el área de pestañas.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in, out] Cuando este método finaliza, este parámetro contiene un rectángulo que delimita el control de ficha actual.
 
 ### <a name="remarks"></a>Comentarios
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parámetros
 
-*Estilo*<br/>
+*style*<br/>
 [in] Uno de los valores de enumeración que especifica la apariencia del control de ficha. Para obtener más información, vea la tabla en la sección Comentarios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -876,7 +876,7 @@ virtual DROPEFFECT OnDragEnter(
 *dwKeyState*<br/>
 [in] Contiene el estado de las teclas modificadoras. Este parámetro es una combinación bit a bit (OR) de los siguientes valores: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, consulte el **parámetros de mensaje** sección de [acerca de la entrada del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*punto*<br/>
+*point*<br/>
 [in] Contiene la ubicación actual del cursor en coordenadas de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] El estado de las teclas modificadoras, que es una combinación bit a bit (OR) de MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON. Para obtener más información, vea "Parámetros de mensaje" en [acerca de la entrada del Mouse](/windows/desktop/inputdev/about-mouse-input).
 
-*punto*<br/>
+*point*<br/>
 [in] La posición del mouse actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas de dónde desea mostrar el menú emergente.
 
 ### <a name="remarks"></a>Comentarios
@@ -944,7 +944,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parámetros
 
-*bSecuencias de ActiveX*<br/>
+*bActive*<br/>
 [in] TRUE para que sea la ficha actual en la pestaña activa; FALSE para hacer que la ficha actual esté inactivo.
 
 ### <a name="remarks"></a>Comentarios
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] El identificador de un recurso de mapa de bits que contiene la lista de imágenes.
 
-*CX*<br/>
+*cx*<br/>
 [in] El ancho de cada imagen, en píxeles. El valor predeterminado es 15.
 
 *clrTransp*<br/>
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parámetros
 
-*bCancelar*<br/>
+*bCancel*<br/>
 [in] TRUE para abandonar la operación de cambio de tamaño actual; FALSE para completar actual cambiar el tamaño de operación. En cualquier caso, el marco de trabajo deja de dibujar el rectángulo de cambio de tamaño.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar

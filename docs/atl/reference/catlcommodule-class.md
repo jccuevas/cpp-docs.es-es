@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 270e6ca4dcb5c7701281cc2ac6c04e1d60093db3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499813"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275875"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule (clase)
 
@@ -36,7 +36,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|El constructor.|
-|[CAtlComModule:: ~ CAtlComModule](#dtor)|Destructor.|
+|[CAtlComModule::~CAtlComModule](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -75,7 +75,7 @@ CAtlComModule() throw();
 
 Inicializa el módulo.
 
-##  <a name="dtor"></a>  CAtlComModule:: ~ CAtlComModule
+##  <a name="dtor"></a>  CAtlComModule::~CAtlComModule
 
 Destructor.
 
@@ -100,7 +100,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 *bRegTypeLib*<br/>
 TRUE si la biblioteca de tipos es que se registrarán. El valor predeterminado es FALSE.
 
-*pTypeInfo*<br/>
+*pCLSID*<br/>
 Señala el CLSID del objeto que se registrarán. Si es NULL (valor predeterminado), todos los objetos en el mapa de objetos que se registra.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -148,7 +148,7 @@ HRESULT UnregisterServer(
 *bRegTypeLib*<br/>
 TRUE si la biblioteca de tipos es se va a anular. El valor predeterminado es FALSE.
 
-*pTypeInfo*<br/>
+*pCLSID*<br/>
 Señala el CLSID del objeto que se va a anular. Si es NULL (valor predeterminado), todos los objetos en el mapa de objetos se anulará.
 
 ### <a name="return-value"></a>Valor devuelto

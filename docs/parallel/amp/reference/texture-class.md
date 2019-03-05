@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279749"
 ---
 # <a name="texture-class"></a>texture (Clase)
 
@@ -83,7 +83,7 @@ El rango de la textura.
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Rank (constante)](#rank)|Obtiene el rango de la `texture` objeto.|
+|[rank Constant](#rank)|Obtiene el rango de la `texture` objeto.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -103,9 +103,9 @@ El rango de la textura.
 
 **Encabezado:** amp_graphics.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ textura
+##  <a name="dtor"></a> ~texture
 
 Destruye el objeto `texture`.
 
@@ -216,7 +216,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 
 El número de bytes entre cada fila de una textura de ensayo de 2 dimensiones o entre cada fila de un segmento de profundidad de textura de ensayo de 3 dimensiones.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Devuelve el valor del elemento especificado por los parámetros.
 
@@ -258,7 +258,7 @@ El rango del índice.
 
 El valor del elemento especificado por los parámetros.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Devuelve el elemento que se encuentra en el índice especificado.
 
@@ -294,7 +294,7 @@ texture& operator= (
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `texture` objeto que se va a copiar desde.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -588,7 +588,7 @@ Un iterador inicial en el contenedor de origen.
 *_Src_last*<br/>
 Un iterador final en el contenedor de origen.
 
-*_Otro*<br/>
+*_Other*<br/>
 Otro origen de datos.
 
 *_Rank*<br/>

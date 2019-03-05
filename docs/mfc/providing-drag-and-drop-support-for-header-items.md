@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-ms.openlocfilehash: 21ff14982baac93fac1cf3ee441353c079f4f760
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f30ad029742a01280abda85cbd1a81104d01d8cd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602974"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263727"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>Proporcionar compatibilidad con arrastrar y colocar para los elementos de encabezado
 
@@ -26,4 +26,3 @@ Como con una funcionalidad común de arrastrar y colocar, puede ampliar el compo
 ## <a name="see-also"></a>Vea también
 
 [Uso de CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

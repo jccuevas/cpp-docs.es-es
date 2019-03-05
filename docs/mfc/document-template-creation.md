@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-ms.openlocfilehash: f5c0691deab3d475a72cda0e86d681ea0c4ddfa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ff6ad47b37d85c812608dbee918f0543730eae
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271683"
 ---
 # <a name="document-template-creation"></a>Clear plantillas de documentos
 
@@ -31,4 +31,3 @@ El puntero a un nuevo `CMultiDocTemplate` objeto se usa como argumento a [AddDoc
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Relaciones entre objetos MFC](../mfc/relationships-among-mfc-objects.md)<br/>
 [Creación de nuevos documentos, ventanas y vistas](../mfc/creating-new-documents-windows-and-views.md)
-

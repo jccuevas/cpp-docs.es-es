@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Bloquear'
+title: 'Windows Sockets: Bloqueo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610579"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272352"
 ---
-# <a name="windows-sockets-blocking"></a>Windows Sockets: Bloquear
+# <a name="windows-sockets-blocking"></a>Windows Sockets: Bloqueo
 
-En este artículo y dos artículos complementarios explican varios problemas en la programación de Windows Sockets. En este artículo se explica el bloqueo. Los otros temas se tratan en los artículos: [Windows Sockets: orden de bytes](../mfc/windows-sockets-byte-ordering.md) y [Windows Sockets: convertir cadenas](../mfc/windows-sockets-converting-strings.md).
+En este artículo y dos artículos complementarios explican varios problemas en la programación de Windows Sockets. En este artículo se explica el bloqueo. Los otros temas se tratan en los artículos: [Windows Sockets: Orden de bytes](../mfc/windows-sockets-byte-ordering.md) y [Windows Sockets: Convertir cadenas](../mfc/windows-sockets-converting-strings.md).
 
 Si usa o derivar de la clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md), tendrá que administrar estos problemas por su cuenta. Si usa o derivar de la clase [CSocket](../mfc/reference/csocket-class.md), MFC administra automáticamente.
 
@@ -36,7 +36,7 @@ Normalmente, si está utilizando `CAsyncSocket`, debe evitar el uso de operacion
 
 En Windows, las llamadas de bloqueo no es recomendable. De forma predeterminada, [CAsyncSocket](../mfc/reference/casyncsocket-class.md) admite las llamadas asincrónicas y se debe administrar el bloqueo mediante notificaciones de devolución de llamada. Clase [CSocket](../mfc/reference/csocket-class.md), por otro lado, es sincrónica. Proporciona mensajes de Windows y administrar los bloqueos.
 
-Para obtener más información acerca del bloqueo, vea la especificación Windows Sockets. Para obtener más información acerca de "On" funciones, vea [Windows Sockets: notificaciones de Socket](../mfc/windows-sockets-socket-notifications.md) y [Windows Sockets: derivar de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Para obtener más información acerca del bloqueo, vea la especificación Windows Sockets. Para obtener más información acerca de "On" funciones, vea [Windows Sockets: Las notificaciones de socket](../mfc/windows-sockets-socket-notifications.md) y [Windows Sockets: Derivación de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 Para obtener más información, consulte:
 
@@ -44,14 +44,13 @@ Para obtener más información, consulte:
 
 - [Windows Sockets: Usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
+- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sockets de flujos](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagramas](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

@@ -1,5 +1,5 @@
 ---
-title: 'Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro'
+title: 'Contenedores de controles ActiveX: Conectar un Control ActiveX a una Variable de miembro'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - member variables [MFC], ActiveX controls in project
 - ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
-ms.openlocfilehash: 2234647e933e37ff82845c4b40dc93cefeb55575
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bc063875f2a31c582c9de32e24e7dfbc7826c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446468"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279944"
 ---
-# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenedores de controles ActiveX: Conectar un control ActiveX a una variable de miembro
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>Contenedores de controles ActiveX: Conectar un Control ActiveX a una Variable de miembro
 
 La manera más fácil de obtener acceso a un control ActiveX desde dentro de su aplicación de contenedor de control es asociar el control ActiveX a una variable de miembro de la clase de cuadro de diálogo que contiene el control.
 
@@ -42,4 +42,3 @@ La manera más fácil de obtener acceso a un control ActiveX desde dentro de su 
 ## <a name="see-also"></a>Vea también
 
 [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
-

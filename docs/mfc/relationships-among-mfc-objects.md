@@ -7,12 +7,12 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-ms.openlocfilehash: c02cf723ee7711ec1bfe00841c90bbde8c260ac1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8d1fcd9737b33d52038746a26f4e1bd1043e95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276981"
 ---
 # <a name="relationships-among-mfc-objects"></a>Relaciones entre objetos MFC
 
@@ -52,4 +52,3 @@ Normalmente, una ventana de marco tiene una vista, pero a veces, al igual que en
 [Creación de plantillas de documentos](../mfc/document-template-creation.md)<br/>
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Creación de nuevos documentos, ventanas y vistas](../mfc/creating-new-documents-windows-and-views.md)
-

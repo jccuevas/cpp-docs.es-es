@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 84756eb177fcec1981f3f2ed018d57eb27df9823
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265384"
 ---
 # <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar (clase)
 
@@ -42,7 +42,7 @@ class CMFCBaseToolBar : public CPane
 
 |Name|Descripción|
 |----------|-----------------|
-|`CMFCBaseToolBar::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCBaseToolBar::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Devuelve el modo de acoplamiento. (Invalida [cbasepane:: Getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
 |[CMFCBaseToolBar::GetMinSize](#getminsize)|Devuelve el tamaño mínimo de una barra de herramientas. (Invalida [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
 |[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Lo llama el marco de trabajo después de realizar cambios de elemento primario del panel. (Invalida [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: 6748ea64f7be20dd5ce4573cd65b6e1084148b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449119"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276759"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target (Clase)
 
@@ -45,7 +45,7 @@ class invalid_link_target : public std::exception;
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> invalid_link_target)
+##  <a name="ctor"></a> invalid_link_target
 
 Construye un objeto `invalid_link_target`.
 
@@ -57,11 +57,10 @@ invalid_link_target() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Mensaje descriptivo del error.
 
 ## <a name="see-also"></a>Vea también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)
-

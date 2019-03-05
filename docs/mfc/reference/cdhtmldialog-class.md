@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594966"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263616"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog (clase)
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Name|Descripción|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Construye un objeto CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destruye un objeto CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destruye un objeto CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -304,7 +304,7 @@ Contiene el número de Id. de un recurso HTML.
 
 El segundo formulario del constructor proporciona acceso al recurso de cuadro de diálogo a través del nombre de plantilla. El tercer formulario del constructor proporciona acceso al recurso de cuadro de diálogo por el identificador de la plantilla de recursos. Normalmente, el identificador empieza por el **IDD_** prefijo.
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog:: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 Destruye un objeto CDHtmlDialog.
 
@@ -330,7 +330,7 @@ virtual BOOL CreateControlSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*que pContainer*<br/>
+*pContainer*<br/>
 Un puntero a la [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) objeto
 
 *ppSite*<br/>
@@ -367,10 +367,10 @@ void DDX_DHtml_AxControl(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor del parámetro de identificador de la etiqueta de objeto en el código fuente HTML para el control ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de la propiedad con el que desee intercambiar datos.
 
 *szPropName*<br/>
@@ -399,10 +399,10 @@ void DDX_DHtml_CheckBox(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ### <a name="example"></a>Ejemplo
@@ -462,13 +462,13 @@ void DDX_DHtml_ElementText(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío del elemento HTML con la que desea intercambiar datos.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -487,10 +487,10 @@ void DDX_DHtml_Radio(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -509,10 +509,10 @@ void DDX_DHtml_SelectIndex(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -531,10 +531,10 @@ void DDX_DHtml_SelectString(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -553,10 +553,10 @@ void DDX_DHtml_SelectValue(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ### <a name="example"></a>Ejemplo
@@ -630,7 +630,7 @@ HRESULT GetControlDispatch(
 
 ### <a name="parameters"></a>Parámetros
 
-*NID*<br/>
+*szId*<br/>
 El identificador HTML de un control ActiveX.
 
 *ppdisp*<br/>
@@ -660,7 +660,7 @@ VARIANT GetControlProperty(
 
 ### <a name="parameters"></a>Parámetros
 
-*NID*<br/>
+*szId*<br/>
 El identificador HTML de un control ActiveX.
 
 *szPropName*<br/>
@@ -669,7 +669,7 @@ El nombre de una propiedad en la configuración regional predeterminada del usua
 *pdispControl*<br/>
 El `IDispatch` puntero de un control ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de una propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 El identificador de un elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de una propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -942,7 +942,7 @@ STDMETHOD(GetOptionKeyPath)(
 *pchKey*<br/>
 Consulte *pchKey* en [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) en el SDK de Windows.
 
-*almacenamiento de datos*<br/>
+*dw*<br/>
 Consulte *dw* en `IDocHostUIHandler::GetOptionKeyPath` en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 El identificador HTML de un control ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de la propiedad para establecer.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 El identificador de un elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de la propiedad para establecer.
 
 *pVar*<br/>
@@ -1527,4 +1527,3 @@ Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandle
 [DHtmlExplore de ejemplo MFC](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml (macros del asistente)](#ddx_dhtml_helper_macros)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-
