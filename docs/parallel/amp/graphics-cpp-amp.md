@@ -2,12 +2,12 @@
 title: Gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570331"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260886"
 ---
 # <a name="graphics-c-amp"></a>Gráficos (C++ AMP)
 
@@ -344,8 +344,8 @@ El tipo de elemento de `texture_view` (su declaración como constante y también
 
 |Tipo|Componentes|Leer|Write|Muestreo|Acceso de asignación MIP|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N >|1, 2, 4|Sí|No (1)|Sí|Sí, indizable. El intervalo se determina en la creación de instancias.|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|Sí<br /><br /> N (2)|Sí<br /><br /> Sí|No (1)<br /><br /> No (1)|Sí, un nivel. El nivel se determina en la creación de instancias.<br /><br /> Sí, un nivel. El nivel se determina en la creación de instancias.|
+|texture_view\<const T, N>|1, 2, 4|Sí|No (1)|Sí|Sí, indizable. El intervalo se determina en la creación de instancias.|
+|Texture_view\<T, N >|1<br /><br /> 2, 4|Sí<br /><br /> No (2)|Sí<br /><br /> Sí|No (1)<br /><br /> No (1)|Sí, un nivel. El nivel se determina en la creación de instancias.<br /><br /> Sí, un nivel. El nivel se determina en la creación de instancias.|
 
 En esta tabla, puede ver que las vistas de textura de solo lectura admiten totalmente las nuevas capacidades a cambio de no poder escribir en la vista. Las vistas de textura de escritura están limitadas a tener acceso solo a un nivel de asignación MIP. Las vistas de textura de lectura y escritura son más especializadas que las de escritura, porque agregan el requisito de que el tipo de elemento de la vista de textura solo tiene un componente. Observe que el muestreo no se admite para las vistas de textura de escritura porque es una operación orientada a la lectura.
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539131"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258377"
 ---
 # <a name="cbasetransition-class"></a>Clase CBaseTransition
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Construye un objeto de base de transición.|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Destructor. Se llama cuando se destruye un objeto de transición.|
+|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Destructor. Se llama cuando se destruye un objeto de transición.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -118,7 +118,7 @@ Esta clase encapsula la interfaz IUIAnimationTransition y actúa como clase base
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="_dtorcbasetransition"></a>  CBaseTransition:: ~ CBaseTransition
+##  <a name="_dtorcbasetransition"></a>  CBaseTransition::~CBaseTransition
 
 Destructor. Se llama cuando se destruye un objeto de transición.
 
@@ -385,7 +385,7 @@ void SetKeyframes(
 *pStart*<br/>
 Un fotograma clave que especifica el comienzo de la transición.
 
-*dejar pendientes*<br/>
+*pEnd*<br/>
 Un fotograma clave que especifica el final de la transición.
 
 ### <a name="remarks"></a>Comentarios
@@ -409,7 +409,7 @@ Un puntero a la variable de animación relacionados.
 
 Establece una relación entre la variable de animación y transición. Una transición puede aplicarse solo a una variable.
 
-##  <a name="transition_type_enumeration"></a>  Enumeración CBaseTransition::TRANSITION_TYPE
+##  <a name="transition_type_enumeration"></a>  CBaseTransition::TRANSITION_TYPE Enumeration
 
 Define los tipos de transición compatibles actualmente con la implementación de MFC de la API de animación de Windows.
 

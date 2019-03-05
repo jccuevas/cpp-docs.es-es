@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259261"
 ---
 # <a name="cscrollview-class"></a>CScrollView (clase)
 
@@ -285,7 +285,7 @@ void ScrollToPosition(POINT pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 El punto de desplazamiento, en unidades lógicas. El `x` miembro debe ser un valor positivo (mayor o igual a 0, hasta el tamaño total de la vista). Lo mismo puede decirse de la `y` miembro cuando el modo de asignación es MM_TEXT. El `y` es negativo en los modos de asignación distintos MM_TEXT miembro.
 
 ### <a name="remarks"></a>Comentarios
@@ -332,15 +332,15 @@ void SetScrollSizes(
 ### <a name="parameters"></a>Parámetros
 
 *nMapMode*<br/>
-El modo de asignación que establezca para esta vista. Los posibles valores incluyen:
+El modo de asignación que establezca para esta vista. Entre los posibles valores se incluyen:
 
 |Modo de asignación|Unidad lógica|Eje y positivo extiende...|
 |------------------|------------------|---------------------------------|
 |MM_TEXT|1 píxel|Hacia abajo|
-|MM_HIMETRIC|0,01 mm|Hacia arriba|
+|MM_HIMETRIC|0.01 mm|Hacia arriba|
 |MM_TWIPS|1/1440 en|Hacia arriba|
 |MM_HIENGLISH|0,001 pda|Hacia arriba|
-|MM_LOMETRIC|0,1 mm|Hacia arriba|
+|MM_LOMETRIC|0.1 mm|Hacia arriba|
 |MM_LOENGLISH|0,01 pda|Hacia arriba|
 
 Todos estos modos se definen mediante Windows. Dos modos de asignación estándar, MM_ISOTROPIC y MM_ANISOTROPIC, no se utilizan para `CScrollView`. La biblioteca de clases proporciona la `SetScaleToFitSize` función miembro para el escalado de la vista al tamaño de ventana. Columna de tres en la tabla anterior describe la orientación de coordenadas.

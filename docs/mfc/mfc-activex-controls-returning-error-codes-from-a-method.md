@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX Controls: Returning Error Codes From a (Método)'
+title: 'Controles ActiveX MFC: Devolver códigos de Error desde un método'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676491"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259144"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX Controls: Returning Error Codes From a (Método)
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Controles ActiveX MFC: Devolver códigos de Error desde un método
 
 En este artículo se describe cómo se devuelven los códigos de error de un método de control ActiveX.
 
@@ -28,11 +28,10 @@ Para indicar que se ha producido un error dentro de un método, se debe utilizar
 
 Funciones auxiliares existen para los más comunes predefinidos SCODEs, tales como [COleControl:: SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), y [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
 
-Para obtener una lista de predefinidos SCODEs e instrucciones sobre cómo definir SCODEs personalizados, vea la sección [control de errores en el ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) en los controles ActiveX: temas avanzados.
+Para obtener una lista de predefinidos SCODEs e instrucciones sobre cómo definir SCODEs personalizados, vea la sección [control de errores en el ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) en los controles ActiveX: Temas avanzados.
 
-Para obtener más información sobre cómo informar de excepciones en otras áreas del código, consulte [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror) y la sección [control de errores en el ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) en los controles ActiveX: temas avanzados.
+Para obtener más información sobre cómo informar de excepciones en otras áreas del código, consulte [COleControl:: FireError](../mfc/reference/colecontrol-class.md#fireerror) y la sección [control de errores en el ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) en los controles ActiveX: Temas avanzados.
 
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259547"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 
@@ -120,7 +120,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetToolTips](#gettooltips)|Recupera el identificador del control de sugerencia de herramienta asociado a un control de ficha.|
 |[CTabCtrl::HighlightItem](#highlightitem)|Establece el estado de resaltado de un elemento de ficha.|
 |[CTabCtrl::HitTest](#hittest)|Determina qué ficha, si existe, está en una posición de pantalla especificada.|
-|[CTabCtrl:: InsertItem](#insertitem)|Inserta una nueva pestaña en un control de ficha.|
+|[CTabCtrl::InsertItem](#insertitem)|Inserta una nueva pestaña en un control de ficha.|
 |[CTabCtrl::RemoveImage](#removeimage)|Quita una imagen de la lista de imágenes de un control de ficha.|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|Establece el foco en una pestaña especificada en un control de ficha.|
 |[CTabCtrl::SetCurSel](#setcursel)|Selecciona una ficha en un control de ficha.|
@@ -193,7 +193,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de ficha. Aplicar cualquier combinación de [estilos de control de pestaña](/windows/desktop/Controls/tab-control-styles), que se describen en el SDK de Windows. Consulte **comentarios** para obtener una lista de estilos de ventana que también se pueden aplicar al control.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de ficha. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -249,7 +249,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de ficha. Aplicar cualquier combinación de [estilos de control de pestaña](/windows/desktop/Controls/tab-control-styles), que se describen en el SDK de Windows. Consulte **comentarios** en [crear](#create) para obtener una lista de estilos de ventana que también se pueden aplicar al control.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -599,7 +599,7 @@ Puntero a un [TCHITTESTINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtchitt
 
 Devuelve el índice de base cero de la ficha o - 1 si no hay pestaña está en la posición especificada.
 
-##  <a name="insertitem"></a>  CTabCtrl:: InsertItem
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
 Inserta una nueva pestaña en un control de ficha existente.
 
@@ -664,7 +664,7 @@ Especifica qué `TCITEM` estructura atributos van a establecer. Puede ser cero o
 *lParam*<br/>
 Datos definido por la aplicación asociados a la pestaña.
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 Especifica los valores de los Estados del elemento. Para obtener más información, consulte [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) en el SDK de Windows.
 
 *dwStateMask*<br/>
@@ -855,7 +855,7 @@ El número de índice de base cero del elemento para el que se va a establecer i
 *dwMask*<br/>
 Especifica qué del estado del elemento de marcas para establecer la máscara. Para obtener una lista de valores, vea el miembro de la máscara de la [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) estructura, como se describe en el SDK de Windows.
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 Una referencia a un valor DWORD que contiene la información de estado. Puede presentar uno de los siguientes valores:
 
 |Valor|Descripción|
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Parámetros
 
-*CX*<br/>
+*cx*<br/>
 Ancho mínimo debe establecerse para un elemento de control de ficha. Si este parámetro se establece en -1, el control utilizará el ancho de tabulación predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto

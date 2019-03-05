@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-ms.openlocfilehash: 3e6d8dcd643a58b3df60488b50da08288a34bab9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262407"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption (clase)
 
@@ -33,7 +33,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 |Name|Descripción|
 |----------|-----------------|
-|`CMFCRibbonContextCaption::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCRibbonContextCaption::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCRibbonContextCaption::GetColor](#getcolor)|Devuelve el color del título.|
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||
 |`CMFCRibbonContextCaption::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|

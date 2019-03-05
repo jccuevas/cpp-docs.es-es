@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 3fe01128fc5f0a9d3058df2d6f95a6c038b28062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261588"
 ---
 # <a name="ccomcontrol-class"></a>CComControl (clase)
 
@@ -109,10 +109,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz que se solicita.
 
-*PPV*<br/>
+*ppv*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*, o NULL si no se encuentra la interfaz.
 
 ### <a name="remarks"></a>Comentarios
@@ -220,7 +220,7 @@ El texto que se mostrará en el cuadro de mensaje.
 *lpszCaption*<br/>
 El título del cuadro de diálogo. Si es NULL (valor predeterminado), el título que se usa "Error".
 
-*nLas*<br/>
+*nType*<br/>
 Especifica el contenido y el comportamiento del cuadro de diálogo. Consulte la [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) entrada en la documentación del SDK de Windows para obtener una lista de los cuadros de mensajes distintos disponibles. El valor predeterminado proporciona un sencillo **Aceptar** botón.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: 25ceae897d3cc845ab06fd4d898c87518b15eacb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aeebec65def9364e56156f6bb323815da012e11f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257447"
 ---
 # <a name="device-context-global-functions"></a>Funciones globales de contexto de dispositivo
 
@@ -29,7 +29,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>Parámetros
 
-*HDC*<br/>
+*hdc*<br/>
 [in] El identificador existente de un contexto de dispositivo, o NULL.
 
 *ptd*<br/>

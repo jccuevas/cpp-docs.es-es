@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258767"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 
@@ -113,7 +113,7 @@ Los siguientes cuatro pasos de este tutorial requieren recursos de mapa de bits.
 
 - Copie un archivo de recursos adecuado de otra aplicación al proyecto y, a continuación, importe los mapas de bits de ese archivo.
 
-En este tutorial copia los archivos de recursos en el ejemplo creado en [Tutorial: creación de una cinta de opciones de aplicación usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+En este tutorial copia los archivos de recursos en el ejemplo creado en [Tutorial: Crear una aplicación de cinta usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
 ### <a name="to-add-bitmaps-to-the-project"></a>Para agregar mapas de bits al proyecto
 
@@ -169,7 +169,7 @@ Consta de una cinta de opciones de la **aplicación** botón, que es el botón g
 
 1. Puede personalizar el **aplicación** botón modificando sus propiedades. Los identificadores de mensaje que se utilizan en este código ya están definidos en el menú para Scribble 1.0.
 
-1. En la vista Diseño, haga clic en el **aplicación** botón para mostrar sus propiedades. Cambie los valores de propiedad como sigue: **imagen** a `IDB_RIBBON_MAIN`, **Prompt** a `File`, **claves** a `f`, **Large Images** a `IDB_RIBBON_FILELARGE`, y **imágenes pequeñas** a `IDB_RIBBON_FILESMALL`.
+1. En la vista Diseño, haga clic en el **aplicación** botón para mostrar sus propiedades. Cambie los valores de propiedad de la manera siguiente: **Imagen** a `IDB_RIBBON_MAIN`, **Prompt** a `File`, **claves** a `f`, **imágenes grandes** a `IDB_RIBBON_FILELARGE`y **Imágenes pequeñas** a `IDB_RIBBON_FILESMALL`.
 
 1. Las modificaciones siguientes crean el menú que aparece cuando el usuario hace clic en el **aplicación** botón. Haga clic en el botón de puntos suspensivos (**...** ) junto a **Main Items** para abrir el **Editor de elementos**.
 
@@ -238,7 +238,7 @@ Ahora que ha creado el **aplicación** botón, puede agregar elementos a la cint
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>Para agregar una categoría Inicio y un panel Edición
 
-1. El programa Scribble solo requiere una categoría. En la vista Diseño, en el **cuadro de herramientas**, haga doble clic en **categoría** para agregar uno y mostrar sus propiedades. Cambie los valores de propiedad como sigue: **título** a `&Home`, **Large Images** a `IDB_RIBBON_HOMELARGE`, **imágenes pequeñas** a `IDB_RIBBON_HOMESMALL`.
+1. El programa Scribble solo requiere una categoría. En la vista Diseño, en el **cuadro de herramientas**, haga doble clic en **categoría** para agregar uno y mostrar sus propiedades. Cambie los valores de propiedad de la manera siguiente: **Título** a `&Home`, **imágenes grandes** a `IDB_RIBBON_HOMELARGE`, **imágenes pequeñas** a `IDB_RIBBON_HOMESMALL`.
 
 1. Cada categoría de la cinta está organizada en paneles con nombre. Cada panel contiene un conjunto de controles que completar operaciones relacionadas. Esta categoría tiene un panel. Haga clic en **Panel**y, a continuación, cambie **título** a `Edit`.
 
@@ -269,4 +269,4 @@ Ha modificado el clásico ejemplo de Scribble de MFC 1.0 para usar el **Ribbon D
 ## <a name="see-also"></a>Vea también
 
 [Tutoriales](../mfc/walkthroughs-mfc.md)<br/>
-[Tutorial: Actualizar la aplicación Scribble de MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Tutorial: Actualizar la aplicación Scribble MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

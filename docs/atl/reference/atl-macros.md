@@ -1,18 +1,18 @@
 ---
-title: Macros de ATL
+title: ATL Macros
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, macros
 - macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
-ms.openlocfilehash: 9523ceef462dc0fbf7669467a72749a8cbd83617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2331f100f627dcd79ba2976b44da30474d93dd3a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261406"
 ---
-# <a name="atl-macros"></a>Macros de ATL
+# <a name="atl-macros"></a>ATL Macros
 
 Para buscar una macro de ATL por categoría, vea los temas siguientes.
 
@@ -80,4 +80,3 @@ Reenviar los mensajes de ventana.
 [Variables globales](../../atl/reference/atl-global-variables.md)<br/>
 [Clases y structs](../../atl/reference/atl-classes.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)
-
