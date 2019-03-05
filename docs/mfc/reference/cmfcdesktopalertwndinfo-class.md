@@ -1,5 +1,5 @@
 ---
-title: CMFCDesktopAlertWndInfo (clase)
+title: CMFCDesktopAlertWndInfo Class
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertWndInfo
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: d815abbd48e1744900853fcf81dc05b6af62788c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301641"
 ---
-# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo (clase)
+# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo Class
 
 El `CMFCDesktopAlertWndInfo` clase se utiliza con el [clase CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md). Especifica los controles que se muestran si emerge la ventana de alerta de escritorio.
 
@@ -43,7 +43,7 @@ class CMFCDesktopAlertWndInfo
 
 |Name|Descripción|
 |----------|-----------------|
-|[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||
+|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>Miembros de datos
 
@@ -80,7 +80,7 @@ En el ejemplo siguiente se muestra cómo utilizar los diversos miembros de la `C
 
 **Encabezado:** afxDesktopAlertDialog.h
 
-##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator=
 
 Para obtener más información, vea el código fuente ubicado en el **VC\\atlmfc\\src\\mfc** carpeta de la instalación de Visual Studio.
 
@@ -145,5 +145,5 @@ Cuando el usuario hace clic en el vínculo, el comando que tiene el [CMFCDesktop
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDesktopAlertWnd (clase)](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[Cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
+[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)<br/>
 [CMFCDesktopAlertDialog (clase)](../../mfc/reference/cmfcdesktopalertdialog-class.md)
