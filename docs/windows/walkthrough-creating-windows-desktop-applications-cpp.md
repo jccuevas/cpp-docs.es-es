@@ -66,7 +66,7 @@ Ya se ha creado el proyecto y se abre el archivo de origen en el editor. Para co
 
 1. En el menú **Archivo**, elija **Nuevo** y después **Proyecto**.
 
-1. En el **nuevo proyecto** cuadro de diálogo, en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
+1. En el cuadro de diálogo **nuevo proyecto**, en el panel izquierdo, expanda **instalado** > **plantillas** > **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Proyecto Win32**.
 
    En el **nombre** , escriba un nombre para el proyecto, por ejemplo, *DesktopApp*. Elija **Aceptar**.
 
