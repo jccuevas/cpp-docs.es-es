@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302772"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator (clase)
 
@@ -54,7 +54,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |-|-|
 |Name|Descripción|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Agrega un separador para el **comandos** lista en el **personalizar** cuadro de diálogo. (Invalida [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
-|`CMFCRibbonSeparator::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCRibbonSeparator::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |`CMFCRibbonSeparator::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
@@ -152,7 +152,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Parámetros
 
-*src*<br/>
+*Src*<br/>
 [in] El elemento de cinta de opciones de origen para copiarlos.
 
 ##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize
@@ -235,7 +235,7 @@ virtual void OnDrawOnList(
 |*pDC*|[in] Un puntero a un contexto de dispositivo.|
 |*strText*|[in] Texto que se muestra en la lista.|
 |*nTextOffset*|[in] Espaciado entre el texto y el lado izquierdo del rectángulo delimitador.|
-|*Rect*|[in] Especifica el rectángulo delimitador.|
+|*rect*|[in] Especifica el rectángulo delimitador.|
 |*bIsSelected*|[in] Pasa por alto.|
 |*bHighlighted*|[in] Pasa por alto.|
 

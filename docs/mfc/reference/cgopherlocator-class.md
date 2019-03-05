@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 336997fd4094f4e5e1eb73f467734e40440b63a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641355"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291393"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator (clase)
 
@@ -118,7 +118,7 @@ Los tipos posibles son los siguientes:
 |GOPHER_TYPE_DOS_ARCHIVE|Un archivo de almacenamiento de denegación de servicio.|
 |GOPHER_TYPE_UNIX_UUENCODED|Un archivo con codificación uuencode.|
 |GOPHER_TYPE_INDEX_SERVER|Un servidor de indexación.|
-|GOPHER_TYPE_TELNET|Un servidor Telnet.|
+|GOPHER_TYPE_TELNET|A Telnet Server.|
 |GOPHER_TYPE_BINARY|Un archivo binario.|
 |GOPHER_TYPE_REDUNDANT|Un servidor duplicado. La información contenida en es un duplicado del servidor principal. El servidor principal es la última entrada de directorio que no tenía un tipo GOPHER_TYPE_REDUNDANT.|
 |GOPHER_TYPE_TN3270|Un servidor TN3270.|

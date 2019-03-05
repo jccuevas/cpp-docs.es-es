@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Escribir un bucle parallel_for'
+title: Filtrar Escribir un bucle parallel_for
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: 5caba385304e97bf2e1008a44724c792d56124f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592726"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283597"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>Cómo: Escribir un bucle parallel_for
+# <a name="how-to-write-a-parallelfor-loop"></a>Filtrar Escribir un bucle parallel_for
 
 Este ejemplo muestra cómo usar [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) para calcular el producto de dos matrices.
 
@@ -53,4 +53,3 @@ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto d
 
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for (función)](reference/concurrency-namespace-functions.md#parallel_for)
-

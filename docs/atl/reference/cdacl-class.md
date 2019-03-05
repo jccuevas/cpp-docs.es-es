@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280126"
 ---
 # <a name="cdacl-class"></a>CDacl (clase)
 
@@ -144,7 +144,7 @@ bool AddDeniedAce(
 ### <a name="parameters"></a>Parámetros
 
 *rSid*<br/>
-Un objeto `CSid`.
+Objeto `CSid`.
 
 *AccessMask*<br/>
 Especifica la máscara de derechos de acceso será denegado para el elemento especificado `CSid` objeto.
@@ -179,14 +179,14 @@ CDacl () throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 Existente `ACL` estructura (lista de control de acceso).
 
 ### <a name="remarks"></a>Comentarios
 
 El `CDacl` objeto se puede, opcionalmente, crear una existente `ACL` estructura. Es importante tener en cuenta que solo una DACL (lista de control de acceso discrecional) y no una SACL (lista de control de acceso del sistema), se debe pasar como este parámetro. En las compilaciones de depuración, pasando una SACL provocará una aserción. En versiones de lanzamiento, pasando una SACL hará que las entradas de control de acceso en la ACL se omite y se producirá ningún error.
 
-##  <a name="dtor"></a>  CDacl:: ~ CDacl
+##  <a name="dtor"></a>  CDacl::~CDacl
 
 Destructor.
 
@@ -220,7 +220,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 La ACL (lista de control de acceso) para asignar al objeto existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -264,7 +264,7 @@ Quita cada `ACE` estructura (entrada de control de acceso) (si existe) en el `CD
 
 [Ejemplo de seguridad](../../visual-cpp-samples.md)<br/>
 [CAcl (clase)](../../atl/reference/cacl-class.md)<br/>
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[ACLs](/windows/desktop/SecAuthZ/access-control-lists)<br/>
 [ACE](/windows/desktop/SecAuthZ/access-control-entries)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

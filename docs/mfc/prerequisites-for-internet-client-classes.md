@@ -16,12 +16,12 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-ms.openlocfilehash: b6be476e4b9f7d1aaa09a588e1c06e72032f48c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6246db7dfb2837f5d94fa51f8433b46722c43663
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267750"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>Requisitos previos para las clases de cliente Internet
 
@@ -32,7 +32,7 @@ Algunas acciones realizadas por un cliente de Internet (lectura de un archivo, p
 |Acción|Requisito previo|
 |------------|------------------|
 |Establecer una conexión.|Crear un [CInternetSession](../mfc/reference/cinternetsession-class.md) para establecer la base de una aplicación de cliente de Internet.|
-|Abra una dirección URL.|Establecer una conexión. Llame a [CInternetSession:: OpenURL](../mfc/reference/cinternetsession-class.md#openurl). El `OpenURL` función devuelve un objeto de recurso de solo lectura.|
+|Abra una dirección URL.|Establecer una conexión. Call [CInternetSession::OpenURL](../mfc/reference/cinternetsession-class.md#openurl). El `OpenURL` función devuelve un objeto de recurso de solo lectura.|
 |Datos de la dirección URL de lectura.|Abra la dirección URL. Llame a [CInternetFile:: Read](../mfc/reference/cinternetfile-class.md#read).|
 |Establecer una opción de Internet.|Establecer una conexión. Llame a [CInternetSession:: SetOption](../mfc/reference/cinternetsession-class.md#setoption).|
 |Establece una función que se llamará con información de estado.|Establecer una conexión. Llame a [CInternetSession:: EnableStatusCallback](../mfc/reference/cinternetsession-class.md#enablestatuscallback). Invalidar [CInternetSession:: OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback) para controlar las llamadas.|
@@ -66,7 +66,7 @@ Algunas acciones realizadas por un cliente de Internet (lectura de un archivo, p
 |Establecer una conexión gopher.|Crear un [CInternetSession](../mfc/reference/cinternetsession-class.md) como base de esta aplicación de cliente de Internet. Llame a [CInternetSession:: GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection) para crear un [CGopherConnection](../mfc/reference/cgopherconnection-class.md).|
 |Buscar el primer archivo en el directorio actual.|Establecer una conexión gopher. Crear un [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md) objeto. Llame a [CGopherConnection:: CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) para crear un [CGopherLocator](../mfc/reference/cgopherlocator-class.md) objeto. Pasar el localizador [CGopherFileFind:: FindFile](../mfc/reference/cgopherfilefind-class.md#findfile). Llame a [CGopherFileFind:: GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator) para obtener el localizador de un archivo si lo necesitará más adelante.|
 |Enumerar todos los archivos disponibles.|Buscar el primer archivo. Llame a [CGopherFileFind:: FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile) hasta que devuelva FALSE.|
-|Abra un archivo gopher.|Establecer una conexión gopher. Crear un localizador gopher con [CGopherConnection:: CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) o buscar un localizador con [CGopherFileFind:: GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Llame a [CGopherConnection:: OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|
+|Abra un archivo gopher.|Establecer una conexión gopher. Crear un localizador gopher con [CGopherConnection:: CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator) o buscar un localizador con [CGopherFileFind:: GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Call [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|
 |Leer un archivo gopher.|Abra un archivo gopher. Use [CGopherFile](../mfc/reference/cgopherfile-class.md).|
 
 ## <a name="see-also"></a>Vea también

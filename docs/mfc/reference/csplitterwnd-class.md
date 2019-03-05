@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302109"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (clase)
 
@@ -103,10 +103,10 @@ class CSplitterWnd : public CWnd
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Ejecuta el comando panel siguiente o panel anterior.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Comprueba si el comando panel siguiente o panel anterior es actualmente posible.|
-|[CSplitterWnd:: Create](#create)|Llamada a crear una ventana divisora dinámica y asociarlo a la `CSplitterWnd` objeto.|
+|[CSplitterWnd::Create](#create)|Llamada a crear una ventana divisora dinámica y asociarlo a la `CSplitterWnd` objeto.|
 |[CSplitterWnd::CreateScrollBarCtrl](#createscrollbarctrl)|Crea un control de barra de desplazamiento compartido.|
-|[CSplitterWnd:: CreateStatic](#createstatic)|Llamada a crear una ventana divisora estática y asociarlo a la `CSplitterWnd` objeto.|
-|[CSplitterWnd:: CreateView](#createview)|Se llama para crear un panel en una ventana divisora.|
+|[CSplitterWnd::CreateStatic](#createstatic)|Llamada a crear una ventana divisora estática y asociarlo a la `CSplitterWnd` objeto.|
+|[CSplitterWnd::CreateView](#createview)|Se llama para crear un panel en una ventana divisora.|
 |[CSplitterWnd::DeleteColumn](#deletecolumn)|Elimina una columna de la ventana divisora.|
 |[CSplitterWnd::DeleteRow](#deleterow)|Elimina una fila de la ventana divisora.|
 |[CSplitterWnd::DeleteView](#deleteview)|Elimina una vista de la ventana divisora.|
@@ -231,7 +231,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Esta función miembro es un comando de alto nivel que está usando el [CView](../../mfc/reference/cview-class.md) clase delegar a los `CSplitterWnd` implementación.
 
-##  <a name="create"></a>  CSplitterWnd:: Create
+##  <a name="create"></a>  CSplitterWnd::Create
 
 Para crear una ventana divisora dinámica, llame a la `Create` función miembro.
 
@@ -319,7 +319,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Invalidar `CreateScrollBarCtrl` para incluir controles adicionales al lado de una barra de desplazamiento. El comportamiento predeterminado es crear controles de barra de desplazamiento de Windows normales.
 
-##  <a name="createstatic"></a>  CSplitterWnd:: CreateStatic
+##  <a name="createstatic"></a>  CSplitterWnd::CreateStatic
 
 Para crear una ventana divisora estática, llame a la `CreateStatic` función miembro.
 
@@ -373,7 +373,7 @@ Para agregar barras de desplazamiento a una ventana divisora estática, agregar 
 
 Vea "Divisor Windows" en el artículo [varios tipos de documentos, vistas y marco Windows](../../mfc/multiple-document-types-views-and-frame-windows.md), [29 de nota técnica](../../mfc/tn029-splitter-windows.md)y el `CSplitterWnd` información general de clases para obtener más información sobre las ventanas divisoras estáticas.
 
-##  <a name="createview"></a>  CSplitterWnd:: CreateView
+##  <a name="createview"></a>  CSplitterWnd::CreateView
 
 Crea los paneles de una ventana divisora estática.
 
@@ -388,10 +388,10 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica la fila de la ventana divisora donde desea colocar la nueva vista.
 
-*Col*<br/>
+*col*<br/>
 Especifica la columna de la ventana divisora donde desea colocar la nueva vista.
 
 *pViewClass*<br/>
@@ -456,7 +456,7 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>Parámetros
 
-*filaEliminar*<br/>
+*rowDelete*<br/>
 Especifica la fila que se va a eliminar.
 
 ### <a name="remarks"></a>Comentarios
@@ -475,10 +475,10 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica la fila de la ventana divisora en la que se va a eliminar la vista.
 
-*Col*<br/>
+*col*<br/>
 Especifica la columna de la ventana divisora en la que se va a eliminar la vista.
 
 ### <a name="remarks"></a>Comentarios
@@ -628,7 +628,7 @@ void GetColumnInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*Col*<br/>
+*col*<br/>
 Especifica una columna.
 
 *cxCur*<br/>
@@ -649,10 +649,10 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica una fila.
 
-*Col*<br/>
+*col*<br/>
 Especifica una columna.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica una fila.
 
 *cyCur*<br/>
@@ -727,10 +727,10 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica la fila de la ventana divisora.
 
-*Col*<br/>
+*col*<br/>
 Especifica la columna de la ventana divisora.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -758,7 +758,7 @@ BOOL IsChildPane(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que va a probarse.
 
 *pRow*<br/>
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 Un puntero al contexto de dispositivo en el que se va a dibujar. Si *pDC* es NULL, a continuación, [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) es llamado por el marco de trabajo y no división se dibuja la ventana.
 
-*nLas*<br/>
+*nType*<br/>
 Un valor de la `enum ESplitType`, que puede ser uno de los siguientes:
 
     - `splitBox` El cuadro de arrastre del divisor.
@@ -818,7 +818,7 @@ Un valor de la `enum ESplitType`, que puede ser uno de los siguientes:
 
     - `splitBorder` Los bordes de ventana dividida.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica el tamaño y la forma de la división de windows.
 
 ### <a name="remarks"></a>Comentarios
@@ -837,7 +837,7 @@ virtual void OnInvertTracker(const CRect& rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Hacer referencia a un `CRect` objeto que especifica el rectángulo de seguimiento.
 
 ### <a name="remarks"></a>Comentarios
@@ -877,13 +877,13 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Si *conquistado* es NULL, que especifica la fila en el panel que estará activo.
 
-*Col*<br/>
+*col*<br/>
 Si *conquistado* es NULL, que especifica la columna en el panel que estará activo.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a un objeto `CWnd` . Si es NULL, el panel especificado por *fila* y *col* está establecido en activo. Si no es NULL, especifica el panel que se establece en activo.
 
 ### <a name="remarks"></a>Comentarios
@@ -905,7 +905,7 @@ void SetColumnInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*Col*<br/>
+*col*<br/>
 Especifica una columna de la ventana divisora.
 
 *cxIdeal*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica una fila de la ventana divisora.
 
 *cyIdeal*<br/>

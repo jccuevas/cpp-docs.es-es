@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550441"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326782"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -173,10 +173,10 @@ class CPane : public CBasePane
 |[CPane::CanBeTabbedDocument](#canbetabbeddocument)|Determina si el panel puede convertirse en un documento con pestañas.|
 |[CPane::ConvertToTabbedDocument](#converttotabbeddocument)|Convierte un panel acoplable en un documento con pestañas.|
 |[CPane::CopyState](#copystate)|Copia el estado de un panel. (Invalida [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[CPANE:: Create](#create)|Crea una barra de control y lo adjunta a la `CPane` objeto.|
-|[Createdefaultminiframe](#createdefaultminiframe)|Crea una ventana de marco reducido para un panel flotante.|
-|[CPANE:: CreateEx](#createex)|Crea una barra de control y lo adjunta a la `CPane` objeto.|
-|`CPane::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|[CPane::Create](#create)|Crea una barra de control y lo adjunta a la `CPane` objeto.|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Crea una ventana de marco reducido para un panel flotante.|
+|[CPane::CreateEx](#createex)|Crea una barra de control y lo adjunta a la `CPane` objeto.|
+|`CPane::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CPane::DockByMouse](#dockbymouse)|Acopla un panel con el mouse acoplamiento método.|
 |[CPane::DockPane](#dockpane)|Acopla el panel flotante a un panel de base.|
 |[CPane::DockPaneStandard](#dockpanestandard)|Acopla un panel mediante el uso de esquema de acoplamiento (estándar).|
@@ -208,12 +208,12 @@ class CPane : public CBasePane
 |[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Lo llama el marco cuando el elemento primario del panel que se va a cambiar.|
 |[CPane::OnPressCloseButton](#onpressclosebutton)|Lo llama el marco cuando el usuario elige el botón de cierre en el título del panel.|
 |`CPane::OnProcessDblClk`|Lo utiliza internamente.|
-|[CPANE:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
-|[CPANE:: Onshowcontrolbarmenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.|
 |`CPane::PrepareToDock`|Lo utiliza internamente.|
-|[CPANE:: RecalcLayout](#recalclayout)|Vuelve a calcular información de diseño para el panel. (Invalida [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane::RecalcLayout](#recalclayout)|Vuelve a calcular información de diseño para el panel. (Invalida [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
 |[CPane::SaveState](#savestate)|Guarda el estado del panel en el registro. (Invalida [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[CPANE:: Setactiveingroup](#setactiveingroup)|Marcas de un panel como activa.|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Marcas de un panel como activa.|
 |[CPane::SetBorders](#setborders)|Establece los valores de borde del panel.|
 |[CPane::SetClientHotSpot](#setclienthotspot)|Establece la zona activa para el panel.|
 |[CPane::SetDockState](#setdockstate)|Restaura información de estado para el panel de acoplamiento.|
@@ -240,7 +240,7 @@ class CPane : public CBasePane
 |nombre|Descripción|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Habilita el control coherente del tamaño mínimo de los paneles.|
-|[CPANE:: M_recentdockinfo](#m_recentdockinfo)|Contiene información de acoplamiento reciente.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Contiene información de acoplamiento reciente.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -348,7 +348,7 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [out] Contiene el tamaño y el desplazamiento del área cliente del panel.
 
 *bHorz*<br/>
@@ -464,7 +464,7 @@ virtual void CopyState(CPane* pOrgBar);
 
 Este método copia el estado de *pOrgBar* al panel actual.
 
-##  <a name="create"></a>  CPANE:: Create
+##  <a name="create"></a>  CPane::Create
 
 Crea una barra de control y lo adjunta a la [CPane](../../mfc/reference/cpane-class.md) objeto.
 
@@ -487,7 +487,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Especifica los atributos de estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño inicial y la posición de la *pParentWnd* ventana, en coordenadas de cliente.
 
 *pParentWnd*<br/>
@@ -512,7 +512,7 @@ Este método crea un panel de Windows y lo adjunta a la `CPane` objeto.
 
 Si no ha inicializado explícitamente [CPANE:: M_recentdockinfo](#m_recentdockinfo) antes de llamar a `Create`, el parámetro *rect* se usará como el rectángulo cuando flotante o el panel de acoplamiento.
 
-##  <a name="createdefaultminiframe"></a>  Createdefaultminiframe
+##  <a name="createdefaultminiframe"></a>  CPane::CreateDefaultMiniframe
 
 Crea una ventana de marco reducido para un panel flotante.
 
@@ -535,7 +535,7 @@ Este método se llama el marco de trabajo para crear una ventana de marco reduci
 
 La información de clase en tiempo de ejecución de la ventana de marco reducido se almacena en el `CPane::m_pMiniFrameRTC` miembro. Puede usar una clase derivada para establecer a este miembro si decide crear ventanas de marco reducido personalizada.
 
-##  <a name="createex"></a>  CPANE:: CreateEx
+##  <a name="createex"></a>  CPane::CreateEx
 
 Crea una barra de control y lo adjunta a la [CPane](../../mfc/reference/cpane-class.md) objeto.
 
@@ -562,7 +562,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Especifica los atributos de estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño inicial y la posición de la *pParentWnd* ventana, en coordenadas de cliente.
 
 *pParentWnd*<br/>
@@ -741,7 +741,7 @@ virtual BOOL FloatPane(
 *dockMethod*<br/>
 [in] Especifica el método que se usará cuando flota el panel de acoplamiento. Para obtener una lista de valores posibles, vea [CPane::DockPane](#dockpane).
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el panel cuando flota; en caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -976,7 +976,7 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un `CRect` objeto que se usa para la comparación.
 
 *bWindowRect*<br/>
@@ -1070,7 +1070,7 @@ Si uno o más paneles de acoplamiento en la aplicación invalidan `GetMinSize`, 
 
 Si este valor se establece en TRUE, se recortan cuyo tamaño debe reducirse por debajo de su tamaño mínimo de todos los paneles, no se ajusta. Dado que el marco de trabajo utiliza regiones de ventana para fines de ajuste de tamaño del panel, no cambie el tamaño de la región de ventana para acoplar paneles si este valor se establece en TRUE.
 
-##  <a name="m_recentdockinfo"></a>  CPANE:: M_recentdockinfo
+##  <a name="m_recentdockinfo"></a>  CPane::m_recentDockInfo
 
 Contiene información de acoplamiento reciente.
 
@@ -1289,7 +1289,7 @@ virtual void OnPressCloseButton();
 
 Este método se llama el marco de trabajo cuando el usuario presiona el **cerrar** botón de título del panel. Para recibir notificaciones sobre el **cerrar** eventos, puede invalidar este método en una clase derivada.
 
-##  <a name="onshowcontrolbarmenu"></a>  CPANE:: Onshowcontrolbarmenu
+##  <a name="onshowcontrolbarmenu"></a>  CPane::OnShowControlBarMenu
 
 Lo llama el marco de trabajo cuando está a punto de mostrarse un menú de panel especial.
 
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Especifica la ubicación del menú.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1308,9 +1308,9 @@ TRUE si se puede mostrar el menú; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-El menú contiene varios elementos que le permiten especificar el comportamiento del panel, a saber: **flotante**, **acoplamiento**, **Ocultar automáticamente**, y **ocultar**. Puede habilitar este menú para todos los paneles mediante una llamada a [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+El menú contiene varios elementos que le permiten especificar el comportamiento del panel, a saber: **Flotante**, **acoplamiento**, **Ocultar automáticamente**, y **ocultar**. Puede habilitar este menú para todos los paneles mediante una llamada a [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>  CPANE:: RecalcLayout
+##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
 Vuelve a calcular información de diseño para el panel.
 
@@ -1356,7 +1356,7 @@ El marco llama a este método cuando guarda el estado del panel en el registro. 
 
 Cuando se reemplaza este método, también llamar al método base y devuelve FALSE si el método base devuelve FALSE.
 
-##  <a name="setactiveingroup"></a>  CPANE:: Setactiveingroup
+##  <a name="setactiveingroup"></a>  CPane::SetActiveInGroup
 
 Marcas de un panel como activa.
 
@@ -1366,7 +1366,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parámetros
 
-*bSecuencias de ActiveX*<br/>
+*bActive*<br/>
 [in] Un valor booleano que especifica si el panel está marcado como activa.
 
 ### <a name="remarks"></a>Comentarios
@@ -1494,7 +1494,7 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un `CRect` objeto que especifica el rectángulo virtual debe establecerse.
 
 *bMapToParent*<br/>

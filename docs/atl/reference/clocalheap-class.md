@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 7f4fa6b6035b9f0dda35a8e989192505ccf126d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283090"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap (clase)
 
@@ -37,10 +37,10 @@ class CLocalHeap : public IAtlMemMgr
 
 |Name|Descripción|
 |----------|-----------------|
-|[Clocalheap:: Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[Clocalheap:: Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
+|[CLocalHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
+|[CLocalHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
 |[CLocalHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|
-|[Clocalheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
+|[CLocalHeap::Reallocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -63,7 +63,7 @@ Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 **Encabezado:** atlmem.h
 
-##  <a name="allocate"></a>  Clocalheap:: Allocate
+##  <a name="allocate"></a>  CLocalHeap::Allocate
 
 Llame a este método para asignar un bloque de memoria.
 
@@ -86,7 +86,7 @@ Llame a [clocalheap:: Free](#free) o [clocalheap:: ReAllocate](#reallocate) para
 
 Implementa mediante [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) con un parámetro de marca de LMEM_FIXED.
 
-##  <a name="free"></a>  Clocalheap:: Free
+##  <a name="free"></a>  CLocalHeap::Free
 
 Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.
 
@@ -124,7 +124,7 @@ Devuelve el tamaño del bloque de memoria asignada en bytes.
 
 Implementa mediante [LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize).
 
-##  <a name="reallocate"></a>  Clocalheap:: ReAllocate
+##  <a name="reallocate"></a>  CLocalHeap::Reallocate
 
 Llame a este método para reasignar la memoria asignada por este administrador de memoria.
 

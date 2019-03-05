@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: b22eea0a20623bb6dfbbf60703b3db25ac4065d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487937"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272651"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Formato y presentación del cuadro de mensaje CString
 
@@ -173,7 +173,7 @@ int AFXAPI AfxMessageBox(
 *lpszText*<br/>
 Apunta a un `CString` objeto o una cadena terminada en null que contiene el mensaje que se mostrará en el cuadro de mensaje.
 
-*nLas*<br/>
+*nType*<br/>
 El estilo del cuadro de mensaje. Aplicar cualquiera de los [estilos de cuadro de mensaje](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) al cuadro.
 
 *nIDHelp*<br/>

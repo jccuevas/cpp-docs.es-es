@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 264b93d11b82eb00ac85e92413ca1a7071e06879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51fcd9e42bc4497131da5adb3dff72efb46537b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296883"
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain (clase)
 
@@ -45,9 +45,9 @@ class invalid_compute_domain : public runtime_exception;
 
 **Encabezado:** amprt.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
-## <a name="ctor"></a> invalid_compute_domain)
+## <a name="ctor"></a> invalid_compute_domain
 
 Inicializa una nueva instancia de la clase.
 
@@ -62,7 +62,7 @@ invalid_compute_domain() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Descripción del error.
 
 ### <a name="return-value"></a>Valor devuelto

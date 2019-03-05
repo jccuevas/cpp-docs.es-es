@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268972"
 ---
 # <a name="singleassignment-class"></a>Clase single_assignment
 
@@ -56,7 +56,7 @@ El tipo de carga del mensaje se almacena y se propaga por el búfer.
 |Name|Descripción|
 |----------|-----------------|
 |[has_value](#has_value)|Comprueba si este `single_assignment` bloque de mensajería se ha inicializado con un valor aún.|
-|[valor](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `single_assignment` bloque de mensajería.|
+|[value](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `single_assignment` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -84,7 +84,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 [ITarget](itarget-class.md)
 
-[source_block)](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -175,7 +175,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -195,7 +195,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero a un `message` que este `single_assignment` ha tomado la posesión de bloque de mensajería.
 
 ##  <a name="release_message"></a> release_message
@@ -252,7 +252,7 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -289,7 +289,7 @@ single_assignment(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
@@ -304,7 +304,7 @@ El runtime usa el programador predeterminado si no se especifican los parámetro
 
 El tipo `filter_method` es un functor con firma `bool (T const &)` que es invocado por este `single_assignment` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.
 
-##  <a name="dtor"></a> ~ single_assignment
+##  <a name="dtor"></a> ~single_assignment
 
 Destruye el `single_assignment` bloque de mensajería.
 
@@ -333,4 +333,3 @@ Este método esperará hasta que llegue un mensaje si ningún mensaje actualment
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [overwrite_buffer (clase)](overwrite-buffer-class.md)<br/>
 [unbounded_buffer (clase)](unbounded-buffer-class.md)
-

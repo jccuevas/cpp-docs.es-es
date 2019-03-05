@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476900"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264340"
 ---
 # <a name="tiledextent-class"></a>tiled_extent (Clase)
 
@@ -103,7 +103,7 @@ La longitud de la dimensión menos significativa.
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="ctor"> </a>  tiled_extent (Constructor)
 
@@ -123,7 +123,7 @@ tiled_extent(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 El `extent` o `tiled_extent` objeto que se va a copiar.
 
 ## <a name="get_tile_extent"> </a>  get_tile_extent
@@ -153,7 +153,7 @@ tiled_extent pad() const;
 ### <a name="return-value"></a>Valor devuelto
 
 El nuevo `tiled_extent` objeto por valor.
-## <a name="truncate"> </a>  truncar
+## <a name="truncate"> </a>  truncate
 
 Devuelve un nuevo `tiled_extent` objeto con extensiones ajustadas a la baja para ser equitativamente divisibles por las dimensiones del icono.
 
@@ -180,7 +180,7 @@ tiled_extent&  operator= (
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `tiled_index` objeto que se va a copiar desde.
 
 ### <a name="return-value"></a>Valor devuelto

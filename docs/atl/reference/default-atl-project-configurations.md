@@ -4,12 +4,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
-ms.openlocfilehash: cf8cb07200db59068e5eb28f7fedf47a6cd1ab01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 449f92f8924114a85d8ca745c7377d30d25bb763
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270101"
 ---
 # <a name="default-atl-project-configurations"></a>Configuraciones de proyecto ATL predeterminadas
 
@@ -17,7 +17,7 @@ El Asistente para proyectos ATL crea dos configuraciones de proyecto de forma pr
 
 |Configuración|Juego de caracteres|Uso de ATL|
 |-------------------|-------------------|----------------|
-|Versión|MBCS|Archivo DLL|
+|Release|MBCS|Archivo DLL|
 |Depuración|MBCS|Archivo DLL|
 
 **Juego de caracteres**, **uso de ATL** y puede cambiarse en el **configuración del proyecto** cuadro de diálogo en el **General** ficha. También puede agregar sus propias configuraciones mediante el Administrador de configuración. Para obtener más información, consulte [las configuraciones de compilación](/visualstudio/ide/understanding-build-configurations).
@@ -28,4 +28,3 @@ El Asistente para proyectos ATL crea dos configuraciones de proyecto de forma pr
 [Trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md)<br/>
 [Cuadro de diálogo Administrador de configuración](/visualstudio/ide/understanding-build-configurations)<br/>
 [Compilar y generar en Visual Studio](/visualstudio/ide/compiling-and-building-in-visual-studio)
-

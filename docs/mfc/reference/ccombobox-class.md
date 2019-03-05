@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178784"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304475"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|Elimina una cadena en el cuadro de lista de un cuadro combinado.|
 |[CComboBox::Dir](#dir)|Agrega una lista de nombres de archivo en el cuadro de lista de un cuadro combinado.|
 |[CComboBox::DrawItem](#drawitem)|Lo llama el marco cuando un aspecto visual de cambia de un cuadro combinado dibujado por el propietario.|
-|[CComboBox:: FindString](#findstring)|Busca la primera cadena que contiene el prefijo especificado en el cuadro de lista de un cuadro combinado.|
+|[CComboBox::FindString](#findstring)|Busca la primera cadena que contiene el prefijo especificado en el cuadro de lista de un cuadro combinado.|
 |[CComboBox::FindStringExact](#findstringexact)|Busca la primera cadena de cuadro de lista (en un cuadro combinado) que coincide con la cadena especificada.|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|Recupera información sobre la `CComboBox` objeto.|
 |[CComboBox::GetCount](#getcount)|Recupera el número de elementos en el cuadro de lista de un cuadro combinado.|
@@ -198,7 +198,7 @@ En la tabla siguiente compara el cuadro combinado tres [estilos](../../mfc/refer
 
 |Estilo|Cuando está visible el cuadro de lista|Control estático o de edición|
 |-----------|-------------------------------|-----------------------------|
-|Sencillo|Always|Editar|
+|Sencillo|Siempre|Editar|
 |Drop-down|Cuando quita hacia abajo|Editar|
 |Lista desplegable|Cuando quita hacia abajo|Estático|
 
@@ -208,13 +208,13 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cuad
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON\_**_notificación_ **(** _id_, _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 donde `id` especifica el identificador de ventana secundaria del control de cuadro combinado que se envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
 Prototipo de función del elemento primario es el siguiente:
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 No se puede predecir el orden en el que se enviará ciertas notificaciones. En concreto, puede producirse una notificación CBN_SELCHANGE antes o después de una notificación CBN_CLOSEUP.
 
@@ -262,7 +262,7 @@ Si incrusta un `CComboBox` objeto dentro de otra ventana del objeto, no es neces
 
 **Encabezado:** afxwin.h
 
-##  <a name="addstring"></a>  CComboBox:: AddString
+##  <a name="addstring"></a>  CComboBox::AddString
 
 Agrega una cadena en el cuadro de lista de un cuadro combinado.
 
@@ -382,7 +382,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del cuadro combinado. Aplicar cualquier combinación de [estilos de cuadro combinado](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) al cuadro.
 
-*Rect*<br/>
+*rect*<br/>
 Apunta a la posición y tamaño del cuadro combinado. Puede ser un [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect) o un `CRect` objeto.
 
 *pParentWnd*<br/>
@@ -554,7 +554,7 @@ De forma predeterminada, esta función miembro no hace nada. Reemplace esta func
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  CComboBox:: FindString
+##  <a name="findstring"></a>  CComboBox::FindString
 
 Detecte, pero no se selecciona, la primera cadena que contiene el prefijo especificado en el cuadro de lista de un cuadro combinado.
 
@@ -1014,7 +1014,7 @@ int InitStorage(
 
 ### <a name="parameters"></a>Parámetros
 
-*nitems con*<br/>
+*nItems*<br/>
 Especifica el número de elementos que se va a agregar.
 
 *nBytes*<br/>
@@ -1227,7 +1227,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parámetros
 
-*nSeleccione*<br/>
+*nSelect*<br/>
 Especifica el índice de base cero de la cadena para seleccionar. Si-1, se quita cualquier selección actual en el cuadro de lista y se borra el control de edición.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEl*<br/>
+*bExtended*<br/>
 Especifica si el cuadro combinado debe usar la interfaz de usuario extendida o la interfaz de usuario de forma predeterminada. Un valor TRUE selecciona la interfaz de usuario extendido; un valor FALSE, selecciona la interfaz de usuario estándar.
 
 ### <a name="return-value"></a>Valor devuelto

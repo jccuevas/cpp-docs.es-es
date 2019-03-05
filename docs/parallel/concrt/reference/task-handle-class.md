@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518886"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298092"
 ---
 # <a name="taskhandle-class"></a>task_handle (Clase)
 
@@ -68,7 +68,7 @@ El tiempo de ejecución crea una copia de la función de trabajo que se pasa a u
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="task_handle__operator_call"></a> Operator()
+##  <a name="task_handle__operator_call"></a> operator()
 
 El operador de llamada de función que invoca el tiempo de ejecución para realizar el trabajo del identificador de tarea.
 
@@ -93,7 +93,7 @@ La función que se invocará para ejecutar el trabajo representado por la `task_
 
 El tiempo de ejecución crea una copia de la función de trabajo que se pasa al constructor. Por lo tanto, cualquier cambio de estado que se produce en función de una objeto que se pasa a un `task_handle` objeto no aparecerá en la copia de ese objeto de función.
 
-##  <a name="dtor"></a> ~ task_handle
+##  <a name="dtor"></a> ~task_handle
 
 Destruye el objeto `task_handle`.
 

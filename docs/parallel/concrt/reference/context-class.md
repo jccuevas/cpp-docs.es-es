@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555082"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293958"
 ---
 # <a name="context-class"></a>Context (Clase)
 
@@ -59,7 +59,7 @@ class Context;
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Determina si el contexto está o no bloqueado de forma sincrónica. Se considera que un contexto está bloqueado de forma sincrónica si realizó una acción que condujo al bloqueo explícitamente.|
 |[Saturar](#oversubscribe)|Inserta un procesador virtual adicional en un programador para la duración de un bloque de código cuando se invoca en un contexto que se ejecuta en uno de los procesadores virtuales de ese programador.|
 |[ScheduleGroupId](#schedulegroupid)|Devuelve un identificador para el grupo de programación en el que el contexto actual está trabajando.|
-|[Desbloquear](#unblock)|Desbloquea el contexto y hace que se convierta en ejecutable.|
+|[Unblock](#unblock)|Desbloquea el contexto y hace que se convierta en ejecutable.|
 |[VirtualProcessorId](#virtualprocessorid)|Devuelve un identificador para el procesador virtual en el que el contexto actual se está ejecutando.|
 |[Yield](#yield)|Genera la ejecución para que otro contexto se pueda ejecutar. Si no hay ningún otro contexto disponible para dar prioridad, el programador puede dar prioridad a otro subproceso del sistema operativo.|
 
@@ -308,4 +308,3 @@ Esta función es nueva en Visual Studio 2015 y es idéntica a la [Yield](#yield)
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Scheduler (clase)](scheduler-class.md)<br/>
 [Programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

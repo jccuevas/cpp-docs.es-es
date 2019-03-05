@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629858"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303396"
 ---
 # <a name="concurrency-namespace"></a>concurrency (Espacio de nombres)
 
@@ -181,7 +181,7 @@ namespace concurrency;
 |[create_async (función)](concurrency-namespace-functions.md#create_async)|Crea una construcción asincrónica de Windows Runtime basada en un objeto o función lambda que se ha proporcionado. El tipo devuelto de `create_async` es `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` o `IAsyncOperationWithProgress<TResult, TProgress>^` en función de la signatura de la expresión lambda pasada al método.|
 |[create_task (función)](concurrency-namespace-functions.md#create_task)|Sobrecargado. Crea un PPL [tarea](task-class.md) objeto. `create_task` se puede usar en cualquier lugar en el que se ha utilizado un constructor de tarea. Se proporciona principalmente por comodidad, porque permite el uso de la palabra clave `auto` cuando se crean tareas.|
 |[CreateResourceManager (función)](concurrency-namespace-functions.md#createresourcemanager)|Devuelve una interfaz que representa la instancia singleton del Administrador de recursos del runtime de simultaneidad. El Administrador de recursos es el responsable de asignar recursos a los programadores que desean cooperar entre sí.|
-|[DisableTracing (función)](concurrency-namespace-functions.md#disabletracing)|Deshabilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW no está registrada de forma predeterminada.|
+|[DisableTracing (función)](concurrency-namespace-functions.md#disabletracing)|Deshabilita la traza en el runtime de simultaneidad. Esta función está desusada porque la traza de ETW no está registrada de forma predeterminada.|
 |[EnableTracing (función)](concurrency-namespace-functions.md#enabletracing)|Habilita la traza en el runtime de simultaneidad. Esta función está en desuso porque la traza de ETW ahora está registrada de forma predeterminada.|
 |[Free (función)](concurrency-namespace-functions.md#free)|Libera un bloque de memoria asignado previamente mediante el método `Alloc` al subasignador de almacenamiento en caché del runtime de simultaneidad.|
 |[get_ambient_scheduler () (función) (Runtime de simultaneidad)](concurrency-namespace-functions.md#get_ambient_scheduler)||
@@ -261,4 +261,3 @@ namespace concurrency;
 ## <a name="see-also"></a>Vea también
 
 [Referencia](reference-concurrency-runtime.md)
-

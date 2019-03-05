@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274549"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -124,7 +124,7 @@ CSettingsStore(
 
 ### <a name="parameters"></a>Parámetros
 
-*bruta administrativa*<br/>
+*bAdmin*<br/>
 [in] Parámetro booleano que especifica si el `CSettingsStore` objeto actúa en modo de administrador.
 
 *bReadOnly*<br/>
@@ -153,7 +153,7 @@ virtual BOOL DeleteKey(
 *pszPath*<br/>
 [in] El nombre de la clave que se va a eliminar.
 
-*bruta administrativa*<br/>
+*bAdmin*<br/>
 [in] Modificador que especifica la ubicación de la clave que se va a eliminar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -299,7 +299,7 @@ virtual BOOL Read(
 *lpPoint*<br/>
 [out] Referencia a un puntero a un `POINT` lee de estructura que recibe el valor de la clave del registro.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable que recibe el valor leído desde la clave del registro.
 
 *ppData*<br/>
@@ -417,7 +417,7 @@ virtual BOOL Write(
 *wcArray*<br/>
 [in] Referencia a una variable de matriz de palabras de 16 bits que contiene los datos que se va a almacenar.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) variable que contiene los datos que se va a almacenar.
 
 *lpPoint*<br/>

@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280321"
 ---
 # <a name="clistbox-class"></a>CListBox (clase)
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|Elimina una cadena de un cuadro de lista.|
 |[CListBox::Dir](#dir)|Agrega los nombres de archivo, las unidades o desde el directorio actual a un cuadro de lista.|
 |[CListBox::DrawItem](#drawitem)|Lo llama el marco cuando un aspecto visual de un cuadro de lista dibujado por el propietario cambie.|
-|[CListBox:: FindString](#findstring)|Busca una cadena en un cuadro de lista.|
+|[CListBox::FindString](#findstring)|Busca una cadena en un cuadro de lista.|
 |[CListBox::FindStringExact](#findstringexact)|Busca la primera cadena del cuadro de lista que coincide con una cadena especificada.|
 |[CListBox::GetAnchorIndex](#getanchorindex)|Recupera el índice de base cero del elemento delimitador actual en un cuadro de lista.|
 |[CListBox::GetCaretIndex](#getcaretindex)|Determina el índice del elemento que tiene el rectángulo de foco en un cuadro de lista de selección múltiple.|
@@ -169,7 +169,7 @@ class CListBox : public CWnd
 |[CListBox::SetCaretIndex](#setcaretindex)|Establece el rectángulo de foco en el elemento en el índice especificado en un cuadro de lista de selección múltiple.|
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Establece el ancho de columna de un cuadro de lista de varias columnas.|
 |[CListBox::SetCurSel](#setcursel)|Selecciona una cadena de un cuadro de lista.|
-|[CListBox:: SetHorizontalExtent](#sethorizontalextent)|Establece el ancho en píxeles que se puede desplazar horizontalmente un cuadro de lista.|
+|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Establece el ancho en píxeles que se puede desplazar horizontalmente un cuadro de lista.|
 |[CListBox::SetItemData](#setitemdata)|Establece el valor de 32 bits asociado al elemento de cuadro de lista.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Establece un puntero al elemento de cuadro de lista.|
 |[CListBox::SetItemHeight](#setitemheight)|Establece el alto de los elementos en un cuadro de lista.|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del cuadro de lista. Aplicar cualquier combinación de [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) al cuadro.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica la posición y tamaño del cuadro de lista. Puede ser un `CRect` objeto o un `RECT` estructura.
 
 *pParentWnd*<br/>
@@ -481,13 +481,13 @@ Puede ser cualquier combinación de la **enum** describen los valores en `CFile:
 |Valor|Significado|
 |-----------|-------------|
 |0x0000|Archivo se puede leer o escribir en.|
-|0 x 0001|Archivo se puede leer pero no se escribe en.|
+|0x0001|Archivo se puede leer pero no se escribe en.|
 |0x0002|Archivo está oculto y no aparece en una lista de directorios.|
 |0x0004|Es un archivo del sistema.|
 |0x0010|El nombre especificado por *lpszWildCard* especifica un directorio.|
 |0x0020|Se ha archivado el archivo.|
-|0 x 4000|Incluir todas las unidades que coinciden con el nombre especificado por *lpszWildCard*.|
-|0 x 8000|Marca exclusivo. Si se establece la marca exclusiva, se muestran solo los archivos del tipo especificado. En caso contrario, se enumeran los archivos del tipo especificado además de los archivos "normales".|
+|0x4000|Incluir todas las unidades que coinciden con el nombre especificado por *lpszWildCard*.|
+|0x8000|Marca exclusivo. Si se establece la marca exclusiva, se muestran solo los archivos del tipo especificado. En caso contrario, se enumeran los archivos del tipo especificado además de los archivos "normales".|
 
 *lpszWildCard*<br/>
 Apunta a una cadena de especificación de archivo. La cadena puede contener caracteres comodín (por ejemplo, *.\*).
@@ -525,7 +525,7 @@ Consulte [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para o
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox:: FindString
+##  <a name="findstring"></a>  CListBox::FindString
 
 Busca la primera cadena en un cuadro de lista que contiene el prefijo especificado sin cambiar la selección del cuadro de lista.
 
@@ -975,7 +975,7 @@ int InitStorage(
 
 ### <a name="parameters"></a>Parámetros
 
-*nitems con*<br/>
+*nItems*<br/>
 Especifica el número de elementos que se va a agregar.
 
 *nBytes*<br/>
@@ -1039,7 +1039,7 @@ UINT ItemFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Punto que se va a buscar el elemento más cercano, especificado con respecto a la esquina superior izquierda del área cliente del cuadro de lista.
 
 *bOutside*<br/>
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*bSeleccione*<br/>
+*bSelect*<br/>
 Especifica cómo se establece la selección. Si *bSelect* es TRUE, la cadena está seleccionada y resaltada; si es FALSE, se quita el resaltado y la cadena ya no está seleccionada.
 
 *nFirstItem*<br/>
@@ -1242,7 +1242,7 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>Parámetros
 
-*nSeleccione*<br/>
+*nSelect*<br/>
 Especifica el índice de base cero de la cadena que se seleccionen. Si *nSeleccione* es -1, el cuadro de lista se establece para que no hay nada seleccionado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1261,7 +1261,7 @@ Para establecer o quitar una selección en un cuadro de lista de selección múl
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-##  <a name="sethorizontalextent"></a>  CListBox:: SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent
 
 Establece el ancho, en píxeles, por el que se puede desplazar horizontalmente un cuadro de lista.
 
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contiene el índice de base cero de la cadena debe establecerse. Si -1, la selección se agrega o quita de todas las cadenas, dependiendo del valor de *bSelect*.
 
-*bSeleccione*<br/>
+*bSelect*<br/>
 Especifica cómo se establece la selección. Si *bSelect* es TRUE, la cadena está seleccionada y resaltada; si es FALSE, se quita el resaltado y la cadena ya no está seleccionada. La cadena especificada se selecciona y se resalta de forma predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto

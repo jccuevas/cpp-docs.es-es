@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286210"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set (Clase)
 
@@ -214,7 +214,7 @@ La función de comparación de igualdad para este conjunto no ordenado.
 El asignador de este conjunto no ordenado.
 
 *first*<br/>
-*Último*<br/>
+*last*<br/>
 *_Uset*<br/>
 El objeto de origen `concurrent_unordered_set` del que copiar o mover elementos.
 
@@ -387,16 +387,16 @@ El tipo de iterador que se utiliza para la inserción.
 *V*<br/>
 El tipo del valor insertado en el conjunto.
 
-*valor*<br/>
+*value*<br/>
 El valor que se va a insertar.
 
-*_WHERE*<br/>
+*_Where*<br/>
 La ubicación inicial para buscar un punto de inserción.
 
 *first*<br/>
 El principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Final del intervalo que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -678,14 +678,14 @@ iterator unsafe_erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 La posición del iterador en la que borrar.
 
 *KVal*<br/>
 Valor de clave que se va a borrar.
 
 *first*<br/>
-*Último*<br/>
+*last*<br/>
 Iteradores.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -714,4 +714,3 @@ El número máximo de depósitos en este contenedor.
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-

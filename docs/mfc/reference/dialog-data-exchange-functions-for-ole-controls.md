@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df96d44cefeb15d89653538c3006d109a97a21a7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531253"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298261"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>Funciones de intercambio de datos de cuadro de diálogo para controles OLE
 
@@ -66,10 +66,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -100,10 +100,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -134,10 +134,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -168,10 +168,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -208,10 +208,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -248,10 +248,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -288,10 +288,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -328,10 +328,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -362,10 +362,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -396,10 +396,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -430,10 +430,10 @@ Un puntero a un **CDataExchange** objeto. El marco de trabajo proporciona este o
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios
@@ -464,10 +464,10 @@ Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objet
 *nIDC*<br/>
 Identificador de un control OLE en el objeto de cuadro de diálogo, vista de formulario o vista de control.
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de una propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Referencia a una variable de miembro del objeto de cuadro de diálogo, vista de formulario o vista de control con el que se intercambian los datos.
 
 ### <a name="remarks"></a>Comentarios

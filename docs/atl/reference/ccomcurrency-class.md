@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451161"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277731"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency (clase)
 
@@ -45,7 +45,7 @@ class CComCurrency
 |Name|Descripción|
 |----------|-----------------|
 |[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|Devuelve la dirección de un miembro de datos `m_currency`.|
-|[CComCurrency:: Getfraction](#getfraction)|Llame a este método para devolver el componente de fracción de un objeto `CComCurrency`.|
+|[CComCurrency::GetFraction](#getfraction)|Llame a este método para devolver el componente de fracción de un objeto `CComCurrency`.|
 |[CComCurrency::GetInteger](#getinteger)|Llame a este método para devolver el componente entero de un objeto `CComCurrency`.|
 |[CComCurrency::Round](#round)|Llame a este método para redondear un objeto `CComCurrency` al valor entero más cercano.|
 |[CComCurrency::SetFraction](#setfraction)|Llame a este método para establecer el componente de fracción de un objeto `CComCurrency`.|
@@ -55,21 +55,21 @@ class CComCurrency
 
 |Name|Descripción|
 |----------|-----------------|
-|[CComCurrency::operator-](#operator_-)|Este operador se usa para restar en un objeto `CComCurrency`.|
-|[CComCurrency::operator! =](#operator_neq)|Compara dos objetos `CComCurrency` para determinar si no son iguales.|
+|[CComCurrency::operator -](#operator_-)|Este operador se usa para restar en un objeto `CComCurrency`.|
+|[CComCurrency::operator !=](#operator_neq)|Compara dos objetos `CComCurrency` para determinar si no son iguales.|
 |[CComCurrency::operator *](#operator_star)|Este operador se usa para multiplicar en un objeto `CComCurrency`.|
-|[CComCurrency::operator * =](#operator_star_eq)|Este operador se usa para multiplicar en un objeto `CComCurrency` y asignarle el resultado.|
+|[CComCurrency::operator *=](#operator_star_eq)|Este operador se usa para multiplicar en un objeto `CComCurrency` y asignarle el resultado.|
 |[CComCurrency::operator /](#operator_div)|Este operador se usa para dividir en un objeto `CComCurrency`.|
-|[CComCurrency::operator / =](#operator_div_eq)|Este operador se utiliza para dividir en un objeto `CComCurrency` y asignarle el resultado.|
+|[CComCurrency::operator /=](#operator_div_eq)|Este operador se utiliza para dividir en un objeto `CComCurrency` y asignarle el resultado.|
 |[CComCurrency::operator +](#operator_add)|Este operador se usa para sumar en un objeto `CComCurrency`.|
 |[CComCurrency::operator +=](#operator_add_eq)|Este operador se usa para sumar en un objeto `CComCurrency` y asignar el resultado al objeto actual.|
 |[CComCurrency::operator <](#operator_lt)|Este operador compara dos objetos `CComCurrency` para determinar el menor.|
-|[CComCurrency::operator < =](#operator_lt_eq)|Este operador compara dos objetos `CComCurrency` para determinar si son iguales o cuál es el menor.|
+|[CComCurrency::operator <=](#operator_lt_eq)|Este operador compara dos objetos `CComCurrency` para determinar si son iguales o cuál es el menor.|
 |[CComCurrency::operator =](#operator_eq)|El operador asigna el objeto `CComCurrency` a un nuevo valor.|
-|[CComCurrency::operator =](#operator_-_eq)|Este operador se usa para restar en un objeto `CComCurrency` y asignarle el resultado.|
+|[CComCurrency::operator -=](#operator_-_eq)|Este operador se usa para restar en un objeto `CComCurrency` y asignarle el resultado.|
 |[CComCurrency::operator ==](#operator_eq_eq)|Este operador compara dos objetos `CComCurrency` para determinar si son iguales.|
 |[CComCurrency::operator >](#operator_gt)|Este operador compara dos objetos `CComCurrency` para determinar el mayor.|
-|[CComCurrency::operator > =](#operator_gt_eq)|Este operador compara dos objetos `CComCurrency` para determinar si son iguales o cuál es el mayor.|
+|[CComCurrency::operator >=](#operator_gt_eq)|Este operador compara dos objetos `CComCurrency` para determinar si son iguales o cuál es el mayor.|
 |[CComCurrency::operator moneda](#operator_currency)|Convierte un objeto de moneda.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -169,7 +169,7 @@ CURRENCY* GetCurrencyPtr() throw();
 
 Devuelve la dirección de un `m_currency` miembro de datos
 
-##  <a name="getfraction"></a>  CComCurrency:: Getfraction
+##  <a name="getfraction"></a>  CComCurrency::GetFraction
 
 Llamar a este método para devolver el componente de fracción de la `CComCurrency` objeto.
 
@@ -217,7 +217,7 @@ CURRENCY m_currency;
 
 Este miembro contiene la moneda acceder y manipular los métodos de esta clase.
 
-##  <a name="operator_-"></a>  CComCurrency::operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 Este operador se usa para restar en un objeto `CComCurrency`.
 
@@ -229,7 +229,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 ### <a name="parameters"></a>Parámetros
 
 *cur*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -239,7 +239,7 @@ Devuelve un `CComCurrency` objeto que representa el resultado de la resta. Si se
 
 [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]
 
-##  <a name="operator_neq"></a>  CComCurrency::operator! =
+##  <a name="operator_neq"></a>  CComCurrency::operator !=
 
 Este operador compara dos objetos no son iguales.
 
@@ -331,7 +331,7 @@ Devuelve un `CComCurrency` objeto que representa el resultado de la división. S
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  CComCurrency::operator / =
+##  <a name="operator_div_eq"></a>  CComCurrency::operator /=
 
 Este operador se utiliza para dividir en un objeto `CComCurrency` y asignarle el resultado.
 
@@ -405,7 +405,7 @@ bool operator<(const CComCurrency& cur) const;
 ### <a name="parameters"></a>Parámetros
 
 *cur*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -426,7 +426,7 @@ bool operator<= (const CComCurrency& cur) const;
 ### <a name="parameters"></a>Parámetros
 
 *cur*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -457,12 +457,12 @@ const CComCurrency& operator= (DECIMAL dSrc);
 ### <a name="parameters"></a>Parámetros
 
 *curSrc*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 *cySrc*<br/>
 Una variable de tipo moneda.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 Valor numérico que se asigna a la `CComCurrency` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -473,7 +473,7 @@ Devuelve el texto actualizado `CComCurrency` objeto. Si se produce un error, com
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  CComCurrency::operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 Este operador se usa para restar en un objeto `CComCurrency` y asignarle el resultado.
 
@@ -484,7 +484,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 ### <a name="parameters"></a>Parámetros
 
 *cur*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -526,7 +526,7 @@ bool operator>(const CComCurrency& cur) const;
 ### <a name="parameters"></a>Parámetros
 
 *cur*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -547,7 +547,7 @@ bool operator>= (const CComCurrency& cur) const;
 ### <a name="parameters"></a>Parámetros
 
 *cur*<br/>
-Un objeto `CComCurrency`.
+Objeto `CComCurrency`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -557,7 +557,7 @@ Devuelve TRUE si el primer objeto es mayor o igual que el segundo, FALSE en caso
 
 [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]
 
-##  <a name="operator_currency"></a>  CComCurrency::operator moneda
+##  <a name="operator_currency"></a>  CComCurrency::operator CURRENCY
 
 Estos operadores se utilizan para convertir un `CComCurrency` objeto a un tipo de datos de moneda.
 

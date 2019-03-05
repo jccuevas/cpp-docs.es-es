@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463783"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270207"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager (clase)
 
@@ -51,7 +51,7 @@ class CAtlTransactionManager;
 
 |Name|Descripción|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager destructor.|
+|[~CAtlTransactionManager](#dtor)|CAtlTransactionManager destructor.|
 |[CAtlTransactionManager](#catltransactionmanager)|Constructor CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -72,7 +72,7 @@ class CAtlTransactionManager;
 |[RegCreateKeyEx](#regcreatekeyex)|Crea la clave del registro especificada y lo asocia con una transacción. Si la clave ya existe, la función lo abre.|
 |[RegDeleteKey](#regdeletekey)|Elimina una subclave y sus valores de la vista específica de la plataforma especificada del registro como una operación de transacción.|
 |[RegOpenKeyEx](#regopenkeyex)|Se abre la clave del registro especificada y lo asocia con una transacción.|
-|[Reversión](#rollback)|Solicitudes que se revierte la transacción.|
+|[Rollback](#rollback)|Solicitudes que se revierte la transacción.|
 |[SetFileAttributes](#setfileattributes)|Establece los atributos de un archivo o directorio como una operación de transacción.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **Encabezado:** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 CAtlTransactionManager destructor.
 
@@ -191,10 +191,10 @@ inline HANDLE CreateFile(
 El nombre de un objeto que se creó o se abran.
 
 *dwDesiredAccess*<br/>
-El acceso al objeto, que se puede resumir como lectura, escritura, ambos o ninguno (cero). Los valores utilizados con más frecuencia son GENERIC_READ, GENERIC_WRITE o ambos: GENERIC_READ &#124; GENERIC_WRITE.
+El acceso al objeto, que se puede resumir como lectura, escritura, ambos o ninguno (cero). Los valores más usados son GENERIC_READ, GENERIC_WRITE o ambos: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-El modo de uso compartido de un objeto que puede ser de lectura, escritura, ambos, eliminar, todos ellos, o ninguno: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+El modo de uso compartido de un objeto, que puede ser de lectura, escritura, ambos, eliminar, todos ellos, o ninguno: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Un puntero a una estructura SECURITY_ATTRIBUTES que contiene un descriptor de seguridad opcional y también determina si el identificador devuelto se puede heredar mediante procesos secundarios. El parámetro puede ser NULL.
@@ -395,7 +395,7 @@ Identificador de una clave del registro abierta.
 *lpSubKey*<br/>
 El nombre de una subclave que esta función se abre o se crea.
 
-*dwReservado*<br/>
+*dwReserved*<br/>
 Este parámetro está reservado y debe ser cero.
 
 *lpClass*<br/>

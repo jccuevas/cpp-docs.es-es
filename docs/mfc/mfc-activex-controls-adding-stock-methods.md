@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585034"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305216"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Controles ActiveX MFC: Agregar métodos estándar
 
@@ -24,8 +24,8 @@ Un método estándar difiere de un método personalizado en que ya está impleme
 
 |Método|Entrada del mapa de envíos|Comentario|
 |------------|------------------------|-------------|
-|`DoClick`|**(DE DISP_STOCKPROP_DOCLICK)**|Se desencadena un evento Click.|
-|`Refresh`|**(DE DISP_STOCKPROP_REFRESH)**|Se actualiza inmediatamente la apariencia del control.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Se desencadena un evento Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Se actualiza inmediatamente la apariencia del control.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Agregar un método estándar mediante el Asistente para agregar métodos
 
@@ -64,4 +64,3 @@ Esta línea asigna el método de actualización de un número de Id. específico
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

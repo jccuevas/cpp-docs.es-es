@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429372"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281530"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton (clase)
 
@@ -123,10 +123,10 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |Name|Descripción|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Compara esta instancia con el proporcionado `CMFCToolBarButton` objeto. (Invalida [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
-|[Cmfctoolbarmenubutton:: CopyFrom](#copyfrom)|Copia las propiedades de otro botón de barra de herramientas a la actual. (Invalida [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Copia las propiedades de otro botón de barra de herramientas a la actual. (Invalida [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
 |[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Inicializa el menú de barra de herramientas desde un identificador de menú de Windows.|
 |[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Crea un menú de Windows que consta de los comandos en el menú de barra de herramientas. Devuelve un identificador para el menú de Windows.|
-|[Cmfctoolbarmenubutton:: CreatePopupMenu](#createpopupmenu)|Crea un objeto de menú emergente ( [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md)) para mostrar el menú de barra de herramientas.|
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Crea un objeto de menú emergente ( [CMFCPopupMenu (clase)](../../mfc/reference/cmfcpopupmenu-class.md)) para mostrar el menú de barra de herramientas.|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
 |[CMFCToolBarMenuButton::GetCommands](#getcommands)|Proporciona acceso de solo lectura a la lista de comandos en el menú de barra de herramientas.|
 |[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Recupera el rectángulo delimitador de la imagen del botón.|
@@ -137,7 +137,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
 |[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Determina si se muestra el menú emergente.|
-|[Cmfctoolbarmenubutton:: Isemptymenuallowed](#isemptymenuallowed)|Lo llama el marco de trabajo para determinar si un usuario puede abrir un submenú de elemento de menú seleccionado.|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Lo llama el marco de trabajo para determinar si un usuario puede abrir un submenú de elemento de menú seleccionado.|
 |[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Determina si el botón está en modo exclusivo, es decir, si mantiene abierto el menú emergente incluso cuando el usuario mueve el puntero sobre otra barra de herramientas o botón.|
 |[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Determina si el menú emergente está en modo de paleta.|
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
@@ -253,13 +253,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *otros*<br/>
+[in] *other*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton:: CopyFrom
+##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -306,7 +306,7 @@ Un handle para el menú si correcto. Es NULL si la lista de comandos asociados c
 
 Puede invalidar este método en una clase derivada para personalizar la forma en que se genera el menú.
 
-##  <a name="createpopupmenu"></a>  Cmfctoolbarmenubutton:: CreatePopupMenu
+##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu
 
 Crea un `CMFCPopupMenu` objeto para mostrar el menú de barra de herramientas.
 
@@ -481,7 +481,7 @@ virtual BOOL IsDroppedDown() const;
 
 TRUE si el botón de menú de la barra de herramientas muestra su submenú; en caso contrario, FALSE.
 
-##  <a name="isemptymenuallowed"></a>  Cmfctoolbarmenubutton:: Isemptymenuallowed
+##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed
 
 Especifica si los elementos de menú muestra los submenús vacíos.
 
@@ -628,7 +628,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *bDelay*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
@@ -661,7 +661,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -723,7 +723,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Especifica la ventana que recibe los comandos de menú desplegable. Puede ser NULL solo si el botón de menú de la barra de herramientas tiene una ventana primaria.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-ms.openlocfilehash: c9a0c51d090b1c62309f27bf6587ea02e0fe1152
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eaeb5275ce825272e1c605e7ceeefa24db7a32ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278358"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>Contenedores de controles ActiveX: Programar controles ActiveX en un contenedor de controles ActiveX
 
@@ -99,4 +99,3 @@ El siguiente ejemplo de código utiliza el *m_circctl* variable miembro para mod
 ## <a name="see-also"></a>Vea también
 
 [Contenedores de controles ActiveX](../mfc/activex-control-containers.md)
-

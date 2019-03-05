@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Usar grupos de programación para influir en el orden de ejecución'
+title: Procedimiento Usar grupos de programación para influir en el orden de ejecución
 ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284364"
 ---
-# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Cómo: Usar grupos de programación para influir en el orden de ejecución
+# <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Filtrar Usar grupos de programación para influir en el orden de ejecución
 
 En el Runtime de simultaneidad, el orden en el que se programan las tareas no es determinista. Sin embargo, puede utilizar directivas de programación para influir en el orden en el que se ejecutan las tareas. En este tema se muestra cómo usar grupos de programación junto con el [Concurrency:: SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) directiva de programador para influir en el orden en que se ejecutan las tareas.
 
@@ -112,4 +112,3 @@ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguel
 
 [Grupos de programación](../../parallel/concrt/schedule-groups.md)<br/>
 [Agentes asincrónicos](../../parallel/concrt/asynchronous-agents.md)
-

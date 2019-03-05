@@ -2,12 +2,12 @@
 title: Ejemplos de control Rich Edit
 ms.date: 02/06/2019
 ms.assetid: ac98bf45-ca74-459c-9b3e-df278a67a00f
-ms.openlocfilehash: 92b095087553e1ad2a9ca8c0cce29e8e3a86d132
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 8d4b2284e1738b1739d732739d392297b90ffb4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763926"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267464"
 ---
 # <a name="rich-edit-control-examples"></a>Ejemplos de control Rich Edit
 
@@ -17,4 +17,3 @@ El ejemplo OLE de MFC [WORDPAD](https://github.com/Microsoft/VCSamples/tree/da80
 
 [Uso de CRichEditCtrl](../mfc/using-cricheditctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

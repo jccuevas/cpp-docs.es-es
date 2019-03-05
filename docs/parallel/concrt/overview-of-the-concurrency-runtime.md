@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305242"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Información general sobre el runtime de simultaneidad
 
@@ -143,4 +143,3 @@ El Runtime de simultaneidad se declara en el [simultaneidad](../../parallel/conc
 El Runtime de simultaneidad se proporciona como parte de la Biblioteca en tiempo de ejecución de C (CRT). Para obtener más información sobre cómo compilar una aplicación que utiliza CRT, vea [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 [[Arriba](#top)]
-

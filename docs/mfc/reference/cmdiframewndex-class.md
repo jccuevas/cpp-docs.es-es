@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275433"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 
@@ -189,7 +189,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Convierte el panel de acoplamiento especificado en un documento con pestañas.|
 |[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Crea una ventana secundaria de documento.|
 |[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Lo llama el marco para crear una nueva ventana.|
-|`CMDIFrameWndEx::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMDIFrameWndEx::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMDIFrameWndEx::DockPane](#dockpane)|Acopla el panel especificado en la ventana de marco.|
 |[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Acopla un panel a la izquierda de otro panel.|
 |[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Permite oculta automáticamente el modo de los paneles cuando se acoplan en lados especificados de la ventana de marco principal.|
@@ -197,7 +197,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Muestra u oculta el menú principal en modo de pantalla completa.|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Habilita el modo de pantalla completa para la ventana de marco.|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Habilita o deshabilita la carga del estado de acoplamiento.|
-|[CMDIFrameWndEx:: Enablemditabbedgroups](#enablemditabbedgroups)|Habilita o deshabilita la característica de grupos con fichas MDI.|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Habilita o deshabilita la característica de grupos con fichas MDI.|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Habilita o deshabilita la característica de las pestañas de MDI. Cuando se habilita, la ventana de marco muestra una pestaña para cada ventana MDI secundaria.|
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Especifica si se debe activar la última pestaña activa cuando el usuario cierra la ficha actual.|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Habilita o deshabilita la creación automática y la administración del menú emergente del panel, que muestra una lista de paneles de la aplicación.  .|
@@ -641,12 +641,12 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar la carga de estado de acoplamiento, FALSE para deshabilitar la carga del estado de acoplamiento.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx:: Enablemditabbedgroups
+##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx::EnableMDITabbedGroups
 
 Habilita o deshabilita la característica de grupos con fichas MDI de la ventana de marco.
 
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Si es TRUE, se habilita la característica de grupos con fichas MDI; Si es FALSE, se deshabilita la característica de grupos con fichas MDI.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si están habilitadas las pestañas.
 
 *bIcons*<br/>
@@ -719,7 +719,7 @@ Especifica la ubicación de las etiquetas de pestaña.
 *bTabCloseButton*<br/>
 Especifica si se debe mostrar botones Cerrar pestaña.
 
-*Estilo*<br/>
+*style*<br/>
 Especifica el estilo de fichas. Utilice STYLE_3D_SCROLLED para pestañas normales o STYLE_3D_ONENOTE para las pestañas de Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Si es TRUE, el control automático del menú panel está habilitado; Si es FALSE, el control automático está deshabilitado.
 
 *uiCustomizeCmd*<br/>
@@ -1047,7 +1047,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Un puntero al panel antes o después de que se va a insertar en el panel.
 
-*Después*<br/>
+*bAfter*<br/>
 [in] Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1100,7 +1100,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a la ventana con pestañas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto especificado en coordenadas de pantalla.
 
 *dwBarAlignment*<br/>
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bSiguiente*<br/>
+*bNext*<br/>
 [in] Si es TRUE, mover la ficha al siguiente grupo de pestañas. Si es FALSE, muévalo al grupo de pestañas anterior.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1342,7 +1342,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Puntero en el panel se está cerrando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1365,7 +1365,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Puntero a la ventana de marco reducido que se va a cerrar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1501,7 +1501,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 *pButton*<br/>
 [in] El botón de barra de herramientas.
 
-*PTI*<br/>
+*pTI*<br/>
 [out] Puntero a un [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] La ubicación del menú en coordenadas de pantalla.
 
 *dwAllowedItems*<br/>
@@ -1635,7 +1635,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar paneles, FALSE para ocultar paneles.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto (en coordenadas de pantalla).
 
 *nSensitivity*<br/>
@@ -1870,7 +1870,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Puntero a una ventana de marco de vista previa de impresión.
 
 ### <a name="remarks"></a>Comentarios
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Menú*<br/>
+*menu*<br/>
 [in] Una referencia a un [CMenu (clase)](../../mfc/reference/cmenu-class.md) objeto va a modificar.
 
 *uiViewUserToolbarCmdFirst*<br/>
@@ -1924,7 +1924,7 @@ void ShowPane(
 *pBar*<br/>
 [in] Puntero al panel para mostrar u ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el panel. FALSE para ocultar el panel.
 
 *bDelay*<br/>

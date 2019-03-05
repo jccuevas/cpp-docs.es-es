@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-ms.openlocfilehash: 3b8d9f32246270a570b09f599f8b05f2a58ecfc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326418"
 ---
 # <a name="mfc-activex-controls-properties"></a>Controles ActiveX MFC: Propiedades
 
@@ -19,9 +19,9 @@ Un control ActiveX activa eventos para comunicarse con su contenedor. El contene
 
 Las propiedades también se denominan atributos.
 
-Para obtener más información sobre los métodos del control ActiveX, vea el artículo [controles ActiveX MFC: métodos](../mfc/mfc-activex-controls-methods.md).
+Para obtener más información sobre los métodos del control ActiveX, vea el artículo [controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md).
 
-Controles ActiveX pueden implementar las existencias y métodos y propiedades personalizados. Clase `COleControl` proporciona una implementación de propiedades estándar. (Para obtener una lista completa de propiedades estándar, vea el artículo [controles ActiveX MFC: agregar propiedades estándar](../mfc/mfc-activex-controls-adding-stock-properties.md).) Propiedades personalizadas, definidas por el desarrollador, agregar capacidades especializadas a un control ActiveX. Para obtener más información, consulte [controles ActiveX MFC: agregar propiedades personalizadas](../mfc/mfc-activex-controls-adding-custom-properties.md).
+Controles ActiveX pueden implementar las existencias y métodos y propiedades personalizados. Clase `COleControl` proporciona una implementación de propiedades estándar. (Para obtener una lista completa de propiedades estándar, vea el artículo [controles ActiveX MFC: Agregar propiedades estándar](../mfc/mfc-activex-controls-adding-stock-properties.md).) Propiedades personalizadas, definidas por el desarrollador, agregar capacidades especializadas a un control ActiveX. Para obtener más información, consulte [controles ActiveX MFC: Agregar propiedades personalizadas](../mfc/mfc-activex-controls-adding-custom-properties.md).
 
 Se admiten las propiedades estándar y personalizadas, como los métodos, mediante un mecanismo que consta de un mapa de envíos que controla las propiedades y métodos y funciones de miembro existente de la `COleControl` clase. Además, estas propiedades pueden tener parámetros que el programador usa para pasar información adicional al control.
 
@@ -33,9 +33,8 @@ Los siguientes artículos describen las propiedades del control ActiveX con más
 
 - [Controles ActiveX MFC: Implementación de propiedades avanzadas](../mfc/mfc-activex-controls-advanced-property-implementation.md)
 
-- [Controles ActiveX MFC: Acceso a las propiedades de ambiente](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
+- [Controles ActiveX MFC: Obtener acceso a las propiedades de ambiente](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

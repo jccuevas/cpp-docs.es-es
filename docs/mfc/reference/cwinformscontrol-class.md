@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289317"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl (clase)
 
@@ -49,7 +49,7 @@ Un control de Windows Forms de .NET Framework que se mostrará en la aplicación
 
 |Name|Descripción|
 |----------|-----------------|
-|[CWinFormsControl:: CreateManagedControl](#createmanagedcontrol)|Crea un control de Windows Forms en un contenedor de MFC.|
+|[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Crea un control de Windows Forms en un contenedor de MFC.|
 |[CWinFormsControl::GetControl](#getcontrol)|Recupera un puntero al control de Windows Forms.|
 |[CWinFormsControl::GetControlHandle](#getcontrolhandle)|Recupera un identificador para el control Windows Forms.|
 
@@ -57,8 +57,8 @@ Un control de Windows Forms de .NET Framework que se mostrará en la aplicación
 
 |Name|Descripción|
 |----------|-----------------|
-|[CWinFormsControl::operator-&gt;](#operator_-_gt)|Reemplaza [CWinFormsControl::GetControl](#getcontrol) en expresiones.|
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Convierte un tipo de puntero a un control de Windows Forms.|
+|[CWinFormsControl::operator -&gt;](#operator_-_gt)|Reemplaza [CWinFormsControl::GetControl](#getcontrol) en expresiones.|
+|[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Convierte un tipo de puntero a un control de Windows Forms.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -75,7 +75,7 @@ El código MFC no debe almacenar en caché identificadores de ventana (normalmen
 
 **Encabezado:** afxwinforms.h
 
-##  <a name="createmanagedcontrol"></a>  CWinFormsControl:: CreateManagedControl
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl
 
 Crea un control de Windows Forms en un contenedor de MFC.
 
@@ -107,13 +107,13 @@ inline BOOL CreateManagedControl(
 
 ### <a name="parameters"></a>Parámetros
 
-*PEscriba*<br/>
+*pType*<br/>
 El tipo de datos del control que se va a crear. Debe ser un [tipo](https://msdn.microsoft.com/library/system.type) tipo de datos.
 
 *dwStyle*<br/>
 Estilo de ventana que se va a aplicar al control. Especificar una combinación de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actualmente, se admiten solo los estilos siguientes: WS_TABSTOP, WS_VISIBLE, WS_DISABLED y WS_GROUP.
 
-*Rect*<br/>
+*rect*<br/>
 Un [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect) que define las coordenadas de las esquinas superior izquierda e inferior derecha del control (primera sobrecarga solo).
 
 *nPlaceHolderID*<br/>
@@ -190,7 +190,7 @@ Devuelve un identificador para el control Windows Forms.
 
 `GetControlHandle` es un método auxiliar que devuelve el identificador de ventana que se almacenan en las propiedades del control de .NET Framework. El valor del identificador de ventana se copia en [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) durante la llamada a [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach).
 
-##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator -&gt;
 
 Reemplaza [CWinFormsControl::GetControl](#getcontrol) en expresiones.
 
@@ -204,7 +204,7 @@ Este operador proporciona una sintaxis adecuada que reemplaza `GetControl` en ex
 
 Para obtener más información sobre Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 
 Convierte un tipo de puntero a un control de Windows Forms.
 

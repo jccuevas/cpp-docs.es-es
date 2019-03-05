@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 59c4e5f4e55947a4eab7a5258d8fe2b943bab3ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294413"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Clase CD2DBitmapBrush
 
@@ -66,7 +66,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Sobrecargado. Construye un objeto CD2DBitmapBrush del archivo.|
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Destructor. Se llama cuando se destruye un objeto brush de mapa de bits de D2D.|
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|Destructor. Se llama cuando se destruye un objeto brush de mapa de bits de D2D.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -96,7 +96,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Interfaz de ID2D1BitmapBrush devuelve|
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Interfaz de ID2D1BitmapBrush devuelve|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -120,7 +120,7 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush
+##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush
 
 Destructor. Se llama cuando se destruye un objeto brush de mapa de bits de D2D.
 
@@ -330,7 +330,7 @@ Las propiedades del pincel de mapa de bits.
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush*
 
 Interfaz de ID2D1BitmapBrush devuelve
 

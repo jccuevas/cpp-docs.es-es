@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465616"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266333"
 ---
 # <a name="carchive-class"></a>CArchive (clase)
 
@@ -98,7 +98,7 @@ class CArchive
 |[CArchive::SetLoadParams](#setloadparams)|Establece el tamaño a la que crece la carga de matriz. Debe llamarse antes de carga cualquier objeto o antes de `MapObject` o `ReadObject` se llama.|
 |[CArchive::SetObjectSchema](#setobjectschema)|Establece el esquema de objeto almacenado en el objeto de archivo.|
 |[CArchive::SetStoreParams](#setstoreparams)|Establece el tamaño de la tabla hash y el tamaño del bloque de la asignación que se usa para identificar objetos únicos durante el proceso de serialización.|
-|[CArchive:: Write](#write)|Escribe los bytes sin formato.|
+|[CArchive::Write](#write)|Escribe los bytes sin formato.|
 |[CArchive::WriteClass](#writeclass)|Escribe una referencia a la `CRuntimeClass` a la `CArchive`.|
 |[CArchive::WriteObject](#writeobject)|Llama a un objeto `Serialize` función para almacenar.|
 |[CArchive::WriteString](#writestring)|Escribe una sola línea de texto.|
@@ -132,7 +132,7 @@ La extracción sobrecargada ( **>>**) y la inserción ( **<<**) operadores son i
 
 `CArchive` también admite la programación con las clases MFC de Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) y [CSocketFile](../../mfc/reference/csocketfile-class.md). El [IsBufferEmpty](#isbufferempty) admite que el uso de la función miembro.
 
-Para obtener más información sobre `CArchive`, consulte los artículos [serialización](../../mfc/serialization-in-mfc.md) y [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Para obtener más información sobre `CArchive`, consulte los artículos [serialización](../../mfc/serialization-in-mfc.md) y [Windows Sockets: Usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -298,7 +298,7 @@ Esta función se proporciona para admitir la programación con la clase MFC de W
 
 La razón para usar `IsBufferEmpty` con un archivo asociado con un `CSocketFile` objeto es que el búfer del archivo puede contener más de un mensaje o registro. Después de recibir un mensaje, debe usar `IsBufferEmpty` para controlar un bucle que continúa recibiendo datos hasta que el búfer está vacío. Para obtener más información, consulte el [recepción](../../mfc/reference/casyncsocket-class.md#receive) función miembro de clase `CAsyncSocket`, que muestra cómo usar `IsBufferEmpty`.
 
-Para obtener más información, consulte [Windows Sockets: usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Para obtener más información, consulte [Windows Sockets: Usar Sockets con archivos](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 
@@ -352,7 +352,7 @@ void MapObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar de nacimiento*<br/>
+*pOb*<br/>
 Un puntero constante para el objeto que se almacena.
 
 ### <a name="remarks"></a>Comentarios
@@ -552,7 +552,7 @@ UINT Read(void* lpBuf, UINT nMax);
 *lpBuf*<br/>
 Un puntero a un búfer proporcionado por el usuario que va a recibir los datos leídos desde el archivo.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Un entero sin signo especifica el número de bytes para leerse desde el archivo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -653,7 +653,7 @@ Una referencia a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) 
 *lpsz*<br/>
 Especifica un puntero a un búfer proporcionado por el usuario que va a recibir una cadena de texto terminada en null.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Especifica el número máximo de caracteres que se va a leer. Debe ser uno menor que el tamaño de la *lpsz* búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -771,7 +771,7 @@ No se debe llamar a `SetStoreParams` se almacenan todos los objetos, o después 
 
 [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]
 
-##  <a name="write"></a>  CArchive:: Write
+##  <a name="write"></a>  CArchive::Write
 
 Escribe un número especificado de bytes en el archivo.
 
@@ -784,7 +784,7 @@ void Write(const void* lpBuf, INT nMax);
 *lpBuf*<br/>
 Un puntero a un búfer proporcionado por el usuario que contiene los datos se escriban en el archivo.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Un entero que especifica el número de bytes que se escribirán en el archivo.
 
 ### <a name="remarks"></a>Comentarios
@@ -834,7 +834,7 @@ void WriteObject(const CObject* pOb);
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar de nacimiento*<br/>
+*pOb*<br/>
 Un puntero constante para el objeto que se almacena.
 
 ### <a name="remarks"></a>Comentarios

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: 86b8db169cbb0f0f43ebf37a8ea9bf959ee0ee06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633353"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301628"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits (clase)
 
@@ -72,7 +72,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 *element1*<br/>
 El primer elemento de cadena.
 
-*elemento Elemento2*<br/>
+*element2*<br/>
 La segunda cadena de elemento.
 
 ### <a name="return-value"></a>Valor devuelto

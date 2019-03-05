@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281439"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox (clase)
 
@@ -256,7 +256,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] La distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo de presentación de la casilla de verificación.
 
 *bIsSelected*<br/>

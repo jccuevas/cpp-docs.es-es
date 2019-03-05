@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: 7becf4d4f579fa4b9b954935f55a06b2fed78593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603715"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283012"
 ---
 # <a name="activex-controls-on-the-internet"></a>Controles ActiveX en Internet
 
@@ -49,7 +49,7 @@ Diseñar un control que funcione bien en un entorno de Internet, requiere una co
 
 Para mejorar el rendimiento de los controles, siga estas sugerencias sobre eficiencia:
 
-- Implementar las técnicas descritas en el artículo [controles ActiveX: optimización](../mfc/mfc-activex-controls-optimization.md).
+- Implementar las técnicas descritas en el artículo [controles ActiveX: Optimización](../mfc/mfc-activex-controls-optimization.md).
 
 - Tenga en cuenta cómo se crea una instancia de un control.
 
@@ -89,7 +89,7 @@ Al crear un nuevo control mediante el Asistente para la aplicación, puede habil
 
 1. En el **configuración del Control** página, seleccione **carga las propiedades de forma asincrónica**. Al seleccionar esta opción establece la propiedad de estado listo y el evento cambiado de estado listo para usted.
 
-   También puede seleccionar otras optimizaciones, como **activación sin ventana**, que se describe en [controles ActiveX: optimización](../mfc/mfc-activex-controls-optimization.md).
+   También puede seleccionar otras optimizaciones, como **activación sin ventana**, que se describe en [controles ActiveX: Optimización](../mfc/mfc-activex-controls-optimization.md).
 
 1. Elija **finalizar** para crear el proyecto.
 
@@ -183,7 +183,7 @@ Este es un ejemplo de una etiqueta de objeto y atributos para insertar un contro
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Actualizar un Control OLE existente para usar nuevas características de Control ActiveX
 
-Si se creó el control OLE con una versión de Visual C++ anterior 4.2, hay pasos que puede seguir para mejorar su rendimiento y mejorar su funcionalidad. Para obtener una explicación detallada de estos cambios, consulte [controles ActiveX: optimización](../mfc/mfc-activex-controls-optimization.md).
+Si se creó el control OLE con una versión de Visual C++ anterior 4.2, hay pasos que puede seguir para mejorar su rendimiento y mejorar su funcionalidad. Para obtener una explicación detallada de estos cambios, consulte [controles ActiveX: Optimización](../mfc/mfc-activex-controls-optimization.md).
 
 Si va a agregar compatibilidad con propiedades asincrónicas a un control existente, deberá agregar la propiedad estado listo y `ReadyStateChange` evento usted mismo. En el constructor para el control, agregue:
 
@@ -195,4 +195,3 @@ Se actualizará el estado preparado tal y como se descarga el código mediante u
 
 [Tareas de programación para Internet de MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)
-

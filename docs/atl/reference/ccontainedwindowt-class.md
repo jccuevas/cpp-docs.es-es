@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693978"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261666"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT (clase)
 
@@ -66,11 +66,11 @@ Una clase de rasgos que define los estilos de la ventana. De manera predetermina
 
 |Name|Descripción|
 |----------|-----------------|
-|[CContainedWindowT:: Create](#create)|Crea una ventana.|
+|[CContainedWindowT::Create](#create)|Crea una ventana.|
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Proporciona el procesamiento de mensajes predeterminado.|
 |[CContainedWindowT::GetCurrentMessage](#getcurrentmessage)|Devuelve el mensaje actual.|
 |[CContainedWindowT::RegisterWndSuperclass](#registerwndsuperclass)|Registra la clase de ventana de la ventana contenida.|
-|[CContainedWindowT:: SubclassWindow](#subclasswindow)|Crea subclases de una ventana.|
+|[CContainedWindowT::SubclassWindow](#subclasswindow)|Crea subclases de una ventana.|
 |[CContainedWindowT::SwitchMessageMap](#switchmessagemap)|Cambia el mapa de mensajes se usa para procesar mensajes de ventana independiente.|
 |[CContainedWindowT::UnsubclassWindow](#unsubclasswindow)|Restaura una ventana cuyas subclases se han creado previamente.|
 |[CContainedWindowT::WindowProc](#windowproc)|(Estático) Procesa los mensajes enviados a la ventana contenida.|
@@ -161,7 +161,7 @@ Hay tres constructores:
 
 Si deriva una subclase de una ventana existente a través de [SubclassWindow](#subclasswindow), *lpszClassName* no se usará el valor; por lo tanto, puede pasar NULL para este parámetro.
 
-##  <a name="create"></a>  CContainedWindowT:: Create
+##  <a name="create"></a>  CContainedWindowT::Create
 
 Las llamadas [RegisterWndSuperclass](#registerwndsuperclass) para registrar una clase de ventana que se basa en una clase existente, pero usa [CContainedWindowT::WindowProc](#windowproc).
 
@@ -213,7 +213,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] El identificador de la ventana principal o propietaria.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.
 
 *szWindowName*<br/>
@@ -362,7 +362,7 @@ Si es correcto, un átomo que identifica la clase de ventana que se está regist
 
 Esta clase de ventana se basa en una clase existente, pero usa [CContainedWindowT::WindowProc](#windowproc). Procedimiento de nombre y la ventana de la clase de ventana existente se guardan en [m_lpszClassName](#m_lpszclassname) y [m_pfnSuperWindowProc](#m_pfnsuperwindowproc), respectivamente.
 
-##  <a name="subclasswindow"></a>  CContainedWindowT:: SubclassWindow
+##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow
 
 Las subclases de la ventana identificada por *hWnd* y lo asocia a la `CContainedWindowT` objeto.
 

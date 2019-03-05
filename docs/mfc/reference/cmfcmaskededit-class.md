@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: c5625c60d6c3c5037c1ef63719c63371b0ff7934
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276989"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit (clase)
 
@@ -131,7 +131,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para especificar que el [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve enmascara solo caracteres; FALSE para especificar que el método recuperar todo el texto. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -191,7 +191,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para seleccionar únicamente grupos; FALSE para seleccionar todo el texto. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -225,7 +225,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para validar la entrada con solo enmascarar caracteres; del usuario FALSE para validar la máscara completa. El valor predeterminado es TRUE.
 
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText

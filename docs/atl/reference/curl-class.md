@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295661"
 ---
 # <a name="curl-class"></a>CUrl (clase)
 
@@ -62,7 +62,7 @@ class CUrl
 |Name|Descripción|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|El constructor.|
-|[CUrl:: ~ CUrl](#dtor)|Destructor.|
+|[CUrl::~CUrl](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -147,17 +147,17 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 *dwFlags*<br/>
 Las marcas que controlan la canonización. Si no se especifica ninguna marca (*dwFlags* = 0), el método convierte todos los caracteres no seguros y las secuencias de metadatos (como \\., \.., y \\...) secuencias de escape. *dwFlags* puede ser uno de los siguientes valores:
 
-- ATL_URL_BROWSER_MODE: No codificar o descodificar caracteres tras "#" o "" y no quita los espacios en blanco finales después de "". Si no se especifica este valor, se codifica la dirección URL completa y se quita el espacio en blanco final.
+- ATL_URL_BROWSER_MODE: No se codifican o descodifican caracteres tras "#" o "" y no quita los espacios en blanco finales después de "". Si no se especifica este valor, se codifica la dirección URL completa y se quita el espacio en blanco final.
 
-- ATL_URL _DECODE: convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape, antes de analizar la dirección URL.
+- ATL_URL _DECODE: Convierte todas las secuencias XX % a caracteres, incluidas las secuencias de escape, antes de analizar la dirección URL.
 
-- ATL_URL _ENCODE_PERCENT: codifica los signos de porcentaje detectados. De forma predeterminada, no se codifican los signos de porcentaje.
+- ATL_URL _ENCODE_PERCENT: Codifica los signos de porcentaje detectados. De forma predeterminada, no se codifican los signos de porcentaje.
 
-- ATL_URL _ENCODE_SPACES_ONLY: codifica solo espacios.
+- ATL_URL _ENCODE_SPACES_ONLY: Codifica solo espacios.
 
-- ATL_URL _NO_ENCODE: no convierte los caracteres no seguros en secuencias de escape.
+- ATL_URL _NO_ENCODE: No convierte los caracteres no seguros en secuencias de escape.
 
-- ATL_URL _NO_META: no se quitan las secuencias de metadatos (como "."y"..") de la dirección URL.
+- ATL_URL _NO_META: No se quitan las secuencias de metadatos (como "."y"..") de la dirección URL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -225,7 +225,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 Este método anexa sus campos individuales para construir la cadena de dirección URL completa con el formato siguiente:
 
-**\<esquema > ://\<usuario >:\<pasar >\@\<dominio >:\<puerto >\<ruta de acceso >\<adicional >**
+**\<scheme>://\<user>:\<pass>\@\<domain>:\<port>\<path>\<extra>**
 
 Cuando se llama a este método, el *pdwMaxLength* parámetro debe contener inicialmente la longitud máxima del búfer de cadena al que hace referencia el *lpszUrl* parámetro. El valor de la *pdwMaxLength* parámetro, se actualizará con la longitud real de la cadena de dirección URL.
 
@@ -246,10 +246,10 @@ CUrl(const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dirección URL que*<br/>
+*urlThat*<br/>
 La `CUrl` objeto que se va a copiar para crear la dirección URL.
 
-##  <a name="dtor"></a>  CUrl:: ~ CUrl
+##  <a name="dtor"></a>  CUrl::~CUrl
 
 Destructor.
 
@@ -447,7 +447,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*dirección URL que*<br/>
+*urlThat*<br/>
 La `CUrl` objeto que se va a copiar en el objeto actual.
 
 ### <a name="return-value"></a>Valor devuelto

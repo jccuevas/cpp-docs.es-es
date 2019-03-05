@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: d6e45613e0b412b6b94dba3c4a435115e32c7d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438225"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295245"
 ---
 # <a name="messageprocessor-class"></a>message_processor (Clase)
 
@@ -48,7 +48,7 @@ El tipo de datos de la carga en los mensajes de administra este `message_process
 |----------|-----------------|
 |[async_send](#async_send)|Cuando se invalida en una clase derivada, coloca los mensajes en el bloque de forma asincrónica.|
 |[sync_send](#sync_send)|Cuando se invalida en una clase derivada, coloca los mensajes en el bloque de forma sincrónica.|
-|[Espere](#wait)|Cuando se invalida en una clase derivada, espera a que todas las operaciones asincrónicas en completarse.|
+|[wait](#wait)|Cuando se invalida en una clase derivada, espera a que todas las operaciones asincrónicas en completarse.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 

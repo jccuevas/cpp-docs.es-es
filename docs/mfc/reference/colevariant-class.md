@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520523"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268068"
 ---
 # <a name="colevariant-class"></a>Clase COleVariant
 
@@ -169,7 +169,7 @@ Un [CByteArray](../../mfc/reference/cbytearray-class.md) objeto que se copiará 
 *lbSrc*<br/>
 Un [CLongBinary](../../mfc/reference/clongbinary-class.md) objeto que se copiará en el nuevo `COleVariant` objeto.
 
-*PIDL*<br/>
+*pidl*<br/>
 Un puntero a un [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) estructura que se copiará en el nuevo `COleVariant` objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -218,7 +218,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 
 ### <a name="parameters"></a>Parámetros
 
-*VarType*<br/>
+*vartype*<br/>
 El valor de VARTYPE para este `COleVariant` objeto.
 
 *pSrc*<br/>
@@ -269,7 +269,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Parámetros
 
-*Bytes*<br/>
+*bytes*<br/>
 Una referencia a una existente [CByteArray](../../mfc/reference/cbytearray-class.md) objeto.
 
 ##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 Una cadena terminada en null que se copiará en el nuevo `COleVariant` objeto.
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 El valor de VARTYPE para el nuevo `COleVariant` objeto.
 
 ### <a name="remarks"></a>Comentarios

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296038"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr (clase)
 
@@ -44,7 +44,7 @@ El tipo del puntero de interfaz que se almacenará en el GIT.
 |Name|Descripción|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|El constructor.|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|Destructor.|
+|[CComGITPtr::~CComGITPtr](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -123,13 +123,13 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in] Un puntero de interfaz que se almacenará en la tabla de interfaz global (GIT).
 
-*GIT*<br/>
+*git*<br/>
 [in] Una referencia a una existente `CComGITPtr` objeto.
 
 *dwCookie*<br/>
 [in] Una cookie utilizada para identificar el puntero de interfaz.
 
-*RV*<br/>
+*rv*<br/>
 [in] El origen `CComGITPtr` mover datos de objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -138,7 +138,7 @@ Crea un nuevo `CComGITPtr` objeto, utilizando opcionalmente existente `CComGITPt
 
 El uso del constructor *rv* es un constructor de movimiento. Los datos se mueven desde el origen, *rv*y, a continuación, *rv* está desactivada.
 
-##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr
+##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
 Destructor.
 
@@ -160,7 +160,7 @@ HRESULT CopyTo(T** pp) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*perfil de puerto*<br/>
+*pp*<br/>
 El puntero que va a recibir la interfaz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -231,13 +231,13 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in] Un puntero a una interfaz.
 
-*GIT*<br/>
+*git*<br/>
 [in] Una referencia a un `CComGITPtr` objeto.
 
 *dwCookie*<br/>
 [in] Una cookie utilizada para identificar el puntero de interfaz.
 
-*RV*<br/>
+*rv*<br/>
 [in] El `CComGITPtr` para mover datos desde.
 
 ### <a name="return-value"></a>Valor devuelto

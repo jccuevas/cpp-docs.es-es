@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564728"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270974"
 ---
 # <a name="general-mfc-topics"></a>Temas generales de MFC
 
@@ -33,7 +33,7 @@ El marco de trabajo de MFC es un enfoque eficaz que permite compilar sobre el tr
 
 [Compilación en el marco](../mfc/building-on-the-framework.md)
 
-[CWinApp: la clase Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp: La clase de aplicación](../mfc/cwinapp-the-application-class.md)
 
 [Las plantillas de documento y el proceso de creación de documento/vista](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ El marco de trabajo de MFC es un enfoque eficaz que permite compilar sobre el tr
 
 [Requisitos de compilación para los controles comunes de Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[Procedimiento para agregar compatibilidad con el Administrador de reinicio](../mfc/how-to-add-restart-manager-support.md)
+[Cómo: Agregar compatibilidad con el Administrador de reinicio](../mfc/how-to-add-restart-manager-support.md)
 
 [Diseño dinámico](../mfc/dynamic-layout.md)
 
@@ -58,4 +58,3 @@ Para obtener información sobre ATL, vea [referencia de Active Template Library]
 ## <a name="see-also"></a>Vea también
 
 [Trabajo con objetos de ventana](../mfc/working-with-window-objects.md)
-

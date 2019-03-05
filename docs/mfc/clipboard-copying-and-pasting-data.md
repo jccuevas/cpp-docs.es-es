@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: 7f22418b4006bcb9fac1d4430660c8721bc7e903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437045"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270740"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Portapapeles: Copiar y pegar datos
 
@@ -69,5 +69,4 @@ Para controlar la opción Pegado especial en el menú Edición, vea el tema [cua
 
 ## <a name="see-also"></a>Vea también
 
-[Portapapeles: Usar el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Portapapeles: Usar el mecanismo del Portapapeles OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

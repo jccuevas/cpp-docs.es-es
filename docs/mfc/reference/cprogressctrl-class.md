@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585905"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260275"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl (clase)
 
@@ -77,7 +77,7 @@ class CProgressCtrl : public CWnd
 |[CProgressCtrl::GetBkColor](#getbkcolor)|Obtiene el color de fondo de la barra de progreso actual.|
 |[CProgressCtrl::GetPos](#getpos)|Obtiene la posición actual de la barra de progreso.|
 |[CProgressCtrl::GetRange](#getrange)|Obtiene los límites superiores e inferiores del intervalo de control de la barra de progreso.|
-|[CProgressCtrl:: GetState](#getstate)|Obtiene el estado del control de barra de progreso actual.|
+|[CProgressCtrl::GetState](#getstate)|Obtiene el estado del control de barra de progreso actual.|
 |[CProgressCtrl::GetStep](#getstep)|Recupera el incremento de paso de la barra de progreso del control de barra de progreso actual.|
 |[CProgressCtrl::OffsetPos](#offsetpos)|Hace avanzar la posición actual de un control de barra de progreso en un incremento especificado y vuelve a dibujar la barra para reflejar la nueva posición.|
 |[CProgressCtrl::SetBarColor](#setbarcolor)|Establece el color de la barra indicadora de progreso en el control de barra de progreso actual.|
@@ -148,7 +148,7 @@ Especifica el estilo del control de barra de progreso. Aplicar cualquier combina
 
 - PBS_SMOOTH muestra gradual smooth rellenando el control de barra de progreso. Sin esta marca, el control se llenará de bloques.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de barra de progreso. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura. Dado que el control debe ser una ventana secundaria, las coordenadas especificadas están en relación con el área cliente de la *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de barra de progreso. Aplicar cualquier combinación de estilos de ventana se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -285,7 +285,7 @@ Esta función copia los valores de los límites superiores e inferiores para los
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
-##  <a name="getstate"></a>  CProgressCtrl:: GetState
+##  <a name="getstate"></a>  CProgressCtrl::GetState
 
 Obtiene el estado del control de barra de progreso actual.
 
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] True para activar el modo de marquesina en, o FALSE para desactivar el modo de marquesina.|
-|*Nintervalo*|[in] Tiempo en milisegundos entre las actualizaciones de la animación de marquesina.|
+|*nInterval*|[in] Tiempo en milisegundos entre las actualizaciones de la animación de marquesina.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -565,7 +565,7 @@ int SetStep(int nStep);
 
 ### <a name="parameters"></a>Parámetros
 
-*nPaso*<br/>
+*nStep*<br/>
 Nuevo incremento del paso.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -604,7 +604,6 @@ Establece el incremento del paso la `CProgressCtrl::SetStep` función miembro.
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

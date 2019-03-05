@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 609c7d78bdf2f16be4d82add454ef9546ea22588
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277370"
 ---
 # <a name="sourceblock-class"></a>source_block (Clase)
 
@@ -71,16 +71,16 @@ Tipo de procesador para procesar los mensajes.
 
 |Name|Descripción|
 |----------|-----------------|
-|[source_block)](#ctor)|Construye un objeto `source_block`.|
+|[source_block](#ctor)|Construye un objeto `source_block`.|
 |[~ source_block (destructor)](#dtor)|Destruye el objeto `source_block`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Aceptar](#accept)|Acepta un mensaje que se ha proporcionado por este `source_block` objeto, transfiriendo la propiedad al llamador.|
+|[accept](#accept)|Acepta un mensaje que se ha proporcionado por este `source_block` objeto, transfiriendo la propiedad al llamador.|
 |[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en este `source_block` objeto, para impedir la eliminación.|
-|[consumir](#consume)|Consume un mensaje ofrecido previamente por este `source_block` objeto y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
+|[consume](#consume)|Consume un mensaje ofrecido previamente por este `source_block` objeto y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
 |[link_target](#link_target)|Vincula un bloque de destino a esta `source_block` objeto.|
 |[release](#release)|Libera una reserva de mensaje correcto anterior.|
 |[release_ref](#release_ref)|Libera un recuento de referencias en este `source_block` objeto.|
@@ -311,7 +311,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que debe procesarse.
 
 ##  <a name="propagate_output_messages"></a> propagate_output_messages
@@ -332,7 +332,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que se propagará.
 
 ##  <a name="release"></a> Versión
@@ -462,7 +462,7 @@ Construye un objeto `source_block`.
 source_block();
 ```
 
-##  <a name="dtor"></a> ~ source_block
+##  <a name="dtor"></a> ~source_block
 
 Destruye el objeto `source_block`.
 

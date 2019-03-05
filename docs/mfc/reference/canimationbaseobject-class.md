@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430451"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258923"
 ---
 # <a name="canimationbaseobject-class"></a>Clase CAnimationBaseObject
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Sobrecargado. Construye un objeto de animación.|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destructor. Se llama cuando se destruye un objeto de animación.|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Destructor. Se llama cuando se destruye un objeto de animación.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -126,7 +126,7 @@ Esta clase implementa los métodos básicos para todos los objetos de animación
 
 **Encabezado:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject:: ~ CAnimationBaseObject
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
 
 Destructor. Se llama cuando se destruye un objeto de animación.
 
@@ -269,7 +269,7 @@ virtual void EnableIntegerValueChangedEvent(
 *pController*<br/>
 Un puntero a un controlador principal.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si se debe habilitar o deshabilitar el evento de cambio de valor entero.
 
 ### <a name="remarks"></a>Comentarios
@@ -291,7 +291,7 @@ virtual void EnableValueChangedEvent(
 *pController*<br/>
 Un puntero a un controlador principal.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si se debe habilitar o deshabilitar el evento de cambio de valor.
 
 ### <a name="remarks"></a>Comentarios

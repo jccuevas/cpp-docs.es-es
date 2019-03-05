@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266151"
 ---
 # <a name="collection-class-helpers"></a>Asistentes de clase de colección
 
-Las clases de colección `CMap`, `CList`, y `CArray` usar funciones de aplicación auxiliar con plantilla global para estos fines, como comparar, copiar y serializar los elementos. Como parte de la implementación de clases basadas en `CMap`, `CList`, y `CArray`, debe invalidar estas funciones según sea necesario con las versiones adaptadas al tipo de datos almacenados en el mapa, lista o matriz. Para obtener información sobre cómo reemplazar las funciones auxiliares como `SerializeElements`, consulte el artículo [colecciones: realización de una colección segura para el tipo](../../mfc/how-to-make-a-type-safe-collection.md). Tenga en cuenta que `ConstructElements` y `DestructElements` han quedado en desuso.
+Las clases de colección `CMap`, `CList`, y `CArray` usar funciones de aplicación auxiliar con plantilla global para estos fines, como comparar, copiar y serializar los elementos. Como parte de la implementación de clases basadas en `CMap`, `CList`, y `CArray`, debe invalidar estas funciones según sea necesario con las versiones adaptadas al tipo de datos almacenados en el mapa, lista o matriz. Para obtener información sobre cómo reemplazar las funciones auxiliares como `SerializeElements`, consulte el artículo [colecciones: Cómo crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md). Tenga en cuenta que `ConstructElements` y `DestructElements` han quedado en desuso.
 
 La biblioteca Microsoft Foundation Class proporciona las siguientes funciones globales en afxtempl.h que le ayudarán a personalizar sus clases de colección:
 
@@ -47,7 +47,7 @@ CompareElements(
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 El tipo del primer elemento que se va a comparar.
 
 *pElement1*<br/>
@@ -89,7 +89,7 @@ void AFXAPI CopyElements(
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos que se copiarán.
 
 *pDest*<br/>
@@ -105,7 +105,7 @@ Número de elementos que se copiarán.
 
 La implementación predeterminada usa el operador de asignación simple ( **=** ) para realizar la operación de copia. Si el tipo que se copia no tiene un operador sobrecargado =, la implementación predeterminada realiza una copia bit a bit.
 
-Para obtener información sobre la implementación de esta y otras funciones auxiliares, consulte el artículo [colecciones: realización de una colección segura para el tipo](../how-to-make-a-type-safe-collection.md).
+Para obtener información sobre la implementación de esta y otras funciones auxiliares, consulte el artículo [colecciones: Cómo crear una colección con seguridad de tipos](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -128,7 +128,7 @@ void  AFXAPI DumpElements(
 *dc*<br/>
 Contexto para volcar los elementos de volcado de memoria.
 
-*TIPO*<br/>
+*TYPE*<br/>
 Especifica el tipo de los elementos de un parámetro de plantilla.
 
 *pElements*<br/>
@@ -200,10 +200,10 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Especifica el tipo de los elementos de un parámetro de plantilla.
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 Un objeto de almacenamiento para archivar o salientes.
 
 *pElements*<br/>
@@ -216,11 +216,11 @@ Número de elementos que se va a archivar
 
 La implementación predeterminada no bit a bit de lectura o escritura.
 
-Para obtener información sobre la implementación de esta y otras funciones auxiliares, consulte el artículo [colecciones: realización de una colección segura para el tipo](../how-to-make-a-type-safe-collection.md).
+Para obtener información sobre la implementación de esta y otras funciones auxiliares, consulte el artículo [colecciones: Cómo crear una colección con seguridad de tipos](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Ejemplo
 
-Vea el ejemplo en el artículo [colecciones: realización de una colección segura para el tipo](../how-to-make-a-type-safe-collection.md).
+Vea el ejemplo en el artículo [colecciones: Cómo crear una colección con seguridad de tipos](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="requirements"></a>Requisitos
 

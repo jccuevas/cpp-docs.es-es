@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: 5faf2789c89e492d74851cb94d270b6fac2972c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283909"
 ---
 # <a name="uint3-class"></a>uint_3 (Clase)
 
@@ -111,8 +111,8 @@ class uint_3;
 |uint_3::get_xy||
 |uint_3::get_xyz||
 |uint_3::get_xz||
-|uint_3:: get_xzy||
-|uint_3:: get_Y||
+|uint_3::get_xzy||
+|uint_3::get_y||
 |uint_3::get_yx||
 |uint_3::get_yxz||
 |uint_3::get_yz||
@@ -129,11 +129,11 @@ class uint_3;
 |uint_t::ref_y||
 |uint_t::ref_z||
 |uint_3::set_x||
-|uint_3:: set_xy||
+|uint_3::set_xy||
 |uint_3::set_xyz||
 |uint_3::set_xz||
-|uint_3:: set_xzy||
-|uint_3:: set_y||
+|uint_3::set_xzy||
+|uint_3::set_y||
 |uint_3::set_yx||
 |uint_3::set_yxz||
 |uint_3::set_yz||
@@ -173,36 +173,36 @@ class uint_3;
 
 |Name|Descripción|
 |----------|-----------------|
-|uint_3:: b||
-|uint_3:: BG||
-|uint_3:: BGR||
-|uint_3:: br||
+|uint_3::b||
+|uint_3::bg||
+|uint_3::bgr||
+|uint_3::br||
 |uint_3::brg||
-|uint_3:: g||
-|uint_3:: GB||
+|uint_3::g||
+|uint_3::gb||
 |uint_3::gbr||
-|uint_3:: GR||
-|uint_3:: GRB||
-|uint_3:: r||
-|uint_3:: RB||
+|uint_3::gr||
+|uint_3::grb||
+|uint_3::r||
+|uint_3::rb||
 |uint_3::rbg||
-|uint_3:: RG||
-|uint_3:: RGB||
-|uint_3:: x||
-|uint_3:: XY||
-|uint_3:: XYZ||
-|uint_3:: XZ||
-|uint_3:: xzy||
-|uint_3:: y||
-|uint_3:: YX||
-|uint_3:: YXZ||
-|uint_3:: YZ||
-|uint_3:: yzx||
-|uint_3:: z||
+|uint_3::rg||
+|uint_3::rgb||
+|uint_3::x||
+|uint_3::xy||
+|uint_3::xyz||
+|uint_3::xz||
+|uint_3::xzy||
+|uint_3::y||
+|uint_3::yx||
+|uint_3::yxz||
+|uint_3::yz||
+|uint_3::yzx||
+|uint_3::z||
 |uint_3::zx||
-|uint_3:: zxy||
-|uint_3:: ZY||
-|uint_3:: ZYX||
+|uint_3::zxy||
+|uint_3::zy||
+|uint_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -212,7 +212,7 @@ class uint_3;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ##  <a name="ctor"></a> uint_3
 
@@ -271,7 +271,7 @@ El valor para inicializar el elemento 2.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ##  <a name="uint_3__size"></a> Tamaño

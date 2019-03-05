@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 743390955c583a130b53b9e80acd2b01d9742e1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550389"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278163"
 ---
 # <a name="cmfcribbonbutton-class"></a>Clase CMFCRibbonButton
 
@@ -154,17 +154,17 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|Devuelve el índice de un elemento de menú emergente asociado al id. de comando especificado.|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[Cmfcribbonbutton:: Getcompactsize](#getcompactsize)|Devuelve el tamaño compacto del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|Devuelve el tamaño compacto del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize).)|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|Devuelve el índice de la imagen asociada al botón.|
 |[CMFCRibbonButton::GetImageSize](#getimagesize)|Devuelve el tamaño de la imagen del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[Cmfcribbonbutton:: Getintermediatesize](#getintermediatesize)|Devuelve el tamaño del elemento de la cinta en su estado intermedio. (Invalida [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|Devuelve el tamaño del elemento de la cinta en su estado intermedio. (Invalida [cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize).)|
 |[CMFCRibbonButton::GetMenu](#getmenu)|Devuelve un controlador a un menú de Windows que se asigna al botón de la cinta.|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[Cmfcribbonbutton:: Getregularsize](#getregularsize)|Devuelve el tamaño normal del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|Devuelve el tamaño normal del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[Cmfcribbonbutton:: GetToolTipText](#gettooltiptext)|Devuelve el texto de información sobre herramientas del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|Devuelve el texto de información sobre herramientas del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext).)|
 |[CMFCRibbonButton::HasCompactMode](#hascompactmode)|Especifica si el elemento de la cinta tiene un modo compacto. (Invalida [cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode).)|
 |[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|Especifica si el elemento de la cinta tiene un modo intermedio. (Invalida [cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode).)|
 |[CMFCRibbonButton::HasLargeMode](#haslargemode)|Determina si el elemento de la cinta tiene un modo grande. (Invalida [cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode).)|
@@ -184,11 +184,11 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
 |[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(Invalida [cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize).)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[Cmfcribbonbutton:: OnDraw](#ondraw)|Llamado por el marco de trabajo para dibujar el elemento de la cinta. (Invalida [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|Llamado por el marco de trabajo para dibujar el elemento de la cinta. (Invalida [cmfcribbonbaseelement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|Quita todos los elementos del menú emergente.|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|Quita un elemento del menú emergente.|
-|[Cmfcribbonbutton:: Setaccdata](#setaccdata)|(Invalida [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(Invalida [cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata).)|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|Especifica si el botón muestra una imagen grande o pequeña cuando el usuario lo contrae.|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|Habilita el comando predeterminado del botón de la cinta.|
 |[CMFCRibbonButton::SetDescription](#setdescription)|Establece la descripción del elemento de la cinta. (Invalida [cmfcribbonbaseelement:: setDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription).)|
@@ -364,7 +364,7 @@ virtual void DrawImage(
 ### <a name="parameters"></a>Parámetros
 
 [in] *pDC*<br/>
-[in] *tipo*<br/>
+[in] *type*<br/>
 [in] *rectImage*<br/>
 
 ### <a name="remarks"></a>Comentarios
@@ -419,7 +419,7 @@ CRect GetCommandRect() const;
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="getcompactsize"></a>  Cmfcribbonbutton:: Getcompactsize
+##  <a name="getcompactsize"></a>  CMFCRibbonButton::GetCompactSize
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -472,13 +472,13 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *tipo*<br/>
+[in] *type*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="getintermediatesize"></a>  Cmfcribbonbutton:: Getintermediatesize
+##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="getregularsize"></a>  Cmfcribbonbutton:: Getregularsize
+##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="gettooltiptext"></a>  Cmfcribbonbutton:: GetToolTipText
+##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -754,7 +754,7 @@ virtual void OnClick(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Especifica la posición del clic del mouse.
 
 ### <a name="remarks"></a>Comentarios
@@ -824,7 +824,7 @@ BOOL RemoveSubItem(int nIndex);
 
 TRUE si el elemento especificado se ha quitado correctamente; en caso contrario, FALSE si *nIndex* es negativo o supera el número de elementos de menú en el menú emergente.
 
-##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata
+##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData
 
 Establece los datos de accesibilidad para el botón de la cinta de opciones.
 

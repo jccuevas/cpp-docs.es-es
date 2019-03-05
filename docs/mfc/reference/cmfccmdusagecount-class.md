@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275368"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount (clase)
 
@@ -55,7 +55,7 @@ class CMFCCmdUsageCount : public CObject
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Se incrementa en uno el contador que está asociado al comando especificado.|
 |[CMFCCmdUsageCount::GetCount](#getcount)|Recupera el recuento de uso que está asociado con el identificador de comando especificado.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Determina si este objeto recopila la cantidad mínima de datos de seguimiento.|
-|[Cmfccmdusagecount](#isfreqeuntlyusedcmd)|Determina si el comando determinado se utiliza con frecuencia.|
+|[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|Determina si el comando determinado se utiliza con frecuencia.|
 |[CMFCCmdUsageCount::Reset](#reset)|Borra el recuento de utilización de todos los comandos.|
 |[CMFCCmdUsageCount::Serialize](#serialize)|Lee este objeto de un archivo o lo escribe en un archivo. (Invalida [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)).|
 |[CMFCCmdUsageCount::SetOptions](#setoptions)|Establece los valores de comparten `CMFCCmdUsageCount` miembros de datos de la clase.|
@@ -150,7 +150,7 @@ Este método devuelve un valor distinto de cero si el recuento total, `m_nTotalU
 
 Este método lo usa [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) para determinar si se muestran todos los comandos de menú disponibles.
 
-##  <a name="isfreqeuntlyusedcmd"></a>  Cmfccmdusagecount
+##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
 
 Determina si el comando determinado se utiliza con frecuencia.
 
@@ -200,13 +200,13 @@ virtual void Serialize(CArchive& ar);
 |||
 |-|-|
 |Parámetro|Descripción|
-|*cuentas por cobrar*|[in] Un `CArchive` objeto que se va a serializar desde o hacia.|
+|*ar*|[in] Un `CArchive` objeto que se va a serializar desde o hacia.|
 
 ### <a name="remarks"></a>Comentarios
 
 Este método serializa la estructura del mapa de recuentos de comando, `m_CmdUsage`y el uso del comando total, `m_nTotalUsage`, contador desde o al archivo especificado.
 
-Para obtener ejemplos de serialización, vea [serialización: serializar un objeto](../../mfc/serialization-serializing-an-object.md).
+Para obtener ejemplos de serialización, vea [serialización: Serializar un objeto](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 

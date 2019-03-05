@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288199"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile (clase)
 
@@ -49,7 +49,7 @@ class CAtlTemporaryFile
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|El constructor.|
-|[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|Destructor.|
+|[CAtlTemporaryFile::~CAtlTemporaryFile](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -74,7 +74,7 @@ class CAtlTemporaryFile
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAtlTemporaryFile::operator identificador](#operator_handle)|Devuelve un identificador en el archivo temporal.|
+|[CAtlTemporaryFile::operator HANDLE](#operator_handle)|Devuelve un identificador en el archivo temporal.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -104,7 +104,7 @@ No se abre realmente un archivo hasta que se realiza una llamada a [CAtlTemporar
 
 [!code-cpp[NVC_ATL_Utilities#73](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlTemporaryFile:: ~ CAtlTemporaryFile
+##  <a name="dtor"></a>  CAtlTemporaryFile::~CAtlTemporaryFile
 
 Destructor.
 
@@ -275,7 +275,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 El bloqueo de bytes en un archivo impide que otros procesos obtengan acceso a dichos bytes. Puede bloquear más de una región de un archivo, pero no se permite ninguna región que se superponen. Para desbloquear correctamente una región, utilice [CAtlTemporaryFile::UnlockRange](#unlockrange), lo que garantiza el intervalo de bytes corresponde exactamente a la región que se ha bloqueado anteriormente. `LockRange` no combina regiones adyacentes; Si dos regiones bloqueadas son adyacentes, debe desbloquear cada uno por separado.
 
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator identificador
+##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator HANDLE
 
 Devuelve un identificador en el archivo temporal.
 
