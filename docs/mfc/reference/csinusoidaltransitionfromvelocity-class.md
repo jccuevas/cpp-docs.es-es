@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-ms.openlocfilehash: 585ffcf787b2e1156b4f0b9f6444b15a4d5bfc54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f61effb6dacdd1076784de8e825a3acec192474c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500521"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286949"
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>Clase CSinusoidalTransitionFromVelocity
 
@@ -102,7 +102,7 @@ CSinusoidalTransitionFromVelocity(
 *Duración*<br/>
 La duración de la transición.
 
-*Período*<br/>
+*period*<br/>
 El período de oscilación de la onda sinusoidal en segundos.
 
 ##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration

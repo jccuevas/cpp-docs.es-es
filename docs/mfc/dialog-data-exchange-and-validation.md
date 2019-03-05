@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a68f3bf3af3d7c782e0d3414ffa90871ef5bd3a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297429"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Intercambio y validación de datos de cuadros de diálogo
 
@@ -36,4 +36,3 @@ Intercambio de datos de cuadro de diálogo (DDX) es una manera fácil para inici
 
 [Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
 [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)
-

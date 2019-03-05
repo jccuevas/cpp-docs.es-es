@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: 5006a648729e1fc561855fcb8cba1d658a9c82cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294426"
 ---
 # <a name="ole-background"></a>Nociones de OLE
 
@@ -26,7 +26,7 @@ OLE incorpora muchos conceptos diferentes que funcionan hacia el objetivo de int
 
 - Vinculación e incrustación de objetos
 
-   Vinculación e incrustación de objetos son los dos métodos para almacenar los elementos creados dentro de un documento OLE que se crearon en otra aplicación. Para obtener información general sobre las diferencias entre los dos, consulte el artículo [fondo OLE: vincular e incrustar](../mfc/ole-background-linking-and-embedding.md). Para obtener más información, consulte los artículos [contenedores](../mfc/containers.md) y [servidores](../mfc/servers.md).
+   Vinculación e incrustación de objetos son los dos métodos para almacenar los elementos creados dentro de un documento OLE que se crearon en otra aplicación. Para obtener información general sobre las diferencias entre los dos, consulte el artículo [OLE en segundo plano: Vincular e incrustar](../mfc/ole-background-linking-and-embedding.md). Para obtener más información, consulte los artículos [contenedores](../mfc/containers.md) y [servidores](../mfc/servers.md).
 
 - Activación en contexto (edición Visual)
 
@@ -42,7 +42,7 @@ OLE incorpora muchos conceptos diferentes que funcionan hacia el objetivo de int
 
 - Archivos compuestos
 
-   Archivos compuestos proporcionan un formato de archivo estándar que simplifica el almacenamiento estructurado de documentos compuestos para las aplicaciones OLE. Dentro de un archivo compuesto, almacenamientos tienen muchas características de directorios y las secuencias tienen muchas características de archivos. Esta tecnología también se denomina almacenamiento estructurado. Para obtener más información sobre los archivos compuestos, vea el artículo [contenedores: archivos compuestos](../mfc/containers-compound-files.md).
+   Archivos compuestos proporcionan un formato de archivo estándar que simplifica el almacenamiento estructurado de documentos compuestos para las aplicaciones OLE. Dentro de un archivo compuesto, almacenamientos tienen muchas características de directorios y las secuencias tienen muchas características de archivos. Esta tecnología también se denomina almacenamiento estructurado. Para obtener más información sobre los archivos compuestos, vea el artículo [contenedores: Archivos compuestos](../mfc/containers-compound-files.md).
 
 - Transferencia de datos uniforme
 
@@ -58,7 +58,7 @@ OLE incorpora muchos conceptos diferentes que funcionan hacia el objetivo de int
 
 En los artículos siguientes se tratan algunos de los temas más importantes de OLE:
 
-- [Nociones de OLE: Vincular e incrustar](../mfc/ole-background-linking-and-embedding.md)
+- [Nociones de OLE: Vinculación e incrustación de objetos](../mfc/ole-background-linking-and-embedding.md)
 
 - [Nociones de OLE: Contenedores y servidores](../mfc/ole-background-containers-and-servers.md)
 
@@ -71,4 +71,3 @@ Para ver información general sobre OLE que no se encuentra en los artículos an
 ## <a name="see-also"></a>Vea también
 
 [OLE](../mfc/ole-in-mfc.md)
-

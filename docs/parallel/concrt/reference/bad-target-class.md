@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 0440955718bee3b426f5e4625b5eb3fc559a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298625"
 ---
 # <a name="badtarget-class"></a>bad_target (Clase)
 
@@ -49,7 +49,7 @@ Esta excepción se produce normalmente por razones como un destino al intentar u
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> bad_target)
+##  <a name="ctor"></a> bad_target
 
 Construye un objeto `bad_target`.
 
@@ -61,11 +61,10 @@ bad_target() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Mensaje descriptivo del error.
 
 ## <a name="see-also"></a>Vea también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)
-

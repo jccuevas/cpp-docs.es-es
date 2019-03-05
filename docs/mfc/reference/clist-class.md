@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513963"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297390"
 ---
 # <a name="clist-class"></a>CList (clase)
 
@@ -88,7 +88,7 @@ class CList : public CObject
 |[CList::GetCount](#getcount)|Devuelve el número de elementos de esta lista.|
 |[CList::GetHead](#gethead)|Devuelve el elemento de encabezado de la lista (no puede estar vacía).|
 |[CList::GetHeadPosition](#getheadposition)|Devuelve la posición del elemento principal de la lista.|
-|[CList::](#getnext)|Obtiene el elemento siguiente para efectuar una iteración.|
+|[CList::GetNext](#getnext)|Obtiene el elemento siguiente para efectuar una iteración.|
 |[CList::GetPrev](#getprev)|Obtiene el elemento anterior para efectuar una iteración.|
 |[CList::GetSize](#getsize)|Devuelve el número de elementos de esta lista.|
 |[CList::GetTail](#gettail)|Devuelve el elemento final de la lista (no puede estar vacía).|
@@ -104,7 +104,7 @@ class CList : public CObject
 
 #### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Tipo de objeto almacenado en la lista.
 
 *ARG_TYPE*<br/>
@@ -288,7 +288,7 @@ const TYPE& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de objeto en la lista.
 
 *Posición*<br/>
@@ -340,7 +340,7 @@ TYPE& GetHead();
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de objeto en la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -373,7 +373,7 @@ Un valor de posición que se puede usar para la iteración o recuperación de ob
 
 [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]
 
-##  <a name="getnext"></a>  CList::
+##  <a name="getnext"></a>  CList::GetNext
 
 Obtiene el elemento de lista identificado por *rPosition*, a continuación, establece *rPosition* en el valor de posición de la siguiente entrada en la lista.
 
@@ -384,7 +384,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de los elementos de la lista.
 
 *rPosition*<br/>
@@ -419,7 +419,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de los elementos de la lista.
 
 *rPosition*<br/>
@@ -474,7 +474,7 @@ const TYPE& GetTail() const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos de la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -626,7 +626,7 @@ TYPE RemoveHead();
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos de la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -651,7 +651,7 @@ TYPE RemoveTail();
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos de la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 La posición del elemento que se puede establecer.
 
 *ARG_TYPE*<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'Excepciones: Liberar objetos en las excepciones'
+title: 'Excepciones: Liberar objetos en excepciones'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298141"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Excepciones: Liberar objetos en las excepciones
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Excepciones: Liberar objetos en excepciones
 
 En este artículo se explica la necesidad y el método de liberación de objetos cuando se produce una excepción. Entre los temas se incluyen los siguientes:
 
@@ -62,9 +62,8 @@ El mecanismo de excepción desasigna automáticamente los objetos de marco; Tamb
 
 Si se llama a funciones que pueden producir excepciones, puede usar **try/catch** bloques para asegurarse de que detecte las excepciones y que tiene una oportunidad para destruir los objetos que ha creado. En concreto, tenga en cuenta que muchas funciones MFC pueden producir excepciones.
 
-Para obtener más información, consulte [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Para obtener más información, consulte [excepciones: Detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
-

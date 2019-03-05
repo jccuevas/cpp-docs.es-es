@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-ms.openlocfilehash: d1e0a8ca85055c289d1ef8e1c36fcd35eab61c91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290811"
 ---
 # <a name="servers"></a>Servidores
 
@@ -43,15 +43,15 @@ La aplicación de servidor debe indicar la DLL del sistema OLE qué hacer si ya 
 
 Para obtener más información sobre los servidores, consulte:
 
-- [Servidores: Implementar un servidor](../mfc/servers-implementing-a-server.md)
+- [servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md)
 
-- [Servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)
+- [servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)
 
-- [Servidores: Implementar ventanas de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)
+- [servidores: Implementación de Windows de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [Servidores: Elementos de servidor](../mfc/servers-server-items.md)
+- [servidores: Elementos del servidor](../mfc/servers-server-items.md)
 
-- [Servidores: Problemas de la interfaz de usuario](../mfc/servers-user-interface-issues.md)
+- [servidores: Problemas de la interfaz de usuario](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>Vea también
 
@@ -61,4 +61,3 @@ Para obtener más información sobre los servidores, consulte:
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registro](../mfc/registration.md)<br/>
 [Servidores de automatización](../mfc/automation-servers.md)
-

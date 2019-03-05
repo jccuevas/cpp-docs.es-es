@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 000f5229c14699c80e2ce18e4125d0c2ac6e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294337"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager (clase)
 
@@ -1481,7 +1481,7 @@ virtual BOOL GetToolTipInfo(
 ### <a name="parameters"></a>Parámetros
 
 [in] *params*<br/>
-[in] *nLas*<br/>
+[in] *nType*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1731,7 +1731,7 @@ virtual void OnActivateApp(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *bSecuencias de ActiveX*<br/>
 
 ### <a name="remarks"></a>Comentarios
@@ -1816,7 +1816,7 @@ virtual BOOL OnDrawBrowseButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica el límite para el botón Examinar.
 
 *pEdit*<br/>
@@ -1856,7 +1856,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Un puntero a un botón de barra de herramientas. El marco dibuja el borde de este botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de barra de herramientas.
 
 *state*<br/>
@@ -1884,7 +1884,7 @@ virtual void OnDrawButtonSeparator(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Comentarios
@@ -1910,7 +1910,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Un puntero a un `CMFCCaptionBar` objeto. El marco dibuja esta barra de título.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la barra de título.
 
 *clrBarBorder*<br/>
@@ -1990,7 +1990,7 @@ virtual void OnDrawCaptionButton (
 *pButton*<br/>
 [in] Un puntero a un `CMFCCaptionButton` objeto. El marco dibuja este botón de título.
 
-*bSecuencias de ActiveX*<br/>
+*bActive*<br/>
 [in] Un parámetro booleano que especifica si el botón está activo.
 
 *bHorz*<br/>
@@ -1999,7 +1999,7 @@ virtual void OnDrawCaptionButton (
 *bMaximized*<br/>
 [in] Un parámetro booleano que especifica si el panel primario está maximizado.
 
-*bDeshabilitado*<br/>
+*bDisabled*<br/>
 [in] Un parámetro booleano que especifica si el botón de título está deshabilitado.
 
 *nImageID*<br/>
@@ -2074,10 +2074,10 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Un puntero al contexto de dispositivo de un botón de cuadro combinado.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de cuadro combinado.
 
-*bDeshabilitado*<br/>
+*bDisabled*<br/>
 [in] Un parámetro booleano que indica si el botón de cuadro combinado está disponible.
 
 *bIsDropped*<br/>
@@ -2112,10 +2112,10 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón desplegable.
 
-*bDeshabilitado*<br/>
+*bDisabled*<br/>
 [in] Un parámetro booleano que indica si el botón no está disponible.
 
 *bIsDropped*<br/>
@@ -2195,10 +2195,10 @@ virtual void OnDrawEditBorder(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la `CMFCToolBarEditBoxButton` objeto.
 
-*bDeshabilitado*<br/>
+*bDisabled*<br/>
 [in] Un parámetro booleano que indica si el botón no está disponible.
 
 *bIsHighlighted*<br/>
@@ -2285,7 +2285,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del control de encabezado.
 
 *bIsPressed*<br/>
@@ -2318,7 +2318,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la flecha de ordenación.
 
 *bIsUp*<br/>
@@ -2364,7 +2364,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Un puntero a un `CMFCPopupMenu` objeto. El marco dibuja un borde en torno a este menú emergente.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del menú emergente.
 
 ### <a name="remarks"></a>Comentarios
@@ -2466,7 +2466,7 @@ virtual void OnDrawMenuScrollButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de desplazamiento.
 
 *bIsScrollDown*<br/>
@@ -2532,7 +2532,7 @@ virtual void OnDrawMenuSystemButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón.
 
 *uiSystemCommand*<br/>
@@ -2640,7 +2640,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Un puntero a un panel. El administrador visual dibuja el borde de este panel.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que indica los límites del panel.
 
 ### <a name="remarks"></a>Comentarios
@@ -2668,7 +2668,7 @@ virtual COLORREF OnDrawPaneCaption(
 *pBar*<br/>
 [in] Un puntero a un `CDockablePane` objeto. El marco dibuja la leyenda para este panel.
 
-*bSecuencias de ActiveX*<br/>
+*bActive*<br/>
 [in] Un parámetro booleano que indica si la barra de control está activa.
 
 *rectCaption*<br/>
@@ -2849,7 +2849,7 @@ virtual void OnDrawRibbonCaption(
 *pBar*<br/>
 [in] Un puntero a una barra de cinta. El administrador visual dibuja esta barra de cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la barra de cinta.
 
 *rectText*<br/>
@@ -3162,7 +3162,7 @@ virtual void OnDrawRibbonLabel(
 *pLabel*<br/>
 [in] Un puntero a un [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) objeto. El marco dibuja esta etiqueta de cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del panel de la cinta.
 
 ### <a name="remarks"></a>Comentarios
@@ -3210,7 +3210,7 @@ virtual void OnDrawRibbonMainPanelFrame(
 *pPanel*<br/>
 [in] Un puntero a la `CMFCRibbonMainPanel`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la `CMFCRibbonMainPanel`.
 
 ### <a name="remarks"></a>Comentarios
@@ -3347,7 +3347,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Un puntero a un [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) objeto. El marco dibuja este separador de cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del separador.
 
 ### <a name="remarks"></a>Comentarios
@@ -3373,7 +3373,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 *pPanel*<br/>
 [in] Un puntero a la **Main** panel en la cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del marco de la lista de archivos recientes.
 
 ### <a name="remarks"></a>Comentarios
@@ -3399,7 +3399,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Un puntero a un objeto CMFCRibbonSlider. El marco dibuja el canal para este control deslizante de la cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites para el canal de control deslizante de la cinta de opciones.
 
 ### <a name="remarks"></a>Comentarios
@@ -3428,7 +3428,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Un puntero a un `CMFCRibbonSlider`. El marco dibuja el control de posición para este control deslizante de la cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del control de posición para el control deslizante de la cinta de opciones.
 
 *bIsHighlighted*<br/>
@@ -3467,7 +3467,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Un puntero a un `CMFCRibbonSlider` objeto. El marco dibuja este control deslizante de la cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de los botones de zoom en el control deslizante de la cinta de opciones.
 
 *bIsZoomOut*<br/>
@@ -3587,7 +3587,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Un puntero a un panel que contiene el separador.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del separador.
 
 *bIsHoriz*<br/>
@@ -3610,7 +3610,7 @@ virtual void OnDrawShowAllMenuItems(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3679,7 +3679,7 @@ virtual void OnDrawSplitterBorder(
 *pSplitterWnd*<br/>
 [in] Un puntero a una ventana divisora. El marco dibuja el borde de esta ventana.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la ventana divisora.
 
 ### <a name="remarks"></a>Comentarios
@@ -3705,7 +3705,7 @@ virtual void OnDrawSplitterBox(
 *pSplitterWnd*<br/>
 [in] Un puntero a una ventana divisora. El marco dibuja la casilla de esta ventana divisora.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la ventana divisora.
 
 ### <a name="remarks"></a>Comentarios
@@ -3877,7 +3877,7 @@ virtual void OnDrawTabCloseButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la **cerrar** botón.
 
 *pTabWnd*<br/>
@@ -3952,7 +3952,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de ficha.
 
 *pButton*<br/>
@@ -4021,10 +4021,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del área de grupo en el panel de tareas.
 
-*bOpciones especiales*<br/>
+*bSpecial*<br/>
 [in] Un parámetro booleano que especifica si se resalta el borde. Un valor TRUE indica que se resalta el borde.
 
 *bNoTitle*<br/>
@@ -4109,7 +4109,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la leyenda.
 
 *bIsActive*<br/>
@@ -4195,7 +4195,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del área de ficha.
 
 *pTabWnd*<br/>
@@ -4224,7 +4224,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de ficha.
 
 *pButton*<br/>
@@ -4255,7 +4255,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la ventana de pestaña.
 
 *pTabWnd*<br/>
@@ -4285,7 +4285,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de ocultación automática.
 
 *pButton*<br/>
@@ -4355,7 +4355,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Un puntero a un [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). El marco de trabajo rellena el fondo para este botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de barra de herramientas.
 
 *state*<br/>
@@ -4412,7 +4412,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón.
 
 *bIsSelected*<br/>
@@ -4445,7 +4445,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del control de encabezado.
 
 ### <a name="remarks"></a>Comentarios
@@ -4475,7 +4475,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 *pFrameWnd*<br/>
 [in] Un puntero a una ventana de marco flotante. El marco dibuja la barra de título para esta ventana.
 
-*bSecuencias de ActiveX*<br/>
+*bActive*<br/>
 [in] Un parámetro booleano que indica si la ventana está activa.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4530,7 +4530,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del botón de página de Outlook.
 
 *bIsHighlighted*<br/>
@@ -4561,7 +4561,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la ventana emergente.
 
 ### <a name="remarks"></a>Comentarios
@@ -4619,7 +4619,7 @@ virtual void OnFillRibbonEdit(
 *pEdit*<br/>
 [in] Un puntero a un `CMFCRibbonRichEditCtrl` objeto. El marco de trabajo rellena el interior de este control de edición.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del control de edición.
 
 *bIsHighlighted*<br/>
@@ -4691,7 +4691,7 @@ virtual void OnFillRibbonMenuFrame(
 *pPanel*<br/>
 [in] Un puntero a una instancia de la [CMFCRibbonMainPanel (clase)](../../mfc/reference/cmfcribbonmainpanel-class.md). El marco de trabajo rellena el marco de menú para este panel de cinta de opciones.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del marco de menú.
 
 ### <a name="remarks"></a>Comentarios
@@ -4734,7 +4734,7 @@ virtual void OnFillSplitterBackground(
 *pSplitterWnd*<br/>
 [in] Un puntero a una instancia de la [CSplitterWndEx clase](csplitterwndex-class.md). El marco de trabajo rellena el fondo de esta ventana divisora.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites de la ventana divisora.
 
 ### <a name="remarks"></a>Comentarios
@@ -4795,10 +4795,10 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del grupo de tareas.
 
-*bOpciones especiales*<br/>
+*bSpecial*<br/>
 [in] Un valor booleano que indica si el interior se rellena con un color especial.
 
 ### <a name="remarks"></a>Comentarios
@@ -4847,7 +4847,7 @@ virtual void OnHighlightMenuItem(
 *pButton*<br/>
 [in] Un puntero a un [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) objeto que se va a mostrar. La implementación predeterminada no utiliza este parámetro.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que especifica los límites del elemento de menú.
 
 *clrText*<br/>
@@ -4891,7 +4891,7 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *bSecuencias de ActiveX*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4911,7 +4911,7 @@ virtual BOOL OnNcPaint(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a la ventana cuya área no cliente dibuja el marco de trabajo.
 
 *lstSysButtons*<br/>
@@ -4940,7 +4940,7 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a la ventana con la región que ha cambiado.
 
 *sizeWindow*<br/>
@@ -5098,4 +5098,3 @@ De forma predeterminada, esta característica está deshabilitada.
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [Administrador de visualización](../../mfc/visualization-manager.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294361"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap (Clase)
 
@@ -221,10 +221,10 @@ La función de comparación de igualdad para este mapa múltiple desordenado.
 *_Allocator*<br/>
 El asignador para este mapa múltiple desordenado.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
 *_Umap*<br/>
@@ -397,16 +397,16 @@ El tipo de iterador que se utiliza para la inserción.
 *V*<br/>
 El tipo del valor insertado en el mapa.
 
-*valor*<br/>
+*value*<br/>
 El valor que se va a insertar.
 
-*_WHERE*<br/>
+*_Where*<br/>
 La ubicación inicial para buscar un punto de inserción.
 
 *first*<br/>
 El principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Final del intervalo que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -688,14 +688,14 @@ iterator unsafe_erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 La posición del iterador en la que borrar.
 
 *KVal*<br/>
 Valor de clave que se va a borrar.
 
 *first*<br/>
-*Último*<br/>
+*last*<br/>
 Iteradores.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -724,4 +724,3 @@ El número máximo de depósitos en este contenedor.
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-

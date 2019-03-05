@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: cc35a4e2de2b29bb6d437dfcbf48ef361fefdfa3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299184"
 ---
 # <a name="transformer-class"></a>Clase transformer
 
@@ -39,10 +39,10 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 #### <a name="parameters"></a>Parámetros
 
-*_Entrada*<br/>
+*_Input*<br/>
 El tipo de carga de los mensajes aceptados por el búfer.
 
-*_Salida*<br/>
+*_Output*<br/>
 El tipo de carga de los mensajes se almacena y se propaga al búfer.
 
 ## <a name="members"></a>Miembros
@@ -79,7 +79,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 [ITarget](itarget-class.md)
 
-[source_block)](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -149,7 +149,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -221,7 +221,7 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -288,7 +288,7 @@ Una función que se invocará para cada mensaje aceptado.
 *_PTarget*<br/>
 Un puntero a un bloque de destino para vincular con el transformador.
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
@@ -305,7 +305,7 @@ El tipo `_Transform_method` es un functor con firma `_Output (_Input const &)` q
 
 El tipo `filter_method` es un functor con firma `bool (_Input const &)` que es invocado por este `transformer` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.
 
-##  <a name="dtor"></a> ~ transformer
+##  <a name="dtor"></a> ~transformer
 
 Destruye el `transformer` bloque de mensajería.
 

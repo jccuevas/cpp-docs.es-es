@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570357"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291339"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d (Espacio de nombres)
 
@@ -60,8 +60,8 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|Devuelve una marca booleana que indica si el tiempo de espera está deshabilitado para el accelerator_view especificado.|
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|Sobrecargado. Realiza una operación aritmética en tres argumentos: _X \* _Y + _Z|
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|Crear una matriz de un puntero de interfaz del búfer D3D.|
-|[ruido](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valor aleatorio mediante el algoritmo de ruido de Perlin|
-|[radianes](concurrency-direct3d-namespace-functions-amp.md#radians)|Convierte _X de grados en radianes.|
+|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|Genera un valor aleatorio mediante el algoritmo de ruido de Perlin|
+|[radians](concurrency-direct3d-namespace-functions-amp.md#radians)|Convierte _X de grados en radianes.|
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|Calcula un recíproco rápido, aproximado del argumento.|
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|Invierte el orden de los bits en _X|
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|Ajusta _X dentro del intervalo de 0 a 1|
@@ -75,7 +75,7 @@ namespace direct3d;
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="see-also"></a>Vea también
 

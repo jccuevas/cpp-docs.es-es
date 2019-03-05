@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo'
+title: Filtrar Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: e72d99cb1b9168e3de1e109d93c163e21cb7fad7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284182"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo
+# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Filtrar Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
 
 Este documento describe cómo usar el [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para mejorar el rendimiento del algoritmo de ordenación bitónica. Este algoritmo divide de forma recursiva la secuencia de entrada en particiones ordenadas más pequeñas. Se puede ejecutar en paralelo porque cada operación de partición es independiente de las demás operaciones.
 
@@ -56,7 +56,7 @@ En esta sección se describe cómo usar el algoritmo `parallel_invoke` para real
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
-1. Cree una nueva función, denominada `parallel_bitonic_mege`, que use el algoritmo `parallel_invoke` para fusionar mediante combinación las secuencias en paralelo si hay suficiente cantidad de trabajo. De lo contrario, llame a `bitonic_merge` para fusionar mediante combinación las secuencias en serie.
+1. Cree una nueva función, denominada `parallel_bitonic_mege`, que use el algoritmo `parallel_invoke` para fusionar mediante combinación las secuencias en paralelo si hay suficiente cantidad de trabajo. De lo contrario, llame a `bitonic_merge` para combinar las secuencias en serie.
 
 [!code-cpp[concrt-parallel-bitonic-sort#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_4.cpp)]
 
@@ -105,4 +105,3 @@ Como con cualquier algoritmo paralelo, se recomienda generar un perfil y optimiz
 
 [Paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [parallel_invoke (función)](reference/concurrency-namespace-functions.md#parallel_invoke)
-

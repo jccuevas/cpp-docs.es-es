@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644150"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289885"
 ---
 # <a name="cfile-class"></a>CFile (clase)
 
@@ -98,10 +98,10 @@ class CFile : public CObject
 |[CFile::GetFileTitle](#getfiletitle)|Recupera el título del archivo seleccionado.|
 |[CFile::GetLength](#getlength)|Recupera la longitud del archivo.|
 |[CFile::GetPosition](#getposition)|Recupera el puntero de archivo actual.|
-|[CFile:: GetStatus](#getstatus)|Recupera el estado del archivo abierto o en la versión estática, recupera el estado del archivo especificado (función static, virtual).|
+|[CFile::GetStatus](#getstatus)|Recupera el estado del archivo abierto o en la versión estática, recupera el estado del archivo especificado (función static, virtual).|
 |[CFile::LockRange](#lockrange)|Bloquea un intervalo de bytes en un archivo.|
 |[CFile::Open](#open)|Con seguridad abre un archivo con una opción de prueba de errores.|
-|[CFile:: Read](#read)|Lecturas de datos (sin almacenamiento en búfer) desde un archivo en la posición de archivo actual.|
+|[CFile::Read](#read)|Lecturas de datos (sin almacenamiento en búfer) desde un archivo en la posición de archivo actual.|
 |[CFile::Remove](#remove)|Elimina el archivo especificado (función estática).|
 |[CFile::Rename](#rename)|Cambia el nombre del archivo especificado (función estática).|
 |[CFile::Seek](#seek)|Coloca el puntero de archivo actual.|
@@ -117,7 +117,7 @@ class CFile : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CFile::operator identificador](#operator_handle)|Un identificador para un `CFile` objeto.|
+|[CFile::operator HANDLE](#operator_handle)|Un identificador para un `CFile` objeto.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -422,7 +422,7 @@ El puntero de archivo.
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  CFile:: GetStatus
+##  <a name="getstatus"></a>  CFile::GetStatus
 
 Este método recupera información de estado relacionada con un determinado `CFile` instancia de objeto o una ruta de acceso de archivo dado.
 
@@ -619,7 +619,7 @@ Utilice este operador para pasar un identificador de un `CFile` de objeto a func
 operator HANDLE() const;
 ```
 
-##  <a name="read"></a>  CFile:: Read
+##  <a name="read"></a>  CFile::Read
 
 Lee los datos en un búfer desde el archivo asociado con el `CFile` objeto.
 
@@ -720,7 +720,7 @@ UINT nFrom);
 *lOff*<br/>
 Número de bytes para mover el puntero de archivo. Los valores positivos mueven el puntero de archivo hacia el final del archivo; los valores negativos mueven el puntero de archivo hacia el principio del archivo.
 
-*nde*<br/>
+*nFrom*<br/>
 Posición para buscar desde. Consulte la sección Comentarios para los valores posibles.
 
 ### <a name="return-value"></a>Valor devuelto

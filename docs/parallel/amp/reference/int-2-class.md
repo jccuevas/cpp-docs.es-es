@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: e71cc1d253d3c280f6004d99c4906610dc7f98bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603026"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288927"
 ---
 # <a name="int2-class"></a>int_2 (Clase)
 
@@ -69,8 +69,8 @@ class int_2;
 |int_2::get_yx||
 |int_2::ref_g||
 |int_2::ref_r||
-|int_2:: ref_x||
-|int_2:: ref_y||
+|int_2::ref_x||
+|int_2::ref_y||
 |int_2::set_x||
 |int_2::set_xy||
 |int_2::set_y||
@@ -110,10 +110,10 @@ class int_2;
 |int_2::gr||
 |int_2::r||
 |int_2::rg||
-|int_2:: x||
-|int_2:: XY||
-|int_2:: y||
-|int_2:: YX||
+|int_2::x||
+|int_2::xy||
+|int_2::y||
+|int_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -123,7 +123,7 @@ class int_2;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ##  <a name="ctor"></a> int_2
 
@@ -178,7 +178,7 @@ El valor para inicializar el elemento 1.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ##  <a name="int_2__size"></a> Tamaño

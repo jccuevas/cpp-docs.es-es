@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481801"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284845"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funciones del espacio de nombres de simultaneidad (AMP)
 
@@ -43,7 +43,7 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ### <a name="parameters"></a>Parámetros
 
 *_Barrier*<br/>
-Un objeto `tile_barrier`.
+Objeto `tile_barrier`.
 
 ##  <a name="amp_uninitialize"></a>  amp_uninitialize
 
@@ -79,7 +79,7 @@ Se lee la ubicación desde la que uno de los valores que se va a comparar, y a l
 *_Expected_value*<br/>
 La ubicación desde la que se lee el segundo valor que se va a comparar.
 
-*valor*<br/>
+*value*<br/>
 El valor que se almacenará en la ubicación de memoria especificada en forma `_Dest` si `_Dest` es igual a `_Expected_value`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 Puntero a la ubicación de destino.
 
-*valor*<br/>
+*value*<br/>
 Nuevo valor.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -140,7 +140,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 Puntero a la ubicación de memoria.
 
-*valor*<br/>
+*value*<br/>
 Valor que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -168,7 +168,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 Puntero a la ubicación de memoria.
 
-*valor*<br/>
+*value*<br/>
 El valor que se usará en el cálculo de AND bit a bit.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -235,7 +235,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 Se lee la ubicación desde la que uno de los valores que se va a comparar, y a la que el máximo de los dos valores es que se almacenará.
 
-*valor*<br/>
+*value*<br/>
 El valor que se compara con el valor en la ubicación especificada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -263,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 La ubicación desde la que uno de los valores que se va a comparar es de lectura y que es el mínimo de los dos valores que se almacenará.
 
-*valor*<br/>
+*value*<br/>
 El valor que se compara con el valor en la ubicación especificada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 Puntero a la ubicación de memoria.
 
-*valor*<br/>
+*value*<br/>
 El valor que se usará en el cálculo de OR bit a bit.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -319,7 +319,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 Puntero a la ubicación de destino.
 
-*valor*<br/>
+*value*<br/>
 El valor que se va a restar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -347,7 +347,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 Puntero a la ubicación de memoria.
 
-*valor*<br/>
+*value*<br/>
 Valor que se va a utilizar en el cálculo de XOR.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -546,7 +546,7 @@ Un `future<void>` que se puede esperar.
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Anula la ejecución de una función con la cláusula de restricción `restrict(amp)` . Cuando el tiempo de ejecución AMP detecta la llamada, provoca una excepción [runtime_exception](runtime-exception-class.md) con el mensaje de error "Reference Rasterizer: Shader abort instruction hit".
+Anula la ejecución de una función con la cláusula de restricción `restrict(amp)` . Cuando el tiempo de ejecución AMP detecta la llamada, provoca una [runtime_exception](runtime-exception-class.md) excepción con el mensaje de error "Reference Rasterizer: Shader abort instruction hit".
 
 ```
 void direct3d_abort() restrict(amp);

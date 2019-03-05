@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289967"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,13 +181,13 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-  **ON_**_notificación_**(** _id_**,** _memberFxn_ **)**
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
 
 donde `id` especifica el identificador de ventana secundaria de enviar la notificación, el control de edición y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
 Prototipo de función del elemento primario es el siguiente:
 
-**afx_msg** memberFxn void **();**
+**afx_msg** void memberFxn **( );**
 
 Siguiente es una lista de posibles entradas del mapa de mensajes y una descripción de los casos en que se enviarían al elemento primario:
 
@@ -277,7 +277,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Las coordenadas de un punto en el área cliente de este `CEdit` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de edición. Aplicar cualquier combinación de [Editar estilos](styles-used-by-mfc.md#edit-styles) al control.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de edición. Puede ser un `CRect` objeto o `RECT` estructura.
 
 *pParentWnd*<br/>
@@ -854,7 +854,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nLínea*<br/>
+*nLine*<br/>
 Contiene el valor de índice de la línea deseada en el texto del control de edición, o -1. Si *nLínea* es -1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -883,7 +883,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nLínea*<br/>
+*nLine*<br/>
 Índice de base cero de un carácter en la línea cuya longitud se va a recuperar. El valor predeterminado es -1.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 Índice de base cero del carácter especificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parámetros
 
-*Nmáx.*<br/>
+*nMax*<br/>
 El nuevo límite de texto, en caracteres.
 
 ### <a name="remarks"></a>Comentarios
@@ -1196,7 +1196,7 @@ void SetPasswordChar(TCHAR ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 Especifica el carácter que se mostrará en lugar del carácter escrito por el usuario. Si *ch* es 0, se muestran los caracteres reales escritos por el usuario.
 
 ### <a name="remarks"></a>Comentarios
@@ -1450,7 +1450,7 @@ Para obtener más información, consulte [EM_UNDO](/windows/desktop/Controls/em-
 ## <a name="see-also"></a>Vea también
 
 [Ejemplo de MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CWnd (clase)](cwnd-class.md)<br/>

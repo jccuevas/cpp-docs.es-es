@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289642"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Configuración del control, Asistente para controles ActiveX MFC
 
 Utilice esta página del Asistente para especificar cómo desea que el control se comporte. Por ejemplo, puede basar el control en los tipos de control de Windows estándar, optimizar su comportamiento y apariencia o indicar que el control puede actuar como un contenedor para otros controles.
 
-Para obtener más información sobre cómo seleccionar las opciones de esta página para maximizar la eficacia del control, vea [controles ActiveX MFC: optimización](../../mfc/mfc-activex-controls-optimization.md).
+Para obtener más información sobre cómo seleccionar las opciones de esta página para maximizar la eficacia del control, vea [controles ActiveX MFC: Optimización](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="uielement-list"></a>Lista de UIElement
 
 - **Crear un control basado en**
 
-   En esta lista, puede seleccionar el tipo de control del que debe heredar su control. La lista es un subconjunto de las clases de controles que están disponibles para `CreateWindowEx` y controles comunes adicionales que se especifican en commctrl.h. La selección determina el estilo del control en el `PreCreateWindow` funcionando en el *Nombre_proyecto*archivo Ctrl.cpp. Para obtener más información, consulte [controles ActiveX MFC: creación de subclases de un Control de Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+   En esta lista, puede seleccionar el tipo de control del que debe heredar su control. La lista es un subconjunto de las clases de controles que están disponibles para `CreateWindowEx` y controles comunes adicionales que se especifican en commctrl.h. La selección determina el estilo del control en el `PreCreateWindow` funcionando en el *Nombre_proyecto*archivo Ctrl.cpp. Para obtener más información, consulte [controles ActiveX MFC: Creación de subclases de un Control de Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
    |Control|Descripción|
    |-------------|-----------------|
-   |**BOTÓN**|Un control de botón de Windows|
-   |**CUADRO COMBINADO**|Un control de cuadro combinado de Windows|
-   |**EDITAR**|Un control de cuadro de edición de Windows|
-   |**CUADRO DE LISTA**|Un control de cuadro de lista de Windows|
-   |**BARRA DE DESPLAZAMIENTO**|Un control de barra de desplazamiento de Windows|
-   |**ESTÁTICO**|Un control estático de Windows|
+   |**BUTTON**|Un control de botón de Windows|
+   |**COMBOBOX**|Un control de cuadro combinado de Windows|
+   |**EDIT**|Un control de cuadro de edición de Windows|
+   |**LISTBOX**|Un control de cuadro de lista de Windows|
+   |**SCROLLBAR**|Un control de barra de desplazamiento de Windows|
+   |**STATIC**|Un control estático de Windows|
    |**msctls_hotkey32**|Un control común hot key|
    |**msctls_progress32**|Una barra de control común de progreso|
    |**msctls_statusbar32**|Un control común de la barra de estado|
@@ -98,4 +98,3 @@ Para obtener más información sobre cómo seleccionar las opciones de esta pág
 [Asistente para controles ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Configuración de la aplicación, Asistente para controles ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Nombres del control, Asistente para controles ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

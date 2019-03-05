@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630755"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299986"
 ---
 # <a name="combinable-class"></a>Clase combinable
 
@@ -41,7 +41,7 @@ El tipo de datos del resultado combinado final. El tipo debe tener un constructo
 
 |Name|Descripción|
 |----------|-----------------|
-|[clase combinable](#ctor)|Sobrecargado. Construye un nuevo objeto `combinable`.|
+|[combinable](#ctor)|Sobrecargado. Construye un nuevo objeto `combinable`.|
 |[~ combinable (destructor)](#dtor)|Destruye un objeto `combinable`.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -102,7 +102,7 @@ El tipo del objeto functor de inicialización.
 *_FnInitialize*<br/>
 Una función que se llamará para inicializar cada nuevo valor de subprocesos privados del tipo `T`. Debe admitir un operador de llamada de función con la firma `T ()`.
 
-*_Copiar*<br/>
+*_Copy*<br/>
 Existente `combinable` objeto que se copiará en ésta.
 
 ### <a name="remarks"></a>Comentarios
@@ -113,7 +113,7 @@ El segundo constructor inicializa nuevos elementos mediante el functor de inicia
 
 El tercer constructor es el constructor de copias.
 
-##  <a name="dtor"></a> ~ combinable
+##  <a name="dtor"></a> ~combinable
 
 Destruye un objeto `combinable`.
 
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Copiar*<br/>
+*_Copy*<br/>
 Existente `combinable` objeto que se copiará en ésta.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 1e389dc253f24eed2fee7e1d552be931a23f5e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bdfdf76b48c1e9f2c06213ee25cd15a113525dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637325"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290162"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow (interfaz)
 
@@ -59,7 +59,7 @@ La definición de esta interfaz está disponible como IDL o C++, como se muestra
 |IDL|ATLIFace.idl|
 |C++|ATLIFace.h (que también se incluye en ATLBase.h)|
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
 
 Asocia un control existente (e inicializado anteriormente) al objeto host mediante la ventana identificada por *hWnd*.
 
@@ -142,7 +142,7 @@ STDMETHOD(CreateControlEx)(
 [out] La dirección de un puntero que va a recibir el `IUnknown` interfaz del control creado. Puede ser NULL.
 
 *riidAdvise*<br/>
-[in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Puede ser IID_NULL.
+[in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Can be IID_NULL.
 
 *punkAdvise*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto receptor para estar conectado al punto de conexión en el objeto contenido especificado por `iidSink`.
@@ -220,6 +220,5 @@ Esta función se usa los controles (por ejemplo, el control del explorador Web) 
 ## <a name="see-also"></a>Vea también
 
 [IAxWinAmbientDispatch (interfaz)](../../atl/reference/iaxwinambientdispatch-interface.md)<br/>
-[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

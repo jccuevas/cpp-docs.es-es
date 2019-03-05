@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: e891bd9e37bbf2fbedcdd71649305cdc366065fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298989"
 ---
 # <a name="options-atl-property-page-wizard"></a>Opciones, Asistente para páginas de propiedades ATL
 
@@ -26,7 +26,7 @@ Utilice esta página del Asistente para definir el nivel de agregación y de mod
    |Opción|Descripción|
    |------------|-----------------|
    |**Single**|La página de propiedades solo se ejecuta en el subproceso COM principal.|
-   |**Apartamento**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|
+   |**Apartment**|La página de propiedades puede crearse en cualquier apartamento de subproceso único. El valor predeterminado.|
 
 - **Agregación**
 
@@ -42,4 +42,3 @@ Utilice esta página del Asistente para definir el nivel de agregación y de mod
 
 [Asistente para páginas de propiedades ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Cadenas, Asistente para páginas de propiedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)
-

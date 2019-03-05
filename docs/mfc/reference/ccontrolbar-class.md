@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291631"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -79,14 +79,14 @@ class CControlBar : public CWnd
 |[CControlBar::DoPaint](#dopaint)|Representa los bordes y la barra de redimensionamiento de la barra de controles.|
 |[CControlBar::DrawBorders](#drawborders)|Representa los bordes de la barra de controles.|
 |[CControlBar::DrawGripper](#drawgripper)|Representa la barra de redimensionamiento de la barra de controles.|
-|[CControlBar:: EnableDocking](#enabledocking)|Permite que una barra de controles esté acoplada o flotante.|
-|[CControlBar::](#getbarstyle)|Recupera la configuración de estilo de la barra de controles.|
+|[CControlBar::EnableDocking](#enabledocking)|Permite que una barra de controles esté acoplada o flotante.|
+|[CControlBar::GetBarStyle](#getbarstyle)|Recupera la configuración de estilo de la barra de controles.|
 |[CControlBar::GetBorders](#getborders)|Recupera los valores de borde de la barra de controles.|
 |[CControlBar::GetCount](#getcount)|Devuelve el número de elementos no HWND de la barra de control.|
 |[CControlBar::GetDockingFrame](#getdockingframe)|Devuelve un puntero al marco al que está acoplada una barra de controles.|
 |[CControlBar::IsFloating](#isfloating)|Devuelve un valor distinto de cero si la barra de controles en cuestión es una barra de controles flotante.|
 |[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|Llama a los controladores de la interfaz de usuario de comandos.|
-|[SetBarStyle](#setbarstyle)|Modifica la configuración de estilo de la barra de controles.|
+|[CControlBar::SetBarStyle](#setbarstyle)|Modifica la configuración de estilo de la barra de controles.|
 |[CControlBar::SetBorders](#setborders)|Establece los valores de borde de la barra de controles.|
 |[CControlBar::SetInPlaceOwner](#setinplaceowner)|Cambia el propietario en contexto de una barra de controles.|
 
@@ -107,7 +107,7 @@ Para obtener más información sobre `CControlBar`, vea:
 
 - [Barras de control](../../mfc/control-bars.md)
 
-- [Nota técnica 31: Barras de Control](../../mfc/tn031-control-bars.md).
+- [Nota técnica 31: Barras de control](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -206,7 +206,7 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Contiene las dimensiones actuales de la barra de control. incluso los bordes.
 
 *bHorz*<br/>
@@ -260,7 +260,7 @@ virtual void DrawBorders(
 *pDC*<br/>
 Apunta al contexto de dispositivo que se usará para representar los bordes de la barra de control.
 
-*Rect*<br/>
+*rect*<br/>
 Un `CRect` objeto que contiene las dimensiones de la barra de control.
 
 ### <a name="remarks"></a>Comentarios
@@ -282,14 +282,14 @@ virtual void DrawGripper(
 *pDC*<br/>
 Apunta al contexto de dispositivo que se usará para representar a los controles de barra de control.
 
-*Rect*<br/>
+*rect*<br/>
 Un `CRect` objeto que contiene las dimensiones de la barra de redimensionamiento de barra de control.
 
 ### <a name="remarks"></a>Comentarios
 
 Reemplace esta función para personalizar la apariencia de la barra de redimensionamiento de barra de control.
 
-##  <a name="enabledocking"></a>  CControlBar:: EnableDocking
+##  <a name="enabledocking"></a>  CControlBar::EnableDocking
 
 Llame a esta función para habilitar una barra de control quede acoplado.
 
@@ -320,7 +320,7 @@ Si es 0 (es decir, lo que indica ningún indicador), no se acoplará la barra de
 
 Los lados especificados deben coincidir con uno de los lados habilitados para el acoplamiento en la ventana de marco de destino, o no se puede acoplar la barra de control a esa ventana de marco.
 
-##  <a name="getbarstyle"></a>  CControlBar::
+##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle
 
 Llame a esta función para determinar qué **CBRS_** configuración (estilos de barra de control) está establecidas actualmente para la barra de control.
 
@@ -446,7 +446,7 @@ Para actualizar un botón individual o un panel, utilice la macro ON_UPDATE_COMM
 
 `OnUpdateCmdUI` se llama el marco de trabajo cuando la aplicación está inactiva. La ventana de marco para actualizarse debe ser una ventana secundaria, al menos indirectamente, de una ventana de marco visible. `OnUpdateCmdUI` es un avanzado que se puede invalidar.
 
-##  <a name="setbarstyle"></a>  SetBarStyle
+##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle
 
 Llame a esta función para establecer el deseado **CBRS_** estilos para la barra de control.
 
@@ -536,7 +536,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a un objeto `CWnd` .
 
 ### <a name="remarks"></a>Comentarios

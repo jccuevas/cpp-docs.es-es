@@ -7,16 +7,16 @@ helpviewer_keywords:
 - threading [C++], troubleshooting
 - troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
-ms.openlocfilehash: 598758a4ceb0a12640faf2832f9f03cd1e44ef9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ceae832599243ffa0aad2b6fa67148e7ea30510
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288195"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Evitar áreas de riesgo en programas multiproceso
 
-Hay varios problemas que pueden surgir en crear, vincular o ejecutar un programa multiproceso en C. Algunos de los problemas más comunes se describen en la tabla siguiente. (Para obtener una discusión similar desde el punto de vista MFC, vea [Multithreading: sugerencias de programación](multithreading-programming-tips.md).)
+Hay varios problemas que pueden surgir en crear, vincular o ejecutar un programa multiproceso en C. Algunos de los problemas más comunes se describen en la tabla siguiente. (Para obtener una discusión similar desde el punto de vista MFC, vea [Multithreading: Sugerencias de programación](multithreading-programming-tips.md).)
 
 |Problema|Causa probable|
 |-------------|--------------------|

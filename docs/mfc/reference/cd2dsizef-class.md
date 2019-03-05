@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-ms.openlocfilehash: e9c8d77a9f84abe9a483a0f100e1f52b8768202b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09ccd8c4ba6bb0c345adb32bcf22686c485d1184
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296597"
 ---
 # <a name="cd2dsizef-class"></a>Clase CD2DSizeF
 
@@ -45,7 +45,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CSize CD2DSizeF::operator](#operator_csize)|Convierte `CD2DSizeF` a `CSize` objeto.|
+|[CD2DSizeF::operator CSize](#operator_csize)|Convierte `CD2DSizeF` a `CSize` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -76,10 +76,10 @@ CD2DSizeF(
 *size*<br/>
 tamaño de origen
 
-*CX*<br/>
+*cx*<br/>
 ancho de origen
 
-*CY*<br/>
+*cy*<br/>
 alto de origen
 
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull
@@ -94,7 +94,7 @@ BOOL IsNull() const;
 
 TRUE si el ancho y alto están vacíos; en caso contrario, FALSE.
 
-##  <a name="operator_csize"></a>  CSize CD2DSizeF::operator
+##  <a name="operator_csize"></a>  CD2DSizeF::operator CSize
 
 Convierte CD2DSizeF CSize objeto.
 

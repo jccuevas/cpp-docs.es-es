@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetPreviewInfo
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
-ms.openlocfilehash: 8044af41a3176d58c09f2c91c52497fa7f59de05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658593"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289629"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate (clase)
 
@@ -87,13 +87,13 @@ class CDocTemplate : public CCmdTarget
 |[CDocTemplate::InitialUpdateFrame](#initialupdateframe)|Inicializa la ventana de marco y, opcionalmente, que es visible.|
 |[CDocTemplate::LoadTemplate](#loadtemplate)|Carga los recursos para un determinado `CDocTemplate` o clase derivada.|
 |[CDocTemplate::MatchDocType](#matchdoctype)|Determina el grado de confianza en la coincidencia entre un tipo de documento y esta plantilla.|
-|[CDocTemplate:: OpenDocumentFile](#opendocumentfile)|Se abre un archivo especificado por una ruta de acceso.|
+|[CDocTemplate::OpenDocumentFile](#opendocumentfile)|Se abre un archivo especificado por una ruta de acceso.|
 |[CDocTemplate::RemoveDocument](#removedocument)|Quita un documento de una plantilla.|
 |[CDocTemplate::SaveAllModified](#saveallmodified)|Guarda todos los documentos asociados con esta plantilla que se han modificado.|
-|[CDocTemplate:: SetContainerInfo](#setcontainerinfo)|Determina los recursos de contenedores OLE al editar un elemento OLE en contexto.|
+|[CDocTemplate::SetContainerInfo](#setcontainerinfo)|Determina los recursos de contenedores OLE al editar un elemento OLE en contexto.|
 |[CDocTemplate::SetDefaultTitle](#setdefaulttitle)|Muestra el título predeterminado en la barra de título de la ventana de documento.|
 |[CDocTemplate::SetPreviewInfo](#setpreviewinfo)|Controlador de vista previa de las instalaciones fuera del proceso.|
-|[CDocTemplate:: SetServerInfo](#setserverinfo)|Determina los recursos y las clases cuando el documento de servidor se incrusta o edita en contexto.|
+|[CDocTemplate::SetServerInfo](#setserverinfo)|Determina los recursos y las clases cuando el documento de servidor se incrusta o edita en contexto.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -201,7 +201,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ### <a name="parameters"></a>Parámetros
 
 *bEndSession*<br/>
-No usado.
+No se utiliza.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -353,7 +353,7 @@ Un puntero al siguiente documento en la lista de documentos asociados con esta p
 
 ### <a name="parameters"></a>Parámetros
 
-*RPO*<br/>
+*rPos*<br/>
 Una referencia a un valor de posición devuelto por una llamada anterior a [GetFirstDocPosition](#getfirstdocposition) o `GetNextDoc`.
 
 ### <a name="remarks"></a>Comentarios
@@ -450,7 +450,7 @@ Si ningún caso es true, la función devuelve `CDocTemplate::yesAttemptForeign`.
 
 La implementación predeterminada devuelve `CDocTemplate::maybeAttemptForeign` o `CDocTemplate::maybeAttemptNative`. Reemplace esta función para implementar la lógica de coincidencia de tipo apropiado para su aplicación, quizá con estos dos valores de la **confianza** enumeración.
 
-##  <a name="opendocumentfile"></a>  CDocTemplate:: OpenDocumentFile
+##  <a name="opendocumentfile"></a>  CDocTemplate::OpenDocumentFile
 
 Se abre un archivo especificado por una ruta de acceso.
 
@@ -507,7 +507,7 @@ virtual BOOL SaveAllModified();
 
 Distinto de cero si se realiza correctamente; en caso contrario, es 0.
 
-##  <a name="setcontainerinfo"></a>  CDocTemplate:: SetContainerInfo
+##  <a name="setcontainerinfo"></a>  CDocTemplate::SetContainerInfo
 
 Determina los recursos de contenedores OLE al editar un elemento OLE en contexto.
 
@@ -543,7 +543,7 @@ Puntero al documento cuyo título que se va a establecer.
 
 Para obtener información sobre el título predeterminado, vea la descripción de `CDocTemplate::docName` en [CDocTemplate::GetDocString](#getdocstring).
 
-##  <a name="setserverinfo"></a>  CDocTemplate:: SetServerInfo
+##  <a name="setserverinfo"></a>  CDocTemplate::SetServerInfo
 
 Determina los recursos y las clases cuando el documento de servidor se incrusta o edita en contexto.
 

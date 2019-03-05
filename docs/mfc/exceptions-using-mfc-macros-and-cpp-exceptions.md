@@ -1,5 +1,5 @@
 ---
-title: 'Excepciones: Usar macros de MFC y excepciones de C++'
+title: 'Excepciones: Uso de Macros de MFC y excepciones de C++'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297715"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Excepciones: Usar macros de MFC y excepciones de C++
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Excepciones: Uso de Macros de MFC y excepciones de C++
 
 En este artículo se describe consideraciones para escribir código que utiliza las macros de control de excepciones de MFC y las palabras clave de control de excepciones de C++.
 
@@ -35,7 +35,7 @@ En este artículo se tratan los siguientes temas:
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> Mezclar Macros y palabras clave de excepción
 
-Puede mezclar macros de excepción de MFC y palabras clave de excepciones de C++ en el mismo programa. Pero no se pueden mezclar macros de MFC con palabras clave de excepciones de C++ en el mismo bloque porque las macros de eliminan objetos de excepción automáticamente cuando salen del ámbito, mientras que el código mediante las palabras clave de control de excepciones no lo hace. Para obtener más información, vea el artículo [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Puede mezclar macros de excepción de MFC y palabras clave de excepciones de C++ en el mismo programa. Pero no se pueden mezclar macros de MFC con palabras clave de excepciones de C++ en el mismo bloque porque las macros de eliminan objetos de excepción automáticamente cuando salen del ámbito, mientras que el código mediante las palabras clave de control de excepciones no lo hace. Para obtener más información, vea el artículo [excepciones: Detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 La principal diferencia entre las macros y las palabras clave es que las macros eliminan "automáticamente" una excepción detectada cuando ésta sale del ámbito. Código mediante las palabras clave no lo hace; se deben eliminar explícitamente las excepciones detectadas en un bloque catch. Mezclar macros y palabras clave de excepciones de C++ puede causar pérdidas de memoria cuando no se elimina un objeto de excepción o daños en el montón cuando se elimina una excepción de dos veces.
 
@@ -58,4 +58,3 @@ Para obtener más información, consulte [excepciones: Examinar contenidos de ex
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
-

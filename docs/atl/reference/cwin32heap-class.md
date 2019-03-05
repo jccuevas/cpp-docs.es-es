@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297260"
 ---
 # <a name="cwin32heap-class"></a>Clase de CWin32Heap
 
@@ -43,18 +43,18 @@ class CWin32Heap : public IAtlMemMgr
 |Name|Descripción|
 |----------|-----------------|
 |[CWin32Heap::CWin32Heap](#cwin32heap)|El constructor.|
-|[CWin32Heap:: ~ CWin32Heap](#dtor)|Destructor.|
+|[CWin32Heap::~CWin32Heap](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CWin32Heap:: Allocate](#allocate)|Asigna un bloque de memoria del objeto de montón.|
-|[CWin32Heap:: Attach](#attach)|Asocia el objeto de montón a un montón existente.|
+|[CWin32Heap::Allocate](#allocate)|Asigna un bloque de memoria del objeto de montón.|
+|[CWin32Heap::Attach](#attach)|Asocia el objeto de montón a un montón existente.|
 |[CWin32Heap::Detach](#detach)|Desasocia el objeto de montón de un montón existente.|
-|[CWin32Heap:: Free](#free)|Libera memoria previamente asignada desde el montón.|
+|[CWin32Heap::Free](#free)|Libera memoria previamente asignada desde el montón.|
 |[CWin32Heap::GetSize](#getsize)|Devuelve el tamaño de un bloque de memoria asignado desde el objeto de montón.|
-|[CWin32Heap:: ReAllocate](#reallocate)|Reasigna un bloque de memoria del objeto de montón.|
+|[CWin32Heap::Reallocate](#reallocate)|Reasigna un bloque de memoria del objeto de montón.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -81,7 +81,7 @@ Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 **Encabezado:** atlmem.h
 
-##  <a name="allocate"></a>  CWin32Heap:: Allocate
+##  <a name="allocate"></a>  CWin32Heap::Allocate
 
 Asigna un bloque de memoria del objeto de montón.
 
@@ -104,7 +104,7 @@ Llame a [CWin32Heap:: Free](#free) o [CWin32Heap:: ReAllocate](#reallocate) para
 
 Implementa mediante [HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc).
 
-##  <a name="attach"></a>  CWin32Heap:: Attach
+##  <a name="attach"></a>  CWin32Heap::Attach
 
 Asocia el objeto de montón a un montón existente.
 
@@ -169,7 +169,7 @@ El parámetro HEAP_NO_SERIALIZE especifica que la exclusión mutua no se utiliza
 
 El tercer parámetro se establece en 0 de forma predeterminada, lo que permite al montón crecer según sea necesario. Consulte [HeapCreate](/windows/desktop/api/heapapi/nf-heapapi-heapcreate) para obtener una explicación de los tamaños de memoria y marcas.
 
-##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap
+##  <a name="dtor"></a>  CWin32Heap::~CWin32Heap
 
 Destructor.
 
@@ -193,7 +193,7 @@ HANDLE Detach() throw();
 
 Devuelve el identificador para el montón al que se ha adjuntado previamente el objeto.
 
-##  <a name="free"></a>  CWin32Heap:: Free
+##  <a name="free"></a>  CWin32Heap::Free
 
 Libera memoria previamente asignada desde el montón mediante [CWin32Heap:: Allocate](#allocate) o [CWin32Heap:: ReAllocate](#reallocate).
 
@@ -243,7 +243,7 @@ HANDLE m_hHeap;
 
 Una variable que se utiliza para almacenar un identificador para el objeto de montón.
 
-##  <a name="reallocate"></a>  CWin32Heap:: ReAllocate
+##  <a name="reallocate"></a>  CWin32Heap::Reallocate
 
 Reasigna un bloque de memoria del objeto de montón.
 

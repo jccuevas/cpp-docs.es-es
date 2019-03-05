@@ -1,5 +1,5 @@
 ---
-title: 'TN031: Barras de control'
+title: 'TN031: Barras de controles'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.controls.bars
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286471"
 ---
-# <a name="tn031-control-bars"></a>TN031: Barras de control
+# <a name="tn031-control-bars"></a>TN031: Barras de controles
 
 > [!NOTE]
 >  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.
@@ -167,9 +167,9 @@ Puede llamar al controlador ON_UPDATE_COMMAND_UI:
 
 - `Enable`: Para habilitar o deshabilitar el botón. Esto funciona igual para los pulsadores que para los botones de casilla.
 
-- `SetCheck`: para establecer el estado de comprobación de un botón. Al llamar a esto para un botón de barra de herramientas lo convertirá en un botón de casilla. `SetCheck` toma un parámetro que puede ser 0 (no activado), 1 (activado) o 2 (indeterminado)
+- `SetCheck`: Para establecer el estado de activación de un botón. Al llamar a esto para un botón de barra de herramientas lo convertirá en un botón de casilla. `SetCheck` toma un parámetro que puede ser 0 (no activado), 1 (activado) o 2 (indeterminado)
 
-- `SetRadio`: Una forma abreviada de `SetCheck`.
+- `SetRadio`: Forma abreviada de `SetCheck`.
 
 Los botones de casilla son botones de casilla "AUTO"; es decir, cuando el usuario los presiona cambiarán inmediatamente su estado. Activado es el estado inactivo o deprimido. No hay ninguna forma en la interfaz de usuario integrada para cambiar un botón al estado "indeterminado"; que debe realizarse a través de código.
 
@@ -179,13 +179,13 @@ Botones de barra de herramientas le enviará mensajes WM_COMMAND como botones no
 
 Existen cuatro estilos de botón de barra de herramientas (valores TBBS_) que se usan para los estados de visualización:
 
-- TBBS_CHECKED:   la casilla está actualmente activada (abajo).
+- TBBS_CHECKED:   Casilla de verificación está actualmente activada (abajo).
 
-- TBBS_INDETERMINATE:   la casilla es actualmente indeterminada.
+- TBBS_INDETERMINATE:   Casilla de verificación es actualmente indeterminada.
 
-- TBBS_DISABLED:   el botón está actualmente deshabilitado.
+- TBBS_DISABLED:   Botón está deshabilitado actualmente.
 
-- TBBS_PRESSED:   el botón está actualmente presionado.
+- TBBS_PRESSED:   Botón está actualmente presionado.
 
 Los seis estilos oficiales de botón de la Guía de diseño de aplicaciones de interfaz de Windows se representan mediante los valores TBBS siguientes:
 
@@ -227,4 +227,3 @@ La personalización puede realizarse a través de las API de administrador de ve
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

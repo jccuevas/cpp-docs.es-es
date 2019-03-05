@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600676"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299301"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group (Clase)
 
@@ -43,11 +43,11 @@ class structured_task_group;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cancelar](#cancel)|Realiza un esfuerzo intenta cancelar el subárbol cuya raíz comienza en este grupo de tareas de trabajo. Todas las tareas programadas en el grupo de tareas obtener cancelará de manera transitiva si es posible.|
+|[cancel](#cancel)|Realiza un esfuerzo intenta cancelar el subárbol cuya raíz comienza en este grupo de tareas de trabajo. Todas las tareas programadas en el grupo de tareas obtener cancelará de manera transitiva si es posible.|
 |[is_canceling](#is_canceling)|Informa al llamador si el grupo de tareas está actualmente en medio de una cancelación. Esto no indica necesariamente que el `cancel` se llamó al método en el `structured_task_group` objeto (aunque sin duda califica este método para devolver **true**). Puede darse el caso de que el `structured_task_group` objeto está ejecutando alineado y un grupo de tareas aún más seguridad en el árbol de trabajo se canceló. En casos como estos dónde puede determinar el tiempo de ejecución antes de tiempo que la cancelación fluirá a través de este `structured_task_group` objeto, **true** devolverá también.|
 |[run](#run)|Sobrecargado. Programa una tarea en el `structured_task_group` objeto. El llamador administra la duración de la `task_handle` objeto pasado en el `_Task_handle` parámetro. La versión que toma el parámetro `_Placement` hace que la tarea se orientadas a ejecutar en la ubicación especificada por ese parámetro.|
 |[run_and_wait](#run_and_wait)|Sobrecargado. Programa una tarea que se ejecuta alineada en el contexto de llamada con la Ayuda de la `structured_task_group` objeto para la compatibilidad de cancelación completa. Si un `task_handle` objeto se pasa como parámetro a `run_and_wait`, el llamador es responsable de administrar la duración de la `task_handle` objeto. La función, a continuación, espera hasta que todo funcione en el `structured_task_group` objeto se haya completado o cancelado.|
-|[Espere](#wait)|Espera hasta que todo funcione en el `structured_task_group` se cancela o se ha completado.|
+|[wait](#wait)|Espera hasta que todo funcione en el `structured_task_group` se cancela o se ha completado.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -124,7 +124,7 @@ El tipo de objeto de función que se invocará para ejecutar el cuerpo del ident
 *_Task_handle*<br/>
 Un identificador para el trabajo está programado. Tenga en cuenta que el llamador tiene la responsabilidad de la duración de este objeto. El tiempo de ejecución continuará esperando que se encuentre activo hasta que el `wait` o `run_and_wait` se ha llamado al método en este `structured_task_group` objeto.
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a la ubicación donde la tarea representada por la `_Task_handle` parámetro se debe ejecutar.
 
 ### <a name="remarks"></a>Comentarios

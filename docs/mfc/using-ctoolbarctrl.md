@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 4a325f750b65b39670168df5a85687b53fcc5a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297052"
 ---
 # <a name="using-ctoolbarctrl"></a>Usar CToolBarCtrl
 
@@ -35,4 +35,3 @@ Puede usar el control de barra de herramientas ([CToolBarCtrl](../mfc/reference/
 ## <a name="see-also"></a>Vea también
 
 [Controles](../mfc/controls-mfc.md)
-

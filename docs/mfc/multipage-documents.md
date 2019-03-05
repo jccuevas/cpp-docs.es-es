@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295011"
 ---
 # <a name="multipage-documents"></a>Documentos de varias páginas
 
@@ -99,7 +99,7 @@ El [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) función miembro t
 
 El [OnPrint](../mfc/reference/cview-class.md#onprint) función miembro realiza la impresión real de la página. El artículo [cómo predeterminado impresión se realiza](../mfc/how-default-printing-is-done.md) muestra cómo el marco llama [OnDraw](../mfc/reference/cview-class.md#ondraw) con un contexto de dispositivo de impresora para realizar la impresión. Más concretamente, las llamadas de framework `OnPrint` con un `CPrintInfo` estructura y un contexto de dispositivo y `OnPrint` pasa el contexto de dispositivo a `OnDraw`. Invalidar `OnPrint` para realizar cualquier procesamiento que debe realizarse durante la impresión y no para la presentación en pantalla. Por ejemplo, para imprimir los encabezados o pies de página (consulte el artículo [encabezados y pies de página](../mfc/headers-and-footers.md) para obtener más información). A continuación, llame a `OnDraw` desde el reemplazo de `OnPrint` para realizar la representación común tanto presentación en pantalla e impresión.
 
-El hecho de que `OnDraw` realiza la representación para ambos presentación en pantalla y la impresión significa que la aplicación es WYSIWYG: "lo que ve es lo obtenemos." Sin embargo, suponga que no está escribiendo una aplicación WYSIWYG. Por ejemplo, considere la posibilidad de un texto de editor que utilice una fuente en negrita para la impresión, pero muestra los códigos de control para indicar el texto en negrita en la pantalla. En esta situación, usa `OnDraw` estrictamente para su presentación en pantalla. Cuando invalide `OnPrint`, sustituya la llamada a `OnDraw` con una llamada a una función de dibujo diferente. Esa función dibuja el documento tal como aparece en el papel, usando los atributos que no se muestran en la pantalla.
+El hecho de que `OnDraw` realiza la representación para ambos presentación en pantalla y la impresión significa que la aplicación es WYSIWYG: "Lo que ve es lo obtenemos." Sin embargo, suponga que no está escribiendo una aplicación WYSIWYG. Por ejemplo, considere la posibilidad de un texto de editor que utilice una fuente en negrita para la impresión, pero muestra los códigos de control para indicar el texto en negrita en la pantalla. En esta situación, usa `OnDraw` estrictamente para su presentación en pantalla. Cuando invalide `OnPrint`, sustituya la llamada a `OnDraw` con una llamada a una función de dibujo diferente. Esa función dibuja el documento tal como aparece en el papel, usando los atributos que no se muestran en la pantalla.
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> Frente a las páginas de impresora. Páginas del documento
 

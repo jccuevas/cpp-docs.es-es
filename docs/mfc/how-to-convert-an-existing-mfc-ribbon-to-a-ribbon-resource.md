@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Convertir una cinta de MFC existente en un recurso de cinta'
+title: Procedimiento Convertir una cinta MFC existente en un recurso de cinta
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: 627c50758b10ad18e45fc1432340c0eb2dad7b19
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524370"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295494"
 ---
-# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Cómo: Convertir una cinta de MFC existente en un recurso de cinta
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Filtrar Convertir una cinta MFC existente en un recurso de cinta
 
 Recursos de la cinta de opciones son más fáciles de visualizar, modificar y mantener que las cintas de opciones codificada de forma manual. Este tema describe cómo convertir una cinta de opciones codificada de forma manual en un proyecto MFC en un recurso de cinta.
 
@@ -47,4 +47,3 @@ Debe tener un proyecto MFC existente que tiene código que utiliza las clases de
 ## <a name="see-also"></a>Vea también
 
 [Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
-

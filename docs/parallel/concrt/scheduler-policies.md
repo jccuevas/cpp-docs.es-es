@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668746"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298144"
 ---
 # <a name="scheduler-policies"></a>Directivas de Scheduler
 
@@ -29,7 +29,7 @@ El [concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#poli
 |Clave de la directiva|Descripción|Valor predeterminado|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|Un [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) valor que especifica el tipo de subprocesos que se utilizarán para programar tareas.|`ThreadScheduler` (use subprocesos normales). Este es el único valor válido para esta clave.|
-|`MaxConcurrency`|Un `unsigned int` valor que especifica el número máximo de recursos de simultaneidad que usa el programador.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
+|`MaxConcurrency`|Un `unsigned int` valor que especifica el número máximo de recursos de simultaneidad que usa el programador.|[concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
 |`MinConcurrency`|Un `unsigned int` valor que especifica el número mínimo de recursos de simultaneidad que usa el programador.|`1`|
 |`TargetOversubscriptionFactor`|Un `unsigned int` valor que especifica cuántos subprocesos se asignan a cada recurso de procesamiento.|`1`|
 |`LocalContextCacheSize`|Un `unsigned int` valor que especifica el número máximo de contextos que pueden almacenarse en caché en la cola local de cada procesador virtual.|`8`|
@@ -49,11 +49,10 @@ Use la [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-cla
 
 ## <a name="example"></a>Ejemplo
 
-Para examinar ejemplos que usan directivas de programador específicas para controlar el comportamiento del programador, consulte [Cómo: especificar directivas de programador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) y [Cómo: crear agentes que Use específico directivas del programador](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Para examinar ejemplos que usan directivas de programador específicas para controlar el comportamiento del programador, vea [Cómo: Especificar directivas de programador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) y [Cómo: Crear agentes que usen directivas de programador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Procedimiento para especificar directivas de Scheduler concretas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
-[Procedimiento para crear agentes que usen directivas de Scheduler concretas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-
+[Cómo: Especificar directivas de Scheduler concretas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
+[Cómo: Crear agentes que usen directivas de programador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296980"
 ---
 # <a name="coledatasource-class"></a>COleDataSource (clase)
 
@@ -65,12 +65,12 @@ class COleDataSource : public CCmdTarget
 
 |Name|Descripción|
 |----------|-----------------|
-|[:: CacheData](#cachedata)|Ofrece los datos en un formato especificado mediante un `STGMEDIUM` estructura.|
-|[COleDataSource:: CacheGlobalData](#cacheglobaldata)|Ofrece los datos en un formato especificado mediante un identificador HGLOBAL.|
-|[COleDataSource:: DelayRenderData](#delayrenderdata)|Ofrece los datos en un formato especificado mediante la representación aplazada.|
-|[COleDataSource:: DelayRenderFileData](#delayrenderfiledata)|Ofrece los datos en un formato especificado en un `CFile` puntero.|
+|[COleDataSource::CacheData](#cachedata)|Ofrece los datos en un formato especificado mediante un `STGMEDIUM` estructura.|
+|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Ofrece los datos en un formato especificado mediante un identificador HGLOBAL.|
+|[COleDataSource::DelayRenderData](#delayrenderdata)|Ofrece los datos en un formato especificado mediante la representación aplazada.|
+|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Ofrece los datos en un formato especificado en un `CFile` puntero.|
 |[COleDataSource::DelaySetData](#delaysetdata)|Llamado para todos los formatos que se admiten en `OnSetData`.|
-|[COleDataSource:: DoDragDrop](#dodragdrop)|Realiza las operaciones de arrastrar y colocar con un origen de datos.|
+|[COleDataSource::DoDragDrop](#dodragdrop)|Realiza las operaciones de arrastrar y colocar con un origen de datos.|
 |[COleDataSource::Empty](#empty)|Vacía la `COleDataSource` objeto de datos.|
 |[COleDataSource::FlushClipboard](#flushclipboard)|Representa todos los datos en el Portapapeles.|
 |[COleDataSource::GetClipboardOwner](#getclipboardowner)|Comprueba que los datos que se coloca en el Portapapeles están aún allí.|
@@ -78,7 +78,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource::OnRenderFileData](#onrenderfiledata)|Recupera los datos en un `CFile` como parte de la representación aplazada.|
 |[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Recupera los datos en un HGLOBAL como parte de la representación aplazada.|
 |[COleDataSource::OnSetData](#onsetdata)|Se llama para reemplazar los datos de la `COleDataSource` objeto.|
-|[COleDataSource:: SetClipboard](#setclipboard)|Coloca un `COleDataSource` objeto en el Portapapeles.|
+|[COleDataSource::SetClipboard](#setclipboard)|Coloca un `COleDataSource` objeto en el Portapapeles.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -100,7 +100,7 @@ Para obtener más información acerca de los orígenes de datos y transferencia 
 
 **Encabezado:** afxole.h
 
-##  <a name="cachedata"></a>  :: CacheData
+##  <a name="cachedata"></a>  COleDataSource::CacheData
 
 Llame a esta función para especificar un formato en el que datos se ofrezcan durante los datos de las operaciones de transferencia.
 
@@ -130,13 +130,13 @@ Proporcione los datos mediante un [STGMEDIUM](/windows/desktop/api/objidl/ns-obj
 
 Después de llamar a `CacheData` el `ptd` miembro de `lpFormatEtc` y el contenido de *lpStgMedium* son propiedad del objeto de datos, no por el llamador.
 
-Para usar la representación aplazada, llame a la [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Para usar la representación aplazada, llame a la [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para obtener más información, consulte el [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) y [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructuras en el SDK de Windows.
 
 Para obtener más información, consulte [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) en el SDK de Windows.
 
-##  <a name="cacheglobaldata"></a>  COleDataSource:: CacheGlobalData
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData
 
 Llame a esta función para especificar un formato en el que datos se ofrezcan durante los datos de las operaciones de transferencia.
 
@@ -162,7 +162,7 @@ Apunta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estr
 
 Esta función proporciona los datos mediante la representación de inmediato, por lo que debe suministrar los datos al llamar a la función; los datos se almacena en caché hasta que sea necesario. Use el `CacheData` función de miembro si se proporciona una gran cantidad de datos o si requiere un medio de almacenamiento estructurado.
 
-Para usar la representación aplazada, llame a la [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Para usar la representación aplazada, llame a la [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para obtener más información, consulte el [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructura en el SDK de Windows.
 
@@ -176,7 +176,7 @@ Construye un objeto `COleDataSource`.
 COleDataSource();
 ```
 
-##  <a name="delayrenderdata"></a>  COleDataSource:: DelayRenderData
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData
 
 Llame a esta función para especificar un formato en el que datos se ofrezcan durante los datos de las operaciones de transferencia.
 
@@ -198,7 +198,7 @@ Apunta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estr
 
 Esta función proporciona los datos con representación retrasada, de modo que los datos no se proporcionan inmediatamente. El [OnRenderData](#onrenderdata) o [OnRenderGlobalData](#onrenderglobaldata) función miembro se llama para solicitar los datos.
 
-Use esta función si no va a proporcionar los datos a través de un `CFile` objeto. Si va a proporcionar los datos a través de un `CFile` de objeto, llame a la [DelayRenderFileData](#delayrenderfiledata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Use esta función si no va a proporcionar los datos a través de un `CFile` objeto. Si va a proporcionar los datos a través de un `CFile` de objeto, llame a la [DelayRenderFileData](#delayrenderfiledata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para utilizar procesamiento inmediato, llame a la [CacheData](#cachedata) o [CacheGlobalData](#cacheglobaldata) función miembro.
 
@@ -206,7 +206,7 @@ Para obtener más información, consulte el [FORMATETC](/windows/desktop/api/obj
 
 Para obtener más información, consulte [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) en el SDK de Windows.
 
-##  <a name="delayrenderfiledata"></a>  COleDataSource:: DelayRenderFileData
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData
 
 Llame a esta función para especificar un formato en el que datos se ofrezcan durante los datos de las operaciones de transferencia.
 
@@ -228,7 +228,7 @@ Apunta a un [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estr
 
 Esta función proporciona los datos con representación retrasada, de modo que los datos no se proporcionan inmediatamente. El [OnRenderFileData](#onrenderfiledata) función miembro se llama para solicitar los datos.
 
-Use esta función si va a usar un `CFile` objeto para proporcionar los datos. Si no va a usar un `CFile` de objeto, llame a la [DelayRenderData](#delayrenderdata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Use esta función si va a usar un `CFile` objeto para proporcionar los datos. Si no va a usar un `CFile` de objeto, llame a la [DelayRenderData](#delayrenderdata) función miembro. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para utilizar procesamiento inmediato, llame a la [CacheData](#cachedata) o [CacheGlobalData](#cacheglobaldata) función miembro.
 
@@ -262,7 +262,7 @@ Para obtener más información, consulte el [FORMATETC](/windows/desktop/api/obj
 
 Para obtener más información, consulte [RegisterClipboardFormat](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) en el SDK de Windows.
 
-##  <a name="dodragdrop"></a>  COleDataSource:: DoDragDrop
+##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop
 
 Llame a la `DoDragDrop` función miembro para realizar una operación de arrastrar y colocar para este origen de datos, normalmente en un [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) controlador.
 
@@ -310,7 +310,7 @@ El tiempo de retraso especificado por un valor de clave del registro. Puede camb
 
 Para obtener más información acerca de cómo arrastrar se almacena información sobre los retrasos en el registro o el. Archivo INI, consulte [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) en el SDK de Windows.
 
-Para obtener más información, vea el artículo [arrastrar y colocar: implementar un origen de Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).
+Para obtener más información, vea el artículo [arrastrar y colocar: Implementación de un origen de colocación](../../mfc/drag-and-drop-implementing-a-drop-source.md).
 
 ##  <a name="empty"></a>  COleDataSource::Empty
 
@@ -374,7 +374,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-El formato especificado es una colocado anteriormente en el `COleDataSource` objeto utilizando el [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función miembro para la representación aplazada. La implementación predeterminada de esta función llamará [OnRenderFileData](#onrenderfiledata) o [OnRenderGlobalData](#onrenderglobaldata) si el medio de almacenamiento proporcionado es un archivo o la memoria, respectivamente. Si se proporciona ninguno de estos formatos, a continuación, la implementación predeterminada devolverá 0 y no hacer nada. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+El formato especificado es una colocado anteriormente en el `COleDataSource` objeto utilizando el [DelayRenderData](#delayrenderdata) o [DelayRenderFileData](#delayrenderfiledata) función miembro para la representación aplazada. La implementación predeterminada de esta función llamará [OnRenderFileData](#onrenderfiledata) o [OnRenderGlobalData](#onrenderglobaldata) si el medio de almacenamiento proporcionado es un archivo o la memoria, respectivamente. Si se proporciona ninguno de estos formatos, a continuación, la implementación predeterminada devolverá 0 y no hacer nada. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Si *lpStgMedium*-> *tymed* es TYMED_NULL, el `STGMEDIUM` debe ser asignado y rellenado según lo especificado por *lpFormatEtc -> tymed*. Si no es TYMED_NULL, el `STGMEDIUM` debe rellenarse en lugar de con los datos.
 
@@ -408,7 +408,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 El formato especificado es una colocado anteriormente en el `COleDataSource` objeto utilizando el [DelayRenderData](#delayrenderdata) función miembro para la representación aplazada. La implementación predeterminada de esta función simplemente devuelve FALSE.
 
-Esto es un avanzado que se puede invalidar. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede reemplazar una de las otras versiones de esta función en su lugar. Si desea controlar varios medios de almacenamiento, reemplace [OnRenderData](#onrenderdata). Si los datos están en un archivo o es de tamaño variable, invalidar `OnRenderFileData`. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Esto es un avanzado que se puede invalidar. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede reemplazar una de las otras versiones de esta función en su lugar. Si desea controlar varios medios de almacenamiento, reemplace [OnRenderData](#onrenderdata). Si los datos están en un archivo o es de tamaño variable, invalidar `OnRenderFileData`. Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para obtener más información, consulte el [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructura y [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) en el SDK de Windows.
 
@@ -440,7 +440,7 @@ El formato especificado es una colocado anteriormente en el `COleDataSource` obj
 
 Si *phGlobal* es NULL, entonces debe asignado y devueltos en un nuevo HGLOBAL *phGlobal*. En caso contrario, el HGLOBAL especificado por *phGlobal* debe rellenarse con los datos. La cantidad de datos colocados en HGLOBAL no puede superar el tamaño actual del bloque de memoria. Además, el bloque no se puede reasignar a un tamaño mayor.
 
-Esto es un avanzado que se puede invalidar. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede reemplazar una de las otras versiones de esta función en su lugar. Si desea controlar varios medios de almacenamiento, reemplace [OnRenderData](#onrenderdata). Si los datos están en un archivo o es de tamaño variable, invalidar [OnRenderFileData](#onrenderfiledata). Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Esto es un avanzado que se puede invalidar. Reemplace esta función para proporcionar los datos en el formato solicitado y medio. Dependiendo de los datos, puede reemplazar una de las otras versiones de esta función en su lugar. Si desea controlar varios medios de almacenamiento, reemplace [OnRenderData](#onrenderdata). Si los datos están en un archivo o es de tamaño variable, invalidar [OnRenderFileData](#onrenderfiledata). Para obtener más información sobre la representación aplazada como controlado por MFC, vea el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para obtener más información, consulte el [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructura y [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) en el SDK de Windows.
 
@@ -478,9 +478,9 @@ La implementación predeterminada no hace nada. Reemplace esta función para ree
 
 Para obtener más información, consulte el [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) y [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructuras y los [ReleaseStgMedium](/windows/desktop/api/ole2/nf-ole2-releasestgmedium) y [IDataObject:: GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) funciones en el SDK de Windows.
 
-##  <a name="setclipboard"></a>  COleDataSource:: SetClipboard
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard
 
-Coloca los datos contenidos en el `COleDataSource` objeto en el Portapapeles después de llamar a una de las siguientes funciones: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), o [DelayRenderFileData](#delayrenderfiledata).
+Coloca los datos contenidos en la `COleDataSource` objeto en el Portapapeles después de llamar a una de las funciones siguientes: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), o [DelayRenderFileData](#delayrenderfiledata).
 
 ```
 void SetClipboard();
