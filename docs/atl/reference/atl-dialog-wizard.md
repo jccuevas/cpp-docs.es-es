@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-ms.openlocfilehash: 7f868800bb8453ac47ec0f188d6a2970aee7a55f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 043c170021ce1ceb072dba3e5a450375f556753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458063"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287926"
 ---
 # <a name="atl-dialog-wizard"></a>Asistente para cuadros de diálogo ATL
 
@@ -45,4 +45,3 @@ El asistente inserta en el archivo de encabezado un [mapa de mensajes](../../atl
 ## <a name="see-also"></a>Vea también
 
 [Cuadro de diálogo ATL](../../atl/reference/adding-an-atl-dialog-box.md)
-

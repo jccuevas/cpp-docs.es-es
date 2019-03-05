@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 10107d7b815f8a3c479a28de8ff07439b5da2fda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273041"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler (clase)
 
@@ -146,7 +146,7 @@ Todos los métodos de la `CDataRecoveryHandler` clase son virtuales. Invalide lo
 
 Para poder usar un `CDataRecoveryHandler` objeto, debe llamar a [CDataRecoveryHandler::Initialize](#initialize).
 
-Dado que el `CDataRecoveryHandler` clase estrechamente está conectada al administrador de reinicio, `CDataRecoveryHandler` depende del parámetro global `m_dwRestartManagerSupportFlags`. Este parámetro determina qué permisos tiene el Administrador de reinicio y cómo interactúa con la aplicación. Para incorporar el Administrador de reinicio en una aplicación existente, tendrá que asignar `m_dwRestartManagerSupportFlags` el valor adecuado en el constructor de la aplicación principal. Para obtener más información sobre cómo usar el Administrador de reinicio, consulte [How to: Add Restart Manager Support](../../mfc/how-to-add-restart-manager-support.md).
+Dado que el `CDataRecoveryHandler` clase estrechamente está conectada al administrador de reinicio, `CDataRecoveryHandler` depende del parámetro global `m_dwRestartManagerSupportFlags`. Este parámetro determina qué permisos tiene el Administrador de reinicio y cómo interactúa con la aplicación. Para incorporar el Administrador de reinicio en una aplicación existente, tendrá que asignar `m_dwRestartManagerSupportFlags` el valor adecuado en el constructor de la aplicación principal. Para obtener más información sobre cómo usar el Administrador de reinicio, vea [Cómo: Agregar compatibilidad con el Administrador de reinicio](../../mfc/how-to-add-restart-manager-support.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -689,5 +689,4 @@ Para usar este método, se debe establecer AFX_RESTART_MANAGER_REOPEN_PREVIOUS_F
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
-[Procedimiento para agregar compatibilidad con el Administrador de reinicio](../../mfc/how-to-add-restart-manager-support.md)
-
+[Cómo: Agregar compatibilidad con el Administrador de reinicio](../../mfc/how-to-add-restart-manager-support.md)

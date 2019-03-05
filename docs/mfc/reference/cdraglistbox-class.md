@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: 739bf08139c56992af883b5cefa5c235bf08f551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6574ffaf8c4b8c0414c00ef2f4a31f6ed74ebe9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294946"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox (clase)
 
@@ -92,7 +92,7 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se está arrastrando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del elemento que se está arrastrando.
 
 ### <a name="remarks"></a>Comentarios
@@ -138,7 +138,7 @@ virtual UINT Dragging(CPoint pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene x e y coordenadas del cursor de la pantalla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -187,7 +187,7 @@ virtual void Dropped(
 *nSrcIndex*<br/>
 Especifica el índice de base cero de la cadena quitada.
 
-*PT*<br/>
+*pt*<br/>
 Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del sitio de destino.
 
 ### <a name="remarks"></a>Comentarios
@@ -206,7 +206,7 @@ int ItemFromPt(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas de un punto en el cuadro de lista.
 
 *bAutoScroll*<br/>

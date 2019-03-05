@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285157"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Procedimiento Convertir un bucle OpenMP que usa el control de excepciones para usar el Runtime de simultaneidad
 
@@ -63,4 +63,3 @@ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguel
 [Migración de OpenMP al Runtime de simultaneidad](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Control de excepciones](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)
-

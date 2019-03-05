@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296766"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton (clase)
 
@@ -43,8 +43,8 @@ class CBitmapButton : public CButton
 
 |Name|Descripción|
 |----------|-----------------|
-|[CBitmapButton:: Autoload](#autoload)|Asocia un botón en un cuadro de diálogo con un objeto de la `CBitmapButton` (clase), carga el bitmap(s) por su nombre y cambia el tamaño del botón para ajustar el mapa de bits.|
-|[CBitmapButton:: LoadBitmaps](#loadbitmaps)|Inicializa el objeto cargando uno o varios recursos de mapa de bits con nombre de archivo de recursos de la aplicación y asociar los mapas de bits para el objeto.|
+|[CBitmapButton::AutoLoad](#autoload)|Asocia un botón en un cuadro de diálogo con un objeto de la `CBitmapButton` (clase), carga el bitmap(s) por su nombre y cambia el tamaño del botón para ajustar el mapa de bits.|
+|[CBitmapButton::LoadBitmaps](#loadbitmaps)|Inicializa el objeto cargando uno o varios recursos de mapa de bits con nombre de archivo de recursos de la aplicación y asociar los mapas de bits para el objeto.|
 |[CBitmapButton::SizeToContent](#sizetocontent)|Cambia el tamaño del botón para acomodar el mapa de bits.|
 
 ## <a name="remarks"></a>Comentarios
@@ -57,7 +57,7 @@ Estos mapas de bits pueden ser de cualquier tamaño, pero se tratan como si fuer
 
 Diversas aplicaciones exigen distintas combinaciones de imágenes de mapa de bits:
 
-|Arriba|Verticalmente|Focused|Deshabilitado|Application|
+|Arriba|Verticalmente|Con foco|Deshabilitado|Administración de|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
 |×|×|||Botón sin estilo WS_TABSTOP|
@@ -112,7 +112,7 @@ Para obtener más información sobre `CBitmapButton`, consulte [controles](../..
 
 **Encabezado:** afxext.h
 
-##  <a name="autoload"></a>  CBitmapButton:: Autoload
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad
 
 Asocia un botón en un cuadro de diálogo con un objeto de la `CBitmapButton` (clase), carga el bitmap(s) por su nombre y cambia el tamaño del botón para ajustar el mapa de bits.
 
@@ -158,7 +158,7 @@ Después de crear el C++ `CBitmapButton` de objeto, llame a [CButton::Create](..
 
 [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]
 
-##  <a name="loadbitmaps"></a>  CBitmapButton:: LoadBitmaps
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps
 
 Use esta función cuando desea cargar imágenes de mapa de bits identificadas por sus nombres de recursos o los números de identificación, o cuando no puede usar el `AutoLoad` funciona porque, por ejemplo, va a crear un botón de mapa de bits que no forma parte de un cuadro de diálogo.
 
@@ -179,7 +179,7 @@ BOOL LoadBitmaps(
 ### <a name="parameters"></a>Parámetros
 
 *lpszBitmapResource*<br/>
-Apunta a la cadena terminada en null que contiene el nombre del mapa de bits para normal de un botón mapa de bits o "seguridad" del estado. Requerido.
+Apunta a la cadena terminada en null que contiene el nombre del mapa de bits para normal de un botón mapa de bits o "seguridad" del estado. Obligatorio.
 
 *lpszBitmapResourceSel*<br/>
 Apunta a la cadena terminada en null que contiene el nombre del mapa de bits de un botón de mapa de bits está seleccionado o "down" estado. Puede ser NULL.
@@ -191,7 +191,7 @@ Apunta a la cadena terminada en null que contiene el nombre del mapa de bits par
 Apunta a la cadena terminada en null que contiene el nombre del mapa de bits en el botón de mapa de bits de estado deshabilitado. Puede ser NULL.
 
 *nIDBitmapResource*<br/>
-Especifica el número de Id. de recurso del recurso de mapa de bits para normal de un botón mapa de bits o "seguridad" del estado. Requerido.
+Especifica el número de Id. de recurso del recurso de mapa de bits para normal de un botón mapa de bits o "seguridad" del estado. Obligatorio.
 
 *nIDBitmapResourceSel*<br/>
 Especifica el número de Id. de recurso del recurso de mapa de bits para la que ha seleccionado un botón de mapa de bits o "down" estado. Puede ser 0.
@@ -227,4 +227,3 @@ void SizeToContent();
 [Ejemplo de MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
 [CButton (clase)](../../mfc/reference/cbutton-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

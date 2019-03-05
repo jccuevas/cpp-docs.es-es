@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666107"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283610"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (clase)
 
@@ -208,7 +208,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](/windows/desktop/Controls/trackbar-control-styles), que se describen en el SDK de Windows para el control.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -250,7 +250,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](/windows/desktop/Controls/trackbar-control-styles), que se describen en el SDK de Windows para el control.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -385,10 +385,10 @@ void GetRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 Referencia a un entero que recibe la posición mínima.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Referencia a un entero que recibe la posición máxima.
 
 ### <a name="remarks"></a>Comentarios
@@ -431,10 +431,10 @@ void GetSelection(
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 Referencia a un entero que recibe la posición inicial de la selección actual.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Referencia a un entero que recibe la posición final de la selección actual.
 
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength
@@ -630,10 +630,10 @@ void SetRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 Posición mínima para el control deslizante.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Posición máxima para el control deslizante.
 
 *bRedraw*<br/>
@@ -651,7 +651,7 @@ void SetRangeMax(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Posición máxima para el control deslizante.
 
 *bRedraw*<br/>
@@ -669,7 +669,7 @@ void SetRangeMin(
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 Posición mínima para el control deslizante.
 
 *bRedraw*<br/>
@@ -687,10 +687,10 @@ void SetSelection(
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 Posición inicial para el control deslizante.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 Posición final para el control deslizante.
 
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>Parámetros
 
-*Nubicación*<br/>
+*nLocation*<br/>
 Valor que representa la ubicación en la que se va a mostrar el control de información sobre herramientas. Para obtener una lista de valores posibles, vea el mensaje de Win32 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside), tal y como se describe en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -801,7 +801,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [TBM_SET
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CProgressCtrl (clase)](../../mfc/reference/cprogressctrl-class.md)

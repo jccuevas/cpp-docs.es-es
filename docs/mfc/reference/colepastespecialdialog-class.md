@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303327"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog (clase)
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Parámetros
 
-*FMT*<br/>
+*fmt*<br/>
 Referencia al tipo de datos para agregar.
 
 *lpszFormat*<br/>
@@ -134,10 +134,10 @@ Cadena que describe el resultado si se elige este formato en el cuadro de diálo
 *flags*<br/>
 Los diferentes vincular e incrustar las opciones disponibles para este formato. Este indicador es una combinación bit a bit de uno o varios de los diferentes valores en el OLEUIPASTEFLAG tipo enumeran.
 
-*CF*<br/>
+*cf*<br/>
 Para agregar el formato del Portapapeles.
 
-*TYMED*<br/>
+*tymed*<br/>
 Los tipos de medios disponibles en este formato. Se trata de una combinación bit a bit de uno o varios de los valores en el TYMED tipo enumeran.
 
 *nFormatID*<br/>
@@ -146,12 +146,12 @@ El identificador de la cadena que identifica este formato. El formato de esta ca
 *bEnableIcon*<br/>
 Marca que determina si la casilla de verificación Mostrar como icono está habilitada cuando se elige este formato en el cuadro de lista.
 
-*Intermitencia*<br/>
+*bLink*<br/>
 Marca que determina si el botón de radio Pegar vínculo está habilitado cuando se elige este formato en el cuadro de lista.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función se puede llamar para agregar tanto estándares como CF_TEXT o CF_TIFF o formatos formatos personalizados que la aplicación se ha registrado con el sistema. Para obtener más información acerca de pegar objetos de datos en la aplicación, consulte el artículo [objetos de datos y orígenes de datos: manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
+Esta función se puede llamar para agregar tanto estándares como CF_TEXT o CF_TIFF o formatos formatos personalizados que la aplicación se ha registrado con el sistema. Para obtener más información acerca de pegar objetos de datos en la aplicación, consulte el artículo [objetos de datos y orígenes de datos: Manipulación](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Para obtener más información, consulte el [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) tipo de enumeración y el [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) estructura en el SDK de Windows.
 
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 Para agregar el formato del Portapapeles.
 
 ### <a name="return-value"></a>Valor devuelto

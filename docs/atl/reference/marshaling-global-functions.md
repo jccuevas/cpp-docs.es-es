@@ -6,12 +6,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: dadaf119f8f1d0aefb4f5b4b740747a2794d271e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271923"
 ---
 # <a name="marshaling-global-functions"></a>Funciones globales de serialización
 
@@ -63,7 +63,7 @@ HRESULT AtlMarshalPtrInProc(
 *pUnk*<br/>
 [in] Un puntero a la interfaz que se van a calcular.
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz que se va a serializar.
 
 *ppStream*<br/>
@@ -87,7 +87,7 @@ Si se produce un error de cálculo de referencias, se libera el puntero del fluj
 
 ##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
 
-Convierte los datos de serialización del flujo en un puntero de interfaz que puede usarse en el cliente.
+Convierte los datos de cálculo de referencias del flujo en un puntero de interfaz que puede usarse en el cliente.
 
 ```
 HRESULT AtlUnmarshalPtr(
@@ -101,7 +101,7 @@ HRESULT AtlUnmarshalPtr(
 *pStream*<br/>
 [in] Un puntero a la secuencia que se resuelven referencias.
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz que se resuelven referencias.
 
 *ppUnk*<br/>

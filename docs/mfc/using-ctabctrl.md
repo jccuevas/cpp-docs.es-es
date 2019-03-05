@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: e4a2169d3b11b36b747f13663fdcb40baf52cd8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272079"
 ---
 # <a name="using-ctabctrl"></a>Usar CTabCtrl
 
@@ -39,4 +39,3 @@ Para obtener más información sobre los controles de ficha, consulte [controles
 ## <a name="see-also"></a>Vea también
 
 [Controles](../mfc/controls-mfc.md)
-

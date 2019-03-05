@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279361"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menús y recursos: Adiciones de contenedor
 
@@ -52,7 +52,7 @@ Debe agregar los siguientes elementos al menú Edición:
 
 Además de los cambios mostrados en este artículo, el archivo de origen debe incluir AFXOLECL. RC, que es necesario para la implementación de la biblioteca Microsoft Foundation Class. Insertar nuevo objeto es la adición de menú requiere solo. Se pueden agregar otros elementos, pero las mencionadas aquí son los más comunes.
 
-Debe crear un nuevo menú de la aplicación de contenedor si desea admitir la activación en contexto de los elementos contenidos. Este menú está formado por el mismo menú archivo y los menús emergentes utilizados cuando los archivos están abiertos, pero tiene dos separadores entre ellos. Estos separadores se utilizan para indicar que el elemento del servidor (componente) (aplicación) debe colocar sus menús cuando se activa en contexto. Para obtener más información sobre esta técnica de combinación de menús, consulte [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md).
+Debe crear un nuevo menú de la aplicación de contenedor si desea admitir la activación en contexto de los elementos contenidos. Este menú está formado por el mismo menú archivo y los menús emergentes utilizados cuando los archivos están abiertos, pero tiene dos separadores entre ellos. Estos separadores se utilizan para indicar que el elemento del servidor (componente) (aplicación) debe colocar sus menús cuando se activa en contexto. Para obtener más información sobre esta técnica de combinación de menús, consulte [menús y recursos: Combinación de menús](../mfc/menus-and-resources-menu-merging.md).
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> Acelerador de la tabla incorporaciones de aplicaciones de contenedor
 
@@ -71,7 +71,7 @@ El segundo cambio consiste en crear una nueva tabla de aceleradores que se corre
 |ID_FILE_SAVE|CTRL+S|**VIRTKEY**|
 |ID_FILE_PRINT|CTRL+P|**VIRTKEY**|
 |ID_NEXT_PANE|VK_F6|**VIRTKEY**|
-|ID_PREV_PANE|MAYÚS + VK_F6|**VIRTKEY**|
+|ID_PREV_PANE|SHIFT+VK_F6|**VIRTKEY**|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
 ##  <a name="_core_string_table_additions_for_container_applications"></a> Agregar tablas de cadenas para las aplicaciones de contenedor
@@ -87,4 +87,3 @@ La mayoría de los cambios en las tablas de cadenas para las aplicaciones de con
 
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Menús y recursos: Adiciones de servidor](../mfc/menus-and-resources-server-additions.md)
-

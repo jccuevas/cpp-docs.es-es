@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301303"
 ---
 # <a name="scheduler-instances"></a>Instancias de Scheduler
 
@@ -38,7 +38,7 @@ Un subproceso que se adjunta a un programador se conoce como un *contexto de eje
 
 Normalmente, el `CurrentScheduler` clase se usa para acceder el programador actual. La `Scheduler` clase es útil cuando se necesita para administrar un programador que no es la actual.
 
-Las secciones siguientes describen cómo crear y administrar una instancia del programador. Para obtener un ejemplo completo que se muestra las tareas, consulte [Cómo: administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Las secciones siguientes describen cómo crear y administrar una instancia del programador. Para obtener un ejemplo completo que se muestra las tareas, consulte [Cómo: Administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[Arriba](#top)]
 
@@ -120,12 +120,11 @@ La siguiente tabla muestra los métodos importantes que se definen mediante la `
 
 ##  <a name="example"></a> Ejemplo
 
-Para obtener ejemplos básicos de cómo crear y administrar una instancia del programador, consulte [Cómo: administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Para obtener ejemplos básicos de cómo crear y administrar una instancia del programador, consulte [Cómo: Administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Procedimiento para administrar una instancia de Scheduler](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Cómo: Administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Directivas de Scheduler](../../parallel/concrt/scheduler-policies.md)<br/>
 [Grupos de programación](../../parallel/concrt/schedule-groups.md)
-

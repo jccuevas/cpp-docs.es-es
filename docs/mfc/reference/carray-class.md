@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: e97a50b2687029ddff3d946f634e145f6709aa48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557682"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266138"
 ---
 # <a name="carray-class"></a>CArray (clase)
 
@@ -62,7 +62,7 @@ class CArray : public CObject
 
 #### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de objetos almacenados en la matriz. *TIPO* es un parámetro devuelto por `CArray`.
 
 *ARG_TYPE*<br/>
@@ -96,7 +96,7 @@ Parámetro de plantilla que especifica el tipo de argumento que se usa para tene
 |[CArray::RemoveAt](#removeat)|Quita un elemento en un índice específico.|
 |[CArray::SetAt](#setat)|Establece el valor de un índice dado; la matriz no puede aumentar de tamaño.|
 |[CArray::SetAtGrow](#setatgrow)|Establece el valor de un índice dado; aumenta el tamaño de la matriz si es necesario.|
-|[CArray](#setsize)|Establece el número de elementos que contendrá esta matriz.|
+|[CArray::SetSize](#setsize)|Establece el número de elementos que contendrá esta matriz.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -281,7 +281,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de los elementos de matriz.
 
 *nIndex*<br/>
@@ -330,7 +330,7 @@ TYPE* GetData();
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de los elementos de matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -451,7 +451,7 @@ const TYPE& operator[](int_ptr nindex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos de esta matriz.
 
 *nIndex*<br/>
@@ -598,7 +598,7 @@ La matriz crece automáticamente si es necesario (es decir, el límite superior 
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
-##  <a name="setsize"></a>  CArray
+##  <a name="setsize"></a>  CArray::SetSize
 
 Establece el tamaño de una matriz vacía o existente. asigna memoria si es necesario.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496429"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284208"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>Controles ActiveX MFC: Agregar propiedades personalizadas
 
@@ -22,7 +22,7 @@ En este artículo se describe cómo agregar una propiedad personalizada al contr
 
 - [Agregue los cambios del Asistente para la propiedad para propiedades personalizadas](#_core_classwizard_changes_for_custom_properties)
 
-Propiedades personalizadas se presentan en cuatro variedades de implementación: la Variable de miembro, Variable miembro con notificación, métodos Get/Set y parametrizada.
+Propiedades personalizadas se dividen en cuatro variedades de implementación: Variable de miembro, la Variable de miembro con la notificación, los métodos Get/Set y con parámetros.
 
 - Implementación de la Variable miembro
 
@@ -38,7 +38,7 @@ Propiedades personalizadas se presentan en cuatro variedades de implementación:
 
 - Implementación con parámetros
 
-   Implementación con parámetros es compatible con el Asistente para agregar propiedades. Una propiedad parametrizada (a veces denominada una matriz de propiedades) puede utilizarse para tener acceso a un conjunto de valores a través de una sola propiedad del control. La macro de entrada de mapa de envíos para esta implementación es DISP_PROPERTY_PARAM. Para obtener más información sobre la implementación de este tipo, consulte [implementar una propiedad parametrizada](../mfc/mfc-activex-controls-advanced-topics.md) en el artículo de controles ActiveX: temas avanzados.
+   Implementación con parámetros es compatible con el Asistente para agregar propiedades. Una propiedad parametrizada (a veces denominada una matriz de propiedades) puede utilizarse para tener acceso a un conjunto de valores a través de una sola propiedad del control. La macro de entrada de mapa de envíos para esta implementación es DISP_PROPERTY_PARAM. Para obtener más información sobre la implementación de este tipo, consulte [implementar una propiedad parametrizada](../mfc/mfc-activex-controls-advanced-topics.md) en el artículo de controles ActiveX: Temas avanzados.
 
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Mediante el Asistente para agregar propiedades para agregar una propiedad personalizada
 

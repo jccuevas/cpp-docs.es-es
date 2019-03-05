@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273288"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl (clase)
 
@@ -56,7 +56,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cmfceditbrowsectrl:: Enablebrowsebutton](#enablebrowsebutton)|Habilita o deshabilita (oculta) el botón Examinar.|
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Habilita o deshabilita (oculta) el botón Examinar.|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Habilita el botón Examinar y coloca el control de exploración de edición en *Examinar archivo* modo.|
 |[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|Habilita el botón Examinar y coloca el control de exploración de edición en *examinar carpetas* modo.|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|Devuelve el modo de exploración actual.|
@@ -129,7 +129,7 @@ En el ejemplo siguiente se muestra cómo usar dos métodos en el `CMFCEditBrowse
 
 **Encabezado:** afxeditbrowsectrl.h
 
-##  <a name="enablebrowsebutton"></a>  Cmfceditbrowsectrl:: Enablebrowsebutton
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
 
 Muestra o no muestra el botón Examinar en el control de exploración de edición actual.
 
@@ -141,7 +141,7 @@ void EnableBrowseButton(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 TRUE para mostrar el botón Examinar; Si es FALSE, no se muestre el botón Examinar. El valor predeterminado es TRUE.
 
 *szLabel*<br/>

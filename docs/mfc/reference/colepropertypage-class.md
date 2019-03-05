@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271260"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage (clase)
 
@@ -76,7 +76,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 |[COlePropertyPage::OnHelp](#onhelp)|Lo llama el marco cuando el usuario pide ayuda.|
 |[COlePropertyPage::OnInitDialog](#oninitdialog)|Lo llama el marco de trabajo cuando se inicializa la página de propiedades.|
 |[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Lo llama el marco de trabajo cuando se elige otro control OLE con nuevas propiedades.|
-|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|Lo llama el marco de trabajo cuando la propiedad frame proporciona el sitio de la página.|
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|Lo llama el marco de trabajo cuando la propiedad frame proporciona el sitio de la página.|
 |[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Establece una marca que indica si el usuario ha modificado el valor del control.|
 |[COlePropertyPage::SetDialogResource](#setdialogresource)|Establece el recurso de cuadro de diálogo de la página de propiedades.|
 |[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Establece el texto de Ayuda breve de la página de propiedades, el nombre de su archivo de ayuda y su contexto de ayuda.|
@@ -89,7 +89,7 @@ Por ejemplo, una página de propiedades puede incluir un control de edición que
 
 Cada propiedad de control estándar o personalizado puede tener un control de cuadro de diálogo que permite que el usuario del control ver el valor de propiedad actuales y modificar ese valor si es necesario.
 
-Para obtener más información sobre el uso de `COlePropertyPage`, consulte el artículo [controles ActiveX: páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).
+Para obtener más información sobre el uso de `COlePropertyPage`, consulte el artículo [controles ActiveX: Páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -222,7 +222,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de la propiedad que se está edita.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -284,7 +284,7 @@ Al ver las propiedades de un control OLE en el entorno del desarrollador, un cua
 
 Reemplace esta función para recibir una notificación de esta acción y realizar ninguna acción especial.
 
-##  <a name="onsetpagesite"></a>  COlePropertyPage:: OnSetPageSite
+##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite
 
 El marco de trabajo llama a esta función cuando la propiedad frame proporciona el sitio de la página de la página de propiedades.
 

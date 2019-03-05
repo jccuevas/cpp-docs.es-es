@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: b14e2a4f1c29860b9a624b09805959a9f6b550f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b48e0b4abc8601b5173c3c7d2748c726646fbc5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267113"
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>Comprender la sintaxis de Backus Nauer Form (BNF)
 
@@ -20,7 +20,7 @@ Los scripts usados por el registrador de ATL se describen en este tema mediante 
 |------------------------|-------------|
 |::=|Equivalente|
 |&#124;|O|
-|X +|Xs uno o más.|
+|X+|Xs uno o más.|
 |[X]|X es opcional. Los delimitadores opcionales se indican mediante \[].|
 |Cualquier **negrita** texto|Un literal de cadena.|
 |Cualquier *en cursiva* texto|Cómo construir el literal de cadena.|
@@ -31,7 +31,7 @@ Como se indica en la tabla anterior, los scripts del registrador usan literales 
 |--------------------|------------|
 |**ForceRemove**|Quita completamente la clave siguiente (si existe) y, a continuación, volver a crearla.|
 |**NoRemove**|No quita la clave siguiente durante la eliminación del registro.|
-|**Val**|Especifica que `<Key Name>` es realmente un valor con nombre.|
+|**val**|Especifica que `<Key Name>` es realmente un valor con nombre.|
 |**Eliminar**|Elimina la clave siguiente durante el registro.|
 |**s**|Especifica que el valor siguiente es una cadena (REG_SZ).|
 |**d**|Especifica que el valor siguiente es un valor DWORD (REG_DWORD).|
@@ -101,4 +101,3 @@ Especifica que el nombre de clave `testhex` se establece un valor DWORD a 55 hex
 ## <a name="see-also"></a>Vea también
 
 [Crear scripts del registrador](../atl/creating-registrar-scripts.md)
-

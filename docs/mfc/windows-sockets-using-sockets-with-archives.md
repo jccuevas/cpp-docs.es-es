@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Usar sockets con archivos'
+title: 'Windows Sockets: Usar Sockets con archivos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], archives
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615398"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261510"
 ---
-# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Usar sockets con archivos
+# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Usar Sockets con archivos
 
 Este artículo se describe la [modelo de programación de CSocket](#_core_the_csocket_programming_model). Clase [CSocket](../mfc/reference/csocket-class.md) proporciona compatibilidad con el socket en un nivel superior de abstracción de clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` usa una versión del protocolo de serialización de MFC para pasar datos hacia y desde un objeto de socket a través de un MFC [CArchive](../mfc/reference/carchive-class.md) objeto. `CSocket` proporciona el bloqueo (mientras administra el procesamiento en segundo plano de los mensajes de Windows) y proporciona acceso a `CArchive`, que administra muchos aspectos de la comunicación que tendría que hacer usted mismo mediante la API sin formato o la clase `CAsyncSocket`.
 
 > [!TIP]
 >  Puede usar la clase `CSocket` por sí mismo, como una versión más conveniente de `CAsyncSocket`, pero el modelo de programación más sencillo es usar `CSocket` con un `CArchive` objeto.
 
-Para obtener más información sobre cómo funciona la implementación de los sockets con archivos, consulte [Windows Sockets: cómo los Sockets con archivos de trabajo](../mfc/windows-sockets-how-sockets-with-archives-work.md). Por ejemplo de código, consulte [Windows Sockets: secuencia de operaciones](../mfc/windows-sockets-sequence-of-operations.md) y [Windows Sockets: ejemplo de Sockets con archivos](../mfc/windows-sockets-example-of-sockets-using-archives.md). Para obtener información sobre algunas de las funciones que puede obtener al derivar sus propias clases de las clases de sockets, consulte [Windows Sockets: derivar de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Para obtener más información sobre cómo funciona la implementación de los sockets con archivos, consulte [Windows Sockets: Cómo funcionan los Sockets con archivos](../mfc/windows-sockets-how-sockets-with-archives-work.md). Por ejemplo de código, consulte [Windows Sockets: Secuencia de operaciones](../mfc/windows-sockets-sequence-of-operations.md) y [Windows Sockets: Ejemplo de Sockets que usan archivos](../mfc/windows-sockets-example-of-sockets-using-archives.md). Para obtener información sobre algunas de las funciones que puede obtener al derivar sus propias clases de las clases de sockets, consulte [Windows Sockets: Derivación de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 > [!NOTE]
->  Si está escribiendo un programa de cliente MFC para comunicarse con servidores establecidos (no basados en MFC), no enviar los objetos de C++ a través del archivo. A menos que el servidor es una aplicación MFC que reconozca los tipos de objetos que desea enviar, no será capaz de recibir y deserializar los objetos. Para obtener material relacionado en el asunto de la comunicación con aplicaciones no basados en MFC, vea también el artículo [Windows Sockets: orden de bytes](../mfc/windows-sockets-byte-ordering.md).
+>  Si está escribiendo un programa de cliente MFC para comunicarse con servidores establecidos (no basados en MFC), no enviar los objetos de C++ a través del archivo. A menos que el servidor es una aplicación MFC que reconozca los tipos de objetos que desea enviar, no será capaz de recibir y deserializar los objetos. Para obtener material relacionado en el asunto de la comunicación con aplicaciones no basados en MFC, vea también el artículo [Windows Sockets: Orden de bytes](../mfc/windows-sockets-byte-ordering.md).
 
 ##  <a name="_core_the_csocket_programming_model"></a> El modelo de programación de CSocket
 
@@ -70,16 +70,15 @@ Mediante un `CSocket` objeto implica crear y asociar varios objetos de clase MFC
     > [!NOTE]
     >  Clase `CArchive` proporciona el `IsBufferEmpty` función miembro específicamente para su uso con la clase `CSocket`. Por ejemplo, si el búfer contiene varios mensajes de datos, necesita un bucle hasta que todos ellos se leen y se borra el búfer. En caso contrario, la siguiente notificación de que hay datos para poder recibir podría retrasarse indefinidamente. Use `IsBufferEmpty` para garantizar que recuperar todos los datos.
 
-El artículo [Windows Sockets: secuencia de operaciones](../mfc/windows-sockets-sequence-of-operations.md) muestra ambos lados de este proceso con código de ejemplo.
+El artículo [Windows Sockets: Secuencia de operaciones](../mfc/windows-sockets-sequence-of-operations.md) muestra ambos lados de este proceso con código de ejemplo.
 
 Para obtener más información, consulte:
 
-- [Windows Sockets: Sockets de flujos](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagramas](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

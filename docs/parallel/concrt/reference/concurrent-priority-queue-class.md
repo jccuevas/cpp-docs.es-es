@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304787"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue (Clase)
 
@@ -41,7 +41,7 @@ template <typename T,
 *T*<br/>
 El tipo de datos de los elementos que se almacenará en la cola de prioridad.
 
-*_Comparación*<br/>
+*_Compare*<br/>
 El tipo de objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en la cola de prioridad. Este argumento es opcional y el predicado binario `less<T>` es el valor predeterminado.
 
 *_Ax*<br/>
@@ -152,10 +152,10 @@ La clase de asignador que se usa con este objeto.
 *_Init_capacity*<br/>
 Capacidad inicial del objeto `concurrent_priority_queue`.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
 *_Src*<br/>
@@ -259,7 +259,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Fronty*<br/>
+*_Queue*<br/>
 La `concurrent_priority_queue` objeto que se va a intercambiar el contenido.
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +283,3 @@ Una referencia a una variable que se rellenará con el elemento de prioridad má
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-

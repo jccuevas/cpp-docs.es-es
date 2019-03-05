@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282453"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd (clase)
 
@@ -194,7 +194,7 @@ CMDIChildWnd* CreateNewChild(
 *pClass*<br/>
 La clase de tiempo de ejecución de la ventana secundaria que se va a crear.
 
-*Nrecurso*<br/>
+*nResource*<br/>
 El identificador de recursos compartidos asociados con la ventana secundaria.
 
 *hMenu*<br/>
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>Parámetros
 
-*nLas*<br/>
+*nType*<br/>
 Especifica una marca en cascada. Se puede especificar sólo el siguiente indicador: MDITILE_SKIPDISABLED, lo que impide deshabilitados ventanas secundarias MDI se organizan en cascada.
 
 ### <a name="remarks"></a>Comentarios
@@ -333,7 +333,7 @@ void MDIMaximize(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntos a maximizar la ventana.
 
 ### <a name="remarks"></a>Comentarios
@@ -384,7 +384,7 @@ void MDIRestore(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana para restaurar.
 
 ### <a name="example"></a>Ejemplo
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>Parámetros
 
-*nLas*<br/>
+*nType*<br/>
 Especifica una marca de disposición en mosaico. Este parámetro puede ser cualquiera de las marcas siguientes:
 
 - Ventanas secundarias de MDI de MDITILE_HORIZONTAL iconos para que una ventana aparezca por encima de otro.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278696"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Espacio de nombres de simultaneidad (C++ AMP)
 
@@ -53,7 +53,7 @@ namespace Concurrency;
 |[tiled_extent (clase)](tiled-extent-class.md)|Un objeto `tiled_extent` es un objeto `extent` de una a tres dimensiones que divide el espacio de la extensión en un mosaico de una, dos o tres dimensiones.|
 |[tiled_index (clase)](tiled-index-class.md)|Proporciona un índice en un objeto `tiled_grid`. Esta clase tiene propiedades para tener acceso a elementos relacionados con el origen local del mosaico y con el origen global.|
 |[uninitialized_object (clase)](uninitialized-object-class.md)|La excepción que se produce cuando se usa un objeto no inicializado.|
-|[unsupported_feature (clase)](unsupported-feature-class.md)|La excepción que se produce cuando se usa una característica no compatible.|
+|[unsupported_feature (clase)](unsupported-feature-class.md)|La excepción que se produce cuando se usa una función no compatible.|
 
 ### <a name="enumerations"></a>Enumeraciones
 
@@ -104,7 +104,7 @@ namespace Concurrency;
 
 |Name|Descripción|
 |----------|-----------------|
-|[HLSL_MAX_NUM_BUFFERS (constante)](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|El número máximo de búferes permitido por DirectX.|
+|[HLSL_MAX_NUM_BUFFERS Constant](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|El número máximo de búferes permitido por DirectX.|
 |[MODULENAME_MAX_LENGTH (constante)](concurrency-namespace-constants-amp.md#modulename_max_length)|Almacena la longitud máxima del nombre del módulo. Este valor debe ser el mismo en el compilador y en el runtime.|
 
 ## <a name="requirements"></a>Requisitos
@@ -114,4 +114,3 @@ namespace Concurrency;
 ## <a name="see-also"></a>Vea también
 
 [Referencia (C++ AMP)](reference-cpp-amp.md)
-

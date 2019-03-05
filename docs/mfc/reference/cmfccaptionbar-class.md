@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429359"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264994"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar (clase)
 
@@ -233,7 +233,7 @@ void EnableButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el botón, es FALSE para deshabilitar el botón.
 
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>Parámetros
 
-*Elem*<br/>
+*elem*<br/>
 [in] Un elemento de la barra de título para el que se va a recuperar la alineación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Un puntero al contexto de dispositivo de la barra de título.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador para rellenar.
 
 ### <a name="remarks"></a>Comentarios
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Un contexto de dispositivo que se usa para mostrar los bordes.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador.
 
 ### <a name="remarks"></a>Comentarios
@@ -406,13 +406,13 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo que se usa para mostrar el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón.
 
 *strButton*<br/>
 [in] Etiqueta de texto del botón.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] TRUE si el botón está habilitado; FALSE en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo que se usa para mostrar la imagen.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el rectángulo delimitador de la imagen.
 
 ### <a name="remarks"></a>Comentarios
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo que se usa para mostrar el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del texto.
 
 *strText*<br/>
@@ -620,7 +620,7 @@ void SetButtonToolTip(
 *lpszToolTip*<br/>
 [in] El título de la información sobre herramientas.
 
-*lpszDescripción*<br/>
+*lpszDescription*<br/>
 [in] La descripción de la información sobre herramientas.
 
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder
@@ -683,7 +683,7 @@ void SetImageToolTip(
 *lpszToolTip*<br/>
 [in] El texto de la información sobre herramientas.
 
-*lpszDescripción*<br/>
+*lpszDescription*<br/>
 [in] La descripción de la información sobre herramientas.
 
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin

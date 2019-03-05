@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589363"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296736"
 ---
 # <a name="uint2-class"></a>uint_2 (Clase)
 
@@ -65,7 +65,7 @@ class uint_2;
 |----------|-----------------|
 |uint_2::get_x||
 |uint_2::get_xy||
-|uint_2:: get_Y||
+|uint_2::get_y||
 |uint_2::get_yx||
 |Método uint_2::ref_g||
 |Método uint_2::ref_r||
@@ -73,7 +73,7 @@ class uint_2;
 |Método uint_2::ref_y||
 |uint_2::set_x||
 |uint_2::set_xy||
-|uint_2:: set_y||
+|uint_2::set_y||
 |uint_2::set_yx||
 
 ### <a name="public-operators"></a>Operadores públicos
@@ -105,14 +105,14 @@ class uint_2;
 
 |Name|Descripción|
 |----------|-----------------|
-|uint_2:: g||
-|uint_2:: GR||
-|uint_2:: r||
+|uint_2::g||
+|uint_2::gr||
+|uint_2::r||
 |uint_2::rg||
-|uint_2:: x||
-|uint_2:: XY||
-|uint_2:: y||
-|uint_2:: YX||
+|uint_2::x||
+|uint_2::xy||
+|uint_2::y||
+|uint_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -122,7 +122,7 @@ class uint_2;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ##  <a name="ctor"></a> uint_2
 
@@ -177,7 +177,7 @@ El valor para inicializar el elemento 1.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ##  <a name="uint_2__size"></a> Tamaño

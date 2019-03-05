@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492808"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285560"
 ---
 # <a name="exceptions-database-exceptions"></a>Excepciones: Excepciones de base de datos
 
@@ -77,4 +77,3 @@ Cuando se trabaja con bases de datos Microsoft Jet (.mdb) y en la mayoría de lo
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
-

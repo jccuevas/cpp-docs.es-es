@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494592"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266424"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Procedimientos recomendados en la biblioteca de agentes asincrónicos
 
@@ -42,7 +42,7 @@ Normalmente, para aislar el estado en un agente, se conservan los miembros de da
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Para obtener ejemplos completos acerca de cómo definir y usar los agentes, vea [Tutorial: crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) y [Tutorial: crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Para obtener ejemplos completos acerca de cómo definir y usar los agentes, vea [Tutorial: Crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) y [Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
 [[Arriba](#top)]
 
@@ -58,7 +58,7 @@ El objeto `semaphore` limita la canalización para procesar a lo sumo dos mensaj
 
 El productor de este ejemplo envía relativamente pocos mensajes al consumidor. Por consiguiente, en este ejemplo no se muestra una condición potencial de memoria insuficiente. Sin embargo, este mecanismo es útil cuando una canalización de datos contiene un número de mensajes relativamente elevado.
 
-Para obtener más información sobre cómo crear la clase de semáforo que se usa en este ejemplo, vea [Cómo: usar la clase Context para implementar un semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Para obtener más información sobre cómo crear la clase de semáforo que se usa en este ejemplo, vea [Cómo: Usar la clase Context para implementar un semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 [[Arriba](#top)]
 
@@ -66,7 +66,7 @@ Para obtener más información sobre cómo crear la clase de semáforo que se us
 
 La biblioteca de agentes es muy útil cuando el trabajo que realiza una canalización de datos es bastante general. Por ejemplo, un componente de la aplicación podría leer los datos de un archivo o una conexión de red y enviar ocasionalmente esos datos a otro componente. El protocolo que usa la biblioteca de agentes para propagar los mensajes hace que el mecanismo de paso de mensajes que tienen más sobrecarga que las construcciones paralelas de tareas proporcionadas por el [Parallel Patterns Library](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Por consiguiente, asegúrese de que el trabajo que realiza una canalización de datos es suficientemente larga para desplazar esta sobrecarga.
 
-Aunque una canalización de datos es más eficaz cuando sus tareas son generales, cada fase de la canalización de datos puede usar las construcciones de PPL como grupos de tareas y algoritmos paralelos para realizar un trabajo más específico. Para obtener un ejemplo de una red de datos de generales que usa el paralelismo específico en cada fase de procesamiento, vea [Tutorial: crear una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Aunque una canalización de datos es más eficaz cuando sus tareas son generales, cada fase de la canalización de datos puede usar las construcciones de PPL como grupos de tareas y algoritmos paralelos para realizar un trabajo más específico. Para obtener un ejemplo de una red de datos de generales que usa el paralelismo específico en cada fase de procesamiento, vea [Tutorial: Creación de una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Arriba](#top)]
 
@@ -87,7 +87,7 @@ Using message_data*...
 took 47ms.
 ```
 
-La versión que usa punteros funciona mejor porque elimina el requisito de que el runtime cree una copia completa de cada objeto `message_data` que pasa del productor al consumidor.
+La versión que usa punteros funciona mejor porque elimina la necesidad de que el runtime cree una copia completa de cada objeto `message_data` que pasa del productor al consumidor.
 
 [[Arriba](#top)]
 
@@ -118,9 +118,8 @@ Destroying resource 64...
 
 [Procedimientos recomendados del Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Tutorial: Crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-[Tutorial: Crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Tutorial: Crear una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Tutorial: Creación de una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Tutorial: Creación de una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Procedimientos recomendados en la biblioteca de modelos paralelos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Procedimientos recomendados generales en el Runtime de simultaneidad](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

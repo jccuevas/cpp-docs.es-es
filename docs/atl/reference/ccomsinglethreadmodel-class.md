@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-ms.openlocfilehash: 2b0e19c94c16de936758ed4e547d731aed40cb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262056"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel (clase)
 
@@ -59,7 +59,7 @@ Normalmente, se utiliza `CComSingleThreadModel` a través de uno de los dos **ty
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComSingleThreadModel` Sí define tres **typedef** nombres. `ThreadModelNoCS` referencias `CComSingleThreadModel`. `AutoCriticalSection` y `CriticalSection` hacen referencia a clase [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md), que proporciona métodos vacíos asociados con la obtención y liberación de la propiedad de una sección crítica.
 

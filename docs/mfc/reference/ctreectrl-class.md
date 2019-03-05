@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271403"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de vista de árbol. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1347,7 +1347,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Coordenadas de cliente del separador para probar.
 
 *pFlags*<br/>
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 Un valor COLORREF que contiene el nuevo color de fondo. Si este valor es -1, el control volverá a utilizar el color del sistema para el color de fondo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 Un valor COLORREF que contiene el nuevo color de texto. Si este argumento es -1, el control volverá a utilizar el color del sistema para el color del texto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2341,7 +2341,7 @@ El *lParam1* y *lParam2* parámetros corresponden a la `lParam` miembro de la [e
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CImageList (clase)](../../mfc/reference/cimagelist-class.md)

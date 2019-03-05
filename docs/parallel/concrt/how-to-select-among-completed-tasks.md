@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Seleccionar tareas completadas'
+title: Filtrar Seleccionar tareas completadas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: c9137c3d1e354a5e3f50f0d281ecbbd247642597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278033"
 ---
-# <a name="how-to-select-among-completed-tasks"></a>Cómo: Seleccionar tareas completadas
+# <a name="how-to-select-among-completed-tasks"></a>Filtrar Seleccionar tareas completadas
 
 En este ejemplo se muestra cómo usar el [Concurrency:: choice](../../parallel/concrt/reference/choice-class.md) y [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clases para seleccionar la primera tarea para completar un algoritmo de búsqueda.
 
@@ -49,7 +49,7 @@ Este ejemplo se usa el [Concurrency:: make_choice](reference/concurrency-namespa
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `find-employee.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc find-employee.cpp**
+**cl.exe /EHsc find-employee.cpp**
 
 ## <a name="see-also"></a>Vea también
 

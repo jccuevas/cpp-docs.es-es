@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 95606818cf5673ef5d4a70361a8e79a9ed28d11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278709"
 ---
 # <a name="containers-advanced-features"></a>Contenedores: Características avanzadas
 
@@ -31,7 +31,7 @@ En este artículo se describe los pasos necesarios para incorporar característi
 
 Una aplicación de contenedor y servidor es una aplicación que actúa como un contenedor y un servidor. Microsoft Word para Windows es un ejemplo de esto. Puede insertar documentos de Word para Windows en otras aplicaciones, y también puede insertar elementos en documentos de Word para Windows. El proceso para modificar la aplicación de contenedor para ser un contenedor y un servidor completo (no se puede crear una aplicación de contenedor/miniservidor combinación) es similar al proceso de creación de un servidor completo.
 
-El artículo [servidores: implementar un servidor](../mfc/servers-implementing-a-server.md) se enumeran una serie de tareas necesarias para implementar una aplicación de servidor. Si convierte una aplicación de contenedor a una aplicación de contenedor y servidor, a continuación, deberá realizar algunas de estas mismas tareas, agregar código al contenedor. A continuación enumeran los aspectos importantes a tener en cuenta:
+El artículo [servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md) se enumeran una serie de tareas necesarias para implementar una aplicación de servidor. Si convierte una aplicación de contenedor a una aplicación de contenedor y servidor, a continuación, deberá realizar algunas de estas mismas tareas, agregar código al contenedor. A continuación enumeran los aspectos importantes a tener en cuenta:
 
 - El código de contenedor creado por el Asistente para aplicaciones ya inicializa el subsistema OLE. No necesitará cambiar ni agregar nada para que admiten.
 
@@ -41,7 +41,7 @@ El artículo [servidores: implementar un servidor](../mfc/servers-implementing-a
 
    Por ejemplo, el ejemplo OLE [OCLIENT](../visual-cpp-samples.md) tiene incrustado un elemento creado por la aplicación de contenedor y servidor. Abra la aplicación OCLIENT y in situ editar el elemento creado por la aplicación de contenedor y servidor. Mientras edita el elemento de la aplicación, decide que desea insertar un elemento creado por el ejemplo OLE de MFC [HIERSVR](../visual-cpp-samples.md). Para ello, no puede utilizar la activación en contexto. Debe abrir completamente HIERSVR para activar este elemento. Dado que la biblioteca Microsoft Foundation Class no admite esta característica OLE, reemplazar `COleClientItem::CanActivate` le permite comprobar esta situación y evitar un posible error de tiempo de ejecución en la aplicación.
 
-Si está creando una nueva aplicación y desea que funcione como una aplicación de contenedor y servidor, elija la opción en el cuadro de diálogo Opciones OLE en el Asistente para la aplicación y esta compatibilidad se crearán automáticamente. Para obtener más información, vea el artículo [información general: creación de un contenedor de controles ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obtener información acerca de los ejemplos MFC, vea los ejemplos de MFC.
+Si está creando una nueva aplicación y desea que funcione como una aplicación de contenedor y servidor, elija la opción en el cuadro de diálogo Opciones OLE en el Asistente para la aplicación y esta compatibilidad se crearán automáticamente. Para obtener más información, vea el artículo [información general: Creación de un contenedor de controles ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Para obtener información acerca de los ejemplos MFC, vea los ejemplos de MFC.
 
 Tenga en cuenta que no se puede insertar una aplicación MDI en sí mismo. Una aplicación que es un contenedor y el servidor no puede insertarse en sí mismo a menos que sea una aplicación SDI.
 
@@ -75,4 +75,3 @@ El ejemplo OLE de MFC [OCLIENT](../visual-cpp-samples.md) implementa esta caract
 
 [Contenedores](../mfc/containers.md)<br/>
 [Servidores](../mfc/servers.md)
-

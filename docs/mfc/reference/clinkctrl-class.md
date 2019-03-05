@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260414"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl (clase)
 
@@ -133,7 +133,7 @@ Puntero a una cadena terminada en cero que contiene el marcado de texto para mos
 *dwStyle*<br/>
 Especifica el estilo del control de vínculo. Aplicar cualquier combinación de los estilos de control. Consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el `Windows SDK` para obtener más información.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control link. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.
 
 *pParentWnd*<br/>
@@ -195,7 +195,7 @@ Especifica el estilo extendido del control link. Para obtener una lista de los e
 *dwStyle*<br/>
 Especifica el estilo del control de vínculo. Aplicar cualquier combinación de los estilos de control. Para obtener más información, consulte [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control link. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.
 
 *pParentWnd*<br/>
@@ -301,7 +301,7 @@ El índice de un elemento de control de vínculo.
 *strID*<br/>
 Un [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) objeto que contiene el identificador del elemento especificado.
 
-*NID*<br/>
+*szID*<br/>
 Una cadena terminada en null que contiene el identificador del elemento especificado.
 
 *cchID*<br/>
@@ -445,7 +445,7 @@ BOOL SetItemID(
 *iLink*<br/>
 El índice de un elemento de control de vínculo.
 
-*NID*<br/>
+*szID*<br/>
 Una cadena terminada en null que contiene el identificador del elemento especificado.
 
 ### <a name="return-value"></a>Valor devuelto

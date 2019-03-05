@@ -4,14 +4,14 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267243"
 ---
-# <a name="example-implementing-a-property-page"></a>Ejemplo: Implementar una página de propiedades
+# <a name="example-implementing-a-property-page"></a>Ejemplo: Implementación de una página de propiedades
 
 En este ejemplo se muestra cómo crear una página de propiedades que muestra las propiedades de (y le permite cambiar) la [clases de documento](../mfc/document-classes.md) interfaz.
 
@@ -43,9 +43,9 @@ En primer lugar, cree un nuevo proyecto ATL para un servidor de archivo DLL deno
 
 |Elemento|Valor|
 |----------|-----------|
-|Title|TextDocument|
+|Título|TextDocument|
 |Cadena de documento|Propiedades de TextDocument VCUE|
-|HelpFile|*\<en blanco >*|
+|Helpfile|*\<blank>*|
 
 Los valores que establezca en esta página del asistente se devolverán en el contenedor de la página de propiedad cuando llama a `IPropertyPage::GetPageInfo`. ¿Qué ocurre con las cadenas después de que es dependiente en el contenedor, pero normalmente se usará para identificar la página al usuario. El título suele aparecer en una pestaña situada sobre la página y la cadena de documento puede mostrarse en una barra de estado o información sobre herramientas (aunque el marco de propiedad estándar no usa esta cadena en absoluto).
 

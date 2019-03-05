@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-ms.openlocfilehash: 6372f28c78be99af9e329ff83ef531d18ad2480f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267282"
 ---
 # <a name="ole-background-mfc-implementation"></a>Nociones de OLE: Implementación de MFC
 
@@ -35,7 +35,7 @@ IMoniker (interfaz) el `IMoniker` interfaz se implementa mediante la biblioteca 
 
 Interfaces IUnknown e IMarshal el `IUnknown` interfaz se implementa mediante la biblioteca de clases, pero no se expone al programador. El `IMarshal` interfaz no está implementado por la biblioteca de clases, pero se usa internamente. Servidores de automatización creados con la biblioteca de clases ya tienen capacidades integradas el cálculo de referencias.
 
-Archivos compuestos DOCFILES (archivos compuestos) se admiten parcialmente por la biblioteca de clases. Ninguna de las funciones que manipulan directamente los archivos compuestos más allá de creación se admiten. MFC utiliza la clase `COleFileStream` para admitir la manipulación de secuencias con funciones estándar de archivo. Para obtener más información, vea el artículo [contenedores: archivos compuestos](../mfc/containers-compound-files.md).
+Archivos compuestos DOCFILES (archivos compuestos) se admiten parcialmente por la biblioteca de clases. Ninguna de las funciones que manipulan directamente los archivos compuestos más allá de creación se admiten. MFC utiliza la clase `COleFileStream` para admitir la manipulación de secuencias con funciones estándar de archivo. Para obtener más información, vea el artículo [contenedores: Archivos compuestos](../mfc/containers-compound-files.md).
 
 Servidores en proceso y controladores de objeto de servidores en proceso y controladores de objeto permiten la implementación de la edición visual de datos o los objetos de modelo de objetos componentes (COM) completos en una biblioteca de vínculos dinámicos (DLL). Para ello, puede implementar el archivo DLL mediante una llamada a la API de OLE directamente. Sin embargo, si está escribiendo un servidor de automatización y el servidor no tiene ninguna interfaz de usuario, puede usar el Asistente para aplicaciones para que a su servidor en un servidor en proceso y colocarlo en un archivo DLL. Para obtener más información acerca de estos temas, consulte [servidores de automatización](../mfc/automation-servers.md).
 
@@ -48,4 +48,3 @@ Para obtener más información sobre cómo las clases OLE de Microsoft Foundatio
 
 [Nociones de OLE](../mfc/ole-background.md)<br/>
 [Nociones de OLE: Estrategias de implementación](../mfc/ole-background-implementation-strategies.md)
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297923"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr (clase)
 
@@ -36,10 +36,10 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 |||
 |-|-|
-|[asignar](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[gratis](#free)|Llame a este método para liberar un bloque de memoria.|
+|[Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
+|[Free](#free)|Llame a este método para liberar un bloque de memoria.|
 |[GetSize](#getsize)|Llame a este método para recuperar el tamaño de un bloque de memoria asignado.|
-|[Reasignar](#reallocate)|Llame a este método para volver a asignar un bloque de memoria.|
+|[Reallocate](#reallocate)|Llame a este método para volver a asignar un bloque de memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -756,7 +756,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 Cuando `SetAmbientDispatch` se denomina con un puntero a una nueva interfaz, se usará esta nueva interfaz para invocar las propiedades o métodos más frecuentes para el control hospedado, si dichas propiedades no se han proporcionado por [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow:: AttachControl
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
 
 Asocia un control existente (e inicializado anteriormente) al objeto host mediante la ventana identificada por *hWnd*.
 
@@ -839,7 +839,7 @@ STDMETHOD(CreateControlEx)(
 [out] La dirección de un puntero que va a recibir el `IUnknown` interfaz del control creado. Puede ser NULL.
 
 *riidAdvise*<br/>
-[in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Puede ser IID_NULL.
+[in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Can be IID_NULL.
 
 *punkAdvise*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto receptor para estar conectado al punto de conexión en el objeto contenido especificado por `iidSink`.

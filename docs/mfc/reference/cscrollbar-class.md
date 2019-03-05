@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 3b8e7dc78ddfa22097c97fb4e97fff92f0984c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d677d72b7e758fcdaa7df0e2918e9bbec3e18ee9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571267"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263122"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar (clase)
 
@@ -116,7 +116,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el desplazamiento del estilo de la barra. Aplicar cualquier combinación de [estilos de barra de desplazamiento](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) a la barra de desplazamiento.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño de la barra de desplazamiento y la posición. Puede ser un `RECT` estructura o un `CRect` objeto.
 
 *pParentWnd*<br/>
@@ -417,7 +417,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica si se muestra o se oculta la barra de desplazamiento. Si este parámetro es TRUE, se muestra la barra de desplazamiento; en caso contrario, se oculta.
 
 ### <a name="remarks"></a>Comentarios

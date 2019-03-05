@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178543"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301459"
 ---
 # <a name="ctoolbar-class"></a>CToolBar (clase)
 
@@ -74,18 +74,18 @@ class CToolBar : public CControlBar
 |Name|Descripción|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Devuelve el índice de un botón con el identificador de comando especificado.|
-|[CToolBar:: Create](#create)|Crea la barra de herramientas de Windows y lo adjunta a la `CToolBar` objeto.|
-|[CToolBar:: CreateEx](#createex)|Crea un `CToolBar` objeto estilos adicionales para el objeto incrustado `CToolBarCtrl` objeto.|
+|[CToolBar::Create](#create)|Crea la barra de herramientas de Windows y lo adjunta a la `CToolBar` objeto.|
+|[CToolBar::CreateEx](#createex)|Crea un `CToolBar` objeto estilos adicionales para el objeto incrustado `CToolBarCtrl` objeto.|
 |[CToolBar::GetButtonInfo](#getbuttoninfo)|Recupera el identificador, el estilo y el número de la imagen de un botón.|
-|[CToolBar:: GetButtonStyle](#getbuttonstyle)|Recupera el estilo para un botón.|
+|[CToolBar::GetButtonStyle](#getbuttonstyle)|Recupera el estilo para un botón.|
 |[CToolBar::GetButtonText](#getbuttontext)|Recupera el texto que aparecerá en un botón.|
 |[CToolBar::GetItemID](#getitemid)|Devuelve el identificador de comando de un botón o un separador en el índice especificado.|
 |[CToolBar::GetItemRect](#getitemrect)|Recupera el rectángulo de presentación para el elemento en el índice especificado.|
-|[CToolBar:: GetToolBarCtrl](#gettoolbarctrl)|Permite el acceso directo al control subyacente común.|
+|[CToolBar::GetToolBarCtrl](#gettoolbarctrl)|Permite el acceso directo al control subyacente común.|
 |[CToolBar::LoadBitmap](#loadbitmap)|Carga el mapa de bits que contiene imágenes de los botones de mapa de bits.|
 |[CToolBar::LoadToolBar](#loadtoolbar)|Carga un recurso de barra de herramientas creado con el editor de recursos.|
 |[CToolBar::SetBitmap](#setbitmap)|Establece una imagen de mapa de bits.|
-|[CToolBar:: SetButtonInfo](#setbuttoninfo)|Establece el identificador, el estilo y el número de la imagen de un botón.|
+|[CToolBar::SetButtonInfo](#setbuttoninfo)|Establece el identificador, el estilo y el número de la imagen de un botón.|
 |[CToolBar::SetButtons](#setbuttons)|Conjuntos de estilos y un índice de imágenes de botón en el mapa de bits de botón.|
 |[CToolBar::SetButtonStyle](#setbuttonstyle)|Establece el estilo de un botón.|
 |[CToolBar::SetButtonText](#setbuttontext)|Establece el texto que aparecerá en un botón.|
@@ -176,7 +176,7 @@ Identificador de comando de un botón de barra de herramientas.
 
 El índice del botón, o -1 si no hay ningún botón tiene el identificador de comando especificado.
 
-##  <a name="create"></a>  CToolBar:: Create
+##  <a name="create"></a>  CToolBar::Create
 
 Esta función miembro crea una barra de herramientas de Windows (una ventana secundaria) y lo asocia a la `CToolBar` objeto.
 
@@ -228,7 +228,7 @@ También se establece el alto de la barra de herramientas en un valor predetermi
 
 [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]
 
-##  <a name="createex"></a>  CToolBar:: CreateEx
+##  <a name="createex"></a>  CToolBar::CreateEx
 
 Llame a esta función para crear una barra de herramientas de Windows (una ventana secundaria) y asócielo con el `CToolBar` objeto.
 
@@ -320,7 +320,7 @@ Esos valores se asignan a las variables que se hace referencia a *nID*, *nStyle*
 
 Si *nIndex* especifica un separador, *iImage* se establece en el ancho del separador en píxeles.
 
-##  <a name="getbuttonstyle"></a>  CToolBar:: GetButtonStyle
+##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle
 
 Llame a esta función miembro para recuperar el estilo de un botón o un separador en la barra de herramientas.
 
@@ -418,7 +418,7 @@ Use `GetItemRect` para obtener las coordenadas de un separador que desee reempla
 
   Vea el ejemplo de [CToolBar::SetSizes](#setsizes).
 
-##  <a name="gettoolbarctrl"></a>  CToolBar:: GetToolBarCtrl
+##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl
 
 Esta función miembro permite el acceso directo al control subyacente común.
 
@@ -518,7 +518,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Por ejemplo, llamar a `SetBitmap` para cambiar la imagen de mapa de bits después de que el usuario realiza una acción en un documento que cambia la acción de un botón.
 
-##  <a name="setbuttoninfo"></a>  CToolBar:: SetButtonInfo
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo
 
 Llame a esta función miembro para establecer el identificador de comando, estilo y número de la imagen del botón.
 

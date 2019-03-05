@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: a4bc8b18a1c29049e17576082a30de4a8704eaee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468957"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278306"
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap (clase)
 
@@ -37,10 +37,10 @@ class CGlobalHeap : public IAtlMemMgr
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cglobalheap:: Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[Cglobalheap:: Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
+|[CGlobalHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
+|[CGlobalHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
 |[CGlobalHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|
-|[Cglobalheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
+|[CGlobalHeap::Reallocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -63,7 +63,7 @@ Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 **Encabezado:** atlmem.h
 
-##  <a name="allocate"></a>  Cglobalheap:: Allocate
+##  <a name="allocate"></a>  CGlobalHeap::Allocate
 
 Llame a este método para asignar un bloque de memoria.
 
@@ -86,7 +86,7 @@ Llame a [cglobalheap:: Free](#free) o [cglobalheap:: ReAllocate](#reallocate) pa
 
 Implementa mediante [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) con un parámetro de marca de GMEM_FIXED.
 
-##  <a name="free"></a>  Cglobalheap:: Free
+##  <a name="free"></a>  CGlobalHeap::Free
 
 Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.
 
@@ -124,7 +124,7 @@ Devuelve el tamaño del bloque de memoria asignada en bytes.
 
 Implementa mediante [GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).
 
-##  <a name="reallocate"></a>  Cglobalheap:: ReAllocate
+##  <a name="reallocate"></a>  CGlobalHeap::Reallocate
 
 Llame a este método para reasignar la memoria asignada por este administrador de memoria.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282648"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass (clase)
 
@@ -35,7 +35,7 @@ class CComCoClass
 *T*<br/>
 La clase derivada de `CComCoClass`.
 
-*pTypeInfo*<br/>
+*pclsid*<br/>
 Un puntero al CLSID del objeto.
 
 ## <a name="members"></a>Miembros
@@ -44,7 +44,7 @@ Un puntero al CLSID del objeto.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CComCoClass:: CreateInstance](#createinstance)|(Estático) Crea una instancia de la clase y las consultas para una interfaz.|
+|[CComCoClass::CreateInstance](#createinstance)|(Estático) Crea una instancia de la clase y las consultas para una interfaz.|
 |[CComCoClass::Error](#error)|(Estático) Devuelve información de error completa al cliente.|
 |[CComCoClass::GetObjectCLSID](#getobjectclsid)|(Estático) Devuelve el identificador de clase del objeto.|
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(Estático) Invalide para devolver la descripción del objeto.|
@@ -67,7 +67,7 @@ Puede invalidar cualquiera de estos valores predeterminados especificando otra m
 
 **Encabezado:** atlcom.h
 
-##  <a name="createinstance"></a>  CComCoClass:: CreateInstance
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance
 
 Use estos `CreateInstance` funciones para crear una instancia de COM de un objeto y recuperar un puntero de interfaz sin usar la API de COM.
 
@@ -87,7 +87,7 @@ La interfaz COM que debe devolverse a través de *pp*.
 *punkOuter*<br/>
 [in] El desconocido externo o desconocido de control del agregado.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] La dirección de una variable de puntero que recibe el puntero de interfaz solicitada si se crea correctamente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +159,7 @@ static HRESULT Error(
 *lpszDesc*<br/>
 [in] La cadena que describe el error. La versión Unicode de `Error` especifica que *lpszDesc* es de tipo LPCOLESTR; la versión ANSI especifica un tipo de LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] IID de la interfaz que define el error o GUID_NULL (el valor predeterminado) si el error se ha definido por el sistema operativo.
 
 *hRes*<br/>

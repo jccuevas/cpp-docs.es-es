@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446753"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296792"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source (Clase)
 
@@ -41,7 +41,7 @@ class cancellation_token_source;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cancelar](#cancel)|Cancela el token. Cualquier objeto `task_group`, `structured_task_group` o `task` que utilice el token se cancelará con esta llamada y producirá una excepción en el siguiente punto de interrupción.|
+|[cancel](#cancel)|Cancela el token. Cualquier objeto `task_group`, `structured_task_group` o `task` que utilice el token se cancelará con esta llamada y producirá una excepción en el siguiente punto de interrupción.|
 |[create_linked_source](#create_linked_source)|Sobrecargado. Crea un objeto `cancellation_token_source` que se cancela al cancelar el token proporcionado.|
 |[get_token](#get_token)|Devuelve un token de cancelación asociado a este origen. El token devuelto se puede sondear para la cancelación o puede proporcionar una devolución de llamada únicamente si se produce la cancelación.|
 
@@ -63,7 +63,7 @@ class cancellation_token_source;
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="dtor"></a> ~ cancellation_token_source)
+##  <a name="dtor"></a> ~cancellation_token_source
 
 ```
 ~cancellation_token_source();
@@ -114,15 +114,16 @@ Tipo de iterador.
 *_Src*<br/>
 Token cuya cancelación provocará la cancelación del origen del token devuelto. Observe que el origen del token devuelto también se puede cancelar independientemente del origen incluido en este parámetro.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 El iterador de biblioteca estándar de C++ correspondiente al inicio del intervalo de tokens para escuchar para determinar su cancelación.
 
-*_Finalizar*<br/>
+*_End*<br/>
 El iterador de biblioteca estándar de C++ correspondiente con el final del intervalo de tokens para escuchar para determinar su cancelación.
 
 ### <a name="return-value"></a>Valor devuelto
 
-`cancellation_token_source` que se cancela cuando se cancela el token proporcionado por el parámetro `_Src`.
+
+  `cancellation_token_source` que se cancela cuando se cancela el token proporcionado por el parámetro `_Src`.
 
 ##  <a name="get_token"></a> get_token
 
@@ -136,7 +137,7 @@ cancellation_token get_token() const;
 
 Token de cancelación asociado a este origen.
 
-##  <a name="operator_neq"></a> operador! =
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token_source& _Src) const;

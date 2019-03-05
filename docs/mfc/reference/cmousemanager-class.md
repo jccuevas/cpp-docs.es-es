@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: b3c5104038e6d715977a211af5a535cc9a5d916f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498155"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293191"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager (clase)
 
@@ -273,4 +273,3 @@ Si *uiCmd* se establece en 0, ya no está asociada a un comando de la vista espe
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx (clase)](../../mfc/reference/cwinappex-class.md)<br/>
 [Personalización del teclado y del mouse](../../mfc/keyboard-and-mouse-customization.md)
-

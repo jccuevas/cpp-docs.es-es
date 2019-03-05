@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301225"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject (clase)
 
@@ -68,13 +68,13 @@ class CGdiObject : public CObject
 |[CGdiObject::GetObject](#getobject)|Rellena un búfer con datos que describe el objeto GDI de Windows asociada a la `CGdiObject` objeto.|
 |[CGdiObject::GetObjectType](#getobjecttype)|Recupera el tipo del objeto GDI.|
 |[CGdiObject::GetSafeHandle](#getsafehandle)|Devuelve `m_hObject` a menos que **esto** es NULL, en el que se devuelve NULL case.|
-|[CGdiObject](#unrealizeobject)|Restablece el origen de un pincel o restablece una paleta lógica.|
+|[CGdiObject::UnrealizeObject](#unrealizeobject)|Restablece el origen de un pincel o restablece una paleta lógica.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CGdiObject::operator! =](#operator_neq)|Determina si dos objetos GDI lógicamente no son iguales.|
+|[CGdiObject::operator !=](#operator_neq)|Determina si dos objetos GDI lógicamente no son iguales.|
 |[CGdiObject::operator ==](#operator_eq_eq)|Determina si dos objetos GDI son lógicamente iguales.|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|Recupera un identificador para el objeto adjunto de GDI de Windows.|
 
@@ -250,7 +250,7 @@ La función recupera una estructura de datos cuyo tipo depende del tipo de objet
 |`CPen`|[LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |`CBrush`|[LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |`CFont`|[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)|
-|`CBitmap`|[MAPA DE BITS](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
+|`CBitmap`|[BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|
 |`CPalette`|WORD|
 |`CRgn`|No compatibles|
 
@@ -272,13 +272,13 @@ El tipo del objeto, si se realiza correctamente; en caso contrario, es 0. El val
 
 - Mapa de bits OBJ_BITMAP
 
-- Pincel OBJ_BRUSH
+- OBJ_BRUSH Brush
 
 - Fuente OBJ_FONT
 
 - Paleta OBJ_PAL
 
-- Lápiz OBJ_PEN
+- OBJ_PEN Pen
 
 - Lápiz OBJ_EXTPEN extendidos
 
@@ -324,7 +324,7 @@ Un identificador que contiene el HBITMAP, HRGN, HBRUSH, HPEN, HPALETTE o HFONT a
 HGDIOBJ m_hObject;
 ```
 
-##  <a name="operator_neq"></a>  CGdiObject::operator! =
+##  <a name="operator_neq"></a>  CGdiObject::operator !=
 
 Determina si dos objetos GDI lógicamente no son iguales.
 
@@ -366,7 +366,7 @@ Recupera un identificador para el objeto adjunto de GDI de Windows; en caso cont
 operator HGDIOBJ() const;
 ```
 
-##  <a name="unrealizeobject"></a>  CGdiObject
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject
 
 Restablece el origen de un pincel o restablece una paleta lógica.
 

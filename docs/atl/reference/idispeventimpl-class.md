@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524305"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283207"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl (clase)
 
@@ -133,7 +133,7 @@ HRESULT GetFuncInfoFromId(
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] Una referencia al identificador de la función.
 
 *dispidMember*<br/>
@@ -142,7 +142,7 @@ HRESULT GetFuncInfoFromId(
 *lcid*<br/>
 [in] El contexto de la configuración regional del identificador de función.
 
-*Info*<br/>
+*info*<br/>
 [in] La estructura que indica cómo se llama a la función.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -203,10 +203,10 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="parameters"></a>Parámetros
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Un puntero a la [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) interfaz que contiene el tipo definido por el usuario.
 
-*HRT*<br/>
+*hrt*<br/>
 [in] Identificador de la descripción del tipo van a recuperar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -244,5 +244,5 @@ De forma predeterminada, la clase es `CComTypeInfoHolder`. `CComTypeInfoHolder` 
 [IDispEventSimpleImpl (clase)](../../atl/reference/idispeventsimpleimpl-class.md)<br/>
 [SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
 [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
-[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

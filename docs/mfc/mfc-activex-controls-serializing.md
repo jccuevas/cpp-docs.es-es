@@ -15,12 +15,12 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522218"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303357"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Controles ActiveX MFC: Serializar
 
@@ -54,20 +54,20 @@ En la tabla siguiente se enumera las funciones de intercambio de propiedad posib
 
 |Funciones de intercambio de propiedad|Propósito|
 |---------------------------------|-------------|
-|**(De PX_Blob)**|Serializa un tipo de propiedad de datos de objetos binarios grandes (BLOB).|
-|**(De PX_Bool)**|Serializa un tipo de propiedad booleana.|
-|**(De PX_Color)**|Serializa una propiedad de color de tipo.|
-|**(De PX_Currency)**|Serializa un tipo **CY** propiedad (moneda).|
-|**(De PX_Double)**|Serializa un tipo **doble** propiedad.|
-|**(De PX_Font)**|Serializa una propiedad de tipo de fuente.|
-|**(De PX_Float)**|Serializa un tipo **float** propiedad.|
-|**(De PX_IUnknown)**|Serializa una propiedad de tipo `LPUNKNOWN`.|
-|**(De PX_Long)**|Serializa un tipo **largo** propiedad.|
-|**(De PX_Picture)**|Serializa un tipo de propiedad de imagen.|
-|**(De PX_Short)**|Serializa un tipo **corto** propiedad.|
-|**(De PXstring)**|Serializa un tipo `CString` propiedad.|
-|**(De PX_ULong)**|Serializa un tipo **ULONG** propiedad.|
-|**(De PX_UShort)**|Serializa un tipo **USHORT** propiedad.|
+|**PX_Blob( )**|Serializa un tipo de propiedad de datos de objetos binarios grandes (BLOB).|
+|**PX_Bool( )**|Serializa un tipo de propiedad booleana.|
+|**PX_Color( )**|Serializa una propiedad de color de tipo.|
+|**PX_Currency( )**|Serializa un tipo **CY** propiedad (moneda).|
+|**PX_Double( )**|Serializa un tipo **doble** propiedad.|
+|**PX_Font( )**|Serializa una propiedad de tipo de fuente.|
+|**PX_Float( )**|Serializa un tipo **float** propiedad.|
+|**PX_IUnknown( )**|Serializa una propiedad de tipo `LPUNKNOWN`.|
+|**PX_Long( )**|Serializa un tipo **largo** propiedad.|
+|**PX_Picture( )**|Serializa un tipo de propiedad de imagen.|
+|**PX_Short( )**|Serializa un tipo **corto** propiedad.|
+|**PXstring( )**|Serializa un tipo `CString` propiedad.|
+|**PX_ULong( )**|Serializa un tipo **ULONG** propiedad.|
+|**PX_UShort( )**|Serializa un tipo **USHORT** propiedad.|
 
 Para obtener más información sobre estas funciones, vea [persistencia de controles OLE](../mfc/reference/persistence-of-ole-controls.md) en el *referencia de MFC*.
 
@@ -96,4 +96,3 @@ De forma predeterminada, un control "convierte" datos antiguos al formato más r
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

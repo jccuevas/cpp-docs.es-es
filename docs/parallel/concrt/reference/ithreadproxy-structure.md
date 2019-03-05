@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-ms.openlocfilehash: 606adf0e6984ebe93951c80620407f9f1c8775f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 906b05800711e89592e5230bec7fa0fe1640379f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533983"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265722"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy (Estructura)
 
@@ -34,9 +34,9 @@ struct IThreadProxy;
 
 |Name|Descripción|
 |----------|-----------------|
-|[IThreadProxy:: GetId](#getid)|Devuelve un identificador único para el proxy del subproceso.|
-|[IThreadProxy:: SwitchOut](#switchout)|Desasocia el contexto de la raíz del procesador virtual subyacente.|
-|[IThreadProxy:: SwitchTo](#switchto)|Realiza un cambio de contexto cooperativo desde el contexto de ejecución actualmente por otra distinta.|
+|[IThreadProxy::GetId](#getid)|Devuelve un identificador único para el proxy del subproceso.|
+|[IThreadProxy::SwitchOut](#switchout)|Desasocia el contexto de la raíz del procesador virtual subyacente.|
+|[IThreadProxy::SwitchTo](#switchto)|Realiza un cambio de contexto cooperativo desde el contexto de ejecución actualmente por otra distinta.|
 |[IThreadProxy::YieldToSystem](#yieldtosystem)|Hace que el subproceso que realiza la llamada ceda la ejecución a otro subproceso que está listo para ejecutarse en el procesador actual. El sistema operativo selecciona el subproceso siguiente que se ejecutará.|
 
 ## <a name="remarks"></a>Comentarios

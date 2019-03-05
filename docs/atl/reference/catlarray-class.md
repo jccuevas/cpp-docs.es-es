@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442684"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301862"
 ---
 # <a name="catlarray-class"></a>CAtlArray (clase)
 
@@ -61,7 +61,7 @@ El código utilizado para copiar o mover elementos.
 |[Anexar](#append)|Llame a este método para agregar el contenido de una matriz al final de la otra.|
 |[AssertValid](#assertvalid)|Llame a este método para confirmar que el objeto de matriz es válido.|
 |[CAtlArray](#catlarray)|El constructor.|
-|[~ CAtlArray](#dtor)|Destructor.|
+|[~CAtlArray](#dtor)|Destructor.|
 |[Copiar](#copy)|Llame a este método para copiar los elementos de una matriz a otra.|
 |[FreeExtra](#freeextra)|Llame a este método para quitar los elementos vacíos de la matriz.|
 |[GetAt](#getat)|Llame a este método para recuperar un único elemento del objeto de matriz.|
@@ -80,7 +80,7 @@ El código utilizado para copiar o mover elementos.
 
 |||
 |-|-|
-|[operador&#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|
+|[operator &#91;&#93;](#operator_at)|Llame a este operador para devolver una referencia a un elemento de la matriz.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -114,7 +114,7 @@ size_t Add();
 
 ### <a name="parameters"></a>Parámetros
 
-*Elemento*<br/>
+*element*<br/>
 El elemento que se agregarán a la matriz.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -190,7 +190,7 @@ Inicializa el objeto de matriz.
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-##  <a name="dtor"></a>  CAtlArray:: ~ CAtlArray
+##  <a name="dtor"></a>  CAtlArray::~CAtlArray
 
 Destructor.
 
@@ -357,7 +357,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *iElement*<br/>
 El índice donde el elemento o elementos son va a insertar.
 
-*Elemento*<br/>
+*element*<br/>
 El valor del elemento o elementos que se van a insertarse.
 
 *nCount*<br/>
@@ -393,7 +393,7 @@ Se dice que la matriz vacía si no contiene ningún elemento. Por lo tanto, incl
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  [] CAtlArray::operator
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 Llame a este operador para devolver una referencia a un elemento de la matriz.
 
@@ -482,7 +482,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 El índice que apunta al elemento de matriz para establecer.
 
-*Elemento*<br/>
+*element*<br/>
 El nuevo valor del elemento especificado.
 
 ### <a name="remarks"></a>Comentarios
@@ -536,7 +536,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *iElement*<br/>
 El índice que apunta al elemento de matriz para establecer.
 
-*Elemento*<br/>
+*element*<br/>
 El nuevo valor del elemento especificado.
 
 ### <a name="remarks"></a>Comentarios
@@ -550,7 +550,7 @@ Reemplaza el valor del elemento señalado por el índice. Si *iElement* es mayor
 ## <a name="see-also"></a>Vea también
 
 [Ejemplo MMXSwarm](../../visual-cpp-samples.md)<br/>
-[Ejemplo DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer Sample](../../visual-cpp-samples.md)<br/>
 [Ejemplo UpdatePV](../../visual-cpp-samples.md)<br/>
 [Ejemplo de marquesina](../../visual-cpp-samples.md)<br/>
 [CArray (clase)](../../mfc/reference/carray-class.md)<br/>

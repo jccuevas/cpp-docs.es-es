@@ -10,12 +10,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 3533a548f009a65462ce0d821d782db0ada9aa4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5747e4450816b803f97ad5ff6338b9e01ad41bca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490015"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264045"
 ---
 # <a name="dialog-box-classes"></a>Clases de cuadro de diálogo
 
@@ -132,4 +132,3 @@ Una estructura que contiene información acerca de un trabajo de impresión o vi
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../mfc/class-library-overview.md)
-

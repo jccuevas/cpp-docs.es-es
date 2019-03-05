@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285612"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Procedimientos recomendados generales con el Runtime de simultaneidad
 
@@ -84,7 +84,7 @@ Considere la función siguiente, `download`, que descarga el archivo en la direc
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Dado que la función `GetHttpFile` realiza una operación potencialmente latente, la sobresuscripción puede permitir que otras tareas se ejecuten mientras la tarea actual espera los datos. Para obtener la versión completa de este ejemplo, vea [Cómo: usar la suscripción excesiva para compensar la latencia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Dado que la función `GetHttpFile` realiza una operación potencialmente latente, la sobresuscripción puede permitir que otras tareas se ejecuten mientras la tarea actual espera los datos. Para obtener la versión completa de este ejemplo, vea [Cómo: Usar la suscripción excesiva para compensar la latencia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Arriba](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-Para obtener ejemplos adicionales que usan el modelo RAII para administrar la vigencia de objetos de simultaneidad, consulte [Tutorial: quitar el trabajo de un subproceso de interfaz de usuario](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Cómo: usar la clase Context para implementar una cooperativa Semáforo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), y [Cómo: usar la suscripción excesiva para compensar la latencia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Para obtener ejemplos adicionales que usan el modelo RAII para administrar la vigencia de objetos de simultaneidad, consulte [Tutorial: Quitar trabajo de un subproceso de interfaz de usuario](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [Cómo: Usar la clase Context para implementar un semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), y [Cómo: Usar la suscripción excesiva para compensar la latencia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[Arriba](#top)]
 
@@ -156,9 +156,9 @@ El Runtime de simultaneidad no admite el uso de objetos de simultaneidad en una 
 [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [Comparación de estructuras de datos de sincronización con la API de Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)<br/>
-[Procedimiento para usar Alloc y Free para mejorar el rendimiento de la memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
-[Procedimiento para usar la suscripción excesiva para compensar la latencia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
-[Procedimiento para usar la clase Context para implementar un semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Tutorial: Quitar trabajo de un subproceso de la interfaz de usuario](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[Cómo: Usar Alloc y Free para mejorar el rendimiento de la memoria](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
+[Cómo: Usar la suscripción excesiva para compensar la latencia](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
+[Cómo: Usar la clase Context para implementar un semáforo cooperativo](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
+[Tutorial: Eliminación de trabajo de un subproceso de la interfaz de usuario](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Procedimientos recomendados en la biblioteca de modelos paralelos](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Procedimientos recomendados en la biblioteca de agentes asincrónicos](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

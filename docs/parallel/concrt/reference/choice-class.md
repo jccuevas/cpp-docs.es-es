@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522732"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267022"
 ---
 # <a name="choice-class"></a>Clase choice
 
@@ -57,16 +57,16 @@ Un `tuple`-según el tipo que representa las cargas de los orígenes de entrada.
 
 |Name|Descripción|
 |----------|-----------------|
-|[elección](#ctor)|Sobrecargado. Construye un bloque de mensajería `choice` .|
+|[choice](#ctor)|Sobrecargado. Construye un bloque de mensajería `choice` .|
 |[~ choice (destructor)](#dtor)|Destruye el `choice` bloque de mensajería.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Aceptar](#accept)|Acepta un mensaje que se ha proporcionado por este `choice` bloque, transfiriendo la propiedad al llamador.|
+|[accept](#accept)|Acepta un mensaje que se ha proporcionado por este `choice` bloque, transfiriendo la propiedad al llamador.|
 |[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en este `choice` bloque de mensajería, para impedir la eliminación.|
-|[consumir](#consume)|Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
+|[consume](#consume)|Consume un mensaje ofrecido previamente por este `choice` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
 |[has_value](#has_value)|Comprueba si este `choice` bloque de mensajería se ha inicializado con un valor aún.|
 |[index](#index)|Devuelve un índice en el `tuple` que representa el elemento seleccionado por el `choice` bloque de mensajería.|
 |[link_target](#link_target)|Vincula un bloque de destino a esta `choice` bloque de mensajería.|
@@ -75,7 +75,7 @@ Un `tuple`-según el tipo que representa las cargas de los orígenes de entrada.
 |[reserve](#reserve)|Reserva un mensaje ofrecido previamente por este `choice` bloque de mensajería.|
 |[unlink_target](#unlink_target)|Desvincula un bloque de destino de este `choice` bloque de mensajería.|
 |[unlink_targets](#unlink_targets)|Desvincula todos los destinos de este `choice` bloque de mensajería. (Invalida [ISource:: Unlink_targets](isource-class.md#unlink_targets).)|
-|[valor](#value)|Obtiene el mensaje cuyo índice se ha seleccionado por el `choice` bloque de mensajería.|
+|[value](#value)|Obtiene el mensaje cuyo índice se ha seleccionado por el `choice` bloque de mensajería.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -174,7 +174,7 @@ El runtime usa el programador predeterminado si no se especifican los parámetro
 
 La construcción de movimiento no se lleva acabo con un bloqueo, lo que significa que el usuario debe asegurarse de que no hay ninguna tarea ligera en marcha en el momento del movimiento. De lo contrario, se pueden producir numerosas carreras, que darán lugar a excepciones o a un estado incoherente.
 
-##  <a name="dtor"></a> ~ choice
+##  <a name="dtor"></a> ~choice
 
 Destruye el `choice` bloque de mensajería.
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297816"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Crear nuevos documentos, ventanas y vistas
 
@@ -60,4 +60,3 @@ En la mayoría de los casos, la invalidación debe llamar a la versión de la cl
 [Creación de plantillas de documentos](../mfc/document-template-creation.md)<br/>
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Relaciones entre objetos MFC](../mfc/relationships-among-mfc-objects.md)
-

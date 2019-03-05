@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 64c2cb1531d9330e075a06c65ff022115d0fb6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292905"
 ---
 # <a name="chandle-class"></a>CHandle (clase)
 
@@ -36,7 +36,7 @@ class CHandle
 |Name|Descripción|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|El constructor.|
-|[CHandle:: ~ CHandle](#dtor)|Destructor.|
+|[CHandle::~CHandle](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -106,7 +106,7 @@ Un identificador existente o `CHandle`.
 
 Crea un nuevo `CHandle` objeto, utilizando opcionalmente un identificador existente o `CHandle` objeto.
 
-##  <a name="dtor"></a>  CHandle:: ~ CHandle
+##  <a name="dtor"></a>  CHandle::~CHandle
 
 Destructor.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300276"
 ---
 # <a name="cevent-class"></a>CEvent (clase)
 
@@ -66,7 +66,7 @@ Un método alternativo para el uso de `CEvent` objetos consiste en Agregar una v
 
 Para obtener acceso a un recurso controlado por un `CEvent` objeto de esta manera, primero cree una variable de cualquier tipo [CSingleLock](../../mfc/reference/csinglelock-class.md) o tipo [CMultiLock](../../mfc/reference/cmultilock-class.md) en el método de acceso del recurso. A continuación, llame a la `Lock` método del objeto de bloqueo (por ejemplo, [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). En este momento, el subproceso se ya sea obtener acceso a los recursos, espere a que el recurso para liberarse y obtener acceso o espere a que se libere el recurso, tiempo de espera y no se pudo obtener acceso al recurso. En cualquier caso, se obtuvo acceso a los recursos de una manera segura para subprocesos. Para liberar el recurso, llame a `SetEvent` para indicar el objeto de evento y, a continuación, utilice el `Unlock` método del objeto de bloqueo (por ejemplo, [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), o dejar que el objeto de bloqueo se encuentran fuera del ámbito.
 
-Para obtener más información sobre cómo usar `CEvent` objetos, vea [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obtener más información sobre cómo usar `CEvent` objetos, vea [Multithreading: Cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -195,4 +195,3 @@ Esta función miembro llama a subprocesos que actualmente poseen un evento para 
 
 [CSyncObject (clase)](../../mfc/reference/csyncobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

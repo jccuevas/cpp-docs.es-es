@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260756"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (clase)
 
@@ -74,16 +74,16 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::GetPSP](#getpsp)|Recupera el Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) estructura asociada con el `CPropertyPage` objeto.|
 |[CPropertyPage::OnApply](#onapply)|Lo llama el marco de trabajo cuando se hace clic en el botón Aplicar ahora.|
 |[CPropertyPage::OnCancel](#oncancel)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar.|
-|[CPropertyPage:: OnKillActive](#onkillactive)|Lo llama el marco de trabajo cuando la página actual ya no es la página activa. Realizar la validación de datos aquí.|
+|[CPropertyPage::OnKillActive](#onkillactive)|Lo llama el marco de trabajo cuando la página actual ya no es la página activa. Realizar la validación de datos aquí.|
 |[CPropertyPage::OnOK](#onok)|Lo llama el marco de trabajo cuando se hace clic en el Aceptar, aplicar ahora o botón de cierre.|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar, y antes de que la cancelación ha tenido lugar.|
 |[CPropertyPage::OnReset](#onreset)|Lo llama el marco de trabajo cuando se hace clic en el botón Cancelar.|
-|[Notificaciones CPropertyPage:: OnSetActive](#onsetactive)|Lo llama el marco de trabajo cuando la página se convierte en la página activa.|
+|[CPropertyPage::OnSetActive](#onsetactive)|Lo llama el marco de trabajo cuando la página se convierte en la página activa.|
 |[CPropertyPage::OnWizardBack](#onwizardback)|Lo llama el marco de trabajo cuando se hace clic en el botón Atrás mientras se usa una hoja de propiedades de tipo asistente.|
 |[CPropertyPage::OnWizardFinish](#onwizardfinish)|Lo llama el marco de trabajo cuando se hace clic en el botón Finalizar al utilizar una hoja de propiedades de tipo asistente.|
 |[CPropertyPage::OnWizardNext](#onwizardnext)|Lo llama el marco de trabajo cuando se hace clic en el botón siguiente mientras se usa una hoja de propiedades de tipo asistente.|
 |[CPropertyPage::QuerySiblings](#querysiblings)|Reenvía el mensaje a cada página de la hoja de propiedades.|
-|[CPropertyPage:: SetModified](#setmodified)|Llamada a activar o desactivar el botón Aplicar ahora.|
+|[CPropertyPage::SetModified](#setmodified)|Llamada a activar o desactivar el botón Aplicar ahora.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -333,7 +333,7 @@ Reemplace esta función miembro para llevar a cabo acciones de botón de cancela
 
 [!code-cpp[NVC_MFCDocView#114](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]
 
-##  <a name="onkillactive"></a>  CPropertyPage:: OnKillActive
+##  <a name="onkillactive"></a>  CPropertyPage::OnKillActive
 
 Esta función miembro se llama el marco de trabajo cuando la página ya no es la página activa.
 
@@ -419,7 +419,7 @@ La implementación predeterminada de `OnReset` no hace nada.
 
   Vea el ejemplo de [CPropertyPage::OnCancel](#oncancel).
 
-##  <a name="onsetactive"></a>  Notificaciones CPropertyPage:: OnSetActive
+##  <a name="onsetactive"></a>  CPropertyPage::OnSetActive
 
 Esta función miembro se llama el marco de trabajo cuando la página elegida por el usuario y se convierte en la página activa.
 
@@ -551,7 +551,7 @@ Si una página, devuelve un valor distinto de cero, la hoja de propiedades no en
 
 [!code-cpp[NVC_MFCDocView#126](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]
 
-##  <a name="setmodified"></a>  CPropertyPage:: SetModified
+##  <a name="setmodified"></a>  CPropertyPage::SetModified
 
 Llame a esta función miembro para habilitar o deshabilitar el botón Aplicar ahora, en función de si se debe aplicar la configuración en la página de propiedades en el objeto externo adecuado.
 
@@ -574,8 +574,8 @@ El marco de trabajo realiza el seguimiento de las páginas son "sucios", es deci
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [Ejemplo de MFC PROPDLG](../../visual-cpp-samples.md)<br/>
 [Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
 [CDialog (clase)](../../mfc/reference/cdialog-class.md)<br/>

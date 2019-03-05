@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573503"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277123"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog (clase)
 
@@ -58,7 +58,7 @@ El control de usuario de .NET Framework que se mostrará en la aplicación MFC.
 
 |nombre||
 |----------|-|
-|[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Reemplaza [CWinFormsDialog::GetControl](#getcontrol) en expresiones.|
+|[CWinFormsDialog::operator -&gt;](#operator_-_gt)|Reemplaza [CWinFormsDialog::GetControl](#getcontrol) en expresiones.|
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Convierte un tipo como una referencia a un control de usuario de Windows Forms.|
 
 ## <a name="remarks"></a>Comentarios
@@ -126,7 +126,7 @@ Cuando se crea el cuadro de diálogo MFC (mediante el [crear](../../mfc/referenc
 
 Reemplace esta función miembro si tiene que realizar un procesamiento especial cuando se inicializa el cuadro de diálogo. Para obtener más información sobre el uso de este método, consulte [CDialog:: OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog).
 
-##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator -&gt;
 
 Reemplaza [CWinFormsDialog::GetControl](#getcontrol) en expresiones.
 

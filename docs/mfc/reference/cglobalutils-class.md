@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: bd382a7f0143d1dce75815430741ef58cee0f8c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271663"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils (clase)
 
@@ -139,7 +139,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -153,7 +153,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -175,7 +175,7 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 [in] *pBar*<br/>
 
@@ -273,7 +273,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -331,7 +331,7 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 

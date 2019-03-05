@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677193"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262706"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool (clase)
 
@@ -53,7 +53,7 @@ La clase que proporciona la función utilizada para crear los subprocesos en el 
 |Name|Descripción|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|El constructor para el grupo de subprocesos.|
-|[CThreadPool:: ~ CThreadPool](#dtor)|El destructor para el grupo de subprocesos.|
+|[CThreadPool::~CThreadPool](#dtor)|El destructor para el grupo de subprocesos.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -62,13 +62,13 @@ La clase que proporciona la función utilizada para crear los subprocesos en el 
 |[CThreadPool::AddRef](#addref)|Implementación de `IUnknown::AddRef`.|
 |[CThreadPool::GetNumThreads](#getnumthreads)|Llame a este método para obtener el número de subprocesos del grupo.|
 |[CThreadPool::GetQueueHandle](#getqueuehandle)|Llame a este método para obtener el identificador del puerto de finalización de E/S utilizado para poner en cola los elementos de trabajo.|
-|[CThreadPool:: GetSize](#getsize)|Llame a este método para obtener el número de subprocesos del grupo.|
+|[CThreadPool::GetSize](#getsize)|Llame a este método para obtener el número de subprocesos del grupo.|
 |[CThreadPool::GetTimeout](#gettimeout)|Llame a este método para obtener el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.|
 |[CThreadPool::Initialize](#initialize)|Llame a este método para inicializar el grupo de subprocesos.|
 |[CThreadPool::QueryInterface](#queryinterface)|Implementación de `IUnknown::QueryInterface`.|
 |[CThreadPool::QueueRequest](#queuerequest)|Llame a este método para poner en cola un elemento de trabajo que va a administrar un subproceso del grupo.|
 |[CThreadPool::Release](#release)|Implementación de `IUnknown::Release`.|
-|[CThreadPool:: SetSize](#setsize)|Llame a este método para establecer el número de subprocesos en el grupo.|
+|[CThreadPool::SetSize](#setsize)|Llame a este método para establecer el número de subprocesos en el grupo.|
 |[CThreadPool::SetTimeout](#settimeout)|Llame a este método para establecer el tiempo máximo en milisegundos que esperará el grupo de subprocesos de un subproceso para que se cierre.|
 |[CThreadPool::Shutdown](#shutdown)|Llame a este método para cerrar el grupo de subprocesos.|
 
@@ -124,7 +124,7 @@ CThreadPool() throw();
 
 Inicializa el valor de tiempo de espera para ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT. El tiempo predeterminado es de 36 segundos. Si es necesario, puede definir su propio valor entero positivo para este símbolo antes de incluir atlutil.h.
 
-##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool
+##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
 El destructor para el grupo de subprocesos.
 
@@ -160,7 +160,7 @@ HANDLE GetQueueHandle() throw();
 
 Devuelve el identificador de la cola o NULL si no se ha inicializado el grupo de subprocesos.
 
-##  <a name="getsize"></a>  CThreadPool:: GetSize
+##  <a name="getsize"></a>  CThreadPool::GetSize
 
 Llame a este método para obtener el número de subprocesos del grupo.
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Solicitud*<br/>
+*request*<br/>
 La solicitud para poner en cola.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -281,7 +281,7 @@ Siempre devuelve 1.
 
 Esta clase no implementa el control de duración con un recuento de referencias.
 
-##  <a name="setsize"></a>  CThreadPool:: SetSize
+##  <a name="setsize"></a>  CThreadPool::SetSize
 
 Llame a este método para establecer el número de subprocesos en el grupo.
 

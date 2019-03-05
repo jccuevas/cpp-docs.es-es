@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678592"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295362"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (clase)
 
@@ -206,7 +206,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::CreateCloneFrom](#createclonefrom)|Crea un duplicado de un elemento existente.|
 |[COleClientItem::CreateFromClipboard](#createfromclipboard)|Crea un elemento incrustado desde el Portapapeles.|
 |[COleClientItem::CreateFromData](#createfromdata)|Crea un elemento incrustado en un objeto de datos.|
-|[Función COleClientItem:: CreateFromFile](#createfromfile)|Crea un elemento incrustado desde un archivo.|
+|[COleClientItem::CreateFromFile](#createfromfile)|Crea un elemento incrustado desde un archivo.|
 |[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|Crea un elemento vinculado desde el Portapapeles.|
 |[COleClientItem::CreateLinkFromData](#createlinkfromdata)|Crea un elemento vinculado desde un objeto de datos.|
 |[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|Crea un elemento vinculado desde un archivo.|
@@ -241,7 +241,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::IsRunning](#isrunning)|Devuelve TRUE si se está ejecutando la aplicación de servidor del elemento.|
 |[COleClientItem::OnActivate](#onactivate)|Lo llama el marco de trabajo para notificar el elemento que está activado.|
 |[COleClientItem::OnActivateUI](#onactivateui)|Lo llama el marco de trabajo para notificar el elemento que se activa y debe mostrar su interfaz de usuario.|
-|[COleClientItem](#onchange)|Se llama cuando el servidor cambia el elemento OLE. Implementación necesaria.|
+|[COleClientItem::OnChange](#onchange)|Se llama cuando el servidor cambia el elemento OLE. Implementación necesaria.|
 |[COleClientItem::OnDeactivate](#ondeactivate)|Lo llama el marco de trabajo cuando se desactiva un elemento.|
 |[COleClientItem::OnDeactivateUI](#ondeactivateui)|Lo llama el marco cuando el servidor quitó su interfaz de usuario local.|
 |[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|Lo llama el marco de trabajo para obtener los datos que se va a copiar en el Portapapeles.|
@@ -267,12 +267,12 @@ class COleClientItem : public CDocItem
 
 |Name|Descripción|
 |----------|-----------------|
-|[COleClientItem:: CanActivate](#canactivate)|Lo llama el marco de trabajo para determinar si se permite la activación en contexto.|
-|[COleClientItem:: OnChangeItemPosition](#onchangeitemposition)|Lo llama el marco cuando cambia la posición de un elemento.|
+|[COleClientItem::CanActivate](#canactivate)|Lo llama el marco de trabajo para determinar si se permite la activación en contexto.|
+|[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Lo llama el marco cuando cambia la posición de un elemento.|
 |[COleClientItem::OnDeactivateAndUndo](#ondeactivateandundo)|Lo llama el marco para deshacer tras la activación.|
 |[COleClientItem::OnDiscardUndoState](#ondiscardundostate)|Lo llama el marco para descartar la información de estado de deshacer del elemento.|
 |[COleClientItem::OnGetClipRect](#ongetcliprect)|Lo llama el marco de trabajo para obtener las coordenadas de rectángulo de recorte del elemento.|
-|[COleClientItem:: OnGetItemPosition](#ongetitemposition)|Lo llama el marco de trabajo para obtener la posición del elemento con respecto a la vista.|
+|[COleClientItem::OnGetItemPosition](#ongetitemposition)|Lo llama el marco de trabajo para obtener la posición del elemento con respecto a la vista.|
 |[COleClientItem::OnGetWindowContext](#ongetwindowcontext)|Lo llama el marco de trabajo cuando se activa un elemento en su lugar.|
 |[COleClientItem::OnScrollBy](#onscrollby)|Lo llama el marco para desplazar el elemento en la vista.|
 |[COleClientItem::OnShowItem](#onshowitem)|Lo llama el marco de trabajo para mostrar el elemento OLE.|
@@ -287,7 +287,7 @@ Un elemento OLE puede estar incrustado o vinculado. Si está insertado, sus dato
 
 `COleClientItem` puede usarse con ninguno el [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), o [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) clase. Para usar `COleClientItem`, derivar una clase e implementar el [OnChange](#onchange) función miembro, que define cómo responde el contenedor de los cambios realizados en el elemento. Para admitir la activación en contexto, invalidar el [OnGetItemPosition](#ongetitemposition) función miembro. Esta función proporciona información sobre la posición del elemento OLE mostrada.
 
-Para obtener más información sobre el uso de la interfaz del contenedor, consulte los artículos [contenedores: implementar un contenedor](../../mfc/containers-implementing-a-container.md) y [activación](../../mfc/activation-cpp.md).
+Para obtener más información sobre el uso de la interfaz del contenedor, consulte los artículos [contenedores: Implementación de un contenedor](../../mfc/containers-implementing-a-container.md) y [activación](../../mfc/activation-cpp.md).
 
 > [!NOTE]
 >  El SDK de Windows hace referencia a elementos vinculados e incrustados como "objetos" y hace referencia a tipos de elementos como "clases". Esta referencia utiliza el término "item" para distinguir la entidad OLE desde el objeto de C++ correspondiente y el término "tipo" para distinguir la categoría OLE de la clase de C++.
@@ -389,7 +389,7 @@ void AttachDataObject(COleDataObject& rDataObject) const;
 *rDataObject*<br/>
 Hacer referencia a un `COleDataObject` objeto que se inicializará para permitir el acceso a los datos en el elemento OLE.
 
-##  <a name="canactivate"></a>  COleClientItem:: CanActivate
+##  <a name="canactivate"></a>  COleClientItem::CanActivate
 
 Lo llama el marco cuando el usuario solicita la activación en contexto del elemento OLE; valor devuelto de la función determina si se permite la activación en contexto.
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parámetros
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -682,7 +682,7 @@ Operaciones de transferencia de datos, como pegar desde el Portapapeles o las op
 
 Para obtener más información, consulte [OleCreateFromData](/windows/desktop/api/ole2/nf-ole2-olecreatefromdata), [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender), y [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) en el SDK de Windows.
 
-##  <a name="createfromfile"></a>  Función COleClientItem:: CreateFromFile
+##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile
 
 Llame a esta función para crear un elemento OLE incrustado desde un archivo.
 
@@ -700,10 +700,10 @@ BOOL CreateFromFile(
 *lpszFileName*<br/>
 Puntero al nombre de archivo desde el que se creará el elemento OLE.
 
-*CLSID*<br/>
+*clsid*<br/>
 Reservado para un uso futuro.
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parámetros
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Puntero al nombre de archivo desde el que se creará el elemento OLE.
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -840,10 +840,10 @@ BOOL CreateNewItem(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Id. que identifica el tipo de elemento OLE para crear.
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parámetros
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.
 
-*Representación*<br/>
+*render*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -1182,7 +1182,7 @@ void GetClipboardData(
 
 ### <a name="parameters"></a>Parámetros
 
-*Plocation*<br/>
+*pDataSource*<br/>
 Puntero a un [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto que recibirá los datos contenidos en el elemento OLE.
 
 *bIncludeLink*<br/>
@@ -1273,7 +1273,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Una referencia al CLSID para el servidor asociado al icono.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un `COleClientItem::ItemState` enumerado valor, que puede ser uno de los siguientes: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Para obtener información acerca de estos Estados, consulte el artículo [contenedores: estados de elementos de cliente](../../mfc/containers-client-item-states.md).
+Un `COleClientItem::ItemState` enumerado valor, que puede ser uno de los siguientes: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Para obtener información acerca de estos Estados, consulte el artículo [contenedores: Estados de elementos de cliente](../../mfc/containers-client-item-states.md).
 
 ### <a name="remarks"></a>Comentarios
 
 Para recibir una notificación cuando cambia el estado del elemento OLE, utilice el [OnChange](#onchange) función miembro.
 
-Para obtener más información, vea el artículo [contenedores: estados de elementos de cliente](../../mfc/containers-client-item-states.md).
+Para obtener más información, vea el artículo [contenedores: Estados de elementos de cliente](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1540,7 +1540,7 @@ El objeto ya ha instalado su barra de herramientas y menús.
 
 La implementación predeterminada recuerda el HWND del servidor para su uso posterior `GetServerWindow` llamadas.
 
-##  <a name="onchange"></a>  COleClientItem
+##  <a name="onchange"></a>  COleClientItem::OnChange
 
 Lo llama el marco cuando el usuario modifica, guarda o cierra el elemento OLE.
 
@@ -1574,7 +1574,7 @@ Para OLE_CHANGED_STATE, se devuelve el estado actual de [GetItemState](#getitems
 
 Reemplace esta función para responder a los cambios de estado del elemento OLE. Normalmente, actualizar la apariencia del elemento que se invalide el área en la que se muestra el elemento. Llame a la implementación de la clase base al principio de la invalidación.
 
-##  <a name="onchangeitemposition"></a>  COleClientItem:: OnChangeItemPosition
+##  <a name="onchangeitemposition"></a>  COleClientItem::OnChangeItemPosition
 
 Lo llama el marco de trabajo para notificar al contenedor que ha cambiado la extensión del elemento OLE durante la activación en contexto.
 
@@ -1709,7 +1709,7 @@ Las coordenadas están en píxeles con respecto al área de cliente de la ventan
 
 La implementación predeterminada simplemente devuelve el rectángulo de cliente de la vista en el que el elemento está activo en contexto.
 
-##  <a name="ongetitemposition"></a>  COleClientItem:: OnGetItemPosition
+##  <a name="ongetitemposition"></a>  COleClientItem::OnGetItemPosition
 
 Las llamadas de framework la `OnGetItemPosition` función miembro para obtener las coordenadas del elemento que se está editando en su lugar.
 
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Apunta a un menú vacío.
 
 *lpMenuWidths*<br/>
-Señala a una matriz de seis valores LONG que indica cuántos de los menús están en cada uno de los siguientes grupos de menús: archivo, edición, contenedor, objeto, ventana, ayuda. La aplicación es responsable de los grupos de menú archivo, el contenedor y la ventana, correspondientes a los elementos 0, 2 y 4 de esta matriz.
+Apunta a una matriz de seis valores LONG que indica cuántos de los menús están en cada uno de los siguientes grupos de menú: Archivo, edición, contenedor, objeto, ventana, ayuda. La aplicación es responsable de los grupos de menú archivo, el contenedor y la ventana, correspondientes a los elementos 0, 2 y 4 de esta matriz.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1877,7 +1877,7 @@ virtual BOOL OnShowControlBars(
 *pFrameWnd*<br/>
 Puntero a la ventana de marco de la aplicación contenedora. Puede tratarse de una ventana de marco principal o una ventana secundaria MDI.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica si las barras de control se puede mostrar u ocultar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2150,7 +2150,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Puntero a un [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Puntero a un [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto

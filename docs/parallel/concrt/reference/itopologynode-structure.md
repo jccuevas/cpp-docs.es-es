@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 4f880e3c44cd9f301aa65d45500ed7f1d1725bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268634"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode (Estructura)
 
@@ -37,9 +37,9 @@ struct ITopologyNode;
 |----------|-----------------|
 |[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Devuelve el número de recursos de ejecución que se agrupan bajo este nodo.|
 |[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|Devuelve el primer recurso de ejecución se agrupa bajo este nodo en el orden de enumeración.|
-|[Itopologynode](#getid)|Devuelve el Administrador de recursos del identificador único para este nodo.|
-|[Itopologynode](#getnext)|Devuelve una interfaz para el nodo de la topología siguiente en el orden de enumeración.|
-|[Getnumanode](#getnumanode)|Devuelve la aplicación Windows asignada al número de nodo NUMA al que pertenece este nodo de Administrador de recursos.|
+|[ITopologyNode::GetId](#getid)|Devuelve el Administrador de recursos del identificador único para este nodo.|
+|[ITopologyNode::GetNext](#getnext)|Devuelve una interfaz para el nodo de la topología siguiente en el orden de enumeración.|
+|[ITopologyNode::GetNumaNode](#getnumanode)|Devuelve la aplicación Windows asignada al número de nodo NUMA al que pertenece este nodo de Administrador de recursos.|
 
 ## <a name="remarks"></a>Comentarios
 

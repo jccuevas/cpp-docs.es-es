@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655812"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280646"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx (clase)
 
@@ -53,7 +53,7 @@ La clase cuyos métodos implementan el modelo de subprocesos deseado. Puede eleg
 |[InternalAddRef](#internaladdref)|Incrementa el recuento de referencias para un objeto no agregado.|
 |[InternalRelease](#internalrelease)|Disminuye el recuento de referencias para un objeto no agregado.|
 |[Bloqueo](#lock)|Si el modelo de subprocesos es multiproceso, obtiene la propiedad de un objeto de sección crítica.|
-|[Desbloquear](#unlock)|Si el modelo de subprocesos es multiproceso, libera la propiedad de un objeto de sección crítica.|
+|[Unlock](#unlock)|Si el modelo de subprocesos es multiproceso, libera la propiedad de un objeto de sección crítica.|
 
 ### <a name="ccomobjectrootbase-methods"></a>Métodos CComObjectRootBase
 
@@ -181,7 +181,7 @@ Un valor que puede ser útil para el diagnóstico y prueba.
 
 Si el modelo de subprocesos es multiproceso, `InterlockedIncrement` se usa para evitar que más de un subproceso cambie el recuento de referencias al mismo tiempo.
 
-##  <a name="internalqueryinterface"></a>  CComObjectRootEx:: InternalQueryInterface
+##  <a name="internalqueryinterface"></a>  CComObjectRootEx::InternalQueryInterface
 
 Recupera un puntero a la interfaz solicitada.
 
@@ -201,7 +201,7 @@ static HRESULT InternalQueryInterface(
 *pEntries*<br/>
 [in] Un puntero a la `_ATL_INTMAP_ENTRY` estructura que tiene acceso a un mapa de las interfaces disponibles.
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz que se solicita.
 
 *ppvObject*<br/>
@@ -333,7 +333,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz que se solicita.
 
 *ppvObject*<br/>

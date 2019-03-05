@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetCheck
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
-ms.openlocfilehash: 30caf7b42cf570a5dcd92d48817ef3743cf63811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677440"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270873"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI (clase)
 
@@ -57,7 +57,7 @@ Para obtener más información sobre DocObjects, consulte [CDocObjectServer](../
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-[Compatibilidad de CCmdUI](../../mfc/reference/ccmdui-class.md)
+[CCmdUI](../../mfc/reference/ccmdui-class.md)
 
 `COleCmdUI`
 
@@ -101,7 +101,7 @@ virtual void Enable(BOOL bOn);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ben*<br/>
+*bOn*<br/>
 Indica si el comando asociado a la `COleCmdUI` objeto debe habilitarse o deshabilitarse. Distinto de cero permite que el comando; 0 deshabilita el comando.
 
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck
@@ -114,7 +114,7 @@ virtual void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parámetros
 
-*nCompruebe*<br/>
+*nCheck*<br/>
 Un valor que determina el estado para establecer un botón de alternancia activar/desactivar comando. Los valores son:
 
 |Valor|Descripción|
@@ -140,4 +140,3 @@ Un puntero al texto que se usará con el comando.
 
 [CCmdUI (clase)](../../mfc/reference/ccmdui-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

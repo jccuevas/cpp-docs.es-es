@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: Crear una red de procesamiento de imagen'
+title: 'Tutorial: Creación de una red de procesamiento de imágenes'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176177"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262823"
 ---
-# <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Crear una red de procesamiento de imagen
+# <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Creación de una red de procesamiento de imágenes
 
 Este documento muestra cómo crear una red de bloques de mensajes asincrónicos que realizan procesamiento de imágenes.
 
@@ -26,9 +26,9 @@ Lea los documentos siguientes antes de iniciar este tutorial:
 
 - [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Procedimiento para usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Cómo: Usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-- [Tutorial: Crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
+- [Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
 También se recomienda comprender los conceptos básicos de GDI + antes de empezar este tutorial.
 
@@ -162,7 +162,7 @@ La siguiente ilustración muestra la salida de ejemplo. Cada imagen de origen es
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `image-processing-network.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe /DUNICODE/EHsc /link procesamiento-image-network.cpp gdiplus.lib**
+**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
 ## <a name="see-also"></a>Vea también
 

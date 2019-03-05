@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535299"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272924"
 ---
 # <a name="completionfuture-class"></a>completion_future (Clase)
 
@@ -47,7 +47,7 @@ class completion_future;
 |[then](#then)|Un objeto de función de devolución de llamada que se encadena el `completion_future` objeto que se ejecutará cuando la operación asincrónica asociada finaliza la ejecución.|
 |[to_task](#to_task)|Devuelve un `task` objeto correspondiente a la operación asincrónica asociada.|
 |[valid](#valid)|Obtiene un valor booleano que indica si el objeto está asociado a una operación asincrónica.|
-|[Espere](#wait)|Se bloquea hasta que se complete la operación asincrónica asociada.|
+|[wait](#wait)|Se bloquea hasta que se complete la operación asincrónica asociada.|
 |[wait_for](#wait_for)|Se bloquea hasta que se complete la operación asíncrona asociada o la hora especificada por `_Rel_time` ha transcurrido.|
 |[wait_until](#wait_until)|Bloquea hasta que se complete la operación asíncrona asociada o hasta que la hora actual supera el valor especificado por `_Abs_time`.|
 
@@ -55,7 +55,7 @@ class completion_future;
 
 |Name|Descripción|
 |----------|-----------------|
-|[operador std::shared_future\<void >](#operator_shared_future)|Convierte implícitamente el `completion_future` objeto a un `std::shared_future` objeto.|
+|[operator std::shared_future\<void>](#operator_shared_future)|Convierte implícitamente el `completion_future` objeto a un `std::shared_future` objeto.|
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `completion_future` objeto en este.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
@@ -86,7 +86,7 @@ completion_future(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `completion_future` objeto se va a copiar o mover.
 
 ### <a name="overloads-list"></a>Lista de sobrecargas
@@ -134,7 +134,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 Para copiar desde el objeto.
 
 ### <a name="return-value"></a>Valor devuelto
