@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304904"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC
 
@@ -360,11 +360,11 @@ Están disponibles los siguientes estilos de cuadro de mensaje.
 
 |Estilo|Descripción|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|El cuadro de mensaje contiene tres botones de comando: anular, Reintentar y pasar por alto.|
+|MB_ABORTRETRYIGNORE|El cuadro de mensaje contiene tres botones de comando: Anular, Reintentar y omitir.|
 |MB_OK|El cuadro de mensaje contiene un botón de comando: Aceptar.|
 |MB_OKCANCEL|El cuadro de mensaje contiene dos botones de comando: Aceptar y Cancelar.|
 |MB_RETRYCANCEL|El cuadro de mensaje contiene dos botones de comando: Reintentar y Cancelar.|
-|MB_YESNO|El cuadro de mensaje contiene dos botones de comando: Yes y no.|
+|MB_YESNO|El cuadro de mensaje contiene dos botones de comando: Sí y no.|
 |MB_YESNOCANCEL|El cuadro de mensaje contiene tres botones de comando: Sí, No y Cancelar.|
 
 ### <a name="message-box-modality"></a>Modalidad de cuadro de mensaje
@@ -509,7 +509,7 @@ Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-cl
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases MFC](../../mfc/class-library-overview.md)<br/>
-[CWnd:: Create](../../mfc/reference/cwnd-class.md#create)<br/>
+[CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>
 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)<br/>
 [CEdit::Create](../../mfc/reference/cedit-class.md#create)<br/>
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)<br/>

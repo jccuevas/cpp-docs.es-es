@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], OnIdle method [MFC]
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
-ms.openlocfilehash: 7b3f2fbeac6ae356003abf12b5df4c54c8bb327a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c7cdd5cd2327be1b90e7fdb3694353acf8adcafe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304458"
 ---
 # <a name="onidle-member-function"></a>OnIdle Member (Función)
 
@@ -30,4 +30,4 @@ Para obtener más información sobre lo que puede hacer en el bucle de inactivid
 
 ## <a name="see-also"></a>Vea también
 
-[CWinApp: la clase Application](../mfc/cwinapp-the-application-class.md)
+[CWinApp: La clase de aplicación](../mfc/cwinapp-the-application-class.md)

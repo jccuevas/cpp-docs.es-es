@@ -1,5 +1,5 @@
 ---
-title: CCommandLineInfo (clase)
+title: CCommandLineInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CCommandLineInfo
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481476"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303032"
 ---
-# <a name="ccommandlineinfo-class"></a>CCommandLineInfo (clase)
+# <a name="ccommandlineinfo-class"></a>CCommandLineInfo Class
 
 Ayuda a analizar la línea de comandos al iniciar la aplicación.
 
@@ -79,17 +79,17 @@ Una aplicación MFC normalmente creará una instancia local de esta clase en el 
 
 Puede utilizar este objeto para encapsular las siguientes opciones de línea de comandos y parámetros:
 
-|Argumento de línea de comandos|Comando ejecutado|
+|Argumento de la línea de comandos|Comando ejecutado|
 |----------------------------|----------------------|
 |*app*|Nuevo archivo.|
 |*aplicación* nombre de archivo|Abrir archivo.|
 |*aplicación* `/p` nombre de archivo|Imprimir archivo a la impresora predeterminada.|
 |*aplicación* `/pt` puerto de controlador de impresora de nombre de archivo|Archivo de impresión en la impresora especificada.|
-|*Aplicación* `/dde`|Se inician y await comando DDE.|
-|*Aplicación* `/Automation`|Inicie como un servidor de automatización OLE.|
-|*Aplicación* `/Embedding`|Inicie editar un elemento OLE incrustado.|
-|*Aplicación* `/Register`<br /><br /> *Aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|
-|*Aplicación* `/Unregister`<br /><br /> *Aplicación* `/Unregserver`|Informa a la aplicación para realizar las tareas de anulación de registro.|
+|*app* `/dde`|Se inician y await comando DDE.|
+|*app* `/Automation`|Inicie como un servidor de automatización OLE.|
+|*app* `/Embedding`|Inicie editar un elemento OLE incrustado.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informa a la aplicación para realizar las tareas de anulación de registro.|
 
 Derive una nueva clase de `CCommandLineInfo` para controlar otras marcas y los valores de parámetro. Invalidar [ParseParam](#parseparam) para controlar las marcas de nuevo.
 
@@ -302,17 +302,17 @@ Indica si este es el último parámetro o marcador en la línea de comandos.
 
 La implementación predeterminada de esta función reconoce los siguientes indicadores: `/p`, `/pt`, `/dde`, `/Automation`, y `/Embedding`, tal y como se muestra en la tabla siguiente:
 
-|Argumento de línea de comandos|Comando ejecutado|
+|Argumento de la línea de comandos|Comando ejecutado|
 |----------------------------|----------------------|
 |*app*|Nuevo archivo.|
 |*aplicación* nombre de archivo|Abrir archivo.|
 |*aplicación* `/p` nombre de archivo|Imprimir archivo a la impresora predeterminada.|
 |*aplicación* `/pt` puerto de controlador de impresora de nombre de archivo|Archivo de impresión en la impresora especificada.|
-|*Aplicación* `/dde`|Se inician y await comando DDE.|
-|*Aplicación* `/Automation`|Inicie como un servidor de automatización OLE.|
-|*Aplicación* `/Embedding`|Inicie editar un elemento OLE incrustado.|
-|*Aplicación* `/Register`<br /><br /> *Aplicación* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|
-|*Aplicación* `/Unregister`<br /><br /> *Aplicación* `/Unregserver`|Informa a la aplicación para realizar las tareas de anulación de registro.|
+|*app* `/dde`|Se inician y await comando DDE.|
+|*app* `/Automation`|Inicie como un servidor de automatización OLE.|
+|*app* `/Embedding`|Inicie editar un elemento OLE incrustado.|
+|*app* `/Register`<br /><br /> *app* `/Regserver`|Informa a la aplicación para realizar las tareas de registro.|
+|*app* `/Unregister`<br /><br /> *app* `/Unregserver`|Informa a la aplicación para realizar las tareas de anulación de registro.|
 
 Esta información se almacena en [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), y [m_nShellCommand](#m_nshellcommand). Las marcas se marcan, ya sea por una barra diagonal ' **/**'o guión' **-**'.
 
@@ -328,4 +328,3 @@ Reemplace esta función en una clase derivada para controlar otros valores de pa
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304982"
 ---
 # <a name="coledropsource-class"></a>COleDropSource (clase)
 
@@ -87,7 +87,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 
 ### <a name="parameters"></a>Parámetros
 
-*EfectoColocar*<br/>
+*dropEffect*<br/>
 El efecto que le gustaría mostrar al usuario, normalmente, que indica lo que sucedería si se produjera una colocación en este momento con los datos seleccionados. Normalmente, esto es el valor devuelto por la llamada más reciente a [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) o [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Puede ser uno o varios de los siguientes:
 
 - DROPEFFECT_NONE no se permitiría un descenso.
@@ -120,7 +120,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que contiene los datos seleccionados.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -167,4 +167,3 @@ Dado que esta función se llama con frecuencia, se debe optimizar tanto como sea
 [Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

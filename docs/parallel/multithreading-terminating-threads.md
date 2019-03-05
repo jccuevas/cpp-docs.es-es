@@ -1,5 +1,5 @@
 ---
-title: 'Multithreading: Finalizar subprocesos en MFC'
+title: 'Multithreading: Terminar subprocesos en MFC'
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693300"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303636"
 ---
-# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Finalizar subprocesos en MFC
+# <a name="multithreading-terminating-threads-in-mfc"></a>Multithreading: Terminar subprocesos en MFC
 
 Hacer que un subproceso puede terminar dos situaciones normales: la función controladora finaliza o el subproceso no se puede ejecutar hasta su finalización. Si un procesador de textos, se usa un subproceso para impresión de fondo, la función controladora terminaría normalmente si la impresión se completa correctamente. Sin embargo, si el usuario desea cancelar la impresión, el subproceso de impresión en segundo plano tiene debe terminarse prematuramente. En este tema se explica cómo implementar cada situación y cómo obtener el código de salida de un subproceso después de que termine.
 
@@ -32,13 +32,13 @@ Hacer que un subproceso puede terminar dos situaciones normales: la función con
 
 ##  <a name="_core_normal_thread_termination"></a> Terminación normal de un subproceso
 
-Para un subproceso de trabajo, la terminación normal es simple: salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un **devolver** instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.
+Para un subproceso de trabajo, la terminación normal es simple: Salir de la función controladora y devolver un valor que indica la razón de finalización. Puede usar el [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) función o un **devolver** instrucción. Normalmente, 0 significa terminación sin error, pero que depende de usted.
 
 Para un subproceso de interfaz de usuario, el proceso es simple: desde el subproceso de interfaz de usuario, debe llamar a [PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) en el SDK de Windows. El único parámetro que `PostQuitMessage` es el código de salida del subproceso. En cuanto a los subprocesos de trabajo, 0 suele significar terminación sin errores.
 
 ##  <a name="_core_premature_thread_termination"></a> Terminación prematura de subprocesos
 
-Terminar un subproceso de forma prematura es casi igual de sencillo: llamar a [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) desde dentro del subproceso. Pasar el código de salida deseado como único parámetro. Esto detiene la ejecución del subproceso, cancela la asignación de la pila del subproceso, desconecte todas las DLL que se adjunta al subproceso y elimina el objeto de subproceso de la memoria.
+Terminar un subproceso de forma prematura es casi igual de sencillo: Llame a [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) desde dentro del subproceso. Pasar el código de salida deseado como único parámetro. Esto detiene la ejecución del subproceso, cancela la asignación de la pila del subproceso, desconecte todas las DLL que se adjunta al subproceso y elimina el objeto de subproceso de la memoria.
 
 `AfxEndThread` Debe llamarse desde dentro del subproceso que se finalice. Si desea terminar el subproceso desde otro subproceso, debe configurar un método de comunicación entre los dos subprocesos.
 

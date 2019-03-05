@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179063"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305086"
 ---
 # <a name="cdc-class"></a>CDC (clase)
 
@@ -436,10 +436,10 @@ class CDC : public CObject
 |[CDC::AddMetaFileComment](#addmetafilecomment)|Copia el comentario de un búfer en un metarchivo mejorado de formato especificado.|
 |[CDC::AlphaBlend](#alphablend)|Muestra los mapas de bits con píxeles transparentes o semitransparentes.|
 |[CDC::AngleArc](#anglearc)|Dibuja un segmento de línea y un arco y mueve la posición actual hasta el punto final del arco.|
-|[CDC::ARC](#arc)|Dibuja un arco elíptico.|
+|[CDC::Arc](#arc)|Dibuja un arco elíptico.|
 |[CDC::ArcTo](#arcto)|Dibuja un arco elíptico. Esta función es similar a `Arc`, excepto en que se actualiza la posición actual.|
 |[CDC::Attach](#attach)|Un contexto de dispositivo de Windows se asocia a este `CDC` objeto.|
-|[CDC:: beginpath](#beginpath)|Abre un corchete de cierre de la ruta de acceso en el contexto de dispositivo.|
+|[CDC::BeginPath](#beginpath)|Abre un corchete de cierre de la ruta de acceso en el contexto de dispositivo.|
 |[CDC::BitBlt](#bitblt)|Copia un mapa de bits de un contexto de dispositivo especificado.|
 |[CDC::Chord](#chord)|Dibuja una cuerda (una figura cerrada limitada por la intersección de una elipse y un segmento de línea).|
 |[CDC::CloseFigure](#closefigure)|Cierra una figura abierta en una ruta de acceso.|
@@ -465,14 +465,14 @@ class CDC : public CObject
 |[CDC::EndDoc](#enddoc)|Finaliza un trabajo de impresión iniciado por el `StartDoc` función miembro.|
 |[CDC::EndPage](#endpage)|Indica al controlador de dispositivo que está finalizando una página.|
 |[CDC::EndPath](#endpath)|Cierra un corchete de cierre de la ruta de acceso y selecciona la ruta definida por el corchete en el contexto de dispositivo.|
-|[CDC:: EnumObjects](#enumobjects)|Enumera los lápices y pinceles disponibles en un contexto de dispositivo.|
+|[CDC::EnumObjects](#enumobjects)|Enumera los lápices y pinceles disponibles en un contexto de dispositivo.|
 |[CDC::Escape](#escape)|Permite que las aplicaciones tener acceso a las instalaciones que no están disponibles directamente desde un dispositivo determinado a través de GDI. También permite el acceso a las funciones de escape de Windows. Escape las llamadas realizadas por una aplicación se convierten y se envían al controlador de dispositivo.|
 |[CDC::ExcludeClipRect](#excludecliprect)|Crea una nueva región de recorte que consta de la región de recorte existente menos el rectángulo especificado.|
 |[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Evita dibujo dentro de las áreas no válidas de una ventana mediante la exclusión de una región actualizada en la ventana de una región de recorte.|
 |[CDC::ExtFloodFill](#extfloodfill)|Rellena un área con el pincel actual. Proporciona más flexibilidad que la [CDC::FloodFill](#floodfill) función miembro.|
 |[CDC::ExtTextOut](#exttextout)|Escribe una cadena de caracteres dentro de una región rectangular con la fuente seleccionada actualmente.|
 |[CDC::FillPath](#fillpath)|Figuras abiertas en la ruta de acceso actual se cierra y rellena el interior de la ruta de acceso con el pincel actual y el modo de relleno de polígono.|
-|[CDC::fillRect](#fillrect)|Rellena un rectángulo determinado usando un pincel de diseño específico.|
+|[CDC::FillRect](#fillrect)|Rellena un rectángulo determinado usando un pincel de diseño específico.|
 |[CDC::FillRgn](#fillrgn)|Rellena una región específica con el pincel especificado.|
 |[CDC::FillSolidRect](#fillsolidrect)|Rellena un rectángulo con un color sólido.|
 |[CDC::FlattenPath](#flattenpath)|Transforma las curvas de la ruta seleccionada en el contexto de dispositivo actual y convierte cada curva en una secuencia de líneas.|
@@ -517,7 +517,7 @@ class CDC : public CObject
 |[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Calcula el ancho y alto de una cadena de caracteres en el contexto de dispositivo de salida.|
 |[CDC::GetOutputTextExtent](#getoutputtextextent)|Calcula el ancho y alto de una línea de texto en el contexto de dispositivo de salida con la fuente actual para determinar las dimensiones.|
 |[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|Recupera las métricas para la fuente actual desde el contexto de dispositivo de salida.|
-|[CDC::getPath](#getpath)|Recupera las coordenadas que definen los puntos de conexión de líneas y los puntos de control de las curvas que se encuentra en la ruta de acceso que está seleccionado en el contexto de dispositivo.|
+|[CDC::GetPath](#getpath)|Recupera las coordenadas que definen los puntos de conexión de líneas y los puntos de control de las curvas que se encuentra en la ruta de acceso que está seleccionado en el contexto de dispositivo.|
 |[CDC::GetPixel](#getpixel)|Recupera el valor de color RGB del píxel en el punto especificado.|
 |[CDC::GetPolyFillMode](#getpolyfillmode)|Recupera el modo de relleno de polígono actual.|
 |[CDC::GetROP2](#getrop2)|Recupera el modo de dibujo actual.|
@@ -539,7 +539,7 @@ class CDC : public CObject
 |[CDC::GetWindowOrg](#getwindoworg)|Recupera las coordenadas x e y del origen de la ventana asociada.|
 |[CDC::GetWorldTransform](#getworldtransform)|Recupera el espacio global actual transformación de espacio en la página.|
 |[CDC::GradientFill](#gradientfill)|Rellena estructuras de rectángulo y triángulo con un color gradating.|
-|[CDC:: graystring](#graystring)|Dibuja atenuado (atenuado) texto en la ubicación especificada.|
+|[CDC::GrayString](#graystring)|Dibuja atenuado (atenuado) texto en la ubicación especificada.|
 |[CDC::HIMETRICtoDP](#himetrictodp)|Convierte unidades HIMETRIC en unidades de dispositivo.|
 |[CDC::HIMETRICtoLP](#himetrictolp)|Convierte unidades HIMETRIC en unidades lógicas.|
 |[CDC::IntersectClipRect](#intersectcliprect)|Crea una nueva región de recorte, es preciso formar la intersección de la región actual y un rectángulo.|
@@ -557,7 +557,7 @@ class CDC : public CObject
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Modifica el origen de la ventana con respecto a las coordenadas del origen de ventana actual.|
 |[CDC::PaintRgn](#paintrgn)|Rellena una región con el pincel seleccionado.|
 |[CDC::PatBlt](#patblt)|Crea un patrón de bits.|
-|[CDC::pie](#pie)|Dibuja un gráfico circular en forma de cuña.|
+|[CDC::Pie](#pie)|Dibuja un gráfico circular en forma de cuña.|
 |[CDC::PlayMetaFile](#playmetafile)|Reproduce el contenido del metarchivo especificado en el dispositivo especificado. La versión mejorada de `PlayMetaFile` muestra la imagen almacenada en el metarchivo mejorado con formato determinado. Se puede reproducir el metarchivo cualquier número de veces.|
 |[CDC::PlgBlt](#plgblt)|Realiza a una transferencia de bloque de bits de los bits de datos de color desde el rectángulo especificado en el contexto de dispositivo de origen en el paralelogramo especificado en el contexto de dispositivo determinado.|
 |[CDC::PolyBezier](#polybezier)|Dibuja una o varias curvas spline Bzier. La posición actual no se usa ni se actualiza.|
@@ -809,7 +809,7 @@ Especifica el ancho, en unidades lógicas, del rectángulo de origen.
 *nSrcHeight*<br/>
 Especifica el alto, en unidades lógicas, del rectángulo de origen.
 
-*Blend*<br/>
+*blend*<br/>
 Especifica un [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -862,7 +862,7 @@ El segmento de línea se dibuja desde la posición actual hasta el principio del
 
 Si es mayor de 360 grados del ángulo de barrido el arco se trazará varias veces. Esta función dibuja líneas utilizando el lápiz actual. No se ha rellenado la ilustración.
 
-##  <a name="arc"></a>  CDC::ARC
+##  <a name="arc"></a>  CDC::Arc
 
 Dibuja un arco elíptico.
 
@@ -885,13 +885,13 @@ BOOL Arc(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda del rectángulo delimitador (en unidades lógicas).
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda del rectángulo delimitador (en unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha del rectángulo delimitador (en unidades lógicas).
 
 *y2*<br/>
@@ -900,13 +900,13 @@ Especifica la coordenada y de la esquina inferior derecha del rectángulo delimi
 *x3*<br/>
 Especifica el punto (en unidades lógicas) de inicio de la coordenada x del punto que define el arco. Este punto no tiene que estar exactamente en el arco.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica el punto (en unidades lógicas) de inicio de la coordenada y del punto que define el arco. Este punto no tiene que estar exactamente en el arco.
 
-*X4*<br/>
+*x4*<br/>
 Especifica la coordenada x del punto que define el punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
-*Y4*<br/>
+*y4*<br/>
 Especifica la coordenada y del punto que define el punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
 *lpRect*<br/>
@@ -955,13 +955,13 @@ BOOL ArcTo(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda del rectángulo delimitador (en unidades lógicas).
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda del rectángulo delimitador (en unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha del rectángulo delimitador (en unidades lógicas).
 
 *y2*<br/>
@@ -970,13 +970,13 @@ Especifica la coordenada y de la esquina inferior derecha del rectángulo delimi
 *x3*<br/>
 Especifica el punto (en unidades lógicas) de inicio de la coordenada x del punto que define el arco. Este punto no tiene que estar exactamente en el arco.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica el punto (en unidades lógicas) de inicio de la coordenada y del punto que define el arco. Este punto no tiene que estar exactamente en el arco.
 
-*X4*<br/>
+*x4*<br/>
 Especifica la coordenada x del punto que define el punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
-*Y4*<br/>
+*y4*<br/>
 Especifica la coordenada y del punto que define el punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
 *lpRect*<br/>
@@ -1019,7 +1019,7 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 El *hDC* se almacenan tanto en `m_hDC`, el contexto de dispositivo de salida y en `m_hAttribDC`, el contexto de dispositivo de atributo.
 
-##  <a name="beginpath"></a>  CDC:: beginpath
+##  <a name="beginpath"></a>  CDC::BeginPath
 
 Abre un corchete de cierre de la ruta de acceso en el contexto de dispositivo.
 
@@ -1041,7 +1041,7 @@ Consulte [BeginPath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) en el SDK 
 
 [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]
 
-##  <a name="bitblt"></a>  CDC:: BitBlt
+##  <a name="bitblt"></a>  CDC::BitBlt
 
 Copia un mapa de bits desde el contexto de dispositivo de origen en este contexto de dispositivo actual.
 
@@ -1138,13 +1138,13 @@ BOOL Chord(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica que la coordenada x de la esquina superior izquierda de la presión simultánea de límite del rectángulo (en unidades lógicas).
 
 *y1*<br/>
 Especifica que la coordenada y de la esquina superior izquierda de la presión simultánea de límite del rectángulo (en unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica que la coordenada x de la esquina inferior derecha de la presión simultánea de límite del rectángulo (en unidades lógicas).
 
 *y2*<br/>
@@ -1153,13 +1153,13 @@ Especifica que la coordenada y de la esquina inferior derecha de la presión sim
 *x3*<br/>
 Especifica la coordenada x del punto que define la cuerda inicial del punto (en unidades lógicas).
 
-*Y3*<br/>
+*y3*<br/>
 Especifica la coordenada y del punto que define la cuerda inicial del punto (en unidades lógicas).
 
-*X4*<br/>
+*x4*<br/>
 Especifica la coordenada x del punto que define el punto de conexión de la presión simultánea (en unidades lógicas).
 
-*Y4*<br/>
+*y4*<br/>
 Especifica la coordenada y del punto que define el punto de conexión de la presión simultánea (en unidades lógicas).
 
 *lpRect*<br/>
@@ -1434,10 +1434,10 @@ Especifica la coordenada x lógica de la esquina superior izquierda del rectáng
 *y*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo tridimensional.
 
-*CX*<br/>
+*cx*<br/>
 Especifica el ancho del rectángulo tridimensional.
 
-*CY*<br/>
+*cy*<br/>
 Especifica el alto del rectángulo tridimensional.
 
 ### <a name="remarks"></a>Comentarios
@@ -1580,7 +1580,7 @@ BOOL DrawFrameControl(
 *lpRect*<br/>
 Un puntero a un `RECT` estructura que contiene las coordenadas lógicas del rectángulo.
 
-*nLas*<br/>
+*nType*<br/>
 Especifica el tipo de control de marco se va a dibujar. Consulte la *uType* parámetro [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol) en el SDK de Windows para obtener una lista de valores posibles de este parámetro.
 
 *nState*<br/>
@@ -1674,7 +1674,7 @@ Especifica la coordenada y lógica de la esquina superior izquierda del icono.
 *hIcon*<br/>
 Identifica el identificador del icono que se va a dibujar.
 
-*punto*<br/>
+*point*<br/>
 Especifica las coordenadas x e y lógica de la esquina superior izquierda del icono. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1764,7 +1764,7 @@ BOOL DrawState(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Especifica la ubicación de la imagen.
 
 *size*<br/>
@@ -1807,7 +1807,7 @@ Especifica información sobre la imagen. El significado de este parámetro depen
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-##  <a name="drawtext"></a>  CDC:: DrawText
+##  <a name="drawtext"></a>  CDC::DrawText
 
 Llame a esta función miembro para dar formato al texto en el rectángulo especificado. Para especificar opciones de formato adicionales, use [CDC::DrawTextEx](#drawtextex).
 
@@ -1926,13 +1926,13 @@ BOOL Ellipse(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha del rectángulo delimitador de la elipse.
 
 *y2*<br/>
@@ -2015,7 +2015,7 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
   Vea el ejemplo de [CDC:: beginpath](#beginpath).
 
-##  <a name="enumobjects"></a>  CDC:: EnumObjects
+##  <a name="enumobjects"></a>  CDC::EnumObjects
 
 Enumera los lápices y pinceles disponibles en un contexto de dispositivo.
 
@@ -2063,7 +2063,7 @@ Tenga en cuenta que todas las funciones de devolución de llamada deben capturar
 
 [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]
 
-##  <a name="escape"></a>  CDC::escape
+##  <a name="escape"></a>  CDC::Escape
 
 Esta función miembro está obsoleta en la práctica de programación de Win32.
 
@@ -2162,13 +2162,13 @@ int ExcludeClipRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha del rectángulo.
 
 *y2*<br/>
@@ -2203,7 +2203,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Señala al objeto de ventana cuya ventana se está actualizando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2341,7 +2341,7 @@ Es distinto de cero si la función se realiza correctamente; de lo contrario, es
 
 Después de su interior se llena, se descarta la ruta de acceso desde el contexto de dispositivo.
 
-##  <a name="fillrect"></a>  CDC::fillRect
+##  <a name="fillrect"></a>  CDC::FillRect
 
 Llame a esta función miembro para rellenar un rectángulo determinado con el pincel especificado.
 
@@ -2429,10 +2429,10 @@ Especifica la coordenada x lógica de la esquina superior izquierda del rectáng
 *y*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo de destino.
 
-*CX*<br/>
+*cx*<br/>
 Especifica el ancho del rectángulo.
 
-*CY*<br/>
+*cy*<br/>
 Especifica el alto del rectángulo.
 
 ### <a name="remarks"></a>Comentarios
@@ -2488,7 +2488,7 @@ Solo los contextos de dispositivo de memoria y los dispositivos que admiten la c
 
 El `ExtFloodFill` función proporciona una funcionalidad similar pero mayor flexibilidad.
 
-##  <a name="framerect"></a>  FrameRect
+##  <a name="framerect"></a>  CDC::FrameRect
 
 Dibuja un borde alrededor del rectángulo especificado por *lpRect*.
 
@@ -2714,7 +2714,7 @@ DWORD GetCharacterPlacement(
 
 ### <a name="parameters"></a>Parámetros
 
-*el puntero lpString*<br/>
+*lpString*<br/>
 Un puntero a la cadena de caracteres para procesar.
 
 *nCount*<br/>
@@ -2807,10 +2807,10 @@ BOOL GetCharABCWidthsI(
 *giFirst*<br/>
 Especifica el primer índice de glifo en el grupo de índices de glifo consecutivos de la fuente actual. Este parámetro solo se usa si el *IGP* parámetro es NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica el número de índices de glifo.
 
-*IGP*<br/>
+*pgi*<br/>
 Un puntero a una matriz que contiene los índices de glifo. Si el valor es NULL, el *giFirst* parámetro se usa en su lugar. El *cgi* parámetro especifica el número de índices de glifo de esta matriz.
 
 *lpabc*<br/>
@@ -2883,10 +2883,10 @@ BOOL GetCharWidthI(
 *giFirst*<br/>
 Especifica el primer índice de glifo en el grupo de índices de glifo consecutivos de la fuente actual. Este parámetro solo se usa si el *IGP* parámetro es NULL.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica el número de índices de glifo.
 
-*IGP*<br/>
+*pgi*<br/>
 Un puntero a una matriz que contiene los índices de glifo. Si el valor es NULL, el *giFirst* parámetro se usa en su lugar. El *cgi* parámetro especifica el número de índices de glifo de esta matriz.
 
 *lpBuffer*<br/>
@@ -3078,7 +3078,7 @@ Si se produce un error en la función, el valor devuelto es CLR_INVALID.
 
 Esta función miembro usa la función de Win32 [GetDCPenColor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor), tal y como se describe en el SDK de Windows.
 
-##  <a name="getdevicecaps"></a>  CDC:: GetDeviceCaps
+##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps
 
 Recupera una amplia gama de información específica del dispositivo sobre el dispositivo de pantalla.
 
@@ -3171,7 +3171,7 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 Especifica el carácter que es información va a devolver.
 
 *nFormat*<br/>
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si se realiza correctamente, el diseño de marcas para el contexto de dispositivo actual. En caso contrario, GDI_ERROR. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para obtener una lista de las marcas de diseño, vea [CDC::SetLayout](#setlayout).
+Si se realiza correctamente, el diseño de marcas para el contexto de dispositivo actual. Otherwise, GDI_ERROR. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Para obtener una lista de las marcas de diseño, vea [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -3499,7 +3499,7 @@ Apunta a la [TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica) e
 
 Es distinto de cero si la función se realiza correctamente; de lo contrario, es 0.
 
-##  <a name="getpath"></a>  CDC::getPath
+##  <a name="getpath"></a>  CDC::GetPath
 
 Recupera las coordenadas que definen los puntos de conexión de líneas y los puntos de control de las curvas que se encuentra en la ruta de acceso que está seleccionado en el contexto de dispositivo.
 
@@ -3545,7 +3545,7 @@ El contexto de dispositivo debe contener un trayecto cerrado. Los puntos de la r
 
   Vea el ejemplo de [CDC:: beginpath](#beginpath).
 
-##  <a name="getpixel"></a>  CDC::getPixel
+##  <a name="getpixel"></a>  CDC::GetPixel
 
 Recupera el valor de color RGB del píxel en el punto especificado por *x* y *y*.
 
@@ -3565,7 +3565,7 @@ Especifica la coordenada x lógica del punto que se va a examinar.
 *y*<br/>
 Especifica la coordenada y lógica del punto que se va a examinar.
 
-*punto*<br/>
+*point*<br/>
 Especifica las coordenadas x e y lógica del punto que se va a examinar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3828,7 +3828,7 @@ BOOL GetTextExtentExPointI(
 *pgiIn*<br/>
 Un puntero a una matriz de índices de glifo de las extensiones son va a recuperar.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica el número de glifos en la matriz señalada por *pgiIn*.
 
 *nMaxExtent*<br/>
@@ -3867,7 +3867,7 @@ BOOL GetTextExtentPointI(
 *pgiIn*<br/>
 Un puntero a una matriz de índices de glifo de las extensiones son va a recuperar.
 
-*CGI*<br/>
+*cgi*<br/>
 Especifica el número de glifos en la matriz señalada por *pgiIn*.
 
 *lpSize*<br/>
@@ -4056,7 +4056,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 Para obtener más información, consulte `GradientFill` en el SDK de Windows.
 
-##  <a name="graystring"></a>  CDC:: graystring
+##  <a name="graystring"></a>  CDC::GrayString
 
 Dibuja atenuado texto (gris) en la ubicación indicada por escribir el texto en un mapa de bits de memoria, atenuar el mapa de bits y, a continuación, copia el mapa de bits a la pantalla.
 
@@ -4171,13 +4171,13 @@ int IntersectClipRect(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha del rectángulo.
 
 *y2*<br/>
@@ -4278,7 +4278,7 @@ Especifica la coordenada x lógica del punto de conexión de la línea.
 *y*<br/>
 Especifica la coordenada y lógica del punto de conexión de la línea.
 
-*punto*<br/>
+*point*<br/>
 Especifica el extremo de la línea. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4485,7 +4485,7 @@ Especifica la coordenada x lógica de la nueva posición.
 *y*<br/>
 Especifica la coordenada y lógica de la nueva posición.
 
-*punto*<br/>
+*point*<br/>
 Especifica la nueva posición. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4662,7 +4662,7 @@ El patrón es una combinación de pincel seleccionado y el modelo ya en el dispo
 
 No todos los contextos de dispositivo admiten el `PatBlt` función. Para determinar si un contexto de dispositivo admite `PatBlt`, llame a la `GetDeviceCaps` miembro funcionando con el índice RASTERCAPS y compruebe el valor devuelto para la marca RC_BITBLT.
 
-##  <a name="pie"></a>  CDC::pie
+##  <a name="pie"></a>  CDC::Pie
 
 Dibuja un gráfico circular en forma de cuña dibujando un arco elíptico cuyo centro y dos puntos de conexión están unidos por líneas.
 
@@ -4685,13 +4685,13 @@ BOOL Pie(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda del rectángulo delimitador (en unidades lógicas).
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda del rectángulo delimitador (en unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha del rectángulo delimitador (en unidades lógicas).
 
 *y2*<br/>
@@ -4700,13 +4700,13 @@ Especifica la coordenada y de la esquina inferior derecha del rectángulo delimi
 *x3*<br/>
 Especifica la coordenada x del punto de partida del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica la coordenada y del punto de partida del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
-*X4*<br/>
+*x4*<br/>
 Especifica la coordenada x del punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
-*Y4*<br/>
+*y4*<br/>
 Especifica la coordenada y del punto de conexión del arco (en unidades lógicas). Este punto no tiene que estar exactamente en el arco.
 
 *lpRect*<br/>
@@ -5115,14 +5115,14 @@ Especifica la coordenada x lógica del punto.
 *y*<br/>
 Especifica la coordenada y lógica del punto.
 
-*punto*<br/>
+*point*<br/>
 Especifica el punto de comprobación en coordenadas lógicas. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Distinto de cero si el punto especificado está dentro de la región de recorte en caso contrario, es 0.
 
-##  <a name="queryabort"></a>  CDC:: QueryAbort
+##  <a name="queryabort"></a>  CDC::QueryAbort
 
 Llama a la función de anulación instalada por el [ayudar a](#setabortproc) función miembro para una aplicación de impresión y las consultas si debe finalizar la impresión.
 
@@ -5170,13 +5170,13 @@ BOOL Rectangle(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda del rectángulo (en unidades lógicas).
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda del rectángulo (en unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha del rectángulo (en unidades lógicas).
 
 *y2*<br/>
@@ -5310,13 +5310,13 @@ BOOL RoundRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda del rectángulo (en unidades lógicas).
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda del rectángulo (en unidades lógicas).
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha del rectángulo (en unidades lógicas).
 
 *y2*<br/>
@@ -5325,13 +5325,13 @@ Especifica la coordenada y de la esquina inferior derecha del rectángulo (en un
 *x3*<br/>
 Especifica el ancho de la elipse que se usa para dibujar las esquinas redondeadas (en unidades lógicas).
 
-*Y3*<br/>
+*y3*<br/>
 Especifica el alto de la elipse que se usa para dibujar las esquinas redondeadas (en unidades lógicas).
 
 *lpRect*<br/>
 Especifica el rectángulo en unidades lógicas. Puede pasar un `CRect` objeto o un puntero a un `RECT` estructura para este parámetro.
 
-*punto*<br/>
+*point*<br/>
 La coordenada x de *punto* especifica el ancho de la elipse para dibujar las esquinas redondeadas (en unidades lógicas). La coordenada y de *punto* especifica el alto de la elipse para dibujar las esquinas redondeadas (en unidades lógicas). Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -5462,7 +5462,7 @@ BOOL ScrollDC(
 
 ### <a name="parameters"></a>Parámetros
 
-*DX*<br/>
+*dx*<br/>
 Especifica el número de unidades de desplazamiento horizontal.
 
 *dy*<br/>
@@ -5575,7 +5575,7 @@ La función supone que se especifican las coordenadas para la región especifica
 
 Las aplicaciones que se deben realizar el escalado de objetos gráficos en el GDI pueden usar el escape de impresora GETSCALINGFACTOR para determinar el factor de escala. Este factor de escala afecta al recorte. Si se usa una región de recorte de gráficos, GDI divide las coordenadas según el factor de escala. Si se usa la región de recorte de texto, GDI no realiza ningún ajuste de escala. Un factor de escala de 1 hace que las coordenadas que se divide por 2. un factor de escala de 2 hace que las coordenadas que se divide por 4; y así sucesivamente.
 
-##  <a name="selectobject"></a>  CDC:: SelectObject
+##  <a name="selectobject"></a>  CDC::SelectObject
 
 Selecciona un objeto en el contexto de dispositivo.
 
@@ -5709,7 +5709,7 @@ Especifica el tipo de objeto estándar deseado. Puede ser uno de los siguientes 
 
 Un puntero a la `CGdiObject` objeto que se ha reemplazado si la función es correcta. Es el objeto real al que señala un [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), o [CFont](../../mfc/reference/cfont-class.md) objeto. Si la llamada se realiza correctamente, el valor devuelto es NULL.
 
-##  <a name="setabortproc"></a>  CDC:: SETABORTPROC
+##  <a name="setabortproc"></a>  CDC::SetAbortProc
 
 Instala el procedimiento de anulación para el trabajo de impresión.
 
@@ -5775,7 +5775,7 @@ Especifica la dirección del arco anterior, si se realiza correctamente; en caso
 
 La dirección predeterminada es a la izquierda. El `SetArcDirection` función especifica la dirección en la que las funciones siguientes draw:
 
-|Arco|Circular|
+|Arco|Gráficos circulares|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
@@ -5908,7 +5908,7 @@ Especifica la coordenada x (en unidades de dispositivo) del nuevo origen. Este v
 *y*<br/>
 Especifica la coordenada y (en unidades de dispositivo) del nuevo origen. Este valor debe ser en el intervalo 0-7.
 
-*punto*<br/>
+*point*<br/>
 Especifica las coordenadas x e y del origen nuevo. Cada valor debe ser en el intervalo 0-7. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6179,7 +6179,7 @@ Especifica la coordenada y lógica del punto debe establecerse.
 *crColor*<br/>
 Un valor RGB COLORREF que especifica el color utilizado para pintar el punto. Consulte [COLORREF](/windows/desktop/gdi/colorref) en el SDK de Windows para obtener una descripción de este valor.
 
-*punto*<br/>
+*point*<br/>
 Especifica las coordenadas x e y lógica del punto debe establecerse. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6218,7 +6218,7 @@ Especifica la coordenada y, en unidades lógicas, del punto debe establecerse.
 *crColor*<br/>
 Especifica el color que se usa para pintar el punto.
 
-*punto*<br/>
+*point*<br/>
 Especifica las coordenadas x e y lógica del punto debe establecerse. Puede pasar un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura de datos o un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6487,10 +6487,10 @@ CSize SetViewportExt(SIZE size);
 
 ### <a name="parameters"></a>Parámetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica la extensión x de la ventanilla (en unidades de dispositivo).
 
-*CY*<br/>
+*cy*<br/>
 Especifica la extensión y de la ventanilla (en unidades de dispositivo).
 
 *size*<br/>
@@ -6537,7 +6537,7 @@ Especifica la coordenada x (en unidades de dispositivo) del origen de la ventani
 *y*<br/>
 Especifica la coordenada y (en unidades de dispositivo) del origen de la ventanilla. El valor debe ser dentro del intervalo del sistema de coordenadas de dispositivo.
 
-*punto*<br/>
+*point*<br/>
 Especifica el origen de la ventanilla. Los valores deben ser dentro del intervalo del sistema de coordenadas de dispositivo. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6568,10 +6568,10 @@ CSize SetWindowExt(SIZE size);
 
 ### <a name="parameters"></a>Parámetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica la x extensión (en unidades lógicas) de la ventana.
 
-*CY*<br/>
+*cy*<br/>
 Especifica la y extensión (en unidades lógicas) de la ventana.
 
 *size*<br/>
@@ -6625,7 +6625,7 @@ Especifica la coordenada x lógica del nuevo origen de la ventana.
 *y*<br/>
 Especifica la coordenada y lógica del origen de la ventana de nuevo.
 
-*punto*<br/>
+*point*<br/>
 Especifica las coordenadas lógicas del nuevo origen de la ventana. Puede pasar un `POINT` estructura o un `CPoint` objeto para este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -6917,7 +6917,7 @@ Si *nTabPositions* es 1, la pestaña se detiene se separan con la distancia espe
 
 De forma predeterminada, la función no usa ni actualiza la posición actual. Si una aplicación necesita actualizar la posición actual cuando llama a la función, la aplicación puede llamar a la [SetTextAlign](#settextalign) función miembro con *nFlags* establecido en TA_UPDATECP. Cuando se establece esta marca, Windows pasa por alto el *x* y *y* parámetros en las llamadas subsiguientes a `TabbedTextOut`, con la posición actual en su lugar.
 
-##  <a name="textout"></a>  CDC:: TextOut
+##  <a name="textout"></a>  CDC::TextOut
 
 Escribe una cadena de caracteres en la ubicación especificada usando la fuente seleccionada actualmente.
 

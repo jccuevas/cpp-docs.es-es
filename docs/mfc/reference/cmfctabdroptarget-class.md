@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303942"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget (clase)
 
@@ -96,10 +96,10 @@ virtual DROPEFFECT OnDragEnter(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*conquistado*|[in] Sin usar.|
+|*pWnd*|[in] Sin usar.|
 |*pDataObject*|[in] Un puntero al objeto que el usuario arrastra.|
 |*dwKeyState*|[in] Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|
-|*punto*|[in] La ubicación del cursor en coordenadas de cliente.|
+|*point*|[in] La ubicación del cursor en coordenadas de cliente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -134,7 +134,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||
 |-|-|
 |Parámetro|Descripción|
-|*conquistado*|[in] Sin usar.|
+|*pWnd*|[in] Sin usar.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -157,10 +157,10 @@ virtual DROPEFFECT OnDragOver(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*conquistado*|[in] Sin usar.|
+|*pWnd*|[in] Sin usar.|
 |*pDataObject*|[in] Un puntero al objeto que el usuario arrastra.|
 |*dwKeyState*|[in] Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.|
-|*punto*|[in] La ubicación del puntero del mouse en coordenadas de cliente.|
+|*point*|[in] La ubicación del puntero del mouse en coordenadas de cliente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -200,11 +200,11 @@ virtual DROPEFFECT OnDropEx(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*conquistado*|[in] Sin usar.|
+|*pWnd*|[in] Sin usar.|
 |*pDataObject*|[in] Un puntero al objeto que el usuario arrastra.|
-|*EfectoColocar*|[in] La operación de colocar de forma predeterminada.|
-|*lista desplegable*|[in] Sin usar.|
-|*punto*|[in] La ubicación del puntero del mouse en coordenadas de cliente.|
+|*dropEffect*|[in] La operación de colocar de forma predeterminada.|
+|*dropList*|[in] Sin usar.|
+|*point*|[in] La ubicación del puntero del mouse en coordenadas de cliente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -254,4 +254,3 @@ Este método llama a [COleDropTarget::Register](../../mfc/reference/coledroptarg
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [Arrastrar y colocar (OLE)](../../mfc/drag-and-drop-ole.md)
-
