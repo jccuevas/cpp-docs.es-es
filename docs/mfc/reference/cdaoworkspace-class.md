@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472870"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263460"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (clase)
 
@@ -91,12 +91,12 @@ class CDaoWorkspace : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDaoQueryDef:: Append](#append)|Anexa un área de trabajo recién creado a la colección de áreas de trabajo del motor de base de datos.|
+|[CDaoWorkspace::Append](#append)|Anexa un área de trabajo recién creado a la colección de áreas de trabajo del motor de base de datos.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|Inicia una transacción nueva, que se aplica a todas las bases de datos abierto en el área de trabajo.|
 |[CDaoWorkspace::Close](#close)|Cierra el área de trabajo y todos los objetos que contiene. Las transacciones pendientes se revierten.|
-|[CDaoWorkspace:: CommitTrans](#committrans)|Completa la transacción actual y guarda los cambios.|
-|[CDaoWorkspace:: CompactDatabase](#compactdatabase)|Compacta una base de datos (o duplicados).|
-|[CDaoWorkspace:: Create](#create)|Crea un nuevo objeto de área de trabajo DAO.|
+|[CDaoWorkspace::CommitTrans](#committrans)|Completa la transacción actual y guarda los cambios.|
+|[CDaoWorkspace::CompactDatabase](#compactdatabase)|Compacta una base de datos (o duplicados).|
+|[CDaoWorkspace::Create](#create)|Crea un nuevo objeto de área de trabajo DAO.|
 |[CDaoWorkspace::GetDatabaseCount](#getdatabasecount)|Devuelve el número de objetos de base de datos DAO en la colección de bases de datos del área de trabajo.|
 |[CDaoWorkspace::GetDatabaseInfo](#getdatabaseinfo)|Devuelve información acerca de una base de datos DAO especificado definido en la colección de bases de datos del área de trabajo.|
 |[CDaoWorkspace::GetIniPath](#getinipath)|Devuelve los valores de inicialización del motor de la ubicación de la base de datos Microsoft Jet en el registro de Windows.|
@@ -109,13 +109,13 @@ class CDaoWorkspace : public CObject
 |[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|Devuelve información sobre un área de trabajo DAO especificado definido en la colección de áreas de trabajo del motor de base de datos.|
 |[CDaoWorkspace::Idle](#idle)|Permite al motor de base de datos realizar tareas en segundo plano.|
 |[CDaoWorkspace::IsOpen](#isopen)|Devuelve cero si el área de trabajo abierto.|
-|[CDaoWorkspace:: Open](#open)|Explícitamente, se abre un objeto de área de trabajo asociado con el área de trabajo de DAO predeterminada.|
-|[CDaoWorkspace:: RepairDatabase](#repairdatabase)|Intenta reparar una base de datos dañada.|
+|[CDaoWorkspace::Open](#open)|Explícitamente, se abre un objeto de área de trabajo asociado con el área de trabajo de DAO predeterminada.|
+|[CDaoWorkspace::RepairDatabase](#repairdatabase)|Intenta reparar una base de datos dañada.|
 |[CDaoWorkspace::Rollback](#rollback)|Finaliza la transacción actual y no guardar los cambios.|
 |[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|Establece la contraseña que utiliza el motor de base de datos cuando se crea un objeto de área de trabajo sin una contraseña específica.|
 |[CDaoWorkspace::SetDefaultUser](#setdefaultuser)|Establece el nombre de usuario que utiliza el motor de base de datos cuando se crea un objeto de área de trabajo sin un nombre de usuario específico.|
 |[CDaoWorkspace::SetIniPath](#setinipath)|Establece los valores de inicialización del motor de la ubicación de la base de datos Microsoft Jet en el registro de Windows.|
-|[CDaoWorkspace:: SetIsolateODBCTrans](#setisolateodbctrans)|Especifica si varias transacciones que implican el mismo origen de datos ODBC están aisladas por forzar varias conexiones al origen de datos.|
+|[CDaoWorkspace::SetIsolateODBCTrans](#setisolateodbctrans)|Especifica si varias transacciones que implican el mismo origen de datos ODBC están aisladas por forzar varias conexiones al origen de datos.|
 |[CDaoWorkspace::SetLoginTimeout](#setlogintimeout)|Establece el número de segundos antes de que se produce un error cuando el usuario intenta iniciar sesión en un origen de datos ODBC.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -193,7 +193,7 @@ Para obtener información sobre cómo llamar a DAO directamente y sobre la segur
 
 **Encabezado:** afxdao.h
 
-##  <a name="append"></a>  CDaoQueryDef:: Append
+##  <a name="append"></a>  CDaoWorkspace::Append
 
 Llame a esta función miembro después de llamar a [crear](#create).
 
@@ -268,7 +268,7 @@ Los objetos del área de trabajo no son permanentes; solo existen mientras exist
 
 Para obtener información relacionada, vea el tema "Método Close" en la Ayuda de DAO.
 
-##  <a name="committrans"></a>  CDaoWorkspace:: CommitTrans
+##  <a name="committrans"></a>  CDaoWorkspace::CommitTrans
 
 Llame a esta función miembro para confirmar una transacción: guardar un grupo de modificaciones y actualizaciones a una o varias bases de datos del área de trabajo.
 
@@ -288,7 +288,7 @@ Al cerrar una base de datos o área de trabajo con las transacciones pendientes,
 > [!NOTE]
 >  Esto no es un mecanismo de confirmación en dos fases. Si no se puede confirmar una actualización, otros todavía confirmará.
 
-##  <a name="compactdatabase"></a>  CDaoWorkspace:: CompactDatabase
+##  <a name="compactdatabase"></a>  CDaoWorkspace::CompactDatabase
 
 Llame a esta función miembro que se deben compactar un especificado Microsoft Jet (. Base de datos de Microsoft Access).
 
@@ -383,7 +383,7 @@ Cambiar datos en una base de datos, el archivo de base de datos puede fragmentar
 
 Para obtener más información acerca de las bases de datos con compactación, vea el tema "Método CompactDatabase" en la Ayuda de DAO.
 
-##  <a name="create"></a>  CDaoWorkspace:: Create
+##  <a name="create"></a>  CDaoWorkspace::Create
 
 Llame a esta función miembro para crear un nuevo objeto de área de trabajo DAO y asociarlo con MFC `CDaoWorkspace` objeto.
 
@@ -454,7 +454,7 @@ void GetDatabaseInfo(
 *nIndex*<br/>
 Índice de base cero del objeto de base de datos de colección de bases de datos del área de trabajo, para la búsqueda por índice.
 
-*DBINFO*<br/>
+*dbinfo*<br/>
 Una referencia a un [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) objeto que devuelve la información solicitada.
 
 *dwInfoOptions*<br/>
@@ -462,9 +462,9 @@ Opciones que especifican qué información acerca de la base de datos para recup
 
 - Nombre AFX_DAO_PRIMARY_INFO (valor predeterminado), puede actualizar, las transacciones
 
-- AFX_DAO_SECONDARY_INFO principal información más: tiempo de espera de consulta de versión, el orden de intercalación,
+- Signo más de información AFX_DAO_SECONDARY_INFO principal: Versión, criterio de ordenación, tiempo de espera de consulta
 
-- AFX_DAO_ALL_INFO principal y secundaria información más: conectar
+- AFX_DAO_ALL_INFO principal y secundaria información más: Conectar
 
 *lpszName*<br/>
 El nombre del objeto de base de datos, para la búsqueda por nombre. El nombre es una cadena con hasta 14 caracteres que identifica inequívocamente el nuevo objeto de área de trabajo.
@@ -632,9 +632,9 @@ Opciones que especifican qué información sobre el área de trabajo para recupe
 
 - Nombre AFX_DAO_PRIMARY_INFO (valor predeterminado)
 
-- AFX_DAO_SECONDARY_INFO principal información más: nombre de usuario
+- Signo más de información AFX_DAO_SECONDARY_INFO principal: Nombre de usuario
 
-- AFX_DAO_ALL_INFO principal y secundaria información más: aislar ODBCTrans
+- AFX_DAO_ALL_INFO principal y secundaria información más: Aislar ODBCTrans
 
 *lpszName*<br/>
 El nombre del objeto de área de trabajo, para la búsqueda por nombre. El nombre es una cadena con hasta 14 caracteres que identifica inequívocamente el nuevo objeto de área de trabajo.
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>Parámetros
 
-*%4.%nresultado de la acción*<br/>
+*nAction*<br/>
 Acción que se realizará durante el procesamiento en inactividad. Actualmente es la única acción válida `dbFreeLocks`.
 
 ### <a name="remarks"></a>Comentarios
@@ -695,7 +695,7 @@ Utilice a este miembro de datos si se necesita acceso directo a objeto DAO subya
 
 Para obtener información sobre el acceso a objetos DAO directamente, vea [Nota técnica 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-##  <a name="open"></a>  CDaoWorkspace:: Open
+##  <a name="open"></a>  CDaoWorkspace::Open
 
 Explícitamente, se abre un objeto de área de trabajo asociado con el área de trabajo de DAO predeterminada.
 
@@ -723,10 +723,10 @@ Aunque muchos `CDaoWorkspace` miembro funciones solo se pueden llamar después d
 ||||
 |-|-|-|
 |[Crear](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[Inactivo](#idle)|[SetIniPath](#setinipath)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
-##  <a name="repairdatabase"></a>  CDaoWorkspace:: RepairDatabase
+##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase
 
 Llame a esta función miembro si tiene que intentar reparar una base de datos dañada que obtiene acceso al motor de base de datos Microsoft Jet.
 
@@ -848,7 +848,7 @@ Llamar a `SetIniPath` solo si tiene que especificar una configuración especial.
 
 Puede usar este mecanismo para configurar el motor de base de datos con la configuración del registro proporcionado por el usuario. El ámbito de este atributo se limita a la aplicación y no se puede cambiar sin tener que reiniciar la aplicación.
 
-##  <a name="setisolateodbctrans"></a>  CDaoWorkspace:: SetIsolateODBCTrans
+##  <a name="setisolateodbctrans"></a>  CDaoWorkspace::SetIsolateODBCTrans
 
 Llame a esta función miembro para establecer el valor de la propiedad IsolateODBCTrans DAO para el área de trabajo.
 
@@ -877,7 +877,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parámetros
 
-*númeroSegundos*<br/>
+*nSeconds*<br/>
 El número de segundos antes de que se produce un error al intentar iniciar sesión en una base de datos ODBC.
 
 ### <a name="remarks"></a>Comentarios

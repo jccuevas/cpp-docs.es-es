@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578911"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292197"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit (clase)
 
@@ -283,10 +283,10 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>Parámetros
 
-*nmín.*<br/>
+*nMin*<br/>
 [in] El valor mínimo del botón de número.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 [in] El valor máximo del botón de número.
 
 ### <a name="remarks"></a>Comentarios
@@ -532,7 +532,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo de presentación para el `CMFCRibbonEdit` control.
 
 *bIsSelected*<br/>
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el control; FALSE para deshabilitar el control.
 
 ### <a name="remarks"></a>Comentarios
@@ -604,7 +604,7 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -619,7 +619,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -649,7 +649,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el control; FALSE para ocultar el control.
 
 ### <a name="remarks"></a>Comentarios
