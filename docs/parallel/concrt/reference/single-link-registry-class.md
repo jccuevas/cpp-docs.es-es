@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454501"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290136"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry (Clase)
 
@@ -33,7 +33,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>Parámetros
 
-*Al _bloque al introducir*<br/>
+*_Block*<br/>
 Tipo de los datos del bloque que se almacenan en la `single_link_registry` objeto.
 
 ## <a name="members"></a>Miembros
@@ -51,7 +51,7 @@ Tipo de los datos del bloque que se almacenan en la `single_link_registry` objet
 |----------|-----------------|
 |[add](#add)|Agrega un vínculo a la `single_link_registry` objeto. (Invalida [network_link_registry:: Add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Devuelve un iterador al primer elemento en el `single_link_registry` objeto. (Invalida [network_link_registry:: BEGIN](network-link-registry-class.md#begin).)|
-|[Contiene](#contains)|Busca el `single_link_registry` objeto para un bloque especificado. (Invalida [network_link_registry:: contains](network-link-registry-class.md#contains).)|
+|[contains](#contains)|Busca el `single_link_registry` objeto para un bloque especificado. (Invalida [network_link_registry:: contains](network-link-registry-class.md#contains).)|
 |[count](#count)|Cuenta el número de elementos de la `single_link_registry` objeto. (Invalida [network_link_registry:: Count](network-link-registry-class.md#count).)|
 |[remove](#remove)|Quita un vínculo desde el `single_link_registry` objeto. (Invalida [network_link_registry:: Remove](network-link-registry-class.md#remove).)|
 
@@ -77,7 +77,7 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a agregar.
 
 ### <a name="remarks"></a>Comentarios
@@ -110,7 +110,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se van a buscar en el `single_link_registry` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -139,14 +139,14 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a quitar, si se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
 
 **True** si el vínculo ha encontrado y eliminado, **false** en caso contrario.
 
-##  <a name="ctor"></a> single_link_registry)
+##  <a name="ctor"></a> single_link_registry
 
 Construye un objeto `single_link_registry`.
 
@@ -154,7 +154,7 @@ Construye un objeto `single_link_registry`.
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ single_link_registry
+##  <a name="dtor"></a> ~single_link_registry
 
 Destruye el objeto `single_link_registry`.
 

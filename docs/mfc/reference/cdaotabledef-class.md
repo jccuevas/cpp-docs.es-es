@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: b2f431b250da4b791c06a629315d59bbc7935802
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579247"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270233"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef (clase)
 
@@ -101,11 +101,11 @@ class CDaoTableDef : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDaoTableDef:: Append](#append)|Agrega una nueva tabla a la base de datos.|
-|[CDaoTableDef:: CanUpdate](#canupdate)|Devuelve cero si se puede actualizar la tabla (se puede modificar la definición de campos o propiedades de la tabla).|
+|[CDaoTableDef::Append](#append)|Agrega una nueva tabla a la base de datos.|
+|[CDaoTableDef::CanUpdate](#canupdate)|Devuelve cero si se puede actualizar la tabla (se puede modificar la definición de campos o propiedades de la tabla).|
 |[CDaoTableDef::Close](#close)|Cierra una definición de tabla abierta.|
-|[CDaoTableDef:: Create](#create)|Crea una tabla que se puede agregar a la base de datos mediante [Append](#append).|
-|[CDaoTableDef:: CreateField](#createfield)|Se llama para crear un campo de una tabla.|
+|[CDaoTableDef::Create](#create)|Crea una tabla que se puede agregar a la base de datos mediante [Append](#append).|
+|[CDaoTableDef::CreateField](#createfield)|Se llama para crear un campo de una tabla.|
 |[CDaoTableDef::CreateIndex](#createindex)|Se llama para crear un índice de una tabla.|
 |[CDaoTableDef::DeleteField](#deletefield)|Se llama para eliminar un campo de una tabla.|
 |[CDaoTableDef::DeleteIndex](#deleteindex)|Se llama para eliminar un índice de una tabla.|
@@ -124,7 +124,7 @@ class CDaoTableDef : public CObject
 |[CDaoTableDef::GetValidationText](#getvalidationtext)|Devuelve un valor que especifica el texto del mensaje que la aplicación muestra si el valor de un objeto de campo no cumple la regla de validación especificado.|
 |[CDaoTableDef::IsOpen](#isopen)|Devuelve distinto de cero si la tabla está abierto.|
 |[CDaoTableDef::Open](#open)|Se abre una definición de tabla existente almacenado en la base de datos 's colección de definición de tabla.|
-|[CDaoTableDef:: RefreshLink](#refreshlink)|Actualiza la información de conexión para una tabla asociada.|
+|[CDaoTableDef::RefreshLink](#refreshlink)|Actualiza la información de conexión para una tabla asociada.|
 |[CDaoTableDef::SetAttributes](#setattributes)|Establece un valor que indica una o varias características de un `CDaoTableDef` objeto.|
 |[CDaoTableDef::SetConnect](#setconnect)|Establece un valor que proporciona información sobre el origen de una tabla.|
 |[CDaoTableDef::SetName](#setname)|Establece el nombre de la tabla.|
@@ -189,7 +189,7 @@ Cuando termine de utilizar un objeto de definición de tabla, llame a su [cerrar
 
 **Encabezado:** afxdao.h
 
-##  <a name="append"></a>  CDaoTableDef:: Append
+##  <a name="append"></a>  CDaoTableDef::Append
 
 Llame a esta función miembro después de llamar a [crear](#create) para crear un nuevo objeto de definición de tabla para guardar la definición de tabla en la base de datos.
 
@@ -206,7 +206,7 @@ La función anexa el objeto a la colección de definiciones de tabla de la base 
 
 Para obtener información relacionada, vea el tema "Método Append" en la Ayuda de DAO.
 
-##  <a name="canupdate"></a>  CDaoTableDef:: CanUpdate
+##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate
 
 Llame a esta función miembro para determinar si la definición de la tabla subyacente un `CDaoTableDef` se puede cambiar el objeto.
 
@@ -257,7 +257,7 @@ Puede llamar a [abierto](#open) nuevamente después de llamar a `Close`. Esto pe
 
 Para obtener información relacionada, vea el tema "Método Close" en la Ayuda de DAO.
 
-##  <a name="create"></a>  CDaoTableDef:: Create
+##  <a name="create"></a>  CDaoTableDef::Create
 
 Llame a esta función miembro para crear una nueva tabla guardada.
 
@@ -296,7 +296,7 @@ Una vez que haya asignado un nombre la definición de tabla, puede llamar [Appen
 
 Para obtener información relacionada, vea el tema "Método CreateTableDef" en la Ayuda de DAO.
 
-##  <a name="createfield"></a>  CDaoTableDef:: CreateField
+##  <a name="createfield"></a>  CDaoTableDef::CreateField
 
 Llame a esta función miembro para agregar un campo a la tabla.
 
@@ -315,7 +315,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lpszName*<br/>
 Un puntero a una expresión de cadena que especifica el nombre de este campo.
 
-*nLas*<br/>
+*nType*<br/>
 Un valor que indica el tipo de datos del campo. El valor puede ser uno de estos valores:
 
 |Tipo|Tamaño (bytes)|Descripción|
@@ -328,9 +328,9 @@ Un valor que indica el tipo de datos del campo. El valor puede ser uno de estos 
 |`dbSingle`|4|float|
 |`dbDouble`|8|double|
 |`dbDate`|8|Fecha y hora ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
-|`dbText`|1 - 255|Texto ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbText`|1 - 255|Text ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Binario largo (objeto OLE), [CLongBinary](../../mfc/reference/clongbinary-class.md) o [CByteArray](../../mfc/reference/cbytearray-class.md)|
-|`dbMemo`|0|Memorando ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbMemo`|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 
 *lSize*<br/>
 Un valor que indica el tamaño máximo, en bytes, de un campo que contiene el texto, o el tamaño de un campo que contiene valores numéricos o de texto fijo. El *lSize* parámetro se omite para todos, excepto los campos de texto.
@@ -346,7 +346,7 @@ Un valor que corresponde a las características del campo y se puede combinar co
 |`dbUpdatableField`|Se puede cambiar el valor del campo.|
 |`dbDescending`|El campo se ordena en orden descendente (Z - A 0 -100) orden (se aplica solo a un objeto de campo en una colección de campos de un objeto de índice). Si se omite esta constante, el campo se ordena en orden ascendente (A - Z o 0 - 100) orden (valor predeterminado).|
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Una referencia a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura.
 
 ### <a name="remarks"></a>Comentarios
@@ -574,7 +574,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 El índice del objeto de campo en la colección de campos basada en cero de la tabla, para la búsqueda por índice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Una referencia a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura.
 
 *dwInfoOptions*<br/>
@@ -582,9 +582,9 @@ Opciones que especifican qué información sobre el campo que desea recuperar. L
 
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Nombre, tipo, tamaño, atributos. Use esta opción para obtener un rendimiento más rápido.
 
-- `AFX_DAO_SECONDARY_INFO` La información principal, además de: Permitir cero tabla de origen de longitud, orden de intercalación, nombre de la externa, el campo de origen, la posición Ordinal, es necesario,
+- `AFX_DAO_SECONDARY_INFO` La información principal, además de: Posición ordinal, es necesario, Permitir longitud cero, intercalación de orden, nombre de la externa, el campo de origen, tabla de origen
 
-- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: regla de validación, el texto de validación, Default Value
+- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: Valor predeterminado de regla, el texto de validación de validación
 
 *lpszName*<br/>
 Un puntero al nombre del objeto de campo, para la búsqueda por nombre. El nombre es una cadena con hasta 64 caracteres que identifica inequívocamente el campo.
@@ -644,9 +644,9 @@ Opciones que especifican qué información sobre el índice para recuperar. Las 
 
 - `AFX_DAO_PRIMARY_INFO` Campos de nombre, información de campo. Use esta opción para obtener un rendimiento más rápido.
 
-- `AFX_DAO_SECONDARY_INFO` La información principal, además de: principal, Unique, Clustered, omitir los valores NULL, es necesarios, externa
+- `AFX_DAO_SECONDARY_INFO` La información principal, además de: Principal, Unique, agrupado, omitir los valores NULL, requeridos, externos
 
-- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: recuento distinto
+- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: Recuento distinto
 
 *lpszName*<br/>
 Un puntero al nombre del objeto de índice, para la búsqueda por nombre.
@@ -792,7 +792,7 @@ Un puntero a una cadena que especifica un nombre de tabla.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="refreshlink"></a>  CDaoTableDef:: RefreshLink
+##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink
 
 Llame a esta función miembro para actualizar la información de conexión para una tabla asociada.
 
@@ -877,7 +877,7 @@ La siguiente tabla muestra los tipos posibles de la base de datos y sus correspo
 |Exportación de HTML|"Exportar HTML;"|" `drive`:\\\ *ruta*"|
 |Texto|"Text";|"unidad:\\\path"|
 |ODBC|"ODBC; Base de datos = `database`; UID = *usuario*; PWD = *contraseña*; DSN = *datasourcename;* LOGINTIMEOUT = *segundos;*" (Esto puede no ser una cadena de conexión completa para todos los servidores; es solo un ejemplo. Es muy importante no tienen espacios entre los parámetros.)|Ninguna|
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Perfil = *perfil*;]<br /><br /> [PWD = *contraseña*;]<br /><br /> [BASE DE DATOS = `database`;] "|*"unidad*:\\\ *ruta*\\\ *filename*. MDB"|
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD = *contraseña*;]<br /><br /> [BASE DE DATOS = `database`;] "|*"unidad*:\\\ *ruta*\\\ *filename*. MDB"|
 
 > [!NOTE]
 >  Btrieve ya no se admite a partir de DAO 3.5.

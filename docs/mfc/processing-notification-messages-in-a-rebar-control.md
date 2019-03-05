@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 4c35a1efb1c93aecf17e8f57b9e96c033aa4334a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8ac225802bd1d0a0a4b0f30e017fa677f1072fd3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693189"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296298"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Procesar mensajes de notificación en un control Rebar
 
@@ -44,4 +44,3 @@ Para obtener más información sobre estas notificaciones, consulte [referencia 
 
 [Uso de CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

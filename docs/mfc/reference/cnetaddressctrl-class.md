@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 51198b44346785369771f63b80164c1a131f6950
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279696"
 ---
 # <a name="cnetaddressctrl-class"></a>Clase CNetDirecciónCtrl
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinación bit a bit de estilos que se va a aplicarse al control. Para obtener más información, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
+|*rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
 |*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|
 |*nID*|[in] El identificador del control.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Una combinación bit a bit (OR) de los estilos extendidos para aplicarse al control. Para obtener más información, consulte el *dwExStyle* parámetro de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) función.|
 |*dwStyle*|[in] Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
+|*rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
 |*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|
 |*nID*|[in] El identificador del control.|
 

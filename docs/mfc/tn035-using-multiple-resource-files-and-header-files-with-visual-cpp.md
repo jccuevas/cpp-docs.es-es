@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279932"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++
 
@@ -111,7 +111,7 @@ AFXRES.H define símbolos estándar, tales como `ID_FILE_NEW`, usados por .NET F
 
 ## <a name="_mfcnotes_tn035_including"></a> Incluir archivos de encabezado adicionales
 
-La aplicación creada mediante AppWizard incluye solo dos archivos de encabezado: RESOURCE.H y AFXRES.H. Solo RESOURCE.H es específico de la aplicación. Puede ser necesario incluir archivos de encabezado de solo lectura adicionales en los casos siguientes:
+La aplicación creada mediante AppWizard incluye solo dos archivos de encabezado: RECURSO. H y AFXRES. H. Solo RESOURCE.H es específico de la aplicación. Puede ser necesario incluir archivos de encabezado de solo lectura adicionales en los casos siguientes:
 
 El archivo de encabezado lo proporciona un origen externo o desea compartir el archivo de encabezado entre varios proyectos o partes diferentes del mismo proyecto.
 
@@ -300,7 +300,7 @@ Tal y como se describió anteriormente, el comando de inclusión del menú Archi
 
 A continuación se describe cómo mantiene Visual C++ esta información en un archivo .RC. No necesita esta información para utilizar Visual C++, pero puede mejorar su comprensión para que pueda usar con más confianza la característica de inclusión.
 
-Cada uno de los tres tipos anteriores de información de inclusión se almacena en el archivo .RC de dos formas: (1) como #include u otras directivas interpretables mediante el compilador de recursos y (2), como recursos especiales TEXTINCLUDE interpretables solo por Visual C++.
+Cada uno de los anteriores tres tipos de información de inclusión se almacena en el. Archivo RC de dos formas: (1) como #include u otras directivas interpretables por el compilador de recursos y (2) como recursos especiales TEXTINCLUDE interpretables solo por Visual C++.
 
 El propósito del recurso TEXTINCLUDE es almacenar información de inclusión de forma segura en un formulario que sea fácilmente presentable en Visual C++ **inclusión** cuadro de diálogo. TEXTINCLUDE es un *tipo de recurso* definido por Visual C++. Visual C++ reconoce tres recursos TEXTINCLUDE específicos que tienen los números de identificación de recurso 1, 2 y 3:
 
@@ -383,4 +383,3 @@ END
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295206"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager (Clase)
 
@@ -64,7 +64,7 @@ El registro del vínculo de red.
 |----------|-----------------|
 |[add](#add)|Agrega un vínculo de origen a la `source_link_manager` objeto.|
 |[begin](#begin)|Devuelve un iterador al primer elemento en el `source_link_manager` objeto.|
-|[Contiene](#contains)|Busca el `network_link_registry` dentro de este `source_link_manager` objeto para un bloque especificado.|
+|[contains](#contains)|Busca el `network_link_registry` dentro de este `source_link_manager` objeto para un bloque especificado.|
 |[count](#count)|Cuenta el número de bloques vinculados el `source_link_manager` objeto.|
 |[reference](#reference)|Adquiere una referencia en el `source_link_manager` objeto.|
 |[register_target_block](#register_target_block)|Registra el bloque de destino que contiene este `source_link_manager` objeto.|
@@ -96,7 +96,7 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a agregar.
 
 ##  <a name="begin"></a> comenzar
@@ -125,7 +125,7 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se van a buscar en el `source_link_manager` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -183,7 +183,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a quitar, si se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -203,7 +203,7 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 El número máximo de vínculos.
 
-##  <a name="ctor"></a> source_link_manager)
+##  <a name="ctor"></a> source_link_manager
 
 Construye un objeto `source_link_manager`.
 
@@ -211,7 +211,7 @@ Construye un objeto `source_link_manager`.
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~ source_link_manager)
+##  <a name="dtor"></a> ~source_link_manager
 
 Destruye el objeto `source_link_manager`.
 

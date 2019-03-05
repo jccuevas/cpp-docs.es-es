@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293451"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager (clase)
 
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |Parámetro|Descripción|
 |*size*|[in] Un [CSize](../../atl-mfc-shared/reference/csize-class.md) parámetro que indica el tamaño del mapa de bits.|
 |*pBits*|[out] Un puntero a un puntero de datos que recibe la ubicación de la imagen de DIB valores de bit.|
-|*mapa de bits*|Un identificador para el mapa de bits original|
+|*bitmap*|Un identificador para el mapa de bits original|
 |*clrTransparent*|Un valor RGB especificando un color transparente del mapa de bits original.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -213,7 +213,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador de la elipse.
 
 *clrFill*<br/>
@@ -243,7 +243,7 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un [CRect](../../atl-mfc-shared/reference/crect-class.md) parámetro que especifica el límite para el anillo de degradado.
 
 *colorStart*<br/>
@@ -297,9 +297,9 @@ void DrawLineA(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*X1*|[in] La coordenada x donde comienza la línea.|
+|*x1*|[in] La coordenada x donde comienza la línea.|
 |*y1*|[in] Coordenada y donde comienza la línea.|
-|*X2*|[in] La coordenada x donde finaliza la línea.|
+|*x2*|[in] La coordenada x donde finaliza la línea.|
 |*y2*|[in] Coordenada y donde finaliza la línea.|
 |*clrLine*|[in] El color de la línea.|
 
@@ -320,7 +320,7 @@ void DrawRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Los límites del rectángulo.
 
 *clrFill*<br/>
@@ -351,7 +351,7 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un área rectangular en la aplicación. El Administrador de dibujo dibujará una sombra debajo de esta área.
 
 *nDepth*<br/>
@@ -410,7 +410,7 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Para rellenar el rectángulo.
 
 *colorStart1*<br/>
@@ -453,7 +453,7 @@ void FillGradient(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] El área rectangular a rellenar.
 
 *colorStart*<br/>
@@ -491,7 +491,7 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] El área rectangular a rellenar.
 
 *colorStart*<br/>
@@ -527,7 +527,7 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] El área rectangular a rellenar.
 
 *nPercentage*<br/>
@@ -564,7 +564,7 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un área rectangular a resaltar.
 
 *nPercentage*<br/>
@@ -699,10 +699,10 @@ static BYTE __stdcall HueToRGB(
 
 ### <a name="parameters"></a>Parámetros
 
-*M1*<br/>
+*m1*<br/>
 [in] Vea la sección Comentarios.
 
-*M2*<br/>
+*m2*<br/>
 [in] Vea la sección Comentarios.
 
 *h*<br/>
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] Vea la sección Comentarios.
 
-*RH*<br/>
+*rh*<br/>
 [in] Vea la sección Comentarios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -745,7 +745,7 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del área para voltear.
 
 *bHorz*<br/>
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Color inicial del píxel.
 
-*Por ciento*<br/>
+*percent*<br/>
 [in] Un número entre 0 y 100 que representa el porcentaje de transparencia. Un valor de 100 indica que el color inicial es completamente transparente.
 
 *percentR*<br/>
@@ -857,7 +857,7 @@ static void __stdcall RGBtoHSL(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*RGB*|[in] El color de los valores RGB.|
+|*rgb*|[in] El color de los valores RGB.|
 |*H*|[out] Un puntero a un valor doble que el método almacena el matiz del color.|
 |*S*|[out] Un puntero a un valor doble que el método almacena la saturación del color.|
 |*L*|[out] Un puntero a un valor doble que el método almacena la luminosidad del color.|
@@ -882,7 +882,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="parameters"></a>Parámetros
 
-*RGB*<br/>
+*rgb*<br/>
 [in] Color que se va a convertir en una representación RGB.
 
 *H*<br/>
@@ -921,7 +921,7 @@ static void __stdcall SetAlphaPixel(
 *pBits*<br/>
 [in] Un puntero a los valores de bits del mapa de bits.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un área rectangular en la aplicación. El Administrador de dibujo dibuja una sombra debajo y a la derecha de esta área.
 
 *x*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] La coordenada vertical del píxel en color.
 
-*Por ciento*<br/>
+*percent*<br/>
 [in] El porcentaje de transparencia.
 
 *iShadowSize*<br/>
@@ -968,11 +968,11 @@ static void __stdcall SetPixel(
 |-|-|
 |Parámetro|Descripción|
 |*pBits*|[in] Un puntero a los valores de bits del mapa de bits.|
-|*CX*|[in] El ancho total del mapa de bits.|
-|*CY*|[in] La altura total del mapa de bits.|
+|*cx*|[in] El ancho total del mapa de bits.|
+|*cy*|[in] La altura total del mapa de bits.|
 |*x*|[in] La coordenada x del píxel del mapa de bits a cambiar.|
 |*y*|[in] Coordenada y del píxel del mapa de bits a cambiar.|
-|*Color*|[in] El nuevo color del píxel que se identifica mediante las coordenadas proporcionadas.|
+|*color*|[in] El nuevo color del píxel que se identifica mediante las coordenadas proporcionadas.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - IPropertyPage ATL implementation
 - IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
-ms.openlocfilehash: bf97699917732f8ce94d1541b6a93e00325b28c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3b92e3d2f72ca48238eb22404947d2eafde0378
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605821"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297338"
 ---
 # <a name="ipropertypageimpl-class"></a>IPropertyPageImpl (clase)
 
@@ -69,15 +69,15 @@ La clase derivada de `IPropertyPageImpl`.
 
 |Name|Descripción|
 |----------|-----------------|
-|[IPropertyPageImpl](#activate)|Crea la ventana del cuadro de diálogo para la página de propiedades.|
-|[IPropertyPageImpl:: Apply](#apply)|Se aplica a valores de la página de propiedad actuales para los objetos subyacentes especificados a través de `SetObjects`. La implementación de ATL devuelve S_OK.|
+|[IPropertyPageImpl::Activate](#activate)|Crea la ventana del cuadro de diálogo para la página de propiedades.|
+|[IPropertyPageImpl::Apply](#apply)|Se aplica a valores de la página de propiedad actuales para los objetos subyacentes especificados a través de `SetObjects`. La implementación de ATL devuelve S_OK.|
 |[IPropertyPageImpl::Deactivate](#deactivate)|Destruye la ventana creada con `Activate`.|
 |[IPropertyPageImpl::GetPageInfo](#getpageinfo)|Recupera información acerca de la página de propiedades.|
 |[IPropertyPageImpl::Help](#help)|Invoca la Ayuda de Windows para la página de propiedades.|
 |[IPropertyPageImpl::IsPageDirty](#ispagedirty)|Indica si la página de propiedad ha cambiado desde que se activó.|
 |[IPropertyPageImpl::Move](#move)|Coloca y cambia el tamaño del cuadro de diálogo de la página de propiedades.|
-|[IPropertyPageImpl:: SetDirty](#setdirty)|Marcas de estado de la página de propiedad como modificada o sin cambios.|
-|[SetObjects](#setobjects)|Proporciona una matriz de `IUnknown` punteros para los objetos asociados a la página de propiedades. Estos objetos reciben los valores de página de propiedad actual a través de una llamada a `Apply`.|
+|[IPropertyPageImpl::SetDirty](#setdirty)|Marcas de estado de la página de propiedad como modificada o sin cambios.|
+|[IPropertyPageImpl::SetObjects](#setobjects)|Proporciona una matriz de `IUnknown` punteros para los objetos asociados a la página de propiedades. Estos objetos reciben los valores de página de propiedad actual a través de una llamada a `Apply`.|
 |[IPropertyPageImpl::SetPageSite](#setpagesite)|Proporciona la página de propiedades con un `IPropertyPageSite` puntero, a través del cual la página de propiedades se comunica con el marco de propiedad.|
 |[IPropertyPageImpl::Show](#show)|Hace que el cuadro de diálogo página de propiedad visible o invisible.|
 |[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|Procesa una pulsación de tecla especificada.|
@@ -112,7 +112,7 @@ El [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) interfaz p
 
 **Encabezado:** atlctl.h
 
-##  <a name="activate"></a>  IPropertyPageImpl
+##  <a name="activate"></a>  IPropertyPageImpl::Activate
 
 Crea la ventana del cuadro de diálogo para la página de propiedades.
 
@@ -129,7 +129,7 @@ De forma predeterminada, el cuadro de diálogo siempre es no modal, independient
 
 Consulte [IPropertyPage::Activate](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-activate) en el SDK de Windows.
 
-##  <a name="apply"></a>  IPropertyPageImpl:: Apply
+##  <a name="apply"></a>  IPropertyPageImpl::Apply
 
 Se aplica a valores de la página de propiedad actuales para los objetos subyacentes especificados a través de `SetObjects`.
 
@@ -291,7 +291,7 @@ HRESULT Move(LPCRECT pRect);
 
 Consulte [IPropertyPage::Move](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage-move) en el SDK de Windows.
 
-##  <a name="setdirty"></a>  IPropertyPageImpl:: SetDirty
+##  <a name="setdirty"></a>  IPropertyPageImpl::SetDirty
 
 Marcas de estado de la página de propiedad como modificada o sin cambios, dependiendo del valor de *bDirty*.
 
@@ -308,7 +308,7 @@ void SetDirty(BOOL bDirty);
 
 Si es necesario, `SetDirty` informa del marco que ha cambiado la página de propiedades.
 
-##  <a name="setobjects"></a>  SetObjects
+##  <a name="setobjects"></a>  IPropertyPageImpl::SetObjects
 
 Proporciona una matriz de `IUnknown` punteros para los objetos asociados a la página de propiedades.
 

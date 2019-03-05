@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: d72d167be874d0776ce8da02784c2e0c267c9175
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263723"
 ---
 # <a name="csyncobject-class"></a>CSyncObject (clase)
 
@@ -50,7 +50,7 @@ class CSyncObject : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CSyncObject::operator identificador](#operator_handle)|Proporciona acceso al objeto de sincronización.|
+|[CSyncObject::operator HANDLE](#operator_handle)|Proporciona acceso al objeto de sincronización.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -62,7 +62,7 @@ class CSyncObject : public CObject
 
 La biblioteca Microsoft Foundation Class proporciona varias clases derivadas de `CSyncObject`. Estos son [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), y [CSemaphore](../../mfc/reference/csemaphore-class.md).
 
-Para obtener información sobre cómo usar los objetos de sincronización, vea el artículo [Multithreading: uso de las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Para obtener información sobre cómo usar los objetos de sincronización, vea el artículo [Multithreading: Cómo usar las clases de sincronización](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -117,7 +117,7 @@ El identificador del objeto de sincronización subyacente.
 HANDLE m_hObject;
 ```
 
-##  <a name="operator_handle"></a>  CSyncObject::operator identificador
+##  <a name="operator_handle"></a>  CSyncObject::operator HANDLE
 
 Utilice este operador para obtener el identificador de la `CSyncObject` objeto.
 
@@ -163,4 +163,3 @@ La implementación predeterminada de la declaración con dos parámetros siempre
 
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611008"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273613"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection (clase)
 
@@ -39,7 +39,7 @@ class CHttpConnection : public CInternetConnection
 
 |Name|Descripción|
 |----------|-----------------|
-|[CHttpConnection:: OpenRequest](#openrequest)|Se abre una solicitud HTTP.|
+|[CHttpConnection::OpenRequest](#openrequest)|Se abre una solicitud HTTP.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -129,7 +129,7 @@ Cualquier combinación de la `INTERNET_FLAG_*` marcas. Consulte la tabla en la *
 
 No crear nunca un `CHttpConnection` directamente. En su lugar, se crea un objeto mediante una llamada a [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).
 
-##  <a name="openrequest"></a>  CHttpConnection:: OpenRequest
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest
 
 Llame a esta función miembro para abrir una conexión HTTP.
 
@@ -205,7 +205,7 @@ Un puntero a la [CHttpFile](../../mfc/reference/chttpfile-class.md) objeto solic
 |INTERNET_FLAG_SECURE|Usa semántica de transacción segura. Esto se traduce en utilizar SSL/PCT y solo es significativo en solicitudes HTTP|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|Solo se usa con HTTP, especifica que las redirecciones no se deben administrar automáticamente en [CHttpFile:: SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|
 
-Reemplace el valor predeterminado de `dwContext` para establecer el identificador de contexto en un valor que desee. El identificador de contexto está asociado con esta operación específica de la `CHttpConnection` objeto creado por su [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. El valor se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado de la operación con el que se identifica. Consulte el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.
+Reemplace el valor predeterminado de `dwContext` para establecer el identificador de contexto en un valor que desee. El identificador de contexto está asociado con esta operación específica de la `CHttpConnection` objeto creado por su [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. El valor se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado de la operación con el que se identifica. Consulte el artículo [Internet primeros pasos: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.
 
 Se pueden producir excepciones con esta función.
 

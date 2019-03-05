@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482087"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289304"
 ---
 # <a name="task-class-concurrency-runtime"></a>tarea (Clase) (Motor Runtime de simultaneidad)
 
@@ -65,11 +65,11 @@ Tipo de resultado de esta tarea.
 |Name|Descripción|
 |----------|-----------------|
 |[get](#get)|Sobrecargado. Devuelve el resultado que esta tarea generó. Si la tarea no está en un estado terminal, una llamada a `get` esperará a que finalice la tarea. Este método no devuelve un valor cuando se llama en una tarea con un `result_type` de `void`.|
-|[is_apartment_aware](#is_apartment_aware)|Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows Runtime o si desciende de esta tarea.|
+|[is_apartment_aware](#is_apartment_aware)|Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows en tiempo de ejecución o si desciende de esta tarea.|
 |[is_done](#is_done)|Determina si se completa la tarea.|
-|[Programador](#scheduler)|Devuelve el programador para esta tarea|
+|[scheduler](#scheduler)|Devuelve el programador para esta tarea|
 |[then](#then)|Sobrecargado. Agrega una tarea de continuación a esta tarea.|
-|[Espere](#wait)|Espera que esta tarea alcance un estado terminal. Es posible que `wait` ejecute la tarea alineada, si se cumplen todas las dependencias de tareas, y todavía no se ha detectado para la ejecución de un trabajador en segundo plano.|
+|[wait](#wait)|Espera que esta tarea alcance un estado terminal. Es posible que `wait` ejecute la tarea alineada, si se cumplen todas las dependencias de tareas, y todavía no se ha detectado para la ejecución de un trabajador en segundo plano.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -116,7 +116,7 @@ Si se cancela la tarea, una llamada a `get` producirá un [task_canceled](task-c
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
-Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows Runtime o si desciende de esta tarea.
+Determina si la tarea desempaqueta una interfaz `IAsyncInfo` de Windows en tiempo de ejecución o si desciende de esta tarea.
 
 ```
 bool is_apartment_aware() const;
@@ -142,7 +142,7 @@ True si la tarea se ha completado, false en caso contrario.
 
 La función devuelve true si la tarea se completaban o cancelaban (con o sin la excepción de usuario).
 
-##  <a name="operator_neq"></a> operador! =
+##  <a name="operator_neq"></a> operator!=
 
 Determina si dos objetos `task` representan diferentes tareas internas.
 
@@ -173,7 +173,7 @@ task& operator= (task&& _Other);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 Objeto `task` de origen.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -246,7 +246,7 @@ Parámetro desde el que se va a construir la tarea. Esto podría ser una expresi
 *_TaskOptions*<br/>
 Entre las opciones de tareas se incluyen el token de cancelación, el programador, etc.
 
-*_Otro*<br/>
+*_Other*<br/>
 Objeto `task` de origen.
 
 ### <a name="remarks"></a>Comentarios

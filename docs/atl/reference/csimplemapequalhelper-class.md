@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: a530254bbaabce723b97d21313abb81e1b375833
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282778"
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper (clase)
 
@@ -82,7 +82,7 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ### <a name="parameters"></a>Parámetros
 
-*V1*<br/>
+*v1*<br/>
 Primer valor.
 
 *v2*<br/>

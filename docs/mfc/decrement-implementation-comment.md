@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC source files, Implementation comment
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
-ms.openlocfilehash: ab69fa25cc8dece635097f17bae97f831f7ec87f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 377997b66c5b9c005d1e1bee24890b756621b672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261055"
 ---
 # <a name="-implementation-comment"></a>// Implementation (Comentario)
 
@@ -33,4 +33,3 @@ Tenga en cuenta desde la `CStdioFile` listado en [un ejemplo de los comentarios]
 [Comentario Attributes](../mfc/decrement-attributes-comment.md)<br/>
 [Comentario Operations](../mfc/decrement-operations-comment.md)<br/>
 [Overridables (comentario)](../mfc/decrement-overridables-comment.md)
-

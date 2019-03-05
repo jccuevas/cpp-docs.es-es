@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302517"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (clase)
 
@@ -219,7 +219,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::ChangeBitmap](#changebitmap)|Cambia el mapa de bits para un botón en el control de barra de herramientas actual.|
 |[CToolBarCtrl::CheckButton](#checkbutton)|Comprueba o borra un botón determinado en un control de barra de herramientas.|
 |[CToolBarCtrl::CommandToIndex](#commandtoindex)|Recupera el índice de base cero del botón asociado al identificador de comando especificado.|
-|[CToolBarCtrl:: Create](#create)|Crea un control de barra de herramientas y lo adjunta a un `CToolBarCtrl` objeto.|
+|[CToolBarCtrl::Create](#create)|Crea un control de barra de herramientas y lo adjunta a un `CToolBarCtrl` objeto.|
 |[CToolBarCtrl::CreateEx](#createex)|Crea un control de barra de herramientas con los estilos extendidos de Windows especificados y lo asocia a un `CToolBarCtrl` objeto.|
 |[CToolBarCtrl::Customize](#customize)|Muestra el cuadro de diálogo Personalizar barra de herramientas.|
 |[CToolBarCtrl::DeleteButton](#deletebutton)|Elimina un botón del control de barra de herramientas.|
@@ -284,7 +284,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos para un control de barra de herramientas.|
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Establece la lista de imágenes que va a usar el control de barra de herramientas para mostrar los botones "activos".|
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Establece el elemento activo en una barra de herramientas.|
-|[CToolBarCtrl:: SetImageList](#setimagelist)|Establece la lista de imágenes que va a usar la barra de herramientas para mostrar botones que se encuentran en su estado predeterminado.|
+|[CToolBarCtrl::SetImageList](#setimagelist)|Establece la lista de imágenes que va a usar la barra de herramientas para mostrar botones que se encuentran en su estado predeterminado.|
 |[CToolBarCtrl::SetIndent](#setindent)|Establece la sangría del primer botón en un control de barra de herramientas.|
 |[CToolBarCtrl::SetInsertMark](#setinsertmark)|Establece la marca de inserción actual de la barra de herramientas.|
 |[CToolBarCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Establece el color utilizado para dibujar la marca de inserción para la barra de herramientas.|
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificador del comando del botón para activar o desactivar.
 
-*bComprobar*<br/>
+*bCheck*<br/>
 True para comprobar el botón, FALSE para desactivarla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -609,7 +609,7 @@ Identificador de comando cuyo botón índice al que desea buscar.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="create"></a>  CToolBarCtrl:: Create
+##  <a name="create"></a>  CToolBarCtrl::Create
 
 Crea un control de barra de herramientas y lo adjunta a un `CToolBarCtrl` objeto.
 
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de los estilos de barra de herramientas y estilos de ventana como se describió en **comentarios**.
 
-*Rect*<br/>
+*rect*<br/>
 Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de los estilos de barra de herramientas y estilos de ventana como se describe en el **comentarios** sección de [crear](#create).
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificador del comando del botón para habilitar o deshabilitar.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 TRUE para habilitar el botón; FALSE para deshabilitar el botón.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parámetros
 
-*cadena n*<br/>
+*nString*<br/>
 Índice de la cadena.
 
 *lpstrString*<br/>
@@ -2084,7 +2084,7 @@ El número de índice de base cero del elemento que estará activo. Si este valo
 
 Esta función miembro implementa el comportamiento del mensaje de Win32 [TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem), tal y como se describe en el SDK de Windows.
 
-##  <a name="setimagelist"></a>  CToolBarCtrl:: SetImageList
+##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList
 
 Establece la lista de imágenes que va a usar la barra de herramientas para mostrar botones que se encuentran en su estado predeterminado.
 
@@ -2206,7 +2206,7 @@ void SetOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la `CWnd` o `CWnd`-objeto derivado que será la nueva ventana de propietario para el control de barra de herramientas.
 
 ### <a name="remarks"></a>Comentarios
@@ -2386,7 +2386,7 @@ Esta función miembro emula la funcionalidad de la [TB_SETWINDOWTHEME](/windows/
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [Ejemplo MFCIE de MFC](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

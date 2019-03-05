@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290097"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Tutorial: Crear una aplicación basada en agente
 
@@ -180,7 +180,7 @@ Llame siempre a la [Concurrency:: Agent:: realiza](reference/agent-class.md#done
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener otro ejemplo de una aplicación basada en agente, vea [Tutorial: usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Para obtener otro ejemplo de una aplicación basada en agente, vea [Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 ## <a name="see-also"></a>Vea también
 
@@ -188,5 +188,4 @@ Para obtener otro ejemplo de una aplicación basada en agente, vea [Tutorial: us
 [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Funciones que pasan mensajes](../../parallel/concrt/message-passing-functions.md)<br/>
 [Estructuras de datos de sincronización](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[Tutorial: Usar la clase join para evitar un interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[Tutorial: Uso de una combinación para evitar el interbloqueo](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

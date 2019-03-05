@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303903"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Controles ActiveX MFC: Páginas de propiedades
 
@@ -47,13 +47,13 @@ Para obtener más información sobre el uso de páginas de propiedades en un con
 
 - [Controles ActiveX MFC: Agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX MFC: Uso de páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 Para obtener información sobre el uso de hojas de propiedades en una aplicación MFC que no sea un control ActiveX, vea [hojas de propiedades](../mfc/property-sheets-mfc.md).
 
 ##  <a name="_core_implementing_the_default_property_page"></a> Implementación de la página de propiedades predeterminada
 
-Si usa el Asistente para controles ActiveX para crear el proyecto de control, el Asistente para controles ActiveX proporciona una clase de página de propiedades predeterminado para el control derivado de [COlePropertyPage (clase)](../mfc/reference/colepropertypage-class.md). Inicialmente, esta página de propiedades está en blanco, pero puede agregar cualquier control de cuadro de diálogo o un conjunto de controles a él. Dado que el Asistente para controles ActiveX crea la clase de página de una sola propiedad de forma predeterminada, las clases de página de propiedades adicionales (también derivada de `COlePropertyPage`) debe crearse con la vista de clases. Para obtener más información sobre este procedimiento, consulte [controles ActiveX MFC: agregar otra página de propiedades de Custom](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
+Si usa el Asistente para controles ActiveX para crear el proyecto de control, el Asistente para controles ActiveX proporciona una clase de página de propiedades predeterminado para el control derivado de [COlePropertyPage (clase)](../mfc/reference/colepropertypage-class.md). Inicialmente, esta página de propiedades está en blanco, pero puede agregar cualquier control de cuadro de diálogo o un conjunto de controles a él. Dado que el Asistente para controles ActiveX crea la clase de página de una sola propiedad de forma predeterminada, las clases de página de propiedades adicionales (también derivada de `COlePropertyPage`) debe crearse con la vista de clases. Para obtener más información sobre este procedimiento, consulte [controles ActiveX MFC: Agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).
 
 Implementar una propiedad de página (en este caso, el valor predeterminado) es un proceso de tres pasos:
 

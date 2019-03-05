@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302823"
 ---
 # <a name="application-design-choices"></a>Opciones de diseño de aplicaciones
 
@@ -24,7 +24,7 @@ Este artículo describen algunos de los problemas de diseño a tener en cuenta a
 
 Los temas tratados en este artículo incluyen:
 
-- [Intranet e Internet](#_core_intranet_versus_internet)
+- [Intranet Versus Internet](#_core_intranet_versus_internet)
 
 - [Aplicación de servidor o cliente](#_core_client_or_server_application)
 
@@ -38,7 +38,7 @@ Los temas tratados en este artículo incluyen:
 
 Si está listo para empezar a escribir el programa ahora, consulte [escribir aplicaciones MFC](../mfc/writing-mfc-applications.md).
 
-##  <a name="_core_intranet_versus_internet"></a> Intranet e Internet
+##  <a name="_core_intranet_versus_internet"></a> Intranet Versus Internet
 
 Muchas aplicaciones se ejecutan en Internet y son accesibles para cualquier persona con un explorador y el acceso a Internet. Las empresas también implementan intranets, que son redes corporativas mediante los protocolos TCP/IP y exploradores Web. Las intranets ofrecen un origen central, puede actualizar fácilmente para obtener información en toda la empresa. Se puede usar para la actualización de software, para entregar y forma que contabilice encuestas, soporte técnico del cliente y para la entrega de información. La tabla siguiente comparan las características de Internet e intranets.
 
@@ -92,4 +92,3 @@ La tabla siguiente resume las varias formas de usar MFC para transferir datos a 
 [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Extensiones de Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Monikers asincrónicos en Internet](../mfc/asynchronous-monikers-on-the-internet.md)
-

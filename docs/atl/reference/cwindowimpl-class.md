@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694171"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290708"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl (clase)
 
@@ -56,7 +56,7 @@ Un [clase traits](../../atl/understanding-window-traits.md) que define los estil
 
 |Name|Descripción|
 |----------|-----------------|
-|[CWindowImpl:: Create](#create)|Crea una ventana.|
+|[CWindowImpl::Create](#create)|Crea una ventana.|
 
 ### <a name="cwindowimplbaset-methods"></a>Métodos de CWindowImplBaseT
 
@@ -126,7 +126,7 @@ El destructor de clase base (~ `CWindowImplRoot`) garantiza que se ha desapareci
 
 **Encabezado:** atlwin.h
 
-##  <a name="create"></a>  CWindowImpl:: Create
+##  <a name="create"></a>  CWindowImpl::Create
 
 Crea una ventana basada en una nueva clase de ventana.
 
@@ -146,7 +146,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] El identificador de la ventana principal o propietaria.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.
 
 *szWindowName*<br/>
@@ -333,7 +333,7 @@ HWND UnsubclassWindow();
 
 El identificador de la ventana previamente una subclase.
 
-##  <a name="windowproc"></a>  CWindowImpl:: WindowProc
+##  <a name="windowproc"></a>  CWindowImpl::WindowProc
 
 Esta función estática implementa el procedimiento de ventana.
 

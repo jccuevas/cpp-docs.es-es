@@ -8,12 +8,12 @@ helpviewer_keywords:
 - columns [MFC], adding to CListCtrl
 - CListCtrl class [MFC], report view
 ms.assetid: 7392c0d7-f8a5-4e7b-9ae7-b53dc9dd80ae
-ms.openlocfilehash: e40a923c755f8b32ca3a6ed1884eb7f7a1d6abfb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d414c5f597628576916c5091fa63a4bf673c8c44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529345"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292559"
 ---
 # <a name="adding-columns-to-the-control-report-view"></a>Agregar columnas al control (Vista de informe)
 
@@ -35,4 +35,3 @@ Si el control de lista admite una vista de informe, deberá agregar una columna 
 
 [Uso de CListCtrl](../mfc/using-clistctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

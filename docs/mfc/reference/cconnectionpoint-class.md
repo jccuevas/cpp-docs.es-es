@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: efa8a7bf9e14bd93682fcc2d5802a84f1bdb1e96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629936"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288953"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint (clase)
 
@@ -53,11 +53,11 @@ class CConnectionPoint : public CCmdTarget
 
 |Name|Descripción|
 |----------|-----------------|
-|[CConnectionPoint:: GetConnections](#getconnections)|Recupera todos los puntos de conexión en un mapa de la conexión.|
+|[CConnectionPoint::GetConnections](#getconnections)|Recupera todos los puntos de conexión en un mapa de la conexión.|
 |[CConnectionPoint::GetContainer](#getcontainer)|Recupera el contenedor del control que posee el mapa de conexión.|
-|[CConnectionPoint:: GetIID](#getiid)|Recupera el identificador de interfaz de un punto de conexión.|
+|[CConnectionPoint::GetIID](#getiid)|Recupera el identificador de interfaz de un punto de conexión.|
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|Recupera el número máximo de puntos de conexión admitidos por un control.|
-|[CConnectionPoint:: GetNextConnection](#getnextconnection)|Recupera un puntero al elemento de conexión en *pos*.|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|Recupera un puntero al elemento de conexión en *pos*.|
 |[CConnectionPoint::GetStartPosition](#getstartposition)|Inicia una iteración de mapa devolviendo un valor de posición que se puede pasar a un `GetNextConnection` llamar.|
 |[CConnectionPoint::OnAdvise](#onadvise)|Lo llama el marco de trabajo al establecer o interrumpir las conexiones.|
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|Recupera un puntero a la interfaz de receptor solicitado.|
@@ -110,7 +110,7 @@ Construye un objeto `CConnectionPoint`.
 CConnectionPoint();
 ```
 
-##  <a name="getconnections"></a>  CConnectionPoint:: GetConnections
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections
 
 Llame a esta función para recuperar todas las conexiones activas para un punto de conexión.
 
@@ -138,7 +138,7 @@ Si es correcto, un puntero al contenedor; en caso contrario, es NULL.
 
 Esta función normalmente se implementa mediante el BEGIN_CONNECTION_PART (macro).
 
-##  <a name="getiid"></a>  CConnectionPoint:: GetIID
+##  <a name="getiid"></a>  CConnectionPoint::GetIID
 
 Lo llama el marco de trabajo para recuperar el identificador de interfaz de un punto de conexión.
 
@@ -172,7 +172,7 @@ La implementación predeterminada devuelve -1, que indica sin límite.
 
 Reemplace esta función si desea limitar el número de receptores a los que puede conectarse a su control.
 
-##  <a name="getnextconnection"></a>  CConnectionPoint:: GetNextConnection
+##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection
 
 Recupera un puntero al elemento de conexión en *pos*.
 
@@ -182,7 +182,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Especifica una referencia a un valor de posición devuelto por un método `GetNextConnection` o [GetStartPosition](#getstartposition) llamar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -262,4 +262,3 @@ Un valor HRESULT estándar.
 
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

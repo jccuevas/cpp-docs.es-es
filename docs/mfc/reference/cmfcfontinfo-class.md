@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 606d70176e93de6f5526c30f182cee6f8c05499f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281192"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo (clase)
 
@@ -102,7 +102,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 *nPitchAndFamily*<br/>
 [in] Un valor que especifica el cabeceo y la familia de la fuente. Para obtener más información, consulte el `lfPitchAndFamily` miembro de la [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) estructura.
 
-*nLas*<br/>
+*nType*<br/>
 [in] Un valor que especifica el tipo de fuente. Este parámetro puede ser una combinación bit a bit (OR) de DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE.
 
 *src*<br/>

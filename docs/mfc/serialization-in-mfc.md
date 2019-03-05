@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-ms.openlocfilehash: d439f5e13148d4359394739ec56048f00ceb35ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462769"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262147"
 ---
 # <a name="serialization-in-mfc"></a>Serialización en MFC
 
@@ -27,7 +27,7 @@ La idea básica de la serialización es que un objeto debe ser capaz de escribir
 
 MFC utiliza un objeto de la `CArchive` clase como un intermediario entre el objeto que se va a serializar y el medio de almacenamiento. Este objeto siempre se asocia un `CFile` objeto desde la que obtiene la información necesaria para la serialización, incluido el nombre de archivo y si la operación solicitada es una lectura o escritura. Puede usar el objeto que realiza una operación de serialización la `CArchive` objeto sin tener en cuenta la naturaleza del medio de almacenamiento.
 
-Un `CArchive` objeto utiliza inserción sobrecargado (**<\<**) y la extracción (**>>**) operadores para realizar la escritura y lectura de operaciones. Para obtener más información, consulte [almacenar y cargar CObjects a través de un archivo](../mfc/storing-and-loading-cobjects-via-an-archive.md) en el artículo serialización: serializar un objeto.
+Un `CArchive` objeto utiliza inserción sobrecargado (**<\<**) y la extracción (**>>**) operadores para realizar la escritura y lectura de operaciones. Para obtener más información, consulte [almacenar y cargar CObjects a través de un archivo](../mfc/storing-and-loading-cobjects-via-an-archive.md) en el artículo de serialización: Serializar un objeto.
 
 > [!NOTE]
 >  No confunda la `CArchive` con el formato clase con las clases iostream de propósito general, que son de sólo texto. La `CArchive` clase es para los objetos serializados en formato binario.
@@ -36,11 +36,11 @@ Si lo desea, puede omitir la serialización de MFC para crear su propio mecanism
 
 Los artículos siguientes tratan las dos tareas principales necesarias para la serialización:
 
-- [Serialización: Crear una clase serializable](../mfc/serialization-making-a-serializable-class.md)
+- [Serialización: Crear una clase Serializable](../mfc/serialization-making-a-serializable-class.md)
 
 - [Serialización: Serializar un objeto](../mfc/serialization-serializing-an-object.md)
 
-El artículo [serialización: serialización frente. Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md) describe cuando la serialización es una técnica de entrada/salida adecuada en las aplicaciones de base de datos.
+El artículo [serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md) describe cuando la serialización es una técnica de entrada/salida adecuada en las aplicaciones de base de datos.
 
 ## <a name="see-also"></a>Vea también
 

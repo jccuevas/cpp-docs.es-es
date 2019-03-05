@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588856"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294140"
 ---
 # <a name="taskgroup-class"></a>task_group (Clase)
 
@@ -37,11 +37,11 @@ class task_group;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cancelar](#cancel)|Realiza un esfuerzo intenta cancelar el subárbol cuya raíz comienza en este grupo de tareas de trabajo. Todas las tareas programadas en el grupo de tareas obtener cancelará de manera transitiva si es posible.|
+|[cancel](#cancel)|Realiza un esfuerzo intenta cancelar el subárbol cuya raíz comienza en este grupo de tareas de trabajo. Todas las tareas programadas en el grupo de tareas obtener cancelará de manera transitiva si es posible.|
 |[is_canceling](#is_canceling)|Informa al llamador si el grupo de tareas está actualmente en medio de una cancelación. Esto no indica necesariamente que el `cancel` se llamó al método en el `task_group` objeto (aunque sin duda califica este método para devolver `true`). Puede darse el caso de que el `task_group` objeto está ejecutando alineado y un grupo de tareas aún más seguridad en el árbol de trabajo se canceló. En casos como estos dónde puede determinar el tiempo de ejecución antes de tiempo que la cancelación fluirá a través de este `task_group` objeto, `true` devolverá también.|
 |[run](#run)|Sobrecargado. Programa una tarea en el `task_group` objeto. Si un `task_handle` objeto se pasa como parámetro a `run`, el llamador es responsable de administrar la duración de la `task_handle` objeto. La versión del método que toma una referencia a un objeto de función como un parámetro implica la asignación del montón dentro del runtime que puede ejecutarse bien que el uso de la versión que toma una referencia a un `task_handle` objeto. La versión que toma el parámetro `_Placement` hace que la tarea se orientadas a ejecutar en la ubicación especificada por ese parámetro.|
 |[run_and_wait](#run_and_wait)|Sobrecargado. Programa una tarea que se ejecuta alineada en el contexto de llamada con la Ayuda de la `task_group` objeto para la compatibilidad de cancelación completa. La función, a continuación, espera hasta que todo funcione en el `task_group` objeto se haya completado o cancelado. Si un `task_handle` objeto se pasa como parámetro a `run_and_wait`, el llamador es responsable de administrar la duración de la `task_handle` objeto.|
-|[Espere](#wait)|Espera hasta que todo funcione en el `task_group` objeto se haya completado o cancelado.|
+|[wait](#wait)|Espera hasta que todo funcione en el `task_group` objeto se haya completado o cancelado.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -131,7 +131,7 @@ El tipo de objeto de función que se invocará para ejecutar el cuerpo del ident
 *_Func*<br/>
 Una función que se llamará para invocar el cuerpo de la tarea. Esto puede ser una expresión lambda u otro objeto que admita una versión del operador de llamada de función con la firma `void operator()()`.
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a la ubicación donde la tarea representada por la `_Func` parámetro se debe ejecutar.
 
 *_Task_handle*<br/>
@@ -211,7 +211,7 @@ Un token de cancelación para asociar a este grupo de tareas. El grupo de tareas
 
 El constructor que toma un token de cancelación crea una `task_group` que se cancela cuando el origen asociado con el token se cancela. Proporcionar un token de cancelación explícita también aísla a este grupo de tareas que no participe en una cancelación implícita de un grupo primario con un token distinto o ningún token.
 
-##  <a name="dtor"></a> ~ task_group
+##  <a name="dtor"></a> ~task_group
 
 Destruye un objeto `task_group`. Se espera que se llame a cualquiera la `wait` o `run_and_wait` método en el objeto antes de la ejecución del destructor, a menos que el destructor se ejecuta como resultado de desenredado debido a una excepción de la pila.
 

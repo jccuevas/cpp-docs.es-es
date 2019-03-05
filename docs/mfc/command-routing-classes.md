@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
-ms.openlocfilehash: 637f2056b76b7d55933b43a8e0822ec00212301a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 264e931ba0468cdc44f27c55e5d259948c5392b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574764"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281974"
 ---
 # <a name="command-routing-classes"></a>Clases de enrutamiento de comandos
 
@@ -23,10 +23,9 @@ Un objeto de clase `CCmdUI` se pasa al comando de actualización de los destinos
 [CCmdTarget](../mfc/reference/ccmdtarget-class.md)<br/>
 Actúa como clase base para todas las clases de objetos que pueden recibir y responder a los mensajes.
 
-[Compatibilidad de CCmdUI](../mfc/reference/ccmdui-class.md)<br/>
+[CCmdUI](../mfc/reference/ccmdui-class.md)<br/>
 Proporciona una interfaz de programación para actualizar los objetos de interfaz de usuario como elementos de menú o botones de barra de control. El objeto de destino del comando habilita, deshabilita, comprueba y borra el objeto de interfaz de usuario con este objeto.
 
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../mfc/class-library-overview.md)
-

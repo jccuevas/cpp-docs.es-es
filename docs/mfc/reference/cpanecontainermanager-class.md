@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 598ad7fd3573928d1915d01d889910c13d9cb00c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294660"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager (clase)
 
@@ -345,7 +345,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -361,7 +361,7 @@ virtual BOOL CheckForMiniFrameAndCaption(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *punto*<br/>
+[in] *point*<br/>
 [in] *ppTargetControlBar*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
@@ -529,7 +529,7 @@ virtual void GetMinSize(CSize& size);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *tamaño*<br/>
+[in] *size*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -715,7 +715,7 @@ virtual CDockablePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *punto*<br/>
+[in] *point*<br/>
 [in] *nSensitivity*<br/>
 [in] *bExactBar*<br/>
 [in] *bIsTabArea*<br/>
@@ -808,7 +808,7 @@ virtual void ResizePaneContainers(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *entro*<br/>
+[in] *nSide*<br/>
 [in] *bExpand*<br/>
 [in] *nOffset*<br/>
 [in] *hdwp*<br/>

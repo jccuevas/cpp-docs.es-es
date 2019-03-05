@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541549"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293434"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 
@@ -201,7 +201,7 @@ Para aprovechar las ventajas de las características de acoplamiento extendidas 
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente deriva una clase de `CMDIChildWndEx`. Este fragmento de código procede de la [ejemplo VisualStudioDemo: aplicación MFC de Visual Studio](../../visual-cpp-samples.md).
+El ejemplo siguiente deriva una clase de `CMDIChildWndEx`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Cuando el marco de trabajo es restaurar el estado más adelante, el nombre del d
 
 ### <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra el uso del método `GetDocumentName`. Este fragmento de código procede de la [ejemplo VisualStudioDemo: aplicación MFC de Visual Studio](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra el uso del método `GetDocumentName`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -547,7 +547,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Un puntero en el panel adyacente.
 
-*Después*<br/>
+*bAfter*<br/>
 [in] Si es TRUE, *pControlBar* se inserta después *pTarget*. Si es FALSE, *pControlBar* se inserta delante *pTarget*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto especificado.
 
 *dwBarAlignment*<br/>
@@ -602,7 +602,7 @@ Esta función se utiliza para evitar que guarden de documentos de sólo lectura.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo reemplazar el `IsReadOnly` método. Este fragmento de código procede de la [ejemplo VisualStudioDemo: aplicación MFC de Visual Studio](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo reemplazar el `IsReadOnly` método. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Especifica el punto, en coordenadas de pantalla, para comprobar.
 
 *nSensitivity*<br/>
@@ -828,7 +828,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el nuevo rectángulo de recorte. Si el rectángulo está vacío o es nulo, se quita el recorte.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1152,7 +1152,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si se habilita (TRUE) o deshabilitar (FALSE) la selección automática de una parte del área de cliente de una ventana para mostrar.
 
 ### <a name="remarks"></a>Comentarios

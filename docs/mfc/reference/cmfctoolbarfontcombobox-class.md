@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 28b2b77ed28453f148786ba7109743a0b7baf598
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429268"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283727"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox (clase)
 
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Especifica el índice de base cero de un elemento de cuadro combinado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -214,5 +214,4 @@ Si *bExact* es TRUE, este método selecciona una fuente que coincide exactamente
 [CMFCToolBarComboBoxButton (clase)](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo (clase)](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

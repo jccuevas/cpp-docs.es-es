@@ -1,5 +1,5 @@
 ---
-title: CMFCShellTreeCtrl (clase)
+title: CMFCShellTreeCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellTreeCtrl
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279996"
 ---
-# <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl (clase)
+# <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
 
 El `CMFCShellTreeCtrl` extiende la clase [CTreeCtrl (clase)](../../mfc/reference/ctreectrl-class.md) funcionalidad mostrando una jerarquía de elementos de Shell.
 
@@ -82,7 +82,7 @@ Esta clase extiende la `CTreeCtrl` clase habilitando el programa incluir element
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxshelltreeCtrl.h
+**Header:** afxshelltreeCtrl.h
 
 ## <a name="example"></a>Ejemplo
 
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Valor booleano que especifica si se habilita el menú contextual.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
@@ -176,7 +176,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *mensaje*<br/>
+[in] *message*<br/>
 [in] *wParam*<br/>
 [in] *lParam*<br/>
 [in] *pLResult*<br/>

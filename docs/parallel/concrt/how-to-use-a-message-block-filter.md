@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Utilizar un filtro de bloque de mensaje'
+title: Procedimiento Utilice un filtro de bloque de mensajes
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660140"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284299"
 ---
-# <a name="how-to-use-a-message-block-filter"></a>Cómo: Utilizar un filtro de bloque de mensaje
+# <a name="how-to-use-a-message-block-filter"></a>Filtrar Utilice un filtro de bloque de mensajes
 
 En este documento se muestra cómo usar una función de filtro para permitir que un bloque de mensajes asincrónicos acepte o rechace un mensaje basándose en la carga de ese mensaje.
 
@@ -20,7 +20,7 @@ Cuando crea un objeto de bloque de mensaje como un [Concurrency:: unbounded_buff
 
 Las funciones de filtro son importantes porque permiten conectar los bloques de mensajes para formar *redes de flujo de datos*. En una red de flujo de datos, los bloques de mensajes controlan el flujo de datos y procesan solo los mensajes que cumplen determinados criterios. Compare esto con el modelo de flujo de control, donde el flujo de datos se regula con las estructuras de control, como instrucciones condicionales, bucles, etc.
 
-En este documento se proporciona un ejemplo básico de cómo usar un filtro de mensajes. Para obtener ejemplos adicionales que usan filtros de mensajes y el modelo de flujo de datos para conectar los bloques de mensaje, consulte [Tutorial: crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) y [Tutorial: crear una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .
+En este documento se proporciona un ejemplo básico de cómo usar un filtro de mensajes. Para obtener ejemplos adicionales que usan filtros de mensajes y el modelo de flujo de datos para conectar los bloques de mensaje, consulte [Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) y [Tutorial: Creación de una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -66,6 +66,6 @@ Para eliminar la copia innecesaria de datos, use el segundo formulario cuando te
 ## <a name="see-also"></a>Vea también
 
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Tutorial: Crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Tutorial: Crear una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Tutorial: Creación de una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [transformer (clase)](../../parallel/concrt/reference/transformer-class.md)

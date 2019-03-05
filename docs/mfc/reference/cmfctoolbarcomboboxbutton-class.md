@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303175"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton (clase)
 
@@ -132,7 +132,7 @@ Para agregar un botón de cuadro combinado a una barra de herramientas, siga est
 
 3. En el controlador de mensajes que procesa el mensaje AFX_WM_RESETTOOLBAR, reemplazar el botón ficticio con el nuevo botón de cuadro combinado mediante [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Para obtener más información, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de un botón de barra de herramientas del cuadro combinado, consulte el proyecto de ejemplo VisualStudioDemo.
+Para obtener más información, vea [Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de un botón de barra de herramientas del cuadro combinado, consulte el proyecto de ejemplo VisualStudioDemo.
 
 ## <a name="example"></a>Ejemplo
 
@@ -327,7 +327,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Un puntero a la ventana primaria del botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectángulo delimitador del cuadro combinado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -350,7 +350,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Un puntero a la ventana primaria del botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectángulo delimitador del nuevo cuadro de edición.
 
 *dwEditStyle*<br/>
@@ -376,7 +376,7 @@ BOOL DeleteItem(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero del elemento que se va a eliminar.
 
 *dwData*<br/>
@@ -413,7 +413,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para permitir que los cuadros de edición y combinado. FALSE para deshabilitar los cuadros de edición y combinado.
 
 ### <a name="remarks"></a>Comentarios
@@ -430,7 +430,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [out] Referencia a un botón de menú.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -612,7 +612,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -638,7 +638,7 @@ static LPCTSTR GetItemAll(
 *uiCmd*<br/>
 [in] El identificador de comando de un botón de cuadro combinado.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -659,7 +659,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -685,7 +685,7 @@ static DWORD_PTR GetItemDataAll(
 *uiCmd*<br/>
 [in] El identificador de comando de un botón de cuadro combinado.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -711,7 +711,7 @@ static void* GetItemDataPtrAll(
 *uiCmd*<br/>
 [in] El identificador de comando del botón de cuadro combinado.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -825,7 +825,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un identificador de ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -936,7 +936,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Puntero a la ventana primaria del botón de cuadro combinado.
 
 *bDelay*<br/>
@@ -990,10 +990,10 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Parámetros
 
-*PDC*<br/>
+*Pdc*<br/>
 [in] El contexto de dispositivo que muestra el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón.
 
 *pImages*<br/>
@@ -1030,7 +1030,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] El contexto de dispositivo que muestra el botón de cuadro combinado.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón de cuadro combinado.
 
 *bSelected*<br/>
@@ -1066,7 +1066,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Si desea ocultar o mostrar el botón de cuadro combinado.
 
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize
@@ -1139,7 +1139,7 @@ BOOL SelectItem(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 *bNotify*<br/>
@@ -1180,7 +1180,7 @@ static BOOL SelectItemAll(
 *uiCmd*<br/>
 [in] El identificador de comando del botón de cuadro combinado que contiene el cuadro de lista.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero del elemento en el cuadro de lista. Un valor de -1, quita cualquier selección actual en el cuadro de lista y borra el cuadro de edición.
 
 *dwData*<br/>
@@ -1205,7 +1205,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 [in, out] La `CArchive` objeto que se va a serializar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [CMFCToolBarButton (clase)](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

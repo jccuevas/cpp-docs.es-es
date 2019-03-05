@@ -3,12 +3,12 @@ title: Crear el proyecto (Tutorial de ATL, Parte 1)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: dab9bdab75bb710bf73314aae7283611d9a3b5cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273938"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Crear el proyecto (Tutorial de ATL, Parte 1)
 

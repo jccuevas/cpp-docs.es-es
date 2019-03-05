@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293490"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton (clase)
 
@@ -159,10 +159,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] Especifica el texto del botón automático.
 
-*automáticoColor*<br/>
+*colorAutomatic*<br/>
 [in] Un valor RGB que especifica el color predeterminado de automático del botón.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Especifica si el botón automático está habilitado o deshabilitado.
 
 ### <a name="remarks"></a>Comentarios
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Especifica si el [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) cuando el usuario hace clic en el botón, se abre el cuadro de diálogo o el cuadro de diálogo de color del sistema.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Especifica si el botón "otro" está habilitado o deshabilitado.
 
 ### <a name="remarks"></a>Comentarios
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Puntos en el contexto de dispositivo que se usa para representar la imagen del botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo que delimita el botón.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Un valor RGB.
 
 ### <a name="remarks"></a>Comentarios
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] El valor del color RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Un color seleccionado por el usuario.
 
 ### <a name="remarks"></a>Comentarios

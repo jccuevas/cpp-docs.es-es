@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266067"
 ---
 # <a name="ctypedptrmap-class"></a>Clase CTypedPtrMap
 
@@ -34,7 +34,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 #### <a name="parameters"></a>Parámetros
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Clase base de la clase de mapa de puntero con tipo. debe ser una clase de mapa de puntero ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, o `CMapStringToPtr`).
 
 *KEY*<br/>
@@ -124,7 +124,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Parámetro de plantilla que especifica la clase base de la clase de este mapa.
 
 *key*<br/>
@@ -144,7 +144,7 @@ Distinto de cero si se encontró el elemento; en caso contrario, es 0.
 
 Llama esta función inline `BASE_CLASS` **:: búsqueda**.
 
-##  <a name="operator_at"></a>  [] CTypedPtrMap::operator
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 Este operador puede usarse solo en el lado izquierdo de una instrucción de asignación (un valor l).
 
@@ -157,7 +157,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 *VALOR*<br/>
 Parámetro de plantilla que especifica el tipo de los valores almacenados en este mapa.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Parámetro de plantilla que especifica la clase base de la clase de este mapa.
 
 *key*<br/>

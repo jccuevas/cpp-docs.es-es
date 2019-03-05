@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: da7b1310f80bfb03645d386b59632e1c2811a367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8820be3073c6ffaffdaa9d04a7338ad584d36ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267304"
 ---
 # <a name="csacl-class"></a>CSacl (clase)
 
@@ -142,14 +142,14 @@ CSacl(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 Existente `ACL` estructura (lista de control de acceso).
 
 ### <a name="remarks"></a>Comentarios
 
 El `CSacl` objeto se puede, opcionalmente, crear una existente `ACL` estructura. Asegúrese de que este parámetro es una lista de control de acceso del sistema (SACL) y no una lista de control de acceso discrecional (DACL). En las compilaciones de depuración, si se proporciona una DACL se producirá una aserción. En las versiones de lanzamiento se omiten todas las entradas de una DACL.
 
-##  <a name="dtor"></a>  CSacl:: ~ CSacl
+##  <a name="dtor"></a>  CSacl::~CSacl
 
 Destructor.
 
@@ -183,7 +183,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `ACL` (lista de control de acceso) para asignar al objeto existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -222,7 +222,7 @@ Quita cada `ACE` estructura (si existe) en el `CSacl` objeto.
 ## <a name="see-also"></a>Vea también
 
 [CAcl (clase)](../../atl/reference/cacl-class.md)<br/>
-[ACL](/windows/desktop/SecAuthZ/access-control-lists)<br/>
+[ACLs](/windows/desktop/SecAuthZ/access-control-lists)<br/>
 [ACE](/windows/desktop/SecAuthZ/access-control-entries)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660478"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299561"
 ---
 # <a name="ccomobject-class"></a>CComObject (clase)
 
@@ -32,7 +32,7 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*<br/>
+*Base*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir del resto de interfaces que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -42,7 +42,7 @@ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Name|Descripción|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|El constructor.|
-|[CComObject:: ~ CComObject](#dtor)|Destructor.|
+|[CComObject::~CComObject](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -100,7 +100,7 @@ El destructor disminuye lo.
 
 Si un `CComObject`-objeto derivado correctamente se construye utilizando el **nuevo** operador, el recuento de referencias inicial es 0. Para establecer el recuento de referencias en el valor apropiado (1), realice una llamada a la [AddRef](#addref) función.
 
-##  <a name="dtor"></a>  CComObject:: ~ CComObject
+##  <a name="dtor"></a>  CComObject::~CComObject
 
 Destructor.
 
@@ -122,7 +122,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Parámetros
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] Un puntero a un **CComObject <** `Base` **>** puntero. Si `CreateInstance` es incorrecta, *pp* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -153,13 +153,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El identificador de la interfaz que se solicita.
 
 *ppvObject*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*. Si el objeto no admite esta interfaz, *ppvObject* se establece en NULL.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] Un puntero al puntero de interfaz identificado por tipo `Q`. Si el objeto no admite esta interfaz, *pp* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto

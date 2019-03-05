@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626842"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301667"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject (clase)
 
@@ -38,7 +38,7 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Parámetros
 
-*contenidos*<br/>
+*contained*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir del resto de interfaces que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -48,7 +48,7 @@ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Name|Descripción|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|El constructor.|
-|[CComAggObject:: ~ CComAggObject](#dtor)|Destructor.|
+|[CComAggObject::~CComAggObject](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -109,7 +109,7 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 [in] El desconocido externo.
 
 ### <a name="remarks"></a>Comentarios
@@ -118,7 +118,7 @@ Inicializa el `CComContainedObject` miembro, [m_contained](#m_contained)e increm
 
 El destructor disminuye el módulo recuento de bloqueos.
 
-##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject
+##  <a name="dtor"></a>  CComAggObject::~CComAggObject
 
 Destructor.
 
@@ -142,7 +142,7 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Parámetros
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] Un puntero a un **CComAggObject\<**<em>contenidos</em> **>** puntero. Si `CreateInstance` es incorrecta, *pp* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -185,7 +185,7 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Parámetros
 
-*contenidos*<br/>
+*contained*<br/>
 [in] La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir del resto de interfaces que desea admitir en el objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -204,13 +204,13 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El identificador de la interfaz que se solicita.
 
 *ppvObject*<br/>
 [out] Un puntero al puntero de interfaz identificado por *iid*. Si el objeto no admite esta interfaz, *ppvObject* se establece en NULL.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] Un puntero al puntero de interfaz identificado por tipo `Q`. Si el objeto no admite esta interfaz, *pp* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog bars
 - dialog bars [MFC], about dialog bars
 ms.assetid: 485c8055-6bb0-4051-8417-dd2971499321
-ms.openlocfilehash: 800cc208df7299cf440508c2705b0b0ddb9ae665
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b4f8975cb67f754778280f84ece98de2ef949c1a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297767"
 ---
 # <a name="dialog-bars"></a>Barras de cuadro de diálogo
 
@@ -34,4 +34,3 @@ Aunque es normal para derivar sus propias clases de cuadro de diálogo de `CDial
 
 [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)<br/>
 [Ejemplo](../visual-cpp-samples.md)
-

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293867"
 ---
 # <a name="cmenu-class"></a>CMenu (clase)
 
@@ -119,12 +119,12 @@ class CMenu : public CObject
 |[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|Coloca un botón de radio junto a un elemento de menú y quitará el botón de radio de todos los demás elementos de menú en el grupo.|
 |[CMenu::CreateMenu](#createmenu)|Crea un menú vacío y lo asocia a un `CMenu` objeto.|
 |[CMenu::CreatePopupMenu](#createpopupmenu)|Crea un menú emergente vacío y lo asocia a un `CMenu` objeto.|
-|[CMenu:: DeleteMenu](#deletemenu)|Elimina un elemento especificado en el menú. Si el elemento de menú tiene un menú emergente asociado, destruye el identificador del menú emergente y libera la memoria usada por ella.|
+|[CMenu::DeleteMenu](#deletemenu)|Elimina un elemento especificado en el menú. Si el elemento de menú tiene un menú emergente asociado, destruye el identificador del menú emergente y libera la memoria usada por ella.|
 |[CMenu::DeleteTempMap](#deletetempmap)|Elimina cualquier temporal `CMenu` los objetos creados por el `FromHandle` función miembro.|
 |[CMenu::DestroyMenu](#destroymenu)|Destruye el menú que se adjunta a un `CMenu` de objeto y libera la memoria que ocupaban el menú.|
 |[CMenu::Detach](#detach)|Desasocia un identificador de menú de Windows desde un `CMenu` de objeto y devuelve el identificador.|
 |[CMenu::DrawItem](#drawitem)|Lo llama el marco cuando un aspecto visual de los cambios de un menú dibujado por el propietario.|
-|[EnableMenuItem](#enablemenuitem)|Habilita, deshabilita o se atenúa (grises) un elemento de menú.|
+|[CMenu::EnableMenuItem](#enablemenuitem)|Habilita, deshabilita o se atenúa (grises) un elemento de menú.|
 |[CMenu::FromHandle](#fromhandle)|Devuelve un puntero a un `CMenu` objeto, dado un identificador de menú de Windows.|
 |[CMenu::GetDefaultItem](#getdefaultitem)|Determina el elemento de menú predeterminado en el menú especificado.|
 |[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|Recupera el identificador de contexto de ayuda asociado con el menú.|
@@ -183,7 +183,7 @@ Puede usar el [LoadMenuIndirect](#loadmenuindirect) para crear un menú desde un
 
 **Encabezado:** afxwin.h
 
-##  <a name="appendmenu"></a>  CMenu:: AppendMenu
+##  <a name="appendmenu"></a>  CMenu::AppendMenu
 
 Anexa un nuevo elemento al final de un menú.
 
@@ -309,7 +309,7 @@ UINT CheckMenuItem(
 *nIDCheckItem*<br/>
 Especifica el elemento de menú debe comprobarse, según lo determinado por *nCompruebe*.
 
-*nCompruebe*<br/>
+*nCheck*<br/>
 Especifica cómo comprobar el elemento de menú y cómo determinar la posición del elemento en el menú. El *nCompruebe* parámetro puede ser una combinación de MF_CHECKED o MF_UNCHECKED con indicadores MF_BYPOSITION o MF_BYCOMMAND. Estas marcas se pueden combinar mediante el operador OR bit a bit. Tienen los significados siguientes:
 
 - MF_BYCOMMAND especifica que el parámetro proporciona el identificador de comando del elemento de menú existente. Este es el valor predeterminado.
@@ -447,7 +447,7 @@ Antes de salir, una aplicación debe liberar los recursos del sistema asociados 
 
   Vea el ejemplo de [CMenu::CreateMenu](#createmenu).
 
-##  <a name="deletemenu"></a>  CMenu:: DeleteMenu
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu
 
 Elimina un elemento en el menú.
 
@@ -459,7 +459,7 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nposición*<br/>
+*nPosition*<br/>
 Especifica el elemento de menú que se va a eliminar, según lo determinado por *nFlags*.
 
 *nFlags*<br/>
@@ -565,7 +565,7 @@ El código siguiente procede de la MFC [CTRLTEST](../../visual-cpp-samples.md) e
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
-##  <a name="enablemenuitem"></a>  EnableMenuItem
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem
 
 Habilita, deshabilita o se atenúa un elemento de menú.
 
@@ -847,7 +847,7 @@ int GetMenuString(
 *nIDItem*<br/>
 Especifica el identificador entero del elemento de menú o el desplazamiento del elemento de menú en el menú, dependiendo del valor de *nFlags*.
 
-*el puntero lpString*<br/>
+*lpString*<br/>
 Señala el búfer que va a recibir la etiqueta.
 
 *rString*<br/>
@@ -929,7 +929,7 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nposición*<br/>
+*nPosition*<br/>
 Especifica el elemento de menú antes de que el nuevo elemento de menú es va a insertar. El *nFlags* parámetro puede usarse para interpretar *Nposición* de las maneras siguientes:
 
 |nFlags|Interpretación de Nposición|
@@ -967,7 +967,7 @@ Cada vez que un menú que reside en una ventana se cambia (sean o no se muestra 
 
 Cuando *nIDNewItem* especifica un menú emergente, se convierte en parte del menú en el que se inserta. Si se destruye el menú, también se destruirá el menú insertado. Un menú insertado se debe desasociar de un `CMenu` objeto para evitar el conflicto.
 
-Si el activo se maximiza la ventana secundaria de varios documentos (MDI) de la interfaz y una aplicación inserta un menú emergente en el menú de la aplicación MDI mediante una llamada a esta función y se especificará el indicador MF_BYPOSITION, en el menú insertan una posición más hacia la izquierda que se esperaba. Esto sucede porque el menú de Control de la ventana secundaria MDI activa se inserta en la primera posición de la barra de menús de la ventana de marco MDI. Para colocar el menú correctamente, la aplicación debe agregar 1 al valor de posición que se usará en caso contrario. Una aplicación puede usar el mensaje WM_MDIGETACTIVE para determinar si se maximiza la ventana secundaria activa actualmente.
+Si el activo se maximiza la ventana secundaria de varios documentos (MDI) de la interfaz y una aplicación inserta un menú emergente en el menú de la aplicación MDI mediante una llamada a esta función y se especificará el indicador MF_BYPOSITION, en el menú insertan una posición más hacia la izquierda que Esperado. Esto sucede porque el menú de Control de la ventana secundaria MDI activa se inserta en la primera posición de la barra de menús de la ventana de marco MDI. Para colocar el menú correctamente, la aplicación debe agregar 1 al valor de posición que se usará en caso contrario. Una aplicación puede usar el mensaje WM_MDIGETACTIVE para determinar si se maximiza la ventana secundaria activa actualmente.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1118,7 +1118,7 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nposición*<br/>
+*nPosition*<br/>
 Especifica el elemento de menú que se puede cambiar. El *nFlags* parámetro puede usarse para interpretar *Nposición* de las maneras siguientes:
 
 |nFlags|Interpretación de Nposición|
@@ -1186,7 +1186,7 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Menú*<br/>
+*menu*<br/>
 Un `CMenu` objeto para la comparación.
 
 ### <a name="remarks"></a>Comentarios
@@ -1203,7 +1203,7 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Menú*<br/>
+*menu*<br/>
 Un `CMenu` objeto para la comparación.
 
 ### <a name="remarks"></a>Comentarios
@@ -1222,7 +1222,7 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nposición*<br/>
+*nPosition*<br/>
 Especifica el elemento de menú que se va a quitar. El *nFlags* parámetro puede usarse para interpretar *Nposición* de las maneras siguientes:
 
 |nFlags|Interpretación de Nposición|
@@ -1337,7 +1337,7 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nposición*<br/>
+*nPosition*<br/>
 Especifica el elemento de menú que se puede cambiar. El *nFlags* parámetro puede usarse para interpretar *Nposición* de las maneras siguientes:
 
 |nFlags|Interpretación de Nposición|
@@ -1424,7 +1424,7 @@ Especifica la posición horizontal, en coordenadas de pantalla del menú emergen
 *y*<br/>
 Especifica la posición vertical, en coordenadas de pantalla de la parte superior del menú en la pantalla.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Identifica la ventana que posee el menú emergente. Este parámetro no puede ser NULL, incluso si se especifica la marca TPM_NONOTIFY. Esta ventana recibe todos los mensajes WM_COMMAND en el menú. En las versiones 3.1 y posteriores de Windows, la ventana no recibe mensajes WM_COMMAND hasta `TrackPopupMenu` devuelve. En Windows 3.0, la ventana recibe mensajes WM_COMMAND antes `TrackPopupMenu` devuelve.
 
 *lpRect*<br/>
@@ -1466,7 +1466,7 @@ Especifica la posición horizontal, en coordenadas de pantalla del menú emergen
 *y*<br/>
 Especifica la posición vertical, en coordenadas de pantalla de la parte superior del menú en la pantalla.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Un puntero a la ventana propietaria del menú emergente y recibir los mensajes en el menú creado. Esta ventana puede ser cualquier ventana de la aplicación actual pero no puede ser NULL. Si especifica TPM_NONOTIFY en el *fuFlags* parámetro, la función no envía ningún mensaje para *conquistado*. La función debe devolver para la ventana apuntada *conquistado* para recibir el mensaje WM_COMMAND.
 
 *lptpm*<br/>

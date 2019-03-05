@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281343"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones de espacio de nombres Concurrency:: Direct3D (AMP)
 
@@ -37,8 +37,8 @@ ms.locfileid: "50519744"
 |[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|[firstbithigh](#firstbithigh)|
 |[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|[get_device](#get_device)|
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|
-|[mad](#mad)|[make_array](#make_array)|[ruido](#noise)|
-|[radianes](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|
 |[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[step](#step)|[umax](#umax)|[umin](#umin)|
 
@@ -63,7 +63,7 @@ Valor entero
 
 Devuelve el valor absoluto del argumento.
 
-##  <a name="clamp"></a>  Clamp
+##  <a name="clamp"></a>  clamp
 
 Calcula el valor del primer argumento especificado filtrado a un intervalo definido por el segundo y tercer argumentos especificados.
 
@@ -156,7 +156,7 @@ El runtime de C++ AMP proporciona información detallada del error en modo de de
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Adquirir un bloqueo en un accelerator_view para realizar operaciones D3D en recursos compartidos con el accelerator_view de forma segura con. El objeto accelerator_view y todos los recursos de C++ AMP asociados a este objeto accelerator_view internamente toman este bloqueo al realizar operaciones y se bloquean mientras otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo es no recursivo: es un comportamiento indefinido para llamar a esta función desde un subproceso que ya tenía el bloqueo. Es un comportamiento indefinido realizar operaciones en el elemento accelerator_view o cualquier contenedor de datos asociada al accelerator_view desde el subproceso que mantiene el bloqueo de acceso de D3D. Vea también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso D3D basado en ámbitos.
+Adquirir un bloqueo en un accelerator_view para realizar operaciones D3D en recursos compartidos con el accelerator_view de forma segura con. El objeto accelerator_view y todos los recursos de C++ AMP asociados a este objeto accelerator_view internamente toman este bloqueo al realizar operaciones y se bloquean mientras otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo es no recursivo: Es un comportamiento indefinido para llamar a esta función desde un subproceso que ya tenía el bloqueo. Es un comportamiento indefinido realizar operaciones en el elemento accelerator_view o cualquier contenedor de datos asociada al accelerator_view desde el subproceso que mantiene el bloqueo de acceso de D3D. Vea también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso D3D basado en ámbitos.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
@@ -269,7 +269,7 @@ IUnknown* get_device(const accelerator_view Av);
 
 ### <a name="parameters"></a>Parámetros
 
-*AV*<br/>
+*Av*<br/>
 El objeto accelerator_view de D3D para el que se devuelve la interfaz de dispositivo D3D subyacente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -298,7 +298,7 @@ Valor entero
 
 Devolver el valor numérico máximo de los argumentos
 
-##  <a name="imin"></a>  Imín
+##  <a name="imin"></a>  imin
 
 Determinar el valor numérico mínimo de los argumentos
 
@@ -414,7 +414,7 @@ Puntero de interfaz IUnknown del búfer D3D para crear la matriz a partir de.
 
 Matriz creada con el búfer de Direct3D proporcionado.
 
-##  <a name="noise"></a>  ruido
+##  <a name="noise"></a>  noise
 
 Genera un valor aleatorio mediante el algoritmo de ruido de Perlin
 

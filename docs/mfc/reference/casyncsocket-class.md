@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179037"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260015"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (clase)
 
@@ -103,12 +103,12 @@ class CAsyncSocket : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAsyncSocket:: Accept](#accept)|Acepta una conexión en el socket.|
+|[CAsyncSocket::Accept](#accept)|Acepta una conexión en el socket.|
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Notificación de eventos de las solicitudes para el socket.|
 |[CAsyncSocket::Attach](#attach)|Asocia un identificador de socket a un `CAsyncSocket` objeto.|
 |[CAsyncSocket::Bind](#bind)|Asocia una dirección local del socket.|
 |[CAsyncSocket::Close](#close)|Cierra el socket.|
-|[CAsyncSocket:: Connect](#connect)|Establece una conexión a un socket del mismo nivel.|
+|[CAsyncSocket::Connect](#connect)|Establece una conexión a un socket del mismo nivel.|
 |[CAsyncSocket::Create](#create)|Crea un socket.|
 |[CAsyncSocket::Detach](#detach)|Desasocia un identificador de socket desde un `CAsyncSocket` objeto.|
 |[CAsyncSocket::FromHandle](#fromhandle)|Devuelve un puntero a un `CAsyncSocket` objeto, dado un identificador de socket.|
@@ -119,12 +119,12 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::GetSockNameEx](#getsocknameex)|Obtiene el nombre local para un socket (controla las direcciones IPv6).|
 |[CAsyncSocket::GetSockOpt](#getsockopt)|Recupera una opción de socket.|
 |[CAsyncSocket::IOCtl](#ioctl)|Controla el modo del socket.|
-|[CAsyncSocket:: Listen](#listen)|Establece un socket para escuchar las solicitudes de conexión entrante.|
+|[CAsyncSocket::Listen](#listen)|Establece un socket para escuchar las solicitudes de conexión entrante.|
 |[CAsyncSocket::Receive](#receive)|Recibe los datos desde el socket.|
 |[CAsyncSocket::ReceiveFrom](#receivefrom)|Recibe un datagrama y almacena la dirección de origen.|
 |[CAsyncSocket::ReceiveFromEx](#receivefromex)|Recibe un datagrama y almacena la dirección de origen (controla las direcciones IPv6).|
 |[CAsyncSocket::Send](#send)|Envía datos a un socket conectado.|
-|[:: SendTo](#sendto)|Envía datos a un destino concreto.|
+|[CAsyncSocket::SendTo](#sendto)|Envía datos a un destino concreto.|
 |[CAsyncSocket::SendToEx](#sendtoex)|Envía datos a un destino concreto (controla las direcciones IPv6).|
 |[CAsyncSocket::SetSockOpt](#setsockopt)|Establece una opción de socket.|
 |[CAsyncSocket::ShutDown](#shutdown)|Deshabilita `Send` o `Receive` llama en el socket.|
@@ -177,7 +177,7 @@ Para obtener más información, consulte [Windows Sockets: Usar la clase CAsyncS
 
 **Encabezado:** afxsock.h
 
-##  <a name="accept"></a>  CAsyncSocket:: Accept
+##  <a name="accept"></a>  CAsyncSocket::Accept
 
 Llame a esta función miembro para aceptar una conexión en un socket.
 
@@ -387,7 +387,7 @@ Esta función libera el descriptor de socket para que aún más las referencias 
 
 Para `CAsyncSocket`, pero no para `CSocket`, la semántica de `Close` se ven afectados por las opciones de socket SO_LINGER y SO_DONTLINGER. Para obtener más información, vea la función miembro `GetSockOpt`.
 
-##  <a name="connect"></a>  CAsyncSocket:: Connect
+##  <a name="connect"></a>  CAsyncSocket::Connect
 
 Llame a esta función miembro para establecer una conexión a un socket de datagrama o la secuencia no conectado.
 
@@ -882,7 +882,7 @@ Esta rutina se puede usar en ningún socket en cualquier estado. Sirve para obte
 
 Esta función es un subconjunto de `ioctl()` que se usa en sockets Berkeley. En concreto, no hay ningún comando que es equivalente a FIOASYNC, mientras que SIOCATMARK es el comando solo de nivel de socket que se admite.
 
-##  <a name="listen"></a>  CAsyncSocket:: Listen
+##  <a name="listen"></a>  CAsyncSocket::Listen
 
 Llame a esta función miembro para escuchar las solicitudes de conexión entrantes.
 
@@ -1454,7 +1454,7 @@ En `CAsyncSocket` los objetos de tipo SOCK_STREAM, el número de bytes escritos 
 
   Vea el ejemplo de [CAsyncSocket::OnSend](#onsend).
 
-##  <a name="sendto"></a>  :: SendTo
+##  <a name="sendto"></a>  CAsyncSocket::SendTo
 
 Llame a esta función miembro para enviar datos a un destino concreto.
 
@@ -1759,7 +1759,7 @@ Una marca que describe qué tipos de operación ya no se permitirá, utilizando 
 
 - **envía = 1**
 
-- **tanto = 2**
+- **both = 2**
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - mappings [MFC], messages
 - messages [MFC], mapping
 ms.assetid: 996f0652-0698-4b8c-b893-cdaa836d9d0f
-ms.openlocfilehash: 1f31bc2e3c6af9c4b899167ba99c152a231a929d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82c55c82d6b7a3faa65906345137885555a57d08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287289"
 ---
 # <a name="mapping-messages"></a>Asignar mensajes
 
@@ -27,4 +27,3 @@ A pesar del nombre "mapa de mensajes," mapas de mensajes tratan ambos mensajes y
 ## <a name="see-also"></a>Vea también
 
 [Mensajes y comandos en el marco](../mfc/messages-and-commands-in-the-framework.md)
-

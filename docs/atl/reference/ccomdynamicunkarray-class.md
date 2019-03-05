@@ -1,5 +1,5 @@
 ---
-title: CComDynamicUnkArray (clase)
+title: CComDynamicUnkArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CComDynamicUnkArray
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-ms.openlocfilehash: c18f28cac89288096b812635e77194bfb5dd224b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274168"
 ---
-# <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray (clase)
+# <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray Class
 
 Esta clase almacena una matriz de `IUnknown` punteros.
 
@@ -42,7 +42,7 @@ class CComDynamicUnkArray
 |Name|Descripción|
 |----------|-----------------|
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Constructor. Inicializa los valores de la colección es NULL y el tamaño de la colección a cero.|
-|[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|Destructor.|
+|[CComDynamicUnkArray::~CComDynamicUnkArray](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -129,7 +129,7 @@ CComDynamicUnkArray();
 
 El tamaño de la colección se establece en cero e inicializa los valores NULL. El destructor libera la colección, si es necesario.
 
-##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray
+##  <a name="dtor"></a>  CComDynamicUnkArray::~CComDynamicUnkArray
 
 Destructor.
 

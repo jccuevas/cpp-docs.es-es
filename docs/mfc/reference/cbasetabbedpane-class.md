@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640900"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259300"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane (clase)
 
@@ -91,19 +91,19 @@ class CBaseTabbedPane : public CDockablePane
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cbasetabbedpane:: addTab](#addtab)|Agrega una nueva pestaña a un panel con pestañas.|
+|[CBaseTabbedPane::AddTab](#addtab)|Agrega una nueva pestaña a un panel con pestañas.|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Especifica si se puede destruir un panel con pestañas vacío.|
 |[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Aplica la configuración de la ficha, que se carga desde el registro, a un panel con pestañas.|
 |[CBaseTabbedPane::CanFloat](#canfloat)|Determina si el panel puede flotar. (Invalida [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
 |[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determina si el título para el panel con pestañas debe mostrar el mismo texto como la pestaña activa.|
 |[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Invalida [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
-|[Cbasetabbedpane:: Detachpane](#detachpane)|Convierte uno o más paneles acoplables en documentos con fichas de MDI.|
+|[CBaseTabbedPane::DetachPane](#detachpane)|Convierte uno o más paneles acoplables en documentos con fichas de MDI.|
 |[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Habilita o deshabilita la capacidad del panel con pestañas para sincronizar el texto de título con el texto de etiqueta en la pestaña activa.|
 |[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restaura el orden de tabulación interno a un estado predeterminado.|
 |[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Devuelve un panel que se encuentra en una ficha cuando la pestaña se identifica mediante un índice de base cero de tabulación.|
 |||
 |[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Devuelve un panel que se identifica mediante el identificador del panel.|
-|[Cbasetabbedpane:: Floattab](#floattab)|Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable.|
+|[CBaseTabbedPane::FloatTab](#floattab)|Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable.|
 |[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Devuelve el orden predeterminado de las pestañas en el panel.|
 |[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Recupera un puntero a la primera ficha mostrada.|
 |[CBaseTabbedPane::GetMinSize](#getminsize)|Recupera el mínimo tamaño permitido para el panel. (Invalida [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
@@ -113,7 +113,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Devuelve el número de fichas en una pestaña de ventana.|
 |[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Obtiene la ventana de pestaña (ajustado) subyacente.|
 |[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Devuelve el número de fichas mostradas.|
-|[Cbasetabbedpane:: Hasautohidemode](#hasautohidemode)|Determina si el panel con pestañas se puede cambiar al modo de ocultación automática.|
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Determina si el panel con pestañas se puede cambiar al modo de ocultación automática.|
 |[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Determina si se oculta el panel con pestañas si solo se muestra una pestaña.|
 |`CBaseTabbedPane::LoadSiblingPaneIDs`|Se usa internamente durante la serialización.|
 |[CBaseTabbedPane::RecalcLayout](#recalclayout)|Vuelve a calcular información de diseño para el panel. (Invalida [CPANE:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
@@ -155,7 +155,7 @@ Para obtener más información sobre cómo crear paneles con pestañas, consulte
 
 **Encabezado:** afxBaseTabbedPane.h
 
-##  <a name="addtab"></a>  Cbasetabbedpane:: addTab
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
 
 Agrega una nueva pestaña a un panel con pestañas.
 
@@ -263,7 +263,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 *bActiveTabOnly*<br/>
 [in] Al convertir un panel con pestañas, especifique TRUE para convertir sólo la pestaña activa. Especifique FALSE para convertir todas las pestañas en el panel.
 
-##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane
 
 Desasocia un panel desde el panel con pestañas.
 
@@ -299,7 +299,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para sincronizar el título del panel con pestañas con el título de la pestaña activa; en caso contrario, FALSE.
 
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray
@@ -361,7 +361,7 @@ Si se encuentra el panel, a continuación, se devuelve un puntero válido para e
 
 Llame a este método para recuperar el panel que se encuentran en la pestaña especificada por el *nTabNum* parámetro.
 
-##  <a name="floattab"></a>  Cbasetabbedpane:: Floattab
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab
 
 Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable.
 
@@ -544,7 +544,7 @@ El número de pestañas visibles, que será mayor o igual que cero.
 
 Llame a este método para determinar el número de pestañas visibles en el panel con pestañas.
 
-##  <a name="hasautohidemode"></a>  Cbasetabbedpane:: Hasautohidemode
+##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode
 
 Determina si el panel con pestañas se puede cambiar a modo de ocultación automática.
 
@@ -631,7 +631,7 @@ virtual BOOL ShowTab(
 *pBar*<br/>
 [in] Un puntero al panel para mostrar u ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el panel. FALSE para ocultar el panel.
 
 *bDelay*<br/>

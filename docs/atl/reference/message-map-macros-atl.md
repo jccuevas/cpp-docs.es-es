@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290383"
 ---
 # <a name="message-map-macros-atl"></a>Macros de mapa de mensajes (ATL)
 
@@ -588,7 +588,7 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>Parámetros
 
-*mens.*<br/>
+*msg*<br/>
 [in] El mensaje de Windows.
 
 *func*<br/>
@@ -652,7 +652,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Parámetros
 
-*CD*<br/>
+*cd*<br/>
 [in] El código de notificación.
 
 *func*<br/>
@@ -675,7 +675,7 @@ NOTIFY_HANDLER( id, cd, func )
 *identificador*<br/>
 [in] El identificador del control que envía el mensaje.
 
-*CD*<br/>
+*cd*<br/>
 [in] El código de notificación.
 
 *func*<br/>
@@ -742,7 +742,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *idLast*<br/>
 [in] Marca el final de un intervalo contiguo de identificadores de control.
 
-*CD*<br/>
+*cd*<br/>
 [in] El código de notificación.
 
 *func*<br/>
@@ -921,7 +921,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Parámetros
 
-*CD*<br/>
+*cd*<br/>
 [in] El código de notificación.
 
 *func*<br/>
@@ -944,7 +944,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 *identificador*<br/>
 [in] El identificador del elemento de menú, control o acelerador.
 
-*CD*<br/>
+*cd*<br/>
 [in] El código de notificación.
 
 *func*<br/>
@@ -990,7 +990,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *idLast*<br/>
 [in] Marca el final de un intervalo contiguo de identificadores de control.
 
-*CD*<br/>
+*cd*<br/>
 [in] El código de notificación.
 
 *func*<br/>

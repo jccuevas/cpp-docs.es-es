@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522498"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281101"
 ---
 # <a name="ccomvariant-class"></a>CComVariant (clase)
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |Name|Descripción|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|El constructor.|
-|[CComVariant:: ~ CComVariant](#dtor)|Destructor.|
+|[CComVariant::~CComVariant](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -59,7 +59,7 @@ class CComVariant : public tagVARIANT
 |[CComVariant::GetSize](#getsize)|Devuelve el tamaño en el número de bytes del contenido de la `CComVariant` objeto.|
 |[CComVariant::ReadFromStream](#readfromstream)|Carga una variante de una secuencia.|
 |[CComVariant::SetByRef](#setbyref)|Inicializa el `CComVariant` objeto y establece el `vt` miembro VT_BYREF.|
-|[CComVariant:: WriteToStream](#writetostream)|Guarda la variante subyacente en una secuencia.|
+|[CComVariant::WriteToStream](#writetostream)|Guarda la variante subyacente en una secuencia.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -68,7 +68,7 @@ class CComVariant : public tagVARIANT
 |[CComVariant::operator <](#operator_lt)|Indica si el `CComVariant` objeto es menor que la variante especificada.|
 |[CComVariant::operator >](#operator_gt)|Indica si el `CComVariant` objeto es mayor que la variante especificada.|
 |[operator !=](#operator_neq)|Indica si el `CComVariant` objeto no es igual a la variante especificada.|
-|[operador =](#operator_eq)|Asigna un valor a la `CComVariant` objeto.|
+|[operator =](#operator_eq)|Asigna un valor a la `CComVariant` objeto.|
 |[operator ==](#operator_eq_eq)|Indica si el `CComVariant` objeto es igual a la variante especificada.|
 
 ## <a name="remarks"></a>Comentarios
@@ -179,7 +179,7 @@ O bien, el puntero SAFERRAY utilizado para inicializar el `CComVariant` objeto. 
 
 El destructor administra la limpieza mediante una llamada a [CComVariant::Clear](#clear).
 
-##  <a name="dtor"></a>  CComVariant:: ~ CComVariant
+##  <a name="dtor"></a>  CComVariant::~CComVariant
 
 Destructor.
 
@@ -387,7 +387,7 @@ Devuelve TRUE si el valor y tipo de *varSrc* son iguales que el valor y tipo, re
 
 El operador compara solo el valor de los tipos variantes. Compara cadenas, enteros y puntos flotantes, pero no las matrices o registros.
 
-##  <a name="operator_neq"></a>  CComVariant::operator! =
+##  <a name="operator_neq"></a>  CComVariant::operator !=
 
 Indica si el `CComVariant` objeto no es igual a la variante especificada.
 
@@ -469,7 +469,7 @@ El puntero que se usa para inicializar el `CComVariant` objeto.
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-##  <a name="writetostream"></a>  CComVariant:: WriteToStream
+##  <a name="writetostream"></a>  CComVariant::WriteToStream
 
 Guarda la variante subyacente en una secuencia.
 

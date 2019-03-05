@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: Sockets de secuencias'
+title: 'Windows Sockets: Sockets de Stream'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560230"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271299"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Sockets de secuencias
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Sockets de Stream
 
 Este artículo describe los sockets de secuencias, uno de los dos tipos de Windows Sockets disponibles. (El otro tipo es el [socket de datagrama](../mfc/windows-sockets-datagram-sockets.md).)
 
@@ -43,5 +43,4 @@ Uso de sockets de secuencia puede ser superior a las aplicaciones diseñadas par
 ## <a name="see-also"></a>Vea también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
-
+[Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Excepciones: Cambios en las macros de excepción en la versión 3.0'
+title: 'Excepciones: Cambios en las Macros de excepción en la versión 3.0'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607992"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291228"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Excepciones: Cambios en las macros de excepción en la versión 3.0
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Excepciones: Cambios en las Macros de excepción en la versión 3.0
 
 Se trata de un tema avanzado.
 
@@ -58,9 +58,8 @@ Por ejemplo, este código fue válido en las versiones anteriores, pero tendrá 
 
 Mediante **THROW** hace que el puntero en la instrucción catch bloque `e` eliminarse para que el bloque catch externo recibirá un puntero no válido. Use **THROW_LAST** para volver a iniciar `e`.
 
-Para obtener más información, consulte [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Para obtener más información, consulte [excepciones: Detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
-

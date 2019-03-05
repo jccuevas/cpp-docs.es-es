@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259508"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Migrar de OpenMP al Runtime de simultaneidad
 
@@ -48,17 +48,17 @@ Los casos siguientes describen quizás no sea adecuado para migrar código exist
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Cómo: Convertir un bucle usar el Runtime de simultaneidad OpenMP paralelo](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[Cómo: Convertir un bucle OpenMP paralelo para usar el runtime de simultaneidad](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 Dado un bucle básico que usa el OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) y [para](../../parallel/openmp/reference/for-openmp.md) directivas, se muestra cómo convertir para que use el Runtime de simultaneidad [Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algoritmo.
 
-[Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[Cómo: Convertir un bucle OpenMP que usa la cancelación para usar el runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) bucle que no requiere que todas las iteraciones que se ejecutan, se muestra cómo convertir para que use el mecanismo de cancelación del Runtime de simultaneidad.
 
-[Cómo: Convertir un bucle OpenMP que usa el control de excepciones para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[Cómo: Convertir un bucle OpenMP que usa el control de excepciones para usar el runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) bucle que realiza el control de excepciones, se muestra cómo convertir para que use el mecanismo de control de excepciones de Runtime de simultaneidad.
 
-[Cómo: Convertir un bucle OpenMP que usa una Variable de reducción para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[Cómo: Convertir un bucle OpenMP que usa una variable de reducción para usar el Runtime de simultaneidad](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[para](../../parallel/openmp/reference/for-openmp.md) bucle que usa el [reducción](../../parallel/openmp/reference/reduction.md) cláusula, se muestra cómo convertir para que use el Runtime de simultaneidad.
 
 ## <a name="see-also"></a>Vea también
@@ -67,4 +67,3 @@ Dado un OpenMP [paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-wr
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)
-

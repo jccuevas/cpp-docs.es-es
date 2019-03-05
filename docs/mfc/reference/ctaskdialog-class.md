@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265020"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -159,7 +159,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|Recupera el estado de la casilla de verificación.|
 |[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|Determina si un control de botón de comando o botón común está habilitado.|
 |[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|Determina si un botón de radio está habilitado.|
-|[IsSupported](#issupported)|Determina si el equipo que ejecuta la aplicación admite el `CTaskDialog`.|
+|[CTaskDialog::IsSupported](#issupported)|Determina si el equipo que ejecuta la aplicación admite el `CTaskDialog`.|
 |[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|Agrega controles de botón de comando mediante el uso de datos de la tabla de cadenas.|
 |[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|Agrega los botones de radio con datos de la tabla de cadenas.|
 |[CTaskDialog::NavigateTo](#navigateto)|Transfiere el foco a otro `CTaskDialog`.|
@@ -271,7 +271,7 @@ void AddCommandControl(
 *strCaption*<br/>
 [in] La cadena que el `CTaskDialog` muestra al usuario. Use esta cadena para explicar el objetivo del comando.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] Un parámetro booleano que indica si el nuevo botón está habilitado o deshabilitado.
 
 *bRequiresElevation*<br/>
@@ -306,7 +306,7 @@ void CTaskDialog::AddRadioButton(
 *strCaption*<br/>
 [in] La cadena que el `CTaskDialog` muestra junto al botón de radio.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] Un parámetro booleano que indica si está habilitado el botón de radio.
 
 ### <a name="remarks"></a>Comentarios
@@ -489,7 +489,7 @@ int GetCommonButtonId(int nFlag);
 
 ### <a name="parameters"></a>Parámetros
 
-*Quitar marca*<br/>
+*nFlag*<br/>
 [in] El tipo de botón comunes asociados con la `CTaskDialog` clase.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -624,7 +624,7 @@ Si *nRadioButtonID* no es un identificador válido para un botón de radio, este
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="issupported"></a>  IsSupported
+##  <a name="issupported"></a>  CTaskDialog::IsSupported
 
 Determina si el equipo que ejecuta la aplicación admite el `CTaskDialog`.
 
@@ -894,7 +894,7 @@ virtual HRESULT OnTimer(long lTime);
 
 ### <a name="parameters"></a>Parámetros
 
-*ni lTime*<br/>
+*lTime*<br/>
 [in] Tiempo en milisegundos desde el `CTaskDialog` se creó o se restablece el temporizador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -966,7 +966,7 @@ void SetCommandControlOptions(
 *nCommandControlID*<br/>
 [in] Identificador del control de comando que se va a actualizar.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] Un parámetro booleano que indica si el control de botón de comando especificado está habilitado o deshabilitado.
 
 *bRequiresElevation*<br/>
@@ -1292,7 +1292,7 @@ En la tabla siguiente se enumera todas las opciones válidas.
 |TDF_USE_HICON_FOOTER|Configura el `CTaskDialog` para usar un `HICON` para el icono de pie de página. La alternativa es usar un `LPCWSTR`.|
 |TDF_ALLOW_DIALOG_CANCELLATION|Permite al usuario cerrar la `CTaskDialog` mediante el teclado o mediante el icono en la esquina superior derecha del cuadro de diálogo, incluso si la **cancelar** botón no está habilitado. Si no se establece esta marca y el **cancelar** botón no está habilitado, el usuario no puede cerrar el cuadro de diálogo con ALT+F4, la tecla Escape, o la barra de título botón Cerrar.|
 |TDF_USE_COMMAND_LINKS|Configura el `CTaskDialog` usar controles de botón de comando.|
-|TDF_USE_COMMAND_LINKS_NO_ICON|Configura el `CTaskDialog` usar controles de botón de comando sin mostrar un icono junto al control. TDF_USE_COMMAND_LINKS invalida TDF_USE_COMMAND_LINKS_NO_ICON.|
+|TDF_USE_COMMAND_LINKS_NO_ICON|Configura el `CTaskDialog` usar controles de botón de comando sin mostrar un icono junto al control. TDF_USE_COMMAND_LINKS overrides TDF_USE_COMMAND_LINKS_NO_ICON.|
 |TDF_EXPAND_FOOTER_AREA|Indica que el área de expansión está expandido actualmente.|
 |TDF_EXPANDED_BY_DEFAULT|Determina si el área de expansión se expande de forma predeterminada.|
 |TDF_VERIFICATION_FLAG_CHECKED|Indica que la casilla de verificación está seleccionada actualmente.|
@@ -1320,7 +1320,7 @@ void SetProgressBarMarquee(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] TRUE para habilitar la barra de marquesina. FALSE para deshabilitar la barra de marquesina y lo quita de la `CTaskDialog`.
 
 *nMarqueeSpeed*<br/>
@@ -1435,7 +1435,7 @@ void SetRadioButtonOptions(
 *nRadioButtonID*<br/>
 [in] El identificador del control de botón de radio.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] TRUE para habilitar el botón de radio; FALSE para deshabilitar el botón de radio.
 
 ### <a name="remarks"></a>Comentarios
@@ -1579,7 +1579,7 @@ HRESULT TaskDialogCallback(
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un identificador de la `m_hWnd` de estructura para el `CTaskDialog`.
 
 *uNotification*<br/>
@@ -1606,17 +1606,17 @@ Los valores de *wParam* y *lParam* dependen el mensaje generado específico. Es 
 
 |Mensaje de notificación|*wParam* valor|*lParam* valor|
 |--------------------------|--------------------|--------------------|
-|TDN_CREATED|No usado.|No usado.|
-|TDN_NAVIGATED|No usado.|No usado.|
-|TDN_BUTTON_CLICKED|Identificador de control de botón de comando|No usado.|
-|TDN_HYPERLINK_CLICKED|No usado.|Un [LPCWSTR](/windows/desktop/WinProg/windows-data-types) estructura que contiene el vínculo.|
-|TDN_TIMER|Tiempo en milisegundos desde el `CTaskDialog` se creó o se restablece el temporizador.|No usado.|
-|TDN_DESTROYED|No usado.|No usado.|
-|TDN_RADIO_BUTTON_CLICKED|El identificador del botón de radio.|No usado.|
-|TDN_DIALOG_CONSTRUCTED|No usado.|No usado.|
-|TDN_VERIFICATION_CLICKED|1 si está activada la casilla de verificación, 0 si no lo está.|No usado.|
-|TDN_HELP|No usado.|No usado.|
-|TDN_EXPANDO_BUTTON_CLICKED|0 si el área de expansión está contraída; distinto de cero si se muestra el texto de expansión.|No usado.|
+|TDN_CREATED|No se utiliza.|No se utiliza.|
+|TDN_NAVIGATED|No se utiliza.|No se utiliza.|
+|TDN_BUTTON_CLICKED|Identificador de control de botón de comando|No se utiliza.|
+|TDN_HYPERLINK_CLICKED|No se utiliza.|Un [LPCWSTR](/windows/desktop/WinProg/windows-data-types) estructura que contiene el vínculo.|
+|TDN_TIMER|Tiempo en milisegundos desde el `CTaskDialog` se creó o se restablece el temporizador.|No se utiliza.|
+|TDN_DESTROYED|No se utiliza.|No se utiliza.|
+|TDN_RADIO_BUTTON_CLICKED|El identificador del botón de radio.|No se utiliza.|
+|TDN_DIALOG_CONSTRUCTED|No se utiliza.|No se utiliza.|
+|TDN_VERIFICATION_CLICKED|1 si está activada la casilla de verificación, 0 si no lo está.|No se utiliza.|
+|TDN_HELP|No se utiliza.|No se utiliza.|
+|TDN_EXPANDO_BUTTON_CLICKED|0 si el área de expansión está contraída; distinto de cero si se muestra el texto de expansión.|No se utiliza.|
 
 ## <a name="see-also"></a>Vea también
 

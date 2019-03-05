@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 278351ad1cf81215f4c6033f4cff0b100adedf23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294491"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: Rutinas RFX
 
@@ -144,15 +144,15 @@ Hay varias maneras de extender el mecanismo predeterminado de RFX. Puede
 
 Para escribir su propia función RFX personalizado, se recomienda que copie una función RFX existente y modificarlo para sus propios fines. Seleccionar el RFX derecho para copiar puede facilitar mucho más fácil el trabajo. Algunas funciones RFX tienen algunas propiedades únicas que debe tener en cuenta al decidir que se va a copiar.
 
-`RFX_Long` y `RFX_Int`: estas son las funciones de RFX más sencillas. El valor de datos no necesita ninguna interpretación especial y el tamaño de datos es fijo.
+`RFX_Long` y `RFX_Int`: Estas son las funciones de RFX más sencillas. El valor de datos no necesita ninguna interpretación especial y el tamaño de datos es fijo.
 
-`RFX_Single` y `RFX_Double`: como RFX_Long y RFX_Int anterior, estas funciones son simples y puede hacer uso de la implementación predeterminada ampliamente. Se almacenan en dbflt.cpp en lugar de dbrfx.cpp, sin embargo, para habilitar la carga de la biblioteca de punto flotante solo cuando explícitamente se referencia en tiempo de ejecución.
+`RFX_Single` y `RFX_Double`: Al igual que RFX_Long y RFX_Int anterior, estas funciones son simples y puede hacer uso de la implementación predeterminada ampliamente. Se almacenan en dbflt.cpp en lugar de dbrfx.cpp, sin embargo, para habilitar la carga de la biblioteca de punto flotante solo cuando explícitamente se referencia en tiempo de ejecución.
 
-`RFX_Text` y `RFX_Binary`: estas dos funciones asignar previamente un búfer estático para contener la información de cadena o binarios y debe registrar estos búferes con ODBC SQLBindCol en lugar de registrar y valor. Por este motivo, estas dos funciones tienen una gran cantidad de código de casos especiales.
+`RFX_Text` y `RFX_Binary`: Estas dos funciones asignar previamente un búfer estático para contener la información de cadena o binarios y deben registrar estos búferes con ODBC SQLBindCol en lugar de registrar y valor. Por este motivo, estas dos funciones tienen una gran cantidad de código de casos especiales.
 
 `RFX_Date`: ODBC devuelve información de fecha y hora en su propia estructura de datos TIMESTAMP_STRUCT. Esta función asigna dinámicamente un TIMESTAMP_STRUCT como un "proxy" para enviar y recibir datos en tiempo de fecha. Varias operaciones deben transferir la información de fecha y hora entre el C++ `CTime` objeto y el proxy TIMESTAMP_STRUCT. Esto complica considerablemente esta función, pero es un buen ejemplo de cómo usar a un proxy para la transferencia de datos.
 
-`RFX_LongBinary`: Esta es la biblioteca de clase única función RFX que no utiliza el enlace de columna para recibir y enviar datos. Esta función pasa por alto la operación BindFieldToColumn y en su lugar, durante la operación de reparación, asigna almacenamiento para almacenar los datos entrantes SQL_LONGVARCHAR o SQL_LONGVARBINARY, a continuación, realiza una llamada SQLGetData para recuperar el valor en el almacenamiento asignado. Al prepararse para enviar los valores de datos de vuelta al origen de datos (por ejemplo, las operaciones de NameValue y valor), esta función utiliza la funcionalidad DATA_AT_EXEC de ODBC. Consulte [Nota técnica 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) para obtener más información sobre cómo trabajar con SQL_LONGVARBINARY y SQL_LONGVARCHARs.
+`RFX_LongBinary`: Se trata de la biblioteca de clases solo función RFX que no utiliza el enlace de columna para recibir y enviar datos. Esta función pasa por alto la operación BindFieldToColumn y en su lugar, durante la operación de reparación, asigna almacenamiento para almacenar los datos entrantes SQL_LONGVARCHAR o SQL_LONGVARBINARY, a continuación, realiza una llamada SQLGetData para recuperar el valor en el almacenamiento asignado. Al prepararse para enviar los valores de datos de vuelta al origen de datos (por ejemplo, las operaciones de NameValue y valor), esta función utiliza la funcionalidad DATA_AT_EXEC de ODBC. Consulte [Nota técnica 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) para obtener más información sobre cómo trabajar con SQL_LONGVARBINARY y SQL_LONGVARCHARs.
 
 Al escribir su propio **RFX_** función, a menudo podrá utilizar `CFieldExchange::Default` para implementar una operación determinada. Examine la implementación de forma predeterminada para la operación en cuestión. Si realiza la operación tendría que escribir su **RFX_** función se puede delegar en el `CFieldExchange::Default`. Puede ver ejemplos de llamada `CFieldExchange::Default` en dbrfx.cpp
 

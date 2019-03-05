@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260392"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager (clase)
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*Info*<br/>
+*info*<br/>
 [in] Una referencia a una estructura de información que contiene la alineación del panel de acoplamiento.
 
 *ppDockBar*<br/>
@@ -355,7 +355,7 @@ BOOL AddPane(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in, out] Especifica el panel para agregar al administrador de acoplamiento.
 
 *bTail*<br/>
@@ -400,7 +400,7 @@ virtual BOOL AddMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a un marco.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -521,7 +521,7 @@ void BuildPanesMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Menú*<br/>
+*menu*<br/>
 [in] Menú para agregar los nombres de los paneles de acoplamiento y barras de herramientas.
 
 *bToolbarsOnly*<br/>
@@ -542,7 +542,7 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a la ventana de acoplamiento.
 
 *ptMouse*<br/>
@@ -594,7 +594,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] La ubicación del panel para comprobar.
 
 *nSensitivity*<br/>
@@ -637,7 +637,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bDeshabilite*<br/>
+*bDisable*<br/>
 [in] True para deshabilitar la carga de diseño de acoplamiento del registro; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
@@ -732,7 +732,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el menú acoplar sitio; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
@@ -763,7 +763,7 @@ void EnablePaneContextMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Si es TRUE, la biblioteca se convierte en el menú contextual automática; la compatibilidad con Si es FALSE la biblioteca desactiva la compatibilidad con menú contextual automática.
 
 *uiCustomizeCmd*<br/>
@@ -863,7 +863,7 @@ virtual CPaneFrameWnd* FrameFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] Especifica el punto, en coordenadas de pantalla, para comprobar.
 
 *pFrameToExclude*<br/>
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*Info*<br/>
+*info*<br/>
 [in] Una estructura que contiene la información de alineación acerca del panel de acoplamiento.
 
 *dwAlignToInsertAfter*<br/>
@@ -1102,7 +1102,7 @@ BOOL InsertPane(
 *pTarget*<br/>
 [in] Un puntero a un panel de destino.
 
-*Después*<br/>
+*bAfter*<br/>
 [in] TRUE para insertar el panel después de la posición del panel de destino; FALSE en caso contrario.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1170,7 +1170,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto especificado.
 
 *dwBarAlignment*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>Parámetros
 
-*Bloque*<br/>
+*bLock*<br/>
 [in] TRUE si la ventana está bloqueada; FALSE en caso contrario.
 
 ### <a name="remarks"></a>Comentarios
@@ -1346,7 +1346,7 @@ void OnPaneContextMenu(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Especifica la ubicación del menú.
 
 ##  <a name="panefrompoint"></a>  CDockingManager::PaneFromPoint
@@ -1372,7 +1372,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Especifica el punto, en coordenadas de pantalla, para comprobar.
 
 *nSensitivity*<br/>
@@ -1475,7 +1475,7 @@ virtual BOOL RemoveMiniFrame(CPaneFrameWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a un marco para quitar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1497,7 +1497,7 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a un panel que se va a quitar.
 
 *bDestroy*<br/>
@@ -1604,7 +1604,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 [in] Una referencia a un objeto de almacenamiento.
 
 ### <a name="remarks"></a>Comentarios
@@ -1639,7 +1639,7 @@ static void SetDockingMode(
 *dockMode*<br/>
 Especifica el nuevo modo de acoplamiento. Para obtener más información, vea la sección Comentarios.
 
-*Tema*<br/>
+*theme*<br/>
 Especifica el tema que se usará para los marcadores de acoplamiento inteligente. Puede ser uno de los valores enumerados siguientes: AFX_SDT_DEFAULT, AFX_SDT_VS2005, AFX_SDT_VS2008.
 
 ### <a name="remarks"></a>Comentarios
@@ -1709,7 +1709,7 @@ void ShowDelayShowMiniFrames(BOOL bshow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para activar la ventana del marco que se muestra; FALSE para ocultar la ventana del marco.
 
 ##  <a name="showpanes"></a>  CDockingManager::ShowPanes
@@ -1722,7 +1722,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar los paneles; FALSE para ocultar los paneles.
 
 ### <a name="return-value"></a>Valor devuelto

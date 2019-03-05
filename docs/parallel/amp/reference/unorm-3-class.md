@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: 2ea10af6ffa1c3e4731b889ddec2d6f0c86ec981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458037"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300913"
 ---
 # <a name="unorm3-class"></a>unorm_3 (Clase)
 
@@ -122,11 +122,11 @@ class unorm_3;
 |unorm_3::get_zxy||
 |unorm_3::get_zy||
 |unorm_3::get_zyx||
-|Unorm_3:: ref_b||
-|Unorm_3:: ref_g||
-|Unorm_3:: ref_r||
-|Unorm_3:: ref_x||
-|Unorm_3:: ref_y||
+|Unorm_3::ref_b||
+|Unorm_3::ref_g||
+|Unorm_3::ref_r||
+|Unorm_3::ref_x||
+|Unorm_3::ref_y||
 |Unorm_3::ref_z||
 |unorm_3::set_x||
 |unorm_3::set_xy||
@@ -166,36 +166,36 @@ class unorm_3;
 
 |Name|Descripción|
 |----------|-----------------|
-|unorm_3:: b||
-|unorm_3:: BG||
-|unorm_3:: BGR||
-|unorm_3:: br||
-|unorm_3:: brg||
-|unorm_3:: g||
-|unorm_3:: GB||
-|unorm_3:: GBR||
-|unorm_3:: GR||
-|unorm_3:: GRB||
-|unorm_3:: r||
-|unorm_3:: RB||
-|unorm_3:: RBG||
-|unorm_3:: RG||
-|unorm_3:: RGB||
-|unorm_3:: x||
-|unorm_3:: XY||
-|unorm_3:: XYZ||
-|unorm_3:: XZ||
-|unorm_3:: xzy||
-|unorm_3:: y||
-|unorm_3:: YX||
-|unorm_3:: YXZ||
-|unorm_3:: YZ||
-|unorm_3:: yzx||
-|unorm_3:: z||
-|unorm_3:: ZX||
-|unorm_3:: zxy||
-|unorm_3:: ZY||
-|unorm_3:: ZYX||
+|unorm_3::b||
+|unorm_3::bg||
+|unorm_3::bgr||
+|unorm_3::br||
+|unorm_3::brg||
+|unorm_3::g||
+|unorm_3::gb||
+|unorm_3::gbr||
+|unorm_3::gr||
+|unorm_3::grb||
+|unorm_3::r||
+|unorm_3::rb||
+|unorm_3::rbg||
+|unorm_3::rg||
+|unorm_3::rgb||
+|unorm_3::x||
+|unorm_3::xy||
+|unorm_3::xyz||
+|unorm_3::xz||
+|unorm_3::xzy||
+|unorm_3::y||
+|unorm_3::yx||
+|unorm_3::yxz||
+|unorm_3::yz||
+|unorm_3::yzx||
+|unorm_3::z||
+|unorm_3::zx||
+|unorm_3::zxy||
+|unorm_3::zy||
+|unorm_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -205,7 +205,7 @@ class unorm_3;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ##  <a name="ctor"></a> unorm_3
 
@@ -274,7 +274,7 @@ El valor para inicializar el elemento 2.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ##  <a name="unorm_3__size"></a> Tamaño

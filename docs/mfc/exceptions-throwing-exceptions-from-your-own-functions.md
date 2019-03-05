@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558998"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297949"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Excepciones: Iniciar excepciones desde sus propias funciones
 
@@ -43,4 +43,3 @@ Cuando se produce una excepción, la ejecución de la función actual se detiene
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575742"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303968"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty (clase)
 
@@ -103,7 +103,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in] El nombre de la propiedad.
 
-*Color*<br/>
+*color*<br/>
 [in] El valor de color de la propiedad.
 
 *pPalette*<br/>
@@ -131,10 +131,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] El texto de la etiqueta del botón automático.
 
-*automáticoColor*<br/>
+*colorAutomatic*<br/>
 [in] El valor de color RGB del color automático (predeterminado).
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el botón automático; en caso contrario, FALSE. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -158,7 +158,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] True para mostrar el `CMFCColorDialog` cuadro de diálogo; FALSE para mostrar el cuadro de diálogo de selección de color estándar. El valor predeterminado es TRUE.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para mostrar el botón otro; en caso contrario, FALSE.  El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -187,7 +187,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Un valor de color RGB.
 
 ### <a name="remarks"></a>Comentarios

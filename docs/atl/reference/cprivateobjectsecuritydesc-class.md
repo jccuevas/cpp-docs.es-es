@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284390"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc (clase)
 
@@ -51,7 +51,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Operador de asignación.|
+|[operator =](#operator_eq)|Operador de asignación.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -115,7 +115,7 @@ CPrivateObjectSecurityDesc() throw();
 
 Inicializa el objeto `CPrivateObjectSecurityDesc`.
 
-##  <a name="dtor"></a>  CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc
 
 Destructor.
 
@@ -160,7 +160,7 @@ Puntero a un descriptor de seguridad proporcionado por el creador del objeto. Si
 *bIsDirectoryObject*<br/>
 Especifica si el nuevo objeto puede contener otros objetos. Un valor true indica que el nuevo objeto es un contenedor. Un valor false indica que el nuevo objeto no es un contenedor.
 
-*símbolo (token)*<br/>
+*Token*<br/>
 Hacer referencia a la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para el proceso de cliente en cuyo nombre se está creando el objeto.
 
 *GenericMapping*<br/>
@@ -200,7 +200,7 @@ bool Get(
 
 ### <a name="parameters"></a>Parámetros
 
-*Si*<br/>
+*si*<br/>
 Un conjunto de marcas de bits que indican las partes del descriptor de seguridad para recuperar. Este valor puede ser una combinación de la [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) marcas de bits.
 
 *pResult*<br/>
@@ -224,7 +224,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 La `CPrivateObjectSecurityDesc` objeto que se va a asignar al objeto actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -252,7 +252,7 @@ bool Set(
 
 ### <a name="parameters"></a>Parámetros
 
-*Si*<br/>
+*si*<br/>
 Un conjunto de marcas de bits que indican las partes del descriptor de seguridad para establecer. Este valor puede ser una combinación de la [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) marcas de bits.
 
 *Modificación*<br/>
@@ -261,7 +261,7 @@ Puntero a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objeto.
 *GenericMapping*<br/>
 Puntero a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) estructura que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
 
-*símbolo (token)*<br/>
+*Token*<br/>
 Hacer referencia a la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para el proceso de cliente en cuyo nombre se está creando el objeto.
 
 *AutoInheritFlags*<br/>

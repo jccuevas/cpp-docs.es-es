@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Enviar un mensaje a intervalos periódicos'
+title: Procedimiento Enviar un mensaje a intervalos regulares
 ms.date: 11/04/2016
 helpviewer_keywords:
 - timer class, example
 - sending messages at regular intervals [Concurrency Runtime]
 ms.assetid: 4b60ea6c-97c8-4d69-9f7b-ad79f3548026
-ms.openlocfilehash: 05777b0c00f587f588a50733d5113d9a7362d247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bf5f93e2a570761874232a88a23289e59e58d94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549622"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257623"
 ---
-# <a name="how-to-send-a-message-at-a-regular-interval"></a>Cómo: Enviar un mensaje a intervalos periódicos
+# <a name="how-to-send-a-message-at-a-regular-interval"></a>Filtrar Enviar un mensaje a intervalos regulares
 
 En este ejemplo se muestra cómo usar la simultaneidad::[clase timer](../../parallel/concrt/reference/timer-class.md) para enviar un mensaje a intervalos regulares.
 
@@ -32,7 +32,7 @@ Performing a lengthy operation..........done.
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `report-progress.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc report-progress.cpp**
+**cl.exe /EHsc report-progress.cpp**
 
 ## <a name="see-also"></a>Vea también
 

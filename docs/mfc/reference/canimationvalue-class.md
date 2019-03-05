@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 9a43536e3f9f90b70d5d68eb5ce5d277f9b42e00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a2caa8946bcafeabf85687a24b2430ecefe790
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613803"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283545"
 ---
 # <a name="canimationvalue-class"></a>Clase CAnimationValue
 
@@ -66,7 +66,7 @@ class CAnimationValue : public CAnimationBaseObject;
 |----------|-----------------|
 |[CAnimationValue::operator doble](#operator_double)|Proporciona la conversión entre CAnimationValue y DOUBLE.|
 |[CAnimationValue::operator INT32](#operator_int32)|Proporciona la conversión entre CAnimationValue e INT32.|
-|[CAnimationValue::operator =](#operator_eq)|Sobrecargado. Asigna un valor INT32 a CAnimationValue.|
+|[CAnimationValue::operator=](#operator_eq)|Sobrecargado. Asigna un valor INT32 a CAnimationValue.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -168,7 +168,7 @@ BOOL GetValue(INT32& nValue);
 *dblValue*<br/>
 Salida. Cuando se devuelve la función contiene un valor actual de la variable de animación.
 
-*nvalor*<br/>
+*nValue*<br/>
 Salida. Cuando se devuelve la función contiene un valor actual de la variable de animación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -235,7 +235,7 @@ Valor actual de animación como entero.
 
 Proporciona la conversión entre CAnimationValue e INT32. Internamente, este método llama GetValue y no compruebe si hay errores. Si se produce un error en GetValue, el valor devuelto contendrá un valor predeterminado establecido previamente en el constructor o con SetDefaultValue.
 
-##  <a name="operator_eq"></a>  CAnimationValue::operator =
+##  <a name="operator_eq"></a>  CAnimationValue::operator=
 
 Asigna un valor doble a CAnimationValue.
 

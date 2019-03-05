@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 8485f13b91c72d12c2084d2714f2acfa6dda7f01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478760"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259560"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr (clase)
 
@@ -46,7 +46,7 @@ El tipo de puntero.
 |Name|Descripción|
 |----------|-----------------|
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|El constructor.|
-|[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|Destructor.|
+|[CAutoVectorPtr::~CAutoVectorPtr](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -139,7 +139,7 @@ Un puntero existente.
 
 La `CAutoVectorPtr` objeto puede crearse mediante un puntero existente, en cuyo caso transfiere la propiedad del puntero.
 
-##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr
+##  <a name="dtor"></a>  CAutoVectorPtr::~CAutoVectorPtr
 
 Destructor.
 

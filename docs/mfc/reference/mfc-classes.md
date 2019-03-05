@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: e31e7d68676a40da51f214496a13072d0d4d2b28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178959"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288659"
 ---
 # <a name="mfc-classes"></a>Clases de MFC
 
@@ -24,7 +24,7 @@ Las clases de la siguiente lista se incluyen en la biblioteca MFC (Microsoft Fou
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Clase CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
+[CAccelerateDecelerateTransition (clase)](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Implementa una transición que aumenta/reduce la velocidad.
 
 [CAnimateCtrl (clase)](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -1306,4 +1306,3 @@ Admite matrices de palabras de 16 bits.
 
 [Aplicaciones de escritorio de MFC](../../mfc/mfc-desktop-applications.md)<br/>
 Contiene vínculos a temas sobre clases, funciones globales, variables globales y macros que componen la biblioteca MFC.
-

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259755"
 ---
 # <a name="coledocument-class"></a>COleDocument (clase)
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 Si está escribiendo una aplicación de contenedor simple, derive la clase de documento de `COleDocument`. Si está escribiendo una aplicación de contenedor que admite la vinculación a los elementos incrustados contenidos en sus documentos, derive la clase de documento de [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Si está escribiendo un servidor de aplicación o combinación de contenedor y servidor, derive la clase de documento de [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` y `COleServerDoc` se derivan de `COleDocument`, por lo que estas clases heredan todos los servicios disponibles en `COleDocument` y `CDocument`.
 
-Para usar `COleDocument`, derivar una clase y agregar la funcionalidad para administrar la aplicación los datos que no son compatibles con OLE, así como elementos incrustados o vinculados. Si define `CDocItem`-las clases derivadas deben almacenar datos nativos de la aplicación, puede usar la implementación predeterminada definida por `COleDocument` para almacenar los datos que no son compatibles con OLE y OLE. También puede diseñar sus propias estructuras de datos para almacenar los datos que no son compatibles con OLE por separado de los elementos OLE. Para obtener más información, vea el artículo [contenedores: archivos compuestos](../../mfc/containers-compound-files.md)...
+Para usar `COleDocument`, derivar una clase y agregar la funcionalidad para administrar la aplicación los datos que no son compatibles con OLE, así como elementos incrustados o vinculados. Si define `CDocItem`-las clases derivadas deben almacenar datos nativos de la aplicación, puede usar la implementación predeterminada definida por `COleDocument` para almacenar los datos que no son compatibles con OLE y OLE. También puede diseñar sus propias estructuras de datos para almacenar los datos que no son compatibles con OLE por separado de los elementos OLE. Para obtener más información, vea el artículo [contenedores: Archivos compuestos](../../mfc/containers-compound-files.md)...
 
 `CDocument` admite el envío del documento a través de correo electrónico si no hay soporte técnico de mail (MAPI). `COleDocument` actualizó [OnFileSendMail](#onfilesendmail) para controlar correctamente los documentos compuestos. Para obtener más información, consulte los artículos [MAPI](../../mfc/mapi.md) y [compatibilidad MAPI en MFC](../../mfc/mapi-support-in-mfc.md)...
 
@@ -166,7 +166,7 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 *ptd*<br/>
 Puntero a un `DVTARGETDEVICE` estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
 
-*PPD*<br/>
+*ppd*<br/>
 Puntero a un `PRINTDLG` estructuras de datos que contiene información sobre el nuevo dispositivo de destino de impresión. Puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -201,12 +201,12 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si la compatibilidad con archivos compuestos está habilitado o deshabilitado.
 
 ### <a name="remarks"></a>Comentarios
 
-También se denomina almacenamiento estructurado. Se suele llamar a esta función desde el constructor de su `COleDocument`-clase derivada. Para obtener más información acerca de los documentos compuestos, vea el artículo [contenedores: archivos compuestos](../../mfc/containers-compound-files.md)...
+También se denomina almacenamiento estructurado. Se suele llamar a esta función desde el constructor de su `COleDocument`-clase derivada. Para obtener más información acerca de los documentos compuestos, vea el artículo [contenedores: Archivos compuestos](../../mfc/containers-compound-files.md)...
 
 Si no se llama a esta función miembro, los documentos se almacenarán en un formato de archivo ("plano") no estructurada.
 
@@ -222,7 +222,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que muestra el documento contenedor.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -239,7 +239,7 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Una referencia a una posición de valor establecido por una llamada anterior a `GetNextClientItem`; el valor inicial es devuelto por la `GetStartPosition` función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -264,7 +264,7 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Una referencia a una posición de valor establecido por una llamada anterior a `GetNextItem`; el valor inicial es devuelto por la `GetStartPosition` función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -289,7 +289,7 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Una referencia a una posición de valor establecido por una llamada anterior a `GetNextServerItem`; el valor inicial es devuelto por la `GetStartPosition` función miembro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -548,4 +548,3 @@ Esto permite que el marco de trabajo preguntar al usuario para guardar el docume
 [Ejemplo de MFC MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument (clase)](../../mfc/reference/cdocument-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

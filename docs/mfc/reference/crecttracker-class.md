@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259586"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (clase)
 
@@ -72,12 +72,12 @@ class CRectTracker
 |[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Llamado cuando se dibuja el borde de un `CRectTracker` objeto.|
 |[CRectTracker::GetHandleMask](#gethandlemask)|Se llama para obtener la máscara de un `CRectTracker` controladores de tamaño del elemento.|
 |[CRectTracker::GetTrueRect](#gettruerect)|Devuelve el ancho y alto del rectángulo, incluidos los controladores de tamaño.|
-|[CRectTracker:: HitTest](#hittest)|Devuelve la posición actual del cursor relacionados con la `CRectTracker` objeto.|
+|[CRectTracker::HitTest](#hittest)|Devuelve la posición actual del cursor relacionados con la `CRectTracker` objeto.|
 |[CRectTracker::NormalizeHit](#normalizehit)|Normaliza un código de prueba de posicionamiento.|
 |[CRectTracker::OnChangedRect](#onchangedrect)|Se llama cuando se cambia el tamaño o mover el rectángulo.|
-|[CRectTracker:: SetCursor](#setcursor)|Establece el cursor, dependiendo de su posición en el rectángulo.|
+|[CRectTracker::SetCursor](#setcursor)|Establece el cursor, dependiendo de su posición en el rectángulo.|
 |[CRectTracker::Track](#track)|Permite al usuario manipular el rectángulo.|
-|[CRectTracker:: TrackRubberBand](#trackrubberband)|Permite al usuario "goma" de la selección.|
+|[CRectTracker::TrackRubberBand](#trackrubberband)|Permite al usuario "goma" de la selección.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -210,7 +210,7 @@ Puntero a la ventana que se usará en el rectángulo de recorte.
 *pDC*<br/>
 Puntero al contexto de dispositivo en el que se va a dibujar.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana en la que se producirá el dibujo.
 
 ### <a name="remarks"></a>Comentarios
@@ -260,7 +260,7 @@ Puntero a la `RECT` coordina la estructura que contiene el dispositivo de la `CR
 
 Las dimensiones del rectángulo incluyen el alto y ancho de los controladores de tamaño situado en el borde exterior. Al volver, *lpTrueRect* siempre es un rectángulo normalizado en coordenadas de dispositivo.
 
-##  <a name="hittest"></a>  CRectTracker:: HitTest
+##  <a name="hittest"></a>  CRectTracker::HitTest
 
 Llame a esta función para averiguar si el usuario ha tomado un controlador de tamaño.
 
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 El punto en coordenadas de dispositivo, para probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -381,7 +381,7 @@ En el momento en los que se llama a esta función, todos los comentarios que se 
 
 Reemplace esta función cuando desea realizar acciones después de que ha cambiado el tamaño del rectángulo.
 
-##  <a name="setcursor"></a>  CRectTracker:: SetCursor
+##  <a name="setcursor"></a>  CRectTracker::SetCursor
 
 Llame a esta función para cambiar la forma del cursor mientras está sobre el `CRectTracker` región del objeto.
 
@@ -393,7 +393,7 @@ BOOL SetCursor(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que contiene actualmente el cursor.
 
 *nHitTest*<br/>
@@ -421,10 +421,10 @@ BOOL Track(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 El objeto de ventana que contiene el rectángulo.
 
-*punto*<br/>
+*point*<br/>
 Coordenadas de dispositivo de la posición actual del mouse relativa al área de cliente.
 
 *bAllowInvert*<br/>
@@ -445,7 +445,7 @@ Esta función capturará el mouse hasta que el usuario suelta el botón primario
 
 Si *bAllowInvert* es TRUE, el rectángulo de seguimiento se puede invertir en el eje x o del eje y.
 
-##  <a name="trackrubberband"></a>  CRectTracker:: TrackRubberBand
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand
 
 Llame a esta función para realizar la selección de banda de goma.
 
@@ -458,10 +458,10 @@ BOOL TrackRubberBand(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 El objeto de ventana que contiene el rectángulo.
 
-*punto*<br/>
+*point*<br/>
 Coordenadas de dispositivo de la posición actual del mouse relativa al área de cliente.
 
 *bAllowInvert*<br/>

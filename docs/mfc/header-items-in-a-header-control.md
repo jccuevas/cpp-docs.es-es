@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-ms.openlocfilehash: 3b872473fcd90f09eecafe65adefc7ab66dfd9e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31b6bcb134b62fc11df78a846b3c256a2ef69c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607719"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264890"
 ---
 # <a name="header-items-in-a-header-control"></a>Elementos de encabezado en un control de encabezado
 
@@ -33,4 +33,3 @@ Puede personalizar la apariencia y el contenido de los elementos nuevos cuando s
 ## <a name="see-also"></a>Vea también
 
 [Uso de CHeaderCtrl](../mfc/using-cheaderctrl.md)
-

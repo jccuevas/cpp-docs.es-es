@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495932"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301888"
 ---
 # <a name="synchronization-data-structures"></a>Estructuras de datos de sincronización
 
@@ -45,7 +45,7 @@ La siguiente tabla muestra los métodos importantes que se definen mediante la `
 
 [[Arriba](#top)]
 
-##  <a name="reader_writer_lock"></a> reader_writer_lock)
+##  <a name="reader_writer_lock"></a> reader_writer_lock
 
 El [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) clase proporciona las operaciones de lectura/escritura de subprocesos a los datos compartidos. Usar bloqueos de lector/escritor cuando varios subprocesos requieren acceso de lectura simultánea a un recurso compartido, pero rara vez se escriben en dicho recurso compartido. Esta clase proporciona acceso de escritura de un solo subproceso a un objeto en cualquier momento.
 
@@ -97,7 +97,7 @@ La siguiente tabla muestra algunos de los métodos importantes que se definen me
 
 |Método|Descripción|
 |------------|-----------------|
-|[Espere](reference/event-class.md#wait)|Espera a que se señale el evento.|
+|[wait](reference/event-class.md#wait)|Espera a que se señale el evento.|
 |[set](reference/event-class.md#set)|Establece el evento en el estado señalado.|
 |[reset](reference/event-class.md#reset)|Establece el evento en el estado no señalado.|
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|Espera a que se señalen varios eventos.|
@@ -115,4 +115,3 @@ Compara el comportamiento de las estructuras de datos de sincronización a los p
 
 [Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime.md)<br/>
 Se describe el Runtime de simultaneidad, que simplifica la programación en paralelo, y contiene vínculos a los temas relacionados.
-

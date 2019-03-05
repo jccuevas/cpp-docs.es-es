@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476660"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270194"
 ---
 # <a name="extent-class-c-amp"></a>extent (Clase) (C++ AMP)
 
@@ -39,7 +39,7 @@ El rango de la `extent` objeto.
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="members"></a>Miembros
 
@@ -53,9 +53,9 @@ El rango de la `extent` objeto.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Contiene](#contains)|Comprueba que el especificado `extent` objeto tiene el rango especificado.|
+|[contains](#contains)|Comprueba que el especificado `extent` objeto tiene el rango especificado.|
 |[size](#size)|Devuelve el tamaño lineal total de la extensión (en unidades de elementos).|
-|[icono](#tile)|Genera un `tiled_extent` objeto con extensiones de mosaico proporcionadas por las dimensiones especificadas.|
+|[tile](#tile)|Genera un `tiled_extent` objeto con extensiones de mosaico proporcionadas por las dimensiones especificadas.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -66,7 +66,7 @@ El rango de la `extent` objeto.
 |[operator%=](#operator_mod_eq)|Calcula el módulo (resto) de cada elemento en el `extent` cuando dicho elemento se divide por un número de objetos.|
 |[operator*=](#operator_star_eq)|Multiplica cada elemento de la `extent` objeto según un número.|
 |[operator/=](#operator_min_eq)|Divide cada elemento de la `extent` objeto según un número.|
-|[Extent:: operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
+|[extent::operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
 |[operator+](#operator_add)|Devuelve un nuevo `extent` objeto que se crea al agregar los correspondientes `index` y `extent` elementos.|
 |[operator++](#operator_add_add)|Incrementa cada elemento de la `extent` objeto.|
 |[operator+=](#operator_add_eq)|Agrega el número especificado a cada elemento de la `extent` objeto.|
@@ -77,7 +77,7 @@ El rango de la `extent` objeto.
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Rank (constante)](#rank)|Obtiene el rango de la `extent` objeto.|
+|[rank Constant](#rank)|Obtiene el rango de la `extent` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -134,7 +134,7 @@ La longitud de la dimensión para la mayoría-significativo.
 *_I2*<br/>
 La longitud de la dimensión menos significativa.
 
-*_Otro*<br/>
+*_Other*<br/>
 Un `extent` objeto en el que el nuevo `extent` se basa el objeto.
 
 ## <a name="remarks"></a>Comentarios
@@ -322,7 +322,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `extent` objeto que se va a copiar desde.
 
 ### <a name="return-value"></a>Valor devuelto

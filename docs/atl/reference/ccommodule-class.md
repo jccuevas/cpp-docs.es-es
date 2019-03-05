@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589454"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298937"
 ---
 # <a name="ccommodule-class"></a>CComModule (clase)
 
@@ -61,13 +61,13 @@ class CComModule : public _ATL_MODULE
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Devuelve `m_hInst`.|
 |[CComModule::GetResourceInstance](#getresourceinstance)|Devuelve `m_hInstResource`.|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|Devuelve `m_hInstTypeLib`.|
-|[Ejecución](#init)|Inicializa a los miembros de datos.|
+|[CComModule::Init](#init)|Inicializa a los miembros de datos.|
 |[CComModule::RegisterClassHelper](#registerclasshelper)|Entra en el registro de clase estándar de un objeto en el registro del sistema.|
 |[CComModule::RegisterClassObjects](#registerclassobjects)|Registra el objeto de clase. Para archivos exe solo.|
 |[CComModule::RegisterServer](#registerserver)|Actualiza el registro del sistema para cada objeto de mapa de objetos.|
 |[CComModule::RegisterTypeLib](#registertypelib)|Registra una biblioteca de tipos.|
 |[CComModule::RevokeClassObjects](#revokeclassobjects)|Revoca el objeto de clase. Para archivos exe solo.|
-|[CComModule:: term](#term)|Libera los miembros de datos.|
+|[CComModule::Term](#term)|Libera los miembros de datos.|
 |[CComModule::UnregisterClassHelper](#unregisterclasshelper)|Quita el registro de clase estándar de un objeto desde el registro del sistema.|
 |[CComModule::UnregisterServer](#unregisterserver)|Anula el registro de cada objeto en el mapa de objetos.|
 |[CComModule::UpdateRegistryClass](#updateregistryclass)|Registra o anula el registro de registro de clase estándar de un objeto.|
@@ -140,7 +140,7 @@ HRESULT GetClassObject(
 *riid*<br/>
 [in] IID de la interfaz solicitada.
 
-*PPV*<br/>
+*ppv*<br/>
 [out] Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppv* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -201,7 +201,7 @@ HINSTANCE.
 
 Devuelve el [m_hInstTypeLib](#m_hinsttypelib) miembro de datos.
 
-##  <a name="init"></a>  Ejecución
+##  <a name="init"></a>  CComModule::Init
 
 A partir de ATL 7.0, `CComModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.
 
@@ -340,7 +340,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] El CLSID del objeto que se registrarán.
 
 *lpszProgID*<br/>
@@ -404,7 +404,7 @@ HRESULT RegisterServer(
 *bRegTypeLib*<br/>
 [in] Indica si se registrará la biblioteca de tipos. El valor predeterminado es FALSE.
 
-*pTypeInfo*<br/>
+*pCLSID*<br/>
 [in] Señala el CLSID del objeto que se registrarán. Si es NULL (valor predeterminado), todos los objetos en el mapa de objetos que se registra.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -461,7 +461,7 @@ Un valor HRESULT estándar.
 
 Quita el objeto de clase. Este método solo está disponible para archivos exe.
 
-##  <a name="term"></a>  CComModule:: term
+##  <a name="term"></a>  CComModule::Term
 
 A partir de ATL 7.0, `CComModule` está obsoleta: vea [clases de módulo ATL](../../atl/atl-module-classes.md) para obtener más detalles.
 
@@ -486,7 +486,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] El CLSID del objeto que se va a anular.
 
 *lpszProgID*<br/>
@@ -519,7 +519,7 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 *bUnRegTypeLib*<br/>
 Si es TRUE, la biblioteca de tipos también se anula el registrada.
 
-*pTypeInfo*<br/>
+*pCLSID*<br/>
 Señala el CLSID del objeto que se va a anular. Si es NULL (valor predeterminado), todos los objetos en el mapa de objetos se anulará.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -558,7 +558,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 El CLSID del objeto que se registra o no.
 
 *lpszProgID*<br/>
@@ -576,7 +576,7 @@ Una cadena que contiene la descripción del objeto.
 *dwFlags*<br/>
 Especifica el modelo de subprocesos para escribir en el registro. Los valores posibles son THREADFLAGS_APARTMENT, THREADFLAGS_BOTH o AUTPRXFLAG.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Indica si se debe registrar el objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -617,7 +617,7 @@ virtual HRESULT UpdateRegistryFromResourceD(
 *nResID*<br/>
 [in] Un identificador de recurso.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 [in] Indica si se debe registrar el objeto.
 
 *pMapEntries*<br/>
@@ -667,7 +667,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
 *nResID*<br/>
 [in] Un identificador de recurso.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 [in] Indica si se debe registrar el script del recurso.
 
 *pMapEntries*<br/>

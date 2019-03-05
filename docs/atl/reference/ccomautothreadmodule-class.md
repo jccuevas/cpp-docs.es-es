@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 805227144887b29d85b1948f62060ffe9eb2d0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272001"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule (clase)
 
@@ -53,7 +53,7 @@ class CComAutoThreadModule : public CComModule
 |[GetDefaultThreads](#getdefaultthreads)|(Estático) Calcula dinámicamente el número de subprocesos para el módulo en función del número de procesadores.|
 |[Init](#init)|Crea subprocesos del módulo.|
 |[Bloqueo](#lock)|Incrementa el recuento de bloqueos en el módulo y en el subproceso actual.|
-|[Desbloquear](#unlock)|Disminuye el recuento de bloqueos en el módulo y en el subproceso actual.|
+|[Unlock](#unlock)|Disminuye el recuento de bloqueos en el módulo y en el subproceso actual.|
 
 ### <a name="data-members"></a>Miembros de datos
 

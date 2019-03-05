@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: f8d93362f9e341087e9213d07475501a26d79d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288888"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane (clase)
 
@@ -77,7 +77,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |`CMFCOutlookBarPane::CanBeRestored`|Determina si el sistema puede restaurar una barra de herramientas a su estado original después de la personalización. (Invalida [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
 |[CMFCOutlookBarPane::ClearAll](#clearall)|Libera los recursos utilizados por las imágenes en el panel de la barra de Outlook.|
 |[CMFCOutlookBarPane::Create](#create)|Crea el panel de la barra de Outlook.|
-|`CMFCOutlookBarPane::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCOutlookBarPane::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |`CMFCOutlookBarPane::Dock`|Lo llama el marco para acoplar el panel de la barra de Outlook. (Invalida `CPane::Dock`).|
 |[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Especifica si las flechas de desplazamiento en el panel de la barra de Outlook avanzar la lista de botones de página o el botón.|
 |[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Devuelve el color del texto normal (no seleccionado) del panel de barra de Outlook.|
@@ -401,7 +401,7 @@ void SetBackColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Especifica el nuevo color de fondo.
 
 ### <a name="remarks"></a>Comentarios
@@ -473,7 +473,7 @@ void SetTransparentColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 Especifica el nuevo color transparente.
 
 ### <a name="remarks"></a>Comentarios

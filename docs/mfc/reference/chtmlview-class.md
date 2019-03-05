@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295999"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (clase)
 
@@ -389,7 +389,7 @@ Apunta a una cadena de caracteres terminada en null que representa el nombre de 
 *dwStyle*<br/>
 Especifica los atributos de estilo de ventana. De forma predeterminada, se establecen los estilos WS_VISIBLE y WS_CHILD Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el tamaño y posición de la ventana. El *rectDefault* valor permite que Windows especificar el tamaño y posición de la nueva ventana.
 
 *pParentWnd*<br/>
@@ -415,7 +415,7 @@ virtual BOOL CreateControlSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*que pContainer*<br/>
+*pContainer*<br/>
 Un puntero a un [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) objeto que contiene el control.
 
 *ppSite*<br/>
@@ -424,7 +424,7 @@ Un puntero a un puntero a un [COleControlSite](../../mfc/reference/colecontrolsi
 *nID*<br/>
 El identificador del control que se va a hospedar.
 
-*CLSID*<br/>
+*clsid*<br/>
 El CLSID del control que se va a hospedar
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1171,10 +1171,10 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ncomando*<br/>
+*nCommand*<br/>
 Identificador del comando cuyo estado habilitado ha cambiado.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Estado habilitado. Este parámetro es distinto de cero si el comando está habilitado, o cero si está deshabilitado.
 
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete
@@ -1401,7 +1401,7 @@ virtual HRESULT OnGetOptionKeyPath(
 *pchKey*<br/>
 Dirección de un `LPOLESTR` que recibe la cadena de subclaves del registro donde el host almacena sus opciones predeterminadas. Esta subclave se encontrarán en la clave HKEY_CURRENT_USER. Asignar esta memoria con [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc). La aplicación que realiza la llamada es responsable de liberar esta memoria mediante [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree). Este parámetro siempre debe inicializarse en NULL, incluso si se produce un error en el método.
 
-*dwReservado*<br/>
+*dwReserved*<br/>
 Reservado para un uso futuro. No se están utilizando.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1861,13 +1861,13 @@ Un puntero a una cadena que contiene el nombre de la propiedad para establecer.
 *dValue*<br/>
 Nuevo valor de la propiedad.
 
-*valor l*<br/>
+*lValue*<br/>
 Nuevo valor de la propiedad.
 
 *lpszValue*<br/>
 Un puntero a una cadena que contiene el nuevo valor de la propiedad.
 
-*nvalor*<br/>
+*nValue*<br/>
 Nuevo valor de la propiedad.
 
 ### <a name="remarks"></a>Comentarios
@@ -2237,4 +2237,3 @@ Se aplica a Internet Explorer y WebBrowser.
 [CFormView (clase)](../../mfc/reference/cformview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

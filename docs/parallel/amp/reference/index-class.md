@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 921d87de72c13e1971d9b40474bf3d91033c0580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284650"
 ---
 # <a name="index-class"></a>index (Clase)
 
@@ -47,7 +47,7 @@ El rango o número de dimensiones.
 |[operator(mod)=](#operator_mod_eq)|Calcula el módulo (resto) de cada elemento en el `index` cuando dicho elemento se divide por un número de objetos.|
 |[operator*=](#operator_star_eq)|Multiplica cada elemento de la `index` objeto según un número.|
 |[operator/=](#operator_div_eq)|Divide cada elemento de la `index` objeto según un número.|
-|[Index:: operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
+|[index::operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
 |[operator++](#operator_add_add)|Incrementa cada elemento de la `index` objeto.|
 |[operator+=](#operator_add_eq)|Agrega el número especificado a cada elemento de la `index` objeto.|
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `index` objeto en este.|
@@ -57,7 +57,7 @@ El rango o número de dimensiones.
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Rank (constante)](#rank)|Almacena el rango de la `index` objeto.|
+|[rank Constant](#rank)|Almacena el rango de la `index` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -71,7 +71,7 @@ El `index` estructura representa un vector de coordenadas de *N* enteros que esp
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="index_ctor"></a> índice de Constructor
 
@@ -121,7 +121,7 @@ La longitud de la dimensión para la mayoría-significativo.
 *_I2*<br/>
 La longitud de la dimensión menos significativa.
 
-*_Otro*<br/>
+*_Other*<br/>
 Un objeto de índice en el que se basa el nuevo objeto de índice.
 
 ## <a name="operator--"></a>  operator--
@@ -139,7 +139,7 @@ index operator--(
 
 Para el operador de prefijo, el objeto de índice (* esto). Para el operador sufijo, un nuevo objeto de índice.
 
-## <a name="operator_mod_eq"></a>  Operator(MOD) =
+## <a name="operator_mod_eq"></a>  operator(mod)=
 
 Calcula el módulo (resto) de cada elemento en el objeto de índice cuando dicho elemento se divide por el número especificado.
 
@@ -157,7 +157,7 @@ El número que se divide por para encontrar el módulo.
 ## <a name="return-value"></a>Valor devuelto
 El objeto de índice.
 
-## <a name="operator_star_eq"></a>  operador * =
+## <a name="operator_star_eq"></a>  operator*=
 
 Multiplica cada elemento en el objeto de índice por el número especificado.
 ```
@@ -171,7 +171,7 @@ index<_Rank>& operator*=(
 *_Rhs*<br/>
 El número que se va a multiplicar.
 
-## <a name="operator_div_eq"></a>  operador / =
+## <a name="operator_div_eq"></a>  operator/=
 
 Divide cada elemento en el objeto de índice por el número especificado.
 
@@ -220,7 +220,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>  operator ++
+## <a name="operator_add_add"></a>  operator++
 
 Incrementa cada elemento del objeto index.
 ```
@@ -235,7 +235,7 @@ index<_Rank> operator++(
 
 Para el operador de prefijo, el objeto de índice (* esto). Para el operador sufijo, un nuevo objeto de índice.
 
-## <a name="operator_add_eq"></a>  operator +=
+## <a name="operator_add_eq"></a>  operator+=
 
 Agrega el número especificado a cada elemento del objeto index.
 ```
@@ -268,14 +268,14 @@ index<_Rank>& operator=(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 Para copiar desde el objeto de índice.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Una referencia a este objeto de índice.
 
-## <a name="operator_-_eq"></a>  operador =
+## <a name="operator_-_eq"></a>  operator-=
 
 Resta el número especificado de cada elemento del objeto de índice.
 ```

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271156"
 ---
 # <a name="connection-maps"></a>Mapas de conexiones
 
@@ -25,7 +25,7 @@ Normalmente, un control será compatible con solo dos puntos de conexión: uno p
 
 |||
 |-|-|
-|[MACROS BEGIN_CONNECTION_PART](#begin_connection_part)|Declara una clase incrustada que implementa un punto de conexión adicionales (debe usarse en la declaración de clase).|
+|[BEGIN_CONNECTION_PART](#begin_connection_part)|Declara una clase incrustada que implementa un punto de conexión adicionales (debe usarse en la declaración de clase).|
 |[END_CONNECTION_PART](#end_connection_part)|Finaliza la declaración de un punto de conexión (debe usarse en la declaración de clase).|
 |[CONNECTION_IID](#connection_iid)|Especifica el identificador de interfaz de punto de conexión del control.|
 |[DECLARE_CONNECTION_MAP](#declare_connection_map)|Declara que se utilizará un mapa de conexión en una clase (debe usarse en la declaración de clase).|
@@ -42,7 +42,7 @@ Las siguientes funciones de ayudar a un receptor de establecer y desconectar una
 |[AfxConnectionAdvise](#afxconnectionadvise)|Establece una conexión entre un origen y receptor.|
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|Interrumpe una conexión entre un origen y un receptor.|
 
-##  <a name="begin_connection_part"></a>  MACROS BEGIN_CONNECTION_PART
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART
 
 Utilice el BEGIN_CONNECTION_PART (macro) para empezar a la definición de puntos de conexión adicionales más allá de los puntos de conexión de notificación de evento y la propiedad.
 
@@ -93,7 +93,7 @@ CONNECTION_IID(iid)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 El identificador de interfaz de la interfaz denominada por el punto de conexión.
 
 ### <a name="remarks"></a>Comentarios
@@ -173,7 +173,7 @@ CONNECTION_PART(theClass, iid, localClass)
 *theClass*<br/>
 Especifica el nombre de la clase del control cuya conexión apunte esto.
 
-*IID*<br/>
+*iid*<br/>
 El identificador de interfaz de la interfaz denominada por el punto de conexión.
 
 *localClass*<br/>
@@ -212,7 +212,7 @@ Un puntero al objeto que llama a la interfaz.
 *pUnkSink*<br/>
 Un puntero al objeto que implementa la interfaz.
 
-*IID*<br/>
+*iid*<br/>
 El identificador de interfaz de la conexión.
 
 *bRefCount*<br/>
@@ -254,7 +254,7 @@ Un puntero al objeto que llama a la interfaz.
 *pUnkSink*<br/>
 Un puntero al objeto que implementa la interfaz.
 
-*IID*<br/>
+*iid*<br/>
 El identificador de interfaz de la interfaz de punto de conexión.
 
 *bRefCount*<br/>

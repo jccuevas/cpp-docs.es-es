@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 1997e56fb0b524ffd6cca5dc9d5983fda25a42e1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518611"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269778"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound (clase)
 
@@ -46,7 +46,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Establece el `CComSafeArrayBound` a un nuevo valor.|
+|[operator =](#operator_eq)|Establece el `CComSafeArrayBound` a un nuevo valor.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -133,8 +133,8 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Enlazado*<br/>
-Un objeto `CComSafeArrayBound`.
+*bound*<br/>
+Objeto `CComSafeArrayBound`.
 
 *ulCount*<br/>
 Número de elementos.

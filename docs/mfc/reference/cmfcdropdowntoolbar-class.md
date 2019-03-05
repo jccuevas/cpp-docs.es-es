@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176944"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303558"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar (clase)
 
@@ -72,7 +72,7 @@ Para insertar la barra de herramientas desplegable en una barra de herramientas 
 
 3. Reemplazar el botón ficticio con la `CMFCDropDownToolBarButton` objeto mediante el uso de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Para obtener más información acerca de los botones de barra de herramientas, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de una barra de herramientas de la lista desplegable, vea el proyecto de ejemplo VisualStudioDemo.
+Para obtener más información acerca de los botones de barra de herramientas, consulte [Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de una barra de herramientas de la lista desplegable, vea el proyecto de ejemplo VisualStudioDemo.
 
 ## <a name="example"></a>Ejemplo
 
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú normal.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] TRUE para bloquear la barra de herramientas; en caso contrario, FALSE.
 
 *uiDisabledResID*<br/>
@@ -202,7 +202,7 @@ afx_msg void OnLButtonUp(
 
 [in] *nFlags*<br/>
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -218,7 +218,7 @@ afx_msg void OnMouseMove(
 
 [in] *nFlags*<br/>
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -260,5 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton (clase)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

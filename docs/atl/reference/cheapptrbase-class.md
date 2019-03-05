@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290088"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase (clase)
 
@@ -39,7 +39,7 @@ class CHeapPtrBase
 *T*<br/>
 El tipo de objeto que se almacenará en el montón.
 
-*Asignador*<br/>
+*Allocator*<br/>
 La clase de asignación de memoria que utilice. De forma predeterminada, las rutinas de CRT se usan para asignar y liberar memoria.
 
 ## <a name="members"></a>Miembros
@@ -48,7 +48,7 @@ La clase de asignación de memoria que utilice. De forma predeterminada, las rut
 
 |Name|Descripción|
 |----------|-----------------|
-|[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|Destructor.|
+|[CHeapPtrBase::~CHeapPtrBase](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -64,7 +64,7 @@ La clase de asignación de memoria que utilice. De forma predeterminada, las rut
 
 |Name|Descripción|
 |----------|-----------------|
-|[CHeapPtrBase::operator T *](#operator_t_star)|El operador de conversión.|
+|[CHeapPtrBase::operator T*](#operator_t_star)|El operador de conversión.|
 |[CHeapPtrBase::operator &](#operator_amp)|El & operador.|
 |[CHeapPtrBase::operator ->](#operator_ptr)|El operador de puntero a miembro.|
 
@@ -122,7 +122,7 @@ Cuando un `CHeapPtrBase` objeto toma posesión de un puntero, eliminará automá
 
 En las compilaciones de depuración, se producirá un error de aserción si el [CHeapPtrBase::m_pData](#m_pdata) variable miembro apunta actualmente a un valor existente; es decir, no es igual a NULL.
 
-##  <a name="dtor"></a>  CHeapPtrBase:: ~ CHeapPtrBase
+##  <a name="dtor"></a>  CHeapPtrBase::~CHeapPtrBase
 
 Destructor.
 
@@ -186,7 +186,7 @@ T** operator&() throw();
 
 Devuelve la dirección del objeto que apunta el `CHeapPtrBase` objeto.
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator -&gt;
 
 El operador de puntero a miembro.
 

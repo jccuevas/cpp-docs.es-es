@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303612"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager (clase)
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|Carga las tablas de clave de acceso directo desde el registro de Windows.|
 |[CKeyboardManager::ResetAll](#resetall)|Vuelve a cargar las tablas de clave de acceso directo desde el recurso de aplicación.|
 |[CKeyboardManager::SaveState](#savestate)|Guarda el acceso directo de las tablas de clave en el registro de Windows.|
-|[Showallaccelerators](#showallaccelerators)|Especifica si el marco de trabajo muestra todas las teclas de método abreviado para todos los comandos o una clave de acceso directo único para cada comando. Este método no afecta a los comandos que tienen solo una tecla de método abreviado.|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Especifica si el marco de trabajo muestra todas las teclas de método abreviado para todos los comandos o una clave de acceso directo único para cada comando. Este método no afecta a los comandos que tienen solo una tecla de método abreviado.|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Convierte un carácter en su registro superior.|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Actualiza una tabla de clave de acceso directo con una nueva tabla de clave de acceso directo.|
 
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Parámetro|Descripción|
-|*NChar*|[in] El carácter que este método comprueba.|
+|*nChar*|[in] El carácter que este método comprueba.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -292,7 +292,7 @@ Si el *lpszProfileName* parámetro es NULL, este método se escribirá el `CKeyb
 
 Si no especifica una ventana de forma predeterminada, se usará la ventana de marco principal como la ventana de forma predeterminada.
 
-##  <a name="showallaccelerators"></a>  Showallaccelerators
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
 
 Muestra todas las teclas de método abreviado asociadas con los comandos de menú.
 
@@ -326,7 +326,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 [in] El carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -382,4 +382,3 @@ Utilice esta función para reemplazar la tabla de acceso directo existente con n
 [CWinAppEx (clase)](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Personalización del teclado y del mouse](../../mfc/keyboard-and-mouse-customization.md)
-

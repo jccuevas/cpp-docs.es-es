@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496023"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261354"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 
@@ -95,7 +95,7 @@ class CHeaderCtrl : public CWnd
 |----------|-----------------|
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Borra todos los filtros de un control de encabezado.|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Borra el filtro para un control de encabezado.|
-|[CHeaderCtrl:: Create](#create)|Crea un control de encabezado y lo adjunta a un `CHeaderCtrl` objeto.|
+|[CHeaderCtrl::Create](#create)|Crea un control de encabezado y lo adjunta a un `CHeaderCtrl` objeto.|
 |[CHeaderCtrl::CreateDragImage](#createdragimage)|Crea una versión transparente de imagen de un elemento dentro de un control de encabezado.|
 |[CHeaderCtrl::CreateEx](#createex)|Crea un control de encabezado con los estilos extendidos de Windows especificados y lo asocia a un `CListCtrl` objeto.|
 |[CHeaderCtrl::DeleteItem](#deleteitem)|Elimina un elemento de un control de encabezado.|
@@ -104,23 +104,23 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::GetBitmapMargin](#getbitmapmargin)|Recupera el ancho del margen de un mapa de bits en un control de encabezado.|
 |[CHeaderCtrl::GetFocusedItem](#getfocuseditem)|Obtiene el identificador del elemento en el control de encabezado actual que tiene el foco.|
 |[CHeaderCtrl::GetImageList](#getimagelist)|Recupera el identificador de una lista de imágenes que se usa para dibujar elementos de encabezado en un control de encabezado.|
-|[CHeaderCtrl:: GetItem](#getitem)|Recupera información sobre un elemento en un control de encabezado.|
+|[CHeaderCtrl::GetItem](#getitem)|Recupera información sobre un elemento en un control de encabezado.|
 |[CHeaderCtrl::GetItemCount](#getitemcount)|Recupera un recuento de los elementos de un control de encabezado.|
 |[CHeaderCtrl::GetItemDropDownRect](#getitemdropdownrect)|Obtiene la información del rectángulo delimitador para el botón de lista desplegable especificado en un control de encabezado.|
 |[CHeaderCtrl::GetItemRect](#getitemrect)|Recupera el rectángulo delimitador para un elemento determinado en un control de encabezado.|
-|[CHeaderCtrl:: GetOrderArray](#getorderarray)|Recupera el orden de izquierda a derecha de los elementos de un control de encabezado.|
+|[CHeaderCtrl::GetOrderArray](#getorderarray)|Recupera el orden de izquierda a derecha de los elementos de un control de encabezado.|
 |[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|Obtiene el rectángulo delimitador del botón de desbordamiento para el control de encabezado actual.|
 |[CHeaderCtrl::HitTest](#hittest)|Determina qué elemento de encabezado, si existe, se encuentra en un punto especificado.|
-|[:: InsertItem](#insertitem)|Inserta un nuevo elemento en un control de encabezado.|
-|[CHeaderCtrl:: Layout](#layout)|Recupera el tamaño y posición de un control de encabezado dentro de un rectángulo determinado.|
+|[CHeaderCtrl::InsertItem](#insertitem)|Inserta un nuevo elemento en un control de encabezado.|
+|[CHeaderCtrl::Layout](#layout)|Recupera el tamaño y posición de un control de encabezado dentro de un rectángulo determinado.|
 |[CHeaderCtrl::OrderToIndex](#ordertoindex)|Recupera el valor de índice para un elemento basándose en su orden en el control de encabezado.|
 |[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|Establece el ancho del margen de un mapa de bits en un control de encabezado.|
 |[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|Establece el intervalo de tiempo de espera entre el momento en que realiza un cambio en los atributos de filtro y el registro de un `HDN_FILTERCHANGE` notificación.|
 |[CHeaderCtrl::SetFocusedItem](#setfocuseditem)|Establece el foco a un elemento de encabezado especificado en el control de encabezado actual.|
 |[CHeaderCtrl::SetHotDivider](#sethotdivider)|Arrastre el divisor entre elementos de encabezado para indicar un manual de los cambios y soltar un elemento de encabezado.|
-|[CHeaderCtrl:: SetImageList](#setimagelist)|Asigna una lista de imágenes a un control de encabezado.|
-|[CHeaderCtrl:: SetItem](#setitem)|Establece los atributos del elemento especificado en un control de encabezado.|
-|[CHeaderCtrl:: SetOrderArray](#setorderarray)|Establece el orden de izquierda a derecha de los elementos en un control de encabezado.|
+|[CHeaderCtrl::SetImageList](#setimagelist)|Asigna una lista de imágenes a un control de encabezado.|
+|[CHeaderCtrl::SetItem](#setitem)|Establece los atributos del elemento especificado en un control de encabezado.|
+|[CHeaderCtrl::SetOrderArray](#setorderarray)|Establece el orden de izquierda a derecha de los elementos en un control de encabezado.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -213,7 +213,7 @@ Este método implementa el comportamiento del mensaje de Win32 [HDM_CLEARFILTER]
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_3.cpp)]
 
-##  <a name="create"></a>  CHeaderCtrl:: Create
+##  <a name="create"></a>  CHeaderCtrl::Create
 
 Crea un control de encabezado y lo adjunta a un `CHeaderCtrl` objeto.
 
@@ -230,7 +230,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de encabezado. Para obtener una descripción de los estilos de control de encabezado, vea [estilos de Control de encabezado](/windows/desktop/Controls/header-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de encabezado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -300,7 +300,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Estilo del control de encabezado. Para obtener una descripción de los estilos de control de encabezado, vea [estilos de Control de encabezado](/windows/desktop/Controls/header-control-styles) en el SDK de Windows. Consulte [crear](#create) para obtener una lista de estilos adicionales.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -486,7 +486,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [HDM_GET
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#9](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_11.cpp)]
 
-##  <a name="getitem"></a>  CHeaderCtrl:: GetItem
+##  <a name="getitem"></a>  CHeaderCtrl::GetItem
 
 Recupera información sobre un elemento de control de encabezado.
 
@@ -591,7 +591,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 Este método implementa el comportamiento del mensaje de Win32 [HDM_GETITEMRECT](/windows/desktop/Controls/hdm-getitemrect), tal y como se describe en el SDK de Windows.
 
-##  <a name="getorderarray"></a>  CHeaderCtrl:: GetOrderArray
+##  <a name="getorderarray"></a>  CHeaderCtrl::GetOrderArray
 
 Recupera el orden de izquierda a derecha de los elementos de un control de encabezado.
 
@@ -691,7 +691,7 @@ En el ejemplo de código siguiente se muestra el `HitTest` método. En una secci
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
-##  <a name="insertitem"></a>  :: InsertItem
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem
 
 Inserta un nuevo elemento en un control de encabezado en el índice especificado.
 
@@ -717,7 +717,7 @@ Puntero a un [DITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estruc
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]
 
-##  <a name="layout"></a>  CHeaderCtrl:: Layout
+##  <a name="layout"></a>  CHeaderCtrl::Layout
 
 Recupera el tamaño y posición de un control de encabezado dentro de un rectángulo determinado.
 
@@ -858,7 +858,7 @@ int SetHotDivider(int nIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 La posición del puntero. El control de encabezado resalta el divisor adecuado según la posición del puntero.
 
 *nIndex*<br/>
@@ -876,7 +876,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [HDM_SET
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#16](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_21.cpp)]
 
-##  <a name="setimagelist"></a>  CHeaderCtrl:: SetImageList
+##  <a name="setimagelist"></a>  CHeaderCtrl::SetImageList
 
 Asigna una lista de imágenes a un control de encabezado.
 
@@ -901,7 +901,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [HDM_SET
 
   Vea el ejemplo de [CHeaderCtrl::GetImageList](#getimagelist).
 
-##  <a name="setitem"></a>  CHeaderCtrl:: SetItem
+##  <a name="setitem"></a>  CHeaderCtrl::SetItem
 
 Establece los atributos del elemento especificado en un control de encabezado.
 
@@ -927,7 +927,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
   Vea el ejemplo de [CHeaderCtrl:: GetItem](#getitem).
 
-##  <a name="setorderarray"></a>  CHeaderCtrl:: SetOrderArray
+##  <a name="setorderarray"></a>  CHeaderCtrl::SetOrderArray
 
 Establece el orden de izquierda a derecha de los elementos en un control de encabezado.
 

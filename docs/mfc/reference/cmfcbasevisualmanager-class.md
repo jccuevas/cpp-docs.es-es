@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292216"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager (clase)
 
@@ -138,7 +138,7 @@ virtual BOOL DrawCheckBox(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador de la casilla de verificación.
 
 *bHighlighted*<br/>
@@ -149,7 +149,7 @@ virtual BOOL DrawCheckBox(
 
 2 para mixto normal.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] Especifica si la casilla de verificación está habilitada.
 
 *bPressed*<br/>
@@ -187,10 +187,10 @@ virtual BOOL DrawComboBorder(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectángulo del borde de cuadro combinado.
 
-*bDeshabilitado*<br/>
+*bDisabled*<br/>
 [in] Especifica si el borde del cuadro combinado está deshabilitado.
 
 *bIsDropped*<br/>
@@ -221,8 +221,8 @@ virtual BOOL DrawComboDropButton(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*pDC*|[in] Un puntero a un contexto de dispositivo.|
-|*Rect*|[in] El rectángulo delimitador del botón de lista desplegable de cuadro combinado.|
-|*bDeshabilitado*|[in] Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.|
+|*rect*|[in] El rectángulo delimitador del botón de lista desplegable de cuadro combinado.|
+|*bDisabled*|[in] Especifica si el botón de lista desplegable del cuadro combinado está deshabilitado.|
 |*bIsDropped*|[in] Especifica si el botón de lista desplegable del cuadro combinado está desplegado.|
 |*bIsHighlighted*|[in] Especifica si se resalta el botón de lista desplegable del cuadro combinado.|
 
@@ -247,7 +247,7 @@ virtual BOOL DrawPushButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón de inserción.
 
 *pButton*<br/>
@@ -279,7 +279,7 @@ virtual BOOL DrawRadioButton(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón de radio.
 
 *bHighlighted*<br/>
@@ -288,7 +288,7 @@ virtual BOOL DrawRadioButton(
 *bChecked*<br/>
 [in] Especifica si se activa el botón de radio.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 [in] Especifica si está habilitado el botón de radio.
 
 *bPressed*<br/>

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273899"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (clase)
 
@@ -195,9 +195,9 @@ class CDaoRecordset : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDaoRecordset:: AddNew](#addnew)|Se prepara para agregar un nuevo registro. Llame a [actualización](#update) para completar la incorporación.|
+|[CDaoRecordset::AddNew](#addnew)|Se prepara para agregar un nuevo registro. Llame a [actualización](#update) para completar la incorporación.|
 |[CDaoRecordset::CanAppend](#canappend)|Devuelve cero si se pueden agregar nuevos registros en el conjunto de registros a través de la [AddNew](#addnew) función miembro.|
-|[CDaoRecordset:: CanBookmark](#canbookmark)|Devuelve cero si el conjunto de registros admite marcadores.|
+|[CDaoRecordset::CanBookmark](#canbookmark)|Devuelve cero si el conjunto de registros admite marcadores.|
 |[CDaoRecordset::CancelUpdate](#cancelupdate)|Cancela cualquier actualización pendiente debido a un [editar](#edit) o [AddNew](#addnew) operación.|
 |[CDaoRecordset::CanRestart](#canrestart)|Devuelve cero si [Requery](#requery) puede llamarse para volver a ejecutar la consulta.|
 |[CDaoRecordset::CanScroll](#canscroll)|Devuelve cero si puede desplazarse por los registros.|
@@ -205,16 +205,16 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::CanUpdate](#canupdate)|Devuelve cero si se puede actualizar el conjunto de registros (puede agregar, actualizar o eliminar registros).|
 |[CDaoRecordset::Close](#close)|Cierra el conjunto de registros.|
 |[CDaoRecordset::Delete](#delete)|Elimina el registro actual del conjunto de registros. Explícitamente, debe desplazarse a otro registro después de la eliminación.|
-|[CDaoRecordset](#dofieldexchange)|Se llama para intercambiar datos (en ambas direcciones) entre los miembros de datos de campo del conjunto de registros y el registro correspondiente en el origen de datos. Implementa DAO campo intercambio registros (DFX).|
-|[CDaoRecordset:: Edit](#edit)|Prepara los cambios en el registro actual. Llame a `Update` para completar la edición.|
-|[CDaoRecordset:: FillCache](#fillcache)|Llena todo o parte de una caché local para un objeto de conjunto de registros que contiene los datos de un origen de datos ODBC.|
+|[CDaoRecordset::DoFieldExchange](#dofieldexchange)|Se llama para intercambiar datos (en ambas direcciones) entre los miembros de datos de campo del conjunto de registros y el registro correspondiente en el origen de datos. Implementa DAO campo intercambio registros (DFX).|
+|[CDaoRecordset::Edit](#edit)|Prepara los cambios en el registro actual. Llame a `Update` para completar la edición.|
+|[CDaoRecordset::FillCache](#fillcache)|Llena todo o parte de una caché local para un objeto de conjunto de registros que contiene los datos de un origen de datos ODBC.|
 |[CDaoRecordset::Find](#find)|Busca la primera, siguiente, anterior, o la última ubicación de una cadena concreta en un conjunto de registros de tipo dinámico que satisface los criterios especificados y hace que el registro en el registro actual.|
 |[CDaoRecordset::FindFirst](#findfirst)|Busca el primer registro en un tipo dinámico o un conjunto de registros de tipo de instantánea que satisface los criterios especificados y hace que el registro en el registro actual.|
 |[CDaoRecordset::FindLast](#findlast)|Busca el último registro en un tipo dinámico o un conjunto de registros de tipo de instantánea que satisface los criterios especificados y hace que el registro en el registro actual.|
 |[CDaoRecordset::FindNext](#findnext)|Busca el siguiente registro en un tipo dinámico o un conjunto de registros de tipo de instantánea que satisface los criterios especificados y hace que el registro en el registro actual.|
 |[CDaoRecordset::FindPrev](#findprev)|Busca el registro anterior en un tipo dinámico o un conjunto de registros de tipo de instantánea que satisface los criterios especificados y hace que el registro en el registro actual.|
-|[CDaoRecordset:: GetAbsolutePosition](#getabsoluteposition)|Devuelve el número de registro del registro actual del objeto de un conjunto de registros.|
-|[CDaoRecordset:: GetBookmark](#getbookmark)|Devuelve un valor que representa el marcador en un registro.|
+|[CDaoRecordset::GetAbsolutePosition](#getabsoluteposition)|Devuelve el número de registro del registro actual del objeto de un conjunto de registros.|
+|[CDaoRecordset::GetBookmark](#getbookmark)|Devuelve un valor que representa el marcador en un registro.|
 |[CDaoRecordset::GetCacheSize](#getcachesize)|Devuelve un valor que especifica el número de registros en un conjunto de registros de tipo dinámico que contiene datos para almacenar en caché localmente desde un origen de datos ODBC.|
 |[CDaoRecordset::GetCacheStart](#getcachestart)|Devuelve un valor que especifica el marcador del primer registro en el conjunto de registros en la memoria caché.|
 |[CDaoRecordset::GetCurrentIndex](#getcurrentindex)|Devuelve un `CString` que contiene el nombre del índice más recientemente usa un tipo de tabla indizada, `CDaoRecordset`.|
@@ -225,14 +225,14 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::GetEditMode](#geteditmode)|Devuelve un valor que indica el estado de edición para el registro actual.|
 |[CDaoRecordset::GetFieldCount](#getfieldcount)|Devuelve un valor que representa el número de campos de un conjunto de registros.|
 |[CDaoRecordset::GetFieldInfo](#getfieldinfo)|Devuelve los tipos concretos de información sobre los campos del conjunto de registros.|
-|[CDaoRecordset:: GetFieldValue](#getfieldvalue)|Devuelve el valor de un campo en un conjunto de registros.|
+|[CDaoRecordset::GetFieldValue](#getfieldvalue)|Devuelve el valor de un campo en un conjunto de registros.|
 |[CDaoRecordset::GetIndexCount](#getindexcount)|Recupera el número de índices en una tabla subyacente de un conjunto de registros.|
 |[CDaoRecordset::GetIndexInfo](#getindexinfo)|Devuelve diversos tipos de información acerca de un índice.|
 |[CDaoRecordset::GetLastModifiedBookmark](#getlastmodifiedbookmark)|Se usa para determinar el último agrega o actualiza el registro.|
 |[CDaoRecordset::GetLockingMode](#getlockingmode)|Devuelve un valor que indica el tipo de bloqueo que está vigente durante la edición.|
 |[CDaoRecordset::GetName](#getname)|Devuelve un `CString` que contiene el nombre del conjunto de registros.|
 |[CDaoRecordset::GetParamValue](#getparamvalue)|Recupera el valor actual del parámetro especificado almacenado en el objeto DAOParameter subyacente.|
-|[CDaoRecordset:: GetPercentPosition](#getpercentposition)|Devuelve la posición del registro actual como un porcentaje del número total de registros.|
+|[CDaoRecordset::GetPercentPosition](#getpercentposition)|Devuelve la posición del registro actual como un porcentaje del número total de registros.|
 |[CDaoRecordset::GetRecordCount](#getrecordcount)|Devuelve el número de registros que se obtiene acceso en un objeto de conjunto de registros.|
 |[CDaoRecordset::GetSQL](#getsql)|Obtiene la cadena SQL que se utiliza para seleccionar registros del conjunto de registros.|
 |[CDaoRecordset::GetType](#gettype)|Se llama para determinar el tipo de un conjunto de registros: tipo de tabla, tipo dinámico o tipo de instantánea.|
@@ -245,39 +245,39 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::IsFieldNull](#isfieldnull)|Devuelve cero si el campo especificado en el registro actual es Null (con ningún valor).|
 |[CDaoRecordset::IsFieldNullable](#isfieldnullable)|Devuelve cero si el campo especificado en el registro actual se puede establecer en Null (con ningún valor).|
 |[CDaoRecordset::IsOpen](#isopen)|Devuelve cero si [abierto](#open) se ha llamado previamente.|
-|[CDaoRecordset:: Move](#move)|Coloca el conjunto de registros a un número especificado de registros desde el registro actual en cualquier dirección.|
+|[CDaoRecordset::Move](#move)|Coloca el conjunto de registros a un número especificado de registros desde el registro actual en cualquier dirección.|
 |[CDaoRecordset::MoveFirst](#movefirst)|Coloca el registro actual en el primer registro en el conjunto de registros.|
 |[CDaoRecordset::MoveLast](#movelast)|Coloca el registro actual en el último registro del conjunto de registros.|
 |[CDaoRecordset::MoveNext](#movenext)|Coloca el registro actual en el registro siguiente en el conjunto de registros.|
 |[CDaoRecordset::MovePrev](#moveprev)|Coloca el registro actual en el registro anterior en el conjunto de registros.|
-|[CDaoRecordset:: Open](#open)|Crea un nuevo conjunto de registros de una tabla, un tipo dinámico o una instantánea.|
+|[CDaoRecordset::Open](#open)|Crea un nuevo conjunto de registros de una tabla, un tipo dinámico o una instantánea.|
 |[CDaoRecordset::Requery](#requery)|Ejecuta la consulta del conjunto de registros nuevo para actualizar los registros seleccionados.|
 |[CDaoRecordset::Seek](#seek)|Localiza el registro de un objeto de conjunto de registros de tipo tabla indizada que satisface los criterios especificados para el índice actual y hace que el registro en el registro actual.|
-|[CDaoRecordset:: SetAbsolutePosition](#setabsoluteposition)|Establece el número de registro del registro actual del objeto de un conjunto de registros.|
-|[CDaoRecordset:: SetBookmark](#setbookmark)|Coloca el conjunto de registros en un registro que contiene el marcador especificado.|
-|[CDaoRecordset:: SetCacheSize](#setcachesize)|Establece un valor que especifica el número de registros en un conjunto de registros de tipo dinámico que contiene datos para almacenar en caché localmente desde un origen de datos ODBC.|
-|[CDaoRecordset:: SetCacheStart](#setcachestart)|Establece un valor que especifica el marcador del primer registro en el conjunto de registros en la memoria caché.|
-|[CDaoRecordset:: SetCurrentIndex](#setcurrentindex)|Se llama para establecer un índice en un conjunto de registros de tipo de tabla.|
-|[CDaoRecordset:: SetFieldDirty](#setfielddirty)|Marca el campo especificado en el registro actual como modificada.|
+|[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|Establece el número de registro del registro actual del objeto de un conjunto de registros.|
+|[CDaoRecordset::SetBookmark](#setbookmark)|Coloca el conjunto de registros en un registro que contiene el marcador especificado.|
+|[CDaoRecordset::SetCacheSize](#setcachesize)|Establece un valor que especifica el número de registros en un conjunto de registros de tipo dinámico que contiene datos para almacenar en caché localmente desde un origen de datos ODBC.|
+|[CDaoRecordset::SetCacheStart](#setcachestart)|Establece un valor que especifica el marcador del primer registro en el conjunto de registros en la memoria caché.|
+|[CDaoRecordset::SetCurrentIndex](#setcurrentindex)|Se llama para establecer un índice en un conjunto de registros de tipo de tabla.|
+|[CDaoRecordset::SetFieldDirty](#setfielddirty)|Marca el campo especificado en el registro actual como modificada.|
 |[CDaoRecordset::SetFieldNull](#setfieldnull)|Establece el valor del campo especificado en el registro actual en Null (con ningún valor).|
 |[CDaoRecordset::SetFieldValue](#setfieldvalue)|Establece el valor de un campo en un conjunto de registros.|
 |[CDaoRecordset::SetFieldValueNull](#setfieldvaluenull)|Establece el valor de un campo en un conjunto de registros en Null. (con ningún valor).|
 |[CDaoRecordset::SetLockingMode](#setlockingmode)|Establece un valor que indica el tipo de bloqueo para poner en efecto durante la edición.|
 |[CDaoRecordset::SetParamValue](#setparamvalue)|Establece el valor actual del parámetro especificado almacenado en el objeto subyacente de DAOParameter|
 |[CDaoRecordset::SetParamValueNull](#setparamvaluenull)|El valor actual del parámetro especificado se establece en Null (con ningún valor).|
-|[CDaoRecordset:: SetPercentPosition](#setpercentposition)|Establece la posición del registro actual en una ubicación correspondiente a un porcentaje del número total de registros en un conjunto de registros.|
+|[CDaoRecordset::SetPercentPosition](#setpercentposition)|Establece la posición del registro actual en una ubicación correspondiente a un porcentaje del número total de registros en un conjunto de registros.|
 |[CDaoRecordset::Update](#update)|Se completa una `AddNew` o `Edit` operación guardando los datos nuevos o modificados del origen de datos.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDaoRecordset:: M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|Contiene una marca que indica si los campos se marcan automáticamente como modificado.|
+|[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Contiene una marca que indica si los campos se marcan automáticamente como modificado.|
 |[CDaoRecordset::m_nFields](#m_nfields)|Contiene el número de miembros de datos en la clase de conjunto de registros y el número de columnas seleccionadas por el conjunto de registros del origen de datos.|
 |[CDaoRecordset::m_nParams](#m_nparams)|Contiene el número de miembros de datos de parámetro en la clase de conjunto de registros: el número de parámetros pasados con la consulta del conjunto de registros|
 |[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|Un puntero a la interfaz DAO subyacente al objeto de conjunto de registros.|
 |[CDaoRecordset::m_pDatabase](#m_pdatabase)|Base de datos de origen para este conjunto de resultados. Contiene un puntero a un [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) objeto.|
-|[CDaoRecordset:: M_strfilter](#m_strfilter)|Contiene una cadena utilizada para construir una instancia de SQL **donde** instrucción.|
+|[CDaoRecordset::m_strFilter](#m_strfilter)|Contiene una cadena utilizada para construir una instancia de SQL **donde** instrucción.|
 |[CDaoRecordset::m_strSort](#m_strsort)|Contiene una cadena utilizada para construir una instancia de SQL **ORDER BY** instrucción.|
 
 ## <a name="remarks"></a>Comentarios
@@ -329,7 +329,7 @@ Para obtener información relacionada, vea el tema "Objeto de conjunto de regist
 
 **Encabezado:** afxdao.h
 
-##  <a name="addnew"></a>  CDaoRecordset:: AddNew
+##  <a name="addnew"></a>  CDaoRecordset::AddNew
 
 Llame a esta función miembro para agregar un nuevo registro a un conjunto de registros de tipo de tabla o de tipo dinámico.
 
@@ -385,7 +385,7 @@ Distinto de cero si el conjunto de registros permite agregar nuevos registros; e
 
 Para obtener información relacionada, vea el tema "Método Append" en la Ayuda de DAO.
 
-##  <a name="canbookmark"></a>  CDaoRecordset:: CanBookmark
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark
 
 Llame a esta función miembro para determinar si el conjunto de registros abierto anteriormente le permite marcar individualmente los registros de uso de marcadores.
 
@@ -557,7 +557,7 @@ A diferencia de `AddNew` y `Edit`, una llamada a `Delete` no va seguida de una l
 
 Para obtener información relacionada, vea los temas "Método AddNew", "Editar método", "Método Delete", "Método de actualización" y "Propiedad actualizable" en la Ayuda de DAO.
 
-##  <a name="dofieldexchange"></a>  CDaoRecordset
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange
 
 El marco de trabajo llama a esta función miembro para automáticamente intercambiar datos entre los miembros de datos de campo del objeto de conjunto de registros y las columnas correspondientes del registro actual en el origen de datos.
 
@@ -580,7 +580,7 @@ Cuando se declara la clase derivada de conjunto de registros con ClassWizard, el
 
 [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]
 
-##  <a name="edit"></a>  CDaoRecordset:: Edit
+##  <a name="edit"></a>  CDaoRecordset::Edit
 
 Llame a esta función miembro para permitir cambios en el registro actual.
 
@@ -622,7 +622,7 @@ Si el origen de datos admite transacciones, puede realizar la `Edit` llame a par
 
 Para obtener información relacionada, vea los temas "Método AddNew", "Editar método", "Método Delete", "Método de actualización" y "Propiedad actualizable" en la Ayuda de DAO.
 
-##  <a name="fillcache"></a>  CDaoRecordset:: FillCache
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache
 
 Llame a esta función miembro para almacenar en caché un número especificado de registros desde el conjunto de registros.
 
@@ -877,7 +877,7 @@ Al usar las operaciones de búsqueda, tenga en cuenta lo siguiente:
 
 Para obtener información relacionada, vea el tema "FindFirst, FindLast, FindNext, FindPrevious métodos" en la Ayuda de DAO.
 
-##  <a name="getabsoluteposition"></a>  CDaoRecordset:: GetAbsolutePosition
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition
 
 Devuelve el número de registro del registro actual del objeto de un conjunto de registros.
 
@@ -903,7 +903,7 @@ Si hay ningún registro actual, como cuando no hay ningún registro en el conjun
 
 Para obtener información relacionada, vea el tema "Propiedad AbsolutePosition" en la Ayuda de DAO.
 
-##  <a name="getbookmark"></a>  CDaoRecordset:: GetBookmark
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark
 
 Llame a esta función miembro para obtener el valor de marcador en un registro concreto.
 
@@ -1122,7 +1122,7 @@ void GetFieldInfo(
 *nIndex*<br/>
 Índice de base cero del campo predefinido en la colección de campos del conjunto de registros, para la búsqueda por índice.
 
-*FieldInfo*<br/>
+*fieldinfo*<br/>
 Una referencia a un [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) estructura.
 
 *dwInfoOptions*<br/>
@@ -1130,9 +1130,9 @@ Opciones que especifican qué información sobre el conjunto de registros para r
 
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Nombre, tipo, tamaño, atributos
 
-- `AFX_DAO_SECONDARY_INFO` La información principal, además de: Permitir cero tabla de origen de longitud, orden de intercalación, nombre de la externa, el campo de origen, la posición Ordinal, es necesario,
+- `AFX_DAO_SECONDARY_INFO` La información principal, además de: Posición ordinal, es necesario, Permitir longitud cero, intercalación de orden, nombre de la externa, el campo de origen, tabla de origen
 
-- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: texto del valor predeterminado, la regla de validación, validación
+- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: Texto de validación de valor, la regla de validación, de forma predeterminada
 
 *lpszName*<br/>
 Nombre del campo.
@@ -1145,7 +1145,7 @@ Para obtener una descripción de la información devuelta, consulte el [CDaoFiel
 
 Para obtener información relacionada, vea el tema "Atributos de propiedad" en la Ayuda de DAO.
 
-##  <a name="getfieldvalue"></a>  CDaoRecordset:: GetFieldValue
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue
 
 Llame a esta función miembro para recuperar los datos en un conjunto de registros.
 
@@ -1237,9 +1237,9 @@ Opciones que especifican qué información sobre el índice para recuperar. Las 
 
 - `AFX_DAO_PRIMARY_INFO` (Valor predeterminado) Campos de nombre, información de campo
 
-- `AFX_DAO_SECONDARY_INFO` La información principal, además de: principal, Unique, Clustered, IgnoreNulls, es necesario, externa
+- `AFX_DAO_SECONDARY_INFO` La información principal, además de: Principal, único, agrupado, IgnoreNulls, es necesario, externa
 
-- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: recuento distinto
+- `AFX_DAO_ALL_INFO` La información principal y secundaria, además de: Recuento distinto
 
 *lpszName*<br/>
 Un puntero al nombre del objeto de índice, para la búsqueda por nombre.
@@ -1339,7 +1339,7 @@ El parámetro puede tener acceso por nombre o por su posición numérica de la c
 
 Para obtener información relacionada, vea el tema "Objeto de parámetro" en la Ayuda de DAO.
 
-##  <a name="getpercentposition"></a>  CDaoRecordset:: GetPercentPosition
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition
 
 Cuando se trabaja con un tipo dinámico o un conjunto de registros de tipo de instantánea, si se llama a `GetPercentPosition` antes de rellenar completamente el conjunto de registros, la cantidad de movimiento es relativo al número de registros de acceso tal como se indica mediante una llamada a [GetRecordCount](#getrecordcount).
 
@@ -1601,7 +1601,7 @@ BOOL IsFieldDirty(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 Un puntero a miembro de datos del campo cuyo estado desea comprobar, o NULL para determinar si cualquiera de los campos estén modificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1624,7 +1624,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 Un puntero a miembro de datos del campo cuyo estado desea comprobar o NULL para determinar si cualquiera de los campos son Null.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1653,7 +1653,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 Un puntero a miembro de datos del campo cuyo estado desea comprobar o NULL para determinar si cualquiera de los campos son Null.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1678,7 +1678,7 @@ Distinto de cero si el objeto recordset `Open` o `Requery` función miembro se h
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset:: M_bcheckcachefordirtyfields
+##  <a name="m_bcheckcachefordirtyfields"></a>  CDaoRecordset::m_bCheckCacheForDirtyFields
 
 Contiene una marca que indica si los campos almacenados en caché se marcan automáticamente como desfasadas (modificados) y Null.
 
@@ -1740,7 +1740,7 @@ Normalmente no directamente debe usar el puntero almacenado en `m_pDatabase`. Si
 
 Para obtener información relacionada, vea el tema "Objeto de base de datos" en la Ayuda de DAO.
 
-##  <a name="m_strfilter"></a>  CDaoRecordset:: M_strfilter
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter
 
 Contiene una cadena que se utiliza para construir el **donde** cláusula de una instrucción SQL.
 
@@ -1766,7 +1766,7 @@ El uso de *m_strSort* no tiene ningún efecto al abrir un conjunto de registros 
 
 Para obtener información relacionada, vea el tema "Propiedad de ordenación" en la Ayuda de DAO.
 
-##  <a name="move"></a>  CDaoRecordset:: Move
+##  <a name="move"></a>  CDaoRecordset::Move
 
 Llame a esta función miembro para colocar el conjunto de registros *lRows* registros desde el registro actual.
 
@@ -1908,7 +1908,7 @@ Para mover la posición del elemento actual registro de un objeto de conjunto de
 
 Para obtener información relacionada, vea los temas "Método Move" y "MoveFirst, MoveLast, MoveNext y MovePrevious" en la Ayuda de DAO.
 
-##  <a name="open"></a>  CDaoRecordset:: Open
+##  <a name="open"></a>  CDaoRecordset::Open
 
 Debe llamar a esta función miembro para recuperar los registros para el conjunto de registros.
 
@@ -2084,7 +2084,7 @@ BOOL Seek(
 Una de las expresiones de cadena siguientes: "<","\<=", "=", "> =", o ">".
 
 *pKey1*<br/>
-Un puntero a un [COleVariant](../../mfc/reference/colevariant-class.md) cuyo valor corresponde al primer campo en el índice. Requerido.
+Un puntero a un [COleVariant](../../mfc/reference/colevariant-class.md) cuyo valor corresponde al primer campo en el índice. Obligatorio.
 
 *pKey2*<br/>
 Un puntero a un `COleVariant` cuyo valor corresponde al segundo campo del índice, si existe. El valor predeterminado es NULL.
@@ -2125,7 +2125,7 @@ No se puede llamar a `Seek` en una tabla asociada de cualquier tipo porque las t
 
 Para obtener información relacionada, vea el tema "Método Seek" en la Ayuda de DAO.
 
-##  <a name="setabsoluteposition"></a>  CDaoRecordset:: SetAbsolutePosition
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition
 
 Establece el número de registro relativo del registro actual del objeto de un conjunto de registros.
 
@@ -2154,7 +2154,7 @@ Si se elimina el registro actual, no está definido el valor de propiedad Absolu
 
 Para obtener información relacionada, vea el tema "Propiedad AbsolutePosition" en la Ayuda de DAO.
 
-##  <a name="setbookmark"></a>  CDaoRecordset:: SetBookmark
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark
 
 Llame a esta función miembro para colocar el conjunto de registros en el registro que contiene el marcador especificado.
 
@@ -2178,7 +2178,7 @@ Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, el `COleV
 
 Para obtener información relacionada, vea los temas "Marcador de propiedad" y la propiedad es"en la Ayuda de DAO.
 
-##  <a name="setcachesize"></a>  CDaoRecordset:: SetCacheSize
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize
 
 Llame a esta función miembro para establecer el número de registros en la memoria caché.
 
@@ -2199,7 +2199,7 @@ Cualquier origen de datos ODBC, como una tabla asociada, puede tener una caché 
 
 Para obtener información relacionada, vea el tema "CacheSize, CacheStart propiedades" en la Ayuda de DAO.
 
-##  <a name="setcachestart"></a>  CDaoRecordset:: SetCacheStart
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart
 
 Llame a esta función miembro para especificar el marcador del primer registro en el conjunto de registros en la memoria caché.
 
@@ -2226,7 +2226,7 @@ Tenga en cuenta que si no va a crear un conjunto de registros UNICODE, el `COleV
 
 Para obtener información relacionada, vea el tema CacheSize, CacheStart propiedades"en la Ayuda de DAO.
 
-##  <a name="setcurrentindex"></a>  CDaoRecordset:: SetCurrentIndex
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex
 
 Llame a esta función miembro para establecer un índice en un conjunto de registros de tipo de tabla.
 
@@ -2249,7 +2249,7 @@ Los registros devueltos desde un conjunto de registros de tipo de tabla se puede
 
 Para obtener información relacionada, vea el tema "Objeto Index" y la definición de "índice actual" en la Ayuda de DAO.
 
-##  <a name="setfielddirty"></a>  CDaoRecordset:: SetFieldDirty
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty
 
 Llame a esta función miembro para marcar a un miembro de datos de campo del conjunto de registros como modificado o no como modificado.
 
@@ -2261,7 +2261,7 @@ void SetFieldDirty(
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 Contiene la dirección de un miembro de datos de campo en el conjunto de registros o NULL. Si es NULL, se marcan todos los miembros de datos de campo del conjunto de registros. (C++ NULL no es igual a Null en la terminología de base de datos, lo que significa "no tener ningún valor.")
 
 *bDirty*<br/>
@@ -2304,7 +2304,7 @@ void SetFieldNull(
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 Contiene la dirección de un miembro de datos de campo en el conjunto de registros o NULL. Si es NULL, se marcan todos los miembros de datos de campo del conjunto de registros. (C++ NULL no es igual a Null en la terminología de base de datos, lo que significa "no tener ningún valor.")
 
 *bNull*<br/>
@@ -2475,7 +2475,7 @@ El nombre del campo en el conjunto de registros para la búsqueda por nombre.
 
 C++ NULL no es igual a Null, lo que, en la terminología de base de datos, significa "no tener ningún valor."
 
-##  <a name="setpercentposition"></a>  CDaoRecordset:: SetPercentPosition
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition
 
 Llame a esta función miembro para establecer un valor que cambia la ubicación aproximada del registro actual en el objeto de conjunto de registros basándose en un porcentaje de los registros del conjunto de registros.
 

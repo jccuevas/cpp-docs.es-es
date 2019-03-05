@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-ms.openlocfilehash: b761fc3d9d9874e676fad8c74a82f1f08d714d61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c5030b9cfbfd636a783d27bcc8f9469f8348acb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647322"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276278"
 ---
 # <a name="ccrtheap-class"></a>CCRTHeap (clase)
 
@@ -34,10 +34,10 @@ class CCRTHeap : public IAtlMemMgr
 
 |Name|Descripción|
 |----------|-----------------|
-|[Ccrtheap:: Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[Ccrtheap:: Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
+|[CCRTHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
+|[CCRTHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
 |[CCRTHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|
-|[Ccrtheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
+|[CCRTHeap::Reallocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -57,7 +57,7 @@ Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 **Encabezado:** atlmem.h
 
-##  <a name="allocate"></a>  Ccrtheap:: Allocate
+##  <a name="allocate"></a>  CCRTHeap::Allocate
 
 Llame a este método para asignar un bloque de memoria.
 
@@ -80,7 +80,7 @@ Llame a [ccrtheap:: Free](#free) o [ccrtheap:: ReAllocate](#reallocate) para lib
 
 Implementa mediante [malloc](../../c-runtime-library/reference/malloc.md).
 
-##  <a name="free"></a>  Ccrtheap:: Free
+##  <a name="free"></a>  CCRTHeap::Free
 
 Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.
 
@@ -118,7 +118,7 @@ Devuelve el tamaño del bloque de memoria asignada en bytes.
 
 Implementa mediante [_msize](../../c-runtime-library/reference/msize.md).
 
-##  <a name="reallocate"></a>  Ccrtheap:: ReAllocate
+##  <a name="reallocate"></a>  CCRTHeap::Reallocate
 
 Llame a este método para reasignar la memoria asignada por este administrador de memoria.
 

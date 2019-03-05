@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604140"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270558"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem (clase)
 
@@ -105,7 +105,7 @@ class COleServerItem : public CDocItem
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Coloca los formatos de presentación y conversión en un `COleDataSource` objeto.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Copia el elemento en el Portapapeles.|
-|[COleServerItem:: DoDragDrop](#dodragdrop)|Realiza una operación de arrastrar y colocar.|
+|[COleServerItem::DoDragDrop](#dodragdrop)|Realiza una operación de arrastrar y colocar.|
 |[COleServerItem::GetClipboardData](#getclipboarddata)|Obtiene el origen de datos para su uso en la transferencia de datos (arrastrar y colocar o Portapapeles).|
 |[COleServerItem::GetDocument](#getdocument)|Devuelve el documento del servidor que contiene el elemento.|
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|Obtiene los datos CF_EMBEDSOURCE para un elemento OLE.|
@@ -116,7 +116,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::IsLinkedItem](#islinkeditem)|Indica si el elemento representa un elemento OLE vinculado.|
 |[COleServerItem::NotifyChanged](#notifychanged)|Actualiza todos los contenedores con la actualización automática de vínculos.|
 |[COleServerItem::OnDoVerb](#ondoverb)|Se llama para ejecutar un verbo.|
-|[COleServerItem:: OnDraw](#ondraw)|Se llama cuando el contenedor solicita para dibujar el elemento; implementación necesaria.|
+|[COleServerItem::OnDraw](#ondraw)|Se llama cuando el contenedor solicita para dibujar el elemento; implementación necesaria.|
 |[COleServerItem::OnDrawEx](#ondrawex)|Se llama para dibujar un elemento especializado.|
 |[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|Lo llama el marco de trabajo para obtener los datos que se van a copiar en el Portapapeles.|
 |[COleServerItem::OnGetExtent](#ongetextent)|Lo llama el marco de trabajo para recuperar el tamaño del elemento OLE.|
@@ -155,7 +155,7 @@ La `COleServerItem` clase define varias funciones miembro reemplazables que son 
 
 Para usar `COleServerItem`, derivar una clase e implementar el [OnDraw](#ondraw) y [Serialize](../../mfc/reference/cobject-class.md#serialize) funciones miembro. El `OnDraw` función proporciona la representación del metarchivo de un elemento, lo que permite que se muestre cuando una aplicación contenedora abre un documento compuesto. El `Serialize` función de `CObject` proporciona la representación nativa de un elemento, lo que permite un elemento incrustado en transferirse entre las aplicaciones de servidor y un contenedor. [OnGetExtent](#ongetextent) proporciona el tamaño natural del elemento en el contenedor, lo que permite el contenedor cambiar el tamaño del elemento.
 
-Para obtener más información acerca de los servidores y otros temas relacionados, vea el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md) y "Creación de una aplicación de contenedor y servidor" en el artículo [contenedores: características avanzadas](../../mfc/containers-advanced-features.md).
+Para obtener más información acerca de los servidores y otros temas relacionados, vea el artículo [servidores: Implementación de un servidor](../../mfc/servers-implementing-a-server.md) y "Creación de una aplicación de contenedor y servidor" en el artículo [contenedores: Características avanzadas](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -181,7 +181,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 
 ### <a name="parameters"></a>Parámetros
 
-*Plocation*<br/>
+*pDataSource*<br/>
 Puntero a la `COleDataSource` en que se deben colocar los datos de objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -223,7 +223,7 @@ Establezca esta opción en TRUE si se deben copiar los datos del vínculo en el 
 
 La función utiliza el [OnGetClipboardData](#ongetclipboarddata) función miembro para crear un [COleDataSource](../../mfc/reference/coledatasource-class.md) objeto que contiene los datos del elemento OLE en los formatos admitidos. La función, a continuación, coloca el `COleDataSource` objeto en el Portapapeles mediante el uso de la [COleDataSource:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) función. La `COleDataSource` objeto incluye los datos del elemento nativo y su representación en formato CF_METAFILEPICT, así como los datos en cualquier formato de conversión decide admitir. Debe haber implementado [Serialize](../../mfc/reference/cobject-class.md#serialize) y [OnDraw](#ondraw) para esta función miembro para que funcione.
 
-##  <a name="dodragdrop"></a>  COleServerItem:: DoDragDrop
+##  <a name="dodragdrop"></a>  COleServerItem::DoDragDrop
 
 Llame a la `DoDragDrop` la función miembro para realizar una operación de arrastrar y colocar.
 
@@ -285,7 +285,7 @@ void GetClipboardData(
 
 ### <a name="parameters"></a>Parámetros
 
-*Plocation*<br/>
+*pDataSource*<br/>
 Puntero a la `COleDataSource` objeto que recibirá los datos del elemento OLE en todos los formatos admitidos.
 
 *bIncludeLink*<br/>
@@ -527,7 +527,7 @@ Reemplace esta función si el verbo principal no muestra el elemento. Por ejempl
 
 Para obtener más información, consulte [DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) en el SDK de Windows.
 
-##  <a name="ondraw"></a>  COleServerItem:: OnDraw
+##  <a name="ondraw"></a>  COleServerItem::OnDraw
 
 Lo llama el marco de trabajo para representar el elemento OLE en un metarchivo.
 

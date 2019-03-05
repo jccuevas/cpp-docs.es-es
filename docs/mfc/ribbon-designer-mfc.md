@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288793"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
 
@@ -56,11 +56,11 @@ Para usar el recurso de cinta en la aplicación MFC, cargue el recurso mediante 
 
 Estas son las dos maneras de agregar un recurso de cinta de opciones al proyecto MFC:
 
-- Cree una aplicación MFC y configure el Asistente para proyectos MFC para crear la cinta de opciones. Para obtener más información, consulte [Tutorial: creación de una cinta de opciones de aplicación usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
+- Cree una aplicación MFC y configure el Asistente para proyectos MFC para crear la cinta de opciones. Para obtener más información, vea [Tutorial: Crear una aplicación de cinta usando MFC](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md).
 
-- En un proyecto MFC existente, cree un recurso de cinta de opciones y cárguelo. Para obtener más información, consulte [Tutorial: actualizar la aplicación Scribble de MFC (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+- En un proyecto MFC existente, cree un recurso de cinta de opciones y cárguelo. Para obtener más información, vea [Tutorial: Actualizar la aplicación Scribble MFC (parte 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-Si el proyecto ya tiene una cinta de opciones codificada de forma manual, MFC tiene funciones que puede utilizar para convertir la cinta existente en un recurso de cinta de opciones. Para obtener más información, consulte [Cómo: convertir una cinta de MFC existente en un recurso de cinta](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
+Si el proyecto ya tiene una cinta de opciones codificada de forma manual, MFC tiene funciones que puede utilizar para convertir la cinta existente en un recurso de cinta de opciones. Para obtener más información, vea [Cómo: Convertir una cinta MFC existente en un recurso de cinta](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md).
 
 > [!NOTE]
 >  Las cintas de opciones no pueden crearse en aplicaciones basadas en cuadros de diálogo. Para obtener más información, consulte [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md).
@@ -73,44 +73,43 @@ En la siguiente ilustración se muestran los distintos componentes del diseñado
 
 ![Diseñador de la cinta MFC](../mfc/media/ribbon_designer.png "Diseñador de la cinta MFC")
 
-- **Cuadro de herramientas:** contiene controles que se pueden arrastrar a la superficie del diseñador.
+- **Cuadro de herramientas:** Contiene controles que se pueden arrastrar a la superficie del diseñador.
 
-- **Superficie del diseñador:** contiene la representación visual del recurso de cinta de opciones.
+- **Superficie del diseñador:** Contiene la representación visual del recurso de cinta de opciones.
 
-- **Ventana Propiedades:** se enumeran los atributos del elemento que se han seleccionado en la superficie del diseñador.
+- **Ventana de propiedades:** Enumera los atributos del elemento que se han seleccionado en la superficie del diseñador.
 
-- **Ventana Vista de recursos:** muestra los recursos que incluyen recursos de la cinta de opciones, en el proyecto.
+- **Ventana de vista de recursos:** Muestra los recursos que incluyen recursos de la cinta de opciones, en el proyecto.
 
-- **Barra de herramientas del Editor de Ribbon:** contiene comandos que le permiten obtener una vista previa de la cinta de opciones y cambiar su tema visual.
+- **Barra de herramientas del Editor de la cinta de opciones:** Contiene comandos que le permiten obtener una vista previa de la cinta de opciones y cambiar su tema visual.
 
 Los temas siguientes describen cómo usar las características del diseñador de la cinta de opciones:
 
-- [Procedimiento para personalizar el botón Aplicación](../mfc/how-to-customize-the-application-button.md)
+- [Cómo: Personalizar el botón aplicación](../mfc/how-to-customize-the-application-button.md)
 
-- [Procedimiento para personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [Cómo: Personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Procedimiento para agregar controles de cinta y controladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Cómo: Agregar controles de cinta y controladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Procedimiento para cargar un recurso de cinta desde una aplicación MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Cómo: Cargar un recurso de cinta desde una aplicación de MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definiciones de elementos de la cinta de opciones
 
 ![Cinta de MFC](../mfc/media/ribbon.png "cinta de MFC")
 
-- **Botón de la aplicación:** el botón que aparece en la esquina superior izquierda de una cinta de opciones. El botón Aplicación reemplaza al menú Archivo y está visible incluso cuando se minimiza la cinta de opciones. Al hacer clic en el botón, se muestra un menú con una lista de comandos.
+- **Botón de la aplicación:** El botón que aparece en la esquina superior izquierda de una cinta de opciones. El botón Aplicación reemplaza al menú Archivo y está visible incluso cuando se minimiza la cinta de opciones. Al hacer clic en el botón, se muestra un menú con una lista de comandos.
 
-- **Barra de herramientas de acceso rápido:** comandos que usa una barra de herramientas pequeña y personalizable que muestra con frecuencia.
+- **Barra de herramientas de acceso rápido:** Una barra de herramientas personalizable y pequeño que con frecuencia muestra comandos usados.
 
-- **Categoría**: agrupamiento lógico que representa el contenido de una pestaña de cinta.
+- **Categoría**: El agrupamiento lógico que representa el contenido de una pestaña de cinta de opciones.
 
-- **Botón categoría predeterminada:** el botón que aparece en la cinta de opciones cuando se minimiza la cinta de opciones. Al hacer clic en el botón, la categoría vuelve a aparecer como un menú.
+- **Botón categoría predeterminada:** El botón que aparece en la cinta de opciones cuando se minimiza la cinta de opciones. Al hacer clic en el botón, la categoría vuelve a aparecer como un menú.
 
-- **Panel:** un área de la barra de cinta de opciones que muestra un grupo de controles relacionados. Cada categoría de la cinta de opciones contiene uno o más paneles de cinta de opciones.
+- **Panel:** Un área de la barra de cinta de opciones que muestra un grupo de controles relacionados. Cada categoría de la cinta de opciones contiene uno o más paneles de cinta de opciones.
 
-- **Elementos de la cinta de opciones:** controles de los paneles, por ejemplo, botones y cuadros combinados. Para ver los distintos controles que pueden hospedarse en una cinta de opciones, consulte [ejemplo RibbonGadgets: aplicación de Gadgets de cinta](../visual-cpp-samples.md).
+- **Elementos de la cinta de opciones:** Controles de los paneles, por ejemplo, botones y cuadros combinados. Para ver los distintos controles que pueden hospedarse en una cinta de opciones, consulte [ejemplo RibbonGadgets: Aplicación de Gadgets de la cinta de opciones](../visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Elementos de la interfaz de usuario](../mfc/user-interface-elements-mfc.md)<br/>
 [Trabajo con archivos de recursos](../windows/working-with-resource-files.md)
-

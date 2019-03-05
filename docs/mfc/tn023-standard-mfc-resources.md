@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277685"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Recursos de MFC estándar
 
@@ -39,19 +39,19 @@ Los recursos de imágenes prediseñadas son recursos adicionales que no dependen
 
 - Prompts.rc: Contiene recursos de cadena de mensaje de menú para cada comando predefinido, como "Crear un nuevo documento" para ID_FILE_NEW.
 
-- Commdlg.rc: Archivo de .rc compatible con Visual C++ que contiene las plantillas de cuadro de diálogo COMMDLG estándar.
+- Commdlg.rc: Un archivo .rc compatible de Visual C++ que contiene las plantillas de cuadro de diálogo COMMDLG estándar.
 
 Recursos de marco estándar son con identificadores definidos por AFX que el marco de trabajo depende de las implementaciones internas. Rara vez necesitará cambiar estos recursos definidos en AFX. Si lo hace, debe seguir el procedimiento descrito más adelante en este tema.
 
 Los siguientes recursos de marco de trabajo se incluyen en el directorio MFC\INCLUDE:
 
-- AFXRES.rc: Recursos comunes utilizados por el marco de trabajo.
+- Afxres.rc: Recursos comunes utilizados por el marco de trabajo.
 
-- Afxprint.rc: Los recursos específicos de impresión.
+- Afxprint.rc: Recursos específicos de impresión.
 
-- AFXOLECL.rc: Los recursos específicos de las aplicaciones de cliente OLE.
+- Afxolecl.rc: Recursos específicos de las aplicaciones de cliente OLE.
 
-- Afxolev.rc: Los recursos específicos de aplicaciones de servidor completas OLE.
+- Afxolev.rc: Recursos específicos de aplicaciones de servidor completas OLE.
 
 ## <a name="using-clip-art-resources"></a>Uso de recursos de imagen prediseñada
 
@@ -103,4 +103,3 @@ En algunos casos excepcionales que desea personalizar el contenido de los recurs
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

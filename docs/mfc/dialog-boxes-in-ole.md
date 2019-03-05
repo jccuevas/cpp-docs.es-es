@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 53e802e973ca78619252fcc4100a7cc50009f2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270896"
 ---
 # <a name="dialog-boxes-in-ole"></a>Cuadros de diálogo en OLE
 
@@ -44,4 +44,3 @@ Cuando el usuario intenta activar un elemento y el servidor está actualmente no
 [Cuadros de diálogo](../mfc/dialog-boxes.md)<br/>
 [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE](../mfc/ole-in-mfc.md)
-

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266385"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (clase)
 
@@ -69,12 +69,12 @@ class COleObjectFactory : public CCmdTarget
 |[COleObjectFactory::IsLicenseValid](#islicensevalid)|Determina si la licencia del control es válida.|
 |[COleObjectFactory::IsRegistered](#isregistered)|Indica si el generador de objetos está registrado con la DLL del sistema OLE.|
 |[COleObjectFactory::Register](#register)|Registra este generador de objetos con la DLL del sistema OLE.|
-|[COleObjectFactory:: RegisterAll](#registerall)|Registra todos los generadores de objetos de la aplicación con la DLL del sistema OLE.|
+|[COleObjectFactory::RegisterAll](#registerall)|Registra todos los generadores de objetos de la aplicación con la DLL del sistema OLE.|
 |[COleObjectFactory::Revoke](#revoke)|Revoca el registro del generador de este objeto con la DLL del sistema OLE.|
 |[COleObjectFactory::RevokeAll](#revokeall)|Revoca los registros de las fábricas de objeto de la aplicación con la DLL del sistema OLE.|
 |[COleObjectFactory::UnregisterAll](#unregisterall)|Anula el registro de todos los generadores de objetos de la aplicación.|
 |[COleObjectFactory::UpdateRegistry](#updateregistry)|Registra este generador de objetos con el registro del sistema OLE.|
-|[COleObjectFactory:: UpdateRegistryAll](#updateregistryall)|Registra todos los generadores de objetos de la aplicación con el registro del sistema OLE.|
+|[COleObjectFactory::UpdateRegistryAll](#updateregistryall)|Registra todos los generadores de objetos de la aplicación con el registro del sistema OLE.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -97,7 +97,7 @@ La `COleObjectFactory` clase tiene funciones de miembro para llevar a cabo las s
 
 - Registrar generadores de objeto de control con el registro del sistema OLE.
 
-Para obtener más información sobre la creación de objetos, consulte los artículos [objetos de datos y orígenes de datos (OLE)](../../mfc/data-objects-and-data-sources-ole.md) y [objetos de datos y orígenes de datos: creación y destrucción](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Para obtener más información acerca del registro, consulte el artículo [registro](../../mfc/registration.md).
+Para obtener más información sobre la creación de objetos, consulte los artículos [objetos de datos y orígenes de datos (OLE)](../../mfc/data-objects-and-data-sources-ole.md) y [objetos de datos y orígenes de datos: Creación y destrucción](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Para obtener más información acerca del registro, consulte el artículo [registro](../../mfc/registration.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -132,13 +132,13 @@ COleObjectFactory(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Referencia a este generador de objetos representa el identificador de clase OLE.
 
 *pRuntimeClass*<br/>
 Puntero a la clase de tiempo de ejecución de los objetos de C++, que puede crear este generador.
 
-*bMultiInstance al*<br/>
+*bMultiInstance*<br/>
 Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si es TRUE, se inician múltiples instancias de la aplicación para que cada solicitud crear un objeto.
 
 *nFlags*<br/>
@@ -191,7 +191,7 @@ virtual BOOL GetLicenseKey(
 
 ### <a name="parameters"></a>Parámetros
 
-*dwReservado*<br/>
+*dwReserved*<br/>
 Reservado para un uso futuro.
 
 *pbstrKey*<br/>
@@ -261,7 +261,7 @@ Distinto de cero si se ha registrado correctamente el generador; en caso contrar
 
 Esta función normalmente se llama mediante [CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) cuando se inicia la aplicación.
 
-##  <a name="registerall"></a>  COleObjectFactory:: RegisterAll
+##  <a name="registerall"></a>  COleObjectFactory::RegisterAll
 
 Registra todos los generadores de objetos de la aplicación con la DLL del sistema OLE.
 
@@ -327,7 +327,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 *lpszProgID*<br/>
 Puntero a una cadena que contiene el identificador de programa de lenguaje natural, por ejemplo, "Excel.Document.5".
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Determina si el generador de objetos de la clase de control es que se registrarán.
 
 ### <a name="remarks"></a>Comentarios
@@ -340,7 +340,7 @@ Siguen las discusiones breves de las dos formas para esta función:
 
    Si usas ActiveX ControlWizard de MFC para crear el proyecto, ControlWizard proporciona una invalidación para esta función virtual pura.
 
-##  <a name="updateregistryall"></a>  COleObjectFactory:: UpdateRegistryAll
+##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 
 Registra todos los generadores de objetos de la aplicación con el registro del sistema OLE.
 
@@ -350,7 +350,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Determina si el generador de objetos de la clase de control es que se registrarán.
 
 ### <a name="return-value"></a>Valor devuelto

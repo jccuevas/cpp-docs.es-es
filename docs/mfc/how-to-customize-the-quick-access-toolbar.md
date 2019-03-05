@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Personalizar la barra de herramientas de acceso rápido'
+title: Procedimiento Personalizar la barra de herramientas de acceso rápido
 ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: aced2e732b68f838c679518ef67b1d6bdd361964
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176333"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300731"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Cómo: Personalizar la barra de herramientas de acceso rápido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Filtrar Personalizar la barra de herramientas de acceso rápido
 
 La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran al lado del botón de la aplicación o en las fichas de categoría. La siguiente ilustración muestra una barra de herramientas de acceso rápido típico.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Serialization: Making a Serializable (Clase)'
+title: 'Serialización: Crear una clase Serializable'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - serializable class [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - serialization [MFC], serializable classes
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
-ms.openlocfilehash: aa9a7f6cb1cb28c701e3954cad27e60cf9f7df4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486975"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281465"
 ---
-# <a name="serialization-making-a-serializable-class"></a>Serialization: Making a Serializable (Clase)
+# <a name="serialization-making-a-serializable-class"></a>Serialización: Crear una clase Serializable
 
 Cinco pasos principales son necesarios para hacer que una clase sea serializable. Se enumeran a continuación y se explica en las secciones siguientes:
 
@@ -92,9 +92,8 @@ En el ejemplo siguiente se muestra cómo utilizar IMPLEMENT_SERIAL para una clas
 
 [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]
 
-Una vez que una clase serializable, se puede serializar objetos de la clase, como se describe en el artículo [serialización: serializar un objeto](../mfc/serialization-serializing-an-object.md).
+Una vez que una clase serializable, se puede serializar objetos de la clase, como se describe en el artículo [serialización: Serializar un objeto](../mfc/serialization-serializing-an-object.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Serialización](../mfc/serialization-in-mfc.md)
-

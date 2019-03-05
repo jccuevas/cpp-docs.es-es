@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305125"
 ---
 # <a name="cfileexception-class"></a>CFileException (clase)
 
@@ -98,7 +98,7 @@ CFileException(
 
 ### <a name="parameters"></a>Parámetros
 
-*Causa*<br/>
+*cause*<br/>
 Una variable de tipo enumerado que indica el motivo de la excepción. Consulte [CFileException::m_cause](#m_cause) para obtener una lista de los valores posibles.
 
 *lOsError*<br/>
@@ -187,35 +187,35 @@ int m_cause;
 
 Este miembro de datos es una variable pública de tipo **int**. A continuación se indican los enumeradores y el significado de cada uno de ellos:
 
-- `CFileException::none` 0: se produjo ningún error.
+- `CFileException::none` 0: Se produjo ningún error.
 
-- `CFileException::genericException` 1: se produjo un error no especificado.
+- `CFileException::genericException` 1: Se ha producido un error no especificado.
 
-- `CFileException::fileNotFound` 2: no se pudo encontrar el archivo.
+- `CFileException::fileNotFound` 2: No se pudo encontrar el archivo.
 
-- `CFileException::badPath` 3: toda o parte de la ruta de acceso no es válido.
+- `CFileException::badPath` 3: Toda o parte de la ruta de acceso no es válido.
 
-- `CFileException::tooManyOpenFiles` 4: se superó el número permitido de archivos abiertos.
+- `CFileException::tooManyOpenFiles` 4: Se superó el número permitido de archivos abiertos.
 
-- `CFileException::accessDenied` 5: no se pudo tener acceso al archivo.
+- `CFileException::accessDenied` 5: No se pudo tener acceso al archivo.
 
-- `CFileException::invalidFile` 6: se ha intentado usar un identificador de archivo no válido.
+- `CFileException::invalidFile` 6: Se ha intentado usar un identificador de archivo no válido.
 
-- `CFileException::removeCurrentDir` 7: no se puede quitar el directorio de trabajo actual.
+- `CFileException::removeCurrentDir` 7: No se puede quitar el directorio de trabajo actual.
 
-- `CFileException::directoryFull` 8: no hay ningún más entradas de directorio.
+- `CFileException::directoryFull` 8: No hay ninguna entrada de directorio más.
 
-- `CFileException::badSeek` 9: se produjo un error al intentar establecer el puntero de archivo.
+- `CFileException::badSeek` 9: Se produjo un error al intentar establecer el puntero de archivo.
 
-- `CFileException::hardIO` 10: se produjo un error de hardware.
+- `CFileException::hardIO` 10: Se produjo un error de hardware.
 
-- `CFileException::sharingViolation` 11: RECURSO COMPARTIDO. No se cargó el archivo EXE o una región compartida estaba bloqueada.
+- `CFileException::sharingViolation` 11: Compartir. No se cargó el archivo EXE o una región compartida estaba bloqueada.
 
-- `CFileException::lockViolation` 12: se produjo un intento de bloquear una región que ya estaba bloqueada.
+- `CFileException::lockViolation` 12: Hubo un intento de bloquear una región que ya estaba bloqueada.
 
-- `CFileException::diskFull` 14: el disco está lleno.
+- `CFileException::diskFull` 14: El disco está lleno.
 
-- `CFileException::endOfFile` 15: se alcanzó el final del archivo.
+- `CFileException::endOfFile` 15: Se alcanzó el final del archivo.
 
     > [!NOTE]
     >  Estos enumeradores de causa de `CFileException` son distintos de los enumeradores de causa de `CArchiveException`.
@@ -313,4 +313,3 @@ Un puntero a la cadena que contiene el nombre del archivo que provocó la excepc
 [CException (clase)](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Procesamiento de excepciones](../../mfc/reference/exception-processing.md)
-

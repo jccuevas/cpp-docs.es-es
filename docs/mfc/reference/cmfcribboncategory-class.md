@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176619"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279476"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory (clase)
 
@@ -219,7 +219,7 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::SetData](#setdata)|Almacena los datos definidos por el usuario en la categoría de cinta de opciones.|
 |[CMFCRibbonCategory::SetKeys](#setkeys)|Keytip se asigna a la categoría de cinta de opciones.|
 |[CMFCRibbonCategory::SetName](#setname)||
-|[CMFCRibbonCategory:: Settabcolor](#settabcolor)|Establece el color de la categoría de cinta de opciones.|
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Establece el color de la categoría de cinta de opciones.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in] Puntero al panel de cinta de opciones para resaltar.
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto de prueba.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1108,7 +1108,7 @@ virtual BOOL OnDrawImage(
 *pDC*<br/>
 [in] Puntero a un contexto de dispositivo para la imagen.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectángulo de presentación de la imagen.
 
 *pElement*<br/>
@@ -1161,7 +1161,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 El código de tecla virtual para la clave que un usuario ha presionado.
 
 ### <a name="remarks"></a>Comentarios
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero del mouse, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="remarks"></a>Comentarios
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="remarks"></a>Comentarios
@@ -1406,7 +1406,7 @@ void SetName(LPCTSTR lpszName);
 
 Para establecer la keytip para la categoría de cinta de opciones, anexar una secuencia de escape de nueva línea seguida por los caracteres de keytip en *lpszName*.
 
-##  <a name="settabcolor"></a>  CMFCRibbonCategory:: Settabcolor
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor
 
 Establece el color de la categoría de cinta de opciones.
 
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Especifica el nuevo color de la categoría de cinta de opciones.
 
 ### <a name="remarks"></a>Comentarios

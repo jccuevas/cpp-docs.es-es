@@ -14,12 +14,12 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-ms.openlocfilehash: c7d9790cfee39fbddd9ab545d48fa375d56f3a05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8536505882ca9a87aec385ca1c42d652ea84ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561335"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326548"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>Crear un programa Win32 multiproceso
 
@@ -28,7 +28,7 @@ Al escribir un programa con varios subprocesos, debe coordinar su comportamiento
 ##  <a name="_core_sharing_common_resources_between_threads"></a> Compartir recursos comunes entre subprocesos
 
 > [!NOTE]
->  Para obtener una discusión similar desde el punto de vista MFC, vea [Multithreading: sugerencias de programación](multithreading-programming-tips.md) y [Multithreading: cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md).
+>  Para obtener una discusión similar desde el punto de vista MFC, vea [Multithreading: Sugerencias de programación](multithreading-programming-tips.md) y [Multithreading: Cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md).
 
 Cada subproceso dispone de su propia pila y su propia copia de los registros de la CPU. Otros recursos, tales como archivos, datos estáticos y memoria dinámica (montón) se comparten entre todos los subprocesos del proceso. Los subprocesos que utilizan estos recursos comunes deben estar sincronizados. Win32 proporciona varios métodos para sincronizar recursos, entre los que se incluyen semáforos, secciones críticas, eventos y exclusiones mutuas (mutex).
 

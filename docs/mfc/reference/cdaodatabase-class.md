@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439291"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272909"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase (clase)
 
@@ -104,8 +104,8 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRecordsAffected](#getrecordsaffected)|Devuelve el número de registros afectado por la última actualización, editar o agregar la operación o mediante una llamada a `Execute`.|
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|Devuelve el número de relaciones definidas entre las tablas de la base de datos.|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|Devuelve información acerca de una relación especificada que se define entre las tablas en la base de datos.|
-|[CDaoDatabase:: GetTableDefCount](#gettabledefcount)|Devuelve el número de tablas definidas en la base de datos.|
-|[CDaoDatabase:: GetTableDefInfo](#gettabledefinfo)|Devuelve información acerca de una tabla especificada en la base de datos.|
+|[CDaoDatabase::GetTableDefCount](#gettabledefcount)|Devuelve el número de tablas definidas en la base de datos.|
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|Devuelve información acerca de una tabla especificada en la base de datos.|
 |[CDaoDatabase::GetVersion](#getversion)|Devuelve la versión del motor de base de datos asociado con la base de datos.|
 |[CDaoDatabase::IsOpen](#isopen)|Devuelve cero si el `CDaoDatabase` objeto actualmente está conectado a una base de datos.|
 |[CDaoDatabase::Open](#open)|Establece una conexión a una base de datos.|
@@ -536,7 +536,7 @@ El tipo de base de datos se indica mediante el archivo o directorio que la ruta 
 |--------------------------|-------------------|
 |. Archivo MDB|Base de datos Microsoft Jet (Microsoft Access)|
 |Directorio que contiene. Archivos DBF|base de datos de dBASE|
-|Directorio que contiene. Archivo XLS|Base de datos de Microsoft Excel|
+|Directorio que contiene. Archivo XLS|Microsoft Excel database|
 |Directorio que contiene. Archivos PDX|Base de datos de Paradox|
 |Directorio que contiene los archivos de base de datos de texto con el formato apropiado|Base de datos de formato de texto|
 
@@ -587,9 +587,9 @@ Opciones que especifican qué información sobre el conjunto de registros para r
 
 - Nombre AFX_DAO_PRIMARY_INFO (valor predeterminado), escriba
 
-- AFX_DAO_SECONDARY_INFO principal información más: fecha de creación, fecha de última actualización, devuelve los registros, actualizable
+- Signo más de información AFX_DAO_SECONDARY_INFO principal: Fecha de creación, fecha de última actualización, devuelve los registros, actualizable
 
-- AFX_DAO_ALL_INFO principal y secundaria información más: SQL, Connect, ODBCTimeout
+- AFX_DAO_ALL_INFO principal y secundaria información más: SQL, conectar, ODBCTimeout
 
 *lpszName*<br/>
 Una cadena que contiene el nombre de una consulta definida en la base de datos para la búsqueda por nombre.
@@ -699,7 +699,7 @@ Dos versiones de esta función proporcionan acceso por índice o por nombre. Par
 > [!NOTE]
 >  Si establece la relación de atributos del objeto para activar las operaciones en cascada (`dbRelationUpdateCascades` o `dbRelationDeleteCascades`), el motor de base de datos Microsoft Jet automáticamente actualiza o elimina los registros de una o varias de las otras tablas cuando se realizan cambios en relacionados con la clave principal tablas. Por ejemplo, suponga que establecer una relación de eliminación en cascada entre una tabla de clientes y una tabla de pedidos. Al eliminar registros de la tabla Customers, también se eliminan los registros de la tabla de pedidos relacionados con ese cliente. Además, si establece cascade delete relaciones entre la tabla Orders y otras tablas, los registros de esas tablas se eliminan automáticamente cuando se eliminan registros de la tabla Customers.
 
-##  <a name="gettabledefcount"></a>  CDaoDatabase:: GetTableDefCount
+##  <a name="gettabledefcount"></a>  CDaoDatabase::GetTableDefCount
 
 Llame a esta función miembro para recuperar el número de tablas definidas en la base de datos.
 
@@ -715,7 +715,7 @@ El número de definiciones de tabla definidas en la base de datos.
 
 `GetTableDefCount` es útil si tiene que recorrer todas las definiciones de tabla en la colección de definiciones de tabla de la base de datos. Para obtener información acerca de una tabla determinada en la colección, vea [GetTableDefInfo](#gettabledefinfo).
 
-##  <a name="gettabledefinfo"></a>  CDaoDatabase:: GetTableDefInfo
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 
 Llame a esta función miembro para obtener diversos tipos de información sobre una tabla definida en la base de datos.
 
@@ -744,9 +744,9 @@ Opciones que especifican qué información acerca de la tabla para recuperar. La
 
 - Atributos de nombre AFX_DAO_PRIMARY_INFO (valor predeterminado), puede actualizar,
 
-- AFX_DAO_SECONDARY_INFO principal información más: fecha de creación, fecha de última actualización, de nombre de tabla de origen, conectar
+- Signo más de información AFX_DAO_SECONDARY_INFO principal: Fecha de creación, fecha de última actualizado, el nombre de la tabla de origen, conectarse
 
-- AFX_DAO_ALL_INFO principal y secundaria información más: número de registros de la regla de validación, el texto de validación
+- AFX_DAO_ALL_INFO principal y secundaria información más: Número de registros de validación de regla, el texto de validación
 
 *lpszName*<br/>
 El nombre del objeto de definición de tabla, para la búsqueda por nombre.
@@ -882,7 +882,7 @@ void SetQueryTimeout(short nSeconds);
 
 ### <a name="parameters"></a>Parámetros
 
-*númeroSegundos*<br/>
+*nSeconds*<br/>
 El número de segundos que se permiten antes de un intento de consulta agote el tiempo de espera.
 
 ### <a name="remarks"></a>Comentarios

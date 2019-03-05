@@ -1,18 +1,18 @@
 ---
-title: 'Contenedores: Implementar un contenedor'
+title: 'Contenedores: Implementación de un contenedor'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271429"
 ---
-# <a name="containers-implementing-a-container"></a>Contenedores: Implementar un contenedor
+# <a name="containers-implementing-a-container"></a>Contenedores: Implementación de un contenedor
 
 En este artículo se resume el procedimiento para implementar un contenedor y se apunta a otros artículos que proporcionan más explicaciones acerca de cómo implementar contenedores. También se enumeran algunas características OLE opcionales que desea implementar y los artículos que describen estas características.
 
@@ -46,7 +46,7 @@ Dado que la implementación de estas características varía considerablemente d
 
 El Asistente para aplicaciones derivará la clase para usted, pero es probable que deba reemplazar `OnChange` y las demás funciones mostradas con ella en el paso 2 del procedimiento anterior. Las implementaciones de esqueleto deben personalizarse para la mayoría de las aplicaciones, ya que estas funciones se implementan de forma diferente de una aplicación a la siguiente. Para obtener ejemplos de esto, consulte los ejemplos MFC [DRAWCLI](../visual-cpp-samples.md) y [contenedor](../visual-cpp-samples.md).
 
-Debe agregar un número de elementos a la estructura de menús de la aplicación contenedora para admitir OLE. Para obtener más información, consulte [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
+Debe agregar un número de elementos a la estructura de menús de la aplicación contenedora para admitir OLE. Para obtener más información, consulte [menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
 
 También puede admitir algunas de las siguientes características en la aplicación de contenedor:
 
@@ -60,10 +60,9 @@ También puede admitir algunas de las siguientes características en la aplicaci
 
 - Vínculos a objetos incrustados o aplicaciones de servidor/contenedor de combinación.
 
-   Para obtener más información, consulte [contenedores: características avanzadas](../mfc/containers-advanced-features.md).
+   Para obtener más información, consulte [contenedores: Características avanzadas](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Contenedores](../mfc/containers.md)<br/>
 [Contenedores: Elementos de cliente](../mfc/containers-client-items.md)
-

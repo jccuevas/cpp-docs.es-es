@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289694"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: Agregar propiedades estándar
 
@@ -75,15 +75,15 @@ La `COleControl` clase proporciona nueve propiedades estándar. Puede agregar la
 
 |Property|Entrada del mapa de envíos|Cómo obtener acceso a valor|
 |--------------|------------------------|-------------------------|
-|`Appearance`|(DE DISP_STOCKPROP_APPEARANCE)|Valor accesible como `m_sAppearance`.|
-|`BackColor`|(DE DISP_STOCKPROP_BACKCOLOR)|Valor accesible mediante una llamada a `GetBackColor`.|
-|`BorderStyle`|(DE DISP_STOCKPROP_BORDERSTYLE)|Valor accesible como `m_sBorderStyle`.|
-|`Caption`|(DE DISP_STOCKPROP_CAPTION)|Valor accesible mediante una llamada a `InternalGetText`.|
-|`Enabled`|(DE DISP_STOCKPROP_ENABLED)|Valor accesible como `m_bEnabled`.|
-|`Font`|(DE DISP_STOCKPROP_FONT)|Consulte el artículo [controles ActiveX MFC: usar fuentes](../mfc/mfc-activex-controls-using-fonts.md) para su uso.|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Valor accesible como `m_sAppearance`.|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Valor accesible mediante una llamada a `GetBackColor`.|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE( )|Valor accesible como `m_sBorderStyle`.|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|Valor accesible mediante una llamada a `InternalGetText`.|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|Valor accesible como `m_bEnabled`.|
+|`Font`|DISP_STOCKPROP_FONT( )|Consulte el artículo [controles ActiveX MFC: Usar fuentes](../mfc/mfc-activex-controls-using-fonts.md) para su uso.|
 |`ForeColor`|(DE DISP_STOCKPROP_FORECOLOR)|Valor accesible mediante una llamada a `GetForeColor`.|
-|`hWnd`|(DE DISP_STOCKPROP_HWND)|Valor accesible como `m_hWnd`.|
-|`Text`|(DE DISP_STOCKPROP_TEXT)|Valor accesible mediante una llamada a `InternalGetText`. Esta propiedad es igual a `Caption`, excepto el nombre de propiedad.|
+|`hWnd`|DISP_STOCKPROP_HWND( )|Valor accesible como `m_hWnd`.|
+|`Text`|DISP_STOCKPROP_TEXT( )|Valor accesible mediante una llamada a `InternalGetText`. Esta propiedad es igual a `Caption`, excepto el nombre de propiedad.|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valor accesible como `m_lReadyState` o `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> Notificación y propiedades estándar

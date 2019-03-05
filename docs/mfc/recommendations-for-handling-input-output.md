@@ -8,12 +8,12 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 1144337df9657d63c53a13e03cf31eb487ce4068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585463"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261978"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recomendaciones para el control de entrada/salida
 
@@ -27,7 +27,7 @@ Si usa E/S de archivo o no depende de cómo responden a las preguntas en el árb
 
    - Sí: Este es el caso de documento MFC de forma predeterminada. Use `CDocument` serialización.
 
-   - No: Normalmente es el caso de basado en transacciones de actualización del archivo. Actualice el archivo en una base por transacción y no es necesario `CDocument` serialización.
+   - No: Esto suele ser el caso de basado en transacciones de actualización del archivo. Actualice el archivo en una base por transacción y no es necesario `CDocument` serialización.
 
 - No, los datos principales no residen en un archivo de disco:
 
@@ -49,4 +49,4 @@ Para obtener información acerca de la serialización, vea [serialización](../m
 
 ## <a name="see-also"></a>Vea también
 
-[Serialización: Serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)

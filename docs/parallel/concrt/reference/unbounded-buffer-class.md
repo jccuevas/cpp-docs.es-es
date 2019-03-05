@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288153"
 ---
 # <a name="unboundedbuffer-class"></a>Clase unbounded_buffer
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>Parámetros
 
-*_Tipo*<br/>
+*_Type*<br/>
 El tipo de carga de los mensajes se almacena y se propaga por el búfer.
 
 ## <a name="members"></a>Miembros
@@ -57,8 +57,8 @@ El tipo de carga de los mensajes se almacena y se propaga por el búfer.
 
 |Name|Descripción|
 |----------|-----------------|
-|[eliminación de cola](#dequeue)|Quita un elemento de la `unbounded_buffer` bloque de mensajería.|
-|[poner en cola](#enqueue)|Agrega un elemento a la `unbounded_buffer` bloque de mensajería.|
+|[dequeue](#dequeue)|Quita un elemento de la `unbounded_buffer` bloque de mensajería.|
+|[enqueue](#enqueue)|Agrega un elemento a la `unbounded_buffer` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -84,7 +84,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 [ITarget](itarget-class.md)
 
-[source_block)](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -162,7 +162,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Elemento*<br/>
+*_Item*<br/>
 Elemento que se va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -197,7 +197,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -231,7 +231,7 @@ virtual void process_input_messages(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al mensaje que debe procesarse.
 
 ##  <a name="release_message"></a> release_message
@@ -293,7 +293,7 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -347,7 +347,7 @@ unbounded_buffer(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
@@ -362,7 +362,7 @@ El runtime usa el programador predeterminado si no se especifican los parámetro
 
 El tipo `filter_method` es un functor con firma `bool (_Type const &)` que es invocado por este `unbounded_buffer` bloque de mensajería para determinar si debe aceptar un mensaje proporcionado.
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+##  <a name="dtor"></a> ~unbounded_buffer
 
 Destruye el `unbounded_buffer` bloque de mensajería.
 
@@ -375,4 +375,3 @@ Destruye el `unbounded_buffer` bloque de mensajería.
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [overwrite_buffer (clase)](overwrite-buffer-class.md)<br/>
 [single_assignment (clase)](single-assignment-class.md)
-

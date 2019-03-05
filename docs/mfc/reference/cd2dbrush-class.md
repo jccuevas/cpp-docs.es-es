@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrush
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
-ms.openlocfilehash: 9e0be4b3b4f39d8fcf32f713bc8765d1f344babe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270987"
 ---
 # <a name="cd2dbrush-class"></a>Clase CD2DBrush
 
@@ -54,7 +54,7 @@ class CD2DBrush : public CD2DResource;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DBrush::CD2DBrush](#cd2dbrush)|Construye un objeto CD2DBrush.|
-|[CD2DBrush:: ~ CD2DBrush](#_dtorcd2dbrush)|Destructor. Se llama cuando se destruye un objeto brush de D2D.|
+|[CD2DBrush::~CD2DBrush](#_dtorcd2dbrush)|Destructor. Se llama cuando se destruye un objeto brush de D2D.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -65,7 +65,7 @@ class CD2DBrush : public CD2DResource;
 |[CD2DBrush::Detach](#detach)|Separa la interfaz de recursos desde el objeto|
 |[CD2DBrush::Get](#get)|Interfaz de ID2D1Brush devuelve|
 |[CD2DBrush::GetOpacity](#getopacity)|Obtiene el grado de opacidad de este pincel|
-|[CD2DBrush::getTransform](#gettransform)|Obtiene la transformación actual del destino de representación|
+|[CD2DBrush::GetTransform](#gettransform)|Obtiene la transformación actual del destino de representación|
 |[CD2DBrush::IsValid](#isvalid)|Comprueba la validez de los recursos (invalidaciones [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 |[CD2DBrush::SetOpacity](#setopacity)|Establece el grado de opacidad de este pincel|
 |[CD2DBrush::SetTransform](#settransform)|Se aplica la transformación indicada en el destino de representación, reemplazando la transformación existente. Todas las operaciones de dibujos subsiguientes se producen en el espacio de transformado|
@@ -74,7 +74,7 @@ class CD2DBrush : public CD2DResource;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CD2DBrush::operator ID2D1Brush *](#operator_id2d1brush_star)|Interfaz de ID2D1Brush devuelve|
+|[CD2DBrush::operator ID2D1Brush*](#operator_id2d1brush_star)|Interfaz de ID2D1Brush devuelve|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -95,7 +95,7 @@ class CD2DBrush : public CD2DResource;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbrush"></a>  CD2DBrush:: ~ CD2DBrush
+##  <a name="_dtorcd2dbrush"></a>  CD2DBrush::~CD2DBrush
 
 Destructor. Se llama cuando se destruye un objeto brush de D2D.
 
@@ -182,7 +182,7 @@ FLOAT GetOpacity() const;
 
 Un valor comprendido entre 0 y 1 que indica la opacidad del pincel. Este valor es un multiplicador de constante que se escala linealmente el valor alfa de todos los píxeles que se rellena con el pincel. Los valores de opacidad se fija en el intervalo de 0 a 1 antes de que se multiplican juntos.
 
-##  <a name="gettransform"></a>  CD2DBrush::getTransform
+##  <a name="gettransform"></a>  CD2DBrush::GetTransform
 
 Obtiene la transformación actual del destino de representación
 
@@ -245,7 +245,7 @@ void SetOpacity(FLOAT opacity);
 
 ### <a name="parameters"></a>Parámetros
 
-*Opacidad*<br/>
+*opacity*<br/>
 Un valor comprendido entre 0 y 1 que indica la opacidad del pincel. Este valor es un multiplicador de constante que se escala linealmente el valor alfa de todos los píxeles que se rellena con el pincel. Los valores de opacidad se fija en el intervalo de 0 a 1 antes de que se multiplican juntos.
 
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform

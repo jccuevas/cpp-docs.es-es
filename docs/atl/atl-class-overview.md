@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288056"
 ---
 # <a name="atl-class-overview"></a>Información general de clases ATL
 
@@ -27,7 +27,7 @@ Las clases de Active Template Library (ATL) se pueden clasificar como sigue:
 |[Controles compuestos](../atl/composite-controls-classes.md)|[Las propiedades y páginas de propiedades](../atl/properties-and-property-pages-classes.md)|
 |[Puntos de conexión](../atl/connection-points-classes.md)|[Compatibilidad del registro](../atl/registry-support-classes.md)|
 |[Contención de controles](../atl/control-containment-classes.md)|[Objetos de ejecución](../atl/running-objects-classes.md)|
-|[De los controles: Soporte técnico en General](../atl/controls-general-support-classes.md)|[Seguridad](../atl/security-classes.md)|
+|[Controles: Soporte técnico general](../atl/controls-general-support-classes.md)|[Seguridad](../atl/security-classes.md)|
 |[Transferencia de datos](../atl/data-transfer-classes.md)|[Compatibilidad con proveedores de servicio](../atl/service-provider-support-classes.md)|
 |[Tipos de datos](../atl/data-types-classes.md)|[Información del sitio](../atl/site-information-classes.md)|
 |[Depuración y la excepción](../atl/debugging-and-exceptions-classes.md)|[Cadena y texto](../atl/string-and-text-classes.md)|
@@ -48,4 +48,3 @@ Para obtener información sobre las clases adicionales que se puede usar en proy
 [Variables globales](../atl/reference/atl-global-variables.md)<br/>
 [Macros](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
-

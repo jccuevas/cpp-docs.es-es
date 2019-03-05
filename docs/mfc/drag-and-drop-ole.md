@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 956c746d6eef84edd7be3ab9b6c6d15107269b1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450354"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305047"
 ---
 # <a name="drag-and-drop-ole"></a>Arrastrar y colocar (OLE)
 
@@ -26,13 +26,13 @@ Cuando se utiliza OLE de arrastrar y colocar, quitar dos pasos del proceso. Sele
 
 Usa OLE de arrastrar y colocar, datos pueden transferirse de una ubicación a otra dentro de un documento, entre distintos documentos o entre aplicaciones. Se puede implementar en un contenedor o una aplicación de servidor y cualquier aplicación puede ser un origen de colocación, un destino de colocación o ambos. Si una aplicación tiene soporte técnico de origen y destino de colocación implementan, arrastrar y colocar está habilitada entre ventanas secundarias, o dentro de una ventana. Esta característica, la aplicación puede quedar mucho más fácil de usar.
 
-Si solo desea usar las capacidades de arrastrar y colocar de OLE, consulte [arrastrar y colocar: personalización](../mfc/drag-and-drop-customizing.md). Puede usar las técnicas explicadas en este artículo para hacer que las aplicaciones que no son compatibles con OLE quitar orígenes. El artículo [arrastrar y colocar: implementar un destino de colocación](../mfc/drag-and-drop-implementing-a-drop-target.md) se describe cómo implementar la compatibilidad de destino de OLE y aplicaciones que no son compatibles con OLE. También será útil examinar los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md).
+Si solo desea usar las capacidades de arrastrar y colocar de OLE, vea [arrastrar y colocar: Personalizar](../mfc/drag-and-drop-customizing.md). Puede usar las técnicas explicadas en este artículo para hacer que las aplicaciones que no son compatibles con OLE quitar orígenes. El artículo [arrastrar y colocar: Implementar un destino de colocación](../mfc/drag-and-drop-implementing-a-drop-target.md) se describe cómo implementar la compatibilidad de destino de OLE y aplicaciones que no son compatibles con OLE. También será útil examinar los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md).
 
 Si no ha leído el [objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md) serie de artículos, es posible que desee hacerlo ahora. Estos artículos explican los aspectos básicos de transferencia de datos y cómo implementarlo en sus aplicaciones.
 
 Para obtener más información acerca de arrastrar y colocar, vea:
 
-- [Arrastrar y colocar: Implementar un origen de colocación](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Arrastrar y colocar: Implementación de un origen de colocación](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
 - [Arrastrar y colocar: Implementar un destino de colocación](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
@@ -42,4 +42,3 @@ Para obtener más información acerca de arrastrar y colocar, vea:
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Objetos de datos y orígenes de datos (OLE)](../mfc/data-objects-and-data-sources-ole.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519196"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273184"
 ---
 # <a name="colecurrency-class"></a>COleCurrency (clase)
 
@@ -61,13 +61,13 @@ class COleCurrency
 
 |Name|Descripción|
 |----------|-----------------|
-|[operador =](#operator_eq)|Copia un `COleCurrency` valor.|
-|[operador +, -](#operator_plus_minus)|Agrega, resta y cambia el signo de `COleCurrency` valores.|
-|[operador +=, =](#operator_plus_minus_eq)|Se agrega y se resta un `COleCurrency` valor de este `COleCurrency` objeto.|
-|[operador * /](#operator_star)|Escala un `COleCurrency` valor por un valor entero.|
-|[operador * =, / =](#operator_star_div_eq)|Esto escala `COleCurrency` valor por un valor entero.|
+|[operator =](#operator_eq)|Copia un `COleCurrency` valor.|
+|[operator +, -](#operator_plus_minus)|Agrega, resta y cambia el signo de `COleCurrency` valores.|
+|[operator +=, -=](#operator_plus_minus_eq)|Se agrega y se resta un `COleCurrency` valor de este `COleCurrency` objeto.|
+|[operator */](#operator_star)|Escala un `COleCurrency` valor por un valor entero.|
+|[operator *=, /=](#operator_star_div_eq)|Esto escala `COleCurrency` valor por un valor entero.|
 |[operador <<](#operator_stream)|Salidas un `COleCurrency` valor `CArchive` o `CDumpContext`.|
-|[operador >>](#operator_stream)|Entradas un `COleCurrency` objeto `CArchive`.|
+|[operator >>](#operator_stream)|Entradas un `COleCurrency` objeto `CArchive`.|
 |[operador de moneda](#operator_currency)|Convierte un `COleCurrency` valor a la moneda.|
 |[operador ==, <, < =, etcetera.](#colecurrency_relational_operators)|Compara dos `COleCurrency` valores.|
 
@@ -220,15 +220,15 @@ Para obtener más información sobre las operaciones que puede establecer el est
 
 - [COleCurrency](#colecurrency)
 
-- [operador =](#operator_eq)
+- [operator =](#operator_eq)
 
-- [operador + -](#operator_plus_minus)
+- [operator + -](#operator_plus_minus)
 
 - [operador += y =](#operator_plus_minus_eq)
 
-- [operador * /](#operator_star)
+- [operator * /](#operator_star)
 
-- [operador * = y / =](#operator_star_div_eq)
+- [operator *= and /=](#operator_star_div_eq)
 
 ### <a name="example"></a>Ejemplo
 
@@ -281,15 +281,15 @@ Para obtener más información sobre las operaciones que puede establecer el est
 
 - [COleCurrency](#colecurrency)
 
-- [operador =](#operator_eq)
+- [operator =](#operator_eq)
 
-- [operador +, -](#operator_plus_minus)
+- [operator +, -](#operator_plus_minus)
 
-- [operador +=, =](#operator_plus_minus_eq)
+- [operator +=, -=](#operator_plus_minus_eq)
 
-- [operador * /](#operator_star)
+- [operator */](#operator_star)
 
-- [operador * =, / =](#operator_star_div_eq)
+- [operator *=, /=](#operator_star_div_eq)
 
 > [!CAUTION]
 >  Este miembro de datos es para situaciones de programación avanzadas. Debe usar las funciones de miembro insertada [GetStatus](#getstatus) y [SetStatus](#setstatus). Consulte `SetStatus` para las precauciones adicionales con respecto a este miembro de datos se establece explícitamente.
@@ -344,7 +344,7 @@ Para obtener más información sobre los valores de estado válido, null y no v�
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, =
+##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, -=
 
 Permiten sumar y restar un `COleCurrency` valor hacia y desde este `COleCurrency` objeto.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-ms.openlocfilehash: b850d9cfa9b2e2ea2a8b5e7f10e29e5cf26bc63e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54231a4229db9a9afeecad878d695814565d776b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655239"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285781"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl (clase)
 
@@ -40,7 +40,7 @@ La clase derivada de `IConnectionPointImpl`.
 *piid*<br/>
 Un puntero para el IID de la interfaz representada por el objeto de punto de conexión.
 
-*VCDTOX*<br/>
+*CDV*<br/>
 Una clase que administra las conexiones. El valor predeterminado es [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), lo que permite conexiones ilimitadas. También puede usar [CComUnkArray](../../atl/reference/ccomunkarray-class.md), que especifica un número fijo de conexiones.
 
 ## <a name="members"></a>Miembros

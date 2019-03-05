@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586880"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279983"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile (clase)
 
@@ -65,12 +65,12 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Close](#close)|Cierra un `CInternetFile` y libera sus recursos.|
 |[CInternetFile::Flush](#flush)|Vuelca el contenido del búfer de escritura y se asegura de que los datos en memoria se escriben en el equipo de destino.|
 |[CInternetFile::GetLength](#getlength)|Devuelve el tamaño del archivo.|
-|[CInternetFile:: Read](#read)|Lee el número de bytes especificados.|
+|[CInternetFile::Read](#read)|Lee el número de bytes especificados.|
 |[CInternetFile::ReadString](#readstring)|Lee una secuencia de caracteres.|
 |[CInternetFile::Seek](#seek)|Recoloca el puntero en un archivo abierto.|
 |[CInternetFile::SetReadBufferSize](#setreadbuffersize)|Establece el tamaño del búfer donde se leerán los datos.|
 |[CInternetFile::SetWriteBufferSize](#setwritebuffersize)|Establece el tamaño del búfer donde se escribirán los datos.|
-|[CInternetFile:: Write](#write)|Escribe el número de bytes especificados.|
+|[CInternetFile::Write](#write)|Escribe el número de bytes especificados.|
 |[CInternetFile::WriteString](#writestring)|Escribe una cadena terminada en null en un archivo.|
 
 ### <a name="public-operators"></a>Operadores públicos
@@ -216,7 +216,7 @@ Utilice este operador para obtener el identificador de Windows para la sesión a
 operator HINTERNET() const;
 ```
 
-##  <a name="read"></a>  CInternetFile:: Read
+##  <a name="read"></a>  CInternetFile::Read
 
 Llame a esta función miembro para leer en la memoria determinada, comenzando en *lpvBuf*, el número especificado de bytes, *nCount*.
 
@@ -258,10 +258,10 @@ virtual LPTSTR ReadString(
 
 ### <a name="parameters"></a>Parámetros
 
-*pStr*<br/>
+*pstr*<br/>
 Un puntero a una cadena que recibirá la línea que se va a leer.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 El número máximo de caracteres que leer.
 
 *rString*<br/>
@@ -294,7 +294,7 @@ virtual ULONGLONG Seek(
 *lOffset*<br/>
 Desplazamiento en bytes para mover el puntero de lectura/escritura en el archivo.
 
-*nde*<br/>
+*nFrom*<br/>
 Referencia relativa para el desplazamiento. Debe ser uno de los siguientes valores:
 
 - `CFile::begin` Mueva el puntero de archivo *lOff* reenvían bytes desde el principio del archivo.
@@ -370,7 +370,7 @@ Subyacente WinInet APIs no realiza el almacenamiento en búfer, por lo que se el
 
 De forma predeterminada, un `CInternetFile` objeto no proporciona ningún almacenamiento en búfer para escribir en él. Si se llama a esta función miembro, debe asegurarse de que el archivo se ha abierto para acceso de escritura. Puede cambiar el tamaño del búfer de escritura en cualquier momento, pero si lo hace una llamada implícita a [vaciar](#flush).
 
-##  <a name="write"></a>  CInternetFile:: Write
+##  <a name="write"></a>  CInternetFile::Write
 
 Llame a esta función miembro para escribir en la memoria determinada, *lpvBuf*, el número especificado de bytes, *nCount*.
 
@@ -402,7 +402,7 @@ virtual void WriteString(LPCTSTR pstr);
 
 ### <a name="parameters"></a>Parámetros
 
-*pStr*<br/>
+*pstr*<br/>
 Un puntero a una cadena que contiene el contenido que se va a escribir.
 
 ### <a name="remarks"></a>Comentarios

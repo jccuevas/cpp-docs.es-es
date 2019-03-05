@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694080"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262641"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc (clase)
 
@@ -125,14 +125,14 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `CSecurityDesc` objeto o `SECURITY_DESCRIPTOR` para asignar a la nueva estructura de `CSecurityDesc` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 El `CSecurityDesc` , opcionalmente, se puede crear el objeto utilizando un `SECURITY_DESCRIPTOR` definida previamente o estructura `CSecurityDesc` objeto.
 
-##  <a name="dtor"></a>  CSecurityDesc:: ~ CSecurityDesc
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc
 
 Destructor.
 
@@ -154,7 +154,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*pStr*<br/>
+*pstr*<br/>
 Puntero a una cadena terminada en null que contiene el [descriptor de seguridad de la cadena con formato](/windows/desktop/SecAuthZ/security-descriptor-string-format) va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -525,7 +525,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `SECURITY_DESCRIPTOR` estructura o `CSecurityDesc` objeto que se va a asignar a la `CSecurityDesc` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -609,7 +609,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*SID*<br/>
+*Sid*<br/>
 Hacer referencia a un [CSid](../../atl/reference/csid-class.md) objeto para el nuevo grupo de principal del descriptor de seguridad. Este parámetro no debe ser NULL. Un descriptor de seguridad puede marcarse como si no tuviera una DACL o una SACL, pero debe tener un grupo y un propietario, incluso estos son los SID NULL (que es un SID integrado con un significado especial).
 
 *bDefaulted*<br/>
@@ -629,7 +629,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*SID*<br/>
+*Sid*<br/>
 El [CSid](../../atl/reference/csid-class.md) objeto para propietario del principal nuevo del descriptor de seguridad. Este parámetro no debe ser NULL.
 
 *bDefaulted*<br/>
@@ -672,10 +672,10 @@ bool ToString(
 
 ### <a name="parameters"></a>Parámetros
 
-*pStr*<br/>
+*pstr*<br/>
 Puntero a una cadena terminada en null que recibirá la [descriptor de seguridad de la cadena con formato](/windows/desktop/SecAuthZ/security-descriptor-string-format).
 
-*Si*<br/>
+*si*<br/>
 Especifica una combinación de marcas de bits SECURITY_INFORMATION para indicar los componentes del descriptor de seguridad debe incluir en la cadena de salida.
 
 ### <a name="return-value"></a>Valor devuelto

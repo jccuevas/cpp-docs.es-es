@@ -1,5 +1,5 @@
 ---
-title: 'Controles ActiveX MFC: Usar páginas de propiedades estándar'
+title: 'Controles ActiveX MFC: Uso de páginas de propiedades estándar'
 ms.date: 09/12/2018
 f1_keywords:
 - CLSID_CPicturePropPage
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304709"
 ---
-# <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: Usar páginas de propiedades estándar
+# <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: Uso de páginas de propiedades estándar
 
 En este artículo se describe las páginas de propiedades estándar disponibles para los controles ActiveX y cómo usarlas.
 
@@ -55,4 +55,3 @@ Una vez realizadas estas modificaciones, recompile el proyecto. Ahora, el contro
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Controles ActiveX MFC: Agregar propiedades estándar](../mfc/mfc-activex-controls-adding-stock-properties.md)
-

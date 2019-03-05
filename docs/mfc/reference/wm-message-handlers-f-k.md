@@ -1,5 +1,5 @@
 ---
-title: 'Controladores de mensajes WM_: F - K'
+title: 'Mensajes Wm_: F - K'
 ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: e21889a44d26cd57ce0645e2050eeeb2839ef17d
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282089"
 ---
-# <a name="wm-message-handlers-f---k"></a>Controladores de mensajes WM_: F - K
+# <a name="wm-message-handlers-f---k"></a>Mensajes Wm_: F - K
 
 Las siguientes entradas de mapa de la izquierda se corresponden con los prototipos de función de la derecha:
 
@@ -64,4 +64,3 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

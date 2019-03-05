@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 7d550268fb417301116b5168d4c0ff76fdc35716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302881"
 ---
 # <a name="ccmdui-class"></a>CCmdUI (clase)
 
@@ -50,7 +50,7 @@ class CCmdUI
 |Name|Descripción|
 |----------|-----------------|
 |[CCmdUI::ContinueRouting](#continuerouting)|Indica al mecanismo de enrutamiento de comandos para enrutar el mensaje actual de la cadena de controladores de continuar.|
-|[A CCmdUI:: Enable](#enable)|Habilita o deshabilita el elemento de interfaz de usuario para este comando.|
+|[CCmdUI::Enable](#enable)|Habilita o deshabilita el elemento de interfaz de usuario para este comando.|
 |[CCmdUI::SetCheck](#setcheck)|Establece el estado de activación del elemento de interfaz de usuario para este comando.|
 |[CCmdUI::SetRadio](#setradio)|Al igual que el `SetCheck` función miembro, pero funciona en grupos de radio.|
 |[CCmdUI::SetText](#settext)|Establece el texto del elemento de interfaz de usuario para este comando.|
@@ -107,7 +107,7 @@ void ContinueRouting();
 
 Se trata de una función miembro avanzado que debe usarse junto con un controlador ON_COMMAND_EX que devuelve FALSE. Para obtener más información, consulte [6 de nota técnica](../../mfc/tn006-message-maps.md).
 
-##  <a name="enable"></a>  A CCmdUI:: Enable
+##  <a name="enable"></a>  CCmdUI::Enable
 
 Llame a esta función miembro para habilitar o deshabilitar el elemento de interfaz de usuario para este comando.
 
@@ -117,7 +117,7 @@ virtual void Enable(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ben*<br/>
+*bOn*<br/>
 TRUE para habilitar el elemento, FALSE para deshabilitarla.
 
 ### <a name="example"></a>Ejemplo
@@ -188,7 +188,7 @@ virtual void SetCheck(int nCheck = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-*nCompruebe*<br/>
+*nCheck*<br/>
 Especifica el estado de verificación para establecer. Si se desactiva el 0, Si las comprobaciones de 1, y si es 2, Establece indeterminado.
 
 ### <a name="remarks"></a>Comentarios
@@ -205,7 +205,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*Ben*<br/>
+*bOn*<br/>
 TRUE para habilitar el elemento; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios

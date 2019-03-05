@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 627fc6788dd359779bf07da3da1901be4c3aeafd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289668"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (clase)
 
@@ -57,7 +57,7 @@ class runtime_exception : public std::exception;
 
 **Encabezado:** amprt.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="runtime_exception__ctor"></a>  runtime_exception (Constructor)
 
@@ -79,13 +79,13 @@ runtime_exception(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Una descripción del error que provocó la excepción.
 
 *_Hresult*<br/>
 El valor HRESULT de error que provocó la excepción.
 
-*_Otro*<br/>
+*_Other*<br/>
 La `runtime_exception` objeto que se va a copiar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -127,7 +127,7 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `runtime_exception` objeto que se va a copiar.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502058"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276616"
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Recomendaciones para desarrolladores de controladores ODBC
 
@@ -120,4 +120,3 @@ Además, si se solicita el bloqueo pesimista, una llamada a `SQLSetPos` con irow
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

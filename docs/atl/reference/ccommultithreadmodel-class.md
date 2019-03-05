@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: ae341763ef40125057b815d2071abbebdcf08f2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b77efffca127c79c665cb8dedb916b0874de038
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508906"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290734"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel (clase)
 
@@ -57,7 +57,7 @@ Normalmente, se utiliza `CComMultiThreadModel` a través de uno de los dos **typ
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M = `CComMultiThreadModel`
+S= `CComSingleThreadModel`; M= `CComMultiThreadModel`
 
 `CComMultiThreadModel` Sí define tres **typedef** nombres. `AutoCriticalSection` y `CriticalSection` hacen referencia a las clases que proporcionan métodos para obtener y liberar la propiedad de una sección crítica. `ThreadModelNoCS` las referencias de clase [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md).
 

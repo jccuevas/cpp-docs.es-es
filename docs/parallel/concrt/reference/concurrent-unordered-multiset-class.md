@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: 8b03245790bf011941cabcb18600bbb1e69c37d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7acb79bf5b7c1831027cc47f4da7faa6f1669c21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543941"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276011"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset (Clase)
 
@@ -163,7 +163,7 @@ Borra todos los elementos en el contenedor simultáneo. Esta función no es segu
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_multiset)
+##  <a name="ctor"></a> concurrent_unordered_multiset
 
 Construye un conjunto múltiple desordenado simultáneo.
 
@@ -214,7 +214,7 @@ La función de comparación de igualdad para este conjunto múltiple desordenado
 El asignador para este conjunto múltiple desordenado.
 
 *first*<br/>
-*Último*<br/>
+*last*<br/>
 *_Uset*<br/>
 El origen `concurrent_unordered_multiset` mover los elementos de objeto.
 
@@ -385,16 +385,16 @@ El tipo de iterador que se utiliza para la inserción.
 *V*<br/>
 El tipo del valor insertado.
 
-*valor*<br/>
+*value*<br/>
 El valor que se va a insertar.
 
-*_WHERE*<br/>
+*_Where*<br/>
 La ubicación inicial para buscar un punto de inserción.
 
 *first*<br/>
 El principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Final del intervalo que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -676,11 +676,11 @@ size_type unsafe_erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 La posición del iterador en la que borrar.
 
 *first*<br/>
-*Último*<br/>
+*last*<br/>
 *KVal*<br/>
 Valor de clave que se va a borrar.
 
@@ -710,4 +710,3 @@ El número máximo de depósitos en este contenedor.
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-

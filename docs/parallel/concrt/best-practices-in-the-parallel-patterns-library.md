@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293620"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Procedimientos recomendados en la biblioteca de modelos paralelos
 
@@ -76,7 +76,7 @@ Para reducir la cantidad de sobrecarga de programación en este ejemplo, puede p
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Para obtener un ejemplo similar que usa una canalización para realizar el procesamiento de imágenes en paralelo, vea [Tutorial: crear una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Para obtener un ejemplo similar que usa una canalización para realizar el procesamiento de imágenes en paralelo, vea [Tutorial: Creación de una red de procesamiento de imágenes](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[Arriba](#top)]
 
@@ -90,7 +90,7 @@ En el ejemplo siguiente se muestra el uso del algoritmo `parallel_invoke` para i
 
 Para reducir la sobrecarga, el algoritmo `parallel_invoke` realiza la última serie de tareas en el contexto de la llamada.
 
-Para obtener la versión completa de este ejemplo, vea [Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Para obtener más información sobre la `parallel_invoke` algoritmo, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
+Para obtener la versión completa de este ejemplo, vea [Cómo: Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Para obtener más información sobre la `parallel_invoke` algoritmo, vea [algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md).
 
 [[Arriba](#top)]
 
@@ -102,7 +102,7 @@ Cuando se trabaja directamente con un objeto de grupo de tareas, utilice el [tas
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-Dado que los algoritmos paralelos usan grupos de tareas, cuando una de las iteraciones paralelas cancela el grupo de tareas primario, se cancela la tarea global. Para obtener la versión completa de este ejemplo, vea [Cómo: usar la cancelación para interrumpir un bucle paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
+Dado que los algoritmos paralelos usan grupos de tareas, cuando una de las iteraciones paralelas cancela el grupo de tareas primario, se cancela la tarea global. Para obtener la versión completa de este ejemplo, vea [Cómo: Usar la cancelación para interrumpir un bucle paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
 
 Aunque el control de excepciones es una forma menos eficaz de cancelar el trabajo paralelo que el mecanismo de cancelación, hay casos en los que el control de excepciones es adecuado. Por ejemplo, el siguiente método, `for_all`, realiza de forma recursiva una función de trabajo en cada nodo de una estructura `tree`. En este ejemplo, el `_children` miembro de datos es un [std:: List](../../standard-library/list-class.md) que contiene `tree` objetos.
 
@@ -112,7 +112,7 @@ El llamador del método `tree::for_all` puede producir una excepción si no requ
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-Para obtener la versión completa de este ejemplo, vea [Cómo: usar control de excepciones para interrumpir un bucle paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Para obtener la versión completa de este ejemplo, vea [Cómo: Usar excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 Para obtener información general sobre la cancelación y mecanismos de control de excepciones que proceden de la biblioteca PPL, consulte [cancelación en PPL](cancellation-in-the-ppl.md) y [Exception Handling](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -190,15 +190,15 @@ Considere el siguiente ejemplo usa el [Concurrency:: parallel_for_each](referenc
 
 [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_15.cpp)]
 
-Este ejemplo también puede provocar un rendimiento bajo porque la operación de bloqueo frecuente serializa eficazmente el bucle. Además, cuando un objeto del Runtime de simultaneidad realiza una operación de bloqueo, el programador puede crear un subproceso adicional que realice otro trabajo mientras el primer subproceso espera los datos. Si el runtime crea muchos subprocesos porque hay muchas tareas esperando los datos compartidos, la aplicación puede tener un rendimiento bajo o entrar en un estado de escasez de recursos.
+Este ejemplo también puede provocar un rendimiento bajo porque la operación de bloqueo frecuente serializa eficazmente el bucle. Además, cuando un objeto del Runtime de simultaneidad realiza una operación de bloqueo, el programador puede crear un subproceso adicional que realice otro trabajo mientras el primer subproceso espera los datos. Si el tiempo de ejecución crea muchos subprocesos porque hay muchas tareas esperando los datos compartidos, la aplicación puede tener un rendimiento bajo o entrar en un estado de escasez de recursos.
 
-La biblioteca PPL define la [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite eliminar el estado compartido, ya que proporciona acceso a los recursos compartidos de forma libre de bloqueo. La clase `combinable` proporciona un almacenamiento local para los subprocesos que permite realizar cálculos específicos y, a continuación, fusionar mediante combinación estos cálculos en un resultado final. Puede pensar en un objeto `combinable` como una variable de reducción.
+La biblioteca PPL define la [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), que le permite eliminar el estado compartido, ya que proporciona acceso a los recursos compartidos de forma libre de bloqueo. La clase `combinable` proporciona un almacenamiento local para los subprocesos que permite realizar cálculos específicos y, a continuación, combinar estos cálculos en un resultado final. Puede pensar en un objeto `combinable` como una variable de reducción.
 
 El ejemplo siguiente modifica el ejemplo anterior mediante el uso de un objeto `combinable` en lugar de un objeto `critical_section` para calcular la suma. Este ejemplo sí se escala, porque cada subproceso tiene su propia copia local de la suma. Este ejemplo se usa el [concurrency::combinable::combine](reference/combinable-class.md#combine) método para combinar los cálculos locales en el resultado final.
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-Para obtener la versión completa de este ejemplo, vea [Cómo: usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Para obtener más información sobre la `combinable` de clases, vea [contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).
+Para obtener la versión completa de este ejemplo, vea [Cómo: Usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Para obtener más información sobre la `combinable` de clases, vea [contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md).
 
 [[Arriba](#top)]
 
@@ -226,7 +226,7 @@ Se recomienda que use el [Concurrency:: combinable](../../parallel/concrt/refere
 
 ##  <a name="lifetime"></a> Asegúrese de que las Variables son válidas durante la vigencia de una tarea
 
-Al proporcionar una expresión lambda a un grupo de tareas o algoritmo paralelo, la cláusula de captura especifica si el cuerpo de la expresión lambda tiene acceso a las variables del ámbito de inclusión por valor o por referencia. Si pasa variables por referencia a una expresión lambda, debe garantizar que esas variables se conserven hasta que finalice la tarea.
+Al proporcionar una expresión lambda a un grupo de tareas o algoritmo paralelo, la cláusula de captura especifica si el cuerpo de la expresión lambda tiene acceso a las variables del ámbito de inclusión por valor o por referencia. Cuando se pasan variables por referencia a una expresión lambda, es necesario garantizar que esas variables van a persistir hasta que la tarea finalice.
 
 Considere el ejemplo siguiente que define la clase `object` y la función `perform_action`. La función `perform_action` crea una variable `object` y realiza alguna acción en esa variable de forma asincrónica. Dado que no se garantiza que la tarea finalice antes de que la función `perform_action` se resuelva, el programa se bloqueará o mostrará un comportamiento no especificado si la variable `object` se destruye mientras se ejecuta la tarea.
 
@@ -264,10 +264,9 @@ Para obtener más información sobre las expresiones lambda, vea [Expresiones la
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)<br/>
 [Control de excepciones](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Tutorial: Crear una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
-[Procedimiento para usar parallel.invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
-[Procedimiento para usar la cancelación para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
-[Procedimiento para usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[Tutorial: Creación de una red de procesamiento de imagen](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Cómo: Usar parallel.invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
+[Cómo: Usar la cancelación para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
+[Cómo: Usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [Procedimientos recomendados en la biblioteca de agentes asincrónicos](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [Procedimientos recomendados generales en el Runtime de simultaneidad](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

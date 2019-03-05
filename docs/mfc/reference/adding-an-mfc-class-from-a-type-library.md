@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-ms.openlocfilehash: 5cd94ad6d400cf2db60131e822f430f87a129cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8264de2c717c874da157cb29ad5e336e3ecbd0f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548023"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301598"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>Agregar una clase MFC desde una biblioteca de tipos
 
@@ -20,7 +20,7 @@ Use este asistente para crear una clase MFC desde una interfaz en una biblioteca
 > [!NOTE]
 >  No es necesario crear un proyecto MFC con la automatización habilitada para agregar una clase desde una biblioteca de tipos.
 
-Una biblioteca de tipos contiene una descripción binaria de las interfaces expuestas por un componente, definir los métodos junto con sus parámetros y tipos de valor devuelto. Se debe registrar la biblioteca de tipos para que aparezca en el **bibliotecas de tipos disponibles** lista Agregar clases desde el Asistente para la biblioteca de tipos. Vea "Dentro de COM distribuido: bibliotecas de tipo e integración del lenguaje" en MSDN library para obtener más información.
+Una biblioteca de tipos contiene una descripción binaria de las interfaces expuestas por un componente, definir los métodos junto con sus parámetros y tipos de valor devuelto. Se debe registrar la biblioteca de tipos para que aparezca en el **bibliotecas de tipos disponibles** lista Agregar clases desde el Asistente para la biblioteca de tipos. Vea "dentro de COM distribuido: Escriba las bibliotecas y lenguaje de integración"en MSDN library para obtener más información.
 
 ### <a name="to-add-an-mfc-class-from-a-type-library"></a>Para agregar una clase MFC desde una biblioteca de tipos
 
@@ -38,4 +38,3 @@ El asistente crea una clase MFC, derivada de [COleDispatchDriver](../../mfc/refe
 
 [Clientes de automatización](../../mfc/automation-clients.md)<br/>
 [Clientes de automatización: Usar bibliotecas de tipos](../../mfc/automation-clients-using-type-libraries.md)
-
