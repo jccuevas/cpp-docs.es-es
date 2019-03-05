@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM interfaces, base interface
 - IUnknown interface
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
-ms.openlocfilehash: 760db28f4016ed529b45c72d25eaabf664642cd2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 047e109e8098ed89ac89c05e434b54c91fda189a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430048"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270586"
 ---
 # <a name="iunknown"></a>IUnknown
 
@@ -23,4 +23,3 @@ ms.locfileid: "50430048"
 
 [Introducción a COM](../atl/introduction-to-com.md)<br/>
 [IUnknown y herencia de interfaz](/windows/desktop/com/iunknown-and-interface-inheritance)
-

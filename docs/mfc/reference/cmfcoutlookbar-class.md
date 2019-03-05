@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622630"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304085"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (clase)
 
@@ -73,7 +73,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 |[CMFCOutlookBar::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determina si el título para el panel con pestañas muestra el mismo texto como la pestaña activa. (Invalida [CBaseTabbedPane::CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).)|
 |[CMFCOutlookBar::Create](#create)|Crea el control de barra de Outlook.|
 |[CMFCOutlookBar::CreateCustomPage](#createcustompage)|Crea una pestaña personalizada de barra de Outlook.|
-|`CMFCOutlookBar::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCOutlookBar::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCOutlookBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determina si un usuario puede acoplar una barra de controles en el borde exterior de la barra de Outlook.|
 |[CMFCOutlookBar::FloatTab](#floattab)|Convierte un panel en flotante, pero solo si el panel se encuentra actualmente en una pestaña desmontable. (Invalida [cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
 |[CMFCOutlookBar::GetButtonsFont](#getbuttonsfont)|Devuelve la fuente del texto en los botones de la barra de Outlook.|
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Comentarios
 
-Para obtener un ejemplo de una barra de Outlook, consulte el [ejemplo OutlookDemo: aplicación de MFC OutlookDemo](../../visual-cpp-samples.md).
+Para obtener un ejemplo de una barra de Outlook, consulte el [OutlookDemo ejemplo: Aplicación de MFC OutlookDemo](../../visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementación de la barra de Outlook
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Especifica un puntero a una ventana primaria. No debe ser NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño y posición de píxeles de la barra de outlook.
 
 *nID*<br/>

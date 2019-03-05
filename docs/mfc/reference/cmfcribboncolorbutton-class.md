@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: f0a55fa9cb431900a0454d481a77efc4e63372ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7901619110652423a2ab00d8088d6b9213fe202
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266282"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton (clase)
 
@@ -171,7 +171,7 @@ CMFCRibbonColorButton(
 *nSmallImageIndex*<br/>
 [in] Índice de base cero de la imagen pequeña que aparezca en el botón.
 
-*Color*<br/>
+*color*<br/>
 [in] El color del botón (el valor predeterminado es negro).
 
 *bSimpleButtonLook*<br/>
@@ -203,10 +203,10 @@ void EnableAutomaticButton(
 *lpszLabel*<br/>
 [in] La etiqueta para el **automática** botón.
 
-*automáticoColor*<br/>
+*colorAutomatic*<br/>
 [in] Un valor RGB que especifica el **automática** color predeterminado del botón.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE si el **automática** botón está habilitado; FALSE si está deshabilitado.
 
 *lpszToolTip*<br/>
@@ -324,7 +324,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Para establecer un color.
 
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize
@@ -352,7 +352,7 @@ static void __stdcall SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] El valor RGB de un color.
 
 *strName*<br/>
@@ -420,7 +420,7 @@ void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 [in] Un color seleccionado por el usuario.
 
 ### <a name="remarks"></a>Comentarios

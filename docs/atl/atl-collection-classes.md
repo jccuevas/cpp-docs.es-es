@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 11da1dd7d72951d421d2600e3825e7cafe189240
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272105"
 ---
 # <a name="atl-collection-classes"></a>Clases de colección de ATL
 
@@ -118,7 +118,7 @@ Los ejemplos siguientes muestran las clases de colección:
 
 - [Ejemplo MMXSwarm](../visual-cpp-samples.md)
 
-- [Ejemplo DynamicConsumer](../visual-cpp-samples.md)
+- [DynamicConsumer Sample](../visual-cpp-samples.md)
 
 - [Ejemplo UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 

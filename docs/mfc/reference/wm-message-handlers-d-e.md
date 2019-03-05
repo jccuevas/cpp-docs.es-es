@@ -1,5 +1,5 @@
 ---
-title: 'Controladores de mensajes WM_: D - E'
+title: 'Mensajes Wm_: D - E'
 ms.date: 11/04/2016
 f1_keywords:
 - ON_WM_ERASEBKGND
@@ -31,14 +31,14 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-ms.openlocfilehash: 90076e991667e829a97cb805a32763b6acbfe6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ae9ff828f342bc4270c3701ced3e670988c7d54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277721"
 ---
-# <a name="wm-message-handlers-d---e"></a>Controladores de mensajes WM_: D - E
+# <a name="wm-message-handlers-d---e"></a>Mensajes Wm_: D - E
 
 Las siguientes entradas de mapa de la izquierda se corresponden con los prototipos de función de la derecha:
 
@@ -68,4 +68,3 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

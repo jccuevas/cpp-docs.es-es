@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302291"
 ---
 # <a name="cinterpolatorbase-class"></a>Clase CInterpolatorBase
 
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Salida. El valor final de una variable al final de la transición.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *offset*<br/>
 El desplazamiento desde el principio de la transición. El desplazamiento es siempre mayor o igual que cero y menor que la duración de la transición. No se llama a este método si la duración de la transición es cero.
 
-*valor*<br/>
+*value*<br/>
 Salida. El valor de interpolación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -206,7 +206,7 @@ IFACEMETHOD(InterpolateVelocity)(
 *offset*<br/>
 El desplazamiento desde el principio de la transición. El desplazamiento es siempre mayor o igual que cero y menor o igual que la duración de la transición. No se llama a este método si la duración de la transición es cero.
 
-*Velocidad*<br/>
+*velocity*<br/>
 Salida. La velocidad de la variable en el desplazamiento.
 
 ### <a name="return-value"></a>Valor devuelto

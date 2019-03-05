@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604951"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285287"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc (clase)
 
@@ -148,7 +148,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 |[COleServerDoc::OnClose](#onclose)|Lo llama el marco cuando solicita un contenedor para cerrar el documento.|
 |[COleServerDoc::OnExecOleCmd](#onexecolecmd)|Ejecuta un comando especificado o muestra ayuda para el comando.|
 |[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|Lo llama el marco de trabajo cuando la ventana de marco del contenedor se activa o desactiva.|
-|[COleServerDoc:: OnGetEmbeddedItem](#ongetembeddeditem)|Se llama para obtener un `COleServerItem` que representa todo el documento; se utiliza para obtener un elemento incrustado. Implementación necesaria.|
+|[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|Se llama para obtener un `COleServerItem` que representa todo el documento; se utiliza para obtener un elemento incrustado. Implementación necesaria.|
 |[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|Lo llama el marco para deshacer los cambios realizados durante la edición en contexto.|
 |[COleServerDoc::OnSetHostNames](#onsethostnames)|Lo llama el marco cuando un contenedor establece el título de ventana para un objeto incrustado.|
 |[COleServerDoc::OnSetItemRects](#onsetitemrects)|Lo llama el marco de trabajo para colocar la ventana de marco de edición en contexto dentro de la ventana de la aplicación contenedora.|
@@ -168,7 +168,7 @@ Para admitir los elementos vinculados, `COleServerDoc` proporciona el [OnGetLink
 
 Necesita uno `COleServerDoc`-clase derivada para cada tipo de servidor de documentos que admita su aplicación. Por ejemplo, si la aplicación de servidor es compatible con las hojas de cálculo y gráficos, necesita dos `COleServerDoc`-las clases derivadas.
 
-Para obtener más información sobre los servidores, consulte el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).
+Para obtener más información sobre los servidores, consulte el artículo [servidores: Implementación de un servidor](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -632,7 +632,7 @@ OLECMDEXECOPT_DONTPROMPTUSER
 
 OLECMDEXECOPT_SHOWHELP
 
-*pVarArgIn Expresión*<br/>
+*pvarargIn*<br/>
 Puntero a un VARIANTARG que contiene los argumentos de entrada para el comando. Puede ser NULL.
 
 *pvarargOut*<br/>
@@ -684,7 +684,7 @@ La implementación predeterminada, cancela la ventana de marco podría estar en 
 
 Para obtener más información, vea el artículo [activación](../../mfc/activation-cpp.md)...
 
-##  <a name="ongetembeddeditem"></a>  COleServerDoc:: OnGetEmbeddedItem
+##  <a name="ongetembeddeditem"></a>  COleServerDoc::OnGetEmbeddedItem
 
 Lo llama el marco de trabajo cuando llama a una aplicación contenedora de la aplicación de servidor para crear o editar un elemento incrustado.
 
@@ -811,7 +811,7 @@ virtual void OnShowControlBars(
 *pFrameWnd*<br/>
 Puntero a la ventana de marco cuyas barras de control deben estar ocultas o se muestra.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Determina si se muestran barras de control o se oculta.
 
 ### <a name="remarks"></a>Comentarios
@@ -828,7 +828,7 @@ virtual void OnShowDocument(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica si la interfaz de usuario para el documento se puede mostrar u ocultar.
 
 ### <a name="remarks"></a>Comentarios

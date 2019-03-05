@@ -1,31 +1,31 @@
 ---
-title: 'Windows Sockets: Notificaciones de Socket'
+title: 'Windows Sockets: Notificaciones de socket'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], notifications
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: e49001e9693872d23162284df49f128097e68784
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476484"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289915"
 ---
-# <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Notificaciones de Socket
+# <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Notificaciones de socket
 
 En este artículo se describe las funciones de notificación en las clases de socket. Estas funciones miembro son funciones de devolución de llamada que llama el marco de trabajo para notificar al objeto de socket de eventos importantes. Las funciones de notificación son:
 
-- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): notifica a este socket que hay datos en el búfer que puede recuperar mediante una llamada a [recepción](../mfc/reference/casyncsocket-class.md#receive).
+- [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): Notifica a este socket que hay datos en el búfer que puede recuperar mediante una llamada a [recepción](../mfc/reference/casyncsocket-class.md#receive).
 
-- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): notifica a este socket que ahora puede enviar datos mediante una llamada a [enviar](../mfc/reference/casyncsocket-class.md#send).
+- [OnSend](../mfc/reference/casyncsocket-class.md#onsend): Notifica a este socket que ahora puede enviar datos mediante una llamada a [enviar](../mfc/reference/casyncsocket-class.md#send).
 
-- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): notifica a este socket de escucha que puede aceptar solicitudes de conexión pendientes llamando [Accept](../mfc/reference/casyncsocket-class.md#accept).
+- [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): Notifica a este socket de escucha que puede aceptar solicitudes de conexión pendientes llamando [Accept](../mfc/reference/casyncsocket-class.md#accept).
 
-- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): notifica a este socket de conexión que su intento de conexión completado: quizás correctamente o quizás en error.
+- [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): Notifica a este socket de conexión que su intento de conexión completado: quizás correctamente o quizás en error.
 
-- [OnClose](../mfc/reference/casyncsocket-class.md#onclose): notifica a este socket que se ha cerrado el socket que está conectada.
+- [OnClose](../mfc/reference/casyncsocket-class.md#onclose): Notifica a este socket que se ha cerrado el socket que está conectada.
 
     > [!NOTE]
     >  Es una función adicional de notificación [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). Esta notificación indica al socket receptor que el socket remitente tiene datos de "fuera de banda" para enviar. Datos fuera de banda están un canal lógicamente independiente asociado a cada par de sockets de secuencias conectados. El canal fuera de banda normalmente se usa para enviar datos "urgentes". MFC admite datos fuera de banda. Trabajar con clases de usuarios avanzados [CAsyncSocket](../mfc/reference/casyncsocket-class.md) posible que deba utilizar el canal fuera de banda, pero los usuarios de la clase [CSocket](../mfc/reference/csocket-class.md) no se recomienda utilizarla. La manera más fácil es crear un segundo socket para transferir estos datos. Para obtener más información acerca de los datos fuera de banda, consulte la especificación Windows Sockets, disponible en el SDK de Windows.
@@ -49,11 +49,11 @@ Para obtener más información, consulte:
 
 - [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Derivar de las clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Derivación de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
 - [Windows Sockets: Cómo funcionan los Sockets con archivos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: Bloquear](../mfc/windows-sockets-blocking.md)
+- [Windows Sockets: Bloqueo](../mfc/windows-sockets-blocking.md)
 
 - [Windows Sockets: Orden de bytes](../mfc/windows-sockets-byte-ordering.md)
 
@@ -62,4 +62,3 @@ Para obtener más información, consulte:
 ## <a name="see-also"></a>Vea también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)
-

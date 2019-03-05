@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176697"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286918"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Tutorial: Depurar una aplicación de C++ AMP
 
@@ -36,7 +36,7 @@ Antes de empezar este tutorial:
 
 - Lectura [Introducción a C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Asegúrese de que esa línea números se muestran en el editor de texto. Para obtener más información, consulte [Cómo: mostrar los números de línea en el Editor de](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Asegúrese de que esa línea números se muestran en el editor de texto. Para obtener más información, vea [Cómo: Mostrar números de línea en el Editor](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Asegúrese de que está ejecutando Windows 8 o Windows Server 2012 para admitir la depuración en el emulador de software.
 
@@ -220,7 +220,7 @@ En esta sección se muestra cómo depurar el código GPU, que es el código cont
 
 2. En el **páginas de propiedades** cuadro de diálogo **propiedades de configuración**, elija **depuración**.
 
-3. En el **depurador para iniciar** lista, seleccione **depurador Local de Windows**.
+3. En la lista **Depurador para iniciar**, seleccione **Depurador local de Windows**.
 
 4. En el **tipo de depurador** lista, compruebe que **automática** está seleccionada.
 
@@ -335,7 +335,7 @@ Puede marcar los subprocesos GPU específicos marcando en el **subprocesos de GP
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Inmovilizar y reanudar subprocesos de GPU
 
-Puede inmovilizar (suspender) y retomar (Reanudar) GPU subprocesos desde la **subprocesos de GPU** ventana o el **inspección paralela** ventana. Puede inmovilizar y descongelar subprocesos de CPU de la misma manera; Para obtener información, consulte [Cómo: utilizar la ventana subprocesos](/visualstudio/debugger/how-to-use-the-threads-window).
+Puede inmovilizar (suspender) y retomar (Reanudar) GPU subprocesos desde la **subprocesos de GPU** ventana o el **inspección paralela** ventana. Puede inmovilizar y descongelar subprocesos de CPU de la misma manera; Para obtener información, vea [Cómo: Utilice la ventana subprocesos](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Para inmovilizar y descongelar subprocesos de GPU
 
@@ -387,6 +387,6 @@ Ejecute todos los subprocesos en un icono determinado para la línea que contien
 
 [Información general sobre C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Depurar código de GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Cómo: Usar la ventana Subprocesos de GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[Cómo: Usar la ventana Inspección paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[Cómo: usar la ventana Subprocesos de GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[Cómo: Uso de la ventana Inspección paralela](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Análisis de código de AMP de C++ con el visualizador de simultaneidad](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

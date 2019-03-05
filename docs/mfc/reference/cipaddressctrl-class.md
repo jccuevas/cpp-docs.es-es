@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: fe5503eb78954bf39a135cd0e4acda6c37fc5fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266300"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl (clase)
 
@@ -121,7 +121,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Estilo del control de dirección IP. Aplicar una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows para obtener una lista de los estilos de windows.
 
-*Rect*<br/>
+*rect*<br/>
 Referencia al tamaño y la posición del Control de dirección IP. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
 
 *pParentWnd*<br/>
@@ -165,7 +165,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Estilo del control de dirección IP. Aplicar una combinación de estilos de ventana. Debe incluir el estilo WS_CHILD porque el control debe ser una ventana secundaria. Consulte [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) en el SDK de Windows para obtener una lista de los estilos de windows.
 
-*Rect*<br/>
+*rect*<br/>
 Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -296,7 +296,7 @@ void SetFieldFocus(WORD nField);
 
 ### <a name="parameters"></a>Parámetros
 
-*nCampo*<br/>
+*nField*<br/>
 Índice del campo de base cero en el que se debe establecer el foco. Si este valor es mayor que el número de campos, se establece el foco al primer campo en blanco. Si todos los campos están en blanco, se establece el foco al primer campo.
 
 ### <a name="remarks"></a>Comentarios
@@ -316,7 +316,7 @@ void SetFieldRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*nCampo*<br/>
+*nField*<br/>
 Índice del campo de base cero al que se aplicará el intervalo.
 
 *nLower*<br/>
@@ -333,4 +333,3 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [IPM_SET
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

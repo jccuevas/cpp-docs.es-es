@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286028"
 ---
 # <a name="ctypedptrlist-class"></a>Clase CTypedPtrList
 
@@ -46,10 +46,10 @@ class CTypedPtrList : public BASE_CLASS
 
 #### <a name="parameters"></a>Parámetros
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Clase base de la clase de lista de puntero con tipo. debe ser una clase de lista de puntero ( `CObList` o `CPtrList`).
 
-*TIPO*<br/>
+*TYPE*<br/>
 Tipo de los elementos almacenados en la lista de clase base.
 
 ## <a name="members"></a>Miembros
@@ -114,13 +114,13 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Tipo de los elementos almacenados en la lista de clase base.
 
 *newElement*<br/>
 El puntero de objeto para agregarse a esta lista. Se permite un valor NULL.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Clase base de la clase de lista de puntero con tipo. debe ser una clase de lista de puntero ( [CObList](../../mfc/reference/coblist-class.md) o [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
 *pNewList*<br/>
@@ -145,13 +145,13 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Tipo de los elementos almacenados en la lista de clase base.
 
 *newElement*<br/>
 El puntero de objeto para agregarse a esta lista. Se permite un valor NULL.
 
-*$BASE_CLASS*<br/>
+*BASE_CLASS*<br/>
 Clase base de la clase de lista de puntero con tipo. debe ser una clase de lista de puntero ( [CObList](../../mfc/reference/coblist-class.md) o [CPtrList](../../mfc/reference/cptrlist-class.md)).
 
 *pNewList*<br/>
@@ -176,7 +176,7 @@ TYPE GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos almacenados en la lista.
 
 *Posición*<br/>
@@ -207,7 +207,7 @@ TYPE GetHead() const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos almacenados en la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -231,7 +231,7 @@ TYPE GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos contenidos en esta lista.
 
 *rPosition*<br/>
@@ -264,7 +264,7 @@ TYPE GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos contenidos en esta lista.
 
 *rPosition*<br/>
@@ -295,7 +295,7 @@ TYPE GetTail() const;
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos almacenados en la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -318,7 +318,7 @@ TYPE RemoveHead();
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos almacenados en la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -339,7 +339,7 @@ TYPE RemoveTail();
 
 ### <a name="parameters"></a>Parámetros
 
-*TIPO*<br/>
+*TYPE*<br/>
 Parámetro de plantilla que especifica el tipo de elementos almacenados en la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -360,10 +360,10 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 La posición del elemento que se puede establecer.
 
-*TIPO*<br/>
+*TYPE*<br/>
 Tipo de los elementos almacenados en la lista de clase base.
 
 *newElement*<br/>

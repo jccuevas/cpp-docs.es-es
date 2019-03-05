@@ -4,12 +4,12 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: a3f1dca05eee7710d07818fb660e35be535fbb78
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94bc17f59e0d0a7ed5627d0ed20d31e471c22fd9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294504"
 ---
 # <a name="internet-information-by-task"></a>Información de Internet por tarea
 
@@ -51,4 +51,3 @@ Las siguientes categorías de tareas se muestran en este tema:
 ## <a name="see-also"></a>Vea también
 
 [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)
-

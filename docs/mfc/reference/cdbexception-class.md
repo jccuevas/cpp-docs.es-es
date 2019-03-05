@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549518"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295024"
 ---
 # <a name="cdbexception-class"></a>CDBException (clase)
 
@@ -44,13 +44,13 @@ class CDBException : public CException
 La clase incluye a dos miembros de datos públicos que puede usar para determinar la causa de la excepción o para mostrar un mensaje de texto que describe la excepción. `CDBException` los objetos se construye y producidos por las funciones miembro de las clases de base de datos.
 
 > [!NOTE]
->  Esta clase es una de las clases de MFC Open Database Connectivity (ODBC). Si utiliza las clases de objetos de acceso a datos (DAO) más reciente en su lugar, use [CDaoException](../../mfc/reference/cdaoexception-class.md) en su lugar. Todos los nombres de clases DAO tengan "CDao" como prefijo. Para obtener más información, vea el artículo [información general: programación de base de datos](../../data/data-access-programming-mfc-atl.md).
+>  Esta clase es una de las clases de MFC Open Database Connectivity (ODBC). Si utiliza las clases de objetos de acceso a datos (DAO) más reciente en su lugar, use [CDaoException](../../mfc/reference/cdaoexception-class.md) en su lugar. Todos los nombres de clases DAO tengan "CDao" como prefijo. Para obtener más información, vea el artículo [información general: Programación de base de datos](../../data/data-access-programming-mfc-atl.md).
 
 Las excepciones son casos de que impliquen condiciones ajenos al control del programa, como origen de datos de ejecución anormal o errores de E/S de red. Errores que es probable que vea en el curso normal de ejecutar el programa normalmente no se consideran excepciones.
 
 Puede tener acceso a estos objetos dentro del ámbito de un **CATCH** expresión. También se puede producir `CDBException` objetos desde su propio código con el `AfxThrowDBException` función global.
 
-Para obtener más información sobre el control de excepciones en general, o sobre `CDBException` objetos, consulte los artículos [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md) y [excepciones: excepciones de base de datos](../../mfc/exceptions-database-exceptions.md).
+Para obtener más información sobre el control de excepciones en general, o sobre `CDBException` objetos, consulte los artículos [de control de excepciones (MFC)](../../mfc/exception-handling-in-mfc.md) y [excepciones: Excepciones de base de datos](../../mfc/exceptions-database-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -144,11 +144,11 @@ Para obtener más información acerca de los códigos que se utiliza para realiz
 
 ### <a name="example"></a>Ejemplo
 
-  Desde ODBC: "Estado: S0022, nativo: 207, origen: [Microsoft] [controlador ODBC SQL Server] nombre de columna no válido [SQL Server] 'ColName'"
+  Desde ODBC: "Estado: S0022, nativo: 207, origen: nombre de columna no válido [Microsoft] [controlador ODBC para SQL Server] [SQL Server] 'ColName'"
 
-En `m_strStateNativeOrigin`: "estado: S0022, nativo: 207, origen: [Microsoft] [controlador ODBC SQL Server] [SQL Server]"
+En `m_strStateNativeOrigin`: "Estado: S0022, nativo: 207, origen: [Microsoft] [controlador ODBC SQL Server] [SQL Server]"
 
-En `m_strError`: "nombre de columna no válido 'ColName'"
+En `m_strError`: "Nombre de columna no válido 'ColName'"
 
 ## <a name="see-also"></a>Vea también
 
@@ -157,6 +157,6 @@ En `m_strError`: "nombre de columna no válido 'ColName'"
 [CDatabase (clase)](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset (clase)](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange (clase)](../../mfc/reference/cfieldexchange-class.md)<br/>
-[CRecordset:: Update](../../mfc/reference/crecordset-class.md#update)<br/>
+[CRecordset::Update](../../mfc/reference/crecordset-class.md#update)<br/>
 [CRecordset::Delete](../../mfc/reference/crecordset-class.md#delete)<br/>
 [CException (clase)](../../mfc/reference/cexception-class.md)

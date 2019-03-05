@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521963"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274302"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass (estructura)
 
@@ -33,7 +33,7 @@ struct CRuntimeClass
 |Name|Descripción|
 |----------|-----------------|
 |[CRuntimeClass::CreateObject](#createobject)|Crea un objeto durante el tiempo de ejecución.|
-|[CRuntimeClass](#fromname)|Crea un objeto durante el tiempo de ejecución mediante el nombre de clase conocidas.|
+|[CRuntimeClass::FromName](#fromname)|Crea un objeto durante el tiempo de ejecución mediante el nombre de clase conocidas.|
 |[CRuntimeClass::IsDerivedFrom](#isderivedfrom)|Determina si la clase se deriva de la clase especificada.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -88,13 +88,13 @@ Un puntero al objeto recién creado, o NULL si el nombre de clase no se encuentr
 
 ### <a name="remarks"></a>Comentarios
 
-Las clases derivadas de `CObject` puede admitir la creación dinámica, que es la capacidad para crear un objeto de una clase especificada en tiempo de ejecución. Documento, vista y las clases de marco, por ejemplo, deben admitir la creación dinámica. Para obtener más información sobre la creación dinámica y la `CreateObject` miembro, vea [CObject (clase)](../../mfc/using-cobject.md) y [CObject (clase): especificar niveles de funcionalidad](../../mfc/specifying-levels-of-functionality.md).
+Las clases derivadas de `CObject` puede admitir la creación dinámica, que es la capacidad para crear un objeto de una clase especificada en tiempo de ejecución. Documento, vista y las clases de marco, por ejemplo, deben admitir la creación dinámica. Para obtener más información sobre la creación dinámica y la `CreateObject` miembro, vea [CObject (clase)](../../mfc/using-cobject.md) y [CObject (clase): Especificar los niveles de funcionalidad](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Ejemplo
 
   Vea el ejemplo de [IsDerivedFrom](#isderivedfrom).
 
-##  <a name="fromname"></a>  CRuntimeClass
+##  <a name="fromname"></a>  CRuntimeClass::FromName
 
 Llame a esta función para recuperar el `CRuntimeClass` estructura asociada con el nombre conocido.
 
@@ -141,7 +141,7 @@ La relación viene determinada por el "recorrido" de la clase del miembro de la 
 > [!NOTE]
 >  Para usar el `CRuntimeClass` estructura, debe incluir la macro IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE o IMPLEMENT_SERIAL en la implementación de la clase para el que desea recuperar información sobre los objetos de tiempo de ejecución.
 
-Para obtener más información sobre el uso de `CRuntimeClass`, consulte el artículo [CObject (clase): acceso a información de clase de tiempo de ejecución](../../mfc/accessing-run-time-class-information.md).
+Para obtener más información sobre el uso de `CRuntimeClass`, consulte el artículo [CObject (clase): Acceso a la información de clase en tiempo de ejecución](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -219,9 +219,8 @@ Para obtener más información sobre los números de esquema, vea el [IMPLEMENT_
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)<br/>
-[CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
+[CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)<br/>
 [RUNTIME_CLASS](run-time-object-model-services.md#runtime_class)<br/>
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

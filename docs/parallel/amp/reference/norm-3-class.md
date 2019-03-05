@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288940"
 ---
 # <a name="norm3-class"></a>norm_3 (Clase)
 
@@ -125,8 +125,8 @@ class norm_3;
 |norm_3::ref_b||
 |norm_3::ref_g||
 |norm_3::ref_r||
-|norm_3:: ref_x||
-|norm_3:: ref_y||
+|norm_3::ref_x||
+|norm_3::ref_y||
 |norm_3::ref_z||
 |norm_3::set_x||
 |norm_3::set_xy||
@@ -167,36 +167,36 @@ class norm_3;
 
 |Name|Descripción|
 |----------|-----------------|
-|norm_3:: b||
-|norm_3:: BG||
-|norm_3:: BGR||
-|norm_3:: br||
+|norm_3::b||
+|norm_3::bg||
+|norm_3::bgr||
+|norm_3::br||
 |norm_3::brg||
-|norm_3:: g||
-|norm_3:: GB||
-|norm_3:: GBR||
-|norm_3:: GR||
-|norm_3:: GRB||
-|norm_3:: r||
-|norm_3:: RB||
-|norm_3:: RBG||
-|norm_3:: RG||
-|norm_3:: RGB||
-|norm_3:: x||
-|norm_3:: XY||
-|norm_3:: XYZ||
+|norm_3::g||
+|norm_3::gb||
+|norm_3::gbr||
+|norm_3::gr||
+|norm_3::grb||
+|norm_3::r||
+|norm_3::rb||
+|norm_3::rbg||
+|norm_3::rg||
+|norm_3::rgb||
+|norm_3::x||
+|norm_3::xy||
+|norm_3::xyz||
 |norm_3::xz||
-|norm_3:: xzy||
-|norm_3:: y||
-|norm_3:: YX||
-|norm_3:: YXZ||
-|norm_3:: YZ||
-|norm_3:: yzx||
-|norm_3:: z||
+|norm_3::xzy||
+|norm_3::y||
+|norm_3::yx||
+|norm_3::yxz||
+|norm_3::yz||
+|norm_3::yzx||
+|norm_3::z||
 |norm_3::zx||
-|norm_3:: zxy||
-|norm_3:: ZY||
-|norm_3:: ZYX||
+|norm_3::zxy||
+|norm_3::zy||
+|norm_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -206,7 +206,7 @@ class norm_3;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ## <a name="ctor"></a> Constructor norm_3
 
@@ -271,7 +271,7 @@ El valor para inicializar el elemento 2.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ## <a name="a-namesize-size-constant"></a><a name="size"> cambio de tamaño constante

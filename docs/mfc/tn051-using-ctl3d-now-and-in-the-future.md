@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CTL3D.DLL
 - 3D effect
 ms.assetid: ab517a13-a137-4a60-8039-be92a632b76b
-ms.openlocfilehash: fb70bc7b073b3b1ef45741d4f4be314d7ce61466
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d058cc39e315b6f6f97a26c29b3f78a63c3c682e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291072"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: Usar CTL3D ahora y en el futuro
 
@@ -23,4 +23,3 @@ Esta nota técnica, que se analizó anteriormente CTL3D y MFC, ahora está obsol
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

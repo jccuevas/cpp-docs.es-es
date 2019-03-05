@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264853"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view (Clase)
 
@@ -58,7 +58,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|Devuelve un valor booleano que indica si el `accelerator_view` objeto tiene el nivel DEBUG habilitado para informar sobre errores.|
 |[get_queuing_mode](#get_queuing_mode)|Devuelve el modo de puesta en cola para el `accelerator_view` objeto.|
 |[get_version](#get_version)|Devuelve la versión de la `accelerator_view`.|
-|[Espere](#wait)|Espera a que todos los comandos enviados a la `accelerator_view` objeto que se va a finalizar.|
+|[wait](#wait)|Espera a que todos los comandos enviados a la `accelerator_view` objeto que se va a finalizar.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -72,7 +72,7 @@ class accelerator_view;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Acelerador](#accelerator)|Obtiene el objeto `accelerator` para el objeto `accelerator_view`.|
+|[accelerator](#accelerator)|Obtiene el objeto `accelerator` para el objeto `accelerator_view`.|
 |[is_auto_selection](#is_auto_selection)|Obtiene un valor booleano que indica si el runtime seleccionará automáticamente un acelerador adecuado cuando el `accelerator_view` objeto se pasa a un [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|
 |[is_debug](#is_debug)|Obtiene un valor booleano que indica si el `accelerator_view` objeto tiene el nivel DEBUG habilitado para informar sobre errores.|
 |[queuing_mode](#queuing_mode)|Obtiene el modo de puesta en cola el `accelerator_view` objeto.|
@@ -94,7 +94,7 @@ Un `accelerator_view` objeto puede tener uno de los dos [queuing_mode (enumeraci
 
 **Encabezado:** amprt.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="accelerator"></a> Acelerador
 
@@ -118,7 +118,7 @@ accelerator_view( const accelerator_view & _Other );
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `accelerator_view` objeto que se va a copiar.
 
 ## <a name="accelerator_view__create_marker"></a> create_marker
@@ -238,7 +238,7 @@ Obtiene un valor booleano que indica si el objeto accelerator_view tiene la capa
 __declspec(property(get= get_is_debug)) bool is_debug;
 ```
 
-## <a name="accelerator_view__operator_neq"></a> operador! =
+## <a name="accelerator_view__operator_neq"></a> operator!=
 
 Compara este objeto accelerator_view con otro y devuelve **false** si son iguales; en caso contrario, devuelve **true**.
 
@@ -250,7 +250,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `accelerator_view` objeto que se va a comparar con éste.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -269,7 +269,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `accelerator_view` objeto que se va a copiar desde.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -288,7 +288,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `accelerator_view` objeto que se va a comparar con éste.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -333,7 +333,7 @@ Devuelve `void`.
 
 Si el [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) es `immediate`, este método regresa inmediatamente sin bloquear.
 
-##  <a name="dtor"></a> ~ accelerator_view
+##  <a name="dtor"></a> ~accelerator_view
 
 Destruye el objeto accelerator_view.
 

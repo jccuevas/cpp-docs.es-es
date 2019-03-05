@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288836"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx (clase)
 
@@ -176,7 +176,7 @@ class CWinAppEx : public CWinApp
 |[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|Inicializa el objeto `CKeyboardManager`.|
 |[CWinAppEx::InitMouseManager](#initmousemanager)|Inicializa el objeto `CMouseManager`.|
 |[CWinAppEx::InitShellManager](#initshellmanager)|Inicializa el `CShellManager` clase|
-|[CWinAppEx](#inittooltipmanager)|Inicializa el `CTooltipManager` clase.|
+|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|Inicializa el `CTooltipManager` clase.|
 |[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
 |[CWinAppEx::IsStateExists](#isstateexists)|Indica si la clave especificada está en el registro.|
 |[CWinAppEx::LoadState](#loadstate)|Carga el estado de la aplicación desde el registro.|
@@ -222,7 +222,7 @@ Depende en gran medida de la funcionalidad proporcionada por el marco de trabajo
 
 - Derive la clase principal de la aplicación de `CWinAppEx`.
 
-Después de incorporar `CWinAppEx` en su aplicación, puede inicializar uno de los administradores de aplicación. Antes de usar un administrador de la aplicación, debe inicializarlo llamando al método initialize adecuado. Para obtener un puntero a un administrador específico, llame al método get asociado. El `CWinAppEx` clase administra los siguientes administradores de aplicación: [CMouseManager (clase)](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager (clase)](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager (clase)](../../mfc/reference/ckeyboardmanager-class.md), [ CUserToolsManager (clase)](../../mfc/reference/cusertoolsmanager-class.md), y [CMenuTearOffManager (clase)](../../mfc/reference/cmenutearoffmanager-class.md).
+Después de incorporar `CWinAppEx` en su aplicación, puede inicializar uno de los administradores de aplicación. Antes de usar un administrador de la aplicación, debe inicializarlo llamando al método initialize adecuado. Para obtener un puntero a un administrador específico, llame al método get asociado. La `CWinAppEx` clase administra los siguientes administradores de aplicación: [CMouseManager (clase)](../../mfc/reference/cmousemanager-class.md), [CContextMenuManager (clase)](../../mfc/reference/ccontextmenumanager-class.md), [CKeyboardManager (clase)](../../mfc/reference/ckeyboardmanager-class.md), [CUserToolsManager (clase)](../../mfc/reference/cusertoolsmanager-class.md), y [ CMenuTearOffManager (clase)](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -288,7 +288,7 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Especifica si la aplicación carga el tamaño inicial y la ubicación de la ventana de marco principal desde el registro.
 
 ### <a name="remarks"></a>Comentarios
@@ -868,7 +868,7 @@ Si se llama a [CWinAppEx::GetShellManager](#getshellmanager), llama la implement
 
 Si la aplicación ya tiene un administrador de shell y se llama `InitShellManager`, la aplicación genera un [ASSERT](diagnostic-services.md#assert) error. Por lo tanto, no llame a `InitShellManager` si creas un `CShellManager` objeto directamente. Si no usa un personalizado `CShellManager`, utilice `GetShellManager` para crear un `CShellManager` objeto.
 
-##  <a name="inittooltipmanager"></a>  CWinAppEx
+##  <a name="inittooltipmanager"></a>  CWinAppEx::InitTooltipManager
 
 Inicializa el [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) objeto.
 
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in] Un puntero a un objeto de ventana para el que el usuario invoca la Ayuda contextual.
 
-*[] dwHelpIDArray*<br/>
+*dwHelpIDArray[]*<br/>
 [in] Un valor reservado.
 
 ### <a name="remarks"></a>Comentarios
@@ -1067,7 +1067,7 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a un objeto derivado de la [clase CView](../../mfc/reference/cview-class.md).
 
 *iViewId*<br/>
@@ -1232,10 +1232,10 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in] Un identificador de recurso de menú.
 
-*punto*<br/>
+*point*<br/>
 [in] Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) que especifica la posición del menú en coordenadas de pantalla.
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero a la ventana que posee el menú emergente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in] Una cadena que contiene el nombre de una clave del registro.
 
-*nvalor*<br/>
+*nValue*<br/>
 [in] Para almacenar los datos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in] Una cadena que contiene el valor que se va a establecer.
 
-*nvalor*<br/>
+*nValue*<br/>
 [in] Los datos para escribir en el registro.
 
 ### <a name="return-value"></a>Valor devuelto

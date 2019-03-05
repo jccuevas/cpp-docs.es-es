@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_lock class
 ms.assetid: 8f494942-7748-4a2a-8de2-23414bfe6346
-ms.openlocfilehash: de7393c9186a1572040acd18854b5b3046b239f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c10a7f302b63c33869425c4e5bddb36a15373ea8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326577"
 ---
 # <a name="improperlock-class"></a>improper_lock (Clase)
 
@@ -31,7 +31,7 @@ class improper_lock : public std::exception;
 
 |Name|Descripción|
 |----------|-----------------|
-|[improper_lock)](#ctor)|Sobrecargado. Construye un objeto `improper_lock exception`.|
+|[improper_lock](#ctor)|Sobrecargado. Construye un objeto `improper_lock exception`.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -49,7 +49,7 @@ Normalmente, esta excepción se produce cuando se intenta adquirir un bloqueo no
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> improper_lock)
+##  <a name="ctor"></a> improper_lock
 
 Construye un objeto `improper_lock exception`.
 
@@ -61,7 +61,7 @@ improper_lock() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Mensaje descriptivo del error.
 
 ## <a name="see-also"></a>Vea también

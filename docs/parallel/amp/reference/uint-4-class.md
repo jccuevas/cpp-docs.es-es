@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e763c2654f0edaa02ceaa5294eb33ef02e69ee9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579041"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266814"
 ---
 # <a name="uint4-class"></a>uint_4 (Clase)
 
@@ -321,10 +321,10 @@ class uint_4;
 |uint_4::get_wzyx||
 |uint_4::get_x||
 |uint_4::get_xw||
-|uint_4:: get_xwy||
+|uint_4::get_xwy||
 |uint_4::get_xwyz||
 |uint_4::get_xwz||
-|uint_4:: get_xwzy||
+|uint_4::get_xwzy||
 |uint_4::get_xy||
 |uint_4::get_xyw||
 |uint_4::get_xywz||
@@ -332,7 +332,7 @@ class uint_4;
 |uint_4::get_xyzw||
 |uint_4::get_xz||
 |uint_4::get_xzw||
-|uint_4:: get_xzwy||
+|uint_4::get_xzwy||
 |uint_4::get_xzy||
 |uint_4::get_xzyw||
 |uint_4::get_y||
@@ -347,7 +347,7 @@ class uint_4;
 |uint_4::get_yxz||
 |uint_4::get_yxzw||
 |uint_4::get_yz||
-|uint_4:: get_yzw||
+|uint_4::get_yzw||
 |uint_4::get_yzwx||
 |uint_4::get_yzx||
 |uint_4::get_yzxw||
@@ -372,8 +372,8 @@ class uint_4;
 |uint_4::ref_g||
 |uint_4::ref_r||
 |uint_4::ref_w||
-|uint_4:: ref_x||
-|uint_4:: ref_y||
+|uint_4::ref_x||
+|uint_4::ref_y||
 |uint_4::ref_z||
 |uint_4::set_w||
 |uint_4::set_wx||
@@ -393,21 +393,21 @@ class uint_4;
 |uint_4::set_wzyx||
 |uint_4::set_x||
 |uint_4::set_xw||
-|uint_4:: set_xwy||
+|uint_4::set_xwy||
 |uint_4::set_xwyz||
 |uint_4::set_xwz||
-|uint_4:: set_xwzy||
+|uint_4::set_xwzy||
 |uint_4::set_xy||
 |uint_4::set_xyw||
 |uint_4::set_xywz||
 |uint_4::set_xyz||
-|uint_4:: set_xyzw||
+|uint_4::set_xyzw||
 |uint_4::set_xz||
 |uint_4::set_xzw||
-|uint_4:: set_xzwy||
+|uint_4::set_xzwy||
 |uint_4::set_xzy||
 |uint_4::set_xzyw||
-|uint_4:: set_y||
+|uint_4::set_y||
 |uint_4::set_yw||
 |uint_4::set_ywx||
 |uint_4::set_ywxz||
@@ -419,7 +419,7 @@ class uint_4;
 |uint_4::set_yxz||
 |uint_4::set_yxzw||
 |uint_4::set_yz||
-|uint_4:: set_yzw||
+|uint_4::set_yzw||
 |uint_4::set_yzwx||
 |uint_4::set_yzx||
 |uint_4::set_yzxw||
@@ -470,10 +470,10 @@ class uint_4;
 |uint_4::abr||
 |uint_4::abrg||
 |uint_4::ag||
-|uint_4:: agb||
+|uint_4::agb||
 |uint_4::agbr||
 |uint_4::agr||
-|uint_4:: agrb||
+|uint_4::agrb||
 |uint_4::ar||
 |uint_4::arb||
 |uint_4::arbg||
@@ -527,66 +527,66 @@ class uint_4;
 |uint_4::rgab||
 |uint_4::rgb||
 |uint_4::rgba||
-|uint_4:: w||
-|uint_4:: WX||
-|uint_4:: WXY||
-|uint_4:: wxyz||
-|uint_4:: wxz||
-|uint_4:: wxzy||
-|uint_4:: WY||
-|uint_4:: wyx||
+|uint_4::w||
+|uint_4::wx||
+|uint_4::wxy||
+|uint_4::wxyz||
+|uint_4::wxz||
+|uint_4::wxzy||
+|uint_4::wy||
+|uint_4::wyx||
 |uint_4::wyxz||
-|uint_4:: WYZ||
-|uint_4:: wyzx||
+|uint_4::wyz||
+|uint_4::wyzx||
 |uint_4::wz||
 |uint_4::wzx||
-|uint_4:: wzxy||
-|uint_4:: wzy||
-|uint_4:: wzyx||
-|uint_4:: x||
-|uint_4:: xw||
-|uint_4:: xwy||
-|uint_4:: xwyz||
+|uint_4::wzxy||
+|uint_4::wzy||
+|uint_4::wzyx||
+|uint_4::x||
+|uint_4::xw||
+|uint_4::xwy||
+|uint_4::xwyz||
 |uint_4::xwz||
-|uint_4:: xwzy||
-|uint_4:: XY||
-|uint_4:: xyw||
+|uint_4::xwzy||
+|uint_4::xy||
+|uint_4::xyw||
 |uint_4::xywz||
-|uint_4:: XYZ||
-|uint_4:: xyzw||
+|uint_4::xyz||
+|uint_4::xyzw||
 |uint_4::xz||
-|uint_4:: xzw||
-|uint_4:: xzwy||
-|uint_4:: xzy||
-|uint_4:: xzyw||
-|uint_4:: y||
-|uint_4:: yw||
-|uint_4:: ywx||
+|uint_4::xzw||
+|uint_4::xzwy||
+|uint_4::xzy||
+|uint_4::xzyw||
+|uint_4::y||
+|uint_4::yw||
+|uint_4::ywx||
 |uint_4::ywxz||
 |uint_4::ywz||
 |uint_4::ywzx||
-|uint_4:: YX||
-|uint_4:: yxw||
+|uint_4::yx||
+|uint_4::yxw||
 |uint_4::yxwz||
 |uint_4::yxz||
-|uint_4:: yxzw||
-|uint_4:: YZ||
-|uint_4:: yzw||
-|uint_4:: yzwx||
+|uint_4::yxzw||
+|uint_4::yz||
+|uint_4::yzw||
+|uint_4::yzwx||
 |uint_4::yzx||
-|uint_4:: yzxw||
+|uint_4::yzxw||
 |uint_4::z||
-|uint_4:: ZW||
+|uint_4::zw||
 |uint_4::zwx||
-|uint_4:: zwxy||
-|uint_4:: zwy||
-|uint_4:: zwyx||
+|uint_4::zwxy||
+|uint_4::zwy||
+|uint_4::zwyx||
 |uint_4::zx||
 |uint_4::zxw||
 |uint_4::zxwy||
-|uint_4:: zxy||
-|uint_4:: zxyw||
-|uint_4:: ZY||
+|uint_4::zxy||
+|uint_4::zxyw||
+|uint_4::zy||
 |uint_4::zyw||
 |uint_4::zywx||
 |uint_4::zyx||
@@ -600,7 +600,7 @@ class uint_4;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ## <a name="uint_4__ctor"></a> uint_4
 
@@ -656,7 +656,7 @@ El valor para inicializar el elemento 3.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ## <a name=""></a> Tamaño

@@ -1,5 +1,5 @@
 ---
-title: 'Objetos de datos y orígenes de datos: manipulación'
+title: 'Objetos de datos y orígenes de datos: Manipulación'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636155"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286756"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Objetos de datos y orígenes de datos: manipulación
+# <a name="data-objects-and-data-sources-manipulation"></a>Objetos de datos y orígenes de datos: Manipulación
 
 Después de crear un objeto de datos o un origen de datos, puede realizar un número de operaciones comunes en los datos, como insertar y quitar datos, enumerar los formatos de que los datos están en y mucho más. En este artículo se describe las técnicas necesarias para completar las operaciones más habituales. Entre los temas se incluyen los siguientes:
 
@@ -67,7 +67,7 @@ Antes de que una aplicación permite al usuario pegar datos en ella, debe saber 
 
    - Llamar al objeto de datos `BeginEnumFormats` función miembro empiecen a enumerar los formatos disponibles en el Portapapeles. A continuación, llame a `GetNextFormat` hasta que el Portapapeles devuelve un formato de la aplicación admite o no hay ningún formato más.
 
-Si usas **ON_UPDATE_COMMAND_UI**, ahora puede habilitar el pegado y, posiblemente, los elementos de pegado especial en el menú Edición. Para ello, llame al `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Para obtener más información acerca de qué contenedor las aplicaciones deben hacer con los elementos de menú y cuándo, vea [menús y recursos: adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
+Si usas **ON_UPDATE_COMMAND_UI**, ahora puede habilitar el pegado y, posiblemente, los elementos de pegado especial en el menú Edición. Para ello, llame al `CMenu::EnableMenuItem` o `CCmdUI::Enable`. Para obtener más información acerca de qué contenedor las aplicaciones deben hacer con los elementos de menú y cuándo, vea [menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Recuperación de datos de un objeto de datos
 

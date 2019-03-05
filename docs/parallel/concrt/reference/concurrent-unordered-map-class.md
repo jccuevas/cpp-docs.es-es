@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657596"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284351"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map (Clase)
 
@@ -247,10 +247,10 @@ La función de comparación de igualdad para esta asignación no ordenada.
 *_Allocator*<br/>
 El asignador para esta asignación no ordenada.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
 *_Umap*<br/>
@@ -428,13 +428,13 @@ El tipo del valor insertado en el mapa.
 *value*<br/>
 El valor que se va a insertar.
 
-*_WHERE*<br/>
+*_Where*<br/>
 La ubicación inicial para buscar un punto de inserción.
 
 *first*<br/>
 El principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Final del intervalo que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -509,7 +509,7 @@ El número máximo de elementos que se pueden insertar en este contenedor simult
 
 Este valor de límite superior realmente puede ser superior a lo que realmente puede contener el contenedor.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Busca o inserta un elemento con la clave especificada. Este método es seguro para simultaneidad.
 
@@ -745,13 +745,13 @@ size_type unsafe_erase(
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 La posición del iterador en la que borrar.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 La posición del primer elemento del intervalo de elementos que va a borrar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 La posición del primer elemento más allá del intervalo de elementos que va a borrar.
 
 *KVal*<br/>
@@ -783,4 +783,3 @@ El número máximo de depósitos en este contenedor.
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-

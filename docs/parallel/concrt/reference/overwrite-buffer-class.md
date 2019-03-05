@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299314"
 ---
 # <a name="overwritebuffer-class"></a>Clase overwrite_buffer
 
@@ -57,7 +57,7 @@ El tipo de carga de los mensajes se almacena y se propaga por el búfer.
 |Name|Descripción|
 |----------|-----------------|
 |[has_value](#has_value)|Comprueba si este `overwrite_buffer` bloque de mensajería aún tiene un valor.|
-|[valor](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `overwrite_buffer` bloque de mensajería.|
+|[value](#value)|Obtiene una referencia a la carga actual del mensaje que se almacenan en el `overwrite_buffer` bloque de mensajería.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -86,7 +86,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 [ITarget](itarget-class.md)
 
-[source_block)](source-block-class.md)
+[source_block](source-block-class.md)
 
 [propagator_block](propagator-block-class.md)
 
@@ -165,7 +165,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 Un puntero al destino recién vinculado.
 
-##  <a name="dtor"></a> ~ overwrite_buffer
+##  <a name="dtor"></a> ~overwrite_buffer
 
 Destruye el `overwrite_buffer` bloque de mensajería.
 
@@ -200,7 +200,7 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Filtrar*<br/>
+*_Filter*<br/>
 Una función de filtro que determina si se deben aceptar mensajes ofrecidos.
 
 *_PScheduler*<br/>
@@ -227,7 +227,7 @@ virtual message_status propagate_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>
@@ -247,7 +247,7 @@ virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero a un `message` objeto que este `overwrite_buffer` ha asumido la titularidad de.
 
 ### <a name="remarks"></a>Comentarios
@@ -266,7 +266,7 @@ virtual message_status send_message(
 
 ### <a name="parameters"></a>Parámetros
 
-*Parámetro _PMessage*<br/>
+*_PMessage*<br/>
 Un puntero al objeto `message`.
 
 *_PSource*<br/>

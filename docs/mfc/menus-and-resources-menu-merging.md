@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438446"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300354"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menús y recursos: Combinación de menús
 
@@ -105,7 +105,7 @@ Cuando se activa un elemento incrustado en su lugar, el marco de trabajo carga e
 
 Las aplicaciones de servidor deben crear una nueva barra de herramientas y almacenar su mapa de bits en un archivo independiente. Las aplicaciones de aplicación generados por el Asistente para almacenan este mapa de bits en un archivo denominado ITOOLBAR. BMP. La nueva barra de herramientas reemplaza la barra de herramientas de la aplicación contenedora cuando el elemento del servidor está activado en su lugar y debe contener los mismos elementos que la barra de herramientas normal, pero quite iconos que representan los elementos en los menús archivo y ventana.
 
-Esta barra de herramientas se carga en su `COleIPFrameWnd`-clase derivada, creada automáticamente el Asistente para aplicaciones. La barra de estado se controla mediante la aplicación contenedora. Para obtener más información sobre la implementación de ventanas de marco en contexto, vea [servidores: implementar un servidor](../mfc/servers-implementing-a-server.md).
+Esta barra de herramientas se carga en su `COleIPFrameWnd`-clase derivada, creada automáticamente el Asistente para aplicaciones. La barra de estado se controla mediante la aplicación contenedora. Para obtener más información sobre la implementación de ventanas de marco en contexto, vea [servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md).
 
 ## <a name="see-also"></a>Vea también
 
@@ -113,4 +113,3 @@ Esta barra de herramientas se carga en su `COleIPFrameWnd`-clase derivada, cread
 [Activación](../mfc/activation-cpp.md)<br/>
 [Servidores](../mfc/servers.md)<br/>
 [Contenedores](../mfc/containers.md)
-

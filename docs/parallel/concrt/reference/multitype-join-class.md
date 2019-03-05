@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289031"
 ---
 # <a name="multitypejoin-class"></a>multitype_join (Clase)
 
@@ -65,9 +65,9 @@ El tipo de `join` bloque es, ya sea `greedy` o `non_greedy`
 
 |Name|Descripción|
 |----------|-----------------|
-|[Aceptar](#accept)|Acepta un mensaje que se ha proporcionado por este `multitype_join` bloque, transfiriendo la propiedad al llamador.|
+|[accept](#accept)|Acepta un mensaje que se ha proporcionado por este `multitype_join` bloque, transfiriendo la propiedad al llamador.|
 |[acquire_ref](#acquire_ref)|Adquiere un recuento de referencias en este `multitype_join` bloque de mensajería, para impedir la eliminación.|
-|[consumir](#consume)|Consume un mensaje ofrecido previamente por el `multitype_join` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
+|[consume](#consume)|Consume un mensaje ofrecido previamente por el `multitype_join` bloque de mensajería y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
 |[link_target](#link_target)|Vincula un bloque de destino a esta `multitype_join` bloque de mensajería.|
 |[release](#release)|Libera una reserva de mensaje correcto anterior.|
 |[release_ref](#release_ref)|Libera un recuento de referencias en este `multiple_join` bloque de mensajería.|
@@ -200,7 +200,7 @@ El objeto `Scheduler` dentro del que se programa la tarea de propagación para e
 *_PScheduleGroup*<br/>
 El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación para el bloque de mensajería `multitype_join` . El objeto `Scheduler` utilizado está implícito en el grupo de programación.
 
-*U_nir*<br/>
+*_Join*<br/>
 Bloque de mensajería `multitype_join` desde el que se realizará la copia. Tenga en cuenta que el objeto original es huérfano, por lo que este constructor pasa a ser de movimiento.
 
 ### <a name="remarks"></a>Comentarios
@@ -209,7 +209,7 @@ El runtime usa el programador predeterminado si no se especifican los parámetro
 
 La construcción de movimiento no se lleva acabo con un bloqueo, lo que significa que el usuario debe asegurarse de que no hay ninguna tarea ligera en marcha en el momento del movimiento. De lo contrario, se pueden producir numerosas carreras, que darán lugar a excepciones o a un estado incoherente.
 
-##  <a name="dtor"></a> ~ multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 Destruye el `multitype_join` bloque de mensajería.
 

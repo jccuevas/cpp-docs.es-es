@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620914"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269219"
 ---
 # <a name="property-pages-mfc"></a>Páginas de propiedades (MFC)
 
@@ -33,9 +33,9 @@ Este mecanismo de asignación de datos asigna controles de página de propiedade
 |[DDP_LBStringExact](#ddp_lbstringexact)|Vincula la cadena seleccionada en un cuadro de lista con la propiedad de un control. La cadena seleccionada y el valor de cadena de la propiedad deben coincidir exactamente.|
 |[DDP_PostProcessing](#ddp_postprocessing)|Finaliza a la transferencia de los valores de propiedad de su control.|
 |[DDP_Radio](#ddp_radio)|Un grupo de botones de radio en la página de propiedades del control con la propiedad de un control de vínculos.|
-|[DDP_TEXT](#ddp_text)|Vincula un control en la página de propiedades del control con la propiedad de un control. Esta función controla varios tipos diferentes de las propiedades, como **doble**, **corto**, BSTR, y **largo**.|
+|[DDP_Text](#ddp_text)|Vincula un control en la página de propiedades del control con la propiedad de un control. Esta función controla varios tipos diferentes de las propiedades, como **doble**, **corto**, BSTR, y **largo**.|
 
-Para obtener más información sobre la `DoDataExchange` páginas de propiedades y la función, vea el artículo [controles ActiveX: páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).
+Para obtener más información sobre la `DoDataExchange` páginas de propiedades y la función, vea el artículo [controles ActiveX: Páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).
 
 La siguiente es una lista de macros que se utiliza para crear y administrar las páginas de propiedades de un control OLE:
 
@@ -342,7 +342,7 @@ Esta función debe llamarse antes de la correspondiente `DDX_Radio` llamada de f
 
   **Encabezado** afxctl.h
 
-##  <a name="ddp_text"></a>  DDP_TEXT
+##  <a name="ddp_text"></a>  DDP_Text
 
 Llame a esta función en el control `DoDataExchange` función para sincronizar el valor de la propiedad con el control de página de la propiedad asociada.
 
@@ -428,7 +428,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de control para la propiedad que se especifican las páginas.
 
 *count*<br/>
@@ -438,7 +438,7 @@ El número de páginas de propiedades utilizados por la clase de control.
 
 En el archivo de implementación (.cpp) que define las funciones de miembro para la clase, inicio la lista de la página de propiedades con el BEGIN_PROPPAGEIDS (macro), a continuación, agregue entradas de macro para cada una de las páginas de propiedades y completar la lista de la página de propiedades con el END_PROPPAGEIDS macro.
 
-Para obtener más información sobre las páginas de propiedades, vea el artículo [controles ActiveX: páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).
+Para obtener más información sobre las páginas de propiedades, vea el artículo [controles ActiveX: Páginas de propiedades](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -454,7 +454,7 @@ END_PROPPAGEIDS(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de control que posee la página de propiedades.
 
 ### <a name="requirements"></a>Requisitos
@@ -471,7 +471,7 @@ PROPPAGEID(clsid)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 El identificador de clase única de una página de propiedades.
 
 ### <a name="remarks"></a>Comentarios

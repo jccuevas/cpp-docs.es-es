@@ -11,12 +11,12 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-ms.openlocfilehash: 1c8c0d32db202b8ba26afec708bcc8bab8e3282c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461963"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272179"
 ---
 # <a name="registration"></a>Registro
 
@@ -46,7 +46,7 @@ RegEdit combina el contenido del archivo de texto .reg en la base de datos de re
 
 Cuando se crea una aplicación de servidor con el Asistente para aplicaciones, el asistente completa automáticamente todas las tareas de inicialización por usted. En esta sección se describe lo que debe hacer si escribe una aplicación de servidor manualmente.
 
-Cuando una aplicación de servidor se inicia una aplicación contenedora, la DLL del sistema OLE agregue la opción "/ incrustación" a la línea de comandos del servidor. Comportamiento de la aplicación de servidor depende de si se ha iniciado un contenedor, por lo que lo primero que debe hacer una aplicación cuando comienza la ejecución es la comprobación de la "/ incrustación" o "-Embedding" opción en la línea de comandos. Si no existe este modificador, cargar un conjunto diferente de los recursos que muestran el servidor como cualquier activo en contexto o completamente abierto. Para obtener más información, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
+Cuando una aplicación de servidor se inicia una aplicación contenedora, la DLL del sistema OLE agregue la opción "/ incrustación" a la línea de comandos del servidor. Comportamiento de la aplicación de servidor depende de si se ha iniciado un contenedor, por lo que lo primero que debe hacer una aplicación cuando comienza la ejecución es la comprobación de la "/ incrustación" o "-Embedding" opción en la línea de comandos. Si no existe este modificador, cargar un conjunto diferente de los recursos que muestran el servidor como cualquier activo en contexto o completamente abierto. Para obtener más información, consulte [menús y recursos: Adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
 
 La aplicación de servidor también debe llamar a su `CWinApp::RunEmbedded` función para analizar la línea de comandos. Si devuelve un valor distinto de cero, la aplicación no debe mostrar su ventana porque se ha ejecutado desde una aplicación de contenedor, no como una aplicación independiente. Esta función actualiza la entrada de servidor en la base de datos de registro del sistema y llama a la `RegisterAll` la función miembro para usted, realizar el registro de la instancia.
 
@@ -61,5 +61,5 @@ Si está escribiendo un miniservidor, por definición, siempre se iniciará un c
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Servidores](../mfc/servers.md)<br/>
 [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)<br/>
-[CWinApp:: RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)<br/>
+[CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)<br/>
 [COleTemplateServer (clase)](../mfc/reference/coletemplateserver-class.md)

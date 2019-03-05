@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298677"
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl (clase)
 
@@ -38,7 +38,7 @@ La clase derivada de `IServiceProviderImpl`.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Método IServiceProviderImpl:: QueryService](#queryservice)|Crea o tiene acceso al servicio especificado y devuelve un puntero de interfaz a la interfaz especificada para el servicio.|
+|[IServiceProviderImpl::QueryService](#queryservice)|Crea o tiene acceso al servicio especificado y devuelve un puntero de interfaz a la interfaz especificada para el servicio.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -60,7 +60,7 @@ El mapa de servicio contiene dos entradas: [SERVICE_ENTRY](service-map-macros.md
 
 **Encabezado:** atlcom.h
 
-##  <a name="queryservice"></a>  Método IServiceProviderImpl:: QueryService
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
 
 Crea o tiene acceso al servicio especificado y devuelve un puntero de interfaz a la interfaz especificada para el servicio.
 

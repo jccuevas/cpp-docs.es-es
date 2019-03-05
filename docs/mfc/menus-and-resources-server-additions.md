@@ -17,12 +17,12 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 8b4e7787029fc9401ece02860f09b8159f086afe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592600"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281961"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menús y recursos: Adiciones de servidor
 
@@ -44,7 +44,7 @@ Los temas tratados en este artículo incluyen:
 
 Las aplicaciones de servidor (componente) deben tener los recursos de menú agregados para admitir la edición visual OLE. No es necesario que los menús que se utilizan cuando la aplicación se ejecuta en modo independiente se puede cambiar, pero debe agregar dos nuevos recursos de menú antes de compilar la aplicación: uno para admitir la activación en contexto y para admitir el servidor que esté completamente abierta. Las aplicaciones completo y miniservidor usan los recursos de menú.
 
-- Para admitir la activación en contexto, debe crear un recurso de menú que es muy similar para el recurso de menú que se utiliza cuando se ejecuta en modo independiente. La diferencia en este menú es que faltan los elementos de archivo y ventana (y otros elementos de menú que se encargan de la aplicación y no los datos). La aplicación contenedora proporcionará estos elementos de menú. Para obtener más información sobre y un ejemplo de esta técnica de combinación de menús, vea el artículo [menús y recursos: combinación de menús](../mfc/menus-and-resources-menu-merging.md).
+- Para admitir la activación en contexto, debe crear un recurso de menú que es muy similar para el recurso de menú que se utiliza cuando se ejecuta en modo independiente. La diferencia en este menú es que faltan los elementos de archivo y ventana (y otros elementos de menú que se encargan de la aplicación y no los datos). La aplicación contenedora proporcionará estos elementos de menú. Para obtener más información sobre y un ejemplo de esta técnica de combinación de menús, vea el artículo [menús y recursos: Combinación de menús](../mfc/menus-and-resources-menu-merging.md).
 
 - Para admitir la activación totalmente abierta, debe crear un recurso de menú casi idéntico para el recurso de menú que se utiliza cuando se ejecuta en modo independiente. La única modificación a este recurso de menú es que algunos elementos se modifican para reflejar el hecho de que el servidor está funcionando en un elemento incrustado en un documento compuesto.
 
@@ -74,4 +74,3 @@ Se aplican las mismas adiciones miniservidores como los mencionados anteriorment
 
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Menús y recursos: Combinación de menús](../mfc/menus-and-resources-menu-merging.md)
-

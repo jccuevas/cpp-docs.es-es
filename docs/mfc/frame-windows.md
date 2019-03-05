@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 939230753f25db38e6ba2f26340f40ddf74d23bf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271143"
 ---
 # <a name="frame-windows"></a>Ventanas de marco
 
@@ -71,7 +71,7 @@ Otra distribución común es para que la ventana de marco para varias vistas, no
 
 - [Responder al intercambio dinámico de datos (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)
 
-- [Estados semimodales: ayuda contextual de Windows (orquestar otras acciones de ventana)](../mfc/orchestrating-other-window-actions.md)
+- [Estados semimodales: Ayuda contextual de Windows (orquestar otras acciones de ventana)](../mfc/orchestrating-other-window-actions.md)
 
 - [Estados semimodales: vista previa de impresión y (orquestar otras acciones de ventana)](../mfc/orchestrating-other-window-actions.md)
 
@@ -86,4 +86,3 @@ Otra distribución común es para que la ventana de marco para varias vistas, no
 ## <a name="see-also"></a>Vea también
 
 [Windows](../mfc/windows.md)
-

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263421"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (clase)
 
@@ -70,7 +70,7 @@ La clase base de la nueva clase. La clase base predeterminada es [CWindow](../..
 
 |||
 |-|-|
-|[Función DialogProc](#dialogproc)|Procesa los mensajes enviados al cuadro de diálogo.|
+|[DialogProc](#dialogproc)|Procesa los mensajes enviados al cuadro de diálogo.|
 |[StartDialogProc](#startdialogproc)|Se llama cuando se recibe el primer mensaje procesar los mensajes enviados al cuadro de diálogo.|
 
 ## <a name="remarks"></a>Comentarios

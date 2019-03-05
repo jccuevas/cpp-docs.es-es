@@ -86,12 +86,12 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259813"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -321,7 +321,7 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 [in] *dockMethod*<br/>
 
@@ -509,7 +509,7 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 [in] *nFlags*<br/>
 
@@ -579,7 +579,7 @@ virtual void OnSizeParent(
 
 [in] *rectAvailable*<br/>
 
-[in] *entro*<br/>
+[in] *nSide*<br/>
 
 [in] *bExpand*<br/>
 
@@ -634,7 +634,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] Un punto en coordenadas de pantalla del panel recuperar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -655,7 +655,7 @@ static int __stdcall RectSideFromPoint(
 
 [in] *rect*<br/>
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -671,7 +671,7 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 [in] *dockMethod*<br/>
 
@@ -773,7 +773,7 @@ virtual BOOL ShowPane(
 *pBar*<br/>
 [in, out] Un puntero al panel para mostrar u ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para especificar que es el panel que se mostrarán; FALSE para especificar que el panel está a punto de ocultarse.
 
 *bDelay*<br/>

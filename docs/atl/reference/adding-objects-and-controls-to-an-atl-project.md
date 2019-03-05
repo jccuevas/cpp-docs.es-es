@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506137"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326002"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Adición de objetos y controles a un proyecto ATL
 
@@ -37,7 +37,7 @@ Puede usar uno de los asistentes de código ATL para agregar un objeto o un cont
 
    El [Agregar clase](../../ide/add-class-dialog-box.md) aparece el cuadro de diálogo.
 
-1. Con el **ATL** carpeta seleccionada en el **categorías** panel, seleccione un objeto que se va a insertar en el **plantillas** panel. Haga clic en **abierto**. Aparece el Asistente de código para el objeto seleccionado.
+1. Con el **ATL** carpeta seleccionada en el **categorías** panel, seleccione un objeto que se va a insertar en el **plantillas** panel. Haga clic en **Abrir**. Aparece el Asistente de código para el objeto seleccionado.
 
    > [!NOTE]
    > Si desea agregar un objeto ATL a un proyecto MFC, debe agregar compatibilidad con ATL al proyecto existente. Puede hacerlo siguiendo las instrucciones de [agregar compatibilidad con ATL a un proyecto MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).

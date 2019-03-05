@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330403"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261861"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -317,7 +317,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Devuelve el número de pestañas visibles.|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Establece una opción que oculta la pestaña de una ventana, pero solo si la ventana con pestañas muestra una sola pestaña visible.|
-|[Cmfcbasetabctrl:: insertTab](#inserttab)|Inserta una pestaña nueva.|
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|Inserta una pestaña nueva.|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
 |[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|Devuelve un valor que indica si una ventana con pestañas está en modo de color automático.|
@@ -436,7 +436,7 @@ void AddIcon(
 *hIcon*<br/>
 [in] Identificador del icono que se va a agregar.
 
-*Icono*<br/>
+*iIcon*<br/>
 [in] Índice de base cero del icono en el modo protegido `CImageList m_Images` miembro.
 
 ### <a name="remarks"></a>Comentarios
@@ -618,7 +618,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Un parámetro booleano que determina si el marco de trabajo usa colores automáticos.
 
 ### <a name="remarks"></a>Comentarios
@@ -637,7 +637,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Valor booleano que determina si se utiliza la información sobre herramientas personalizada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -658,7 +658,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Un parámetro booleano que especifica si se habilita la edición directa de las etiquetas de pestaña.
 
 ### <a name="remarks"></a>Comentarios
@@ -684,7 +684,7 @@ virtual BOOL EnableTabDetach(
 *iTab*<br/>
 [in] Índice de base cero de una pestaña.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Un valor booleano que indica si se debe establecer la pestaña desmontable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -701,7 +701,7 @@ void EnableTabSwap(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Un valor booleano que indica si se debe permitir el intercambio de ficha.
 
 ### <a name="remarks"></a>Comentarios
@@ -749,7 +749,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] Un punto que se define utilizando el área de cliente de coordenadas de la [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1068,7 +1068,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Identificador de una ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1085,7 +1085,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] Un punto en coordenadas de cliente del control de ficha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1204,7 +1204,7 @@ virtual BOOL GetTabRect(
 *iTab*<br/>
 [in] Índice de base cero de la pestaña.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Una referencia a un `CRect` objeto. Este método almacena el tamaño y posición de la pestaña en este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1363,7 +1363,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 Cuando la aplicación está configurada para ocultar fichas únicas, el marco de trabajo muestra pestañas automáticamente cuando se agrega una segunda pestaña para el control de ficha.
 
-##  <a name="inserttab"></a>  Cmfcbasetabctrl:: insertTab
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
 
 Inserta una pestaña en el control de ficha.
 
@@ -1541,7 +1541,7 @@ BOOL IsIconAdded(
 
 [in] *hIcon*<br/>
 
-[in] *el icono*<br/>
+[in] *iIcon*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto de prueba.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1761,7 +1761,7 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *Norigen*<br/>
+[in] *nSource*<br/>
 
 [in] *nDest*<br/>
 
@@ -1991,7 +1991,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 [in] Especifica el nuevo color de fondo.
 
 ### <a name="remarks"></a>Comentarios
@@ -2008,7 +2008,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 [in] Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que especifica el color del texto nuevo.
 
 ### <a name="remarks"></a>Comentarios
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Un identificador de recurso de mapa de bits. `SetImageList` carga la lista de imágenes de este recurso.
 
-*CX*<br/>
+*cx*<br/>
 [in] El ancho de cada imagen en píxeles.
 
 *clrTransp*<br/>
@@ -2120,7 +2120,7 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *ubicación*<br/>
+[in] *location*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2139,7 +2139,7 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in] Índice de base cero de la pestaña.
 
-*Color*<br/>
+*color*<br/>
 [in] Para establecer el color.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2304,7 +2304,7 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in] Índice de base cero de la pestaña.
 
-*Color*<br/>
+*color*<br/>
 [in] Un [COLORREF](/windows/desktop/gdi/colorref) parámetro que indica el color del texto nuevo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2328,7 +2328,7 @@ virtual BOOL ShowTab(
 *iTab*<br/>
 [in] El índice de la pestaña que `ShowTab` mostrará u ocultará.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Un parámetro booleano que indica si se debe mostrar la pestaña.
 
 *bRecalcLayout*<br/>

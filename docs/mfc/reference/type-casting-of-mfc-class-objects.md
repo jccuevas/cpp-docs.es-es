@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 42b668287905fc5f6e05a09949d53acc51c79026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3107b860747bc2434ae9afca39b517d8dcc9eb01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584150"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299366"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Conversión de tipos de objetos de clase de MFC
 
@@ -62,17 +62,17 @@ STATIC_DOWNCAST(class_name, pobject)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase que se va a convertir en.
 
-*pObject*<br/>
+*pobject*<br/>
 El puntero para convertirse en un puntero a un *class_name* objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 *pObject* debe ser NULL o seleccione un objeto de una clase que se deriva directa o indirectamente, de *class_name*. En las compilaciones de la aplicación con el símbolo de preprocesador _DEBUG definido, la macro se producirá una aserción si *pobject* no es NULL, o si señala a un objeto que no es un "tipo de" la clase especificada en el *class_name*parámetro (consulte [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). En el que no sean de **_DEBUG** compilaciones, la macro realiza la conversión sin ninguna comprobación de tipo.
 
-La clase especificada en el *class_name* parámetro debe derivarse de `CObject` y debe usar el DECLARE_DYNAMIC y IMPLEMENT_DYNAMIC, el DECLARE_DYNCREATE y IMPLEMENT_DYNCREATE, o el DECLARE_SERIAL y IMPLEMENT_ SERIE macros como se explican en el artículo [CObject (clase): derivar una clase de CObject](../../mfc/deriving-a-class-from-cobject.md).
+La clase especificada en el *class_name* parámetro debe derivarse de `CObject` y debe usar el DECLARE_DYNAMIC y IMPLEMENT_DYNAMIC, el DECLARE_DYNCREATE y IMPLEMENT_DYNCREATE, o el DECLARE_SERIAL y IMPLEMENT_ SERIE macros como se explican en el artículo [CObject (clase): Derivar una clase de CObject](../../mfc/deriving-a-class-from-cobject.md).
 
 Por ejemplo, podría convertir un puntero a `CMyDoc`, llamado `pMyDoc`, en un puntero a `CDocument` mediante la siguiente expresión:
 

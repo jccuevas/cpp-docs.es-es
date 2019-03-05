@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541705"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278408"
 ---
 # <a name="command-routing"></a>enrutamiento de comandos
 
@@ -46,4 +46,3 @@ En los casos en los que las entradas numeradas de la segunda columna de la tabla
 ## <a name="see-also"></a>Vea también
 
 [Cómo el marco llama a un controlador](../mfc/how-the-framework-calls-a-handler.md)
-
