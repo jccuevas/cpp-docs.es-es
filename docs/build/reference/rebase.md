@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463653"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422044"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -32,7 +32,7 @@ Especifique los archivos ejecutables y DLL en el programa la *archivos* argument
 
 |Modificador|Acción|
 |--------------|------------|
-|**BASE =**<em>dirección</em>|Proporciona una dirección inicial para reasignar las direcciones base para los archivos. Especificar *dirección* en notación de lenguaje de C o decimal. Si no se especifica la BASE, la dirección base de inicio predeterminada es 0 x 400000. Debe especificarse si inferior se usa, BASE, y *dirección* establece el final del intervalo de direcciones base.|
+|**BASE=**<em>address</em>|Proporciona una dirección inicial para reasignar las direcciones base para los archivos. Especificar *dirección* en notación de lenguaje de C o decimal. Si no se especifica la BASE, la dirección base de inicio predeterminada es 0 x 400000. Debe especificarse si inferior se usa, BASE, y *dirección* establece el final del intervalo de direcciones base.|
 |**BASEFILE**|Crea un archivo denominado COFFBASE. TXT, que es un archivo de texto en el formato esperado por el del vínculo/opción de BASE.|
 |**ABAJO**|Hace que EDITBIN reasigne las direcciones base hacia abajo desde una dirección final. Los archivos se vuelven a asignar en el orden especificado, con el primer archivo que se encuentra en la dirección más alta posible bajo el final del intervalo de direcciones. BASE debe utilizarse con profundidad para asegurarse de suficiente espacio de direcciones para basar los archivos. Para determinar el espacio de direcciones necesario para los archivos especificados, ejecute EDITBIN con /REBASE en los archivos y agregue 64 KB para el tamaño total mostrado.|
 

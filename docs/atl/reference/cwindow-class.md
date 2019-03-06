@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298353"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425073"
 ---
 # <a name="cwindow-class"></a>CWindow (clase)
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Consulte [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) en el SDK de Windows.
 
-La segunda versión de este método permite convertir las coordenadas de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+La segunda versión de este método permite convertir las coordenadas de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Consulte [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) en el SDK de Windows.
 
-La segunda versión de este método permite convertir las coordenadas de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+La segunda versión de este método permite convertir las coordenadas de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 Para una ventana de nivel superior parámetros de objeto, x e y son relativas a la esquina superior izquierda de la pantalla. Para un objeto de ventana secundaria, son relativas a la esquina superior izquierda del área de cliente de la ventana primaria.
 
-La segunda versión de este método usa un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para determinar la nueva posición de la ventana, ancho y alto.
+La segunda versión de este método usa un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura para determinar la nueva posición de la ventana, ancho y alto.
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Consulte [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) en el SDK de Windows.
 
-La segunda versión de este método permite convertir las coordenadas de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+La segunda versión de este método permite convertir las coordenadas de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Consulte [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) en el SDK de Windows.
 
-La segunda versión de este método usa un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para establecer la nueva posición de la ventana, ancho y alto.
+La segunda versión de este método usa un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura para establecer la nueva posición de la ventana, ancho y alto.
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

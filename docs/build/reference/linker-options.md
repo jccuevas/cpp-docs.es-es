@@ -9,12 +9,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 22ac88ede7cc015efd12f1a996ffdf361b43f041
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cfa784242af1f737c116629a29be5ad77af31d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510123"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415206"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -58,14 +58,14 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|Controla la carga retrasada de DLL.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|Provoca la carga retrasada de la DLL especificada.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|Firma parcialmente un ensamblado.|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Establece marcas predeterminadas en las cargas DLL dependientes.|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|Establece marcas predeterminadas en las cargas DLL dependientes.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|Compila una DLL.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|Crea un controlador modo kernel.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|Especifica si se generará una imagen ejecutable que se pueda reorganizar aleatoriamente en el momento de la carga con la característica de selección aleatoria del diseño del espacio de direcciones (ASLR).|
 |[/ENTRY](../../build/reference/entry-entry-point-symbol.md)|Establece la dirección inicial.|
 |[/errorReport](../../build/reference/errorreport-report-internal-linker-errors.md)|Informa a Microsoft de los errores internos del enlazador.|
 |[/EXPORT](../../build/reference/export-exports-a-function.md)|Exporta una función.|
-|[/ FILEALIGN](../../build/reference/filealign.md)|Alinea las secciones en el archivo de salida en múltiplos de un valor especificado.|
+|[/FILEALIGN](../../build/reference/filealign.md)|Alinea las secciones en el archivo de salida en múltiplos de un valor especificado.|
 |[/FIXED](../../build/reference/fixed-fixed-base-address.md)|Crea un programa que solo se puede cargar en su dirección base preferida.|
 |[/FORCE](../../build/reference/force-force-file-output.md)|Fuerza la finalización de un vínculo aunque haya símbolos o símbolos sin resolver definidos más de una vez.|
 |[/FUNCTIONPADMIN](../../build/reference/functionpadmin-create-hotpatchable-image.md)|Crea una imagen que se puede revisar en caliente.|
@@ -95,7 +95,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)|Incluye en el archivo de asignaciones la información especificada.|
 |[/MERGE](../../build/reference/merge-combine-sections.md)|Combina secciones.|
 |[/MIDL](../../build/reference/midl-specify-midl-command-line-options.md)|Especifica opciones de la línea de comandos MIDL.|
-|[/ NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Agrega los visualizadores del depurador desde un archivo Natvis a PDB.|
+|[/NATVIS](../../build/reference/natvis-add-natvis-to-pdb.md)|Agrega los visualizadores del depurador desde un archivo Natvis a PDB.|
 |[/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)|Suprime la creación de un ensamblado de .NET Framework.|
 |[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)|Ignora todas las bibliotecas predeterminadas (o las bibliotecas que se especifiquen) cuando se resuelven las referencias externas.|
 |[/NOENTRY](../../build/reference/noentry-no-entry-point.md)|Crea una DLL solo de recursos.|
@@ -113,7 +113,7 @@ Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especif
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|Establece la suma de comprobación en el encabezado del .exe.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|Especifica que la imagen contendrá una tabla de controladores de excepciones seguros.|
 |[/SECTION](../../build/reference/section-specify-section-attributes.md)|Invalida los atributos de una sección.|
-|[/ SOURCELINK](../../build/reference/sourcelink.md)|Especifica un archivo de SourceLink para agregar al archivo PDB.|
+|[/SOURCELINK](../../build/reference/sourcelink.md)|Especifica un archivo de SourceLink para agregar al archivo PDB.|
 |[/STACK](../../build/reference/stack-stack-allocations.md)|Establece el tamaño de la pila en bytes.|
 |[/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)|Asocia un programa de código auxiliar MS-DOS a un programa Win32.|
 |[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)|Le indica al sistema operativo cómo ejecutar el archivo .exe.|

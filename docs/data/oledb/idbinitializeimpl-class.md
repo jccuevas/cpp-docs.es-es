@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556769"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418755"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl (Clase)
 
-Proporciona una implementación para el [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)) interfaz.
+Proporciona una implementación para el [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -79,7 +79,7 @@ La clase derivada de `IDBInitializeImpl`.
 |||
 |-|-|
 |[Initialize](#initialize)|Inicia el proveedor.|
-|[Anular la inicialización](#uninitialize)|Detiene el proveedor.|
+|[Uninitialize](#uninitialize)|Detiene el proveedor.|
 
 ### <a name="data-members"></a>Miembros de datos
 
@@ -92,7 +92,7 @@ La clase derivada de `IDBInitializeImpl`.
 
 Una interfaz obligatoria en los objetos de origen de datos y una interfaz opcional sobre los enumeradores.
 
-## <a name="idbinitializeimpl"></a> Idbinitializeimpl:: Idbinitializeimpl
+## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
 
 El constructor.
 
@@ -106,7 +106,7 @@ IDBInitializeImpl();
 
 Inicializa a todos los miembros de datos.
 
-## <a name="initialize"></a> Idbinitializeimpl:: Initialize
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
 Inicializa el objeto de origen de datos mediante la preparación de su compatibilidad con la propiedad.
 
@@ -118,9 +118,9 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDBInitialize:: Initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="uninitialize"></a> Idbinitializeimpl:: UnInitialize
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
 Coloca los datos del origen de objeto en un estado no inicializado al liberar los recursos internos, como la compatibilidad con la propiedad.
 
@@ -132,9 +132,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDBInitialize:: UnInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [IDBInitialize:: UnInitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="dwstatus"></a> Idbinitializeimpl:: M_dwstatus
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
 Indicadores del origen de datos.
 
@@ -162,7 +162,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Establece si el objeto de origen de datos requiere la persistencia (es decir, si ha habido cambios).|
 |`DSF_INITIALIZED`|Establecer si se ha inicializado el origen de datos.|
 
-## <a name="pcutlpropinfo"></a> Idbinitializeimpl:: M_pcutlpropinfo
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
 Un puntero al objeto de implementación para la información de las propiedades de la base de datos.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 63affcced5dfc5bb56b0226021e1c32d93ec5d4f
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f76164468375e84380c6f02050c6c7a35b32412
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626752"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418989"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (optimizar para valores específicos de la arquitectura)
 
@@ -24,10 +24,10 @@ ms.locfileid: "53626752"
 
 ## <a name="remarks"></a>Comentarios
 
-**/ favor: Blend**<br/>
+**/favor:blend**<br/>
 (x86 y x64) genera el código que está optimizado para las características de microarquitecturas en arquitecturas el AMD y las arquitecturas de Intel. Mientras **/favor: Blend** podría no ofrecer el mejor rendimiento posible en un procesador específico, se ha diseñado para ofrecer el mejor rendimiento en una amplia gama de procesadores x86 y x64. De forma predeterminada, **/favor: Blend** está en vigor.
 
-**/favor:Atom**<br/>
+**/favor:ATOM**<br/>
 (x86 y x64) genera el código que está optimizado para las características del procesador Intel Atom y tecnología de procesador Intel Centrino Atom. Código que se genera mediante el uso de **/favor:ATOM** también puede generar instrucciones de Intel SSSE3, SSE3, SSE y SSE2 para los procesadores Intel.
 
 **/favor:AMD64**<br/>

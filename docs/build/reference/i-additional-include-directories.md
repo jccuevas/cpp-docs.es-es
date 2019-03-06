@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750397"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412853"
 ---
 # <a name="i-additional-include-directories"></a>/I (directorios de inclusión adicionales)
 
@@ -27,11 +27,11 @@ Agrega un directorio a la lista de directorios para buscar archivos de inclusió
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/I**[]*directorio*
+> **/I**[ ]*directory*
 
 ### <a name="arguments"></a>Argumentos
 
-*Directorio*<br/>
+*directory*<br/>
 Busca en el directorio para agregarse a la lista de directorios para archivos de inclusión.
 
 ## <a name="remarks"></a>Comentarios
@@ -62,7 +62,7 @@ El compilador busca en los directorios en el orden siguiente:
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente comando busca los archivos de inclusión solicitados por MAIN.c en el orden siguiente: en primer lugar, si se especifica mediante el uso de comillas dobles, se buscan en archivos locales. A continuación, la búsqueda continúa en el directorio \INCLUDE, a continuación, en el directorio \MY\INCLUDE y, por último, en los directorios asignados a la variable de entorno INCLUDE.
+El siguiente comando busca los archivos de inclusión solicitados por MAIN.c en el orden siguiente: En primer lugar, si se especifica mediante el uso de comillas dobles, se buscan los archivos locales. A continuación, la búsqueda continúa en el directorio \INCLUDE, a continuación, en el directorio \MY\INCLUDE y, por último, en los directorios asignados a la variable de entorno INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

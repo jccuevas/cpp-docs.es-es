@@ -2,12 +2,12 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: fb115d564ca24ff29e120e0d8c25e0dbe28024cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549713"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421812"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -21,19 +21,19 @@ Especifica la arquitectura para la generación de código en x86. Consulte tambi
 
 ## <a name="arguments"></a>Argumentos
 
-**/ arch: IA32**<br/>
+**/arch:IA32**<br/>
 No especifica ninguna instrucción mejorada y también especifica x87 para los cálculos de punto flotante.
 
-**/ arch: SSE**<br/>
+**/arch:SSE**<br/>
 Habilita el uso de instrucciones SSE.
 
-**/ arch: SSE2**<br/>
+**/arch:SSE2**<br/>
 Habilita el uso de instrucciones SSE2. Se trata de la instrucción predeterminada en x86 plataformas si no hay ningún **/arch** se especifica la opción.
 
-**/ arch: AVX**<br/>
+**/arch:AVX**<br/>
 Habilita el uso de instrucciones de Extensiones de vector avanzadas de Intel.
 
-**/ arch: avx2**<br/>
+**/arch:AVX2**<br/>
 Habilita el uso de instrucciones de Extensiones de vector avanzadas 2 (AVX2) de Intel.
 
 ## <a name="remarks"></a>Comentarios

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556652"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419964"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet (Clase)
 
@@ -68,13 +68,13 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[operador =](#op_equal)|Asigna el contenido de Id. de propiedad de un juego a otro.|
+|[operator =](#op_equal)|Asigna el contenido de Id. de propiedad de un juego a otro.|
 
 ## <a name="remarks"></a>Comentarios
 
-Uso de los consumidores de OLE DB `DBPROPIDSET` estructuras para pasar una matriz de identificadores de propiedad para el que el consumidor desea obtener información de la propiedad. Las propiedades identificadas en un único [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura pertenecen a una propiedad establecida.
+Uso de los consumidores de OLE DB `DBPROPIDSET` estructuras para pasar una matriz de identificadores de propiedad para el que el consumidor desea obtener información de la propiedad. Las propiedades identificadas en un único [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura pertenecen a una propiedad establecida.
 
-## <a name="addpropertyid"></a> Cdbpropidset:: Addpropertyid
+## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
 Agrega un identificador de propiedad para el conjunto de Id. de propiedad.
 
@@ -86,12 +86,12 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 #### <a name="parameters"></a>Parámetros
 
-*PROPID*<br/>
+*propid*<br/>
 [in] Establece el identificador de propiedad que se agregarán al identificador de propiedad.
 
-## <a name="cdbpropidset"></a> Cdbpropidset:: Cdbpropidset
+## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-El constructor. Inicializa el `rgProperties`, `cProperties`y (opcionalmente) `guidPropertySet` campos de la [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura.
+El constructor. Inicializa el `rgProperties`, `cProperties`y (opcionalmente) `guidPropertySet` campos de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -105,13 +105,13 @@ CDBPropIDSet();
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*guid*<br/>
 [in] Un GUID que se usa para inicializar el `guidPropertySet` campo.
 
 *propidset*<br/>
 [in] Otro `CDBPropIDSet` objeto para la construcción de copia.
 
-## <a name="setguid"></a> Cdbpropidset:: SetGuid
+## <a name="setguid"></a> CDBPropIDSet::SetGUID
 
 Establece el campo GUID de la `DBPROPIDSET` estructura.
 
@@ -123,14 +123,14 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
-[in] Un GUID que se usa para establecer el `guidPropertySet` campo de la [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura.
+*guid*<br/>
+[in] Un GUID que se usa para establecer el `guidPropertySet` campo de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) estructura.
 
 ### <a name="remarks"></a>Comentarios
 
 Este campo se puede establecer el [constructor](../../data/oledb/cdbpropidset-cdbpropidset.md) también. Si utiliza el constructor predeterminado para esta clase, llame a esta función.
 
-## <a name="op_equal"></a> Cdbpropidset:: operator =
+## <a name="op_equal"></a> CDBPropIDSet::operator =
 
 Asigna el contenido de Id. de una propiedad establecida en otro conjunto de propiedades de identificador.
 

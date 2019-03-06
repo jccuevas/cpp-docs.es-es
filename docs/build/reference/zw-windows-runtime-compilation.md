@@ -1,5 +1,5 @@
 ---
-title: /ZW (Compilación de Windows Runtime)
+title: /ZW (Compilación de Windows en tiempo de ejecución)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 297697d215a78cbf1aefef30df53f6956c4e16b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 944d66de3c029d9731a225281b4e592c477806e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629767"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417988"
 ---
-# <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows Runtime)
+# <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows en tiempo de ejecución)
 
 Compila el código para admitir las extensiones de componente de C++ de Visual C++ / fuente c++ / CX para la creación de aplicaciones de plataforma Universal de Windows (UWP).
 

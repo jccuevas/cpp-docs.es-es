@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3157
 ms.assetid: fe94d97f-612e-4729-8b2b-b057d84822a1
-ms.openlocfilehash: 8f130be4c54ca877a00618acb8371242254fd817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0912ce240801b9d43bea185a96d17ac7d1913e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667082"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412866"
 ---
 # <a name="compiler-error-c3157"></a>Error del compilador C3157
 
 Atributo ParamArray solamente se puede aplicar al último parámetro
 
-El [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) atributo se aplicó a un parámetro equivocado.
+El <xref:System.ParamArrayAttribute> atributo se aplicó a un parámetro equivocado.

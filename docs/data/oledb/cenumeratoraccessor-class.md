@@ -37,12 +37,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 2bcbf55c4bc6d546c8a2b4eca3ea2dbeafc613fa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1fa04d94e4e6785e5a9d0941ce44a4404b1e28da
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556353"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423396"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor (Clase)
 
@@ -74,7 +74,7 @@ class CEnumeratorAccessor
 
 Este conjunto de filas se compone de los orígenes de datos y enumeradores visibles desde el enumerador actual.
 
-## <a name="bisparent"></a> Cenumeratoraccessor:: M_bisparent
+## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
 
 Una variable que indica si el enumerador es un enumerador primario, si la fila es un enumerador.
 
@@ -86,9 +86,9 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
 
-## <a name="ntype"></a> Cenumeratoraccessor:: M_ntype
+## <a name="ntype"></a> CEnumeratorAccessor::m_nType
 
 Una variable que indica si la fila describe un origen de datos o un enumerador.
 
@@ -100,9 +100,9 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
 
-## <a name="szdescription"></a> Cenumeratoraccessor:: M_szdescription
+## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
 
 La descripción del origen de datos o enumerador.
 
@@ -114,9 +114,9 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
 
-## <a name="szname"></a> Cenumeratoraccessor:: M_szname
+## <a name="szname"></a> CEnumeratorAccessor::m_szName
 
 El nombre del origen de datos o enumerador.
 
@@ -128,9 +128,9 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
 
-## <a name="szparsename"></a> Cenumeratoraccessor:: M_szparsename
+## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
 
 Cadena que se pasan al [IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname) para obtener un moniker para el origen de datos o enumerador.
 
@@ -142,7 +142,7 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [ISourcesRowset:: GetSourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
+Consulte [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) en el *referencia del programador de OLE DB* para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 

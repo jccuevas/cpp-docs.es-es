@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422499"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (clase)
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Especifica la combinación de estilos de control de tiempo fecha. Consulte [estilos de fecha y hora selector Control](/windows/desktop/Controls/date-and-time-picker-control-styles) en el SDK de Windows para obtener más información sobre los estilos de selector de fecha y hora.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que es la posición y el tamaño del control de selector de fecha y hora.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que es la posición y el tamaño del control de selector de fecha y hora.
 
 *pParentWnd*<br/>
 Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control de selector de fecha y hora. No debe ser NULL.

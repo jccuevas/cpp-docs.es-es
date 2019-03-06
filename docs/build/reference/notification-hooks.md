@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549837"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426555"
 ---
 # <a name="notification-hooks"></a>Enlaces de notificación
 
@@ -27,7 +27,7 @@ Se habilita el enlace de notificación:
 
 - Si se suministra una nueva definición del puntero **__pfnDliNotifyHook2** que se inicializa para que apunte a su propia función que recibe las notificaciones.
 
-   \-o -
+   O bien
 
 - Al establecer el puntero **__pfnDliNotifyHook2** a la función de enlace antes de que todas las llamadas a la DLL que el programa es retrasar la carga.
 

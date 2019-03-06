@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: a7a98c864a1d0bf617ebf4ededea5e1a59a1af31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 742b018ae96ff706336a81b49e1d8e5fb954d9b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437159"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425450"
 ---
 # <a name="build-system-changes"></a>Cambios del sistema de compilación
 
@@ -56,11 +56,11 @@ En el ejemplo siguiente, una lista delimitada por punto y coma se asigna a una p
 Property=<value>;$(MyProperty)
 ```
 
-## <a name="vcxprojuser-files"></a>. vcxproj.user archivos
+## <a name="vcxprojuser-files"></a>.vcxproj.user Files
 
 Un archivo de usuario (. vcxproj.user) almacena propiedades específicas del usuario, para la configuración de ejemplo, depuración e implementación. El archivo vcxproj.user se aplica a todos los proyectos para un usuario determinado.
 
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters archivo
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File
 
 Cuando **el Explorador de soluciones** se usa para agregar un archivo a un proyecto, el archivo de filtros (. vcxproj.filters) define dónde en la **el Explorador de soluciones** vista se agrega el archivo, según su extensión de nombre de archivo de árbol.
 

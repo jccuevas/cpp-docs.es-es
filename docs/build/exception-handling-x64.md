@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627545"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422980"
 ---
 # <a name="x64-exception-handling"></a>x64 control de excepciones
 
@@ -68,7 +68,7 @@ La estructura UNWIND_INFO debe ser DWORD alineada en memoria. Esto es lo que sig
 
    Número de versión de los datos de desenredo, actualmente 1.
 
-- **marcas**
+- **Marcas**
 
    Tres marcadores definidos actualmente:
 
@@ -182,21 +182,21 @@ El código de operación de desenredo es uno de estos valores:
 
   |||
   |-|-|
-  |RSP + 32|SS|
-  |RSP + 24|RSP anterior|
-  |RSP + 16|EFLAGS|
-  |RSP + 8|CS|
+  |RSP+32|SS|
+  |RSP+24|RSP anterior|
+  |RSP+16|EFLAGS|
+  |RSP+8|CS|
   |RSP|COPIAR DESDE CD|
 
   Si la información de la operación es igual a 1, a continuación, uno de estos marcos se ha insertado:
 
   |||
   |-|-|
-  |RSP + 40|SS|
-  |RSP + 32|RSP anterior|
-  |RSP + 24|EFLAGS|
-  |RSP + 16|CS|
-  |RSP + 8|COPIAR DESDE CD|
+  |RSP+40|SS|
+  |RSP+32|RSP anterior|
+  |RSP+24|EFLAGS|
+  |RSP+16|CS|
+  |RSP+8|COPIAR DESDE CD|
   |RSP|Código de error|
 
   Este código de desenredado siempre aparece en un prólogo ficticio, lo que realmente nunca se ejecuta, pero en su lugar aparece antes del punto de entrada real de una rutina de interrupción y sólo existe para proporcionar un lugar para simular la inserción de un marco del equipo. `UWOP_PUSH_MACHFRAME` registra la simulación, lo que indica que el equipo ha hecho conceptualmente esta operación:
@@ -333,8 +333,8 @@ Para poder escribir rutinas de ensamblado adecuado, hay un conjunto de pseudoper
 |. PUSHREG *registrar*|Genera una entrada de código de desenredado UWOP_PUSH_NONVOL para el número de registro especificado mediante el desplazamiento actual en el prólogo.<br /><br /> Solo debe usarse con registros de enteros no volátil.  Inserciones de los registros volátiles, utilice una. ALLOCSTACK 8 en su lugar|
 |. SETFRAME *registrar*, *desplazamiento*|Rellenos en el marco de registrar el campo y el desplazamiento en la información de desenredo mediante el registro especificado y el desplazamiento. El desplazamiento debe ser un múltiplo de 16 y menor o igual a 240. Esta directiva también genera una entrada de código de desenredo UWOP_SET_FPREG para el registro especificado mediante el desplazamiento actual del prólogo.|
 |. ALLOCSTACK *tamaño*|Genera una entrada UWOP_ALLOC_SMALL o UWOP_ALLOC_LARGE con el tamaño especificado para el desplazamiento actual en el prólogo.<br /><br /> El *tamaño* operando debe ser un múltiplo de 8.|
-|. SAVEREG *registrar*, *desplazamiento*|Genera un UWOP_SAVE_NONVOL o una entrada de código de desenredado UWOP_SAVE_NONVOL_FAR para el registro especificado y el desplazamiento mediante el desplazamiento actual del prólogo. MASM elige la codificación más eficaz.<br /><br /> *desplazamiento* debe ser positivo y un múltiplo de 8. *desplazamiento* es relativa a la base del marco del procedimiento, que se encuentra normalmente en RSP, o bien, si usa un puntero de marco, el puntero de marco sin escala.|
-|. Savexmm128 *registrar*, *desplazamiento*|Genera un UWOP_SAVE_XMM128 o una entrada de código de desenredado UWOP_SAVE_XMM128_FAR para el registro XMM especificado y el desplazamiento mediante el desplazamiento actual del prólogo. MASM elige la codificación más eficaz.<br /><br /> *desplazamiento* debe ser positivo y un múltiplo de 16.  *desplazamiento* es relativa a la base del marco del procedimiento, que se encuentra normalmente en RSP, o bien, si usa un puntero de marco, el puntero de marco sin escala.|
+|.SAVEREG *register*, *offset*|Genera un UWOP_SAVE_NONVOL o una entrada de código de desenredado UWOP_SAVE_NONVOL_FAR para el registro especificado y el desplazamiento mediante el desplazamiento actual del prólogo. MASM elige la codificación más eficaz.<br /><br /> *desplazamiento* debe ser positivo y un múltiplo de 8. *desplazamiento* es relativa a la base del marco del procedimiento, que se encuentra normalmente en RSP, o bien, si usa un puntero de marco, el puntero de marco sin escala.|
+|.SAVEXMM128 *register*, *offset*|Genera un UWOP_SAVE_XMM128 o una entrada de código de desenredado UWOP_SAVE_XMM128_FAR para el registro XMM especificado y el desplazamiento mediante el desplazamiento actual del prólogo. MASM elige la codificación más eficaz.<br /><br /> *desplazamiento* debe ser positivo y un múltiplo de 16.  *desplazamiento* es relativa a la base del marco del procedimiento, que se encuentra normalmente en RSP, o bien, si usa un puntero de marco, el puntero de marco sin escala.|
 |. PUSHFRAME \[ *código*]|Genera una entrada de código de desenredado UWOP_PUSH_MACHFRAME. Si el elemento opcional *código* se especifica, la entrada de código de desenredado se proporciona un modificador de 1. En caso contrario, el modificador es 0.|
 |.ENDPROLOG|Señala el final de las declaraciones del prólogo.  Se debe producir en los primeros 255 bytes de la función.|
 
@@ -398,7 +398,7 @@ Con el fin de simplificar el uso de la [pseudoperaciones sin formato](#raw-pseud
 |push_reg *reg*|Inserta un registro permanente *reg* en la pila y emite información de desenredo adecuado. (.pushreg registro)|
 |rex_push_reg *reg*|Guardar un registro permanente de la pila mediante una inserción de 2 bytes y emite información (.pushreg registro) se debe usar si la inserción es la primera instrucción en la función para asegurarse de que la función es "n" patchable de desenredo adecuado.|
 |save_xmm128 *reg*, *loc*|Guarda un registro XMM no volátil *reg* en la pila en RSP desplazamiento *loc*y emite la correspondiente información de desenredo (reg. savexmm128, loc)|
-|set_frame *reg*, *desplazamiento*|Establece el registro de marco *reg* sea RSP + *desplazamiento* (mediante un `mov`, o un `lea`) y emite la correspondiente información de desenredo (reg. set_frame, desplazamiento)|
+|set_frame *reg*, *offset*|Establece el registro de marco *reg* sea RSP + *desplazamiento* (mediante un `mov`, o un `lea`) y emite la correspondiente información de desenredo (reg. set_frame, desplazamiento)|
 |push_eflags|Inserta eflags con un `pushfq` instrucciones y emite adecuado (. alloc_stack 8) de la información de desenredo|
 
 Este es un ejemplo de prólogo de función con el uso correcto de las macros:
@@ -504,4 +504,4 @@ typedef struct _RUNTIME_FUNCTION {
 
 ## <a name="see-also"></a>Vea también
 
-[x64 convenciones de software](../build/x64-software-conventions.md)
+[Convenciones de software x64](../build/x64-software-conventions.md)

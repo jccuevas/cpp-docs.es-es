@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423058"
 ---
 # <a name="cutlprops-class"></a>CUtlProps (Clase)
 
@@ -73,11 +73,11 @@ La clase que contiene el `BEGIN_PROPSET_MAP`.
 
 La mayor parte de esta clase es un detalle de implementación.
 
-`CUtlProps` contiene dos miembros para establecer propiedades internamente: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) y [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` Para establecer propiedades internamente, contiene a dos miembros: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) y [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
 Para obtener más información sobre las macros utilizadas en una asignación de conjunto de propiedades, vea [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) y [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a> CUtlProps:: GetPropValue
+## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 
 Obtiene una propiedad de un conjunto de propiedades.
 
@@ -104,7 +104,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 
 `Failure` en el error y S_OK si se realiza correctamente.
 
-## <a name="isvalidvalue"></a> CUtlProps:: IsValidValue
+## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
 
 Se utiliza para validar un valor antes de establecer una propiedad.
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 El índice de la matriz de conjunto de propiedades; cero si no hay sólo una propiedad establecida.
 
 *pDBProp*<br/>
-El identificador de propiedad y el nuevo valor en un [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) estructura.
+El identificador de propiedad y el nuevo valor en un [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -131,7 +131,7 @@ Un HRESULT estándar. El valor predeterminado es S_OK.
 
 Si dispone de las rutinas de validación que desea ejecutar en un valor que va a utilizar para establecer una propiedad, se debe reemplazar esta función. Por ejemplo, podría validar DBPROP_AUTH_PASSWORD una tabla de la contraseña para determinar un valor válido.
 
-## <a name="oninterfacerequested"></a> CUtlProps:: Oninterfacerequested
+## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
 
 Controla las solicitudes para una interfaz opcional cuando el consumidor llama a un método en uno de los objetos interfaces de creación.
 
@@ -166,7 +166,7 @@ Si un consumidor abre un objeto y solicita una interfaz opcional, el proveedor d
 
 Si desea controlar otras interfaces, reemplace esta función en la clase de origen, sesión, comando o conjunto de filas de datos para las funciones del proceso. La invalidación debe avanzar por las interfaces de propiedades normal de get/set para asegurarse de que establecer las propiedades también establece las propiedades encadenadas (consulte [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
+## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
 
 Se llama después de establecer una propiedad para controlar las propiedades encadenadas.
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 El índice de la matriz de conjunto de propiedades; cero si no hay sólo una propiedad establecida.
 
 *pDBProp*<br/>
-El identificador de propiedad y el nuevo valor en un [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) estructura.
+El identificador de propiedad y el nuevo valor en un [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -199,7 +199,7 @@ En esta función, el usuario obtiene el identificador de propiedad de la `DBPROP
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> CUtlProps:: Setpropvalue
+## <a name="setpropvalue"></a> CUtlProps::SetPropValue
 
 Establece una propiedad en un conjunto de propiedades.
 

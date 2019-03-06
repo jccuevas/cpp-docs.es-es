@@ -2,12 +2,12 @@
 title: /Qvec-report (Nivel de información de vectorizador automático)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: dc8c1d3bc65b0160fd489f1cdebe06e4fc9a0992
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fc4e129a908b5347c85794d369856873dac9180
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590234"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418001"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (Nivel de información de vectorizador automático)
 
@@ -21,10 +21,10 @@ Habilita la característica informes del compilador [Vectorizador automático](.
 
 ## <a name="remarks"></a>Comentarios
 
-**/ Qvec-report: 1**<br/>
+**/Qvec-report:1**<br/>
 Genera un mensaje informativo para los bucles que se ha vectorizado.
 
-**/ Qvec-report: 2**<br/>
+**/Qvec-report:2**<br/>
 Genera un mensaje informativo para los bucles que se ha vectorizado y para los bucles que no vectorizados, junto con un código de motivo.
 
 Para obtener información sobre los códigos de motivo y mensajes, vea [mensajes del Vectorizador y Paralelizador](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).

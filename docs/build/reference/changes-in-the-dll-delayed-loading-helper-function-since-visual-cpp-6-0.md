@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613777"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426529"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Cambios en la función del asistente de carga retrasada de DLL desde Visual C++ 6.0
 
@@ -47,7 +47,7 @@ Si define una función auxiliar personalizada y usa la versión actual de Visual
 
 - Cambiar el nombre de la función auxiliar que **__delayLoadHelper2**.
 
-- Puesto que los punteros en el descriptor de retraso (ImgDelayDescr en delayimp.h) se cambió de direcciones absolutas (VAs) a direcciones relativas (RVA) funcionen según lo previsto en ambos programas de 32 y 64 bits, deberá convertirlos de nuevo en punteros. Se ha introducido una nueva función: PFromRva, ubicada en delayhlp.cpp. Puede usar esta función en cada uno de los campos del descriptor para convertirlos a ambos punteros de 32 o 64 bits. La función de aplicación auxiliar de carga de retraso predeterminado sigue siendo una buena plantilla que usaremos como ejemplo.
+- Puesto que los punteros en el descriptor de retraso (ImgDelayDescr en delayimp.h) se cambió de direcciones absolutas (VAs) a direcciones relativas (RVA) funcionen según lo previsto en ambos programas de 32 y 64 bits, deberá convertirlos de nuevo en punteros. Se ha introducido una nueva función: PFromRva, que se encuentra en delayhlp.cpp. Puede usar esta función en cada uno de los campos del descriptor para convertirlos a ambos punteros de 32 o 64 bits. La función de aplicación auxiliar de carga de retraso predeterminado sigue siendo una buena plantilla que usaremos como ejemplo.
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Cargar todas las importaciones para un archivo DLL de carga retrasada
 

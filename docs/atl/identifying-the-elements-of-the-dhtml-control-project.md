@@ -5,12 +5,12 @@ helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: 3cb250c68d5ba36dc3cf502b871f62eec8f1861c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283883"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424384"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificar los elementos del proyecto de Control DHTML
 
@@ -22,7 +22,7 @@ Un control DHTML es similar a cualquier control ATL, excepto:
 
 - Crea un recurso HTML para el control de interfaz de usuario.
 
-- Permite el acceso al modelo de objetos DHTML a través de la variable miembro `m_spBrowser`, que es un puntero inteligente de tipo [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx). Use este puntero para tener acceso a cualquier parte del modelo de objetos DHTML.
+- Permite el acceso al modelo de objetos DHTML a través de la variable miembro `m_spBrowser`, que es un puntero inteligente de tipo [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)). Use este puntero para tener acceso a cualquier parte del modelo de objetos DHTML.
 
 El siguiente gráfico ilustra la relación entre el archivo DLL, el control DHTML, el explorador Web y el recurso HTML.
 

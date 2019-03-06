@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412463"
 ---
 # <a name="cl-environment-variables"></a>Variables de entorno de CL
 
@@ -42,11 +42,11 @@ Para obtener información relacionada, consulte [establecer Variables de entorno
 
 Este es un ejemplo de configuración de la variable de entorno de CL:
 
-> CONJUNTO de CL = / Zp2/Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 Cuando se establece esta variable de entorno, si escribe `CL INPUT.C` en la línea de comandos, este es el comando eficaz:
 
-> CL/Zp2/Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. ENTRADA DE OBJ. C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 En el ejemplo siguiente, un comando de CL sin formato compila los archivos de código fuente FILE1.c y FILE2.c y, a continuación, vincula los archivos objeto FILE1.obj, FILE2.obj y FILE3.obj:
 
@@ -54,7 +54,7 @@ En el ejemplo siguiente, un comando de CL sin formato compila los archivos de c�
 
 Esto tiene el mismo efecto que la línea de comandos siguiente:
 
-> CL FILE1. C FILE2. C FILE3. OBJ
+> CL FILE1.C FILE2.C FILE3.OBJ
 
 ## <a name="see-also"></a>Vea también
 

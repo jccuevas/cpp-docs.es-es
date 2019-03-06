@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551338"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414634"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Diferencias en el comportamiento del control de excepciones en /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> Sin asociación vuelve a generar
 
-**/ CLR** no admite volver a producir una excepción fuera de un controlador catch (conocido como una rethrow desasociada). Las excepciones de este tipo se tratan como una excepción de C++ estándar. Si se encuentra desasociada rethrow cuando hay una excepción administrada activa, la excepción se empaqueta como una excepción de C++ y, a continuación, vuelve a iniciar. Solo se pueden detectar las excepciones de este tipo como una excepción de tipo [System:: SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**/ CLR** no admite volver a producir una excepción fuera de un controlador catch (conocido como una rethrow desasociada). Las excepciones de este tipo se tratan como una excepción de C++ estándar. Si se encuentra desasociada rethrow cuando hay una excepción administrada activa, la excepción se empaqueta como una excepción de C++ y, a continuación, vuelve a iniciar. Solo se pueden detectar las excepciones de este tipo como una excepción de tipo <xref:System.Runtime.InteropServices.SEHException>.
 
 El ejemplo siguiente muestra una excepción administrada que se vuelve a producir una excepción de C++:
 

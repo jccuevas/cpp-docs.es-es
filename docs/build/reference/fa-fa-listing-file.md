@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507307"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420913"
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (Archivo de lista)
 
@@ -61,16 +61,16 @@ Una *origen*archivo .asm se crea para cada archivo de código fuente en la compi
 *filename*<br/>
 Un archivo de lista denominado *filename*.asm se coloca en el directorio actual. Esto solo es válido cuando se compila un archivo de código fuente único.
 
-*FileName.Extension*<br/>
+*filename.extension*<br/>
 Un archivo de lista denominado *filename.extension* se coloca en el directorio actual. Esto solo es válido cuando se compila un archivo de código fuente único.
 
-*Directorio*__\\__<br/>
+*directory*__\\__<br/>
 Una *archivo_origen*archivo .asm se crea y se colocan en la instancia especificada *directory* para cada archivo de código fuente en la compilación. Tenga en cuenta la barra diagonal necesaria. Se permiten rutas de acceso sólo en el disco actual.
 
 *directorio*__\\__*nombre de archivo*<br/>
 Un archivo de lista denominado *filename*.asm se coloca en la instancia especificada *directory*. Esto solo es válido cuando se compila un archivo de código fuente único.
 
-*directorio*__\\__*filename.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 Un archivo de lista denominado *filename.extension* se coloca en la instancia especificada *directory*. Esto solo es válido cuando se compila un archivo de código fuente único.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
