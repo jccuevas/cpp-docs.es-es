@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285313"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420926"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl (clase)
 
@@ -45,7 +45,7 @@ class CHtmlEditCtrl: public CWnd,
 |Name|Descripción|
 |----------|-----------------|
 |[CHtmlEditCtrl::Create](#create)|Crea un control WebBrowser ActiveX y lo adjunta a la `CHtmlEditCtrl` objeto. Esta función coloca automáticamente el control WebBrowser ActiveX en modo de edición.|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera el [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaz en el documento cargado actualmente en el control WebBrowser independiente.|
+|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|Recupera el [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfaz en el documento cargado actualmente en el control WebBrowser independiente.|
 |[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|Recupera la dirección URL a un documento predeterminado para cargar en el control WebBrowser independiente.|
 
 ## <a name="remarks"></a>Comentarios
@@ -116,7 +116,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
 
-Recupera el [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaz en el documento cargado actualmente en el control WebBrowser independiente
+Recupera el [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfaz en el documento cargado actualmente en el control WebBrowser independiente
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;

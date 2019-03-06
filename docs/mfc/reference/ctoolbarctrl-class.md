@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302517"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424488"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (clase)
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de los estilos de barra de herramientas y estilos de ventana como se describió en **comentarios**.
 
 *rect*<br/>
-Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de barra de herramientas. No debe ser NULL.
@@ -681,7 +681,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de los estilos de barra de herramientas y estilos de ventana como se describe en el **comentarios** sección de [crear](#create).
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Índice de base cero del botón que se va a recuperar la información.
 
 *lpRect*<br/>
-Dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que recibe las coordenadas del rectángulo delimitador.
+Dirección de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que recibe las coordenadas del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 El identificador del botón.
 
 *lpRect*<br/>
-Un puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para recibir la información del rectángulo delimitador.
+Un puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura para recibir la información del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parámetros
 
 *ppt*<br/>
-Un puntero a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que contiene la coordenada x de la prueba de posicionamiento en el `x` miembro y la coordenada y de la posición de prueba en el `y` miembro. Las coordenadas son relativas al área de cliente de la barra de herramientas.
+Un puntero a un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que contiene la coordenada x de la prueba de posicionamiento en el `x` miembro y la coordenada y de la posición de prueba en el `y` miembro. Las coordenadas son relativas al área de cliente de la barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parámetros
 
 *ppt*<br/>
-Un puntero a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la estructura que contiene la prueba de posicionamiento, en relación con el área cliente de la barra de herramientas.
+Un puntero a un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la estructura que contiene la prueba de posicionamiento, en relación con el área cliente de la barra de herramientas.
 
 *ptbim*<br/>
 Un puntero a un [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) estructura que recibe la información de marca de inserción.
@@ -2295,7 +2295,7 @@ Número solicitado de filas.
 Indica si se debe usar las filas más o menos filas si no puede cambiarse de tamaño la barra de herramientas para el número solicitado de filas.
 
 *lpRect*<br/>
-Apunta a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que va a recibir el nuevo rectángulo delimitador de la barra de herramientas.
+Apunta a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que va a recibir el nuevo rectángulo delimitador de la barra de herramientas.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290435"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425034"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Especifica el estilo del control de botón de número. Se aplican a cualquier combinación de los estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](/windows/desktop/Controls/up-down-control-styles) en el SDK de Windows.
 
 *rect*<br/>
-Especifica el tamaño y la posición del control de botón de número. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura
+Especifica el tamaño y la posición del control de botón de número. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura
 
 *pParentWnd*<br/>
 Un puntero a la ventana del elemento primario del control de botón de número, normalmente un `CDialog`. No debe ser NULL.
@@ -160,7 +160,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de botón de número. Se aplican a cualquier combinación de los estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](/windows/desktop/Controls/up-down-control-styles) en el SDK de Windows.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.

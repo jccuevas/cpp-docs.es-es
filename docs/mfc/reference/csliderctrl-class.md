@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283610"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422005"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl (clase)
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](/windows/desktop/Controls/trackbar-control-styles), que se describen en el SDK de Windows para el control.
 
 *rect*<br/>
-Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Especifica el tamaño y la posición del control deslizante. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana del elemento primario del control deslizante, normalmente un `CDialog`. No debe ser NULL.
@@ -251,7 +251,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control deslizante. Aplicar cualquier combinación de [estilos de control deslizante](/windows/desktop/Controls/trackbar-control-styles), que se describen en el SDK de Windows para el control.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.

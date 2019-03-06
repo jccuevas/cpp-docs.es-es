@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556730"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426659"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl (Clase)
 
-La implementación de plantillas OLE DB de la [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) interfaz en la especificación de OLE DB.
+La implementación de plantillas OLE DB de la [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) interfaz en la especificación de OLE DB.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 *T*<br/>
 Una clase derivada de `IRowsetChangeImpl`.
 
-*Almacenamiento de información*<br/>
+*Storage*<br/>
 El registro de usuario.
 
 *BaseInterface*<br/>
@@ -109,7 +109,7 @@ La implementación de plantillas OLE DB es compatible con todos los métodos bas
 
 - Consulte también cómo el `RUpdateRowset` clase se utiliza en el [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) ejemplo.
 
-## <a name="deleterows"></a> IRowsetChangeImpl:: DeleteRows
+## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
 
 Elimina las filas del conjunto de filas.
 
@@ -124,9 +124,9 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetChange:: DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) en el *referencia del programador OLE DB*.
+Consulte [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="insertrow"></a> IRowsetChangeImpl:: insertRow
+## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
 Crea e inicializa una nueva fila del conjunto de filas.
 
@@ -141,9 +141,9 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetChange:: insertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [IRowsetChange:: insertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="setdata"></a> IRowsetChangeImpl:: SetData
+## <a name="setdata"></a> IRowsetChangeImpl::SetData
 
 Establece los valores de datos en una o varias columnas.
 
@@ -157,9 +157,9 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IRowsetChange:: SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="flushdata"></a> IRowsetChangeImpl:: FlushData
+## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
 Omitido por el proveedor para confirmar los datos en su almacén.
 

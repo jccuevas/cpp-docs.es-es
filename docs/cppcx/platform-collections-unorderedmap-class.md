@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648336"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423617"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap (Clase)
 
@@ -44,7 +44,7 @@ Los tipos permitidos son:
 
 - enteros
 
-- clase de interfaz ^
+- interface class^
 
 - clase ref pública^
 
@@ -62,15 +62,15 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 |Name|Descripción|
 |----------|-----------------|
-|[Unorderedmap](#ctor)|Inicializa una nueva instancia de la clase Map.|
+|[UnorderedMap::UnorderedMap](#ctor)|Inicializa una nueva instancia de la clase Map.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Unorderedmap](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
+|[UnorderedMap::Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
 |[UnorderedMap::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Map.|
-|[GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, una clase Platform::Collections::UnorderedMapView.|
+|[UnorderedMap::GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, una clase Platform::Collections::UnorderedMapView.|
 |[UnorderedMap::HasKey](#haskey)|Determina si el objeto Map actual contiene la clave especificada.|
 |[UnorderedMap::Insert](#insert)|Agrega el par clave-valor especificado al objeto Map actual.|
 |[UnorderedMap::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto Map actual.|
@@ -92,7 +92,7 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="clear"></a>  Método unorderedmap:: Clear
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Método unorderedmap:: First
 
-Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento del mapa no ordenado.
+Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elemento del mapa no ordenado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
-*valor*<br/>
+*value*<br/>
 La parte de valor del par clave-valor. El tipo de *valor* es typename *V*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -205,7 +205,7 @@ Clave usada para buscar un elemento en el objeto UnorderedMap. El tipo de *clave
 
 El valor que se empareja con el *clave*. El tipo del valor devuelto es typename *V*.
 
-## <a name="mapchanged"></a>  Unorderedmap:: Mapchanged
+## <a name="mapchanged"></a>  UnorderedMap::MapChanged
 
 Se produce cuando un elemento se inserta en el mapa o se quita del mapa.
 
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-Un [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contiene información sobre el objeto que provocó el evento y el tipo de cambio producido. Vea también [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) y [CollectionChange (enumeración)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Un [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contiene información sobre el objeto que provocó el evento y el tipo de cambio producido. Vea también [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) y [CollectionChange (enumeración)](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework
 
@@ -241,7 +241,7 @@ La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
 ## <a name="size"></a>  Método unorderedmap:: Size
 
-Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos de UnorderedMap.
+Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos de UnorderedMap.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -352,13 +352,13 @@ Un objeto de función que genera un valor hash para una clave. Este parámetro t
 *m*<br/>
 Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a un [std:: unordered_map](../standard-library/unordered-map-class.md) que se usa para inicializar el objeto UnorderedMap actual.
 
-*IL*<br/>
+*il*<br/>
 Un [std:: initializer_list](../standard-library/initializer-list-class.md) de [std:: Pair](../standard-library/pair-structure.md) objetos que se usa para inicializar el objeto map.
 
 *first*<br/>
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto UnorderedMap actual.
 
-*Último*<br/>
+*last*<br/>
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto UnorderedMap actual.
 
 ## <a name="see-also"></a>Vea también

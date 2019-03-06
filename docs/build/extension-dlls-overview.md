@@ -1,5 +1,5 @@
 ---
-title: 'Archivos DLL de extensión: información general'
+title: 'Archivos DLL de extensión: Información general'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AFXDLL library
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 1967370f587b0b78c4e68ebff14804b20f158bd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425060"
 ---
-# <a name="mfc-extension-dlls-overview"></a>DLL de extensión MFC: información general
+# <a name="mfc-extension-dlls-overview"></a>Archivos DLL de extensión MFC: Información general
 
 Una extensión MFC DLL es un archivo DLL que implementa clases reutilizables derivadas de clases de Microsoft Foundation Class Library existentes. Archivos DLL de extensión MFC se crean con la versión de la biblioteca de vínculos dinámicos de MFC (también conocida como la versión compartida de MFC). Solo los archivos ejecutables MFC (aplicaciones o archivos DLL de MFC estándar) que se generan con la versión compartida de MFC pueden usar un archivo DLL de extensión MFC. Con un archivo DLL de extensión MFC, puede derivar nuevas clases personalizadas de MFC y, a continuación, ofrecer esta versión extendida de MFC a las aplicaciones que llamen al archivo DLL.
 
@@ -35,7 +35,7 @@ Tenga en cuenta que el término AFXDLL ya no se usa en la documentación de Visu
 
 - [Uso de archivos DLL de extensión MFC de base de datos, OLE y Sockets en archivos DLL de MFC estándar](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Archivos DLL no basados en MFC: información general](../build/non-mfc-dlls-overview.md)
+- [DLL no basada en MFC: información general](../build/non-mfc-dlls-overview.md)
 
 - [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 

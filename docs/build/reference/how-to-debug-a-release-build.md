@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Depurar una versión de lanzamiento'
+title: Filtrar Depurar una versión de lanzamiento
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-ms.openlocfilehash: 4ee99bb76d3af4339e065a3ed4d4809acfe23507
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61baaa827feb1abcc03a0296574e56c993ce1681
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649259"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412567"
 ---
-# <a name="how-to-debug-a-release-build"></a>Cómo: Depurar una versión de lanzamiento
+# <a name="how-to-debug-a-release-build"></a>Filtrar Depurar una versión de lanzamiento
 
 Puede depurar una versión de lanzamiento de una aplicación.
 

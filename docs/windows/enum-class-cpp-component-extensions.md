@@ -3,12 +3,12 @@ title: clase Enum (C++ / c++ / CLI y c++ / CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592522"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417429"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>clase Enum (C++ / c++ / CLI y c++ / CX)
 
@@ -55,7 +55,7 @@ El valor de cada enumerador es una expresión constante definida implícitamente
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información y ejemplos, vea [Enumeraciones](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx).
+Para obtener más información y ejemplos, vea [Enumeraciones](../cppcx/enums-c-cx.md).
 
 Observe que el compilador emite mensajes de error si la expresión constante que define el valor de un enumerador no se puede representar mediante *underlying-type*.  Sin embargo, el compilador no indica un error para un valor que es inadecuado para el tipo subyacente. Por ejemplo:
 

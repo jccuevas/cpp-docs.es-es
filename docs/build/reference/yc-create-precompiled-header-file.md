@@ -15,12 +15,12 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-ms.openlocfilehash: bda384152962bc59ab37b1aae138091aa6f4514c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b8bfb30a49efa35a3af3d3b76e75f8dede9fd7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536847"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418976"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (Crear archivo de encabezado precompilado)
 
@@ -29,7 +29,7 @@ Indica al compilador que cree un archivo de encabezado precompilado (.pch) que r
 ## <a name="syntax"></a>Sintaxis
 
 > __/Yc__<br/>
-> __/Yc__*nombre de archivo*
+> __/Yc__*filename*
 
 ## <a name="arguments"></a>Argumentos
 

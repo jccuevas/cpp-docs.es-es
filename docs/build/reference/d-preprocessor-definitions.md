@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620511"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424683"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (Definiciones de preprocesador)
 
@@ -46,7 +46,7 @@ Este comando define el símbolo DEBUG en TEST.c:
 
 Este comando quita todas las apariciones de la palabra clave `__far` en TEST.c:
 
-**CL /D__far = TEST. C**
+**CL /D__far=  TEST.C**
 
 El **CL** variable de entorno no se puede establecer en una cadena que contiene el signo igual. Para usar **/D** junto con el **CL** entorno variable, debe especificar el signo de número en lugar del signo igual:
 
@@ -54,7 +54,7 @@ El **CL** variable de entorno no se puede establecer en una cadena que contiene 
 SET CL=/DTEST#0
 ```
 
-Al definir un símbolo de preprocesamiento en el símbolo del sistema, tenga en cuenta las reglas de análisis del shell y del compilador. Por ejemplo, para definir un símbolo de preprocesamiento de signo de porcentaje (%) en el programa, especifique dos caracteres de signo de porcentaje (%%) en el símbolo del sistema: Si solo especifica uno, se producirá un error en el análisis.
+Al definir un símbolo de preprocesamiento en el símbolo del sistema, tenga en cuenta las reglas de análisis del shell y del compilador. Por ejemplo, para definir un símbolo de preprocesamiento de signo de porcentaje (%) en el programa, especifique los caracteres de signo de dos por ciento (%) en el símbolo del sistema: Si especifica solo una, se genera un error de análisis.
 
 ```
 CL /DTEST=%% TEST.C

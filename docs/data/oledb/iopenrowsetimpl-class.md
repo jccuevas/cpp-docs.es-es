@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 437f78636d1fa75f5bb8e4304a347dc3b554c34d
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3d4f778f560b55f22c1c54185bea79af07949ceb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556268"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422768"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl (Clase)
 
@@ -52,11 +52,11 @@ La clase derivada de `IOpenRowsetImpl`.
 
 ## <a name="remarks"></a>Comentarios
 
-El [IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85)) interfaz es obligatoria para un objeto de sesión. Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice.
+El [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) interfaz es obligatoria para un objeto de sesión. Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice.
 
-## <a name="createrowset"></a> Iopenrowsetimpl:: CreateRowset
+## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Crea un objeto de conjunto de filas. No llama directamente al usuario. Consulte [IOpenRowset:: OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador OLE DB.*
+Crea un objeto de conjunto de filas. No llama directamente al usuario. Consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador OLE DB.*
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -80,9 +80,9 @@ Un miembro de clase de plantilla que representa la clase de conjunto de filas de
 *pRowsetObj*<br/>
 [out] Un puntero a un objeto de conjunto de filas. Normalmente no se usa este parámetro, pero puede usarse si tiene que realizar más trabajo en el conjunto de filas antes de pasarlo a un objeto COM. La duración de *pRowsetObj* está limitado por *ppRowset*.
 
-Para otros parámetros, vea [IOpenRowset:: OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador de OLE DB.*
+Para otros parámetros, vea [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador de OLE DB.*
 
-## <a name="openrowset"></a> Iopenrowsetimpl:: OpenRowset
+## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
 Se abre y devuelve un conjunto de filas que incluye todas las filas de una única tabla base o índice.
 
@@ -100,7 +100,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IOpenRowset:: OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 
