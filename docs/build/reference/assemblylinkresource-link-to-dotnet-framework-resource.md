@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: 7c1d78758e43bf8e0c2c281c495c81e9f62b36e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2970f4e6d94cfa2e6315eeff85eb71a30dc032a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473910"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422434"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (Vincular a recursos de .NET Framework)
 
@@ -35,7 +35,7 @@ Recursos vinculados son públicos en el ensamblado cuando se crean con el vincul
 
 /ASSEMBLYLINKRESOURCE requiere que el compilador incluya [/CLR](../../build/reference/clr-common-language-runtime-compilation.md); [/LN](../../build/reference/ln-create-msil-module.md) o [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) no se permite con/ASSEMBLYLINKRESOURCE.
 
-Si *filename* es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) o en el entorno de desarrollo, puede obtenerse con los miembros de la **System.Resources** espacio de nombres. Para obtener más información, consulte [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx). Para todos los demás recursos, utilice el **GetManifestResource** \* métodos en el **System.Reflection.Assembly** clase para acceder al recurso en tiempo de ejecución.
+Si *filename* es un archivo de recursos de .NET Framework creado, por ejemplo, con [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator) o en el entorno de desarrollo, puede obtenerse con los miembros de la **System.Resources** espacio de nombres. Para obtener más información, consulte [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager). Para todos los demás recursos, utilice el **GetManifestResource** \* métodos en el **System.Reflection.Assembly** clase para acceder al recurso en tiempo de ejecución.
 
 *nombre de archivo* puede tener cualquier formato de archivo. Por ejemplo, desea realizar una DLL nativa forme parte del ensamblado, por lo que se puede instalar en la caché Global de ensamblados y accesible desde el código administrado del ensamblado.
 

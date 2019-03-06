@@ -3,12 +3,12 @@ title: x64 convención de llamada
 description: Detalles de la convención de llamada predeterminada x64 ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636222"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415791"
 ---
 # <a name="x64-calling-convention"></a>x64 convención de llamada
 
@@ -184,10 +184,10 @@ La parte no variable se establece en los valores estándar siguientes al princip
 
 | Registrar\[bits] | Parámetro |
 |-|-|
-| REGISTRO DE MXCSR\[6] | Denormals son ceros - 0 |
-| REGISTRO DE MXCSR\[7:12] | Excepción enmascara todos los valores 1 (se enmascaran todas las excepciones) |
-| REGISTRO DE MXCSR\[13:14] | Control de redondeo: 0 (redondeo al más cercano) |
-| REGISTRO DE MXCSR\[15] | Vaciar en cero subdesbordamiento enmascarado - 0 (desactivado) |
+| MXCSR\[6] | Denormals son ceros - 0 |
+| MXCSR\[7:12] | Excepción enmascara todos los valores 1 (se enmascaran todas las excepciones) |
+| MXCSR\[13:14] | Control de redondeo: 0 (redondeo al más cercano) |
+| MXCSR\[15] | Vaciar en cero subdesbordamiento enmascarado - 0 (desactivado) |
 
 Un destinatario que modifica cualquiera de los campos no volátiles dentro de MXCSR debe restaurarlos antes de devolver al llamador. Además, un llamador que se ha modificado alguno de estos campos debe restaurarlos a sus valores estándares antes de invocar a un destinatario a menos que el contrato, el destinatario espere los valores modificados.
 
@@ -207,4 +207,4 @@ Una llamada a `setjmp` conserva el puntero de pila actual, registros no volátil
 
 ## <a name="see-also"></a>Vea también
 
-[x64 convenciones de software](../build/x64-software-conventions.md)
+[Convenciones de software x64](../build/x64-software-conventions.md)

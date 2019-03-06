@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261354"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415622"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl (clase)
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Especifica el estilo del control de encabezado. Para obtener una descripción de los estilos de control de encabezado, vea [estilos de Control de encabezado](/windows/desktop/Controls/header-control-styles) en el SDK de Windows.
 
 *rect*<br/>
-Especifica el tamaño y la posición del control de encabezado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Especifica el tamaño y la posición del control de encabezado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana control de encabezado principal, normalmente un `CDialog`. No debe ser NULL.
@@ -301,7 +301,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Estilo del control de encabezado. Para obtener una descripción de los estilos de control de encabezado, vea [estilos de Control de encabezado](/windows/desktop/Controls/header-control-styles) en el SDK de Windows. Consulte [crear](#create) para obtener una lista de estilos adicionales.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*iItem*|[in] Índice de base cero de un elemento de encabezado cuyo estilo es HDF_SPLITBUTTON. Para obtener más información, consulte el `fmt` miembro de la [DITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) estructura.|
-|*lpRect*|[out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para recibir la información del rectángulo delimitador.|
+|*lpRect*|[out] Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura para recibir la información del rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Índice de base cero del elemento de control de encabezado.
 
 *lpRect*<br/>
-Un puntero a la dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe la información del rectángulo delimitador.
+Un puntero a la dirección de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe la información del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*lpRect*|[out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe la información del rectángulo delimitador.|
+|*lpRect*|[out] Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe la información del rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
 

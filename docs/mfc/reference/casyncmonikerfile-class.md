@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262628"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425827"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile (clase)
 
@@ -158,7 +158,7 @@ Como alternativa, puede delegar el objeto COM para la implementación de MFC med
 
 [CAsyncMonikerFile::Open](#open) llamadas `CreateBindStatusCallback`.
 
-Para obtener más información acerca de los monikers asincrónicos y enlace asincrónica, vea el [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060) interfaz y [cómo enlace asincrónica y el trabajo de almacenamiento](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Para obtener una explicación de agregación, vea [agregación](/windows/desktop/com/aggregation). Todos los tres temas están en el SDK de Windows.
+Para obtener más información acerca de los monikers asincrónicos y enlace asincrónica, vea el [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\)) interfaz y [cómo enlace asincrónica y el trabajo de almacenamiento](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Para obtener una explicación de agregación, vea [agregación](/windows/desktop/com/aggregation). Todos los tres temas están en el SDK de Windows.
 
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
 

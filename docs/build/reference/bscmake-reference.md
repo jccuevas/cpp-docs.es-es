@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1f321d51d1b880ea634c835567767c528aca041b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509479"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416259"
 ---
 # <a name="bscmake-reference"></a>Referencia de BSCMAKE
 
@@ -33,7 +33,7 @@ Si compila el programa fuera del entorno de desarrollo, aún puede crear un arch
 
 Esta sección contiene los siguientes temas:
 
-- [Compilar archivos de información de examen: información general](../../build/reference/building-browse-information-files-overview.md)
+- [Compilación de archivos de información de examen: información general](../../build/reference/building-browse-information-files-overview.md)
 
 - [Crear un archivo .bsc](../../build/reference/building-a-dot-bsc-file.md)
 

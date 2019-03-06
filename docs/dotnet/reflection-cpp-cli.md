@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444023"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426451"
 ---
 # <a name="reflection-ccli"></a>Reflexión (C++/CLI)
 
@@ -31,12 +31,12 @@ La reflexión permite inspeccionar tipos de datos conocidos en tiempo de ejecuci
 
 Tenga en cuenta que el nombre del ensamblado es el nombre seguro (vea [crear y utilizar ensamblados](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)), que incluye la versión del ensamblado, la referencia cultural y la información de firma. Observe además que puede recuperarse el nombre del espacio de nombres en el que se define el tipo de datos, al igual que el nombre de la clase base.
 
-La manera más común de obtener acceso a las características de reflexión es utilizar el método <xref:System.Object.GetType%2A>. Este método se proporciona por [System:: Object](https://msdn.microsoft.com/library/system.object.aspx), desde que se derivan todas las clases de recolección.
+La manera más común de obtener acceso a las características de reflexión es utilizar el método <xref:System.Object.GetType%2A>. Este método se proporciona por <xref:System.Object?displayProperty=nameWithType>, desde que se derivan todas las clases de recolección.
 
 > [!NOTE]
 > Solo se permite la reflexión en un .exe compilado con el compilador de Visual C++ si se ha creado el archivo .exe con el **/CLR: pure** o **/CLR: safe** opciones del compilador. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no está disponible en Visual Studio 2017. Consulte [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obtener más información.
 
-Para obtener más información, consulte [Namespace System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx)
+Para obtener más información, vea <xref:System.Reflection>
 
 ## <a name="example-gettype"></a>Ejemplo: GetType
 
@@ -114,7 +114,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>Ejemplo: GetType miembros y propiedades
+## <a name="example-gettype-members-and-properties"></a>Ejemplo: Propiedades y miembros GetType
 
 El objeto `GetType` admite un número de miembros y propiedades que pueden utilizarse para examinar un tipo. Este código recupera y muestra una parte de esta información:
 
@@ -177,9 +177,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>Ejemplo: inspección de ensamblados
 
-Si el código anterior se compila en un archivo DLL denominado vcpp_reflection_6.dll, puede utilizar la reflexión para inspeccionar el contenido de este ensamblado. Esto implica el uso de la función de la API de reflexión estática [Assembly:: Load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx) para cargar el ensamblado. Esta función devuelve la dirección de un **ensamblado** objeto que, a continuación, se puede consultar acerca de los módulos y tipos de dentro.
+Si el código anterior se compila en un archivo DLL denominado vcpp_reflection_6.dll, puede utilizar la reflexión para inspeccionar el contenido de este ensamblado. Esto implica el uso de la reflexión estática API función xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType para cargar el ensamblado. Esta función devuelve la dirección de un **ensamblado** objeto que, a continuación, se puede consultar acerca de los módulos y tipos de dentro.
 
-Una vez que el sistema de reflexión carga correctamente el ensamblado, una matriz de **tipo** se recuperan los objetos con el [Assembly:: GetTypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx) función. Cada elemento de la matriz contiene información sobre un tipo diferente, aunque en este caso solo se define una clase. Mediante un bucle, cada **tipo** en esta matriz se consultan los miembros de tipo usando el **Type:: GetMembers** función. Esta función devuelve una matriz de **MethodInfo** objetos, cada objeto que contiene información acerca de la función miembro, el miembro de datos o la propiedad del tipo.
+Una vez que el sistema de reflexión carga correctamente el ensamblado, una matriz de **tipo** se recuperan los objetos con el <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> función. Cada elemento de la matriz contiene información sobre un tipo diferente, aunque en este caso solo se define una clase. Mediante un bucle, cada **tipo** en esta matriz se consultan los miembros de tipo usando el **Type:: GetMembers** función. Esta función devuelve una matriz de **MethodInfo** objetos, cada objeto que contiene información acerca de la función miembro, el miembro de datos o la propiedad del tipo.
 
 Tenga en cuenta que la lista de métodos incluye las funciones explícitamente definidos en **TestClass** y las funciones hereden implícitamente de la **System:: Object** clase. Por haberse descrito en .NET y no en la sintaxis de Visual C++, las propiedades aparecen como el miembro de datos subyacente al que se obtiene acceso mediante funciones get o set. Las funciones get y set aparecen en esta lista con métodos periódicas. La reflexión se admite a través de Common Language Runtime, no del compilador de Visual C++.
 
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> Cómo: implementar una arquitectura de componentes complementarios mediante reflexión
+## <a name="implement"></a> Cómo: Implementar una arquitectura de componentes complementarios mediante reflexión
 
 Ejemplos de código siguientes muestran el uso de reflexión para implementar una arquitectura de "complemento" simple. La primera lista es la aplicación y el segundo es el complemento. La aplicación es un formulario de múltiples documentos que se rellena mediante cualquier clase basada en formularios que se encuentra en la DLL del complemento proporcionada como un argumento de línea de comandos.
 

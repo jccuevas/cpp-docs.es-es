@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423708"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map (Clase)
 
@@ -73,27 +73,27 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 |Name|Descripción|
 |----------|-----------------|
-|[Map](#ctor)|Inicializa una nueva instancia de la clase Map.|
+|[Map::Map](#ctor)|Inicializa una nueva instancia de la clase Map.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Map:: Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
+|[Map::Clear](#clear)|Quita todos los pares clave-valor del objeto Map actual.|
 |[Map::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Map.|
-|[GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
+|[Map::GetView](#getview)|Devuelve una vista de solo lectura del objeto Map actual; es decir, [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md).|
 |[Map::HasKey](#haskey)|Determina si el objeto Map actual contiene la clave especificada.|
-|[Map:: Insert](#insert)|Agrega el par clave-valor especificado al objeto Map actual.|
-|[Map:: Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto Map actual.|
-|[Map](#remove)|Elimina el par clave-valor especificado del objeto Map actual.|
-|[Map:: Size](#size)|Devuelve el número de elementos del objeto Map actual.|
+|[Map::Insert](#insert)|Agrega el par clave-valor especificado al objeto Map actual.|
+|[Map::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto Map actual.|
+|[Map::Remove](#remove)|Elimina el par clave-valor especificado del objeto Map actual.|
+|[Map::Size](#size)|Devuelve el número de elementos del objeto Map actual.|
 
 ### <a name="events"></a>Eventos
 
 |||
 |-|-|
 |nombre|Descripción|
-|[Mapchanged](#mapchanged-event.md) `event`|Se produce cuando cambia la asignación.|
+|[Map::MapChanged](#mapchanged-event.md) `event`|Se produce cuando cambia la asignación.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -103,7 +103,7 @@ Para obtener más información, consulte [colecciones](../cppcx/collections-c-cx
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="clear"></a>  Map:: Clear (método)
 
@@ -146,7 +146,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un objeto `MapView`.
+Objeto `MapView`.
 
 ## <a name="haskey"></a>  Haskey (método)
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
-*valor*<br/>
+*value*<br/>
 La parte de valor del par clave-valor. El tipo de *valor* es typename *V*.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -234,7 +234,7 @@ Map(
 *InIt*<br/>
 typename del objeto Map actual.
 
-*Comp.*<br/>
+*comp*<br/>
 Tipo que proporciona un objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en el objeto Map.
 
 *m*<br/>
@@ -243,7 +243,7 @@ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a
 *first*<br/>
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto Map actual.
 
-*Último*<br/>
+*last*<br/>
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto Map actual.
 
 ## <a name="mapchanged"></a>  Mapchanged (evento)
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto
 
-Un [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contiene información sobre el objeto que provocó el evento y el tipo de cambio producido. Vea también [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) y [CollectionChange (enumeración)](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Un [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) que contiene información sobre el objeto que provocó el evento y el tipo de cambio producido. Vea también [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) y [CollectionChange (enumeración)](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Equivalente de .NET Framework
 
@@ -281,7 +281,7 @@ La parte de clave del par clave-valor. El tipo de *clave* es typename *K*.
 
 ## <a name="size"></a>  Map:: Size (método)
 
-Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos del mapa.
+Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos del mapa.
 
 ### <a name="syntax"></a>Sintaxis
 

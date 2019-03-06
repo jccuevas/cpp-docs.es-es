@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560841"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414413"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView (Clase)
 
@@ -47,7 +47,7 @@ UnorderedMapView es la implementación concreta en C++ de la [Windows::Foundatio
 
 |Name|Descripción|
 |----------|-----------------|
-|[Unorderedmapview](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|
+|[UnorderedMapView::UnorderedMapView](#ctor)|Inicializa una nueva instancia de la clase UnorderedMapView.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -67,11 +67,11 @@ UnorderedMapView es la implementación concreta en C++ de la [Windows::Foundatio
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="first"></a>  UnorderedMapView::First (Método)
 
-Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elemento del mapa no ordenado.
+Devuelve un iterador que especifica el primer [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elemento del mapa no ordenado.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -129,7 +129,7 @@ El valor que se empareja con `key`. El tipo del valor devuelto es typename *V*.
 
 ## <a name="size"></a>  UnorderedMapView::Size (Método)
 
-Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) elementos en el objeto UnorderedMapView.
+Devuelve el número de [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) elementos en el objeto UnorderedMapView.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -236,7 +236,7 @@ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a
 *first*<br/>
 Iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto UnorderedMapView.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto UnorderedMapView.
 
 ## <a name="see-also"></a>Vea también

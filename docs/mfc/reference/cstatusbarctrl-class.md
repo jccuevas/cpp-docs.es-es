@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272846"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426139"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl (clase)
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.
 
 *rect*<br/>
-Especifica el tamaño y la posición del control de barra de estado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Especifica el tamaño y la posición del control de barra de estado. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica el estado de la barra de la ventana primaria de control, normalmente un `CDialog`. No debe ser NULL.
@@ -178,7 +178,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de barra de estado. Aplicar cualquier combinación de los estilos de control que aparece en la barra de estado [estilos de Control comunes](/windows/desktop/Controls/common-control-styles) en el SDK de Windows. Este parámetro debe incluir el estilo WS_CHILD. También debe incluir el estilo WS_VISIBLE.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Índice de base cero del elemento cuyo rectángulo delimitador es va a recuperar.
 
 *lpRect*<br/>
-Dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador.
+Dirección de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe el rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
