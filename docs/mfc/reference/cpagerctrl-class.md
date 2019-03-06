@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270727"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417614"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl (clase)
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [estilos de control de paginación](/windows/desktop/Controls/pager-control-styles) aplicarse al control.|
-|*rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control, en coordenadas de cliente.|
+|*rect*|[in] Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene la posición y el tamaño del control, en coordenadas de cliente.|
 |*pParentWnd*|[in] Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control. Este parámetro no puede ser NULL.|
 |*nID*|[in] El identificador del control.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Una combinación bit a bit de los estilos extendidos para aplicarse al control. Para obtener más información, consulte el *dwExStyle* parámetro de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) función.|
 |*dwStyle*|[in] Una combinación bit a bit (OR) de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [estilos de control de paginación](/windows/desktop/Controls/pager-control-styles) aplicarse al control.|
-|*rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control, en coordenadas de cliente.|
+|*rect*|[in] Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene la posición y el tamaño del control, en coordenadas de cliente.|
 |*pParentWnd*|[in] Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control. Este parámetro no puede ser NULL.|
 |*nID*|[in] El identificador del control.|
 

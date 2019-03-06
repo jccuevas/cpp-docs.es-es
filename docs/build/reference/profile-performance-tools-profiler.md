@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 26f4ba4efc20f5fee70b2937cdb943689c948888
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0fda47497ffc247dd9678ece7aac76291aed1ff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519927"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419158"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (Generador de perfiles de Herramientas de rendimiento)
 
@@ -28,13 +28,13 @@ Produce un archivo de salida que se puede usar con el generador de perfiles de H
 
 / PERFIL implica las siguientes opciones del vinculador:
 
-- [/ OPT: REF](../../build/reference/opt-optimizations.md)
+- [/OPT:REF](../../build/reference/opt-optimizations.md)
 
 - / OPT: NOICF
 
-- [/ INCREMENTAL: NO](../../build/reference/incremental-link-incrementally.md)
+- [/INCREMENTAL:NO](../../build/reference/incremental-link-incrementally.md)
 
-- [O SE HA CORREGIDO: NO](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED:NO](../../build/reference/fixed-fixed-base-address.md)
 
 Y perfil hace que el vinculador generar una sección de reubicación en la imagen del programa.  Una sección de reubicación permite que el generador de perfiles transformar la imagen del programa para obtener datos de perfil.
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271403"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418937"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.
 
 *rect*<br/>
-Especifica el tamaño y la posición del control de vista de árbol. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Especifica el tamaño y la posición del control de vista de árbol. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de vista de árbol, normalmente un `CDialog`. No debe ser NULL.
@@ -361,7 +361,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de vista de árbol. Aplicar estilos de ventana, se describe en [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)y cualquier combinación de [estilos de control de vista de árbol](/windows/desktop/Controls/tree-view-control-window-styles) tal como se describe en el SDK de Windows.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in] Identificador de un elemento de control de vista de árbol.|
 |*nPart*|[in] Identificador de la parte. Debe establecerse en TVGIPR_BUTTON.|
-|*lpRect*|[out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura. Si este método se realiza correctamente, la estructura recibe las coordenadas del rectángulo del elemento especificado por *hItem* y *nPart*.|
+|*lpRect*|[out] Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura. Si este método se realiza correctamente, la estructura recibe las coordenadas del rectángulo del elemento especificado por *hItem* y *nPart*.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 El identificador de un elemento de control de vista de árbol.
 
 *lpRect*<br/>
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador. Las coordenadas son relativas a la esquina superior izquierda del control de vista de árbol.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe el rectángulo delimitador. Las coordenadas son relativas a la esquina superior izquierda del control de vista de árbol.
 
 *bTextOnly*<br/>
 Si este parámetro es distinto de cero, el rectángulo delimitador incluye sólo el texto del elemento. En caso contrario, incluye toda la línea que ocupa el elemento en el control de vista de árbol.

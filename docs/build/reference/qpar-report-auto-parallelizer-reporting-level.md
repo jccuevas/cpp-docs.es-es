@@ -2,12 +2,12 @@
 title: /Qpar-report (Nivel de información de paralelizador automático)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4f3f496deb9f87d4f33f5e36832bd46405a482b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550038"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419912"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (Nivel de información de paralelizador automático)
 
@@ -21,10 +21,10 @@ Habilita la característica informes del compilador [Paralelizador automático](
 
 ## <a name="remarks"></a>Comentarios
 
-**/ Qpar-report: 1**<br/>
+**/Qpar-report:1**<br/>
 Genera un mensaje informativo para los bucles que se paralelizan.
 
-**/ Qpar-report: 2**<br/>
+**/Qpar-report:2**<br/>
 Genera un mensaje informativo para los bucles que se paralelizan y también para los bucles que no se paralelizan, junto con un código de motivo.
 
 Los mensajes se notifican a stdout. Si no se notifica ningún mensaje informativo, significa que el código no contiene bucles, o bien que el nivel de generación de informes no se estableció para notificar bucles no paralelizados. Para obtener más información sobre los códigos de motivo y mensajes, vea [mensajes del Vectorizador y Paralelizador](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).

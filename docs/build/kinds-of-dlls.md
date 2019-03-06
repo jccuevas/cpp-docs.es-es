@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441124"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424813"
 ---
 # <a name="kinds-of-dlls"></a>Tipos de archivos DLL
 
@@ -31,7 +31,7 @@ La misma biblioteca MFC está disponible, las bibliotecas de vínculos estático
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Archivos DLL no basados en MFC: información general](../build/non-mfc-dlls-overview.md)
+- [DLL no basada en MFC: información general](../build/non-mfc-dlls-overview.md)
 
 - [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
@@ -55,11 +55,11 @@ Si el archivo DLL sólo se usará en ejecutables MFC, tienen posibilidad de eleg
 
 Si el archivo DLL se vincula dinámicamente a MFC, se puede redistribuir los archivos DLL de MFC con el archivo DLL. Esta arquitectura es especialmente útil para compartir la biblioteca de clases entre varios archivos ejecutables para ahorrar espacio en disco y minimizar el uso de memoria.
 
-Antes de la versión 4.0, los tipos de Visual C++ sólo admitía dos de los archivos DLL que utilizaban MFC: USRDLL y AFXDLL. Archivos DLL de MFC estándar vinculados estáticamente a MFC tienen las mismas características que el archivo USRDLL anterior. Archivos DLL de extensión MFC tiene las mismas características que los archivos AFXDLL.
+Antes de la versión 4.0, Visual C++ sólo admitía dos tipos de archivos DLL que utilizaban MFC: USRDLL y AFXDLL. Archivos DLL de MFC estándar vinculados estáticamente a MFC tienen las mismas características que el archivo USRDLL anterior. Archivos DLL de extensión MFC tiene las mismas características que los archivos AFXDLL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Archivos DLL no basados en MFC: información general](../build/non-mfc-dlls-overview.md)
+- [DLL no basada en MFC: información general](../build/non-mfc-dlls-overview.md)
 
 - [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 

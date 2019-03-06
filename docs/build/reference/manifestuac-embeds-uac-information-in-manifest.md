@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 702dae41f873218dab0d3fb24e46dacd710bc20f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae9d18bb0fe2172886ef24250d53cf76851bbba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625100"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420432"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incrustar información de UAC en el manifiesto)
 
@@ -33,7 +33,7 @@ Especifica si la información de Control de cuentas de usuario (UAC) debe incrus
 
 ### <a name="parameters"></a>Parámetros
 
-*Fragmento*<br/>
+*fragment*<br/>
 Una cadena que contiene los valores de `level` y `uiAccess`. Para obtener más información, vea la sección Comentarios más adelante en este tema.
 
 *_level*<br/>
@@ -48,11 +48,11 @@ Si especifica varias opciones /MANIFESTUAC en la línea de comandos, tendrá pri
 
 Las opciones de /MANIFESTUAC:level son las siguientes:
 
-- `asInvoker`: la aplicación se ejecutará con los mismos permisos que el proceso que la inició. La aplicación se puede elevar a un nivel de permisos superior seleccionando **ejecutar como administrador**.
+- `asInvoker`: La aplicación se ejecutará con los mismos permisos que el proceso que fue iniciado. La aplicación se puede elevar a un nivel de permisos superior seleccionando **ejecutar como administrador**.
 
-- highestAvailable: la aplicación se ejecutará con el máximo nivel de permisos posible. Si el usuario que inicia la aplicación es miembro del grupo Administradores, esta opción es igual que requireAdministrator. Si el máximo nivel de permisos disponible es superior al nivel del proceso de apertura, el sistema solicitará las credenciales.
+- highestAvailable: La aplicación se ejecutará con el mayor nivel de permiso que lo hace. Si el usuario que inicia la aplicación es miembro del grupo Administradores, esta opción es igual que requireAdministrator. Si el máximo nivel de permisos disponible es superior al nivel del proceso de apertura, el sistema solicitará las credenciales.
 
-- requireAdministrator: la aplicación se ejecutará con permisos de administrador. El usuario que inicia la aplicación debe ser miembro del grupo Administradores. Si el proceso de apertura no se está ejecutando con permisos administrativos, el sistema solicitará las credenciales.
+- requireAdministrator: La aplicación se ejecutará con permisos de administrador. El usuario que inicia la aplicación debe ser miembro del grupo Administradores. Si el proceso de apertura no se está ejecutando con permisos administrativos, el sistema solicitará las credenciales.
 
 El nivel y los valores de uiAccess se pueden especificar en un solo paso mediante la opción /MANIFESTUAC:fragmento. El fragmento deben tener el formato siguiente:
 

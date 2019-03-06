@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Agregar herramientas de compilación personalizadas a proyectos de MSBuild'
+title: Procedimiento Agregar herramientas de compilación personalizadas a proyectos de MSBuild
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 48923c997c881e8786a8c20b00077161cf470195
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d07c8de3405791e94193368e921c0f594845a418
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413854"
 ---
-# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Cómo: Agregar herramientas de compilación personalizadas a proyectos de MSBuild
+# <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Filtrar Agregar herramientas de compilación personalizadas a proyectos de MSBuild
 
 Una herramienta de compilación personalizada es una herramienta de línea de comandos, definido por el usuario que está asociada a un archivo determinado.
 
@@ -50,6 +50,6 @@ Pasos de compilación personalizada y herramientas de compilación personalizada
 
 ## <a name="see-also"></a>Vea también
 
-[Tutorial: Usar MSBuild para crear un proyecto de Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Procedimiento para usar eventos de compilación en proyectos de MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[Procedimiento para agregar un paso de compilación personalizado a proyectos de MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+[Tutorial: Uso de MSBuild para crear un proyecto de Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Cómo: Usar de eventos de compilación en proyectos de MSBuild](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Cómo: Agregar un paso personalizado de compilación a proyectos de MSBuild](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)

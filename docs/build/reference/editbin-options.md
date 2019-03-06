@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: 263cfb79897ae60daff64521928db865f1dcb874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 409c40986068475299c95f1be0dff5f15d022520
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540548"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424332"
 ---
 # <a name="editbin-options"></a>Opciones de EDITBIN
 
@@ -28,7 +28,7 @@ EDITBIN tiene las siguientes opciones:
 |[/APPCONTAINER](../../build/reference/appcontainer.md)|Especifica si la aplicación debe ejecutarse dentro de un AppContainer, por ejemplo, una aplicación para UWP.|
 |[/BIND](../../build/reference/bind.md)|Establece las direcciones de los puntos de entrada en los objetos especificados para acelerar el tiempo de carga.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Especifica si el archivo DLL o una imagen ejecutable puede reubicarse aleatoriamente durante la carga mediante el uso de la selección aleatoria de diseño de espacio de direcciones (ASLR).|
-|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Informes de errores internos a Microsoft.|
+|[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Informes de errores internos a Microsoft.|
 |[/HEAP](../../build/reference/heap.md)|Establece el tamaño del montón de la imagen ejecutable en bytes.|
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Especifica si el archivo DLL o una imagen ejecutable es compatible con alta entropía (64 bits) dirección espacio selección aleatoria del diseño (ASLR).|
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Especifica si se comprueba la firma digital en tiempo de carga.|

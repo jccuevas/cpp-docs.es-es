@@ -1,5 +1,5 @@
 ---
-title: 'Compilar archivos de información de examen: información general'
+title: 'Generar archivos de información de examen: Información general'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .bsc files, about .bsc files
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: d620c7170ef5e84a05496af6e74d3a22f594749b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469983"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413022"
 ---
-# <a name="building-browse-information-files-overview"></a>Compilar archivos de información de examen: información general
+# <a name="building-browse-information-files-overview"></a>Generar archivos de información de examen: Información general
 
 Para crear información de examen para la exploración de símbolos, el compilador crea un archivo .sbr para cada archivo de código fuente en el proyecto, a continuación, BSCMAKE. EXE concatena los archivos .sbr en un archivo .bsc.
 

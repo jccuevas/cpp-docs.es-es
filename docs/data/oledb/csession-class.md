@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 86ac5984f5d21e0077c15027ac7a8d8daab08945
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556795"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414010"
 ---
 # <a name="csession-class"></a>CSession (Clase)
 
@@ -92,13 +92,13 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ITransaction:: Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Un HRESULT estándar.
 
-## <a name="close"></a> CSession:: Close
+## <a name="close"></a> CSession::Close
 
 Cierra la sesión, lo que se abrió por [CSession:: Open](../../data/oledb/csession-open.md).
 
@@ -112,7 +112,7 @@ void Close() throw();
 
 Las versiones del `m_spOpenRowset` puntero.
 
-## <a name="commit"></a> CSession:: Commit
+## <a name="commit"></a> CSession::Commit
 
 Confirma la transacción.
 
@@ -126,7 +126,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ITransaction:: Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -134,9 +134,9 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [ITransaction:: Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)).
+Para obtener más información, consulte [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
-## <a name="gettransactioninfo"></a> CSession:: Gettransactioninfo
+## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
 Devuelve información relativa a una transacción.
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -156,9 +156,9 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) en el *referencia del programador de OLE DB*.
+Para obtener más información, consulte [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) en el *referencia del programador de OLE DB*.
 
-## <a name="open"></a> CSession:: Open
+## <a name="open"></a> CSession::Open
 
 Se abre una nueva sesión para el objeto de origen de datos.
 
@@ -172,14 +172,14 @@ HRESULT Open(const CDataSource& ds,
 
 #### <a name="parameters"></a>Parámetros
 
-*DS*<br/>
+*ds*<br/>
 [in] El origen de datos para el que la sesión consiste en Abrir.
 
 *pPropSet*<br/>
-[in] Un puntero a una matriz de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows.
+[in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows.
 
 *ulPropSets*<br/>
-[in] El número de [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) pasan las estructuras en el *pPropSet* argumento.
+[in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) pasan las estructuras en el *pPropSet* argumento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -189,7 +189,7 @@ Un HRESULT estándar.
 
 Debe abrir el objeto de origen de datos mediante [CDataSource:: Open](../../data/oledb/cdatasource-open.md) antes de pasarlo a `CSession::Open`.
 
-## <a name="starttransaction"></a> CSession:: StartTransaction
+## <a name="starttransaction"></a> CSession::StartTransaction
 
 Inicia una transacción nueva para esta sesión.
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ITransactionLocal:: StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) en el *referencia del programador OLE DB*.
+Consulte [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -212,7 +212,7 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [ITransactionLocal:: StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) en el *referencia del programador de OLE DB*.
+Para obtener más información, consulte [ITransactionLocal:: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) en el *referencia del programador de OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

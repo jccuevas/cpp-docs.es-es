@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 77344150f5c0d969c1636ac146138242d96ee39f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 25af1656295606658c62c2c85c1c037a54181527
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556561"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425632"
 ---
 # <a name="supporting-notifications"></a>Admitir notificaciones
 
@@ -22,7 +22,7 @@ ms.locfileid: "51556561"
 
 Para implementar notificaciones, una clase de proveedor debe heredar de [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) y [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementa funciones aconsejar a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
+`IRowsetNotifyCP` implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementa funciones aconsejar a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
 
 También debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como el receptor) mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor puede controlar las notificaciones. Para obtener información acerca de cómo implementar la interfaz de punto de conexión del consumidor, consulte [recibir notificaciones](../../data/oledb/receiving-notifications.md).
 
@@ -85,15 +85,15 @@ También deberá agregar las siguientes propiedades para el proveedor. Solo debe
 
 |Property|Agregar si admite|
 |--------------|------------------------|
-|DBPROP_IConnectionPointContainer|Always|
-|DBPROP_NOTIFICATIONGRANULARITY|Always|
-|DBPROP_NOTIFICATIONPHASES|Always|
+|DBPROP_IConnectionPointContainer|Siempre|
+|DBPROP_NOTIFICATIONGRANULARITY|Siempre|
+|DBPROP_NOTIFICATIONPHASES|Siempre|
 |DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
 |DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
 |DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
-|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Always|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Siempre|
 |DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
-|DBPROP_NOTIFYROWSETRELEASE|Always|
+|DBPROP_NOTIFYROWSETRELEASE|Siempre|
 |DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|

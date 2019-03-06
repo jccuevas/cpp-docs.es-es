@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-ms.openlocfilehash: 1c459604d90b23953bbf3f250708c393fa78277d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2e1a51dcff46601034ed18292e9c4dcf4bd7d5c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413945"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (Subprocesos compilador)
 
@@ -25,7 +25,7 @@ Establece el número de subprocesos cl.exe que se deben usar para la optimizaci�
 
 ## <a name="arguments"></a>Argumentos
 
-*Número*<br/>
+*number*<br/>
 El número máximo de subprocesos que debe usar cl.exe, en un intervalo de 1 a 8.
 
 ## <a name="remarks"></a>Comentarios

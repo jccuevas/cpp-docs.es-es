@@ -5,16 +5,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 149e6f37de64a1133258f5bbc550896a4fb22a9f
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 04f6f046451a5347dbd2a911ce9fbd1a67e39bba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414166"
 ---
 # <a name="setting-properties-in-your-provider"></a>Establecer propiedades en un proveedor
 
-Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) en el **referencia del programador de OLE DB**.
+Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) en el **referencia del programador de OLE DB**.
 
 En el código del proveedor generado por el asistente, busque la asignación de propiedad correspondiente al grupo de propiedades. El nombre del grupo de propiedades normalmente corresponde al nombre del objeto. Propiedades de comando y conjunto de filas pueden encontrarse en el comando o un conjunto de filas; propiedades de inicialización y el origen de datos pueden encontrarse en el objeto de origen de datos.
 
@@ -22,7 +22,7 @@ En el mapa de propiedades, agregue un [PROPERTY_INFO_ENTRY_EX](../../data/oledb/
 
 - El identificador de propiedad correspondiente a la propiedad. Quite los siete primeros caracteres ("DBPROP_") desde el principio del nombre de la propiedad. Por ejemplo, si desea agregar `DBPROP_MAXROWS`, pasar `MAXROWS` como el primer elemento. Si se trata de una propiedad personalizada, pase el nombre completo de GUID (por ejemplo, `DBMYPROP_MYPROPERTY`).
 
-- El tipo de variante de la propiedad (en [propiedades de OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) en el **referencia del programador de OLE DB**). Escriba el tipo VT_ (como VT_BOOL o VT_I2) correspondiente al tipo de datos.
+- El tipo de variante de la propiedad (en [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) en el **referencia del programador de OLE DB**). Escriba el tipo VT_ (como VT_BOOL o VT_I2) correspondiente al tipo de datos.
 
 - Marcadores que indican si la propiedad es de lectura y escritura y el grupo al que pertenece. Por ejemplo, el código siguiente indica una propiedad de lectura/escritura que pertenecen al grupo de filas:
 

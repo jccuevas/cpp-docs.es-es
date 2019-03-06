@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259547"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425021"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl (clase)
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indica qué operación debe realizarse. Si este parámetro es TRUE, *lpRect* especifica un rectángulo de presentación y recibe el rectángulo de la ventana correspondiente. Si este parámetro es FALSE, *lpRect* especifica un rectángulo de la ventana y recibe el rectángulo de presentación correspondiente.
 
 *lpRect*<br/>
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el rectángulo especificado y recibe el rectángulo calculado.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que especifica el rectángulo especificado y recibe el rectángulo calculado.
 
 ### <a name="example"></a>Ejemplo
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Especifica el estilo del control de ficha. Aplicar cualquier combinación de [estilos de control de pestaña](/windows/desktop/Controls/tab-control-styles), que se describen en el SDK de Windows. Consulte **comentarios** para obtener una lista de estilos de ventana que también se pueden aplicar al control.
 
 *rect*<br/>
-Especifica el tamaño y la posición del control de ficha. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Especifica el tamaño y la posición del control de ficha. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de ficha, normalmente un `CDialog`. No debe ser NULL.
@@ -250,7 +250,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Especifica el estilo del control de ficha. Aplicar cualquier combinación de [estilos de control de pestaña](/windows/desktop/Controls/tab-control-styles), que se describen en el SDK de Windows. Consulte **comentarios** en [crear](#create) para obtener una lista de estilos de ventana que también se pueden aplicar al control.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Índice de base cero del elemento de ficha.
 
 *lpRect*<br/>
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador de la pestaña. Estas coordenadas Usar modo de asignación de la ventanilla actual.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe el rectángulo delimitador de la pestaña. Estas coordenadas Usar modo de asignación de la ventanilla actual.
 
 ### <a name="return-value"></a>Valor devuelto
 

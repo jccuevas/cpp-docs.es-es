@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: fb2f66474f9700ed7bfdc2e1063865734e4e991a
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557016"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416551"
 ---
 # <a name="crowset-class"></a>CRowset (Clase)
 
@@ -273,16 +273,16 @@ Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.
 |-|-|
 |[AddRefRows](#addrefrows)|Incrementa el recuento de referencias asociadas con la fila actual.|
 |[Cerrar](#close)|Libera las filas y la actual `IRowset` interfaz.|
-|[Compare](#compare)|Compara dos marcadores utilizando [IRowsetLocate:: Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Compare](#compare)|Compara dos marcadores utilizando [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crea un nuevo `CRowset` objeto y lo asocia a (opcionalmente) un `IRowset` interfaz proporcionada como un parámetro.|
-|[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
 |[FindNextRow](#findnextrow)|Busca la siguiente fila coincidente después del marcador especificado.|
 |[GetApproximatePosition](#getapproximateposition)|Devuelve la posición aproximada de una fila correspondiente a un marcador.|
 |[GetData](#getdata)|Recupera datos de copia del conjunto de filas de la fila.|
 |[GetDataHere](#getdatahere)|Recupera los datos desde el búfer especificado.|
 |[GetOriginalData](#getoriginaldata)|Recupera los datos desde más recientemente o transmitida al origen de datos, pasando por alto los cambios pendientes.|
 |[GetRowStatus](#getrowstatus)|Devuelve el estado de todas las filas.|
-|[Insertar](#insert)|Crea e inserta una nueva fila usando [IRowsetChange:InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[Insertar](#insert)|Crea e inserta una nueva fila usando [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[IsSameRow](#issamerow)|Compara la fila especificada con la fila actual.|
 |[MoveFirst](#movefirst)|Cambia la ubicación de la siguiente captura de posición en la posición inicial.|
 |[MoveLast](#movelast)|Se desplaza al último registro.|
@@ -290,9 +290,9 @@ Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.
 |[MovePrev](#moveprev)|Se desplaza al registro anterior.|
 |[MoveToBookmark](#movetobookmark)|Recupera la fila en un desplazamiento especificado o la fila marcada con un marcador de marcador.|
 |[MoveToRatio](#movetoratio)|Captura las filas a partir de una posición en el conjunto de filas fraccionaria.|
-|[ReleaseRows](#releaserows)|Las llamadas [IRowset:: ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) para liberar el identificador de fila actual.|
-|[SetData](#setdata)|Establece los valores de datos en una o varias columnas de una fila mediante [IRowsetChange:SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)).|
-|[Fase de reversión](#undo)|Deshace los cambios realizados en una fila desde la última captura o [actualización](../../data/oledb/crowset-update.md).|
+|[ReleaseRows](#releaserows)|Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para liberar el identificador de fila actual.|
+|[SetData](#setdata)|Establece los valores de datos en una o varias columnas de una fila mediante [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)).|
+|[Undo](#undo)|Deshace los cambios realizados en una fila desde la última captura o [actualización](../../data/oledb/crowset-update.md).|
 |[Actualizar](#update)|Los cambios realizados en la fila actual desde la última captura o actualización pendientes transmite.|
 |[UpdateAll](#updateall)|Los cambios realizados en todas las filas desde la última captura o actualización pendientes transmite.|
 
@@ -302,9 +302,9 @@ En OLE DB, un conjunto de filas es el objeto a través del cual un programa esta
 
 Esta clase no pretende ser crea una instancia, pero en su lugar se pasa como un parámetro de plantilla `CTable` o `CCommand` (`CRowset` es el valor predeterminado).
 
-## <a name="addrefrows"></a> CRowset:: Addrefrows
+## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Las llamadas [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar (en uno) el recuento de referencias asociada con el identificador de fila actual.
+Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar (en uno) el recuento de referencias asociada con el identificador de fila actual.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -320,9 +320,9 @@ Un HRESULT estándar.
 
 Este método aumenta el recuento de referencias para el identificador de fila actual. Llame a [ReleaseRows](../../data/oledb/crowset-releaserows.md) para reducir el recuento. Filas devueltas por los métodos move tienen un recuento de referencias de uno.
 
-## <a name="close"></a> CRowset:: Close
+## <a name="close"></a> CRowset::Close
 
-Libera las filas y la actual [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interfaz.
+Libera las filas y la actual [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interfaz.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -334,9 +334,9 @@ void Close() throw();
 
 Este método libera todas las filas actualmente en el conjunto de filas.
 
-## <a name="compare"></a> CRowset:: Compare
+## <a name="compare"></a> CRowset::Compare
 
-Compara dos marcadores utilizando [IRowsetLocate:: Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).
+Compara dos marcadores utilizando [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -348,7 +348,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 #### <a name="parameters"></a>Parámetros
 
-*Marcador Bookmark1*<br/>
+*Bookmark1*<br/>
 [in] Primer marcador que se va a comparar.
 
 *Bookmark2*<br/>
@@ -367,9 +367,9 @@ Este método requiere la interfaz opcional `IRowsetLocate`, que es posible que n
 
 Para obtener información sobre el uso de marcadores de los consumidores, consulte [utilizar marcadores](../../data/oledb/using-bookmarks.md).
 
-## <a name="crowset"></a> CRowset:: CRowset
+## <a name="crowset"></a> CRowset::CRowset
 
-Crea un nuevo `CRowset` objeto y lo asocia a (opcionalmente) un [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) interfaz proporcionada como un parámetro.
+Crea un nuevo `CRowset` objeto y lo asocia a (opcionalmente) un [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) interfaz proporcionada como un parámetro.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -384,9 +384,9 @@ CRowset(IRowset* pRowset);
 *pRowset*<br/>
 [in] Un puntero a un `IRowset` interfaz va a asociar a esta clase.
 
-## <a name="delete"></a> CRowset:: Delete
+## <a name="delete"></a> CRowset::Delete
 
-Las llamadas [IRowsetChange:: DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) para eliminar la fila actual del conjunto de filas.
+Las llamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) para eliminar la fila actual del conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -398,7 +398,7 @@ HRESULT Delete() const throw();
 
 Un HRESULT estándar.
 
-## <a name="findnextrow"></a> CRowset:: FindNextRow
+## <a name="findnextrow"></a> CRowset::FindNextRow
 
 Busca la siguiente fila coincidente después del marcador especificado.
 
@@ -417,23 +417,23 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 #### <a name="parameters"></a>Parámetros
 
-*OP*<br/>
-[in] La operación que se usará en la comparación de valores de fila. Para los valores, vea [irowsetfind:: FindNextRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms723091(v=vs.85)).
+*op*<br/>
+[in] La operación que se usará en la comparación de valores de fila. Para los valores, vea [irowsetfind:: FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85)).
 
 *pData*<br/>
 [in] Un puntero al valor que se debe coincidir.
 
 *wType*<br/>
-[in] Indica el tipo de datos de la parte del valor del búfer. Para obtener información acerca de los indicadores de tipo, consulte [tipos de datos](https://docs.microsoft.com/previous-versions/windows/desktop/ms723969(v=vs.85)) en el *referencia del programador de OLE DB* en el SDK de Windows.
+[in] Indica el tipo de datos de la parte del valor del búfer. Para obtener información acerca de los indicadores de tipo, consulte [tipos de datos](/previous-versions/windows/desktop/ms723969(v=vs.85)) en el *referencia del programador de OLE DB* en el SDK de Windows.
 
 *nLength*<br/>
-[in] La longitud, en bytes, de la estructura de datos del consumidor asignada para el valor de datos. Para obtener más información, vea la descripción de `cbMaxLen` en [estructuras DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) en el *referencia del programador de OLE DB.*
+[in] La longitud, en bytes, de la estructura de datos del consumidor asignada para el valor de datos. Para obtener más información, vea la descripción de `cbMaxLen` en [estructuras DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) en el *referencia del programador de OLE DB.*
 
 *bPrecision*<br/>
-[in] La precisión máxima que se usa al obtener los datos. Sólo se usa si *wType* es DBTYPE_NUMERIC. Para obtener más información, consulte [conversiones que afectan a DBTYPE_NUMERIC o DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) en el *referencia del programador de OLE DB*.
+[in] La precisión máxima que se usa al obtener los datos. Sólo se usa si *wType* es DBTYPE_NUMERIC. Para obtener más información, consulte [conversiones que afectan a DBTYPE_NUMERIC o DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) en el *referencia del programador de OLE DB*.
 
 *bScale*<br/>
-[in] La escala que se usa al obtener los datos. Sólo se usa si *wType* es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Para obtener más información, consulte [conversiones que afectan a DBTYPE_NUMERIC o DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) en el *referencia del programador de OLE DB*.
+[in] La escala que se usa al obtener los datos. Sólo se usa si *wType* es DBTYPE_NUMERIC o DBTYPE_DECIMAL. Para obtener más información, consulte [conversiones que afectan a DBTYPE_NUMERIC o DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714(v=vs.85)) en el *referencia del programador de OLE DB*.
 
 *bSkipCurrent*<br/>
 [in] El número de filas desde el marcador en el que se va a iniciar una búsqueda.
@@ -451,7 +451,7 @@ Este método requiere la interfaz opcional `IRowsetFind`, que es posible que no 
 
 Para obtener información sobre el uso de marcadores de los consumidores, consulte [utilizar marcadores](../../data/oledb/using-bookmarks.md).
 
-## <a name="getapproximateposition"></a> CRowset:: Getapproximateposition
+## <a name="getapproximateposition"></a> CRowset::GetApproximatePosition
 
 Devuelve la posición aproximada de una fila correspondiente a un marcador.
 
@@ -484,7 +484,7 @@ Este método requiere la interfaz opcional `IRowsetScroll`, que es posible que n
 
 Para obtener información sobre el uso de marcadores de los consumidores, consulte [utilizar marcadores](../../data/oledb/using-bookmarks.md).
 
-## <a name="getdata"></a> CRowset:: GetData
+## <a name="getdata"></a> CRowset::GetData
 
 Recupera datos de copia del conjunto de filas de la fila.
 
@@ -509,7 +509,7 @@ Un HRESULT estándar.
 
 Si especifica un descriptor de acceso que no sea autoaccessor en [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), use este método para obtener explícitamente los datos, pasando el número de descriptor de acceso.
 
-## <a name="getdatahere"></a> CRowset:: GetDataHere
+## <a name="getdatahere"></a> CRowset::GetDataHere
 
 Recupera los datos de la fila actual y lo coloca en el búfer especificado.
 
@@ -536,7 +536,7 @@ Un HRESULT estándar.
 
 Para obtener un ejemplo de cómo usar esta función, vea el [ejemplo MultiRead](../../visual-cpp-samples.md).
 
-## <a name="getoriginaldata"></a> CRowset:: GetOriginalData
+## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
 Las llamadas `IRowsetUpdate::GetOriginalData` para recuperar los datos desde más recientemente o transmitida al origen de datos.
 
@@ -556,7 +556,7 @@ Este método recupera los datos que se han capturado recientemente desde o trans
 
 Este método requiere la interfaz opcional `IRowsetUpdate`, que es posible que no se admite en todos los proveedores; si este es el caso, el método devuelve E_NOINTERFACE. También debe establecer `DBPROP_IRowsetUpdate` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas.
 
-## <a name="getrowstatus"></a> CRowset:: GetRowStatus
+## <a name="getrowstatus"></a> CRowset::GetRowStatus
 
 Devuelve el estado de todas las filas.
 
@@ -579,7 +579,7 @@ Un HRESULT estándar.
 
 Este método requiere la interfaz opcional `IRowsetUpdate`, que es posible que no se admite en todos los proveedores; si este es el caso, el método devuelve E_NOINTERFACE. También debe establecer `DBPROP_IRowsetUpdate` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas.
 
-## <a name="insert"></a> CRowset:: Insert
+## <a name="insert"></a> CRowset::Insert
 
 Crea e inicializa una nueva fila con datos del descriptor de acceso.
 
@@ -616,7 +616,7 @@ En primer lugar, cree una clase de tabla mediante la inserción de un nuevo obje
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="issamerow"></a> CRowset:: Issamerow
+## <a name="issamerow"></a> CRowset::IsSameRow
 
 Compara la fila especificada con la fila actual.
 
@@ -633,9 +633,9 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un HRESULT estándar. S_OK indica que las filas son los mismos. Para otros valores, vea [IRowsetIndentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) en el *referencia del programador de OLE DB* en el SDK de Windows.
+Un HRESULT estándar. S_OK indica que las filas son los mismos. Para otros valores, vea [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) en el *referencia del programador de OLE DB* en el SDK de Windows.
 
-## <a name="movefirst"></a> CRowset:: MoveFirst
+## <a name="movefirst"></a> CRowset::MoveFirst
 
 Mueve el cursor a la posición inicial y recupera la fila inicial.
 
@@ -651,9 +651,9 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Las llamadas [IRowset:: RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) para cambiar la posición de la ubicación de la siguiente captura a la posición inicial (es decir, la posición que era la ubicación de la siguiente captura cuando se creó el conjunto de filas) y recupera la fila inicial.
+Las llamadas [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) para cambiar la posición de la ubicación de la siguiente captura a la posición inicial (es decir, la posición que era la ubicación de la siguiente captura cuando se creó el conjunto de filas) y recupera la fila inicial.
 
-## <a name="movelast"></a> CRowset:: MoveLast
+## <a name="movelast"></a> CRowset::MoveLast
 
 Mueve el cursor a la última fila.
 
@@ -669,11 +669,11 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Las llamadas [IRowset:: RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) para cambiar la posición de la ubicación de la siguiente captura a la última posición y recupera la última fila.
+Las llamadas [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) para cambiar la posición de la ubicación de la siguiente captura a la última posición y recupera la última fila.
 
 Este método requiere que establezca `DBPROP_CANSCROLLBACKWARDS` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas. (Para mejorar el rendimiento, también puede establecer `DBPROP_QUICKRESTART` en VARIANT_TRUE.)
 
-## <a name="movenext"></a> CRowset:: MoveNext
+## <a name="movenext"></a> CRowset::MoveNext
 
 Mueve el cursor al siguiente registro.
 
@@ -710,7 +710,7 @@ Este método requiere que establezca las propiedades siguientes antes de llamar 
 
 En caso contrario (si *lSkip* > = 0 y *bForward* = true), no es necesario establecer las propiedades adicionales.
 
-## <a name="moveprev"></a> CRowset:: MovePrev
+## <a name="moveprev"></a> CRowset::MovePrev
 
 Mueve el cursor al registro anterior.
 
@@ -728,7 +728,7 @@ Un HRESULT estándar.
 
 Este método requiere que se establezca `DBPROP_CANFETCHBACKWARDS` o `DBPROP_CANSCROLLBACKWARDS` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas.
 
-## <a name="movetobookmark"></a> CRowset:: MoveToBookmark
+## <a name="movetobookmark"></a> CRowset::MoveToBookmark
 
 Recopila la fila marcada por fila en un desplazamiento especificado o un marcador (*lSkip*) desde ese marcador.
 
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parámetros
 
-*Marcador*<br/>
+*bookmark*<br/>
 [in] Un marcador de marcar la ubicación desde la que desea capturar datos.
 
 *lSkip*<br/>
@@ -757,7 +757,7 @@ Este método requiere la interfaz opcional `IRowsetLocate`, que es posible que n
 
 Para obtener información sobre el uso de marcadores de los consumidores, consulte [utilizar marcadores](../../data/oledb/using-bookmarks.md).
 
-## <a name="movetoratio"></a> CRowset:: Movetoratio
+## <a name="movetoratio"></a> CRowset::MoveToRatio
 
 Captura las filas a partir de una posición en el conjunto de filas fraccionaria.
 
@@ -789,13 +789,13 @@ Un HRESULT estándar.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)).
+Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
 Este método requiere la interfaz opcional `IRowsetScroll`, que es posible que no se admite en todos los proveedores; si este es el caso, el método devuelve E_NOINTERFACE. También debe establecer `DBPROP_IRowsetScroll` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas.
 
-## <a name="releaserows"></a> CRowset:: ReleaseRows
+## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Las llamadas [IRowset:: ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) para liberar el identificador de fila actual.
+Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para liberar el identificador de fila actual.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -807,7 +807,7 @@ HRESULT ReleaseRows() throw();
 
 Un HRESULT estándar.
 
-## <a name="setdata"></a> CRowset:: SetData
+## <a name="setdata"></a> CRowset::SetData
 
 Establece los valores de datos en una o más columnas de una fila.
 
@@ -836,7 +836,7 @@ Este método requiere la interfaz opcional `IRowsetChange`, que es posible que n
 
 La operación de configuración puede producir un error si no se puede escribir una o varias columnas. Modifique la asignación del cursor para corregirlo.
 
-## <a name="undo"></a> CRowset
+## <a name="undo"></a> CRowset::Undo
 
 Deshace los cambios realizados en una fila desde la última captura o [actualización](../../data/oledb/crowset-update.md).
 
@@ -867,7 +867,7 @@ Un HRESULT estándar.
 
 Este método requiere la interfaz opcional `IRowsetUpdate`, que es posible que no se admite en todos los proveedores; si este es el caso, el método devuelve E_NOINTERFACE. También debe establecer `DBPROP_IRowsetUpdate` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas.
 
-## <a name="update"></a> CRowset:: Update
+## <a name="update"></a> CRowset::Update
 
 Los cambios realizados en la fila actual desde la última recuperación de cambios pendientes transmite o `Update` llamar en ella.
 
@@ -900,7 +900,7 @@ Los cambios pendientes realizados en la fila actual desde esa fila se recuperan 
 
 Este método requiere la interfaz opcional `IRowsetUpdate`, que es posible que no se admite en todos los proveedores; si este es el caso, el método devuelve E_NOINTERFACE. También debe establecer `DBPROP_IRowsetUpdate` en VARIANT_TRUE antes de llamar a `Open` en la tabla o un comando que contiene el conjunto de filas.
 
-## <a name="updateall"></a> CRowset:: UpdateAll
+## <a name="updateall"></a> CRowset::UpdateAll
 
 Los cambios realizados en todas las filas desde la última recuperación de cambios pendientes transmite o `Update` llamar en ella.
 

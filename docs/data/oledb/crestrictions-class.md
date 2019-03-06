@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556522"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412827"
 ---
 # <a name="crestrictions-class"></a>CRestrictions (Clase)
 
@@ -75,7 +75,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parámetros
 
-*Sesión*<br/>
+*session*<br/>
 [in] Especifica un objeto de sesión existente utilizado para conectarse al origen de datos.
 
 *lpszParam*<br/>
@@ -92,7 +92,7 @@ Uno de los valores HRESULT estándar.
 
 Puede especificar un máximo de siete restricciones en un conjunto de filas de esquema.
 
-Consulte [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) para obtener información sobre las restricciones definidas en cada conjunto de filas de esquema.
+Consulte [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) para obtener información sobre las restricciones definidas en cada conjunto de filas de esquema.
 
 ## <a name="see-also"></a>Vea también
 

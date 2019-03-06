@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484804"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414699"
 ---
 # <a name="msbuild-visual-c-overview"></a>Información general sobre MSBuild (Visual C++)
 
@@ -27,13 +27,13 @@ Lea los siguientes documentos sobre MSBuild.
 
 - [Referencia de línea de comandos](/visualstudio/msbuild/msbuild-command-line-reference) se describen los argumentos de línea de comandos y opciones que puede utilizar con msbuild.exe.
 
-- [Referencia de tareas](/visualstudio/msbuild/msbuild-task-reference) las tareas de MSBuild describe. Tenga en cuenta especialmente estas tareas, que son específicas de Visual C++: [tarea BscMake](/visualstudio/msbuild/bscmake-task), [CL (tarea)](/visualstudio/msbuild/cl-task), [CPPClean (tarea)](/visualstudio/msbuild/cppclean-task), [LIB (tarea)](/visualstudio/msbuild/lib-task), [Vincular tarea](/visualstudio/msbuild/link-task), [MIDL (tarea)](/visualstudio/msbuild/midl-task), [MT (tarea)](/visualstudio/msbuild/mt-task), [tarea RC](/visualstudio/msbuild/rc-task), [SetEnv (tarea)](/visualstudio/msbuild/setenv-task), [ Tarea VCMessage](/visualstudio/msbuild/vcmessage-task), [XDCMake (tarea)](/visualstudio/msbuild/xdcmake-task), [XSD (tarea)](/visualstudio/msbuild/xsd-task).
+- [Referencia de tareas](/visualstudio/msbuild/msbuild-task-reference) las tareas de MSBuild describe. Tenga en cuenta especialmente estas tareas, que son específicas de Visual C++: [Tarea BscMake](/visualstudio/msbuild/bscmake-task), [CL (tarea)](/visualstudio/msbuild/cl-task), [CPPClean (tarea)](/visualstudio/msbuild/cppclean-task), [LIB (tarea)](/visualstudio/msbuild/lib-task), [Vincular tarea](/visualstudio/msbuild/link-task), [MIDL (tarea)](/visualstudio/msbuild/midl-task), [MT (tarea)](/visualstudio/msbuild/mt-task), [tarea RC](/visualstudio/msbuild/rc-task), [SetEnv (tarea)](/visualstudio/msbuild/setenv-task), [VCMessage (tarea)](/visualstudio/msbuild/vcmessage-task), [XDCMake (tarea)](/visualstudio/msbuild/xdcmake-task), [XSD (tarea)](/visualstudio/msbuild/xsd-task).
 
 ## <a name="msbuild-on-the-command-line"></a>MSBuild en la línea de comandos
 
 La siguiente instrucción desde el [referencia de línea de comandos de MSBuild](/visualstudio/msbuild/msbuild-command-line-reference) muestra que la herramienta msbuild.exe toma un implícita o explícita *project_file* argumento (un archivo .vcxproj para los proyectos de Visual C++) y cero o más de línea de comandos *opciones* argumentos.
 
-> **MSBuild.exe** [ *project_file* ] [ *opciones* ]
+> **msbuild.exe** [ *project_file* ] [ *options* ]
 
 Use la **/target** (o **/t**) y **/Property** (o **/p**) opciones de línea de comandos para invalidar los destinos y propiedades específicas Si se especifica en el archivo de proyecto.
 
@@ -77,7 +77,7 @@ Los directorios de archivos de compatibilidad contienen archivos con estas exten
 |---------------|-----------------|
 |.targets|Contiene `Target` elementos XML que especifican las tareas que se ejecutan en el destino. También puede contener `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`y definido por el usuario `Item` elementos que se usan para asignar archivos y opciones de línea de comandos a los parámetros de tarea.<br /><br /> Para obtener más información, consulte [elemento Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
 |.props|Contiene `Property Group` y definido por el usuario `Property` elementos XML que especifican los valores de archivo y los parámetros que se usan durante una compilación.<br /><br /> También puede contener `ItemDefinitionGroup` y definido por el usuario `Item` elementos XML que especifican opciones de configuración adicionales. Los elementos definidos en un grupo de definiciones de elemento son similares a las propiedades, pero no es accesible desde la línea de comandos. Archivos de proyecto de Visual C++, se utiliza con frecuencia elementos en lugar de propiedades para representar los valores.<br /><br /> Para obtener más información, consulte [elemento ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [elemento ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), y [elemento Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
-|.Xml|Contiene elementos XML que declaran e inicializan elementos de interfaz de usuario del IDE como hojas de propiedades y páginas de propiedades y los controles de cuadro de lista y el cuadro de texto.<br /><br /> Los archivos .xml admiten directamente el IDE, no MSBuild. Sin embargo, los valores de propiedades del IDE se asignan a las propiedades y elementos de compilación.<br /><br /> Mayoría de los archivos .xml se encuentran en un subdirectorio específico de la configuración regional. Por ejemplo, los archivos para la región de inglés de Estados Unidos se encuentran en $(VCTargetsPath) \1033\\.|
+|.xml|Contiene elementos XML que declaran e inicializan elementos de interfaz de usuario del IDE como hojas de propiedades y páginas de propiedades y los controles de cuadro de lista y el cuadro de texto.<br /><br /> Los archivos .xml admiten directamente el IDE, no MSBuild. Sin embargo, los valores de propiedades del IDE se asignan a las propiedades y elementos de compilación.<br /><br /> Mayoría de los archivos .xml se encuentran en un subdirectorio específico de la configuración regional. Por ejemplo, los archivos para la región de inglés de Estados Unidos se encuentran en $(VCTargetsPath) \1033\\.|
 
 ## <a name="user-targets-and-properties"></a>Las propiedades y destinos de usuarios
 
@@ -118,13 +118,13 @@ En la tabla siguiente se enumera varios destinos útiles orientado al usuario.
 |ClCompile|Ejecuta la herramienta de compilador de Visual C++, cl.exe.|
 |Limpiar|Crear archivos de eliminaciones temporales e intermedios.|
 |Lib|Ejecuta la herramienta Administrador de bibliotecas de Microsoft de 32 bits, lib.exe.|
-|Vínculo|Ejecuta la herramienta del vinculador de Visual C++, link.exe.|
+|Link|Ejecuta la herramienta del vinculador de Visual C++, link.exe.|
 |ManifestResourceCompile|Extrae una lista de recursos de un manifiesto y, a continuación, ejecuta la herramienta compilador de recursos de Microsoft Windows, rc.exe.|
 |MIDL|Ejecuta la herramienta compilador de lenguaje de definición de interfaz de Microsoft (MIDL), midl.exe.|
-|Recompilar|Limpia y, a continuación, compila el proyecto.|
+|Volver a compilar|Limpia y, a continuación, compila el proyecto.|
 |ResourceCompile|Ejecuta la herramienta compilador de recursos de Microsoft Windows, rc.exe.|
 |XdcMake|Ejecuta la herramienta de documentación XML, xdcmake.exe.|
-|XSD|Ejecuta la herramienta de definición de esquemas XML, xsd.exe. *Vea la nota siguiente.*|
+|Xsd|Ejecuta la herramienta de definición de esquemas XML, xsd.exe. *Vea la nota siguiente.*|
 
 > [!NOTE]
 > En Visual Studio 2017, proyecto de compatibilidad con C++ **xsd** archivos está en desuso. Todavía puede usar **Microsoft.VisualC.CppCodeProvider** agregando **CppCodeProvider.dll** manualmente a la GAC.

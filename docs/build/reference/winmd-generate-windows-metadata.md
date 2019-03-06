@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 3a59dd770d9429f23a4f401c6e1f5b13b9f743ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656110"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426696"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (generar metadatos de Windows)
 
 Habilita la generación de un archivo de metadatos en tiempo de ejecución de Windows (.winmd).
 
-> **/ WINMD**\[**:**{**NO**\|**SÓLO**}]
+> **/WINMD**\[**:**{**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -25,7 +25,7 @@ La configuración predeterminada para aplicaciones de la plataforma Universal de
 **/WINMD:NO**<br/>
 El vinculador genera solo el archivo ejecutable binario, pero no es un archivo winmd.
 
-**/ WINMD: SOLO**<br/>
+**/WINMD:ONLY**<br/>
 El vinculador genera solo el archivo .winmd, pero no el archivo ejecutable binario.
 
 ## <a name="remarks"></a>Comentarios

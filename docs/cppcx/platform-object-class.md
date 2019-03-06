@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850096"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422794"
 ---
 # <a name="platformobject-class"></a>Platform::Object (Clase)
 
@@ -116,7 +116,7 @@ Un [Platform:: Type](../cppcx/platform-type-class.md) objeto que describe el tip
 
 Estático [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) puede usarse para obtener un [TypeCode (enumeración)](../cppcx/platform-typecode-enumeration.md) valor que representa el tipo actual. Esto es especialmente útil para los tipos integrados. El código de tipo para cualquier clase ref además [Platform:: String](../cppcx/platform-string-class.md) es objeto (1).
 
-El [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) clase se utiliza en las API de Windows como una manera independiente del lenguaje de pasar información de tipos entre los componentes de Windows y aplicaciones. La T[Platform:: Type Class](../cppcx/platform-type-class.md) tiene operadores para la conversión entre `Type` y `TypeName`.
+El [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) clase se utiliza en las API de Windows como una manera independiente del lenguaje de pasar información de tipos entre los componentes de Windows y aplicaciones. La T[Platform:: Type Class](../cppcx/platform-type-class.md) tiene operadores para la conversión entre `Type` y `TypeName`.
 
 Use la [typeid](../windows/typeid-cpp-component-extensions.md) operador para devolver un `Platform::Type` objeto para un nombre de clase, por ejemplo, al navegar entre páginas XAML:
 

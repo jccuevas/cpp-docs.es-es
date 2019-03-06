@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 21d0baccaf74fc08bb110b0ae9f8b7dc108abd6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561582"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426711"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -24,11 +24,11 @@ El compilador de CL llama automáticamente el vínculo a menos que especifique l
 |Especificación de CL|Acción de CL que afecta al vínculo|
 |----------------------|---------------------------------|
 |Cualquier extensión de nombre de archivo que no sea .def, .cpp, .cxx o .c|Pasa un nombre de archivo como entrada de LINK|
-|*nombre de archivo*.def|Pasa/def:*filename*.def|
-|/F*número*|Pasa/Stack:*número*|
-|/FD*nombre de archivo*|Pasa/PDB:*nombre de archivo*|
-|/Fe*nombre de archivo*|Pasa/OUT:*nombre de archivo*|
-|/FM*nombre de archivo*|Pasa/Map:*nombre de archivo*|
+|*filename*.def|Pasa/def:*filename*.def|
+|/F*number*|Pasa/Stack:*número*|
+|/Fd*filename*|Pasa/PDB:*nombre de archivo*|
+|/Fe*filename*|Pasa/OUT:*nombre de archivo*|
+|/Fm*filename*|Pasa/Map:*nombre de archivo*|
 |/Gy|Crea funciones empaquetadas (COMDAT); permite la vinculación de nivel de función|
 |/LD|Pasa /DLL|
 |/LDd|Pasa /DLL|
@@ -36,7 +36,7 @@ El compilador de CL llama automáticamente el vínculo a menos que especifique l
 |/MD o/MT|Coloca un nombre de biblioteca predeterminado en el archivo .obj|
 |/ MDd o /MTd|Coloca un nombre de biblioteca predeterminado en el archivo .obj. Define el símbolo **_DEBUG**|
 |/nologo|Pasa /NOLOGO|
-|/ Zd|Fases/Debug|
+|/Zd|Fases/Debug|
 |Zi o/Z7|Fases/Debug|
 |/Zl|Omite el nombre de la biblioteca predeterminada del archivo .obj|
 

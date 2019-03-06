@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: d7a39dd19a51bc5bab0f924d360d594bddf89b44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44943803fdb422ccbf77302e7c81f23c34cc7433
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265943"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420770"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (clase)
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Especifica la combinación de los estilos de cuadro combinado que se aplica al cuadro combinado. Consulte **comentarios** a continuación para obtener más información sobre los estilos.
 
 *rect*<br/>
-Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que es la posición y tamaño del cuadro combinado.
+Una referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que es la posición y tamaño del cuadro combinado.
 
 *pParentWnd*<br/>
 Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del cuadro combinado (normalmente un `CDialog`). No debe ser NULL.
@@ -210,7 +210,7 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 Estilo del control de cuadro combinado. Consulte [crear](#create) para obtener una lista de estilos.
 
 *rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
