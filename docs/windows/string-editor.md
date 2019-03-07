@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: d040c09b36c2b46036744c8a263802da48cd8e60
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210801"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563308"
 ---
 # <a name="string-editor-c"></a>Editor de cadenas (C++)
 
@@ -56,7 +56,7 @@ El **Editor de cadenas** le permite:
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Para buscar un recurso de cadena en la tabla de cadenas
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Vaya al menú **editar** > **buscar y reemplazar** y elija **encontrar**.
 
@@ -77,9 +77,9 @@ Rápidamente puede insertar o eliminar las entradas en la tabla de la cadena med
 
 El **Editor de cadenas** se asegura de que no use un identificador que ya está en uso. Si selecciona un identificador ya en uso, el **Editor de cadenas** le notificaremos y, a continuación, asignar un identificador genérico único, por ejemplo `IDS_STRING58113`.
 
-Para agregar una entrada de tabla de cadenas:
+#### <a name="to-add-a-string-table-entry"></a>Para agregar una entrada de tabla de cadenas
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Haga doble clic en la tabla de cadenas y elija **nueva cadena**.
 
@@ -92,7 +92,7 @@ Para agregar una entrada de tabla de cadenas:
    > [!NOTE]
    > No se permiten cadenas nulas en las tablas de cadenas de Windows. Si crea una entrada en la tabla de cadenas es una cadena nula, recibirá un mensaje que le pide que **escriba una cadena para esta entrada de tabla**.
 
-Para eliminar una entrada de tabla de cadenas:
+#### <a name="to-delete-a-string-table-entry"></a>Para eliminar una entrada de tabla de cadenas
 
 Seleccione la entrada que desea eliminar y realice una de las siguientes acciones:
 
@@ -110,7 +110,7 @@ Seleccione la entrada que desea eliminar y realice una de las siguientes accione
 
 1. Coloque el cursor en el destino **Editor de cadenas** ventana.
 
-1. En el archivo .rc en la que desea mover la cadena, haga clic en y elija **pegar**.
+1. En el *.rc* archivo al que desea mover la cadena, haga clic en y elija **pegar**.
 
 > [!NOTE]
 > Si el **ID** o **valor** de conflictos con una cadena desplazada **ID** o **valor** en el archivo de destino, ya sea que **ID** o **valor** de los cambios de la cadena desplazada.
@@ -122,9 +122,9 @@ Puede usar la edición en contexto para cambiar la **ID**, **valor**, y **títul
 > [!NOTE]
 >  También puede editar propiedades de una cadena en el [ventana propiedades](/visualstudio/ide/reference/properties-window).
 
-Para cambiar una cadena o su identificador:
+#### <a name="to-change-a-string-or-its-identifier"></a>Para cambiar una cadena o su identificador.
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Seleccione la cadena que desea editar y haga doble clic en el **ID**, **valor**, o **título** columna, puede realizar:
 
@@ -134,9 +134,9 @@ Para cambiar una cadena o su identificador:
 
    - Escriba las modificaciones en el **título** columna.
 
-Para cambiar la propiedad caption de varios recursos de cadena:
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Para cambiar la propiedad caption de varios recursos de cadena
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Seleccione las cadenas que desee cambiar, mantenga presionada la **Ctrl** clave mientras selecciona cada uno de ellos.
 
@@ -146,7 +146,7 @@ Para cambiar la propiedad caption de varios recursos de cadena:
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Para agregar formato o caracteres especiales a un recurso de cadena
 
-1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](../windows/resource-view-window.md).
+1. Abra la tabla de cadenas haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
 
 1. Seleccione la cadena que desea modificar.
 

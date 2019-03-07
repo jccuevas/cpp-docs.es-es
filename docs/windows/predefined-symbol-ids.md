@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954918"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562762"
 ---
 # <a name="predefined-symbol-ids"></a>Identificadores de símbolo predefinidos
 
@@ -18,7 +18,7 @@ Cuando se inicia un proyecto nuevo, dependiendo del tipo de proyecto, es posible
 
 Estos identificadores de símbolo son importantes al trabajar con recursos. Están disponibles al editar tablas de aceleradores y algunos de ellos ya están asociados con teclas virtuales. También están disponibles a través del [ventana propiedades](/visualstudio/ide/reference/properties-window). Puede asignar cualquiera de los identificadores de símbolo predefinidos a los nuevos recursos, o puede asignar teclas de aceleración en ellos y la funcionalidad asociada con el símbolo de que identificador se asocia automáticamente a esa combinación de teclas.
 
-Estas bibliotecas cuentan con símbolos predefinidos que aparecerán como parte del proyecto:
+Las bibliotecas tienen símbolos predefinidos que aparecerán como parte del proyecto:
 
 - [Símbolos predefinidos de ATL](../windows/atl-predefined-symbols.md)
 

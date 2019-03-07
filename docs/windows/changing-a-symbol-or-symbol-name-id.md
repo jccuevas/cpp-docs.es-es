@@ -35,14 +35,14 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: d3c8a747c1e66490c333ff050c7bfa6e6f723a87
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954905"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562801"
 ---
-# <a name="how-to-manage-symbols"></a>Procedimiento Administrar los símbolos
+# <a name="how-to-manage-symbols"></a>Filtrar Administrar los símbolos
 
 Cuando se crea un nuevo recurso u objeto de recurso, el entorno de desarrollo le asigna un nombre de símbolo predeterminado, por ejemplo, `IDD_DIALOG1`. Puede usar el [ventana propiedades](/visualstudio/ide/reference/properties-window) para cambiar el nombre del símbolo predeterminado o para cambiar el nombre de cualquier símbolo ya asociado a un recurso.
 
@@ -57,7 +57,7 @@ Normalmente todos los símbolos se guardan las definiciones en `Resource.h`. Sin
 
 Las restricciones en los nombres de símbolos son las siguientes:
 
-- Todos los [símbolos](../windows/symbols-resource-identifiers.md) debe ser único dentro del ámbito de la aplicación. Esto evita conflictos de definiciones de símbolos en los archivos de encabezado.
+- Todos los [símbolos](../windows/symbols-resource-identifiers.md) debe ser único dentro del ámbito de la aplicación para evitar que las definiciones de símbolos en conflicto en los archivos de encabezado.
 
 - Los caracteres válidos en un nombre de símbolo son A-z, a-z, 0-9 y caracteres de subrayado (_).
 
@@ -65,12 +65,14 @@ Las restricciones en los nombres de símbolos son las siguientes:
 
 - Los nombres de símbolo no pueden contener espacios.
 
-- Los nombres de símbolo no distinguen mayúsculas y minúsculas, pero se conserva el caso de la primera definición de símbolos. El compilador/editor de recursos y los programas de C++  usan el archivo de encabezado que define los símbolos para hacer referencia a los recursos definidos en un archivo de recursos. Cuando dos nombres de símbolo difieren únicamente en sus mayúsculas o minúsculas, el programa de C++ verá dos símbolos distintos, mientras que el compilador/editor de recursos verá dos nombres se remiten al mismo símbolo.
+- Los nombres de símbolo no distinguen mayúsculas y minúsculas, pero se conserva el caso de la primera definición de símbolos.
+
+   El compilador/editor de recursos y los programas de C++  usan el archivo de encabezado que define los símbolos para hacer referencia a los recursos definidos en un archivo de recursos. Cuando dos nombres de símbolo difieren únicamente en sus mayúsculas o minúsculas, el programa de C++ verá dos símbolos distintos, mientras que el compilador/editor de recursos verá dos nombres se remiten al mismo símbolo.
 
 > [!NOTE]
 > Si no sigue el esquema de nombre de símbolo estándar (ID que se describen a continuación y el nombre del símbolo resulta ser el mismo que una palabra clave conocida por el compilador de script de recursos, intenta compilar el archivo de script de recursos, se producirá un error aparentemente aleatorio de generación que es difícil de diagnosticar. Para evitar esto, aténgase al esquema de nomenclatura estándar.
 
-Los nombres de símbolo tienen prefijos descriptivos que indican el tipo de recurso u objeto que representan. Estos prefijos descriptivos comienzan por el identificador de combinación de texto. La biblioteca Microsoft Foundation Class (MFC) usa las convenciones de nomenclatura de símbolo que se muestra en la tabla siguiente:
+Los nombres de símbolo tienen prefijos descriptivos que indican el tipo de recurso u objeto que representan. Estos prefijos descriptivos comienzan por el identificador de combinación de texto. La biblioteca Microsoft Foundation Class (MFC) usa el símbolo que se muestra en la siguiente tabla de convenciones de nomenclatura:
 
 |Categoría|Prefijo|Usar|
 |--------------|------------|---------|
@@ -83,7 +85,7 @@ Los nombres de símbolo tienen prefijos descriptivos que indican el tipo de recu
 
 ### <a name="to-change-a-symbol-name-id"></a>Para cambiar un nombre de símbolo (Id.)
 
-1. En [vista de recursos](../windows/resource-view-window.md), seleccione el recurso.
+1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), seleccione el recurso.
 
 1. En el **propiedades** ventana, escriba un nombre de símbolo nuevo o seleccione en la lista de símbolos existentes en el **ID** cuadro.
 
@@ -103,11 +105,11 @@ Un valor de símbolo puede ser cualquier entero expresado en la forma normal par
 -3456
 ```
 
-Los valores de símbolo de recursos (aceleradores, mapas de bits, cursores, cuadros de diálogo, iconos, menús, tablas de cadenas e información de versión) deben ser números decimales comprendidos en el intervalo de 0 a 32.767 (pero no pueden ser hexadecimales). Los valores de símbolo de partes de recursos, como los controles de cuadro de diálogo o las cadenas individuales de la tabla de cadenas, pueden ir de 0 a 65.534 o de -32.768 a 32.767.
+Valores de símbolos de recursos como los aceleradores, mapas de bits, cursores, cuadros de diálogo, iconos, menús, tablas de cadenas y versión deben ser números decimales comprendidos en el intervalo de 0 a 32.767 de información, pero no pueden ser hexadecimal. Los valores de símbolo de partes de recursos, como los controles de cuadro de diálogo o las cadenas individuales de la tabla de cadenas, pueden ir de 0 a 65.534 o de -32.768 a 32.767. Para obtener más información sobre los intervalos numéricos, vea [TN023: Recursos de MFC estándar](../mfc/tn023-standard-mfc-resources.md).
 
-Símbolos de recursos son números de 16 bits. Puede especificarlos con o sin signo, sin embargo, se usan internamente como enteros sin signo. Así pues, los números negativos se convertirán a su valor positivo correspondiente.
+Símbolos de recursos son números de 16 bits. Puede especificarlos con o sin signo, sin embargo, se usan internamente como enteros sin signo, por lo que los números negativos se convertirán a su valor positivo correspondiente.
 
-A continuación se muestran algunas limitaciones de los valores de símbolo:
+Algunas limitaciones de los valores de símbolo son:
 
 - El entorno de desarrollo de Visual Studio y MFC usan algunos intervalos numéricos para fines especiales. MFC se reserva todos los números con el bit más significativo establecido (de -32.768 a -1 o de 32.768 a 65.534, en función del signo).
 
@@ -125,11 +127,9 @@ A continuación se muestran algunas limitaciones de los valores de símbolo:
 
 - La aplicación puede tener un archivo que contenga símbolos definidos con expresiones.
 
-Para obtener más información sobre los intervalos numéricos, vea [TN023: Recursos de MFC estándar](../mfc/tn023-standard-mfc-resources.md).
-
 ### <a name="to-change-a-symbol-value"></a>Para cambiar un valor de símbolo
 
-1. En [vista de recursos](../windows/resource-view-window.md), seleccione el recurso.
+1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), seleccione el recurso.
 
 1. En el **propiedades** ventana, escriba el nombre del símbolo seguido por un signo igual y un número entero en el **ID** cuadro, por ejemplo:
 
@@ -149,12 +149,12 @@ Mientras se encuentre en el [cuadro de diálogo símbolos de recursos](../window
 
 1. Editar nombre o un valor en los cuadros correspondientes en el símbolo del **cambiar símbolo** cuadro de diálogo.
 
-   > [!NOTE]
-   > Para cambiar un símbolo que se asigna a un recurso u objeto, debe usar el editor de recursos o **propiedades** ventana.
+> [!NOTE]
+> Para cambiar un símbolo que se asigna a un recurso u objeto, debe usar el editor de recursos o **propiedades** ventana.
 
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>Para eliminar un símbolo sin asignar (sin usar)
 
-En el [cuadro de diálogo símbolos de recursos](../windows/resource-symbols-dialog-box.md), seleccione el símbolo que desea eliminar y elija **eliminar**.
+En el **símbolos de recursos** cuadro de diálogo, seleccione el símbolo que desea eliminar y elija **eliminar**.
 
 > [!NOTE]
 > Antes de eliminar un símbolo sin usar en un archivo de recursos, asegúrese de que no se utiliza en otro lugar en el programa o archivos de recursos incluidos en tiempo de compilación.
@@ -185,7 +185,7 @@ El entorno interpreta correctamente estos símbolos calculados siempre y cuando:
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Para incluir símbolos compartidos (de solo lectura) en el archivo de recursos
 
-1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el archivo .rc y elija [incluye recursos](../windows/resource-includes-dialog-box.md) en el menú contextual.
+1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), haga clic en su *.rc* de archivo y seleccione [incluye recursos](../windows/resource-includes-dialog-box.md).
 
 1. En el **directivas de símbolos de solo lectura** cuadro, use el `#include` directiva de compilador para especificar el archivo donde desea que se conserven los símbolos de solo lectura.
 
@@ -204,7 +204,7 @@ El entorno interpreta correctamente estos símbolos calculados siempre y cuando:
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Para cambiar el nombre del archivo de encabezado de símbolos de recurso
 
-1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el archivo .rc y elija [incluye recursos](../windows/resource-includes-dialog-box.md) en el menú contextual.
+1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), haga clic en su *.rc* de archivo y elija [incluye recursos](../windows/resource-includes-dialog-box.md).
 
 1. En el **archivo de encabezado de símbolos** , escriba el nuevo nombre del archivo de inclusión.
 
