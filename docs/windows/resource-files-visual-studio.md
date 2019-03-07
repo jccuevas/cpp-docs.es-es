@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676440"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563009"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
@@ -121,9 +121,9 @@ Para ver la versión y escriba la información contenida en un recurso del manif
 
 1. Expanda el **archivos de recursos** carpeta, a continuación:
 
-   - Para abrir el editor de texto, haga doble clic en el archivo de manifiesto.
+   - Para abrir el editor de texto, haga doble clic en el *.manifest* archivo.
 
-   - Para abrir en otro editor, haga clic en el archivo .manifest y seleccione **abrir con...** . Especifique el editor y elija **abierto**.
+   - Para abrir en otro editor, haga clic en el *.manifest* de archivo y seleccione **abrir con**. Especifique el editor para usar y seleccione **abierto**.
 
 ## <a name="requirements"></a>Requisitos
 

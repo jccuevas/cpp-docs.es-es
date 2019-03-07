@@ -21,23 +21,23 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 420c5ecf44f8e8b264d9eafd93de58c0db3bedf4
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210723"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562866"
 ---
 # <a name="binary-editor-c"></a>Editor binario (C++)
 
 > [!CAUTION]
 > Modificar recursos, como cuadros de diálogo, imágenes o menús en la **Editor binario** es peligroso. Una edición incorrecta podría dañar el recurso y hacerlo ilegible en su editor nativo.
 
-El **Editor binario** permite editar cualquier recurso en el nivel binario en formato ASCII o hexadecimal. También se puede utilizar el [comando Buscar](/visualstudio/ide/reference/find-command) para buscar cadenas ASCII o bytes hexadecimales. Use la **Editor binario** sólo cuando necesite ver o realizar menores cambia a los recursos personalizados o tipos de recursos no admitidos en el entorno de Visual Studio.
+El **Editor binario** permite editar cualquier recurso en el nivel binario en formato ASCII o hexadecimal. También se puede utilizar el [comando Buscar](/visualstudio/ide/reference/find-command) para buscar cadenas ASCII o bytes hexadecimales. Use la **Editor binario** sólo cuando necesite ver o realizar menores cambia a los recursos personalizados o tipos de recursos no admitidos en el entorno de Visual Studio. El **Editor binario** no está disponible en las ediciones Express.
 
-Para abrir el **Editor binario** en un nuevo archivo, vaya al menú **archivo** > **New** > **archivo**, seleccione el tipo de archivo que desea editar y luego seleccione la flecha desplegable situada junto a la **abierto** botón y elija **abrir con** > **Editor binario**.
+- Para abrir el **Editor binario** en un nuevo archivo, vaya al menú **archivo** > **New** > **archivo**, seleccione el tipo de archivo que desea editar y luego seleccione la flecha desplegable situada junto a la **abierto** botón y elija **abrir con** > **Editor binario**.
 
-Para abrir el **Editor binario** en un archivo existente, vaya al menú **archivo** > **abrir** > **archivo**, seleccione el archivo que desea editar y luego seleccione la flecha desplegable situada junto a la **abierto** botón y elija **abrir con** > **Editor binario**.
+- Para abrir el **Editor binario** en un archivo existente, vaya al menú **archivo** > **abrir** > **archivo**, seleccione el archivo que desea editar y luego seleccione la flecha desplegable situada junto a la **abierto** botón y elija **abrir con** > **Editor binario**.
 
    ![Editor binario](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Datos binarios de un cuadro de diálogo que se muestra en el **Editor binario**
@@ -45,9 +45,7 @@ Para abrir el **Editor binario** en un archivo existente, vaya al menú **archiv
 Solo determinados valores ASCII se representan en el **Editor binario** (0 x 20 a 0x7E). Los caracteres extendidos se muestran como puntos en la sección de valor ASCII de panel derecho de la **Editor binario**. Los caracteres imprimibles son valores ASCII 32 a 126.
 
 > [!TIP]
-> Al usar el **Editor binario**, en muchos casos hacer clic en para mostrar un menú contextual de comandos específicos del recurso. Los comandos disponibles dependen del objeto al que apunta el cursor. Por ejemplo, si hace clic mientras señala a la **Editor binario** teniendo seleccionados valores hexadecimales, el menú contextual muestra los **cortar**, **copia**, y **pegar**  comandos.
-
-El **Editor binario** no está disponible en las ediciones Express.
+> Al usar el **Editor binario**, en muchos casos hacer clic en para mostrar un menú contextual de comandos específicos del recurso. Los comandos disponibles dependen del objeto al que apunta el cursor. Por ejemplo, si hace clic mientras se apunta a la **Editor binario** teniendo seleccionados valores hexadecimales, el menú contextual muestra los **cortar**, **copia**y **Pegar** comandos.
 
 ## <a name="how-to"></a>Procedimientos
 
@@ -55,12 +53,12 @@ El **Editor binario** le permite:
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Para abrir un recurso de escritorio de Windows para editarlo en modo binario
 
-1. En la [Vista de recursos](../windows/resource-view-window.md), seleccione el archivo de recursos específico que quiera editar.
+1. En la [Vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), seleccione el archivo de recursos específico que quiera editar.
 
 1. Haga clic en el recurso y seleccione **abrir datos binarios**.
 
 > [!NOTE]
-> Si usas el [vista de recursos](../windows/resource-view-window.md) ventana para abrir un recurso con un formato que Visual Studio no reconoce, como RCDATA o un recurso personalizado, el recurso se abrirá automáticamente en el **Editor binario**.
+> Si usas el **vista de recursos** ventana para abrir un recurso con un formato que Visual Studio no reconoce, como RCDATA o un recurso personalizado, el recurso se abrirá automáticamente en el **Editor binario**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Para abrir un recurso para editarlo para la edición binaria
 
@@ -75,8 +73,7 @@ El **Editor binario** le permite:
 
 ### <a name="to-edit-a-resource"></a>Para editar un recurso
 
-> [!NOTE]
-> Si desea usar el **Editor binario** en un recurso que ya se está editando en otra ventana del editor, cierre primero la otra ventana del editor.
+Si desea usar el **Editor binario** en un recurso que ya se está editando en otra ventana del editor, cierre primero la otra ventana del editor.
 
 1. Seleccione el byte que se va a editar.
 
@@ -93,7 +90,7 @@ El **Editor binario** le permite:
 
 Puede buscar cadenas ASCII o bytes hexadecimales. Por ejemplo, para buscar *Hello*, se puede buscar la cadena *Hello* o su valor hexadecimal, *48 65 6C 6C 6F*.
 
-1. Desde el **editar** menú, elija [encontrar](/visualstudio/ide/reference/find-command).
+1. Vaya al menú **editar** > [encontrar](/visualstudio/ide/reference/find-command).
 
 1. En el **buscar** cuadro, seleccione una cadena de búsqueda anterior en la lista desplegable o escriba los datos que desea buscar.
 

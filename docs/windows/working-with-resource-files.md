@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676427"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562970"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
 
 > [!WARNING]
 > Esta sección se aplica a aplicaciones de escritorio de Windows escritas en C++.
 >
-> Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](/windows/uwp/app-resources/), o sobre cómo agregar recursos a C++ / c++ / CLI (administrado) de proyectos, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
+> Para obtener información sobre los recursos de aplicaciones de plataforma Universal de Windows escritas en C++, vea [definir recursos de la aplicación](/windows/uwp/app-resources/), o sobre cómo agregar recursos a C++ / c++ / CLI (administrado) de proyectos, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en Guía del desarrollador de .NET Framework.
 
 Los recursos pueden estar formados por una amplia gama de elementos, como:
 
@@ -28,6 +28,9 @@ Los recursos pueden estar formados por una amplia gama de elementos, como:
 - Recursos de cuadro de diálogo y menús.
 
 Puede agregar recursos nuevos al proyecto y modificarlos con el editor de recursos apropiado. La mayoría de asistentes de Visual C++ generarán automáticamente un archivo .rc para el proyecto.
+
+> [!NOTE]
+> El **editores de recursos** y **vista de recursos** no están disponibles en las ediciones Express.
 
 Para agregar manualmente archivos de recursos a proyectos administrados, vea [crear archivos de recursos para las aplicaciones de escritorio](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). En este artículo incluye cómo tener acceso a recursos, mostrar recursos estáticos y asignar cadenas de recursos a propiedades.
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: c76b870ad1fdfeda7370af03c6396bedba9530ab
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 63971ba381394bcaf905d614496511b7aa0d01f3
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954866"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563321"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificadores de recursos (símbolos) (C++)
 
-Un símbolo es un identificador de recurso (id.) que consta de dos partes: una cadena de texto (nombre del símbolo) asignada a un valor entero (valor del símbolo). Por ejemplo:
+Un símbolo es un identificador de recursos (ID) que consta de dos partes, un nombre de símbolo (cadena de texto) que se asigna a un valor de símbolo (entero), por ejemplo:
 
 ```
 IDC_EDITNAME = 5100
@@ -29,11 +29,6 @@ Los nombres de símbolos a menudo se denominan identificadores.
 
 Los símbolos ofrecen un medio descriptivo para hacer referencia a los recursos y objetos de interfaz de usuario, tanto en el código fuente como mientras trabaja con ellos en los editores de recursos. Puede ver y manipular símbolos en un lugar cómodo mediante el [cuadro de diálogo Símbolos de recursos](../windows/viewing-resource-symbols.md).
 
-Cuando crea un nuevo recurso o un objeto de recurso, los [editores de recursos](../windows/resource-editors.md) ofrecen un nombre predeterminado para el recurso, por ejemplo, `IDC_RADIO1`, y le asignan un valor. La definición de nombre y valor se almacena en el `Resource.h` archivo.
-
-> [!NOTE]
-> Cuando se copian recursos u objetos de recursos de un archivo .rc a otro, Visual C++ puede cambiar el valor del símbolo del recurso transferido, o el nombre del símbolo y el valor, para evitar conflictos con nombres de símbolos o valores del archivo existente.
-
 Conforme aumenta el tamaño y la sofisticación de su aplicación, lo hacen también su número de recursos y símbolos. El seguimiento de grandes números de símbolos dispersos en varios archivos puede resultar difícil. El **símbolos de recursos** cuadro de diálogo simplifica la administración de símbolos mediante una herramienta central que permite:
 
 - [Creación de símbolos](../windows/creating-new-symbols.md)
@@ -41,6 +36,11 @@ Conforme aumenta el tamaño y la sofisticación de su aplicación, lo hacen tamb
 - [Administrar los símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [Ver id. de de símbolos predefinidos](../windows/predefined-symbol-ids.md)
+
+Cuando crea un nuevo recurso o un objeto de recurso, los [editores de recursos](../windows/resource-editors.md) ofrecen un nombre predeterminado para el recurso, por ejemplo, `IDC_RADIO1`, y le asignan un valor. La definición de nombre y valor se almacena en el `Resource.h` archivo.
+
+> [!NOTE]
+> Cuando se copian recursos u objetos de recursos de un archivo .rc a otro, Visual C++ puede cambiar el valor del símbolo del recurso transferido, o el nombre del símbolo y el valor, para evitar conflictos con nombres de símbolos o valores del archivo existente.
 
 ## <a name="requirements"></a>Requisitos
 

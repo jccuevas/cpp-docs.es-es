@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336610"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562931"
 ---
 # <a name="menu-commands-c"></a>Comandos de menú (C++)
 
@@ -30,26 +30,26 @@ La siguiente información se organiza según el **menú** propiedades que aparec
 
 |Property|Descripción|
 |--------------|-----------------|
-|**Break**|Puede ser uno de estos valores:<br /><br />- **Ninguno** (predeterminado): Sin interrupción.<br />- **Columna**: En los menús estáticos, este valor sitúa el comando de menú en una nueva línea. En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas. Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />- **Bar**: Igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical. Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **menú** editor.|
+|**Break**|Puede ser uno de estos valores:<br/>  - **Ninguno**: Sin interrupción. Este es el valor predeterminado.<br/>  - **Columna**: En los menús estáticos, este valor sitúa el comando de menú en una nueva línea.<br/>      En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas.<br/>      Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />   - **Bar**: Igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical.<br/>      Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **Editor de menús**.|
 |**Título**|El texto que etiqueta el comando de menú (el nombre del menú). Para convertir una de las letras del título de un comando de menú en la tecla de acceso, sitúe delante de ella una Y comercial (&).|
 |**Activadas**|Si **True**, el comando de menú se activa inicialmente. Tipo: **BOOL**. Predeterminado: **False**.|
 |**Habilitado**|Si es **False**, se deshabilita el elemento de menú.|
 |**Grayed**|Si **True**, el comando de menú inicialmente está atenuado e inactivo. Tipo: **BOOL**. Predeterminado: **False**.|
-|**Ayuda**|Alinea el elemento de menú a la derecha. Por ejemplo, el comando de menú **Ayuda** siempre está a la derecha en todas las aplicaciones de Windows. Si establece esta propiedad en un elemento de menú, ese elemento aparecerá en el extremo derecho y al final del menú. Se aplica a los elementos de nivel superior. Predeterminado: **False**.|
-|**ID**|Un símbolo definido en el archivo de encabezado. Tipo: **Símbolo**, **entero**, o **cadena entrecomillada**. Puede usar cualquier símbolo de los que se encuentran disponibles normalmente en cualquier editor, aunque la [ventana Propiedades](/visualstudio/ide/reference/properties-window) no proporciona ninguna lista desplegable donde seleccionar.|
-|**Popup**|Si **True**, el comando de menú es un menú emergente. Tipo: **BOOL**. Predeterminado: **True** para menús de nivel superior en un menú de la barra; en caso contrario **False**.|
-|**Preguntar**|Contiene el texto que aparece en la barra de estado cuando se resalta el comando de menú. El texto se sitúa en la tabla de cadenas con el mismo identificador que el comando de menú. Esta propiedad se encuentra disponible para cualquier tipo de proyecto, pero la funcionalidad en tiempo de ejecución es específica de MFC.|
+|**Ayuda**|Alinea el elemento de menú a la derecha. Predeterminado: **False**.<br/><br/>Por ejemplo, el comando de menú **Ayuda** siempre está a la derecha en todas las aplicaciones de Windows. Si establece esta propiedad en un elemento de menú, ese elemento aparecerá en el extremo derecho y al final del menú. Se aplica a los elementos de nivel superior.|
+|**ID**|Un símbolo definido en el archivo de encabezado. Tipo: **Símbolo**, **entero**, o **cadena entrecomillada**.<br/><br/>Puede usar cualquier símbolo de los que se encuentran disponibles normalmente en cualquier editor, aunque la [ventana Propiedades](/visualstudio/ide/reference/properties-window) no proporciona ninguna lista desplegable donde seleccionar.|
+|**Popup**|Si **True**, el comando de menú es un menú emergente. Tipo: **BOOL**. Predeterminado: **True** para los menús de nivel superior de una barra de menús, en caso contrario **False**.|
+|**Preguntar**|Contiene el texto que aparece en la barra de estado cuando se resalta el comando de menú. El texto se sitúa en la tabla de cadenas con el mismo identificador que el comando de menú.<br/><br/>Esta propiedad se encuentra disponible para cualquier tipo de proyecto, pero la funcionalidad en tiempo de ejecución es específica de MFC.|
 |**Right to Left Justify**|Justifica a la derecha el comando de menú en la barra de menús, en tiempo de ejecución. Tipo: **BOOL**. Predeterminado: **False**.|
 |**Right to Left Order**|Permite mostrar los comandos de menú de derecha a izquierda cuando la interfaz se localiza a idiomas con esta dirección de lectura, como el hebreo o el árabe.|
 |**Separator**|Si **True**, el comando de menú es un separador. Tipo: **BOOL**. Predeterminado: **False**.|
 
 ## <a name="associate-menu-commands"></a>Asociar comandos de menú
 
-A menudo quiere que un elemento de menú u una combinación de teclado ejecuten el mismo comando de programa. Se emiten comandos idéntico utilizando el **menú** editor para asignar el mismo identificador de recurso para el comando de menú y a una entrada en la tabla de aceleradores de la aplicación. A continuación, edite el [Título](../windows/menu-command-properties.md) del comando de menú para que muestre el nombre del acelerador.
+A menudo quiere que un elemento de menú u una combinación de teclado ejecuten el mismo comando de programa. Se emiten comandos idéntico utilizando el **Editor de menús** para asignar el mismo identificador de recurso para el comando de menú y a una entrada en la tabla de aceleradores de la aplicación. A continuación, edite el [Título](../windows/menu-command-properties.md) del comando de menú para que muestre el nombre del acelerador.
 
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>Para asociar un comando de menú a una tecla de aceleración
 
-1. En el editor de **menús** , seleccione el comando de menú que quiere.
+1. En el **Editor de menús**, seleccione el comando de menú que desee.
 
 1. En la [Ventana Propiedades](/visualstudio/ide/reference/properties-window), agregue el nombre de la tecla de aceleración a la propiedad **Título** :
 
@@ -63,31 +63,24 @@ A menudo quiere que un elemento de menú u una combinación de teclado ejecuten 
    &Open...\tCtrl+O
    ```
 
-   El comando de menú en el **menú** editor se actualiza para reflejar el nuevo título a medida que lo escribe.
+   El comando de menú en el **Editor de menús** se actualiza para reflejar el nuevo título a medida que lo escribe.
 
 1. [Cree la entrada de la tabla de aceleradores](../windows/adding-an-entry-to-an-accelerator-table.md) en el editor **Acelerador** y asígnele el mismo identificador que el comando de menú. Use una combinación de teclas que le resulte sencilla de recordar.
 
-### <a name="to-associate-a-menu-command-with-a-status-bar-text-string-in-mfc-applications"></a>Para asociar un comando de menú a un cadena de texto en aplicaciones MFC de la barra de estado
-
 La aplicación de MFC puede mostrar texto descriptivo para cada uno de los comandos de menú, que puede seleccionar un usuario. Mostrar texto descriptivo, se asigna una cadena de texto a cada comando de menú mediante el **Prompt** propiedad en el **propiedades** ventana. Si tiene una cadena en la [tabla de cadenas](../windows/string-editor.md) cuyo id. es igual que el comando, una aplicación MFC mostrará automáticamente este recurso de cadena en la barra de estado de la aplicación en ejecución cuando un usuario se desplace sobre un elemento de menú.
 
-1. En el editor de **menús** , seleccione el comando de menú.
-
-1. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), escriba el texto de la barra de estado asociado en el cuadro **Prompt** .
-
-> [!NOTE]
-> Este conjunto de pasos requiere MFC.
-
-### <a name="to-assign-an-access-shortcut-key-to-a-menu-command"></a>Para asignar una tecla de acceso (método abreviado) a un comando de menú
+- Para asociar un comando de menú con la cadena de texto en aplicaciones MFC, la barra de estado en el **Editor de menús**, seleccione el comando de menú. En la [ventana Propiedades](/visualstudio/ide/reference/properties-window), escriba el texto de la barra de estado asociado en el cuadro **Prompt** .
 
 En un proyecto de C++, puede asignar una tecla de acceso (una tecla de acceso que permite al usuario seleccionar el menú con el teclado) para los menús y comandos de menú.
 
-Escriba una y comercial (`&`) delante de una letra en el nombre de menú o el nombre de comando para especificar esa letra como tecla de acceso correspondiente. Por ejemplo, "& archivo" define **Alt**+**F** como tecla de método abreviado para el **archivo** menú en aplicaciones escritas para Microsoft Windows.
+- Para asignar una tecla de acceso (método abreviado) a un comando de menú, escriba una y comercial (`&`) delante de una letra en el nombre de menú o el nombre de comando para especificar esa letra como tecla de acceso correspondiente. 
+
+   Por ejemplo, "& archivo" define **Alt**+**F** como tecla de método abreviado para el **archivo** menú en aplicaciones escritas para Microsoft Windows.
 
    El elemento de menú ofrecerá una indicación visible de que una de las letras tiene asignada una tecla de método abreviado. La letra que sigue a la y comercial aparece subrayada (depende del sistema operativo).
 
-   > [!NOTE]
-   > Para asegurarse de que todas las teclas de acceso de un menú son únicas, haga clic con el botón secundario en el menú y elija **Comprobar teclas de acceso** en el menú contextual.
+> [!NOTE]
+> Asegúrese de que todas las claves de acceso en un menú son únicas, haciendo clic en el menú y elegir **Comprobar teclas de acceso**.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -96,4 +89,6 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editor de menús](../windows/menu-editor.md)<br/>
-[Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+
+<!--
+[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

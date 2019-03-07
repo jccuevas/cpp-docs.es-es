@@ -39,47 +39,41 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 8e97fb88a8860ab0831f62bf2413b1f8f7174c7b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0681cc0a0d93d78633dd5488defaa0e9db55b1c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336688"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563139"
 ---
 # <a name="menu-editor-c"></a>Editor de menús (C++)
 
-Los menús le permiten organizar comandos de una forma lógica y sencilla de encontrar. Con el **menú** editor, puede crear y editar menús trabajando directamente con una barra de menús que se parezca a la mostrada en la aplicación finalizada.
+Los menús le permiten organizar comandos de una forma lógica y sencilla de encontrar. Con el **Editor de menús**, puede crear y editar menús trabajando directamente con una barra de menús es muy similar a uno en la aplicación finalizada.
 
 > [!TIP]
-> Al usar el **menú** editor, en muchos casos, puede hacer clic en el botón secundario del mouse para mostrar un menú emergente de comandos usados con frecuencia. Los comandos disponibles dependen del objeto al que apunta el puntero.
-
-> [!NOTE]
-> Para los programas de Foundation clase biblioteca MFC (Microsoft) y los programas ATL, puede usar **asistentes para código** para enlazar comandos de menú al código. Para más información, vea [Agregar un evento](../ide/adding-an-event-visual-cpp.md).
+> Al usar el **Editor de menús**, en muchos casos, puede hacer clic en para mostrar un menú emergente de comandos usados con frecuencia. Los comandos disponibles dependen del objeto al que apunta el puntero.
 
 ## <a name="how-to"></a>Procedimientos
 
-> [!NOTE]
-> El **ventana recursos** no está disponible en las ediciones Express.
-
-El **menú** editor le permite:
+El **Editor de menús** le permite:
 
 ### <a name="to-create-a-standard-menu"></a>Para crear un menú estándar
 
-1. Desde el **vista** menú, seleccione **vista de recursos** y, a continuación, haga doble clic en el **menú** de encabezado y elija **Agregar recurso**. Elija **Menú**.
+1. Vaya al menú **vista** > **vista de recursos** y haga doble clic en el **menú** encabezado. Elija **Agregar recurso**, a continuación, **menú**.
 
-1. Seleccione el cuadro **Nuevo elemento** (el rectángulo que contiene "Escriba aquí") en la barra de menús.
+1. Seleccione el **nuevo elemento** cuadro (el rectángulo que contiene *escriba aquí*) en la barra de menús.
 
    ![Cuadro nuevo elemento en el editor de menús](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
-   Cuadro Nuevo elemento
+   **Nuevo elemento** cuadro
 
-1. Escriba un nombre para el nuevo menú, por ejemplo, "Archivo".
+1. Escriba un nombre para el nuevo menú, por ejemplo, *archivo*.
 
-   El texto que escriba aparecerá en el **Editor de menús** y en el cuadro **Leyenda** de la [ventana Propiedades](/visualstudio/ide/reference/properties-window). Puede editar las propiedades del nuevo menú en uno u otro componente.
+   El texto que escriba aparecerá en el **Editor de menús** y en el **título** cuadro el [ventana propiedades](/visualstudio/ide/reference/properties-window). Puede editar las propiedades del nuevo menú en uno u otro componente.
 
    Tras asignar un nombre al nuevo menú en la barra de menús, el cuadro de nuevo elemento se desplaza hacia la derecha (para permitir agregar otro menú) y se abre otro cuadro de nuevo elemento debajo del primer menú, donde pueden agregarse otros comandos de menú.
 
    ![Cuadro nuevo elemento expandido](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
-   Cuadro Nuevo elemento con el foco desplazado al escribir el nombre del nuevo menú
+   **Nuevo elemento** cuadro con el foco desplazado al escribir el nombre del menú
 
    > [!NOTE]
    > Para crear un solo elemento de menú en la barra de menús, establezca la **emergente** propiedad **False**.
@@ -92,24 +86,22 @@ El **menú** editor le permite:
 
 1. Agregar otros comandos de menú al menú del submenú.
 
-## <a name="to-insert-a-new-menu-between-existing-menus"></a>Para insertar un nuevo menú entre los menús existentes
+### <a name="to-insert-a-new-menu-between-existing-menus"></a>Para insertar un nuevo menú entre los menús existentes
 
-Seleccione un nombre en el menú de existentes y presione la **insertar** clave o haga doble clic en la barra de menús y elija **Insertar nuevo** en el menú contextual.
+Seleccione un nombre en el menú de existentes y presione la **insertar** clave, o haga doble clic en la barra de menús y elija **Insertar nuevo**.
 
-El **nuevo elemento** cuadro se inserta antes del elemento seleccionado.
+   El **nuevo elemento** cuadro se inserta antes del elemento seleccionado.
 
 ### <a name="to-add-commands-to-a-menu"></a>Para agregar comandos a un menú
 
-1. Crear un menú.
-
-1. Seleccione un nombre de menú, por ejemplo, **archivo**.
+1. Crear un menú. A continuación, seleccione un nombre de menú, por ejemplo, **archivo**.
 
    Cada menú se expandirá y expondrá un nuevo cuadro de elemento para los comandos. Por ejemplo, puede agregar los comandos **New**, **abierto**, y **cerrar** a un **archivo** menú.
 
 1. En el nuevo cuadro de elemento, escriba un nombre para el nuevo comando de menú.
 
    > [!NOTE]
-   > El texto que escriba aparecerá en el **Editor de menús** y en el cuadro **Leyenda** de la [ventana Propiedades](/visualstudio/ide/reference/properties-window). Puede editar las propiedades del nuevo menú en uno u otro componente.
+   > El texto que escriba aparecerá en el **Editor de menús** y en el **título** cuadro el [ventana propiedades](/visualstudio/ide/reference/properties-window). Puede editar las propiedades del nuevo menú en uno u otro componente.
 
    > [!TIP]
    > Puede definir una tecla nemotécnica (tecla de acceso rápido) que permita al usuario seleccionar el comando de menú. Escriba una y comercial (`&`) delante de una letra para especificarla como la tecla de acceso. El usuario puede seleccionar el comando de menú escribiendo esa letra.
@@ -127,42 +119,38 @@ El **nuevo elemento** cuadro se inserta antes del elemento seleccionado.
 
    El cuadro de elemento nuevo se selecciona para que pueda crear comandos de menú adicionales.
 
-### <a name="to-select-multiple-menu-commands"></a>Para seleccionar varios comandos de menú
-
-Puede seleccionar varios nombres de los menús o comandos de menú para ejecutar operaciones masivas, como eliminar o cambiar las propiedades.
+### <a name="to-select-multiple-menu-commands-to-run-bulk-operations-such-as-deleting-or-changing-properties"></a>Para seleccionar varios comandos de menú para ejecutar operaciones masivas, como eliminar o cambiar propiedades
 
 Mientras mantiene presionada la **Ctrl** clave, seleccione los menús o comandos de submenú que desee.
 
 ### <a name="to-move-and-copy-menus-and-menu-commands"></a>Para mover y copiar menús y comandos de menú
 
+- Utilice el método de arrastrar y colocar:
+
+   1. Arrastre o copie el elemento que desee mover a:
+
+      - Una nueva ubicación en el menú actual.
+
+      - Otro menú. Puede navegar a otros menús arrastrando el puntero del mouse sobre ellos.
+
+   1. Arrastre el comando de menú cuando la guía de inserción muestre la posición que desee.
+
+- Use los comandos del menú contextual:
+
+   1. Haga clic en uno o varios menús o comandos de menú y luego elija **cortar** (para mover) o **copia**.
+
+   1. Si va a mover los elementos al menú de otro recurso o archivo de script de recursos, [abrirlo en otra ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
+
+   1. Seleccione la posición del menú o comando de menú al que desee mover o copiar.
+
+   1. En el menú contextual, elija **Pegar**. El elemento movido o copiado se coloca antes del elemento que seleccione.
+
 > [!NOTE]
 > También puede arrastrar, copiar y pegar en otros menús de otras ventanas de menú.
 
-#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>Para mover o copiar menús o comandos de menú mediante el método de arrastrar y colocar
-
-1. Arrastre o copie el elemento que desee mover a:
-
-   - Una nueva ubicación en el menú actual.
-
-   - Otro menú. (Puede navegar a otros menús arrastrando el puntero del mouse sobre ellos).
-
-1. Arrastre el comando de menú cuando la guía de inserción muestre la posición que desee.
-
-#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>Para mover o copiar menús o comandos de menú mediante los comandos de menú contextual
-
-1. Haga clic con el botón derecho en uno o varios menús o comandos de menú.
-
-1. En el menú contextual, elija **Cortar** (para mover) o **Copiar**.
-
-1. Si va a mover los elementos al menú de otro recurso o archivo de script de recursos, [abrirlo en otra ventana](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
-
-1. Seleccione la posición del menú o comando de menú al que desee mover o copiar.
-
-1. En el menú contextual, elija **Pegar**. El elemento movido o copiado se coloca antes del elemento que seleccione.
-
 ### <a name="to-delete-a-menu-or-menu-command"></a>Para eliminar un menú o un comando de menú
 
-Haga clic en el nombre del menú o comando y elija **eliminar** en el menú contextual.
+Haga clic en el nombre del menú o comando y elija **eliminar**.
 
 > [!NOTE]
 > De forma similar, puede utilizar el menú contextual para realizar otras acciones, como Copiar, Cortar, Pegar, Insertar nuevo, Insertar separador, Editar IDs, Ver como emergente, Comprobar teclas de acceso, etc.
@@ -173,21 +161,14 @@ Los[menús emergentes](../mfc/menus-mfc.md) muestran comandos de pantalla que se
 
 Una vez haya creado el recurso de menú, el código de aplicación debe cargar el recurso y usar [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) para que aparezca el menú. Una vez que el usuario descarte el menú emergente seleccionando fuera de él, o ha seleccionado un comando, se devolverá esa función. Si el usuario elige un comando, se enviará el mensaje de ese comando a la ventana cuyo controlador se ha pasado.
 
-### <a name="to-create-a-pop-up-menu"></a>Para crear un menú emergente
+> [!NOTE]
+> Para los programas de la biblioteca de Microsoft Foundation Class (MFC) y los programas ATL, use **asistentes para código** para enlazar comandos de menú al código. Para obtener más información, consulte [agregar un evento](../ide/adding-an-event-visual-cpp.md) y [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md).
 
-1. Crear un menú con un título vacío (no proporcionan un **título**).
+- Para crear un menú emergente, crear un menú con un título vacío y no proporcionan un *título*. A continuación, agregue un comando de menú al menú nuevo, pasar al primer comando de menú debajo del título de menú en blanco con el título provisional *escriba aquí* y escriba un *título* y cualquier otra información.
 
-1. [Agregue un comando de menú al menú nuevo](../windows/adding-commands-to-a-menu.md). Mover al primer comando de menú debajo del título de menú en blanco (el título provisional dice `Type Here`). Escriba un **Título** y cualquier otra información.
+   Repita este proceso para cualquier otro comando de menú en el menú emergente y asegúrese de guardar el recurso de menú.
 
-   Repita este proceso para los demás comandos de menú del menú emergente.
-
-1. Guarde el recurso de menú.
-
-### <a name="to-connect-a-pop-up-menu-to-your-application"></a>Para conectar un menú emergente a una aplicación
-
-1. Agregue un controlador de mensajes para WM_CONTEXTMENU (por ejemplo). Para obtener más información, consulte [asignar mensajes a funciones](../mfc/reference/mapping-messages-to-functions.md).
-
-1. Agregue el código siguiente al controlador de mensajes:
+- Para conectar un menú emergente a una aplicación, por ejemplo, agregue un controlador de mensajes para WM_CONTEXTMENU, a continuación, agregue el código siguiente al controlador de mensajes:
 
     ```cpp
     CMenu menu;
@@ -200,19 +181,14 @@ Una vez haya creado el recurso de menú, el código de aplicación debe cargar e
    > [!NOTE]
    > El [CPoint](../atl-mfc-shared/reference/cpoint-class.md) pasa por el mensaje de controlador está en coordenadas de pantalla.
 
-> [!NOTE]
-> Conectar un menú emergente a una aplicación requiere MFC.
+Normalmente, cuando esté trabajando el **Editor de menús**, un recurso de menú se muestra como una barra de menús. Sin embargo, es posible que algunos recursos de menú se agreguen a la barra de menús de la aplicación mientras se ejecuta el programa.
 
-### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Para ver un recurso de menú como menú emergente
-
-Normalmente, cuando esté trabajando el **menú** editor, un recurso de menú se muestra como una barra de menús. Sin embargo, es posible que algunos recursos de menú se agreguen a la barra de menús de la aplicación mientras se ejecuta el programa.
-
-El menú contextual y elija **ver como emergente** en el menú contextual.
+- Para ver un recurso de menú como menú emergente, haga clic en el menú y elija **ver como emergente**.
 
    Esta opción es sólo una preferencia de visualización y no modificará su menú.
 
-> [!NOTE]
-> Para cambiar a la vista de la barra de menús, seleccione **ver como emergente** nuevo (que quita la marca de verificación y devuelve la vista de la barra de menús).
+> [!TIP]
+> Para cambiar a la vista de la barra de menús, seleccione **ver como emergente** nuevo. Esta acción quita la marca de verificación y devuelve la vista de la barra de menús.
 
 ## <a name="requirements"></a>Requisitos
 
