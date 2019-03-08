@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Tutorial: Crear una aplicación tradicional de escritorio de Windows (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
