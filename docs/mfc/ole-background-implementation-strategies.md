@@ -1,19 +1,19 @@
 ---
-title: 'Nociones de OLE: Estrategias de implementación'
+title: 'Nociones de OLE: Implementation Strategies'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624398"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284819"
 ---
-# <a name="ole-background-implementation-strategies"></a>Nociones de OLE: Estrategias de implementación
+# <a name="ole-background-implementation-strategies"></a>Nociones de OLE: Implementation Strategies
 
 Dependiendo de la aplicación, hay cuatro estrategias de implementación posibles para agregar compatibilidad con OLE:
 
@@ -38,7 +38,6 @@ Una vez que haya decidido una estrategia, debe leer la [contenedores](../mfc/con
 ## <a name="see-also"></a>Vea también
 
 [Nociones de OLE](../mfc/ole-background.md)<br/>
-[Contenedores: Implementar un contenedor](../mfc/containers-implementing-a-container.md)<br/>
-[Servidores: Implementar un servidor](../mfc/servers-implementing-a-server.md)<br/>
+[Contenedores: Implementación de un contenedor](../mfc/containers-implementing-a-container.md)<br/>
+[servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md)<br/>
 [Asistente para aplicaciones MFC](../mfc/reference/mfc-application-wizard.md)
-

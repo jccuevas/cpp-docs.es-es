@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 879f7d6eb4887dfebcc9b2be393b60da4942a351
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614947"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305099"
 ---
 # <a name="cdialog-class"></a>CDialog (clase)
 
@@ -75,10 +75,10 @@ class CDialog : public CWnd
 |[CDialog::EndDialog](#enddialog)|Cierra el cuadro de diálogo modal.|
 |[CDialog::GetDefID](#getdefid)|Obtiene el identificador del control de botón de comando predeterminado para un cuadro de diálogo.|
 |[CDialog::GotoDlgCtrl](#gotodlgctrl)|Mueve el foco a un control de cuadro de diálogo especificado en el cuadro de diálogo.|
-|[CDialog:: InitModalIndirect](#initmodalindirect)|Crea un cuadro de diálogo modal desde una plantilla de cuadro de diálogo en memoria (no basada en recursos). Los parámetros se almacenan hasta que la función `DoModal` se llama.|
+|[CDialog::InitModalIndirect](#initmodalindirect)|Crea un cuadro de diálogo modal desde una plantilla de cuadro de diálogo en memoria (no basada en recursos). Los parámetros se almacenan hasta que la función `DoModal` se llama.|
 |[CDialog::MapDialogRect](#mapdialogrect)|Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de la pantalla.|
 |[CDialog::NextDlgCtrl](#nextdlgctrl)|Mueve el foco al siguiente control de cuadro de diálogo en el cuadro de diálogo.|
-|[CDialog:: OnInitDialog](#oninitdialog)|Reemplace este valor para aumentar la inicialización del cuadro de diálogo.|
+|[CDialog::OnInitDialog](#oninitdialog)|Reemplace este valor para aumentar la inicialización del cuadro de diálogo.|
 |[CDialog::OnSetFont](#onsetfont)|Reemplace este valor para especificar la fuente que un control de cuadro de diálogo que se va a usar cuando dibuja el texto.|
 |[CDialog::PrevDlgCtrl](#prevdlgctrl)|Mueve el foco al control de cuadro de diálogo anterior en el cuadro de diálogo.|
 |[CDialog::SetDefID](#setdefid)|Cambia el control de botón de comando predeterminado para un cuadro de diálogo a un botón de comando especificado.|
@@ -301,7 +301,7 @@ void EndDialog(int nResult);
 
 ### <a name="parameters"></a>Parámetros
 
-*Nresultado*<br/>
+*nResult*<br/>
 Contiene el valor que se va a devolver desde el cuadro de diálogo al llamador del `DoModal`.
 
 ### <a name="remarks"></a>Comentarios
@@ -355,7 +355,7 @@ Para obtener un puntero al control (ventana secundaria) para pasar como *pWndCtr
 
   Vea el ejemplo de [CWnd:: GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem).
 
-##  <a name="initmodalindirect"></a>  CDialog:: InitModalIndirect
+##  <a name="initmodalindirect"></a>  CDialog::InitModalIndirect
 
 Llame a esta función miembro para inicializar un objeto de cuadro de diálogo modal, mediante una plantilla de cuadro de diálogo que se construye en la memoria.
 
@@ -405,7 +405,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](../../mfc/reference/rect-structure1.md) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
+Apunta a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -448,7 +448,7 @@ Si implementa el **cancelar** botón en un cuadro de diálogo no modal, se debe 
 
 [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]
 
-##  <a name="oninitdialog"></a>  CDialog:: OnInitDialog
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog
 
 Este método se llama en respuesta a la `WM_INITDIALOG` mensaje.
 
@@ -562,4 +562,3 @@ Especifica el identificador de ayuda contextual.
 [Ejemplo de MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

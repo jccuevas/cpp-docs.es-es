@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: a8b204c2bf48802b8efcfe5ca487d62876942c29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540341"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702913"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ Compruebe siempre el valor devuelto para ver si el puntero es NULL antes de real
 
 **fopen** admite secuencias de archivo Unicode. Para abrir un archivo Unicode, pase un **ccs** marca que especifica la codificación deseada a **fopen**, como se indica a continuación.
 
-> **ARCHIVO *fp = fopen ("newfile.txt", "rt +, ccs =**_codificación_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 Los valores permitidos de *codificación* son **UNICODE**, **UTF-8**, y **UTF-16LE**.
 
@@ -117,12 +117,12 @@ La cadena de caracteres *modo* especifica el tipo de acceso solicitado para el a
 
 |*mode*|Access|
 |-|-|
-**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra el **fopen** llamar se produce un error.
-**"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.
-**"a"**|Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe.
-**"r+"**|Abre para lectura y escritura. El archivo debe existir.
-**"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido.
-**"a+"**|Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe.
+| **"r"** | Abre para lectura. Si el archivo no existe o no se encuentra el **fopen** llamar se produce un error. |
+| **"w"** | Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido. |
+| **"a"** | Abre para escritura al final del archivo (anexo) sin eliminar el marcador de fin de archivo (EOF) antes de que se escriban nuevos datos en el archivo. Crea el archivo si no existe. |
+| **"r+"** | Abre para lectura y escritura. El archivo debe existir. |
+| **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
+| **"a+"** | Se abre para lectura y anexado. La operación de anexado incluye la eliminación del marcador EOF antes de que los nuevos datos se escriban en el archivo. El marcador EOF no se restablece una vez completada la escritura. Crea el archivo si no existe. |
 
 Cuando se abre un archivo mediante el **"a"** tipo de acceso o el **"a +"** acceso tipo, todas las operaciones se producen al final del archivo de escritura. Se puede mover el puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier escritura que se realiza la operación. Por consiguiente, los datos existentes no pueden sobrescribirse.
 
@@ -134,8 +134,8 @@ Además de los valores anteriores, los caracteres siguientes se pueden anexar a 
 
 |*modo* modificador|Modo de traducción|
 |-|-|
-**t**|Abra en modo de texto (traducido).
-**b**|Abra en modo binario (sin traducir); las traducciones que implican los caracteres de retorno de carro y avance de línea se suprimen.
+| **t** | Abra en modo de texto (traducido). |
+| **b** | Abra en modo binario (sin traducir); las traducciones que implican los caracteres de retorno de carro y avance de línea se suprimen. |
 
 En el modo de texto, CTRL+Z se interpreta como un carácter EOF en entrada. En los archivos que están abiertos para lectura/escritura mediante el uso de **"a +"**, **fopen** comprueba un CTRL+Z al final del archivo y lo quita, si es posible. Esto se hace porque utilizar [fseek](fseek-fseeki64.md) y **ftell** para desplazarse por un archivo que finaliza con CTRL+Z puede hacer que [fseek](fseek-fseeki64.md) para que se comporte de forma incorrecta cerca del final del archivo.
 
@@ -143,42 +143,42 @@ En el modo de texto, las combinaciones de retorno de carro y se traducen en avan
 
 Si **t** o **b** no se proporciona en *modo*, el modo de traducción predeterminado está definido por la variable global [_fmode](../../c-runtime-library/fmode.md). Si **t** o **b** tiene como prefijo para el argumento, la función produce un error y devuelve **NULL**.
 
-Para más información sobre cómo utilizar los modos binario y de texto en Unicode y la E/S de flujo multibyte, vea [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Para más información sobre cómo utilizar los modos binario y de texto en Unicode y la E/S de flujo multibyte, vea [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [E/S de secuencias Unicode en los modos binario y de texto](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 Las siguientes opciones se pueden anexar a *modo* para especificar comportamientos adicionales.
 
 |*modo* modificador|Comportamiento|
 |-|-|
-**c**|Habilitar la marca de confirmación asociado *filename* para que el contenido del búfer del archivo se escribe directamente en el disco si **fflush** o **_flushall** se llama.
-**n**|Restablecer la marca de confirmación asociado *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a COMMODE.OBJ. El valor predeterminado de la marca de confirmación global es "no-commit", a menos que vincule explícitamente el programa a COMMODE.OBJ (vea [Link Options](../../c-runtime-library/link-options.md)).
-**N**|Especifica que el archivo no se hereda mediante procesos secundarios.
-**S**|Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco.
-**R**|Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco.
-**T**|Especifica un archivo como temporal. Si es posible, no se vuelca en el disco.
-**D**|Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo.
-**CCS =**_codificación_|Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI.
+| **c** | Habilitar la marca de confirmación asociado *filename* para que el contenido del búfer del archivo se escribe directamente en el disco si **fflush** o **_flushall** se llama. |
+| **n** | Restablecer la marca de confirmación asociado *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a COMMODE.OBJ. El valor predeterminado de la marca de confirmación global es "no-commit", a menos que vincule explícitamente el programa a COMMODE.OBJ (vea [Link Options](../../c-runtime-library/link-options.md)). |
+| **N** | Especifica que el archivo no se hereda mediante procesos secundarios. |
+| **S** | Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco. |
+| **R** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
+| **T** | Especifica un archivo como temporal. Si es posible, no se vuelca en el disco. |
+| **D** | Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo. |
+| **ccs=**_encoding_ | Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
 
 Los caracteres válidos para el *modo* cadena que se usa en **fopen** y **_fdopen** corresponden a *oflag* argumentos que se usan en [_open](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
-|Los caracteres de *modo* cadena|Equivalente *oflag* valor para _open/_sopen|
+|Los caracteres de *modo* cadena|Equivalente *oflag* valor \_abrir /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (normalmente **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**W**|**_O_WRONLY** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (normalmente **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_APPEND**)|
+|**a+**|**\_O\_RDWR** &#124; **\_O\_APPEND** (usually **\_O\_RDWR** &#124; **\_O\_APPEND** &#124; **\_O\_CREAT** )|
+|**r**|**\_O\_RDONLY**|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (normalmente  **\_O\_WRONLY** &#124;  **\_O\_crear** &#124;  **\_O\_TRUNC**)|
+|**w+**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**b**|**\_O\_BINARY**|
+|**t**|**\_O\_TEXT**|
 |**c**|Ninguna|
 |**n**|Ninguna|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**S**|**\_O\_SECUENCIAL**|
+|**R**|**\_O\_RANDOM**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_TEMPORAL**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Si usas **rb** modo, no es necesario trasladar su código y, si espera que leer la mayor parte de un archivo grande o no se preocupa sobre el rendimiento de red, también puede considerar si va a utilizar memoria archivos Win32 asignados como una opción.
 

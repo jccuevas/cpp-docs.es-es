@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-ms.openlocfilehash: 15f18a43fcda76bb5531434de84d97a349cb7f39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497207"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271273"
 ---
 # <a name="canimationpoint-class"></a>Clase CAnimationPoint
 
@@ -73,7 +73,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CPoint CAnimationPoint::operator](#operator_cpoint)|Convierte un CAnimationPoint CPoint.|
-|[CAnimationPoint::operator =](#operator_eq)|Asigna ptSrc a CAnimationPoint.|
+|[CAnimationPoint::operator=](#operator_eq)|Asigna ptSrc a CAnimationPoint.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -266,7 +266,7 @@ Valor actual de CAnimationPoint como CPoint.
 
 Esta función llama internamente a GetValue. Si se produce un error en GetValue por algún motivo, el punto devuelto contendrá los valores predeterminados para X y coordenadas.
 
-##  <a name="operator_eq"></a>  CAnimationPoint::operator =
+##  <a name="operator_eq"></a>  CAnimationPoint::operator=
 
 Asigna ptSrc a CAnimationPoint.
 

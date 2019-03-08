@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447208"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412736"
 ---
 # <a name="cl-invokes-the-linker"></a>CL invoca el vinculador
 
@@ -24,15 +24,15 @@ CL invoca automáticamente el vinculador después de compilar, a menos que se ut
 |Opción|Descripción|
 |------------|-----------------|
 |/c|Compilar sin vinculación|
-|/ /P E, /EP,|Preprocesar sin compilar ni vincular|
+|/E, /EP, /P|Preprocesar sin compilar ni vincular|
 |/Zg|Generar prototipos de función|
-|/Zs|Comprobar sintaxis|
+|/Zs|Comprobar la sintaxis|
 
 Para obtener más información acerca de la vinculación, vea [opciones del vinculador](../../build/reference/linker-options.md).
 
 ## <a name="example"></a>Ejemplo
 
-Se supone que está compilando archivos de código fuente de C tres: MAIN.c, MOD1.c y MOD2.c. Cada archivo incluye una llamada a una función definida en un archivo diferente:
+Supongamos que está compilando archivos de código fuente de C tres: MAIN.c, MOD1.c y MOD2.c. Cada archivo incluye una llamada a una función definida en un archivo diferente:
 
 - MAIN.c llama a la función `func1` en MOD1.c y la función `func2` de MOD2.c.
 

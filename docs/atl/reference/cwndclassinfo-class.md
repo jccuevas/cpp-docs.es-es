@@ -1,5 +1,5 @@
 ---
-title: CWndClassInfo (clase)
+title: CWndClassInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CWndClassInfo
@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: 2ffe37059eb6ab81eb9dd67243ba125766b92dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4aeac558c28d0ac89707423433e51f348bc35d29
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467306"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274120"
 ---
-# <a name="cwndclassinfo-class"></a>CWndClassInfo (clase)
+# <a name="cwndclassinfo-class"></a>CWndClassInfo Class
 
 Esta clase proporciona métodos para registrar información de una clase de ventana.
 
@@ -141,7 +141,7 @@ TCHAR m_szAutoName[13];
 
 ##  <a name="m_wc"></a>  CWndClassInfo::m_wc
 
-Mantiene la información de la clase de ventana en un [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577) estructura.
+Mantiene la información de la clase de ventana en un [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa) estructura.
 
 ```
 WNDCLASSEX m_wc;

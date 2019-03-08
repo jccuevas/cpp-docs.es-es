@@ -1,6 +1,6 @@
 ---
 title: Funciones y valores globales internos de CRT
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 apiname:
 - __acrt_iob_func
 - __AdjustPointer
@@ -44,6 +44,7 @@ apiname:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -208,6 +209,7 @@ apiname:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -291,6 +293,7 @@ apilocation:
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -335,6 +338,7 @@ f1_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -499,6 +503,7 @@ f1_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -609,6 +614,7 @@ helpviewer_keywords:
 - __crtCreateEventExW
 - __crtCreateSemaphoreExW
 - __crtCreateSymbolicLinkW
+- _crt_debugger_hook
 - __crtEnumSystemLocalesEx
 - __crtFlsAlloc
 - __crtFlsFree
@@ -773,6 +779,7 @@ helpviewer_keywords:
 - _pwctype
 - __pwctype_func
 - __pxcptinfoptrs
+- _query_app_type
 - _realloc_base
 - _register_thread_local_exe_atexit_callback
 - __report_gsfailure
@@ -841,12 +848,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 64288cec680c1c10b6ee3f8b0f046fb22d25ab7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 291d509315a6825cd6b4e56c8bfe095f0149be4e
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485623"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211074"
 ---
 # <a name="internal-crt-globals-and-functions"></a>Funciones y valores globales internos de CRT
 
@@ -926,6 +933,7 @@ Estas funciones y macros de funciones se usan para implementar CRT y la bibliote
 |__crtCreateEventExW|
 |__crtCreateSemaphoreExW|
 |__crtCreateSymbolicLinkW|
+|_crt_debugger_hook|
 |__crtEnumSystemLocalesEx|
 |__crtFlsAlloc|
 |__crtFlsFree|
@@ -1104,6 +1112,7 @@ Estas funciones y macros de funciones se usan para implementar CRT y la bibliote
 |_pwctype|
 |__pwctype_func|
 |__pxcptinfoptrs|
+|_query_app_type|
 |_realloc_base|
 |[_register_onexit_function](../c-runtime-library/execute-onexit-table-initialize-onexit-table-register-onexit-function.md)|
 |_register_thread_local_exe_atexit_callback|

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: d4dceec94a8868ed9b6d744a9f481825bf6af58a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08bda1a297e99c28dadfc2c58853900ee67dbb90
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660452"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416051"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>Introducción a la generación de manifiestos para los programas de C/C++
 
-Un [manifiesto](https://msdn.microsoft.com/library/aa375365) es un documento XML que puede ser un archivo XML externo o un recurso incrustado dentro de una aplicación o un ensamblado. El manifiesto de un [aplicación aislada](/windows/desktop/SbsCs/isolated-applications) se usa para administrar los nombres y las versiones de los ensamblados en paralelo compartidos a los que se debe enlazar la aplicación en tiempo de ejecución. El manifiesto de un ensamblado en paralelo especifica sus dependencias en los nombres, versiones, recursos y otros ensamblados.
+Un [manifiesto](/windows/desktop/sbscs/manifests) es un documento XML que puede ser un archivo XML externo o un recurso incrustado dentro de una aplicación o un ensamblado. El manifiesto de un [aplicación aislada](/windows/desktop/SbsCs/isolated-applications) se usa para administrar los nombres y las versiones de los ensamblados en paralelo compartidos a los que se debe enlazar la aplicación en tiempo de ejecución. El manifiesto de un ensamblado en paralelo especifica sus dependencias en los nombres, versiones, recursos y otros ensamblados.
 
 Hay dos maneras de crear un manifiesto para una aplicación aislada o un ensamblado en paralelo. En primer lugar, el autor del ensamblado puede crear manualmente un archivo de manifiesto siguiendo las reglas y requisitos de nomenclatura. Como alternativa, si un programa sólo depende de ensamblados de Visual C++ como CRT, MFC, ATL u otros, el vinculador puede generar automáticamente un manifiesto.
 

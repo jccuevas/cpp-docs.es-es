@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463016"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424488"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl (clase)
 
@@ -219,7 +219,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::ChangeBitmap](#changebitmap)|Cambia el mapa de bits para un botón en el control de barra de herramientas actual.|
 |[CToolBarCtrl::CheckButton](#checkbutton)|Comprueba o borra un botón determinado en un control de barra de herramientas.|
 |[CToolBarCtrl::CommandToIndex](#commandtoindex)|Recupera el índice de base cero del botón asociado al identificador de comando especificado.|
-|[CToolBarCtrl:: Create](#create)|Crea un control de barra de herramientas y lo adjunta a un `CToolBarCtrl` objeto.|
+|[CToolBarCtrl::Create](#create)|Crea un control de barra de herramientas y lo adjunta a un `CToolBarCtrl` objeto.|
 |[CToolBarCtrl::CreateEx](#createex)|Crea un control de barra de herramientas con los estilos extendidos de Windows especificados y lo asocia a un `CToolBarCtrl` objeto.|
 |[CToolBarCtrl::Customize](#customize)|Muestra el cuadro de diálogo Personalizar barra de herramientas.|
 |[CToolBarCtrl::DeleteButton](#deletebutton)|Elimina un botón del control de barra de herramientas.|
@@ -284,7 +284,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos para un control de barra de herramientas.|
 |[CToolBarCtrl::SetHotImageList](#sethotimagelist)|Establece la lista de imágenes que va a usar el control de barra de herramientas para mostrar los botones "activos".|
 |[CToolBarCtrl::SetHotItem](#sethotitem)|Establece el elemento activo en una barra de herramientas.|
-|[CToolBarCtrl:: SetImageList](#setimagelist)|Establece la lista de imágenes que va a usar la barra de herramientas para mostrar botones que se encuentran en su estado predeterminado.|
+|[CToolBarCtrl::SetImageList](#setimagelist)|Establece la lista de imágenes que va a usar la barra de herramientas para mostrar botones que se encuentran en su estado predeterminado.|
 |[CToolBarCtrl::SetIndent](#setindent)|Establece la sangría del primer botón en un control de barra de herramientas.|
 |[CToolBarCtrl::SetInsertMark](#setinsertmark)|Establece la marca de inserción actual de la barra de herramientas.|
 |[CToolBarCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Establece el color utilizado para dibujar la marca de inserción para la barra de herramientas.|
@@ -579,7 +579,7 @@ BOOL CheckButton(
 *nID*<br/>
 Identificador del comando del botón para activar o desactivar.
 
-*bComprobar*<br/>
+*bCheck*<br/>
 True para comprobar el botón, FALSE para desactivarla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -609,7 +609,7 @@ Identificador de comando cuyo botón índice al que desea buscar.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="create"></a>  CToolBarCtrl:: Create
+##  <a name="create"></a>  CToolBarCtrl::Create
 
 Crea un control de barra de herramientas y lo adjunta a un `CToolBarCtrl` objeto.
 
@@ -626,8 +626,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de los estilos de barra de herramientas y estilos de ventana como se describió en **comentarios**.
 
-*Rect*<br/>
-Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+*rect*<br/>
+Opcionalmente, especifica el tamaño y la posición del control de barra de herramientas. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de barra de herramientas. No debe ser NULL.
@@ -680,8 +680,8 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de barra de herramientas. Las barras de herramientas siempre deben tener el estilo WS_CHILD. Además, puede especificar cualquier combinación de los estilos de barra de herramientas y estilos de ventana como se describe en el **comentarios** sección de [crear](#create).
 
-*Rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+*rect*<br/>
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -755,7 +755,7 @@ BOOL EnableButton(
 *nID*<br/>
 Identificador del comando del botón para habilitar o deshabilitar.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 TRUE para habilitar el botón; FALSE para deshabilitar el botón.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Índice de base cero del botón que se va a recuperar la información.
 
 *lpRect*<br/>
-Dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que recibe las coordenadas del rectángulo delimitador.
+Dirección de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que recibe las coordenadas del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Parámetros
 
 *pSize*<br/>
-Un puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe el tamaño de los elementos.
+Un puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que recibe el tamaño de los elementos.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 El identificador del botón.
 
 *lpRect*<br/>
-Un puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura para recibir la información del rectángulo delimitador.
+Un puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura para recibir la información del rectángulo delimitador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1247,7 +1247,7 @@ La información de estado del botón si se realiza correctamente o - 1 en caso c
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función resulta especialmente útil si desea recuperar más de uno de los Estados del botón. Para recuperar sólo un estado, use una de las funciones miembro siguientes: [IsButtonEnabled tal](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), o [IsButtonIndeterminate](#isbuttonindeterminate). Sin embargo, el `GetState` función miembro es la única manera de detectar el estado del botón TBSTATE_WRAP.
+Esta función resulta especialmente útil si desea recuperar más de uno de los Estados del botón. Para recuperar sólo un estado, use una de las funciones miembro siguientes: [IsButtonEnabled tal](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), o [IsButtonIndeterminate](#isbuttonindeterminate). Sin embargo, el `GetState` función miembro es la única manera de detectar el estado del botón TBSTATE_WRAP.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>Parámetros
 
-*cadena n*<br/>
+*nString*<br/>
 Índice de la cadena.
 
 *lpstrString*<br/>
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Parámetros
 
 *ppt*<br/>
-Un puntero a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que contiene la coordenada x de la prueba de posicionamiento en el `x` miembro y la coordenada y de la posición de prueba en el `y` miembro. Las coordenadas son relativas al área de cliente de la barra de herramientas.
+Un puntero a un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que contiene la coordenada x de la prueba de posicionamiento en el `x` miembro y la coordenada y de la posición de prueba en el `y` miembro. Las coordenadas son relativas al área de cliente de la barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Parámetros
 
 *ppt*<br/>
-Un puntero a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la estructura que contiene la prueba de posicionamiento, en relación con el área cliente de la barra de herramientas.
+Un puntero a un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la estructura que contiene la prueba de posicionamiento, en relación con el área cliente de la barra de herramientas.
 
 *ptbim*<br/>
 Un puntero a un [TBINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark) estructura que recibe la información de marca de inserción.
@@ -2084,7 +2084,7 @@ El número de índice de base cero del elemento que estará activo. Si este valo
 
 Esta función miembro implementa el comportamiento del mensaje de Win32 [TB_SETHOTITEM](/windows/desktop/Controls/tb-sethotitem), tal y como se describe en el SDK de Windows.
 
-##  <a name="setimagelist"></a>  CToolBarCtrl:: SetImageList
+##  <a name="setimagelist"></a>  CToolBarCtrl::SetImageList
 
 Establece la lista de imágenes que va a usar la barra de herramientas para mostrar botones que se encuentran en su estado predeterminado.
 
@@ -2206,7 +2206,7 @@ void SetOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la `CWnd` o `CWnd`-objeto derivado que será la nueva ventana de propietario para el control de barra de herramientas.
 
 ### <a name="remarks"></a>Comentarios
@@ -2295,7 +2295,7 @@ Número solicitado de filas.
 Indica si se debe usar las filas más o menos filas si no puede cambiarse de tamaño la barra de herramientas para el número solicitado de filas.
 
 *lpRect*<br/>
-Apunta a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que va a recibir el nuevo rectángulo delimitador de la barra de herramientas.
+Apunta a la [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que va a recibir el nuevo rectángulo delimitador de la barra de herramientas.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2386,7 +2386,7 @@ Esta función miembro emula la funcionalidad de la [TB_SETWINDOWTHEME](/windows/
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [Ejemplo MFCIE de MFC](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>

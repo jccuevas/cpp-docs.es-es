@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262459"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook (clase)
 
@@ -37,7 +37,7 @@ class CDebugReportHook
 |Name|Descripción|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Las llamadas [SetPipeName](#setpipename), [SetTimeout](#settimeout), y [SetHook](#sethook).|
-|[CDebugReportHook:: ~ CDebugReportHook](#dtor)|Las llamadas [CDebugReportHook::RemoveHook](#removehook).|
+|[CDebugReportHook::~CDebugReportHook](#dtor)|Las llamadas [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -83,7 +83,7 @@ El nombre de la canalización con nombre a la que se debe enviar la salida de de
 *dwTimeout*<br/>
 El tiempo en milisegundos que esperará la canalización con nombre esté disponible a que esta clase.
 
-##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
+##  <a name="dtor"></a>  CDebugReportHook::~CDebugReportHook
 
 Las llamadas [CDebugReportHook::RemoveHook](#removehook).
 

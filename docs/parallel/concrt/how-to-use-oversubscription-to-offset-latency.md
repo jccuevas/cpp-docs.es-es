@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Usar la suscripción excesiva para compensar la latencia'
+title: Filtrar Usar la suscripción excesiva para compensar la latencia
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653081"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257948"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Cómo: Usar la suscripción excesiva para compensar la latencia
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Filtrar Usar la suscripción excesiva para compensar la latencia
 
 La suscripción excesiva puede mejorar la eficacia general de algunas aplicaciones que contienen tareas con una latencia elevada. En este tema se muestra cómo utilizar la suscripción excesiva para compensar la latencia que se produce al leer datos de una conexión de red.
 
@@ -82,4 +82,3 @@ En el siguiente ejemplo se modifica el cuerpo del método `download` para utiliz
 
 [Contextos](../../parallel/concrt/contexts.md)<br/>
 [Oversubscribe (método)](reference/context-class.md#oversubscribe)
-

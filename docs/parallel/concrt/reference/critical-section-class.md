@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: a08cb5049d742a9740361595bd931a2f7a48bd16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260951"
 ---
 # <a name="criticalsection-class"></a>critical_section (Clase)
 
@@ -84,7 +84,7 @@ Construye una nueva sección crítica.
 critical_section();
 ```
 
-##  <a name="dtor"></a> ~ critical_section
+##  <a name="dtor"></a> ~critical_section
 
 Destruye una sección crítica.
 
@@ -147,7 +147,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 *_Critical_section*<br/>
 La sección crítica para bloquear.
 
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock
 
 Destruye un `scoped_lock` de objetos y libera la sección crítica que se suministra con el constructor.
 
@@ -177,7 +177,7 @@ bool try_lock_for(unsigned int _Timeout);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 El número de milisegundos que transcurrirán antes de agotar el tiempo.
 
 ### <a name="return-value"></a>Valor devuelto

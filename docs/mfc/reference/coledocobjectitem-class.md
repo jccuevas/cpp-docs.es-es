@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: d12ee07c9e36f52fc176066be0e91ce1a7307858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659074"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276291"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem (clase)
 
@@ -53,11 +53,11 @@ class COleDocObjectItem : public COleClientItem
 
 |Name|Descripción|
 |----------|-----------------|
-|[COleDocObjectItem:: DoDefaultPrinting](#dodefaultprinting)|Imprime el documento de la aplicación de contenedor con la configuración de la impresora predeterminada.|
+|[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Imprime el documento de la aplicación de contenedor con la configuración de la impresora predeterminada.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Ejecuta el comando especificado por el usuario.|
 |[COleDocObjectItem::GetActiveView](#getactiveview)|Recupera la vista activa del documento.|
 |[COleDocObjectItem::GetPageCount](#getpagecount)|Recupera el número de páginas del documento de la aplicación contenedora.|
-|[COleDocObjectItem:: OnPreparePrinting](#onprepareprinting)|Documento de la aplicación contenedora se prepara para la impresión.|
+|[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|Documento de la aplicación contenedora se prepara para la impresión.|
 |[COleDocObjectItem::OnPrint](#onprint)|Imprime el documento de la aplicación contenedora.|
 |[COleDocObjectItem::QueryCommand](#querycommand)|Consulta el estado de uno o más comandos generados por eventos de interfaz de usuario.|
 |[COleDocObjectItem::Release](#release)|Libera la conexión a un elemento vinculado de OLE y se cierra si estaba abierta. No se destruye el elemento de cliente.|
@@ -107,7 +107,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 *pContainerDoc*<br/>
 Un puntero a la `COleDocument` objeto que actúa como el contenedor del documento activo. Este parámetro debe ser NULL para habilitar IMPLEMENT_SERIALIZE. Normalmente, elementos OLE se construyen con un puntero de documento no nulo.
 
-##  <a name="dodefaultprinting"></a>  COleDocObjectItem:: DoDefaultPrinting
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting
 
 Lo llama el marco de trabajo a un documento con la configuración predeterminada.
 
@@ -204,7 +204,7 @@ Un puntero al número total de páginas del documento. Puede ser NULL, lo que in
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
-##  <a name="onprepareprinting"></a>  COleDocObjectItem:: OnPreparePrinting
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting
 
 Esta función miembro se llama el marco de trabajo para preparar un documento para su impresión.
 

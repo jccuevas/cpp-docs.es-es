@@ -3,12 +3,12 @@ title: Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: 9a73ea1df099003061081d108a3f3f6eef601fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594368"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220691"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl para encapsulación en tiempo de compilación (C++ moderno)
 
@@ -59,6 +59,6 @@ Considere la posibilidad de agregar compatibilidad para la especialización de i
 
 ## <a name="see-also"></a>Vea también
 
-[Aquí está otra vez C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

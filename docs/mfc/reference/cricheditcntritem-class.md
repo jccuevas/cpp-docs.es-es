@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 4683e0ea4a56e6766c039b2fcb858a54e28d14ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268491"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem (clase)
 
@@ -82,7 +82,7 @@ CRichEditCntrItem(
 *preo*<br/>
 Puntero a un [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) estructura que describe un elemento OLE. El nuevo `CRichEditCntrItem` se construye el objeto en torno a esta elemento OLE. Si *preo* es NULL, el elemento de cliente está vacío.
 
-*que pContainer*<br/>
+*pContainer*<br/>
 Puntero en el documento contenedor que contendrá este elemento. Si *que pContainer* es NULL, debe llamar explícitamente a [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) para agregar este elemento de cliente a un documento.
 
 ### <a name="remarks"></a>Comentarios
@@ -101,7 +101,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ### <a name="parameters"></a>Parámetros
 
-*REO*<br/>
+*reo*<br/>
 Hacer referencia a un [REOBJECT](/windows/desktop/api/richole/ns-richole-_reobject) estructura que describe un elemento OLE.
 
 ### <a name="remarks"></a>Comentarios

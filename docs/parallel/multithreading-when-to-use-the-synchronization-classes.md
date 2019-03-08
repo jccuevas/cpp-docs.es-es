@@ -11,12 +11,12 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-ms.openlocfilehash: 63555236ec41ce0a28d82aa676318b53a24169c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284377"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Multithreading: Cuándo usar las clases de sincronización de MFC
 
@@ -48,11 +48,11 @@ Como ejemplo, considere una aplicación que mantiene una lista vinculada de cuen
 
 Esta aplicación de ejemplo utiliza los tres tipos de clases de sincronización. Porque permite hasta tres cuentas que se va a examinar al mismo tiempo, usa `CSemaphore` para limitar el acceso a tres objetos de vista. Cuando se produce un intento de ver una cuarta cuenta, la aplicación espera a que se cierre una de las tres primeras ventanas o bien genera un error. Cuando se actualiza una cuenta, la aplicación utiliza `CCriticalSection` para asegurarse de que se actualiza solo una cuenta a la vez. La actualización se realiza correctamente, la aplicación señaliza `CEvent`, lo que libera un subproceso en espera para que se señale el evento. Este subproceso envía los nuevos datos al archivo de almacenamiento de datos.
 
-## <a name="example-2-using-synchronization-access-classes"></a>Ejemplo 2: Utilizar clases de acceso de sincronización
+## <a name="example-2-using-synchronization-access-classes"></a>Ejemplo 2: Uso de clases de acceso de sincronización
 
 Elegir qué clase de acceso de sincronización debe utilizar es incluso más sencillo. Si la aplicación es tener acceso a solo un único recurso controlado, utilice `CSingleLock`. Si necesita acceso a cualquiera de una serie de recursos controlados, utilice `CMultiLock`. En el ejemplo 1, `CSingleLock` habría utilizado, ya que en cada caso se necesita solo un recurso en un momento dado.
 
-Para obtener información sobre cómo se utilizan las clases de sincronización, vea [Multithreading: uso de las clases de sincronización](multithreading-how-to-use-the-synchronization-classes.md). Para obtener información acerca de la sincronización, vea [sincronización](/windows/desktop/Sync/synchronization) en el SDK de Windows. Para obtener información sobre la compatibilidad con multithreading en MFC, vea [Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md).
+Para obtener información sobre cómo se utilizan las clases de sincronización, vea [Multithreading: Cómo usar las clases de sincronización](multithreading-how-to-use-the-synchronization-classes.md). Para obtener información acerca de la sincronización, vea [sincronización](/windows/desktop/Sync/synchronization) en el SDK de Windows. Para obtener información sobre la compatibilidad con multithreading en MFC, vea [Multithreading con C++ y MFC](multithreading-with-cpp-and-mfc.md).
 
 ## <a name="see-also"></a>Vea también
 

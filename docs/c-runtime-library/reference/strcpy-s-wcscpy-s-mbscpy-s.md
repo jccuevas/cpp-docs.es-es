@@ -1,9 +1,10 @@
 ---
-title: strcpy_s, wcscpy_s, _mbscpy_s
-ms.date: 03/22/2086
+title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
+ms.date: 01/22/2019
 apiname:
 - wcscpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - strcpy_s
 apilocation:
 - msvcrt.dll
@@ -18,34 +19,37 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - strcpy_s
 - _mbscpy_s
+- _mbscpy_s_l
 - _tcscpy_s
 - wcscpy_s
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
 - _mbscpy_s function
+- _mbscpy_s_l function
 - copying strings
 - strings [C++], copying
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9763ba66867faba080ed8729b4fe07b96c56ee0d
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616611"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210528"
 ---
-# <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
+# <a name="strcpys-wcscpys-mbscpys-mbscpysl"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
 Copia una cadena. Estas versiones de [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscpy_s** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy_s** y **_mbscpy_s_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -64,6 +68,12 @@ errno_t _mbscpy_s(
    unsigned char *dest,
    rsize_t dest_size,
    const unsigned char *src
+);
+errno_t _mbscpy_s_l(
+   unsigned char *dest,
+   rsize_t dest_size,
+   const unsigned char *src,
+   _locale_t locale
 );
 ```
 
@@ -84,6 +94,12 @@ errno_t _mbscpy_s(
    unsigned char (&dest)[size],
    const unsigned char *src
 ); // C++ only
+template <size_t size>
+errno_t _mbscpy_s_l(
+   unsigned char (&dest)[size],
+   const unsigned char *src,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -96,6 +112,9 @@ Tamaño del búfer de cadena de destino en **char** unidades para las funciones 
 
 *src*<br/>
 Búfer de cadena de origen terminada en NULL.
+
+*locale*<br/>
+Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -113,7 +132,7 @@ Cero si es correcto; en caso contrario, error.
 
 El **strcpy_s** función copia el contenido de la dirección de *src*, incluido el carácter nulo final, en la ubicación especificada por *dest*. La cadena de destino debe ser lo suficientemente grande como para contener la cadena de origen y su carácter nulo de terminación. El comportamiento de **strcpy_s** es indefinido si las cadenas de origen y destino se superponen.
 
-**wcscpy_s** es la versión de caracteres anchos de **strcpy_s**, y **_mbscpy_s** es la versión de caracteres multibyte. Los argumentos de **wcscpy_s** son caracteres anchos cadenas; los de **_mbscpy_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
+**wcscpy_s** es la versión de caracteres anchos de **strcpy_s**, y **_mbscpy_s** es la versión de caracteres multibyte. Los argumentos de **wcscpy_s** son caracteres anchos cadenas; los de **_mbscpy_s** y **_mbscpy_s_l** son cadenas de caracteres multibyte. Por lo demás, estas funciones se comportan exactamente igual. **_mbscpy_s_l** es idéntico al **_mbscpy_s** salvo que usa el parámetro locale pasado en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Si *dest* o *src* es un puntero nulo, o si el tamaño de la cadena de destino *dest_size* es demasiado pequeño, se invoca el controlador de parámetros no válidos, como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL** cuando *dest* o  *src* es un puntero nulo, y devuelven **ERANGE** y establecer **errno** a **ERANGE** cuando la cadena de destino es demasiado pequeña.
 
@@ -205,8 +224,8 @@ String = Hello world from wcscpy_s and wcscat_s!
 ## <a name="see-also"></a>Vea también
 
 [Manipulación de cadenas](../../c-runtime-library/string-manipulation-crt.md) <br/>
-[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) <br/>
-[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md) <br/>
+[strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
+[strcmp, wcscmp, _mbscmp, _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md) <br/>
 [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md) <br/>

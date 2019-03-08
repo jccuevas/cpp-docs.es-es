@@ -23,12 +23,12 @@ helpviewer_keywords:
 - ON_WM_VKEYTOITEM [MFC]
 - ON_WM_VSCROLL
 ms.assetid: c528bb2e-ddb5-4da6-b652-432a387408b8
-ms.openlocfilehash: 1f543489271c6bc6e5cef2bc61de0d6df3f52748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b5dbcb52ef7a61712f2c59c217a71f533799f67
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271858"
 ---
 # <a name="wm-messages-t---z"></a>Mensajes WM_: T - Z
 
@@ -57,4 +57,3 @@ Las siguientes entradas de mapa se corresponden con los prototipos de función:
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

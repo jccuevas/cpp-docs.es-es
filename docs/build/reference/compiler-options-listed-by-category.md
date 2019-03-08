@@ -1,21 +1,21 @@
 ---
 title: Opciones del compilador por categoría
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532956"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676505"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 
 Este artículo contiene una lista por categorías de las opciones del compilador. Para acceder a una lista alfabética, vea [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Optimización
+## <a name="optimization"></a>Optimización
 
 |Opción|Propósito|
 |------------|-------------|
@@ -31,7 +31,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Oy](oy-frame-pointer-omission.md)|Omite el puntero de marco. (solo x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Muestra el código optimizado para una arquitectura especificada o para un intervalo de arquitecturas.|
 
-### <a name="code-generation"></a>Generación de código
+## <a name="code-generation"></a>Generación de código
 
 |Opción|Propósito|
 |------------|-------------|
@@ -46,7 +46,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Gh](gh-enable-penter-hook-function.md)|Llama a la función de enlace `_penter`.|
 |[/GH](gh-enable-pexit-hook-function.md)|Llama a la función de enlace `_pexit`.|
 |[/GL](gl-whole-program-optimization.md)|Habilita la optimización completa del programa.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Habilita la recompilación mínima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Habilita la recompilación mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita la información de tipo en tiempo de ejecución (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__fastcall` . (solo x86)|
 |[/GS](gs-buffer-security-check.md)|Comprueba la seguridad de búfer.|
@@ -62,17 +62,17 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Fuerza la escritura de parámetros pasados en registros en sus ubicaciones en la pila a la entrada de la función. Esta opción del compilador es solo para el x64 compiladores (compilación nativos y cruzada).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea una imagen a la que se puede aplicar una revisión reciente.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Genera funciones transcendentales rápidas.|
-|[QIfist](qifist-suppress-ftol.md)|Desusado. Suprime la llamada de la función del asistente `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero. (solo x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Desusado. Suprime la llamada de la función del asistente `_ftol` cuando se requiere la conversión de un tipo de punto flotante a un tipo entero. (solo x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Quita los comandos `fwait` del interior de los bloques `try` .|
 |[/Qpar](qpar-auto-parallelizer.md)|Habilita la ejecución en paralelo automática de bucles.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Habilita los niveles de informe para la ejecución en paralelo automática.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Utiliza instrucciones de movimiento de enteros para valores de punto flotante y deshabilita ciertas optimizaciones de carga de punto flotante.|
 |[/Qspectre](qspectre.md)|Habilitar mitigaciones para CVE 2017-5753, para una clase de ataques de Spectre.|
-|[/ Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|
+|[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|Habilita los niveles de informe para la vectorización automática.|
 |[/RTC](rtc-run-time-error-checks.md)|Habilita la comprobación de errores en tiempo de ejecución.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Selecciona cómo se interpreta la palabra clave volatile.|
 
-### <a name="output-files"></a>Archivos de salida
+## <a name="output-files"></a>Archivos de salida
 
 |Opción|Finalidad|
 |------------|-------------|
@@ -85,9 +85,9 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Fm](fm-name-mapfile.md)|Crea un archivo de asignaciones.|
 |[/Fo](fo-object-file-name.md)|Crea un archivo de objeto.|
 |[/Fp](fp-name-dot-pch-file.md)|Especifica el nombre de un archivo de encabezado precompilado.|
-|[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nombre generado los archivos .sbr explorador.|
+|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|Nombre generado los archivos .sbr explorador.|
 
-### <a name="preprocessor"></a>Preprocesador
+## <a name="preprocessor"></a>Preprocesador
 
 |Opción|Propósito|
 |------------|-------------|
@@ -105,7 +105,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/u](u-u-undefine-symbols.md)|Quita todas las macros predefinidas.|
 |[/X](x-ignore-standard-include-paths.md)|Omite el directorio de archivos de inclusión estándar.|
 
-### <a name="language"></a>Lenguaje
+## <a name="language"></a>Lenguaje
 
 |Opción|Propósito|
 |------------|-------------|
@@ -121,7 +121,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Za](za-ze-disable-language-extensions.md)|Deshabilita las extensiones del lenguaje|
 |[/Zc](zc-conformance.md)|Especifica un comportamiento estándar bajo [/Ze](za-ze-disable-language-extensions.md).|
 |[/Ze](za-ze-disable-language-extensions.md)|Desusado. Habilita las extensiones de lenguaje.|
-|[/ZF](zf.md)|PDB mejora el tiempo de generación en las compilaciones en paralelo.|
+|[/Zf](zf.md)|PDB mejora el tiempo de generación en las compilaciones en paralelo.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Incluye la información de depuración en una base de datos de programa compatible con Editar y continuar. (solo x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Genera información de depuración completa.|
 |[/Zl](zl-omit-default-library-name.md)|Quita el nombre de la biblioteca predeterminada del archivo .obj.|
@@ -129,7 +129,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Zs](zs-syntax-check-only.md)|Comprueba únicamente la sintaxis.|
 |[/ZW](zw-windows-runtime-compilation.md)|Genera un archivo de salida para ejecutarse en el tiempo de ejecución de Windows.|
 
-### <a name="linking"></a>Vinculación
+## <a name="linking"></a>Vinculación
 
 |Opción|Propósito|
 |------------|-------------|
@@ -143,7 +143,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/MT](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso mediante LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Compila para crear un archivo ejecutable multiproceso para depuración mediante LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Varios
+## <a name="miscellaneous"></a>Varios
 
 |Opción|Propósito|
 |------------|-------------|
@@ -159,7 +159,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/J](j-default-char-type-is-unsigned.md)|Cambia el tipo `char` predeterminado.|
-|[/ JMC](jmc.md)|Admite la depuración nativa de C++ solo mi código.|
+|[/JMC](jmc.md)|Admite la depuración nativa de C++ solo mi código.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|El compilador y el vinculador producirán un binario que se puede ejecutar en el kernel de Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Compila varios archivos de código fuente simultáneamente.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Suprime la presentación de la pancarta de inicio de sesión.|
@@ -186,27 +186,28 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 |[/Yu](yu-use-precompiled-header-file.md)|Usa un archivo de encabezado precompilado durante la compilación.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Omite todas las demás opciones del compilador de encabezado precompilado en la generación actual.|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Especifica el límite de asignación de memoria del encabezado precompilado.|
-|[/ await](await-enable-coroutine-support.md)|Habilitar las extensiones de corrutinas (las funciones reanudables).|
-|[/ Source-CharSet](source-charset-set-source-character-set.md)|Establecer el juego de caracteres de origen.|
-|[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Establecer el juego de caracteres de ejecución.|
-|[/ UTF-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Conjunto de caracteres de origen y ejecución se establece en UTF-8.|
-|[/ Validate/CharSet](validate-charset-validate-for-compatible-characters.md)|Validar archivos UTF-8 únicamente caracteres compatibles.|
-|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla el formato de mensajes de diagnóstico.|
-|[/ permissive-](permissive-standards-conformance.md)|Establecer el modo de cumplimiento del estándar.|
-|[/ STD](std-specify-language-standard-version.md)|Selector de compatibilidad de la versión estándar de C++.|
+|[/await](await-enable-coroutine-support.md)|Habilitar las extensiones de corrutinas (las funciones reanudables).|
+|[/source-charset](source-charset-set-source-character-set.md)|Establecer el juego de caracteres de origen.|
+|[/execution-charset](execution-charset-set-execution-character-set.md)|Establecer el juego de caracteres de ejecución.|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Conjunto de caracteres de origen y ejecución se establece en UTF-8.|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Validar archivos UTF-8 únicamente caracteres compatibles.|
+|[/diagnostics](diagnostics-compiler-diagnostic-options.md)|Controla el formato de mensajes de diagnóstico.|
+|[/permissive-](permissive-standards-conformance.md)|Establecer el modo de cumplimiento del estándar.|
+|[/std](std-specify-language-standard-version.md)|Selector de compatibilidad de la versión estándar de C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Opciones del compilador en desuso y quitadas
+## <a name="deprecated-and-removed-compiler-options"></a>Opciones del compilador en desuso y quitadas
 
 |Opción|Propósito|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Desusado. Utilice [/LN (Create MSIL Module)](ln-create-msil-module.md) en su lugar.|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Desusado. Crea un archivo de información de examen sin variables locales.|
 |[/Ge](ge-enable-stack-probes.md)|Desusado. Activa las comprobaciones de la pila. Esta opción está activada de manera predeterminada.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Habilita la recompilación mínima.|
 |[/GX](gx-enable-exception-handling.md)|Desusado. Habilita el control sincrónico de excepciones. Use [/EH](eh-exception-handling-model.md) en su lugar.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Desusado. Habilita las comprobaciones rápidas. Use [/RTC1](rtc-run-time-error-checks.md) en su lugar.|
 |[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
 |[/Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
-|[QIfist](qifist-suppress-ftol.md)|Desusado. Se usaba para especificar cómo hacer una conversión de un tipo de punto flotante a un tipo entero.|
+|[/QIfist](qifist-suppress-ftol.md)|Desusado. Se usaba para especificar cómo hacer una conversión de un tipo de punto flotante a un tipo entero.|
 |[/V](v-version-number.md)|Desusado. Establece la cadena de versión del archivo .obj.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Obsoleto. Detecta problemas de portabilidad de 64 bits.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Desusado. Coloca información completa de depuración en todos los archivos de objeto. Use [/Zi](z7-zi-zi-debug-information-format.md) en su lugar.|

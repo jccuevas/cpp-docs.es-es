@@ -1,6 +1,6 @@
 ---
-title: 'Controladores de mensajes WM_: F - K'
-ms.date: 11/04/2016
+title: 'Mensajes Wm_: F - K'
+ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
 - ON_WM_ICONERASEBKGND
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: 993202e0d0037c510886e43004ee499599234a62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609914"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282089"
 ---
-# <a name="wm-message-handlers-f---k"></a>Controladores de mensajes WM_: F - K
+# <a name="wm-message-handlers-f---k"></a>Mensajes Wm_: F - K
 
 Las siguientes entradas de mapa de la izquierda se corresponden con los prototipos de función de la derecha:
 
@@ -44,7 +44,7 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 |---------------|------------------------|
 |ON_WM_FONTCHANGE()|void afx_msg [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)();|
 |ON_WM_GETDLGCODE()|afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
-|ON_WM_GETMINMAXINFO()|void afx_msg [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(LPPOINT);|
+|ON_WM_GETMINMAXINFO()|void afx_msg [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(MINMAXINFO *);|
 |ON_WM_HELPINFO()|afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *);|
 |ON_WM_HOTKEY()|void afx_msg [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)(UINT, UINT, UINT);|
 |ON_WM_HSCROLL()|void afx_msg [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, UINT, CWnd *);|
@@ -64,4 +64,3 @@ Las siguientes entradas de mapa de la izquierda se corresponden con los prototip
 
 [Mapas de mensajes](../../mfc/reference/message-maps-mfc.md)<br/>
 [Controladores de mensajes WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

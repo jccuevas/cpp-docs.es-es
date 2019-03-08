@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 49a65680d330752679c86c47c4b142ee3153237c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533801"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693719"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn, _wspawn (Funciones)
 
@@ -139,7 +139,7 @@ Los nuevos procesos creados mediante llamadas a rutinas de `_spawn` no conservan
 
 Si va a llamar a `_spawn` desde un archivo DLL o una aplicación de interfaz gráfica de usuario y quiere redirigir el resultado a una canalización, tiene dos opciones:
 
-- Usar la API de Win32 para crear una canalización, llamar a [AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944), establecer los valores de identificador en la estructura de inicio y llamar a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
+- Usar la API de Win32 para crear una canalización, llamar a [AllocConsole](/windows/console/allocconsole), establecer los valores de identificador en la estructura de inicio y llamar a [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa).
 
 - Llamar a [_popen, _wpopen](../c-runtime-library/reference/popen-wpopen.md), lo que creará una canalización e invocará a la aplicación con **cmd.exe /c** (o **command.exe /c**).
 

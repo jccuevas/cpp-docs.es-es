@@ -12,21 +12,19 @@ helpviewer_keywords:
 - maximum number of files
 - open files, maximum
 ms.assetid: 39cf5196-250a-459d-ae90-ce3d99f79039
-ms.openlocfilehash: 4be9eab86a59c272ed2428d9cca72597990efb9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e240c7f797e385cc96fd414e0e4484cc1fdc82e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444218"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220301"
 ---
 # <a name="fopenmax-sysopen"></a>FOPEN_MAX, _SYS_OPEN
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <stdio.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

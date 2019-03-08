@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: fad906510a111a2132d590d7c221d2484645f044
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591209"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290838"
 ---
 # <a name="cd2drectf-class"></a>Clase CD2DRectF
 
@@ -75,7 +75,7 @@ CD2DRectF(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 rectángulo de origen
 
 *fLeft*<br/>
@@ -84,7 +84,7 @@ Coordenada izquierda de origen
 *fTop*<br/>
 Coordenada superior de origen
 
-*Más*<br/>
+*fRight*<br/>
 Coordenada derecha de origen
 
 *fBottom*<br/>

@@ -8,12 +8,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: f97a4ff0dc28077d42fe0f8ca4992946db4082f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275316"
 ---
 # <a name="server-registration-global-functions"></a>Funciones globales de registro de servidor
 
@@ -53,7 +53,7 @@ Puntero al módulo COM.
 *bRegTypeLib*<br/>
 TRUE si la biblioteca de tipos es que se registrarán.
 
-*pTypeInfo*<br/>
+*pCLSID*<br/>
 Señala el CLSID del objeto que se registrarán. Si es NULL, se registrarán todos los objetos en el mapa de objetos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -85,7 +85,7 @@ Puntero al módulo COM.
 *bUnRegTypeLib*<br/>
 TRUE si la biblioteca de tipos es que se registrarán.
 
-*pTypeInfo*<br/>
+*pCLSID*<br/>
 Señala el CLSID del objeto que se va a anular. Si NULL se anula todos los objetos en el mapa de objetos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -172,7 +172,7 @@ El CLSID del objeto que se va a crear.
 *riid*<br/>
 IID de la interfaz solicitada.
 
-*PPV*<br/>
+*ppv*<br/>
 Un puntero al puntero de interfaz identificado por *riid*. Si el objeto no admite esta interfaz, *ppv* se establece en NULL.
 
 ### <a name="return-value"></a>Valor devuelto

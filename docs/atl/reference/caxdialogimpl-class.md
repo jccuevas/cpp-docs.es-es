@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-ms.openlocfilehash: 1814d95ae4346706c8f78125903e26fca8136d68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6f08553a9eff421923ef348caee2022849674ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544604"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301992"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl (clase)
 
@@ -52,7 +52,7 @@ La clase de ventana base para `CDialogImplBaseT`.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAxDialogImpl:: AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.|
+|[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.|
 |[CAxDialogImpl::Create](#create)|Llame a este método para crear un cuadro de diálogo no modal.|
 |[CAxDialogImpl::DestroyWindow](#destroywindow)|Llame a este método para destruir un cuadro de diálogo no modal.|
 |[CAxDialogImpl::DoModal](#domodal)|Llame a este método para crear un cuadro de diálogo modal.|
@@ -101,7 +101,7 @@ Para obtener más información sobre `CAxDialogImpl`, consulte [preguntas más f
 
 **Encabezado:** atlwin.h
 
-##  <a name="advisesinkmap"></a>  CAxDialogImpl:: AdviseSinkMap
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
 
 Llame a este método para notificar o no notificar todas las entradas de mapa de asignación de eventos de receptor del objeto.
 
@@ -135,7 +135,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
 
-*RECT &AMP;*<br/>
+*RECT&*<br/>
 Este parámetro no se utiliza. Este parámetro se pasa `CComControl`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -177,7 +177,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parámetros
 
 *hWndParent*<br/>
-[in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) función de Win32.
+[in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) función de Win32.
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -255,7 +255,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="parameters"></a>Parámetros
 
 *pMsg*<br/>
-Puntero a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estructura que contiene el mensaje se va a comprobar.
+Puntero a un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estructura que contiene el mensaje se va a comprobar.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: Personalizar la barra de herramientas de acceso rápido'
-ms.date: 11/04/2016
+title: Procedimiento Personalizar la barra de herramientas de acceso rápido
+ms.date: 11/19/2018
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558488"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300731"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Cómo: Personalizar la barra de herramientas de acceso rápido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Filtrar Personalizar la barra de herramientas de acceso rápido
 
 La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran al lado del botón de la aplicación o en las fichas de categoría. La siguiente ilustración muestra una barra de herramientas de acceso rápido típico.
 
-![Barra de herramientas de acceso rápido de MFC Ribbon](../mfc/media/quick_access_toolbar.png "quick_access_toolbar")
+![Barra de herramientas de acceso rápido de cinta de opciones MFC](../mfc/media/quick_access_toolbar.png "barra de herramientas de acceso rápido de cinta de opciones MFC")
 
 Para personalizar la barra de herramientas de acceso rápido, ábralo en el **propiedades** , modifique sus comandos y, a continuación, obtener una vista previa del control de la cinta de opciones.
 
@@ -55,4 +55,3 @@ Comandos de barra de herramientas acceso rápidos no aparecen en la superficie d
 ## <a name="see-also"></a>Vea también
 
 [Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
-

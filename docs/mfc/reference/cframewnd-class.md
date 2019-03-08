@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300897"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (clase)
 
@@ -139,10 +139,10 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Establece la ventana de marco en modal.|
 |[CFrameWnd::Create](#create)|Llamada a crear e inicializar la ventana de marco de Windows asociada con el `CFrameWnd` objeto.|
 |[CFrameWnd::CreateView](#createview)|Crea una vista dentro de un marco que no se deriva `CView`.|
-|[CFrameWnd:: DockControlBar](#dockcontrolbar)|Una barra de control se acopla.|
-|[CFrameWnd:: EnableDocking](#enabledocking)|Permite que una barra de control quede acoplado.|
+|[CFrameWnd::DockControlBar](#dockcontrolbar)|Una barra de control se acopla.|
+|[CFrameWnd::EnableDocking](#enabledocking)|Permite que una barra de control quede acoplado.|
 |[CFrameWnd::EndModalState](#endmodalstate)|Finaliza el estado de la ventana de marco modal. Habilita todas las ventanas deshabilitadas de forma `BeginModalState`.|
-|[CFrameWnd:: FloatControlBar](#floatcontrolbar)|Flota una barra de controles.|
+|[CFrameWnd::FloatControlBar](#floatcontrolbar)|Flota una barra de controles.|
 |[CFrameWnd::GetActiveDocument](#getactivedocument)|Devuelve el activo `CDocument` objeto.|
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|Devuelve el activo `CFrameWnd` objeto.|
 |[CFrameWnd::GetActiveView](#getactiveview)|Devuelve el activo `CView` objeto.|
@@ -151,21 +151,21 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::GetMenuBarState](#getmenubarstate)|Recupera el estado de vista del menú de la aplicación MFC actual.|
 |[CFrameWnd::GetMenuBarVisibility](#getmenubarvisibility)|Indica si el comportamiento predeterminado del menú de la aplicación MFC actual está oculto o visible.|
 |[CFrameWnd::GetMessageBar](#getmessagebar)|Devuelve un puntero a la que pertenecen a la ventana de marco de la barra de estado.|
-|[CFrameWnd:: GetMessageString](#getmessagestring)|Recupera el mensaje correspondiente a un identificador de comando.|
+|[CFrameWnd::GetMessageString](#getmessagestring)|Recupera el mensaje correspondiente a un identificador de comando.|
 |[CFrameWnd::GetTitle](#gettitle)|Recupera el título de la barra de controles relacionados.|
 |[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|Hace que el `OnInitialUpdate` función miembro que pertenecen a todas las vistas en la ventana de marco que se llame.|
 |[CFrameWnd::InModalState](#inmodalstate)|Devuelve un valor que indica si es o no una ventana de marco en un estado modal.|
 |[CFrameWnd::IsTracking](#istracking)|Determina si actualmente se está moviendo barra divisora.|
 |[CFrameWnd::LoadAccelTable](#loadacceltable)|Llamada a cargar una tabla de aceleradores.|
-|[CFrameWnd:: LoadBarState](#loadbarstate)|Llamada a restaurar la configuración de la barra de control.|
+|[CFrameWnd::LoadBarState](#loadbarstate)|Llamada a restaurar la configuración de la barra de control.|
 |[CFrameWnd::LoadFrame](#loadframe)|Llamada a crear dinámicamente una ventana de marco de información de recursos.|
 |[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|Negocia el espacio del borde de la ventana de marco.|
 |[CFrameWnd::OnBarCheck](#onbarcheck)|Se llama cada vez que se realice una acción en la barra de control especificado.|
 |[CFrameWnd::OnContextHelp](#oncontexthelp)|Controla MAYÚS + F1 Ayuda para los elementos en contexto.|
-|[CFrameWnd:: Onsetpreviewmode](#onsetpreviewmode)|Establece la ventana de marco principal de la aplicación dentro y fuera del modo de vista previa de impresión.|
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|Establece la ventana de marco principal de la aplicación dentro y fuera del modo de vista previa de impresión.|
 |[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|Lo llama el marco de trabajo cuando se actualiza el menú asociado.|
-|[RecalcLayout](#recalclayout)|Cambia de posición de las barras de control de la `CFrameWnd` objeto.|
-|[CFrameWnd:: SaveBarState](#savebarstate)|Llamada a guardar la configuración de la barra de control.|
+|[CFrameWnd::RecalcLayout](#recalclayout)|Cambia de posición de las barras de control de la `CFrameWnd` objeto.|
+|[CFrameWnd::SaveBarState](#savebarstate)|Llamada a guardar la configuración de la barra de control.|
 |[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|Designa la vista especificada sea la vista activa para vista previa avanzada.|
 |[CFrameWnd::SetActiveView](#setactiveview)|Establece el activo `CView` objeto.|
 |[CFrameWnd::SetDockState](#setdockstate)|Llamada a acoplar la ventana de marco en la ventana principal.|
@@ -329,7 +329,7 @@ Apunta a una cadena de caracteres terminada en null que representa el nombre de 
 *dwStyle*<br/>
 Especifica el período de [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. Incluya el estilo FWS_ADDTOTITLE si desea que la barra de título para mostrar automáticamente el nombre del documento representado en la ventana.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y posición de la ventana. El *rectDefault* valor permite que Windows especificar el tamaño y posición de la nueva ventana.
 
 *pParentWnd*<br/>
@@ -380,7 +380,7 @@ Puntero a un `CWnd` objeto si es correcto; de lo contrario, NULL.
 
 Use esta función miembro para crear "vistas" que no son `CView`-derivadas dentro de un marco. Después de llamar a `CreateView`, debe establecer la vista activa manualmente y establecer que sea visible; de estas tareas no se realizan automáticamente por `CreateView`.
 
-##  <a name="dockcontrolbar"></a>  CFrameWnd:: DockControlBar
+##  <a name="dockcontrolbar"></a>  CFrameWnd::DockControlBar
 
 Hace que una barra de control se acopla a la ventana de marco.
 
@@ -416,7 +416,7 @@ Determina, en coordenadas de pantalla, donde se acoplará la barra de control en
 
 La barra de control se acoplará a uno de los lados de la ventana de marco especificado en las llamadas a ambos [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) y [CFrameWnd:: EnableDocking](#enabledocking). Los elegidos lado viene determinada por *nDockBarID*.
 
-##  <a name="enabledocking"></a>  CFrameWnd:: EnableDocking
+##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking
 
 Llame a esta función para habilitar las barras de control acoplable en una ventana de marco.
 
@@ -459,7 +459,7 @@ virtual void EndModalState();
 
 `EndModalState` habilita todas las ventanas deshabilitadas de forma [BeginModalState](#beginmodalstate).
 
-##  <a name="floatcontrolbar"></a>  CFrameWnd:: FloatControlBar
+##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar
 
 Llame a esta función para que una barra de control no se acopla a la ventana de marco.
 
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 Apunta a la barra de control a flotar.
 
-*punto*<br/>
+*point*<br/>
 La ubicación, en coordenadas de pantalla, donde se colocará la esquina superior izquierda de la barra de control.
 
 *dwStyle*<br/>
@@ -637,7 +637,7 @@ virtual CWnd* GetMessageBar();
 
 Puntero a la ventana de la barra de estado.
 
-##  <a name="getmessagestring"></a>  CFrameWnd:: GetMessageString
+##  <a name="getmessagestring"></a>  CFrameWnd::GetMessageString
 
 Reemplace esta función para proporcionar cadenas personalizadas para los identificadores de comando.
 
@@ -744,7 +744,7 @@ Tablas de aceleradores cargadas desde los recursos se liberan automáticamente c
 
 Si se llama a `LoadFrame` para crear la ventana de marco, el marco de trabajo carga una tabla de aceleradores junto con los recursos de menú y el icono y, a continuación, es necesaria una llamada subsiguiente a esta función miembro.
 
-##  <a name="loadbarstate"></a>  CFrameWnd:: LoadBarState
+##  <a name="loadbarstate"></a>  CFrameWnd::LoadBarState
 
 Llame a esta función para restaurar la configuración de cada barra de controles que pertenecen a la ventana de marco.
 
@@ -844,7 +844,7 @@ Contiene uno de los siguientes valores de la `enum BorderCmd`:
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Puntero a un [RECT](../../mfc/reference/rect-structure1.md) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas del borde.
+Puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura o un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica las coordenadas del borde.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -901,8 +901,8 @@ virtual BOOL OnCreateClient(
 
 ### <a name="parameters"></a>Parámetros
 
-*LPC*<br/>
-Un puntero a un Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) estructura.
+*lpcs*<br/>
+Un puntero a un Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estructura.
 
 *pContext*<br/>
 Un puntero a un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) estructura.
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 Este controlador de eventos permite que la aplicación realizar acciones personalizadas cuando el sistema está a punto de ocultar el menú. No se puede impedir que el menú está oculto, pero puede, por ejemplo, llamar a otros métodos para recuperar el estilo de menú o el estado.
 
-##  <a name="onsetpreviewmode"></a>  CFrameWnd:: Onsetpreviewmode
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode
 
 Llame a esta función miembro para establecer la ventana de marco principal de la aplicación dentro y fuera del modo de vista previa de impresión.
 
@@ -983,7 +983,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 *pCmdUI*<br/>
 Un puntero a un [CCmdUI](../../mfc/reference/ccmdui-class.md) objeto que representa el menú que generó el comando de actualización. Las llamadas del controlador de actualización de la [habilitar](../../mfc/reference/ccmdui-class.md#enable) función miembro de la `CCmdUI` objeto a través de *pCmdUI* para actualizar la interfaz de usuario.
 
-##  <a name="recalclayout"></a>  RecalcLayout
+##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout
 
 Lo llama el marco de trabajo cuando las barras de control estándar se activan o desactivan, o cuando se cambia el tamaño de la ventana de marco.
 
@@ -1010,7 +1010,7 @@ Pase este estático `CRect` como un parámetro al crear una ventana para permiti
 static AFX_DATA const CRect rectDefault;
 ```
 
-##  <a name="savebarstate"></a>  CFrameWnd:: SaveBarState
+##  <a name="savebarstate"></a>  CFrameWnd::SaveBarState
 
 Llame a esta función para almacenar información sobre cada propiedad de la ventana de marco de la barra de control.
 
@@ -1115,7 +1115,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*nStyle*|[in] Especifica si el menú está oculta, de manera predeterminada o es visible y tiene el foco. El *nStyle* parámetro puede tener los siguientes valores:<br /><br />-AFX_MBV_KEEPVISIBLE (0 X 01):<br />     El menú se muestra en todo momento y, de forma predeterminada no tiene el foco.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     El menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla ALT para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla ALT o ESC para ocultar el menú.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinación bit a bit (OR)): el menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla F10 para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla F10 para alternar el foco o desactivar el menú. Se muestra el menú hasta que presione la tecla ALT o ESC para ocultarlo.|
+|*nStyle*|[in] Especifica si el menú está oculta, de manera predeterminada o es visible y tiene el foco. El *nStyle* parámetro puede tener los siguientes valores:<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     El menú se muestra en todo momento y, de forma predeterminada no tiene el foco.<br />-AFX_MBV_DISPLAYONFOCUS (0 X 02):<br />     El menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla ALT para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla ALT o ESC para ocultar el menú.<br />-AFX_MBV_ DISPLAYONFOCUS (0 x 02) &#124; AFX_MBV_DISPLAYONF10 (0 x 04)<br />     (combinación bit a bit (OR)): el menú está oculta de forma predeterminada. Si se oculta el menú, presione la tecla F10 para mostrar el menú y asignarle el foco. Si se muestra el menú, presione la tecla F10 para alternar el foco o desactivar el menú. Se muestra el menú hasta que presione la tecla ALT o ESC para ocultarlo.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Parámetros
 
 *tbpFlags*<br/>
-Marcas que controlan el estado actual del botón del progreso. Especifique solo uno de los siguientes indicadores porque todos los Estados son mutuamente excluyentes: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Marcas que controlan el estado actual del botón del progreso. Especifique solo una de las marcas siguientes porque todos los Estados son mutuamente excluyentes: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1254,7 +1254,7 @@ void ShowControlBar(
 *pBar*<br/>
 Puntero a la barra de control para mostrar u ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 Si es TRUE, especifica que se mostrará la barra de control. Si es FALSE, especifica que la barra de control está a punto de ocultarse.
 
 *bDelay*<br/>
@@ -1270,7 +1270,7 @@ void ShowOwnedWindows(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica si las ventanas de propiedad se puede mostrar u ocultar.
 
 ## <a name="see-also"></a>Vea también

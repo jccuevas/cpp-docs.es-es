@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300728"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection (clase)
 
@@ -46,9 +46,9 @@ class CGopherConnection : public CInternetConnection
 
 |Name|Descripción|
 |----------|-----------------|
-|[CGopherConnection:: CreateLocator](#createlocator)|Crea un [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto va a buscar archivos en un servidor gopher.|
+|[CGopherConnection::CreateLocator](#createlocator)|Crea un [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) objeto va a buscar archivos en un servidor gopher.|
 |[CGopherConnection::GetAttribute](#getattribute)|Recupera información de atributos sobre el objeto gopher.|
-|[CGopherConnection:: OpenFile](#openfile)|Abre un archivo gopher.|
+|[CGopherConnection::OpenFile](#openfile)|Abre un archivo gopher.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -126,7 +126,7 @@ Número que identifica el puerto TCP/IP que se usará en el servidor.
 
 No crear nunca un `CGopherConnection` directamente. En su lugar, llame a [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), que crea un `CGopherConnection` de objetos y devuelve un puntero a él.
 
-##  <a name="createlocator"></a>  CGopherConnection:: CreateLocator
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator
 
 Llame a esta función miembro para crear un localizador gopher para buscar o identificar un archivo en un servidor gopher.
 
@@ -201,7 +201,7 @@ Una referencia a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) 
 
 Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.
 
-##  <a name="openfile"></a>  CGopherConnection:: OpenFile
+##  <a name="openfile"></a>  CGopherConnection::OpenFile
 
 Llame a esta función miembro para abrir un archivo en un servidor gopher.
 
@@ -233,7 +233,7 @@ Un puntero a la [CGopherFile](../../mfc/reference/cgopherfile-class.md) objeto q
 
 ### <a name="remarks"></a>Comentarios
 
-Invalidar el *dwContext* predeterminada para establecer el identificador de contexto en un valor de su elección. El identificador de contexto está asociado con esta operación específica de la `CGopherConnection` objeto creado por su [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. El valor se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado de la operación con el que se identifica. Consulte el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.
+Invalidar el *dwContext* predeterminada para establecer el identificador de contexto en un valor de su elección. El identificador de contexto está asociado con esta operación específica de la `CGopherConnection` objeto creado por su [CInternetSession](../../mfc/reference/cinternetsession-class.md) objeto. El valor se devuelve al [CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) para proporcionar el estado de la operación con el que se identifica. Consulte el artículo [Internet primeros pasos: WinInet](../../mfc/wininet-basics.md) para obtener más información sobre el identificador de contexto.
 
 ## <a name="see-also"></a>Vea también
 

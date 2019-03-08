@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261705"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase (clase)
 
@@ -46,15 +46,15 @@ El tipo de objeto que hace referencia el puntero inteligente.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|Destructor.|
+|[CComPtrBase::~CComPtrBase](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[¡CComPtrBase:: Advise](#advise)|Llame a este método para crear una conexión entre el `CComPtrBase`del punto de conexión y el receptor de un cliente.|
+|[CComPtrBase::Advise](#advise)|Llame a este método para crear una conexión entre el `CComPtrBase`del punto de conexión y el receptor de un cliente.|
 |[CComPtrBase::Attach](#attach)|Llame a este método para tomar posesión de un puntero existente.|
-|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|Llame a este método para crear un objeto de la clase asociada con un Id. de clase especificado o el Id. de programa.|
+|[CComPtrBase::CoCreateInstance](#cocreateinstance)|Llame a este método para crear un objeto de la clase asociada con un Id. de clase especificado o el Id. de programa.|
 |[CComPtrBase::CopyTo](#copyto)|Llame a este método para copiar el `CComPtrBase` puntero a otra variable de puntero.|
 |[CComPtrBase::Detach](#detach)|Llame a este método para liberar la propiedad de un puntero.|
 |[CComPtrBase::IsEqualObject](#isequalobject)|Llame a este método para comprobar si especificado `IUnknown` apunta al mismo objeto asociado con el `CComPtrBase` objeto.|
@@ -66,8 +66,8 @@ El tipo de objeto que hace referencia el puntero inteligente.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CComPtrBase::operator T *](#operator_t_star)|El operador de conversión.|
-|[¡CComPtrBase::operator!](#operator_not)|El operador NOT.|
+|[CComPtrBase::operator T*](#operator_t_star)|El operador de conversión.|
+|[CComPtrBase::operator !](#operator_not)|El operador NOT.|
 |[CComPtrBase::operator &](#operator_amp)|El & operador.|
 |[CComPtrBase::operator *](#operator_star)|El operador \*.|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|El menor-que el operador.|
@@ -88,7 +88,7 @@ Esta clase proporciona la base para otros punteros inteligentes que use las ruti
 
 **Encabezado:** atlcomcli.h
 
-##  <a name="advise"></a>  ¡CComPtrBase:: Advise
+##  <a name="advise"></a>  CComPtrBase::Advise
 
 Llame a este método para crear una conexión entre el `CComPtrBase`del punto de conexión y el receptor de un cliente.
 
@@ -104,10 +104,10 @@ HRESULT Advise(
 *pUnk*<br/>
 Un puntero para el cliente `IUnknown`.
 
-*IID*<br/>
+*iid*<br/>
 El GUID del punto de conexión. Normalmente, esto es igual que la interfaz de salida administrada por el punto de conexión.
 
-*PDW*<br/>
+*pdw*<br/>
 Un puntero a la cookie que identifica la conexión.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -128,14 +128,14 @@ void Attach(T* p2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*P2*<br/>
+*p2*<br/>
 La `CComPtrBase` objeto tomará posesión de este puntero.
 
 ### <a name="remarks"></a>Comentarios
 
 `Attach` las llamadas [CComPtrBase::Release](#release) en existente [CComPtrBase::p](#p) variable miembro y, a continuación, asigna *p2* a `CComPtrBase::p`. Cuando un `CComPtrBase` objeto toma posesión de un puntero, se llamará automáticamente a `Release` en el puntero que se eliminará el puntero y los datos asignados si el recuento de referencias en el objeto llega a 0.
 
-##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase
+##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
 
 Destructor.
 
@@ -147,7 +147,7 @@ Destructor.
 
 Libera la interfaz apuntada `CComPtrBase`.
 
-##  <a name="cocreateinstance"></a>  CComPtrBase:: CoCreateInstance
+##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance
 
 Llame a este método para crear un objeto de la clase asociada con un Id. de clase especificado o el Id. de programa.
 
@@ -237,13 +237,14 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="parameters"></a>Parámetros
 
 *pOther*<br/>
-`IUnknown *` que se va comparar.
+
+  `IUnknown *` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve true si los objetos son idénticos, false en caso contrario.
 
-##  <a name="operator_not"></a>  ¡CComPtrBase::operator!
+##  <a name="operator_not"></a>  CComPtrBase::operator !
 
 El operador NOT.
 
@@ -298,7 +299,7 @@ Un puntero a un objeto.
 
 Devuelve true si `CComPtrBase` y *pT* apuntan al objeto mismo, false en caso contrario.
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CComPtrBase::operator -&gt;
 
 El operador de puntero a miembro.
 
@@ -369,7 +370,7 @@ template <class Q> HRESULT QueryInterface(Q
 *Q*<br/>
 El tipo de objeto cuyo puntero de interfaz es necesario.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 Dirección de variable de salida que recibe el puntero de interfaz solicitada.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-ms.openlocfilehash: ba63fdca32af28d0763dd4cf2da3465a99ddeb1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca9f89565770e60a59007d609d132fae15eacae6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304800"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>Pestañas y atributos del control de pestaña
 
@@ -31,4 +31,3 @@ Para obtener más información acerca de los atributos de la pestaña, vea [pest
 
 [Uso de CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

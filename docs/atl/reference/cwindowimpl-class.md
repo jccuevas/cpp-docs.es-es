@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 0a1d0c79e97cf9f9cb0c2b0c6b140654deb4c227
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417936"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl (clase)
 
@@ -56,7 +56,7 @@ Un [clase traits](../../atl/understanding-window-traits.md) que define los estil
 
 |Name|Descripción|
 |----------|-----------------|
-|[CWindowImpl:: Create](#create)|Crea una ventana.|
+|[CWindowImpl::Create](#create)|Crea una ventana.|
 
 ### <a name="cwindowimplbaset-methods"></a>Métodos de CWindowImplBaseT
 
@@ -126,7 +126,7 @@ El destructor de clase base (~ `CWindowImplRoot`) garantiza que se ha desapareci
 
 **Encabezado:** atlwin.h
 
-##  <a name="create"></a>  CWindowImpl:: Create
+##  <a name="create"></a>  CWindowImpl::Create
 
 Crea una ventana basada en una nueva clase de ventana.
 
@@ -146,8 +146,8 @@ HWND Create(
 *hWndParent*<br/>
 [in] El identificador de la ventana principal o propietaria.
 
-*Rect*<br/>
-[in] Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.
+*rect*<br/>
+[in] Un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que especifica la posición de la ventana. El `RECT` puede pasarse por referencia o puntero.
 
 *szWindowName*<br/>
 [in] Especifica el nombre de la ventana. El valor predeterminado es NULL.
@@ -210,7 +210,7 @@ El resultado del procesamiento del mensaje.
 
 ### <a name="remarks"></a>Comentarios
 
-De forma predeterminada, `DefWindowProc` llamadas la [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) Win32/función para enviar la información del mensaje al procedimiento de ventana especificado en [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+De forma predeterminada, `DefWindowProc` llamadas la [CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca) Win32/función para enviar la información del mensaje al procedimiento de ventana especificado en [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 La función sin parámetros recupera automáticamente los parámetros necesarios desde el mensaje actual.
 
@@ -333,7 +333,7 @@ HWND UnsubclassWindow();
 
 El identificador de la ventana previamente una subclase.
 
-##  <a name="windowproc"></a>  CWindowImpl:: WindowProc
+##  <a name="windowproc"></a>  CWindowImpl::WindowProc
 
 Esta función estática implementa el procedimiento de ventana.
 

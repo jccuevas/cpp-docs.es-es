@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656045"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260717"
 ---
 # <a name="clongbinary-class"></a>CLongBinary (clase)
 
@@ -53,7 +53,7 @@ Para usar un `CLongBinary` objeto, declare un miembro de datos de campo de tipo 
 
 Cuando se destruya el conjunto de registros, los datos incrustado `CLongBinary` también se destruye el objeto y su destructor se desasigna la `HGLOBAL` identificador de datos.
 
-Para obtener más información acerca de los objetos grandes y el uso de `CLongBinary`, consulte los artículos [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md) y [conjunto de registros: trabajar con elementos de datos de gran tamaño (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Para obtener más información acerca de los objetos grandes y el uso de `CLongBinary`, consulte los artículos [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md) y [conjunto de registros: Trabajar con grandes elementos de datos (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

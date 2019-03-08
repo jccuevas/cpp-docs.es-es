@@ -1,22 +1,22 @@
 ---
-title: 'Archivos DLL que no están basados en MFC: información general'
+title: 'Archivos DLL no basados en MFC: Información general'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 5646f346ad8ccc62b838962b677b7f1947783ea9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649792"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414530"
 ---
-# <a name="non-mfc-dlls-overview"></a>Archivos DLL que no están basados en MFC: información general
+# <a name="non-mfc-dlls-overview"></a>Archivos DLL no basados en MFC: Información general
 
 Una DLL de MFC: no es un archivo DLL que no usa MFC internamente, y pueden llamarse las funciones exportadas en el archivo DLL mediante archivos ejecutables MFC o no MFC. Las funciones normalmente se exportan desde un no - DLL de MFC mediante la interfaz de C estándar.
 
-Para obtener más información acerca de la DLL MFC, vea [bibliotecas de vínculos dinámicos](https://msdn.microsoft.com/library/windows/desktop/ms682589) en el SDK de Windows.
+Para obtener más información acerca de la DLL MFC, vea [bibliotecas de vínculos dinámicos](/windows/desktop/dlls/dynamic-link-libraries) en el SDK de Windows.
 
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 

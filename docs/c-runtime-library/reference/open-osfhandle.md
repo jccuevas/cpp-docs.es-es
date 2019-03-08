@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519462"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327868"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ Estas constantes de manifiesto se definen en \<fcntl.h >:
 
 |||
 |-|-|
-**\_O\_APPEND**|Coloca un puntero de archivo al final del archivo antes de cada operación de escritura.
-**\_O\_RDONLY**|Abre el archivo únicamente para leerlo.
-**\_O\_TEXTO**|Abre el archivo en modo de texto (traducido).
-**\_O\_WTEXT**|Abre el archivo en modo Unicode (UTF-16 traducido).
+| **\_O\_APPEND** | Coloca un puntero de archivo al final del archivo antes de cada operación de escritura. |
+| **\_O\_RDONLY** | Abre el archivo únicamente para leerlo. |
+| **\_O\_TEXTO** | Abre el archivo en modo de texto (traducido). |
+| **\_O\_WTEXT** | Abre el archivo en modo Unicode (UTF-16 traducido). |
 
 El **_open_osfhandle** llamada transfiere la propiedad del identificador de archivo de Win32 en el descriptor de archivo. Para cerrar un archivo abierto con **_open_osfhandle**, llame a [ \_cerrar](close.md). También se cierra el identificador de archivo del sistema operativo subyacente mediante una llamada a **_close**, por lo que no es necesario llamar a la función de Win32 **CloseHandle** en el identificador original. Si el descriptor de archivo pertenece a un **archivo &#42;**  secuencia, a continuación, llamar a [fclose](fclose-fcloseall.md) en que **archivo &#42;**  secuencia también tanto el descriptor de archivo cierra y el identificador subyacente. En este caso, no llame a **_close** en el descriptor de archivo.
 

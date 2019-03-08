@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 930434a6d1e447d38d5cec9a6b0b8adee8e37b81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438098"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275238"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton (clase)
 
@@ -196,7 +196,7 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton::CompareWith](#comparewith)|Compara esta instancia con el proporcionado `CMFCToolBarButton` objeto.|
 |[CMFCToolBarButton::CopyFrom](#copyfrom)|Copia las propiedades de otro botón de barra de herramientas a la actual.|
 |[CMFCToolBarButton::CreateFromOleData](#createfromoledata)|Crea un `CMFCToolBarButton` objeto proporcionado `COleDataObject` objeto.|
-|`CMFCToolBarButton::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCToolBarButton::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCToolBarButton::EnableWindow](#enablewindow)|Habilita o deshabilita la entrada de mouse y de teclado.|
 |[CMFCToolBarButton::ExportToMenuButton](#exporttomenubutton)|Copia el texto en el botón de barra de herramientas a un menú.|
 |[CMFCToolBarButton::GetClipboardFormat](#getclipboardformat)|Recupera el formato del Portapapeles global para la aplicación.|
@@ -390,7 +390,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in] Un valor booleano que determina si el botón está definido por el usuario. Si este parámetro es TRUE, el botón está definido por el usuario. En caso contrario, la imagen del botón se carga desde un recurso.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] Un valor booleano que determina si se puede personalizar el botón. Si este parámetro es TRUE, no se puede personalizar el botón. En caso contrario, se puede personalizar el botón.
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -462,12 +462,12 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Establezca este parámetro en True para habilitar entrada, o en FALSE para deshabilitar la entrada.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método llama a la `EnableWindow` función para habilitar o deshabilitar la entrada. Para obtener más información, consulte [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) en el SDK de Windows.
+Este método llama a la `EnableWindow` función para habilitar o deshabilitar la entrada. Para obtener más información, consulte [EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) en el SDK de Windows.
 
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton
 
@@ -479,7 +479,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in] Una referencia al botón de menú de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -824,7 +824,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Un identificador de ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1146,7 +1146,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] La ventana primaria del botón de barra de herramientas.
 
 *bDelay*<br/>
@@ -1190,7 +1190,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] La ventana primaria del botón de barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1201,7 +1201,7 @@ Este método devuelve FALSE.
 
 La implementación predeterminada de este método no hace nada y devuelve FALSE. Invalide este método para devolver un valor distinto de cero si el botón procesa el mensaje de ayuda.
 
-Para obtener más información sobre el mensaje WM_HELPHITTEST, vea [TN028: compatibilidad con la Ayuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
+Para obtener más información sobre el mensaje WM_HELPHITTEST, vea [TN028: Compatibilidad con la Ayuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1264,7 +1264,7 @@ virtual void OnDblClk(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] - la ventana primaria del botón.
 
 ### <a name="remarks"></a>Comentarios
@@ -1294,7 +1294,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] El contexto de dispositivo que muestra el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón.
 
 *pImages*<br/>
@@ -1335,7 +1335,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] El contexto de dispositivo que muestra el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón.
 
 *bSelected*<br/>
@@ -1410,7 +1410,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Especifica si el botón está visible. Si este parámetro es TRUE, el botón está visible. En caso contrario, el botón no está visible.
 
 ### <a name="remarks"></a>Comentarios
@@ -1446,10 +1446,10 @@ virtual BOOL OnToolHitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] La ventana primaria del botón. Puede ser NULL.
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Un `TOOLINFO` estructura que contiene información acerca de una herramienta en un control de información sobre herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1575,14 +1575,14 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 [in] La `CArchive` objeto desde la que o que se va a serializar.
 
 ### <a name="remarks"></a>Comentarios
 
 Este método es compatible con los procesos de transferencia de datos, como el Portapapeles o en operaciones de arrastrar y colocar. Lee o escribe propiedades del botón como el identificador, la etiqueta de texto y el Id. de imagen desde o hacia proporcionado `CArchive` objeto.
 
-Para obtener ejemplos de serialización, vea [serialización: serializar un objeto](../../mfc/serialization-serializing-an-object.md).
+Para obtener ejemplos de serialización, vea [serialización: Serializar un objeto](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1689,7 +1689,7 @@ void SetRect(const CRect rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] El nuevo rectángulo delimitador del botón.
 
 ### <a name="remarks"></a>Comentarios
@@ -1723,7 +1723,7 @@ void SetVisible(BOOL bShow=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Un valor booleano que especifica si se debe mostrar u ocultar el botón. Si este parámetro es TRUE, se muestra el botón. Si el parámetro es FALSE, se oculta el botón.
 
 ### <a name="remarks"></a>Comentarios
@@ -1740,7 +1740,7 @@ void Show(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Un valor booleano que especifica si se debe mostrar u ocultar el botón. Si este parámetro es TRUE, se muestra el botón. Si el parámetro es FALSE, se oculta el botón.
 
 ### <a name="remarks"></a>Comentarios

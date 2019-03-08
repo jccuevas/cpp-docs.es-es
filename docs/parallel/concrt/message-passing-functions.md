@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: e258a73723e78090f61230555748e109c28cf01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303955"
 ---
 # <a name="message-passing-functions"></a>Funciones que pasan mensajes
 
@@ -51,17 +51,17 @@ Para obtener ejemplos que utilizan el `send` y `asend`, y `receive` funciones, v
 
 - [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Procedimiento para implementar varios modelos productor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
+- [Cómo: Implementar varios modelos productor-consumidor](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
 
-- [Procedimiento para proporcionar funciones de trabajo a las clases call y transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
+- [Cómo: Proporcionar funciones de trabajo a las clases call y transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
 
-- [Procedimiento para usar la clase transformer en una canalización de datos](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
+- [Cómo: Usar la clase transformer en una canalización de datos](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)
 
-- [Procedimiento para seleccionar tareas completadas](../../parallel/concrt/how-to-select-among-completed-tasks.md)
+- [Cómo: Seleccionar tareas completadas](../../parallel/concrt/how-to-select-among-completed-tasks.md)
 
-- [Procedimiento para enviar un mensaje a intervalos periódicos](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
+- [Cómo: Enviar un mensaje a intervalos periódicos](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)
 
-- [Procedimiento para usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Cómo: Usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
 [[Arriba](#top)]
 
@@ -73,4 +73,3 @@ Para obtener ejemplos que utilizan el `send` y `asend`, y `receive` funciones, v
 [asend (función)](reference/concurrency-namespace-functions.md#asend)<br/>
 [Receive (función)](reference/concurrency-namespace-functions.md#receive)<br/>
 [try_receive (función)](reference/concurrency-namespace-functions.md#try_receive)
-

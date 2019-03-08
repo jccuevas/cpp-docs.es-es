@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631301"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626726"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Texto y cadenas en Visual C++
 
@@ -46,10 +46,10 @@ Describe Unicode, que es una especificación para admitir todos los juegos de ca
 [Compatibilidad con juegos de caracteres Multibyte (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Describe MBCS, que es una alternativa a Unicode para la compatibilidad con juegos de caracteres, como el japonés y el chino, que no pueden representarse en un solo byte.
 
-[Asignaciones de texto genérico en TCHAR.H](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Proporciona las asignaciones de texto genérico específicas de Microsoft para muchos tipos de datos, rutinas y demás objetos.
 
-[Procedimiento para convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)<br/>
+[Cómo: Convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)<br/>
 Muestra cómo se convierten distintos tipos de cadenas de Visual C++ en otras cadenas.
 
 ## <a name="related-sections"></a>Secciones relacionadas

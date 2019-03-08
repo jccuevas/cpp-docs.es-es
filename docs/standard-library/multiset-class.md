@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: f33dd9343cc2acbaa7f43c060267c6d206da2fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466877"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418723"
 ---
 # <a name="multiset-class"></a>multiset (Clase)
 
@@ -114,7 +114,7 @@ Tipo que proporciona un objeto de función que puede comparar dos valores de ele
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la clase multiset. El valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -482,7 +482,7 @@ Número de elementos del conjunto múltiple cuyo criterio de ordenación coincid
 
 La función miembro devuelve el número de elementos *x* del intervalo
 
-[ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) ).
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ### <a name="example"></a>Ejemplo
 
@@ -756,7 +756,6 @@ int main()
     print(s1);
     cout << endl;
 }
-
 ```
 
 ## <a name="emplace_hint"></a> multiset::emplace_hint
@@ -954,7 +953,7 @@ size_type erase(
 *Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
@@ -1172,7 +1171,7 @@ IList);
 |*Val*|Valor de un elemento que se va a insertar en el multiset.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que el multiset puede utilizar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
+|*First*|Posición del primer elemento que se va a copiar.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
@@ -1285,7 +1284,6 @@ int main()
     print(s4);
     cout << endl;
 }
-
 ```
 
 ## <a name="iterator"></a> multiset::iterator
@@ -1463,7 +1461,7 @@ int main( )
            << *ms1_RcIter << "." << endl;
 
    // The element at a specific location in the multiset can be
-   // found using a derefenced iterator addressing the location
+   // found using a dereferenced iterator addressing the location
    ms1_AcIter = ms1.end( );
    ms1_AcIter--;
    ms1_RcIter = ms1.lower_bound( *ms1_AcIter );
@@ -1569,7 +1567,7 @@ multiset (
 |*Al*|Clase de asignador de almacenamiento que se va a utilizar para este objeto multiset, que toma como valor predeterminado `Allocator`.|
 |*Comp.*|Función de comparación de tipo `const Compare` que se utiliza para ordenar los elementos del multiset, que de forma predeterminada es `Compare`.|
 |*Derecha*|Multiset del que el multiset construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list de la que se van a copiar los elementos.|
 
@@ -1617,7 +1615,7 @@ int main()
     ms1.insert(40);
 
     // Create an empty multiset ms2 with the key comparison
-    // function of geater than, then insert 2 elements
+    // function of greater than, then insert 2 elements
     multiset <int, less<int> > ms2;
     ms2.insert(10);
     ms2.insert(20);
@@ -1808,15 +1806,15 @@ int main( )
    cout << "The first element in the reversed multiset is "
         << *ms1_rIter << "." << endl;
 
-   // begin can be used to start an interation
-   // throught a multiset in a forward order
+   // begin can be used to start an iteration
+   // through a multiset in a forward order
    cout << "The multiset is:";
    for ( ms1_Iter = ms1.begin( ) ; ms1_Iter != ms1.end( ); ms1_Iter++ )
       cout << " " << *ms1_Iter;
    cout << endl;
 
-   // rbegin can be used to start an interation
-   // throught a multiset in a reverse order
+   // rbegin can be used to start an iteration
+   // through a multiset in a reverse order
    cout << "The reversed multiset is:";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
       cout << " " << *ms1_rIter;
@@ -1924,15 +1922,15 @@ int main() {
    cout << "The last element in the reversed multiset is "
         << *ms1_rIter << "." << endl;
 
-   // end can be used to terminate an interation
-   // throught a multiset in a forward order
+   // end can be used to terminate an iteration
+   // through a multiset in a forward order
    cout << "The multiset is: ";
    for ( ms1_Iter = ms1.begin( ) ; ms1_Iter != ms1.end( ); ms1_Iter++ )
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
-   // throught a multiset in a reverse order
+   // rend can be used to terminate an iteration
+   // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
       cout << *ms1_rIter << " ";

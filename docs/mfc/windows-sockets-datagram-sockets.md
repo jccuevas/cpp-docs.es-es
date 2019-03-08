@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets: Sockets de datagramas'
+title: 'Windows Sockets: Sockets de datagrama'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], datagram
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Sockets [MFC], datagram
 - sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
-ms.openlocfilehash: 886409d4072a77244cff415c6f0a6a3f533e42d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14d33ece66d902b5705e573e9863ea78fff9737f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462132"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266801"
 ---
-# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Sockets de datagramas
+# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Sockets de datagrama
 
 Este artículo describe los sockets de datagrama, uno de los dos tipos de Windows Sockets disponibles. (El otro tipo es el [socket de secuencia](../mfc/windows-sockets-stream-sockets.md).)
 
@@ -30,5 +30,4 @@ Sockets de datagramas son mejores que los sockets de secuencias de datos orienta
 ## <a name="see-also"></a>Vea también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
-
+[Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)

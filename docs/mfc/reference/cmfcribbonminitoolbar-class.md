@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 665de65d64262415e20ca5ac05e1e06b2c1862c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462a4aa04ddc542db8aba734ed93ab0fae905dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283844"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar (clase)
 
@@ -46,7 +46,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 |Name|Descripción|
 |----------|-----------------|
-|`CMFCRibbonMiniToolBar::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCRibbonMiniToolBar::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |`CMFCRibbonMiniToolBar::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Invalida `CMFCPopupMenu::IsRibbonMiniToolBar`).|

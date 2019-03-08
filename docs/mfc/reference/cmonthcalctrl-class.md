@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509597"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413932"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (clase)
 
@@ -148,7 +148,7 @@ class CMonthCalCtrl : public CWnd
 |[CMonthCalCtrl::SetColor](#setcolor)|Establece el color de un área especificada de un control de calendario mensual.|
 |[CMonthCalCtrl::SetCurrentView](#setcurrentview)|Establece el control de calendario del mes actual para mostrar la vista especificada.|
 |[CMonthCalCtrl::SetCurSel](#setcursel)|Establece la fecha seleccionada actualmente para un control de calendario mensual.|
-|[CMonthCalCtrl:: SetDayState](#setdaystate)|Establece la presentación de días en un control de calendario mensual.|
+|[CMonthCalCtrl::SetDayState](#setdaystate)|Establece la presentación de días en un control de calendario mensual.|
 |[CMonthCalCtrl::SetDecadeView](#setdecadeview)|Establece el calendario del mes actual control a la vista de la década.|
 |[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|Establece el día de la semana que se mostrará en la columna más a la izquierda del calendario.|
 |[CMonthCalCtrl::SetMaxSelCount](#setmaxselcount)|Establece el número máximo de días que se pueden seleccionar en un control de calendario mensual.|
@@ -226,11 +226,11 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica la combinación de los estilos de Windows aplicados al control de calendario mensual. Consulte [estilos de Control de calendario de mes](/windows/desktop/Controls/month-calendar-control-styles) en el SDK de Windows para obtener más información acerca de los estilos.
 
-*Rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura. Contiene la posición y el tamaño del control de calendario mensual.
+*rect*<br/>
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura. Contiene la posición y el tamaño del control de calendario mensual.
 
-*PT*<br/>
-Una referencia a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que identifica la ubicación del control de calendario mensual.
+*pt*<br/>
+Una referencia a un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que identifica la ubicación del control de calendario mensual.
 
 *pParentWnd*<br/>
 Un puntero a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control de calendario mensual. No debe ser NULL.
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto o un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto. Recibe la hora actual.
 
 *pDateTime*<br/>
-Un puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que recibirá la información de fecha seleccionada actualmente. Este parámetro debe ser una dirección válida y no puede ser NULL.
+Un puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que recibirá la información de fecha seleccionada actualmente. Este parámetro debe ser una dirección válida y no puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *pRect*<br/>
-Un puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibirá la información de rectángulo delimitador. Este parámetro debe ser una dirección válida y no puede ser NULL.
+Un puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibirá la información de rectángulo delimitador. Este parámetro debe ser una dirección válida y no puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -579,7 +579,7 @@ Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-c
 Una referencia a un `COleDateTime` o `CTime` objeto que contiene la fecha máxima permitida.
 
 *pMinRange*<br/>
-Un puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en el extremo inferior del intervalo.
+Un puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en el extremo inferior del intervalo.
 
 *pMaxRange*<br/>
 Un puntero a un `SYSTEMTIME` estructura que contiene la fecha en el extremo superior del intervalo.
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>Parámetros
 
 *pMinRange*<br/>
-Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en el extremo inferior del intervalo.
+Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en el extremo inferior del intervalo.
 
 *pMaxRange*<br/>
-Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en el extremo superior del intervalo.
+Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en el extremo superior del intervalo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -674,7 +674,7 @@ Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-c
 Una referencia a un `COleDateTime` o `CTime` objeto que contiene la fecha máxima permitida.
 
 *pMinRange*<br/>
-Un puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en el extremo inferior del intervalo.
+Un puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en el extremo inferior del intervalo.
 
 *pMaxRange*<br/>
 Un puntero a un `SYSTEMTIME` estructura que contiene la fecha en el extremo superior del intervalo.
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) o [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que indica el día actual.
 
 *pDateTime*<br/>
-Un puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que recibirá la información de fecha. Este parámetro debe ser una dirección válida y no puede ser NULL.
+Un puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que recibirá la información de fecha. Este parámetro debe ser una dirección válida y no puede ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -862,7 +862,7 @@ BOOL SetCalID(CALID calid);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*IDcalendario*|[in] Uno de los [identificador calendario](/windows/desktop/Intl/calendar-identifiers) constantes.|
+|*calid*|[in] Uno de los [identificador calendario](/windows/desktop/Intl/calendar-identifiers) constantes.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) o [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que indica el control de calendario del mes seleccionado actualmente.
 
 *pDateTime*<br/>
-Puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en que se establecerá como la selección actual.
+Puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en que se establecerá como la selección actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -993,7 +993,7 @@ Esta función miembro implementa el comportamiento del mensaje de Win32 [MCM_SET
 
 [!code-cpp[NVC_MFC_CMonthCalCtrl#5](../../mfc/reference/codesnippet/cpp/cmonthcalctrl-class_11.cpp)]
 
-##  <a name="setdaystate"></a>  CMonthCalCtrl:: SetDayState
+##  <a name="setdaystate"></a>  CMonthCalCtrl::SetDayState
 
 Establece la presentación de días en un control de calendario mensual.
 
@@ -1079,7 +1079,7 @@ BOOL SetMaxSelCount(int nMax);
 
 ### <a name="parameters"></a>Parámetros
 
-*Nmáx.*<br/>
+*nMax*<br/>
 El valor que se establecerá para representar el número máximo de días seleccionables.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>Parámetros
 
 *pMinRange*<br/>
-Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en el extremo inferior del intervalo.
+Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en el extremo inferior del intervalo.
 
 *pMaxRange*<br/>
 Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o `SYSTEMTIME` estructura que contiene la fecha en el extremo superior del intervalo.
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>Parámetros
 
 *pMinRange*<br/>
-Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la fecha en el extremo inferior del intervalo.
+Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la fecha en el extremo inferior del intervalo.
 
 *pMaxRange*<br/>
 Un puntero a un `COleDateTime` objeto, un `CTime` objeto, o `SYSTEMTIME` estructura que contiene la fecha en el extremo superior del intervalo.
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 Una referencia a un [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) objeto que contiene la fecha actual.
 
 *pDateTime*<br/>
-En la segunda versión, un puntero a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contiene la información de la fecha actual. En la tercera versión, un puntero a un [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) estructura que contiene la información de la fecha actual.
+En la segunda versión, un puntero a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto que contiene la información de la fecha actual. En la tercera versión, un puntero a un [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) estructura que contiene la información de la fecha actual.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*lpRect*|[in] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que define un rectángulo que contiene el número deseado de calendarios.|
+|*lpRect*|[in] Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que define un rectángulo que contiene el número deseado de calendarios.|
 
 ### <a name="return-value"></a>Valor devuelto
 
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que define un rectángulo cuyo tamaño es menor o igual que el rectángulo definido por el *lpRect* parámetro.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que define un rectángulo cuyo tamaño es menor o igual que el rectángulo definido por el *lpRect* parámetro.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1304,7 +1304,7 @@ Este método envía el [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerec
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CDateTimeCtrl (clase)](../../mfc/reference/cdatetimectrl-class.md)

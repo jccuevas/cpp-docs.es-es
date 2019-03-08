@@ -1,6 +1,6 @@
 ---
 title: Documentos, vistas y el marco
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 799035976ea55988a635f7dc9b667e87c48d8f7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662376"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273509"
 ---
 # <a name="documents-views-and-the-framework"></a>Documentos, vistas y el marco
 
@@ -59,7 +59,8 @@ Los objetos de clave en una aplicación en ejecución son:
 
 En una aplicación en ejecución, estos objetos responden de forma cooperativa a acciones del usuario, enlazadas mediante los comandos y otros mensajes. Un solo objeto aplicación administra una o varias plantillas de documento. Cada plantilla de documento crea y administra uno o varios documentos (dependiendo de si la aplicación es SDI o MDI). El usuario ve y manipula documentos a través de una vista contenida dentro de una ventana de marco. La siguiente ilustración muestra las relaciones entre estos objetos para una aplicación SDI.
 
-![Los objetos en una aplicación SDI en ejecución](../mfc/media/vc386v1.gif "vc386v1") objetos en una aplicación SDI ejecutando
+![Los objetos en una aplicación SDI en ejecución](../mfc/media/vc386v1.gif "objetos en una aplicación SDI en ejecución") <br/>
+Objetos de una aplicación SDI en ejecución
 
 El resto de esta serie de artículos explica cómo las herramientas de marco de trabajo, el Asistente para aplicaciones MFC y los editores de recursos, crean estos objetos, cómo funcionan y cómo usarlos en su programación. Documentos, vistas y ventanas de marco se tratan con más detalle en [Window (objetos)](../mfc/window-objects.md) y [arquitectura documento/vista](../mfc/document-view-architecture.md).
 

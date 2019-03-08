@@ -23,21 +23,19 @@ helpviewer_keywords:
 - _HEAPBADPTR constants
 - heap constants
 ms.assetid: 3f751bb9-2dc4-486f-b5f5-9061c96d3754
-ms.openlocfilehash: 4b944b993b99a9e03e6bda6e203150dcf913417f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8783a5826376a65cb71444e2d64c61b6938eab8
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523349"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220223"
 ---
 # <a name="heap-constants"></a>Constantes de montón
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <malloc.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

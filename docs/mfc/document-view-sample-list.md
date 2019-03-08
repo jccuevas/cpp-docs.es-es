@@ -2,12 +2,12 @@
 title: Lista de ejemplos de documentos y vistas
 ms.date: 11/04/2016
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-ms.openlocfilehash: 3abd57efdaa8d1ebc95347c19f83dd757c23d164
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41cb41bb6924bda5db3c19871e0379c2f8d6036d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602922"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300575"
 ---
 # <a name="documentview-sample-list"></a>Lista de ejemplos de documentos y vistas
 
@@ -38,4 +38,3 @@ Vea los siguientes programas de ejemplo que ilustran el uso de arquitectura docu
 ## <a name="see-also"></a>Vea también
 
 [Arquitectura documento/vista](../mfc/document-view-architecture.md)
-

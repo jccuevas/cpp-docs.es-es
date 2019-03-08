@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: bd978bfa65cc003bcb69a309b44254a6d36a2ebd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302551"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl (clase)
 
@@ -159,7 +159,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Un valor booleano que especifica si el marco de trabajo permite el acceso directo.
 
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder
@@ -226,7 +226,7 @@ const IShellFolder* GetCurrentShellFolder() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la [IShellFolder interfaz](https://msdn.microsoft.com/library/windows/desktop/bb775075) para el objeto seleccionado.
+Un puntero a la [IShellFolder interfaz](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder) para el objeto seleccionado.
 
 ### <a name="remarks"></a>Comentarios
 

@@ -1,21 +1,21 @@
 ---
 title: unary_negate (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::unary_negate
+- functional/std::unary_negate
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96d70a24b87a84275f17813e76473a82fbff90da
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648193"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006713"
 ---
 # <a name="unarynegate-class"></a>unary_negate (Clase)
 
-Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función unaria especificada.
+Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función unaria especificada. En desuso en C ++ 17 en favor de [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,7 +44,7 @@ La negación de la función unaria.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función unaria _ *Func.* Define su función miembro `operator()` para que devuelva **!**\_ *Func(left).*
+La clase de plantilla almacena una copia de un objeto de función unaria  *\_Func*. Define su función miembro `operator()` que devuelva `!_Func(left)`.
 
 El constructor de `unary_negate` no suele usarse directamente. La función del asistente [not1](../standard-library/functional-functions.md#not1) proporciona una manera más sencilla de declarar y usar el predicado de adaptador **unary_negator**.
 

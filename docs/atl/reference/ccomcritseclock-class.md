@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: e0f68f48867510c270c7c69e325a796f274198d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261237"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock (clase)
 
@@ -39,7 +39,7 @@ Objeto que se va a ser bloqueadas y desbloqueadas.
 |Name|Descripción|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|El constructor.|
-|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Destructor.|
+|[CComCritSecLock::~CComCritSecLock](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -66,7 +66,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 ### <a name="parameters"></a>Parámetros
 
-*CS*<br/>
+*cs*<br/>
 El objeto de sección crítica.
 
 *bInitialLock*<br/>
@@ -76,7 +76,7 @@ El estado de bloqueo inicial: **true** forma bloqueada.
 
 Inicializa el objeto de sección crítica.
 
-##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock
+##  <a name="dtor"></a>  CComCritSecLock::~CComCritSecLock
 
 Destructor.
 

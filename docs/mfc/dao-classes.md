@@ -7,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: cce9831cb317b468bfc51777eedbde261e798108
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 238aab0a1948f16a85b8ea16719b75b49f5e69c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287497"
 ---
 # <a name="dao-classes"></a>Clases de DAO
 
@@ -64,4 +64,3 @@ Contenedor para el tipo de automatización OLE **VARIANT**. Datos de **VARIANT**
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases](../mfc/class-library-overview.md)
-

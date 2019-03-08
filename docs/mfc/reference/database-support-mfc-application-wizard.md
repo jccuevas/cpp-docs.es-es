@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: 9635b7e045812cc90c5d6e9662b8475e411a0b48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654212"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259963"
 ---
 # <a name="database-support-mfc-application-wizard"></a>Compatibilidad con bases de datos, Asistente para aplicaciones MFC
 
@@ -24,7 +24,7 @@ Esta página proporciona opciones que le permiten especificar el nivel de base d
    |Opción|Descripción|
    |------------|-----------------|
    |**Ninguno**|No proporciona ninguna compatibilidad de base de datos. Ésta es la opción predeterminada.|
-   |**Archivos de encabezado**|Proporciona el nivel básico de compatibilidad de base de datos para la aplicación. Si selecciona compatibilidad con ODBC en **tipo cliente**, MFC Application Wizard se incluye en el proyecto el archivo de encabezado AFXDB. H. Agrega las bibliotecas de vínculos, pero no crea todas las clases de base de datos específica. Puede crear conjuntos de registros más adelante y usarlos para examinar y actualizar registros. Si selecciona compatibilidad con OLE DB en **tipo cliente**, se incluyen los siguientes archivos de encabezado: ATLBASE. H AFXOLEDB. H ATLPLUS. H|
+   |**Archivos de encabezado**|Proporciona el nivel básico de compatibilidad de base de datos para la aplicación. Si selecciona compatibilidad con ODBC en **tipo cliente**, MFC Application Wizard se incluye en el proyecto el archivo de encabezado AFXDB. H. Agrega las bibliotecas de vínculos, pero no crea todas las clases de base de datos específica. Puede crear conjuntos de registros más adelante y usarlos para examinar y actualizar registros. Si selecciona compatibilidad con OLE DB en **tipo cliente**, se incluyen los archivos de encabezado siguientes: ATLBASE. H AFXOLEDB. H ATLPLUS. H|
    |**Vista de base de datos sin compatibilidad con archivos**|Incluye archivos de encabezado de la base de datos, las bibliotecas de vínculos, una vista de registros y un conjunto de registros. (Disponible solo para las aplicaciones con el **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación](../../mfc/reference/application-type-mfc-application-wizard.md) página.) Esta opción incluye compatibilidad con documentos pero no con la serialización. Si decide incluir una vista de base de datos, debe especificar el origen de datos.|
    |**Vista de base de datos con compatibilidad con archivos**|Incluye archivos de encabezado de la base de datos, las bibliotecas de vínculos, una vista de registros y un conjunto de registros. (Disponible solo para las aplicaciones con el **compatibilidad con la arquitectura documento/vista** opción seleccionada en el **tipo de aplicación** página.) Esta opción admite la serialización de documentos, que puede usar, por ejemplo, para actualizar un archivo de perfil de usuario. Las aplicaciones de base de datos se suelen aplicar a una base por registro en lugar de en un archivo por lo que no necesitan la serialización. Sin embargo, puede tener un uso especial para la serialización. Si decide incluir una vista de base de datos, debe especificar el origen de datos.|
 

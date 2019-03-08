@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: b785754a7970573c42fcc1d0736541416f522c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260822"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo (estructura)
 
@@ -39,7 +39,7 @@ Un puntero a un `CMFCTabToolTipInfo` estructura se pasa como un parámetro del m
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `CMFCTabToolTipInfo` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `CMFCTabToolTipInfo` se utiliza en el [MDITabsDemo ejemplo: MFC con fichas MDI aplicación](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -65,7 +65,7 @@ int m_nTabIndex;
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_nTabIndex` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `m_nTabIndex` se utiliza en el [MDITabsDemo ejemplo: MFC con fichas MDI aplicación](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_pTabWnd` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `m_pTabWnd` se utiliza en el [MDITabsDemo ejemplo: MFC con fichas MDI aplicación](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ Si la cadena está vacía, no se muestra la información sobre herramientas.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_strText` se utiliza en el [ejemplo MDITabsDemo: aplicación de MFC con fichas MDI](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `m_strText` se utiliza en el [MDITabsDemo ejemplo: MFC con fichas MDI aplicación](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

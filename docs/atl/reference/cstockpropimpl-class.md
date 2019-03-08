@@ -1,6 +1,6 @@
 ---
 title: CStockPropImpl (clase)
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,33 +64,33 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 7befbce6e062bdb7944c2ed1f351d6927adfd75a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270792"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl (clase)
 
 Esta clase proporciona métodos para la compatibilidad con los valores de propiedad estándar.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-template <class T, class InterfaceName,
+template <
+    class T, 
+    class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, class tihclass = CcomTypeInfoHolder>
-class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
-plibid,
-    wMajor,
-wMinor,
-    tihclass>
+    WORD wMinor = 0, 
+    class tihclass = CcomTypeInfoHolder>
+class ATL_NO_VTABLE CStockPropImpl :
+    public IDispatchImpl<InterfaceName, piid, plibid, wMajor, wMinor, tihclass>
 ```
 
 #### <a name="parameters"></a>Parámetros
@@ -188,7 +188,7 @@ Por compatibilidad con versiones anteriores, `CStockPropImpl` también expone `g
 
 Las siguientes propiedades también tienen un **putref** implementación:
 
-- Tipo de letra
+- Fuente
 
 - MouseIcon
 
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>Parámetros
 
 *ppPicture*<br/>
-Variable que recibe un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.
+Variable que recibe un puntero a las propiedades de la imagen. Consulte [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -864,7 +864,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 TRUE si el control está habilitado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -949,12 +949,12 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="parameters"></a>Parámetros
 
-*/&ast; hWnd &ast;/*<br/>
+*hWnd*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve E_FAIL.
+Returns E_FAIL.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parámetros
 
 *pPicture*<br/>
-Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.
+Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1094,7 +1094,7 @@ Identificador de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve E_FAIL.
+Returns E_FAIL.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Parámetros
 
 *pPicture*<br/>
-Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) para obtener más detalles.
+Un puntero a las propiedades de la imagen. Consulte [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) para obtener más detalles.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 867bec619dc633b7b1fbf9785e14132ba8c493ba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417195"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl (clase)
 
@@ -151,8 +151,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de animación. Aplicar cualquier combinación de las ventanas de estilos que se describe en la siguiente sección de comentarios y los estilos de control de animación se describen en [estilos de Control de animación](/windows/desktop/Controls/animation-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
-Especifica la posición y el tamaño del control de animación. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](../../mfc/reference/rect-structure1.md) estructura.
+*rect*<br/>
+Especifica la posición y el tamaño del control de animación. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de animación, normalmente un `CDialog`. No debe ser NULL.
@@ -205,8 +205,8 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de animación. Aplicar cualquier combinación de la ventana y estilos de control de animación se describen en [estilos de Control de animación](/windows/desktop/Controls/animation-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+*rect*<br/>
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -288,10 +288,10 @@ BOOL Play(
 
 ### <a name="parameters"></a>Parámetros
 
-*nde*<br/>
+*nFrom*<br/>
 Índice de base cero del marco donde se comienza a reproducir. Valor debe ser inferior a 65.536. Un valor de 0 significa que comienzan por el primer fotograma en el clip AVI.
 
-*nPara*<br/>
+*nTo*<br/>
 Índice de base cero del marco de reproducción donde finaliza. Valor debe ser inferior a 65.536. Un valor de - 1 significa que termina con el último fotograma en el clip AVI.
 
 *nRep*<br/>
@@ -319,7 +319,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="parameters"></a>Parámetros
 
-*nPara*<br/>
+*nTo*<br/>
 Índice de base cero del marco para mostrar. Valor debe ser inferior a 65.536. Un valor de 0 significa que muestre el primer fotograma en el clip AVI. El valor -1 significa que mostrar el último fotograma en el clip AVI.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -356,4 +356,3 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

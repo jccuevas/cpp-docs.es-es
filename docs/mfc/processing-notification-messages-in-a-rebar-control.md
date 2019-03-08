@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8cbe9849e16e8bfa9c0d0ce1f96e846bffaab2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ac225802bd1d0a0a4b0f30e017fa677f1072fd3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296298"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Procesar mensajes de notificación en un control Rebar
 
@@ -38,10 +38,9 @@ El objeto de control rebar pueden enviar los mensajes de notificación siguiente
 
 - RBN_LAYOUTCHANGED se envía mediante un control rebar cuando el usuario cambia el diseño de las bandas del control.
 
-Para obtener más información sobre estas notificaciones, consulte [referencia del Control Rebar](https://msdn.microsoft.com/library/windows/desktop/bb774375) en el SDK de Windows.
+Para obtener más información sobre estas notificaciones, consulte [referencia del Control Rebar](/windows/desktop/controls/rebar-control-reference) en el SDK de Windows.
 
 ## <a name="see-also"></a>Vea también
 
 [Uso de CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656981"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413334"
 ---
 # <a name="running-lib"></a>Ejecutar LIB
 
@@ -62,7 +62,7 @@ Una opción consta de un especificador de opción, que es ya sea un guión (**-*
 
 Las siguientes opciones se aplican a todos los modos de LIB:
 
-> **/ ERRORREPORT** [**NONE** &AMP;#124; **PROMPT** &AMP;#124; **COLA** &AMP;#124; **ENVIAR**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 Si lib.exe genera un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft sobre estos errores internos.
 
@@ -88,7 +88,7 @@ Suprime la presentación de la LIB copyright mensaje y número de versión e imp
 
 Muestra los detalles sobre el progreso de la sesión, incluidos los nombres de los archivos .obj que se va a agregar. La información se envía a la salida estándar y puede redirigirse a un archivo.
 
-> **/WX**[**: N**]
+> **/WX**[**:NO**]
 
 Tratar advertencias como errores. Consulte [/WX (tratar advertencias del vinculador como errores)](../../build/reference/wx-treat-linker-warnings-as-errors.md) para obtener más información.
 

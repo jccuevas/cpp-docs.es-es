@@ -6,12 +6,12 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_SUPERCLASS
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-ms.openlocfilehash: 75a6a769770c9de8b26c08fae852197cdb99248e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261003"
 ---
 # <a name="window-class-macros"></a>Macros de clase de ventana
 
@@ -127,10 +127,10 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 *WndClassName*<br/>
 [in] El nombre de la nueva clase de ventana. Si es NULL, ATL generará un nombre de clase de ventana.
 
-*Estilo*<br/>
+*style*<br/>
 [in] El estilo de la ventana.
 
-*fondo*<br/>
+*bkgnd*<br/>
 [in] El color de fondo de la ventana.
 
 ### <a name="remarks"></a>Comentarios
@@ -144,4 +144,3 @@ Si desea usar los estilos predeterminados y el color de fondo, utilice el [DECLA
 ## <a name="see-also"></a>Vea también
 
 [Macros](atl-macros.md)
-

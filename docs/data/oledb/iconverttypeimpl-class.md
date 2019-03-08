@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: dffd15478f0ae10d42b49be3b202fbd4845abb56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1117cfb8e68cbdc5432355315213faad903ea35
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544656"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424657"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl (Clase)
 
-Proporciona una implementación de la [IConvertType](/previous-versions/windows/desktop/ms715926) interfaz.
+Proporciona una implementación de la [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -54,21 +54,21 @@ La clase derivada de `IConvertTypeImpl`.
 
 Esta interfaz es obligatoria en los comandos, los conjuntos de filas y conjuntos de filas de índice. `IConvertTypeImpl` implementa la interfaz mediante la delegación para el objeto de conversión proporcionado por OLE DB.
 
-## <a name="canconvert"></a> Iconverttypeimpl:: CanConvert
+## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
 
 Proporciona información sobre la disponibilidad de las conversiones de tipos en un comando o en un conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(CanConvert)(DBTYPE wFromType, 
-   DBTYPE wToType, 
+STDMETHOD(CanConvert)(DBTYPE wFromType,
+   DBTYPE wToType,
    DBCONVERTFLAGS dwConvertFlags);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224) en el *referencia del programador OLE DB*.
+Consulte [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 

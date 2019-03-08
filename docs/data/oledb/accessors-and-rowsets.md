@@ -1,6 +1,6 @@
 ---
 title: Descriptores de acceso y conjuntos de filas
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651261"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175724"
 ---
 # <a name="accessors-and-rowsets"></a>Descriptores de acceso y conjuntos de filas
 
@@ -34,7 +34,7 @@ Todos los descriptores de acceso que se derivan de [CAccessorBase](../../data/ol
 
 En la siguiente ilustración se muestra los tipos de descriptor de acceso.
 
-![Tipos de descriptor de acceso](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Tipos de descriptor de acceso](../../data/oledb/media/vcaccessortypes.gif "tipos de descriptor de acceso")<br/>
 Clases de descriptor de acceso
 
 - [CAccessor](../../data/oledb/caccessor-class.md) Utilice este descriptor de acceso cuando conozca la estructura del origen de base de datos en tiempo de diseño. `CAccessor` enlaza estáticamente un registro de base de datos, que contiene el búfer, al origen de datos.
@@ -63,7 +63,7 @@ Las plantillas OLE DB admiten tres tipos de conjuntos de filas (consulte la ilus
 
 En la siguiente ilustración se muestra los tipos de conjunto de filas.
 
-![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![Gráfico de RowsetType](../../data/oledb/media/vcrowsettypes.gif "gráfico de RowsetType")<br/>
 Clases de conjunto de filas
 
 [Conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) no acceder a los datos en los datos almacenar pero en su lugar, tener acceso a información sobre el almacén de datos, denominada metadatos. Conjuntos de filas de esquema se usan normalmente en situaciones en las que la estructura de base de datos no se conoce en tiempo de compilación y debe obtenerse en tiempo de ejecución.

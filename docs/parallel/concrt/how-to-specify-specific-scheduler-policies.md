@@ -1,22 +1,22 @@
 ---
-title: 'Cómo: Especificar directivas de Scheduler concretas'
+title: Filtrar Especificar directivas de programador específicas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-ms.openlocfilehash: 1334b8dcf8b6615120d4be8db8530af60df9d668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c03ef6661ebefe0bfe9fab62938ce9987a4bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520034"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277864"
 ---
-# <a name="how-to-specify-specific-scheduler-policies"></a>Cómo: Especificar directivas de Scheduler concretas
+# <a name="how-to-specify-specific-scheduler-policies"></a>Procedimiento Especificar directivas de programador específicas
 
 Las directivas de Scheduler permiten controlar la estrategia que el programador utiliza cuando administra tareas. En este tema se muestra cómo utilizar una directiva de programador para aumentar la prioridad del subproceso de una tarea que imprime un indicador de progreso en la consola.
 
-Para obtener un ejemplo que usa directivas de programador personalizadas junto con los agentes asincrónicos, vea [Cómo: crear agentes que directivas de programador específicas de uso](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Para obtener un ejemplo que usa directivas de programador personalizadas junto con los agentes asincrónicos, vea [Cómo: Crear agentes que usen directivas de programador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -24,7 +24,7 @@ En el siguiente ejemplo se llevan a cabo dos tareas en paralelo. La primera tare
 
 La primera tarea utiliza la descomposición recursiva para calcular el número de Fibonacci. Es decir, cada tarea crea de forma recursiva subtareas para calcular el resultado total. Una tarea que utiliza la descomposición recursiva podría utilizar todos los recursos disponibles y dejar otras tareas sin alimentar. En este ejemplo, la tarea que imprime el indicador de progreso tal vez no reciba el acceso oportuno a los recursos de cálculo.
 
-Para proporcionar la tarea que imprime un acceso equitativo de mensaje de progreso en recursos informáticos, este ejemplo usa los pasos que se describen en [Cómo: administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) para crear una instancia del programador que tiene una directiva personalizada. La directiva personalizada especifica la prioridad del subproceso como la clase de prioridad máxima.
+Para proporcionar la tarea que imprime un acceso equitativo de mensaje de progreso en recursos informáticos, este ejemplo usa los pasos que se describen en [Cómo: Administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) para crear una instancia del programador que tiene una directiva personalizada. La directiva personalizada especifica la prioridad del subproceso como la clase de prioridad máxima.
 
 Este ejemplo se usa el [Concurrency:: call](../../parallel/concrt/reference/call-class.md) y [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md) clases para imprimir el indicador de progreso. Estas clases tienen versiones de sus constructores que toman una referencia a un [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) objeto que las programa. En el ejemplo se utiliza el programador predeterminado para programar la tarea que calcula el número de Fibonacci y la instancia del programador para programar la tarea que imprime el indicador de progreso.
 
@@ -47,11 +47,10 @@ Aunque ambos conjuntos de tareas generan el mismo resultado, la versión que uti
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `scheduler-policy.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc scheduler-policy.cpp**
+**cl.exe /EHsc scheduler-policy.cpp**
 
 ## <a name="see-also"></a>Vea también
 
 [Directivas de Scheduler](../../parallel/concrt/scheduler-policies.md)<br/>
-[Procedimiento para administrar una instancia de Scheduler](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
-[Procedimiento para crear agentes que usen directivas de Scheduler concretas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-
+[Cómo: Administrar una instancia del programador](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
+[Cómo: Crear agentes que usen directivas de programador específicas](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

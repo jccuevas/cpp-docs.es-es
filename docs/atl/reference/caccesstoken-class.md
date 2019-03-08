@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb49ee135dce4ee0d5e37acd2382a34e1d99b083
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265488"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 
@@ -150,14 +150,14 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*que hToken*<br/>
+*hToken*<br/>
 Un identificador para el token de acceso.
 
 ### <a name="remarks"></a>Comentarios
 
 En las compilaciones de depuración, se producirá un error de aserción si el `CAccessToken` objeto ya tiene una propiedad de un token de acceso.
 
-##  <a name="dtor"></a>  CAccessToken:: ~ CAccessToken
+##  <a name="dtor"></a>  CAccessToken::~CAccessToken
 
 Destructor.
 
@@ -215,7 +215,7 @@ bool CreateImpersonationToken(
 *pImp*<br/>
 Puntero a la nueva `CAccessToken` objeto.
 
-*Sil*<br/>
+*sil*<br/>
 Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token de nuevo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -224,7 +224,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreateImpersonationToken` las llamadas [duplicar el elemento](https://msdn.microsoft.com/library/windows/desktop/aa446616) para crear un nuevo token de suplantación.
+`CreateImpersonationToken` las llamadas [duplicar el elemento](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) para crear un nuevo token de suplantación.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -254,7 +254,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreatePrimaryToken` las llamadas [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) para crear un nuevo token principal.
+`CreatePrimaryToken` las llamadas [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) para crear un nuevo token principal.
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ Puntero a un [PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-pro
 Puntero a un [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) estructura que especifica cómo debe aparecer la ventana principal del nuevo proceso.
 
 *dwCreationFlags*<br/>
-Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) para obtener una lista de marcas.
+Especifica marcas adicionales que controlan la clase de prioridad y la creación del proceso. Vea la función de Win32 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) para obtener una lista de marcas.
 
 *bLoadProfile*<br/>
 Si es TRUE, se carga el perfil del usuario con [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
@@ -312,7 +312,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreateProcessAsUser` usa el `CreateProcessAsUser` función de Win32 para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto. Vea la descripción de la [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) función para ver una explicación detallada de los parámetros necesarios.
+`CreateProcessAsUser` usa el `CreateProcessAsUser` función de Win32 para crear un nuevo proceso que se ejecuta en el contexto de seguridad del usuario representado por la `CAccessToken` objeto. Vea la descripción de la [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) función para ver una explicación detallada de los parámetros necesarios.
 
 Para que se realice correctamente, este método la `CAccessToken` debe contener objeto AssignPrimaryToken (a menos que sea un token restringido) y IncreaseQuota privilegios.
 
@@ -348,7 +348,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-`CreateRestrictedToken` usa el [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) función de Win32 para crear un nuevo `CAccessToken` objeto, con restricciones.
+`CreateRestrictedToken` usa el [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) función de Win32 para crear un nuevo `CAccessToken` objeto, con restricciones.
 
 > [!IMPORTANT]
 >  Cuando se usa `CreateRestrictedToken`, asegúrese de lo siguiente: el token existente es válido (y no se ha introducido por el usuario) y *SidsToDisable* y *PrivilegesToDelete* son válidas (y no se ha introducido por el usuario). Si el método devuelve FALSE, deniegue la funcionalidad.
@@ -661,7 +661,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Las llamadas del [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) función de Win32.
+Las llamadas del [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) función de Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -781,7 +781,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*PEscriba*<br/>
+*pType*<br/>
 Dirección de la [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-_token_type) variable que, si se ejecuta correctamente, recibe el tipo del token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1056,7 +1056,7 @@ Indica si la comprobación de acceso es que debe realizarse en el contexto de se
 
 Si este parámetro es FALSE, la comprobación de acceso se realiza mediante el contexto de seguridad para el subproceso que realiza la llamada. Si el subproceso está suplantando a un cliente, este contexto de seguridad puede ser de un proceso de cliente. Si este parámetro es TRUE, la comprobación de acceso se realiza mediante el contexto de seguridad del proceso para el subproceso que realiza la llamada.
 
-*Sil*<br/>
+*sil*<br/>
 Especifica un [SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-_security_impersonation_level) tipo enumerado que proporciona el nivel de suplantación del token.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1093,7 +1093,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando `PrivilegeCheck` que devuelve el `Attributes` miembro de cada [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) estructura se establece en SE_PRIVILEGE_USED_FOR_ACCESS si está habilitado el privilegio correspondiente. Este método llama a la [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) función de Win32.
+Cuando `PrivilegeCheck` que devuelve el `Attributes` miembro de cada [LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) estructura se establece en SE_PRIVILEGE_USED_FOR_ACCESS si está habilitado el privilegio correspondiente. Este método llama a la [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) función de Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

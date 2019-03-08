@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445726"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329636"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ El **tipo** miembro especifica el tipo de error matemático. Es uno de los valor
 
 |Macro|Significado|
 |-|-|
-**_DOMINIO**|Error de argumento de dominio
-**_SING**|Singularidad del argumento
-**_OVERFLOW**|Error de intervalo de desbordamiento
-**_PLOSS**|Pérdida parcial de significado
-**_TLOSS**|Pérdida total de significado
-**_UNDERFLOW**|El resultado es demasiado pequeño para representarlo (esta condición no se admite actualmente).
+| **_DOMINIO** | Error de argumento de dominio |
+| **_SING** | Singularidad del argumento |
+| **_OVERFLOW** | Error de intervalo de desbordamiento |
+| **_PLOSS** | Pérdida parcial de significado |
+| **_TLOSS** | Pérdida total de significado |
+| **_UNDERFLOW** | El resultado es demasiado pequeño para representarlo (esta condición no se admite actualmente). |
 
 El miembro de estructura **name** es un puntero a una cadena terminada en nulo que contiene el nombre de la función que produjo el error. Los miembros de estructura **arg1** y **arg2** especifican los valores que provocaron el error Si solo se proporciona un argumento, se almacena en **arg1**.
 

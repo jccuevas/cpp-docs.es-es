@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526430"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425034"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl (clase)
 
@@ -72,7 +72,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetBase](#setbase)|Establece la base de un control de botón de número.|
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|Establece la ventana relacionada para un control de botón de número.|
 |[CSpinButtonCtrl::SetPos](#setpos)|Establece la posición actual del control.|
-|[CSpinButtonCtrl:: SetRange](#setrange)|Establece los límites superiores e inferiores (intervalo) de un control de botón de número.|
+|[CSpinButtonCtrl::SetRange](#setrange)|Establece los límites superiores e inferiores (intervalo) de un control de botón de número.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -119,8 +119,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de botón de número. Se aplican a cualquier combinación de los estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](/windows/desktop/Controls/up-down-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
-Especifica el tamaño y la posición del control de botón de número. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura
+*rect*<br/>
+Especifica el tamaño y la posición del control de botón de número. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura
 
 *pParentWnd*<br/>
 Un puntero a la ventana del elemento primario del control de botón de número, normalmente un `CDialog`. No debe ser NULL.
@@ -159,8 +159,8 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de botón de número. Se aplican a cualquier combinación de los estilos de control de botón de número para el control. Estos estilos se describen en [estilos de Control de flechas](/windows/desktop/Controls/up-down-control-styles) en el SDK de Windows.
 
-*Rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+*rect*<br/>
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -271,10 +271,10 @@ void GetRange32(
 
 ### <a name="parameters"></a>Parámetros
 
-*inferior*<br/>
+*lower*<br/>
 Referencia a un entero que recibe el límite inferior para el control.
 
-*superior*<br/>
+*upper*<br/>
 Referencia a un entero que recibe el límite superior para el control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -371,7 +371,7 @@ La posición anterior (16 bits de precisión para `SetPos`, 32 bits precisión p
 
 `SetPos32` establece la posición de 32 bits.
 
-##  <a name="setrange"></a>  CSpinButtonCtrl:: SetRange
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
 
 Establece los límites superiores e inferiores (intervalo) de un control de botón de número.
 
@@ -399,7 +399,7 @@ La función miembro `SetRange32` establece el rango de 32 bits para el control d
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CSliderCtrl (clase)](../../mfc/reference/csliderctrl-class.md)

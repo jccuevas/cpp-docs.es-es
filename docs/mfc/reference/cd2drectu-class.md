@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: afcd328a8945853761fecfce8f3c14f73b2a96e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feb8af3992b9f56164ded0e3b6a4529a46fe2a1d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294387"
 ---
 # <a name="cd2drectu-class"></a>Clase CD2DRectU
 
@@ -45,7 +45,7 @@ class CD2DRectU : public D2D1_RECT_U;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CRect CD2DRectU::operator](#operator_crect)|Convierte `CD2DRectU` a `CRect` objeto.|
+|[CD2DRectU::operator CRect](#operator_crect)|Convierte `CD2DRectU` a `CRect` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -75,7 +75,7 @@ CD2DRectU(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 rectángulo de origen
 
 *uLeft*<br/>
@@ -102,7 +102,7 @@ BOOL IsNull() const;
 
 TRUE si son iguales a 0; superior, izquierdo, inferior y valores correctos del rectángulo en caso contrario, FALSE.
 
-##  <a name="operator_crect"></a>  CRect CD2DRectU::operator
+##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
 
 Convierte CD2DRectU objeto CRect.
 

@@ -1,5 +1,5 @@
 ---
-title: CAtlPreviewCtrlImpl (clase)
+title: CAtlPreviewCtrlImpl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlPreviewCtrlImpl
@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-ms.openlocfilehash: ffa2613909145bffaf901b2d5bae4129e6d434c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505058"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283274"
 ---
-# <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl (clase)
+# <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl Class
 
 Esta clase es una implementación de ATL de una ventana que se coloca en una ventana host proporcionada por el Shell de vista previa avanzada.
 
@@ -46,7 +46,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Se destruye un objeto de control de vista previa.|
+|[CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl](#dtor)|Se destruye un objeto de control de vista previa.|
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Construye un objeto de control de vista previa.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -93,7 +93,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CWindowImplBaseT<TBase,TWinTraits>`
 
-[ATL::CWindowImpl\<CAtlPreviewCtrlImpl >](../../atl/reference/cwindowimpl-class.md)
+[ATL::CWindowImpl\<CAtlPreviewCtrlImpl>](../../atl/reference/cwindowimpl-class.md)
 
 `IPreviewCtrl`
 
@@ -114,7 +114,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="dtor"></a>  CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl
+##  <a name="dtor"></a>  CAtlPreviewCtrlImpl::~CAtlPreviewCtrlImpl
 
 Se destruye un objeto de control de vista previa.
 
@@ -137,7 +137,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
 *hWndParent*<br/>
 Identificador de la ventana host proporcionada por el Shell de vista previa avanzada.
 
-*República Popular China*<br/>
+*prc*<br/>
 Especifica el tamaño inicial y la posición de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -166,7 +166,7 @@ virtual void DoPaint(HDC hdc);
 
 ### <a name="parameters"></a>Parámetros
 
-*HDC*<br/>
+*hdc*<br/>
 Identificador de un contexto de dispositivo para dibujar.
 
 ### <a name="remarks"></a>Comentarios
@@ -287,7 +287,7 @@ Color de fondo de la ventana Vista previa.
 *clrText*<br/>
 Color del texto de la ventana Vista previa.
 
-*PLF*<br/>
+*plf*<br/>
 Fuente utilizada para mostrar texto en la ventana Vista previa.
 
 ### <a name="remarks"></a>Comentarios
@@ -302,7 +302,7 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
 
 ### <a name="parameters"></a>Parámetros
 
-*República Popular China*<br/>
+*prc*<br/>
 Especifica el nuevo tamaño y posición del control de vista previa.
 
 *bRedraw*<br/>

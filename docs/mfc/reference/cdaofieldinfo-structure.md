@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629429"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275147"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo (Estructura)
 
@@ -50,7 +50,7 @@ Un valor que indica el tipo de datos del campo. Para obtener más información, 
 
 - `dbBoolean` Sí/No, igual a TRUE o FALSE
 
-- `dbByte` bytes
+- `dbByte` Byte
 
 - `dbInteger` corto
 
@@ -90,7 +90,7 @@ Un valor que indica el tamaño máximo, en bytes, de un objeto de campo DAO que 
 |`dbDate`|8|Fecha y hora ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Texto ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Binario largo (objeto OLE; [CByteArray](../../mfc/reference/cbytearray-class.md); use en lugar de `CLongBinary`)|
-|`dbMemo`|0|Memorando ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
+|`dbMemo`|0|Memo ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbGUID`|16|Un identificador único global identificador/universalmente único usa con llamadas a procedimiento remoto.|
 
 *m_lAttributes*<br/>
@@ -160,4 +160,3 @@ Información recuperada por el `GetFieldInfo` función miembro (de la clase que 
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

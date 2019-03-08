@@ -1,26 +1,35 @@
 ---
 title: ALIGN (MASM)
-ms.date: 08/30/2018
+ms.date: 01/02/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 7a90f3b1aab3d1181597f96d8cc339f260f3c9c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb42b1952b3fd59438f0dd4c29d48c91c4d8864d
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575375"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031231"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-Se alinea a la variable o la instrucción en un byte que es un múltiplo del siguiente *número*.
+El **alinear** directiva alinea el siguiente elemento de datos o la instrucción en una dirección que sea un múltiplo de su parámetro. El parámetro debe ser una potencia de 2 (por ejemplo, 1, 2, 4 etc.) que es menor o igual que la alineación de segmento.
 
 ## <a name="syntax"></a>Sintaxis
 
 > Alinear [[*número*]]
 
+## <a name="remarks"></a>Comentarios
+
+El **alinear** directiva le permite especificar el desplazamiento inicial de un elemento de datos o una instrucción. Datos alineados pueden mejorar el rendimiento, a costa de un espacio desaprovechado entre elementos de datos. Grandes mejoras de rendimiento pueden verse cuando se encuentran los accesos a datos en los límites que se ajusta a las líneas de la memoria caché. En los límites naturales de acceso para tipos nativos significa menos tiempo invertido en hardware interno Realineación microcódigo.
+
+La necesidad de instrucciones alineadas es poco frecuente en los procesadores modernos que utilizan un modelo de direccionamiento sin formato, pero pueden ser necesarios para objetivos de salto en código antiguo para otros modelos de direccionamiento.
+
+Cuando los datos están alineados, el espacio se omitió se rellena con ceros. Cuando las instrucciones están alineadas, el espacio se omitió se rellena con las instrucciones NOP de tamaño adecuado.
+
 ## <a name="see-also"></a>Vea también
 
+[EVEN](even.md)<br/>
 [Referencia de directivas](../../assembler/masm/directives-reference.md)<br/>

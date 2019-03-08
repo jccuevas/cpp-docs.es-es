@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-ms.openlocfilehash: ccbd3d5ff708b12fd557b8c3470fb270303678f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39d5fd4707f1c03de78cf9fd078655389c93ba17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657891"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298755"
 ---
 # <a name="cuintarray-class"></a>CUIntArray (clase)
 
@@ -101,7 +101,7 @@ por ejemplo, se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -128,4 +128,3 @@ Para obtener más información sobre el uso de `CUIntArray`, consulte el artícu
 
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

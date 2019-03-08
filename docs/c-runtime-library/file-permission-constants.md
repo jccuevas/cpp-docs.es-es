@@ -12,21 +12,19 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: 7b9d99f8b0fc7daf8f7dc58db999c7f885a3dc8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648609"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220288"
 ---
 # <a name="file-permission-constants"></a>Constantes de permiso de archivo
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <sys/stat.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

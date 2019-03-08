@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 75b95f871023d7bfdea198a69377b1f360ab115f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb4147bda64e86770e133e10a60efa567cee7719
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414075"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl (Clase)
 
-Proporciona una implementación de la [IGetDataSource](/previous-versions/windows/desktop/ms709721) objeto.
+Proporciona una implementación de la [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85)) objeto.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -53,20 +53,20 @@ La clase derivada de `IGetDataSourceImpl`.
 
 Esto es una interfaz obligatoria en la sesión para obtener un puntero de interfaz al objeto de origen de datos.
 
-## <a name="getdatasource"></a> Igetdatasourceimpl:: GetDatasource
+## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
 
 Devuelve un puntero de interfaz en el objeto de origen de datos que creó la sesión.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(GetDataSource)(REFIID riid, 
+STDMETHOD(GetDataSource)(REFIID riid,
    IUnknown ** ppDataSource);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) en el *referencia del programador OLE DB*.
+Consulte [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 

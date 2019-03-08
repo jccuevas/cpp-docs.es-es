@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: 3e86ce3e0179ff7c7a47a7083b6c168fea91ccbc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662441"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274952"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog (clase)
 
@@ -176,7 +176,7 @@ Tenga en cuenta que cuando se llama al constructor con *bPrintSetupOnly* estable
 
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
 
-Crea un contexto de dispositivo (DC) de impresora desde la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) y [DEVNAMES](../../mfc/reference/devnames-structure.md) estructuras.
+Crea un contexto de dispositivo (DC) de impresora desde la [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) y [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) estructuras.
 
 ```
 HDC CreatePrinterDC();

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-ms.openlocfilehash: c68bc835adf19df7f1538d30b2be162fe6dc6021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584462"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327166"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -85,25 +85,25 @@ Pasado de descriptores de archivo **_fdopen** pertenecen por el valor devuelto *
 
 El *modo* cadena de caracteres especifica el tipo de acceso al archivo solicitado para el archivo:
 
-|*mode*|Access|
-|-|-|
-**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra el **fopen** llamar se produce un error.
-**"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.
-**"a"**|Se abre para escritura al final del archivo (anexo). Crea el archivo si no existe.
-**"r+"**|Abre para lectura y escritura. El archivo debe existir.
-**"w+"**|Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido.
-**"a+"**|Se abre para lectura y anexado. Crea el archivo si no existe.
+| *mode* | Access |
+|--------|--------|
+| **"r"** | Abre para lectura. Si el archivo no existe o no se encuentra el **fopen** llamar se produce un error. |
+| **"w"** | Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido. |
+| **"a"** | Se abre para escritura al final del archivo (anexo). Crea el archivo si no existe. |
+| **"r+"** | Abre para lectura y escritura. El archivo debe existir. |
+| **"w+"** | Abre un archivo vacío para lectura y escritura. Si el archivo existe, se destruye su contenido. |
+| **"a+"** | Se abre para lectura y anexado. Crea el archivo si no existe. |
 
 Cuando se abre un archivo con el **"a"** o **"a +"** acceso tipo, todas las operaciones se producen al final del archivo de escritura. Se puede mover el puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier escritura operación se lleva a cabo. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando el **"r +"**, **"w +"**, o **"a +"** se especifica el tipo de acceso, se permiten operaciones de lectura y escritura (se dice que el archivo esté abierto para "actualización"). Sin embargo, cuando se cambia entre lectura y escritura, debe haber una intervención [fflush](fflush.md), [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md), o [rebobinar](rewind.md) operación. Puede especificar la posición actual para el [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) operación, si desea.
 
 Además de los valores anteriores, también se pueden incluir los siguientes caracteres en *modo* para especificar el modo de traducción de caracteres de nueva línea:
 
-|*modo* modificador|Comportamiento|
-|-|-|
-**t**|Abra en modo de texto (traducido). En este modo, las combinaciones de retorno de carro-avance de línea (CR-LF) se convierten en avances de una línea (LF) en la entrada, y los caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, Ctrl+Z se interpreta como carácter de final de archivo en la entrada.
-**b**|Abre en modo binario (sin traducir). Las traducciones del **t** modo se suprimen.
-**c**|Habilitar la marca de confirmación asociado *filename* para que el contenido del búfer del archivo se escribe directamente en el disco si **fflush** o **_flushall** se llama.
-**n**|Restablecer la marca de confirmación asociado *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a Commode.obj. El valor predeterminado de la marca global de confirmación es "no-commit" a menos que explícitamente vincule el programa a Commode.obj.
+| *modo* modificador | Comportamiento |
+|-----------------|----------|
+| **t** | Abra en modo de texto (traducido). En este modo, las combinaciones de retorno de carro-avance de línea (CR-LF) se convierten en avances de una línea (LF) en la entrada, y los caracteres de LF se traducen en combinaciones de CR-LF en la salida. Además, Ctrl+Z se interpreta como carácter de final de archivo en la entrada. |
+| **b** | Abre en modo binario (sin traducir). Las traducciones del **t** modo se suprimen. |
+| **c** | Habilitar la marca de confirmación asociado *filename* para que el contenido del búfer del archivo se escribe directamente en el disco si **fflush** o **_flushall** se llama. |
+| **n** | Restablecer la marca de confirmación asociado *filename* a "no-commit". Este es el valor predeterminado. También invalida la marca global de confirmación si vincula el programa a Commode.obj. El valor predeterminado de la marca global de confirmación es "no-commit" a menos que explícitamente vincule el programa a Commode.obj. |
 
 El **t**, **c**, y **n** *modo* opciones son extensiones de Microsoft para **fopen** y **_fdopen**. No las use si desea conservar la portabilidad ANSI.
 

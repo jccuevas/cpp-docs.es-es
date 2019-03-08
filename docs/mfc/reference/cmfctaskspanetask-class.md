@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPaneTask (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTask
 - AFXTASKSPANE/CMFCTasksPaneTask
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 77fd20ad7a7f5bae8b9c654ef12b708c58cab33f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a2e4f2a1f2e3344936af33fb2258b496b1be93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516888"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279255"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask (clase)
 
@@ -81,10 +81,10 @@ class CMFCTasksPaneTask : public CObject
 
 La siguiente ilustración muestra un grupo de tareas que contiene tres tareas:
 
-![Grupo de tareas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Grupo de tareas, expandido](../../mfc/reference/media/nexttaskgrpexpand.png "grupo de tareas, expandido")
 
 > [!NOTE]
->  Si una tarea no tiene un identificador de comando válido, se trata como una etiqueta sencilla.
+> Si una tarea no tiene un identificador de comando válido, se trata como una etiqueta sencilla.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

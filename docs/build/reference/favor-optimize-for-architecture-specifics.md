@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -favor compiler option [C++]
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
-ms.openlocfilehash: 35a8f36437d14b258273fb637eb6fd8b3c8e3c4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f76164468375e84380c6f02050c6c7a35b32412
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552183"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418989"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (optimizar para valores específicos de la arquitectura)
 
@@ -20,16 +20,14 @@ ms.locfileid: "50552183"
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-/favor:{blend | ATOM | AMD64 | INTEL64}
-```
+> **/ favor:**{**blend** | **ATOM** | **AMD64** | **INTEL64**}
 
 ## <a name="remarks"></a>Comentarios
 
-**/ favor: Blend**<br/>
+**/favor:blend**<br/>
 (x86 y x64) genera el código que está optimizado para las características de microarquitecturas en arquitecturas el AMD y las arquitecturas de Intel. Mientras **/favor: Blend** podría no ofrecer el mejor rendimiento posible en un procesador específico, se ha diseñado para ofrecer el mejor rendimiento en una amplia gama de procesadores x86 y x64. De forma predeterminada, **/favor: Blend** está en vigor.
 
-**/favor:Atom**<br/>
+**/favor:ATOM**<br/>
 (x86 y x64) genera el código que está optimizado para las características del procesador Intel Atom y tecnología de procesador Intel Centrino Atom. Código que se genera mediante el uso de **/favor:ATOM** también puede generar instrucciones de Intel SSSE3, SSE3, SSE y SSE2 para los procesadores Intel.
 
 **/favor:AMD64**<br/>
@@ -41,7 +39,7 @@ ms.locfileid: "50552183"
 > [!NOTE]
 > Arquitectura Intel64 se conocía anteriormente como Extended Memory 64 Technology, y la opción del compilador correspondiente era **/favor:EM64T**.
 
-Para obtener información sobre cómo programar para la x64 arquitectura, consulte [x64 convenciones de Software](../../build/x64-software-conventions.md).
+Para obtener información sobre cómo programar para la x64 arquitectura, consulte [x64 convenciones de software](../../build/x64-software-conventions.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: ee42fc2d1065a755fa816a99563ccc9f0108e847
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0f79ed1b38401abbc65898193f2305bd432bb28
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419925"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Especificar el límite de asignación de memoria del encabezado precompilado)
 
@@ -52,7 +52,7 @@ La tabla siguiente muestra cómo el *factor* argumento afecta el límite de asig
 |100|75 MB|
 |200|150 MB|
 |1000|750 MB|
-|2000|1.500 MB|
+|2000|1500 MB|
 
 ## <a name="other-ways-to-set-the-memory-allocation-limit"></a>Otras maneras de establecer el límite de la asignación de memoria
 

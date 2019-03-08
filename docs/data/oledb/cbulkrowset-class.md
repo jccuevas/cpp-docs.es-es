@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 776123baa0d53ac2a1777849b60d35cf0d93a172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431075"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426230"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset (Clase)
 
@@ -152,9 +152,9 @@ El ejemplo siguiente muestra el uso de la `CBulkRowset` clase.
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="addrefrows"></a> CBulkRowset:: Addrefrows
+## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.
+Las llamadas [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) para incrementar el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -166,7 +166,7 @@ HRESULT AddRefRows() throw();
 
 Un HRESULT estándar.
 
-## <a name="cbulkrowset"></a> CBulkRowset:: CBulkRowset
+## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
 
 Crea un nuevo `CBulkRowset` de objetos y el recuento de filas de forma predeterminada se establece en 10.
 
@@ -176,7 +176,7 @@ Crea un nuevo `CBulkRowset` de objetos y el recuento de filas de forma predeterm
 CBulkRowset();
 ```
 
-## <a name="movefirst"></a> CBulkRowset:: MoveFirst
+## <a name="movefirst"></a> CBulkRowset::MoveFirst
 
 Recupera la primera fila de datos.
 
@@ -190,7 +190,7 @@ HRESULT MoveFirst() throw();
 
 Un HRESULT estándar.
 
-## <a name="movelast"></a> CBulkRowset:: MoveLast
+## <a name="movelast"></a> CBulkRowset::MoveLast
 
 Se mueve a la última fila.
 
@@ -204,7 +204,7 @@ HRESULT MoveLast() throw();
 
 Un HRESULT estándar.
 
-## <a name="movenext"></a> CBulkRowset:: MoveNext
+## <a name="movenext"></a> CBulkRowset::MoveNext
 
 Recupera la siguiente fila de datos.
 
@@ -218,7 +218,7 @@ HRESULT MoveNext() throw();
 
 Un HRESULT estándar. Cuando se alcanza el final del conjunto de filas, devuelve DB_S_ENDOFROWSET.
 
-## <a name="moveprev"></a> CBulkRowset:: MovePrev
+## <a name="moveprev"></a> CBulkRowset::MovePrev
 
 Se desplaza a la fila anterior.
 
@@ -232,7 +232,7 @@ HRESULT MovePrev() throw();
 
 Un HRESULT estándar.
 
-## <a name="movetobookmark"></a> CBulkRowset:: MoveToBookmark
+## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
 
 Recopila la fila marcada por fila en un desplazamiento especificado o un marcador (*lSkip*) desde ese marcador.
 
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parámetros
 
-*Marcador*<br/>
+*bookmark*<br/>
 [in] Un marcador de marcar la ubicación desde la que desea capturar datos.
 
 *lSkip*<br/>
@@ -253,9 +253,9 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>Valor devuelto
 
-Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988) en el *referencia del programador OLE DB*.
+Consulte [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="movetoratio"></a> CBulkRowset:: Movetoratio
+## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
 Captura las filas a partir de una posición en el conjunto de filas fraccionaria.
 
@@ -284,11 +284,11 @@ Un HRESULT estándar.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) en el *referencia del programador de OLE DB*.
+Donde `RowsetSize` es el tamaño del conjunto de filas, medido en filas. El proveedor específico depende de la precisión de esta fórmula. Para obtener más información, consulte [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) en el *referencia del programador de OLE DB*.
 
-## <a name="releaserows"></a> CBulkRowset:: ReleaseRows
+## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.
+Las llamadas [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) para reducir el recuento de referencias para todas las filas recuperadas actualmente desde el conjunto de filas bulk.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -300,7 +300,7 @@ HRESULT ReleaseRows() throw();
 
 Un HRESULT estándar.
 
-## <a name="setrows"></a> CBulkRowset:: setRows
+## <a name="setrows"></a> CBulkRowset::SetRows
 
 Establece el número de identificadores de fila recuperados por cada llamada.
 

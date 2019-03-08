@@ -1,5 +1,5 @@
 ---
-title: 'Administración de memoria: asignación de marcos'
+title: 'Administración de memoria: Asignación de marcos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory leaks [MFC], frame allocation
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: 45b0242ec8acafa2345482893d14decb02c4a3f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcd691f8e99b558fcadfc1cf51990b673c5b760c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262212"
 ---
-# <a name="memory-management-frame-allocation"></a>Administración de memoria: asignación de marcos
+# <a name="memory-management-frame-allocation"></a>Administración de memoria: Asignación de marcos
 
 Asignación en el marco toma su nombre de la "marco de pila" que se establece cada vez que se llama a una función. El marco de pila es un área de memoria que contiene de forma temporal los argumentos a la función, así como las variables que se definen local a la función. Las variables de marco a menudo se denominan variables "automáticas" porque el compilador asigna automáticamente el espacio para ellos.
 
@@ -42,4 +42,3 @@ La ventaja clave de asignación de objetos en el marco es que se eliminen autom�
 ## <a name="see-also"></a>Vea también
 
 [Administración de memoria](../mfc/memory-management.md)
-

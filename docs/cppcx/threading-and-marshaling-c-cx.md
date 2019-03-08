@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582642"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426763"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Subprocesamiento y cálculo de referencias (C++/CX)
 
@@ -61,7 +61,7 @@ A continuación se muestra la advertencia que se emite:
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-Cuando agregas una referencia, en el ámbito de miembro o en el ámbito global, a un objeto que tiene un comportamiento del cálculo de referencias de “Standard”, el compilador emite una advertencia aconsejándote que incluyas el tipo en `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` . Si utilizas `Agile<T>`, puedes utilizar la clase del mismo modo que cualquier otra clase ágil. Utiliza `Platform::Agile<T>` en estas circunstancias:
+Al agregar una referencia, en el ámbito de miembro o un ámbito global, a un objeto que tiene un comportamiento del cálculo de referencias de "Estándar", el compilador emite una advertencia aconsejándote que incluyas el tipo en que `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Si usa `Agile<T>`, puede utilizar la clase igual que cualquier otra clase ágil. Utiliza `Platform::Agile<T>` en estas circunstancias:
 
 - La variable no ágil se declara en el ámbito global.
 
@@ -124,5 +124,5 @@ El subprocesamiento y serialización información requerida por un componente de
 
 ## <a name="see-also"></a>Vea también
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

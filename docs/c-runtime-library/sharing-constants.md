@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: e1dc7879403072113c8b81658165c377a1bf4527
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcebc4f9321ebf3f85bdd757118f779a759fc62
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532826"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220522"
 ---
 # <a name="sharing-constants"></a>Constantes de uso compartido
 
@@ -34,9 +34,7 @@ Constantes para modos de uso compartido de archivos.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <share.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

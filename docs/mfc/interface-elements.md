@@ -1,16 +1,16 @@
 ---
 title: Elementos de la interfaz
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 564f0baa34cfb0fe682c2a761fcf8c0d41cd6cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262888"
 ---
 # <a name="interface-elements"></a>Elementos de la interfaz
 
@@ -18,7 +18,7 @@ Este documento describe los elementos de interfaz que se introdujeron en Visual 
 
 La siguiente ilustración muestra una aplicación que se creó mediante el uso de los nuevos elementos de interfaz.
 
-![Aplicación de ejemplo de MFC Feature Pack](../mfc/media/mfc_featurepack.png "mfc_featurepack")
+![Aplicación de ejemplo de MFC Feature Pack](../mfc/media/mfc_featurepack.png "aplicación de ejemplo de MFC Feature Pack")
 
 ## <a name="window-docking"></a>Acoplamiento de ventanas
 
@@ -46,7 +46,7 @@ Cada barra de acoplamiento se divide en las filas de acoplamiento. Las filas de 
 
 ## <a name="mini-frame-windows"></a>Windows de marco reducido
 
-Un panel flotante reside en una ventana de marco reducido. Ventanas de marco reducido están representadas por dos clases: [CMDITabInfo (clase)](../mfc/reference/cmditabinfo-class.md) (que puede contener un solo panel) y [CMultiPaneFrameWnd (clase)](../mfc/reference/cmultipaneframewnd-class.md) (que puede contener varios paneles). Para un panel flotante en el código, llame a [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Después de un panel de la flota, el marco crea automáticamente una ventana de marco reducido y esa ventana de marco reducido se convierte en el elemento primario del panel flotante. Cuando se acopla el panel flotante, el marco de trabajo restablece a su elemento primario y el panel flotante se convierte en una barra de acoplamiento (para las barras de herramientas) o un sitio de vinculación (para los paneles de tamaño variable).
+Un panel flotante reside en una ventana de marco reducido. Ventanas de marco reducido se representan mediante dos clases: [CMDITabInfo (clase)](../mfc/reference/cmditabinfo-class.md) (que puede contener un solo panel) y [CMultiPaneFrameWnd (clase)](../mfc/reference/cmultipaneframewnd-class.md) (que puede contener varios paneles). Para un panel flotante en el código, llame a [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). Después de un panel de la flota, el marco crea automáticamente una ventana de marco reducido y esa ventana de marco reducido se convierte en el elemento primario del panel flotante. Cuando se acopla el panel flotante, el marco de trabajo restablece a su elemento primario y el panel flotante se convierte en una barra de acoplamiento (para las barras de herramientas) o un sitio de vinculación (para los paneles de tamaño variable).
 
 ## <a name="pane-dividers"></a>Divisores de paneles
 
@@ -69,4 +69,3 @@ El control de barra de Outlook también se basa en las barras con pestañas. El 
 ## <a name="see-also"></a>Vea también
 
 [Conceptos](../mfc/mfc-concepts.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: 996a9052d71df4aed54fa4f922b4d4ffff8f1c14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453877"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304839"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList (clase)
 
@@ -63,7 +63,7 @@ class CRecentFileList
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CRecentFileList::operator](#operator_at)|Devuelve un `CString` objeto en una posición determinada.|
+|[CRecentFileList::operator \[ \]](#operator_at)|Devuelve un `CString` objeto en una posición determinada.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -115,7 +115,7 @@ Especifica un puntero al elemento de Shell que debe agregarse a la lista.
 *pLink*<br/>
 Especifica un puntero al vínculo de Shell para agregarse a la lista.
 
-*PIDL*<br/>
+*pidl*<br/>
 Especifica la lista de identificadores para el elemento de shell que debe agregarse a la carpeta de documentos recientes.
 
 ### <a name="remarks"></a>Comentarios
@@ -137,7 +137,7 @@ CRecentFileList(
 
 ### <a name="parameters"></a>Parámetros
 
-*Ncomenzar*<br/>
+*nStart*<br/>
 Desplazamiento de la numeración de la pantalla del menú de la lista de archivos MRU (usado más recientemente).
 
 *lpszSection*<br/>
@@ -264,4 +264,3 @@ virtual void WriteList();
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

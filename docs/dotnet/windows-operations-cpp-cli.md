@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508399"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415089"
 ---
 # <a name="windows-operations-ccli"></a>Operaciones de Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 La clase <xref:Microsoft.Win32.Registry> es simplemente un contenedor para instancias estáticas de <xref:Microsoft.Win32.RegistryKey>. Cada instancia representa un nodo de Registro raíz. Las instancias son <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> y <xref:Microsoft.Win32.Registry.Users>.
 
-Además de ser estáticos, los objetos incluidos en la clase <xref:Microsoft.Win32.Registry> son de sólo lectura. Por otra parte, las instancias de la clase <xref:Microsoft.Win32.RegistryKey> que se crean para tener acceso al contenido de los objetos del Registro también son de sólo lectura. Para obtener un ejemplo de cómo invalidar este comportamiento, consulte [Cómo: escribir datos en el registro de Windows (C++ / c++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+Además de ser estáticos, los objetos incluidos en la clase <xref:Microsoft.Win32.Registry> son de sólo lectura. Por otra parte, las instancias de la clase <xref:Microsoft.Win32.RegistryKey> que se crean para tener acceso al contenido de los objetos del Registro también son de sólo lectura. Para obtener un ejemplo de cómo invalidar este comportamiento, vea [Cómo: Escribir datos en el registro de Windows (C++ / c++ / CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Hay dos objetos adicionales en la clase <xref:Microsoft.Win32.Registry>: <xref:Microsoft.Win32.Registry.DynData> y <xref:Microsoft.Win32.Registry.PerformanceData>. Los dos son instancias de la clase <xref:Microsoft.Win32.RegistryKey>. La <xref:Microsoft.Win32.Registry.DynData> objeto contiene información dinámica del registro, que solo se admite en Windows 98 y Windows Me. El objeto <xref:Microsoft.Win32.Registry.PerformanceData> se puede usar para tener acceso a información del contador de rendimiento para aplicaciones que usan el sistema de supervisión de rendimiento de Windows. El <xref:Microsoft.Win32.Registry.PerformanceData> nodo representa información que no se almacena realmente en el registro y, por tanto, no se pueden ver utilizando Regedit.exe.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Comentarios
 
-Puede usar .NET Framework para tener acceso al registro con el <xref:Microsoft.Win32.Registry> y [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) clases, que están definen en el <xref:Microsoft.Win32> espacio de nombres. El **registro** clase es un contenedor para instancias estáticas de la <xref:Microsoft.Win32.RegistryKey> clase. Cada instancia representa un nodo de Registro raíz. Las instancias son <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> y <xref:Microsoft.Win32.Registry.Users>.
+Puede usar .NET Framework para tener acceso al registro con el <xref:Microsoft.Win32.Registry> y <xref:Microsoft.Win32.RegistryKey> clases, que están definen en el <xref:Microsoft.Win32> espacio de nombres. El **registro** clase es un contenedor para instancias estáticas de la <xref:Microsoft.Win32.RegistryKey> clase. Cada instancia representa un nodo de Registro raíz. Las instancias son <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> y <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

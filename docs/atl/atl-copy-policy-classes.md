@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 535bd1a3129bab15f546f6a82d77cf4e152fc605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452759"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296350"
 ---
 # <a name="atl-copy-policy-classes"></a>Clases de directivas de copia ATL
 
@@ -82,4 +82,3 @@ VCUE_Copy.h también contiene las siguientes especializaciones de esta clase: `G
 
 [Implementar una recopilación basada en la biblioteca estándar de C++](../atl/implementing-an-stl-based-collection.md)<br/>
 [Ejemplo ATLCollections](../visual-cpp-samples.md)
-

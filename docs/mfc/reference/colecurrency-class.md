@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: d831353c72c40ab4f35b64046ab5d5236aa9644a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273184"
 ---
 # <a name="colecurrency-class"></a>COleCurrency (clase)
 
@@ -61,13 +61,13 @@ class COleCurrency
 
 |Name|Descripción|
 |----------|-----------------|
-|[operador =](#operator_eq)|Copia un `COleCurrency` valor.|
-|[operador +, -](#operator_plus_minus)|Agrega, resta y cambia el signo de `COleCurrency` valores.|
-|[operador +=, =](#operator_plus_minus_eq)|Se agrega y se resta un `COleCurrency` valor de este `COleCurrency` objeto.|
-|[operador * /](#operator_star)|Escala un `COleCurrency` valor por un valor entero.|
-|[operador * =, / =](#operator_star_div_eq)|Esto escala `COleCurrency` valor por un valor entero.|
+|[operator =](#operator_eq)|Copia un `COleCurrency` valor.|
+|[operator +, -](#operator_plus_minus)|Agrega, resta y cambia el signo de `COleCurrency` valores.|
+|[operator +=, -=](#operator_plus_minus_eq)|Se agrega y se resta un `COleCurrency` valor de este `COleCurrency` objeto.|
+|[operator */](#operator_star)|Escala un `COleCurrency` valor por un valor entero.|
+|[operator *=, /=](#operator_star_div_eq)|Esto escala `COleCurrency` valor por un valor entero.|
 |[operador <<](#operator_stream)|Salidas un `COleCurrency` valor `CArchive` o `CDumpContext`.|
-|[operador >>](#operator_stream)|Entradas un `COleCurrency` objeto `CArchive`.|
+|[operator >>](#operator_stream)|Entradas un `COleCurrency` objeto `CArchive`.|
 |[operador de moneda](#operator_currency)|Convierte un `COleCurrency` valor a la moneda.|
 |[operador ==, <, < =, etcetera.](#colecurrency_relational_operators)|Compara dos `COleCurrency` valores.|
 
@@ -132,11 +132,11 @@ Todos estos constructores crean nuevos `COleCurrency` objetos inicializados en e
 
 - COleCurrency (`curSrc`) construye un `COleCurrency` objeto a partir de una máquina `COleCurrency` objeto. El nuevo objeto tiene el mismo estado que el objeto de origen.
 
-- COleCurrency (`varSrc`) construye un `COleCurrency` objeto. Intenta convertir un [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) estructura o `COleVariant` objeto como un valor de divisa (VT_CY). Si esta conversión se realiza correctamente, el valor convertido se copia en el nuevo `COleCurrency` objeto. Si no, es el valor de la `COleCurrency` objeto se establece en cero (0) y su estado a no válido.
+- COleCurrency (`varSrc`) construye un `COleCurrency` objeto. Intenta convertir un [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) estructura o `COleVariant` objeto como un valor de divisa (VT_CY). Si esta conversión se realiza correctamente, el valor convertido se copia en el nuevo `COleCurrency` objeto. Si no, es el valor de la `COleCurrency` objeto se establece en cero (0) y su estado a no válido.
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' objeto de los componentes numéricos especificados. Si el valor absoluto de la parte fraccionaria es mayor que 10.000, se realiza el ajuste adecuado a las unidades. Tenga en cuenta que las unidades y la parte fraccionaria se especifican mediante los valores de tipo long con signo.
 
-Para obtener más información, consulte el [moneda](/windows/desktop/api/wtypes/ns-wtypes-tagcy) y [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) entradas en el SDK de Windows.
+Para obtener más información, consulte el [moneda](/windows/desktop/api/wtypes/ns-wtypes-tagcy) y [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) entradas en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 
@@ -220,15 +220,15 @@ Para obtener más información sobre las operaciones que puede establecer el est
 
 - [COleCurrency](#colecurrency)
 
-- [operador =](#operator_eq)
+- [operator =](#operator_eq)
 
-- [operador + -](#operator_plus_minus)
+- [operator + -](#operator_plus_minus)
 
 - [operador += y =](#operator_plus_minus_eq)
 
-- [operador * /](#operator_star)
+- [operator * /](#operator_star)
 
-- [operador * = y / =](#operator_star_div_eq)
+- [operator *= and /=](#operator_star_div_eq)
 
 ### <a name="example"></a>Ejemplo
 
@@ -281,15 +281,15 @@ Para obtener más información sobre las operaciones que puede establecer el est
 
 - [COleCurrency](#colecurrency)
 
-- [operador =](#operator_eq)
+- [operator =](#operator_eq)
 
-- [operador +, -](#operator_plus_minus)
+- [operator +, -](#operator_plus_minus)
 
-- [operador +=, =](#operator_plus_minus_eq)
+- [operator +=, -=](#operator_plus_minus_eq)
 
-- [operador * /](#operator_star)
+- [operator */](#operator_star)
 
-- [operador * =, / =](#operator_star_div_eq)
+- [operator *=, /=](#operator_star_div_eq)
 
 > [!CAUTION]
 >  Este miembro de datos es para situaciones de programación avanzadas. Debe usar las funciones de miembro insertada [GetStatus](#getstatus) y [SetStatus](#setstatus). Consulte `SetStatus` para las precauciones adicionales con respecto a este miembro de datos se establece explícitamente.
@@ -314,7 +314,7 @@ A continuación se muestra una breve descripción de cada operador:
 
 - **operador = (** *varSrc* **)** si la conversión de la `VARIANT` valor (o [COleVariant](../../mfc/reference/colevariant-class.md) objeto) a una moneda ( `VT_CY`) es es correcto, el valor convertido se copia en esta `COleCurrency` objeto y su estado se establece en válido. Si la conversión no se realiza correctamente, el valor de la `COleCurrency` objeto se establece en 0 y su estado a no válido.
 
-Para obtener más información, consulte el [moneda](/windows/desktop/api/wtypes/ns-wtypes-tagcy) y [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) entradas en el SDK de Windows.
+Para obtener más información, consulte el [moneda](/windows/desktop/api/wtypes/ns-wtypes-tagcy) y [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) entradas en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 
@@ -344,7 +344,7 @@ Para obtener más información sobre los valores de estado válido, null y no v�
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, =
+##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator +=, -=
 
 Permiten sumar y restar un `COleCurrency` valor hacia y desde este `COleCurrency` objeto.
 

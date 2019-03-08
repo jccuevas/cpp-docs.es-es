@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: 12a6e988828d1e4e2dbdc46d49da5ff2fe9e9d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2bac6f62f7b1a692e5fc40fcf6dea1e10a50927
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473782"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424367"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (Omitir bibliotecas)
 
@@ -28,7 +28,7 @@ ms.locfileid: "50473782"
 
 ## <a name="arguments"></a>Argumentos
 
-*Biblioteca de*<br/>
+*library*<br/>
 Una biblioteca que desee al enlazador que omita al resolver referencias externas.
 
 ## <a name="remarks"></a>Comentarios

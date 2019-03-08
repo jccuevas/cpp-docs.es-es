@@ -37,16 +37,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 45e7f7e86344f1928bb007e5f2bde1c0eca1f745
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c410efbbd0ce51bcaca2ba43a835bf88e1cdbc54
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632237"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419194"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl (Clase)
 
-Proporciona una implementación de la [IAccessor](/previous-versions/windows/desktop/ms719672) interfaz.
+Proporciona una implementación de la [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -91,9 +91,9 @@ Unidad de almacenamiento para obtener información de columna. El valor predeter
 
 ## <a name="remarks"></a>Comentarios
 
-Esto es obligatorio en los conjuntos de filas y los comandos. OLE DB requiere que los proveedores implementar un HACCESSOR, que es una etiqueta a una matriz de [DBBINDING](/previous-versions/windows/desktop/ms716845) estructuras. HACCESSORs proporcionadas por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un `ATLBINDINGS` en `IAccessorImpl`de definición de plantilla. `BindType` Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su `DBBINDING` de matriz, así como un indicadores de descriptores de acceso y el recuento de referencia.
+Esto es obligatorio en los conjuntos de filas y los comandos. OLE DB requiere que los proveedores implementar un HACCESSOR, que es una etiqueta a una matriz de [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) estructuras. HACCESSORs proporcionadas por `IAccessorImpl` son direcciones de la `BindType` estructuras. De forma predeterminada, `BindType` se define como un `ATLBINDINGS` en `IAccessorImpl`de definición de plantilla. `BindType` Proporciona un mecanismo que utiliza `IAccessorImpl` para realizar un seguimiento del número de elementos de su `DBBINDING` de matriz, así como un indicadores de descriptores de acceso y el recuento de referencia.
 
-## <a name="iaccessorimpl"></a> IAccessorImpl:: IAccessorImpl
+## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
 El constructor.
 
@@ -103,7 +103,7 @@ El constructor.
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a> IAccessorImpl:: Addrefaccessor
+## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
 
 Agrega un recuento de referencias a un descriptor de acceso existente.
 
@@ -116,9 +116,9 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) en el *referencia del programador OLE DB*.
+Consulte [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="createaccessor"></a> IAccessorImpl:: CreateAccessor
+## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
 Crea un descriptor de acceso de un conjunto de enlaces.
 
@@ -135,9 +135,9 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969) en el *referencia del programador OLE DB*.
+Consulte [IAccessor:: CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="getbindings"></a> IAccessorImpl:: Getbindings
+## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
 Devuelve los enlaces de columnas básicas del consumidor en un descriptor de acceso.
 
@@ -152,9 +152,9 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) en el *referencia del programador OLE DB*.
+Consulte [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) en el *referencia del programador OLE DB*.
 
-## <a name="releaseaccessor"></a> IAccessorImpl:: ReleaseAccessor
+## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
 Libera un descriptor de acceso.
 
@@ -167,7 +167,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717) en el *referencia del programador OLE DB*.
+Consulte [IAccessor:: ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273782"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl (clase)
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*<br/>
+*Base*<br/>
 Una interfaz de enumerador COM. Consulte [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) para obtener un ejemplo.
 
 *piid*<br/>
@@ -58,7 +58,7 @@ Un homogéneos [Copiar directiva clase](../../atl/atl-copy-policy-classes.md).
 |Name|Descripción|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|El constructor.|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|Destructor.|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -68,7 +68,7 @@ Un homogéneos [Copiar directiva clase](../../atl/atl-copy-policy-classes.md).
 |[CComEnumImpl::Init](#init)|Inicializa el enumerador.|
 |[CComEnumImpl::Next](#next)|La implementación de **siguiente**.|
 |[CComEnumImpl::Reset](#reset)|La implementación de **restablecer**.|
-|[CComEnumImpl:: Skip](#skip)|La implementación de **Skip**.|
+|[CComEnumImpl::Skip](#skip)|La implementación de **Skip**.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -111,7 +111,7 @@ El constructor.
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl
+##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
 
 Destructor.
 
@@ -271,7 +271,7 @@ STDMETHOD(Reset)(void);
 
 Un valor HRESULT estándar.
 
-##  <a name="skip"></a>  CComEnumImpl:: Skip
+##  <a name="skip"></a>  CComEnumImpl::Skip
 
 Este método proporciona la implementación de la **Skip** método.
 

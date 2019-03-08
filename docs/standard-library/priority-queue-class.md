@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677180"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333220"
 ---
 # <a name="priorityqueue-class"></a>priority_queue (Clase)
 
@@ -224,9 +224,9 @@ Construye un objeto priority_queue que está vacío o que es una copia de un int
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*_ comp*<br/>
+*_comp*<br/>
 Función de comparación de tipo **constTraits** usada para ordenar los elementos de priority_queue, que de manera predeterminada es la función de comparación del contenedor base.
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ Cada uno de los tres primeros constructores especifica un priority_queue inicial
 
 El cuarto constructor especifica una copia de la priority_queue *derecho*.
 
-Los tres últimos constructores copian el intervalo [* primero, último *) de algún contenedor y use los valores para inicializar un objeto priority_queue con especificando el tipo de función de comparación de clase **rasgos** y `container_type`.
+Los tres últimos constructores copian el intervalo \[ *primera*, *última*) de algún contenedor y use los valores para inicializar un objeto priority_queue con especificando el tipo de función de comparación de clase `Traits` y `container_type`.
 
 ### <a name="example"></a>Ejemplo
 

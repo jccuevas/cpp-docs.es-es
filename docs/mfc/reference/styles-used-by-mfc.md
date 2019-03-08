@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304904"
 ---
 # <a name="styles-used-by-mfc"></a>Estilos utilizados por MFC
 
@@ -338,7 +338,7 @@ Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/c
 |LBS_HASSTRINGS|Especifica un cuadro de lista dibujado por el propietario que contiene elementos que se componen de cadenas. El cuadro de lista mantiene la memoria y los punteros para las cadenas por lo que la aplicación puede utilizar el `GetText` función miembro para recuperar el texto de un elemento determinado.|
 |LBS_MULTICOLUMN|Especifica un cuadro de lista de varias columnas que se desplaza horizontalmente. El `SetColumnWidth` función miembro establece el ancho de las columnas.|
 |LBS_MULTIPLESEL|Selección de la cadena se activa cada vez que el usuario hace clic o hace doble clic en la cadena. Se puede seleccionar cualquier número de cadenas.|
-|LBS_NODATA|Especifica un cuadro de lista sin datos. Especifique este estilo cuando el recuento de elementos en el cuadro de lista será superior a mil. Un cuadro de lista sin datos también debe tener el estilo LBS_OWNERDRAWFIXED, pero no debe tener el estilo LBS_SORT o LBS_HASSTRINGS. <br />< /br / > un cuadro de lista sin datos es similar a un cuadro de lista dibujado por el propietario, salvo que no contiene datos para un elemento de mapa de bits o de cadena. Comandos para agregar, insertar o eliminar un elemento ignorar siempre cualquier elemento de datos; las solicitudes para buscar una cadena en el cuadro de lista siempre se producirá un error. El sistema envía el mensaje WM_DRAWITEM a la ventana propietaria cuando se debe dibujar un elemento. El miembro itemID de la `DRAWITEMSTRUCT` estructura pasada con el mensaje WM_DRAWITEM especifica el número de línea del elemento que se va a dibujar. Un cuadro de lista sin datos no envía un mensaje WM_DELETEITEM.|
+|LBS_NODATA|Especifica un cuadro de lista sin datos. Especifique este estilo cuando el recuento de elementos en el cuadro de lista será superior a mil. Un cuadro de lista sin datos también debe tener el estilo LBS_OWNERDRAWFIXED, pero no debe tener el estilo LBS_SORT o LBS_HASSTRINGS.<br/><br/> Un cuadro de lista sin datos es similar a un cuadro de lista dibujado por el propietario, salvo que no contiene datos para un elemento de mapa de bits o de cadena. Comandos para agregar, insertar o eliminar un elemento ignorar siempre cualquier elemento de datos; las solicitudes para buscar una cadena en el cuadro de lista siempre se producirá un error. El sistema envía el mensaje WM_DRAWITEM a la ventana propietaria cuando se debe dibujar un elemento. El miembro itemID de la `DRAWITEMSTRUCT` estructura pasada con el mensaje WM_DRAWITEM especifica el número de línea del elemento que se va a dibujar. Un cuadro de lista sin datos no envía un mensaje WM_DELETEITEM.|
 |LBS_NOINTEGRALHEIGHT|El tamaño del cuadro de lista es exactamente igual al tamaño especificado por la aplicación cuando creó el cuadro de lista. Por lo general, Windows cambia el tamaño de un cuadro de lista para que el cuadro de lista no muestren elementos parciales.|
 |LBS_NOREDRAW|Presentación del cuadro de lista no se actualiza cuando se realizan cambios. Este estilo puede cambiarse en cualquier momento mediante el envío de un mensaje WM_SETREDRAW.|
 |LBS_NOSEL|Especifica que el cuadro de lista contiene los elementos que pueden verse pero no seleccionados.|
@@ -350,7 +350,7 @@ Estilos de cuadro de lista se aplican a [CListBox (clase)](../../mfc/reference/c
 |LBS_USETABSTOPS|Permite que un cuadro de lista reconocer y expandir los caracteres de tabulación al dibujar sus cadenas. Las posiciones de tabulación predeterminada son 32 unidades de cuadro de diálogo. (Una unidad de cuadro de diálogo es una distancia horizontal o vertical. Una unidad de cuadro de diálogo horizontal es igual a una cuarta parte de la unidad de base de ancho del cuadro de diálogo actual. Las unidades base del cuadro de diálogo se calculan en función del alto y ancho de la fuente del sistema actual. El `GetDialogBaseUnits` función Windows devuelve el cuadro de diálogo actual unidades base en píxeles.) Este estilo no debe usarse con LBS_OWNERDRAWFIXED.|
 |LBS_WANTKEYBOARDINPUT|El propietario del cuadro de lista recibe mensajes WM_VKEYTOITEM o WM_CHARTOITEM cada vez que el usuario presiona una tecla mientras el cuadro de lista tiene foco de entrada. Esto permite que una aplicación realizar un procesamiento especial en la entrada del teclado.|
 
-##<a name="message-box-styles"></a>  Estilos de cuadro de mensaje
+## <a name="message-box-styles"></a>  Estilos de cuadro de mensaje
 
 Se aplican los estilos de cuadro de mensaje para [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) elementos. Especificar una combinación de estilos en el *nLas* parámetro de `AfxMessageBox`. Para obtener más información acerca de los estilos de cuadro de mensaje en Windows, consulte [función MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox).
 
@@ -360,11 +360,11 @@ Están disponibles los siguientes estilos de cuadro de mensaje.
 
 |Estilo|Descripción|
 |-----------|-----------------|
-|MB_ABORTRETRYIGNORE|El cuadro de mensaje contiene tres botones de comando: anular, Reintentar y pasar por alto.|
+|MB_ABORTRETRYIGNORE|El cuadro de mensaje contiene tres botones de comando: Anular, Reintentar y omitir.|
 |MB_OK|El cuadro de mensaje contiene un botón de comando: Aceptar.|
 |MB_OKCANCEL|El cuadro de mensaje contiene dos botones de comando: Aceptar y Cancelar.|
 |MB_RETRYCANCEL|El cuadro de mensaje contiene dos botones de comando: Reintentar y Cancelar.|
-|MB_YESNO|El cuadro de mensaje contiene dos botones de comando: Yes y no.|
+|MB_YESNO|El cuadro de mensaje contiene dos botones de comando: Sí y no.|
 |MB_YESNOCANCEL|El cuadro de mensaje contiene tres botones de comando: Sí, No y Cancelar.|
 
 ### <a name="message-box-modality"></a>Modalidad de cuadro de mensaje
@@ -383,6 +383,7 @@ Están disponibles los siguientes estilos de cuadro de mensaje.
 |MB_ICONINFORMATION|Aparece un icono que consta de una "I" en un círculo en el cuadro de mensaje.|
 |MB_ICONQUESTION|Aparece un icono de signo de interrogación en el cuadro de mensaje.|
 |MB_ICONSTOP|Aparece un icono de detener el inicio de sesión en el cuadro de mensaje.|
+
 ### <a name="message-box-default-buttons"></a>Botones de cuadro de mensaje predeterminados
 
 |Estilo|Descripción|
@@ -444,7 +445,7 @@ Estilos estáticos se aplican a [CStatic (clase)](../../mfc/reference/cstatic-cl
 
 ## <a name="window-styles"></a> Estilos de ventana
 
-Estilos de ventana se aplican a [clase CWnd](../../mfc/reference/cwnd-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) o [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obtener más información sobre los estilos de ventana de Windows, consulte [estilos de ventana (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600).
+Estilos de ventana se aplican a [clase CWnd](../../mfc/reference/cwnd-class.md) objetos. Especificar una combinación de estilos en el *dwStyle* parámetro de [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) o [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex). Para obtener más información sobre los estilos de ventana de Windows, consulte [estilos de ventana (Windows)](/windows/desktop/winmsg/window-styles).
 
 |Estilo|Descripción|
 |-----------|-----------------|
@@ -508,7 +509,7 @@ Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-cl
 ## <a name="see-also"></a>Vea también
 
 [Información general de clases MFC](../../mfc/class-library-overview.md)<br/>
-[CWnd:: Create](../../mfc/reference/cwnd-class.md#create)<br/>
+[CWnd::Create](../../mfc/reference/cwnd-class.md#create)<br/>
 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)<br/>
 [CEdit::Create](../../mfc/reference/cedit-class.md#create)<br/>
 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)<br/>
@@ -523,5 +524,5 @@ Aplican estilos de ventana extendidos a [clase CWnd](../../mfc/reference/cwnd-cl
 [Función MessageBox (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)<br/>
 [Estilos de Control de barra de desplazamiento (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)<br/>
 [Estilos de Control estática (Windows)](/windows/desktop/Controls/static-control-styles)<br/>
-[Estilos de ventana (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)<br/>
+[Estilos de ventana (Windows)](/windows/desktop/winmsg/window-styles)<br/>
 [Estilos de ventana extendidos (Windows)](/windows/desktop/winmsg/extended-window-styles)

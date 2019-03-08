@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9e9867e5cea8d45aefa0901798b86557b05693f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528042"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418859"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilación de Common Language Runtime)
 
@@ -26,7 +26,7 @@ Permite que las aplicaciones y los componentes usen las características de Comm
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ CLR**[**:**_opciones_]
+> **/clr**[**:**_options_]
 
 ## <a name="arguments"></a>Argumentos
 
@@ -37,7 +37,7 @@ Uno o varios de los siguientes modificadores, separados por comas.
 
    Sin opciones, **/CLR** crea metadatos para la aplicación. Los metadatos pueden usarlos otras aplicaciones de CLR y permiten que la aplicación use tipos y datos en los metadatos de otros componentes de CLR. Para obtener más información, consulte [ensamblados mixtos (nativos y administrados)](../../dotnet/mixed-native-and-managed-assemblies.md).
 
-- **puros**
+- **pure**
 
    **/ CLR: pure está desusada**. Se quita la opción en Visual Studio 2017. Se recomienda trasladar el código que deba ser MSIL puro a C#.
 

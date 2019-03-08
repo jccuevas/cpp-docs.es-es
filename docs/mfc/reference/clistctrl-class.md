@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 0d07ee024a1659c18e929b0827d6ac989fa0cdde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498805"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425099"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 
@@ -309,7 +309,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::FindItem](#finditem)|Busca un elemento de vista de lista con las características especificadas.|
 |[CListCtrl::GetBkColor](#getbkcolor)|Recupera el color de fondo de un control de vista de lista.|
 |[CListCtrl::GetBkImage](#getbkimage)|Recupera la imagen de fondo actual de un control de vista de lista.|
-|[CListCtrl:: GetCallbackMask](#getcallbackmask)|Recupera la máscara de devolución de llamada para un control de vista de lista.|
+|[CListCtrl::GetCallbackMask](#getcallbackmask)|Recupera la máscara de devolución de llamada para un control de vista de lista.|
 |[CListCtrl::GetCheck](#getcheck)|Recupera el estado de la imagen de estado asociada a un elemento de visualización actual.|
 |[CListCtrl::GetColumn](#getcolumn)|Recupera los atributos de columna de un control.|
 |[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)|Recupera el orden de las columnas (de izquierda a derecha) de un control de vista de lista.|
@@ -334,7 +334,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::GetInsertMark](#getinsertmark)|Recupera la posición actual de la marca de inserción.|
 |[CListCtrl::GetInsertMarkColor](#getinsertmarkcolor)|Recupera el color actual de la marca de inserción.|
 |[CListCtrl::GetInsertMarkRect](#getinsertmarkrect)|Recupera el rectángulo que delimita el punto de inserción.|
-|[CListCtrl:: GetItem](#getitem)|Recupera los atributos del elemento de vista de lista.|
+|[CListCtrl::GetItem](#getitem)|Recupera los atributos del elemento de vista de lista.|
 |[CListCtrl::GetItemCount](#getitemcount)|Recupera el número de elementos en un control de vista de lista.|
 |[CListCtrl::GetItemData](#getitemdata)|Recupera el valor específico de la aplicación asociado a un elemento.|
 |[CListCtrl::GetItemIndexRect](#getitemindexrect)|Recupera el rectángulo delimitador para la totalidad o parte de un subelemento en el control de vista de lista actual.|
@@ -382,23 +382,23 @@ class CListCtrl : public CWnd
 |[CListCtrl::Scroll](#scroll)|Desplaza el contenido de un control de vista de lista.|
 |[CListCtrl::SetBkColor](#setbkcolor)|Establece el color de fondo del control de vista de lista.|
 |[CListCtrl::SetBkImage](#setbkimage)|Establece la imagen de fondo actual de un control de vista de lista.|
-|[CListCtrl:: SetCallbackMask](#setcallbackmask)|Establece la máscara de devolución de llamada para un control de vista de lista.|
+|[CListCtrl::SetCallbackMask](#setcallbackmask)|Establece la máscara de devolución de llamada para un control de vista de lista.|
 |[CListCtrl::SetCheck](#setcheck)|Conjuntos actual Mostrar estado de la imagen de estado asociada a un elemento.|
 |[CListCtrl::SetColumn](#setcolumn)|Establece los atributos de una columna de vista de lista.|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|Establece el orden de las columnas (de izquierda a derecha) de un control de vista de lista.|
 |[CListCtrl::SetColumnWidth](#setcolumnwidth)|Cambia el ancho de una columna en la vista de informe o vista de lista.|
-|[CListCtrl:: SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos actuales de un control de vista de lista.|
+|[CListCtrl::SetExtendedStyle](#setextendedstyle)|Establece los estilos extendidos actuales de un control de vista de lista.|
 |[CListCtrl::SetGroupInfo](#setgroupinfo)|Establece la información para el grupo de un control de vista de lista especificado.|
 |[CListCtrl::SetGroupMetrics](#setgroupmetrics)|Establece las métricas de grupo de un control de vista de lista.|
 |[CListCtrl::SetHotCursor](#sethotcursor)|Establece el cursor usado cuando se habilita el seguimiento activo para un control de vista de lista.|
 |[CListCtrl::SetHotItem](#sethotitem)|Establece el elemento activo actual de un control de vista de lista.|
 |[CListCtrl::SetHoverTime](#sethovertime)|Establece el tiempo de desplazamiento actual de un control de vista de lista.|
 |[CListCtrl::SetIconSpacing](#seticonspacing)|Establece el espaciado entre los iconos en un control de vista de lista.|
-|[CListCtrl:: SetImageList](#setimagelist)|Asigna una lista de imágenes a un control de vista de lista.|
+|[CListCtrl::SetImageList](#setimagelist)|Asigna una lista de imágenes a un control de vista de lista.|
 |[CListCtrl::SetInfoTip](#setinfotip)|Establece el texto de información sobre herramientas.|
 |[CListCtrl::SetInsertMark](#setinsertmark)|Establece el punto de inserción a la posición definida.|
 |[CListCtrl::SetInsertMarkColor](#setinsertmarkcolor)|Establece el color del punto de inserción.|
-|[CListCtrl:: SetItem](#setitem)|Establece los atributos del elemento de algunos o todos de una vista de lista.|
+|[CListCtrl::SetItem](#setitem)|Establece los atributos del elemento de algunos o todos de una vista de lista.|
 |[CListCtrl::SetItemCount](#setitemcount)|Prepara un control de vista de lista para agregar un gran número de elementos.|
 |[CListCtrl::SetItemCountEx](#setitemcountex)|Establece el número de elementos de un control de vista de lista virtual.|
 |[CListCtrl::SetItemData](#setitemdata)|Establece el valor del elemento específico de la aplicación.|
@@ -446,9 +446,9 @@ Los controles de vista de lista pueden mostrar su contenido de cuatro maneras di
 
 - Vista de informe
 
-   Cada elemento aparece en su propia línea, con información adicional que se organizan en columnas a la derecha. La columna de la izquierda contiene el pequeño icono y una etiqueta, y las columnas subsiguientes contienen los subelementos especificados por la aplicación. Un control de encabezado incrustado (clase [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa estas columnas. Para obtener más información sobre el control de encabezado y las columnas de una vista de informe, vea [utilizando CListCtrl: agregar columnas al Control (vista de informe)](../../mfc/adding-columns-to-the-control-report-view.md).
+   Cada elemento aparece en su propia línea, con información adicional que se organizan en columnas a la derecha. La columna de la izquierda contiene el pequeño icono y una etiqueta, y las columnas subsiguientes contienen los subelementos especificados por la aplicación. Un control de encabezado incrustado (clase [CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) implementa estas columnas. Para obtener más información sobre el control de encabezado y las columnas de una vista de informe, vea [CListCtrl utilizando: Agregar columnas al Control (vista de informe)](../../mfc/adding-columns-to-the-control-report-view.md).
 
-El estilo de vista de lista actual del control determina la vista actual. Para obtener más información sobre estos estilos y su uso, consulte [utilizando CListCtrl: cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
+El estilo de vista de lista actual del control determina la vista actual. Para obtener más información sobre estos estilos y su uso, consulte [CListCtrl utilizando: Cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
 
 ## <a name="extended-styles"></a>Estilos extendidos
 
@@ -460,7 +460,7 @@ Además de los estilos de lista estándar, la clase `CListCtrl` admite un gran c
 
 - Vistas de lista virtual
 
-   Cuando está habilitada, permite que el control admitir el máximo de elementos DWORD. Esto es posible mediante la colocación de la sobrecarga de administración de datos de elemento en la aplicación. Excepto la información de foco y selección de elementos, la aplicación debe administrar toda la información de elemento. Para obtener más información, consulte [utilizando CListCtrl: los controles de lista Virtual](../../mfc/virtual-list-controls.md).
+   Cuando está habilitada, permite que el control admitir el máximo de elementos DWORD. Esto es posible mediante la colocación de la sobrecarga de administración de datos de elemento en la aplicación. Excepto la información de foco y selección de elementos, la aplicación debe administrar toda la información de elemento. Para obtener más información, consulte [CListCtrl utilizando: Controles de lista virtual](../../mfc/virtual-list-controls.md).
 
 - Activación de uno y dos clics
 
@@ -470,7 +470,7 @@ Además de los estilos de lista estándar, la clase `CListCtrl` admite un gran c
 
    Cuando está habilitada, permite arrastrar y colocar reordenación de columnas en un control de vista de lista. Solo está disponible en la vista de informe.
 
-Para obtener información sobre el uso de estos nuevos estilos extendidos, vea [utilizando CListCtrl: cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
+Para obtener información sobre el uso de estos nuevos estilos extendidos, vea [CListCtrl utilizando: Cambiar los estilos de Control de lista](../../mfc/changing-list-control-styles.md).
 
 ## <a name="items-and-subitems"></a>Los elementos y subelementos
 
@@ -478,7 +478,7 @@ Cada elemento en un control de vista de lista se compone de un icono (de una lis
 
 Clase `CListCtrl` proporciona varias funciones para insertar, eliminar, buscar y modificar estos elementos. Para obtener más información, consulte [CListCtrl:: GetItem](#getitem), [CListCtrl::InsertItem](#insertitem), y [CListCtrl::FindItem](#finditem), [agregar elementos al Control](../adding-items-to-the-control.md), y [desplazamiento, organizar, ordenar y buscar en los controles de lista](../scrolling-arranging-sorting-and-finding-in-list-controls.md).
 
-De forma predeterminada, el control de vista de lista es responsable de almacenar los atributos de icono y texto de un elemento. Sin embargo, además de estos tipos de elemento de la clase `CListCtrl` admite "elementos de devolución de llamada". Un "elemento de devolución de llamada" es un elemento de vista de lista para que la aplicación, en lugar del control, almacena el texto, icono o ambos. Una máscara de devolución de llamada se usa para especificar los atributos del elemento (texto o icono) proporcionados por la aplicación. Si una aplicación utiliza los elementos de devolución de llamada, debe ser capaz de proporcionar los atributos de texto y/o un icono a petición. Elementos de devolución de llamada son útiles cuando mantiene la aplicación ya parte de esta información. Para obtener más información, consulte [utilizando CListCtrl: elementos de devolución de llamada y máscara de devolución de llamada](../callback-items-and-the-callback-mask.md).
+De forma predeterminada, el control de vista de lista es responsable de almacenar los atributos de icono y texto de un elemento. Sin embargo, además de estos tipos de elemento de la clase `CListCtrl` admite "elementos de devolución de llamada". Un "elemento de devolución de llamada" es un elemento de vista de lista para que la aplicación, en lugar del control, almacena el texto, icono o ambos. Una máscara de devolución de llamada se usa para especificar los atributos del elemento (texto o icono) proporcionados por la aplicación. Si una aplicación utiliza los elementos de devolución de llamada, debe ser capaz de proporcionar los atributos de texto y/o un icono a petición. Elementos de devolución de llamada son útiles cuando mantiene la aplicación ya parte de esta información. Para obtener más información, consulte [CListCtrl utilizando: Elementos de devolución de llamada y máscara de devolución de llamada](../callback-items-and-the-callback-mask.md).
 
 ## <a name="image-lists"></a>Listas de imágenes
 
@@ -500,7 +500,7 @@ Los iconos, imágenes de elemento de encabezado y aplicación - definen los Esta
 
    Se utiliza en la vista de informe para imágenes pequeñas que aparecen en cada elemento del control de encabezado.
 
-De forma predeterminada, un control de vista de lista destruye las listas de imágenes asignadas cuando se destruye; Sin embargo, el desarrollador puede personalizar este comportamiento mediante la destrucción de cada lista de imágenes cuando ya no se utiliza, según lo determinado por la aplicación. Para obtener más información, consulte [utilizando CListCtrl: elementos de lista y listas de imágenes](../list-items-and-image-lists.md).
+De forma predeterminada, un control de vista de lista destruye las listas de imágenes asignadas cuando se destruye; Sin embargo, el desarrollador puede personalizar este comportamiento mediante la destrucción de cada lista de imágenes cuando ya no se utiliza, según lo determinado por la aplicación. Para obtener más información, consulte [CListCtrl utilizando: Elementos de lista y listas de imágenes](../list-items-and-image-lists.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -618,8 +618,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de lista. Aplicar cualquier combinación de los estilos de control de lista al control. Consulte [estilos de ventana de vista de lista](/windows/desktop/Controls/list-view-window-styles) en el SDK de Windows para obtener una lista completa de estos estilos. Conjunto específico de un control mediante estilos extendidos [SetExtendedStyle](#setextendedstyle).
 
-*Rect*<br/>
-Especifica el tamaño y la posición del control de lista. Puede ser un `CRect` objeto o un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+*rect*<br/>
+Especifica el tamaño y la posición del control de lista. Puede ser un `CRect` objeto o un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 *pParentWnd*<br/>
 Especifica la lista ventana del control primario, normalmente un `CDialog`. No debe ser NULL.
@@ -666,8 +666,8 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de lista. Aplicar cualquier combinación de los estilos de control de lista al control. Para obtener una lista completa de estos estilos, consulte [estilos de ventana de vista de lista](/windows/desktop/Controls/list-view-window-styles) en el SDK de Windows.
 
-*Rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+*rect*<br/>
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 Índice del elemento cuya lista de imágenes de arrastre que se va a crearse.
 
 *lpPoint*<br/>
-Dirección de un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la estructura que recibe la ubicación inicial de la esquina superior izquierda de la imagen, en la vista.
+Dirección de un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la estructura que recibe la ubicación inicial de la esquina superior izquierda de la imagen, en la vista.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 Un puntero a un [LVFINDINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa) estructura que contiene información sobre el elemento que se va a buscar.
 
-*Ncomenzar*<br/>
+*nStart*<br/>
 Índice del elemento que se va a comenzar la búsqueda con, o -1 para iniciar desde el principio. El elemento situado en *Ncomenzar* se excluye de la búsqueda si *Ncomenzar* no es igual a -1.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1009,7 +1009,7 @@ Este método implementa el comportamiento de la macro de Win32, [ListView_GetBkI
         }
 ```
 
-## <a name="getcallbackmask"></a>  CListCtrl:: GetCallbackMask
+## <a name="getcallbackmask"></a>  CListCtrl::GetCallbackMask
 
 Recupera la máscara de devolución de llamada para un control de vista de lista.
 
@@ -1333,7 +1333,7 @@ int GetGroupInfo(
 *iGroupId*<br/>
 El identificador del grupo cuya información se va a recuperar.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Un puntero a la [LVGROUP que se](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) que contiene información sobre el grupo especificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1358,7 +1358,7 @@ BOOL GetGroupInfoByIndex(
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*iÍndice*|[in] Índice de base cero de un grupo.|
+|*iIndex*|[in] Índice de base cero de un grupo.|
 |*pGroup*|[out] Puntero a un [LVGROUP que se](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estructura que recibe información acerca del grupo especificado por el *iÍndice* parámetro.<br /><br /> El llamador es responsable de inicializar los miembros de la [LVGROUP que se](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estructura. Establecer el `cbSize` miembro para el tamaño de la estructura y las marcas de la `mask` miembro para especificar la información para recuperar.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*iGroupId*|[in] Especifica un grupo.|
-|*lpRect*|[in, out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura. Si este método se realiza correctamente, la estructura recibe las coordenadas del rectángulo del grupo especificado por *iGroupId*.|
+|*lpRect*|[in, out] Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura. Si este método se realiza correctamente, la estructura recibe las coordenadas del rectángulo del grupo especificado por *iGroupId*.|
 |*iCoords*|[in] Especifica las coordenadas del rectángulo para recuperar. Use uno de estos valores:<br /><br /> -LVGGR_GROUP - las coordenadas (valor predeterminado) de todo el grupo expandido.<br />-LVGGR_HEADER - las coordenadas de la cabecera (grupo contraído).<br />-LVGGR_SUBSETLINK - coordenadas del vínculo de subconjunto (subconjunto de marcado).|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1451,7 +1451,7 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-El llamador es responsable de asignar la [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que señala el *pRect* parámetro.
+El llamador es responsable de asignar la [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que señala el *pRect* parámetro.
 
 Este método envía el [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect) mensaje, que se describe en el SDK de Windows.
 
@@ -1700,7 +1700,7 @@ Devuelve uno de los siguientes valores:
 
 Esta función miembro emula la funcionalidad de la [LVM_GETINSERTMARKRECT](/windows/desktop/Controls/lvm-getinsertmarkrect) del mensaje, como se describe en el SDK de Windows.
 
-## <a name="getitem"></a>  CListCtrl:: GetItem
+## <a name="getitem"></a>  CListCtrl::GetItem
 
 Recupera algunos o todos los atributos del elemento de vista de lista.
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in] Puntero a un [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estructura para el elemento primario del subelemento.<br /><br /> El llamador es responsable de asignar y establecer los miembros de la [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estructura. Este parámetro no puede ser NULL.|
 |*iColumn*|[in] Índice de base cero de una columna en el control.|
 |*rectType*|[in] Parte del subelemento de vista de lista que se recupera el rectángulo delimitador. Especifique uno de los siguientes valores:<br /><br /> LVIR_BOUNDS - devuelve el rectángulo delimitador del subelemento todo, incluido el icono y una etiqueta.<br /><br /> LVIR_ICON - devuelve el rectángulo delimitador del icono o el icono pequeño del subelemento.<br /><br /> LVIR_LABEL - devuelve el rectángulo delimitador del texto del subelemento.|
-|*pRect*|[out] Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe información sobre el rectángulo delimitador del subelemento.<br /><br /> El llamador es responsable de asignar la [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura. Este parámetro no puede ser NULL.|
+|*pRect*|[out] Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe información sobre el rectángulo delimitador del subelemento.<br /><br /> El llamador es responsable de asignar la [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura. Este parámetro no puede ser NULL.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 Índice del elemento cuya posición se va a recuperar.
 
 *lpPoint*<br/>
-Dirección de un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la estructura que recibe la posición de la esquina superior izquierda del elemento en la vista.
+Dirección de un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la estructura que recibe la posición de la esquina superior izquierda del elemento en la vista.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 Índice del elemento cuya posición se va a recuperar.
 
 *lpRect*<br/>
-Dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que recibe el rectángulo delimitador.
+Dirección de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que recibe el rectángulo delimitador.
 
 *nCode*<br/>
 Parte del elemento de vista de lista que se va a recuperar el rectángulo delimitador. Puede ser uno de estos valores:
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Una referencia a un valor de posición devuelto por una llamada anterior a `GetNextSelectedItem` o `GetFirstSelectedItemPosition`. El valor se actualiza a la siguiente posición de esta llamada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2191,7 +2191,6 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
         {
             TRACE(_T("Couldn't allocate enough memory!"));
         }
-
 ```
 
 ## <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor
@@ -2221,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpPoint*<br/>
-Dirección de un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que recibe el origen de la vista.
+Dirección de un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que recibe el origen de la vista.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2417,7 +2416,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pTI*<br/>
+*pti*<br/>
 Un puntero a un [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) estructura que recibe la información de los iconos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2532,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Dirección de un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura.
+Dirección de un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2557,7 +2556,7 @@ void GetWorkAreas(
 *nWorkAreas*<br/>
 El número de `RECT` estructuras contenidas en el *prc* matriz.
 
-*República Popular China*<br/>
+*prc*<br/>
 Un puntero a una matriz de `RECT` estructuras (o [CRect](../../atl-mfc-shared/reference/crect-class.md) objetos) que reciben las áreas de trabajo del control de vista de lista. Valores de estas estructuras son en coordenadas de cliente.
 
 ### <a name="remarks"></a>Comentarios
@@ -2606,7 +2605,7 @@ int HitTest(
 *pHitTestInfo*<br/>
 Dirección de un `LVHITTESTINFO` estructura que contiene la posición a los resultados de pruebas y que recibe información acerca de los resultados de la prueba de posicionamiento.
 
-*PT*<br/>
+*pt*<br/>
 Punto que va a probarse.
 
 *pFlags*<br/>
@@ -2706,7 +2705,7 @@ LRESULT InsertGroup(
 *index*<br/>
 Índice del elemento donde se insertará el grupo.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Un puntero a un [LVGROUP que se](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estructura que contiene el grupo va a agregar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2835,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Parámetros
 
 *pPoint*<br/>
-Un puntero a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la estructura que contiene la prueba de posicionamiento, en relación con el área cliente del control de lista.
+Un puntero a un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la estructura que contiene la prueba de posicionamiento, en relación con el área cliente del control de lista.
 
 *lvim*<br/>
 Un puntero a un [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) estructura que especifica el punto de inserción más cercano a las coordenadas definidas por el parámetro de punto.
@@ -3041,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nprimer*<br/>
+*nFirst*<br/>
 Índice del primer elemento que se vuelva a dibujar.
 
-*Núltimo*<br/>
+*nLast*<br/>
 Índice del último elemento que se vuelva a dibujar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3115,7 +3114,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CR*<br/>
+*cr*<br/>
 Color de fondo para establecer o el valor como CLR_NONE ningún color de fondo. Controles de vista de lista con los colores de fondo volver a dibujar a sí mismos significativamente más rápido que las que no tienen colores de fondo. Para obtener información, consulte [COLORREF](/windows/desktop/gdi/colorref) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3184,7 +3183,7 @@ Devuelve cero si se realiza correctamente, o cero en caso contrario.
 
   Vea el ejemplo de [CListCtrl::GetBkImage](#getbkimage).
 
-## <a name="setcallbackmask"></a>  CListCtrl:: SetCallbackMask
+## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
 Establece la máscara de devolución de llamada para un control de vista de lista.
 
@@ -3321,14 +3320,14 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Índice de la columna para que el ancho se va a establecer. En la vista de lista, este parámetro debe ser 0.
 
-*CX*<br/>
+*cx*<br/>
 El nuevo ancho de la columna. Puede ser LVSCW_AUTOSIZE o LVSCW_AUTOSIZE_USEHEADER, como se describe en [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Es distinto de cero si es correcto. En caso contrario, es cero.
 
-## <a name="setextendedstyle"></a>  CListCtrl:: SetExtendedStyle
+## <a name="setextendedstyle"></a>  CListCtrl::SetExtendedStyle
 
 Establece los estilos extendidos actuales de un control de vista de lista.
 
@@ -3372,7 +3371,7 @@ int SetGroupInfo(
 *iGroupId*<br/>
 El identificador del grupo cuya información se establece.
 
-*PGRP*<br/>
+*pgrp*<br/>
 Puntero a un [LVGROUP que se](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) estructura que contiene la información para establecer. El llamador es responsable de asignar esta estructura y la configuración de sus miembros.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3410,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>Parámetros
 
-*conexión híbrida*<br/>
+*hc*<br/>
 Identificador de un recurso de cursor, utilizado para representar el cursor activo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3437,7 +3436,7 @@ int SetHotItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 Índice de base cero del elemento que se establecerá como el elemento activo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3491,10 +3490,10 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Parámetros
 
-*CX*<br/>
+*cx*<br/>
 Distancia (en píxeles) entre los iconos en el eje x.
 
-*CY*<br/>
+*cy*<br/>
 Distancia (en píxeles) entre los iconos en el eje y.
 
 *size*<br/>
@@ -3515,7 +3514,7 @@ Esta función miembro implementa el comportamiento de la macro de Win32, [ListVi
     m_myListCtrl.SetIconSpacing(CSize(100, 100));
 ```
 
-## <a name="setimagelist"></a>  CListCtrl:: SetImageList
+## <a name="setimagelist"></a>  CListCtrl::SetImageList
 
 Asigna una lista de imágenes a un control de vista de lista.
 
@@ -3599,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 Un [COLORREF](/windows/desktop/gdi/colorref) estructura que especifica el color para establecer el punto de inserción.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3610,7 +3609,7 @@ Devuelve un `COLORREF` estructura que contiene el color anterior.
 
 Esta función miembro emula la funcionalidad de la [LVM_SETINSERTMARKCOLOR](/windows/desktop/Controls/lvm-setinsertmarkcolor) del mensaje, como se describe en el SDK de Windows.
 
-## <a name="setitem"></a>  CListCtrl:: SetItem
+## <a name="setitem"></a>  CListCtrl::SetItem
 
 Establece los atributos del elemento de algunos o todos de una vista de lista.
 
@@ -3699,7 +3698,7 @@ void SetItemCount(int nItems);
 
 ### <a name="parameters"></a>Parámetros
 
-*nitems con*<br/>
+*nItems*<br/>
 Número de elementos que finalmente contendrá el control.
 
 ### <a name="remarks"></a>Comentarios
@@ -3824,7 +3823,7 @@ BOOL SetItemIndexState(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*pItemIndex*|[in] Puntero a un [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) estructura que describe un elemento. El llamador es responsable de asignar esta estructura y la configuración de sus miembros.|
-|*"_mfc_CTabCtrl.3a3a.GetItem"*|[in] El estado se establece el elemento, que es una combinación bit a bit de [una lista de Estados de elemento de vista](/windows/desktop/Controls/list-view-item-states). Especifique cero para restablecer o una para establecer un estado.|
+|*dwState*|[in] El estado se establece el elemento, que es una combinación bit a bit de [una lista de Estados de elemento de vista](/windows/desktop/Controls/list-view-item-states). Especifique cero para restablecer o una para establecer un estado.|
 |*dwMask*|[in] Una máscara de los bits válidas del estado especificado por el *"_mfc_CTabCtrl.3a3a.GetItem"* parámetro. Especificar una combinación bit a bit (OR) de [una lista de Estados de elemento de vista](/windows/desktop/Controls/list-view-item-states).|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3854,8 +3853,8 @@ BOOL SetItemPosition(
 *nItem*<br/>
 Índice del elemento cuya posición se va a establecer.
 
-*PT*<br/>
-Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) coordina la estructura que especifica la nueva posición en la vista, de la esquina superior izquierda del elemento.
+*pt*<br/>
+Un [punto](/previous-versions/dd162805\(v=vs.85\)) coordina la estructura que especifica la nueva posición en la vista, de la esquina superior izquierda del elemento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3956,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 El nuevo [COLORREF](/windows/desktop/gdi/colorref) estructura que contiene el color del contorno.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3998,7 +3997,7 @@ int SetSelectionMark(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 Índice de base cero del primer elemento en una selección múltiple.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4023,7 +4022,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CR*<br/>
+*cr*<br/>
 Un COLORREF que especifica el color de fondo del texto nuevo. Para obtener información, consulte [COLORREF](/windows/desktop/gdi/colorref) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4049,7 +4048,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CR*<br/>
+*cr*<br/>
 Un COLORREF que especifica el color del texto nuevo. Para obtener información, consulte [COLORREF](/windows/desktop/gdi/colorref) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4076,7 +4075,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 
 ### <a name="parameters"></a>Parámetros
 
-*pTI*<br/>
+*pti*<br/>
 Un puntero a un [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) estructura que contiene la información que debe establecerse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4427,4 +4426,3 @@ Esta función también organiza el control de vista de lista si tiene el estilo 
 [CWnd (clase)](cwnd-class.md)<br/>
 [Gráfico de jerarquías](../hierarchy-chart.md)<br/>
 [CImageList (clase)](cimagelist-class.md)
-

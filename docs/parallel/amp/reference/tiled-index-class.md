@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257909"
 ---
 # <a name="tiledindex-class"></a>tiled_index (Clase)
 
@@ -85,7 +85,7 @@ La longitud de la dimensión menos significativa.
 |||
 |[Constante global](#tiled_index__global)|Almacena un [índice](index-class.md) objeto del rango 1, 2 o 3 que representa el índice global en un objeto de cuadrícula.|
 |[Constante local](#tiled_index__local)|Almacena un `index` objeto de índice de rango 1, 2 o 3 que representa la relación en el mosaico actual de un [tiled_extent](tiled-extent-class.md) objeto.|
-|[Rank (constante)](#tiled_index__rank)|Almacena el rango de la `tiled_index` objeto.|
+|[rank Constant](#tiled_index__rank)|Almacena el rango de la `tiled_index` objeto.|
 |[Tile (constante)](#tiled_index__tile)|Almacena un `index` objeto del rango 1, 2 ó 3 que representa las coordenadas del mosaico actual de un `tiled_extent` objeto.|
 |[tile_dim0 (constante)](#tiled_index__tile_dim0)|Almacena la longitud de la dimensión más significativa.|
 |[tile_dim1 (constante)](#tiled_index__tile_dim1)|Almacena la longitud de la dimensión significativa más próxima.|
@@ -108,7 +108,7 @@ La longitud de la dimensión menos significativa.
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="tiled_index__ctor"></a>  tiled_index (Constructor)
 
@@ -145,7 +145,7 @@ El origen del mosaico [índice](index-class.md) de construido `tiled_index`
 *_Barrier*<br/>
 El [tile_barrier](tile-barrier-class.md) objeto de construido `tiled_index`.
 
-*_Otro*<br/>
+*_Other*<br/>
 El `tile_index` objeto va a copiar a construido `tiled_index`.
 
 ## <a name="overloads"></a>Overloads
@@ -170,7 +170,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 
 Un `extent` objeto que tiene los valores de la `tiled_index` argumentos de plantilla `_Dim0`, `_Dim1`, y `_Dim2`.
 
-## <a name="tiled_index__barrier"></a>  barrera
+## <a name="tiled_index__barrier"></a>  barrier
 
 Almacena un [tile_barrier](tile-barrier-class.md) objeto que representa una barrera en el mosaico actual de subprocesos.
 
@@ -200,7 +200,7 @@ Almacena un [índice](index-class.md) objeto de índice de rango 1, 2 o 3 que re
 const index<rank> local;
 ```
 
-## <a name="tiled_index__rank"></a>  rango
+## <a name="tiled_index__rank"></a>  rank
 
 Almacena el rango de la `tiled_index` objeto.
 

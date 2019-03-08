@@ -1,6 +1,6 @@
 ---
 title: CMFCStatusBar (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCStatusBar
 - AFXSTATUSBAR/CMFCStatusBar
@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: bd63ee83412c3f89b6eea755c0b0a213b1dcc2e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326756"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar (clase)
 
@@ -140,7 +140,7 @@ class CMFCStatusBar : public CPane
 
 El siguiente diagrama muestra una ilustración de la barra de estado de [ejemplo de demostración de la barra de estado](../../visual-cpp-samples.md) aplicación.
 
-![Ejemplo de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")
+![Ejemplo de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "ejemplo de CMFCStatusBar")
 
 ## <a name="example"></a>Ejemplo
 
@@ -275,7 +275,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Si es TRUE, habilite el procesamiento del doble clic del mouse. En caso contrario, deshabilite el procesamiento del doble clic del mouse.
 
 ### <a name="remarks"></a>Comentarios
@@ -301,7 +301,7 @@ void EnablePaneProgressBar(
 *nIndex*<br/>
 [in] Especifica el índice del panel cuyo barra de progreso para habilitar.
 
-*nEl*<br/>
+*nTotal*<br/>
 [in] Especifica el valor máximo de la barra de progreso.
 
 *bDisplayText*<br/>
@@ -596,7 +596,7 @@ void SetPaneAnimation(
 *nFrameRate*<br/>
 [in] Especifica la velocidad de fotogramas, en milisegundos, para la animación.
 
-*bActualización*<br/>
+*bUpdate*<br/>
 [in] Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, se actualiza el contenido del panel al que se invalide.
 
 ### <a name="remarks"></a>Comentarios
@@ -622,7 +622,7 @@ void SetPaneBackgroundColor(
 *clrBackground*<br/>
 [in] Especifica el nuevo color de fondo.
 
-*bActualización*<br/>
+*bUpdate*<br/>
 [in] Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, no actualice el contenido del panel hasta que el panel se invalida por cualquier otro método.
 
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon
@@ -650,7 +650,7 @@ void SetPaneIcon(
 *hIcon*<br/>
 [in] Especifica un identificador para el icono que se establecerá como la imagen del panel.
 
-*bActualización*<br/>
+*bUpdate*<br/>
 [in] Especifica si se debe actualizar inmediatamente el contenido del panel.
 
 *hBmp*<br/>
@@ -703,7 +703,7 @@ void SetPaneProgress(
 *nCurr*<br/>
 [in] Especifica el valor actual del indicador de progreso.
 
-*bActualización*<br/>
+*bUpdate*<br/>
 [in] Especifica si se debe actualizar inmediatamente el panel.
 
 ### <a name="remarks"></a>Comentarios
@@ -765,7 +765,7 @@ void SetPaneTextColor(
 *clrText*<br/>
 [in] Especifica el color del texto.
 
-*bActualización*<br/>
+*bUpdate*<br/>
 [in] Si es TRUE, actualice el contenido del panel inmediatamente. En caso contrario, no actualice el contenido del panel hasta que el panel se invalida por cualquier otro método.
 
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] Índice del panel de barra de estado para el que se va a establecer un ancho de nuevo.
 
-*CX*<br/>
+*cx*<br/>
 [in] Nuevo ancho del panel de barra de estado, en píxeles.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText

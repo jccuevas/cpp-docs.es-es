@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: f16a8cd21fe724c44a1ed648f29e42cb5d00dcd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663320"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293269"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd (clase)
 
@@ -129,7 +129,7 @@ Especifica los atributos de estilo de ventana. Estos pueden incluir los estilos 
 
 Consulte [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores de estilo de ventana posible. La combinación típica que se utiliza para ventanas de marco reducido es WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
+*rect*<br/>
 Un `RECT` estructura que especifica las dimensiones deseadas de la ventana.
 
 *pParentWnd*<br/>
@@ -167,7 +167,7 @@ virtual BOOL CreateEx(
 Especifica el estilo extendido de la `CMiniFrameWnd` va a crear. Aplicar cualquiera de los [estilos de ventana extendidos](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) a la ventana.
 
 *lpClassName*<br/>
-Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows (un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura). El nombre de clase puede ser cualquier nombre registrado con global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función o cualquiera de los nombres de clase de control predefinido. No debe ser NULL.
+Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows (un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura). El nombre de clase puede ser cualquier nombre registrado con global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función o cualquiera de los nombres de clase de control predefinido. No debe ser NULL.
 
 *lpWindowName*<br/>
 Apunta a una cadena de caracteres terminada en null que contiene el nombre de la ventana.
@@ -175,7 +175,7 @@ Apunta a una cadena de caracteres terminada en null que contiene el nombre de la
 *dwStyle*<br/>
 Especifica los atributos de estilo de ventana. Consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles) y [CWnd:: Create](../../mfc/reference/cwnd-class.md#create) para obtener una descripción de los valores posibles.
 
-*Rect*<br/>
+*rect*<br/>
 El tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>

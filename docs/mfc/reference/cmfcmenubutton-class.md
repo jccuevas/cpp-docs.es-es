@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: b2f7b2e5a94329d0d5b0079aaae6eff98ac03911
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298209"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (clase)
 
@@ -176,7 +176,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Parámetros
 
 *pMsg*<br/>
-[in] Apunta a un [MSG](../../mfc/reference/msg-structure1.md) estructura que contiene el mensaje que se va a procesar.
+[in] Apunta a un [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) estructura que contiene el mensaje que se va a procesar.
 
 ### <a name="return-value"></a>Valor devuelto
 

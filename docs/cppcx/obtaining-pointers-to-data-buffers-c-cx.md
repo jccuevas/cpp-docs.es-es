@@ -1,25 +1,25 @@
 ---
 title: Obtener punteros a búfers de datos (C++/CX)
-ms.date: 12/30/2016
+ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46a81fa9e3d278645b654dca3c652653f6c21037
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514275"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426382"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Obtener punteros a búfers de datos (C++/CX)
 
-En Windows en tiempo de ejecución, la interfaz [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) ofrece un medio basado en streaming e independiente del lenguaje para tener acceso a los búferes de datos. En C++ puedes obtener un puntero sin formato a la matriz de bytes subyacente mediante la interfaz IBufferByteAccess de la biblioteca de Windows en tiempo de ejecución definida en robuffer.h. Con este método, puedes modificar la matriz de bytes en contexto sin necesidad de crear ninguna copia innecesaria de los datos.
+En Windows en tiempo de ejecución, la interfaz [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) ofrece un medio basado en streaming e independiente del lenguaje para tener acceso a los búferes de datos. En C++ puedes obtener un puntero sin formato a la matriz de bytes subyacente mediante la interfaz IBufferByteAccess de la biblioteca de Windows en tiempo de ejecución definida en robuffer.h. Con este método, puedes modificar la matriz de bytes en contexto sin necesidad de crear ninguna copia innecesaria de los datos.
 
-En el diagrama siguiente se muestra un elemento de imagen XAML, cuyo origen es una interfaz [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Una aplicación cliente escrita en cualquier lenguaje puede pasar una referencia a la clase `WriteableBitmap` al código de C++, y este puede usar dicha referencia para tener acceso al búfer subyacente. En una aplicación de plataforma Universal de Windows que está escrita en C++, puede usar la función en el ejemplo siguiente directamente en el código fuente sin empaquetarla en un componente de Windows en tiempo de ejecución.
+En el diagrama siguiente se muestra un elemento de imagen XAML, cuyo origen es una interfaz [Windows::UI::Xaml::Media::Imaging WriteableBitmap](/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap). Una aplicación cliente escrita en cualquier lenguaje puede pasar una referencia a la clase `WriteableBitmap` al código de C++, y este puede usar dicha referencia para tener acceso al búfer subyacente. En una aplicación de plataforma Universal de Windows que está escrita en C++, puede usar la función en el ejemplo siguiente directamente en el código fuente sin empaquetarla en un componente de Windows en tiempo de ejecución.
 
-![C&#43; &#43; código de acceso a datos de píxeles directamente](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+![C&#43; &#43; código que tiene acceso a datos de píxeles directamente](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; código que tiene acceso a datos de píxeles directamente")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 
-El método siguiente acepta una interfaz [Windows::Storage::Streams::IBuffer](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ibuffer.aspx) y devuelve un puntero sin formato a la matriz de bytes subyacente. Para llamar a la función, pasa una propiedad [WriteableBitmap::PixelBuffer](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer.aspx) .
+El método siguiente acepta una interfaz [Windows::Storage::Streams::IBuffer](/uwp/api/windows.storage.streams.ibuffer) y devuelve un puntero sin formato a la matriz de bytes subyacente. Para llamar a la función, pasa una propiedad [WriteableBitmap::PixelBuffer](/uwp/api/windows.ui.xaml.media.imaging.writeablebitmap.pixelbuffer) .
 
 ```cpp
 #include <wrl.h>

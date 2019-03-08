@@ -1,17 +1,16 @@
 ---
 title: Conformidad del lenguaje Visual C++
 ms.date: 11/15/2017
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 78c4be98ecc8e0a42e2cd0967f2bedece9dabc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630417"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809768"
 ---
 # <a name="visual-c-language-conformance"></a>Conformidad del lenguaje Visual C++
 
@@ -157,7 +156,7 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;[P0521R0 Dejar en desuso shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 Variables insertadas para la biblioteca estándar](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html) en desuso|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4562 Elementos fundamentales de biblioteca: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Corregir tipos de valor devueltos de buscadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Elementos fundamentales de biblioteca: búsqueda Boyer-Moore()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 Corregir tipos de valor devueltos de buscadores](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 constexpr para \<array> (otra vez) e \<iterator>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 Extender herramientas de administración de memoria](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0084R2 Tipo de valor devuelto emplace](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -296,7 +295,7 @@ La opción del compilador /Zc:noexceptTypes-solicita el comportamiento anterior 
 
 <a name="note_charconv"></a>__charconv__ from_chars() y to_chars() están disponibles para los números enteros. Actualmente se está trabajando en from_chars() de punto flotante, y después seguirá to_chars() de punto flotante.
 
-<a name ="note_parallel"></a> __parallel__  La biblioteca de algoritmos paralelos de C++17 se ha completado. Tenga en cuenta que esto no significa que todos los algoritmos se paralelicen en todos los casos; se han paralelizado los algoritmos más importantes y se proporcionan firmas de directiva de ejecución incluso cuando los algoritmos no están paralelizados. El encabezado interno central de nuestra implementación de STL, yvals.h, contiene la sección "Notas de algoritmos paralelos" siguiente: C++ permite a una implementación implementar algoritmos paralelos como llamadas a los algoritmos de serie.   Esta implementación paraleliza varias llamadas de algoritmo comunes, pero no todas.
+<a name ="note_parallel"></a> __parallel__  La biblioteca de algoritmos paralelos de C++17 se ha completado. Tenga en cuenta que esto no significa que todos los algoritmos se paralelicen en todos los casos; se han paralelizado los algoritmos más importantes y se proporcionan firmas de directiva de ejecución incluso cuando los algoritmos no están paralelizados. El encabezado interno central de nuestra implementación de STL, yvals.h, contiene las siguientes "Notas de algoritmos paralelos": C++ permite que una implementación implemente algoritmos paralelos como llamadas a algoritmos en serie.   Esta implementación paraleliza varias llamadas de algoritmo comunes, pero no todas.
 
 Se paralelizan los algoritmos siguientes:
 

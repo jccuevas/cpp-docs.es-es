@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 0ff15244f4e93ecd2913fa825e8b5c351c7ff84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501847"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626700"
 ---
 # <a name="general-mbcs-programming-advice"></a>Consejos generales sobre la programación con MBCS
 
 Use las sugerencias siguientes:
 
-- Para mayor flexibilidad, use las macros de tiempo de ejecución como `_tcschr` y `_tcscpy` cuando sea posible. Para obtener más información, consulte [asignaciones de texto genérico en Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Para mayor flexibilidad, use las macros de tiempo de ejecución como `_tcschr` y `_tcscpy` cuando sea posible. Para obtener más información, consulte [asignaciones de texto genérico en tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - Utilice el tiempo de ejecución de C `_getmbcp` función para obtener información acerca de la página de códigos actual.
 

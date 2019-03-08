@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636868"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263083"
 ---
 # <a name="message-class"></a>message (Clase)
 
@@ -62,7 +62,7 @@ El tipo de datos de la carga dentro del mensaje.
 
 |Name|Descripción|
 |----------|-----------------|
-|[carga](#payload)|La carga de la `message` objeto.|
+|[payload](#payload)|La carga de la `message` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -114,7 +114,7 @@ message(
 *_P*<br/>
 La carga de este mensaje.
 
-*_ID*<br/>
+*_Id*<br/>
 El identificador único de este mensaje.
 
 *_Msg*<br/>
@@ -124,7 +124,7 @@ Una referencia o puntero a un `message` objeto.
 
 El constructor que toma un puntero a un `message` objeto como un argumento, se produce un [invalid_argument](../../../standard-library/invalid-argument-class.md) excepción si el parámetro `_Msg` es `NULL`.
 
-##  <a name="dtor"></a> ~ mensaje
+##  <a name="dtor"></a> ~message
 
 Destruye el objeto `message`.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644332"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850445"
 ---
 # <a name="diagnostic-services"></a>Servicios de diagnóstico
 
@@ -186,7 +186,7 @@ ASSERT_KINDOF(classname, pobject)
 *classname*<br/>
 El nombre de un `CObject`-clase derivada.
 
-*pObject*<br/>
+*pobject*<br/>
 Un puntero a un objeto de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -320,12 +320,6 @@ Si se produce un error en cualquiera de estas pruebas, se muestra un mensaje de 
 
 **Encabezado:** afx.h
 
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 Expande el nombre del archivo que se está compilando.
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
-
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -452,7 +440,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar de nacimiento*<br/>
+*pOb*<br/>
 Un puntero a un objeto de una clase derivada de `CObject`.
 
 ### <a name="remarks"></a>Comentarios
@@ -464,10 +452,6 @@ El código del programa no debe llamar a `AfxDump`, pero en su lugar, debe llama
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
-
-### <a name="see-also"></a>Vea también
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -569,7 +553,7 @@ void AfxDump(const CObject* pOb);
 
 ### <a name="parameters"></a>Parámetros
 
-*lugar de nacimiento*<br/>
+*pOb*<br/>
 Un puntero a un objeto de una clase derivada de `CObject`.
 
 ### <a name="remarks"></a>Comentarios
@@ -581,10 +565,6 @@ El código del programa no debe llamar a `AfxDump`, pero en su lugar, debe llama
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
-
-### <a name="see-also"></a>Vea también
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -657,7 +637,7 @@ Para usar correctamente esta función:
 - El archivo IMAGEHLP. Archivo DLL debe estar en la ruta de acceso. Si no tiene este archivo DLL, la función mostrará un mensaje de error. Consulte [bibliotecas de Ayuda de la imagen](/windows/desktop/Debug/image-help-library) para obtener información sobre el conjunto de funciones proporcionado IMAGEHLP.
 
 - Los módulos que tienen los marcos en la pila deben incluir información de depuración. Si no contienen información de depuración, la función seguirá generando un seguimiento de pila, pero el seguimiento será menos detallado.
-### <a name="requirements"></a>Requisitos
+  ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afx.h
 
@@ -776,7 +756,7 @@ BOOL AfxIsValidAddress(
 
 ### <a name="parameters"></a>Parámetros
 
-*LP*<br/>
+*lp*<br/>
 Apunta a la dirección de memoria que va a probarse.
 
 *nBytes*<br/>
@@ -861,7 +841,7 @@ El asignador de memoria de depuración de la biblioteca Microsoft Foundation Cla
 *nSize*<br/>
 El tamaño de la asignación de memoria propuesto.
 
-*bEmpaquetador*<br/>
+*bObject*<br/>
 TRUE si la asignación es para un `CObject`-objeto derivado; de lo contrario, FALSE.
 
 *lRequestNumber*<br/>
@@ -886,7 +866,7 @@ AFXAPI AfxDoForAllClasses(
 
 ### <a name="parameters"></a>Parámetros
 
-*PFN*<br/>
+*pfn*<br/>
 Señala a una función de la iteración que se llama para cada clase. Los argumentos de función son un puntero a un `CRuntimeClass` objeto y un puntero void para los datos adicionales que proporciona el autor de la llamada a la función.
 
 *pContext*<br/>
@@ -921,7 +901,7 @@ void AfxDoForAllObjects(
 
 ### <a name="parameters"></a>Parámetros
 
-*PFN*<br/>
+*pfn*<br/>
 Señala una función de iteración para ejecutar para cada objeto. Los argumentos de función son un puntero a un `CObject` y un puntero void para los datos adicionales que proporciona el autor de la llamada a la función.
 
 *pContext*<br/>
@@ -942,4 +922,5 @@ No se enumeran pila, global, o los objetos incrustados. El puntero se pasa a `Af
 
 ## <a name="see-also"></a>Vea también
 
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

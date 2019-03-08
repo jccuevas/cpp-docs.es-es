@@ -16,12 +16,12 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494283"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290810"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>Multithreading: Sugerencias de programación de MFC
 
@@ -43,11 +43,11 @@ La biblioteca de clases utiliza internamente secciones críticas para proteger l
 
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> Acceso a objetos MFC desde subprocesos no MFC
 
-Si tiene una aplicación multiproceso que crea un subproceso de forma que no sean un [CWinThread](../mfc/reference/cwinthread-class.md) objeto, no se puede obtener acceso a otros objetos MFC desde ese subproceso. En otras palabras, si desea tener acceso a cualquier objeto MFC desde un subproceso secundario, debe crear ese subproceso con uno de los métodos descritos en [Multithreading: crear subprocesos de la interfaz de usuario](multithreading-creating-user-interface-threads.md) o [Multithreading: Crear subprocesos de trabajo](multithreading-creating-worker-threads.md). Estos métodos son los únicos que permiten a la biblioteca de clases inicializar las variables internas necesarias para controlar aplicaciones multiproceso.
+Si tiene una aplicación multiproceso que crea un subproceso de forma que no sean un [CWinThread](../mfc/reference/cwinthread-class.md) objeto, no se puede obtener acceso a otros objetos MFC desde ese subproceso. En otras palabras, si desea tener acceso a cualquier objeto MFC desde un subproceso secundario, debe crear ese subproceso con uno de los métodos descritos en [Multithreading: Crear subprocesos de interfaz de usuario](multithreading-creating-user-interface-threads.md) o [Multithreading: Crear subprocesos de trabajo](multithreading-creating-worker-threads.md). Estos métodos son los únicos que permiten a la biblioteca de clases inicializar las variables internas necesarias para controlar aplicaciones multiproceso.
 
 ##  <a name="_core_windows_handle_maps"></a> Asignaciones de identificadores de Windows
 
-Por regla general, un subproceso sólo puede tener acceso a los objetos MFC que haya creado. Esto se debe a que las asignaciones de identificadores temporales y permanentes de Windows se conservan en almacenamiento local para el subproceso para ayudar a mantener la protección frente a accesos simultáneos desde múltiples subproceso. Por ejemplo, un subproceso de trabajo no puede realizar un cálculo y entonces llama a la función miembro `UpdateAllViews` de un documento para modificar las ventanas que contienen vistas de los nuevos datos. Esto no tiene ningún efecto en absoluto, porque la asignación de `CWnd` objetos a los HWND es local para el subproceso principal. Es decir, un subproceso podría tener una asignación de un identificador de Windows a un objeto de C++, pero otro subproceso podría asignar el mismo identificador a un objeto diferente de C++. Los cambios realizados en un subproceso no se reflejarían en el otro.
+Por regla general, un subproceso sólo puede tener acceso a los objetos MFC que haya creado. Esto se debe a que las asignaciones de identificadores temporales y permanentes de Windows se conservan en almacenamiento local de subprocesos para ayudar a mantener la protección frente a accesos simultáneos desde múltiples subprocesos. Por ejemplo, un subproceso de trabajo no puede realizar un cálculo y entonces llama a la función miembro `UpdateAllViews` de un documento para modificar las ventanas que contienen vistas de los nuevos datos. Esto no tiene ningún efecto en absoluto, porque la asignación de `CWnd` objetos a los HWND es local para el subproceso principal. Es decir, un subproceso podría tener una asignación de un identificador de Windows a un objeto de C++, pero otro subproceso podría asignar el mismo identificador a un objeto diferente de C++. Los cambios realizados en un subproceso no se reflejarían en el otro.
 
 Existen varias soluciones para este problema. La primera consiste en pasar identificadores individuales (por ejemplo, un HWND) en lugar de los objetos de C++ para el subproceso de trabajo. El subproceso de trabajo agrega entonces estos objetos a su asignación temporal mediante una llamada a la función miembro `FromHandle` apropiada. También podría agregar el objeto a la asignación permanente mediante una llamada a `Attach`, pero esto debe realizarse solo si se garantiza que el objeto sigue existiendo después de los subprocesos.
 
@@ -57,7 +57,7 @@ Para obtener más información sobre asignación de identificadores, vea [Nota t
 
 ##  <a name="_core_communicating_between_threads"></a> Comunicación entre subprocesos
 
-MFC proporciona una serie de clases que permiten sincronizar el acceso a los objetos para garantizar subprocesos correctos. Uso de estas clases se describe en [Multithreading: uso de las clases de sincronización](multithreading-how-to-use-the-synchronization-classes.md) y [Multithreading: cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md). Para obtener más información acerca de estos objetos, consulte [sincronización](/windows/desktop/Sync/synchronization) en el SDK de Windows.
+MFC proporciona una serie de clases que permiten sincronizar el acceso a los objetos para garantizar subprocesos correctos. Uso de estas clases se describe en [Multithreading: Cómo usar las clases de sincronización](multithreading-how-to-use-the-synchronization-classes.md) y [Multithreading: Cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md). Para obtener más información acerca de estos objetos, consulte [sincronización](/windows/desktop/Sync/synchronization) en el SDK de Windows.
 
 ## <a name="see-also"></a>Vea también
 

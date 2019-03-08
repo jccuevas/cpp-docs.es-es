@@ -2,16 +2,16 @@
 title: Conversión boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a8812cb56cbbd684be953876d480e6e0c90841a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420016"
 ---
 # <a name="boxing-ccx"></a>Conversión boxing (C++/CX)
 
-*Boxing* es el ajuste de una variable de tipo de valor como [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)(o un tipo escalar fundamental como `int`) en una clase ref cuando la variable se pasa a un método que toma [Platform::Object^](../cppcx/platform-object-class.md) como tipo de entrada.
+*Boxing* es el ajuste de una variable de tipo de valor como [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime)(o un tipo escalar fundamental como `int`) en una clase ref cuando la variable se pasa a un método que toma [Platform::Object^](../cppcx/platform-object-class.md) como tipo de entrada.
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Pasar un tipo de valor a un parámetro de tipo Object^
 
@@ -34,7 +34,6 @@ En un cliente XAML de C#, puedes usarlo de este modo:
     int? a = null;
     int? b = 5;
     var result = obj.Multiply(a,b); //result = null
-
 ```
 
 ## <a name="see-also"></a>Vea también

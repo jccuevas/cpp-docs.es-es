@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: f143b2c58159d1bb0812152c68d3c31153d4570d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85a8f1d41c6c54f94b500807a1e4ca504206f56a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467436"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425658"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch (interfaz)
 
@@ -94,7 +94,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 Esta interfaz se expone mediante los objetos que hospeda los controles ActiveX de ATL. Llamar a los métodos de esta interfaz para establecer las propiedades de ambientales disponibles en el control hospedado o para especificar otros aspectos del comportamiento del contenedor. Para complementar las propiedades proporcionadas por `IAxWinAmbientDispatch`, utilice [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) intentará cargar la información de tipo sobre `IAxWinAmbientDispatch` y `IAxWinAmbientDispatchEx` desde la biblioteca de tipos que contiene el código.
+<xref:System.Windows.Forms.AxHost> se intentará cargar la información de tipo sobre `IAxWinAmbientDispatch` y `IAxWinAmbientDispatchEx` desde la biblioteca de tipos que contiene el código.
 
 Si vincula a ATL90.dll, **AXHost** cargará la información de tipo de la biblioteca de tipos en el archivo DLL.
 
@@ -696,6 +696,5 @@ La implementación del objeto host ATL utiliza VARIANT_TRUE como el valor predet
 
 [IAxWinAmbientDispatchEx (interfaz)](../../atl/reference/iaxwinambientdispatchex-interface.md)<br/>
 [IAxWinHostWindow (interfaz)](../../atl/reference/iaxwinhostwindow-interface.md)<br/>
-[CAxWindow:: QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
+[CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)<br/>
 [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-

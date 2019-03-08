@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 2ac243f5e2c91636183c31640b50fa7bef95254d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459025"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425190"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl (Clase)
 
-Proporciona una implementación de la [IDBCreateCommand](/previous-versions/windows/desktop/ms711625) interfaz.
+Proporciona una implementación de la [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,21 +55,21 @@ La clase de comando.
 
 Una interfaz opcional para el objeto de sesión para obtener un nuevo comando.
 
-## <a name="createcommand"></a> Idbcreatecommandimpl:: CreateCommand
+## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
 
 Crea un nuevo comando y devuelve la interfaz solicitada.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
-   REFIID riid, 
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
+   REFIID riid,
    IUnknown ** ppvCommand);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772) en el *referencia del programador OLE DB*.
+Consulte [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) en el *referencia del programador OLE DB*.
 
 Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBCreateCommand::CreateCommand`:
 

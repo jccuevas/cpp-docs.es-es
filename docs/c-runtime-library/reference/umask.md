@@ -26,12 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677167"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327673"
 ---
 # <a name="umask"></a>_umask
 
@@ -58,13 +58,13 @@ El **_umask** función establece la máscara de permisos de archivo del proceso 
 
 La expresión de entero *pmode* contiene una o ambas de las siguientes constantes de manifiesto, definidas en SYS\STAT. H:
 
-|*pmode*||
+|*pmode*| |
 |-|-|
-**_S_IWRITE**|Escritura permitida.
-**_S_IREAD**|Lectura permitida.
-**_S_IREAD** \| **_S_IWRITE**|Lectura y escritura permitidas.
+| **_S_IWRITE** | Escritura permitida. |
+| **_S_IREAD** | Lectura permitida. |
+| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Lectura y escritura permitidas. |
 
-Cuando ambas constantes se proporcionan, se unen con el operador OR bit a bit ( **|** ). Si el *pmode* argumento es **_S_IREAD**, no se permite la lectura (el archivo es de solo escritura). Si el *pmode* argumento es **_S_IWRITE**, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por consiguiente, establecer el bit de lectura con **_umask** no tiene ningún efecto en los modos del archivo.
+Cuando ambas constantes se proporcionan, se unen con el operador OR bit a bit ( **&#124;** ). Si el *pmode* argumento es **_S_IREAD**, no se permite la lectura (el archivo es de solo escritura). Si el *pmode* argumento es **_S_IWRITE**, no se permite la escritura (el archivo es de solo lectura). Por ejemplo, si el bit de escritura está establecido en la máscara, los nuevos archivos serán de solo lectura. Tenga en cuenta que en los sistemas operativos MS-DOS y Windows, todos los archivos se pueden leer; no se puede conceder permiso de solo escritura. Por consiguiente, establecer el bit de lectura con **_umask** no tiene ningún efecto en los modos del archivo.
 
 Si *pmode* no es una combinación de una de las constantes de manifiesto o incorpora un conjunto alternativo de constantes, la función simplemente las omitirá.
 

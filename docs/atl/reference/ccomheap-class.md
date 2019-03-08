@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: ae076ee7e2b1e04a997d0b345a2d89b4cc59183d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276171"
 ---
 # <a name="ccomheap-class"></a>CComHeap (clase)
 
@@ -38,9 +38,9 @@ class CComHeap : public IAtlMemMgr
 |Name|Descripción|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Llame a este método para asignar un bloque de memoria.|
-|[Ccomheap:: Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
+|[CComHeap::Free](#free)|Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.|
 |[CComHeap::GetSize](#getsize)|Llame a este método para obtener el tamaño de un bloque de memoria asignado por este administrador de memoria asignado.|
-|[Ccomheap:: ReAllocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
+|[CComHeap::Reallocate](#reallocate)|Llame a este método para reasignar la memoria asignada por este administrador de memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -58,7 +58,7 @@ Vea el ejemplo de [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** ATLComMem.h
+**Encabezado**: ATLComMem.h
 
 ##  <a name="allocate"></a>  CComHeap::Allocate
 
@@ -83,7 +83,7 @@ Llame a [ccomheap:: Free](#free) o [ccomheap:: ReAllocate](#reallocate) para lib
 
 Implementa mediante [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
 
-##  <a name="free"></a>  Ccomheap:: Free
+##  <a name="free"></a>  CComHeap::Free
 
 Llame a este método para liberar un bloque de memoria asignada por este administrador de memoria.
 
@@ -121,7 +121,7 @@ Devuelve el tamaño del bloque de memoria asignada en bytes.
 
 Implementa mediante [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
 
-##  <a name="reallocate"></a>  Ccomheap:: ReAllocate
+##  <a name="reallocate"></a>  CComHeap::Reallocate
 
 Llame a este método para reasignar la memoria asignada por este administrador de memoria.
 
@@ -149,7 +149,7 @@ Implementa mediante [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combas
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer Sample](../../visual-cpp-samples.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [CWin32Heap (clase)](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap (clase)](../../atl/reference/clocalheap-class.md)<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a794d16b2f94bf8ba66b6c0398dec262d8829e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481827"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269895"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Funciones de intercambio de datos de cuadro de diálogo para CRecordView y CDaoRecordView
 
@@ -124,7 +124,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de recurso del control de casilla de verificación asociado con la propiedad del control.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se intercambian los datos de objeto de vista de control.
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de la primera de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes en la [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de la primera de un grupo (con el estilo WS_GROUP) de los controles de botón de radio adyacentes en la [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto.
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ Consulte [DDX_FieldText](#ddx_fieldtext) para obtener un ejemplo de DDX_Field ge
 
   **Encabezado** afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 El `DDX_FieldSlider` función sincroniza la posición del control de posición de un control deslizante en una vista de registros y un **int** miembro de datos de campo de un conjunto de registros asociado a la vista de registros (o elija para asignarlo a cualquier variable de entero).
 
 ### <a name="syntax"></a>Sintaxis
@@ -503,7 +503,7 @@ Un puntero a un [CDataExchange](cdataexchange-class.md) objeto. El marco de trab
 *nIDC*<br/>
 El identificador de recurso del control deslizante.
 
-*valor*<br/>
+*value*<br/>
 Una referencia al valor que se van a intercambiar. Este parámetro contiene o se usará para establecer la posición de control de posición actual del control deslizante.
 
 *pRecordset*<br/>
@@ -526,10 +526,6 @@ Consulte [DDX_FieldText](#ddx_fieldtext) para obtener un ejemplo de DDX_Field ge
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxdao.h
-
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)
 
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText
 
@@ -653,7 +649,7 @@ Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) obje
 *nIDC*<br/>
 El identificador de un control en el [CRecordView](../../mfc/reference/crecordview-class.md) o [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) objeto.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a un miembro de datos de campo en el asociado `CRecordset` o `CDaoRecordset` objeto. El tipo de datos del valor depende de cuál de las versiones sobrecargadas de `DDX_FieldText` utilice.
 
 *pRecordset*<br/>
@@ -679,4 +675,4 @@ La siguiente `DoDataExchange` funcionar para un [CRecordView](../../mfc/referenc
 
 ## <a name="see-also"></a>Vea también
 
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros y funciones globales](mfc-macros-and-globals.md)

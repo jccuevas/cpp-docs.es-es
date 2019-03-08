@@ -8,12 +8,12 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 690b48cf50e95265aaf5bdd454e2881b8f5fab3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260678"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>Usar un control común como ventana secundaria
 
@@ -33,4 +33,3 @@ Cualquiera de los controles comunes de Windows puede utilizarse como una ventana
 
 [Creación y uso de controles](../mfc/making-and-using-controls.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

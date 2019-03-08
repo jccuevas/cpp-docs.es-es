@@ -23,21 +23,19 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-ms.openlocfilehash: 8a649c4f6718ddfbfa466c307d2edb3aad396f7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b159d5dbe434f4ce63b7b93f60aca89b51437812
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623848"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220028"
 ---
 # <a name="math-error-constants"></a>Constantes de error matemático
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <math.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

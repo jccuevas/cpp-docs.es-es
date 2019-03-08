@@ -8,12 +8,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-ms.openlocfilehash: 022450469a69e9fe127f23a50b799092e7e057b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274393"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view (Clase)
 
@@ -75,7 +75,7 @@ El rango de la textura.
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Rank (constante)](#rank)|Obtiene el rango de la `writeonly_texture_view` objeto.|
+|[rank Constant](#rank)|Obtiene el rango de la `writeonly_texture_view` objeto.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -87,9 +87,9 @@ El rango de la textura.
 
 **Encabezado:** amp_graphics.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ writeonly_texture_view
+##  <a name="dtor"></a> ~writeonly_texture_view
 
 Destruye el objeto `writeonly_texture_view`.
 
@@ -108,7 +108,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 `writeonly_texture_view` objeto que se va a copiar desde.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -138,7 +138,7 @@ void set(
 *_Index*<br/>
 El índice del elemento.
 
-*valor*<br/>
+*value*<br/>
 Nuevo valor del elemento.
 
 ##  <a name="ctor"></a> writeonly_texture_view

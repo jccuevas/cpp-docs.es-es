@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 79589cb631635f4ed8b85f4399a86e8fadf61dda
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260639"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager (clase)
 
@@ -41,7 +41,7 @@ class CTooltipManager : public CObject
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|Crea un control de información sobre herramientas para el tipo de control de Windows especificado.|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|Elimina el control de información sobre herramientas.|
-|[Ctooltipmanager:: Settooltipparams](#settooltipparams)|Personaliza la apariencia visual del control de información sobre herramientas para el tipo de control de Windows especificado.|
+|[CTooltipManager::SetTooltipParams](#settooltipparams)|Personaliza la apariencia visual del control de información sobre herramientas para el tipo de control de Windows especificado.|
 |[CTooltipManager::SetTooltipText](#settooltiptext)|Establece el texto y la descripción para un control de información sobre herramientas.|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
@@ -78,7 +78,7 @@ static BOOL CreateToolTip(
 *pWndParent*<br/>
 [in] Elemento primario de la información sobre herramientas.
 
-*nLas*<br/>
+*nType*<br/>
 [in] Tipo de la información sobre herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -124,7 +124,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 Llame a este método para cada [CToolTipCtrl (clase)](../../mfc/reference/ctooltipctrl-class.md) creado por [CTooltipManager::CreateToolTip](#createtooltip). El control primario debe llamar a este método desde su `OnDestroy` controlador. Esto es necesario para quitar correctamente la información sobre herramientas del marco de trabajo. Este método establece *pToolTip* en NULL antes de devolver.
 
-##  <a name="settooltipparams"></a>  Ctooltipmanager:: Settooltipparams
+##  <a name="settooltipparams"></a>  CTooltipManager::SetTooltipParams
 
 Personaliza la apariencia del control de información sobre herramientas para los tipos de control de Windows especificados.
 
@@ -175,13 +175,13 @@ static void SetTooltipText(
 
 ### <a name="parameters"></a>Parámetros
 
-*PTI*<br/>
+*pTI*<br/>
 [in] Un puntero a un objeto TOOLINFO.
 
 *pToolTip*<br/>
 [in, out] Un puntero al control de información sobre herramientas para el que se va a establecer el texto y la descripción.
 
-*nLas*<br/>
+*nType*<br/>
 [in] Especifica el tipo de control que está asociada esta información sobre herramientas.
 
 *strText*<br/>

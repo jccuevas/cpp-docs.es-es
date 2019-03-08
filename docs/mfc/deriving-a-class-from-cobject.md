@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: afaddfcb0a75b7e753897768d993df7ab5d876c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301251"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Derivar una clase de CObject
 
@@ -44,7 +44,7 @@ En la tabla siguiente se muestra la relación entre las macros utilizadas para a
 
 ### <a name="macros-used-for-serialization-and-run-time-information"></a>Macros utilizadas para la serialización y la información de tiempo de ejecución
 
-|Macro utilizada|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator >><br /><br /> CArchive::operator <<|
+|Macro utilizada|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator>><br /><br /> CArchive::operator <<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
 |Básico `CObject` funcionalidad|No|No|No|
 |`DECLARE_DYNAMIC`|Sí|No|No|
@@ -59,11 +59,10 @@ En la tabla siguiente se muestra la relación entre las macros utilizadas para a
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Normalmente, sin embargo, es posible que desee reemplazar algunas de `CObject`de las funciones miembro para controlar los detalles de la nueva clase. Por ejemplo, es posible que normalmente desea invalidar el `Dump` función de `CObject` para proporcionar la información de depuración para el contenido de la clase. Para obtener más información sobre cómo invalidar `Dump`, consulte el artículo [diagnósticos: volcar el contenido de objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). También puede invalidar el `AssertValid` función de `CObject` para proporcionar una prueba personalizada para validar la coherencia de los miembros de datos de objetos de clase. Para obtener una descripción de cómo invalidar `AssertValid`, consulte [MFC ASSERT_VALID y CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+Normalmente, sin embargo, es posible que desee reemplazar algunas de `CObject`de las funciones miembro para controlar los detalles de la nueva clase. Por ejemplo, es posible que normalmente desea invalidar el `Dump` función de `CObject` para proporcionar la información de depuración para el contenido de la clase. Para obtener más información sobre cómo invalidar `Dump`, consulte el artículo [diagnósticos: Volcar el contenido del objeto](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). También puede invalidar el `AssertValid` función de `CObject` para proporcionar una prueba personalizada para validar la coherencia de los miembros de datos de objetos de clase. Para obtener una descripción de cómo invalidar `AssertValid`, consulte [MFC ASSERT_VALID y CObject:: AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 
 El artículo [especificar niveles de funcionalidad](../mfc/specifying-levels-of-functionality.md) se describe cómo especificar otros niveles de funcionalidad, incluida la información de clase en tiempo de ejecución, creación dinámica de objetos y serialización.
 
 ## <a name="see-also"></a>Vea también
 
 [Uso de CObject](../mfc/using-cobject.md)
-

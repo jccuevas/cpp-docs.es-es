@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Incrustar un manifiesto en una aplicación de C/C++'
+title: Filtrar Incrustar un manifiesto en una aplicación C o C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624880"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412905"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Cómo: Incrustar un manifiesto en una aplicación de C/C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Filtrar Incrustar un manifiesto en una aplicación C o C++
 
 Se recomienda que una aplicación de C o C++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen. consulte [Manifest Generation en Visual Studio](../build/manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar archivos MAKE existente para insertar automáticamente el manifiesto dentro del archivo binario final.
 
@@ -23,11 +23,11 @@ Hay dos maneras para incrustar el manifiesto en una aplicación o biblioteca.
 
 - Si no está realizando una compilación incremental puede insertar directamente el manifiesto mediante una línea de comandos similar a lo siguiente como un paso posterior a la compilación:
 
-   **MT.exe-manifest MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
 
    o
 
-   **MT.exe-manifest MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 para un archivo EXE, 2 para un archivo DLL).
 

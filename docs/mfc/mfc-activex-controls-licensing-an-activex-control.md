@@ -1,6 +1,6 @@
 ---
-title: 'Controles ActiveX MFC: Licencias de un control ActiveX'
-ms.date: 09/12/2018
+title: 'Controles ActiveX MFC: Licencias de un Control ActiveX'
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eda2ea08c6bd3526befb71c704aa20eba6935b04
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304631"
 ---
-# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles ActiveX MFC: Licencias de un control ActiveX
+# <a name="mfc-activex-controls-licensing-an-activex-control"></a>Controles ActiveX MFC: Licencias de un Control ActiveX
 
 Las licencias de soporte técnico, una característica opcional de controles ActiveX, le permite controlar quién puede usar o distribuir el control. (Para obtener más información sobre problemas de licencias, consulte los problemas de licencias en [actualizar un ActiveX Control existente](../mfc/upgrading-an-existing-activex-control.md).)
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
 
-En este artículo se trata los temas siguientes:
+En este artículo se tratan los siguientes temas:
 
 - [Información general de la licencia de controles ActiveX](#_core_overview_of_activex_control_licensing)
 
@@ -43,13 +43,15 @@ Para proporcionar compatibilidad con las licencias para los controles ActiveX, e
 
 La siguiente ilustración muestra la comprobación de licencia de un control ActiveX que se usará durante el desarrollo de una aplicación contenedora. Como se mencionó anteriormente, el desarrollador de aplicaciones de contenedor debe tener el archivo. LIC correcto instalado en el equipo de desarrollo para crear una instancia del control.
 
-![Con licencia comprobado durante el desarrollo de controles de ActiveX](../mfc/media/vc374d1.gif "vc374d1") comprobación de un Control de ActiveX con licencia durante el desarrollo
+![Con licencia comprobado durante el desarrollo de controles de ActiveX](../mfc/media/vc374d1.gif "control ActiveX con licencia comprobado durante el desarrollo") <br/>
+Comprobación de un control ActiveX con licencia durante el desarrollo
 
 El proceso siguiente, que se muestra en la ilustración siguiente, se produce cuando el usuario final se ejecuta la aplicación contenedora.
 
 Cuando se inicia la aplicación, normalmente debe crearse una instancia del control. El contenedor realiza mediante una llamada a `CreateInstanceLic`, pasando la clave de licencia incrustado como un parámetro. A continuación, se realiza una comparación de cadenas entre la clave de licencia incrustada y la copia del control de la clave de licencia. Si la coincidencia es correcta, se crea una instancia del control y la aplicación continúa ejecutándose normalmente. Tenga en cuenta que el. Archivo LIC no necesita estar presente en el equipo del usuario de control.
 
-![Con licencia comprobado durante la ejecución de control de ActiveX](../mfc/media/vc374d2.gif "vc374d2") comprobación de un Control de ActiveX con licencia durante la ejecución
+![Con licencia comprobado durante la ejecución de control de ActiveX](../mfc/media/vc374d2.gif "control ActiveX con licencia comprobado durante la ejecución") <br/>
+Comprobación de un control ActiveX con licencia durante la ejecución
 
 Licencias de control consta de dos componentes básicos: código específico en el archivo DLL de implementación del control y el archivo de licencia. El código se compone de dos (o posiblemente tres) llamadas de función y una cadena de caracteres, en lo sucesivo denominado una "cadena de licencia", que contiene un aviso de copyright. Estas llamadas y la cadena de licencia se encuentran en la implementación del control (. Archivo CPP). El archivo de licencia, generado por el Asistente para controles ActiveX, es un archivo de texto con una instrucción de copyright. Se denomina con el nombre del proyecto con un. Extensión LIC, por ejemplo, ejemplo. LIC. Un control con licencia debe ir acompañado por el archivo de licencia, si se necesita tiempo de diseño.
 
@@ -124,4 +126,3 @@ Para obtener más información sobre problemas de licencias, consulte los proble
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Asistente para controles ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md)
-

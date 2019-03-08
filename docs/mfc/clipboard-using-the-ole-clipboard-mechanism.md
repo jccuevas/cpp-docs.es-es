@@ -1,5 +1,5 @@
 ---
-title: 'Portapapeles: Usar el mecanismo del Portapapeles de OLE'
+title: 'Portapapeles: Usar el mecanismo del Portapapeles OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 3dadd2ae6774c684fe751e02fb3a80570accd30a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262257"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Portapapeles: Usar el mecanismo del Portapapeles de OLE
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Portapapeles: Usar el mecanismo del Portapapeles OLE
 
 OLE utiliza formatos estándar y algunos formatos específicos de OLE para transferir datos a través del Portapapeles.
 
@@ -46,4 +46,3 @@ Por ejemplo, para habilitar el comando Cortar, podría escribir a un controlador
 ## <a name="see-also"></a>Vea también
 
 [Portapapeles](../mfc/clipboard.md)
-

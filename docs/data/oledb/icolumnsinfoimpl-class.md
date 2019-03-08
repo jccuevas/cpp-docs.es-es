@@ -27,23 +27,23 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 149d8ea9b23abffb73b5ea620ea094d6f5b792b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498935"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418274"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl (Clase)
 
-Proporciona una implementación de la [IColumnsInfo](/previous-versions/windows/desktop/ms724541) interfaz.
+Proporciona una implementación de la [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```cpp
 template <class T>
 class ATL_NO_VTABLE IColumnsInfoImpl :
-   public IColumnsInfo,  
+   public IColumnsInfo, 
    public CDBIDOps
 ```
 
@@ -69,7 +69,7 @@ La clase derivada de `IColumnsInfoImpl`.
 
 Una interfaz obligatoria en los conjuntos de filas y los comandos. Para modificar el comportamiento de su proveedor `IColumnsInfo` implementación, deberá modificar la asignación de columna del proveedor.
 
-## <a name="getcolumninfo"></a> Icolumnsinfoimpl:: GetColumnInfo
+## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
 
 Devuelve los metadatos de columna necesarios para la mayoría de los consumidores.
 
@@ -83,9 +83,9 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704) en el *referencia del programador OLE DB*.
+Consulte [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) en el *referencia del programador OLE DB*.
 
-## <a name="mapcolumnids"></a> Icolumnsinfoimpl:: Mapcolumnids
+## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
 Devuelve una matriz de ordinales de las columnas en un conjunto de filas que se identifican mediante los identificadores de columna especificado.
 
@@ -99,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200) en el *referencia del programador OLE DB*.
+Consulte [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

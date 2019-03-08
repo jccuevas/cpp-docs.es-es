@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 799ec11fd8542a8b30ef3aa95f1a20700c5c9796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299108"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation (clase)
 
@@ -35,7 +35,7 @@ class CAutoRevertImpersonation
 |Name|Descripción|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Construye un `CAutoRevertImpersonation` objeto|
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Destruye el objeto y revierte la suplantación de token de acceso.|
+|[CAutoRevertImpersonation::~CAutoRevertImpersonation](#dtor)|Destruye el objeto y revierte la suplantación de token de acceso.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -67,7 +67,7 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*PAT*<br/>
+*pAT*<br/>
 La dirección de la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto al que se revierten automáticamente
 
 ### <a name="remarks"></a>Comentarios
@@ -84,14 +84,14 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*PAT*<br/>
+*pAT*<br/>
 La dirección de la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto al que se revierten automáticamente.
 
 ### <a name="remarks"></a>Comentarios
 
 La suplantación del token de acceso real debe realizarse por separado de y, preferiblemente, antes de la creación de un `CAutoRevertImpersonation` objeto. Esta suplantación, se revertirá automáticamente cuando el `CAutoRevertImpersonation` objeto queda fuera del ámbito.
 
-##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
+##  <a name="dtor"></a>  CAutoRevertImpersonation::~CAutoRevertImpersonation
 
 Destruye el objeto y revierte la suplantación de token de acceso.
 

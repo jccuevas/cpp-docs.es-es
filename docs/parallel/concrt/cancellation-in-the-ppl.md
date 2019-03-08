@@ -1,6 +1,6 @@
 ---
 title: Cancelación en la biblioteca PPL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558735"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271741"
 ---
 # <a name="cancellation-in-the-ppl"></a>Cancelación en la biblioteca PPL
 
 En este documento se explica el rol de cancelación de la biblioteca de patrones de procesamiento paralelo (PPL), cómo se cancela el trabajo paralelo y cómo se determina cuándo se cancela un trabajo paralelo.
 
 > [!NOTE]
->  El runtime usa el control de excepciones para implementar la cancelación. No debe detectar ni administrar estas excepciones en su código. Además, le recomendamos que escriba código seguro ante excepciones en los cuerpos de las funciones de las tareas. Por ejemplo, puede usar el *Resource Acquisition Is Initialization* patrón (RAII) para asegurarse de que los recursos se administran correctamente cuando se produce una excepción en el cuerpo de una tarea. Para obtener un ejemplo completo que usa el modelo RAII para limpiar un recurso en una tarea cancelable, vea [Tutorial: quitar el trabajo de un subproceso de interfaz de usuario](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
+>  El runtime usa el control de excepciones para implementar la cancelación. No debe detectar ni administrar estas excepciones en su código. Además, le recomendamos que escriba código seguro ante excepciones en los cuerpos de las funciones de las tareas. Por ejemplo, puede usar el *Resource Acquisition Is Initialization* patrón (RAII) para asegurarse de que los recursos se administran correctamente cuando se produce una excepción en el cuerpo de una tarea. Para obtener un ejemplo completo que usa el modelo RAII para limpiar un recurso en una tarea cancelable, vea [Tutorial: Quitar trabajo de un subproceso de interfaz de usuario](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md).
 
 ## <a name="key-points"></a>Puntos clave
 
@@ -31,7 +31,7 @@ En este documento se explica el rol de cancelación de la biblioteca de patrones
 
 - Al utilizar tokens de cancelación, use el [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) método para iniciar la cancelación y el [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) función para responder a cancelación. Use la [is_canceled](reference/cancellation-token-class.md#is_canceled) método para comprobar si cualquier otra tarea ha solicitado la cancelación.
 
-- La cancelación no se produce de forma inmediata. Aunque el nuevo trabajo no se inicia si se cancela una tarea o un grupo de tareas, el trabajo activo debe buscar y responder a la cancelación.
+- La cancelación no se produce de inmediato. Aunque el nuevo trabajo no se inicia si se cancela una tarea o un grupo de tareas, el trabajo activo debe buscar y responder a la cancelación.
 
 - Una continuación basada en valores hereda el token de cancelación de la tarea anterior. Una continuación basada en tareas nunca hereda el token de la tarea anterior.
 
@@ -57,7 +57,7 @@ En este documento se explica el rol de cancelación de la biblioteca de patrones
 
 PPL usa tareas y grupos de tareas para administrar tareas y cálculos específicos. Puede anidar grupos de tareas al formulario *árboles* de trabajo paralelo. En la ilustración siguiente se muestra un árbol de trabajo paralelo. En esta ilustración, `tg1` y `tg2` representan grupos de tareas; `t1`, `t2`, `t3`, `t4` y `t5` representan el trabajo que realizan los grupos de tareas.
 
-![Un árbol de trabajo paralelo](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![Un árbol de trabajo paralelo](../../parallel/concrt/media/parallelwork_trees.png "un árbol de trabajo paralelo")
 
 En el ejemplo siguiente se muestra el código necesario para crear el árbol de la ilustración. En este ejemplo, `tg1` y `tg2` son [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) objetos; `t1`, `t2`, `t3`, `t4`, y `t5` son [Concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md) objetos.
 
@@ -71,7 +71,7 @@ También puede usar el [Concurrency:: task_group](reference/task-group-class.md)
 
 Existen varias maneras de cancelar el trabajo paralelo. La forma preferida es utilizar un token de cancelación. Grupos de tareas también compatibilidad con la [task_group](reference/task-group-class.md#cancel) método y el [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) método. La otra manera consiste en iniciar una excepción en el cuerpo de una función de trabajo de una tarea. Independientemente del método que elija, debe saber que la cancelación no se produce de inmediato. Aunque el nuevo trabajo no se inicia si se cancela una tarea o un grupo de tareas, el trabajo activo debe buscar y responder a la cancelación.
 
-Para obtener más ejemplos que cancelan tareas paralelas, vea [Tutorial: conectar usando tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [Cómo: usar la cancelación para interrumpir un bucle paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), y [Cómo: usar Excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Para obtener más ejemplos que cancelan tareas paralelas, vea [Tutorial: Conectar usando tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [Cómo: Usar la cancelación para interrumpir un bucle paralelo](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), y [Cómo: Usar excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 ###  <a name="tokens"></a> Uso de un Token de cancelación para cancelar el trabajo paralelo
 
@@ -90,13 +90,12 @@ En el ejemplo siguiente se muestra el primer patrón básico para la cancelació
 La función `cancel_current_task` se inicia; por consiguiente, no necesita regresar de manera explícita de la función o bucle actual.
 
 > [!TIP]
-
->  Como alternativa, puede llamar a la [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) función en lugar de `cancel_current_task`.
+> Como alternativa, puede llamar a la [Concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point) función en lugar de `cancel_current_task`.
 
 Es importante llamar a `cancel_current_task` cuando responda a la cancelación porque pasa la tarea al estado cancelado. Si regresa prematuramente de la función en lugar de llamar a `cancel_current_task`, la operación pasa al estado completado y se ejecuta cualquier continuación basada en valores.
 
 > [!CAUTION]
->  Nunca inicie `task_canceled` desde su código. En su lugar, llame a `cancel_current_task`.
+> Nunca inicie `task_canceled` desde su código. En su lugar, llame a `cancel_current_task`.
 
 Cuando finaliza una tarea en el estado cancelado, la [concurrency::task::get](reference/task-class.md#get) método inicie una excepción [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (A la inversa, [concurrency::task::wait](reference/task-class.md#wait) devuelve [task_status:: Canceled](reference/concurrency-namespace-enums.md#task_group_status) y no produce una excepción.) En el ejemplo siguiente se muestra este comportamiento para una continuación basada en tareas. Siempre se llama a una continuación basada en tareas, incluso cuando se cancela la tarea anterior.
 
@@ -107,8 +106,7 @@ Dado que las continuaciones basadas en valores heredan el token de su tarea ante
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Si no se pasa un token de cancelación a la `task` constructor o la [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) función, esa tarea no es cancelable. Además, debe pasar el mismo token de cancelación al constructor de cualquier tarea anidada (es decir, las tareas que se crean en el cuerpo de otra tarea) para cancelar todas las tareas a la vez.
+> Si no se pasa un token de cancelación a la `task` constructor o la [Concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task) función, esa tarea no es cancelable. Además, debe pasar el mismo token de cancelación al constructor de cualquier tarea anidada (es decir, las tareas que se crean en el cuerpo de otra tarea) para cancelar todas las tareas a la vez.
 
 Puede que desee ejecutar código arbitrario cuando se cancele un token de cancelación. Por ejemplo, si el usuario elige un **cancelar** botón en la interfaz de usuario para cancelar la operación, se podía deshabilitar dicho botón hasta que el usuario inicie otra operación. El ejemplo siguiente muestra cómo usar el [concurrency::cancellation_token::register_callback](reference/cancellation-token-class.md#register_callback) método para registrar una función de devolución de llamada que se ejecuta cuando se cancela un token de cancelación.
 
@@ -123,11 +121,10 @@ El documento [paralelismo de tareas](../../parallel/concrt/task-parallelism-conc
 Estos comportamientos no se ven afectados por una tarea con errores (es decir, una que produce una excepción). En este caso, se cancela una continuación basada en valores; no se cancela una continuación basada en tareas.
 
 > [!CAUTION]
->  Una tarea que se crea en otra tarea (es decir, una tarea anidada) no hereda el token de cancelación de la tarea principal. Solo una continuación basada en valores hereda el token de cancelación de la tarea anterior.
+> Una tarea que se crea en otra tarea (es decir, una tarea anidada) no hereda el token de cancelación de la tarea principal. Solo una continuación basada en valores hereda el token de cancelación de la tarea anterior.
 
 > [!TIP]
-
->  Use la [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) método cuando se llama a un constructor o una función que toma un `cancellation_token` objeto y no desea que la operación se pueda cancelar.
+> Use la [Concurrency:: cancellation_token:: none](reference/cancellation-token-class.md#none) método cuando se llama a un constructor o una función que toma un `cancellation_token` objeto y no desea que la operación se pueda cancelar.
 
 También puede proporcionar un token de cancelación al constructor de un objeto `task_group` o `structured_task_group`. Un aspecto importante que debe tener en cuenta es que los grupos de tareas secundarios heredan este token de cancelación. Para obtener un ejemplo que muestra este concepto mediante el uso de la [Concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) función que se ejecuta para llamar a `parallel_for`, consulte [Cancelar algoritmos paralelos](#algorithms) más adelante en este documento.
 
@@ -185,7 +182,7 @@ El uso de tokens de cancelación y el método `cancel` son más eficaces que el 
 > [!CAUTION]
 >  Se recomienda usar excepciones para cancelar el trabajo paralelo solo cuando sea necesario. Los tokens de cancelación y los métodos `cancel` del grupo de tareas son más eficaces y menos propensos a errores.
 
-Cuando se produce una excepción en el cuerpo de una función de trabajo que se pasa a un grupo de tareas, el runtime almacena esa excepción y calcula las referencias de la excepción en el contexto en el que se espera a que el grupo de tareas finalice. Como sucede con el método `cancel`, el runtime descarta cualquier tarea que no se haya iniciado todavía y no acepta nuevas tareas.
+Cuando se produce una excepción en el cuerpo de una función de trabajo que se pasa a un grupo de tareas, el runtime almacena esa excepción y serializa las referencias de la excepción en el contexto en el que se espera a que el grupo de tareas finalice. Como sucede con el método `cancel`, el runtime descarta cualquier tarea que no se haya iniciado todavía y no acepta nuevas tareas.
 
 Este tercer ejemplo se parece al segundo, salvo en que la tarea `t4` produce una excepción para cancelar el grupo de tareas `tg2`. Este ejemplo se usa un `try` - `catch` bloque para comprobar la cancelación cuando el grupo de tareas `tg2` espera a que sus tareas secundarias finalicen. Al igual que en el primer ejemplo, esto hace que el grupo de tareas `tg2` pase a tener el estado cancelado, pero no cancela el grupo de tareas `tg1`.
 
@@ -247,8 +244,8 @@ El uso de la cancelación es adecuado cuando cada miembro de un grupo de tareas 
 
 |Título|Descripción|
 |-----------|-----------------|
-|[Procedimiento para usar la cancelación para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Muestra cómo se usa la cancelación para implementar un algoritmo de búsqueda paralelo.|
-|[Procedimiento para usar el control de excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Muestra cómo usar la clase `task_group` para escribir un algoritmo de búsqueda en una estructura de árbol básica.|
+|[Cómo: Usar la cancelación para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Muestra cómo se usa la cancelación para implementar un algoritmo de búsqueda paralelo.|
+|[Cómo: Usar el control de excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Muestra cómo usar la clase `task_group` para escribir un algoritmo de búsqueda en una estructura de árbol básica.|
 |[Control de excepciones](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Describe cómo el runtime controla las excepciones generadas por grupos de tareas, tareas ligeras y agentes asincrónicos y cómo se responde a las excepciones en las aplicaciones.|
 |[Paralelismo de tareas](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Describe cómo se relacionan las tareas con los grupos de tareas y cómo se pueden usar tareas estructuradas y no estructuradas en las aplicaciones.|
 |[Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)|Describe los algoritmos paralelos, que realizan el trabajo de forma simultánea en colecciones de datos.|
@@ -267,4 +264,3 @@ El uso de la cancelación es adecuado cuando cada miembro de un grupo de tareas 
 [structured_task_group (clase)](../../parallel/concrt/reference/structured-task-group-class.md)
 
 [parallel_for (función)](reference/concurrency-namespace-functions.md#parallel_for)
-

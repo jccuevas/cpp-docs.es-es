@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500768"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416012"
 ---
 # <a name="cimagelist-class"></a>CImageList (clase)
 
@@ -107,7 +107,7 @@ class CImageList : public CObject
 |[CImageList::Attach](#attach)|Asocia una lista de imágenes a un `CImageList` objeto.|
 |[CImageList::BeginDrag](#begindrag)|Comienza a arrastrar una imagen.|
 |[CImageList::Copy](#copy)|Copia una imagen dentro de un `CImageList` objeto.|
-|[CImageList:: Create](#create)|Inicializa una lista de imágenes y lo adjunta a un `CImageList` objeto.|
+|[CImageList::Create](#create)|Inicializa una lista de imágenes y lo adjunta a un `CImageList` objeto.|
 |[CImageList::DeleteImageList](#deleteimagelist)|Elimina una lista de imágenes.|
 |[CImageList::DeleteTempMap](#deletetempmap)|Lo llama el [CWinApp](../../mfc/reference/cwinapp-class.md) controlador de tiempo de inactividad para eliminar de temporales `CImageList` objeto creado por `FromHandle`.|
 |[CImageList::Detach](#detach)|Desasocia un objeto de lista de la imagen desde un `CImageList` de objetos y devuelve un identificador a una lista de imágenes.|
@@ -133,7 +133,7 @@ class CImageList : public CObject
 |[CImageList::SetBkColor](#setbkcolor)|Establece el color de fondo de una lista de imágenes.|
 |[CImageList::SetDragCursorImage](#setdragcursorimage)|Crea una nueva imagen de arrastre.|
 |[CImageList::SetImageCount](#setimagecount)|Restablece el recuento de imágenes en una lista de imágenes.|
-|[Función CImageList:: SetOverlayImage](#setoverlayimage)|Agrega el índice de base cero de una imagen a la lista de imágenes que se usará como máscaras de superposición.|
+|[CImageList::SetOverlayImage](#setoverlayimage)|Agrega el índice de base cero de una imagen a la lista de imágenes que se usará como máscaras de superposición.|
 |[CImageList::Write](#write)|Escribe una lista de imágenes en un archivo.|
 
 ### <a name="public-operators"></a>Operadores públicos
@@ -311,7 +311,7 @@ Es distinto de cero si es correcto. En caso contrario, es cero.
 
 [!code-cpp[NVC_MFC_CImageList#6](../../mfc/reference/codesnippet/cpp/cimagelist-class_4.cpp)]
 
-##  <a name="create"></a>  CImageList:: Create
+##  <a name="create"></a>  CImageList::Create
 
 Inicializa una lista de imágenes y lo adjunta a un [CImageList](../../mfc/reference/cimagelist-class.md) objeto.
 
@@ -348,10 +348,10 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Parámetros
 
-*CX*<br/>
+*cx*<br/>
 Dimensiones de cada imagen, en píxeles.
 
-*CY*<br/>
+*cy*<br/>
 Dimensiones de cada imagen, en píxeles.
 
 *nFlags*<br/>
@@ -383,19 +383,19 @@ Color utilizado para generar una máscara. Cada píxel de este color del mapa de
 *lpszBitmapID*<br/>
 Una cadena que contiene los identificadores de las imágenes de recursos.
 
-*imageList1*<br/>
+*imagelist1*<br/>
 Referencia a un objeto `CImageList`.
 
 *nImage1*<br/>
 Índice de la primera imagen existente.
 
-*ImageList2*<br/>
+*imagelist2*<br/>
 Referencia a un objeto `CImageList`.
 
 *nImage2*<br/>
 Índice de la segunda imagen existente.
 
-*DX*<br/>
+*dx*<br/>
 Desplazamiento del eje x de la segunda imagen en relación con la primera imagen, en píxeles.
 
 *dy*<br/>
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 Puntero a la ventana propietaria de la imagen de arrastre.
 
-*punto*<br/>
+*point*<br/>
 Posición en la que se va a mostrar la imagen de arrastre. Las coordenadas son en relación con la esquina superior izquierda de la ventana (no en el área de cliente).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -529,7 +529,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Nueva posición de arrastre.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -554,7 +554,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 Especifica si la imagen de arrastre es que se mostrará.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -585,7 +585,7 @@ Puntero al contexto del dispositivo de destino.
 *nImage*<br/>
 Índice de base cero de la imagen para dibujar.
 
-*PT*<br/>
+*pt*<br/>
 Ubicación en la que se va a dibujar dentro del contexto de dispositivo especificado.
 
 *nStyle*<br/>
@@ -630,7 +630,7 @@ Puntero al contexto del dispositivo de destino.
 *nImage*<br/>
 Índice de base cero de la imagen para dibujar.
 
-*PT*<br/>
+*pt*<br/>
 Ubicación en la que se va a dibujar dentro del contexto de dispositivo especificado.
 
 *sz*<br/>
@@ -690,14 +690,14 @@ Un puntero al contexto del dispositivo de destino. Debe eliminar este [CDC](../.
 *nImage*<br/>
 Índice de base cero de la imagen que se va a dibujar.
 
-*PT*<br/>
-Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que contiene las coordenadas x e y donde se dibujará la imagen.
+*pt*<br/>
+Un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que contiene las coordenadas x e y donde se dibujará la imagen.
 
 *sz*<br/>
-Un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que indica el tamaño de la imagen que se va a dibujar.
+Un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que indica el tamaño de la imagen que se va a dibujar.
 
 *ptOrigin*<br/>
-Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que contiene las coordenadas x e y especificación de la esquina superior izquierda de la operación de dibujo con respecto a la imagen en Sí. No se dibujan los píxeles de la imagen que están a la izquierda de la coordenada x y versiones posteriores de la coordenada y.
+Un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que contiene las coordenadas x e y especificación de la esquina superior izquierda de la operación de dibujo con respecto a la imagen en Sí. No se dibujan los píxeles de la imagen que están a la izquierda de la coordenada x y versiones posteriores de la coordenada y.
 
 *fStyle*<br/>
 Marca que especifica el estilo de dibujo y, opcionalmente, la imagen de superposición. Vea la sección Comentarios para obtener información sobre la imagen de superposición. La implementación predeterminada MFC, ILD_NORMAL, dibuja la imagen con el color de fondo de la lista de imágenes. Si el color de fondo es el valor como CLR_NONE, la imagen se dibuja utilizando una máscara de forma transparente.
@@ -715,7 +715,7 @@ El color de fondo de imagen, de forma predeterminada CLR_DEFAULT. Este parámetr
 |Valor|Significado|
 |-----------|-------------|
 |CLR_DEFAULT|Color de fondo predeterminado. La imagen se dibuja utilizando el color de fondo de la lista de imágenes.|
-|COMO CLR_NONE|Ningún color de fondo. La imagen se dibuja de forma transparente.|
+|CLR_NONE|Ningún color de fondo. La imagen se dibuja de forma transparente.|
 
 *rgbFore*<br/>
 Color de primer plano de imagen, de forma predeterminada CLR_DEFAULT. Este parámetro puede ser un valor definido por la aplicación de RGB o uno de los valores siguientes:
@@ -723,7 +723,7 @@ Color de primer plano de imagen, de forma predeterminada CLR_DEFAULT. Este pará
 |Valor|Significado|
 |-----------|-------------|
 |CLR_DEFAULT|Color de primer plano predeterminado. La imagen se dibuja utilizando el color de resaltado del sistema como el color de primer plano.|
-|COMO CLR_NONE|Ningún color de blend. La imagen se mezcla con el color del contexto del dispositivo de destino.|
+|CLR_NONE|Ningún color de blend. La imagen se mezcla con el color del contexto del dispositivo de destino.|
 
 Este parámetro se usa únicamente si *fStyle* incluye la marca ILD_BLEND25 o ILD_BLEND50.
 
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Parámetros
 
 *lpPoint*<br/>
-Dirección de un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que recibe la actual posición de arrastre.
+Dirección de un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que recibe la actual posición de arrastre.
 
 *lpPointHotSpot*<br/>
 Dirección de un `POINT` estructura que recibe el desplazamiento de la imagen de arrastre en relación con la posición de arrastre.
@@ -1074,7 +1074,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CR*<br/>
+*cr*<br/>
 Color de fondo para establecer. Puede ser como CLR_NONE. En ese caso, las imágenes se dibujan utilizando la máscara de forma transparente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1097,7 +1097,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="parameters"></a>Parámetros
 
-*Narrastre*<br/>
+*nDrag*<br/>
 Índice de la nueva imagen que va a combinarse con la imagen de arrastre.
 
 *ptHotSpot*<br/>
@@ -1138,7 +1138,7 @@ Si disminuye el tamaño de una lista de imágenes mediante el uso de esta funci�
 
 [!code-cpp[NVC_MFC_CImageList#21](../../mfc/reference/codesnippet/cpp/cimagelist-class_21.cpp)]
 
-##  <a name="setoverlayimage"></a>  Función CImageList:: SetOverlayImage
+##  <a name="setoverlayimage"></a>  CImageList::SetOverlayImage
 
 Llame a esta función para agregar el índice de base cero de una imagen a la lista de imágenes que se usará como máscaras de superposición.
 

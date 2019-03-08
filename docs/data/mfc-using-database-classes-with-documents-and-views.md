@@ -1,5 +1,5 @@
 ---
-title: 'MFC: Utilizar clases de base de datos con documentos y vistas'
+title: 'MFC: Uso de clases de base de datos con documentos y vistas'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [C++], database applications
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624840"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849758"
 ---
-# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Utilizar clases de base de datos con documentos y vistas
+# <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Uso de clases de base de datos con documentos y vistas
 
 Puede usar las clases de base de datos MFC con o sin la arquitectura documento/vista. En este tema se destaca cómo trabajar con documentos y vistas. Explica:
 
@@ -31,7 +31,7 @@ Puede usar las clases de base de datos MFC con o sin la arquitectura documento/v
 
 - [Otras consideraciones](#_core_other_factors).
 
-Para alternativas, consulte [MFC: utilizar clases de base de datos sin documentos y vistas](../data/mfc-using-database-classes-without-documents-and-views.md).
+Para alternativas, consulte [MFC: Uso de clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> Escribir una aplicación basada en formularios
 
@@ -63,14 +63,14 @@ Muchas aplicaciones sencillas basadas en formularios no es necesario documentos.
 
 ##  <a name="_core_other_factors"></a> Otros factores
 
-Aplicaciones basadas en formularios a menudo no tienen ningún uso para el mecanismo de serialización de documentos de .NET framework, por lo que es posible que desee quitar, deshabilitar o reemplazar el **New** y **abierto** comandos en el **Archivo** menú. Consulte el artículo [serialización: serialización frente. Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
+Aplicaciones basadas en formularios a menudo no tienen ningún uso para el mecanismo de serialización de documentos de .NET framework, por lo que es posible que desee quitar, deshabilitar o reemplazar el **New** y **abierto** comandos en el **Archivo** menú. Consulte el artículo [serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
 
 También puede hacer uso de las muchas posibilidades de interfaz de usuario que puede admitir el marco de trabajo. Por ejemplo, podría utilizar varios `CRecordView` objetos en una ventana divisora, abrir múltiples conjuntos de registros en diferentes varias ventanas de documento MDI (interfaz) secundarias y así sucesivamente.
 
 Es posible que desee implementar la impresión de cualquier cosa que esté en la vista, ya sea un formulario se implementa con `CRecordView` o alguna otra cosa. Como las clases derivadas de `CFormView`, `CRecordView` no admita la impresión, pero puede invalidar el `OnPrint` la función miembro se permite la impresión. Para obtener más información, vea la clase [CFormView](../mfc/reference/cformview-class.md).
 
-Es posible que no desea utilizar documentos y vistas en absoluto. En ese caso, consulte [MFC: utilizar clases de base de datos sin documentos y vistas](../data/mfc-using-database-classes-without-documents-and-views.md).
+Es posible que no desea utilizar documentos y vistas en absoluto. En ese caso, consulte [MFC: Uso de clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Las clases de base de datos MFC (.. / data/mfc-database-classes-odbc-and-dao.md)
+[Clases de bases de datos MFC](../data/mfc-database-classes-odbc-and-dao.md)

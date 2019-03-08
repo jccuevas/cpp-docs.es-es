@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 58316a6f09fcd60aae8b8de41e22af138ae88813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e3605b636bbcb16a1c6f543bc9090d2b212a60b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527175"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418582"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Admitir transacciones en OLE DB
 
@@ -22,11 +22,11 @@ Un [transacciones](../../data/transactions-mfc-data-access.md) es una forma Agru
 
 OLE DB admite las transacciones con los tres métodos siguientes:
 
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008)
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction:: Abort](/previous-versions/windows/desktop/ms709833)
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>Relación de sesiones y transacciones
 
@@ -48,7 +48,7 @@ Una llamada a `ITransaction::Commit` o `ITransaction::Abort` finaliza la transac
 
 ## <a name="nested-transactions"></a>Transacciones anidadas
 
-Un [anidar transacciones](/previous-versions/windows/desktop/ms716985) se produce cuando se inicia una nueva transacción local cuando una transacción activa ya existe en la sesión. La nueva transacción se inicia como una transacción anidada bajo la transacción actual. Si el proveedor no admite transacciones anidadas, la llamada a `StartTransaction` cuando ya hay una transacción activa en la sesión, devuelve XACT_E_XTIONEXISTS.
+Un [anidar transacciones](/previous-versions/windows/desktop/ms716985(v=vs.85)) se produce cuando se inicia una nueva transacción local cuando una transacción activa ya existe en la sesión. La nueva transacción se inicia como una transacción anidada bajo la transacción actual. Si el proveedor no admite transacciones anidadas, la llamada a `StartTransaction` cuando ya hay una transacción activa en la sesión, devuelve XACT_E_XTIONEXISTS.
 
 ## <a name="distributed-transactions"></a>Transacciones distribuidas
 

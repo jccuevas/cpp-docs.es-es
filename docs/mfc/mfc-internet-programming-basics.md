@@ -1,6 +1,6 @@
 ---
 title: Fundamentos de programación para Internet de MFC
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37fe5486d6d41ad182779a3a15b0aca3af51d04b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288446"
 ---
 # <a name="mfc-internet-programming-basics"></a>Fundamentos de programación para Internet de MFC
 
@@ -30,7 +30,7 @@ Microsoft proporciona muchas API para programar aplicaciones de cliente y servid
 >[!IMPORTANT]
 > ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información, consulte [controles ActiveX](activex-controls.md).
 
-![Las aplicaciones cliente y servidor](../mfc/media/vc38bq1.gif "vc38bq1")
+![Las aplicaciones cliente y servidor](../mfc/media/vc38bq1.gif "aplicaciones cliente y servidor")
 
 MFC proporciona clases que admiten la programación de Internet. Puede usar [COleControl](../mfc/reference/colecontrol-class.md) y [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) y relacionados con las clases MFC para crear controles ActiveX y documentos activos. Puede usar las clases MFC como [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), y [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) para recuperar información mediante protocolos de Internet, como FTP y archivos HTTP y gopher.
 
@@ -81,4 +81,3 @@ El [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37
 La sección OLE del SDK de Windows contiene información adicional sobre la programación de OLE. Esta información proporciona detalles sobre cómo usar las funciones de Win32 WinInet directamente, en lugar de a través de las clases MFC. También contiene información general sobre las tecnologías de Internet.
 
 ## <a name="see-also"></a>Vea también
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302889"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer (clase)
 
@@ -45,7 +45,7 @@ class COleTemplateServer : public COleObjectFactory
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Se conecta a una plantilla de documento subyacente `COleObjectFactory` objeto.|
 |[COleTemplateServer::Unregister](#unregister)|Anula el registro de la plantilla de documento asociado.|
-|[COleTemplateServer:: UpdateRegistry](#updateregistry)|Registra el tipo de documento con el registro del sistema OLE.|
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|Registra el tipo de documento con el registro del sistema OLE.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -53,7 +53,7 @@ Esta clase se deriva de la clase [COleObjectFactory](../../mfc/reference/coleobj
 
 `COleTemplateServer` invalida el `OnCreateInstance` función de miembro definida por `COleObjectFactory`. Esta función miembro se llama el marco de trabajo para crear un objeto de C++ del tipo correcto.
 
-Para obtener más información acerca de los servidores, consulte el artículo [servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md).
+Para obtener más información acerca de los servidores, consulte el artículo [servidores: Implementación de un servidor](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -94,13 +94,13 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Referencia al identificador de clase OLE que solicita la plantilla.
 
 *pDocTemplate*<br/>
 Puntero a la plantilla de documento.
 
-*bMultiInstance al*<br/>
+*bMultiInstance*<br/>
 Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si es TRUE, se inician múltiples instancias de la aplicación para que cada solicitud crear un objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -123,7 +123,7 @@ TRUE si es correcto; en caso contrario, FALSE.
 
 EnterRemarks
 
-##  <a name="updateregistry"></a>  COleTemplateServer:: UpdateRegistry
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry
 
 Carga información de tipo de archivo de la cadena de plantilla de documento y coloca dicha información en el registro del sistema OLE.
 
@@ -156,7 +156,7 @@ Una lista de entradas que se escribe en el registro solo si hay entradas.
 *rglpszOverwrite*<br/>
 Una lista de entradas que se escribe en el registro, independientemente de que existan las entradas anteriores.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Determina si la clase es que se registrarán. Si *bInscríbase al* es TRUE, la clase se registra con el registro del sistema. En caso contrario, anula el registro de la clase.
 
 ### <a name="remarks"></a>Comentarios

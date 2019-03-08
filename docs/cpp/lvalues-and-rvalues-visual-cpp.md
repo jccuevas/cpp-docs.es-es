@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
+ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546359"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52453890"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues y Rvalues (Visual C++)
 
@@ -20,7 +20,7 @@ El estándar C ++ 17 define las categorías de valor de expresión como sigue:
 
 - Un *glvalue* es una expresión cuya evaluación determina la identidad de un objeto, el campo de bits o la función.
 - Un *prvalue* es una expresión cuya evaluación Inicializa un objeto o un campo de bits, o calcula el valor del operando de un operador, como especificado por el contexto donde aparece.
-- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). [Ejemplo: determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue. ]
+- Un *xvalue* es un glvalue que denota un objeto o un campo de bits cuyos recursos se pueden reutilizar (normalmente porque es casi al final de su ciclo de vida). Ejemplo: Determinados tipos de expresiones que implican las referencias rvalue (8.3.2) producen xvalues, por ejemplo, una llamada a una función cuyo tipo de valor devuelto es una referencia rvalue o una conversión a un tipo de referencia rvalue.
 - Un *lvalue* es un glvalue que no sea un xvalue.
 - Un *rvalue* es un prvalue o un xvalue.
 
@@ -54,12 +54,12 @@ int main()
     // Correct usage: the dereferenced pointer is an lvalue.
     *p = i;
 
-    const int ci = 7;
-    // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
-    ci = 9; // C3892
-
     // Correct usage: the conditional operator returns an lvalue.
     ((i < 3) ? i : j) = 7;
+    
+    // Incorrect usage: the constant ci is a non-modifiable lvalue (C3892).
+    const int ci = 7;
+    ci = 9; // C3892
 }
 ```
 

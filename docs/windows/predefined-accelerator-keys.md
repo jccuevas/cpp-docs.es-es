@@ -1,79 +1,85 @@
 ---
-title: Teclas de aceleración predefinidas (C++)
-ms.date: 11/04/2016
+title: Teclas de aceleración (C++)
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
 - keyboard shortcuts [C++], predefined
+- menus [C++], shortcut keys
+- keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 9ee884123bfe440e2246b6313ba1e37c0b01b494
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99867f146ca80d8b48c9be9deb59044207b33af1
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541627"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210502"
 ---
-# <a name="predefined-accelerator-keys-c"></a>Teclas de aceleración predefinidas (C++)
+# <a name="accelerator-keys-c"></a>Teclas de aceleración (C++)
 
-Hay una serie de teclas de aceleración predefinidas que pueden formar parte de un proyecto de aplicación de Windows. Algunas de estas teclas virtuales se destinan al entorno de Windows. Otras admiten exploradores o aplicaciones Unicode. Puede usar una de estas teclas en cualquier acelerador.
+## <a name="predefined-accelerator-keys"></a>Teclas de aceleración predefinidas
 
-|Tecla|Descripción|
+Hay una serie de teclas de aceleración predefinidas que pueden formar parte de un proyecto de aplicación de Windows. Algunas de estas teclas virtuales se destinan al entorno de Windows. Otras admiten explorador o aplicaciones Unicode. Puede usar una de estas teclas en cualquier acelerador.
+
+|Key|Descripción|
 |---------|-----------------|
-|VK_ACCEPT|Aceptación de IME|
-|VK_BROWSER_BACK|Windows: tecla Atrás del explorador|
-|VK_BROWSER_FAVORITES|Windows: tecla Favoritos del explorador|
-|VK_BROWSER_FORWARD|Windows: tecla Adelante del explorador|
-|VK_BROWSER_HOME|Windows: tecla Inicio e inicio del explorador|
-|VK_BROWSER_REFRESH|Windows: tecla Actualizar del explorador|
-|VK_BROWSER_SEARCH|Windows: tecla Buscar del explorador|
-|VK_BROWSER_STOP|Windows: tecla Detener del explorador|
-|VK_CONVERT|Conversión de IME|
-|VK_FINAL|Modo final de IME|
-|VK_HANGUEL|Modo Hanguel de IME (se mantiene por compatibilidad; use VK_HANGUL)|
-|VK_HANGUL|Modo Hangul de IME|
-|VK_HANJA|Modo Hanja de IME|
-|VK_JUNJA|Modo Junja de IME|
-|VK_KANA|Modo Kana de IME|
-|VK_KANJI|Modo Kanji de IME|
-|VK_LAUNCH_APP1|Windows: Tecla Iniciar aplicación 1|
-|VK_LAUNCH_APP2|Windows: Tecla Iniciar aplicación 2|
-|VK_LAUNCH_MAIL|Windows: tecla Iniciar correo electrónico|
-|VK_LAUNCH_MEDIA_SELECT|Windows: tecla Seleccionar medio|
-|VK_LCONTROL|Tecla CONTROL izquierda|
-|VK_LMENU|Tecla MENÚ izquierda|
-|VK_LSHIFT|Tecla MAYÚS izquierda|
-|VK_MEDIA_NEXT_TRACK|Windows: tecla Pista siguiente|
-|VK_MEDIA_PLAY_PAUSE|Windows: tecla Reproducir/Pausar medio|
-|VK_MEDIA_PREV_TRACK|Windows: tecla Pista anterior|
-|VK_MEDIA_STOP|Windows: tecla Detener medios|
-|VK_MODECHANGE|Solicitud de cambio del modo IME|
-|VK_NONCONVERT|No conversión IME|
-|VK_OEM_1|Windows: para el teclado estándar de Estados Unidos, la tecla ';:'|
-|VK_OEM_102|Windows: la tecla de corchete angular o la tecla de barra diagonal inversa del teclado de 102 teclas RT|
-|VK_OEM_2|¿Windows: para el teclado estándar de Estados Unidos, la '/'? key|
-|VK_OEM_3|Windows: para el teclado estándar de Estados Unidos, la tecla '`~'|
-|VK_OEM_4|Windows: para el teclado estándar de Estados Unidos, la tecla '[{'|
-|VK_OEM_5|Windows: para el teclado estándar de Estados Unidos, la '\\&#124;' clave|
-|VK_OEM_6|Windows: para el teclado estándar de Estados Unidos, la tecla ']}'|
-|VK_OEM_7|Windows: para el teclado estándar de Estados Unidos, la tecla 'comilla simple/comilla doble'|
-|VK_OEM_COMMA|Windows: para cualquier país o región, la tecla ','|
-|VK_OEM_MINUS|Windows: para cualquier país o región, la tecla '-'|
-|VK_OEM_PERIOD|Windows: para cualquier país o región, la tecla '.'|
-|VK_OEM_PLUS|Windows: para cualquier país o región, la tecla '+'|
-|VK_PACKET|Windows: se usa para pasar caracteres Unicode como si fueran pulsaciones de teclas.|
-|VK_RCONTROL|Tecla CONTROL derecha|
-|VK_RMENU|Tecla MENÚ derecha|
-|VK_RSHIFT|Tecla MAYÚS derecha|
-|VK_SLEEP|Tecla Equipo suspendido|
-|VK_VOLUME_DOWN|Windows: tecla Bajar volumen|
-|VK_VOLUME_MUTE|Windows: tecla Silenciar volumen|
-|VK_VOLUME_UP|Windows: tecla Subir volumen|
-|VK_XBUTTON1|Windows: botón del mouse X 1|
-|VK_XBUTTON2|Windows: botón del mouse X 2|
+|VK_ACCEPT|(IME) Aceptar|
+|VK_BROWSER_BACK|(Windows) Explorador, **volver** clave|
+|VK_BROWSER_FAVORITES|(Windows) Explorador, **favoritos** clave|
+|VK_BROWSER_FORWARD|(Windows) Explorador, **reenviar** clave|
+|VK_BROWSER_HOME|(Windows) Explorador, **iniciar** y **inicio** clave|
+|VK_BROWSER_REFRESH|(Windows) Explorador, **actualizar** clave|
+|VK_BROWSER_SEARCH|(Windows) Explorador, **búsqueda** clave|
+|VK_BROWSER_STOP|(Windows) Explorador, **detener** clave|
+|VK_CONVERT|Convert (IME)|
+|VK_FINAL|Modo final (IME)|
+|VK_HANGUEL|(IME) Modo Hanguel (se mantiene por compatibilidad, use VK_HANGUL)|
+|VK_HANGUL|(IME) Modo hangul|
+|VK_HANJA|(IME) Modo hanja|
+|VK_JUNJA|(IME) Modo Junja|
+|VK_KANA|(IME) Modo kana|
+|VK_KANJI|(IME) Modo Kanji|
+|VK_LAUNCH_APP1|(Windows) **Iniciar aplicación 1** clave|
+|VK_LAUNCH_APP2|(Windows) **Iniciar aplicación 2** clave|
+|VK_LAUNCH_MAIL|(Windows) **Iniciar correo electrónico** clave|
+|VK_LAUNCH_MEDIA_SELECT|(Windows) **Seleccionar medio** clave|
+|VK_LCONTROL|**Ctrl izquierda** clave|
+|VK_LMENU|**Menú de la izquierda** clave|
+|VK_LSHIFT|**Desplazamiento a la izquierda** clave|
+|VK_MEDIA_NEXT_TRACK|(Windows) **Pista siguiente** clave|
+|VK_MEDIA_PLAY_PAUSE|(Windows) **Reproducir/pausar medio** clave|
+|VK_MEDIA_PREV_TRACK|(Windows) **Pista anterior** clave|
+|VK_MEDIA_STOP|(Windows) **Detener medios** clave|
+|VK_MODECHANGE|Solicitud de cambio de modo (IME)|
+|VK_NONCONVERT|No conversión (IME)|
+|VK_OEM_1|(Windows) Para el teclado estándar de Estados Unidos, la **;:** clave|
+|VK_OEM_102|(Windows) La tecla de corchete angular de cierre o la tecla de barra diagonal inversa en el teclado de 102 teclas RT|
+|VK_OEM_2|(Windows) ¿Para el teclado estándar de Estados Unidos, la **/?** key|
+|VK_OEM_3|(Windows) Para el teclado estándar de Estados Unidos, la **`~** clave|
+|VK_OEM_4|(Windows) Para el teclado estándar de Estados Unidos, la **[{** clave|
+|VK_OEM_5|(Windows) Para el teclado estándar de Estados Unidos, la **\\ &#124;** clave|
+|VK_OEM_6|(Windows) Para el teclado estándar de Estados Unidos, la **]}** clave|
+|VK_OEM_7|(Windows) Para el teclado estándar de Estados Unidos, la tecla ' comilla/double-comilla'|
+|VK_OEM_COMMA|(Windows) Para cualquier país o región, el **,** clave|
+|VK_OEM_MINUS|(Windows) Para cualquier país o región, el **-** clave|
+|VK_OEM_PERIOD|(Windows) Para cualquier país o región, el **.** key|
+|VK_OEM_PLUS|(Windows) Para cualquier país o región, el **+** clave|
+|VK_PACKET|(Windows) Se usa para pasar caracteres Unicode como si fueran pulsaciones de teclas.|
+|VK_RCONTROL|**Ctrl derecha** clave|
+|VK_RMENU|**Menú derecho** clave|
+|VK_RSHIFT|**Desplazamiento a la derecha** clave|
+|VK_SLEEP|**Equipo suspendido** clave|
+|VK_VOLUME_DOWN|(Windows) **Bajar volumen** clave|
+|VK_VOLUME_MUTE|(Windows) **Silenciar volumen** clave|
+|VK_VOLUME_UP|(Windows) **Subir volumen** clave|
+|VK_XBUTTON1|(Windows) **X1** botón del mouse|
+|VK_XBUTTON2|(Windows) **X2** botón del mouse|
 
-Para obtener información sobre cómo agregar recursos a proyectos administrados, vea [Resources in Desktop Apps](/dotnet/framework/resources/index) en el *Guía del desarrollador de .NET Framework*.
+## <a name="accelerator-key-association"></a>Acelerador de la asociación de clave
+
+Muchas veces se desea que un elemento de menú y una combinación de teclado ejecuten el mismo comando de programa. Realice esta acción, se asigna el mismo identificador de recurso (Id.) para el elemento de menú y una entrada en la tabla de aceleradores de la aplicación. A continuación, edite el título del elemento de menú para que muestre el nombre del acelerador. Para obtener más información sobre los elementos de menú y las teclas de aceleración, vea [comandos de menú](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -82,4 +88,3 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editor de aceleradores](../windows/accelerator-editor.md)<br/>
-[Editores de recursos](../windows/resource-editors.md)

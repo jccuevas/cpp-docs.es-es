@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278826"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd (clase)
 
@@ -267,7 +267,7 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] El panel para agregar.
 
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList
@@ -282,10 +282,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] El panel para agregar o quitar.
 
-*bAgregar*<br/>
+*bAdd*<br/>
 [in] Si es distinto de cero, agregar el panel. Si es 0, quite el panel.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -425,7 +425,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Especifica el estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño inicial y la posición de la ventana de marco reducido.
 
 *pParentWnd*<br/>
@@ -467,7 +467,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Especifica el estilo de ventana. Para obtener más información, consulte [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño inicial y la posición de la ventana de marco reducido.
 
 *pParentWnd*<br/>
@@ -532,7 +532,7 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] El punto en coordenadas de pantalla.
 
 *nSensitivity*<br/>
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto de prueba.
 
 *bDetectCaption*<br/>
@@ -967,7 +967,7 @@ virtual void OnShowPane(
 *pBar*<br/>
 [in] El panel que se va a mostrar u ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE si se muestra el panel; FALSE si se va a ocultar el panel.
 
 ### <a name="remarks"></a>Comentarios
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] El punto de que el usuario hizo clic, en coordenadas de pantalla.
 
 *nSensitivity*<br/>
@@ -1049,7 +1049,7 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Un puntero al panel para quitar.
 
 *bDestroy*<br/>

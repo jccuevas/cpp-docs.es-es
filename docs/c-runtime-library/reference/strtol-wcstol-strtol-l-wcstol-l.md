@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617469"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326724"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -108,7 +108,7 @@ El **strtol** función convierte *strSource* a un **largo**. **strtol** deja de 
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-La configuración regional actual **LC_NUMERIC** valor de la categoría determina el reconocimiento del carácter base en *strSource *** para obtener más información, consulte [setlocale](setlocale-wsetlocale.md). Las funciones sin el **_l** sufijo usar la configuración regional actual. **_strtol_l** y **_wcstol_l** son idénticas a las funciones correspondientes sin el **_l** sufijo, salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+La configuración regional actual **LC_NUMERIC** valor de la categoría determina el reconocimiento del carácter base en *strSource*; para obtener más información, consulte [setlocale](setlocale-wsetlocale.md). Las funciones sin el **_l** sufijo usar la configuración regional actual. **_strtol_l** y **_wcstol_l** son idénticas a las funciones correspondientes sin el **_l** sufijo, salvo que usan la configuración regional que se pasa en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 Si *endptr* no **NULL**, un puntero al carácter que detuvo el análisis se almacena en la ubicación señalada por *endptr*. Si no se puede realizar ninguna conversión (no se encontró ningún dígito válido o se especificó una base no válida), el valor de *strSource* se almacena en la ubicación señalada por *endptr*.
 

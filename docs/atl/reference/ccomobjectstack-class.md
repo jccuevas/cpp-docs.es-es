@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: dfe8c58803a0eb06ea17ae1b241e1e435f0263f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287166"
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack (clase)
 
@@ -32,7 +32,7 @@ class CComObjectStack : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*<br/>
+*Base*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir de cualquier otra interfaz que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -42,7 +42,7 @@ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Name|Descripción|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|El constructor.|
-|[CComObjectStack:: ~ CComObjectStack](#dtor)|Destructor.|
+|[CComObjectStack::~CComObjectStack](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -106,7 +106,7 @@ CComObjectStack(void* = NULL);
 
 Las llamadas `FinalConstruct` y, a continuación, establece [m_hResFinalConstruct](#m_hresfinalconstruct) el HRESULT devuelto por `FinalConstruct`. Si no se ha derivado la clase base desde [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), debe proporcionar su propia `FinalConstruct` método. El destructor llama a `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack
+##  <a name="dtor"></a>  CComObjectStack::~CComObjectStack
 
 Destructor.
 

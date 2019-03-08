@@ -7,12 +7,12 @@ helpviewer_keywords:
 - communications, tree controls
 - tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
-ms.openlocfilehash: a5749b76468a7ba30cd48dc3a9b61f2de7ac67b9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 920608724ebb362b91efdcb3eab50b80acd20474
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654195"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289889"
 ---
 # <a name="communicating-with-a-tree-control"></a>Comunicar con un control de árbol
 
@@ -28,4 +28,3 @@ Usar varios métodos para llamar a funciones miembro un [CTreeCtrl](../mfc/refer
 
 [Uso de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

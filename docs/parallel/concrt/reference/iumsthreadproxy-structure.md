@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657142"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263044"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy (Estructura)
 
@@ -37,8 +37,8 @@ struct IUMSThreadProxy : public IThreadProxy;
 |----------|-----------------|
 |[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Se llama para especificar una región crítica. Dentro de una región crítica, el programador no observará operaciones asincrónicas de bloqueo que se producen durante la región. Esto significa que el programador no se volverá para errores de página, suspensiones de subproceso, las llamadas de procedimientos asincrónicos (APC) del kernel y así sucesivamente, para un subproceso UMS.|
 |[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Se llama para especificar una región hyper crítica. Dentro de una región hyper crítica, el programador no observarán ninguna operación de bloqueo que se producen durante la región. Esto significa que el programador no se volverá para bloquear llamadas de función, intentos de adquisición de bloqueo que bloquean, errores de página, subproceso suspensiones, las llamadas del kernel procedimientos asincrónicos (APC) y así sucesivamente, para un UMS subprocesos.|
-|[IUMSThreadProxy:: ExitCriticalRegion](#exitcriticalregion)|Se llama para salir de una región crítica.|
-|[IUMSThreadProxy:: ExitHyperCriticalRegion](#exithypercriticalregion)|Se llama para salir de una región hyper crítica.|
+|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|Se llama para salir de una región crítica.|
+|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|Se llama para salir de una región hyper crítica.|
 |[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|Devuelve el tipo de región crítica, el proxy del subproceso está dentro. Dado que las regiones hyper críticas son un superconjunto de las regiones críticas, si el código ha entrado en una región crítica y, a continuación, en una región hyper crítica, `InsideHyperCriticalRegion` se devolverá.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia

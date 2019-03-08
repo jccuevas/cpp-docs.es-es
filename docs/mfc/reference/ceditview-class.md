@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e0095f2c490ebde10d20ec0705b1297b976b76b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269857"
 ---
 # <a name="ceditview-class"></a>CEditView (clase)
 
@@ -76,7 +76,7 @@ class CEditView : public CCtrlView
 |[CEditView::GetSelectedText](#getselectedtext)|Recupera el texto seleccionado actualmente.|
 |[CEditView::LockBuffer](#lockbuffer)|Bloquea el búfer.|
 |[CEditView::PrintInsideRect](#printinsiderect)|Representa el texto dentro de un rectángulo determinado.|
-|[CEditView:: SerializeRaw](#serializeraw)|Serializa un `CEditView` objeto en el disco como texto sin formato.|
+|[CEditView::SerializeRaw](#serializeraw)|Serializa un `CEditView` objeto en el disco como texto sin formato.|
 |[CEditView::SetPrinterFont](#setprinterfont)|Establece una nueva fuente de la impresora.|
 |[CEditView::SetTabStops](#settabstops)|Establece las tabulaciones para la impresión y presentación en pantalla.|
 |[CEditView::UnlockBuffer](#unlockbuffer)|Desbloquea el búfer.|
@@ -186,7 +186,7 @@ BOOL FindText(
 *lpszFind*<br/>
 El texto que se encuentra.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Especifica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 *bCase*<br/>
@@ -296,7 +296,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 El texto que se encuentra.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Especifica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 *bCase*<br/>
@@ -355,7 +355,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 El texto que se encuentra.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Especifica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 *bCase*<br/>
@@ -401,7 +401,7 @@ UINT PrintInsideRect(
 Puntero al contexto de dispositivo de impresora.
 
 *rectLayout*<br/>
-Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [estructura RECT](../../mfc/reference/rect-structure1.md) especifica el rectángulo en el que el texto es va a representar.
+Hacer referencia a un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [estructura RECT](/windows/desktop/api/windef/ns-windef-tagrect) especifica el rectángulo en el que el texto es va a representar.
 
 *nIndexStart*<br/>
 Índice dentro del búfer del primer carácter que se va a representar.
@@ -419,7 +419,7 @@ Si el `CEditView` control no tiene el estilo ES_AUTOHSCROLL, el texto se ajusta 
 
 El `rect.bottom` elemento de la *rectLayout* objeto se cambia para que las dimensiones del rectángulo definen la parte del rectángulo original que está ocupada por el texto.
 
-##  <a name="serializeraw"></a>  CEditView:: SerializeRaw
+##  <a name="serializeraw"></a>  CEditView::SerializeRaw
 
 Llame a `SerializeRaw` para tener un `CArchive` objeto leer o escribir el texto en el `CEditView` objeto a un archivo de texto.
 
@@ -429,7 +429,7 @@ void SerializeRaw(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 Hacer referencia a la `CArchive` objeto que almacena el texto serializado.
 
 ### <a name="remarks"></a>Comentarios

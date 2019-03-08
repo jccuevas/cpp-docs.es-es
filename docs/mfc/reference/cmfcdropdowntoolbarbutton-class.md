@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: 3544bbd65b5e0c754552f93b45263f768b73fe69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625321"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275498"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton (clase)
 
@@ -73,7 +73,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |Name|Descripción|
 |----------|-----------------|
 |[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copia las propiedades de otro botón de barra de herramientas a la actual. (Invalida [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
-|`CMFCDropDownToolbarButton::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCDropDownToolbarButton::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Se abre una barra de herramientas desplegable.|
 |[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copia el texto en el botón de barra de herramientas a un menú. (Invalida [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|
 |[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Recupera la barra de herramientas de la lista desplegable que está asociado con el botón.|
@@ -177,7 +177,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] La ventana primaria del marco de la lista desplegable, o NULL para usar la ventana primaria del botón de barra de herramientas desplegable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -202,7 +202,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*MenuButton*<br/>
+*menuButton*<br/>
 [in] Una referencia al botón de menú de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -334,7 +334,7 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] La ventana primaria del botón de barra de herramientas.
 
 *bDelay*<br/>
@@ -380,7 +380,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] La ventana primaria del botón de barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -391,7 +391,7 @@ Distinto de cero si el botón procesa el mensaje de ayuda; en caso contrario, es
 
 Este método extiende la implementación de la clase base ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) mediante una llamada a la [CMFCDropDownToolbarButton::OnClick](#onclick) método con *bDelay*establecida en FALSE. Este método devuelve el valor devuelto por [CMFCDropDownToolbarButton::OnClick](#onclick).
 
-Para obtener más información sobre el mensaje WM_HELPHITTEST, vea [TN028: compatibilidad con la Ayuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
+Para obtener más información sobre el mensaje WM_HELPHITTEST, vea [TN028: Compatibilidad con la Ayuda contextual](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu
 
@@ -447,7 +447,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] El contexto de dispositivo que muestra el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón.
 
 *pImages*<br/>
@@ -488,7 +488,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] El contexto de dispositivo que muestra el botón.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del botón.
 
 *bSelected*<br/>
@@ -514,7 +514,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 [in] La `CArchive` objeto desde la que o que se va a serializar.
 
 ### <a name="remarks"></a>Comentarios
@@ -545,5 +545,4 @@ Llame a este método para especificar un comando predeterminado que el marco de 
 [CMFCDropDownToolBar (clase)](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton (clase)](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

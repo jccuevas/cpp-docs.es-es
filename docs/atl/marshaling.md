@@ -6,12 +6,12 @@ helpviewer_keywords:
 - marshaling
 - COM interfaces, marshaling
 ms.assetid: 40644b0a-1106-4fc8-9dfb-9bee9915d825
-ms.openlocfilehash: a6129ba96cf3ac11339a8ab953e0838127f8fb3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0661a4cdde0a3a875cf27221e884f6c65b9fea55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269687"
 ---
 # <a name="marshaling"></a>El cálculo de referencias
 
@@ -24,4 +24,3 @@ La técnica de COM de la serialización permite que las interfaces expuestas por
 
 [Introducción a COM](../atl/introduction-to-com.md)<br/>
 [Detalles del cálculo de referencias](/windows/desktop/com/marshaling-details)
-

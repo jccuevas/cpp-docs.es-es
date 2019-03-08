@@ -1,5 +1,5 @@
 ---
-title: 'Servidores: Implementar ventanas de marco en contexto'
+title: 'Servidores: Implementación de Windows de marco en contexto'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637637"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278995"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementar ventanas de marco en contexto
+# <a name="servers-implementing-in-place-frame-windows"></a>Servidores: Implementación de Windows de marco en contexto
 
 En este artículo se explica lo que debe hacer para implementar ventanas de marco en contexto en la aplicación de servidor de edición visual si no utiliza al Asistente para aplicaciones para crear la aplicación de servidor. En lugar de seguir el procedimiento descrito en este artículo, podría usar una clase de ventana de marco en contexto existente de una aplicación generada por el asistente o un ejemplo que se proporciona con Visual C++.
 
@@ -45,14 +45,13 @@ En este artículo se explica lo que debe hacer para implementar ventanas de marc
 
 Llama la serie de función el **si** instrucción crea la barra de herramientas de los recursos del servidor proporcionado. En este momento, la barra de herramientas es parte de la jerarquía de la ventana del contenedor. Dado que se deriva de esta barra de herramientas `CToolBar`, pasará sus mensajes a su propietario, la ventana de marco de la aplicación de contenedor, a menos que cambie el propietario. Por eso la llamada a `SetOwner` es necesario. Esta llamada cambia la ventana donde se envían los comandos de ventana de marco en contexto del servidor, la causa de los mensajes que se pasarán al servidor. Esto permite que el servidor reaccionar a las operaciones en la barra de herramientas que proporciona.
 
-El identificador del mapa de bits de la barra de herramientas debe ser igual que los otros recursos en el contexto definidos en la aplicación de servidor. Consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md) para obtener más información.
+El identificador del mapa de bits de la barra de herramientas debe ser igual que los otros recursos en el contexto definidos en la aplicación de servidor. Consulte [menús y recursos: Adiciones de servidor](../mfc/menus-and-resources-server-additions.md) para obtener más información.
 
 Para obtener más información, consulte [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md), [COleResizeBar](../mfc/reference/coleresizebar-class.md), y [CDocTemplate:: SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) en el *Class Library Reference*.
 
 ## <a name="see-also"></a>Vea también
 
 [Servidores](../mfc/servers.md)<br/>
-[Servidores: Implementar un servidor](../mfc/servers-implementing-a-server.md)<br/>
-[Servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)<br/>
-[Servidores: Elementos de servidor](../mfc/servers-server-items.md)
-
+[servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md)<br/>
+[servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)<br/>
+[servidores: Elementos del servidor](../mfc/servers-server-items.md)

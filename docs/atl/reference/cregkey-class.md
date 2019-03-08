@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605094"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283662"
 ---
 # <a name="cregkey-class"></a>CRegKey (clase)
 
@@ -69,7 +69,7 @@ class CRegKey
 |Name|Descripción|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|El constructor.|
-|[CRegKey:: ~ CRegKey](#dtor)|Destructor.|
+|[CRegKey::~CRegKey](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -234,7 +234,7 @@ Puntero al objeto CAtlTransactionManager
 
 Crea un nuevo objeto `CRegKey`. El objeto se puede crear a partir de una máquina `CRegKey` objeto, o desde un identificador de una clave del registro.
 
-##  <a name="dtor"></a>  CRegKey:: ~ CRegKey
+##  <a name="dtor"></a>  CRegKey::~CRegKey
 
 Destructor.
 
@@ -310,7 +310,7 @@ LONG EnumKey(
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 El índice de la subclave. Este parámetro debe ser cero para la primera llamada y, a continuación, se incrementa en llamadas posteriores
 
 *pszName*<br/>
@@ -359,10 +359,10 @@ LONG GetKeySecurity(
 
 ### <a name="parameters"></a>Parámetros
 
-*Si*<br/>
+*si*<br/>
 El [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) valor que indica la información de seguridad solicitado.
 
-*PSD*<br/>
+*psd*<br/>
 Un puntero a un búfer que recibe una copia del descriptor de seguridad solicitado.
 
 *pnBytes*<br/>
@@ -884,7 +884,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Si*<br/>
+*si*<br/>
 Especifica los componentes del descriptor de seguridad para establecer. El valor puede ser una combinación de los siguientes valores:
 
 |Valor|Significado|
@@ -892,9 +892,9 @@ Especifica los componentes del descriptor de seguridad para establecer. El valor
 |DACL_SECURITY_INFORMATION|Establece la lista de la clave control de acceso discrecional (DACL). La clave debe tener acceso WRITE_DAC o el proceso de llamada debe ser el propietario del objeto.|
 |GROUP_SECURITY_INFORMATION|Establece el identificador de la clave principal del grupo seguridad (SID). La clave debe tener acceso WRITE_OWNER o el proceso de llamada debe ser el propietario del objeto.|
 |OWNER_SECURITY_INFORMATION|Establece el propietario de la clave SID. La clave debe tener acceso WRITE_OWNER o el proceso de llamada debe ser el propietario del objeto o tener el privilegio SE_TAKE_OWNERSHIP_NAME habilitado.|
-|SACL_SECURITY_INFORMATION|Establece la lista de control de acceso de la clave del sistema (SACL). La clave debe tener acceso ACCESS_SYSTEM_SECURITY. La manera adecuada de obtener este acceso es habilitar el SE_SECURITY_NAME [privilegio](https://msdn.microsoft.com/library/windows/desktop/aa379306) en el token de acceso actual del llamador, abrir el identificador para el acceso ACCESS_SYSTEM_SECURITY y, a continuación, deshabilite el privilegio.|
+|SACL_SECURITY_INFORMATION|Establece la lista de control de acceso de la clave del sistema (SACL). La clave debe tener acceso ACCESS_SYSTEM_SECURITY. La manera adecuada de obtener este acceso es habilitar el SE_SECURITY_NAME [privilegio](/windows/desktop/secauthz/privileges) en el token de acceso actual del llamador, abrir el identificador para el acceso ACCESS_SYSTEM_SECURITY y, a continuación, deshabilite el privilegio.|
 
-*PSD*<br/>
+*psd*<br/>
 Puntero a un [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) estructura que especifica los atributos de seguridad para establecer la clave especificada.
 
 ### <a name="return-value"></a>Valor devuelto

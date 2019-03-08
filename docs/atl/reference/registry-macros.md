@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292927"
 ---
 # <a name="registry-macros"></a>Macros de registro
 
@@ -30,7 +30,7 @@ Estas macros definen las instalaciones de biblioteca y el registro de tipo útil
 |[DECLARE_NO_REGISTRY](#declare_no_registry)|Evita el registro de ATL de forma predeterminada.|
 |[DECLARE_REGISTRY](#declare_registry)|Escribe o quita la entrada del objeto principal en el registro del sistema.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Especifica la información necesaria para registrar automáticamente el *appid*.|
-|[MACROS DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Busca el recurso con nombre y se ejecuta el script del registro dentro de él.|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Busca el recurso con nombre y se ejecuta el script del registro dentro de él.|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Busca el recurso identificado por un número de identificación y se ejecuta el script del registro dentro de él.|
 
 ## <a name="requirements"></a>Requisitos
@@ -61,7 +61,7 @@ DECLARE_LIBID( libid )
 
 ### <a name="parameters"></a>Parámetros
 
-*LIBID*<br/>
+*libid*<br/>
 El GUID de la biblioteca de tipos.
 
 ### <a name="remarks"></a>Comentarios
@@ -104,7 +104,7 @@ DECLARE_REGISTRY(
 *vpid*<br/>
 [in] LPCTSTR que es un identificador de programa independiente de la versión.
 
-*NID*<br/>
+*nid*<br/>
 [in] Un tipo UINT que es un índice de la cadena de recurso en el registro que se usará como la descripción del programa.
 
 *flags*<br/>
@@ -128,10 +128,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 
 ### <a name="parameters"></a>Parámetros
 
-*RESID*<br/>
+*resid*<br/>
 El identificador de recurso del archivo .rgs que contiene información sobre la *appid*.
 
-*AppID*<br/>
+*appid*<br/>
 Un GUID.
 
 ### <a name="remarks"></a>Comentarios
@@ -142,7 +142,7 @@ Usar DECLARE_REGISTRY_APPID_RESOURCEID en un `CAtlModuleT`-clase derivada.
 
 Las clases agregadas a proyectos ATL con el Asistente de código Agregar clase tendrá un ejemplo del uso de esta macro.
 
-##  <a name="declare_registry_resource"></a>  MACROS DECLARE_REGISTRY_RESOURCE
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE
 
 Obtiene el recurso con nombre que contiene el archivo de registro y se ejecuta la secuencia de comandos para especificar los objetos en el registro del sistema o quitarlas del registro del sistema.
 

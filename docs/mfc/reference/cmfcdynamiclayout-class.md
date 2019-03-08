@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: da512b5e05f3d5ff0229cc44a0a8268148a43f82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288407"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Clase CMFCDynamicLayout
 
@@ -45,14 +45,14 @@ class CMFCDynamicLayout : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cmfcdynamiclayout:: AddItem](#additem)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
-|[Cmfcdynamiclayout:: Adjust](#adjust)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
+|[CMFCDynamicLayout::AddItem](#additem)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
+|[CMFCDynamicLayout::Adjust](#adjust)|Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.|
 |[CMFCDynamicLayout::Create](#create)|Almacena y valida la ventana host.|
 |[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Devuelve un puntero a una ventana host.|
 |[CMFCDynamicLayout::GetMinSize](#getminsize)|Devuelve el tamaño de la ventana por debajo del cual no se ajusta el diseño.|
 |[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|Recupera el rectángulo de área de cliente actual de la ventana.|
-|[Cmfcdynamiclayout:: Hasitem](#hasitem)|Comprueba si se agregó un control secundario al diseño dinámico.|
-|[Cmfcdynamiclayout:: IsEmpty](#isempty)|Comprueba si un diseño dinámico no tiene ventanas secundarias agregadas.|
+|[CMFCDynamicLayout::HasItem](#hasitem)|Comprueba si se agregó un control secundario al diseño dinámico.|
+|[CMFCDynamicLayout::IsEmpty](#isempty)|Comprueba si un diseño dinámico no tiene ventanas secundarias agregadas.|
 |[CMFCDynamicLayout::LoadResource](#loadresource)|Lee el diseño dinámico del recurso AFX_DIALOG_LAYOUT y después aplica el diseño a la ventana del host.|
 |estática [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto un control secundario se desplaza horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
 |estática [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Obtiene un [MoveSettings](#movesettings_structure) valor que define cuánto un control secundario se desplaza horizontalmente cuando el usuario cambia el tamaño de su ventana de hospedaje.|
@@ -83,7 +83,7 @@ class CMFCDynamicLayout : public CObject
 
 **Encabezado:** afxlayout.h
 
-##  <a name="additem"></a>  Cmfcdynamiclayout:: AddItem
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem
 
 Agrega una ventana secundaria (un control, normalmente) a la lista de ventanas controladas por el administrador de diseño dinámico.
 
@@ -99,7 +99,7 @@ BOOL AddItem(
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
+*hwnd*<br/>
 Controlador de la ventana que se va a agregar.
 
 *nID*<br/>
@@ -142,7 +142,7 @@ BOOL Create(CWnd* pHostWnd);
 ### <a name="parameters"></a>Parámetros
 
 *pHostWnd*<br/>
-Un puntero a la ventana del host.
+Un puntero a la ventana host.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -160,7 +160,7 @@ CWnd* GetHostWnd();
 
 ### <a name="return-value"></a>Valor devuelto
 
-Un puntero a la ventana del host.
+Un puntero a la ventana host.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -192,12 +192,12 @@ void GetHostWndRect(CRect& rect,);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Después de la devolución de la función, este parámetro contiene el rectángulo delimitador del área de presentación. Se trata de un parámetro de salida; el valor de entrada se sobrescribe.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="hasitem"></a>  Cmfcdynamiclayout:: Hasitem
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem
 
 Comprueba si se agregó un control secundario al diseño dinámico.
 
@@ -207,7 +207,7 @@ BOOL HasItem(HWND hwnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*HWND*<br/>
+*hwnd*<br/>
 El identificador de ventana para el control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -216,7 +216,7 @@ TRUE si el diseño ya tiene este elemento; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="isempty"></a>  Cmfcdynamiclayout:: IsEmpty
+##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty
 
 Comprueba si un diseño dinámico no tiene ventanas secundarias agregadas.
 
@@ -243,7 +243,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ### <a name="parameters"></a>Parámetros
 
 *pHostWnd*<br/>
-Un puntero a la ventana del host.
+Un puntero a la ventana host.
 
 *lpResource*<br/>
 Un puntero al búfer que contiene el recurso AFX_DIALOG_LAYOUT.
@@ -268,7 +268,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ### <a name="parameters"></a>Parámetros
 
 *nRatio*<br/>
-Define como un porcentaje hasta qué punto se desplaza horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.
+Define como un porcentaje hasta qué punto se desplaza horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -287,7 +287,7 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ### <a name="parameters"></a>Parámetros
 
 *nXRatio*<br/>
-Define como un porcentaje hasta qué punto se desplaza horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.
+Define como un porcentaje hasta qué punto se desplaza horizontalmente un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
 
 *nYRatio*<br/>
 Define, como un porcentaje, hasta qué punto se desplaza verticalmente un control secundario cuando el usuario cambia el tamaño de la ventana de host.
@@ -407,7 +407,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ### <a name="parameters"></a>Parámetros
 
 *nRatio*<br/>
-Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de host.
+Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -426,10 +426,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ### <a name="parameters"></a>Parámetros
 
 *nXRatio*<br/>
-Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de host.
+Define como un porcentaje hasta qué punto se cambia el tamaño horizontal de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
 
 *nYRatio*<br/>
-Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de host.
+Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -510,7 +510,7 @@ static SizeSettings SizeVertical(int nRatio);
 ### <a name="parameters"></a>Parámetros
 
 *nRatio*<br/>
-Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de host.
+Define como un porcentaje hasta qué punto se cambia el tamaño vertical de un control secundario cuando el usuario cambia el tamaño de la ventana de hospedaje.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: e7099c247a68823fbe5467f47c6afe1dc5a33abc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275667"
 ---
 # <a name="textureview-class"></a>texture_view (Clase)
 
@@ -74,7 +74,7 @@ El rango de la `texture_view`.
 |[gather_green](#gather_green)|Sobrecargado. Muestrea la textura en las coordenadas especificadas mediante la configuración de muestreo especificada y devuelve los componentes verde (y) de los cuatro elementos de textura muestreados.|
 |[gather_red](#gather_red)|Sobrecargado. Muestrea la textura en las coordenadas especificadas mediante la configuración de muestreo especificada y devuelve los componentes rojo (x) de los cuatro elementos de textura muestreados.|
 |[get](#get)|Sobrecargado. Obtiene el valor del elemento por índice.|
-|[Ejemplo](#sample)|Sobrecargado. Muestrea la textura en el nivel de detalle y las coordenadas especificadas mediante la configuración de muestreo especificada.|
+|[sample](#sample)|Sobrecargado. Muestrea la textura en el nivel de detalle y las coordenadas especificadas mediante la configuración de muestreo especificada.|
 |[set](#set)|Establece el valor de un elemento por índice.|
 
 ### <a name="public-operators"></a>Operadores públicos
@@ -82,7 +82,7 @@ El rango de la `texture_view`.
 |Name|Descripción|
 |----------|-----------------|
 |[operator()](#operator_call)|Sobrecargado. Obtiene el valor del elemento por índice.|
-|[operator[]](#operator_at)|Sobrecargado. Obtiene el valor del elemento por índice.|
+|[operator\[\]](#operator_at)|Sobrecargado. Obtiene el valor del elemento por índice.|
 |[operator=](#operator_eq)|Sobrecargado. Operador de asignación.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -103,7 +103,7 @@ El rango de la `texture_view`.
 
 **Namespace:** Concurrency:: Graphics
 
-##  <a name="dtor"></a> ~ texture_view
+##  <a name="dtor"></a> ~texture_view
 
 Destruye el `texture_view` instancia.
 
@@ -150,7 +150,7 @@ texture_view(// [7] copy constructor
 
 [3, 4] Constructor la `texture` en el que el no modificable `texture_view` se crea.
 
-*_Otro*<br/>
+*_Other*<br/>
 [5] Constructor de copia el origen de escritura `texture_view`.
 
 [6, 7] El origen no modificable del Constructor de copias `texture_view`.
@@ -330,7 +330,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 [1, 2] Constructor de copias de una escritura `texture_view` objeto.
 
 [3] Constructor de copia A no modificable `texture_view` objeto.
@@ -339,7 +339,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 Una referencia a este `texture_view` instancia.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Devuelve el valor del elemento por índice.
 
@@ -365,7 +365,7 @@ El índice unidimensional.
 
 El valor del elemento indizado por `_Index`.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Devuelve el valor del elemento por índice.
 
@@ -473,7 +473,7 @@ void set(
 *_Index*<br/>
 Índice del elemento que se va a establecer, posiblemente multidimensional.
 
-*valor*<br/>
+*value*<br/>
 Valor que se establecerá el elemento.
 
 ##  <a name="value_type"></a> value_type

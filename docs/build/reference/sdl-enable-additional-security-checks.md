@@ -1,15 +1,15 @@
 ---
 title: /sdl (habilitar comprobaciones adicionales de seguridad)
-ms.date: 11/04/2016
+ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587465"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413100"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (habilitar comprobaciones adicionales de seguridad)
 
@@ -39,7 +39,7 @@ Agrega las comprobaciones recomendadas del ciclo de vida de desarrollo de seguri
 |[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|Uso de una variable de puntero local potencialmente no inicializada.|
 |[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Saturación del búfer cuando se utilizan funciones específicas de C en tiempo de ejecución (CRT).|
 |[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|Uso de una función marcada con pragma [en desuso](../../preprocessor/deprecated-c-cpp.md).|
-|[ADVERTENCIA C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Uso de una función marcada como [en desuso](../../cpp/deprecated-cpp.md).|
+|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Uso de una función marcada como [en desuso](../../cpp/deprecated-cpp.md).|
 
 ## <a name="runtime-checks"></a>Comprobaciones en tiempo de ejecución
 
@@ -49,7 +49,17 @@ Cuando **/sdl** está habilitada, el compilador genera código para realizar est
 
 - Realiza una inmunización de puntero limitada. En las expresiones que no implican desreferenciación y en los tipos que no tienen un destructor definido por el usuario, las referencias de puntero se establecen en una dirección no válida después de una llamada a `delete`. Esto ayuda a evitar la reutilización de las referencias de puntero obsoletas.
 
-- Realiza la inicialización del miembro de clase. Se inicializan automáticamente todos los miembros de clase a cero en la creación de instancias de objetos (antes de que se ejecute el constructor). Esto ayuda a evitar el uso de los datos sin inicializar asociados a los miembros de clase que el constructor no inicializa explícitamente.
+- Realiza la inicialización de puntero de miembro de clase. Automáticamente inicializa los miembros de tipo de puntero a la clase **nullptr** en las instancias de objeto (antes de que se ejecute el constructor). Esto ayuda a impedir el uso de punteros no inicializados que el constructor no inicializa explícitamente. Se llama a la inicialización de puntero de miembro generado por el compilador siempre y cuando:
+
+  - El objeto no está asignado mediante un personalizado (definido por el usuario) `operator new`
+
+  - El objeto no está asignado como parte de una matriz (por ejemplo `new A[x]`)
+
+  - La clase no está administrada o importada
+
+  - La clase tiene un constructor predeterminado definido por el usuario.
+
+  Para inicializar la función de inicialización de la clase generada por el compilador, debe ser un miembro de un puntero, no una propiedad o una constante.
 
 ## <a name="remarks"></a>Comentarios
 

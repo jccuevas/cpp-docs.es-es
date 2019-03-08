@@ -1,17 +1,17 @@
 ---
 title: Sobrecarga de funciones
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: 47e77e1709322abaa2607677bf21c9cfe4a3e6ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580242"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176307"
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 
@@ -253,12 +253,12 @@ En la tabla siguiente se muestra un grupo de conversiones, denominadas conversio
 |-----------------------|---------------------|
 |*nombre de tipo*|*nombre de tipo* **&**|
 |*nombre de tipo* **&**|*nombre de tipo*|
-|*nombre de tipo* **]**|*nombre de tipo\**|
-|*nombre de tipo* **(** *lista de argumentos* **)**|**(**  *\*nombre de tipo* **) (** *lista de argumentos* **)**|
+|*nombre de tipo* **]**|*nombre de tipo* __\*__|
+|*nombre de tipo* **(** *lista de argumentos* **)**|**(** __\*__ *nombre de tipo* **) (** *lista de argumentos* **)**|
 |*nombre de tipo*|**Const** *nombre de tipo*|
 |*nombre de tipo*|**volatile** *nombre de tipo*|
-|*nombre de tipo\**|**Const** *nombre de tipo\**|
-|*nombre de tipo\**|**volatile** *nombre de tipo\**|
+|*nombre de tipo* __\*__|**Const** *nombre de tipo* __\*__|
+|*nombre de tipo* __\*__|**volatile** *nombre de tipo* __\*__|
 
 Las conversiones se intentan en la siguiente secuencia:
 
@@ -280,7 +280,8 @@ Las conversiones se intentan en la siguiente secuencia:
 
    - La conversión de un puntero a una clase derivada, a un puntero a una clase base, genera una coincidencia mejor cuanto más cerca esté la clase base de una clase base directa. Supongamos que la jerarquía de clases es tal y como se muestra en la ilustración siguiente.
 
-![Preferido conversiones](../cpp/media/vc391t1.gif "vc391T1") gráfico que ilustra las conversiones preferidas
+![Gráfico de las conversiones preferidas](../cpp/media/vc391t1.gif "gráfico de las conversiones preferidas") <br/>
+Gráfico que muestra conversiones preferidas
 
 La conversión del tipo `D*` al tipo `C*` es preferible a la conversión del tipo `D*` al tipo `B*`. De forma similar, la conversión del tipo `D*` al tipo `B*` es preferible a la conversión del tipo `D*` al tipo `A*`.
 
@@ -290,7 +291,8 @@ Esta regla se aplica también a las conversiones de puntero a miembro. La conver
 
 La regla anterior solo se aplica a lo largo de una ruta de derivación determinada. Considere el gráfico que se muestra en la ilustración siguiente.
 
-![Múltiples&#45;herencia que muestra conversiones preferidas](../cpp/media/vc391t2.gif "vc391T2") gráfico de herencia múltiple que muestra conversiones preferidas
+![Varios&#45;herencia que muestra conversiones preferidas](../cpp/media/vc391t2.gif "varios&#45;herencia que muestra conversiones preferidas") <br/>
+Gráfico de herencia múltiple que muestra conversiones preferidas
 
 La conversión del tipo `C*` al tipo `B*` es preferible a la conversión del tipo `C*` al tipo `A*`. La razón es que están en la misma ruta y `B*` está más cerca. Sin embargo, la conversión del tipo `C*` al tipo `D*` no es preferible a la conversión al tipo `A*`; no hay ninguna preferencia, porque las conversiones siguen diferentes rutas.
 

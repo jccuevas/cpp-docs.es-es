@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 6b8f84966ed58c5b031518bdf5e9f42cf7cedb48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429229"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284390"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc (clase)
 
@@ -51,7 +51,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Operador de asignación.|
+|[operator =](#operator_eq)|Operador de asignación.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -101,7 +101,7 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-Este método intenta determinar si la lista de las ACE en el control de acceso discrecional (DACL) y una lista de control de acceso de sistema (SACL) del descriptor de seguridad actual se heredan el descriptor de seguridad del elemento primario. Lo llama el [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403) función.
+Este método intenta determinar si la lista de las ACE en el control de acceso discrecional (DACL) y una lista de control de acceso de sistema (SACL) del descriptor de seguridad actual se heredan el descriptor de seguridad del elemento primario. Lo llama el [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) función.
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -115,7 +115,7 @@ CPrivateObjectSecurityDesc() throw();
 
 Inicializa el objeto `CPrivateObjectSecurityDesc`.
 
-##  <a name="dtor"></a>  CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc
 
 Destructor.
 
@@ -160,7 +160,7 @@ Puntero a un descriptor de seguridad proporcionado por el creador del objeto. Si
 *bIsDirectoryObject*<br/>
 Especifica si el nuevo objeto puede contener otros objetos. Un valor true indica que el nuevo objeto es un contenedor. Un valor false indica que el nuevo objeto no es un contenedor.
 
-*símbolo (token)*<br/>
+*Token*<br/>
 Hacer referencia a la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para el proceso de cliente en cuyo nombre se está creando el objeto.
 
 *GenericMapping*<br/>
@@ -181,7 +181,7 @@ Devuelve true si la operación se realiza correctamente; de lo contrario, devuel
 
 ### <a name="remarks"></a>Comentarios
 
-Este método llama a [CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405) o [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
+Este método llama a [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) o [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
 
 El segundo método permite especificar el tipo de objeto GUID del nuevo objeto o controlar cómo se heredan las ACE.
 
@@ -200,7 +200,7 @@ bool Get(
 
 ### <a name="parameters"></a>Parámetros
 
-*Si*<br/>
+*si*<br/>
 Un conjunto de marcas de bits que indican las partes del descriptor de seguridad para recuperar. Este valor puede ser una combinación de la [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) marcas de bits.
 
 *pResult*<br/>
@@ -224,7 +224,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 La `CPrivateObjectSecurityDesc` objeto que se va a asignar al objeto actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -252,7 +252,7 @@ bool Set(
 
 ### <a name="parameters"></a>Parámetros
 
-*Si*<br/>
+*si*<br/>
 Un conjunto de marcas de bits que indican las partes del descriptor de seguridad para establecer. Este valor puede ser una combinación de la [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) marcas de bits.
 
 *Modificación*<br/>
@@ -261,7 +261,7 @@ Puntero a un [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) objeto.
 *GenericMapping*<br/>
 Puntero a un [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-_generic_mapping) estructura que especifica la asignación de cada derecho genérico a derechos específicos para el objeto.
 
-*símbolo (token)*<br/>
+*Token*<br/>
 Hacer referencia a la [CAccessToken](../../atl/reference/caccesstoken-class.md) objeto para el proceso de cliente en cuyo nombre se está creando el objeto.
 
 *AutoInheritFlags*<br/>

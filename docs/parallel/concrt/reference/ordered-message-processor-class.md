@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: c6e09ff862f0725cc508e3e390dbfa3cc12f7daa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545969"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270753"
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor (Clase)
 
@@ -57,10 +57,10 @@ El tipo de carga de mensajes controlados por el procesador.
 |Name|Descripción|
 |----------|-----------------|
 |[async_send](#async_send)|Pone en cola los mensajes de forma asincrónica y se inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: async_send](message-processor-class.md#async_send).)|
-|[inicializar](#initialize)|Inicializa el `ordered_message_processor` objeto con el grupo de programación, el programador y la función de devolución de llamada apropiados.|
+|[initialize](#initialize)|Inicializa el `ordered_message_processor` objeto con el grupo de programación, el programador y la función de devolución de llamada apropiados.|
 |[initialize_batched_processing](#initialize_batched_processing)|Inicializar el procesamiento de mensajes por lotes|
 |[sync_send](#sync_send)|Sincrónicamente pone en cola los mensajes e inicia una tarea de procesamiento, si esto no se ha hecho ya. (Invalida [message_processor:: sync_send](message-processor-class.md#sync_send).)|
-|[Espere](#wait)|Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque. (Invalida [message_processor:: wait](message-processor-class.md#wait).)|
+|[wait](#wait)|Una espera de vuelta específica del procesador usada en destructores de bloques de mensajes para asegurarse de que todas las tareas de procesamiento asincrónico tienen tiempo para finalizar antes de destruir el bloque. (Invalida [message_processor:: wait](message-processor-class.md#wait).)|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -70,7 +70,7 @@ El tipo de carga de mensajes controlados por el procesador.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-[message_processor)](message-processor-class.md)
+[message_processor](message-processor-class.md)
 
 `ordered_message_processor`
 
@@ -145,7 +145,7 @@ ordered_message_processor();
 
 Esto `ordered_message_processor` no programará controladores sincrónicos o asincrónicos hasta el `initialize` se llama a la función.
 
-##  <a name="dtor"></a> ~ ordered_message_processor
+##  <a name="dtor"></a> ~ordered_message_processor
 
 Destruye el objeto `ordered_message_processor`.
 

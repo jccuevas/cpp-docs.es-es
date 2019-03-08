@@ -12,12 +12,12 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-ms.openlocfilehash: 8c6781e0ff49b026e3b969f062f01e9923eb0a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e76ff4da090a00409465333f8cbc9816ab4c4de6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665704"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518351"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: Llamar directamente a funciones de la API de ODBC
 
@@ -38,7 +38,7 @@ Para llamar a una función de la API de ODBC directamente, debe realizar los mis
 
 - Cuando termine, desasignar almacenamiento.
 
-Para obtener más información acerca de estos pasos, consulte el [Open Database Connectivity (ODBC)](/previous-versions/windows/desktop/ms710252) SDK en la documentación de MSDN.
+Para obtener más información acerca de estos pasos, consulte el [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK en la documentación de MSDN.
 
 Además de estos pasos, debe realizar pasos adicionales para comprobar los valores devueltos de función, asegúrese de que el programa no está esperando una llamada asincrónica al finalizar y así sucesivamente. Puede simplificar estos últimos pasos mediante el uso de las macros AFX_SQL_ASYNC y AFX_SQL_SYNC. Para obtener más información, consulte [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *referencia de MFC*.
 

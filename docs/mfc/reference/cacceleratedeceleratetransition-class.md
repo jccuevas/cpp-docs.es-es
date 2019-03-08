@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-ms.openlocfilehash: f37670d6e965cb034b81a6fb9ec8cc252bd5ee31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dbebe794ba76ae4abd3d1e3ea6bc8ee31bc3007f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278865"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Clase CAccelerateDecelerateTransition
 

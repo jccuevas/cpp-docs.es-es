@@ -1,5 +1,5 @@
 ---
-title: 'TN021: Enrutamiento de comandos y mensajes'
+title: 'TN021: Comando y el enrutamiento de mensajes'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294400"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021: Enrutamiento de comandos y mensajes
+# <a name="tn021-command-and-message-routing"></a>TN021: Comando y el enrutamiento de mensajes
 
 > [!NOTE]
 >  La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.

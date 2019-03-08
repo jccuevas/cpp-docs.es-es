@@ -25,21 +25,19 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 08c60585bfb6bcc002bd739b630225f0750a6cc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595096"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220444"
 ---
 # <a name="file-constants"></a>Constantes de archivo
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <fcntl.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

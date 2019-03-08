@@ -1,18 +1,18 @@
 ---
 title: Uniones
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: df100ddcacd0a9b1d839dbe6a0551eb5f5707afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608958"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176528"
 ---
 # <a name="unions"></a>Uniones
 
@@ -631,7 +631,8 @@ int main()
 
 La unión `NumericType` se organiza en memoria (conceptualmente), como se muestra en la ilustración siguiente.
 
-![Almacenamiento de datos en una unión de tipo numérico](../cpp/media/vc38ul1.png "vc38UL1") almacenamiento de datos en unión de tipo numérico
+![Almacenamiento de datos en una unión de tipo numérico](../cpp/media/vc38ul1.png "almacenamiento de datos en una unión de tipo numérico") <br/>
+Almacenamiento de datos en unión de tipo numérico
 
 ## <a name="anonymous_unions"></a> Uniones anónimas
 

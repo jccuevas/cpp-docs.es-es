@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: c01852c89d79b44bdae75b0ded9e2b8d1678cbd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441332"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258780"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Asistente para proveedores OLE DB ATL
 
@@ -41,7 +41,7 @@ En la tabla siguiente se describe las opciones para el Asistente para proveedore
 
    Si selecciona esta opción al crear un proyecto sin atributos, el asistente le advertirá de que el proyecto se convertirá en un proyecto con atributos y le preguntará si desea continuar o no.
 
-- **Id. de programa**
+- **ProgID**
 
    El ProgID o el identificador de programación, es una cadena de texto que puede usar la aplicación en lugar de un GUID. El nombre de ProgID tiene la forma *Projectname.Coclassname*.
 
@@ -88,4 +88,3 @@ En la tabla siguiente se describe las opciones para el Asistente para proveedore
 ## <a name="see-also"></a>Vea también
 
 [Proveedor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
-

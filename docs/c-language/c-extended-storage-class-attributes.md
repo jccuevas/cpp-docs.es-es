@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extended storage-class attributes
 - storage class specifiers, C storage classes
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
-ms.openlocfilehash: aa1f1b5d8fa62d12651c32724f06e8bd3f0ec53e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0c8b60dab3229d5d5c162f7bafc959fa2558f0
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658281"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146962"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Atributos extendidos de clase de almacenamiento de C
 

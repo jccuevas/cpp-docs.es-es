@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: fe0871f9778d7a1f74bf74af6030d7f8162d3b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8ae2ae3b68b01c00ce1c6441fa9a3150d4c334b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285066"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
@@ -54,5 +54,4 @@ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de me
 
 [Implementar una ventana](../atl/implementing-a-window.md)<br/>
 [Mapas de mensajes](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
-
+[WM_NOTIFY](/windows/desktop/controls/wm-notify)

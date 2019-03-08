@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-ms.openlocfilehash: 7663f85b20ab88c999af7ba37b260237d0fd869e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cfa609c31e83c02cce8b2a474a9b66ec3ba56f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520671"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260743"
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage (clase)
 
@@ -35,7 +35,7 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 |||
 |-|-|
 |Name|Descripción|
-|`CMFCStandardColorsPropertyPage::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCStandardColorsPropertyPage::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |`CMFCStandardColorsPropertyPage::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
 
 ### <a name="remarks"></a>Comentarios

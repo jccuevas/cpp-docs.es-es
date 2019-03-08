@@ -1,6 +1,6 @@
 ---
 title: CMFCColorPickerCtrl (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276018"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl (clase)
 
@@ -97,7 +97,7 @@ Colores estándar se seleccionan de una paleta de colores hexagonal y colores pe
 
 La siguiente ilustración muestra varios `CMFCColorPickerCtrl` objetos.
 
-![Cuadro de diálogo CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "colorpicker")
+![Cuadro de diálogo CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "cuadro de diálogo CMFCColorPickerCtrl")
 
 El `CMFCColorPickerCtrl` admite dos pares de estilos. Los estilos HEX_GREYSCALE y valores HEXADECIMALES son adecuados para la selección de color estándar. Los estilos de SELECTOR y la LUMINANCIA son adecuados para la selección de color personalizado.
 
@@ -159,7 +159,7 @@ virtual void DrawCursor(
 *pDC*<br/>
 [in] Puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica un área rectangular alrededor del color seleccionado.
 
 ### <a name="remarks"></a>Comentarios
@@ -193,13 +193,13 @@ void GetHLS(
 
 ### <a name="parameters"></a>Parámetros
 
-*HUE*<br/>
+*hue*<br/>
 [out] Puntero a una variable de tipo double que recibe información de hue.
 
-*luminancia*<br/>
+*luminance*<br/>
 [out] Puntero a una variable de tipo double que recibe información de luminancia.
 
-*Saturación*<br/>
+*saturation*<br/>
 [out] Puntero a una variable de tipo double que recibe información de la saturación.
 
 ### <a name="remarks"></a>Comentarios
@@ -317,13 +317,13 @@ void SetHLS(
 
 ### <a name="parameters"></a>Parámetros
 
-*HUE*<br/>
+*hue*<br/>
 [in] Un valor de matiz.
 
-*luminancia*<br/>
+*luminance*<br/>
 [in] Un valor de luminancia.
 
-*Saturación*<br/>
+*saturation*<br/>
 [in] Un valor de saturación.
 
 *bInvalidate*<br/>
@@ -371,7 +371,7 @@ void SetLuminanceBarWidth(int w);
 
 ### <a name="parameters"></a>Parámetros
 
-*W*<br/>
+*w*<br/>
 [in] El ancho de la barra de luminancia medido en píxeles.
 
 ### <a name="remarks"></a>Comentarios

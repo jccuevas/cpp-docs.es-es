@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: d57e038a4ebc55d08b4518f25e37b4f2d9cee05d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429220"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269778"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound (clase)
 
-Esta clase es un contenedor para un [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estructura.
+Esta clase es un contenedor para un [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estructura.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,7 +46,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Establece el `CComSafeArrayBound` a un nuevo valor.|
+|[operator =](#operator_eq)|Establece el `CComSafeArrayBound` a un nuevo valor.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -133,8 +133,8 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Enlazado*<br/>
-Un objeto `CComSafeArrayBound`.
+*bound*<br/>
+Objeto `CComSafeArrayBound`.
 
 *ulCount*<br/>
 Número de elementos.

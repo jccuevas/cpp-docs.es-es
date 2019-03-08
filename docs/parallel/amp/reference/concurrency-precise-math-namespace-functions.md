@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469360"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297351"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Funciones del espacio de nombres precise_math
 
@@ -112,7 +112,7 @@ ms.locfileid: "50469360"
 |[cospi](#cospi)|[cospif](#cospif)|[erf](#erf)|
 |[erfc](#erfc)|[erfcf](#erfcf)|[erfcinv](#erfcinv)|
 |[erfcinvf](#erfcinvf)|[erff](#erff)|[erfinv](#erfinv)|
-|[erfinvf](#erfinvf)|[exp](#exp)|[EXP10](#exp10)|
+|[erfinvf](#erfinvf)|[exp](#exp)|[exp10](#exp10)|
 |[exp10f](#exp10f)|[exp2](#exp2)|[exp2f](#exp2f)|
 |[expf](#expf)|[expm1](#expm1)|[expm1f](#expm1f)|
 |[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|
@@ -131,7 +131,7 @@ ms.locfileid: "50469360"
 |[logbf](#logbf)|[logf](#logf)|[modf](#modf)|
 |[modff](#modff)|[nan](#nan)|[nanf](#nanf)|
 |[nearbyint](#nearbyint)|[nearbyintf](#nearbyintf)|[nextafter](#nextafter)|
-|[nextafterf](#nextafterf)|[PHI](#phi)|[phif](#phif)|
+|[nextafterf](#nextafterf)|[phi](#phi)|[phif](#phif)|
 |[pow](#pow)|[powf](#powf)|[probit](#probit)|
 |[probitf](#probitf)|[rcbrt](#rcbrt)|[rcbrtf](#rcbrtf)|
 |[remainder](#remainder)|[remainderf](#remainderf)|[remquo](#remquo)|
@@ -183,7 +183,7 @@ Valor de punto flotante
 
 Devuelve el valor del arcocoseno del argumento.
 
-##  <a name="acosh"></a>  ACOSH
+##  <a name="acosh"></a>  acosh
 
 Calcula el coseno hiperbólico inverso del argumento.
 
@@ -255,7 +255,7 @@ Valor de punto flotante
 
 Devuelve el valor del arcoseno del argumento.
 
-##  <a name="asinh"></a>  Asinh
+##  <a name="asinh"></a>  asinh
 
 Calcula el seno hiperbólico inverso del argumento.
 
@@ -375,7 +375,7 @@ Valor de punto flotante
 
 Devuelve el valor del arcotangente del argumento.
 
-##  <a name="atanh"></a>  ATANH
+##  <a name="atanh"></a>  atanh
 
 Calcula la tangente hiperbólica inversa del argumento.
 
@@ -639,7 +639,7 @@ Valor de punto flotante
 
 Devuelve el valor de coseno de pi \* _X
 
-##  <a name="erf"></a>  ERF
+##  <a name="erf"></a>  erf
 
 Calcula la función de error de _X.
 
@@ -658,7 +658,7 @@ Valor de punto flotante
 
 Devuelve la función de error de _X.
 
-##  <a name="erfc"></a>  ERFC
+##  <a name="erfc"></a>  erfc
 
 Calcula la función error complementaria de _X.
 
@@ -783,7 +783,7 @@ Valor de punto flotante
 
 Devuelve la función inversa de error de _X.
 
-##  <a name="exp10"></a>  EXP10
+##  <a name="exp10"></a>  exp10
 
 Calcula el valor exponencial del argumento de base 10
 
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Exponente*<br/>
+*exponent*<br/>
 El término exponencial *n* de la expresión matemática `e` <sup>n</sup>, donde `e` es la base del logaritmo natural.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Exponente*<br/>
+*exponent*<br/>
 El término exponencial *n* de la expresión matemática `e` <sup>n</sup>, donde `e` es la base del logaritmo natural.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1043,7 +1043,7 @@ Valor de punto flotante
 
 Devuelve el límite inferior del argumento.
 
-## <a name="a-namefma-fma"></a><a name="fma"> FMA
+## <a name="a-namefma-fma"></a><a name="fma"> fma
 
 Calcula el producto de los argumentos primeros y segundo especificados, a continuación, agrega el tercer argumento especificado al resultado; el cálculo completo se realiza como una sola operación.
 ```
@@ -1308,7 +1308,7 @@ Devuelve al exponente de entero de _X en el valor de punto flotante
 
 Devuelve la mantisa _X
 
-##  <a name="hypot"></a>  hypot)
+##  <a name="hypot"></a>  hypot
 
 Calcula la raíz cuadrada de la suma de los cuadrados de _X y de _Y
 
@@ -1430,7 +1430,7 @@ Valor de punto flotante
 
 Devuelve un valor distinto de cero si y solo si el argumento tiene un valor infinito
 
-##  <a name="isnan"></a>  isNaN)
+##  <a name="isnan"></a>  isnan
 
 Determina si el argumento es un NaN
 
@@ -1492,7 +1492,7 @@ Valor entero, exponente
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="ldexpf"></a>  ldexpf
 
@@ -1514,7 +1514,7 @@ Valor entero, exponente
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="lgamma"></a>  lgamma
 
@@ -1535,7 +1535,7 @@ inline double lgamma(
 *_X*<br/>
 Valor de punto flotante
 
-*_Iniciar*<br/>
+*_Sign*<br/>
 Devuelve el inicio de sesión
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1557,7 +1557,7 @@ inline float lgammaf(
 *_X*<br/>
 Valor de punto flotante
 
-*_Iniciar*<br/>
+*_Sign*<br/>
 Devuelve el inicio de sesión
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1792,7 +1792,7 @@ La parte entera de `_X`, como un valor de punto flotante.
 
 Devuelve la parte fraccionaria con signo de `_X`.
 
-##  <a name="nan"></a>  NaN
+##  <a name="nan"></a>  nan
 
 Devuelve un valor NaN
 
@@ -1910,7 +1910,7 @@ Valor de punto flotante
 
 Devuelve el siguiente valor representable, en el tipo de la función, después de _X en la dirección de _Y
 
-##  <a name="phi"></a>  PHI
+##  <a name="phi"></a>  phi
 
 Devuelve la función de distribución acumulativa del argumento.
 
@@ -2062,7 +2062,7 @@ Valor de punto flotante
 
 Devuelve el recíproco de la raíz cúbica del argumento.
 
-##  <a name="remainder"></a>  resto
+##  <a name="remainder"></a>  remainder
 
 Calcula el resto: _X REM _Y
 
@@ -2167,7 +2167,7 @@ El segundo argumento de punto flotante.
 
 Devuelve el resto de `_X` dividido por `_Y`.
 
-##  <a name="round"></a>  redondear
+##  <a name="round"></a>  round
 
 Redondea _X al entero más próximo
 
@@ -2263,7 +2263,7 @@ Valor de punto flotante
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbf"></a>  scalbf
 
@@ -2285,7 +2285,7 @@ Valor de punto flotante
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbn"></a>  scalbn
 
@@ -2311,7 +2311,7 @@ Valor entero
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="scalbnf"></a>  scalbnf
 
@@ -2333,7 +2333,7 @@ Valor entero
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* (FLT_RADIX ^ _Y)
+Returns _X \* (FLT_RADIX ^ _Y)
 
 ##  <a name="signbit"></a>  signbit
 
@@ -2431,7 +2431,7 @@ Valor de punto flotante
 *_S*<br/>
 Devuelve el valor de seno de _X.
 
-*_E*<br/>
+*_C*<br/>
 Devuelve el valor de coseno de _X.
 
 ##  <a name="sincosf"></a>  sincosf
@@ -2453,7 +2453,7 @@ Valor de punto flotante
 *_S*<br/>
 Devuelve el valor de seno de _X.
 
-*_E*<br/>
+*_C*<br/>
 Devuelve el valor de coseno de _X.
 
 ##  <a name="sinh"></a>  sinh

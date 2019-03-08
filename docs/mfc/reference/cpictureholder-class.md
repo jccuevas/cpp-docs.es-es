@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284221"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder (clase)
 
@@ -64,7 +64,7 @@ class CPictureHolder
 |[CPictureHolder::GetDisplayString](#getdisplaystring)|Recupera la cadena que se muestra en el Explorador de propiedades del contenedor del control.|
 |[CPictureHolder::GetPictureDispatch](#getpicturedispatch)|Devuelve el `CPictureHolder` del objeto `IDispatch` interfaz.|
 |[CPictureHolder::GetType](#gettype)|Indica si el `CPictureHolder` objeto es un mapa de bits, un metarchivo o icono.|
-|[CPictureHolder:: Render](#render)|Representa la imagen.|
+|[CPictureHolder::Render](#render)|Representa la imagen.|
 |[CPictureHolder::SetPictureDispatch](#setpicturedispatch)|Establece el `CPictureHolder` del objeto `IDispatch` interfaz.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -79,7 +79,7 @@ class CPictureHolder
 
 Con la propiedad de imagen estándar, el desarrollador puede especificar un mapa de bits, icono o metarchivo para su presentación.
 
-Para obtener información sobre cómo crear propiedades de imagen personalizada, consulte el artículo [controles ActiveX MFC: utilizar imágenes en un ActiveX Control](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Para obtener información sobre cómo crear propiedades de imagen personalizada, consulte el artículo [controles ActiveX MFC: Usar imágenes en un Control ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -283,7 +283,7 @@ Un puntero a la `CPictureHolder` del objeto `IPicture` interfaz.
 LPPICTURE m_pPict;
 ```
 
-##  <a name="render"></a>  CPictureHolder:: Render
+##  <a name="render"></a>  CPictureHolder::Render
 
 Representa la imagen en el rectángulo al que hace referencia *rcRender*.
 

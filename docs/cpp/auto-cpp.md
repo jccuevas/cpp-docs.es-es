@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f396d95d08a435ac3d85e214226921ce468a2259
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447455"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518572"
 ---
 # <a name="auto-c"></a>automático (C++)
 
@@ -69,24 +69,23 @@ Puede usar **automática**, junto con el **decltype** especificador, como ayuda 
 Tenga en cuenta que el uso **automática** quita las referencias, los calificadores const y volatile calificadores. Considere el ejemplo siguiente:
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
-
 ```
 
 En el ejemplo anterior, myAuto es un entero, no una referencia int, por lo que es la salida `11 11`, no `11 12` como sería el caso si no hubiera quitado el calificador de referencia **automática**.

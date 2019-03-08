@@ -13,12 +13,12 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 57bbd009bbcbe0ea3352ab27c5d6fbb630b7d050
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b68198c17d7bd030b88bc78ad4de1367c914703
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299159"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain (clase)
 
@@ -40,7 +40,7 @@ class CDynamicChain
 |Name|Descripción|
 |----------|-----------------|
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|El constructor.|
-|[CDynamicChain:: ~ CDynamicChain](#dtor)|Destructor.|
+|[CDynamicChain::~CDynamicChain](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -48,7 +48,7 @@ class CDynamicChain
 |----------|-----------------|
 |[CDynamicChain::CallChain](#callchain)|Dirige un mensaje de Windows al mapa de mensajes de otro objeto.|
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|Quita una entrada de asignación de mensaje de la colección.|
-|[CDynamicChain:: SetChainEntry](#setchainentry)|Agrega una entrada de asignación de mensaje a la colección o modifica una entrada existente.|
+|[CDynamicChain::SetChainEntry](#setchainentry)|Agrega una entrada de asignación de mensaje a la colección o modifica una entrada existente.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -130,7 +130,7 @@ El constructor.
 CDynamicChain();
 ```
 
-##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain
+##  <a name="dtor"></a>  CDynamicChain::~CDynamicChain
 
 Destructor.
 
@@ -159,7 +159,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 TRUE si el mapa de mensajes se quitó correctamente de la colección. En caso contrario, FALSE.
 
-##  <a name="setchainentry"></a>  CDynamicChain:: SetChainEntry
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry
 
 Agrega el mapa de mensajes especificado a la colección.
 

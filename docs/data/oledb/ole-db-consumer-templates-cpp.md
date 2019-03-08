@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: 2494293330e7c0f47a6f72e8833c82c21df8dca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b247660e65975630b9434685d0a12caf0fc257
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573799"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419189"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Plantillas de consumidor OLE DB (C++)
 
@@ -24,7 +24,7 @@ Las plantillas de consumidor OLE DB admiten la especificación de OLE DB versió
 
 - Tipos de datos nativos de C/C++ para la programación de OLE DB.
 
-Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124).
+Para usar las plantillas OLE DB, es necesario estar familiarizado con las plantillas de C++, COM y las interfaces OLE DB. Si no está familiarizado con OLE DB, consulte [referencia del programador de OLE DB](/previous-versions/windows/desktop/ms718124(v=vs.85)).
 
 Las plantillas OLE DB son compatibles con el modelo de objetos OLE DB existente en lugar de agregar un nuevo modelo de objetos. Las clases de nivel superior de las plantillas de consumidor OLE DB se corresponden con los componentes definidos en la especificación de OLE DB. El diseño de las plantillas de consumidor OLE DB incluye características avanzadas como, por ejemplo, varios descriptores de acceso en un conjunto de filas. El uso de plantillas y herencia múltiple permite que la biblioteca mantenga su flexibilidad y un tamaño reducido.
 
@@ -60,5 +60,5 @@ Para obtener más información, vea los temas siguientes:
 
 [Programación de OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Acceso a datos](../data-access-in-cpp.md)<br/>
-[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784)<br/>
-[Referencia del programador de OLE DB](/previous-versions/windows/desktop/ms713643)
+[Documentación del SDK de OLE DB](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[Referencia del programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)

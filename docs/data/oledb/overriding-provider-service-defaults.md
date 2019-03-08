@@ -5,16 +5,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-ms.openlocfilehash: a9f8eb1c96c40336f39f14fe1a0ee29d60efd003
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 5966d1d5d18ad099a28498f92848cf8f6f7997ac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265222"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415817"
 ---
 # <a name="overriding-provider-service-defaults"></a>Reemplazar los valores predeterminados de servicio de un proveedor
 
-Se devuelve el valor del proveedor del registro para OLEDB_SERVICES como el valor predeterminado para el [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898) propiedad de inicialización en el objeto de origen de datos.
+Se devuelve el valor del proveedor del registro para OLEDB_SERVICES como el valor predeterminado para el [DBPROP_INIT_OLEDBSERVICES](/previous-versions/windows/desktop/ms716898(v=vs.85)) propiedad de inicialización en el objeto de origen de datos.
 
 Siempre y cuando la entrada del registro existe, se agregan los objetos del proveedor. El usuario puede invalidar configuración predeterminada del proveedor para servicios habilitados estableciendo la propiedad DBPROP_INIT_OLEDBSERVICES antes de la inicialización. Para habilitar o deshabilitar un servicio determinado, el usuario obtiene el valor actual de la propiedad DBPROP_INIT_OLEDBSERVICES, Establece o borra el bit habilitar o deshabilitar la propiedad determinada y restablece la propiedad. DBPROP_INIT_OLEDBSERVICES puede establecerse directamente en OLE DB o en la cadena de conexión pasada a ADO o `IDataInitialize::GetDatasource`. Los valores correspondientes para habilitar o deshabilitar servicios individuales se muestran en la tabla siguiente.
 
@@ -30,7 +30,7 @@ Si no existe la entrada del registro para el proveedor, los administradores de c
 
 ## <a name="see-also"></a>Vea también
 
-[Agrupación de recursos](/previous-versions/windows/desktop/ms713655)<br/>
-[Cómo los consumidores utilizan la agrupación de recursos](/previous-versions/windows/desktop/ms715907)<br/>
-[Funcionan de proveedores de forma eficaz con la agrupación de recursos](/previous-versions/windows/desktop/ms714906)<br/>
+[Agrupación de recursos](/previous-versions/windows/desktop/ms713655(v=vs.85))<br/>
+[Cómo los consumidores utilizan la agrupación de recursos](/previous-versions/windows/desktop/ms715907(v=vs.85))<br/>
+[Funcionan de proveedores de forma eficaz con la agrupación de recursos](/previous-versions/windows/desktop/ms714906(v=vs.85))<br/>
 [Habilitar y deshabilitar servicios OLE DB](../../data/oledb/enabling-and-disabling-ole-db-services.md)<br/>

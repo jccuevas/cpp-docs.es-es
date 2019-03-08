@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77b08945c99b9e9e2652a40e5710d8c4e89846b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269683"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Rutinas de validación de datos de cuadros de diálogo estándar
 
@@ -54,7 +54,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
 *nChars*<br/>
@@ -85,10 +85,10 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo bytes) permitido.
 
 *maxVal*<br/>
@@ -159,10 +159,10 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo **doble**) permitido.
 
 *maxVal*<br/>
@@ -193,10 +193,10 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo DWORD) permitido.
 
 *maxVal*<br/>
@@ -227,10 +227,10 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo **float**) permitido.
 
 *maxVal*<br/>
@@ -261,10 +261,10 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo **int**) permitido.
 
 *maxVal*<br/>
@@ -295,10 +295,10 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo **largo**) permitido.
 
 *maxVal*<br/>
@@ -329,10 +329,10 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo LONGLONG) permitido.
 
 *maxVal*<br/>
@@ -403,10 +403,10 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo **corto**) permitido.
 
 *maxVal*<br/>
@@ -437,10 +437,10 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto. El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia al valor que se va a validar. Este parámetro contiene o establece la posición de control de posición actual del control deslizante.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo permitido.
 
 *maxVal*<br/>
@@ -471,10 +471,10 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo UINT) permitido.
 
 *maxVal*<br/>
@@ -505,10 +505,10 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo ULONGLONG) permitido.
 
 *maxVal*<br/>
@@ -521,11 +521,6 @@ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadr
 ### <a name="requirements"></a>Requisitos
 
   **Encabezado** afxdd_.h
-
-## <a name="see-also"></a>Vea también
-
-[Rutinas de intercambio de datos de cuadros de diálogo estándar](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -546,10 +541,10 @@ Llame a `DDV_MinMaxUnsigned` para comprobar que el valor en el control asociado 
 *pDX*<br/>
 Puntero a un objeto `CDataExchange` . El marco de trabajo proporciona este objeto para establecer el contexto del intercambio de datos, incluida su dirección.
 
-*valor*<br/>
+*value*<br/>
 Una referencia a una variable de miembro del cuadro de diálogo, vista de formulario o con la que se validan los datos de objeto de vista de control.
 
-*propiedades minVal*<br/>
+*minVal*<br/>
 Valor mínimo (de tipo **sin signo** ) permitido.
 
 *maxVal*<br/>
@@ -563,9 +558,9 @@ Para obtener más información acerca de DDV, vea [intercambio de datos de cuadr
 
 **Encabezado:** afxdd_.h
 
-### <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
+[Rutinas de intercambio de datos de cuadros de diálogo estándar](standard-dialog-data-exchange-routines.md)<br/>
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
-
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)

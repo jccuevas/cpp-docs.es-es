@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Diseñar para la seguridad de las excepciones'
+title: Procedimiento Diseño de seguridad de las excepciones
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: d15a1ffda81c41e48eaf4a12c95f83d06c5af900
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530278"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220561"
 ---
-# <a name="how-to-design-for-exception-safety"></a>Cómo: Diseñar para la seguridad de las excepciones
+# <a name="how-to-design-for-exception-safety"></a>Procedimiento Diseño de seguridad de las excepciones
 
 Una de las ventajas del mecanismo de excepciones es que la ejecución, así como los datos sobre la excepción, saltan directamente de la instrucción que produce la excepción a la primera instrucción catch que la controla. El controlador puede ser cualquier número de niveles en la pila de llamadas. Las funciones a las que se llama entre la instrucción try y la instrucción throw no se requieren para saber nada sobre la excepción que se produce.  Sin embargo, tienen que diseñarse de forma que puedan quedar fuera de ámbito “inesperadamente” en cualquier punto donde una excepción pudiera propagarse de arriba a abajo, y lo hagan sin dejar detrás objetos parcialmente creados, memoria perdida o estructuras de datos que están en estado inutilizable.
 
@@ -26,60 +26,60 @@ Independientemente de cómo una función controla una excepción, para ayudar a 
 Cuando se encapsula la administración de recursos manual en las clases, use una clase que no haga nada más que administrar cada recurso; de lo contrario, podrían producirse pérdidas. Use [inteligente punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.
 
 ```cpp
-// old-style new/delete version
-class NDResourceClass {
+// old-style new/delete version
+class NDResourceClass {
 private:
-    int*   m_p;
-    float* m_q;
+    int*   m_p;
+    float* m_q;
 public:
-    NDResourceClass() : m_p(0), m_q(0) {
-        m_p = new int;
-        m_q = new float;
-    }
+    NDResourceClass() : m_p(0), m_q(0) {
+        m_p = new int;
+        m_q = new float;
+    }
 
-    ~NDResourceClass() {
-        delete m_p;
-        delete m_q;
-    }
-    // Potential leak! When a constructor emits an exception, 
-    // the destructor will not be invoked.   
+    ~NDResourceClass() {
+        delete m_p;
+        delete m_q;
+    }
+    // Potential leak! When a constructor emits an exception,
+    // the destructor will not be invoked.
 };
 
-// shared_ptr version
-#include <memory>
+// shared_ptr version
+#include <memory>
 
-using namespace std;
+using namespace std;
 
-class SPResourceClass {
+class SPResourceClass {
 private:
-    shared_ptr<int> m_p;
-    shared_ptr<float> m_q;
+    shared_ptr<int> m_p;
+    shared_ptr<float> m_q;
 public:
-    SPResourceClass() : m_p(new int), m_q(new float) { }
-    // Implicitly defined dtor is OK for these members, 
-    // shared_ptr will clean up and avoid leaks regardless.
+    SPResourceClass() : m_p(new int), m_q(new float) { }
+    // Implicitly defined dtor is OK for these members,
+    // shared_ptr will clean up and avoid leaks regardless.
 };
 
-// A more powerful case for shared_ptr
+// A more powerful case for shared_ptr
 
-class Shape {
-    // ...
+class Shape {
+    // ...
 };
 
-class Circle : public Shape {
-    // ...
+class Circle : public Shape {
+    // ...
 };
 
-class Triangle : public Shape {
-    // ...
+class Triangle : public Shape {
+    // ...
 };
 
-class SPShapeResourceClass {
+class SPShapeResourceClass {
 private:
-    shared_ptr<Shape> m_p;
-    shared_ptr<Shape> m_q;
+    shared_ptr<Shape> m_p;
+    shared_ptr<Shape> m_q;
 public:
-    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }
+    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }
 };
 ```
 
@@ -95,7 +95,7 @@ Normalmente, se explica la seguridad de las excepciones en cuanto a las tres gar
 
 La garantía de que no haya error (o “ningún throw”) es la mayor garantía que una función puede proporcionar. Indica que la función no producirá una excepción ni permitirá que se propague. Sin embargo, esta garantía no se puede proporcionar confiablemente a menos que (a) se sepa que todas las funciones a las que llama la función tampoco producen ningún error, (b) se sepa que cualquier excepción que se produzca se detectará antes de que llegue a esta función o (c) se sepa cómo detectar y controlar correctamente todas las excepciones que puedan tener acceso a esta función.
 
-La garantía segura y la seguridad básica se basan en la hipótesis de que los destructores no producen ningún error. Todos los contenedores y tipos de la garantía de la biblioteca estándar que los destructores no producen. También hay un requisito inverso: la biblioteca estándar requiere que los tipos definidos por el usuario que se le proporcionan (por ejemplo, como argumentos de plantilla) deben tener destructores no que produzcan excepciones.
+La garantía segura y la seguridad básica se basan en la hipótesis de que los destructores no producen ningún error. Todos los contenedores y tipos de la garantía de la biblioteca estándar que los destructores no producen. También es un requisito inverso: La biblioteca estándar requiere que los definidos por el usuario tipos que se les proporciona, por ejemplo, como argumentos de plantilla, debe tener destructores no producen excepciones.
 
 ### <a name="strong-guarantee"></a>Garantía segura
 
@@ -121,5 +121,5 @@ Los tipos integrados garantizan todos que no se produzca ningún error y los tip
 
 ## <a name="see-also"></a>Vea también
 
-[Controlar errores y excepciones](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Cómo: Interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Controlar errores y excepciones (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Cómo: La interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

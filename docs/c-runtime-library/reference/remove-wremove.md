@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613980"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417608"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -59,7 +59,7 @@ Ruta de acceso del archivo que se va a quitar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. En caso contrario, devuelve -1 y establece **errno** a **EACCES** para indicar que la ruta de acceso especifica un archivo de solo lectura o el archivo está abierto, o a **ENOENT** para indicar que el no se encontró el nombre de archivo o ruta de acceso o que la ruta de acceso especifica un directorio.
+Cada una de estas funciones devuelve 0 si el archivo se elimina correctamente. En caso contrario, devuelve -1 y establece **errno** a **EACCES** indicar que la ruta de acceso especifica un archivo de solo lectura, especifica un directorio o el archivo está abierto, o a **ENOENT** para indicar que no se encontró el nombre de archivo o ruta de acceso.
 
 Vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 

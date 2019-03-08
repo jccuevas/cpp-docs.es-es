@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 7b6bd33e69d24e452414b2537ad70bf31e6b722f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458479"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296688"
 ---
 # <a name="messagenotfound-class"></a>message_not_found (Clase)
 
@@ -45,7 +45,7 @@ class message_not_found : public std::exception;
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="ctor"></a> message_not_found)
+##  <a name="ctor"></a> message_not_found
 
 Construye un objeto `message_not_found`.
 
@@ -57,11 +57,10 @@ message_not_found() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Mensaje descriptivo del error.
 
 ## <a name="see-also"></a>Vea también
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Bloques de mensajes asincrónicos](../../../parallel/concrt/asynchronous-message-blocks.md)
-

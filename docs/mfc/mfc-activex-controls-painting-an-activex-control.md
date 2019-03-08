@@ -1,18 +1,18 @@
 ---
-title: 'Controles ActiveX MFC: Pintar un control ActiveX'
+title: 'Controles ActiveX MFC: Pintar un Control ActiveX'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281935"
 ---
-# <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintar un control ActiveX
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>Controles ActiveX MFC: Pintar un Control ActiveX
 
 En este artículo se describe el proceso de dibujo del control ActiveX y cómo puede modificar el código para optimizar el proceso. (Consulte [optimizar el dibujo de controles](../mfc/optimizing-control-drawing.md) para conocer las técnicas optimizar el dibujo haciendo que los controles no individualmente restauración objetos GDI seleccionados anteriormente. Después de han dibujado todos los controles, el contenedor puede restaurar automáticamente los objetos originales.)
 
@@ -31,7 +31,7 @@ Se tratan los siguientes temas:
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> El proceso de dibujo de un Control ActiveX
 
-Cuando se muestran inicialmente o se vuelven a dibujar controles ActiveX, sigue un proceso similar a otras aplicaciones desarrolladas mediante MFC, con una diferencia importante: los controles ActiveX pueden ser un activo o en un estado inactivo.
+Cuando se muestran inicialmente o se vuelven a dibujar controles ActiveX, sigue un proceso similar a otras aplicaciones desarrolladas mediante MFC, con una diferencia importante: Controles ActiveX pueden ser un activo o en un estado inactivo.
 
 Se representa un control activo en un contenedor de controles ActiveX mediante una ventana secundaria. Al igual que otras ventanas, es responsable de dibujarse a sí misma cuando se recibe un mensaje WM_PAINT. La clase del control base, [COleControl](../mfc/reference/colecontrol-class.md), controla este mensaje en su `OnPaint` función. Esta implementación predeterminada llama el `OnDraw` función de su control.
 
@@ -71,7 +71,7 @@ Para asegurarse de que se puede dibujar el control en la pantalla y metarchivo c
 
 Dado que la implementación predeterminada de `OnDrawMetafile` llama al control `OnDraw` función, utilice solo funciones miembro que son adecuadas para un metarchivo y un contexto de dispositivo de pantalla, a menos que reemplace `OnDrawMetafile`. La siguiente muestra el subconjunto de `CDC` funciones miembro que se pueden usar en un metarchivo y un contexto de dispositivo de pantalla. Para obtener más información sobre estas funciones, vea la clase [CDC](../mfc/reference/cdc-class.md) en el *referencia de MFC*.
 
-|Arco|BibBlt|Cuerda|
+|Arco|BibBlt|Chord|
 |---------|------------|-----------|
 |`Ellipse`|`Escape`|`ExcludeClipRect`|
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|
@@ -90,7 +90,7 @@ Dado que la implementación predeterminada de `OnDrawMetafile` llama al control 
 
 Además `CDC` funciones miembro, hay muchas otras funciones que son compatibles en un DC de metarchivo. Estos incluyen [CPalette:: AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)y tres funciones miembro de `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), y [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
 
-Las funciones que no se registran en un metarchivo son: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)y [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Dado que un DC de metarchivo no es realmente asociado con un dispositivo, no puede utilizar SetDIBits, GetDIBits y CreateDIBitmap con un DC de metarchivo. Puede usar SetDIBitsToDevice y StretchDIBits con un DC de metarchivo como destino. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), y [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) no son significativos con un DC de metarchivo.
+Las funciones que no se registran en un metarchivo son: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect ](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), y [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Dado que un DC de metarchivo no es realmente asociado con un dispositivo, no puede utilizar SetDIBits, GetDIBits y CreateDIBitmap con un DC de metarchivo. Puede usar SetDIBitsToDevice y StretchDIBits con un DC de metarchivo como destino. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), y [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) no son significativos con un DC de metarchivo.
 
 Otro aspecto a tener en cuenta cuando se usa un DC de metarchivo es que el sistema de coordenadas no es posible que se mide en píxeles. Por este motivo, todo el código de dibujo se debería ajustar para que quepa en el rectángulo pasado a `OnDraw` en el *rcBounds* parámetro. Esto evita que dibujar fuera del control porque *rcBounds* representa el tamaño de la ventana del control.
 
@@ -111,4 +111,3 @@ Después de haber implementado la representación del metarchivo del control, ut
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

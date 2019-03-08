@@ -7,12 +7,12 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269297"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Clases de vistas derivadas disponibles en MFC
 
@@ -38,9 +38,8 @@ La siguiente tabla muestra las clases de vista de MFC y sus relaciones entre sí
 > [!NOTE]
 >  A partir de la versión 4.0, MFC `CEditView` se deriva de `CCtrlView`.
 
-Para utilizar estas clases en la aplicación, derivar las clases de vista de la aplicación de ellos. Para obtener información relacionada, consulte [desplazamiento y escalar vistas](../mfc/scrolling-and-scaling-views.md). Para obtener más información sobre las clases de base de datos, vea [información general: programación de base de datos](../data/data-access-programming-mfc-atl.md).
+Para utilizar estas clases en la aplicación, derivar las clases de vista de la aplicación de ellos. Para obtener información relacionada, consulte [desplazamiento y escalar vistas](../mfc/scrolling-and-scaling-views.md). Para obtener más información sobre las clases de base de datos, vea [información general: Programación de base de datos](../data/data-access-programming-mfc-atl.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Uso de vistas](../mfc/using-views.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - background colors, dialog boxes
 - MFC dialog boxes [MFC], colors
 ms.assetid: 05ee28a4-f3ae-4203-84ac-022f266ff2ab
-ms.openlocfilehash: 0e5b450e5a09d6551ea49c13ce12a2c02b2323f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 495ab827d6185826cc4d261a6a990f751e525d22
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654368"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297442"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>Configurar el color de fondo de un cuadro de diálogo
 
@@ -26,4 +26,3 @@ Consulte [codexpert blog](http://codexpert.ro/blog/2013/03/13/painting-the-dialo
 
 [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Control de mensajes de Windows en el cuadro de diálogo](../mfc/handling-windows-messages-in-your-dialog-box.md)
-

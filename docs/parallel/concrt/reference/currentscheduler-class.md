@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619185"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326795"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler (Clase)
 
@@ -100,7 +100,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a una ubicación donde las tareas dentro del grupo de programación se se decanta hacia el ejecutando en.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -207,7 +207,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a la ubicación para consultar al programador actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -257,10 +257,10 @@ static void __cdecl ScheduleTask(
 *_Proc*<br/>
 Un puntero a la función que se ejecutan para realizar el cuerpo de la tarea ligera.
 
-*_Datos*<br/>
+*_Data*<br/>
 Un puntero void para los datos que se pasa como parámetro al cuerpo de la tarea.
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a una ubicación donde la tarea ligera se se decanta hacia el ejecutando en.
 
 ### <a name="remarks"></a>Comentarios
@@ -273,4 +273,3 @@ Este método hará que se cree el programador predeterminado del proceso y se ad
 [Scheduler (clase)](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

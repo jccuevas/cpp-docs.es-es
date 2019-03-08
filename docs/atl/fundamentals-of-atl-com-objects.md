@@ -1,24 +1,24 @@
 ---
 title: Aspectos básicos de los objetos ATL COM
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
 - ATL, COM
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 243b7f84fc20e1c002e866ae0720ab9521d24748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cba26ede01b69e4a077f1e842982adc8c2127331
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437259"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270051"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Aspectos básicos de los objetos ATL COM
 
 La siguiente ilustración muestra la relación entre las clases e interfaces que se usan para definir un objeto COM de ATL.
 
-![Estructura ATL](../atl/media/vc307y1.gif "vc307y1")
+![Estructura ATL](../atl/media/vc307y1.gif "estructura ATL")
 
 > [!NOTE]
 >  Este diagrama muestra que `CComObject` se deriva de `CYourClass` , mientras que `CComAggObject` y `CComPolyObject` incluyen `CYourClass` como una variable de miembro.
@@ -76,4 +76,3 @@ Proporciona vínculos a temas sobre cómo programar utilizando Active Template L
 ## <a name="see-also"></a>Vea también
 
 [Conceptos](../atl/active-template-library-atl-concepts.md)
-

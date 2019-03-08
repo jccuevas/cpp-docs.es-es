@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518721"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283857"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup (Clase)
 
@@ -121,7 +121,7 @@ Esto normalmente se usa para administrar la duración del grupo de programación
 
 Un grupo de programación está asociado a una instancia del programador determinado. Debe asegurarse de que todas las referencias al grupo de programación se liberan antes de que se liberan todas las referencias al programador, ya que podría producir en el programador está destruyendo. Hacer en caso contrario, da como resultado un comportamiento indefinido.
 
-##  <a name="dtor"></a> ~ ScheduleGroup
+##  <a name="dtor"></a> ~ScheduleGroup
 
 ```
 virtual ~ScheduleGroup();
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Un puntero a la función que se ejecutan para realizar el cuerpo de la tarea ligera.
 
-*_Datos*<br/>
+*_Data*<br/>
 Un puntero void para los datos que se pasa como parámetro al cuerpo de la tarea.
 
 ### <a name="remarks"></a>Comentarios
@@ -155,4 +155,3 @@ Una llamada a la `ScheduleTask` método implícitamente coloca un recuento de re
 [CurrentScheduler (clase)](currentscheduler-class.md)<br/>
 [Scheduler (clase)](scheduler-class.md)<br/>
 [Programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

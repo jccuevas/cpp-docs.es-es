@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dddd43a5b3e68992e41f0b95893303e57e7c7ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268855"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy (Estructura)
 
@@ -37,9 +37,9 @@ struct ISchedulerProxy;
 |Name|Descripción|
 |----------|-----------------|
 |[ISchedulerProxy::BindContext](#bindcontext)|Asocia un contexto de ejecución a un proxy del subproceso, si aún no está asociado a uno.|
-|[ISchedulerProxy:: CreateOversubscriber](#createoversubscriber)|Crea una nueva raíz del procesador virtual en el subproceso de hardware asociado a un recurso de ejecución existente.|
-|[ISchedulerProxy:: RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Solicita una asignación inicial de raíces de procesador virtual. Cada raíz del procesador virtual representa la capacidad para ejecutar un subproceso que puede realizar el trabajo para el programador.|
-|[ISchedulerProxy:: Shutdown](#shutdown)|Notifica al administrador de recursos que se está cerrando el programador. Esto hará que el Administrador de recursos para reclamar inmediatamente todos los recursos que se concede al programador.|
+|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|Crea una nueva raíz del procesador virtual en el subproceso de hardware asociado a un recurso de ejecución existente.|
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|Solicita una asignación inicial de raíces de procesador virtual. Cada raíz del procesador virtual representa la capacidad para ejecutar un subproceso que puede realizar el trabajo para el programador.|
+|[ISchedulerProxy::Shutdown](#shutdown)|Notifica al administrador de recursos que se está cerrando el programador. Esto hará que el Administrador de recursos para reclamar inmediatamente todos los recursos que se concede al programador.|
 |[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|Registra el subproceso actual con el Administrador de recursos, asociarla a este programador.|
 |[ISchedulerProxy::UnbindContext](#unbindcontext)|Desasocia un proxy del subproceso del contexto de ejecución especificado por el `pContext` parámetro y lo devuelve al grupo libre del generador del proxy de subproceso. Este método solo se puede llamar en un contexto de ejecución que se enlazó a través de la [BindContext](#bindcontext) método y aún no se ha iniciado a través de que se va a la `pContext` parámetro de un [IThreadProxy:: SwitchTo ](ithreadproxy-structure.md#switchto) llamada al método.|
 
@@ -57,7 +57,7 @@ Resource Manager entrega una `ISchedulerProxy` interfaz a cada programador que s
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="bindcontext"></a>  BindContext (método)
+##  <a name="bindcontext"></a>  ISchedulerProxy::BindContext Method
 
 Asocia un contexto de ejecución a un proxy del subproceso, si aún no está asociado a uno.
 

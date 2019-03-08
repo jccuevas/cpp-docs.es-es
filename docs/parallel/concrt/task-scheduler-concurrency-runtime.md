@@ -16,12 +16,12 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-ms.openlocfilehash: 91ef4ed14fa1ddc25ff494f6666a50f5b39b8a54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286814"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Programador de tareas (Runtime de simultaneidad)
 
@@ -41,7 +41,7 @@ El Programador de tareas administra los detalles relacionados con la programaci�
 
 [En comparación con otros modelos de simultaneidad](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md) se describen las diferencias entre los mecanismos de programación preferentes y cooperativas. El Programador de tareas usa la programación cooperativa y un algoritmo de robo de trabajo con el programador preferente del sistema operativo. De este modo, consigue realizar el mayor uso posible de los recursos de procesamiento.
 
-Runtime de simultaneidad proporciona un programador predeterminado, de modo que no es necesario administrar los detalles de infraestructura. Por lo tanto, en la mayoría de los casos, no usará el Programador de tareas directamente. Sin embargo, para satisfacer las necesidades de calidad de la aplicación, puede usar este programador para proporcionar su propia directiva de programación, o asociar programadores a tareas específicas. Por ejemplo, supongamos que dispone de una rutina de ordenación en paralelo que, como máximo, puede escalarse a través de cuatro procesadores. Puede usar *directivas del programador* para crear un programador que genera no más de cuatro tareas simultáneas. Si ejecuta la rutina de ordenación en este programador, habilitará al resto de programadores activos para usar los recursos de procesamiento restantes.
+El Runtime de simultaneidad proporciona un programador predeterminado, de modo que no es necesario administrar los detalles de infraestructura. Por lo tanto, en la mayoría de los casos, no usará el Programador de tareas directamente. Sin embargo, para satisfacer las necesidades de calidad de la aplicación, puede usar este programador para proporcionar su propia directiva de programación, o asociar programadores a tareas específicas. Por ejemplo, supongamos que dispone de una rutina de ordenación en paralelo que, como máximo, puede escalarse a través de cuatro procesadores. Puede usar *directivas del programador* para crear un programador que genera no más de cuatro tareas simultáneas. Si ejecuta la rutina de ordenación en este programador, habilitará al resto de programadores activos para usar los recursos de procesamiento restantes.
 
 ## <a name="related-topics"></a>Temas relacionados
 
@@ -55,6 +55,5 @@ Runtime de simultaneidad proporciona un programador predeterminado, de modo que 
 |[Funciones de administración de memoria](../../parallel/concrt/memory-management-functions.md)|Describe las funciones `concurrency::Alloc` y `concurrency::Free`. Para mejorar el rendimiento de la memoria, estas funciones pueden asignar y liberar memoria de forma simultánea.|
 |[En comparación con otros modelos de simultaneidad](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|Describe las diferencias existentes entre los mecanismos de programación cooperativa y preferente.|
 |[Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Describe cómo usar diferentes modelos de procesamiento paralelo, como los algoritmos paralelos, en las aplicaciones.|
-|[Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)|Describe cómo usar los agentes asincrónicos en las aplicaciones.|
+|[Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)|Describe cómo se deben usar los agentes asincrónicos en las aplicaciones.|
 |[Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime.md)|Se describe el Runtime de simultaneidad, que simplifica la programación en paralelo, y contiene vínculos a los temas relacionados.|
-

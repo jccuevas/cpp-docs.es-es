@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3132
 ms.assetid: d54a3d12-336a-4ed0-ad4e-43cddac33b5e
-ms.openlocfilehash: 2b8edc506b6038ddec0ca265cafabbebf0428d1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a97e04747cb92909380e66d1f4ea8ca62183054
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612992"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424176"
 ---
 # <a name="compiler-error-c3132"></a>Error del compilador C3132
 
 'parámetro de función': las matrices de parámetros solo se pueden aplicar a un argumento formal de tipo 'matriz unidimensional administrada'
 
-El [ParamArray](https://msdn.microsoft.com/library/system.paramarrayattribute.aspx) se aplicó el atributo a un parámetro que no era una matriz unidimensional.
+El <xref:System.ParamArrayAttribute> se aplicó el atributo a un parámetro que no era una matriz unidimensional.
 
 El ejemplo siguiente genera C3132:
 
@@ -29,5 +29,4 @@ void f( [ParamArray] Int32[,] );   // C3132
 void g( [ParamArray] Int32[] );   // C3132
 
 void h( [ParamArray] array<Char ^> ^ MyArray );   // OK
-
 ```

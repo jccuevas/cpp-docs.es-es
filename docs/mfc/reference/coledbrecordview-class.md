@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: b862ce5176a1fd4fa4ac48cabf7830cd8ebf3d92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599607"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280382"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView (clase)
 
@@ -51,7 +51,7 @@ La vista es una vista de formulario conectada directamente a un `CRowset` objeto
 Puede utilizar funciones DDX con `COleDbRecordView` para obtener datos directamente desde el conjunto de registros de base de datos y mostrarlos en un control de cuadro de diálogo. Debe usar el `DDX_*` métodos (como `DDX_Text`), no el `DDX_Field*` funciones (como `DDX_FieldText`) con `COleDbRecordView`. `DDX_FieldText` no funcionará con `COleDbRecordView` porque `DDX_FieldText` toma un argumento adicional de tipo `CRecordset*` (para `CRecordView`) o `CDaoRecordset*` (para `CDaoRecordView`).
 
 > [!NOTE]
->  Si está trabajando con las clases de objetos de acceso a datos (DAO) en lugar de las clases de plantilla de consumidor OLE DB, utilice la clase [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) en su lugar. Para obtener más información, vea el artículo [información general: programación de base de datos](../../data/data-access-programming-mfc-atl.md).
+>  Si está trabajando con las clases de objetos de acceso a datos (DAO) en lugar de las clases de plantilla de consumidor OLE DB, utilice la clase [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) en su lugar. Para obtener más información, vea el artículo [información general: Programación de base de datos](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` realiza un seguimiento de la posición del usuario en el conjunto de filas para que la vista de registros pueda actualizar la interfaz de usuario. Cuando el usuario se desplaza a cualquiera de los extremos del conjunto de filas, la vista de registros deshabilita los objetos de interfaz de usuario, como los elementos de menú o botones de barra de herramientas, para mover con más detalle en la misma dirección.
 
@@ -107,7 +107,6 @@ Devuelve un identificador para el **CRowset <>** objeto asociado a la vista de r
 
 ```
 virtual CRowset<>* OnGetRowset() = 0;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -125,7 +124,7 @@ Debe reemplazar esta función miembro para construir u obtener un objeto de conj
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Para obtener más información y ejemplos, vea el artículo [vistas de registros: utilizar una vista de registros](../../data/using-a-record-view-mfc-data-access.md).
+Para obtener más información y ejemplos, vea el artículo [vistas de registros: Uso de una vista de registros](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -165,4 +164,3 @@ Si mueve más allá del último registro del conjunto de registros, la vista de 
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

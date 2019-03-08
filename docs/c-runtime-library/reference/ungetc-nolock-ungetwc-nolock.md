@@ -32,12 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482867"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331508"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -66,7 +66,7 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **_ungetc_nolock** devuelve ** EOF`; **_ungetwc_nolock` devuelve **WEOF**. Si *secuencia* es **NULL**, **EOF** o **WEOF** se devuelve y **errno** está establecido en  **EINVAL**.
+Si es correcto, cada una de estas funciones devuelve el argumento de carácter *c*. Si *c* no volver a insertar o si no se ha leído ningún carácter, el flujo de entrada no cambia y **_ungetc_nolock** devuelve **EOF**; **_ungetwc_nolock** devuelve **WEOF**. Si *secuencia* es **NULL**, **EOF** o **WEOF** se devuelve y **errno** está establecido en  **EINVAL**.
 
 Para obtener información sobre estos y otros códigos de error, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

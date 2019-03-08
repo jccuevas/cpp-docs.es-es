@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493618"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422794"
 ---
 # <a name="platformobject-class"></a>Platform::Object (Clase)
 
@@ -35,15 +35,15 @@ public ref class Object : Object
 
 |Name|Descripción|
 |----------|-----------------|
-|[Object](#ctor)|Inicializa una nueva instancia de la clase Object.|
+|[Object::Object](#ctor)|Inicializa una nueva instancia de la clase Object.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|
+|[Object::Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|
 |[Object::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|
-|[ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|
+|[Object::ReferenceEquals](#referenceequals)|Determina si las instancias de Object especificadas son la misma instancia.|
 |[ToString](#tostring)|Devuelve una cadena que representa el objeto actual. Puede invalidarse.|
 |[GetType](#gettype)|Obtiene un [Platform::Type](../cppcx/platform-type-class.md) que describe la instancia actual.|
 
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **Encabezado:** vccorlib.h
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 ## <a name="equals"></a> Equals (método)
 
@@ -116,19 +116,13 @@ Un [Platform:: Type](../cppcx/platform-type-class.md) objeto que describe el tip
 
 Estático [Type:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) puede usarse para obtener un [TypeCode (enumeración)](../cppcx/platform-typecode-enumeration.md) valor que representa el tipo actual. Esto es especialmente útil para los tipos integrados. El código de tipo para cualquier clase ref además [Platform:: String](../cppcx/platform-string-class.md) es objeto (1).
 
-El [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) clase se utiliza en las API de Windows como una manera independiente del lenguaje de pasar información de tipos entre los componentes de Windows y aplicaciones. La T[Platform:: Type Class](../cppcx/platform-type-class.md) tiene operadores para la conversión entre `Type` y `TypeName`.
+El [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) clase se utiliza en las API de Windows como una manera independiente del lenguaje de pasar información de tipos entre los componentes de Windows y aplicaciones. La T[Platform:: Type Class](../cppcx/platform-type-class.md) tiene operadores para la conversión entre `Type` y `TypeName`.
 
 Use la [typeid](../windows/typeid-cpp-component-extensions.md) operador para devolver un `Platform::Type` objeto para un nombre de clase, por ejemplo, al navegar entre páginas XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
-
-## <a name="see-also"></a>Vea también
-
-[Platform::Type (Clase)](../cppcx/platform-type-class.md)<br/>
-[Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)<br/>
-[Tipo System] (.. /cppcx/Type-System-c-CX.MD
 
 ## <a name="ctor"></a>  Constructor de Object
 
@@ -152,7 +146,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="parameters"></a>Parámetros
 
-*Obj1*<br/>
+*obj1*<br/>
 Primer objeto que se va a comparar.
 
 *obj2*<br/>
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>Vea también
 
-[Plataforma Namespace](platform-namespace-c-cx.md)
+[Plataforma Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Type (Clase)](platform-type-class.md)<br/>
+[Sistema de tipos](type-system-c-cx.md)

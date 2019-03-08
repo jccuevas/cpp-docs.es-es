@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460884"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694067"
 ---
 # <a name="constructors-c"></a>Constructores (C++)
 
@@ -25,7 +25,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     explicit Box(int i) : m_width(i), m_length(i), m_height(i) // member init list
     {}
 
@@ -127,7 +127,6 @@ Puede evitar que el compilador genere un constructor predeterminado implícito s
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 Un constructor predeterminado generado por el compilador se definirá como elimina si ningún miembro de clase no puede construir de forma predeterminada. Por ejemplo, todos los miembros de tipo de clase y sus miembros de tipo de clase, deben tener un constructor predeterminado y los destructores que son accesibles. Escribe todos los miembros de datos de referencia, así como **const** los miembros deben tener un inicializador de miembro predeterminado.
@@ -572,7 +571,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     Box(int i) :  Box(i, i, i);  // delegating constructor
     {}
 

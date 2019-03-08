@@ -1,25 +1,25 @@
 ---
-title: 'Windows Sockets: Orden de bytes'
+title: 'Windows Sockets: Byte Ordering'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - byte order issues in sockets programming
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453957"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278098"
 ---
-# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Orden de bytes
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Byte Ordering
 
-En este artículo y dos artículos complementarios explican varios problemas en la programación de Windows Sockets. Este artículo describe el orden de bytes. Los otros temas se tratan en los artículos: [Windows Sockets: bloquear](../mfc/windows-sockets-blocking.md) y [Windows Sockets: convertir cadenas](../mfc/windows-sockets-converting-strings.md).
+En este artículo y dos artículos complementarios explican varios problemas en la programación de Windows Sockets. Este artículo describe el orden de bytes. Los otros temas se tratan en los artículos: [Windows Sockets: Bloqueo](../mfc/windows-sockets-blocking.md) y [Windows Sockets: Convertir cadenas](../mfc/windows-sockets-converting-strings.md).
 
 Si usa o derivar de la clase [CAsyncSocket](../mfc/reference/casyncsocket-class.md), tendrá que administrar estos problemas por su cuenta. Si usa o derivar de la clase [CSocket](../mfc/reference/csocket-class.md), MFC administra automáticamente.
 
-## <a name="byte-ordering"></a>Orden de bytes
+## <a name="byte-ordering"></a>Byte Ordering
 
 Las arquitecturas de diferentes máquinas a veces, almacenan de datos mediante órdenes de bytes diferentes. Por ejemplo, las máquinas de basados en Intel almacenan datos en orden inverso de las máquinas de Macintosh (Motorola). El orden de bytes de Intel, denominado "little-Endian," también es el inverso del orden estándar de red de "big Endian". La siguiente tabla explica estos términos.
 
@@ -57,7 +57,7 @@ Trabajar con [CAsyncSocket](../mfc/reference/casyncsocket-class.md), debe admini
 El caso ideal para utilizar sockets de MFC es cuando se escribe en ambos extremos de la comunicación y se usa MFC en ambos extremos. Si está escribiendo una aplicación que se comunican con las aplicaciones no basados en MFC, como un servidor FTP, probablemente necesitará administrar el intercambio de bytes antes de pasar datos al objeto de archivo, utilizando las rutinas de conversión de Windows Sockets **ntohs**, **ntohl**, **htons**, y **htonl**. Un ejemplo de estas funciones que se usa para establecer comunicación con una aplicación MFC no aparece más adelante en este artículo.
 
 > [!NOTE]
->  Cuando el otro extremo de la comunicación no es una aplicación MFC, también se debe evitar los objetos de C++ que se deriva de transmisión por secuencias `CObject` en el archivo porque el receptor no podrá controlarlos. Vea la nota de [Windows Sockets: usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md).
+>  Cuando el otro extremo de la comunicación no es una aplicación MFC, también se debe evitar los objetos de C++ que se deriva de transmisión por secuencias `CObject` en el archivo porque el receptor no podrá controlarlos. Vea la nota de [Windows Sockets: Usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Para obtener más información acerca de los pedidos de bytes, vea la especificación de Windows Sockets, disponible en el SDK de Windows.
 
@@ -100,13 +100,12 @@ Para obtener más información, consulte:
 
 - [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
+- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sockets de flujos](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagramas](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Windows Sockets en MFC](../mfc/windows-sockets-in-mfc.md)
-

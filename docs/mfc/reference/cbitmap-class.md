@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296740"
 ---
 # <a name="cbitmap-class"></a>CBitmap (clase)
 
@@ -64,14 +64,14 @@ class CBitmap : public CGdiObject
 |Name|Descripción|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Inicializa el objeto con un mapa de bits dependiente del dispositivo de memoria que tiene un ancho especificado, el alto y el patrón de bits.|
-|[CBitmap:: Createbitmapindirect](#createbitmapindirect)|Inicializa el objeto con un mapa de bits con el ancho, alto y el patrón de bits (si se especifica alguna) proporcionado en un `BITMAP` estructura.|
+|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Inicializa el objeto con un mapa de bits con el ancho, alto y el patrón de bits (si se especifica alguna) proporcionado en un `BITMAP` estructura.|
 |[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|Inicializa el objeto con un mapa de bits para que sea compatible con un determinado dispositivo.|
 |[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|Inicializa el objeto con un mapa de bits que se puede descartar que sea compatible con un determinado dispositivo.|
 |[CBitmap::FromHandle](#fromhandle)|Devuelve un puntero a un `CBitmap` objeto cuando se especifica un identificador a un Windows `HBITMAP` mapa de bits.|
 |[CBitmap::GetBitmap](#getbitmap)|Rellena un `BITMAP` estructura con información sobre el mapa de bits.|
 |[CBitmap::GetBitmapBits](#getbitmapbits)|Copia los bits del mapa de bits especificado en el búfer especificado.|
 |[CBitmap::GetBitmapDimension](#getbitmapdimension)|Devuelve el ancho y alto del mapa de bits. El alto y ancho se supone que se han establecido anteriormente la [SetBitmapDimension](#setbitmapdimension) función miembro.|
-|[CBitmap:: LoadBitmap](#loadbitmap)|Inicializa el objeto si carga un recurso de mapa de bits con nombre de archivo ejecutable de la aplicación y se asocia el mapa de bits para el objeto.|
+|[CBitmap::LoadBitmap](#loadbitmap)|Inicializa el objeto si carga un recurso de mapa de bits con nombre de archivo ejecutable de la aplicación y se asocia el mapa de bits para el objeto.|
 |[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|Carga un mapa de bits y asigna los colores a los colores del sistema actual.|
 |[CBitmap::LoadOEMBitmap](#loadoembitmap)|Inicializa el objeto si carga un mapa de bits de Windows predefinida y se asocia el mapa de bits para el objeto.|
 |[CBitmap::SetBitmapBits](#setbitmapbits)|Establece los bits de un mapa de bits en los valores de bits especificado.|
@@ -155,9 +155,9 @@ Aunque un mapa de bits no se puede seleccionar directamente para un dispositivo 
 
 Cuando termine con el objeto `CBitmap` creado por la función `CreateBitmap` , seleccione primero el mapa de bits fuera del contexto del dispositivo y elimine luego el objeto `CBitmap` .
 
-Para obtener más información, vea la descripción de la `bmBits` campo el `BITMAP` estructura. La estructura [BITMAP](../../mfc/reference/bitmap-structure.md) se describe en la función miembro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
+Para obtener más información, vea la descripción de la `bmBits` campo el `BITMAP` estructura. La estructura [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) se describe en la función miembro [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
-##  <a name="createbitmapindirect"></a>  CBitmap:: Createbitmapindirect
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
 Inicializa un mapa de bits que tenga el ancho, el alto y el patrón de bits (si se especifica alguna) en la estructura que señala *lpBitmap*.
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Parámetros
 
 *lpBitmap*<br/>
-Apunta a un [mapa de bits](../../mfc/reference/bitmap-structure.md) estructura que contiene información sobre el mapa de bits.
+Apunta a un [mapa de bits](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estructura que contiene información sobre el mapa de bits.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Parámetros
 
 *pBitMap*<br/>
-Puntero a un [estructura de mapa de bits](../../mfc/reference/bitmap-structure.md) estructura que recibirá las propiedades de imagen. Este parámetro no debe ser NULL.
+Puntero a un [mapa de bits](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) estructura que recibirá las propiedades de imagen. Este parámetro no debe ser NULL.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -336,7 +336,7 @@ El ancho y alto del mapa de bits, se mide en unidades de 0,1 milímetros. El alt
 
 El alto y ancho se supone que se han establecido anteriormente mediante el uso de la [SetBitmapDimension](#setbitmapdimension) función miembro.
 
-##  <a name="loadbitmap"></a>  CBitmap:: LoadBitmap
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap
 
 Carga el recurso de mapa de bits con el nombre *lpszResourceName* o identificada por el número de identificación en *nIDResource* desde el archivo ejecutable de la aplicación.
 
@@ -524,4 +524,3 @@ La GDI no utiliza estos valores, excepto to devolverlos cuando una aplicación l
 [Ejemplo MDI de MFC](../../visual-cpp-samples.md)<br/>
 [CGdiObject (clase)](../../mfc/reference/cgdiobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 3627dadde60a5ba0ece90497b85e2085f33e0919
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: deb217e2f889d30ab5c4caa7d9812d5e612dcb62
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448404"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299353"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -54,4 +54,4 @@ Para obtener un ejemplo del uso de este controlador de mensajes en un mapa de me
 
 [Implementar una ventana](../atl/implementing-a-window.md)<br/>
 [Mapas de mensajes](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)
+[WM_NOTIFY](/windows/desktop/controls/wm-notify)

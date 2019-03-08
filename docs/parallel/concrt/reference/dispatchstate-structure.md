@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 4c15fc0ba9c78d8b6416cd88480c8ada6e3febf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603572"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265059"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState (Estructura)
 
@@ -34,7 +34,7 @@ struct DispatchState;
 
 |Name|Descripción|
 |----------|-----------------|
-|[DispatchState:: DispatchState](#ctor)|Construye un nuevo objeto `DispatchState`.|
+|[DispatchState::DispatchState](#ctor)|Construye un nuevo objeto `DispatchState`.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -70,7 +70,7 @@ Tamaño de esta estructura, que se usa para el control de versiones.
 unsigned long m_dispatchStateSize;
 ```
 
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState:: M_fispreviouscontextasynchronouslyblocked miembro de datos
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member
 
 Indica si este contexto ha entrado la `Dispatch` método porque el contexto anterior se bloqueó de forma asincrónica. Esto sólo se utiliza en el contexto de programación UMS y se establece en el valor `0` para todos los otros contextos de ejecución.
 

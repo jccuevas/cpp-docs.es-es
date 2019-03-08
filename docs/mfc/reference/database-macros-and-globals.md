@@ -13,12 +13,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: d3df96c92c39b9fdc05a019ed1ada033dc36d05e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536557"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268725"
 ---
 # <a name="database-macros-and-globals"></a>Macros y variables globales de base de datos
 
@@ -58,10 +58,6 @@ Asegúrese de que esta llamada se produce antes de cualquier llamada de clase ba
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** \<afxdll_.h >
-
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)
 
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
@@ -104,7 +100,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Parámetros
 
-*incorporación de cambios*<br/>
+*prs*<br/>
 Un puntero a un `CRecordset` objeto o un `CDatabase` objeto. A partir de MFC 4.2, se omite este valor de parámetro.
 
 *SQLFunc*<br/>

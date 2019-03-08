@@ -1,5 +1,5 @@
 ---
-title: 'TN001: Registro de clases de ventana'
+title: 'TN001: Registro de la clase de ventana'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 92d55780ad309a9c8392cf86e7fa4eaefc5f407a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619159"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294153"
 ---
-# <a name="tn001-window-class-registration"></a>TN001: Registro de clases de ventana
+# <a name="tn001-window-class-registration"></a>TN001: Registro de la clase de ventana
 
-Esta nota describe las rutinas MFC que registrar especial [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)es necesarias para Microsoft Windows. Específica `WNDCLASS` se describen los atributos utilizados por MFC y Windows.
+Esta nota describe las rutinas MFC que registrar especial [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es necesarias para Microsoft Windows. Específica `WNDCLASS` se describen los atributos utilizados por MFC y Windows.
 
 ## <a name="the-problem"></a>El problema
 
@@ -31,7 +31,7 @@ Esto `WNDCLASS` debe estar registrado a través de uno de cuatro formas:
 
 - Explícitamente mediante una llamada a la MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) o [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-- Explícitamente mediante una llamada a la rutina de Windows [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586).
+- Explícitamente mediante una llamada a la rutina de Windows [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa).
 
 ## <a name="wndclass-fields"></a>Campos WNDCLASS
 
@@ -40,7 +40,7 @@ El `WNDCLASS` estructura consta de varios campos que describen una clase de vent
 |Campo|Descripción|
 |-----------|-----------------|
 |*lpfnWndProc*|proc. de ventana, debe ser un `AfxWndProc`|
-|*se especifica*|no se usa (debe ser cero)|
+|*cbClsExtra*|no se usa (debe ser cero)|
 |*cbWndExtra*|no se usa (debe ser cero)|
 |*hInstance*|rellena automáticamente con [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|
 |*hIcon*|icono de ventanas de marco, consulte a continuación|
@@ -61,7 +61,7 @@ Dos iconos de admiten aplicaciones MDI con tipos de documento único: un icono p
 
 - estilo de clase: CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;
 
-- icono AFX_IDI_STD_FRAME
+- icon AFX_IDI_STD_FRAME
 
 - cursor de flecha
 
@@ -110,4 +110,3 @@ Es importante usar `AfxRegisterClass` (o `AfxRegisterWndClass`) en un archivo DL
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

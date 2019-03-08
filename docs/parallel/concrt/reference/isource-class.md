@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620524"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288771"
 ---
 # <a name="isource-class"></a>ISource (Clase)
 
@@ -57,9 +57,9 @@ El tipo de datos de la carga dentro de los mensajes generados por el bloque de o
 
 |Name|Descripción|
 |----------|-----------------|
-|[Aceptar](#accept)|Cuando se invalida en una clase derivada, acepta un mensaje que se ha proporcionado por este `ISource` bloque, transfiriendo la propiedad al llamador.|
+|[accept](#accept)|Cuando se invalida en una clase derivada, acepta un mensaje que se ha proporcionado por este `ISource` bloque, transfiriendo la propiedad al llamador.|
 |[acquire_ref](#acquire_ref)|Cuando se invalida en una clase derivada, adquiere un recuento de referencias en este `ISource` bloquear para impedir la eliminación.|
-|[consumir](#consume)|Cuando se invalida en una clase derivada, consume un mensaje ofrecido previamente por este `ISource` bloquear y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
+|[consume](#consume)|Cuando se invalida en una clase derivada, consume un mensaje ofrecido previamente por este `ISource` bloquear y correctamente reservado por el destino, transfiriendo la propiedad al llamador.|
 |[link_target](#link_target)|Cuando se invalida en una clase derivada, vincula un bloque de destino a esta `ISource` bloque.|
 |[release](#release)|Cuando se invalida en una clase derivada, libera una reserva de mensaje correcto anterior.|
 |[release_ref](#release_ref)|Cuando se reemplaza en una clase derivada, libera un recuento de referencias en este `ISource` bloque.|
@@ -150,7 +150,7 @@ Un puntero a la `message` que el llamador tiene ahora la propiedad de objeto.
 
 El `consume` es similar al método `accept`, pero siempre debe ir precedido por una llamada a `reserve` que devuelve **true**.
 
-##  <a name="dtor"></a> ~ ISource
+##  <a name="dtor"></a> ~ISource
 
 Destruye el objeto `ISource`.
 

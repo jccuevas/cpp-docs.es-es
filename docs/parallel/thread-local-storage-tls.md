@@ -9,20 +9,20 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507593"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293464"
 ---
 # <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 
-El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subproceso puede asignar ubicaciones en las que almacenar los datos específicos de esos subproceso. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 y el compilador de Visual C++ ahora son compatibles con datos por subproceso que se enlazan estáticamente (en tiempo de carga) además de la implementación existente de la API.
+El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subprocesos puede asignar ubicaciones en las que almacenar los datos específicos de esos subprocesos. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 y el compilador de Visual C++ ahora son compatibles con datos por subproceso que se enlazan estáticamente (en tiempo de carga) además de la implementación existente de la API.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementación del compilador de TLS
 
-**C ++ 11:** el `thread_local` especificador de clase de almacenamiento es la manera recomendada para especificar el almacenamiento local de subprocesos para los objetos y miembros de clase. Para obtener más información, consulte [clases de almacenamiento (C++)](../cpp/storage-classes-cpp.md).
+**C++11:**  El `thread_local` especificador de clase de almacenamiento es la manera recomendada para especificar el almacenamiento local de subprocesos para los objetos y miembros de clase. Para obtener más información, consulte [clases de almacenamiento (C++)](../cpp/storage-classes-cpp.md).
 
 Visual C++ también proporciona un atributo específico de Microsoft, [subproceso](../cpp/thread.md), como modificador de clase de almacenamiento extendida. Use la **__declspec** palabra clave para declarar un **subproceso** variable. Por ejemplo, el código siguiente declara una variable local de subproceso de entero y la inicializa con un valor:
 

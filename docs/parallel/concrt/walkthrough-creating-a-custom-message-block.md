@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: Crear un bloque de mensajes personalizado'
+title: 'Tutorial: Creación de un bloque de mensajes personalizado'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: de44a2d01364070318f4d800fc6316c628177178
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e897163a1d394228ac1d8f566e4b0d761fbeeb42
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607134"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272742"
 ---
-# <a name="walkthrough-creating-a-custom-message-block"></a>Tutorial: Crear un bloque de mensajes personalizado
+# <a name="walkthrough-creating-a-custom-message-block"></a>Tutorial: Creación de un bloque de mensajes personalizado
 
 En este documento se describe cómo crear un tipo de bloque de mensajes personalizado que ordena los mensajes entrantes por prioridad.
 

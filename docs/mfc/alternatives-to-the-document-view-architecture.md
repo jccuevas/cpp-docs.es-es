@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569785"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282557"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Alternativas a la arquitectura documento/vista
 
@@ -48,23 +48,22 @@ Se recomienda encarecidamente usar al Asistente para aplicaciones MFC para crear
 
    Declarado en `CDocument`:
 
-   - Dos `CString` objetos.
+  - Dos `CString` objetos.
 
-   - Tres **BOOL**s.
+  - Tres **BOOL**s.
 
-   - Una `CDocTemplate` puntero.
+  - Una `CDocTemplate` puntero.
 
-   - Una `CPtrList` objeto, que contiene una lista de las vistas del documento.
+  - Una `CPtrList` objeto, que contiene una lista de las vistas del documento.
 
-   Además, el documento requiere que la cantidad de tiempo para crear el objeto de documento, sus objetos de vista, una ventana de marco y un objeto de plantilla de documento.
+  Además, el documento requiere que la cantidad de tiempo para crear el objeto de documento, sus objetos de vista, una ventana de marco y un objeto de plantilla de documento.
 
 - Tratar el documento y la vista como apéndices no utilizados. Coloque el código de dibujo y administración de datos en la ventana de marco en lugar de la vista. Este enfoque está más cerca al modelo de programación de lenguaje C.
 
 - Reemplace las partes de framework MFC que creación el documento y la vista para eliminar su creación en absoluto. El proceso de creación de documento comienza con una llamada a `CWinApp::AddDocTemplate`. Elimine esa llamada de la clase de aplicación `InitInstance` miembro de función y, en su lugar, cree una ventana de marco en `InitInstance` usted mismo. Coloque el código de administración de datos en la clase de ventana de marco. Se ilustra el proceso de creación de documento/vista en [creación de documento/vista](../mfc/document-view-creation.md). Esto supone más trabajo y requiere una comprensión más profunda de framework, pero libera completamente de la sobrecarga de documento/vista.
 
-El artículo [MFC: utilizar clases de base de datos sin documentos y vistas](../data/mfc-using-database-classes-without-documents-and-views.md) ofrece más ejemplos concretos de alternativas de documento/vista en el contexto de las aplicaciones de base de datos.
+El artículo [MFC: Uso de las clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md) ofrece más ejemplos concretos de alternativas de documento/vista en el contexto de las aplicaciones de base de datos.
 
 ## <a name="see-also"></a>Vea también
 
 [Arquitectura documento/vista](../mfc/document-view-architecture.md)
-

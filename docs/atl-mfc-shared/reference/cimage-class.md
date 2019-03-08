@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605860"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419687"
 ---
 # <a name="cimage-class"></a>CImage (clase)
 
@@ -110,10 +110,10 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|Determina si el mapa de bits adjunta es una sección DIB.|
 |[CImage::IsIndexed](#isindexed)|Indica que los colores de un mapa de bits se asignan a una paleta indizada.|
 |[CImage::IsNull](#isnull)|Indica si un mapa de bits de origen está cargada actualmente.|
-|[CImage:: IsTransparencySupported](#istransparencysupported)|Indica si la aplicación admite mapas de bits transparentes.|
+|[CImage::IsTransparencySupported](#istransparencysupported)|Indica si la aplicación admite mapas de bits transparentes.|
 |[CImage::Load](#load)|Carga una imagen desde el archivo especificado.|
 |[CImage::LoadFromResource](#loadfromresource)|Carga una imagen desde el recurso especificado.|
-|[CImage:: MaskBlt](#maskblt)|Combina los datos de color para los mapas de bits de origen y destino con la máscara especificada y la operación de trama.|
+|[CImage::MaskBlt](#maskblt)|Combina los datos de color para los mapas de bits de origen y destino con la máscara especificada y la operación de trama.|
 |[CImage::PlgBlt](#plgblt)|Realiza a una transferencia de bloque de bits de un rectángulo en un contexto de dispositivo de origen en un paralelogramo en un contexto de dispositivo de destino.|
 |[CImage::ReleaseDC](#releasedc)|Libera el contexto de dispositivo que se ha recuperado con [CImage::GetDC](#getdc).|
 |[CImage::ReleaseGDIPlus](#releasegdiplus)|Libera los recursos utilizados por GDI +. Debe llamarse para liberar recursos creados por un global `CImage` objeto.|
@@ -124,7 +124,7 @@ class CImage
 |[CImage::SetPixelRGB](#setpixelrgb)|Establece el píxel en las coordenadas especificadas al valor especificado de rojo, verde, azul (RGB).|
 |[CImage::SetTransparentColor](#settransparentcolor)|Establece el índice del color se traten como transparente. Solo un color de una paleta puede ser transparente.|
 |[CImage::StretchBlt](#stretchblt)|Copia un mapa de bits de un rectángulo de origen en un rectángulo de destino, estirando o comprimiendo el mapa de bits para ajustarse a las dimensiones del rectángulo de destino, si es necesario.|
-|[CImage:: TransparentBlt](#transparentblt)|Copia un mapa de bits con color transparente desde el contexto de dispositivo de origen en este contexto de dispositivo actual.|
+|[CImage::TransparentBlt](#transparentblt)|Copia un mapa de bits con color transparente desde el contexto de dispositivo de origen en este contexto de dispositivo actual.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -146,7 +146,7 @@ class CImage
 
 - [GetPixelAddress](#getpixeladdress)
 
-- [Isindexed como](#isindexed)
+- [IsIndexed](#isindexed)
 
 - [SetColorTable](#setcolortable)
 
@@ -258,7 +258,7 @@ Un valor de transparencia alfa que se usará en el mapa de bits de código fuent
 La función de combinación alfa para el origen y los mapas de bits de destino, un valor alfa global que se aplicará a la información de formato del mapa de bits de origen y el mapa de bits de código fuente completo. Las funciones de mezcla de origen y destino están limitadas actualmente a AC_SRC_OVER.
 
 *pointDest*<br/>
-Una referencia a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que identifica la esquina superior izquierda del rectángulo de destino, en unidades lógicas.
+Una referencia a un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que identifica la esquina superior izquierda del rectángulo de destino, en unidades lógicas.
 
 *nDestWidth*<br/>
 El ancho, en unidades lógicas, del rectángulo de destino.
@@ -279,7 +279,7 @@ El ancho, en unidades lógicas, del rectángulo de origen.
 El alto, en unidades lógicas, del rectángulo de origen.
 
 *rectDest*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que identifica el destino.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que identifica el destino.
 
 *rectSrc*<br/>
 Una referencia a un `RECT` estructura, que identifica el origen.
@@ -368,7 +368,7 @@ Coordenada y lógica de la esquina superior izquierda del rectángulo de destino
 Para realizar la operación de trama. Códigos de operación de trama definen exactamente cómo combinar los bits de origen, el destino y el patrón (tal y como se define por el pincel actualmente seleccionado) para formar el destino. Consulte [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) en el SDK de Windows para obtener una lista de otros códigos de operación de trama y sus descripciones.
 
 *pointDest*<br/>
-Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que indica la esquina superior izquierda del rectángulo de destino.
+Un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que indica la esquina superior izquierda del rectángulo de destino.
 
 *nDestWidth*<br/>
 El ancho, en unidades lógicas, del rectángulo de destino.
@@ -383,7 +383,7 @@ Coordenada x lógica de la esquina superior izquierda del rectángulo de origen.
 Coordenada y lógica de la esquina superior izquierda del rectángulo de origen.
 
 *rectDest*<br/>
-Un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que indica el rectángulo de destino.
+Un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que indica el rectángulo de destino.
 
 *pointSrc*<br/>
 Un `POINT` estructura que indica la esquina superior izquierda del rectángulo de origen.
@@ -595,13 +595,13 @@ El ancho, en unidades lógicas, del rectángulo de origen.
 El alto, en unidades lógicas, del rectángulo de origen.
 
 *rectDest*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que identifica el destino.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que identifica el destino.
 
 *rectSrc*<br/>
 Una referencia a un `RECT` estructura, que identifica el origen.
 
 *pointDest*<br/>
-Una referencia a un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que identifica la esquina superior izquierda del rectángulo de destino, en unidades lógicas.
+Una referencia a un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que identifica la esquina superior izquierda del rectángulo de destino, en unidades lógicas.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -994,7 +994,7 @@ Si el mapa de bits no es una sección DIB, no se puede usar el siguiente `CImage
 
 - [GetPixelAddress](#getpixeladdress)
 
-- [Isindexed como](#isindexed)
+- [IsIndexed](#isindexed)
 
 - [SetColorTable](#setcolortable)
 
@@ -1029,7 +1029,7 @@ bool IsNull() const throw();
 
 Este método devuelve TRUE si un mapa de bits no está cargada actualmente; en caso contrario, FALSE.
 
-##  <a name="istransparencysupported"></a>  CImage:: IsTransparencySupported
+##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported
 
 Indica si la aplicación admite mapas de bits transparentes.
 
@@ -1101,7 +1101,7 @@ El identificador del recurso para cargar.
 
 El recurso debe ser de tipo de mapa de bits.
 
-##  <a name="maskblt"></a>  CImage:: MaskBlt
+##  <a name="maskblt"></a>  CImage::MaskBlt
 
 Combina los datos de color para los mapas de bits de origen y destino con la máscara especificada y la operación de trama.
 
@@ -1259,10 +1259,10 @@ La coordenada x de la esquina superior izquierda del mapa de bits monocromo.
 Coordenada y de la esquina superior izquierda del mapa de bits monocromo.
 
 *rectSrc*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica las coordenadas del rectángulo de origen.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que especifica las coordenadas del rectángulo de origen.
 
 *pointMask*<br/>
-Un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) estructura que indica la esquina superior izquierda del mapa de bits de máscara.
+Un [punto](/previous-versions/dd162805\(v=vs.85\)) estructura que indica la esquina superior izquierda del mapa de bits de máscara.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1384,7 +1384,7 @@ La ubicación horizontal del píxel que se va a establecer.
 *y*<br/>
 Ubicación vertical del píxel que se va a establecer.
 
-*Color*<br/>
+*color*<br/>
 El color que establecer el píxel.
 
 ### <a name="remarks"></a>Comentarios
@@ -1407,7 +1407,7 @@ La ubicación horizontal del píxel que se va a establecer.
 *y*<br/>
 Ubicación vertical del píxel que se va a establecer.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 El índice de un color en la paleta de colores.
 
 ##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB
@@ -1519,7 +1519,7 @@ El alto, en unidades lógicas, del rectángulo de destino.
 Para realizar la operación de trama. Códigos de operación de trama definen exactamente cómo combinar los bits de origen, el destino y el patrón (tal y como se define por el pincel actualmente seleccionado) para formar el destino. Consulte [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) en el SDK de Windows para obtener una lista de otros códigos de operación de trama y sus descripciones.
 
 *rectDest*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que identifica el destino.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que identifica el destino.
 
 *xSrc*<br/>
 La coordenada x, en unidades lógicas, de la esquina superior izquierda del rectángulo de origen.
@@ -1544,7 +1544,7 @@ Distinto de cero si se realiza correctamente, en caso contrario, 0.
 
 Para obtener más información, consulte [StretchBlt](/windows/desktop/api/wingdi/nf-wingdi-stretchblt) en el SDK de Windows.
 
-##  <a name="transparentblt"></a>  CImage:: TransparentBlt
+##  <a name="transparentblt"></a>  CImage::TransparentBlt
 
 Copia un mapa de bits desde el contexto de dispositivo de origen en este contexto de dispositivo actual.
 
@@ -1602,7 +1602,7 @@ El alto, en unidades lógicas, del rectángulo de destino.
 El color del mapa de bits de origen debe tratar como transparente. De forma predeterminada, CLR_INVALID, que indica que el color actualmente establecido como el color transparente de la imagen debe usarse.
 
 *rectDest*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura, que identifica el destino.
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura, que identifica el destino.
 
 *xSrc*<br/>
 La coordenada x, en unidades lógicas, de la esquina superior izquierda del rectángulo de origen.
@@ -1659,7 +1659,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ## <a name="see-also"></a>Vea también
 
 [Ejemplo MMXSwarm](../../visual-cpp-samples.md)<br/>
-[Ejemplo SimpleImage](../../visual-cpp-samples.md)<br/>
+[SimpleImage Sample](../../visual-cpp-samples.md)<br/>
 [Mapas de bits independientes del dispositivo](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)<br/>

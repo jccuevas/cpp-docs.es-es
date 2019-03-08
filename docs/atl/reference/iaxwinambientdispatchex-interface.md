@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 5b4afabe2c12dff048bc6a6fb904a82b3cea4d01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 638152d8c49bd20742a586bc665efcdb662b6f3a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539443"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413893"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx (interfaz)
 
@@ -38,11 +38,11 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ## <a name="remarks"></a>Comentarios
 
-Esta interfaz se incluyen en las aplicaciones de ATL que se vinculan estáticamente con ATL y el host de controles ActiveX, especialmente los controles ActiveX que tiene las propiedades de ambiente. Sin incluir esta interfaz generará esta aserción: "¿olvidó pasar el LIBID en ejecución"
+Esta interfaz se incluyen en las aplicaciones de ATL que se vinculan estáticamente con ATL y el host de controles ActiveX, especialmente los controles ActiveX que tiene las propiedades de ambiente. Sin incluir esta interfaz generará esta aserción: "¿Olvidó pasar el LIBID en ejecución"
 
 Esta interfaz se expone mediante los objetos que hospeda los controles ActiveX de ATL. Deriva [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md), `IAxWinAmbientDispatchEx` agrega un método que permite complementar la interfaz de propiedad de ambiente proporcionada por ATL con uno propio.
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) intentará cargar la información de tipo sobre `IAxWinAmbientDispatch` y `IAxWinAmbientDispatchEx` desde la biblioteca de tipos que contiene el código.
+<xref:System.Windows.Forms.AxHost> se intentará cargar la información de tipo sobre `IAxWinAmbientDispatch` y `IAxWinAmbientDispatchEx` desde la biblioteca de tipos que contiene el código.
 
 Si vincula a ATL90.dll, **AXHost** cargará la información de tipo de la biblioteca de tipos en el archivo DLL.
 

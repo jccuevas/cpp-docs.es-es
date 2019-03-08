@@ -1,6 +1,6 @@
 ---
 title: Funciones &lt;memory&gt;
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2b7f65e2bca728ccde50cdee503f920291aa3ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619068"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763939"
 ---
 # <a name="ltmemorygt-functions"></a>Funciones &lt;memory&gt;
 
@@ -135,7 +135,7 @@ Límite de alineación que se va a intentar.
 *Size*<br/>
 Tamaño en bytes del almacenamiento alineado.
 
-*PTR*<br/>
+*Ptr*<br/>
 Dirección inicial del bloque de almacenamiento contiguo disponible que se va a usar. Este parámetro también es un parámetro de salida y se establece para que contenga la nueva dirección inicial si la alineación se realiza correctamente. Si `align()` no se realiza correctamente, este parámetro no se modifica.
 
 *Espacio*<br/>
@@ -261,7 +261,7 @@ void declare_no_pointers(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*ptr*|Dirección del primer carácter que ya no contiene punteros rastreables.|
-|*_Tamaño*|Tamaño de bloque que comienza por *ptr* que no contiene punteros rastreables.|
+|*_Size*|Tamaño de bloque que comienza por *ptr* que no contiene punteros rastreables.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -299,7 +299,7 @@ struct default_delete {
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntero al objeto que se va a eliminar.
 
 *Otros problemas*<br/>
@@ -327,7 +327,7 @@ Tipo controlado por el puntero compartido devuelto.
 *Otros problemas*<br/>
 Tipo controlado por el puntero compartido de argumento.
 
-*SP*<br/>
+*sp*<br/>
 Puntero compartido de argumento.
 
 ### <a name="remarks"></a>Comentarios
@@ -370,7 +370,7 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a>  get_deleter)
+## <a name="get_deleter"></a>  get_deleter
 
 Obtiene el eliminador de shared_ptr.
 
@@ -387,7 +387,7 @@ Tipo del eliminador.
 *Ty*<br/>
 Tipo controlado por el puntero compartido.
 
-*SP*<br/>
+*sp*<br/>
 El puntero compartido.
 
 ### <a name="remarks"></a>Comentarios
@@ -431,7 +431,6 @@ int main()
 
     return (0);
 }
-
 ```
 
 ```Output
@@ -648,7 +647,7 @@ Número de elementos para los que se va a asignar espacio en la nueva matriz.
 
 ### <a name="remarks"></a>Comentarios
 
-La primera sobrecarga se usa para los objetos únicos, la segunda sobrecarga se invoca para las matrices, y la tercera sobrecarga impide que especifique un tamaño de matriz en el argumento de tipo (make_unique\<T[N]>); esta construcción no es compatible con el estándar actual. Cuando se utiliza `make_unique` para crear un `unique_ptr` para una matriz, se deben inicializar los elementos de la matriz por separado. Si está considerando la posibilidad de usar esta sobrecarga, quizás sea mejor usar [std::vector](../standard-library/vector-class.md).
+La primera sobrecarga se utiliza para objetos individuales, la segunda sobrecarga se invoca para las matrices y la tercera sobrecarga impide que pueda especificar un tamaño de matriz en el argumento de tipo (make_unique\<T [N] >); esta construcción no es compatible con la actual estándar. Cuando se utiliza `make_unique` para crear un `unique_ptr` para una matriz, se deben inicializar los elementos de la matriz por separado. Si está considerando la posibilidad de usar esta sobrecarga, quizás sea mejor usar [std::vector](../standard-library/vector-class.md).
 
 Puesto que `make_unique` se implementa con cuidado para la seguridad de las excepciones, se recomienda utilizar `make_unique` en lugar de llamar directamente a los constructores de `unique_ptr`.
 
@@ -701,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Parámetros
 
-*a la _izquierda*<br/>
+*_left*<br/>
 Un puntero compartido o no seguro.
 
 *right*<br/>
@@ -957,7 +956,7 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 *first*<br/>
 Iterador de entrada que direcciona el primer elemento del intervalo de origen.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que direcciona el último elemento del intervalo de origen.
 
 *dest*<br/>
@@ -1102,10 +1101,10 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 *first*<br/>
 Un iterador hacia delante que direcciona el primer elemento del intervalo de destino que se va a iniciar.
 
-*Último*<br/>
+*last*<br/>
 Un iterador hacia delante que direcciona el último elemento del intervalo de destino que se va a iniciar.
 
-*Val*<br/>
+*val*<br/>
 Valor que se usará para inicializar el intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios
@@ -1177,7 +1176,7 @@ Iterador hacia delante que direcciona el primer elemento del intervalo de destin
 *count*<br/>
 Número de elementos que se van a inicializar.
 
-*Val*<br/>
+*val*<br/>
 Valor que se usará para inicializar el intervalo de destino.
 
 ### <a name="remarks"></a>Comentarios

@@ -33,12 +33,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 367a5ed6bf9d42730a309570c93afd1b315bae25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283181"
 ---
 # <a name="concurrentvector-class"></a>Clase concurrent_vector
 
@@ -121,7 +121,7 @@ El tipo que representa el objeto de asignador almacenado que encapsula los detal
 
 |Name|Descripción|
 |----------|-----------------|
-|[operator[]](#operator_at)|Sobrecargado. Proporciona acceso al elemento en el índice especificado del vector simultáneo. Este método es seguro para simultaneidad para las operaciones de lectura así como al aumento del vector, siempre que se haya asegurado de que el valor `_Index` es menor que el tamaño del vector simultáneo.|
+|[operator\[\]](#operator_at)|Sobrecargado. Proporciona acceso al elemento en el índice especificado del vector simultáneo. Este método es seguro para simultaneidad para las operaciones de lectura así como al aumento del vector, siempre que se haya asegurado de que el valor `_Index` es menor que el tamaño del vector simultáneo.|
 |[operator=](#operator_eq)|Sobrecargado. Asigna el contenido de otro objeto `concurrent_vector` a este. Este método no es seguro para la simultaneidad.|
 
 ## <a name="remarks"></a>Comentarios
@@ -164,13 +164,13 @@ El tipo del iterador especificado.
 *_N*<br/>
 El número de elementos que se va a copiar en el vector simultáneo.
 
-*_Elemento*<br/>
+*_Item*<br/>
 Referencia a un valor utilizado para rellenar el vector simultáneo.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Un iterador al primer elemento del intervalo de origen.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Un iterador a uno más allá del último elemento del intervalo de origen.
 
 ### <a name="remarks"></a>Comentarios
@@ -333,13 +333,13 @@ El objeto de origen `concurrent_vector` del que copiar o mover elementos.
 *_N*<br/>
 Capacidad inicial del objeto `concurrent_vector`.
 
-*_Elemento*<br/>
+*_Item*<br/>
 El valor de elementos en el objeto construido.
 
-*_Empezar la*<br/>
+*_Begin*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*_Finalizar*<br/>
+*_End*<br/>
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -358,7 +358,7 @@ El sexto constructor especifica una repetición de ( `_N`) elementos del valor `
 
 El último constructor especifica los valores proporcionados por el rango de iterador [ `_Begin`, `_End`).
 
-##  <a name="dtor"></a> ~ concurrent_vector
+##  <a name="dtor"></a> ~concurrent_vector
 
 Borra todos los elementos y se destruye este vector simultáneo.
 
@@ -460,7 +460,7 @@ iterator grow_by(
 *_Delta*<br/>
 El número de elementos que se va a anexar al objeto.
 
-*_Elemento*<br/>
+*_Item*<br/>
 El valor para inicializar los nuevos elementos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -528,7 +528,7 @@ Objeto `concurrent_vector` de origen.
 
 Una referencia a este `concurrent_vector` objeto.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Proporciona acceso al elemento en el índice especificado del vector simultáneo. Este método es seguro para simultaneidad para las operaciones de lectura así como al aumento del vector, siempre que se haya asegurado de que el valor `_Index` es menor que el tamaño del vector simultáneo.
 
@@ -565,7 +565,7 @@ iterator push_back(T&& _Item);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Elemento*<br/>
+*_Item*<br/>
 El valor se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -635,7 +635,7 @@ void resize(
 *_N*<br/>
 El nuevo tamaño de la concurrent_vector.
 
-*Val*<br/>
+*val*<br/>
 El valor de elementos nuevos añadido al vector si el nuevo tamaño es mayor que el tamaño original. Si se omite el valor, los nuevos objetos se asignan el valor predeterminado para su tipo.
 
 ### <a name="remarks"></a>Comentarios
@@ -689,4 +689,3 @@ La `concurrent_vector` objeto que se va a intercambiar el contenido.
 
 [concurrency (espacio de nombres)](concurrency-namespace.md)<br/>
 [Contenedores y objetos paralelos](../../../parallel/concrt/parallel-containers-and-objects.md)
-

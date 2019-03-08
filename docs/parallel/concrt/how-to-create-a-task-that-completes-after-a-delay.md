@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Crear una tarea que se complete después de un retardo'
+title: Filtrar Crear una tarea que finaliza después de un retraso
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272267"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Cómo: Crear una tarea que se complete después de un retardo
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Filtrar Crear una tarea que finaliza después de un retraso
 
 En este ejemplo se muestra cómo usar el [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md), y [Concurrency:: call](../../parallel/concrt/reference/call-class.md) las clases para crear una tarea que finaliza después de un retraso. Puede usar este método para crear bucles que ocasionalmente sondear en busca de datos, introducen los tiempos de espera, retrasar el control de entrada de usuario para un tiempo predeterminado y así sucesivamente.
 
@@ -58,4 +58,3 @@ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto d
 [call (clase)](../../parallel/concrt/reference/call-class.md)<br/>
 [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)
-

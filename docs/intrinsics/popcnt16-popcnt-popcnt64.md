@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: b40d84b919a3418d48b820e5285b523cd602dc92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538174"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146897"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Específicos de Microsoft**
 
-Cuenta el número de uno de los bits (recuento de llenado) en un 16, 32 o entero sin signo de 64 bytes.
+Cuenta el número de uno de los bits (recuento de llenado) en un 16, 32 o entero sin signo de 64 bits.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 [in] El 16, 32 o entero sin signo de 64 bits para el que queremos que el recuento de llenado.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -59,7 +59,7 @@ El número de bits de uno de los `value` parámetro.
 
 ## <a name="remarks"></a>Comentarios
 
-Cada una de estas funciones intrínsecas genera el `popcnt` instrucción.  El tamaño del valor que el `popcnt` instrucción devuelve es el mismo que el tamaño de su argumento.  En el modo de 32 bits no hay ningún 64-bit registros de uso general, por lo tanto, no de 64 bits `popcnt`.
+Cada una de estas funciones intrínsecas genera el `popcnt` instrucción. En el modo de 32 bits no hay ningún 64-bit registros de uso general, por lo tanto, no de 64 bits `popcnt`.
 
 Para determinar la compatibilidad de hardware para el `popcnt` instrucción, llamada la `__cpuid` intrínseca con `InfoType=0x00000001` y comprobar poco 23 de `CPUInfo[2] (ECX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario. Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `popcnt` instrucciones, los resultados son impredecibles.
 
@@ -87,7 +87,6 @@ int main()
     cout << "__popcnt(0x" << hex << ui[i] << ") = " << dec << uir << endl;
   }
 }
-
 ```
 
 ```Output
@@ -102,7 +101,7 @@ __popcnt(0xffffffff) = 32
 
 **FIN de Específicos de Microsoft**
 
-Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vea también
 

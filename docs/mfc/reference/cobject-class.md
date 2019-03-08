@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304072"
 ---
 # <a name="cobject-class"></a>CObject (clase)
 
@@ -49,12 +49,12 @@ class AFX_NOVTABLE CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CObject:: AssertValid](#assertvalid)|Valida la integridad de este objeto.|
+|[CObject::AssertValid](#assertvalid)|Valida la integridad de este objeto.|
 |[CObject::Dump](#dump)|Genera un volcado de diagnóstico de este objeto.|
 |[CObject::GetRuntimeClass](#getruntimeclass)|Devuelve el `CRuntimeClass` estructura correspondiente a la clase de este objeto.|
-|[CObject:: IsKindOf](#iskindof)|Comprueba la relación de este objeto con una clase determinada.|
+|[CObject::IsKindOf](#iskindof)|Comprueba la relación de este objeto con una clase determinada.|
 |[CObject::IsSerializable](#isserializable)|Comprueba si este objeto se puede serializar.|
-|[CObject:: Serialize](#serialize)|Carga o almacena un objeto desde y hacia un archivo.|
+|[CObject::Serialize](#serialize)|Carga o almacena un objeto desde y hacia un archivo.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -93,7 +93,7 @@ Para obtener información sobre cómo derivar clases de C++ y Microsoft Foundati
 
 **Encabezado:** afx.h
 
-##  <a name="assertvalid"></a>  CObject:: AssertValid
+##  <a name="assertvalid"></a>  CObject::AssertValid
 
 Valida la integridad de este objeto.
 
@@ -217,7 +217,7 @@ Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para o
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
-##  <a name="iskindof"></a>  CObject:: IsKindOf
+##  <a name="iskindof"></a>  CObject::IsKindOf
 
 Comprueba la relación de este objeto con una clase determinada.
 
@@ -343,7 +343,7 @@ Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para o
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
-##  <a name="serialize"></a>  CObject:: Serialize
+##  <a name="serialize"></a>  CObject::Serialize
 
 Lee o escribe este objeto de o en un archivo.
 
@@ -353,7 +353,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 Un `CArchive` objeto para serializar o salientes.
 
 ### <a name="remarks"></a>Comentarios
@@ -366,7 +366,7 @@ Use [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) o [CA
 
 `Serialize` llama a [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) y [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Estas funciones están asociadas con el `CArchive` operador de inserción ( **< \<**) y el operador de extracción ( **>>**).
 
-Para obtener ejemplos de serialización, vea el artículo [serialización: serializar un objeto](../../mfc/serialization-serializing-an-object.md).
+Para obtener ejemplos de serialización, vea el artículo [serialización: Serializar un objeto](../../mfc/serialization-serializing-an-object.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -377,4 +377,3 @@ Consulte [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) para o
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

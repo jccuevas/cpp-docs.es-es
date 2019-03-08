@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270506"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT (clase)
 
@@ -76,8 +76,8 @@ El identificador de recurso del servicio.
 
 |Name|Descripción|
 |----------|-----------------|
-|[CAtlServiceModuleT:: Handler](#handler)|La rutina del controlador para el servicio.|
-|[CAtlServiceModuleT:: InitializeSecurity](#initializesecurity)|Proporciona el valor predeterminado de configuración de seguridad para el servicio.|
+|[CAtlServiceModuleT::Handler](#handler)|La rutina del controlador para el servicio.|
+|[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Proporciona el valor predeterminado de configuración de seguridad para el servicio.|
 |[CAtlServiceModuleT::Install](#install)|Instala y crea el servicio.|
 |[CAtlServiceModuleT::IsInstalled](#isinstalled)|Confirma que se ha instalado el servicio.|
 |[CAtlServiceModuleT::LogEvent](#logevent)|Escribe en el registro de eventos.|
@@ -90,14 +90,14 @@ El identificador de recurso del servicio.
 |[CAtlServiceModuleT::ParseCommandLine](#parsecommandline)|Analiza la línea de comandos y realiza el registro, si es necesario.|
 |[CAtlServiceModuleT::PreMessageLoop](#premessageloop)|Este método se llama inmediatamente antes de entrar en el bucle de mensajes.|
 |[CAtlServiceModuleT::RegisterAppId](#registerappid)|Registra el servicio en el registro.|
-|[CAtlServiceModuleT:: Run](#run)|Ejecuta el servicio.|
-|[CAtlServiceModuleT:: ServiceMain](#servicemain)|El método llamado por el Administrador de Control de servicios.|
+|[CAtlServiceModuleT::Run](#run)|Ejecuta el servicio.|
+|[CAtlServiceModuleT::ServiceMain](#servicemain)|El método llamado por el Administrador de Control de servicios.|
 |[CAtlServiceModuleT::SetServiceStatus](#setservicestatus)|Actualiza el estado del servicio.|
-|[CAtlServiceModuleT:: Start](#start)|Lo llama `CAtlServiceModuleT::WinMain` cuando se inicia el servicio.|
+|[CAtlServiceModuleT::Start](#start)|Lo llama `CAtlServiceModuleT::WinMain` cuando se inicia el servicio.|
 |[CAtlServiceModuleT::Uninstall](#uninstall)|Detiene y elimina el servicio.|
 |[CAtlServiceModuleT::Unlock](#unlock)|Disminuye el recuento de bloqueo del servicio.|
 |[CAtlServiceModuleT::UnregisterAppId](#unregisterappid)|Quita el servicio del registro.|
-|[A CAtlServiceModuleT:: WinMain](#winmain)|Este método implementa el código necesario para ejecutar el servicio.|
+|[CAtlServiceModuleT::WinMain](#winmain)|Este método implementa el código necesario para ejecutar el servicio.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -143,7 +143,7 @@ CAtlServiceModuleT() throw();
 
 Inicializa a los miembros de datos y establece el estado del servicio inicial.
 
-##  <a name="handler"></a>  CAtlServiceModuleT:: Handler
+##  <a name="handler"></a>  CAtlServiceModuleT::Handler
 
 La rutina del controlador para el servicio.
 
@@ -172,7 +172,7 @@ Si no se reconoce el código de operación, el método [CAtlServiceModuleT::OnUn
 
 Servicio predeterminado generado por ATL sólo controla la instrucción stop. Si el SCM pasa dicha instrucción, el servicio indica el SCM que el programa está a punto de detenerse. El servicio, a continuación, llama a `PostThreadMessage` para publicar un mensaje a sí mismo. Esto finaliza el bucle de mensajes y el servicio se cerrará en última instancia.
 
-##  <a name="initializesecurity"></a>  CAtlServiceModuleT:: InitializeSecurity
+##  <a name="initializesecurity"></a>  CAtlServiceModuleT::InitializeSecurity
 
 Proporciona el valor predeterminado de configuración de seguridad para el servicio.
 
@@ -414,14 +414,14 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*bServicio*<br/>
+*bService*<br/>
 Debe ser true para registrar como un servicio.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
-##  <a name="run"></a>  CAtlServiceModuleT:: Run
+##  <a name="run"></a>  CAtlServiceModuleT::Run
 
 Ejecuta el servicio.
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección. El valor predeterminado es SW_HIDE.
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sección. El valor predeterminado es SW_HIDE.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -442,7 +442,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 Después de que se llama, `Run` llamadas [CAtlServiceModuleT::PreMessageLoop](#premessageloop), [CAtlExeModuleT::RunMessageLoop](../../atl/reference/catlexemodulet-class.md#runmessageloop), y [CAtlExeModuleT::PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop).
 
-##  <a name="servicemain"></a>  CAtlServiceModuleT:: ServiceMain
+##  <a name="servicemain"></a>  CAtlServiceModuleT::ServiceMain
 
 Este método se llama por el Administrador de Control de servicios.
 
@@ -474,14 +474,14 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*"_mfc_CTabCtrl.3a3a.GetItem"*<br/>
+*dwState*<br/>
 El estado nueva. Consulte [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) para los valores posibles.
 
 ### <a name="remarks"></a>Comentarios
 
 Actualiza la información de estado del Administrador de Control de servicio para el servicio. Lo llama [CAtlServiceModuleT:: Run](#run), [CAtlServiceModuleT:: ServiceMain](#servicemain) y otros métodos de controlador. El estado también se almacena en la variable miembro [CAtlServiceModuleT::m_status](#m_status).
 
-##  <a name="start"></a>  CAtlServiceModuleT:: Start
+##  <a name="start"></a>  CAtlServiceModuleT::Start
 
 Lo llama `CAtlServiceModuleT::WinMain` cuando se inicia el servicio.
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección.
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sección.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -542,7 +542,7 @@ HRESULT UnregisterAppId() throw();
 
 Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
-##  <a name="winmain"></a>  A CAtlServiceModuleT:: WinMain
+##  <a name="winmain"></a>  CAtlServiceModuleT::WinMain
 
 Este método implementa el código necesario para iniciar el servicio.
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Parámetros
 
 *nShowCmd*<br/>
-Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) sección.
+Especifica cómo se mostrará la ventana. Este parámetro puede ser uno de los valores descritos en la [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) sección.
 
 ### <a name="return-value"></a>Valor devuelto
 

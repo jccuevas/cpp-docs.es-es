@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d31bc72e485fbb15ed595a7c777c3685a00865c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270142"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase (clase)
 
@@ -43,7 +43,7 @@ class CAtlFileMappingBase
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|El constructor.|
-|[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Destructor.|
+|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -85,7 +85,7 @@ CAtlFileMappingBase() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*orig.*<br/>
+*orig*<br/>
 El objeto de asignación del archivo original a copiar para crear el nuevo objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -96,7 +96,7 @@ Crea un nuevo objeto de asignación de archivos, utilizando opcionalmente un obj
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase
+##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
 
 Destructor.
 
@@ -118,7 +118,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*orig.*<br/>
+*orig*<br/>
 El objeto de asignación de archivos original para copiarlos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -193,7 +193,7 @@ El desplazamiento de archivo donde asignación se va a comenzar. El valor de des
 La protección que desea para la vista del archivo cuando se asigna el archivo. Consulte *flProtect* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.
 
 *dwViewDesiredAccess*<br/>
-Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
+Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -201,7 +201,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Una vez creado un objeto de asignación de archivos, el tamaño del archivo no puede superar el tamaño del objeto de asignación de archivos; Si es así, no todos el contenido del archivo estará disponibles para uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) y [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
+Una vez creado un objeto de asignación de archivos, el tamaño del archivo no puede superar el tamaño del objeto de asignación de archivos; Si es así, no todos el contenido del archivo estará disponibles para uso compartido. Para obtener más información, consulte [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) y [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 
@@ -232,14 +232,14 @@ El nombre del objeto de asignación.
 *pbAlreadyExisted*<br/>
 Apunta a un valor booleano que se establece en TRUE si el objeto de asignación ya existía.
 
-*LPSA*<br/>
+*lpsa*<br/>
 El puntero a un `SECURITY_ATTRIBUTES` estructura que determina si el identificador devuelto se puede heredar mediante procesos secundarios. Consulte *lpAttributes* en [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) en el SDK de Windows.
 
 *dwMappingProtection*<br/>
 La protección que desea para la vista del archivo, cuando se asigna el archivo. Consulte *flProtect* en `CreateFileMapping` en el SDK de Windows.
 
 *dwViewDesiredAccess*<br/>
-Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
+Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -273,7 +273,7 @@ El tamaño de asignación. Si es 0, el tamaño máximo del archivo de asignació
 El desplazamiento de archivo donde asignación se va a comenzar. El valor de desplazamiento debe ser un múltiplo de granularidad de asignación de memoria del sistema.
 
 *dwViewDesiredAccess*<br/>
-Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) en el SDK de Windows.
+Especifica el tipo de acceso a la vista del archivo y, por lo tanto, la protección de las páginas asignadas por el archivo. Consulte *dwDesiredAccess* en [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -293,7 +293,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Parámetros
 
-*orig.*<br/>
+*orig*<br/>
 El objeto de asignación de archivos actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -314,7 +314,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) en el SDK de Windows para obtener más detalles.
+Consulte [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) en el SDK de Windows para obtener más detalles.
 
 ## <a name="see-also"></a>Vea también
 

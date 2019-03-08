@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531721"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270883"
 ---
 # <a name="cd2dlayer-class"></a>Clase CD2DLayer
 
@@ -48,7 +48,7 @@ class CD2DLayer : public CD2DResource;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Construye un objeto CD2DLayer.|
-|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Destructor. Se llama cuando se destruye un objeto de capa de D2D.|
+|[CD2DLayer::~CD2DLayer](#_dtorcd2dlayer)|Destructor. Se llama cuando se destruye un objeto de capa de D2D.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -86,7 +86,7 @@ class CD2DLayer : public CD2DResource;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlayer"></a>  CD2DLayer:: ~ CD2DLayer
+##  <a name="_dtorcd2dlayer"></a>  CD2DLayer::~CD2DLayer
 
 Destructor. Se llama cuando se destruye un objeto de capa de D2D.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: 4355a575f29741d0c7b9f1e12e40ca9d977219b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6f9bca6f6b7ca9d104cb492c760ab89f7163afd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630083"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259391"
 ---
 # <a name="exceptions-examining-exception-contents"></a>Excepciones: Examinar contenidos de excepciones
 
@@ -26,9 +26,8 @@ El ejemplo siguiente muestra cómo examinar el contenido de un `CFileException`.
 
 [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
 
-Para obtener más información, consulte [excepciones: liberar objetos en excepciones](../mfc/exceptions-freeing-objects-in-exceptions.md) y [excepciones: detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Para obtener más información, consulte [excepciones: Liberar objetos en excepciones](../mfc/exceptions-freeing-objects-in-exceptions.md) y [excepciones: Detectar y eliminar excepciones](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones](../mfc/exception-handling-in-mfc.md)
-

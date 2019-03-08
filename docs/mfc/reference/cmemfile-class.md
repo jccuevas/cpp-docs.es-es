@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMemFile [MFC], Memcpy
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
-ms.openlocfilehash: a7bc54d30df80ec8d56b6a403582ebe4c48858f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a57f4e245ca1e93ec0edd454a7f407aeda5beca4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634894"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304952"
 ---
 # <a name="cmemfile-class"></a>CMemFile (clase)
 
@@ -292,4 +292,3 @@ Reemplace esta función para implementar la reasignación de memoria personaliza
 
 [CFile (clase)](../../mfc/reference/cfile-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

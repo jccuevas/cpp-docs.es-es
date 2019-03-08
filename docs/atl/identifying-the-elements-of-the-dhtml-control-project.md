@@ -1,16 +1,16 @@
 ---
 title: Identificar los elementos del proyecto de Control DHTML
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533697"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424384"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Identificar los elementos del proyecto de Control DHTML
 
@@ -22,11 +22,11 @@ Un control DHTML es similar a cualquier control ATL, excepto:
 
 - Crea un recurso HTML para el control de interfaz de usuario.
 
-- Permite el acceso al modelo de objetos DHTML a través de la variable miembro `m_spBrowser`, que es un puntero inteligente de tipo [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx). Use este puntero para tener acceso a cualquier parte del modelo de objetos DHTML.
+- Permite el acceso al modelo de objetos DHTML a través de la variable miembro `m_spBrowser`, que es un puntero inteligente de tipo [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)). Use este puntero para tener acceso a cualquier parte del modelo de objetos DHTML.
 
 El siguiente gráfico ilustra la relación entre el archivo DLL, el control DHTML, el explorador Web y el recurso HTML.
 
-![Elementos de un proyecto de control DHTML](../atl/media/vc52en1.gif "vc52en1")
+![Elementos de un proyecto de control DHTML](../atl/media/vc52en1.gif "elementos de un proyecto de control DHTML")
 
 > [!NOTE]
 >  Los nombres de este gráfico son marcadores de posición. Los nombres de los recursos HTML y las interfaces expuestas en el control se basan en los nombres que se les asigna en el Asistente para controles ATL.
@@ -47,11 +47,10 @@ En este gráfico, los elementos son:
 
 El Asistente para controles ATL genera un control con el código de forma predeterminada en el recurso HTML y el archivo. cpp. Puede compilar y ejecutar el control como el generado por el asistente y, a continuación, el control de vista en el explorador Web o el Control ActiveX Test Container. La siguiente imagen muestra el control DHTML ATL predeterminado con tres botones en el contenedor de prueba:
 
-![Control DHTML ATL](../atl/media/vc52en2.gif "vc52en2")
+![Control DHTML ATL](../atl/media/vc52en2.gif "control DHTML ATL")
 
 Consulte [crear un Control de DHTML ATL](../atl/creating-an-atl-dhtml-control.md) para empezar a crear un control DHTML. Consulte [Probar propiedades y eventos con un contenedor de prueba](../mfc/testing-properties-and-events-with-test-container.md) para obtener información sobre cómo obtener acceso a Test Container.
 
 ## <a name="see-also"></a>Vea también
 
 [Compatibilidad con controles DHTML](../atl/atl-support-for-dhtml-controls.md)
-

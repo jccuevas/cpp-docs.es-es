@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: a0245862fe90c108b8ffc038b723a8b5bb62a665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36da88a49e7d0e648d44b0798e108a60abb935d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431921"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415154"
 ---
 # <a name="csize-class"></a>CSize (clase)
 
-Similar a la estructura [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) de Windows, que implementa una coordenada relativa o una posición.
+Similar a la estructura [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) de Windows, que implementa una coordenada relativa o una posición.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,11 +40,11 @@ class CSize : public tagSIZE
 
 |Name|Descripción|
 |----------|-----------------|
-|[CSize::operator-](#operator_-)|Resta dos tamaños.|
-|[CSize::operator! =](#operator_neq)|Comprueba la desigualdad entre `CSize` y un tamaño.|
+|[CSize::operator -](#operator_-)|Resta dos tamaños.|
+|[CSize::operator !=](#operator_neq)|Comprueba la desigualdad entre `CSize` y un tamaño.|
 |[CSize::operator +](#operator_add)|Agrega dos tamaños.|
 |[CSize::operator +=](#operator_add_eq)|Agrega un tamaño para `CSize`.|
-|[CSize::operator =](#operator_-_eq)|Resta un tamaño de `CSize`.|
+|[CSize::operator -=](#operator_-_eq)|Resta un tamaño de `CSize`.|
 |[CSize::operator ==](#operator_eq_eq)|Comprueba la igualdad entre `CSize` y un tamaño.|
 
 ## <a name="remarks"></a>Comentarios
@@ -87,10 +87,10 @@ Establece el `cx` miembro para el `CSize`.
 Establece el `cy` miembro para el `CSize`.
 
 *initSize*<br/>
-[TAMAÑO](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura o `CSize` objeto usado para inicializar `CSize`.
+[TAMAÑO](/windows/desktop/api/windef/ns-windef-tagsize) estructura o `CSize` objeto usado para inicializar `CSize`.
 
 *initPt*<br/>
-[PUNTO](../../mfc/reference/point-structure.md) estructura o `CPoint` objeto usado para inicializar `CSize`.
+[PUNTO](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o `CPoint` objeto usado para inicializar `CSize`.
 
 *dwSize*<br/>
 DWORD que se usa para inicializar `CSize`. La palabra de orden inferior es la `cx` miembro y la palabra de orden superior es el `cy` miembro.
@@ -173,17 +173,23 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Consulte las siguientes descripciones de los operadores individuales:
 
-- **operador + (** `size` **)** esta operación agrega dos `CSize` valores.
+- **operador + (** *tamaño* **)**
 
-- **operador + (** `point` **)** esta operación desplazamientos (mueve) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) valor vieron `CSize` valor. El **cx** y **cy** los miembros de este `CSize` se agregan valor a la **x** y **y** miembros de datos de la **punto**  valor. De forma análoga a la versión de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+  Esta operación agrega dos `CSize` valores.
 
-- **operador + (** `lpRect` **)** esta operación desplazamientos (mueve) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) valor vieron `CSize` valor. El **cx** y **cy** los miembros de este `CSize` se agregan valor a la **izquierdo**, **superior**, **derecha**, y **inferior** miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+- **operador + (** *punto* **)**
+
+  Esta operación desplazamientos (mueve) un [punto](/previous-versions/dd162805\(v=vs.85\)) (o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) valor vieron `CSize` valor. El `cx` y `cy` los miembros de este `CSize` se agregan valor a la `x` y `y` miembros de datos de la `POINT` valor. De forma análoga a la versión de [CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add) que toma un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) parámetro.
+
+- **operador + (** *lpRect* **)**
+
+   Esta operación desplazamientos (mueve) un [RECT](/previous-versions/dd162897\(v=vs.85\)) (o [CRect](../../atl-mfc-shared/reference/crect-class.md)) valor vieron `CSize` valor. El `cx` y `cy` los miembros de este `CSize` se agregan valor a la `left`, `top`, `right`, y `bottom` miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add) que toma un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) parámetro.
 
 ### <a name="example"></a>Ejemplo
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CSize::operator-
+##  <a name="operator_-"></a>  CSize::operator -
 
 Los primeros tres de estos operadores restar esto `CSize` valor para el valor del parámetro.
 
@@ -198,13 +204,21 @@ CSize operator-() const throw();
 
 El cuarto operador, el unario menos, cambia el signo de la `CSize` valor. Consulte las siguientes descripciones de los operadores individuales:
 
-- **operador-(** `size` **)** esta operación de resta dos `CSize` valores.
+- **operator -(** *size* **)**
 
-- **operador-(** `point` **)** esta operación desplazamientos (mueve) un [punto](https://msdn.microsoft.com/library/windows/desktop/dd162805) o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valor por el inverso aditivo de este `CSize` valor. El **cx** y **cy** esto `CSize` se restan valor a la **x** y **y** miembros de datos de la **punto**  valor. De forma análoga a la versión de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+  Esta operación de resta dos `CSize` valores.
 
-- **operador-(** `lpRect` **)** esta operación desplazamientos (mueve) un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) o [CRect](../../atl-mfc-shared/reference/crect-class.md) valor por el inverso aditivo de este `CSize` valor. El **cx** y **cy** los miembros de este `CSize` se restan valor a la **izquierdo**, **superior**, **derecha**, y **inferior** miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que toma un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) parámetro.
+- **operator -(** *point* **)**
 
-- **operador-()** esta operación devuelve el inverso aditivo de este `CSize` valor.
+  Esta operación desplazamientos (mueve) un [punto](/previous-versions/dd162805\(v=vs.85\)) o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) valor por el inverso aditivo de este `CSize` valor. El `cx` y `cy` esto `CSize` se restan valor a la `x` y `y` miembros de datos de la `POINT` valor. De forma análoga a la versión de [CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-) que toma un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) parámetro.
+
+- **operator -(** *lpRect* **)**
+
+  Esta operación desplazamientos (mueve) un [RECT](/previous-versions/dd162897\(v=vs.85\)) o [CRect](../../atl-mfc-shared/reference/crect-class.md) valor por el inverso aditivo de este `CSize` valor. El `cx` y `cy` los miembros de este `CSize` se restan valor a la `left`, `top`, `right`, y `bottom` miembros de datos de la `RECT` valor. De forma análoga a la versión de [CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-) que toma un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) parámetro.
+
+- **operator -()**
+
+  Esta operación devuelve el inverso aditivo de este `CSize` valor.
 
 ### <a name="example"></a>Ejemplo
 

@@ -1,5 +1,5 @@
 ---
-title: CRichEditView (clase)
+title: CRichEditView Class
 ms.date: 11/04/2016
 f1_keywords:
 - CRichEditView
@@ -100,14 +100,14 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259521"
 ---
-# <a name="cricheditview-class"></a>CRichEditView (clase)
+# <a name="cricheditview-class"></a>CRichEditView Class
 
 Con [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) y [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), proporciona la funcionalidad del control rich edit en el contexto de la arquitectura de vista de documento de MFC.
 
@@ -143,7 +143,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView::GetParaFormatSelection](#getparaformatselection)|Recupera los atributos para la selección actual de formato de párrafo.|
 |[CRichEditView::GetPrintRect](#getprintrect)|Recupera el rectángulo de impresión para esta vista de rich edit.|
 |[CRichEditView::GetPrintWidth](#getprintwidth)|Recupera el ancho de impresión para esta vista de rich edit.|
-|[CRichEditView:: GetRichEditCtrl](#getricheditctrl)|Recupera el control de edición enriquecida.|
+|[CRichEditView::GetRichEditCtrl](#getricheditctrl)|Recupera el control de edición enriquecida.|
 |[CRichEditView::GetSelectedItem](#getselecteditem)|Recupera el elemento seleccionado de la vista de edición enriquecida.|
 |[CRichEditView::GetTextLength](#gettextlength)|Recupera la longitud del texto en la vista de edición enriquecida.|
 |[CRichEditView::GetTextLengthEx](#gettextlengthex)|Recupera el número de caracteres o bytes en la vista de edición enriquecida. Lista expandida de marca para el método para determinar la longitud.|
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 El [COleDataObject](../../mfc/reference/coledataobject-class.md) que contiene los datos que se va a pegar.
 
-*CF*<br/>
+*cf*<br/>
 El formato de Portapapeles deseado.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Indica si la búsqueda distingue mayúsculas de minúsculas.
 *bWord*<br/>
 Indica si la búsqueda debe coincidir con palabras completas, no partes de palabras.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Indica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -336,7 +336,7 @@ Indica si la búsqueda distingue mayúsculas de minúsculas.
 *bWord*<br/>
 Indica si la búsqueda debe coincidir con palabras completas, no partes de palabras.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Indica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -573,7 +573,7 @@ int GetPrintWidth() const;
 
 El ancho del área de impresión, medido en MM_TWIPS.
 
-##  <a name="getricheditctrl"></a>  CRichEditView:: GetRichEditCtrl
+##  <a name="getricheditctrl"></a>  CRichEditView::GetRichEditCtrl
 
 Llame a esta función para recuperar el [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) objeto asociado con el `CRichEditView` objeto.
 
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 El formato del Portapapeles de interés.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -786,8 +786,8 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Cadena que se va a buscar.
 
-*bSiguiente*<br/>
-La dirección de búsqueda: TRUE se indica abajo; Es FALSE, arriba.
+*bNext*<br/>
+La dirección de búsqueda: TRUE indica abajo; Es FALSE, arriba.
 
 *bCase*<br/>
 Indica si la búsqueda distingue entre mayúsculas y minúsculas.
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 El texto que se debe reemplazar.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Indica la dirección de la búsqueda: TRUE si está presionada; Es FALSE, arriba.
 
 *bCase*<br/>
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Puntero a un contexto de dispositivo para el área de salida.
 
 *rectLayout*<br/>
-[RECT](../../mfc/reference/rect-structure1.md) o [CRect](../../atl-mfc-shared/reference/crect-class.md) que define el área de salida.
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect) o [CRect](../../atl-mfc-shared/reference/crect-class.md) que define el área de salida.
 
 *nIndexStart*<br/>
 Índice de base cero del primer carácter que se aplicará el formato.
@@ -1127,7 +1127,7 @@ Puntero a la [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) a 
 Puntero en el formato de datos aceptable.
 
 *dwReco*<br/>
-No usado.
+No se utiliza.
 
 *bReally*<br/>
 Indica si debe continuar la operación de pegar o no.
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura que contiene los atributos de formato de carácter predeterminado nuevo.
 
 ### <a name="remarks"></a>Comentarios

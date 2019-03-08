@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 0b89757380aa50af5092979c3824d3e15f29ca2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279970"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 (clase)
 
@@ -70,13 +70,13 @@ class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003
 |[CMFCVisualManagerVS2005::OnDrawCaptionButton](#ondrawcaptionbutton)|(Invalida `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`).|
 |[CMFCVisualManagerVS2005::OnDrawPaneCaption](#ondrawpanecaption)|(Invalida [CMFCVisualManagerOffice2003::OnDrawPaneCaption](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawpanecaption).)|
 |[CMFCVisualManagerVS2005::OnDrawSeparator](#ondrawseparator)|(Invalida [CMFCVisualManagerOffice2003::OnDrawSeparator](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawseparator).)|
-|[CMFCVisualManagerVS2005::OnDrawTab](#ondrawtab)|(Invalida [CMFCVisualManagerOffice2003::OnDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab).)|
+|[CMFCVisualManagerVS2005::OnDrawTab](#ondrawtab)|(Overrides [CMFCVisualManagerOffice2003::OnDrawTab](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#ondrawtab).)|
 |[CMFCVisualManagerVS2005::OnDrawToolBoxFrame](#ondrawtoolboxframe)|(Invalida [CMFCVisualManager::OnDrawToolBoxFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawtoolboxframe).)|
 |[CMFCVisualManagerVS2005::OnEraseTabsArea](#onerasetabsarea)|(Invalida [CMFCVisualManagerOffice2003::OnEraseTabsArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onerasetabsarea).)|
 |[CMFCVisualManagerVS2005::OnFillAutoHideButtonBackground](#onfillautohidebuttonbackground)|(Invalida [CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillautohidebuttonbackground).)|
 |[CMFCVisualManagerVS2005::OnFillHighlightedArea](#onfillhighlightedarea)|(Invalida [CMFCVisualManagerOffice2003::OnFillHighlightedArea](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onfillhighlightedarea).)|
 |[CMFCVisualManagerVS2005::OnFillMiniFrameCaption](#onfillminiframecaption)|(Invalida `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`).|
-|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Invalida [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
+|[CMFCVisualManagerVS2005::OnUpdateSystemColors](#onupdatesystemcolors)|(Overrides [CMFCVisualManagerOffice2003::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanageroffice2003-class.md#onupdatesystemcolors).)|
 
 ## <a name="remarks"></a>Comentarios
 

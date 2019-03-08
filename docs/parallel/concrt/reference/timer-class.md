@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: beb374efe26c25fed490b7407e087e2cc46043c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659841"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298157"
 ---
 # <a name="timer-class"></a>Clase timer
 
@@ -47,14 +47,14 @@ El tipo de carga de los mensajes de salida de este bloque.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Temporizador](#ctor)|Sobrecargado. Construye un `timer` bloque de mensajería que desencadenará un mensaje determinado después de un intervalo especificado.|
+|[timer](#ctor)|Sobrecargado. Construye un `timer` bloque de mensajería que desencadenará un mensaje determinado después de un intervalo especificado.|
 |[~ timer (destructor)](#dtor)|Destruye un `timer` bloque de mensajería.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[pausar](#pause)|Se detiene el `timer` bloque de mensajería. Si es una repetición `timer` bloque de mensajería, se puede reiniciar con una posterior `start()` llamar. Para no repetitivo temporizadores, esto tiene el mismo efecto que un `stop` llamar.|
+|[pause](#pause)|Se detiene el `timer` bloque de mensajería. Si es una repetición `timer` bloque de mensajería, se puede reiniciar con una posterior `start()` llamar. Para no repetitivo temporizadores, esto tiene el mismo efecto que un `stop` llamar.|
 |[start](#start)|Se inicia el `timer` bloque de mensajería. Se llama el número especificado de milisegundos después de esto, el valor especificado se propagará descendentes, como un `message`.|
 |[stop](#stop)|Se detiene el `timer` bloque de mensajería.|
 
@@ -78,7 +78,7 @@ Para obtener más información, consulte [bloques de mensajes asincrónicos](../
 
 [ISource](isource-class.md)
 
-[source_block)](source-block-class.md)
+[source_block](source-block-class.md)
 
 `timer`
 
@@ -244,7 +244,7 @@ timer(
 *_Ms*<br/>
 El número de milisegundos que deben transcurrir después de llamar a iniciar para el mensaje especificado que se propaguen de nivel inferior.
 
-*valor*<br/>
+*value*<br/>
 El valor se propagará bajada cuando transcurre el temporizador.
 
 *_PTarget*<br/>
@@ -263,7 +263,7 @@ El objeto `ScheduleGroup` dentro del que se programa la tarea de propagación pa
 
 El runtime usa el programador predeterminado si no se especifican los parámetros `_Scheduler` o `_ScheduleGroup` .
 
-##  <a name="dtor"></a> ~ timer
+##  <a name="dtor"></a> ~timer
 
 Destruye un `timer` bloque de mensajería.
 

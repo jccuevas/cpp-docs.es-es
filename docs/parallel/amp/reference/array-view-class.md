@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: bd13fbef1b335b6a2fde1f16a59ddf11d489cdde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268478"
 ---
 # <a name="arrayview-class"></a>array_view (Clase)
 
@@ -80,7 +80,7 @@ El rango de la `array_view` objeto.
 |[get_extent](#get_extent)|Devuelve el objeto de extensión del objeto de array_view.|
 |[get_ref](#get_ref)|Devuelve una referencia al elemento indizado.|
 |[get_source_accelerator_view](#get_source_accelerator_view)|Devuelve el [accelerator_view](accelerator-view-class.md) donde el origen de datos de la `array_view` se encuentra.|
-|[actualización](#refresh)|Notifica a la `array_view` objeto que su memoria enlazada se ha modificado fuera del `array_view` interfaz. Una llamada a este método procesa toda la información almacenada en caché obsoleto.|
+|[refresh](#refresh)|Notifica a la `array_view` objeto que su memoria enlazada se ha modificado fuera del `array_view` interfaz. Una llamada a este método procesa toda la información almacenada en caché obsoleto.|
 |[reinterpret_as](#reinterpret_as)|Devuelve una matriz unidimensional que contiene todos los elementos de la `array_view` objeto.|
 |[section](#section)|Devuelve una subsección de la `array_view` objeto que está en el origen especificado y, opcionalmente, que tiene la extensión especificada.|
 |[synchronize](#synchronize)|Sincroniza cualquier modificación realizada en el `array_view` objeto a su origen de datos.|
@@ -94,14 +94,14 @@ El rango de la `array_view` objeto.
 |Name|Descripción|
 |----------|-----------------|
 |[operator()](#operator_call)|Devuelve el valor del elemento especificado por el parámetro o parámetros.|
-|[operator[]](#operator_at)|Devuelve el elemento especificado por los parámetros.|
+|[operator\[\]](#operator_at)|Devuelve el elemento especificado por los parámetros.|
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `array_view` objeto en este.|
 
 ### <a name="public-constants"></a>Constantes públicas
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Rank (constante)](#rank)|Almacena el rango de la `array_view` objeto.|
+|[rank Constant](#rank)|Almacena el rango de la `array_view` objeto.|
 
 ### <a name="data-members"></a>Miembros de datos
 
@@ -151,9 +151,9 @@ Las dos acciones notifica el `array_view` de objetos que la memoria nativa subya
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
-##  <a name="dtor"></a> ~ array_view
+##  <a name="dtor"></a> ~array_view
 
 Destruye el objeto `array_view`.
 
@@ -323,7 +323,6 @@ array_view(
     int _E1,
     int _E2,
     const value_type* _Src) restrict(amp,cpu);
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -346,10 +345,10 @@ El componente menos significativo de la extensión de esta sección.
 *_Extent*<br/>
 La extensión de cada dimensión de este `array_view`.
 
-*_Otro*<br/>
+*_Other*<br/>
 Un objeto de tipo `array_view<T,N>` desde que se va a inicializar la nueva `array_view`.
 
-*_Tamaño*<br/>
+*_Size*<br/>
 El tamaño de una matriz de estilo C desde la que se proporcionan los datos.
 
 *_Src*<br/>
@@ -365,7 +364,6 @@ void copy_to(
 
 void copy_to(
     array_view<value_type, _Rank>& _Dest) const;
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -441,12 +439,11 @@ Devuelve el accelerator_view donde se encuentra el origen de datos de array_view
 
 ```
 accelerator_view get_source_accelerator_view() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Devuelve el valor del elemento especificado por el parámetro o parámetros.
 
@@ -491,7 +488,7 @@ La ubicación del elemento.
 
 El valor del elemento especificado por el parámetro o parámetros.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Devuelve el elemento especificado por los parámetros.
 
@@ -529,7 +526,7 @@ array_view& operator= (
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `array_view` objeto que se va a copiar desde.
 
 ### <a name="return-value"></a>Valor devuelto

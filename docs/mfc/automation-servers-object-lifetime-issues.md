@@ -1,5 +1,5 @@
 ---
-title: 'Servidores de Automation: Problemas de duración de objetos'
+title: 'Servidores de automatización: Problemas de duración de objetos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293586"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Servidores de Automation: Problemas de duración de objetos
+# <a name="automation-servers-object-lifetime-issues"></a>Servidores de automatización: Problemas de duración de objetos
 
 Cuando un cliente de automatización se crea o activa un elemento OLE, el servidor pasa al cliente un puntero a ese objeto. El cliente establece una referencia al objeto mediante una llamada a la función OLE [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Esta referencia está en vigor hasta que el cliente llama a [IUnknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Las aplicaciones cliente escritas con clases de la biblioteca Microsoft Foundation Class OLE no necesitan realizar estas llamadas; lo hace el marco de trabajo). El sistema OLE y el propio servidor pueden establecer referencias al objeto. Un servidor debe destruir un objeto siempre y cuando las referencias externas al objeto siguen en vigor.
 
@@ -32,4 +32,3 @@ En el SDK de Windows, consulte `IUnknown::AddRef` y `IUnknown::Release`.
 
 [Servidores de automatización](../mfc/automation-servers.md)<br/>
 [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
-

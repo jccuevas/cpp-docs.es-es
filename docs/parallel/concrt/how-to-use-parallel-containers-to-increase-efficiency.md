@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Usar contenedores paralelos para aumentar la eficacia'
+title: Procedimiento Usar contenedores paralelos para aumentar la eficacia
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439187"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300640"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Cómo: Usar contenedores paralelos para aumentar la eficacia
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Filtrar Usar contenedores paralelos para aumentar la eficacia
 
 En este tema se muestra cómo se usan contenedores paralelos para almacenar de forma eficaz los datos y tener acceso a ellos en paralelo.
 
@@ -67,7 +67,7 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `carmichael-primes.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc carmichael-primes.cpp**
+**cl.exe /EHsc carmichael-primes.cpp**
 
 ## <a name="see-also"></a>Vea también
 

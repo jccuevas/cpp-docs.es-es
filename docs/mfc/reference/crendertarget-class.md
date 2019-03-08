@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259885"
 ---
 # <a name="crendertarget-class"></a>Clase CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Construye un objeto CRenderTarget.|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Destructor. Se llama cuando se destruye un objeto de destino de representación.|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Destructor. Se llama cuando se destruye un objeto de destino de representación.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Interfaz ID2D1RenderTarget de devoluciones|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|Interfaz ID2D1RenderTarget de devoluciones|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -224,7 +224,7 @@ class CRenderTarget : public CObject;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget:: ~ CRenderTarget
+##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
 
 Destructor. Se llama cuando se destruye un objeto de destino de representación.
 
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 El color a la que se borra el área de dibujo.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Parámetros
 
-*Color*<br/>
+*color*<br/>
 Valor RGB.
 
 *nAlpha*
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Parámetros
 
-*elipse*<br/>
+*ellipse*<br/>
 La posición y el radio de la elipse que se va a dibujar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Las dimensiones del rectángulo se va a dibujar, en píxeles independientes del dispositivo
 
 *pBrush*<br/>
@@ -567,13 +567,13 @@ void DrawText(
 *strText*<br/>
 Un puntero a una matriz de caracteres Unicode se va a dibujar.
 
-*Rect*<br/>
+*rect*<br/>
 El tamaño y posición del área en la que se dibuja el texto.
 
 *pForegroundBrush*<br/>
 El pincel utilizado para pintar el texto.
 
-*TextFormat*<br/>
+*textFormat*<br/>
 Un objeto que describe el formato de los detalles del texto se va a dibujar, como la fuente, el tamaño de fuente y la dirección del flujo.
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>Parámetros
 
-*elipse*<br/>
+*ellipse*<br/>
 La posición y el radio, en píxeles independientes del dispositivo, de la elipse para pintar.
 
 *pBrush*<br/>
@@ -720,7 +720,7 @@ void FillRectangle(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 La dimensión del rectángulo va a pintar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
@@ -756,10 +756,10 @@ void Flush(
 
 ### <a name="parameters"></a>Parámetros
 
-*Etiqueta1*<br/>
+*tag1*<br/>
 Contiene la etiqueta para las operaciones que causó errores o 0 si no hubo errores de dibujo. Este parámetro se pasa sin inicializar.
 
-*Etiqueta2*<br/>
+*tag2*<br/>
 Contiene la etiqueta para las operaciones que causó errores o 0 si no hubo errores de dibujo. Este parámetro se pasa sin inicializar.
 
 ##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
@@ -858,10 +858,10 @@ void GetTags(
 
 ### <a name="parameters"></a>Parámetros
 
-*Etiqueta1*<br/>
+*tag1*<br/>
 Contiene la primera etiqueta para operaciones de dibujo subsiguientes. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.
 
-*Etiqueta2*<br/>
+*tag2*<br/>
 Contiene la segunda etiqueta para operaciones de dibujo subsiguientes. Este parámetro se pasa sin inicializar. Si se especifica NULL, no se recupera ningún valor para este parámetro.
 
 ##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
@@ -1016,7 +1016,7 @@ void PushLayer(
 *layerParameters*<br/>
 Los límites de contenido, máscara geométrica, opacidad, máscara de opacidad y opciones de suavizado de contorno de la capa.
 
-*Capa*<br/>
+*layer*<br/>
 La capa que recibe las operaciones de dibujo subsiguientes.
 
 ##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
@@ -1083,10 +1083,10 @@ void SetTags(
 
 ### <a name="parameters"></a>Parámetros
 
-*Etiqueta1*<br/>
+*tag1*<br/>
 Una etiqueta para aplicar a las operaciones de dibujo subsiguientes.
 
-*Etiqueta2*<br/>
+*tag2*<br/>
 Una etiqueta para aplicar a las operaciones de dibujo subsiguientes.
 
 ##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode

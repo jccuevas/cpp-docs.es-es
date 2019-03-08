@@ -15,12 +15,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 78e9bda9c21ce53fa5b775b83be5c978c3fa1431
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555264"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274614"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject (clase)
 
@@ -35,7 +35,7 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*<br/>
+*Base*<br/>
 Deriva de la clase desplazable, `CComTearOffObjectBase` y las interfaces desea que el objeto desplazable para admitir.
 
 ATL implementa sus interfaces divisibles en dos fases: la `CComTearOffObjectBase` métodos controlan el recuento de referencias y `QueryInterface`, mientras que `CComTearOffObject` implementa [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown).
@@ -47,7 +47,7 @@ ATL implementa sus interfaces divisibles en dos fases: la `CComTearOffObjectBase
 |Name|Descripción|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|El constructor.|
-|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Destructor.|
+|[CComTearOffObject::~CComTearOffObject](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -113,14 +113,14 @@ CComTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Parámetros
 
-*PV*<br/>
+*pv*<br/>
 [in] Puntero que se convertirá en un puntero a un `CComObject<Owner>` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 Recuento de referencias del propietario se incrementa en uno.
 
-##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject
+##  <a name="dtor"></a>  CComTearOffObject::~CComTearOffObject
 
 Destructor.
 
@@ -154,7 +154,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>Parámetros
 
-*Propietario*<br/>
+*Owner*<br/>
 [in] La clase para el que está implementando un desplazable.
 
 ### <a name="remarks"></a>Comentarios
@@ -171,7 +171,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] IID de la interfaz que se solicita.
 
 *ppvObject*<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: 2b680ece131df434b65f02501f78f0cdb6507f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4dc4f0d7b2cfb78b07b23802054f119da9cbbc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551767"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290682"
 ---
 # <a name="tree-control-image-lists"></a>Listas de imágenes del control de árbol
 
@@ -25,10 +25,9 @@ Si se especifica una lista de imágenes de estado, un control de árbol reserva 
 
 Especificando el **I_IMAGECALLBACK** valor en lugar del índice de una imagen, puede retrasar la especificación de la imagen seleccionada o no hasta que el elemento está a punto de volver a dibujar. **I_IMAGECALLBACK** dirige el control de árbol para consultar la aplicación para el índice mediante el envío de la [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo) mensaje de notificación.
 
-El [función miembro GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) función miembro recupera el identificador de la lista de imágenes de un control de árbol. Esta función es útil si necesita agregar más imágenes a la lista. Para obtener más información acerca de las listas de imágenes, consulte [utilizar CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) en el *referencia de MFC*, y [listas de imágenes](https://msdn.microsoft.com/library/windows/desktop/bb761389) en el Windows SDK.
+El [función miembro GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) función miembro recupera el identificador de la lista de imágenes de un control de árbol. Esta función es útil si necesita agregar más imágenes a la lista. Para obtener más información acerca de las listas de imágenes, consulte [utilizar CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) en el *referencia de MFC*, y [listas de imágenes](/windows/desktop/controls/image-lists) en el Windows SDK.
 
 ## <a name="see-also"></a>Vea también
 
 [Uso de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

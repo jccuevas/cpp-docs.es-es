@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662779"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303353"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages (clase)
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] TRUE si el `CMFCToolBarImages` objeto usa la profundidad de color (bits por píxel) de la nueva imagen; FALSE si el `CMFCToolbarImages` objeto mantiene la profundidad de color actual.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Una referencia a un `CMFCToolbarImages` objeto que contiene la imagen para agregar.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Parámetros
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] La lista de imágenes que se usará como origen para las imágenes de barra de herramientas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE si la imagen se resaltarse; en caso contrario, FALSE.
 
-*bDeshabilitado*<br/>
+*bDisabled*<br/>
 [in] Es TRUE si la imagen se dibuja en el estilo deshabilitado; en caso contrario, FALSE.
 
 *bIndeterminate*<br/>
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Parámetros
 
-*DS*<br/>
+*ds*<br/>
 [in] Una referencia a la `CAfxDrawState` objeto que se pasó a la `PrepareDrawImage` método.
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Un puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Las coordenadas de un rectángulo que se va a rellenar.
 
 ### <a name="remarks"></a>Comentarios
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Una instancia de la DLL de recursos.
 
-*bAgregar*<br/>
+*bAdd*<br/>
 [in] TRUE para agregar el mapa de bits cargado en el mapa de bits existente, o FALSE para reemplazar el mapa de bits existente.
 
 *lpszBmpFileName*<br/>
@@ -923,7 +923,7 @@ BOOL LoadStr(
 
 [in] *lpszResourceName*<br/>
 [in] *hinstRes*<br/>
-[in] *bAgregar*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Parámetros
 
-*DS*<br/>
+*ds*<br/>
 [in] Una referencia a `CAfxDrawState` estructura, que almacena los recursos asignados entre las fases de procesamiento de imagen.
 
 *sizeImageDest*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parámetros
 
-*nvalor*<br/>
+*nValue*<br/>
 [in] El nuevo valor del canal alfa.
 
 ### <a name="remarks"></a>Comentarios
@@ -1195,7 +1195,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nvalor*<br/>
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1226,7 +1226,7 @@ void SetLightPercentage(int nValue);
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *nvalor*<br/>
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>Comentarios
 

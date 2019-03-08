@@ -9,12 +9,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 17078bd9d916aac2676180f8854d93a4de92aa4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262303"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funciones de devolución de llamada usadas por MFC
 
@@ -45,7 +45,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>Parámetros
 
 *lpszLogObject*<br/>
-Apunta a un [LOGPEN](../../mfc/reference/logpen-structure.md) o [LOGBRUSH](../../mfc/reference/logbrush-structure.md) estructura de datos que contiene información sobre los atributos de la lógicas del objeto.
+Apunta a un [LOGPEN](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen) o [LOGBRUSH](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush) estructura de datos que contiene información sobre los atributos de la lógicas del objeto.
 
 *lpData*<br/>
 Apunta a los datos proporcionados por la aplicación pasa a la `EnumObjects` función.
@@ -121,7 +121,6 @@ El nombre real debe exportarse como se describe en la sección Comentarios de [C
 ## <a name="see-also"></a>Vea también
 
 [Estructuras, estilos, devoluciones de llamada y mapas de mensajes](structures-styles-callbacks-and-message-maps.md)<br/>
-[CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
-[CDC:: graystring](../../mfc/reference/cdc-class.md#graystring)
-
+[CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260548"
 ---
 # <a name="exception-handling-in-mfc"></a>Control de excepciones en MFC
 
@@ -50,9 +50,9 @@ Este artículo explica los mecanismos de control de excepciones disponibles en M
 
 Si está escribiendo una nueva aplicación mediante MFC, debe usar el mecanismo de C++. Puede usar el mecanismo de macro si la aplicación existente ya usa ese mecanismo ampliamente.
 
-Se puede convertir fácilmente código existente para usar las excepciones de C++ en lugar de las macros de excepción de MFC. Ventajas de convertir el código e instrucciones para hacerlo se describen en el artículo [excepciones: convertir desde Macros de excepción de MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+Se puede convertir fácilmente código existente para usar las excepciones de C++ en lugar de las macros de excepción de MFC. Ventajas de convertir el código e instrucciones para hacerlo se describen en el artículo [excepciones: Convertir desde Macros de excepción de MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
-Si ya ha desarrollado una aplicación mediante las macros de excepción de MFC, aún puede usar estas macros en el código existente, mientras usa las excepciones de C++ en el nuevo código. El artículo [excepciones: cambios en las Macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) proporciona instrucciones para hacerlo.
+Si ya ha desarrollado una aplicación mediante las macros de excepción de MFC, aún puede usar estas macros en el código existente, mientras usa las excepciones de C++ en el nuevo código. El artículo [excepciones: Cambios en las Macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) proporciona instrucciones para hacerlo.
 
 > [!NOTE]
 >  Para habilitar en el código de control de excepciones de C++, seleccione Habilitar excepciones de C++ en la página generación de código en la carpeta C/C ++ del proyecto [páginas de propiedades](../ide/property-pages-visual-cpp.md) cuadro de diálogo o utilice el [/EHsc](../build/reference/eh-exception-handling-model.md) opción del compilador.
@@ -103,7 +103,7 @@ La siguiente tabla muestra las excepciones predefinidas proporcionadas por MFC.
 |[CUserException (clase)](../mfc/reference/cuserexception-class.md)|Excepción que alerta al usuario con un cuadro de mensaje, a continuación, se produce un tipo genérico [CException (clase)](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC es compatible con las excepciones de C++ y las macros de excepción de MFC. MFC no admite directamente los controladores de excepciones de NT Windows estructurado (SEH), como se describe en [Structured Exception Handling](https://msdn.microsoft.com/library/windows/desktop/ms680657).
+>  MFC es compatible con las excepciones de C++ y las macros de excepción de MFC. MFC no admite directamente los controladores de excepciones de NT Windows estructurado (SEH), como se describe en [Structured Exception Handling](/windows/desktop/debug/structured-exception-handling).
 
 ##  <a name="_core_further_reading_about_exceptions"></a> Información adicional sobre las excepciones
 
@@ -113,7 +113,7 @@ Los siguientes artículos explican el uso de la biblioteca MFC de control de exc
 
 - [Excepciones: Examinar contenidos de excepciones](../mfc/exceptions-examining-exception-contents.md)
 
-- [Excepciones: Liberar objetos en las excepciones](../mfc/exceptions-freeing-objects-in-exceptions.md)
+- [Excepciones: Liberar objetos en excepciones](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
 - [Excepciones: Iniciar excepciones desde sus propias funciones](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
@@ -123,14 +123,13 @@ Los siguientes artículos explican el uso de la biblioteca MFC de control de exc
 
 Los siguientes artículos de comparan las macros de excepción de MFC con las palabras clave de excepción de C++ y explican cómo puede adaptar el código:
 
-- [Excepciones: Cambios en las macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [Excepciones: Cambios en las Macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [Excepciones: Convertir desde macros de excepciones de MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [Excepciones: Convertir desde Macros de excepción de MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [Excepciones: Usar macros de MFC y excepciones de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [Excepciones: Uso de Macros de MFC y excepciones de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Control de excepciones de C++](../cpp/cpp-exception-handling.md)<br/>
-[Cómo: crear mis propias clases de excepción personalizada](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[¿Cómo lo hago?: Crear mis propias clases de excepción personalizada](http://go.microsoft.com/fwlink/p/?linkid=128045)

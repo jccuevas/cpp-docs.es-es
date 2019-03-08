@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _puttc function
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
-ms.openlocfilehash: 05bbb5434e6626076aab0d574b04058ec730b77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de87ca4996540737dad319fc920f4c76415250b9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444700"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330886"
 ---
 # <a name="putc-putwc"></a>putc, putwc
 
@@ -63,7 +63,7 @@ Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, **putc** y **putchar** devolver ** EOF`; **putwc` y **putwchar** devolver **WEOF**. Para las cuatro rutinas, use [ferror](ferror.md) o [feof](feof.md) para comprobar si hay un error o una condición de final de archivo. Si se pasa un puntero nulo para *secuencia*, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** o **WEOF** y establecer **errno** a **EINVAL**.
+Devuelve el carácter escrito. Para indicar un error o una condición de final de archivo, **putc** y **putchar** devolver **EOF**; **putwc** y **putwchar** devolver **WEOF**. Para las cuatro rutinas, use [ferror](ferror.md) o [feof](feof.md) para comprobar si hay un error o una condición de final de archivo. Si se pasa un puntero nulo para *secuencia*, se invoca el controlador de parámetros no válidos, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EOF** o **WEOF** y establecer **errno** a **EINVAL**.
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de error.
 

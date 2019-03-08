@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271234"
 ---
 # <a name="cd2dgeometry-class"></a>Clase CD2DGeometry
 
@@ -70,7 +70,7 @@ class CD2DGeometry : public CD2DResource;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|Construye un objeto CD2DGeometry.|
-|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|Destructor. Se llama cuando se destruye un objeto de geometría D2D.|
+|[CD2DGeometry::~CD2DGeometry](#_dtorcd2dgeometry)|Destructor. Se llama cuando se destruye un objeto de geometría D2D.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -86,7 +86,7 @@ class CD2DGeometry : public CD2DResource;
 |[CD2DGeometry::Detach](#detach)|Separa la interfaz de recursos desde el objeto|
 |[CD2DGeometry::FillContainsPoint](#fillcontainspoint)|Indica si el área que rellena la geometría contendría el punto especificado, dado la tolerancia especificada de valores sin formato.|
 |[CD2DGeometry::Get](#get)|Interfaz ID2D1Geometry de devoluciones|
-|[CD2DGeometry::getBounds](#getbounds)||
+|[CD2DGeometry::GetBounds](#getbounds)||
 |[CD2DGeometry::GetWidenedBounds](#getwidenedbounds)|Obtiene los límites de la geometría después de haberlo ampliada por el ancho del trazo especificado y el estilo y transforma la matriz especificada.|
 |[CD2DGeometry::IsValid](#isvalid)|Comprueba la validez de los recursos (invalidaciones [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
 |[CD2DGeometry::Outline](#outline)|Calcula el contorno de la geometría y escribe el resultado en un ID2D1SimplifiedGeometrySink.|
@@ -119,7 +119,7 @@ class CD2DGeometry : public CD2DResource;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry:: ~ CD2DGeometry
+##  <a name="_dtorcd2dgeometry"></a>  CD2DGeometry::~CD2DGeometry
 
 Destructor. Se llama cuando se destruye un objeto de geometría D2D.
 
@@ -234,7 +234,7 @@ BOOL ComputeArea(
 *worldTransform*<br/>
 Transformación que se aplican a esta geometría antes de calcular su área.
 
-*Área*<br/>
+*area*<br/>
 Cuando este método finaliza, contiene un puntero al área de la versión transformada y sin estructura jerárquica de esta geometría. Debe asignar el almacenamiento para este parámetro.
 
 *flatteningTolerance*<br/>
@@ -291,7 +291,7 @@ La distancia a lo largo de la geometría del punto y tangente a buscar. Si la di
 *worldTransform*<br/>
 La transformación para aplicar a la geometría antes de calcular el punto especificado y la tangente.
 
-*punto*<br/>
+*point*<br/>
 La ubicación a la distancia a lo largo de la geometría especificada. Si la geometría está vacía, este punto contiene NaN como su x e y valores.
 
 *unitTangentVector*<br/>
@@ -338,13 +338,13 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 El punto de prueba.
 
 *worldTransform*<br/>
 La transformación para aplicar a la geometría antes de la prueba de contención.
 
-*Contiene*<br/>
+*contains*<br/>
 Cuando este método finaliza, contiene un valor booleano que es TRUE si el área que rellena la geometría contiene el punto; en caso contrario, FALSE. Debe asignar el almacenamiento para este parámetro.
 
 *flatteningTolerance*<br/>
@@ -366,7 +366,7 @@ ID2D1Geometry* Get();
 
 Puntero a una interfaz ID2D1Geometry o NULL si el objeto no se ha inicializado todavía.
 
-##  <a name="getbounds"></a>  CD2DGeometry::getBounds
+##  <a name="getbounds"></a>  CD2DGeometry::GetBounds
 
 ```
 BOOL GetBounds(
@@ -377,7 +377,7 @@ CD2DRectF& bounds) const;
 ### <a name="parameters"></a>Parámetros
 
 *worldTransform*<br/>
-*Límites*
+*bounds*
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -405,7 +405,7 @@ El estilo del trazo que se amplía la geometría.
 *worldTransform*<br/>
 Una transformación para aplicar a la geometría después de la geometría se transforma y geometría ha sido trazada.
 
-*Límites*<br/>
+*bounds*<br/>
 Cuando este método finaliza, contiene los límites de la geometría ampliada. Debe asignar el almacenamiento para este parámetro.
 
 *flatteningTolerance*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 El punto de contención que se buscará.
 
 *strokeWidth*<br/>
@@ -531,7 +531,7 @@ El estilo del trazo que se va a aplicar.
 *worldTransform*<br/>
 La transformación para aplicar a la geometría trazar el objeto.
 
-*Contiene*<br/>
+*contains*<br/>
 Cuando este método finaliza, contiene un valor booleano establecido en TRUE si el trazo de la geometría contiene el punto especificado; en caso contrario, FALSE. Debe asignar el almacenamiento para este parámetro.
 
 *flatteningTolerance*<br/>

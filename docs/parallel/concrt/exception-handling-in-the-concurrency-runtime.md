@@ -8,20 +8,20 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437874"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272638"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Control de excepciones en el runtime de simultaneidad
 
-El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar muchas modalidades de errores. Entre estos errores, se incluyen el uso no válido del runtime, errores de runtime, como el que se produce al no poder adquirir un recurso, y errores que afectan a funciones de trabajo que el usuario proporciona a las tareas y los grupos de tareas. Cuando una tarea o un grupo de tareas produce una excepción, el runtime mantiene esa excepción y calcula las referencias en el contexto que espera a que finalice la tarea o el grupo de tareas. En el caso de componentes tales como tareas ligeras y agentes, el runtime no administra las excepciones en nombre del usuario. En estos casos, debe implementar su propio mecanismo del control de excepciones. En este tema se describe cómo controla el runtime las excepciones que producen las tareas, los grupos de tareas, las tareas ligeras y los agentes asincrónicos, y cómo se responde a las excepciones en las aplicaciones.
+El Runtime de simultaneidad usa el control de excepciones de C++ para comunicar muchas modalidades de errores. Entre estos errores, se incluyen el uso no válido del runtime, errores de runtime, como el que se produce al no poder adquirir un recurso, y errores que afectan a funciones de trabajo que el usuario proporciona a las tareas y los grupos de tareas. Cuando una tarea o un grupo de tareas produce una excepción, el runtime mantiene esa excepción y serializa las referencias en el contexto que espera a que finalice la tarea o el grupo de tareas. En el caso de componentes tales como tareas ligeras y agentes, el runtime no administra las excepciones en nombre del usuario. En estos casos, debe implementar su propio mecanismo del control de excepciones. En este tema se describe cómo controla el runtime las excepciones que producen las tareas, los grupos de tareas, las tareas ligeras y los agentes asincrónicos, y cómo se responde a las excepciones en las aplicaciones.
 
 ## <a name="key-points"></a>Puntos clave
 
-- Cuando una tarea o un grupo de tareas produce una excepción, el runtime mantiene esa excepción y calcula las referencias en el contexto que espera a que finalice la tarea o el grupo de tareas.
+- Cuando una tarea o un grupo de tareas produce una excepción, el runtime mantiene esa excepción y serializa las referencias en el contexto que espera a que finalice la tarea o el grupo de tareas.
 
 - Cuando sea posible, delimite cada llamada a [concurrency::task::get](reference/task-class.md#get) y [concurrency::task::wait](reference/task-class.md#wait) con un `try` / `catch` bloque para controlar los errores que puede recuperar De. El runtime finaliza la aplicación si una tarea produce una excepción y la tarea, una de sus continuaciones o la aplicación principal no detecta la excepción.
 
@@ -102,7 +102,7 @@ Este ejemplo produce el siguiente resultado:
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-Para obtener un ejemplo completo que usa el control de excepciones en un grupo de tareas, consulte [Cómo: usar control de excepciones para interrumpir un bucle paralelo](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Para obtener un ejemplo completo que usa el control de excepciones en un grupo de tareas, consulte [Cómo: Usar excepciones para interrumpir un bucle Parallel](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 [[Arriba](#top)]
 
@@ -110,7 +110,7 @@ Para obtener un ejemplo completo que usa el control de excepciones en un grupo d
 
 Una excepción puede ser el resultado de una llamada al runtime. La mayoría de los tipos de excepción, excepto para [Concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) y [Concurrency:: operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), indicar un error de programación. Normalmente, estos errores son irrecuperables y, por consiguiente, no se deben detectar ni administrar en el código de aplicación. Sugerimos sólo detectar o controlar los errores irrecuperables en el código de aplicación si es necesario diagnosticar errores de programación. Sin embargo, conocer los tipos de excepciones que define el runtime puede ayudar a diagnosticar los errores de programación.
 
-El mecanismo de control de excepciones es el mismo para las excepciones que produce el runtime y las excepciones que producen las funciones de trabajo. Por ejemplo, el [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) función produce `operation_timed_out` cuando no recibe un mensaje en el período de tiempo especificado. Si `receive` produce una excepción en una función de trabajo que se pasa a un grupo de tareas, el runtime almacena esa excepción y calcula las referencias en el contexto que llama a `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait` o `structured_task_group::run_and_wait`.
+El mecanismo de control de excepciones es el mismo para las excepciones que produce el runtime y las excepciones que producen las funciones de trabajo. Por ejemplo, el [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) función produce `operation_timed_out` cuando no recibe un mensaje en el período de tiempo especificado. Si `receive` produce una excepción en una función de trabajo que se pasa a un grupo de tareas, el runtime almacena esa excepción y serializa las referencias en el contexto que llama a `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait` o `structured_task_group::run_and_wait`.
 
 En el ejemplo siguiente se usa el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para ejecutar dos tareas en paralelo. La primera tarea espera cinco segundos y, a continuación, envía un mensaje a un búfer de mensajes. La segunda tarea usa la función `receive` para esperar tres segundos a recibir un mensaje desde el mismo búfer de mensajes. La función `receive` produce la excepción `operation_timed_out` si no recibe el mensaje en dicho período de tiempo.
 
@@ -193,4 +193,3 @@ Para obtener más información sobre los agentes asincrónicos, vea [agentes asi
 [Cancelación en la biblioteca PPL](cancellation-in-the-ppl.md)<br/>
 [Programador de tareas](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Agentes asincrónicos](../../parallel/concrt/asynchronous-agents.md)
-

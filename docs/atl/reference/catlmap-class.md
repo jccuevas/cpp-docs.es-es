@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293789"
 ---
 # <a name="catlmap-class"></a>CAtlMap (clase)
 
@@ -101,7 +101,7 @@ El código utilizado para copiar o mover elementos de valor.
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|El constructor.|
-|[CAtlMap:: ~ CAtlMap](#dtor)|Destructor.|
+|[CAtlMap::~CAtlMap](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -221,7 +221,7 @@ Antes de que se pueden almacenar los datos, es necesario inicializar la tabla ha
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlMap:: ~ CAtlMap
+##  <a name="dtor"></a>  CAtlMap::~CAtlMap
 
 Destructor.
 
@@ -288,13 +288,13 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 *key*<br/>
 Parámetro de plantilla que especifica el tipo de clave del mapa.
 
-*valor*<br/>
+*value*<br/>
 Especifica el tipo del valor de la asignación de un parámetro de plantilla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -343,7 +343,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -365,7 +365,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -385,13 +385,13 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 *key*<br/>
 Parámetro de plantilla que especifica el tipo de clave del mapa.
 
-*valor*<br/>
+*value*<br/>
 Especifica el tipo del valor de la asignación de un parámetro de plantilla.
 
 ### <a name="remarks"></a>Comentarios
@@ -408,7 +408,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -430,7 +430,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -479,7 +479,7 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Especifica la clave que identifica el elemento que se va a buscar.
 
-*valor*<br/>
+*value*<br/>
 Variable que recibe el valor buscado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -632,7 +632,7 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
 ### <a name="remarks"></a>Comentarios
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 El valor de clave para agregar a la `CAtlMap` objeto.
 
-*valor*<br/>
+*value*<br/>
 Valor que se agrega a la `CAtlMap` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -728,10 +728,10 @@ void SetValueAt(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 El contador de posición, devuelto por una llamada anterior a [CAtlMap::GetNextAssoc](#getnextassoc) o [CAtlMap::GetStartPosition](#getstartposition).
 
-*valor*<br/>
+*value*<br/>
 Valor que se agrega a la `CAtlMap` objeto.
 
 ### <a name="remarks"></a>Comentarios

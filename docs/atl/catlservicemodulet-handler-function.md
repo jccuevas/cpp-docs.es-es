@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handler method
 ms.assetid: 14db5f2a-be87-4774-a296-445cb6fc7b2e
-ms.openlocfilehash: 74c52e07f5be4ac16c8f9a20115a623c53f46090
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e344fd36ad6c70a80486eef6a10eacd8a88a2baf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273379"
 ---
 # <a name="catlservicemodulethandler-function"></a>Función CAtlServiceModuleT:: Handler
 
@@ -24,5 +24,4 @@ Para controlar más instrucciones, deberá cambiar el `m_status` inicializar el 
 ## <a name="see-also"></a>Vea también
 
 [Servicios](../atl/atl-services.md)<br/>
-[CAtlServiceModuleT:: Handler](../atl/reference/catlservicemodulet-class.md#handler)
-
+[CAtlServiceModuleT::Handler](../atl/reference/catlservicemodulet-class.md#handler)

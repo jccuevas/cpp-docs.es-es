@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501990"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294998"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Ventanas divisoras
 
@@ -60,9 +60,9 @@ Panel: Una ventana específica de la aplicación que un `CSplitterWnd` administr
 
 Para usar un `CWnd`-derivados de objeto, pase el RUNTIME_CLASS del objeto para el `CreateView` funcionando como lo haría si estuviera usando un `CView`-clase derivada. Debe utilizar la clase DECLARE_DYNCREATE e IMPLEMENT_DYNCREATE porque el marco de trabajo utiliza la creación dinámica en tiempo de ejecución. Aunque hay una gran cantidad de código en `CSplitterWnd` que es específico para el `CView` (clase), [CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof) siempre se utiliza antes de que se llevan a cabo esas acciones.
 
-Barra divisora: Un control que se coloca entre las filas y columnas de paneles. Se puede usar para ajustar los tamaños de las filas o columnas de paneles.
+Barra de división: Un control que se coloca entre las filas y columnas de paneles. Se puede usar para ajustar los tamaños de las filas o columnas de paneles.
 
-: Divisor un control de cuadro En dinámico `CSplitterWnd` que puede usar para crear nuevas filas o columnas de paneles. Se encuentra en la parte superior de las barras de desplazamiento vertical o a la izquierda de las barras de desplazamiento horizontal.
+Divisor de cuadro: Un control en un dinámico `CSplitterWnd` que puede usar para crear nuevas filas o columnas de paneles. Se encuentra en la parte superior de las barras de desplazamiento vertical o a la izquierda de las barras de desplazamiento horizontal.
 
 Divisor intersección: La intersección de una barra divisora vertical y una barra divisora horizontal. Puede arrastrar para ajustar el tamaño de una fila y columna de paneles al mismo tiempo.
 
@@ -140,4 +140,3 @@ El `CView` clase usa los siguientes comandos de alto niveles para delegar a los 
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

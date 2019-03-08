@@ -25,7 +25,7 @@ La descripción de las funciones de plantilla de algoritmo emplea varias frases 
 
 - La frase "en el intervalo \[ *A*, *B*)" significa la secuencia de cero o más valores discretos que comienzan con *A* hasta, pero no incluyendo *B* . Un intervalo es válido únicamente si *B* sea accesible desde *A;* puede almacenar *A* en un objeto *N* (*N*  =  *A*), incrementar el objeto cero o más veces (++*N*), y tiene el objeto son iguales a *B* después de un número finito de incrementos (*N*   ==  *B*).
 
-- La frase "cada *N* en el intervalo \[ *A*, *B*)" significa que *N* comienza con el valor *un*y se incrementa cero o más veces hasta que es igual al valor *B*. El caso N* == *B* no está en el intervalo.
+- La frase "cada *N* en el intervalo \[ *A*, *B*)" significa que *N* comienza con el valor *un*y se incrementa cero o más veces hasta que es igual al valor *B*. El caso *N* == *B* no está en el intervalo.
 
 - La frase "el valor más bajo de *N* en el intervalo \[ *A*, *B*) tal que *X*" significa que la condición *X* se determina para cada *N* en el intervalo \[ *A*, *B*) hasta que la condición *X*se cumple.
 

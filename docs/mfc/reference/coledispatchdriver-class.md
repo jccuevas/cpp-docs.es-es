@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569240"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274588"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver (clase)
 
@@ -56,12 +56,12 @@ class COleDispatchDriver
 |Name|Descripción|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Asocia un `IDispatch` conexión a la `COleDispatchDriver` objeto.|
-|[COleDispatchDriver:: CreateDispatch](#createdispatch)|Crea un `IDispatch` conexión y lo asocia a la `COleDispatchDriver` objeto.|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|Crea un `IDispatch` conexión y lo asocia a la `COleDispatchDriver` objeto.|
 |[COleDispatchDriver::DetachDispatch](#detachdispatch)|Desasocia un `IDispatch` conexión sin liberarlo.|
-|[COleDispatchDriver:: GetProperty](#getproperty)|Obtiene una propiedad de automatización.|
-|[COleDispatchDriver:: Invokehelper](#invokehelper)|Aplicación auxiliar para llamar a métodos de automatización.|
+|[COleDispatchDriver::GetProperty](#getproperty)|Obtiene una propiedad de automatización.|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|Aplicación auxiliar para llamar a métodos de automatización.|
 |[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|Las versiones un `IDispatch` conexión.|
-|[COleDispatchDriver:: SetProperty](#setproperty)|Establece una propiedad de automatización.|
+|[COleDispatchDriver::SetProperty](#setproperty)|Establece una propiedad de automatización.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -158,7 +158,7 @@ El formulario `COleDispatchDriver`() se crea un `COleDispatchDriver` objeto pero
 
   Vea el ejemplo de [COleDispatchDriver::CreateDispatch](#createdispatch).
 
-##  <a name="createdispatch"></a>  COleDispatchDriver:: CreateDispatch
+##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
 
 Crea un objeto de interfaz [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) y lo vincula al objeto `COleDispatchDriver` .
 
@@ -174,7 +174,7 @@ BOOL CreateDispatch(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Id. de clase del objeto de conexión `IDispatch` que se va a crear.
 
 *pError*<br/>
@@ -213,7 +213,7 @@ Para obtener más información sobre el tipo LPDISPATCH, consulte [Implementing 
 
 [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]
 
-##  <a name="getproperty"></a>  COleDispatchDriver:: GetProperty
+##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty
 
 Obtiene la propiedad del objeto especificada por *dwDispID*.
 
@@ -239,7 +239,7 @@ Dirección de la variable que recibirá el valor de propiedad. Debe coincidir co
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  COleDispatchDriver:: Invokehelper
+##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper
 
 Llama al método de objeto o la propiedad especificada por *dwDispID*, en el contexto especificado por *wFlags*.
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 Identifica el método o la propiedad que se va a invocar.
 
 *wFlags*<br/>
-Marcas que describen el contexto de la llamada a `IDispatch::Invoke`. . Para obtener una lista de valores posibles, vea el *wFlags* parámetro [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) en el SDK de Windows.
+Marcas que describen el contexto de la llamada a `IDispatch::Invoke`. . Para obtener una lista de valores posibles, vea el *wFlags* parámetro [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) en el SDK de Windows.
 
 *vtRet*<br/>
 Especifica el tipo del valor devuelto. Para los valores posibles, vea la sección Comentarios.
@@ -296,9 +296,9 @@ Los valores posibles para el *vtRet* argumento se toman de la enumeración VAREN
 
 El *pbParamInfo* argumento es una lista separada por espacios de **VTS_** constantes. Uno o varios de estos valores, separados por espacios (no por comas), especifican la lista de parámetros de la función. Los valores posibles se muestran con la macro [EVENT_CUSTOM](event-maps.md#event_custom) .
 
-Esta función convierte los parámetros con valores VARIANTARG y luego invoca el [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) método. Si se produce un error en la llamada a `Invoke` , esta función generará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto; de lo contrario, genera un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Esta función convierte los parámetros con valores VARIANTARG y luego invoca el [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) método. Si se produce un error en la llamada a `Invoke` , esta función generará una excepción. Si el SCODE (código de estado) devuelto por `IDispatch::Invoke` es DISP_E_EXCEPTION, esta función genera un [COleException](../../mfc/reference/coleexception-class.md) objeto; de lo contrario, genera un [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
-Para obtener más información, consulte [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), y [estructura de códigos de Error COM](/windows/desktop/com/structure-of-com-error-codes) en el SDK de Windows.
+Para obtener más información, consulte [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), y [estructura de códigos de Error COM](/windows/desktop/com/structure-of-com-error-codes) en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 
@@ -381,7 +381,7 @@ Si se ha establecido la liberación automática para esta conexión, esta funci�
 
   Vea el ejemplo de [COleDispatchDriver::AttachDispatch](#attachdispatch).
 
-##  <a name="setproperty"></a>  COleDispatchDriver:: SetProperty
+##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty
 
 Establece la propiedad del objeto OLE especificada por *dwDispID*.
 

@@ -1,17 +1,17 @@
 ---
 title: Campos de bits de C++
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - bitfields [C++]
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: df4e5a068f76c35dc22b3915ad7e4ace421ca10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 747920378472cc091928a080e303a0543e287aaa
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644978"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175098"
 ---
 # <a name="c-bit-fields"></a>Campos de bits de C++
 
@@ -43,7 +43,8 @@ struct Date {
 
 En la ilustración siguiente se muestra el diseño de memoria conceptual de un objeto de tipo `Date`.
 
-![Diseño de memoria de un objeto de fecha](../cpp/media/vc38uq1.png "vc38UQ1") diseño de memoria de objeto de fecha
+![Diseño de memoria de un objeto de fecha](../cpp/media/vc38uq1.png "diseño de memoria de un objeto de fecha") <br/>
+Diseño de memoria de objeto de fecha
 
 Tenga en cuenta que `nYear` tiene una longitud de 8 bits y que desbordaría el límite de palabras del tipo declarado, **sin signo** **corto**. Por lo tanto, comienza al principio de un nuevo **sin signo** **corto**. No es necesario que todos los campos de bits quepan en un objeto del tipo subyacente; se asignan nuevas unidades de almacenamiento según el número de bits solicitados en la declaración.
 
@@ -69,7 +70,8 @@ struct Date {
 
 a continuación, el diseño de memoria es como se muestra en la ilustración siguiente:
 
-![Diseño de objeto de fecha con cero&#45;campo de bits de longitud](../cpp/media/vc38uq2.png "vc38UQ2") diseño de objeto de fecha con campo de bits de longitud cero
+![Diseño de objeto de fecha con cero&#45;campo de bits de longitud](../cpp/media/vc38uq2.png "objeto de diseño de fecha con cero&#45;campo de bits de longitud") <br/>
+Diseño de objeto de fecha con campo de bits de longitud cero
 
 El tipo subyacente de un campo de bits debe ser un tipo entero, como se describe en [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 

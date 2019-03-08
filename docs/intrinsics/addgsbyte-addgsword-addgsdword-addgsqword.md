@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 2439e541332705ec5330a7ee6e703c99712f7e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9514c193468d526aa645ea7984691034feebc07a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667615"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220470"
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
@@ -32,21 +32,21 @@ Agregar un valor a una ubicación de memoria especificada por un desplazamiento 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-void __addgsbyte( 
-   unsigned long Offset, 
-   unsigned char Data 
+void __addgsbyte(
+   unsigned long Offset,
+   unsigned char Data
 );
-void __addgsword( 
-   unsigned long Offset, 
-   unsigned short Data 
+void __addgsword(
+   unsigned long Offset,
+   unsigned short Data
 );
-void __addgsdword( 
-   unsigned long Offset, 
-   unsigned long Data 
+void __addgsdword(
+   unsigned long Offset,
+   unsigned long Data
 );
-void __addgsqword( 
-   unsigned long Offset, 
-   unsigned __int64 Data 
+void __addgsqword(
+   unsigned long Offset,
+   unsigned __int64 Data
 );
 ```
 
@@ -69,7 +69,7 @@ void __addgsqword( 
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intrínsecas están disponibles en solo en modo kernel, y estas rutinas solo están disponibles como intrínsecos.
+Estas rutinas solo están disponibles como intrínseco.
 
 **FIN de Específicos de Microsoft**
 

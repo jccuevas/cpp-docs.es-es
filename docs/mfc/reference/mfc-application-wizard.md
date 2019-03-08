@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: b860d09ddb2f07909797ba7f24776e1850d27cc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258637"
 ---
 # <a name="mfc-application-wizard"></a>Asistente para aplicaciones MFC
 

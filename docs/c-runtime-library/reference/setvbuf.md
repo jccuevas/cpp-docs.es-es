@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445778"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328102"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ El modo debe ser **_IOFBF**, **_IOLBF**, o **_IONBF**. Si *modo* es **_IOFBF** o
 
 |*modo* valor|Significado|
 |-|-|
-**_IOFBF**|Almacenamiento en búfer completo; es decir, *búfer* sirve como búfer y *tamaño* se utiliza como el tamaño del búfer. Si *búfer* es **NULL**, un búfer asignado automáticamente *tamaño* se utiliza la longitud de bytes.
-**_IOLBF**|En algunos sistemas, esto proporciona un almacenamiento en búfer en línea, Sin embargo, para Win32, el comportamiento es igual a **_IOFBF** -almacenamiento en búfer completo.
-**_IONBF**|No hay ningún búfer se usa, con independencia del *búfer* o *tamaño*.
+| **_IOFBF** | Almacenamiento en búfer completo; es decir, *búfer* sirve como búfer y *tamaño* se utiliza como el tamaño del búfer. Si *búfer* es **NULL**, un búfer asignado automáticamente *tamaño* se utiliza la longitud de bytes. |
+| **_IOLBF** | En algunos sistemas, esto proporciona un almacenamiento en búfer en línea, Sin embargo, para Win32, el comportamiento es igual a **_IOFBF** -almacenamiento en búfer completo. |
+| **_IONBF** | No hay ningún búfer se usa, con independencia del *búfer* o *tamaño*. |
 
 ## <a name="requirements"></a>Requisitos
 

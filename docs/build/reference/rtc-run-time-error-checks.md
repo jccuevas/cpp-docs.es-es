@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655007"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424618"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Comprobaciones de errores en tiempo de ejecución)
 
@@ -95,7 +95,7 @@ Si una variable se ha inicializado, no se notificarán en tiempo de ejecución *
 
 ## <a name="remarks"></a>Comentarios
 
-Comprobaciones de errores en tiempo de ejecución son una manera de encontrar problemas en su código en ejecución. Para obtener más información, consulte [Cómo: usar las comprobaciones de tiempo de ejecución nativo](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Comprobaciones de errores en tiempo de ejecución son una manera de encontrar problemas en su código en ejecución. Para obtener más información, vea [Cómo: Utilizar comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Si compila el programa en la línea de comandos mediante cualquiera de los **/RTC** opciones del compilador, cualquier directiva pragma [optimizar](../../preprocessor/optimize.md) instrucciones que aparecen en el código en modo silencioso se producirá un error. Esto es porque las comprobaciones de errores en tiempo de ejecución no son válidas en una compilación de versión (optimizado).
 
@@ -111,7 +111,7 @@ Cuando usas cualquiera, se definirá la directiva de preprocesador __MSVC_RUNTIM
 
 1. Haga clic en el **generación de código** página de propiedades.
 
-1. Modificar una o ambas de las siguientes propiedades: **comprobaciones en tiempo de ejecución básicas** o **comprobación de tipos más pequeños**.
+1. Modifique una o ambas de las siguientes propiedades: **Comprobaciones básicas en tiempo de ejecución** o **comprobación de tipo más pequeño**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
@@ -121,4 +121,4 @@ Cuando usas cualquiera, se definirá la directiva de preprocesador __MSVC_RUNTIM
 
 [Opciones del compilador](../../build/reference/compiler-options.md)<br/>
 [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Cómo: Usar comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[Cómo: Uso de comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks)

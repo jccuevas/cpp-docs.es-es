@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465369"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301901"
 ---
 # <a name="csid-class"></a>CSid (clase)
 
@@ -77,7 +77,7 @@ class CSid
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Operador de asignación.|
+|[operator =](#operator_eq)|Operador de asignación.|
 |[SID de operador const *](#operator_const_sid__star)|Convierte un `CSid` objeto a un puntero a un `SID` estructura.|
 
 ### <a name="global-operators"></a>Operadores globales
@@ -87,9 +87,9 @@ class CSid
 |[operator ==](#operator_eq_eq)|Comprueba dos objetos de descriptor de seguridad para la igualdad|
 |[operator !=](#operator_neq)|Comprueba dos objetos de descriptor de seguridad no son iguales|
 |[Operador \<](#operator_lt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
-|[operador >](#operator_gt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
+|[operator >](#operator_gt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
 |[Operador \<=](#operator_lt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
-|[operador > =](#operator_gt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
+|[operator >=](#operator_gt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -146,7 +146,7 @@ explicit CSid(
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 Existente `CSid` objeto o `SID` estructura (identificador de seguridad).
 
 *IdentifierAuthority*<br/>
@@ -170,7 +170,7 @@ El constructor inicializa el `CSid` objeto, si se establece en un miembro de dat
 
 Si se produce un error de inicialización, el constructor produce una [CAtlException (clase)](../../atl/reference/catlexception-class.md).
 
-##  <a name="dtor"></a>  CSid:: ~ CSid
+##  <a name="dtor"></a>  CSid::~CSid
 
 Destructor.
 
@@ -223,7 +223,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` estructura (identificador de seguridad) o `CSid` objeto que se va a comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -232,7 +232,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) en el SDK de Windows para obtener más detalles.
+Consulte [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) en el SDK de Windows para obtener más detalles.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -381,7 +381,7 @@ CSid& operator= (const SID& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` para asignar a la `CSid` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -400,17 +400,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado izquierdo del operador ==.
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado derecho del operador ==.
 
 ### <a name="return-value"></a>Valor devuelto
 
 TRUE si los descriptores de seguridad son iguales, de lo contrario, FALSE.
 
-##  <a name="operator_neq"></a>  CSid::operator! =
+##  <a name="operator_neq"></a>  CSid::operator !=
 
 Comprueba dos objetos de descriptor de seguridad no son iguales.
 
@@ -422,10 +422,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado izquierdo de la! = (operador).
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado derecho de la! = (operador).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -444,10 +444,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado izquierdo de la! = (operador).
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado derecho de la! = (operador).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -466,10 +466,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado izquierdo de la! = (operador).
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado derecho de la! = (operador).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -488,10 +488,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado izquierdo de la! = (operador).
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado derecho de la! = (operador).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -510,10 +510,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado izquierdo de la! = (operador).
 
-*RHS*<br/>
+*rhs*<br/>
 El `SID` (identificador de seguridad) o `CSid` que aparece en el lado derecho de la! = (operador).
 
 ### <a name="return-value"></a>Valor devuelto

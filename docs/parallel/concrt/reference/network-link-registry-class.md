@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273353"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry (Clase)
 
@@ -32,7 +32,7 @@ class network_link_registry;
 
 #### <a name="parameters"></a>Parámetros
 
-*Al _bloque al introducir*<br/>
+*_Block*<br/>
 Tipo de los datos del bloque que se almacenan en el `network_link_registry`.
 
 ## <a name="members"></a>Miembros
@@ -52,7 +52,7 @@ Tipo de los datos del bloque que se almacenan en el `network_link_registry`.
 |----------|-----------------|
 |[add](#add)|Cuando se invalida en una clase derivada, agrega un vínculo a la `network_link_registry` objeto.|
 |[begin](#begin)|Cuando se invalida en una clase derivada, devuelve un iterador al primer elemento en el `network_link_registry` objeto.|
-|[Contiene](#contains)|Cuando se invalida en una clase derivada, busca el `network_link_registry` objeto para un bloque especificado.|
+|[contains](#contains)|Cuando se invalida en una clase derivada, busca el `network_link_registry` objeto para un bloque especificado.|
 |[count](#count)|Cuando se invalida en una clase derivada, devuelve el número de elementos de la `network_link_registry` objeto.|
 |[remove](#remove)|Cuando se invalida en una clase derivada, quita un bloque especificado desde el `network_link_registry` objeto.|
 
@@ -80,7 +80,7 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a agregar.
 
 ##  <a name="begin"></a> comenzar
@@ -109,7 +109,7 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a buscar en el `network_link_registry` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -138,7 +138,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Vincular*<br/>
+*_Link*<br/>
 Un puntero a un bloque que se va a quitar, si se encuentra.
 
 ### <a name="return-value"></a>Valor devuelto

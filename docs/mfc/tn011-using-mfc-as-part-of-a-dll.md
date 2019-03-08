@@ -1,5 +1,5 @@
 ---
-title: 'TN011: Usar MFC como parte de un archivo DLL'
+title: 'TN011: Utilizar MFC como parte de un archivo DLL'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326457"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Usar MFC como parte de un archivo DLL
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Utilizar MFC como parte de un archivo DLL
 
 Esta nota describe los archivos DLL de MFC estándar, que le permiten utilizar la biblioteca MFC como parte de una biblioteca de vínculos dinámicos (DLL) de Windows. Se supone que está familiarizado con los archivos DLL de Windows y cómo crearlas. Para obtener información acerca de los archivos DLL de extensión de MFC, con lo que puede crear extensiones a la biblioteca MFC, vea [versión de DLL de MFC](../mfc/tn033-dll-version-of-mfc.md).
 
@@ -33,7 +33,7 @@ archivos DLL de MFC estándar tiene varias ventajas:
 
 - Con MFC archivos DLL estándar vinculados estáticamente a MFC, el tamaño del archivo DLL depende solo las rutinas en tiempo de ejecución MFC y C que se usan y vinculadas.
 
-- Con la DLL de MFC normal que se vinculan dinámicamente a MFC, el ahorro de memoria del uso de la versión compartida de MFC puede ser significativo. Sin embargo, debe distribuir los archivos DLL compartidos, Mfc*\<versión >*.dll y Msvvcrt*\<versión >*.dll con el archivo DLL.
+- Con la DLL de MFC normal que se vinculan dinámicamente a MFC, el ahorro de memoria del uso de la versión compartida de MFC puede ser significativo. Sin embargo, debe distribuir los archivos DLL compartidos, Mfc\<*versión*> .dll y Msvvcrt\<*versión*> .dll con el archivo DLL.
 
 - El diseño del archivo DLL depende de cómo se implementan las clases. El diseño de la DLL exporta solo a las API que desee. Como resultado, si cambia la implementación, los archivos DLL estándar de MFC siguen siendo válidas.
 
@@ -115,4 +115,3 @@ Las estructuras utilizadas por la API no se derivan las clases MFC y se definen 
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

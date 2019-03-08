@@ -1,6 +1,6 @@
 ---
 title: Administrar los datos de estado de los módulos MFC
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - global state [MFC]
 - data management [MFC], MFC modules
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 757fe9d8b4c9985cd3fa36d399cdc92057c03011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0cdb368dc70b73ba70b3721fecdaf47de36686d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562219"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293802"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>Administrar los datos de estado de los módulos MFC
 
@@ -28,11 +28,13 @@ Este artículo describen los datos de estado de los módulos MFC y cómo se actu
 
 Como se muestra en la ilustración siguiente, MFC tiene datos de estado para cada módulo que se usan en una aplicación. Algunos ejemplos de estos datos son los identificadores de instancia de Windows (usados para cargar recursos), punteros a la actual `CWinApp` y `CWinThread` de una aplicación OLE recuentos de referencia de módulo y una variedad de mapas que mantienen las conexiones entre los objetos Windows objeto identificadores y las instancias correspondientes de objetos de MFC. Sin embargo, cuando una aplicación utiliza varios módulos, los datos de estado de cada módulo no están aplicación amplia. En su lugar, cada módulo tiene su propia copia privada de los datos de estado de MFC.
 
-![Los datos de un solo módulo de estado &#40;aplicación&#41;](../mfc/media/vc387n1.gif "vc387n1") datos de estado de un solo módulo (aplicación)
+![Los datos de un solo módulo de estado &#40;aplicación&#41;](../mfc/media/vc387n1.gif "los datos de un solo módulo de estado &#40;aplicación&#41;") <br/>
+Datos de estado de un solo módulo (aplicación)
 
 Datos de estado de un módulo se encuentran en una estructura y siempre está disponibles a través de un puntero a esa estructura. Cuando el flujo de ejecución entra en un módulo determinado, como se muestra en la siguiente ilustración, estado de ese módulo debe ser el estado "actual" o "eficaces". Por lo tanto, cada objeto de subproceso tiene un puntero a la estructura de estado efectivo de la aplicación. Mantener este puntero actualizado en todo momento es vital para administrar el estado global de la aplicación y mantener la integridad del estado de cada módulo. Administración incorrecta del estado global puede provocar un comportamiento impredecible de la aplicación.
 
-![Los datos de varios módulos de estado](../mfc/media/vc387n2.gif "vc387n2") datos de estado de varios módulos
+![Los datos de varios módulos de estado](../mfc/media/vc387n2.gif "los datos de varios módulos de estado") <br/>
+Datos de estado de varios módulos
 
 En otras palabras, cada módulo es responsable de cambiar correctamente entre los Estados de módulos en todos sus puntos de entrada. Un "punto de entrada" es cualquier lugar donde el flujo de ejecución puede escribir el código del módulo. Puntos de entrada incluyen:
 
@@ -45,4 +47,3 @@ En otras palabras, cada módulo es responsable de cambiar correctamente entre lo
 ## <a name="see-also"></a>Vea también
 
 [Temas generales de MFC](../mfc/general-mfc-topics.md)
-

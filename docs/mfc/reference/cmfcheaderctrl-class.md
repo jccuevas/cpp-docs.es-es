@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538507"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269440"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -136,7 +136,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el modo de ordenación de varias columnas; FALSE para deshabilitar el modo de ordenación de varias columnas y quite todas las columnas de la lista de columnas ordenadas. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -249,7 +249,7 @@ virtual void OnDrawItem(
 *iItem*<br/>
 [in] Índice de base cero del elemento que se va a dibujar.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo delimitador del elemento que se va a dibujar.
 
 *bIsPressed*<br/>
@@ -323,7 +323,7 @@ void SetSortColumn(
 *bAscending*<br/>
 [in] Especifica el criterio de ordenación de la columna que la *iColumn* especifica el parámetro. TRUE para establecer el orden ascendente; FALSE para establecer el orden descendente. El valor predeterminado es TRUE.
 
-*bAgregar*<br/>
+*bAdd*<br/>
 [in] True para establecer el criterio de ordenación de la columna que la *iColumn* especifica el parámetro.
 
 Si el control de encabezado actual está en *ordenación de varias columnas* modo, este método agrega la columna especificada a la lista de columnas de orden. Use [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) para establecer el modo de ordenación de varias columnas.

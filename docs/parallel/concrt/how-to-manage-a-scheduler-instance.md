@@ -1,22 +1,22 @@
 ---
-title: 'Cómo: Administrar una instancia del programador'
+title: Filtrar Administrar una instancia del programador
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276174"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Cómo: Administrar una instancia del programador
+# <a name="how-to-manage-a-scheduler-instance"></a>Filtrar Administrar una instancia del programador
 
 Las instancias del Programador permiten asociar directivas de programación concretas con varios tipos de cargas de trabajo. Este tema contiene dos ejemplos básicos que muestran cómo crear y administrar una instancia del programador.
 
-En los ejemplos se crean programadores que usan las directivas del programador predeterminado. Para un ejemplo que crea un programador que utiliza una directiva personalizada, consulte [Cómo: especificar directivas de programador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+En los ejemplos se crean programadores que usan las directivas del programador predeterminado. Para un ejemplo que crea un programador que usa una directiva personalizada, vea [Cómo: Especificar directivas de programador específicas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Para administrar una instancia del programador en su aplicación
 
@@ -38,7 +38,7 @@ En los ejemplos se crean programadores que usan las directivas del programador p
 
 1. Pasar el identificador para el evento a la [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) función a esperar para que el programador se cierre.
 
-1. Llame a la [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) función para cerrar el identificador del objeto de evento.
+1. Llame a la [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) función para cerrar el identificador del objeto de evento.
 
 ## <a name="example"></a>Ejemplo
 
@@ -78,5 +78,4 @@ Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguel
 ## <a name="see-also"></a>Vea también
 
 [Instancias de Scheduler](../../parallel/concrt/scheduler-instances.md)<br/>
-[Procedimiento para especificar directivas de Scheduler concretas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
-
+[Cómo: Especificar directivas de Scheduler concretas](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)

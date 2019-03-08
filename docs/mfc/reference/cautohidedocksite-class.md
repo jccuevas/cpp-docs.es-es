@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 5bfff575861d92eaaef07a1f2f21b79d89cb52b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302967"
 ---
 # <a name="cautohidedocksite-class"></a>Clase CAutoHideDockSite
 
@@ -137,7 +137,7 @@ virtual void DockPane(
 |||
 |-|-|
 |Parámetro|Descripción|
-|*conquistado*|[in] El panel que se acopla el marco de trabajo.|
+|*pWnd*|[in] El panel que se acopla el marco de trabajo.|
 |*dockMethod*|[in] Opciones para el panel de acoplamiento.|
 |*lpRect*|[in] Un rectángulo que especifica los límites del panel acoplado.|
 
@@ -160,7 +160,7 @@ void GetAlignRect(CRect& rect) const;
 |||
 |-|-|
 |Parámetro|Descripción|
-|*Rect*|[in] Una referencia a un rectángulo. El método almacena el tamaño del sitio de acoplamiento en este rectángulo.|
+|*rect*|[in] Una referencia a un rectángulo. El método almacena el tamaño del sitio de acoplamiento en este rectángulo.|
 
 ### <a name="remarks"></a>Comentarios
 

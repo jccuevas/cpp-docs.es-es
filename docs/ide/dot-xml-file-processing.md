@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 6592352e2afc02d3689f328ab37db6f289880cec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522192"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524175"
 ---
 # <a name="xml-file-processing"></a>Procesamiento de archivos .Xml
 
@@ -23,50 +23,50 @@ El compilador cumple las siguientes reglas cuando genera las cadenas de identifi
 
 - La primera parte de la cadena ID identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos. Se utilizan los siguientes tipos de miembros:
 
-   |Carácter|Descripción|
-   |---------------|-----------------|
-   |N|namespace<br /><br /> No se pueden agregar comentarios de documentación a un espacio de nombres, pero se admiten referencias cref a un espacio de nombres.|
-   |T|tipo: clase, interfaz, estructura, enumeración y delegado|
-   |D|definición de tipos|
-   |F|campo|
-   |P|propiedad (incluidos indizadores u otras propiedades indizadas)|
-   |M|método (incluidos métodos especiales como constructores, operadores, etc.)|
-   |E|evento|
-   |!|cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de Visual C++ genera información de error para los vínculos que no se pueden resolver.|
+  | Carácter | Descripción |
+  |---------------|-----------------|
+  | N | namespace<br /><br /> No se pueden agregar comentarios de documentación a un espacio de nombres, pero se admiten referencias cref a un espacio de nombres. |
+  | T | tipo: clase, interfaz, estructura, enumeración y delegado |
+  | D | definición de tipos |
+  | F | campo |
+  | P | propiedad (incluidos indizadores u otras propiedades indizadas) |
+  | M | método (incluidos métodos especiales como constructores, operadores, etc.) |
+  | E | evento |
+  | ! | cadena de error<br /><br /> El resto de la cadena proporciona información sobre el error. El compilador de Visual C++ genera información de error para los vínculos que no se pueden resolver. |
 
 - La segunda parte de la cadena es el nombre completo del elemento, que empieza por la raíz del espacio de nombres. El nombre del elemento, su tipo envolvente y el espacio de nombres se separan mediante puntos. Si el nombre del elemento ya contiene puntos, estos se reemplazan por el signo hash ("#"). Se supone que ningún elemento tiene un signo hash directamente en el nombre. Por ejemplo, el nombre completo del constructor de `String` sería "System.String.#ctor".
 
 - Para propiedades y métodos, si hay argumentos para el método, sigue la lista de argumentos entre paréntesis. Si no hay ningún argumento, tampoco habrá paréntesis. Los argumentos están separados por comas. La codificación de cada argumento indica directamente cómo se codifica en una firma de .NET Framework:
 
-   - Tipos base. Los tipos habituales (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) se representan como el nombre completo del tipo.
+  - Tipos base. Los tipos habituales (ELEMENT_TYPE_CLASS o ELEMENT_TYPE_VALUETYPE) se representan como el nombre completo del tipo.
 
-   - Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente, por ejemplo **System.Int32** o **System.TypedReference**.
+  - Los tipos intrínsecos (por ejemplo, ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF y ELEMENT_TYPE_VOID) se representan como el nombre completo del tipo completo correspondiente, por ejemplo **System.Int32** o **System.TypedReference**.
 
-   - ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.
+  - ELEMENT_TYPE_PTR se representa como un "*" después del tipo modificado.
 
-   - ELEMENT_TYPE_BYREF se representa como un "\@" después del tipo modificado.
+  - ELEMENT_TYPE_BYREF se representa como un "\@" después del tipo modificado.
 
-   - ELEMENT_TYPE_PINNED se representa como "^" después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.
+  - ELEMENT_TYPE_PINNED se representa como "^" después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.
 
-   - ELEMENT_TYPE_CMOD_REQ se representa como "&#124;" y el nombre completo de la clase modificadora, después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.
+  - ELEMENT_TYPE_CMOD_REQ se representa como "&#124;" y el nombre completo de la clase modificadora, después del tipo modificado. El compilador de Visual C++ nunca genera este resultado.
 
-   - ELEMENT_TYPE_CMOD_OPT se representa como "!" y el nombre completo de la clase modificadora, después del tipo modificado.
+  - ELEMENT_TYPE_CMOD_OPT se representa como "!" y el nombre completo de la clase modificadora, después del tipo modificado.
 
-   - ELEMENT_TYPE_SZARRAY se representa como "[]" después del tipo de elemento de la matriz.
+  - ELEMENT_TYPE_SZARRAY se representa como "[]" después del tipo de elemento de la matriz.
 
-   - ELEMENT_TYPE_GENERICARRAY se representa como "[?]" después del tipo de elemento de la matriz. El compilador de Visual C++ nunca genera este resultado.
+  - ELEMENT_TYPE_GENERICARRAY se representa como "[?]" después del tipo de elemento de la matriz. El compilador de Visual C++ nunca genera este resultado.
 
-   - ELEMENT_TYPE_ARRAY se representa como [*límite inferior*:`size`,*límite inferior*:`size`], donde el número de comas es la clasificación - 1, y los límites inferiores y el tamaño de cada dimensión, si se conocen, se representan en decimales. Si no se especifican un límite inferior ni un tamaño, simplemente se omiten. Si se omiten el límite inferior y el tamaño de una dimensión determinada, también se omite ":". Por ejemplo, una matriz de dos dimensiones con 1 como los límites inferiores y tamaños no especificados es [1:,1:].
+  - ELEMENT_TYPE_ARRAY se representa como [*límite inferior*:`size`,*límite inferior*:`size`], donde el número de comas es la clasificación - 1, y los límites inferiores y el tamaño de cada dimensión, si se conocen, se representan en decimales. Si no se especifican un límite inferior ni un tamaño, simplemente se omiten. Si se omiten el límite inferior y el tamaño de una dimensión determinada, también se omite ":". Por ejemplo, una matriz de dos dimensiones con 1 como los límites inferiores y tamaños no especificados es [1:,1:].
 
-   - ELEMENT_TYPE_FNPTR se representa como "=FUNC:`type`(*signature*)", donde `type` es el tipo de valor devuelto y *signature* se corresponde con los argumentos del método. Si no hay ningún argumento, se omiten los paréntesis. El compilador de Visual C++ nunca genera este resultado.
+  - ELEMENT_TYPE_FNPTR se representa como "=FUNC:`type`(*signature*)", donde `type` es el tipo de valor devuelto y *signature* se corresponde con los argumentos del método. Si no hay ningún argumento, se omiten los paréntesis. El compilador de Visual C++ nunca genera este resultado.
 
-   Los siguientes componentes de la firma no se representan porque nunca se usan para diferenciar métodos sobrecargados:
+  Los siguientes componentes de la firma no se representan porque nunca se usan para diferenciar métodos sobrecargados:
 
-   - Convención de llamada
+  - Convención de llamada
 
-   - Tipo de valor devuelto
+  - Tipo de valor devuelto
 
-   - ELEMENT_TYPE_SENTINEL
+  - ELEMENT_TYPE_SENTINEL
 
 - Solo para los operadores de conversión, el valor devuelto del método se codifica como "~" seguido por el tipo de valor devuelto, como se ha codificado anteriormente.
 
@@ -76,9 +76,9 @@ El compilador cumple las siguientes reglas cuando genera las cadenas de identifi
     <member name="T:MyClass`2">
     ```
 
-   Para un tipo que se define como `public class MyClass<T, U>`.
+  Para un tipo que se define como `public class MyClass<T, U>`.
 
-   Para los métodos que toman tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0, \`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.
+  Para los métodos que toman tipos genéricos como parámetros, los parámetros de tipo genérico se especifican como números precedidos por tildes agudas (por ejemplo, \`0, \`1).  Cada número representa una notación de matriz de base cero para los parámetros genéricos del tipo.
 
 ## <a name="example"></a>Ejemplo
 

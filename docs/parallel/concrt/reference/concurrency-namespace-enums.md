@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271195"
 ---
 # <a name="concurrency-namespace-enums"></a>enumeraciones del espacio de nombres de simultaneidad
 
@@ -106,7 +106,7 @@ enum ConcRT_EventType;
 
 **Encabezado:** concrt.h **Namespace:** simultaneidad
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags (enumeración)
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration
 
 Marcas de seguimiento para los tipos de evento
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|El programador no recopila información de progreso. Reequilibrio se realiza basándose únicamente en el nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Este valor está reservado para su uso por el tiempo de ejecución.|
 |`ProgressFeedbackEnabled`|El programador recopila información de progreso y lo pasa al administrador de recursos. El Administrador de recursos usará esta información estadística para volver a equilibrar los recursos en nombre del programador además del nivel de suscripción de subproceso de hardware subyacente. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  join_type (enumeración)
 
 El tipo de un bloque de mensajería `join`.
@@ -216,16 +217,16 @@ enum PolicyElementKey;
 
 |Nombre|Descripción|
 |----------|-----------------|
-|`ContextPriority`|La prioridad del subproceso del sistema operativo de cada contexto en el programador. Si esta clave se establece en el valor `INHERIT_THREAD_PRIORITY` los contextos en el programador heredarán la prioridad del subproceso que creó el programador.<br /><br /> Los valores válidos: cualquiera de los valores válidos para el Windows `SetThreadPriority` función y el valor especial `INHERIT_THREAD_PRIORITY`<br /><br /> Valor predeterminado: `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|El tamaño de pila reservado de cada contexto en el programador en kilobytes.<br /><br /> Los valores válidos: enteros positivos<br /><br /> Valor predeterminado: `0`, que indica que se utiliza el valor predeterminado de la variable del proceso para el tamaño de la pila.|
-|`DynamicProgressFeedback`|Determina si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador o solo en función del nivel de suscripción de subprocesos de hardware subyacentes. Para obtener más información, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Los valores válidos: un miembro de la `DynamicProgressFeedbackType` enumeración, ya sea `ProgressFeedbackEnabled` o `ProgressFeedbackDisabled`<br /><br /> Valor predeterminado: `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|Cuando el `SchedulingProtocol` clave de la directiva se establece en el valor `EnhanceScheduleGroupLocality`, esta propiedad especifica el número máximo de contextos ejecutables que pueden almacenarse en caché por colas locales de procesador virtual. Estos contextos generalmente se ejecutarán en orden de último en el primero en salir (LIFO) en el procesador virtual que provocó que se convierta en ejecutable. Tenga en cuenta que esta clave de directiva no tiene ningún significado cuando la `SchedulingProtocol` clave se establece en el valor `EnhanceForwardProgress`.<br /><br /> Los valores válidos: enteros no negativos<br /><br /> Valor predeterminado: `8`|
-|`MaxConcurrency`|La simultaneidad máxima nivel deseada por el programador. El Administrador de recursos intentará asignar inicialmente el siguiente número de procesadores virtuales. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad deseado es igual que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MinConcurrency` es mayor que el número de subprocesos de hardware en el equipo y `MaxConcurrency` se especifica como `MaxExecutionResources`, el valor de `MaxConcurrency` se genera para que coincida con lo que se establece para `MinConcurrency`.<br /><br /> Los valores válidos: enteros positivos y el valor especial `MaxExecutionResources`<br /><br /> Valor predeterminado: `MaxExecutionResources`|
+|`ContextPriority`|La prioridad del subproceso del sistema operativo de cada contexto en el programador. Si esta clave se establece en el valor `INHERIT_THREAD_PRIORITY` los contextos en el programador heredarán la prioridad del subproceso que creó el programador.<br /><br /> Valores válidos: Cualquiera de los valores válidos para el Windows `SetThreadPriority` función y el valor especial `INHERIT_THREAD_PRIORITY`<br /><br /> Valor predeterminado: `THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|El tamaño de pila reservado de cada contexto en el programador en kilobytes.<br /><br /> Valores válidos: Números enteros positivos<br /><br /> Valor predeterminado: `0`, que indica que se utiliza el valor predeterminado de la variable del proceso para el tamaño de la pila.|
+|`DynamicProgressFeedback`|Determina si los recursos para el programador se volverán a equilibrar según la información estadística recopilada desde el programador o solo en función del nivel de suscripción de subprocesos de hardware subyacentes. Para obtener más información, consulte [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype).<br /><br /> Valores válidos: Un miembro de la `DynamicProgressFeedbackType` enumeración, ya sea `ProgressFeedbackEnabled` o `ProgressFeedbackDisabled`<br /><br /> Valor predeterminado: `ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|Cuando el `SchedulingProtocol` clave de la directiva se establece en el valor `EnhanceScheduleGroupLocality`, esta propiedad especifica el número máximo de contextos ejecutables que pueden almacenarse en caché por colas locales de procesador virtual. Estos contextos generalmente se ejecutarán en orden de último en el primero en salir (LIFO) en el procesador virtual que provocó que se convierta en ejecutable. Tenga en cuenta que esta clave de directiva no tiene ningún significado cuando la `SchedulingProtocol` clave se establece en el valor `EnhanceForwardProgress`.<br /><br /> Valores válidos: Enteros no negativos<br /><br /> Valor predeterminado: `8`|
+|`MaxConcurrency`|La simultaneidad máxima nivel deseada por el programador. El Administrador de recursos intentará asignar inicialmente el siguiente número de procesadores virtuales. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad deseado es igual que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MinConcurrency` es mayor que el número de subprocesos de hardware en el equipo y `MaxConcurrency` se especifica como `MaxExecutionResources`, el valor de `MaxConcurrency` se genera para que coincida con lo que se establece para `MinConcurrency`.<br /><br /> Valores válidos: Números enteros positivos y el valor especial `MaxExecutionResources`<br /><br /> Valor predeterminado: `MaxExecutionResources`|
 |`MaxPolicyElementKey`|La clave de elemento de directiva máxima. No es una clave de elemento válido.|
-|`MinConcurrency`|El nivel de simultaneidad mínimo que debe proporcionarse al programador mediante el Administrador de recursos. El número de procesadores virtuales asignados a un programador nunca pasará por debajo del mínimo. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad mínimo es igual que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MaxConcurrency` es menor que el número de subprocesos de hardware en el equipo y `MinConcurrency` se especifica como `MaxExecutionResources`, el valor de `MinConcurrency` se reduce para que coincida con lo que se establece para `MaxConcurrency`.<br /><br /> Los valores válidos: enteros no negativos y el valor especial `MaxExecutionResources`. Tenga en cuenta que las directivas de programador utilizadas para la construcción de los programadores del Runtime de simultaneidad, el valor de `0` no es válido.<br /><br /> Valor predeterminado: `1`|
-|`SchedulerKind`|El tipo de subprocesos que el programador se utilizará para contextos de ejecución subyacentes. Para obtener más información, consulte [SchedulerType](#schedulertype).<br /><br /> Los valores válidos: un miembro de la `SchedulerType` enumeración, por ejemplo, `ThreadScheduler`<br /><br /> Valor predeterminado: `ThreadScheduler`. Esto se traduce en subprocesos de Win32 en todos los sistemas operativos.|
-|`SchedulingProtocol`|Describe el algoritmo de programación que se usará en el programador. Para obtener más información, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Los valores válidos: un miembro de la `SchedulingProtocolType` enumeración, ya sea `EnhanceScheduleGroupLocality` o `EnhanceForwardProgress`<br /><br /> Valor predeterminado: `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|Número de procesadores virtuales por subproceso de hardware provisional. El factor de la suscripción excesiva puede aumentarse el Administrador de recursos, si es necesario, para satisfacer `MaxConcurrency` con los subprocesos de hardware en el equipo.<br /><br /> Los valores válidos: enteros positivos<br /><br /> Valor predeterminado: `1`|
+|`MinConcurrency`|El nivel de simultaneidad mínimo que debe proporcionarse al programador mediante el Administrador de recursos. El número de procesadores virtuales asignados a un programador nunca pasará por debajo del mínimo. El valor especial [MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources) indica que el nivel de simultaneidad mínimo es igual que el número de subprocesos de hardware en el equipo. Si el valor especificado para `MaxConcurrency` es menor que el número de subprocesos de hardware en el equipo y `MinConcurrency` se especifica como `MaxExecutionResources`, el valor de `MinConcurrency` se reduce para que coincida con lo que se establece para `MaxConcurrency`.<br /><br /> Valores válidos: Enteros no negativos y el valor especial `MaxExecutionResources`. Tenga en cuenta que las directivas de programador utilizadas para la construcción de los programadores del Runtime de simultaneidad, el valor de `0` no es válido.<br /><br /> Valor predeterminado: `1`|
+|`SchedulerKind`|El tipo de subprocesos que el programador se utilizará para contextos de ejecución subyacentes. Para obtener más información, consulte [SchedulerType](#schedulertype).<br /><br /> Valores válidos: Un miembro de la `SchedulerType` enumeración, por ejemplo, `ThreadScheduler`<br /><br /> Valor predeterminado: `ThreadScheduler`. Esto se traduce en subprocesos de Win32 en todos los sistemas operativos.|
+|`SchedulingProtocol`|Describe el algoritmo de programación que se usará en el programador. Para obtener más información, consulte [SchedulingProtocolType](#schedulingprotocoltype).<br /><br /> Valores válidos: Un miembro de la `SchedulingProtocolType` enumeración, ya sea `EnhanceScheduleGroupLocality` o `EnhanceForwardProgress`<br /><br /> Valor predeterminado: `EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|Número de procesadores virtuales por subproceso de hardware provisional. El factor de la suscripción excesiva puede aumentarse el Administrador de recursos, si es necesario, para satisfacer `MaxConcurrency` con los subprocesos de hardware en el equipo.<br /><br /> Valores válidos: Números enteros positivos<br /><br /> Valor predeterminado: `1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>Requisitos
@@ -325,7 +326,7 @@ enum WinRTInitializationType;
 |Nombre|Descripción|
 |----------|-----------------|
 |`DoNotInitializeWinRT`|Cuando la aplicación se ejecuta en los sistemas operativos con Windows 8 o una versión posterior, los subprocesos dentro del programador no se inicializarán en Windows Runtime.|
-|`InitializeWinRTAsMTA`|Cuando la aplicación se ejecuta en los sistemas operativos con Windows 8 o una versión posterior, cada subproceso del programador se inicializará en Windows Runtime y declarará que forma parte del apartamento multiproceso.|
+|`InitializeWinRTAsMTA`|Cuando la aplicación se ejecuta en los sistemas operativos con Windows 8 o una versión posterior, cada subproceso del programador se inicializará en Windows en tiempo de ejecución y declarará que forma parte del apartamento multiproceso.|
 
 ## <a name="requirements"></a>Requisitos
 

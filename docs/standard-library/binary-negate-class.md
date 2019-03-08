@@ -1,21 +1,21 @@
 ---
 title: binary_negate (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binary_negate
+- functional/std::binary_negate
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e00e398f1c43d0a8d762ca42c3f4f3ab51b9866
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536651"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006349"
 ---
 # <a name="binarynegate-class"></a>binary_negate (Clase)
 
-Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función binaria especificada.
+Clase de plantilla que proporciona una función miembro que niega el valor devuelto de una función binaria especificada. En desuso en C ++ 17 en favor de [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,7 +49,7 @@ La negación de la función binaria.
 
 ## <a name="remarks"></a>Comentarios
 
-La clase de plantilla almacena una copia de un objeto de función binaria _ *Func*. Define su función miembro `operator()` para que devuelva **!**\_ *Func(left, right).*
+La clase de plantilla almacena una copia de un objeto de función binaria *Func*. Define su función miembro `operator()` que devuelva `!Func(left, right)`.
 
 El constructor de `binary_negate` no suele usarse directamente. La función del asistente [not2](../standard-library/functional-functions.md#not2) se suele preferir para declarar y usar el predicado de adaptador **binary_negator**.
 

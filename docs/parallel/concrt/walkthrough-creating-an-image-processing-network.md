@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: Crear una red de procesamiento de imagen'
-ms.date: 11/04/2016
+title: 'Tutorial: Creación de una red de procesamiento de imágenes'
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643643"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262823"
 ---
-# <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Crear una red de procesamiento de imagen
+# <a name="walkthrough-creating-an-image-processing-network"></a>Tutorial: Creación de una red de procesamiento de imágenes
 
 Este documento muestra cómo crear una red de bloques de mensajes asincrónicos que realizan procesamiento de imágenes.
 
@@ -26,9 +26,9 @@ Lea los documentos siguientes antes de iniciar este tutorial:
 
 - [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Procedimiento para usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Cómo: Usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-- [Tutorial: Crear un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
+- [Tutorial: Creación de un agente de flujo de datos](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
 También se recomienda comprender los conceptos básicos de GDI + antes de empezar este tutorial.
 
@@ -134,7 +134,7 @@ Si la aplicación requiere que varios de mensaje bloquea procesar el mensaje, en
 
 La siguiente ilustración muestra la red de procesamiento de imágenes:
 
-![Red de procesamiento de imágenes](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![Red de procesamiento de imágenes](../../parallel/concrt/media/concrt_imageproc.png "red de procesamiento de imágenes")
 
 La `countdown_event` objeto en este ejemplo habilita la red de procesamiento de imágenes informar a la aplicación principal cuando se han procesado todas las imágenes. El `countdown_event` clase utiliza un [Concurrency:: Event](../../parallel/concrt/reference/event-class.md) objeto que se va a señalar cuando un valor de contador llega a cero. La aplicación principal incrementa el contador cada vez que TI envía un nombre de archivo a la red. El nodo terminal de la red disminuye el contador después de procesar cada imagen. Una vez que la aplicación principal atraviesa el directorio especificado, espera el `countdown_event` objeto para indicar que el contador llegue a cero.
 
@@ -152,7 +152,7 @@ En el código siguiente se muestra el ejemplo completo. El `wmain` función admi
 
 La siguiente ilustración muestra la salida de ejemplo. Cada imagen de origen está por encima de su correspondiente imagen modificada.
 
-![Ejemplo de salida para el ejemplo](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![Ejemplo de salida para el ejemplo](../../parallel/concrt/media/concrt_imageout.png "ejemplo de salida para el ejemplo")
 
 `Lighthouse` creado por Tom Alphin y, por tanto, se convierte a escala de grises. `Chrysanthemum`, `Desert`, `Koala`, y `Tulips` tiene rojo como color dominante y, por tanto, tienen los componentes de color azul y verde que se quita y se oscurecerá. `Hydrangeas`, `Jellyfish`, y `Penguins` coinciden con los criterios predeterminados y, por tanto, son sepia tonos.
 
@@ -162,7 +162,7 @@ La siguiente ilustración muestra la salida de ejemplo. Cada imagen de origen es
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `image-processing-network.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe /DUNICODE/EHsc /link procesamiento-image-network.cpp gdiplus.lib**
+**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
 ## <a name="see-also"></a>Vea también
 

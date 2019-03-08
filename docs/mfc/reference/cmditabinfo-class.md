@@ -1,5 +1,5 @@
 ---
-title: CMDITabInfo (clase)
+title: CMDITabInfo Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMDITabInfo
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: b9b45142d0fb1d53ccecad31ace7ad1a6dd4ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524714"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276343"
 ---
-# <a name="cmditabinfo-class"></a>CMDITabInfo (clase)
+# <a name="cmditabinfo-class"></a>CMDITabInfo Class
 
 El `CMDITabInfo` clase se utiliza para pasar parámetros al [CMDIFrameWndEx:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) método. Establezca miembros de esta clase para controlar el comportamiento de MDI con grupos con pestañas.
 
@@ -213,7 +213,7 @@ Especifique uno de los siguientes estilos de las etiquetas de pestaña:
 |-|-|
 |STYLE_3D|Estilo 3D.  |
 |STYLE_3D_ONENOTE|Estilo de Microsoft OneNote.  |
-|STYLE_3D_VS2005|Estilo de Microsoft Visual Studio 2005.  |
+|STYLE_3D_VS2005|Microsoft Visual Studio 2005 style.  |
 |STYLE_3D_SCROLLED|Estilo 3D con etiquetas de pestaña de rectángulo.  |
 |STYLE_FLAT_SHARED_HORZ_SCROLL|Estilo plano con la barra de desplazamiento horizontal compartida.  |
 |STYLE_3D_ROUNDED_SCROLL|Estilo 3D con etiquetas de pestaña redondear.  |
@@ -244,7 +244,7 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>Parámetros
 
-*cuentas por cobrar*<br/>
+*ar*<br/>
 [in] Un [CArchive (clase)](../../mfc/reference/carchive-class.md) objeto que se va a serializar.
 
 ## <a name="see-also"></a>Vea también

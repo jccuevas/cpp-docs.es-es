@@ -1,6 +1,6 @@
 ---
 title: /hotpatch (Crear una imagen a la que se puede aplicar una revisión reciente)
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 f1_keywords:
 - /hotpatch
 - VC.Project.VCCLCompilerTool.CreateHotpatchableImage
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-ms.openlocfilehash: b304edffc024fac084338789134269745111ba00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aca009b108eab8a9e7e9401aa14db4ab225d475a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581446"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417858"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crear una imagen a la que se puede aplicar una revisión reciente)
 
@@ -48,10 +48,6 @@ Dado que las instrucciones siempre son dos bytes o mayores en la arquitectura AR
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
 - Vea <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
-
-## <a name="guidance"></a>Orientación
-
-Para obtener más información acerca de la administración de actualizaciones, vea "Security Guidance for Update Management" en [ http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx ](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).
 
 ## <a name="see-also"></a>Vea también
 

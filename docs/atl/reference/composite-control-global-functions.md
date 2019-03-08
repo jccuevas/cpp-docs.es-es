@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb41134de21cc030ae4e96360cad67222026ce4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283441"
 ---
 # <a name="composite-control-global-functions"></a>Funciones globales de Control compuesto
 
@@ -52,7 +52,7 @@ Estas funciones proporcionan compatibilidad para crear cuadros de diálogo y par
 
 **Encabezado:** atlhost.h
 
-##  <a name="atlaxdialogbox"></a>  AtlAxCreateDialog
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
 Crea un cuadro de diálogo modal a partir de una plantilla de cuadros de diálogo proporcionada por el usuario.
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Identifica la ventana propietaria del cuadro de diálogo.
 
 *lpDialogProc*<br/>
-[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Para obtener más información sobre la edición de scripts de recursos, consulte [Cómo: abrir un archivo de Script de recursos en formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obtener más información sobre las instrucciones de definición de recursos de control, vea [parámetros comunes de Control](/windows/desktop/menurc/common-control-parameters) en Windows SDK *: SDK Tools*.
+Para obtener más información sobre la edición de scripts de recursos, consulte [Cómo: Abrir un archivo de Script de recursos en formato de texto](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Para obtener más información sobre las instrucciones de definición de recursos de control, vea [parámetros comunes de Control](/windows/desktop/menurc/common-control-parameters) en Windows SDK: SDK Tools.
 
 Para obtener más información sobre los cuadros de diálogo en general, consulte [cuadro de diálogo](/windows/desktop/api/winuser/nf-winuser-dialogboxa) y [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) en el SDK de Windows.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Identifica la ventana propietaria del cuadro de diálogo.
 
 *lpDialogProc*<br/>
-[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Señala el procedimiento de cuadro de diálogo. Para obtener más información sobre el procedimiento de cuadro de diálogo, vea [función DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -160,7 +160,7 @@ Un puntero a una cadena que se pasarán al control. Debe tener el formato de una
 
 - CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Una dirección URL como "http://www.microsoft.com"
+- Una dirección URL como "<http://www.microsoft.com>"
 
 - Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ Un puntero a una cadena que se pasarán al control. Debe tener el formato de una
 
 - CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Una dirección URL como "http://www.microsoft.com"
+- Una dirección URL como "<http://www.microsoft.com>"
 
 - Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ Un puntero a una cadena que se pasarán al control. Debe tener el formato de una
 
 - CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Una dirección URL como "http://www.microsoft.com"
+- Una dirección URL como "<http://www.microsoft.com>"
 
 - Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ Un puntero a una cadena que se pasarán al control. Debe tener el formato de una
 
 - CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Una dirección URL como "http://www.microsoft.com"
+- Una dirección URL como "<http://www.microsoft.com>"
 
 - Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"
 
@@ -413,7 +413,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Identificador de la ventana que hospeda el control.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] El `IUnknown` del contenedor del control.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -433,7 +433,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 *h*<br/>
 [in] Identificador de la ventana que hospeda el control.
 
-*perfil de puerto*<br/>
+*pp*<br/>
 [out] El `IUnknown` del control hospedado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -490,7 +490,7 @@ Siempre devuelve TRUE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función simplemente llama a [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) tal como se describe en el SDK de Windows.
+Esta función simplemente llama a [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) tal como se describe en el SDK de Windows.
 
 Llame a esta función para limpiar después de que se hayan destruido todas las ventanas de host existente si llama a [AtlAxWinInit](#atlaxwininit) y ya no necesita crear ventanas de host. Si no llama a esta función, la clase de ventana se anula automáticamente cuando finaliza el proceso.
 

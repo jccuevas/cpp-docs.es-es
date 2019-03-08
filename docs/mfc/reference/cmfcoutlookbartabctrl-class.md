@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559723"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269947"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -79,7 +79,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|Lo llama el marco de trabajo durante las operaciones de cambio de tamaño para determinar si se pueden mostrar menos botones de página de ficha de barra de Outlook que están actualmente visibles.|
 |[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|Lo llama el marco de trabajo durante las operaciones de cambio de tamaño para determinar si se pueden mostrar más botones de página de ficha de barra de Outlook que están actualmente visibles.|
 |[CMFCOutlookBarTabCtrl::Create](#create)|Crea el control de ficha de la barra de Outlook.|
-|`CMFCOutlookBarTabCtrl::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCOutlookBarTabCtrl::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)|Especifica si está habilitada la animación que se produce durante la conmutación entre las pestañas activas.|
 |[CMFCOutlookBarTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Especifica si un usuario puede modificar las etiquetas de texto en los botones de ficha de la barra de Outlook. (Invalida [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|
 |[CMFCOutlookBarTabCtrl::EnableScrollButtons](#enablescrollbuttons)|Lo llama el marco de trabajo para habilitar los botones que permiten al usuario desplazarse por los botones en el panel de la barra de Outlook.|
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño inicial y la posición, en píxeles.
 
 *pParentWnd*<br/>
@@ -246,7 +246,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Especifica si la animación debe habilitarse o deshabilitarse.
 
 ### <a name="remarks"></a>Comentarios
@@ -265,7 +265,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Si es TRUE, habilite la edición en contexto de la etiqueta de texto. Si es FALSE, deshabilite la edición en contexto.
 
 ### <a name="remarks"></a>Comentarios
@@ -285,7 +285,7 @@ void EnableScrollButtons(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Determina si se muestran los botones de desplazamiento.
 
 *bIsUp*<br/>
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Especifica el identificador de recurso de la imagen para cargar.
 
-*CX*<br/>
+*cx*<br/>
 [in] Especifica el ancho de una imagen en la lista de imágenes, en píxeles.
 
 *clrTransp*<br/>

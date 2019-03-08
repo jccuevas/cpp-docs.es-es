@@ -4,6 +4,16 @@ ms.date: 11/04/2016
 apiname:
 - _findfirst
 - _wfindfirst
+- _findfirst32
+- _wfindfirst32
+- _findfirst32i64
+- _wfindfirst32i64
+- _findfirst64
+- _wfindfirst64
+- _findfirst64i32
+- _wfindfirst64i32
+- _findfirsti64
+- _wfindfirsti64
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -90,12 +100,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47a1d7301b59a942a1af860f310e1f1f9da12ec7
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542091"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703147"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 
@@ -156,22 +166,22 @@ intptr_t _wfindfirst64i32(
 
 ### <a name="parameters"></a>Parámetros
 
-*especificación de archivo*<br/>
+*filespec*<br/>
 Especificación de archivo de destino (puede incluir caracteres comodín).
 
-*FileInfo*<br/>
+*fileinfo*<br/>
 Búfer de información de archivo.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Si es correcto, **_findfirst** devuelve un identificador de búsqueda exclusivo que identifica el archivo o grupo de archivos que coinciden con el *filespec* especificación, que puede usarse en una llamada subsiguiente a [_ FindNext](findnext-functions.md) o a [_findclose](findclose.md). En caso contrario, **_findfirst** devuelve -1 y establece **errno** a uno de los siguientes valores.
 
-|valor de errno|Condición|
+| valor de errno | Condición |
 |-|-|
-**EINVAL**|Parámetros no válidos: *filespec* o *fileinfo* era **NULL**. O bien, el sistema operativo ha devuelto un error inesperado.
-**ENOENT**|Especificación de archivo que no se encuentra.
-**ENOMEM**|Memoria insuficiente.
-**EINVAL**|Especificación de nombre de archivo no válido o el nombre de archivo indicado era mayor que **MAX_PATH**.
+| **EINVAL** | Parámetros no válidos: *filespec* o *fileinfo* era **NULL**. O bien, el sistema operativo ha devuelto un error inesperado. |
+| **ENOENT** | Especificación de archivo que no se encuentra. |
+| **ENOMEM** | Memoria insuficiente. |
+| **EINVAL** | Especificación de nombre de archivo no válido o el nombre de archivo indicado era mayor que **MAX_PATH**. |
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

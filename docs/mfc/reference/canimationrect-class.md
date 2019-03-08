@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540184"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259495"
 ---
 # <a name="canimationrect-class"></a>Clase CAnimationRect
 
@@ -87,7 +87,7 @@ class CAnimationRect : public CAnimationBaseObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Convierte un CAnimationRect al objeto Rect.|
-|[CAnimationRect::operator =](#operator_eq)|Asigna rect a CAnimationRect.|
+|[CAnimationRect::operator=](#operator_eq)|Asigna rect a CAnimationRect.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -183,7 +183,7 @@ CAnimationRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el rectángulo del predeterminado.
 
 *nGroupID*<br/>
@@ -195,7 +195,7 @@ Especifica el identificador de objeto.
 *dwUserData*<br/>
 Especifica los datos definidos por el usuario.
 
-*PT*<br/>
+*pt*<br/>
 Coordenada de la esquina superior izquierda.
 
 *sz*<br/>
@@ -322,7 +322,7 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Salida. Cuando este método vuelve, contiene el valor actual.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -401,7 +401,7 @@ Valor actual del rectángulo de animación como objeto Rect.
 
 Esta función llama internamente a GetValue. Si se produce un error en GetValue por algún motivo, el rectángulo devuelto contendrá los valores predeterminados para todas las coordenadas del rectángulo.
 
-##  <a name="operator_eq"></a>  CAnimationRect::operator =
+##  <a name="operator_eq"></a>  CAnimationRect::operator=
 
 Asigna rect a CAnimationRect.
 
@@ -411,7 +411,7 @@ void operator=(const RECT& rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 El nuevo valor de rectángulo de animación.
 
 ### <a name="remarks"></a>Comentarios
@@ -428,7 +428,7 @@ void SetDefaultValue(const CRect& rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Especifica los nuevos valores predeterminados de la izquierda, superior, derecho e inferior.
 
 ### <a name="remarks"></a>Comentarios

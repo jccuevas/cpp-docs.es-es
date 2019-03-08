@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 631e7a6f3676114e5d0bcac745dce58df1daf1ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276382"
 ---
 # <a name="cominterfaceentry-macros"></a>Macros COM_INTERFACE_ENTRY
 
@@ -97,7 +97,7 @@ COM_INTERFACE_ENTRY2(x, x2)
 *x*<br/>
 [in] El nombre de una interfaz que se va a exponer desde el objeto.
 
-*X2*<br/>
+*x2*<br/>
 [in] El nombre de la rama de herencia desde la que *x* se expone.
 
 ### <a name="remarks"></a>Comentarios
@@ -118,7 +118,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz expuesta.
 
 *x*<br/>
@@ -138,13 +138,13 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] GUID que se especifica para la interfaz.
 
 *x*<br/>
 [in] El nombre de una interfaz que el objeto de clase se deriva directamente.
 
-*X2*<br/>
+*x2*<br/>
 [in] El nombre de una segunda interfaz que el objeto de clase se deriva directamente.
 
 ##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
@@ -157,10 +157,10 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz de consulta.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] El nombre de un `IUnknown` puntero.
 
 ### <a name="remarks"></a>Comentarios
@@ -181,7 +181,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*<br/>
+*punk*<br/>
 [in] El nombre de un `IUnknown` puntero.
 
 ### <a name="remarks"></a>Comentarios
@@ -202,13 +202,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz de consulta.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] El nombre de un `IUnknown` puntero. Debe ser un miembro de la clase que contiene el mapa COM.
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] El identificador de la función de agregado que se creará si *punk* es NULL.
 
 ### <a name="remarks"></a>Comentarios
@@ -227,10 +227,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ### <a name="parameters"></a>Parámetros
 
-*pUnk*<br/>
+*punk*<br/>
 [in] El nombre de un `IUnknown` puntero. Debe ser un miembro de la clase que contiene el mapa COM.
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] El identificador de la función de agregado que se creará si *punk* es NULL.
 
 ### <a name="remarks"></a>Comentarios
@@ -268,13 +268,13 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz desplazable.
 
 *x*<br/>
 [in] El nombre de la clase que implementa la interfaz.
 
-*pUnk*<br/>
+*punk*<br/>
 [in] El nombre de un `IUnknown` puntero. Debe ser un miembro de la clase que contiene el mapa COM. Se debe inicializar en NULL en el constructor del objeto de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -295,7 +295,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz desplazable.
 
 *x*<br/>
@@ -342,10 +342,10 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El GUID de la interfaz expuesta.
 
-*almacenamiento de datos*<br/>
+*dw*<br/>
 [in] Un parámetro que se pasa a la *func*.
 
 *func*<br/>
@@ -369,7 +369,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 
 ### <a name="parameters"></a>Parámetros
 
-*almacenamiento de datos*<br/>
+*dw*<br/>
 [in] Un parámetro que se pasa a la *func*.
 
 *func*<br/>
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 Puede usar esta macro para impedir que una interfaz que se usan en un caso concreto. Por ejemplo, puede insertar esta macro en el mapa COM. justo antes de COM_INTERFACE_ENTRY_AGGREGATE_BLIND para impedir que una consulta para la interfaz que se reenvían a desconocido interno del agregado.
 
 La interfaz se construirán IID anexando *x* a `IID_`. Por ejemplo, si *x* es `IPersistStorage`, será el IID `IID_IPersistStorage`.
-

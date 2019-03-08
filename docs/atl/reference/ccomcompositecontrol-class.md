@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: 370f0bb2fc76e1377dce6ae4616861085ad44562
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302005"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl (clase)
 
@@ -49,13 +49,13 @@ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Name|Descripción|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|El constructor.|
-|[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Destructor.|
+|[CComCompositeControl::~CComCompositeControl](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CComCompositeControl:: AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o no notificar todos los controles alojados por el control compuesto.|
+|[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Llame a este método para notificar o no notificar todos los controles alojados por el control compuesto.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Llame a este método para calcular el tamaño en unidades HIMETRIC del recurso de cuadro de diálogo usa para hospedar un control compuesto.|
 |[CComCompositeControl::Create](#create)|Se llama a este método para crear la ventana de control para el control compuesto.|
 |[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Llame a este método para crear la ventana de control y aconseja cualquier control hospedado.|
@@ -102,7 +102,7 @@ Un control que implementa un `CComCompositeControl`-clase derivada tiene integra
 
 **Encabezado:** atlctl.h
 
-##  <a name="advisesinkmap"></a>  CComCompositeControl:: AdviseSinkMap
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap
 
 Llame a este método para notificar o no notificar todos los controles alojados por el control compuesto.
 
@@ -193,7 +193,7 @@ CComCompositeControl();
 
 Inicializa el [CComCompositeControl::m_hbrBackground](#m_hbrbackground) y [CComCompositeControl::m_hWndFocus](#m_hwndfocus) los miembros de datos es NULL.
 
-##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl
+##  <a name="dtor"></a>  CComCompositeControl::~CComCompositeControl
 
 Destructor.
 

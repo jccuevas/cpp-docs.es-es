@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Escribir un bucle parallel_for_each'
+title: Filtrar Escribir un bucle parallel_for_each
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610514"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272222"
 ---
-# <a name="how-to-write-a-parallelforeach-loop"></a>Cómo: Escribir un bucle parallel_for_each
+# <a name="how-to-write-a-parallelforeach-loop"></a>Filtrar Escribir un bucle parallel_for_each
 
 En este ejemplo se muestra cómo usar el [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo para calcular el recuento de números primos en un [std:: Array](../../standard-library/array-class-stl.md) objetos en paralelo.
 
@@ -38,14 +38,13 @@ took 1653 ms
 
 Para compilar el código, cópielo y, a continuación, péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `parallel-count-primes.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc parallel-count-primes.cpp**
+**cl.exe /EHsc parallel-count-primes.cpp**
 
 ## <a name="robust-programming"></a>Programación sólida
 
-La expresión lambda que el ejemplo pasa al algoritmo `parallel_for_each` usa la función `InterlockedIncrement` para permitir a las iteraciones paralelas del bucle incrementar el contador simultáneamente. Si usa funciones como `InterlockedIncrement` para sincronizar el acceso a los recursos compartidos, pueden presentarse cuellos de botella de rendimiento en el código. Puede usar un mecanismo de sincronización sin bloqueo, por ejemplo, el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), para eliminar el acceso simultáneo a los recursos compartidos. Para obtener un ejemplo que usa el `combinable` de clase de esta manera, vea [Cómo: usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
+La expresión lambda que el ejemplo pasa al algoritmo `parallel_for_each` usa la función `InterlockedIncrement` para permitir a las iteraciones paralelas del bucle incrementar el contador simultáneamente. Si usa funciones como `InterlockedIncrement` para sincronizar el acceso a los recursos compartidos, pueden presentarse cuellos de botella de rendimiento en el código. Puede usar un mecanismo de sincronización sin bloqueo, por ejemplo, el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) (clase), para eliminar el acceso simultáneo a los recursos compartidos. Para obtener un ejemplo que usa el `combinable` de clase de esta manera, vea [Cómo: Usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for_each (función)](reference/concurrency-namespace-functions.md#parallel_for_each)
-

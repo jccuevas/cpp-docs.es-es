@@ -1,5 +1,5 @@
 ---
-title: CMFCShellTreeCtrl (clase)
+title: CMFCShellTreeCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellTreeCtrl
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 5f257cb57e7b6f287d5032bdc2655bb65fe946cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fa829c5333a87d908d36438fe8ffcd253f9fb5a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445882"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279996"
 ---
-# <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl (clase)
+# <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl Class
 
 El `CMFCShellTreeCtrl` extiende la clase [CTreeCtrl (clase)](../../mfc/reference/ctreectrl-class.md) funcionalidad mostrando una jerarquía de elementos de Shell.
 
@@ -53,7 +53,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |Name|Descripción|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Habilita o deshabilita el menú contextual.|
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Devuelve una combinación de marcas que se pasan a [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).|
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|Devuelve una combinación de marcas que se pasan a [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Recupera la ruta de acceso a un elemento.|
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Devuelve un puntero a la [CMFCShellListCtrl (clase)](../../mfc/reference/cmfcshelllistctrl-class.md) objeto que se usa junto con esto `CMFCShellTreeCtrl` objeto para crear una ventana similar al explorador.|
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Esta ventana primaria llama a esta función miembro cuando recibe un mensaje de notificación que se aplica a esta ventana. (Invalida [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|
@@ -82,7 +82,7 @@ Esta clase extiende la `CTreeCtrl` clase habilitando el programa incluir element
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** afxshelltreeCtrl.h
+**Header:** afxshelltreeCtrl.h
 
 ## <a name="example"></a>Ejemplo
 
@@ -101,7 +101,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Valor booleano que especifica si se habilita el menú contextual.
 
 ##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
@@ -118,7 +118,7 @@ Establece un valor DWORD que especifica la combinación de marcas actualmente.
 
 ### <a name="remarks"></a>Comentarios
 
-Las marcas establecidas el `CMFCShellTreeCtrl` se envían al método [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066) cada vez que el objeto se actualiza. Puede cambiar los indicadores con el [CMFCShellTreeCtrl::SetFlags](#setflags) método.
+Las marcas establecidas el `CMFCShellTreeCtrl` se envían al método [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects) cada vez que el objeto se actualiza. Puede cambiar los indicadores con el [CMFCShellTreeCtrl::SetFlags](#setflags) método.
 
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath
 
@@ -176,7 +176,7 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *mensaje*<br/>
+[in] *message*<br/>
 [in] *wParam*<br/>
 [in] *lParam*<br/>
 [in] *pLResult*<br/>
@@ -269,7 +269,7 @@ void SetFlags(
 
 ### <a name="remarks"></a>Comentarios
 
-El `CMFCShellTreeCtrl` pasadas todos establecer marcas para [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066). Para obtener más información acerca de los valores de los indicadores, vea [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066).
+El `CMFCShellTreeCtrl` pasadas todos establecer marcas para [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects). Para obtener más información acerca de los valores de los indicadores, vea [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).
 
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - maps, property
 - property maps
 ms.assetid: 44abde56-90ad-4612-854e-d2fa5426fa80
-ms.openlocfilehash: 174108cac9982e46a62a90f8cb60662527812e47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e1e9999c63bfa525988b67d020031fd76514b67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575505"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415895"
 ---
 # <a name="property-maps"></a>Mapas de propiedades
 
-Con la sesión, el conjunto de filas y el objeto de comando opcional, cada proveedor admite una o varias propiedades. Estas propiedades se definen en las asignaciones de propiedad almacenados en los archivos de encabezado creados por el **Asistente para proveedores OLE DB**. Cada archivo de encabezado contiene una asignación para las propiedades en el grupo de propiedades de OLE DB definido para el objeto u objetos definidos en ese archivo. El archivo de encabezado que contiene el objeto de origen de datos también contiene el mapa de propiedades para el [propiedades DataSource](https://msdn.microsoft.com/library/ms724188). `Session.h` contiene la asignación de propiedad para el [propiedades de la sesión](/previous-versions/windows/desktop/ms714221). Los objetos de conjunto de filas y los comandos están en un archivo de encabezado único, denominado *projectname*RS.h. Estas propiedades son miembros de la [las propiedades del conjunto de filas](/previous-versions/windows/desktop/ms711252) grupo.
+Con la sesión, el conjunto de filas y el objeto de comando opcional, cada proveedor admite una o varias propiedades. Estas propiedades se definen en las asignaciones de propiedad almacenados en los archivos de encabezado creados por el **Asistente para proveedores OLE DB**. Cada archivo de encabezado contiene una asignación para las propiedades en el grupo de propiedades de OLE DB definido para el objeto u objetos definidos en ese archivo. El archivo de encabezado que contiene el objeto de origen de datos también contiene el mapa de propiedades para el [propiedades DataSource](https://msdn.microsoft.com/library/ms724188). `Session.h` contiene la asignación de propiedad para el [propiedades de la sesión](/previous-versions/windows/desktop/ms714221(v=vs.85)). Los objetos de conjunto de filas y los comandos están en un archivo de encabezado único, denominado *projectname*RS.h. Estas propiedades son miembros de la [las propiedades del conjunto de filas](/previous-versions/windows/desktop/ms711252(v=vs.85)) grupo.
 
 ## <a name="see-also"></a>Vea también
 

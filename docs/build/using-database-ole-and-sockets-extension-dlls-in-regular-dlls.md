@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587530"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421212"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>Uso de archivos DLL de extensión de base de datos, OLE y Sockets MFC en archivos DLL de MFC estándar
 
 Cuando se usa una extensión MFC DLL desde una DLL de MFC regular, si la extensión MFC DLL no está conectada a la **CDynLinkLibrary** objeto de cadena de la DLL de MFC regular, pueden surgir uno o más de un conjunto de problemas relacionados. Dado que admiten las versiones de depuración de la base de datos de MFC, OLE y Sockets archivos DLL se implementa como archivos DLL de extensión MFC, podría ver problemas similares si usa estos MFC características, incluso si no está explícitamente utilizando cualquiera de su propios archivos DLL de extensión MFC. Algunos síntomas son:
 
-- Cuando intenta deserializar un objeto de un tipo de clase definido en la extensión MFC DLL, el mensaje "Advertencia: no se puede cargar CSuClase desde el archivo. Clase no definido". aparece en la ventana de depuración de seguimiento y el objeto no se puede serializar.
+- Cuando intenta deserializar un objeto de un tipo de clase definido en la extensión MFC DLL, el mensaje "Advertencia: No se puede cargar CSuClase desde el archivo. Clase no definido". aparece en la ventana de depuración de seguimiento y el objeto no se puede serializar.
 
 - Se podría producir una excepción que indica la clase incorrecto.
 

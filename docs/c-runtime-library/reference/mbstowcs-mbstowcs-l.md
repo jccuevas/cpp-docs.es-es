@@ -15,7 +15,9 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - mbstowcs
@@ -24,12 +26,12 @@ helpviewer_keywords:
 - mbstowcs_l function
 - mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
-ms.openlocfilehash: b788cd820f1297c563f3db739173162bb4983758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9178f64dd698ff517ea5b376ed19e97981c511d
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500976"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210684"
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs, _mbstowcs_l
 

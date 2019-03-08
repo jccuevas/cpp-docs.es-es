@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257307"
 ---
 # <a name="creating-an-active-document-container-application"></a>Crear una aplicación de contenedor de documentos activo
 
@@ -37,15 +37,15 @@ La manera más sencilla y más recomendada para crear una aplicación de contene
 
 1. Haga clic en **Finalizar**.
 
-9. Cuando el Asistente para aplicaciones MFC termina de generar la aplicación, abra los siguientes archivos mediante el Explorador de soluciones:
+1. Cuando el Asistente para aplicaciones MFC termina de generar la aplicación, abra los siguientes archivos mediante el Explorador de soluciones:
 
-   - *Archivo MyProjview.cpp*
+   - *MyProjview.cpp*
 
-10. En *archivo MyProjview.cpp*, realice los cambios siguientes:
+1. En *archivo MyProjview.cpp*, realice los cambios siguientes:
 
    - En `CMyProjView::OnPreparePrinting`, reemplace el contenido de la función con el código siguiente:
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` proporciona compatibilidad con la impresión. Este código reemplaza `DoPreparePrinting`, que es la preparación de impresión predeterminada.
 
@@ -59,9 +59,8 @@ La manera más sencilla y más recomendada para crear una aplicación de contene
 
    Las funciones miembro estáticas `COleDocObjectItem::OnPrint` y `COleDocObjectItem::OnPreparePrinting`, tal y como se implementa en el código anterior, controlar este esquema de impresión mejorado.
 
-11. Agregar sus propias implementaciones y compile la aplicación.
+1. Agregar sus propias implementaciones y compile la aplicación.
 
 ## <a name="see-also"></a>Vea también
 
 [Contención de documentos activos](../mfc/active-document-containment.md)
-

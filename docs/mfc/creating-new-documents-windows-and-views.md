@@ -1,6 +1,6 @@
 ---
 title: Crear nuevos documentos, ventanas y vistas
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d4ca55a9bff6ec42643db745896a2cea96dcefb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297816"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Crear nuevos documentos, ventanas y vistas
 
@@ -37,11 +37,14 @@ Las ilustraciones siguientes ofrecen información general del proceso de creaci�
 
 Tras la finalización de este proceso, los objetos en colaboración existen y almacenan punteros a entre sí. Las ilustraciones siguientes muestran la secuencia en que se crean los objetos. Puede seguir la secuencia de una ilustración a otra.
 
-![Secuencia para crear un documento](../mfc/media/vc387l1.gif "vc387l1") secuencia de creación de un documento
+![Secuencia para crear un documento](../mfc/media/vc387l1.gif "secuencia para crear un documento") <br/>
+Secuencia de creación de un documento
 
-![Secuencia de creación de ventanas de marco](../mfc/media/vc387l2.png "vc387l2") secuencia de creación de una ventana de marco
+![Secuencia de creación de ventanas de marco](../mfc/media/vc387l2.png "secuencia de creación de ventanas de marco") <br/>
+Secuencia de creación de una ventana de marco
 
-![Secuencia para crear una vista](../mfc/media/vc387l3.gif "vc387l3") secuencia de creación de una vista
+![Secuencia para crear una vista](../mfc/media/vc387l3.gif "secuencia para crear una vista") <br/>
+Secuencia de creación de una vista
 
 Para obtener información acerca de cómo el marco de trabajo inicializa el nuevo documento, vista y los objetos de ventana de marco, vea clases [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), y [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) en la referencia de la biblioteca MFC. Consulte también [Nota técnica 22](../mfc/tn022-standard-commands-implementation.md), que explica los procesos de creación e inicialización adicional en su discusión de los comandos estándar de .NET framework para la **New** y **abrir** los elementos de la **archivo** menú.
 
@@ -57,4 +60,3 @@ En la mayoría de los casos, la invalidación debe llamar a la versión de la cl
 [Creación de plantillas de documentos](../mfc/document-template-creation.md)<br/>
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Relaciones entre objetos MFC](../mfc/relationships-among-mfc-objects.md)
-

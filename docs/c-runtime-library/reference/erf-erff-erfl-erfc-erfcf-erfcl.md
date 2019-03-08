@@ -1,10 +1,13 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 04/05/2018
+ms.date: 01/31/2019
 apiname:
 - erff
 - erfl
 - erf
+- erfc
+- erfcf
+- erfcl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,17 +25,23 @@ f1_keywords:
 - erfl
 - erf
 - erff
+- erfc
+- erfcf
+- erfcl
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
+- erfcl function
+- erfcf function
+- erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450074"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702666"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -86,7 +95,7 @@ El **erf** funciones devuelven una función de error de la Gauss *x*. El **erfc*
 
 El **erf** funciones calculan la función de error de Gauss *x*, que se define como:
 
-![Función de error de x](media/crt_erf_formula.PNG "CRT_erf_formula")
+![La función de error de x](media/crt_erf_formula.PNG "la función de error de x")
 
 La función de error de Gauss complementaria se define como 1 - ERF. El **erf** funciones devuelven un valor en el intervalo de -1,0 y 1,0. No se devuelve ningún error. El **erfc** funciones devuelven un valor en el intervalo de 0 a 2. Si *x* es demasiado grande para **erfc**, **errno** variable se establece en **ERANGE**.
 
@@ -96,7 +105,7 @@ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **erf** y **erfc*
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**ERF**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

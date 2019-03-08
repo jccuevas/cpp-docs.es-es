@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: ec635ea00c9659d43d148c55e02a70a7c759279a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a44b9524324065581583bad13018b2c4479fc9f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291411"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr (clase)
 
@@ -89,7 +89,7 @@ por ejemplo, se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -115,4 +115,3 @@ Para obtener más información sobre `CMapPtrToPtr`, consulte el artículo [cole
 
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

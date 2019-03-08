@@ -1,6 +1,6 @@
 ---
 title: Puntos de conexión
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f934c4a5a24c5d54805a60e81cb0afdcdc2c14a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304748"
 ---
 # <a name="connection-points"></a>Puntos de conexión
 
@@ -30,7 +30,8 @@ En el pasado, el modelo de objetos componentes (COM) define un mecanismo general
 
 Una conexión tiene dos partes: el objeto que llama a la interfaz, denominada el origen y el objeto que implementa la interfaz, llama al receptor. Un punto de conexión es la interfaz expuesta por el origen. Al exponer un punto de conexión, un origen permite a los receptores establecer conexiones a sí mismo (origen). A través de la conexión de punto mecanismo (el `IConnectionPoint` interfaz), se pasa un puntero a la interfaz de receptor para el objeto de origen. This (puntero) proporciona el origen con acceso a la implementación del receptor de un conjunto de funciones miembro. Por ejemplo, para desencadenar un evento implementado por el receptor, el origen puede llamar al método correspondiente de la implementación del receptor. En la siguiente ilustración se muestra la conexión de punto que acabamos de describir.
 
-![Implementa el punto de conexión](../mfc/media/vc37lh1.gif "vc37lh1") An implementado de punto de conexión
+![Implementa el punto de conexión](../mfc/media/vc37lh1.gif "implementa el punto de conexión") <br/>
+Un punto de conexión implementado
 
 MFC implementa este modelo en el [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) y [CCmdTarget](../mfc/reference/ccmdtarget-class.md) clases. Las clases derivadas de `CConnectionPoint` implementar el `IConnectionPoint` interfaz, se utiliza para exponer los puntos de conexión a otros objetos. Las clases derivadas de `CCmdTarget` implementar el `IConnectionPointContainer` interfaz, que puede enumerar todos los puntos de conexión disponibles de un objeto o buscar un punto de conexión concreto.
 
@@ -54,7 +55,8 @@ Por último, agregue una llamada a `EnableConnections` en el constructor de clas
 
 Una vez insertado este código, su `CCmdTarget`-clase derivada expone un punto de conexión para el `ISampleSink` interfaz. En la siguiente ilustración se muestra en este ejemplo.
 
-![Punto de conexión implementado mediante MFC](../mfc/media/vc37lh2.gif "vc37lh2") una conexión de punto implementado con MFC
+![Punto de conexión implementado mediante MFC](../mfc/media/vc37lh2.gif "punto de conexión implementado mediante MFC") <br/>
+Un punto de conexión implementado con MFC
 
 Por lo general, la compatibilidad de puntos de conexión con "multidifusión": la capacidad para difundir a varios receptores conectados a la misma interfaz. El siguiente fragmento de ejemplo muestra cómo multidifusión recorriendo en iteración cada receptor en un punto de conexión:
 
@@ -65,4 +67,3 @@ En este ejemplo recupera el conjunto actual de conexiones en el `SampleConnPt` p
 ## <a name="see-also"></a>Vea también
 
 [MFC COM](../mfc/mfc-com.md)
-

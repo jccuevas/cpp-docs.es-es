@@ -1,6 +1,6 @@
 ---
 title: Arquitectura de vista-documento
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326587"
 ---
 # <a name="documentview-architecture"></a>Arquitectura documento/vista
 
@@ -47,7 +47,8 @@ El [CView](../mfc/reference/cview-class.md) (o uno de sus clases derivadas) prop
 
 En la siguiente ilustración muestra la relación entre un documento y su vista.
 
-![La vista es la parte del documento que se muestra](../mfc/media/vc379n1.gif "vc379n1") documento y vista
+![La vista es la parte del documento que se muestra](../mfc/media/vc379n1.gif "vista es la parte del documento que se muestra") <br/>
+Documento y vista
 
 La implementación de documento/vista en la biblioteca de clases separa los propios datos de su presentación y de los datos de las operaciones de usuario. Todos los cambios en los datos se administran a través de la clase de documento. La vista se llama a esta interfaz para obtener acceso y actualizar los datos.
 
@@ -89,4 +90,3 @@ Documentos, sus vistas asociadas y las ventanas de marco de las vistas que se cr
 [Las plantillas de documento y el proceso de creación de documento/vista](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
 [Crear documentos y vistas](../mfc/document-view-creation.md)<br/>
 [Creación de nuevos documentos, ventanas y vistas](../mfc/creating-new-documents-windows-and-views.md)
-

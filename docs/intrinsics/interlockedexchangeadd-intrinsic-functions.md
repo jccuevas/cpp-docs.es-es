@@ -1,6 +1,6 @@
 ---
 title: Funciones intrínsecas _InterlockedExchangeAdd
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchangeAdd64_nf
 - _InterlockedExchangeAdd64_rel
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: ffdeec13f3f99e5ef3595cbfec4a66f2099cd1a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cb4c4a5f1b8048995684e3f5c630acecc74000b
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647179"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627505"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchangeAdd
 
@@ -151,7 +151,6 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
    __int64 volatile * Addend,
    __int64 Value
 );
-
 ```
 
 #### <a name="parameters"></a>Parámetros
@@ -196,4 +195,4 @@ Para obtener un ejemplo de cómo usar `_InterlockedExchangeAdd`, consulte [_Inte
 
 [Intrínsecos del controlador](../intrinsics/compiler-intrinsics.md)<br/>
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
-[Conflictos con el compilador de x86](../build/conflicts-with-the-x86-compiler.md)
+[Conflictos con el compilador de x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

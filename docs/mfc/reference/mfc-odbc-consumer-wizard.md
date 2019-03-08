@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590884"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259937"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Asistente para consumidores ODBC MFC
 
@@ -25,30 +25,30 @@ Este asistente configura una clase de conjunto de registros ODBC y los enlaces d
 
 - **Origen de datos**
 
-   El **origen de datos** botón le permite configurar el origen de datos especificado mediante el controlador ODBC especificado. Para obtener más información acerca de los archivos de origen de datos (DSN), consulte [orígenes de datos de archivo](/previous-versions/windows/desktop/ms715401) en el SDK de ODBC.
+  El **origen de datos** botón le permite configurar el origen de datos especificado mediante el controlador ODBC especificado. Para obtener más información acerca de los archivos de origen de datos (DSN), consulte [orígenes de datos de archivo](/previous-versions/windows/desktop/ms715401) en el SDK de ODBC.
 
-   El **Seleccionar origen de datos** cuadro de diálogo tiene dos pestañas:
+  El **Seleccionar origen de datos** cuadro de diálogo tiene dos pestañas:
 
-   - **Origen de datos de archivo** pestaña:
+  - **Origen de datos de archivo** pestaña:
 
-      El **buscar en** cuadro especifica el directorio en el que se va a seleccionar los archivos que se usarán como orígenes de datos. El valor predeterminado es \Program Files\Common Files\ODBC\Data Sources. Los orígenes de datos de archivo existente (archivos .dsn) aparecen en el cuadro de lista principal. Puede configurar los orígenes de datos antes de tiempo mediante la **DSN de archivo** ficha la [Administrador de orígenes de datos ODBC](/previous-versions/windows/desktop/ms714024), o crear otros nuevos mediante este cuadro de diálogo.
+     El **buscar en** cuadro especifica el directorio en el que se va a seleccionar los archivos que se usarán como orígenes de datos. El valor predeterminado es \Program Files\Common Files\ODBC\Data Sources. Los orígenes de datos de archivo existente (archivos .dsn) aparecen en el cuadro de lista principal. Puede configurar los orígenes de datos antes de tiempo mediante la **DSN de archivo** ficha la [Administrador de orígenes de datos ODBC](/previous-versions/windows/desktop/ms714024), o crear otros nuevos mediante este cuadro de diálogo.
 
-      Para crear un nuevo origen de datos de archivo desde este cuadro de diálogo, haga clic en `New` para especificar un nombre DSN; el **crear nuevo origen de datos** aparece el cuadro de diálogo. En el **crear nuevo origen de datos** diálogo cuadro, seleccione un controlador apropiado y haga clic en `Next`; haga clic en **examinar**y seleccione el nombre del archivo que se usará como un origen de datos (tiene que seleccionar "Todos los archivos" en vista que no sean archivos DSN, como los archivos .xls); Haga clic en `Next`y, a continuación, haga clic en **finalizar**. (Si ha seleccionado un archivo no DSN, obtendrá un cuadro de diálogo específico del controlador, como "ODBC Microsoft Excel Setup", que se convertirá el archivo a un DSN.)
+     Para crear un nuevo origen de datos de archivo desde este cuadro de diálogo, haga clic en `New` para especificar un nombre DSN; el **crear nuevo origen de datos** aparece el cuadro de diálogo. En el **crear nuevo origen de datos** diálogo cuadro, seleccione un controlador apropiado y haga clic en `Next`; haga clic en **examinar**y seleccione el nombre del archivo que se usará como un origen de datos (tiene que seleccionar "Todos los archivos" en vista que no sean archivos DSN, como los archivos .xls); Haga clic en `Next`y, a continuación, haga clic en **finalizar**. (Si ha seleccionado un archivo no DSN, obtendrá un cuadro de diálogo específico del controlador, como "ODBC Microsoft Excel Setup", que se convertirá el archivo a un DSN.)
 
-      > [!NOTE]
-      > También puede crear un nuevo origen de datos de archivo con antelación mediante el Administrador de orígenes de datos ODBC. Desde el **iniciar** menú, seleccione **configuración**, **Panel de Control**, **herramientas administrativas**, **deorígenesdedatos(ODBC)** y, a continuación, **Administrador de orígenes de datos ODBC**.
+     > [!NOTE]
+     > También puede crear un nuevo origen de datos de archivo con antelación mediante el Administrador de orígenes de datos ODBC. Desde el **iniciar** menú, seleccione **configuración**, **Panel de Control**, **herramientas administrativas**, **deorígenesdedatos(ODBC)** y, a continuación, **Administrador de orígenes de datos ODBC**.
 
-      El **nombre DSN** cuadro le permite especificar un nombre para el origen de datos de archivo. Debe asegurarse de que el nombre DSN termina con la extensión de archivo apropiado, como .xls para archivos de Excel o .mdb para acceder a los archivos.
+     El **nombre DSN** cuadro le permite especificar un nombre para el origen de datos de archivo. Debe asegurarse de que el nombre DSN termina con la extensión de archivo apropiado, como .xls para archivos de Excel o .mdb para acceder a los archivos.
 
-      Para obtener más información acerca de DNS, consulte [orígenes de datos de archivo](/previous-versions/windows/desktop/ms715401) en el SDK de ODBC.
+     Para obtener más información acerca de DNS, consulte [orígenes de datos de archivo](/previous-versions/windows/desktop/ms715401) en el SDK de ODBC.
 
-   - **Máquina de origen de datos** pestaña:
+  - **Máquina de origen de datos** pestaña:
 
-      Esta pestaña muestra los orígenes de datos de usuario y del sistema. Orígenes de datos de usuario son específicos para un usuario en este equipo. Orígenes de datos del sistema se pueden usar todos los usuarios en este equipo o en un servicio en todo el sistema. Consulte [Machine orígenes de datos](/previous-versions/windows/desktop/ms710952) en el SDK de ODBC
+     Esta pestaña muestra los orígenes de datos de usuario y del sistema. Orígenes de datos de usuario son específicos para un usuario en este equipo. Orígenes de datos del sistema se pueden usar todos los usuarios en este equipo o en un servicio en todo el sistema. Consulte [Machine orígenes de datos](/previous-versions/windows/desktop/ms710952) en el SDK de ODBC
 
-      Para obtener más información sobre orígenes de datos ODBC, vea [orígenes de datos](/previous-versions/windows/desktop/ms711688) en el SDK de ODBC.
+     Para obtener más información sobre orígenes de datos ODBC, vea [orígenes de datos](/previous-versions/windows/desktop/ms711688) en el SDK de ODBC.
 
-   Haga clic en **Aceptar** para finalizar. El **seleccionar un objeto de base de datos** aparece el cuadro de diálogo. En este cuadro de diálogo, seleccione la tabla o ver que el consumidor usará. Tenga en cuenta que puede seleccionar varias tablas y vistas, mantenga presionada la tecla CTRL mientras hace clic en los elementos. Haga clic en **Aceptar** para finalizar.
+  Haga clic en **Aceptar** para finalizar. El **seleccionar un objeto de base de datos** aparece el cuadro de diálogo. En este cuadro de diálogo, seleccione la tabla o ver que el consumidor usará. Tenga en cuenta que puede seleccionar varias tablas y vistas, mantenga presionada la tecla CTRL mientras hace clic en los elementos. Haga clic en **Aceptar** para finalizar.
 
 - **Clase**
 
@@ -66,7 +66,7 @@ Este asistente configura una clase de conjunto de registros ODBC y los enlaces d
 
    Especifica si el conjunto de registros es de tipo dinámico (predeterminado) o una instantánea.
 
-   - **Conjunto de registros dinámicos**: Especifica que el conjunto de registros es de tipo dinámico. Tipo dinámico es el resultado de una consulta que proporciona una vista indizada en datos la base de consultada. Un conjunto de registros dinámicos almacena en caché sólo un índice entero para los datos originales y, por tanto, ofrece un rendimiento descanse una instantánea. El índice apunta directamente a cada registro encontrados como resultado de una consulta y se indica si se quita un registro. También tendrá acceso a la información actualizada en los registros consultados. Este es el valor predeterminado.
+   - **Dynaset**: Especifica que el conjunto de registros es de tipo dinámico. Tipo dinámico es el resultado de una consulta que proporciona una vista indizada en datos la base de consultada. Un conjunto de registros dinámicos almacena en caché sólo un índice entero para los datos originales y, por tanto, ofrece un rendimiento descanse una instantánea. El índice apunta directamente a cada registro encontrados como resultado de una consulta y se indica si se quita un registro. También tendrá acceso a la información actualizada en los registros consultados. Este es el valor predeterminado.
 
    - **Instantánea**: Especifica que el conjunto de registros es una instantánea. Una instantánea es el resultado de una consulta y es una vista en una base de datos en un momento dado. Todos los registros encontrados como resultado de la consulta se almacenan en caché, por lo que no verá los cambios realizados en los registros originales.
 
@@ -78,4 +78,3 @@ Este asistente configura una clase de conjunto de registros ODBC y los enlaces d
 
 [Consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)
-

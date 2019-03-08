@@ -1,6 +1,6 @@
 ---
 title: / Execution-CharSet (establecer juego de caracteres de ejecución)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14d6cf5e6f1982cb3079093294770f4d78faa478
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663975"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422460"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/ Execution-CharSet (establecer juego de caracteres de ejecución)
 
@@ -47,7 +47,7 @@ Si desea establecer el juego de caracteres de origen y el juego de caracteres de
 
 1. Expanda el **propiedades de configuración**, **C o C++**, **línea de comandos** carpeta.
 
-1. En **opciones avanzadas**, agregue el **/Execution-CharSet** opción y especifique la codificación preferida.
+1. En **opciones adicionales**, agregue el **/Execution-CharSet** opción y especifique la codificación preferida.
 
 1. Elija **Aceptar** para guardar los cambios.
 

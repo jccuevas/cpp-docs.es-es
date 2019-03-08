@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594966"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413958"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog (clase)
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |Name|Descripción|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Construye un objeto CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destruye un objeto CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Destruye un objeto CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -304,7 +304,7 @@ Contiene el número de Id. de un recurso HTML.
 
 El segundo formulario del constructor proporciona acceso al recurso de cuadro de diálogo a través del nombre de plantilla. El tercer formulario del constructor proporciona acceso al recurso de cuadro de diálogo por el identificador de la plantilla de recursos. Normalmente, el identificador empieza por el **IDD_** prefijo.
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog:: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 Destruye un objeto CDHtmlDialog.
 
@@ -330,7 +330,7 @@ virtual BOOL CreateControlSite(
 
 ### <a name="parameters"></a>Parámetros
 
-*que pContainer*<br/>
+*pContainer*<br/>
 Un puntero a la [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) objeto
 
 *ppSite*<br/>
@@ -367,10 +367,10 @@ void DDX_DHtml_AxControl(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor del parámetro de identificador de la etiqueta de objeto en el código fuente HTML para el control ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de la propiedad con el que desee intercambiar datos.
 
 *szPropName*<br/>
@@ -399,10 +399,10 @@ void DDX_DHtml_CheckBox(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ### <a name="example"></a>Ejemplo
@@ -462,13 +462,13 @@ void DDX_DHtml_ElementText(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío del elemento HTML con la que desea intercambiar datos.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -487,10 +487,10 @@ void DDX_DHtml_Radio(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -509,10 +509,10 @@ void DDX_DHtml_SelectIndex(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -531,10 +531,10 @@ void DDX_DHtml_SelectString(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -553,10 +553,10 @@ void DDX_DHtml_SelectValue(
 *pDX*<br/>
 Un puntero a un [CDataExchange](../../mfc/reference/cdataexchange-class.md) objeto.
 
-*NID*<br/>
+*szId*<br/>
 El valor que especificó para el parámetro de Id. del control HTML.
 
-*valor*<br/>
+*value*<br/>
 El valor que se intercambian.
 
 ### <a name="example"></a>Ejemplo
@@ -582,7 +582,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>Parámetros
 
 *fEnable*<br/>
-Consulte *fEnable* en [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) en el SDK de Windows.
+Consulte *fEnable* en [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -590,7 +590,7 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject
 
@@ -605,7 +605,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>Parámetros
 
 *pDO*<br/>
-Consulte *pDO* en [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) en el SDK de Windows.
+Consulte *pDO* en [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) en el SDK de Windows.
 
 *ppDORet*<br/>
 Consulte *ppDORet* en `IDocHostUIHandler::FilterDataObject` en el SDK de Windows.
@@ -616,7 +616,7 @@ Devuelve S_FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
 
@@ -630,7 +630,7 @@ HRESULT GetControlDispatch(
 
 ### <a name="parameters"></a>Parámetros
 
-*NID*<br/>
+*szId*<br/>
 El identificador HTML de un control ActiveX.
 
 *ppdisp*<br/>
@@ -660,7 +660,7 @@ VARIANT GetControlProperty(
 
 ### <a name="parameters"></a>Parámetros
 
-*NID*<br/>
+*szId*<br/>
 El identificador HTML de un control ActiveX.
 
 *szPropName*<br/>
@@ -669,7 +669,7 @@ El nombre de una propiedad en la configuración regional predeterminada del usua
 *pdispControl*<br/>
 El `IDispatch` puntero de un control ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de una propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -695,7 +695,7 @@ Un [CString](../../atl-mfc-shared/reference/cstringt-class.md) que contiene la d
 
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument
 
-Recupera el [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) interfaz en el documento HTML cargado actualmente.
+Recupera el [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interfaz en el documento HTML cargado actualmente.
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -722,7 +722,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>Parámetros
 
 *pDropTarget*<br/>
-Consulte *pDropTarget* en [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) en el SDK de Windows.
+Consulte *pDropTarget* en [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) en el SDK de Windows.
 
 *ppDropTarget*<br/>
 Consulte *ppDropTarget* en `IDocHostUIHandler::GetDropTarget` en el SDK de Windows.
@@ -733,7 +733,7 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement
 
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 El identificador de un elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de una propiedad.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -896,7 +896,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>Parámetros
 
 *ppDispatch*<br/>
-Consulte *ppDispatch* en [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) en el SDK de Windows.
+Consulte *ppDispatch* en [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -904,7 +904,7 @@ Devuelve S_OK si funciona correctamente o E_NOTIMPL en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
 
@@ -917,7 +917,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Parámetros
 
 *pInfo*<br/>
-Consulte *pInfo* en [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) en el SDK de Windows.
+Consulte *pInfo* en [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -925,7 +925,7 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
 
@@ -940,9 +940,9 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>Parámetros
 
 *pchKey*<br/>
-Consulte *pchKey* en [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) en el SDK de Windows.
+Consulte *pchKey* en [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) en el SDK de Windows.
 
-*almacenamiento de datos*<br/>
+*dw*<br/>
 Consulte *dw* en `IDocHostUIHandler::GetOptionKeyPath` en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -951,7 +951,7 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="hideui"></a>  CDHtmlDialog::HideUI
 
@@ -967,7 +967,7 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
 
@@ -1082,7 +1082,7 @@ void Navigate(
 Un puntero a una cadena que contiene la dirección URL de destino.
 
 *dwFlags*<br/>
-Los indicadores de una variable que especifica si se debe agregar el recurso a la lista del historial, si se debe a la memoria caché de lectura o escritura de la memoria caché y si se muestra el recurso en una nueva ventana. La variable puede ser una combinación de los valores definidos por el [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) enumeración.
+Los indicadores de una variable que especifica si se debe agregar el recurso a la lista del historial, si se debe a la memoria caché de lectura o escritura de la memoria caché y si se muestra el recurso en una nueva ventana. La variable puede ser una combinación de los valores definidos por el [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) enumeración.
 
 *lpszTargetFrameName*<br/>
 Un puntero a una cadena que contiene el nombre del marco en el que se va a mostrar el recurso.
@@ -1143,7 +1143,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parámetros
 
 *fActivate*<br/>
-Consulte *fActivate* en [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) en el SDK de Windows.
+Consulte *fActivate* en [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1151,7 +1151,7 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1164,7 +1164,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Parámetros
 
 *fActivate*<br/>
-Consulte *fActivate* en [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) en el SDK de Windows.
+Consulte *fActivate* en [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1172,7 +1172,7 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
 
@@ -1226,7 +1226,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>Parámetros
 
 *prcBorder*<br/>
-Consulte *prcBorder* en [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) en el SDK de Windows.
+Consulte *prcBorder* en [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) en el SDK de Windows.
 
 *pUIWindow*<br/>
 Consulte *pUIWindow* en `IDocHostUIHandler::ResizeBorder` en el SDK de Windows.
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 El identificador HTML de un control ActiveX.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de la propiedad para establecer.
 
 *pVar*<br/>
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 El identificador de un elemento HTML.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío de la propiedad para establecer.
 
 *pVar*<br/>
@@ -1372,7 +1372,7 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>Parámetros
 
 *dwFlags*<br/>
-Para los valores posibles, vea [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) en el SDK de Windows.
+Para los valores posibles, vea [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) en el SDK de Windows.
 
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
 
@@ -1389,7 +1389,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="parameters"></a>Parámetros
 
 *dwID*<br/>
-Consulte *dwID* en [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) en el SDK de Windows.
+Consulte *dwID* en [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) en el SDK de Windows.
 
 *ppt*<br/>
 Consulte *ppt* en `IDocHostUIHandler::ShowContextMenu` en el SDK de Windows.
@@ -1406,7 +1406,7 @@ Devuelve S_FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="showui"></a>  CDHtmlDialog::ShowUI
 
@@ -1424,7 +1424,7 @@ STDMETHOD(ShowUI)(
 ### <a name="parameters"></a>Parámetros
 
 *dwID*<br/>
-Consulte *dwID* en [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) en el SDK de Windows.
+Consulte *dwID* en [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) en el SDK de Windows.
 
 *pActiveObject*<br/>
 Consulte *pActiveObject d* en `IDocHostUIHandler::ShowUI` en el SDK de Windows.
@@ -1444,7 +1444,7 @@ Devuelve S_FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
 
@@ -1460,7 +1460,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>Parámetros
 
 *lpMsg*<br/>
-Consulte *lpMsg* en [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) en el SDK de Windows.
+Consulte *lpMsg* en [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) en el SDK de Windows.
 
 *pguidCmdGroup*<br/>
 Consulte *pguidCmdGroup* en `IDocHostUIHandler::TranslateAccelerator` en el SDK de Windows.
@@ -1474,7 +1474,7 @@ Devuelve S_FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
 
@@ -1490,7 +1490,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>Parámetros
 
 *dwTranslate*<br/>
-Consulte *dwTranslate* en [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) en el SDK de Windows.
+Consulte *dwTranslate* en [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) en el SDK de Windows.
 
 *pchURLIn*<br/>
 Consulte *pchURLIn* en `IDocHostUIHandler::TranslateUrl` en el SDK de Windows.
@@ -1504,7 +1504,7 @@ Devuelve S_FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
 
@@ -1520,11 +1520,10 @@ Devuelve E_NOTIMPL.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), tal y como se describe en el SDK de Windows.
+Esta función miembro es la implementación de CDHtmlDialog de [IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), tal y como se describe en el SDK de Windows.
 
 ## <a name="see-also"></a>Vea también
 
 [DHtmlExplore de ejemplo MFC](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml (macros del asistente)](#ddx_dhtml_helper_macros)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

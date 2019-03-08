@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 404796a4ff51ef821b4d5ce805b8564ab2471d25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266229"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString (clase)
 
@@ -106,7 +106,7 @@ por ejemplo, se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -229,4 +229,3 @@ Llame a este método para buscar un elemento de mapa con una clave que coincida 
 [Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

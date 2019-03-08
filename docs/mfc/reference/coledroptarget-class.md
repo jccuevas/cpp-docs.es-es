@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502900"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300133"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget (clase)
 
@@ -108,7 +108,7 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que está entrando en el cursor.
 
 *pDataObject*<br/>
@@ -117,7 +117,7 @@ Señala al objeto de datos que contiene los datos que se pueden quitar.
 *dwKeyState*<br/>
 Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la ubicación actual del cursor en coordenadas de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -150,7 +150,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que está abandonando el cursor.
 
 ### <a name="remarks"></a>Comentarios
@@ -173,7 +173,7 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que el cursor está sobre.
 
 *pDataObject*<br/>
@@ -182,7 +182,7 @@ Señala al objeto de datos que contiene los datos que se va a quitar.
 *dwKeyState*<br/>
 Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la ubicación actual del cursor en coordenadas de cliente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -222,13 +222,13 @@ virtual DROPEFFECT OnDragScroll(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que el cursor está actualmente.
 
 *dwKeyState*<br/>
 Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la ubicación del cursor, en píxeles, relativo a la pantalla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -263,13 +263,13 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que el cursor está actualmente.
 
 *pDataObject*<br/>
 Señala al objeto de datos que contiene los datos que se va a quitar.
 
-*EfectoColocar*<br/>
+*dropEffect*<br/>
 El efecto que el usuario ha elegido para la operación de colocar. Puede ser uno o varios de los siguientes:
 
 - DROPEFFECT_COPY se realizará una operación de copia.
@@ -278,7 +278,7 @@ El efecto que el usuario ha elegido para la operación de colocar. Puede ser uno
 
 - ¿Se puede establecer vínculo de un DROPEFFECT_LINK de los datos colocados en los datos originales.
 
-*punto*<br/>
+*point*<br/>
 Contiene la ubicación del cursor, en píxeles, relativo a la pantalla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -308,7 +308,7 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que el cursor está actualmente.
 
 *pDataObject*<br/>
@@ -317,10 +317,10 @@ Señala al objeto de datos que contiene los datos que se va a quitar.
 *dropDefault*<br/>
 El efecto que el usuario ha elegido para la operación de colocar de forma predeterminada, según el estado actual de la clave. Puede ser DROPEFFECT_NONE. Efectos de colocar se tratan en la sección Comentarios.
 
-*lista desplegable*<br/>
+*dropList*<br/>
 Una lista de los efectos de colocar que admite el origen de colocación. Los valores de efecto de colocar se pueden combinar con la operación OR bit a bit (**&#124;**) operación. Efectos de colocar se tratan en la sección Comentarios.
 
-*punto*<br/>
+*point*<br/>
 Contiene la ubicación del cursor, en píxeles, relativo a la pantalla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -357,7 +357,7 @@ BOOL Register(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la ventana que va a registrarse como un destino de colocación.
 
 ### <a name="return-value"></a>Valor devuelto

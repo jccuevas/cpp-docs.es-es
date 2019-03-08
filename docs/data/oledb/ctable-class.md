@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 15081173edfae5ba0f881a6c1607a22e77a8a7c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff2a139c16b6678bedf38c64a16dce28fa53c5fe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452174"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425203"
 ---
 # <a name="ctable-class"></a>CTable (Clase)
 
@@ -57,7 +57,7 @@ Una clase de conjunto de filas.
 
 Consulte [CCommand](../../data/oledb/ccommand-class.md) para obtener información sobre cómo ejecutar un comando para obtener acceso a un conjunto de filas.
 
-## <a name="open"></a> CTable:: Open
+## <a name="open"></a> CTable::Open
 
 Se abre en la tabla.
 
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Parámetros
 
-*Sesión*<br/>
+*session*<br/>
 [in] La sesión para el que se abre en la tabla.
 
 *wszTableName*<br/>
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in] El `DBID` de la tabla que desea abrir.
 
 *pPropSet*<br/>
-[in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.
+[in] Un puntero a una matriz de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) estructuras que contienen las propiedades y valores que desea establecer. Consulte [conjuntos de propiedades y grupos de propiedades](/previous-versions/windows/desktop/ms713696(v=vs.85)) en el *referencia del programador OLE DB* en el SDK de Windows. El valor predeterminado es null, especifica ninguna propiedad.
 
 *ulPropSets*<br/>
-[in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367) pasan las estructuras en el *pPropSet* argumento.
+[in] El número de [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) pasan las estructuras en el *pPropSet* argumento.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -106,7 +106,7 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724) en el *referencia del programador de OLE DB*.
+Para obtener más información, consulte [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) en el *referencia del programador de OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

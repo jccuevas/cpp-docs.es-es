@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: d8399d9b0f1ebb6f111fad46eab85df4d3065416
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648115"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978249"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -22,7 +22,6 @@ Define varias clases de plantilla que describen objetos en función de la clase 
 
 ```cpp
 #include <codecvt>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

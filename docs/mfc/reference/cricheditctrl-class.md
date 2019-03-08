@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: e8575c2eb814bd7fb3cb307654b0e3622506c6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505422"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414296"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (clase)
 
@@ -360,7 +360,7 @@ int CharFromPos(CPoint pt) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 Un [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto que contiene las coordenadas del punto especificado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -426,8 +426,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del control de edición. Aplicar una combinación de los estilos de ventana que aparece en el **comentarios** sección más adelante, y [estilos de control de edición](/windows/desktop/Controls/edit-control-styles), que se describen en el SDK de Windows.
 
-*Rect*<br/>
-Especifica el tamaño y la posición del control de edición. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](../../mfc/reference/rect-structure1.md) estructura.
+*rect*<br/>
+Especifica el tamaño y la posición del control de edición. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana primaria del control de edición (a menudo un [CDialog](../../mfc/reference/cdialog-class.md)). No debe ser NULL.
@@ -488,8 +488,8 @@ Especifica el estilo extendido del control que se está creando. Para obtener un
 *dwStyle*<br/>
 Especifica el estilo del control de edición. Aplicar una combinación de los estilos de ventana que aparece en el **comentarios** sección de [crear](#create) y [estilos de control de edición](/windows/desktop/Controls/edit-control-styles), que se describen en el SDK de Windows.
 
-*Rect*<br/>
-Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
+*rect*<br/>
+Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que describe el tamaño y posición de la ventana que se creará, en coordenadas de cliente de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un puntero a la ventana que es primario del control.
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Parámetros
 
 *pDisplayRect*<br/>
-Puntero a un [RECT](../../mfc/reference/rect-structure1.md) o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica el área del dispositivo para mostrar el texto.
+Puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) o [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto que especifica el área del dispositivo para mostrar el texto.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 Indica la acción que se realizará. Para obtener una lista de valores posibles, vea la descripción para el parámetro *código* en EM_FINDWORDBREAK en el SDK de Windows.
 
-*Ncomenzar*<br/>
+*nStart*<br/>
 La posición de carácter de base cero desde el que se va a iniciar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -658,7 +658,7 @@ long FormatRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*PFR*<br/>
+*pfr*<br/>
 Puntero a la [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange) estructura que contiene información sobre el dispositivo de salida. NULL indica que la información almacenada en caché en el control rich edit puede liberarse.
 
 *bDisplay*<br/>
@@ -711,7 +711,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 En la primera versión, un puntero a un `CHARFORMAT` estructura que contiene los atributos de formato de carácter predeterminado.
 
 En la segunda versión, un puntero a un `CHARFORMAT2` estructura, que es una extensión de Rich Edit 2.0 a la `CHARFORMAT` estructura, que contiene los atributos de formato de carácter predeterminado.
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](../../mfc/reference/rect-structure1.md) para recibir el rectángulo de formato de este `CRichEditCtrl` objeto.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) para recibir el rectángulo de formato de este `CRichEditCtrl` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1015,7 +1015,7 @@ void GetSel(
 
 ### <a name="parameters"></a>Parámetros
 
-*CR*<br/>
+*cr*<br/>
 Hacer referencia a un [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estructura que recibirá los límites de la selección actual.
 
 *nStartChar*<br/>
@@ -1050,7 +1050,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 En la primera versión, un puntero a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estructura para recibir el formato de los atributos de la selección actual de caracteres.
 
 En la segunda versión, un puntero a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura, que es una extensión de Rich Edit 2.0 a la `CHARFORMAT` estructura para recibir el formato de los atributos de la selección actual de caracteres.
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*Nprimer*<br/>
+*nFirst*<br/>
 El índice de posición de carácter inmediatamente antes del primer carácter del intervalo.
 
-*Núltimo*<br/>
+*nLast*<br/>
 La posición del carácter inmediatamente después del último carácter del intervalo.
 
 *refString*<br/>
@@ -1343,7 +1343,7 @@ int LineIndex(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nLínea*<br/>
+*nLine*<br/>
 Contiene el valor de índice de la línea deseada en el texto del control de edición, o -1. Si *nLínea* es -1, especifica la línea actual, es decir, la línea que contiene el símbolo de intercalación.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1370,7 +1370,7 @@ int LineLength(int nLine = -1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*nLínea*<br/>
+*nLine*<br/>
 Especifica el índice de carácter de un carácter en la línea cuya longitud se va a recuperar. Si este parámetro es -1, se devuelve la longitud de la línea actual (la línea que contiene el símbolo de intercalación), sin incluir la longitud de cualquier texto dentro de la línea seleccionado. Cuando `LineLength` se llama para un control de edición de línea única, se omite este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1477,7 +1477,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 Índice de base cero del carácter.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1560,7 +1560,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si el control está establecido para detectar automáticamente una dirección URL. Si es TRUE, está habilitado. Si es FALSE, está deshabilitado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1589,7 +1589,7 @@ COLORREF SetBackgroundColor(
 *bSysColor*<br/>
 Indica si se debe establecer el color de fondo en el valor del sistema. Si este valor es TRUE, *cr* se omite.
 
-*CR*<br/>
+*cr*<br/>
 El color de fondo solicitado. Sólo se usa si *bSysColor* es FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1617,7 +1617,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 En la primera versión, un puntero a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estructura que contiene los atributos de formato de carácter predeterminado nuevo.
 
 En la segunda versión, un puntero a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura, que es una extensión de Rich Edit 2.0 a la `CHARFORMAT` estructura, que contiene los atributos de formato de carácter predeterminado.
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](../../mfc/reference/rect-structure1.md) que indica los nuevos límites del rectángulo de formato.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) o un puntero a un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) que indica los nuevos límites del rectángulo de formato.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1887,7 +1887,7 @@ void SetSel(CHARRANGE& cr);
 *nEndChar*<br/>
 Índice de base cero del último carácter de la selección.
 
-*CR*<br/>
+*cr*<br/>
 [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) estructura que contiene los límites de la selección actual.
 
 ### <a name="remarks"></a>Comentarios
@@ -1919,7 +1919,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 En la primera versión, un puntero a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estructura que contiene el nuevo formato de caracteres de atributos de la selección actual.
 
 En la segunda versión, un puntero a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura, que es una extensión de Rich Edit 2.0 a la `CHARFORMAT` estructura, que contiene el carácter de nueva dar formato a los atributos de la selección actual.
@@ -2032,7 +2032,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 En la primera versión, un puntero a un [CHARFORMAT](/windows/desktop/api/richedit/ns-richedit-_charformat) estructura que contiene el nuevo formato de caracteres de atributos de la palabra seleccionada actualmente.
 
 En la segunda versión, un puntero a un [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura, que es una extensión de Rich Edit 2.0 a la `CHARFORMAT` estructura, que contiene el carácter de nueva dar formato a los atributos de la palabra seleccionada actualmente.

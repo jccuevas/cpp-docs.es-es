@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: 0469a41fce07dcd0a8a26fdc630a022399f9b455
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 080504dabccd89340d511aa6d3192cf711d3d6bf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535790"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416870"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl (clase)
 
@@ -82,17 +82,17 @@ La clase por la que `IDBSchemaRowsetImpl` se hereda. Normalmente, esta clase ser
 
 ## <a name="remarks"></a>Comentarios
 
-Esta clase implementa la interfaz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) y la función de creador de plantillas [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
+Esta clase implementa la interfaz [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) y la función de creador de plantillas [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
 
-OLE DB usa conjuntos de filas de esquema para devolver datos sobre los datos de un proveedor. Estos datos se suelen denominar "metadatos". De forma predeterminada, un proveedor siempre debe admitir `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, y `DBSCHEMA_PROVIDER_TYPES`, tal y como se describe en [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) en el *referencia del programador de OLE DB*. Conjuntos de filas de esquema se designan en una asignación de esquema. Para obtener información sobre las entradas de asignación de esquema, vea [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB usa conjuntos de filas de esquema para devolver datos sobre los datos de un proveedor. Estos datos se suelen denominar "metadatos". De forma predeterminada, un proveedor siempre debe admitir `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, y `DBSCHEMA_PROVIDER_TYPES`, tal y como se describe en [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) en el *referencia del programador de OLE DB*. Conjuntos de filas de esquema se designan en una asignación de esquema. Para obtener información sobre las entradas de asignación de esquema, vea [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
 
 El Asistente para proveedores OLE DB, en el Asistente para objetos ATL, genera automáticamente el código para los conjuntos de filas de esquema en el proyecto. (De forma predeterminada, el asistente admite conjuntos de filas de esquema obligatorios mencionados anteriormente). Cuando crea un consumidor mediante el Asistente para objetos ATL, el asistente usa conjuntos de filas de esquema para enlazar los datos correctos a un proveedor. Si no implementa los conjuntos de filas de esquema para proporcionar los metadatos correctos, el asistente no enlazará los datos correctos.
 
 Para obtener más información sobre la compatibilidad del proveedor con los conjuntos de filas de esquema, vea [Admitir conjuntos de filas de esquema](../../data/oledb/supporting-schema-rowsets.md).
 
-Para obtener más información sobre los conjuntos de filas de esquema, vea [Conjuntos de filas de esquema](/previous-versions/windows/desktop/ms712921) en la *Referencia del programador de OLE DB*.
+Para obtener más información sobre los conjuntos de filas de esquema, vea [Conjuntos de filas de esquema](/previous-versions/windows/desktop/ms712921(v=vs.85)) en la *Referencia del programador de OLE DB*.
 
-## <a name="checkrestrictions"></a> IDBSchemaRowsetImpl:: CheckRestrictions
+## <a name="checkrestrictions"></a> IDBSchemaRowsetImpl::CheckRestrictions
 
 Comprueba la validez de las restricciones en un conjunto de filas de esquema.
 
@@ -100,7 +100,7 @@ Comprueba la validez de las restricciones en un conjunto de filas de esquema.
 
 ```cpp
 HRESULT CheckRestrictions(REFGUID rguidSchema,
-   ULONG cRestrictions,  const VARIANT rgRestrictions[]);
+   ULONG cRestrictions,  const VARIANT rgRestrictions[]);
 ```
 
 #### <a name="parameters"></a>Parámetros
@@ -120,9 +120,9 @@ Use `CheckRestrictions` para comprobar la validez de las restricciones en un con
 
 `CheckRestrictions` Determina si el consumidor llama a [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) con la restricción correcta y el tipo de restricción correcto (por ejemplo, VT_BSTR una cadena) que admite el proveedor. También determina si se admite el número correcto de restricciones. De forma predeterminada, `CheckRestrictions` le preguntará al proveedor mediante la llamada [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) cuáles son las restricciones que admite en un conjunto de filas determinado. Después, compara las restricciones del consumidor con las que admite el proveedor y la operación se realiza correctamente o bien se produce un error.
 
-Para obtener más información sobre los conjuntos de filas de esquema, vea [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) en el *referencia del programador de OLE DB* en el SDK de Windows.
+Para obtener más información sobre los conjuntos de filas de esquema, vea [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) en el *referencia del programador de OLE DB* en el SDK de Windows.
 
-## <a name="createschemarowset"></a> IDBSchemaRowsetImpl:: CreateSchemaRowset
+## <a name="createschemarowset"></a> IDBSchemaRowsetImpl::CreateSchemaRowset
 
 Implementa una función de creación de objetos COM para el objeto especificado por el parámetro de la plantilla.
 
@@ -158,7 +158,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [in] Número de conjuntos de propiedad que se van a establecer.
 
 *rgPropertySets*<br/>
-[in] Una matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367) que especifica las propiedades que se están estableciendo.
+[in] Una matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) que especifica las propiedades que se están estableciendo.
 
 *ppRowset*<br/>
 [out] Salida `IUnknown` solicitado por *riid*. Esto `IUnknown` es una interfaz en el objeto de conjunto de filas de esquema.
@@ -174,7 +174,7 @@ Un valor HRESULT estándar.
 
 Esta función implementa un creador genérico para todos los tipos de conjuntos de filas de esquema. Normalmente, el usuario no llama a esta función. Se llama mediante la implementación de la asignación de esquema.
 
-## <a name="setrestrictions"></a> IDBSchemaRowsetImpl:: SetRestrictions
+## <a name="setrestrictions"></a> IDBSchemaRowsetImpl::SetRestrictions
 
 Especifica qué restricciones se admiten en un conjunto de filas de esquema determinado.
 
@@ -195,7 +195,7 @@ void SetRestrictions(ULONG cRestrictions,
 [in] Una matriz de GUID de conjuntos de filas de esquema para los que se deben obtener restricciones. Cada elemento de la matriz contiene el GUID de un conjunto de filas de esquema (por ejemplo, `DBSCHEMA_TABLES`).
 
 *rgRestrictions*<br/>
-[in] Matriz de longitud *cRestrictions* de los valores de restricción que se van a establecer. Cada elemento corresponde a las restricciones en el conjunto de filas de esquema identificado por el GUID. Si el proveedor no admite un conjunto de filas de esquema, el elemento se establece en cero. De otro modo, el valor de **ULONG** contiene una máscara de bits que representa las restricciones admitidas en ese conjunto de filas de esquema. Para obtener más información sobre qué restricciones corresponden a un conjunto de filas de esquema determinado, consulte la tabla del conjunto de filas de esquema GUID en [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) en el *referencia del programador de OLE DB* en el Windows SDK DE.
+[in] Matriz de longitud *cRestrictions* de los valores de restricción que se van a establecer. Cada elemento corresponde a las restricciones en el conjunto de filas de esquema identificado por el GUID. Si el proveedor no admite un conjunto de filas de esquema, el elemento se establece en cero. De otro modo, el valor de **ULONG** contiene una máscara de bits que representa las restricciones admitidas en ese conjunto de filas de esquema. Para obtener más información sobre qué restricciones corresponden a un conjunto de filas de esquema determinado, consulte la tabla del conjunto de filas de esquema GUID en [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) en el *referencia del programador de OLE DB* en el Windows SDK DE.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -207,9 +207,9 @@ Para obtener información sobre cómo implementar la compatibilidad de conjunto 
 
 Para obtener un ejemplo de un proveedor que admite conjuntos de filas de esquema, vea el ejemplo [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-Para obtener más información sobre los conjuntos de filas de esquema, vea [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) en el *referencia del programador de OLE DB* en el SDK de Windows.
+Para obtener más información sobre los conjuntos de filas de esquema, vea [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) en el *referencia del programador de OLE DB* en el SDK de Windows.
 
-## <a name="getrowset"></a> IDBSchemaRowsetImpl:: GetRowset
+## <a name="getrowset"></a> IDBSchemaRowsetImpl::GetRowset
 
 Devuelve un conjunto de filas de esquema.
 
@@ -247,7 +247,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 [in] Número de conjuntos de propiedad que se van a establecer.
 
 *rgPropertySets*<br/>
-[in/out] Matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367) que se van a establecer en el conjunto de filas de esquema recién creado.
+[in/out] Matriz de estructuras [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) que se van a establecer en el conjunto de filas de esquema recién creado.
 
 *ppRowset*<br/>
 [out] Puntero a la interfaz solicitada en el conjunto de filas de esquema recién creado.
@@ -256,9 +256,9 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 Este método exige que el usuario tenga una asignación de esquema en la clase de sesión. Con la información de asignación de esquema `GetRowset` crea un objeto de conjunto de filas determinado si el *rguidSchema* parámetro es igual a uno de los GUID de las entradas de mapa. Vea [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) para obtener una descripción de la entrada de asignación.
 
-Consulte [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634) en el SDK de Windows.
+Consulte [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) en el SDK de Windows.
 
-## <a name="getschemas"></a> IDBSchemaRowsetImpl:: GetSchemas
+## <a name="getschemas"></a> IDBSchemaRowsetImpl::GetSchemas
 
 Devuelve una lista de conjuntos de filas de esquema accesibles por [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
 
@@ -283,7 +283,7 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 ### <a name="remarks"></a>Comentarios
 
-Este método devuelve una matriz de todos los conjuntos de filas de esquema admitidos por el proveedor. Consulte [IDBSchemaRowset:: GetSchemas](/previous-versions/windows/desktop/ms719605) en el SDK de Windows.
+Este método devuelve una matriz de todos los conjuntos de filas de esquema admitidos por el proveedor. Consulte [IDBSchemaRowset:: GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) en el SDK de Windows.
 
 La implementación de esta función exige que el usuario tenga una asignación de esquema en la clase de sesión. Luego, con la información de la asignación de esquema, responde con la matriz de GUID de los esquemas de la asignación. Representa los esquemas admitidos por el proveedor.
 

@@ -1,5 +1,5 @@
 ---
-title: 'TN028: Compatibilidad con la ayuda contextual'
+title: 'TN028: Compatibilidad con la Ayuda contextual'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288290"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028: Compatibilidad con la ayuda contextual
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Compatibilidad con la Ayuda contextual
 
 Esta nota describe las reglas para asignar identificadores de contextos de ayuda y otros temas de ayuda en MFC. Compatibilidad con la Ayuda contextual requiere que el compilador de ayuda que está disponible en Visual C++.
 
 > [!NOTE]
->  Además de implementar la Ayuda contextual mediante WinHelp, MFC también admite el uso de la Ayuda HTML. Para obtener más información sobre este soporte técnico y la programación con la Ayuda de HTML, consulte [ayuda HTML: ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Además de implementar la Ayuda contextual mediante WinHelp, MFC también admite el uso de la Ayuda HTML. Para obtener más información sobre este soporte técnico y la programación con la Ayuda de HTML, consulte [ayuda HTML: Ayuda contextual para los programas](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Tipos de ayuda compatible
 
@@ -85,7 +85,6 @@ Para reemplazar esta funcionalidad y la forma en que se determina un contexto de
 ```
 
 afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
-
 ```
 
 WM_COMMANDHELP es un mensaje privado de MFC de Windows que se recibe en la ventana activa cuando se solicita ayuda. Cuando la ventana recibe este mensaje, puede llamar a `CWinApp::WinHelp` con contexto que coincide con el estado interno de la ventana.
@@ -181,4 +180,3 @@ En el segundo caso, el valor predeterminado de nIDHelp es -1, que indica que el 
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)
-

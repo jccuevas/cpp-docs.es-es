@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264721"
 ---
 # <a name="cd2dbitmap-class"></a>Clase CD2DBitmap
 
@@ -75,7 +75,7 @@ class CD2DBitmap : public CD2DResource;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Sobrecargado. Construye un objeto CD2DBitmap desde HBITMAP.|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Destructor. Se llama cuando se destruye un objeto de mapa de bits D2D.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Destructor. Se llama cuando se destruye un objeto de mapa de bits D2D.|
 
 ### <a name="protected-constructors"></a>Constructores protegidos
 
@@ -111,7 +111,7 @@ class CD2DBitmap : public CD2DResource;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Interfaz de ID2D1Bitmap devuelve|
+|[CD2DBitmap::operator ID2D1Bitmap*](#operator_id2d1bitmap_star)|Interfaz de ID2D1Bitmap devuelve|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 Destructor. Se llama cuando se destruye un objeto de mapa de bits D2D.
 
@@ -260,7 +260,7 @@ HRESULT CopyFromMemory(
 *srcData*<br/>
 Para copiar los datos.
 
-*Tono*<br/>
+*pitch*<br/>
 Stride o timbre, del mapa de bits de origen almacenado en srcData. El intervalo es el número de bytes de una línea de exploración (una fila de píxeles en memoria). Se puede calcular el intervalo de la fórmula siguiente: ancho de píxel \* bytes por píxel + relleno de memoria.
 
 *destRect*<br/>
@@ -461,7 +461,7 @@ Identificador de recurso de mapa de bits.
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap *
+##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap*
 
 Interfaz de ID2D1Bitmap devuelve
 

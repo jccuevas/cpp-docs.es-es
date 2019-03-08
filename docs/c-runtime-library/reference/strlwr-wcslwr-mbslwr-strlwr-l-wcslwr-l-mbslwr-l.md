@@ -20,6 +20,8 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _strlwr
@@ -55,12 +57,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9749a319d28d869babdb54859a80fa7f1916394
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505696"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210580"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l
 
@@ -136,7 +138,7 @@ Cada una de estas funciones devuelve un puntero a la cadena convertida. Dado que
 
 ## <a name="remarks"></a>Comentarios
 
-El **_strlwr** función convierte las letras mayúsculas en *str* en minúsculas según lo determinado por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El **_strlwr** función convierte las letras mayúsculas en *str* en minúsculas según lo determinado por la **LC_CTYPE** valor de la categoría de la configuración regional. Otros caracteres no resultan afectados. Para obtener más información sobre **LC_CTYPE**, consulte [setlocale](setlocale-wsetlocale.md). Las versiones de estas funciones sin el **_l** sufijo usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el **_l** sufijo son idénticas salvo que usan la configuración regional pasada en en lugar de. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 El **_wcslwr** y **_mbslwr** funciones son versiones de caracteres anchos y caracteres multibyte de **_strlwr**. El valor de argumentos y valores devueltos de **_wcslwr** son caracteres anchos cadenas; los de **_mbslwr** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 

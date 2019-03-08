@@ -6,21 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - RAND_MAX constant
 ms.assetid: a2039697-8908-4911-bd2d-a2bdd19912a0
-ms.openlocfilehash: 7917e905490250816adcff93f5efcbf541ed8c2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb4c35bf596a7487df2a6a831db996cf28f8d70
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440253"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220171"
 ---
 # <a name="randmax"></a>RAND_MAX
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <stdlib.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

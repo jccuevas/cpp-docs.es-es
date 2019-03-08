@@ -1,12 +1,12 @@
 ---
 title: Control de excepciones ARM64
-ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.date: 11/19/2018
+ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620602"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176684"
 ---
 # <a name="arm64-exception-handling"></a>Control de excepciones ARM64
 
@@ -56,7 +56,7 @@ Estos son los supuestos realizados en la descripción de control de excepciones:
 
 Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cualquier posición de la variable local area dependiendo de las consideraciones de optimización. El objetivo es maximizar el número de variables locales que se puede tener acceso mediante una única instrucción en función de puntero de marco (r29) o de puntero de pila (sp). Sin embargo para `alloca` funciones, debe estar encadenada y r29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de registro par direccionamiento-modo de, no volátil registrar aave áreas se colocan en la parte superior de la pila del área Local. Estos son ejemplos que ilustran varias de las secuencias de prólogo más eficaces. Para mayor claridad mejor emplazamiento en caché, el orden de almacenar los registros guardados y en todos los prólogos canónicos es en orden "creciente de". `#framesz` a continuación representa el tamaño de pila completa (excepto el área de alloca). `#localsz` y `#outsz` indican el tamaño de área local (incluida la operación de Guardar área para el \<r29, lr > par) y el tamaño del parámetro de salida, respectivamente.
 
-1. Encadenar #localsz < = 512
+1. Encadenar #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   Se tiene acceso a todas las variables locales en función de SP. \<R29, lr > señala al fotograma anterior. Para el tamaño del marco de < = 512, el "sub sp,..." puede optimizarse si el área de guardado de los registros se mueve a la parte inferior de la pila. La desventaja de es que no es coherente con otros diseños anteriores, y los registros guardados formen parte del intervalo para los registros el par y el modo de direccionamiento desplazamiento previo y posteriores al indizado.
+   Se tiene acceso a todas las variables locales en función de SP. \<R29, lr > señala al fotograma anterior. Para el tamaño del marco \<= 512, el "sub sp,..." puede optimizarse si el área de guardado de los registros se mueve a la parte inferior de la pila. La desventaja de es que no es coherente con otros diseños anteriores, y los registros guardados formen parte del intervalo para los registros el par y el modo de direccionamiento desplazamiento previo y posteriores al indizado.
 
 1. Funciones, no de hoja (lr se guarda en el área de Int guardado)
 
@@ -131,7 +131,7 @@ Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cu
 
    Se tiene acceso a todas las variables locales en función de SP. \<R29 > señala al fotograma anterior.
 
-1. Encadenar #framesz < = 512, #outsz = 0
+1. Encadenar #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ Si se garantiza que las excepciones solo se producen dentro de un cuerpo de func
 
 Los códigos de desenredado están codificados según la tabla siguiente. Todos los códigos de desenredado son un byte único o doble, excepto el que se asigna una pila enorme. Totalmente hay código de desenredado 21. Cada desenredo de código se asigna exactamente una instrucción en el prólogo y epílogo con el fin de permitir el desenredado de parcialmente ejecutados prólogos y epílogos.
 
-Código de desenredado|Bits y la interpretación
+|Código de desenredado|Bits y la interpretación|
 |-|-|
-`alloc_s`|000xxxxx: asignar la pila pequeña con tamaño < 512 (2 ^ 5 * 16).
-`save_r19r20_x`|    001zzzzz: Guardar \<r19, r 20 > par en [sp-#Z * 8]!, desplazamiento previamente indizada > =-248
-`save_fplr`|        01zzzzzz: Guardar \<r29, lr > emparejar en [sp + #Z * 8], desplazamiento < = 504.
-`save_fplr_x`|        10zzzzzz: Guardar \<r29, lr > emparejar en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512
-`alloc_m`|        11000xxx\|xxxxxxxx: asignar la pila de gran tamaño con tamaño < 16 k (2 ^ 11 * 16).
-`save_regp`|        110010xx\|xxzzzzzz: guardar r(19+#X) par en [sp + #Z * 8], desplazamiento < = 504
-`save_regp_x`|        110011xx\|xxzzzzzz: guardar r(19+#X) par en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512
-`save_reg`|        110100xx\|xxzzzzzz: guardar r(19+#X) reg en [sp + #Z * 8], desplazamiento < = 504
-`save_reg_x`|        x 1101010\|xxxzzzzz: guardar r(19+#X) reg en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > =-256.
-`save_lrpair`|         x 1101011\|xxzzzzzz: guardar par \<r19 + 2 *#X, lr > en [sp + #Z*8], desplazamiento < = 504
-`save_fregp`|        x 1101100\|xxzzzzzz: guardar d(8+#X) par en [sp + #Z * 8], desplazamiento < = 504
-`save_fregp_x`|        x 1101101\|xxzzzzzz: guardar d(8+#X) par, en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512
-`save_freg`|        x 1101110\|xxzzzzzz: guardar d(8+#X) reg en [sp + #Z * 8], desplazamiento < = 504
-`save_freg_x`|        11011110\|xxxzzzzz: guardar d(8+#X) reg en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > =-256.
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx: asignar la pila de gran tamaño con tamaño < 256 M (2 ^ 24 * 16)
-`set_fp`|        11100001: configurar r29: con: r29 mov, sp
-`add_fp`|        11100010\|xxxxxxxx: configurar r29 con: agregar r29, sp, #x * 8
-`nop`|            11100011: no hay desenredado se requiere la operación.
-`end`|            11100100: final del código de desenredado. Implica ret en epílogo.
-`end_c`|        11100101: final del código de desenredado en el actual ámbito encadenada.
-`save_next`|        11100110: guardar siguiente Int no volátil o FP registrar par.
-`arithmetic(add)`|    11100111\| 000zxxxx: agregar cookie reg(z) a lr (0 = x28, 1 = sp); agregar lr, lr, reg(z)
-`arithmetic(sub)`|    11100111\| 001zxxxx: sub reg(z) cookie de lr (0 = x28, 1 = sp); sub lr, lr, reg(z)
-`arithmetic(eor)`|    11100111\| 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); eor lr, lr, reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: rol simulado de lr con cookie reg (x28); xip0 = neg x28; ror lr, xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); ror lr, lr, reg(z)
-||            11100111: xxxz---:---reservado
-||              11101xxx: reservado para casos de pila personalizados siguientes solo se genera para las rutinas de asm
-||              11101001: pila personalizado para MSFT_OP_TRAP_FRAME
-||              11101010: pila personalizado para MSFT_OP_MACHINE_FRAME
-||              11101011: pila personalizado para MSFT_OP_CONTEXT
-||              1111xxxx: reservado
+|`alloc_s`|000xxxxx: asignar la pila pequeña con tamaño \< 512 (2 ^ 5 * 16).|
+|`save_r19r20_x`|    001zzzzz: Guardar \<r19, r 20 > par en [sp-#Z * 8]!, desplazamiento previamente indizada > =-248 |
+|`save_fplr`|        01zzzzzz: Guardar \<r29, lr > emparejar en [sp + #Z * 8], desplazamiento \<= 504. |
+|`save_fplr_x`|        10zzzzzz: Guardar \<r29, lr > emparejar en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
+|`alloc_m`|        11000xxx'xxxxxxxx: asignar la pila de gran tamaño con tamaño \< 16 k (2 ^ 11 * 16). |
+|`save_regp`|        110010xx'xxzzzzzz: guardar r(19+#X) par en [sp + #Z * 8], desplazamiento \<= 504 |
+|`save_regp_x`|        110011xx'xxzzzzzz: guardar r(19+#X) par en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
+|`save_reg`|        110100xx'xxzzzzzz: guardar r(19+#X) reg en [sp + #Z * 8], desplazamiento \<= 504 |
+|`save_reg_x`|        x 1101010'xxxzzzzz: guardar r(19+#X) reg en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > =-256. |
+|`save_lrpair`|         x 1101011'xxzzzzzz: guardar par \<r19 + 2 *#X, lr > en [sp + #Z*8], desplazamiento \<= 504 |
+|`save_fregp`|        x 1101100'xxzzzzzz: guardar d(8+#X) par en [sp + #Z * 8], desplazamiento \<= 504 |
+|`save_fregp_x`|        x 1101101'xxzzzzzz: guardar d(8+#X) par, en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
+|`save_freg`|        x 1101110'xxzzzzzz: guardar d(8+#X) reg en [sp + #Z * 8], desplazamiento \<= 504 |
+|`save_freg_x`|        11011110' xxxzzzzz: guardar d(8+#X) reg en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > =-256. |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: asignar la pila de gran tamaño con tamaño \< 256 M (2 ^ 24 * 16) |
+|`set_fp`|        11100001: configurar r29: con: r29 mov, sp |
+|`add_fp`|        11100010' xxxxxxxx: configurar r29 con: agregar r29, sp, #x * 8 |
+|`nop`|            11100011: no hay desenredado se requiere la operación. |
+|`end`|            11100100: final del código de desenredado. Implica ret en epílogo. |
+|`end_c`|        11100101: final del código de desenredado en el actual ámbito encadenada. |
+|`save_next`|        11100110: guardar siguiente Int no volátil o FP registrar par. |
+|`arithmetic(add)`|    11100111' 000zxxxx: agregar cookie reg(z) a lr (0 = x28, 1 = sp); Agregar lr, lr, reg(z) |
+|`arithmetic(sub)`|    11100111' 001zxxxx: sub reg(z) cookie de lr (0 = x28, 1 = sp); Sub lr, lr, reg(z) |
+|`arithmetic(eor)`|    11100111' 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: rol simulado de lr con cookie reg (x28); xip0 = neg x28; lr ROR, xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); lr ROR, lr, reg(z) |
+| |            11100111: xxxz---:---reservado |
+| |              11101xxx: reservado para casos de pila personalizados siguientes solo se genera para las rutinas de asm |
+| |              11101001: pila personalizado para MSFT_OP_TRAP_FRAME |
+| |              11101010: pila personalizado para MSFT_OP_MACHINE_FRAME |
+| |              11101011: pila personalizado para MSFT_OP_CONTEXT |
+| |              1111xxxx: reservado |
 
 En instrucciones con los valores grandes que ocupan múltiples bytes, los bits más significativos se almacenan en primer lugar. Los códigos de desenredado anteriores están diseñados para que simplemente buscando el primer byte del código, es posible conocer el tamaño total en bytes del código de desenredado. Dado que todos los códigos de desenredado se asignan exactamente a una instrucción de prólogo y epílogo, para calcular el tamaño del prólogo o epílogo, todo lo que debe hacerse es guiarlo desde el principio de la secuencia hasta el final, uso de una tabla de búsqueda o un dispositivo similar para determinar cuánto tiempo el cor es el código de operación responde.
 
@@ -382,7 +382,7 @@ Paso #|Valores de marca|número de instrucciones|Código de operación|Código d
 5D|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\*: If **CR** == 01 y **regis** es un número impar, paso 2 y última save_rep en el paso 1 se combinan en un save_regp.
+\* Si **CR** == 01 y **regis** es un número impar, paso 2 y última save_rep en el paso 1 se combinan en un save_regp.
 
 \*\* Si **regis** == **CR** == 0, y **RegF** ! = 0, el primer stp para el punto flotante no la predecremento.
 

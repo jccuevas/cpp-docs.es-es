@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289560"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Controles ActiveX MFC: Agregar otra página de propiedades personalizadas
 
 En ocasiones, un control ActiveX tendrá más propiedades que cabe en una página de propiedades. En este caso, puede agregar páginas de propiedades al control ActiveX para mostrar estas propiedades.
 
-En este artículo explica cómo agregar nuevas páginas de propiedades a un control ActiveX que ya tiene al menos una página de propiedades. Para obtener más información sobre cómo agregar propiedades estándar páginas (fuente, imagen o color), consulte el artículo [controles ActiveX MFC: usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+En este artículo explica cómo agregar nuevas páginas de propiedades a un control ActiveX que ya tiene al menos una página de propiedades. Para obtener más información sobre cómo agregar propiedades estándar páginas (fuente, imagen o color), consulte el artículo [controles ActiveX MFC: Uso de páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 Los siguientes procedimientos utilizan un marco de control ActiveX de ejemplo creado por el Asistente para controles ActiveX. Por lo tanto, los nombres de clase y los identificadores son únicos para este ejemplo.
 
@@ -26,7 +26,7 @@ Para obtener más información sobre el uso de páginas de propiedades en un con
 
 - [Controles ActiveX MFC: Páginas de propiedades](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX MFC: Usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [Controles ActiveX MFC: Uso de páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
     > [!NOTE]
     >  Se recomienda encarecidamente esa propiedad nuevas páginas respetar el tamaño estándar para páginas de propiedades del control ActiveX. La propiedad de imagen y el color estándar páginas unidades de medida 250 x 62 cuadro de diálogo (DLU). La página de propiedades estándar fuente es 250 x 110 DLU. La página de propiedades predeterminado creada por el Asistente para controles ActiveX utiliza el estándar de 250 x 62 DLU.
@@ -110,4 +110,3 @@ Una vez realizadas las modificaciones necesarias Recompile el proyecto y usar el
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)
-

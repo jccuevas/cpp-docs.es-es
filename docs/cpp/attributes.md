@@ -2,12 +2,12 @@
 title: Atributos de C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471830"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694119"
 ---
 # <a name="attributes-in-c"></a>Atributos de C++
 
@@ -45,16 +45,16 @@ Los atributos representan una alternativa a las extensiones específicas del pro
 
 - `[[nodiscard]]` **Visual Studio 2017 versión 15.3 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) especifica que el valor devuelto de una función no está pensado para descartarse. Genera la advertencia de C4834, tal como se muestra en este ejemplo:
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 versión 15.3 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) especifica que una variable, función, clase, typedef, miembro de datos no estáticos, enum o especialización de plantilla intencionadamente no puede usarse. El compilador no avisa cuando una entidad marcada `[[maybe_unused]]` no se utiliza. Más adelante se puede volver a declarar una entidad que está declarada sin el atributo con el atributo y viceversa. Se considera una entidad marcada se analiza su primera declaración de marcado y para el resto de la traducción de la unidad de traducción actual.
 
@@ -75,12 +75,12 @@ Los atributos representan una alternativa a las extensiones específicas del pro
     }
     ```
 
-   El ejemplo genera estas advertencias:
+  El ejemplo genera estas advertencias:
 
-   - 26494 (tipo de la regla 5: siempre debe inicializarse un objeto.)
+  - 26494 (tipo de la regla 5: siempre debe inicializarse un objeto.)
 
-   - 26485 (límites de la regla 3: ninguna matriz de decadencia de puntero.)
+  - 26485 (límites de la regla 3: ninguna matriz de decadencia de puntero.)
 
-   - 26481 (límites de la regla 1: no usar aritmética de puntero. Usar intervalo en su lugar).
+  - 26481 (límites de la regla 1: no usar aritmética de puntero. Usar intervalo en su lugar).
 
-   Las dos primeras advertencias se activan cuando se compila este código con la herramienta de análisis de código CppCoreCheck instalado y activado. Pero no se activa la advertencia tercer debido al atributo. Puede suprimir todo el perfil bounds escribiendo [[gsl::suppress(bounds)]] sin incluir un número específico de regla. C++ Core Guidelines están diseñados para ayudarle a escribir código mejor y más seguro. El atributo suprimir facilita desactivar las advertencias cuando no se querían.
+  Las dos primeras advertencias se activan cuando se compila este código con la herramienta de análisis de código CppCoreCheck instalado y activado. Pero no se activa la advertencia tercer debido al atributo. Puede suprimir todo el perfil bounds escribiendo [[gsl::suppress(bounds)]] sin incluir un número específico de regla. C++ Core Guidelines están diseñados para ayudarle a escribir código mejor y más seguro. El atributo suprimir facilita desactivar las advertencias cuando no se querían.

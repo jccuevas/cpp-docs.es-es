@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: c6ebfc39c3fcfb467774fb898d9188c2dd3e69e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298638"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery (clase)
 
@@ -114,7 +114,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Habilita o deshabilita el cambio de tamaño del panel de menú.|
 |[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Habilita o deshabilita la barra lateral a la izquierda del menú emergente.|
 |[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Invalida [cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Invalida [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
+|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Overrides [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
 |[CMFCRibbonGallery::GetGroupName](#getgroupname)|Devuelve el nombre del grupo al que se encuentra en el índice especificado.|
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||
 |[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Devuelve el número de elementos de una fila de la Galería de la cinta de opciones.|
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el menú; el cambio de tamaño en caso contrario, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para especificar que la barra lateral está habilitada; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios

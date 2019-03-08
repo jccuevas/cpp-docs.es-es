@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271871"
 ---
 # <a name="cfont-class"></a>CFont (clase)
 
@@ -49,9 +49,9 @@ class CFont : public CGdiObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CFont:: CreateFont](#createfont)|Inicializa un `CFont` con las características especificadas.|
+|[CFont::CreateFont](#createfont)|Inicializa un `CFont` con las características especificadas.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Inicializa un `CFont` objeto con las características de un `LOGFONT` estructura.|
-|[CFont:: CreatePointFont](#createpointfont)|Inicializa un `CFont` con el alto especificado, medido en décimas de un punto y el tipo de letra.|
+|[CFont::CreatePointFont](#createpointfont)|Inicializa un `CFont` con el alto especificado, medido en décimas de un punto y el tipo de letra.|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|Igual que `CreateFontIndirect` , salvo que el alto de fuente se mide en décimas de un punto en lugar de unidades lógicas.|
 |[CFont::FromHandle](#fromhandle)|Devuelve un puntero a un `CFont` objeto cuando se especifica un HFONT de Windows.|
 |[CFont::GetLogFont](#getlogfont)|Rellena un `LOGFONT` con información acerca de la fuente lógica asociada a la `CFont` objeto.|
@@ -98,7 +98,7 @@ El objeto resultante debe inicializarse con `CreateFont`, `CreateFontIndirect`, 
 
 [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]
 
-##  <a name="createfont"></a>  CFont:: CreateFont
+##  <a name="createfont"></a>  CFont::CreateFont
 
 Inicializa un `CFont` objeto con las características especificadas.
 
@@ -221,7 +221,7 @@ Cuando ya no necesita la `CFont` objeto creado por el `CreateFontIndirect` funci
 
 [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]
 
-##  <a name="createpointfont"></a>  CFont:: CreatePointFont
+##  <a name="createpointfont"></a>  CFont::CreatePointFont
 
 Esta función proporciona una manera sencilla para crear una fuente de un tipo de letra especificado y el tamaño de punto.
 
@@ -362,4 +362,3 @@ Para obtener más información sobre el uso de objetos gráficos, consulte [grá
 [Ejemplo HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject (clase)](../../mfc/reference/cgdiobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

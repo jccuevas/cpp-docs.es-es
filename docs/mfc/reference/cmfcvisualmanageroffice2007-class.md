@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: f26aeb94bdb392040eee1ab4795e580cbce79e69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282440"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 (clase)
 
@@ -485,7 +485,7 @@ CMFCRibbonBar* GetRibbonBar(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -674,7 +674,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 ### <a name="parameters"></a>Parámetros
 
 [in] *pButton*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -701,7 +701,7 @@ virtual BOOL GetToolTipInfo(
 ### <a name="parameters"></a>Parámetros
 
 [in] *params*<br/>
-[in] *nLas*<br/>
+[in] *nType*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -755,7 +755,7 @@ BOOL IsRibbonPresent(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -795,7 +795,7 @@ virtual void OnDrawButtonBorder(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -815,7 +815,7 @@ virtual void OnDrawButtonSeparator(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 [in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Comentarios
@@ -1783,7 +1783,7 @@ virtual void OnDrawShowAllMenuItems(
 
 [in] *pDC*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2034,7 +2034,7 @@ virtual void OnFillButtonInterior(
 [in] *pDC*<br/>
 [in] *pButton*<br/>
 [in] *rect*<br/>
-[in] *estado*<br/>
+[in] *state*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2324,7 +2324,7 @@ virtual BOOL OnNcActivate(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *bSecuencias de ActiveX*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2342,7 +2342,7 @@ virtual BOOL OnNcPaint(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *lstSysButtons*<br/>
 [in] *rectRedraw*<br/>
 
@@ -2360,7 +2360,7 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *sizeWindow*<br/>
 
 ### <a name="return-value"></a>Valor devuelto

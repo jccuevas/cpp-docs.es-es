@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: ec770f594836073fe340b0661e0427c058533b22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677531"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273366"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo (estructura)
 
@@ -67,7 +67,7 @@ Un `CPrintInfo` objeto se pasa entre el marco de trabajo y la clase de vista dur
 
 Otro ejemplo es el caso en el que no se conoce la longitud del documento hasta que se imprima. En esta situación, la clase de vista de pruebas para el final del documento cada vez que se imprima una página. Cuando se alcanza el final, Establece la clase de vista el `m_bContinuePrinting` miembro `CPrintInfo` como FALSE; así informa el marco de trabajo para detener el bucle de impresión.
 
-`CPrintInfo` se utiliza por las funciones miembro de `CView` enumerados bajo "Consulte también". Para obtener más información sobre la arquitectura de impresión proporcionada por la biblioteca Microsoft Foundation Class, consulte [marco Windows](../../mfc/frame-windows.md) y [arquitectura documento/vista](../../mfc/document-view-architecture.md) y los artículos [ Imprimir](../../mfc/printing.md) y [imprimir: documentos de varias páginas](../../mfc/multipage-documents.md).
+`CPrintInfo` se utiliza por las funciones miembro de `CView` enumerados bajo "Consulte también". Para obtener más información sobre la arquitectura de impresión proporcionada por la biblioteca Microsoft Foundation Class, consulte [marco Windows](../../mfc/frame-windows.md) y [arquitectura documento/vista](../../mfc/document-view-architecture.md) y los artículos [ Imprimir](../../mfc/printing.md) y [imprimir: Documentos de varias páginas](../../mfc/multipage-documents.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -83,7 +83,6 @@ Llame a esta función para recuperar el número de la primera página que se imp
 
 ```
 UINT GetFromPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -100,7 +99,6 @@ Llame a esta función para recuperar el número de la última página del docume
 
 ```
 UINT GetMaxPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -117,7 +115,6 @@ Llame a esta función para recuperar el número de la primera página del docume
 
 ```
 UINT GetMinPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -134,7 +131,6 @@ Llame a esta función para recuperar el desplazamiento al imprimir varios elemen
 
 ```
 UINT GetOffsetPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -151,7 +147,6 @@ Llame a esta función para recuperar el número de la última página que se van
 
 ```
 UINT GetToPage() const;
-
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -324,10 +319,9 @@ Números de página normalmente empiezan en 1. Este valor se almacena en el `CPr
 
 [Ejemplo de MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[CView:: OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
-[OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
+[CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
+[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
 [CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
-[CView:: OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
+[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [CView::OnPrint](../../mfc/reference/cview-class.md#onprint)
-

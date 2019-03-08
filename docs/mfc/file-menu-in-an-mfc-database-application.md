@@ -5,12 +5,12 @@ helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-ms.openlocfilehash: ce56dd5f04312ae9e7b7f747ce81cb704f3d085d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9a195a81423417809b65b5edce32027071ad2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279125"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>Archivo (Menú en una aplicación de base de datos MFC)
 
@@ -34,5 +34,4 @@ Para interpretar un comando de menú archivo de una manera especial, debe reempl
 
 ## <a name="see-also"></a>Vea también
 
-[Serialización: Serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)
-
+[Serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)

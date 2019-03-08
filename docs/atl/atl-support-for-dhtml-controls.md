@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls, ATL support
 - DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
-ms.openlocfilehash: 321c8c14f2049622b43741cfa9d856cb00e2cd61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd8ac616d127c3307c1c432c0b3c9bc2ef1d6181
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265267"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>Compatibilidad de ATL con controles DHTML
 
@@ -21,7 +21,7 @@ Uso de ATL, puede crear un control con la funcionalidad de HTML dinámico (DHTML
 
 - Especifica, mediante HTML, la interfaz de usuario (UI) del control DHTML.
 
-- Tiene acceso al objeto WebBrowser y sus métodos a través de su interfaz, [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx).
+- Tiene acceso al objeto WebBrowser y sus métodos a través de su interfaz, [IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\)).
 
 - Administra la comunicación entre el código de C++ y HTML.
 
@@ -53,4 +53,3 @@ Muestra cómo compilar y probar la funcionalidad del control se ha agregado.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
-

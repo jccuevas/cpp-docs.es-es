@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258481"
 ---
 # <a name="compiler-options-macros"></a>Macros de opciones de compilador
 
@@ -33,7 +33,7 @@ Estas macros controlan las características específicas del compilador.
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Define si uno o varios de los objetos utilizan el apartamento de subproceso.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Hace que determinados `CString` constructores explícitos, impidiendo cualquier conversión involuntaria.|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Definir esta macro para poder usar estándar compatible con sintaxis de C++, que genera el error del compilador C4867 cuando se usa una sintaxis no estándar para inicializar un puntero a una función miembro.|
-|[ACTIVA _ATL_FREE_THREADED](#_atl_free_threaded)|Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutra.|
+|[_ATL_FREE_THREADED](#_atl_free_threaded)|Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutra.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Un símbolo que indica el proyecto tendrá los objetos que están marcados como ambos, libre o neutra. La macro [activa _ATL_FREE_THREADED](#_atl_free_threaded) debe usarse en su lugar.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Un símbolo que impide el uso predeterminado de espacio de nombres como ATL.|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Un símbolo que impide que el código relacionado con COM que se está compilando el proyecto.|
@@ -127,7 +127,7 @@ Debe cambiarse por:
 
 Tenga en cuenta que para las macros de mapa que agregue el carácter '&', no debe agregarlo nuevo en el código.
 
-##  <a name="_atl_free_threaded"></a>  ACTIVA _ATL_FREE_THREADED
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED
 
 Define si uno o varios de los objetos utilizan el subprocesamiento libre o neutra.
 
@@ -201,7 +201,7 @@ Un símbolo que indica una función no debe estar entre línea.
 
 ### <a name="parameters"></a>Parámetros
 
-*MyFunction*<br/>
+*myfunction*<br/>
 La función que no debe estar entre línea.
 
 ### <a name="remarks"></a>Comentarios

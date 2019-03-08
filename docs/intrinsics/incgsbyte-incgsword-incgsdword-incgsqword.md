@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: a6e8307214f85ba376c539ac791c80ca688c619f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0fb12a56a8c6e0220818d54ee5ec7413fe56b43
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586087"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220262"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
@@ -32,17 +32,17 @@ Agregue uno para el valor en una ubicación de memoria especificada por un despl
 ## <a name="syntax"></a>Sintaxis
 
 ```
-void __incgsbyte( 
-   unsigned long Offset 
-);
-void __incgsword( 
-   unsigned long Offset 
-);
-void __incgsdword( 
+void __incgsbyte(
    unsigned long Offset
 );
-void __incgsqword( 
-   unsigned long Offset 
+void __incgsword(
+   unsigned long Offset
+);
+void __incgsdword(
+   unsigned long Offset
+);
+void __incgsqword(
+   unsigned long Offset
 );
 ```
 
@@ -62,7 +62,7 @@ void __incgsqword( 
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intrínsecas solo están disponibles en modo kernel, y las rutinas solo están disponibles como intrínsecos.
+Estas rutinas solo están disponibles como intrínseco.
 
 **FIN de Específicos de Microsoft**
 

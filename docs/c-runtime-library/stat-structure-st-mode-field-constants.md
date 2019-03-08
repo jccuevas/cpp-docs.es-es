@@ -35,21 +35,19 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: 88b81ac5450d04a5a3e617af4658bb6e73fb4dd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 081d96fcf9b0d0d8d5183e3ed6d0fc69c5a29206
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502224"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220236"
 ---
 # <a name="stat-structure-stmode-field-constants"></a>Constantes del campo st_mode de la estructura _stat
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <sys/stat.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

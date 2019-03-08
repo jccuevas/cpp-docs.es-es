@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475652"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282362"
 ---
 # <a name="ccombstr-class"></a>CComBSTR (clase)
 
@@ -53,7 +53,7 @@ class CComBSTR
 |Name|Descripción|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|El constructor.|
-|[CComBSTR:: ~ CComBSTR](#dtor)|Destructor.|
+|[CComBSTR::~CComBSTR](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -83,8 +83,8 @@ class CComBSTR
 |Name|Descripción|
 |----------|-----------------|
 |[CComBSTR::operator BSTR](#operator_bstr)|Convierte un `CComBSTR` objeto a un tipo BSTR.|
-|[¡CComBSTR::operator!](#operator_not)|Devuelve TRUE o FALSE, dependiendo de si `m_str`es NULL.|
-|[CComBSTR::operator! =](#operator_neq)|Compara un `CComBSTR` con una cadena.|
+|[CComBSTR::operator !](#operator_not)|Devuelve TRUE o FALSE, dependiendo de si `m_str`es NULL.|
+|[CComBSTR::operator !=](#operator_neq)|Compara un `CComBSTR` con una cadena.|
 |[CComBSTR::operator &](#operator_amp)|Devuelve la dirección de `m_str`.|
 |[CComBSTR::operator +=](#operator_add_eq)|Anexa un `CComBSTR` al objeto.|
 |[CComBSTR::operator <](#operator_lt)|Compara un `CComBSTR` con una cadena.|
@@ -134,7 +134,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 *bstrSrc*<br/>
 [in] Un `CComBSTR` objeto que se va a anexar.
 
-*CH*<br/>
+*ch*<br/>
 [in] Un carácter que se va a anexar.
 
 *lpsz*<br/>
@@ -329,7 +329,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 *src*<br/>
 [in] Objeto `CComBSTR`.
 
-*GUID*<br/>
+*guid*<br/>
 [in] Una referencia a un `GUID` estructura.
 
 ### <a name="remarks"></a>Comentarios
@@ -346,7 +346,7 @@ El destructor libera la cadena a la que apunta `m_str`.
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>  CComBSTR::~CComBSTR
 
 Destructor.
 
@@ -501,7 +501,7 @@ Le permite pasar `CComBSTR` objetos a funciones que tienen **[in] BSTR** paráme
 
 Vea el ejemplo de [CComBSTR::m_str](#m_str).
 
-##  <a name="operator_not"></a>  ¡CComBSTR::operator!
+##  <a name="operator_not"></a>  CComBSTR::operator !
 
 Comprueba si la cadena BSTR es NULL.
 
@@ -521,7 +521,7 @@ Este operador solo busca un valor NULL, no para una cadena vacía.
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="operator_neq"></a>  CComBSTR::operator! =
+##  <a name="operator_neq"></a>  CComBSTR::operator !=
 
 Devuelve el lógico opuesto [operador ==](#operator_eq_eq).
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 6e8ebad0f99e086387bf9946323a2c1ef864f391
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297598"
 ---
 # <a name="caxwindow-class"></a>CAxWindow (clase)
 
@@ -56,7 +56,7 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Asigna un HWND para existente `CAxWindow` objeto.|
+|[operator =](#operator_eq)|Asigna un HWND para existente `CAxWindow` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -136,7 +136,7 @@ Un puntero a una cadena para crear el control. Debe tener el formato de una de l
 
 - CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Una dirección URL como "http://www.microsoft.com"
+- Una dirección URL como "<http://www.microsoft.com>"
 
 - Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"
 
@@ -203,7 +203,7 @@ Un puntero a una cadena para crear el control. Debe tener el formato de una de l
 
 - CLSID, como "{8E27C92B-1264-101C-8A2F-040224009C02}"
 
-- Una dirección URL como "http://www.microsoft.com"
+- Una dirección URL como "<http://www.microsoft.com>"
 
 - Una referencia a un documento activo como "file://\\\Documents\MyDoc.doc"
 
@@ -222,7 +222,7 @@ Un puntero a una cadena para crear el control. Debe tener el formato de una de l
 [out] La dirección de un puntero que va a recibir el `IUnknown` del control. Puede ser NULL.
 
 *iidSink*<br/>
-[in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Puede ser IID_NULL.
+[in] Identificador de interfaz de una interfaz de salida en el objeto contenido. Can be IID_NULL.
 
 *punkSink*<br/>
 [in] Un puntero a la `IUnknown` interfaz del objeto receptor para estar conectado al punto de conexión en el objeto contenido especificado por *iidSink*.
@@ -273,7 +273,7 @@ Identificador de una ventana existente.
 
 Devuelve una referencia al objeto `CAxWindow` actual.
 
-##  <a name="querycontrol"></a>  :: QueryControl
+##  <a name="querycontrol"></a>  CAxWindow::QueryControl
 
 Recupera la interfaz especificada del control hospedado.
 
@@ -285,7 +285,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] Especifica el IID de la interfaz del control.
 
 *ppUnk*<br/>
@@ -298,7 +298,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 Un valor HRESULT estándar.
 
-##  <a name="queryhost"></a>  CAxWindow:: QueryHost
+##  <a name="queryhost"></a>  CAxWindow::QueryHost
 
 Devuelve la interfaz del host especificada.
 
@@ -310,7 +310,7 @@ HRESULT QueryHost(Q** ppUnk);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] Especifica el IID de la interfaz del control.
 
 *ppUnk*<br/>
@@ -372,4 +372,3 @@ Externo `IDocHostUIHandlerDispatch` interfaz se usa los controles que consultar 
 [Fundamentos de controles compuestos](../../atl/atl-composite-control-fundamentals.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Preguntas más frecuentes sobre la contención de controles](../../atl/atl-control-containment-faq.md)
-

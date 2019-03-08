@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c3588ccfc1e775ebecc245c055f600da4d2652ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266853"
 ---
 # <a name="int3-class"></a>int_3 (Clase)
 
@@ -111,8 +111,8 @@ class int_3;
 |int_3::get_xy||
 |int_3::get_xyz||
 |int_3::get_xz||
-|int_3:: get_xzy||
-|int_3:: get_Y||
+|int_3::get_xzy||
+|int_3::get_y||
 |int_3::get_yx||
 |int_3::get_yxz||
 |int_3::get_yz||
@@ -122,18 +122,18 @@ class int_3;
 |int_3::get_zxy||
 |int_3::get_zy||
 |int_3::get_zyx||
-|int_3:: ref_b||
+|int_3::ref_b||
 |int_3::ref_g||
 |int_3::ref_r||
-|int_3:: ref_x||
-|int_3:: ref_y||
+|int_3::ref_x||
+|int_3::ref_y||
 |int_3::ref_z||
 |int_3::set_x||
-|int_3:: set_xy||
+|int_3::set_xy||
 |int_3::set_xyz||
 |int_3::set_xz||
-|int_3:: set_xzy||
-|int_3:: set_y||
+|int_3::set_xzy||
+|int_3::set_y||
 |int_3::set_yx||
 |int_3::set_yxz||
 |int_3::set_yz||
@@ -155,7 +155,7 @@ class int_3;
 |int_3::operator*=||
 |int_3::operator/=||
 |int_3::operator^=||
-|operador int_3::&#124;=||
+|int_3::operator&#124;=||
 |int_3::operator~||
 |int_3::operator++||
 |int_3::operator+=||
@@ -174,36 +174,36 @@ class int_3;
 
 |Name|Descripción|
 |----------|-----------------|
-|int_3:: b||
-|int_3:: BG||
-|int_3:: BGR||
+|int_3::b||
+|int_3::bg||
+|int_3::bgr||
 |int_3::br||
 |int_3::brg||
-|int_3:: g||
-|int_3:: GB||
+|int_3::g||
+|int_3::gb||
 |int_3::gbr||
-|int_3:: GR||
-|int_3:: GRB||
-|int_3:: r||
-|int_3:: RB||
+|int_3::gr||
+|int_3::grb||
+|int_3::r||
+|int_3::rb||
 |int_3::rbg||
 |int_3::rg||
 |int_3::rgb||
-|int_3:: x||
-|int_3:: XY||
-|int_3:: XYZ||
+|int_3::x||
+|int_3::xy||
+|int_3::xyz||
 |int_3::xz||
-|int_3:: xzy||
-|int_3:: y||
-|int_3:: YX||
-|int_3:: YXZ||
-|int_3:: YZ||
-|int_3:: yzx||
-|int_3:: z||
+|int_3::xzy||
+|int_3::y||
+|int_3::yx||
+|int_3::yxz||
+|int_3::yz||
+|int_3::yzx||
+|int_3::z||
 |int_3::zx||
-|int_3:: zxy||
-|int_3:: ZY||
-|int_3:: ZYX||
+|int_3::zxy||
+|int_3::zy||
+|int_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -213,7 +213,7 @@ class int_3;
 
 **Encabezado:** amp_short_vectors.h
 
-**Namespace:** Concurrency:: Graphics
+**Espacio de nombres**: Concurrency:: Graphics
 
 ## <a name="ctor"></a> int_3
 
@@ -265,7 +265,7 @@ El valor para inicializar el elemento 2.
 *_V*<br/>
 El valor de inicialización.
 
-*_Otro*<br/>
+*_Other*<br/>
 El objeto usado para inicializar.
 
 ## <a name="size"></a> Tamaño

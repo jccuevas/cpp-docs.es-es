@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514405"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289588"
 ---
 # <a name="class-factories-and-licensing"></a>Generadores de clases y licencias
 
 Para crear una instancia del control OLE, una aplicación de contenedor llama a una función miembro de la fábrica de clase del control. Dado que el control es un objeto OLE real, el generador de clases es responsable de crear instancias del control. Cada clase de control OLE debe tener un generador de clases.
 
-Otra característica importante de los controles OLE es su capacidad para aplicar una licencia. ControlWizard permite incorporar las licencias durante la creación de su proyecto de control. Para obtener más información acerca de las licencias de control, vea el artículo [controles ActiveX: licencias de un ActiveX Control](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
+Otra característica importante de los controles OLE es su capacidad para aplicar una licencia. ControlWizard permite incorporar las licencias durante la creación de su proyecto de control. Para obtener más información acerca de las licencias de control, vea el artículo [controles ActiveX: Licencias de un Control ActiveX](../../mfc/mfc-activex-controls-licensing-an-activex-control.md).
 
 La tabla siguiente enumeran varias macros y funciones que se usan para declarar e implementar el generador de clases de su control y a la licencia de su control.
 
@@ -41,7 +41,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de control.
 
 ### <a name="remarks"></a>Comentarios
@@ -79,7 +79,7 @@ IMPLEMENT_OLECREATE_EX(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase de página de propiedades de control.
 
 *external_name*<br/>
@@ -106,7 +106,7 @@ BEGIN_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 Especifica el nombre de la clase control cuyo generador de clases que se trata.
 
 ### <a name="remarks"></a>Comentarios
@@ -127,7 +127,7 @@ END_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>Parámetros
 
-*CLASS_NAME*<br/>
+*class_name*<br/>
 El nombre de la clase control cuyo generador de clases que se trata.
 
 ### <a name="requirements"></a>Requisitos

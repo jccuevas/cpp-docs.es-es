@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-ms.openlocfilehash: 2f88213fce0c5aa1d91f94d7fbeb26eab6432207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac2b7e323fff5d3baa80b509586178a48dbe1f8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483296"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693625"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Utilizar varios descriptores de acceso en un conjunto de filas
 
@@ -20,19 +20,19 @@ Hay tres escenarios básicos en el que se deba usar varios descriptores de acces
 
 - **Varios conjuntos de filas de lectura/escritura.** En este escenario, tiene una tabla con una clave principal. Desea poder leer todas las columnas de la fila, incluida la clave principal. También desea ser capaz de escribir datos en todas las columnas excepto la clave principal (porque no se puede escribir en la columna de clave principal). En este caso, configure dos descriptores de acceso:
 
-   - Descriptor de acceso 0 contiene todas las columnas.
+  - Descriptor de acceso 0 contiene todas las columnas.
 
-   - Descriptor de acceso 1 contiene todas las columnas excepto la clave principal.
+  - Descriptor de acceso 1 contiene todas las columnas excepto la clave principal.
 
 - **Rendimiento.** En este escenario, una o varias columnas tienen una gran cantidad de datos, por ejemplo, gráficos, sonido, archivos o de vídeo. Cada vez que se pasa a una fila, probablemente no desea recuperar la columna con el archivo de datos de gran tamaño, porque si lo hace así una reducción de rendimiento de la aplicación.
 
-   Puede configurar los descriptores de acceso independientes en el que el primer descriptor de acceso contiene todas las columnas excepto la gran cantidad de datos y recupera datos de estas columnas automáticamente; el descriptor de acceso primera es la automática. El segundo descriptor de acceso recupera solo la columna que contiene datos de gran tamaño, pero no recupera los datos de esta columna automáticamente. Actualizar o recuperar los datos de gran tamaño a petición se pueden utilizar otros métodos.
+  Puede configurar los descriptores de acceso independientes en el que el primer descriptor de acceso contiene todas las columnas excepto la gran cantidad de datos y recupera datos de estas columnas automáticamente; el descriptor de acceso primera es la automática. El segundo descriptor de acceso recupera solo la columna que contiene datos de gran tamaño, pero no recupera los datos de esta columna automáticamente. Actualizar o recuperar los datos de gran tamaño a petición se pueden utilizar otros métodos.
 
-   - Descriptor de acceso 0 es automático; Recupera todas las columnas excepto la gran cantidad de datos.
+  - Descriptor de acceso 0 es automático; Recupera todas las columnas excepto la gran cantidad de datos.
 
-   - Descriptor de acceso 1 no es un descriptor de acceso automático; Recupera la columna con datos de gran tamaño.
+  - Descriptor de acceso 1 no es un descriptor de acceso automático; Recupera la columna con datos de gran tamaño.
 
-   Utilice el argumento automático para especificar si el descriptor de acceso es automático.
+  Utilice el argumento automático para especificar si el descriptor de acceso es automático.
 
 - **Varias columnas ISequentialStream.** En este escenario, ha explotación de más de una columna `ISequentialStream` datos. Sin embargo, cada descriptor de acceso está limitado a uno `ISequentialStream` flujo de datos. Para solucionar este problema, configure varios descriptores de acceso, cada uno con uno `ISequentialStream` puntero.
 
@@ -84,7 +84,7 @@ El código principal es como sigue. Una llamada a `MoveNext` recupera automátic
 ```cpp
 int main(int argc, char* argv[])
 {
-    // Initalize COM
+    // Initialize COM
     ::CoInitialize(NULL);
 
     // Create instances of the data source and session

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: be0b4639fd42461a19db10f88ced336cd1129fb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633525"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294959"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Crear un control ActiveX MFC
 
@@ -44,4 +44,3 @@ Una vez haya creado el proyecto, puede usar los asistentes para código para agr
 
 [Agregar funcionalidad con los Asistentes para código](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Páginas de propiedades](../../ide/property-pages-visual-cpp.md)
-

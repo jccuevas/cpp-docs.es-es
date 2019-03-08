@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: 5a9fa47ab19a5935bf0c7c36dea37b3cfe6180ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75c9a96b727ef60280055536296f850f492d16ac
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512390"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327309"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf (Clase)
 
@@ -186,11 +186,11 @@ El carácter que se va a insertar en el búfer o `EOF`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función no se ejecuta correctamente, devuelve `EOF`. De lo contrario, si _ *Meta* == `EOF`, devuelve un valor distinto de `EOF`. De lo contrario, devuelve \_ *Meta*.
+Si la función no se ejecuta correctamente, devuelve `EOF`. De lo contrario, si  *\_Meta* == `EOF`, devuelve un valor distinto de `EOF`. De lo contrario, devuelve  *\_Meta*.
 
 ### <a name="remarks"></a>Comentarios
 
-Si _ *Meta* != `EOF`, la función miembro virtual protegida intenta insertar el elemento ( `char`)\_ *Meta* en el búfer de salida. Puede hacerlo de varias maneras:
+Si  *\_Meta* ! = `EOF`, la función miembro virtual protegida intenta insertar el elemento `(char)_Meta` en el búfer de salida. Puede hacerlo de varias maneras:
 
 - Si está disponible una posición de escritura, puede almacenar el elemento en la posición de escritura e incrementar el puntero siguiente para el búfer de salida.
 
@@ -211,13 +211,13 @@ El carácter que se va a insertar en el búfer o `EOF`.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función no se ejecuta correctamente, devuelve `EOF`. De lo contrario, si _ *Meta* == `EOF`, devuelve un valor distinto de `EOF`. De lo contrario, devuelve \_ *Meta*.
+Si la función no se ejecuta correctamente, devuelve `EOF`. De lo contrario, si  *\_Meta* == `EOF`, devuelve un valor distinto de `EOF`. De lo contrario, devuelve  *\_Meta*.
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida intenta devolver un elemento al búfer de entrada y, después, convertirlo en el elemento actual (indicado por el siguiente puntero).
+La función miembro virtual protegida intenta devolver un elemento al búfer de entrada y después convertirlo en el elemento actual (indicado por el siguiente puntero).
 
-Si _ *Meta* == `EOF`, el elemento que se va a devolver es realmente el que ya está en el flujo por delante del elemento actual. De lo contrario, dicho elemento se sustituye por **ch** = ( `char`)\_ *Meta*. La función puede devolver un elemento de distintas maneras:
+Si  *\_Meta* == `EOF`, el elemento que se va a devolver es realmente el ya está en el flujo por delante del elemento actual. En caso contrario, ese elemento se sustituye por `ch = (char)_Meta`. La función puede devolver un elemento de distintas maneras:
 
 - Si está disponible una posición de devolución y el elemento almacenado es igual a `ch`, puede disminuir el puntero siguiente del búfer de entrada.
 
@@ -289,15 +289,15 @@ La función miembro virtual protegida trata de modificar las posiciones actuales
 
 La nueva posición se determina de la siguiente forma:
 
-- Si `_Way` == `ios_base::beg`, la nueva posición es el principio del flujo más _ *Off*.
+- Si `_Way == ios_base::beg`, la nueva posición es el principio del flujo más *_Off*.
 
-- Si `_Way` == `ios_base::cur`, la nueva posición es la posición actual del flujo más _ *Off*.
+- Si `_Way == ios_base::cur`, la nueva posición es la posición actual del flujo más *_Off*.
 
-- Si `_Way` == `ios_base::end`, la nueva posición es el final de la secuencia más _ *Off*.
+- Si `_Way == ios_base::end`, la nueva posición es el final del flujo más *_Off*.
 
-Si `_Which` & **ios_base::in** es distinto de cero y el búfer de entrada existe, la función modifica la siguiente posición de lectura en el búfer de entrada. Si `_Which` & **ios_base::out** también es distinto de cero, `_Way` != **ios_base::cur** y existe el búfer de salida, la función establece también la siguiente posición de escritura para que coincida con la siguiente posición de lectura.
+Si `_Which & ios_base::in` es distinto de cero y existe el búfer de entrada, la función modifica la siguiente posición de lectura en el búfer de entrada. Si `_Which & ios_base::out` también es distinto de cero, `_Way != ios_base::cur`y existe el búfer de salida, la función establece también la siguiente posición de escritura para que coincida con la siguiente posición de lectura.
 
-De lo contrario, si `_Which` & `ios_base::out` es distinto de cero y el búfer de salida existe, la función modifica la siguiente posición de escritura en el búfer de salida. De lo contrario, se produce un error en la operación de posicionamiento. Para que una operación de posicionamiento se realice correctamente, la posición de la secuencia resultante debe encontrarse dentro de la secuencia controlada.
+De lo contrario, si `_Which & ios_base::out` es distinto de cero y existe el búfer de salida, la función modifica la siguiente posición de escritura en el búfer de salida. De lo contrario, se produce un error en la operación de posicionamiento. Para que una operación de posicionamiento se realice correctamente, la posición de la secuencia resultante debe encontrarse dentro de la secuencia controlada.
 
 ## <a name="seekpos"></a>  strstreambuf::seekpos
 
@@ -321,7 +321,7 @@ Si la función modifica correctamente una o las dos posiciones de la secuencia, 
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida trata de modificar las posiciones actuales de las secuencias controladas. Para un objeto de la clase strstreambuf, una posición de la secuencia consta únicamente de un desplazamiento de la secuencia. El desplazamiento cero designa el primer elemento de la secuencia controlada. La nueva posición se determina mediante _ *Sp*.
+La función miembro virtual protegida trata de modificar las posiciones actuales de las secuencias controladas. Para un objeto de la clase strstreambuf, una posición de la secuencia consta únicamente de un desplazamiento de la secuencia. El desplazamiento cero designa el primer elemento de la secuencia controlada. La nueva posición viene determinada por *_Sp*.
 
 Si `_Which` & **ios_base::in** es distinto de cero y el búfer de entrada existe, la función modifica la siguiente posición de lectura en el búfer de entrada. Si `_Which` & `ios_base::out` es distinto de cero y existe el búfer de salida, la función establece también la siguiente posición de escritura para que coincida con la siguiente posición de lectura. De lo contrario, si `_Which` & `ios_base::out` es distinto de cero y el búfer de salida existe, la función modifica la siguiente posición de escritura en el búfer de salida. De lo contrario, se produce un error en la operación de posicionamiento. Para que una operación de posicionamiento se realice correctamente, la posición del flujo resultante debe encontrarse dentro de la secuencia controlada.
 
@@ -398,7 +398,7 @@ Un búfer que se usa para la salida.
 
 El primer constructor almacena un puntero nulo en todos los punteros que controlan el búfer de entrada, el búfer de salida y la asignación de strstreambuf. Establece el modo de strstreambuf almacenado para que la secuencia controlada se pueda modificar y ampliar. También acepta *recuento* como un tamaño de asignación inicial sugerido.
 
-El segundo constructor se comporta como el primero, salvo que almacena _ *Allocfunc* como puntero a la función que se llama para asignar el almacenamiento y \_ *Freefunc* como puntero a la función que se llama para liberar el almacenamiento.
+El segundo constructor se comporta como la primera, salvo que almacena  *\_Allocfunc* como puntero a la función para llamar a para asignar el almacenamiento y  *\_Freefunc* como el puntero a la función para llamar a para liberar el almacenamiento.
 
 Los tres constructores:
 

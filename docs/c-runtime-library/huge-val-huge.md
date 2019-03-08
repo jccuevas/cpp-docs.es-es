@@ -14,21 +14,19 @@ helpviewer_keywords:
 - HUGE_VAL constant
 - double value
 ms.assetid: 3f044b45-02cd-46b2-b1de-87fd0441dd6a
-ms.openlocfilehash: 96b05bc2f7b608c31a12493a4f1b71535b13dc4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1d9b099684d9671a60dd1afb1e6692e3c0d2a65
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630092"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220483"
 ---
 # <a name="hugeval-huge"></a>HUGE_VAL, _HUGE
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <math.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

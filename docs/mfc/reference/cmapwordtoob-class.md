@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: 3fcd3bd59b406d19c57335702e7059feab6a754c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300709"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb (clase)
 
@@ -55,7 +55,7 @@ class CMapWordToOb : public CObject
 
 Las funciones miembro de `CMapWordToOb` son similares a las funciones miembro de clase [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Debido a esta similitud, puede utilizar la documentación de referencia de `CMapStringToOb` para obtener información específica de la función miembro. Siempre que vea un `CString` o un **const** puntero a **char** como un parámetro de función o valor devuelto, use WORD.
 
-`BOOL CMapStringToOb::Lookup( const char* <key>,` CObject* & <rValue> ) const;'
+`BOOL CMapStringToOb::Lookup( const char* <key>,` CObject*& <rValue> ) const;`
 
 por ejemplo, se traduce en
 
@@ -89,7 +89,7 @@ por ejemplo, se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CMapStringToOb::operator](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
+|[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -115,4 +115,3 @@ Para obtener más información sobre `CMapWordToOb`, consulte el artículo [cole
 
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

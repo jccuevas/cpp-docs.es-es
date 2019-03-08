@@ -10,21 +10,19 @@ helpviewer_keywords:
 - SEEK_END constant
 - SEEK_CUR constant
 ms.assetid: 9deeb13e-5aa3-4c33-80d8-721c80a4de9d
-ms.openlocfilehash: fcf2c7ac6ea6280abdab5279ab67b65656bdeff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a97495aaa5ab0a79ed71a48a12162bd14fc60131
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507691"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220457"
 ---
 # <a name="fseek-lseek-constants"></a>fseek, _lseek (Constantes)
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <stdio.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

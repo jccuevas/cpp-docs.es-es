@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 21c77f71fb576177a6e61ef38d1ef0459f14ab05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a91b34dc28ace3a8fc0fe1ac1c59d86b19ece43
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290075"
 ---
 # <a name="collection-classes"></a>Clases de colección
 
@@ -32,9 +32,9 @@ Las clases siguientes proporcionan compatibilidad para matrices, listas, asignac
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) esta clase proporciona métodos, funciones estáticas, y definiciones de tipos útiles al crear colecciones de COM de punteros de interfaz.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) esta clase es un contenedor para el [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) estructura.
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) esta clase es un contenedor para el [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) estructura.
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) esta clase es un contenedor para un [SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estructura.
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) esta clase es un contenedor para un [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) estructura.
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md) esta clase almacena **IUnknown** punteros y está diseñado para usarse como un parámetro a la [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) clase de plantilla.
 
@@ -92,4 +92,3 @@ Las clases siguientes proporcionan compatibilidad para matrices, listas, asignac
 
 [Información general de clases](../atl/atl-class-overview.md)<br/>
 [Clases de colección](../atl/atl-collection-classes.md)
-

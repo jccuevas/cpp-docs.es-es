@@ -50,12 +50,12 @@ helpviewer_keywords:
 - omp_unset_lock OpenMP function
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-ms.openlocfilehash: 36954115d817f3fef042f063a673976e8ce09c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0435d75b69ea870db50739933245925d6860cbf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489512"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333291"
 ---
 # <a name="openmp-functions"></a>Funciones de OpenMP
 
@@ -976,8 +976,8 @@ Consulte [omp_init_lock](#omp-init-lock) para obtener un ejemplo del uso de `omp
 Libera un bloqueo anidable.
 
 ```
-void omp_unset_nest_lock( 
-   omp_nest_lock_t *lock 
+void omp_unset_nest_lock(
+   omp_nest_lock_t *lock
 );
 ```
 

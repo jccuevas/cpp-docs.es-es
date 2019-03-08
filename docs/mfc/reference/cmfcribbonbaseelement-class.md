@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289980"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 
@@ -265,18 +265,18 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Agrega un elemento de la cinta de opciones en el cuadro de lista de comandos especificada de la cinta de opciones.|
 |[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indica si el elemento de la cinta de opciones se puede agregar a la barra de herramientas de acceso rápido.|
 |[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indica si el tamaño del elemento de cinta de opciones puede ser compact.|
-|[Cmfcribbonbaseelement:: Canbestretched](#canbestretched)|Indica si el alto del elemento de cinta de opciones puede aumentar verticalmente para el alto de una fila de la cinta de opciones.|
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indica si el alto del elemento de cinta de opciones puede aumentar verticalmente para el alto de una fila de la cinta de opciones.|
 |[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indica si se puede cambiar el ancho del elemento de cinta de opciones.|
-|[Cmfcribbonbaseelement:: Cleanupsizes](#cleanupsizes)|Limpia la configuración de dimensión para el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Closepopupmenu](#closepopupmenu)|Cierra el menú emergente para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Limpia la configuración de dimensión para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Cierra el menú emergente para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copia el estado del elemento especificado `CMFCRibbonBaseElement` al objeto actual.|
 |[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destruye el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: DrawImage](#drawimage)|Dibuja la imagen para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Dibuja la imagen para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::Find](#find)|Devuelve el puntero especificado para el elemento de la cinta si señala al objeto actual.|
 |[CMFCRibbonBaseElement::FindByData](#findbydata)|Recupera un puntero al elemento de la cinta de opciones si contiene los datos especificados.|
 |[CMFCRibbonBaseElement::FindByID](#findbyid)|Recupera un puntero al elemento de cinta de opciones si ese elemento se identifica mediante el identificador de comando especificado.|
 |[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Recupera un puntero al elemento de la cinta de opciones si su elemento de la cinta original coincide con el elemento especificado de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Getcompactsize](#getcompactsize)|Devuelve el tamaño compacto del elemento de la cinta.|
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Devuelve el tamaño compacto del elemento de la cinta.|
 |[CMFCRibbonBaseElement::GetData](#getdata)|Recupera los datos definidos por el usuario asociados con el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::GetDescription](#getdescription)|Devuelve la descripción del elemento de cinta de opciones.|
 |[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Recupera un puntero para el elemento de la cinta si se quita su menú emergente hacia abajo.|
@@ -284,8 +284,8 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Agrega el elemento actual de la cinta de opciones en la matriz especificada, si el elemento actual de la cinta de opciones contiene el identificador de comando especificado.|
 |[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Recupera un puntero al elemento de la cinta de opciones si está resaltado.|
 |[CMFCRibbonBaseElement::GetID](#getid)|Devuelve el identificador de comando del elemento de cinta de opciones.|
-|[Cmfcribbonbaseelement:: Getimagesize](#getimagesize)|Devuelve el tamaño de la imagen del elemento de la cinta.|
-|[Cmfcribbonbaseelement:: Getintermediatesize](#getintermediatesize)|Devuelve el tamaño del elemento de la cinta en su estado intermedio.|
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Devuelve el tamaño de la imagen del elemento de la cinta.|
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Devuelve el tamaño del elemento de la cinta en su estado intermedio.|
 |[CMFCRibbonBaseElement::GetKeys](#getkeys)|Devuelve la keytip asociado al elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Recupera el rectángulo de límite de keytip para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Recupera el tamaño del texto del elemento keytip.|
@@ -300,19 +300,19 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetPressed](#getpressed)|Recupera un puntero al elemento de la cinta de opciones si el usuario lo pulsa actualmente.|
 |[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Recupera el identificador de comando del elemento de cinta de opciones cuando se encuentra en la barra de herramientas de acceso rápido.|
 |[CMFCRibbonBaseElement::GetRect](#getrect)|Devuelve el rectángulo delimitador del elemento de cinta de opciones.|
-|[Cmfcribbonbaseelement:: Getregularsize](#getregularsize)|Devuelve el tamaño normal del elemento de la cinta.|
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Devuelve el tamaño normal del elemento de la cinta.|
 |[CMFCRibbonBaseElement::GetSize](#getsize)|Devuelve el tamaño actual del elemento de cinta de opciones.|
 |[CMFCRibbonBaseElement::GetText](#gettext)|Devuelve el texto asociado al elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: GetToolTipText](#gettooltiptext)|Devuelve el texto de información sobre herramientas del elemento de la cinta.|
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Devuelve el texto de información sobre herramientas del elemento de la cinta.|
 |[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Recupera la barra de cinta de opciones de nivel superior para el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Hascompactmode](#hascompactmode)|Especifica si el elemento de la cinta tiene un modo compacto.|
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Especifica si el elemento de la cinta tiene un modo compacto.|
 |[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indica si el elemento primario tiene el foco de teclado.|
-|[Cmfcribbonbaseelement:: Hasintermediatemode](#hasintermediatemode)|Especifica si el elemento de la cinta tiene un modo intermedio.|
-|[Cmfcribbonbaseelement:: Haslargemode](#haslargemode)|Especifica si el elemento de la cinta tiene un modo de gran tamaño.|
-|[Cmfcribbonbaseelement:: HasMenu](#hasmenu)|Indica si el elemento de la cinta tiene un menú.|
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Especifica si el elemento de la cinta tiene un modo intermedio.|
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Especifica si el elemento de la cinta tiene un modo de gran tamaño.|
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indica si el elemento de la cinta tiene un menú.|
 |[CMFCRibbonBaseElement::HitTest](#hittest)|Recupera un puntero al elemento de la cinta de opciones si el punto especificado se encuentra en ella.|
 |[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indica si el elemento de la cinta se alinea verticalmente con otros elementos de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Isalwayslargeimage](#isalwayslargeimage)|Indica si el tamaño de imagen del elemento de cinta de opciones siempre es grande.|
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indica si el tamaño de imagen del elemento de cinta de opciones siempre es grande.|
 |[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indica si el elemento de la cinta es automática en modo de repetición.|
 |[CMFCRibbonBaseElement::IsChecked](#ischecked)|Especifica si el elemento de la cinta está activado.|
 |[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Especifica si el elemento de la cinta está en un modo compacto.|
@@ -339,11 +339,11 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Agrega el elemento de la cinta de opciones en la barra de herramientas acceso rápido especificado.|
 |[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Actualiza la información sobre herramientas para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Actualiza el elemento de la cinta en respuesta a la entrada del usuario sostenido.|
-|[Cmfcribbonbaseelement:: Oncalctextsize](#oncalctextsize)|Calcula el tamaño del texto para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calcula el tamaño del texto para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Lo llama el marco cuando cambia el resaltado de un elemento de la cinta de opciones que se encuentra en un menú.|
-|[Cmfcribbonbaseelement:: OnDraw](#ondraw)|Llamado por el marco de trabajo para dibujar el elemento de la cinta.|
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Llamado por el marco de trabajo para dibujar el elemento de la cinta.|
 |[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Lo llama el marco de trabajo para dibujar la keytip para el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Ondrawmenuimage](#ondrawmenuimage)|Lo llama el marco de trabajo cuando se dibuje la imagen del menú para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Lo llama el marco de trabajo cuando se dibuje la imagen del menú para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Lo llama el marco de trabajo para dibujar el elemento de la cinta de opciones en un cuadro de lista de comandos.|
 |[CMFCRibbonBaseElement::OnKey](#onkey)|Lo llama el marco cuando el usuario presiona un keytip y el elemento de la cinta tiene el foco.|
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||
@@ -352,20 +352,20 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Lo llama el marco cuando el elemento de la cinta se va a mostrar un menú emergente.|
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||
 |[CMFCRibbonBaseElement::Redraw](#redraw)|Actualiza la presentación para el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Setaccdata](#setaccdata)|Establece los datos de accesibilidad para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Establece los datos de accesibilidad para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Establece el tamaño de presentación para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetData](#setdata)|Asocia un elemento de datos con el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||
-|[Cmfcribbonbaseelement:: setDescription](#setdescription)|Establece la descripción del elemento de la cinta.|
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Establece la descripción del elemento de la cinta.|
 |[CMFCRibbonBaseElement::SetID](#setid)|Establece el identificador de comando del elemento de cinta de opciones.|
 |[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Establece el tamaño de la presentación inicial para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetKeys](#setkeys)|Establece la keytip para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Establece el elemento de la cinta original para el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: Setparentcategory](#setparentcategory)|Establece la categoría primaria para el elemento de la cinta de opciones.|
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Establece la categoría primaria para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Establece al elemento primario contenedor de menú para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Establece la barra de cinta primario para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetRect](#setrect)|Establece el fot dimensiones que mostrar el rectángulo para el elemento de la cinta de opciones.|
-|[Cmfcribbonbaseelement:: SetText](#settext)|Establece el texto para el elemento de la cinta.|
+|[CMFCRibbonBaseElement::SetText](#settext)|Establece el texto para el elemento de la cinta.|
 |[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Establece el texto del elemento de la cinta de opciones Mostrar de la derecha.|
 |[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Establece el texto de información sobre herramientas para el elemento de la cinta de opciones.|
 |[CMFCRibbonBaseElement::SetVisible](#setvisible)|Establece el estado de visibilidad del elemento de cinta de opciones.|
@@ -483,7 +483,7 @@ TRUE si el tamaño del elemento de cinta de opciones puede ser compacto; en caso
 
 El tamaño de un elemento de la cinta de opciones puede ser compacto, intermedio o grandes.
 
-##  <a name="canbestretched"></a>  Cmfcribbonbaseelement:: Canbestretched
+##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched
 
 Indica si el alto del elemento de cinta de opciones puede aumentar verticalmente para el alto de una fila de la cinta de opciones.
 
@@ -515,7 +515,7 @@ Siempre devuelve FALSE.
 
 De forma predeterminada, este método siempre devuelve FALSE. Invalide este método para indicar si se puede cambiar el ancho del elemento de cinta de opciones.
 
-##  <a name="cleanupsizes"></a>  Cmfcribbonbaseelement:: Cleanupsizes
+##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes
 
 Limpia la configuración de dimensión para el elemento de la cinta de opciones.
 
@@ -527,7 +527,7 @@ virtual void CleanUpSizes();
 
 De forma predeterminada, este método no hace nada. Invalide este método en una clase derivada para restablecer la configuración de dimensión para el elemento de la cinta de opciones.
 
-##  <a name="closepopupmenu"></a>  Cmfcribbonbaseelement:: Closepopupmenu
+##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu
 
 Cierra el menú emergente para el elemento de la cinta de opciones.
 
@@ -564,7 +564,7 @@ virtual void DestroyCtrl();
 
 De forma predeterminada, este método no hace nada. Invalide este método en una clase derivada para destruir el elemento de la cinta de opciones.
 
-##  <a name="drawimage"></a>  Cmfcribbonbaseelement:: DrawImage
+##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage
 
 Dibuja la imagen para el elemento de la cinta de opciones.
 
@@ -675,7 +675,7 @@ Un puntero al elemento de cinta de opciones si su elemento de la cinta original 
 
 Los elementos de la cinta de opciones que se copian en otro contenedor conservan un puntero para el elemento de la cinta original.
 
-##  <a name="getcompactsize"></a>  Cmfcribbonbaseelement:: Getcompactsize
+##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize
 
 Devuelve el tamaño compacto del elemento de la cinta.
 
@@ -795,7 +795,7 @@ UINT GetID() const;
 
 El identificador de comando del elemento de cinta de opciones.
 
-##  <a name="getimagesize"></a>  Cmfcribbonbaseelement:: Getimagesize
+##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize
 
 Devuelve el tamaño de la imagen del elemento de la cinta.
 
@@ -807,7 +807,7 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 
 El tamaño de la imagen del elemento de cinta de opciones.
 
-##  <a name="getintermediatesize"></a>  Cmfcribbonbaseelement:: Getintermediatesize
+##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize
 
 Devuelve el tamaño del elemento de la cinta en su estado intermedio.
 
@@ -1049,7 +1049,7 @@ CRect GetRect() const;
 
 El rectángulo delimitador del elemento de cinta de opciones. La posición del rectángulo está en las coordenadas del elemento primario de control de la cinta de opciones.
 
-##  <a name="getregularsize"></a>  Cmfcribbonbaseelement:: Getregularsize
+##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize
 
 Devuelve el tamaño normal del elemento de la cinta.
 
@@ -1100,7 +1100,7 @@ LPCTSTR GetText() const;
 
 El texto asociado al elemento de la cinta de opciones.
 
-##  <a name="gettooltiptext"></a>  Cmfcribbonbaseelement:: GetToolTipText
+##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText
 
 Devuelve el texto de información sobre herramientas del elemento de la cinta.
 
@@ -1126,7 +1126,7 @@ Un puntero a la barra de cinta de opciones de nivel superior para el elemento de
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="hascompactmode"></a>  Cmfcribbonbaseelement:: Hascompactmode
+##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode
 
 Especifica si el elemento de la cinta tiene un modo compacto.
 
@@ -1143,7 +1143,7 @@ TRUE si el elemento de la cinta tiene un modo compacto. FALSE en caso contrario.
 > [!NOTE]
 >  En el modo compacto, un elemento muestra sólo una imagen pequeña.
 
-##  <a name="hasintermediatemode"></a>  Cmfcribbonbaseelement:: Hasintermediatemode
+##  <a name="hasintermediatemode"></a>  CMFCRibbonBaseElement::HasIntermediateMode
 
 Especifica si el elemento de la cinta tiene un modo intermedio.
 
@@ -1157,7 +1157,7 @@ TRUE si el elemento de la cinta tiene un modo intermedio. En el modo intermedio,
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="haslargemode"></a>  Cmfcribbonbaseelement:: Haslargemode
+##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode
 
 Determina si el elemento de la cinta tiene un modo grande.
 
@@ -1173,7 +1173,7 @@ TRUE si el elemento de la cinta tiene un modo de gran tamaño. FALSE en caso con
 
 En el modo de gran tamaño, un elemento puede tomar el alto total del panel primario.
 
-##  <a name="hasmenu"></a>  Cmfcribbonbaseelement:: HasMenu
+##  <a name="hasmenu"></a>  CMFCRibbonBaseElement::HasMenu
 
 Indica si el elemento de la cinta tiene un menú.
 
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1226,7 +1226,7 @@ Siempre devuelve TRUE.
 
 De forma predeterminada, este método siempre devuelve TRUE. Invalide este método en una clase derivada para indicar si el elemento derivado de la cinta de opciones se alinea verticalmente con otros elementos de la cinta de opciones.
 
-##  <a name="isalwayslargeimage"></a>  Cmfcribbonbaseelement:: Isalwayslargeimage
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage
 
 Indica si el tamaño de imagen del elemento de cinta de opciones siempre es grande.
 
@@ -1629,7 +1629,7 @@ Siempre devuelve FALSE.
 
 De forma predeterminada este método siempre devuelve FALSE. Invalide este método para procesar la entrada de usuario sostenido.
 
-##  <a name="oncalctextsize"></a>  Cmfcribbonbaseelement:: Oncalctextsize
+##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize
 
 Calcula el tamaño del texto para el elemento de la cinta de opciones.
 
@@ -1667,7 +1667,7 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 
 De forma predeterminada, este método no hace nada. Invalide este método para actualizar un elemento de la cinta de opciones que se encuentra en un menú cuando cambia el resaltado.
 
-##  <a name="ondraw"></a>  Cmfcribbonbaseelement:: OnDraw
+##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw
 
 Llamado por el marco de trabajo para dibujar el elemento de la cinta.
 
@@ -1700,7 +1700,7 @@ virtual void OnDrawKeyTip(
 *pDC*<br/>
 [in] Puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectángulo de límite de keytip.
 
 *bIsMenu*<br/>
@@ -1708,7 +1708,7 @@ virtual void OnDrawKeyTip(
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="ondrawmenuimage"></a>  Cmfcribbonbaseelement:: Ondrawmenuimage
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage
 
 Lo llama el marco de trabajo cuando se dibuje la imagen del menú para el elemento de la cinta de opciones.
 
@@ -1723,7 +1723,7 @@ virtual BOOL OnDrawMenuImage(
 *pDC*<br/>
 [in] Puntero a un contexto de dispositivo.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Rectángulo de imagen del menú.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1757,7 +1757,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Distancia, en píxeles, del lado izquierdo del cuadro de lista para mostrar el texto.
 
-*Rect*<br/>
+*rect*<br/>
 [in] El rectángulo de presentación para el elemento de la cinta de opciones.
 
 *bIsSelected*<br/>
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1870,7 +1870,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -1918,7 +1918,7 @@ virtual void Redraw();
 
 Este método vuelve a dibujar el rectángulo de presentación para el elemento de la cinta de opciones mediante una llamada a [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) con las marcas RDW_INVALIDATE RDW_ERASE y RDW_UPDATENOW establecido.
 
-##  <a name="setaccdata"></a>  Cmfcribbonbaseelement:: Setaccdata
+##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData
 
 Establece los datos de accesibilidad para el elemento de la cinta de opciones.
 
@@ -1996,7 +1996,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="setdescription"></a>  Cmfcribbonbaseelement:: setDescription
+##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription
 
 Establece la descripción del elemento de la cinta.
 
@@ -2078,7 +2078,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 
 Los elementos de la cinta de opciones que se copian en otro contenedor conservan un puntero para el elemento de la cinta original.
 
-##  <a name="setparentcategory"></a>  Cmfcribbonbaseelement:: Setparentcategory
+##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory
 
 Establece la categoría primaria para el elemento de la cinta de opciones.
 
@@ -2135,12 +2135,12 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [in] Las dimensiones del rectángulo.
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="settext"></a>  Cmfcribbonbaseelement:: SetText
+##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText
 
 Establece el texto y la keytip para el elemento de la cinta de opciones.
 

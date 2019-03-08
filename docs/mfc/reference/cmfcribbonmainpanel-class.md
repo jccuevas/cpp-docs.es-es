@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 101c718d25a2e06461156045deea5f42d85e2f4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638222"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294461"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel (clase)
 
@@ -50,7 +50,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 |[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Agrega una cadena de texto en el menú de lista de archivos recientes.|
 |[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Agrega un elemento de la cinta de opciones en el panel inferior del panel de la aplicación de cinta.|
 |[CMFCRibbonMainPanel::AddToRight](#addtoright)|Agrega un elemento de la cinta de opciones en el panel derecho del panel de botones de la aplicación.|
-|`CMFCRibbonMainPanel::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCRibbonMainPanel::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Devuelve un rectángulo que representa el área del panel principal de la cinta.|
 |`CMFCRibbonMainPanel::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
 

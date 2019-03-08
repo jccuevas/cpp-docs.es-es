@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299080"
 ---
 # <a name="cdocument-class"></a>CDocument (clase)
 
@@ -149,7 +149,7 @@ class CDocument : public CCmdTarget
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDocument:: AddView](#addview)|Una vista se adjunta al documento.|
+|[CDocument::AddView](#addview)|Una vista se adjunta al documento.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Inicializa fragmentos de lectura.|
 |[CDocument::CanCloseFrame](#cancloseframe)|Avanzada que se puede invalidar; se llama antes de cerrar una ventana de marco viendo en este documento.|
 |[CDocument::ClearChunkList](#clearchunklist)|Borra la lista de fragmentos.|
@@ -176,7 +176,7 @@ class CDocument : public CCmdTarget
 |[CDocument::OnDrawThumbnail](#ondrawthumbnail)|Invalide este método en una clase derivada para dibujar el contenido de vista en miniatura.|
 |[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|Lo llama el marco de trabajo cuando es necesario cargar los datos del documento de flujo.|
 |[CDocument::OnNewDocument](#onnewdocument)|Se llama para crear un nuevo documento.|
-|[CDocument:: OnOpenDocument](#onopendocument)|Se llama para abrir un documento existente.|
+|[CDocument::OnOpenDocument](#onopendocument)|Se llama para abrir un documento existente.|
 |[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|Dirige el controlador de vista previa para devolver el HWND de la llamada a la función GetFocus.|
 |[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|Dirige el controlador de vista previa para controlar una pulsación de tecla Subir de nivel de la bomba de mensaje del proceso en el que se está ejecutando el controlador de vista previa.|
 |[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|Se llama cuando ha cambiado el color de fondo de vista previa avanzada.|
@@ -191,19 +191,19 @@ class CDocument : public CCmdTarget
 |[CDocument::RemoveChunk](#removechunk)|Quita un fragmento con el GUID especificado.|
 |[CDocument::RemoveView](#removeview)|Desasocia una vista del documento.|
 |[CDocument::ReportSaveLoadException](#reportsaveloadexception)|Avanzada que se puede invalidar; se llama cuando una abierta o la operación de guardado no se puede completar debido a una excepción.|
-|[CDocument:: SaveModified](#savemodified)|Avanzada que se puede invalidar; se llama para preguntar al usuario si se debe guardar el documento.|
+|[CDocument::SaveModified](#savemodified)|Avanzada que se puede invalidar; se llama para preguntar al usuario si se debe guardar el documento.|
 |[CDocument::SetChunkValue](#setchunkvalue)|Establece un valor de fragmento.|
 |[CDocument::SetModifiedFlag](#setmodifiedflag)|Establece una marca que indica que ha modificado el documento desde que se guardó por última vez.|
 |[CDocument::SetPathName](#setpathname)|Establece la ruta de acceso del archivo de datos utilizado por el documento.|
 |[CDocument::SetTitle](#settitle)|Establece el título del documento.|
-|[UpdateAllViews](#updateallviews)|Notifica a todas las vistas de ese documento se ha modificado.|
+|[CDocument::UpdateAllViews](#updateallviews)|Notifica a todas las vistas de ese documento se ha modificado.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDocument:: OnFileSendMail](#onfilesendmail)|Envía un mensaje de correo electrónico con el documento adjunto.|
-|[CDocument:: OnUpdateFileSendMail](#onupdatefilesendmail)|Habilita el comando Enviar correo si el correo electrónico está presente.|
+|[CDocument::OnFileSendMail](#onfilesendmail)|Envía un mensaje de correo electrónico con el documento adjunto.|
+|[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Habilita el comando Enviar correo si el correo electrónico está presente.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -256,7 +256,7 @@ Para obtener más información sobre `CDocument`, consulte [serialización](../.
 
 **Encabezado:** afxwin.h
 
-##  <a name="addview"></a>  CDocument:: AddView
+##  <a name="addview"></a>  CDocument::AddView
 
 Llame a esta función para asociar una vista al documento.
 
@@ -372,7 +372,7 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*guid*<br/>
 Especifica el GUID de un fragmento a buscar.
 
 *pid*<br/>
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Parámetros
 
-*CX*<br/>
+*cx*<br/>
 Especifica el ancho y alto del mapa de bits.
 
 *phbmp*<br/>
@@ -761,7 +761,7 @@ Especifica un rectángulo delimitador del área donde se debe dibujar la miniatu
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="onfilesendmail"></a>  CDocument:: OnFileSendMail
+##  <a name="onfilesendmail"></a>  CDocument::OnFileSendMail
 
 Envía un mensaje en el host de correo electrónico residente (si existe) con el documento como datos adjuntos.
 
@@ -831,7 +831,7 @@ Los ejemplos siguientes muestran métodos alternativos de inicializar un objeto 
 
 [!code-cpp[NVC_MFCDocView#62](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]
 
-##  <a name="onopendocument"></a>  CDocument:: OnOpenDocument
+##  <a name="onopendocument"></a>  CDocument::OnOpenDocument
 
 Lo llama el marco de trabajo como parte del comando Abrir archivo.
 
@@ -895,7 +895,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 
 ### <a name="parameters"></a>Parámetros
 
-*pMsg*<br/>
+*pmsg*<br/>
 [in] Un puntero a un mensaje de ventana.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -975,7 +975,7 @@ virtual void OnUnloadHandler();
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="onupdatefilesendmail"></a>  CDocument:: OnUpdateFileSendMail
+##  <a name="onupdatefilesendmail"></a>  CDocument::OnUpdateFileSendMail
 
 Habilita el comando ID_FILE_SEND_MAIL si no hay soporte técnico de mail (MAPI).
 
@@ -1073,7 +1073,7 @@ virtual void RemoveChunk(
 *Guid*<br/>
 Especifica el GUID de un fragmento que se va a quitar.
 
-*PID*<br/>
+*Pid*<br/>
 Especifica el PID de un fragmento que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1129,7 +1129,7 @@ Identificador del mensaje de error que se mostrará si la función no especifica
 
 La implementación predeterminada examina el objeto de excepción y busca un mensaje de error que describe concretamente la causa. Si no se encuentra un mensaje concreto o si *e* es NULL, el mensaje general especificado por el *nIDPDefault* se usa el parámetro. La función, a continuación, muestra un cuadro de mensaje que contiene el mensaje de error. Reemplace esta función si desea proporcionar mensajes de error personalizados adicionales. Esto es un avanzado que se puede invalidar.
 
-##  <a name="savemodified"></a>  CDocument:: SaveModified
+##  <a name="savemodified"></a>  CDocument::SaveModified
 
 Lo llama el marco de trabajo antes de cerrarse un documento modificado.
 
@@ -1220,7 +1220,7 @@ Apunta a la cadena que se usará como el título del documento.
 
 Llamar a esta función actualiza los títulos de todas las ventanas de marco del documento.
 
-##  <a name="updateallviews"></a>  UpdateAllViews
+##  <a name="updateallviews"></a>  CDocument::UpdateAllViews
 
 Llame a esta función después de que se ha modificado el documento.
 

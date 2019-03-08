@@ -1,18 +1,18 @@
 ---
 title: / Source-CharSet (establecer juego de caracteres de origen)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - source-charset
 - /source-charset
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec5ac314f73c49b47f4132583d7651681b6b0545
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663832"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413061"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-CharSet (establecer juego de caracteres de origen)
 
@@ -48,7 +48,7 @@ Si desea establecer el juego de caracteres de origen y el juego de caracteres de
 
 1. Expanda el **propiedades de configuración**, **C o C++**, **línea de comandos** carpeta.
 
-1. En **opciones avanzadas**, agregue el **/Source-CharSet** opción y especifique la codificación preferida.
+1. En **opciones adicionales**, agregue el **/Source-CharSet** opción y especifique la codificación preferida.
 
 1. Elija **Aceptar** para guardar los cambios.
 

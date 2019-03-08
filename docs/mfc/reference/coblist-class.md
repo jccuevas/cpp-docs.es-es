@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 66cc4d28e20ced498e4a434efbe41c3f5db59370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293737"
 ---
 # <a name="coblist-class"></a>CObList (clase)
 
@@ -158,7 +158,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSICIÓN AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN AddHead (const CString &** `newElement` **);**<br /><br /> **POSICIÓN AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN AddHead (const CString &** `newElement` **);**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -208,7 +208,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSICIÓN AddTail (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN AddTail (const CString &** `newElement` **);**<br /><br /> **POSICIÓN AddTail (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN AddTail (const CString &** `newElement` **);**<br /><br /> **POSITION AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -245,8 +245,8 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 
 |Clase|Función miembro|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -289,7 +289,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Búsqueda de posición (void** <strong>\*</strong> `searchValue` **, posición** `startAfter` **= NULL) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Búsqueda de posición (LPCTSTR** `searchValue` **, posición** `startAfter` **= NULL) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION Find( LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -415,7 +415,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const void\*& () GetHead const; void\*& () GetHead;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead () const; (De CString & GetHead);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -601,7 +601,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Const void\*& () GetTail const; void\*& () GetTail;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail () const; (De CString & GetTail);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetTail( ) const; CString& GetTail( );**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -657,7 +657,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSICIÓN InsertAfter (posición** *posición* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN InsertAfter (posición** *posición* **, const CString &** `newElement` **);**<br /><br /> **POSICIÓN InsertAfter (posición** *posición* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN InsertAfter (posición** *posición* **, const CString &** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -705,7 +705,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSICIÓN InsertBefore (posición** *posición* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN InsertBefore (posición** *posición* **, const CString &** `newElement` **);**<br /><br /> **POSICIÓN InsertBefore (posición** *posición* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSICIÓN InsertBefore (posición** *posición* **, const CString &** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -835,7 +835,7 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 |Clase|Función miembro|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* () RemoveHead;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**(De CString RemoveHead);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -863,8 +863,8 @@ En la tabla siguiente se muestra otro miembro de funciones que son similares a `
 
 |Clase|Función miembro|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* () RemoveTail;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**(De CString RemoveTail);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail( );**|
 
 ### <a name="example"></a>Ejemplo
 
@@ -884,7 +884,7 @@ void SetAt(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 La posición del elemento que se puede establecer.
 
 *newElement*<br/>

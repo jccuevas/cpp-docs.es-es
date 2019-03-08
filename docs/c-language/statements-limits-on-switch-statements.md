@@ -1,15 +1,15 @@
 ---
-title: 'Instrucciones: Límites en las instrucciones switch'
+title: 'Instrucciones: límites en las instrucciones switch'
 ms.date: 11/04/2016
 ms.assetid: d327ef3f-2b11-4bd6-abfe-539697fd21a7
-ms.openlocfilehash: 27b378f8ad744cbb204332f8e8d5696140dea327
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56588bd14305738505f3c846621d2053c7f75c2d
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586998"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150083"
 ---
-# <a name="statements-limits-on-switch-statements"></a>Instrucciones: Límites en las instrucciones switch
+# <a name="statements-limits-on-switch-statements"></a>Instrucciones: límites en las instrucciones switch
 
 **ANSI 3.6.4.2** El número máximo de valores **case** en una instrucción `switch`
 

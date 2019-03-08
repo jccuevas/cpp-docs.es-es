@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467116"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268179"
 ---
 # <a name="icommandui-interface"></a>ICommandUI (interfaz)
 
@@ -51,7 +51,7 @@ Esta interfaz proporciona métodos y propiedades que administran los comandos de
 
 `ICommandUI` se utiliza dentro de un controlador ON_UPDATE_COMMAND_UI en un [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-clase derivada. Cuando un usuario de una aplicación activa (activa o clics) se muestra un menú, cada elemento de menú como habilitado o deshabilitado. El destino de cada comando de menú proporciona esta información mediante la implementación de un controlador ON_UPDATE_COMMAND_UI. Para cada uno de los objetos de interfaz de usuario de comandos en la aplicación, utilice la ventana Propiedades para crear una entrada de mapa de mensajes y el prototipo de función para cada controlador.
 
-Para obtener más información sobre cómo el `ICommandUI` interfaz se utiliza en el enrutamiento de comandos, consulte [Cómo: agregar el enrutamiento de comandos para el Control de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Para obtener más información sobre cómo el `ICommandUI` interfaz se utiliza en el enrutamiento de comandos, vea [Cómo: Agregar comando enrutamiento a la Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Para obtener más información sobre el uso de Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Comentarios
 
-Se trata de una función miembro avanzado que debe usarse junto con un controlador ON_COMMAND_EX que devuelve FALSE. Para obtener más información, consulte TN006 de nota técnica: mapas de mensajes.
+Se trata de una función miembro avanzado que debe usarse junto con un controlador ON_COMMAND_EX que devuelve FALSE. Para obtener más información, consulte TN006 de nota técnica: Mapas de mensajes.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

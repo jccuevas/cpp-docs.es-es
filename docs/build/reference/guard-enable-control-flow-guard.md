@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516082"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424085"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (habilitar Protección de flujo de control)
 
@@ -26,7 +26,7 @@ Habilite la generación del compilador de comprobaciones de seguridad de Protecc
 
 La opción **/guard:cf** hace que el compilador analice el flujo de control para los destinos de llamada indirecta en tiempo de compilación y que después inserte código para comprobar los destinos en tiempo de ejecución. La opción **/guard:cf** está desactivada de forma predeterminada y debe habilitarse explícitamente. Para deshabilitar explícitamente esta opción, utilice **/guard:cf-**.
 
-**Visual Studio 2017 y versiones posterior**: esta opción agrega restricciones para **cambiar** instrucciones que generan tablas de saltar.
+**Visual Studio 2017 y versiones posterior**: Esta opción agrega restricciones para **cambiar** instrucciones que generan tablas de saltar.
 
 Cuando la opción de Protección de flujo de control (CFG) **/guard:cf** se especifica, el compilador y el vinculador insertan comprobaciones de seguridad en tiempo de ejecución adicionales para detectar aquellas acciones que pretenden poner en peligro su código. Durante la compilación y vinculación, se analizan todas las llamadas indirectas en el código para encontrar todas las ubicaciones que puede alcanzar el código cuando se ejecuta correctamente. Esta información se almacena en estructuras adicionales en los encabezados de los archivos binarios. El compilador también inserta una comprobación antes de cada llamada indirecta en el código, que garantiza que el destino sea una de las ubicaciones comprobadas. Si se produce un error en la comprobación en tiempo de ejecución en un sistema operativo compatible con CFG, el sistema operativo cierra el programa.
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: b1411f3df97aeaf66abcccc5be78c734e3a71f19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9d6c9aab2b12859462abfa2a842754128e72306
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603494"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416662"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl (Clase)
 
-Proporciona una implementación de la [ICommandProperties](/previous-versions/windows/desktop/ms723044) interfaz.
+Proporciona una implementación de la [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) interfaz.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -60,41 +60,41 @@ La clase de propiedades.
 
 Esto es obligatorio en los comandos. Proporciona la implementación de una función estática definida por el [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) macro.
 
-## <a name="getproperties"></a> Icommandpropertiesimpl:: GetProperties
+## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
 
 Devuelve todos los conjuntos de propiedades solicitado mediante la asignación de propiedad del comando.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
-   const DBPROPIDSET rgPropertyIDSets[], 
-   ULONG * pcPropertySets, 
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG * pcPropertySets,
    DBPROPSET ** prgPropertySets);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119) en el *referencia del programador OLE DB*.
+Consulte [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 
 Vea [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> Icommandpropertiesimpl:: SetProperties
+## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
 
 Establece las propiedades para el objeto de comando.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497) en el *referencia del programador OLE DB*.
+Consulte [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ## <a name="see-also"></a>Vea también
 

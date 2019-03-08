@@ -1,17 +1,17 @@
 ---
 title: Probar el Control DHTML ATL modificado
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55cdaba64ccb95ee5695c082a5e146b1e7dc2cf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277243"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Probar el Control DHTML ATL modificado
 
@@ -23,7 +23,7 @@ Pruebe el nuevo control para ver cómo funciona ahora.
 
    El tamaño del control para mostrar todos los botones que agregó.
 
-1. Examine los dos botones que insertó modificando el código HTML. Cada botón posee la etiqueta que identificó en [modificar el Control DHTML ATL](../atl/modifying-the-atl-dhtml-control.md): **actualizar** y **HelloHTML**.
+1. Examine los dos botones que insertó modificando el código HTML. Cada botón posee la etiqueta que identificó en [modificar el Control DHTML ATL](../atl/modifying-the-atl-dhtml-control.md): **Actualizar** y **HelloHTML**.
 
 1. Probar los dos nuevos botones para ver cómo funcionan.
 
@@ -31,13 +31,13 @@ Ahora los métodos que no forman parte de la interfaz de usuario de prueba.
 
 1. Resalte el control, por lo que se activa el borde.
 
-1. En el **Control** menú, haga clic en **invocar métodos**.
+1. En el **Control** menú, elija **invocar métodos**.
 
-Los métodos en la lista con la etiqueta **nombre del método** son los métodos que puede llamar el contenedor: `MethodInvoked` y `GoToURL`. Todos los demás métodos se controlan mediante la interfaz de usuario.
+   Los métodos en la lista con la etiqueta **nombre del método** son los métodos que puede llamar el contenedor: `MethodInvoked` y `GoToURL`. Todos los demás métodos se controlan mediante la interfaz de usuario.
 
-1. Seleccione un método para invocar y haga clic en `Invoke` para mostrar el cuadro de mensaje del método o vaya a www.microsoft.com.
+1. Seleccione un método para invocar y elija **Invoke** para mostrar el cuadro de mensaje del método o para navegar a `www.microsoft.com`.
 
-1. En el **invocar métodos** cuadro de diálogo, haga clic en **cerrar**.
+1. En el **invocar métodos** diálogo cuadro, elija **cerrar**.
 
 Para obtener más información acerca de los distintos elementos y los archivos que componen un control DHTML ATL, vea [que identifican los elementos del proyecto de Control DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 626da7b2fd52a93602afa08c416bbbb3a4abdbf7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287575"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Funciones globales de los informes de errores y depuración
 
@@ -53,7 +53,7 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Parámetros
 
-*Error*<br/>
+*error*<br/>
 Para convertir el valor de error.
 
 ### <a name="remarks"></a>Comentarios
@@ -119,13 +119,13 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 [in] El CLSID del objeto que notifica el error.
 
 *lpszDesc*<br/>
 [in] La cadena que describe el error. Especifican las versiones Unicode que *lpszDesc* es de tipo LPCOLESTR; la versión ANSI especifica un tipo de LPCSTR.
 
-*IID*<br/>
+*iid*<br/>
 [in] IID de la interfaz que define el error o GUID_NULL si el error se ha definido por el sistema operativo.
 
 *hRes*<br/>
@@ -172,7 +172,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Parámetros
 
-*recursos humanos*<br/>
+*hr*<br/>
 Valor HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
@@ -225,4 +225,3 @@ Si se define _ATL_NO_EXCEPTIONS, la función genera un error de aserción en lug
 
 [Funciones](../../atl/reference/atl-functions.md)<br/>
 [Macros de depuración e informe de errores](../../atl/reference/debugging-and-error-reporting-macros.md)
-

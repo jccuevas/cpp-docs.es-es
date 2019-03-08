@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511129"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328011"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -66,9 +66,9 @@ Cada una de estas funciones devuelve 0 si el directorio se elimina correctamente
 
 |valor de errno|Condición|
 |-|-|
-**ENOTEMPTY**|La ruta de acceso especificada no es un directorio, el directorio no está vacío o el directorio es el directorio de trabajo actual o el directorio raíz.
-**ENOENT**|La ruta de acceso no es válida.
-**EACCES**|Un programa tiene un identificador abierto en el directorio.
+| **ENOTEMPTY** | La ruta de acceso especificada no es un directorio, el directorio no está vacío o el directorio es el directorio de trabajo actual o el directorio raíz. |
+| **ENOENT** | La ruta de acceso no es válida. |
+| **EACCES** | Un programa tiene un identificador abierto en el directorio. |
 
 Para obtener más información sobre estos y otros códigos de retorno, vea [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

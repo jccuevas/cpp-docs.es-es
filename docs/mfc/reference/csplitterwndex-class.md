@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265150"
 ---
 # <a name="csplitterwndex-class"></a>Clase CSplitterWndEx
 
@@ -77,10 +77,10 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 [in] Puntero al contexto de dispositivo. Si este parámetro es NULL, el marco de trabajo se vuelve a dibujar la ventana activa.
 
-*nLas*<br/>
+*nType*<br/>
 [in] Uno de los `CSplitterWnd::ESplitType` valores de enumeración que especifica el elemento de la ventana de separador se va a dibujar. Los valores válidos son `splitBox`, `splitBar`, `splitIntersection` y `splitBorder`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Un rectángulo delimitador que especifica las dimensiones y la ubicación para dibujar el elemento de la ventana divisora especificado.
 
 ### <a name="remarks"></a>Comentarios

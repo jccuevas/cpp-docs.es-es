@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265579"
 ---
 # <a name="atl-classes-and-structs"></a>Structs y clases ATL
 
@@ -28,8 +28,8 @@ Active Template Library (ATL) incluye las siguientes clases y structs. Para busc
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Esta clase se utiliza por las macros de conversión de cadena CA2TEX y CT2AEX y la definición de tipo CA2A.|atlconv.h|
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Esta clase se usa macros de conversión de cadena CA2CTEX y CT2CAEX y la definición de tipo CA2CA.|atlconv.h|
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|Esta clase se utiliza por las macros de conversión de cadena CA2TEX, CA2CTEX, CT2WEX y CT2CWEX y la definición de tipo CA2W.|atlconv.h|
-|[CAccessToken](../../atl/reference/caccesstoken-class.md)|Esta clase es un contenedor para un token de acceso.|ATLSecurity.h|
-|[CAcl](../../atl/reference/cacl-class.md)|Esta clase es un contenedor para una estructura ACL (lista de control de acceso).|ATLSecurity.h|
+|[CAccessToken](../../atl/reference/caccesstoken-class.md)|Esta clase es un contenedor para un token de acceso.|atlsecurity.h|
+|[CAcl](../../atl/reference/cacl-class.md)|Esta clase es un contenedor para una estructura ACL (lista de control de acceso).|atlsecurity.h|
 |[CAdapt](../../atl/reference/cadapt-class.md)|Esta plantilla se utiliza para ajustar las clases que vuelven a definir el operador address-of para devolver algo distinto de la dirección del objeto.|atlcomcli.h|
 |[CAtlArray](../../atl/reference/catlarray-class.md)|Esta clase implementa un objeto de matriz.|atlcoll.h|
 |[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)|Esta clase implementa un servidor COM de subprocesamiento de modelo, agrupadas por subproceso.|atlbase.h|
@@ -113,7 +113,7 @@ Active Template Library (ATL) incluye las siguientes clases y structs. Para busc
 |[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)|Esta clase implementa una ventana dentro de otro objeto.|atlwin.h|
 |[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)|Esta clase proporciona métodos para administrar la memoria utilizando las rutinas de memoria de CRT.|atlcore.h|
 |[CCRTHeap](../../atl/reference/ccrtheap-class.md)|Esta clase implementa [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) mediante las funciones del montón de CRT.|atlmem.h|
-|[CDacl](../../atl/reference/cdacl-class.md)|Esta clase es un contenedor para una estructura DACL (lista de control de acceso discrecional).|ATLSecurity.h|
+|[CDacl](../../atl/reference/cdacl-class.md)|Esta clase es un contenedor para una estructura DACL (lista de control de acceso discrecional).|atlsecurity.h|
 |[CDebugReportHook (clase)](../../atl/reference/cdebugreporthook-class.md)|Utilice esta clase para enviar informes de depuración a una canalización con nombre.|atlutil.h|
 |[CDefaultCharTraits](../../atl/reference/cdefaultchartraits-class.md)|Esta clase proporciona dos funciones estáticas para la conversión de caracteres entre mayúsculas y minúsculas.|atlcoll.h|
 |[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)|Esta clase proporciona funciones de comparación de elemento de predeterminado.|atlcoll.h|
@@ -139,16 +139,16 @@ Active Template Library (ATL) incluye las siguientes clases y structs. Para busc
 |[CNoWorkerThread (clase)](../../atl/reference/cnoworkerthread-class.md)|Utilice esta clase como argumento para el `MonitorClass` las clases de caché de parámetro de plantilla si desea deshabilitar el mantenimiento de la caché dinámica.|atlutil.h|
 |[CPathT (clase)](../../atl/reference/cpatht-class.md)|Esta clase representa una ruta de acceso.|atlpath.h|
 |[CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)|Esta clase proporciona métodos de forma predeterminada y las funciones de una clase de colección formado por tipos de datos primitivos.|atlcoll.h|
-|[CPrivateObjectSecurityDesc](../../atl/reference/cprivateobjectsecuritydesc-class.md)|Esta clase representa un objeto de descriptor de seguridad de objeto privado.|ATLSecurity.h|
+|[CPrivateObjectSecurityDesc](../../atl/reference/cprivateobjectsecuritydesc-class.md)|Esta clase representa un objeto de descriptor de seguridad de objeto privado.|atlsecurity.h|
 |[CRBMap](../../atl/reference/crbmap-class.md)|Esta clase representa una estructura de asignación, mediante un árbol binario rojo-negro.|atlcoll.h|
 |[CRBMultiMap](../../atl/reference/crbmultimap-class.md)|Esta clase representa una estructura de asignación que permite que cada clave que se va a asociar a más de un valor, utilizando un árbol binario rojo-negro.|atlcoll.h|
 |[CRBTree](../../atl/reference/crbtree-class.md)|Esta clase proporciona métodos para la creación y uso de un árbol rojo-negro.|atlcoll.h|
 |[CRegKey](../../atl/reference/cregkey-class.md)|Esta clase proporciona métodos para manipular las entradas del registro del sistema.|atlbase.h|
 |[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)|Esta clase proporciona la función de creación de un subproceso de CRT. Utilice esta clase si el subproceso va a usar las funciones de CRT.|atlbase.h|
-|[CSacl](../../atl/reference/csacl-class.md)|Esta clase es un contenedor para una estructura SACL (lista de control de acceso del sistema).|ATLSecurity.h|
-|[CSecurityAttributes](../../atl/reference/csecurityattributes-class.md)|Esta clase es un contenedor fino para la `SECURITY_ATTRIBUTES` estructura.|ATLSecurity.h|
-|[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)|Esta clase es un contenedor para el `SECURITY_DESCRIPTOR` estructura.|ATLSecurity.h|
-|[CSid](../../atl/reference/csid-class.md)|Esta clase es un contenedor para un `SID` estructura (identificador de seguridad).|ATLSecurity.h|
+|[CSacl](../../atl/reference/csacl-class.md)|Esta clase es un contenedor para una estructura SACL (lista de control de acceso del sistema).|atlsecurity.h|
+|[CSecurityAttributes](../../atl/reference/csecurityattributes-class.md)|Esta clase es un contenedor fino para la `SECURITY_ATTRIBUTES` estructura.|atlsecurity.h|
+|[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)|Esta clase es un contenedor para el `SECURITY_DESCRIPTOR` estructura.|atlsecurity.h|
+|[CSid](../../atl/reference/csid-class.md)|Esta clase es un contenedor para un `SID` estructura (identificador de seguridad).|atlsecurity.h|
 |[CSimpleArray](../../atl/reference/csimplearray-class.md)|Esta clase proporciona métodos para administrar una matriz simple.|atlsimpcoll.h|
 |[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)|Esta clase es una aplicación auxiliar para el [CSimpleArray](../../atl/reference/csimplearray-class.md) clase.|atlsimpcoll.h|
 |[CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)|Esta clase es una aplicación auxiliar para el [CSimpleArray](../../atl/reference/csimplearray-class.md) clase.|atlsimpcoll.h|
@@ -159,12 +159,12 @@ Active Template Library (ATL) incluye las siguientes clases y structs. Para busc
 |[CSnapInItemImpl](../../atl/reference/csnapinitemimpl-class.md)|Esta clase proporciona métodos para implementar un objeto de nodo del complemento.|atlsnap.h|
 |[CSnapInPropertyPageImpl](../../atl/reference/csnapinpropertypageimpl-class.md)|Esta clase proporciona métodos para implementar un objeto de la página de propiedades del complemento.|atlsnap.h|
 |[CStockPropImpl](../../atl/reference/cstockpropimpl-class.md)|Esta clase proporciona métodos para la compatibilidad con los valores de propiedad estándar.|atlctl.h|
-|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Esta clase proporciona funciones estáticas usadas por las clases de colección para almacenar `CString` objetos.|CStringT.h|
+|[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)|Esta clase proporciona funciones estáticas usadas por las clases de colección para almacenar `CString` objetos.|cstringt.h|
 |[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)|Esta clase proporciona funciones estáticas relacionados con las cadenas almacenadas en objetos de clase de colección. Es similar a [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), pero realiza comparaciones entre mayúsculas y minúsculas.|atlcoll.h|
 |[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)|Esta clase proporciona funciones estáticas relacionados con las cadenas almacenadas en objetos de clase de colección. Los objetos de cadena se tratan como referencias.|atlcoll.h|
 |[CThreadPool (clase)](../../atl/reference/cthreadpool-class.md)|Esta clase proporciona un grupo de subprocesos de trabajo que procesan una cola de elementos de trabajo.|atlutil.h|
-|[CTokenGroups](../../atl/reference/ctokengroups-class.md)|Esta clase es un contenedor para el `TOKEN_GROUPS` estructura.|ATLSecurity.h|
-|[CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md)|Esta clase es un contenedor para el `TOKEN_PRIVILEGES` estructura.|ATLSecurity.h|
+|[CTokenGroups](../../atl/reference/ctokengroups-class.md)|Esta clase es un contenedor para el `TOKEN_GROUPS` estructura.|atlsecurity.h|
+|[CTokenPrivileges](../../atl/reference/ctokenprivileges-class.md)|Esta clase es un contenedor para el `TOKEN_PRIVILEGES` estructura.|atlsecurity.h|
 |[CUrl (clase)](../../atl/reference/curl-class.md)|Esta clase representa una dirección URL. Permite manipular cada elemento de la dirección URL independientemente de los demás si una dirección URL existente de análisis de cadena o creación de una cadena desde el principio.|atlutil.h|
 |[CW2AEX](../../atl/reference/cw2aex-class.md)|Esta clase se utiliza por las macros de conversión de cadena CT2AEX, CW2TEX, CW2CTEX y CT2CAEX y la definición de tipo CW2A.|atlconv.h|
 |[CW2CWEX](../../atl/reference/cw2cwex-class.md)|Esta clase se utiliza por las macros de conversión de cadena CW2CTEX y CT2CWEX y la definición de tipo CW2CW.|atlconv.h|
@@ -226,4 +226,3 @@ Active Template Library (ATL) incluye las siguientes clases y structs. Para busc
 [Variables globales](../../atl/reference/atl-global-variables.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)
-

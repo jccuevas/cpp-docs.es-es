@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-ms.openlocfilehash: 47b30f1da0d22b63e06a6eee93c905630f5990f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ecf01b81c4150e2bdae3b6d2862c1b3e91152b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648219"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281725"
 ---
 # <a name="cptrarray-class"></a>CPtrArray (clase)
 
@@ -101,7 +101,7 @@ por ejemplo, se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
 
 ## <a name="remarks"></a>Comentarios
 

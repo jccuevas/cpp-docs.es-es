@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 7fd81a1ccf6702c74a013c5772d59f01121b61a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479227"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295050"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr (estructura)
 
@@ -43,7 +43,7 @@ struct scheduler_ptr;
 
 |Name|Descripción|
 |----------|-----------------|
-|[scheduler_ptr:: operator bool](#operator_bool)|Prueba si el puntero del programador no es null|
+|[scheduler_ptr::operator bool](#operator_bool)|Prueba si el puntero del programador no es null|
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|Se comporta como un puntero|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 
 ##  <a name="get"></a>  scheduler_ptr::Get (método)
 
-Devuelve el puntero sin formato al programador
+Devuelve el puntero sin formato al programador.
 
 ```
 scheduler_interface* get() const;
@@ -66,41 +66,41 @@ scheduler_interface* get() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool
+##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
 
-Prueba si el puntero del programador no es null
+Comprueba si el puntero del programador es distinto de null.
 
-''' operador bool() const;
+```
+operator bool() const;
 ```
 
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
 
-Behave like a pointer
+Se comporta como un puntero.
 
 ```
-operador de scheduler_interface () -> () const;
+scheduler_interface* operator->() const;
 ```
 
-### Return Value
+### <a name="return-value"></a>Valor devuelto
 
 ##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
 
-Creates a scheduler pointer from shared_ptr to scheduler
+Crea un puntero de programador de shared_ptr al programador.
 
 ```
-scheduler_ptr (de) explícita (scheduler std:: shared_ptr < scheduler_interface () >);
-
-scheduler_ptr (de) explícita (_In_opt_ pScheduler scheduler_interface () *);
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```
 
-### Parameters
+### <a name="parameters"></a>Parámetros
 
 *scheduler*<br/>
-The scheduler to convert.
+El programador para convertir.
 
 *pScheduler*<br/>
-The scheduler pointer to convert.
+Para convertir el puntero del programador.
 
-## See Also
+## <a name="see-also"></a>Vea también
 
-[concurrency Namespace](concurrency-namespace.md)
+[concurrency (espacio de nombres)](concurrency-namespace.md)

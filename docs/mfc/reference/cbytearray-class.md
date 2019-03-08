@@ -1,5 +1,5 @@
 ---
-title: CByteArray (clase)
+title: CByteArray Class
 ms.date: 11/04/2016
 f1_keywords:
 - CByteArray
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-ms.openlocfilehash: 3038f0c67e171ea56438945ded7eccb8e4f98ee5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1c48e087052308dfb6b27275c5b4997ed9cca7b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259716"
 ---
-# <a name="cbytearray-class"></a>CByteArray (clase)
+# <a name="cbytearray-class"></a>CByteArray Class
 
 Admite matrices dinámicas de bytes.
 
@@ -101,7 +101,7 @@ por ejemplo, se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
 
 ## <a name="remarks"></a>Comentarios
 

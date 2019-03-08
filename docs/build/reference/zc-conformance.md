@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: b1f612040eea0078b0f27cf72327db94fe9e2939
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50f3e7a79b80514b6c28bd9aee86c720d6e20cf6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665444"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413919"
 ---
 # <a name="zc-conformance"></a>/Zc (Ajuste)
 
@@ -33,21 +33,21 @@ Estos son los `/Zc` opciones del compilador:
 |Opción|Comportamiento|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|Habilitar C ++ 17 asignación alineada en exceso dinámico (activado de forma predeterminada en C ++ 17).|
-|[Automático\[-\]](zc-auto-deduce-variable-type.md)|Aplicar el nuevo significado estándar de C++ para `auto` (de forma predeterminada).|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|Aplicar el nuevo significado estándar de C++ para `auto` (de forma predeterminada).|
 |[__cplusplus\[-\]](zc-cplusplus.md)|Habilitar la **__cplusplus** macro para notificar el estándar admitido (desactivado de forma predeterminada).|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Habilitar vinculación externa para `constexpr` variables (desactivado de forma predeterminada).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Exigir Standard C++ `for` las reglas de ámbito (de forma predeterminada).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Habilitar implícita `noexcept` en funciones requeridas (en forma predeterminada).|
-|[en línea\[-\]](zc-inline-remove-unreferenced-comdat.md)|Quitar datos o función sin referencia si son COMDAT o solo tienen vinculación interna (desactivado de forma predeterminada).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Quitar datos o función sin referencia si son COMDAT o solo tienen vinculación interna (desactivado de forma predeterminada).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Exigir reglas C ++ 17 noexcept (de forma predeterminada en C ++ 17 o posterior).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Un archivo temporal UDT no se enlazará a una referencia distinta de const lvalue (desactivado de forma predeterminada).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Exigir reglas de conversión explícita de tipos estándar de C++ (desactivado de forma predeterminada).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Permitir a C ++ 14 desasignación con tamaño global funciones (de forma predeterminada).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Deshabilitar literal de cadena `char*` o `wchar_t*` conversión (desactivado de forma predeterminada).|
-|[Ternario\[-\]](zc-ternary.md)|Aplicar reglas de operador condicional en los tipos de operandos (desactivado de forma predeterminada).|
+|[ternary\[-\]](zc-ternary.md)|Aplicar reglas de operador condicional en los tipos de operandos (desactivado de forma predeterminada).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Habilitar la inicialización estática local de subprocesos (de forma predeterminada).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Suponga `operator new` en caso de error (desactivado de forma predeterminada).|
-|[Trígrafos\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilitar trígrafos (obsoletos, desactivado de forma predeterminada).|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Habilitar trígrafos (obsoletos, desactivado de forma predeterminada).|
 |[twoPhase-](zc-twophase.md)|Usar análisis de comportamiento (cumple las especificaciones de forma predeterminada) de las plantillas no conforme.|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` es un tipo nativo, no un typedef (de forma predeterminada).|
 

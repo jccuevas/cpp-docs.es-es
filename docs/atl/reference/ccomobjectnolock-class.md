@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 85a5a71e330b8171a8e0e239d9afab43a6df1512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467380"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301966"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock (clase)
 
@@ -31,7 +31,7 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>Parámetros
 
-*base*<br/>
+*Base*<br/>
 La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) o [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), como también a partir de cualquier otra interfaz que desea admitir en el objeto.
 
 ## <a name="members"></a>Miembros
@@ -41,7 +41,7 @@ La clase derivada de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.m
 |Name|Descripción|
 |----------|-----------------|
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Constructor.|
-|[CComObjectNoLock:: ~ CComObjectNoLock](#dtor)|Destructor.|
+|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -92,7 +92,7 @@ CComObjectNoLock(void* = NULL);
 <em>void\*</em><br/>
 [in] No se utiliza este parámetro sin nombre. Existe para lograr una simetría con otros `CComXXXObjectXXX` constructores.
 
-##  <a name="dtor"></a>  CComObjectNoLock:: ~ CComObjectNoLock
+##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
 
 Destructor.
 
@@ -114,7 +114,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Parámetros
 
-*IID*<br/>
+*iid*<br/>
 [in] El identificador de la interfaz que se solicita.
 
 *ppvObject*<br/>

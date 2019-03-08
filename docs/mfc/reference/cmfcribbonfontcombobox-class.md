@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 5feb97b274b6547ebc6868e27ead20824ce4e8ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 643e2a519c6d96c1070990dd86d571c5b7c09f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288433"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox (clase)
 
@@ -58,7 +58,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |Name|Descripción|
 |----------|-----------------|
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|Rellena el cuadro combinado de fuente de la cinta con fuentes del tipo de fuente, el juego de caracteres y el paso y la familia especificados.|
-|`CMFCRibbonFontComboBox::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CMFCRibbonFontComboBox::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |[CMFCRibbonFontComboBox::GetCharSet](#getcharset)|Devuelve el juego de caracteres especificado.|
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||
 |[CMFCRibbonFontComboBox::GetFontType](#getfonttype)|Devuelve los tipos de fuente que se van a mostrar en el cuadro combinado. Las opciones válidas son DEVICE_FONTTYPE, RASTER_FONTTYPE y TRUETYPE_FONTTYPE o cualquier combinación bit a bit de estas.|
@@ -157,7 +157,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *iÍndice*<br/>
+[in] *iIndex*<br/>
 
 ### <a name="return-value"></a>Valor devuelto
 

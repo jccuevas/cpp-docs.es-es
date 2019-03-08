@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 5fbd3b1c4e0ca1c09e34c3e04a4d0b0613e45e73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430419"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270842"
 ---
 # <a name="atl-text-encoding-functions"></a>Las funciones de codificación de texto ATL
 
@@ -93,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="parameters"></a>Parámetros
 
-*Conserva*<br/>
+*pReserved*<br/>
 Un puntero reservado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -400,7 +400,7 @@ inline int IsExtendedChar(char ch) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 El carácter que se va a probar
 
 ### <a name="return-value"></a>Valor devuelto
@@ -721,7 +721,7 @@ El número de caracteres necesarios para un búfer que podría contener datos co
 
 Implementación de esta forma sigue la especificación de POSIX P1003.2b/D11.
 
-### <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
-[Conceptos](../../atl/active-template-library-atl-concepts.md)<br/>
-[Componentes de escritorio COM de ATL](../../atl/atl-com-desktop-components.md)
+[Conceptos](../active-template-library-atl-concepts.md)<br/>
+[Componentes de escritorio COM de ATL](../atl-com-desktop-components.md)

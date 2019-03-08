@@ -1,17 +1,16 @@
 ---
 title: Novedades de Visual C++ en Visual Studio
 ms.date: 11/15/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a9bbf86d6febfdec5ab5cbd9969cd5076672c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620148"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809794"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novedades de Visual C++ en Visual Studio 2017
 
@@ -25,9 +24,9 @@ Visual Studio 2017 incluye muchas actualizaciones y revisiones del entorno de Vi
 
 En esta versión, hemos actualizado el compilador C++ y la biblioteca estándar con compatibilidad mejorada con características de C ++ 11 y C ++ 14, así como la compatibilidad preliminar para determinadas características que se esperan que estén en C ++ 17 estándar. Para obtener información detallada, vea [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
-**Versión 15.5 de Visual Studio 2017**: el compilador admite aproximadamente un 75 % de las características nuevas de C++17, incluidos los enlaces estructurados, las expresiones lambda `constexpr`, `if constexpr`, las variables alineadas, las expresiones fold y la adición de `noexcept` al sistema de tipos. Están disponibles en la opción **/std:c++17**. Para obtener más información, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
+**Versión 15.5 de Visual Studio 2017**: El compilador admite aproximadamente un 75 % de las características nuevas de C++17, incluidos los enlaces estructurados, las expresiones lambda `constexpr`, `if constexpr`, las variables alineadas, las expresiones fold y la adición de `noexcept` al sistema de tipos. Están disponibles en la opción **/std:c++17**. Para obtener más información, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
-**Versión 15.7 de Visual Studio 2017**: el conjunto de herramientas del compilador MSVC en Visual Studio, versión 15.7, ahora cumple con el estándar de C++. Para obtener más información, vea [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (Anuncio: MSVC cumple con el estándar de C++) y [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md).
+**Visual Studio 2017 versión 15.7**: El conjunto de herramientas del compilador MSVC en Visual Studio versión 15.7 ahora cumple con el estándar de C++. Para obtener más información, vea [Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) (Anuncio: MSVC cumple con el estándar de C++) y [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md).
 
 ### <a name="new-compiler-options"></a>Nuevas opciones del compilador
 
@@ -50,7 +49,7 @@ En esta versión, hemos actualizado el compilador C++ y la biblioteca estándar 
 Esta versión ofrece varias mejoras en la optimización, la generación de código, el control de versiones del conjunto de herramientas y el diagnóstico. Estas son algunas de las mejoras destacables incluidas:
 
 - Generación de código de bucles mejorada: compatibilidad con vectorización automática de división de enteros constantes, mejor identificación de patrones de memset.
-- Seguridad de código mejorada: emisión mejorada de diagnósticos de compilador de desbordamiento del búfer. Asimismo, [/guard:cf](build/reference/guard-enable-control-flow-guard.md) ahora protege instrucciones switch que generan tablas de saltos.
+- Seguridad de código mejorada: emisión mejorada de diagnósticos de compilador de desbordamiento del búfer; [/guard:cf](build/reference/guard-enable-control-flow-guard.md) ahora protege instrucciones switch que generan tablas de saltos.
 - Control de versiones: el valor de la macro de preprocesador integrada **\_MSC\_VER** se actualiza de forma continua en cada actualización del conjunto de herramientas de Visual C++. Para obtener más información, vea [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) (Versión del compilador de Visual C++).
 - Nuevo diseño del conjunto de herramientas: el compilador y las herramientas de compilación relacionadas tienen una nueva ubicación y estructura de directorios en la máquina de desarrollo. El nuevo diseño permite instalaciones en paralelo de varias versiones del compilador. Para más información, vea [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Diseño de las herramientas del compilador en Visual Studio "15").
 - Diagnóstico mejorado: en la ventana de salida ahora se muestra la columna en la que se produce un error. Para más información, vea [C++ improvisamente diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (Mejoras del diagnóstico del compilador C++ en VS "15" Preview 5).
@@ -246,7 +245,7 @@ Vea [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md) pa
 
 ### <a name="open-source-library-support"></a>Compatibilidad con bibliotecas de código abierto
 
-**Vcpkg** es una herramienta de línea de comandos de código abierto que simplifica enormemente el proceso de adquirir y compilar bibliotecas estáticas de C++ de código abierto y archivos DLL en Visual Studio. Para más información, vea [Vcpkg: Administrador de paquetes de C++ para Windows](vcpkg.md).
+**Vcpkg** es una herramienta de línea de comandos de código abierto que simplifica enormemente el proceso de adquirir y compilar bibliotecas estáticas de C++ de código abierto y archivos DLL en Visual Studio. Para obtener más información, vea [vcpkg: un administrador de paquetes de C++ para Windows, Linux y MacOS](vcpkg.md).
 
 **Versión 15.5 de Visual Studio 2017**:
 
@@ -312,7 +311,7 @@ Ahora C++ permite hacer clic presionando la tecla Control para **ir a la definic
 - La característica experimental "Carga de proyecto más rápida" está disponible para proyectos de C++. La próxima vez que abra un proyecto de C++, se cargará más rápido y la siguiente todavía más.
 - Algunas de estas características son comunes a otros lenguajes y otras son específicas de C++. Para obtener más información sobre estas nuevas características, vea [Announcing Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/) (Presentación de Visual Studio "15").
 
-**Visual Studio 1027 versión 15.7**: se ha agregado compatibilidad para ClangFormat. Para obtener más información, vea [ClangFormat Support in Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/) (Compatibilidad con ClangFormat en Visual Studio 2017).
+**Visual Studio 1027, versión 15.7**: se ha agregado compatibilidad para ClangFormat. Para obtener más información, vea [ClangFormat Support in Visual Studio 2017](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/) (Compatibilidad con ClangFormat en Visual Studio 2017).
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Proyectos que no son de MSBuild con Abrir carpeta
 
@@ -339,11 +338,11 @@ Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin conv
 
   ![Abrir carpeta Cmake](media/cmake_cpp.png "Abrir carpeta CMake")
 
-**Visual Studio 2017 versión 15.3**: se agregó compatibilidad con el generador CMake Ninja.
+**Visual Studio 2017 versión 15.3**: se ha agregado compatibilidad para el generador CMake Ninja.
 
-**Visual Studio 2017, versión 15.5**: se ha agregado compatibilidad para importar memorias caché de CMake existentes.
+**Versión 15.5 de Visual Studio 2017**: se ha agregado compatibilidad para la importación de las memorias caché de CMake existentes.
 
-**Visual Studio 2017 versión 15.7**: se ha agregado compatibilidad para CMake 3.11, análisis de código en proyectos de CMake, la vista de destinos en el Explorador de soluciones, opciones de generación de caché y la compilación de archivo único. Para obtener más información, vea [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Compatibilidad con CMake en Visual Studio) y [Proyectos de CMake en Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 versión 15.7**: se ha agregado compatibilidad para CMake 3.11, el análisis de código en proyectos de CMake, la vista de destinos en el Explorador de soluciones, las opciones de generación de caché y la compilación de archivo único. Para obtener más información, vea [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Compatibilidad con CMake en Visual Studio) y [Proyectos de CMake en Visual C++](ide/cmake-tools-for-visual-cpp.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Desarrollo del escritorio de Windows con C++
 
@@ -389,9 +388,9 @@ Ahora puede crear y depurar aplicaciones móviles con Visual Studio que pueden t
 C++ viene como un componente opcional de la carga de trabajo de la Aplicación Windows universal.  Actualmente, la actualización de proyectos de C++ se debe hacer de forma manual. Si abre un proyecto de UWP orientado a v140 en Visual Studio 2017, deberá seleccionar el conjunto de herramientas de la plataforma v141 en las páginas de propiedades del proyecto si no tiene instalado Visual Studio 2015.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>Nuevas opciones de C++ en la Plataforma universal de Windows (UWP)
-Ahora dispone de nuevas opciones para escribir y empaquetar aplicaciones de C++ para la Plataforma universal de Windows y la Tienda Windows: puede usar la infraestructura Puente de dispositivo de escritorio para empaquetar la aplicación de escritorio existente para su implementación a través de la Tienda Windows o a través de los canales existentes mediante la instalación de prueba. Las nuevas capacidades de Windows 10 le permiten agregar funcionalidad de Plataforma universal de Windows a su aplicación de escritorio de varias maneras. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
+Ahora tiene nuevas opciones para escribir y empaquetar aplicaciones C++ para la Plataforma universal de Windows y Microsoft Store: puede usar la infraestructura Puente de dispositivo de escritorio para empaquetar la aplicación de escritorio existente para su implementación a través de Microsoft Store o los canales existentes vía la instalación de prueba. Las nuevas capacidades de Windows 10 le permiten agregar funcionalidad de Plataforma universal de Windows a su aplicación de escritorio de varias maneras. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
-**Visual Studio 2017 versión 15.5**: se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que simplifica en gran medida la tarea de empaquetar aplicaciones de escritorio mediante el uso del Puente de dispositivo de escritorio. Está disponible en **Archivo | Nuevo | Proyecto | Instalado | Visual C++ | Plataforma universal de Windows**. Para obtener más información, consulte [Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+**Versión 15.5 de Visual Studio 2017**: Se ha agregado una plantilla de proyecto **Proyecto de empaquetado de aplicaciones de Windows**, lo que simplifica en gran medida la tarea de empaquetar aplicaciones de escritorio mediante el uso del Puente de dispositivo de escritorio. Está disponible en **Archivo | Nuevo | Proyecto | Instalado | Visual C++ | Plataforma universal de Windows**. Para obtener más información, consulte [Empaquetar una aplicación mediante Visual Studio (Puente de dispositivo de escritorio a UWP)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
 
 Al escribir código nuevo, ahora puede usar C++/WinRT, una proyección del lenguaje C++ estándar para Windows Runtime que se implementa solamente en los archivos de encabezado. Permite crear y usar las API de Windows Runtime con cualquier compilador de C++ conforme a los estándares. C++/WinRT está diseñado para proporcionar a los desarrolladores de C++ acceso de primera a la API de Windows moderna. Para obtener más información, vea [C++/WinRT Available on GitHub](https://moderncpp.com/) (C++/WinRT está disponible en GitHub).
 
@@ -407,9 +406,9 @@ Ahora se distribuyen con Visual Studio los comprobadores principales de C++ para
 
 ![CppCoreCheck](media/CppCoreCheck.png "Página de propiedades de CppCoreCheck")
 
-**Visual Studio 2017 versión 15.3**: se agregó compatibilidad con reglas relativas a la administración de recursos.
+**Visual Studio 2017 versión 15.3**: Se ha agregado compatibilidad con reglas relativas a la administración de recursos.
 
-**Visual Studio 2017, versión 15.5**: las nuevas comprobaciones de C++ Core Guidelines cubren la corrección del puntero inteligente, el uso adecuado de inicializadores globales y la marca de usos de construcciones como `goto` y conversiones incorrectas.
+**Versión 15.5 de Visual Studio 2017**: Las nuevas comprobaciones de C++ Core Guidelines cubren la exactitud del puntero inteligente, el uso adecuado de inicializadores globales y la marca de usos de construcciones como `goto` y conversiones incorrectas.
 
 Algunos números de advertencias que puede encontrar en 15.3 ya no están disponibles en 15.5. Estas advertencias se han sustituido por comprobaciones más específicas.
 
@@ -433,7 +432,7 @@ Google Test Adapter y Boost.Test Adapter ahora están disponibles como component
 - Se ha agregado compatibilidad para admitir la biblioteca dinámica de Boost.Test.
 - Ahora en el IDE hay una plantilla de elemento Boost.Test disponible.
 
-Para obtener más información, vea [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Prueba unitaria Boost.Test: compatibilidad con las bibliotecas dinámicas y nueva plantilla de elemento).
+Para obtener más información, vea [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Pruebas unitarias de Boost.Test: compatibilidad con bibliotecas dinámicas y nueva plantilla de elemento).
 
 **Visual Studio 2017 versión 15.7**:
 
@@ -443,15 +442,15 @@ Se ha agregado compatibilidad con [CodeLens](/visualstudio/ide/find-code-changes
 
 Diagnóstico de gráficos de Visual Studio es un conjunto de herramientas para grabar y analizar problemas de representación y rendimiento de las aplicaciones de Direct3D. Las características de Diagnóstico de gráficos pueden usarse con aplicaciones que se ejecutan localmente en su PC Windows, en un emulador de dispositivos de Windows o en un dispositivo o equipo remoto.
 
-- **Entrada y salida para sombreadores de vértices y geometría:** la función para ver la entrada y la salida de los sombreadores de vértices y de geometría ha sido una de las más solicitadas, y ahora es compatible con las herramientas. Basta con que seleccione la fase VS (sombreadores de vértices) o GS (sombreadores de geometría) en la vista Etapas de canalización para empezar a inspeccionar su entrada y su salida en la tabla siguiente.
+- **Entrada y salida para sombreadores de vértices y geometría**: la función para ver la entrada y la salida de los sombreadores de vértices y geometría ha sido una de las más solicitadas, y ahora es compatible con las herramientas. Basta con que seleccione la fase VS (sombreadores de vértices) o GS (sombreadores de geometría) en la vista Etapas de canalización para empezar a inspeccionar su entrada y su salida en la tabla siguiente.
 
   ![Entrada y salida de los sombreadores](media/io-shaders.png)
 
-- **Búsqueda y filtrado en la tabla de objetos:** proporciona un modo rápido y sencillo de encontrar los recursos que se buscan.
+- **Búsqueda y filtrado en la tabla de objetos**: proporciona un modo rápido y sencillo de encontrar los recursos que se buscan.
 
   ![Buscar](media/search.png)
 
-- **Historial de recursos:** esta nueva vista proporciona una manera simplificada de ver el historial completo de modificaciones de un recurso tal como se usó durante el procesamiento de un fotograma capturado. Para invocar el historial de un recurso, haga clic en el icono de reloj que se encuentra junto a los hipervínculos de recursos.
+- **Historial de recursos**: esta nueva vista proporciona una manera simplificada de ver el historial completo de modificaciones de un recurso tal como se usó durante el procesamiento de un fotograma capturado. Para invocar el historial de un recurso, haga clic en el icono de reloj que se encuentra junto a los hipervínculos de recursos.
 
   ![Historial de recursos](media/resource-history.png)
 
@@ -461,23 +460,23 @@ Diagnóstico de gráficos de Visual Studio es un conjunto de herramientas para g
 
   Tenga en cuenta que, si el fotograma se ha capturado con la captura de pila de llamadas completa habilitada (**Visual Studio > Herramientas > Opciones** en **Diagnóstico de gráficos**), el contexto de cada evento de cambio se puede deducir rápidamente e inspeccionar dentro del proyecto de Visual Studio.
 
-- **Estadísticas de API:** vea un resumen de alto nivel del uso de la API en su fotograma. Esto puede ser útil para detectar llamadas que tal vez no sepa que realiza o para detectar llamadas que realiza demasiado. Esta ventana está disponible en **Vista > Estadísticas de API** en el Analizador de gráficos de Visual Studio.
+- **Estadísticas de API**: vea un resumen de alto nivel del uso de la API en su fotograma. Esto puede ser útil para detectar llamadas que tal vez no sepa que realiza o para detectar llamadas que realiza demasiado. Esta ventana está disponible en **Vista > Estadísticas de API** en el Analizador de gráficos de Visual Studio.
 
   ![Estadísticas de API](media/api-stats.png)
 
-- **Estadísticas de memoria:** vea cuánta memoria asigna el controlador a los recursos que crea en el fotograma. Esta ventana está disponible en **Vista > Estadísticas de memoria** en el **Analizador de gráficos de Visual Studio**. Es posible copiar los datos en un archivo .csv para verlos en una hoja de cálculo. Para ello, haga clic con el botón derecho y seleccione **Copiar todo**.
+- **Estadísticas de memoria**: vea cuánta memoria asigna el controlador a los recursos que crea en el fotograma. Esta ventana está disponible en **Vista > Estadísticas de memoria** en el **Analizador de gráficos de Visual Studio**. Es posible copiar los datos en un archivo .csv para verlos en una hoja de cálculo. Para ello, haga clic con el botón derecho y seleccione **Copiar todo**.
 
   ![Estadísticas de memoria](media/memory-stats.png)
 
-- **Validación de fotogramas:** la nueva lista de errores y advertencias proporciona una manera fácil de navegar por la lista de eventos en función de los posibles problemas que haya detectado la capa de depuración de Direct3D. Haga clic en **Ver > Validación de fotogramas** en el Analizador de gráficos de Visual Studio para abrir la ventana. Después, haga clic en **Ejecutar validación** para comenzar el análisis. Puede tardar varios minutos en completarse, en función de la complejidad del fotograma.
+- **Validación de fotogramas**: la nueva lista de errores y advertencias proporciona una manera fácil de navegar por la lista de eventos en función de los posibles problemas que haya detectado la capa de depuración de Direct3D. Haga clic en **Ver > Validación de fotogramas** en el Analizador de gráficos de Visual Studio para abrir la ventana. Después, haga clic en **Ejecutar validación** para comenzar el análisis. Puede tardar varios minutos en completarse, en función de la complejidad del fotograma.
 
   ![Validación de fotogramas](media/frame-validation.png)
 
-- **Análisis de fotogramas para D3D12**: use el análisis de fotogramas para analizar el rendimiento de las llamadas a draw con experimentos "y si" dirigidos. Cambie a la pestaña Análisis de fotogramas y ejecute un análisis para ver el informe. Para obtener más información, vea el vídeo [GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) (GoingNative 25: análisis de fotogramas de gráficos de Visual Studio).
+- **Análisis de fotogramas para D3D12**: use el análisis de fotogramas para analizar el rendimiento de las llamadas a draw con experimentos "y si" dirigidos. Cambie a la pestaña Análisis de fotogramas y ejecute un análisis para ver el informe. Para obtener más información, vea el vídeo [GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) (GoingNative 25: Análisis de fotogramas de gráficos de Visual Studio).
 
   ![Análisis de fotogramas](media/frame-analysis.png)
 
-- **Mejoras de uso de GPU:** abra los seguimientos realizados mediante el Generador de perfiles de uso de GPU de Visual Studio con la herramienta Vista de GPU o Windows Performance Analyzer (WPA) para obtener análisis más detallados. Si tiene instalado Windows Performance Toolkit, habrá dos hipervínculos (uno para WPA y otro para Vista de GPU) en la parte inferior derecha de la información general de la sesión.
+- **Mejoras de uso de GPU**: abra los seguimientos realizados mediante el Generador de perfiles de uso de GPU de Visual Studio con la herramienta Vista de GPU o Windows Performance Analyzer (WPA) para obtener análisis más detallados. Si tiene instalado Windows Performance Toolkit, habrá dos hipervínculos (uno para WPA y otro para Vista de GPU) en la parte inferior derecha de la información general de la sesión.
 
   ![Uso de GPU](media/gpu-usage.png)
 

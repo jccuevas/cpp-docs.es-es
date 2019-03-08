@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 9bd5b5dd8f8c233ac324e4c50a6291347bb954e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496345"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274523"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups (clase)
 
@@ -43,7 +43,7 @@ class CTokenGroups
 |Name|Descripción|
 |----------|-----------------|
 |[CTokenGroups::CTokenGroups](#ctokengroups)|El constructor.|
-|[CTokenGroups:: ~ CTokenGroups](#dtor)|Destructor.|
+|[CTokenGroups::~CTokenGroups](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -113,14 +113,14 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `CTokenGroups` objeto o [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) estructura con la que se va a construir el `CTokenGroups` objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 El `CTokenGroups` , opcionalmente, se puede crear el objeto utilizando un `TOKEN_GROUPS` definida previamente o estructura `CTokenGroups` objeto.
 
-##  <a name="dtor"></a>  CTokenGroups:: ~ CTokenGroups
+##  <a name="dtor"></a>  CTokenGroups::~CTokenGroups
 
 Destructor.
 
@@ -252,7 +252,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 
 ### <a name="parameters"></a>Parámetros
 
-*RHS*<br/>
+*rhs*<br/>
 El `CTokenGroups` objeto o [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-_token_groups) estructura para asignar a la `CTokenGroups` objeto.
 
 ### <a name="return-value"></a>Valor devuelto

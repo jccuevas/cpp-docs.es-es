@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: 5d9ab804478dbf72ec51265a851f62d025ebfba5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428072"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287367"
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator (clase)
 
@@ -33,9 +33,9 @@ class ATL::CCRTAllocator
 
 |Name|Descripción|
 |----------|-----------------|
-|[Ccrtallocator:: Allocate](#allocate)|(Estático) Llame a este método para asignar memoria.|
-|[Ccrtallocator:: Free](#free)|(Estático) Llame a este método para liberar memoria.|
-|[Ccrtallocator:: ReAllocate](#reallocate)|(Estático) Llame a este método para reasignar memoria.|
+|[CCRTAllocator::Allocate](#allocate)|(Estático) Llame a este método para asignar memoria.|
+|[CCRTAllocator::Free](#free)|(Estático) Llame a este método para liberar memoria.|
+|[CCRTAllocator::Reallocate](#reallocate)|(Estático) Llame a este método para reasignar memoria.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -45,7 +45,7 @@ Esta clase se utiliza por [CHeapPtr](../../atl/reference/cheapptr-class.md) para
 
 **Encabezado:** atlcore.h
 
-##  <a name="allocate"></a>  Ccrtallocator:: Allocate
+##  <a name="allocate"></a>  CCRTAllocator::Allocate
 
 Llame a esta función estática para asignar memoria.
 
@@ -66,7 +66,7 @@ Devuelve un puntero void al espacio asignado, o NULL si no hay suficiente memori
 
 Asigna memoria. Consulte [malloc](../../c-runtime-library/reference/malloc.md) para obtener más detalles.
 
-##  <a name="free"></a>  Ccrtallocator:: Free
+##  <a name="free"></a>  CCRTAllocator::Free
 
 Llame a esta función estática para liberar memoria.
 
@@ -83,7 +83,7 @@ Puntero a la memoria asignada.
 
 Libera la memoria asignada. Consulte [libre](../../c-runtime-library/reference/free.md) para obtener más detalles.
 
-##  <a name="reallocate"></a>  Ccrtallocator:: ReAllocate
+##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
 
 Llame a esta función estática para reasignar memoria.
 

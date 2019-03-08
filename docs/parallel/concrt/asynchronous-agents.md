@@ -1,16 +1,16 @@
 ---
 title: Agentes asincrónicos
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467605"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268946"
 ---
 # <a name="asynchronous-agents"></a>Agentes asincrónicos
 
@@ -22,7 +22,7 @@ La biblioteca de agentes define la [Concurrency:: Agent](../../parallel/concrt/r
 
 Los agentes tienen un ciclo de vida establecido. El [concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status) enumeración define los distintos Estados de un agente. La siguiente ilustración es un diagrama de estado que muestra el progresan de los agentes de un estado a otro. En esta ilustración, las líneas sólidas representan métodos que se llama desde la aplicación; las líneas de puntos representan los métodos que se llaman desde el tiempo de ejecución.
 
-![Diagrama de estado del agente](../../parallel/concrt/media/agentstate.png "agentstate")
+![Diagrama de estado del agente](../../parallel/concrt/media/agentstate.png "diagrama de estado del agente")
 
 La tabla siguiente describe cada estado en el `agent_status` enumeración.
 
@@ -46,10 +46,10 @@ En la tabla siguiente se muestra algunos de los métodos importantes que pertene
 |------------|-----------------|
 |[start](reference/agent-class.md#start)|Las programaciones del `agent` objeto para su ejecución y lo establece en el `agent_runnable` estado.|
 |[run](reference/agent-class.md#run)|Ejecuta la tarea que se debe realizar la `agent` objeto.|
-|[Listo](reference/agent-class.md#done)|Mueve un agente para el `agent_done` estado.|
-|[Cancelar](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Si no se inició el agente, este método cancela la ejecución del agente y lo establece en el `agent_canceled` estado.|
+|[done](reference/agent-class.md#done)|Mueve un agente para el `agent_done` estado.|
+|[cancel](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|Si no se inició el agente, este método cancela la ejecución del agente y lo establece en el `agent_canceled` estado.|
 |[status](reference/agent-class.md#status)|Recupera el estado actual de la `agent` objeto.|
-|[Espere](reference/agent-class.md#wait)|Espera a que el `agent` objeto para escribir el `agent_done` o `agent_canceled` estado.|
+|[wait](reference/agent-class.md#wait)|Espera a que el `agent` objeto para escribir el `agent_done` o `agent_canceled` estado.|
 |[wait_for_all](reference/agent-class.md#wait_for_all)|Espera a que todos proporcionado `agent` objetos que se va a escribir el `agent_done` o `agent_canceled` estado.|
 |[wait_for_one](reference/agent-class.md#wait_for_one)|Espera a que al menos uno de los proporcionados `agent` objetos que se va a escribir el `agent_done` o `agent_canceled` estado.|
 
@@ -59,9 +59,8 @@ El runtime no administra las excepciones producidas por agentes asincrónicos. P
 
 ## <a name="example"></a>Ejemplo
 
-Para obtener un ejemplo que muestra cómo crear una aplicación basada en agente básica, vea [Tutorial: crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
+Para obtener un ejemplo que muestra cómo crear una aplicación basada en agente básica, vea [Tutorial: Crear una aplicación basada en agente](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Biblioteca de agentes asincrónicos](../../parallel/concrt/asynchronous-agents-library.md)
-

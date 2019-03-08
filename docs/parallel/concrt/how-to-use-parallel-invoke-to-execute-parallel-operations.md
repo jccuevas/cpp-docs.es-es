@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Usar parallel.invoke para ejecutar operaciones paralelas'
+title: Procedimiento Usar Parallel.Invoke para ejecutar operaciones paralelas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_invoke function, example
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-ms.openlocfilehash: 2d4cd19a3cbb02b9c18b1733f8df6f64eb956803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293530"
 ---
-# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Cómo: Usar parallel.invoke para ejecutar operaciones paralelas
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>Filtrar Usar Parallel.Invoke para ejecutar operaciones paralelas
 
 En este ejemplo se muestra cómo usar el [Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) algoritmo para mejorar el rendimiento de un programa que realiza varias operaciones en un origen de datos compartido. Dado que ninguna de ellas modifica el origen, se pueden ejecutar en paralelo de manera sencilla.
 
@@ -68,7 +68,7 @@ Dado que el algoritmo `parallel_invoke` llama a cada función de trabajo en para
 
 Dado que este ejemplo realiza tres tareas en paralelo, no debe esperar que el rendimiento se escale en los equipos que tienen más de tres procesadores. Para mejorar el rendimiento, puede dividir las tareas más prolongadas en otras más pequeñas y ejecutarlas en paralelo.
 
-Puede usar el `parallel_invoke` algoritmo en lugar de la [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) clases si no necesita soporte técnico para la cancelación. Para obtener un ejemplo que compara el uso de la `parallel_invoke` algoritmo frente a grupos de tareas, consulte [Cómo: usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
+Puede usar el `parallel_invoke` algoritmo en lugar de la [Concurrency:: task_group](reference/task-group-class.md) y [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) clases si no necesita soporte técnico para la cancelación. Para obtener un ejemplo que compara el uso de la `parallel_invoke` algoritmo frente a grupos de tareas, consulte [Cómo: Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md).
 
 ## <a name="compiling-the-code"></a>Compilar el código
 
@@ -80,4 +80,3 @@ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto d
 
 [Algoritmos paralelos](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_invoke (función)](reference/concurrency-namespace-functions.md#parallel_invoke)
-

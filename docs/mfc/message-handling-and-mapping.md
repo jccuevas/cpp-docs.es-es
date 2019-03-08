@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: 1b109a3f85ffd3311d08c3d749d543b1e625e77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628623"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279671"
 ---
 # <a name="message-handling-and-mapping"></a>Controlar y asignar mensajes
 
@@ -23,7 +23,7 @@ WM_COMMAND (mensajes), normalmente generados por los menús, botones de barra de
 
 Mapas de mensajes también proporcionan una manera de actualizar los objetos de interfaz de usuario (por ejemplo, menús y botones de barra de herramientas), habilitar o deshabilitar para adaptarlas al contexto actual.
 
-Para obtener información general sobre los mensajes y las colas de mensajes en Windows, consulte [mensajes y las colas de mensajes](https://msdn.microsoft.com/library/windows/desktop/ms632590) en el SDK de Windows.
+Para obtener información general sobre los mensajes y las colas de mensajes en Windows, consulte [mensajes y las colas de mensajes](/windows/desktop/winmsg/messages-and-message-queues) en el SDK de Windows.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 
@@ -41,7 +41,7 @@ Para obtener información general sobre los mensajes y las colas de mensajes en 
 
 - [Actualización dinámica de objetos de interfaz de usuario](../mfc/how-to-update-user-interface-objects.md)
 
-- [Procedimiento para crear un mapa de mensajes para una clase de plantilla](../mfc/how-to-create-a-message-map-for-a-template-class.md)
+- [Cómo: Crear un mapa de mensajes para una clase de plantilla](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 
 ## <a name="see-also"></a>Vea también
 

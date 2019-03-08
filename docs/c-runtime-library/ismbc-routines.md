@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454644"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326737"
 ---
 # <a name="ismbc-routines"></a>_ismbc (Rutinas)
 
@@ -42,7 +42,7 @@ El valor de salida se ve afectado por el valor de la categoría `LC_CTYPE` de la
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfanumérico|Devuelve cero si y solo si `c` es una representación de un solo byte de una letra inglesa ASCII. Vea los ejemplos de `_ismbcdigit` y `_ismbcalpha`.|
-|[_ismbcalpha, _ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfabético|Devuelve cero si y solo si `c` es una representación de un solo byte de una letra inglesa ASCII: vea los ejemplos de `_ismbcupper` y `_ismbclower`; o una letra katakana: 0xA6<=`c`<=0xDF.|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alfabético|Devuelve cero si y solo si `c` es una representación de un solo byte de una letra inglesa ASCII: vea los ejemplos de `_ismbcupper` y `_ismbclower`; o una letra katakana: 0xA6<=`c`<=0xDF.|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Dígito|Devuelve cero si y solo si `c` es una representación de un solo byte de un dígito ASCII: 0x30<=`c`<=0x39.|
 |[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Gráfico|Devuelve un valor distinto de cero si y solo si `c` es una representación de un solo byte de cualquier carácter imprimible ASCII o katakana excepto un espacio en blanco ( ). Vea los ejemplos de `_ismbcdigit`, `_ismbcalpha` y `_ismbcpunct`.|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Carácter multibyte válido|Devuelve un valor distinto de cero si y solo si el primer byte de `c` está dentro de los intervalos 0x81 - 0x9F o 0xE0 - 0xFC, y el segundo byte está dentro de los intervalos 0x40 - 0x7E o 0x80 - FC.|

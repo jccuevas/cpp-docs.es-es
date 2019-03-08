@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560568"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280223"
 ---
 # <a name="clipboard-adding-other-formats"></a>Portapapeles: Agregar otros formatos
 
-En este tema se explica cómo expandir la lista de formatos admitidos, especialmente para la compatibilidad con OLE. El tema [Portapapeles: copiar y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir copiando y pegando mediante el Portapapeles. Si esto es todo lo que implemente, son los únicos formatos que se coloca en el Portapapeles **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**y posiblemente **CF_LINKSOURCE**. La mayoría de las aplicaciones necesitará más formatos del Portapapeles que estos tres.
+En este tema se explica cómo expandir la lista de formatos admitidos, especialmente para la compatibilidad con OLE. El tema [Portapapeles: Copiar y pegar datos](../mfc/clipboard-copying-and-pasting-data.md) describe la implementación mínima necesaria para admitir copiando y pegando mediante el Portapapeles. Si esto es todo lo que implemente, son los únicos formatos que se coloca en el Portapapeles **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**y posiblemente **CF_LINKSOURCE**. La mayoría de las aplicaciones necesitará más formatos del Portapapeles que estos tres.
 
 ##  <a name="_core_registering_custom_formats"></a> Registrar formatos personalizados
 
@@ -48,5 +48,4 @@ Esta técnica se usa en el programa de ejemplo OLE de MFC [HIERSVR](../visual-cp
 
 ## <a name="see-also"></a>Vea también
 
-[Portapapeles: Usar el mecanismo del Portapapeles de OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[Portapapeles: Usar el mecanismo del Portapapeles OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450939"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419002"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 
@@ -81,11 +81,11 @@ class CPropertySheet : public CWnd
 
 |Name|Descripción|
 |----------|-----------------|
-|[CPropertySheet:: AddPage](#addpage)|Agrega una página a la hoja de propiedades.|
+|[CPropertySheet::AddPage](#addpage)|Agrega una página a la hoja de propiedades.|
 |[CPropertySheet::Construct](#construct)|Construye un objeto `CPropertySheet`.|
-|[CPropertySheet:: Create](#create)|Muestra una hoja de propiedades no modal.|
-|[CPropertySheet:: DoModal](#domodal)|Muestra una hoja de propiedades modal.|
-|[CPropertySheet:: EnableStackedTabs](#enablestackedtabs)|Indica si la hoja de propiedades usa pestañas apiladas o desplazamiento.|
+|[CPropertySheet::Create](#create)|Muestra una hoja de propiedades no modal.|
+|[CPropertySheet::DoModal](#domodal)|Muestra una hoja de propiedades modal.|
+|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Indica si la hoja de propiedades usa pestañas apiladas o desplazamiento.|
 |[CPropertySheet::EndDialog](#enddialog)|Finaliza la hoja de propiedades.|
 |[CPropertySheet::GetActiveIndex](#getactiveindex)|Recupera el índice de la página activa de la hoja de propiedades.|
 |[CPropertySheet::GetActivePage](#getactivepage)|Devuelve el objeto de la página activa.|
@@ -94,20 +94,20 @@ class CPropertySheet : public CWnd
 |[CPropertySheet::GetPageIndex](#getpageindex)|Recupera el índice de la página especificada de la hoja de propiedades.|
 |[CPropertySheet::GetTabControl](#gettabcontrol)|Recupera un puntero a un control de ficha.|
 |[CPropertySheet::MapDialogRect](#mapdialogrect)|Convierte las unidades de cuadro de diálogo de un rectángulo en unidades de la pantalla.|
-|[CPropertySheet:: OnInitDialog](#oninitdialog)|Invalidar para aumentar la inicialización de la hoja de propiedades.|
+|[CPropertySheet::OnInitDialog](#oninitdialog)|Invalidar para aumentar la inicialización de la hoja de propiedades.|
 |[CPropertySheet::PressButton](#pressbutton)|Simula la elección del botón especificado en una hoja de propiedades.|
 |[CPropertySheet::RemovePage](#removepage)|Quita una página de la hoja de propiedades.|
 |[CPropertySheet::SetActivePage](#setactivepage)|Se establece mediante programación el objeto de la página activa.|
 |[CPropertySheet::SetFinishText](#setfinishtext)|Establece el texto para el botón Finalizar.|
 |[CPropertySheet::SetTitle](#settitle)|Establece el título de la hoja de propiedades.|
 |[CPropertySheet::SetWizardButtons](#setwizardbuttons)|Permite que los botones del asistente.|
-|[CPropertySheet:: SetWizardMode](#setwizardmode)|Habilita el modo de asistente.|
+|[CPropertySheet::SetWizardMode](#setwizardmode)|Habilita el modo de asistente.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[:: M_psh de PROPSHEETHEADER](#m_psh)|El Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) estructura. Proporciona acceso a los parámetros de la hoja de propiedades básicas.|
+|[CPropertySheet::m_psh](#m_psh)|El Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) estructura. Proporciona acceso a los parámetros de la hoja de propiedades básicas.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -161,7 +161,7 @@ Para obtener más información sobre cómo usar `CPropertySheet` objetos, consul
 
 **Encabezado:** afxdlgs.h
 
-##  <a name="addpage"></a>  CPropertySheet:: AddPage
+##  <a name="addpage"></a>  CPropertySheet::AddPage
 
 Agrega la página proporcionada con la pestaña situada en la hoja de propiedades.
 
@@ -328,7 +328,7 @@ Puede mostrar las imágenes de marca de agua o encabezado automáticamente si us
 
 [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]
 
-##  <a name="create"></a>  CPropertySheet:: Create
+##  <a name="create"></a>  CPropertySheet::Create
 
 Muestra una hoja de propiedades no modal.
 
@@ -371,7 +371,7 @@ Para mostrar una hoja de propiedades modal, llame a [DoModal](#domodal) en su lu
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>  CPropertySheet:: DoModal
+##  <a name="domodal"></a>  CPropertySheet::DoModal
 
 Muestra una hoja de propiedades modal.
 
@@ -418,7 +418,7 @@ Deshabilitar todos los demás estilos de Windows, ya que no son compatibles con 
 
 Vea el ejemplo de [CPropertySheet:: AddPage](#addpage).
 
-##  <a name="enablestackedtabs"></a>  CPropertySheet:: EnableStackedTabs
+##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs
 
 Indica si las filas de pestañas en una hoja de propiedades de la pila.
 
@@ -582,7 +582,7 @@ Por ejemplo, llamar a esta función miembro si desea agregar mapas de bits a cad
 
 [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]
 
-##  <a name="m_psh"></a>  :: M_psh de PROPSHEETHEADER
+##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
 Una estructura cuyos miembros almacenan las características de [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2).
 
@@ -607,7 +607,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
+Apunta a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura o [CRect](../../atl-mfc-shared/reference/crect-class.md) coordina el objeto que contiene el cuadro de diálogo que para se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -617,7 +617,7 @@ El [GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseuni
 
 El `MapDialogRect` función miembro reemplaza las unidades de cuadro de diálogo en *lpRect* con pantalla (píxeles) de las unidades para que el rectángulo se puede usar para crear un cuadro de diálogo o colocar un control dentro de un cuadro.
 
-##  <a name="oninitdialog"></a>  CPropertySheet:: OnInitDialog
+##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog
 
 Invalidaciones para aumentar la inicialización de la hoja de propiedades.
 
@@ -647,8 +647,8 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Parámetros
 
-*nBotón*<br/>
-nBotón: identifica que se pulse el botón. Este parámetro puede ser uno de los siguientes valores:
+*nButton*<br/>
+nBotón: Identifica que se pulse el botón. Este parámetro puede ser uno de los siguientes valores:
 
 - PSBTN_BACK elige el botón Atrás.
 
@@ -808,7 +808,7 @@ Un `CPropertySheet` tiene tres páginas de propiedades de asistente: `CStylePage
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="setwizardmode"></a>  CPropertySheet:: SetWizardMode
+##  <a name="setwizardmode"></a>  CPropertySheet::SetWizardMode
 
 Establece una página de propiedades como un asistente.
 
@@ -830,8 +830,8 @@ Llame a `SetWizardMode` antes de llamar a [DoModal](#domodal). Después de llama
 
 ## <a name="see-also"></a>Vea también
 
-[CMNCTRL1 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
-[CMNCTRL2 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [Ejemplo de MFC PROPDLG](../../visual-cpp-samples.md)<br/>
 [Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>

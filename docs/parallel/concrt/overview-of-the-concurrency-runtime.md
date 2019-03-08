@@ -1,20 +1,21 @@
 ---
 title: Información general sobre el runtime de simultaneidad
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: c1b9f9ca0565bfb04c3bff56b23ea1ef1dfa42d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613673"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305242"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Información general sobre el runtime de simultaneidad
+
 En este documento se proporciona información general sobre el Runtime de simultaneidad. Se describen las ventajas del Runtime de simultaneidad, cuándo usarlo, y cómo interactúan sus componentes entre sí y con el sistema operativo y las aplicaciones.
 
 ##  <a name="top"></a> Secciones
@@ -59,10 +60,10 @@ El Runtime de simultaneidad se divide en cuatro componentes: la Biblioteca de mo
 
 **Arquitectura del Runtime de simultaneidad**
 
-![La arquitectura del Runtime de simultaneidad](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![La arquitectura del Runtime de simultaneidad](../../parallel/concrt/media/concurrencyrun.png "la arquitectura del Runtime de simultaneidad")
 
 > [!IMPORTANT]
->  Los componentes de programador de tareas y el Administrador de recursos no están disponibles desde una aplicación de plataforma Universal de Windows (UWP) o cuando se usa la clase de tarea u otros tipos de ppltasks.h.
+> Los componentes de programador de tareas y el Administrador de recursos no están disponibles desde una aplicación de plataforma Universal de Windows (UWP) o cuando se usa la clase de tarea u otros tipos de ppltasks.h.
 
 El Runtime de simultaneidad es alta *que admite composición*, es decir, puede combinar la funcionalidad existente para hacer más cosas. El Runtime de simultaneidad compone muchas características —por ejemplo, algoritmos paralelos— a partir de componentes de nivel inferior.
 
@@ -142,4 +143,3 @@ El Runtime de simultaneidad se declara en el [simultaneidad](../../parallel/conc
 El Runtime de simultaneidad se proporciona como parte de la Biblioteca en tiempo de ejecución de C (CRT). Para obtener más información sobre cómo compilar una aplicación que utiliza CRT, vea [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 [[Arriba](#top)]
-

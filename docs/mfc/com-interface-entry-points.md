@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-ms.openlocfilehash: b608b200094cc522d5b70e154d342108fd00892f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c7b0067e66dfa8bc6f52bcd67637370f8c9a758
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288080"
 ---
 # <a name="com-interface-entry-points"></a>Puntos de entrada de la interfaz COM
 
@@ -33,7 +33,6 @@ El `METHOD_PROLOGUE` macro se define como:
     theClass* pThis = \
     ((theClass*)((BYTE*)this - offsetof(theClass, m_x##localClass))); \
     AFX_MANAGE_STATE(pThis->m_pModuleState) \
-
 ```
 
 La parte de la macro relacionada con la administración del estado global es:
@@ -45,4 +44,3 @@ En esta expresión, *m_pModuleState* se supone que es una variable de miembro de
 ## <a name="see-also"></a>Vea también
 
 [Administración de los datos de estado de los módulos MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
-

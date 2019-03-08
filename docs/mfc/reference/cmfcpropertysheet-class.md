@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531617"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294569"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet (clase)
 
@@ -70,7 +70,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 |Name|Descripción|
 |----------|-----------------|
-|[CMFCPropertySheet:: AddPage](#addpage)|Agrega una página a la hoja de propiedades.|
+|[CMFCPropertySheet::AddPage](#addpage)|Agrega una página a la hoja de propiedades.|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Agrega una nueva página de propiedades al control de árbol.|
 |[CMFCPropertySheet::AddTreeCategory](#addtreecategory)|Agrega un nuevo nodo al control de árbol.|
 |[CMFCPropertySheet::EnablePageHeader](#enablepageheader)|Reserva espacio en la parte superior de cada página para dibujar un encabezado personalizado.|
@@ -88,7 +88,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|Quita un nodo del control de árbol.|
 |[CMFCPropertySheet::RemovePage](#removepage)|Quita una página de propiedades de la hoja de propiedades.|
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Especifica la lista de imágenes que se usan en el control de navegación del panel de Outlook.|
-|[CMFCPropertySheet:: Setlook](#setlook)|Especifica el aspecto de la hoja de propiedades.|
+|[CMFCPropertySheet::SetLook](#setlook)|Especifica el aspecto de la hoja de propiedades.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -112,15 +112,15 @@ Realice los pasos siguientes para usar la clase `CMFCPropertySheet` en la aplica
 
 La siguiente ilustración muestra una hoja de propiedades que se encuentra en el estilo de una barra de herramientas incrustada de Microsoft Outlook. La barra de herramientas de Outlook aparece en el lado izquierdo de la hoja de propiedades.
 
-![Controles de color de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Controles de color de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "controles de color de CMFCPropertySheet")
 
 La siguiente ilustración muestra una hoja de propiedades que contiene un [CMFCPropertyGridCtrl (clase)](../../mfc/reference/cmfcpropertygridctrl-class.md) objeto. Ese objeto es una hoja de propiedades del estilo de una hoja de propiedades de controles comunes estándar.
 
-![Controles de propiedad y lista de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Controles de propiedad y lista de CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "controles de propiedad y lista de CMFCPropertySheet")
 
 La siguiente ilustración muestra una hoja de propiedades que se encuentra en el estilo de un control de árbol.
 
-![Árbol de propiedades](../../mfc/reference/media/proptree.png "proptree")
+![Árbol de la propiedad](../../mfc/reference/media/proptree.png "propiedad árbol")
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -138,7 +138,7 @@ La siguiente ilustración muestra una hoja de propiedades que se encuentra en el
 
 **Encabezado:** afxpropertysheet.h
 
-##  <a name="addpage"></a>  CMFCPropertySheet:: AddPage
+##  <a name="addpage"></a>  CMFCPropertySheet::AddPage
 
 Agrega una página a la hoja de propiedades.
 
@@ -465,13 +465,13 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] El identificador de recurso de una lista de imágenes.
 
-*CX*<br/>
+*cx*<br/>
 [in] El ancho, en píxeles, de los iconos en la lista de imágenes.
 
 *clrTransparent*<br/>
 [in] El color transparente de imagen. Las partes de la imagen que tienen este color será transparentes. El valor predeterminado es el color fucsia, RGB(255,0,255).
 
-*elementos HICON*<br/>
+*hIcons*<br/>
 [in] Identificador de una lista de imágenes existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -484,7 +484,7 @@ Si la hoja de propiedades está en el estilo de Microsoft Outlook, el marco de t
 
 Para obtener más información sobre los métodos que admite este método, consulte [CImageList:: Create](../../mfc/reference/cimagelist-class.md#create) y [CImageList::Add](../../mfc/reference/cimagelist-class.md#add). Para obtener más información acerca de cómo establecer el estilo de una hoja de propiedades, vea [CMFCPropertySheet:: Setlook](#setlook).
 
-##  <a name="setlook"></a>  CMFCPropertySheet:: Setlook
+##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
 
 Especifica el aspecto de la hoja de propiedades.
 
@@ -496,7 +496,7 @@ void SetLook(
 
 ### <a name="parameters"></a>Parámetros
 
-*Buscar*<br/>
+*look*<br/>
 [in] Uno de los valores de enumeración que especifica el aspecto de la hoja de propiedades. El estilo predeterminado para una hoja de propiedades es `CMFCPropertySheet::PropSheetLook_Tabs`. Para obtener más información, vea la tabla en la sección Comentarios de este tema.
 
 *nNavControlWidth*<br/>

@@ -1,18 +1,18 @@
 ---
 title: is_function (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- type_traits/std::is
+- type_traits/std::is_function
 helpviewer_keywords:
 - is_function class
-- is
+- is_function
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-ms.openlocfilehash: 23427ded641d2e7c6d4496ec3c0c36a05cf56422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea1f2ae025823a700ca4e91f3f6b3c05ed79e1cc
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575297"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006479"
 ---
 # <a name="isfunction-class"></a>is_function (Clase)
 
@@ -63,7 +63,6 @@ int main()
 
     return (0);
     }
-
 ```
 
 ```Output

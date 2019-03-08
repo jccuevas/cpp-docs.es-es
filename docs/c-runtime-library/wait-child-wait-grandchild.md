@@ -12,21 +12,19 @@ helpviewer_keywords:
 - _WAIT_CHILD constant
 - _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
-ms.openlocfilehash: 50519ffe8e2de784a9596a1dc748741bbd4cd278
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b484f068ce94ab7a2a637723641e1206072cf24b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613959"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220275"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <process.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

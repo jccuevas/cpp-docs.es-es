@@ -1,6 +1,6 @@
 ---
 title: Clase CNetDirecciónCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654692"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423565"
 ---
 # <a name="cnetaddressctrl-class"></a>Clase CNetDirecciónCtrl
 
@@ -64,7 +64,7 @@ El `CNetAddressCtrl` clase se deriva el [CEdit](../../mfc/reference/cedit-class.
 
 La figura siguiente muestra un cuadro de diálogo que contiene un control de dirección de red. El texto cuadro (1) para el control de dirección de red contiene una dirección de red no válido. Se muestra el mensaje de recuadro informativo (2) si la dirección de red no es válida.
 
-![Cuadro de diálogo con un control de dirección de red y un recuadro informativo. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Cuadro de diálogo con un control de dirección de red y un recuadro informativo. ](../../mfc/reference/media/cnetaddctrl.png "Cuadro de diálogo con un control de dirección de red y un recuadro informativo.")
 
 ## <a name="example"></a>Ejemplo
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinación bit a bit de estilos que se va a aplicarse al control. Para obtener más información, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
+|*rect*|[in] Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene la posición y el tamaño del control.|
 |*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|
 |*nID*|[in] El identificador del control.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Una combinación bit a bit (OR) de los estilos extendidos para aplicarse al control. Para obtener más información, consulte el *dwExStyle* parámetro de la [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) función.|
 |*dwStyle*|[in] Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [Editar estilos](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
+|*rect*|[in] Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene la posición y el tamaño del control.|
 |*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|
 |*nID*|[in] El identificador del control.|
 

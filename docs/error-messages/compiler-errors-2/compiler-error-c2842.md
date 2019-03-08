@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
-ms.openlocfilehash: 2ec39768a88da049c6a31ca2a9de226e25479c99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99b2c86d1e914c9425c2664d4e858bba6cb99486
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571475"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325580"
 ---
 # <a name="compiler-error-c2842"></a>Error del compilador C2842
 
-'class': un tipo de WinRT o administrado no puede definir su propio 'operator new' u 'operator delete'
+> '*clase*': tipo administrado o tipo de WinRT no puede definir su propio 'operator new' u 'operator delete'
 
-Puede definir sus propios ** new (operador) o **operador delete** para administrar la asignación de memoria en el montón nativo. Sin embargo, las clases de referencia no pueden definir estos operadores porque solo se asignan en el montón administrado.
+## <a name="remarks"></a>Comentarios
+
+Puede definir sus propios **new (operador)** o **operador delete** para administrar la asignación de memoria en el montón nativo. Sin embargo, las clases de referencia no pueden definir estos operadores porque solo se asignan en el montón administrado.
 
 Para obtener más información, consulte [operadores definidos por el usuario (C++ / c++ / CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
 
@@ -25,7 +27,7 @@ Para obtener más información, consulte [operadores definidos por el usuario (C
 
 El código siguiente genera el error C2842.
 
-```
+```cpp
 // C2842.cpp
 // compile with: /clr /c
 ref class G {

@@ -2,17 +2,17 @@
 title: logical_or (struct)
 ms.date: 11/04/2016
 f1_keywords:
-- xfunctional/std::logical_or
+- functional/std::logical_or
 helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: f0d585fe2d8fd231f9d39c89aa0b1bcdbdc090b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9a4bf5b72a134bf166fe9297aaa41610718aa8b
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572658"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006544"
 ---
 # <a name="logicalor-struct"></a>logical_or (struct)
 
@@ -112,7 +112,6 @@ d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
 */
-
 ```
 
 ## <a name="requirements"></a>Requisitos

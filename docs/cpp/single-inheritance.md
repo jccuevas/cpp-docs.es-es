@@ -1,6 +1,6 @@
 ---
 title: Herencia única
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461859"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175631"
 ---
 # <a name="single-inheritance"></a>Herencia única
 
 En la "herencia única", una forma de herencia común, las clases solo tienen una clase base. Considere la relación que se muestra en la siguiente ilustración.
 
-![Básico solo&#45;gráfico de herencia](../cpp/media/vc38xj1.gif "vc38XJ1") gráfico sencillo de herencia única
+![Básico solo&#45;gráfico de herencia](../cpp/media/vc38xj1.gif "básico solo&#45;gráfico de herencia") <br/>
+Gráfico sencillo de herencia única
 
 Observe la progresión de general a específico en la ilustración. Otro atributo común que se encuentra en el diseño de la mayoría de jerarquías de clases es que la clase derivada tiene una "especie" de relación con la clase base. En la ilustración, `Book` es una clase de `PrintedDocument` y `PaperbackBook` es una clase de `book`.
 
@@ -47,12 +48,13 @@ En el ejemplo anterior, el especificador de acceso **pública** se utiliza. Se d
 
 Una clase puede actuar como clase base para muchas clases específicas, como se muestra en la ilustración siguiente.
 
-![Gráfico acíclico dirigido directos](../cpp/media/vc38xj2.gif "vc38XJ2") ejemplo de gráfico acíclico dirigido
+![Gráfico acíclico dirigido directos](../cpp/media/vc38xj2.gif "directos de gráfico acíclico dirigido") <br/>
+Ejemplo de gráfico acíclico dirigido
 
 En el diagrama anterior, denominado "gráfico acíclico dirigido" (o DAG), algunas de las clases son clases base para más de una clase derivada. Sin embargo, no sucede lo mismo al contrario: solo hay una clase base directa para una clase derivada dada. El gráfico de la ilustración muestra una estructura de "herencia única".
 
 > [!NOTE]
->  Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple.
+> Los gráficos acíclicos dirigidos no son exclusivos de la herencia única. También se usan para ilustrar gráficos de herencia múltiple.
 
 En la herencia, la clase derivada contiene los miembros de la clase base más cualquier miembro nuevo que se agregue. Como resultado, una clase derivada puede hacer referencia a miembros de la clase base (a menos que esos miembros se redefinan en la clase derivada). Se puede usar el operador de resolución de ámbito (`::`) para hacer referencia a los miembros de clases base directas o indirectas cuando esos miembros se han vuelto a definir en la clase derivada. Considere este ejemplo:
 

@@ -1,9 +1,10 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s
-ms.date: 11/04/2016
+title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
+ms.date: 01/22/2019
 apiname:
 - strcat_s
 - _mbscat_s
+- _mbscat_s_l
 - wcscat_s
 apilocation:
 - msvcrt.dll
@@ -18,32 +19,35 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
+- _mbscat_s_l
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
 - mbscat_s function
 - strings [C++], appending
 - _mbscat_s function
+- _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd7894ba77e7fa67fa3844587394bd3e2e821391
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621317"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210398"
 ---
-# <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
+# <a name="strcats-wcscats-mbscats-mbscatsl"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
 Anexa una cadena. Estas versiones de [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) incluyen mejoras de seguridad, tal y como se describe en [Características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** y **_mbscat_s_l** no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows. Para obtener más información, vea [Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -63,6 +67,12 @@ errno_t _mbscat_s(
    size_t numberOfElements,
    const unsigned char *strSource
 );
+errno_t _mbscat_s_l(
+   unsigned char *strDestination,
+   size_t numberOfElements,
+   const unsigned char *strSource,
+   _locale_t locale
+);
 template <size_t size>
 errno_t strcat_s(
    char (&strDestination)[size],
@@ -78,6 +88,12 @@ errno_t _mbscat_s(
    unsigned char (&strDestination)[size],
    const unsigned char *strSource
 ); // C++ only
+template <size_t size>
+errno_t _mbscat_s_l(
+   unsigned char (&strDestination)[size],
+   const unsigned char *strSource,
+   _locale_t locale
+); // C++ only
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -90,6 +106,9 @@ Tamaño del búfer de cadena de destino.
 
 *strSource*<br/>
 Búfer de cadena de origen terminada en NULL.
+
+*locale*<br/>
+Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -119,6 +138,8 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 **wcscat_s** y **_mbscat_s** son versiones de caracteres anchos y caracteres multibyte de **strcat_s**. Los argumentos y el valor devuelto de **wcscat_s** son caracteres anchos cadenas; los de **_mbscat_s** son cadenas de caracteres multibyte. Estas tres funciones se comportan exactamente igual.
 
 Si *strDestination* es un puntero nulo o no está terminada en null, o si *strSource* es un **NULL** puntero, o si la cadena de destino es demasiado pequeña, el parámetro no válido se invoca el controlador, como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md). Si la ejecución puede continuar, estas funciones devuelven **EINVAL** y establecer **errno** a **EINVAL**.
+
+Las versiones de las funciones que tienen el **_l** sufijo tienen el mismo comportamiento, pero use el parámetro de configuración regional que se pasa en lugar de la configuración regional actual. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 En C++, el uso de estas funciones se simplifica con las sobrecargas de plantilla; las sobrecargas pueden realizar una inferencia automáticamente de la longitud de búfer (lo que elimina el requisito de especificar un argumento de tamaño) y pueden reemplazar automáticamente funciones anteriores no seguras con sus homólogos seguros más recientes. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

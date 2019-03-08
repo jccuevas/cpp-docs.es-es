@@ -19,6 +19,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntdll.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _stprintf_l
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: d24ea0c83d934afe81368a9fe734c2a39d08c3d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451505"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210853"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 
@@ -102,7 +103,6 @@ int _sprintf_l(
    locale_t locale [,
    argument] ...
 ); // C++ only
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -116,7 +116,7 @@ Número máximo de caracteres que se van a almacenar en la versión Unicode de e
 *format*<br/>
 Cadena de control de formato
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos opcionales
 
 *locale*<br/>

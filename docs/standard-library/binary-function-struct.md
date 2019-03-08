@@ -1,21 +1,21 @@
 ---
 title: binary_function (Struct)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466773"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006273"
 ---
 # <a name="binaryfunction-struct"></a>binary_function (Struct)
 
-Un struct base vacío que define los tipos que pueden heredar las clases derivadas que proporciona un objeto de función binario.
+Un struct base vacío que define los tipos que pueden heredar las clases derivadas que proporciona un objeto de función binario. En desuso en C ++ 11, se ha quitado en C ++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,7 +31,7 @@ struct binary_function {
 
 El struct de plantilla sirve como base para las clases que definen una función miembro con el formato:
 
-> *result_type* ** operator() (const ** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**&) const**
+> *result_type* ** operator()( const** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**& ) const**
 
 Todas estas funciones binarias pueden hacer referencia a su primer tipo de argumento como *first_argument_type*, a su segundo tipo de argumento como *second_argument_type* y a su tipo de valor devuelto como *result_type*.
 

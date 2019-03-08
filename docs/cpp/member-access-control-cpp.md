@@ -1,17 +1,17 @@
 ---
 title: Control de acceso a miembros (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611424"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176230"
 ---
 # <a name="member-access-control-c"></a>Control de acceso a miembros (C++)
 
@@ -234,7 +234,8 @@ En el ejemplo anterior, al llamar a la función virtual `GetState` mediante un p
 
 En los entramados de herencia múltiple con clases base virtuales, se puede acceder a un nombre determinado a través de más de una ruta. Dado que se puede aplicar un control de acceso diferente en estas rutas de acceso diferentes, el compilador elige la ruta de acceso que proporciona el mejor acceso. Vea la ilustración siguiente.
 
-![Acceso a lo largo de rutas de acceso de un gráfico de herencia](../cpp/media/vc38v91.gif "vc38V91") a lo largo de rutas de acceso de un gráfico de herencia
+![Acceso a lo largo de rutas de acceso de un gráfico de herencia](../cpp/media/vc38v91.gif "acceso a lo largo de rutas de acceso de un gráfico de herencia") <br/>
+Acceso mediante rutas de acceso de un gráfico de herencia
 
 En la ilustración, se accede a un nombre declarado en la clase `VBase` siempre a través de la clase `RightPath`. La ruta de acceso derecha es más accesible porque `RightPath` declara `VBase` como clase base pública, mientras que `LeftPath` declara `VBase` como private.
 

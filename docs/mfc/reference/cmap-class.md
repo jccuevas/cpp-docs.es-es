@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627323"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305177"
 ---
 # <a name="cmap-class"></a>CMap (clase)
 
@@ -106,7 +106,7 @@ Tipo de datos utilizado para *valor* argumentos; normalmente, una referencia a *
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CMap::operator](#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Inserta un elemento en el mapa: sustitución de operador para `SetAt`.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -116,7 +116,7 @@ Una variable de tipo que se utiliza la posición de acceso alternativa a las ent
 
 Algunas funciones de miembro de esta llamada de clase auxiliar global de funciones que deben personalizarse para usos de la mayoría de los `CMap` clase. Consulte [aplicaciones auxiliares de clase de colección](../../mfc/reference/collection-class-helpers.md) en la sección Macros y funciones globales de la **referencia de MFC**.
 
-`CMap` invalida [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) para admitir la serialización y el volcado de sus elementos. Si una asignación se almacena en un archivo con `Serialize`, cada elemento de mapa se serializa a su vez. La implementación predeterminada de la `SerializeElements` función auxiliar realiza una escritura bit a bit. Para obtener información acerca de la serialización de los elementos de colección de puntero derivado de `CObject` o de otros tipos definidos por el usuario, consulte [Cómo: crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md).
+`CMap` invalida [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) para admitir la serialización y el volcado de sus elementos. Si una asignación se almacena en un archivo con `Serialize`, cada elemento de mapa se serializa a su vez. La implementación predeterminada de la `SerializeElements` función auxiliar realiza una escritura bit a bit. Para obtener información acerca de la serialización de los elementos de colección de puntero derivado de `CObject` o de otros tipos definidos por el usuario, vea [Cómo: Crear una colección con seguridad de tipos](../../mfc/how-to-make-a-type-safe-collection.md).
 
 Si necesita un volcado de diagnóstico de los elementos individuales en el mapa (las claves y valores), debe establecer la profundidad del contexto de volcado en 1 o mayor.
 

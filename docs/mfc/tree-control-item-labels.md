@@ -8,12 +8,12 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: 0abfeee170dbc9cbb4639e896e7a22d7184b35a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438199"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278891"
 ---
 # <a name="tree-control-item-labels"></a>Etiquetas de elemento de control de árbol
 
@@ -27,4 +27,3 @@ Un control de árbol utiliza memoria asignada desde el montón del proceso que c
 
 [Uso de CTreeCtrl](../mfc/using-ctreectrl.md)<br/>
 [Controles](../mfc/controls-mfc.md)
-

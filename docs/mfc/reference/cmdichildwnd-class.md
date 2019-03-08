@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: ffe7b975443b8bdc050bcb19af4f990b2e5ffafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576636"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304995"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd (clase)
 
@@ -142,7 +142,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Parámetros
 
 *lpszClassName*<br/>
-Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows (un [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) estructura). El nombre de clase puede ser cualquier nombre registrado con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global. Debe ser NULL para un estándar `CMDIChildWnd`.
+Apunta a una cadena de caracteres terminada en null que se nombra la clase de Windows (un [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura). El nombre de clase puede ser cualquier nombre registrado con el [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) función global. Debe ser NULL para un estándar `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
 Apunta a una cadena de caracteres terminada en null que representa el nombre de la ventana. Se utiliza como texto de la barra de título.
@@ -150,7 +150,7 @@ Apunta a una cadena de caracteres terminada en null que representa el nombre de 
 *dwStyle*<br/>
 Especifica el período de [estilo](../../mfc/reference/styles-used-by-mfc.md#window-styles) atributos. Se requiere el estilo WS_CHILD.
 
-*Rect*<br/>
+*rect*<br/>
 Contiene el tamaño y posición de la ventana. El `rectDefault` valor permite que Windows especificar el tamaño y la posición del nuevo `CMDIChildWnd`.
 
 *pParentWnd*<br/>
@@ -171,7 +171,7 @@ El marco llama a esta función miembro en respuesta a un comando de usuario para
 
 ### <a name="example"></a>Ejemplo
 
-Ejemplo 1:
+Ejemplo 1:
 
 [!code-cpp[NVC_MFCWindowing#7](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_1.cpp)]
 

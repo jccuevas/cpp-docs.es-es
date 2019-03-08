@@ -1,18 +1,18 @@
 ---
-title: 'Tutorial: Crear un agente de flujo de datos'
-ms.date: 11/04/2016
+title: 'Tutorial: Creación de un agente de flujo de datos'
+ms.date: 11/19/2018
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: 35532fd01259bcbf64a70aaca16c621f875bb43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bba72404b1c39ef1835b0c96883154b385181b6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266762"
 ---
-# <a name="walkthrough-creating-a-dataflow-agent"></a>Tutorial: Crear un agente de flujo de datos
+# <a name="walkthrough-creating-a-dataflow-agent"></a>Tutorial: Creación de un agente de flujo de datos
 
 En este documento se muestra cómo crear aplicaciones basadas en agentes que recurren al flujo de datos, no al flujo de control.
 
@@ -28,7 +28,7 @@ Lea los documentos siguientes antes de iniciar este tutorial:
 
 - [Bloques de mensajes asincrónicos](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Procedimiento para usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [Cómo: Usar un filtro de bloque de mensaje](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
 ##  <a name="top"></a> Secciones
 
@@ -84,7 +84,7 @@ El agente de flujo de datos crea una red de búferes de mensajes, cada uno de lo
 
 En el diagrama siguiente se muestra la red de flujo de datos completa de la clase `dataflow_agent`:
 
-![La red de flujo de datos](../../parallel/concrt/media/concrt_dataflow.png "concrt_dataflow")
+![La red de flujo de datos](../../parallel/concrt/media/concrt_dataflow.png "la red de flujo de datos")
 
 En la tabla siguiente se describen los miembros de la red.
 
@@ -118,7 +118,7 @@ There are 499477 positive numbers.
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `dataflow-agent.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc dataflow-agent.cpp**
+**cl.exe /EHsc dataflow-agent.cpp**
 
 [[Arriba](#top)]
 
@@ -147,11 +147,10 @@ info: ===Logging finished.===
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `log-filter.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc log-filter.cpp**
+**cl.exe /EHsc log-filter.cpp**
 
 [[Arriba](#top)]
 
 ## <a name="see-also"></a>Vea también
 
 [Tutoriales del Runtime de simultaneidad](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
-

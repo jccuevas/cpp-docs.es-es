@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474274"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850277"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de mapa de mensajes (MFC)
 
@@ -135,7 +135,7 @@ Esta macro es similar a la [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_m
 
 En la sección de implementación del método de la clase, comenzará el mapa de mensajes con la macro BEGIN_TEMPLATE_MESSAGE_MAP; a continuación, agregue entradas de macro para cada uno de los métodos de controlador de mensajes como lo haría para un mapa de mensajes estándar. Como con la macro BEGIN_MESSAGE_MAP, complete el mapa de mensajes de la plantilla con el [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) macro.
 
-Para obtener más información sobre la implementación de mapas de mensajes para las clases de plantilla, consulte [Cómo: crear un mapa de mensajes para una clase de plantilla](../how-to-create-a-message-map-for-a-template-class.md).
+Para obtener más información sobre la implementación de mapas de mensajes para las clases de plantilla, consulte [Cómo: Crear un mapa de mensajes para una clase de plantilla](../how-to-create-a-message-map-for-a-template-class.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -250,37 +250,13 @@ El nombre de la función de controlador de mensajes a la que se asigna el comand
 
 ### <a name="remarks"></a>Comentarios
 
-Un formulario extendido de controladores de mensajes de comando está disponible para los usos avanzados. La macro ON_COMMAND_EX se usa para dichos controladores de mensajes y proporciona un superconjunto de la funcionalidad [ON_COMMAND] (#on_command).  Las funciones miembro de controlador de comandos extendido toman un único parámetro, un tipo UINT que contiene el identificador de comando y devuelven un valor booleano. El valor devuelto debe ser TRUE para
-
-Esta macro asigna un mensaje de comando a una función miembro extendido de controlador de comandos.
-
-### <a name="syntax"></a>Sintaxis
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>Parámetros
-
-*identificador*<br/>
-Identificador del comando.
-
-*memberFxn*<br/>
-El nombre de la función de controlador de mensajes a la que se asigna el comando.
-
-### <a name="remarks"></a>Comentarios
-
 Un formulario extendido de controladores de mensajes de comando está disponible para los usos avanzados. La macro ON_COMMAND_EX se usa para dichos controladores de mensajes y proporciona un superconjunto de la [ON_COMMAND](message-map-macros-mfc.md#on_command) funcionalidad. Las funciones miembro de controlador de comandos extendido toman un único parámetro, un tipo UINT que contiene el identificador de comando y devuelven un valor booleano. El valor devuelto debe ser TRUE para indicar que el comando se ha controlado; enrutamiento en caso contrario, continuará a otros objetos de destino del comando.
-Para obtener más información, vea la nota técnica [TN006: mapas de mensajes] tm006-message-maps.md).
+
+Para obtener más información, vea la nota técnica [TN006: Mapas de mensajes] tm006-message-maps.md).
 
 ### <a name="requirements"></a>Requisitos
 
 Archivo de encabezado: afxmsg_.h
-
-### <a name="see-also"></a>Vea también
-
-[ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: Mapas de mensajes](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -402,97 +378,97 @@ El identificador de menú, Id. de la barra de herramientas, identificador de bot
 
 El `IOleCommandTarget` comandos de menú estándar se han implementado por MFC en las macros siguientes:
 
-**(DE ON_OLECMD_CLEARSELECTION)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 Envía el comando Editar Clear. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**(DE ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 Envía el comando Editar una copia. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**(DE ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 Envía el comando Editar Cortar. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**(DE ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 Envía el comando nuevo archivo. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`
 
-**(DE ON_OLECMD_OPEN)**
+**ON_OLECMD_OPEN( )**
 
 Envía el comando Abrir archivo. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**(DE ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 Envía el comando Configurar página de archivo. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**(DE ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 Envía el comando Pegar del menú. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**(DE ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 Envía el comando Editar Pegado especial. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**(DE ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 Envía el comando Imprimir del archivo. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**(DE ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 Envía el comando Vista previa de impresión de archivos. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**(DE ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 Envía el comando Editar de puesta al día. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**(DE ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 Envía el comando Guardar archivo. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**(DE ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 Envía el comando Guardar como. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**(DE ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 Envía el comando Guardar copia como. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**(DE ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 Envía el comando Editar Seleccionar todo. Se implementa como:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**(DE ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 Envía el comando Editar deshacer. Se implementa como:
 
@@ -501,11 +477,6 @@ Envía el comando Editar deshacer. Se implementa como:
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxdocob.h
-
-### <a name="see-also"></a>Vea también
-
-[COleCmdUI (clase)](colecmdui-class.md)<br/>
-[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
 ## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
 
@@ -544,11 +515,6 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmsg_.h
-
-### <a name="see-also"></a>Vea también
-
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
-[Controladores definidos por el usuario](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
@@ -630,10 +596,6 @@ Para obtener más información y ejemplos, vea [de mensajes y asignación de tem
 
 **Encabezado:** afxole.h
 
-### <a name="see-also"></a>Vea también
-
-[CCmdUI (clase)](ccmdui-class.md)
-
 ## <a name="on_command_range"></a>  ON_COMMAND_RANGE
 
 Use esta macro para asignar un intervalo contiguo de identificadores de comando a una función de controlador de mensaje único.
@@ -646,10 +608,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parámetros
 
-*Id1*<br/>
+*id1*<br/>
 Identificador de comando al principio de un intervalo contiguo de identificadores de comando.
 
-*Id2*<br/>
+*id2*<br/>
 Identificador de comando al final de un intervalo contiguo de identificadores de comando.
 
 *memberFxn*<br/>
@@ -701,10 +663,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Parámetros
 
-*Id1*<br/>
+*id1*<br/>
 Identificador de comando al principio de un intervalo contiguo de identificadores de comando.
 
-*Id2*<br/>
+*id2*<br/>
 Identificador de comando al final de un intervalo contiguo de identificadores de comando.
 
 *memberFxn*<br/>
@@ -735,10 +697,10 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 *wNotifyCode*<br/>
 El código de notificación a la que el controlador está respondiendo.
 
-*Id1*<br/>
+*id1*<br/>
 Identificador de comando al principio de un intervalo contiguo de identificadores de control.
 
-*Id2*<br/>
+*id2*<br/>
 Identificador de comando al final de un intervalo contiguo de identificadores de control.
 
 *memberFxn*<br/>
@@ -755,3 +717,13 @@ Para obtener más información sobre cómo implementar funciones de controlador 
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxmsg_.h
+
+## <a name="see-also"></a>Vea también
+
+[ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
+[TN006: Mapas de mensajes](../tn006-message-maps.md)<br/>
+[COleCmdUI (clase)](colecmdui-class.md)<br/>
+[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
+[Controladores definidos por el usuario](user-defined-handlers.md)<br/>
+[CCmdUI (clase)](ccmdui-class.md)

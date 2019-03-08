@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 40c7d87e2dafa3c9b40e8ebda60b15a7b32709eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95a19b20e0acc4ae45a953eee5a1c4d2bfb3e9da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326730"
 ---
 # <a name="coledataobject-class"></a>COleDataObject (clase)
 
@@ -59,13 +59,13 @@ class COleDataObject
 |----------|-----------------|
 |[COleDataObject::Attach](#attach)|Asocia el objeto de datos OLE especificado en el `COleDataObject`.|
 |[COleDataObject::AttachClipboard](#attachclipboard)|Asocia el objeto de datos que se encuentra en el Portapapeles.|
-|[COleDataObject:: BeginEnumFormats](#beginenumformats)|Se prepara para uno o más subsiguiente `GetNextFormat` llamadas.|
+|[COleDataObject::BeginEnumFormats](#beginenumformats)|Se prepara para uno o más subsiguiente `GetNextFormat` llamadas.|
 |[COleDataObject::Detach](#detach)|Desasocia asociado `IDataObject` objeto.|
 |[COleDataObject::GetData](#getdata)|Copia datos desde el objeto de datos OLE adjunto en un formato especificado.|
 |[COleDataObject::GetFileData](#getfiledata)|Copia datos desde el objeto de datos OLE adjunto en un `CFile` puntero en el formato especificado.|
 |[COleDataObject::GetGlobalData](#getglobaldata)|Copia datos desde el objeto de datos OLE adjunto en un `HGLOBAL` con el formato especificado.|
 |[COleDataObject::GetNextFormat](#getnextformat)|Devuelve el siguiente formato de datos disponible.|
-|[COleDataObject:: IsDataAvailable](#isdataavailable)|Comprueba si los datos están disponibles en un formato especificado.|
+|[COleDataObject::IsDataAvailable](#isdataavailable)|Comprueba si los datos están disponibles en un formato especificado.|
 |[COleDataObject::Release](#release)|Desconecta y libera asociado `IDataObject` objeto.|
 
 ## <a name="remarks"></a>Comentarios
@@ -127,7 +127,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 > [!NOTE]
 >  Llamar a esta función bloquea el Portapapeles hasta que se publique este objeto de datos. El objeto de datos que se publica en el destructor para la `COleDataObject`. Para obtener más información, consulte [llamar a OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard) y [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) en la documentación de Win32.
 
-##  <a name="beginenumformats"></a>  COleDataObject:: BeginEnumFormats
+##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats
 
 Llame a esta función para prepararse para las llamadas subsiguientes a `GetNextFormat` para recuperar una lista de formatos de datos desde el elemento.
 
@@ -290,7 +290,7 @@ Para comprobar la disponibilidad de un formato determinado, llame a [COleDataObj
 
 Para obtener más información, consulte [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) en el SDK de Windows.
 
-##  <a name="isdataavailable"></a>  COleDataObject:: IsDataAvailable
+##  <a name="isdataavailable"></a>  COleDataObject::IsDataAvailable
 
 Llame a esta función para determinar si un formato determinado está disponible para recuperar datos desde el elemento OLE.
 

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603223"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274081"
 ---
 # <a name="ischeduler-structure"></a>IScheduler (Estructura)
 
@@ -37,13 +37,13 @@ struct IScheduler;
 
 |Name|Descripción|
 |----------|-----------------|
-|[IScheduler:: AddVirtualProcessors](#addvirtualprocessors)|Proporciona a un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho para ejecutar un subproceso único que puede realizar el trabajo en nombre del programador.|
-|[IScheduler:: GetId](#getid)|Devuelve un identificador único para el programador.|
-|[IScheduler:: GetPolicy](#getpolicy)|Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas del programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|
-|[IScheduler:: NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.|
-|[IScheduler:: NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no se usan por otros programadores.|
-|[IScheduler:: RemoveVirtualProcessors](#removevirtualprocessors)|Inicia la eliminación de raíces de procesador virtual que se asignaron previamente a este programador.|
-|[IScheduler:: STATISTICS](#statistics)|Proporciona información relacionada con las tasas de llegada y finalización de tarea y cambio de longitud de cola para un programador.|
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|Proporciona a un programador con un conjunto de raíces de procesador virtual para su uso. Cada `IVirtualProcessorRoot` interfaz representa el derecho para ejecutar un subproceso único que puede realizar el trabajo en nombre del programador.|
+|[IScheduler::GetId](#getid)|Devuelve un identificador único para el programador.|
+|[IScheduler::GetPolicy](#getpolicy)|Devuelve una copia de la directiva del programador. Para obtener más información sobre las directivas del programador, consulte [SchedulerPolicy](schedulerpolicy-class.md).|
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` ahora están siendo utilizados por otros programadores.|
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|Notifica a este programador que los subprocesos de hardware representados por el conjunto de raíces de procesador virtual en la matriz `ppVirtualProcessorRoots` no se usan por otros programadores.|
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|Inicia la eliminación de raíces de procesador virtual que se asignaron previamente a este programador.|
+|[IScheduler::Statistics](#statistics)|Proporciona información relacionada con las tasas de llegada y finalización de tarea y cambio de longitud de cola para un programador.|
 
 ## <a name="remarks"></a>Comentarios
 

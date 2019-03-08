@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447793"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332639"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ Define la clase de plantilla valarray y numerosas funciones y clases de plantill
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>Comentarios
 
-A estas funciones y clases de plantilla se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que devuelva el tipo **valarray\<** T1**>** puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepte uno o más argumentos de tipo **valarray\<** T2**>** debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, donde cada uno se sustituirá por un argumento de tipo T2.
+A estas funciones y clases de plantilla se les permite una latitud inusual con el fin de mejorar el rendimiento. En concreto, cualquier función que devuelve el tipo `valarray<T1>` puede devolver un objeto de algún otro tipo T2. En ese caso, cualquier función que acepta uno o más argumentos de tipo `valarray<T2>` debe tener sobrecargas que acepten combinaciones arbitrarias de esos argumentos, cada uno de ellos se sustituirá por un argumento de tipo T2.
 
 ### <a name="functions"></a>Funciones
 

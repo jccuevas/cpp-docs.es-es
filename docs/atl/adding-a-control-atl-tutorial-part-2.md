@@ -3,12 +3,12 @@ title: Agregar un control (Tutorial de ATL, Parte 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428657"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283233"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Agregar un control (Tutorial de ATL, Parte 2)
 
@@ -38,10 +38,10 @@ El **Control ATL** del asistente **nombres** página contiene los siguientes cam
 |**Clase**|El nombre de la clase de C++ creada para implementar el control.|
 |**Archivo .h**|El archivo creado para contener la definición de la clase de C++.|
 |**Archivo .cpp**|El archivo creado para contener la implementación de la clase de C++.|
-|**Coclase**|Nombre de la clase de componente para este control.|
+|**CoClass**|Nombre de la clase de componente para este control.|
 |**Interface**|El nombre de la interfaz donde el control implementará sus métodos y propiedades personalizados.|
 |**Type**|Una descripción del control.|
-|**Id. de programa**|El nombre legible que se puede utilizar para buscar el CLSID del control.|
+|**ProgID**|El nombre legible que se puede utilizar para buscar el CLSID del control.|
 
 Tendrá que realizar algunos ajustes adicionales en el **Control ATL** asistente.
 

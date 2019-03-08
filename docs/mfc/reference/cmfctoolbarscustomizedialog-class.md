@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295037"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (clase)
 
 Un cuadro de diálogo no modal de tabulación ( [CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)) que permite al usuario personalizar las barras de herramientas, menús, métodos abreviados de teclado, herramientas definidas por el usuario y el estilo visual de una aplicación. Normalmente, el usuario tiene acceso a este cuadro de diálogo seleccionando **Personalizar** en el menú **Herramientas** .
 
-El **personalizar** cuadro de diálogo tiene seis pestañas: **comandos**, **las barras de herramientas**, **herramientas**, **teclado**,  **Menú**, y **opciones**.
+El **personalizar** cuadro de diálogo tiene seis pestañas: **Comandos**, **las barras de herramientas**, **herramientas**, **teclado**, **menú**, y **opciones**.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Especifica el identificador de categoría en la que se va a insertar en el botón.
 
-*Botón*<br/>
+*button*<br/>
 [in] Especifica el botón que se va a insertar.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar las barras de herramientas definidas por el usuario; FALSE para deshabilitar las barras de herramientas.
 
 ### <a name="remarks"></a>Comentarios
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Un puntero a la ventana primaria.
 
-*mapa de bits*<br/>
+*bitmap*<br/>
 [in] Una referencia a un objeto de mapa de bits que se va a editar.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Especifica el comando del botón que se debe reemplazar.
 
-*Botón*<br/>
+*button*<br/>
 [in] Un **const** referencia al objeto de botón de barra de herramientas que reemplaza al botón anterior.
 
 ### <a name="remarks"></a>Comentarios

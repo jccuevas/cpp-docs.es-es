@@ -1,6 +1,6 @@
 ---
 title: Inicializadores
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544669"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176294"
 ---
 # <a name="initializers"></a>Inicializadores
 
@@ -528,7 +528,8 @@ Las variables de tipo de referencia solo se pueden declarar sin inicializadores 
 
 Al inicializar una variable de tipo de referencia, el compilador usa el gráfico de decisión que se muestra en la figura siguiente para elegir entre crear una referencia a un objeto o crear un objeto temporal al que señala la referencia.
 
-![Gráfico de decisión de inicialización de tipos de referencia](../cpp/media/vc38s71.gif "vc38S71") gráfico de decisión de inicialización de tipos de referencia
+![Gráfico de decisión de inicialización de tipos de referencia](../cpp/media/vc38s71.gif "gráfico de decisión de inicialización de tipos de referencia") <br/>
+Gráfico de decisión de inicialización de tipos de referencia
 
 Las referencias a **volátil** tipos (declarados como **volátil** *typename* <strong>&</strong> *identificador*) se puede inicializar con **volátil** objetos del mismo tipo o con objetos que no se ha declarado como **volátil**. No pueden, sin embargo, inicializarse con **const** objetos de ese tipo. De forma similar, las referencias a **const** tipos (declarados como **const** *typename* <strong>&</strong> *identificador* ) se puede inicializar con **const** objetos del mismo tipo (o cualquier elemento que tenga una conversión a ese tipo o con objetos que no se ha declarado como **const**). No pueden, sin embargo, inicializarse con **volátil** objetos de ese tipo.
 

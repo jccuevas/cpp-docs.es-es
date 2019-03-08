@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287910"
 ---
 # <a name="scheduler-class"></a>Scheduler (Clase)
 
@@ -44,7 +44,7 @@ class Scheduler;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Programador](#ctor)|Un objeto de la `Scheduler` clase solo se puede crear utilizando métodos de fábrica, o implícitamente.|
+|[Scheduler](#ctor)|Un objeto de la `Scheduler` clase solo se puede crear utilizando métodos de fábrica, o implícitamente.|
 |[~ Scheduler (destructor)](#dtor)|Un objeto de la `Scheduler` clase implícitamente se destruye cuando todas las referencias externas a ella dejan de existir.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -136,7 +136,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a una ubicación donde las tareas dentro del grupo de programación se inclina hacia la ejecución en.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -195,7 +195,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a la ubicación para consultar al programador.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -234,7 +234,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 
 ### <a name="parameters"></a>Parámetros
 
-*_Eventos*<br/>
+*_Event*<br/>
 Identificador de un objeto de evento de Windows que se señalará el tiempo de ejecución cuando se cierra y se destruye el programador.
 
 ##  <a name="release"></a> Versión
@@ -279,7 +279,7 @@ El programador del proceso de forma predeterminada se crea implícitamente al ut
 
 También puede crear un programador explícitamente a través del `CurrentScheduler::Create` método o la `Scheduler::Create` método.
 
-##  <a name="dtor"></a> ~ Scheduler
+##  <a name="dtor"></a> ~Scheduler
 
 Un objeto de la `Scheduler` clase implícitamente se destruye cuando todas las referencias externas a ella dejan de existir.
 
@@ -307,10 +307,10 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 Un puntero a la función que se ejecutan para realizar el cuerpo de la tarea ligera.
 
-*_Datos*<br/>
+*_Data*<br/>
 Un puntero void para los datos que se pasa como parámetro al cuerpo de la tarea.
 
-*_Este*<br/>
+*_Placement*<br/>
 Una referencia a una ubicación donde la tarea ligera se se decanta hacia el ejecutando en.
 
 ##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
@@ -336,4 +336,3 @@ Si el `SetDefaultSchedulerPolicy` método se llama cuando un programador predete
 [Scheduler (clase)](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Programador de tareas](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

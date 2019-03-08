@@ -1,19 +1,19 @@
 ---
-title: 'Windows Sockets: Ejemplo de sockets que usan archivos'
+title: 'Windows Sockets: Ejemplo de Sockets que usan archivos'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436275"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295268"
 ---
-# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Ejemplo de sockets que usan archivos
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Ejemplo de Sockets que usan archivos
 
 Este artículo presenta un ejemplo del uso de la clase [CSocket](../mfc/reference/csocket-class.md). El ejemplo emplea `CArchive` objetos para serializar los datos a través del socket. Tenga en cuenta que esto no es serialización de documentos a o desde un archivo.
 
@@ -43,15 +43,15 @@ Para la recepción, la función funciona de forma similar, salvo que usa el oper
 En este modelo de comunicaciones, la palabra "Recibido", se envía el mensaje en el *strText* variable es para su presentación en el otro extremo de la comunicación, por lo que especifica al usuario que ha sido un cierto número de paquetes de datos ha recibido. El receptor responde con una cadena similar que dice "Enviado", para su presentación en pantalla del remitente original. Recepción de ambas cadenas indica que se ha producido una comunicación correcta.
 
 > [!CAUTION]
->  Si está escribiendo un programa de cliente MFC para comunicarse con servidores establecidos (no basados en MFC), no enviar los objetos de C++ a través del archivo. A menos que el servidor es una aplicación MFC que reconozca los tipos de objetos que desea enviar, no podrá recibir y deserializar los objetos. Un ejemplo en el artículo [Windows Sockets: orden de bytes](../mfc/windows-sockets-byte-ordering.md) muestra una comunicación de este tipo.
+>  Si está escribiendo un programa de cliente MFC para comunicarse con servidores establecidos (no basados en MFC), no enviar los objetos de C++ a través del archivo. A menos que el servidor es una aplicación MFC que reconozca los tipos de objetos que desea enviar, no podrá recibir y deserializar los objetos. Un ejemplo en el artículo [Windows Sockets: Orden de bytes](../mfc/windows-sockets-byte-ordering.md) muestra una comunicación de este tipo.
 
 Para obtener más información, consulte Especificación de Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Además, para obtener más información, consulte:
 
-- [Windows Sockets: Derivar de las clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: Derivación de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
 - [Windows Sockets: Cómo funcionan los Sockets con archivos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: Nociones](../mfc/windows-sockets-background.md)
+- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>Vea también
 
@@ -60,5 +60,4 @@ Para obtener más información, consulte Especificación de Windows Sockets: **h
 [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
-[CObject:: Serialize](../mfc/reference/cobject-class.md#serialize)
-
+[CObject::Serialize](../mfc/reference/cobject-class.md#serialize)

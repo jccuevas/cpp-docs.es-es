@@ -1,22 +1,22 @@
 ---
 title: pointer_to_binary_function (Clase)
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::pointer_to_binary
+- functional/std::pointer_to_binary
 helpviewer_keywords:
 - pointer_to_binary_function function
 - pointer_to_binary_function class
 ms.assetid: fb50599f-bcb3-4076-a669-6dcc3eb189a5
-ms.openlocfilehash: 42e57c9fd5dafb60a866b24a7a5b8496643d1c76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88d38be258c6ceb1054e0d31cc52e4d8d25186ec
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487092"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006804"
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function (Clase)
 
-Convierte un puntero a función binaria en una función binaria adaptable.
+Convierte un puntero a función binaria en una función binaria adaptable. En desuso en C ++ 11, se ha quitado en C ++ 17.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -45,7 +45,7 @@ El objeto de la derecha al que *\*pfunc* está llamado.
 
 ## <a name="return-value"></a>Valor devuelto
 
-La clase de plantilla almacena una copia de `pfunc`. Define su función miembro `operator()` para que devuelva (\* **pfunc**)(_ *Left*, \_ *Right*).
+La clase de plantilla almacena una copia de `pfunc`. Define su función miembro `operator()` que devuelva `(* pfunc)(Left, right)`.
 
 ## <a name="remarks"></a>Comentarios
 

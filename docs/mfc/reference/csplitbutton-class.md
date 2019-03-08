@@ -1,6 +1,6 @@
 ---
 title: CSplitButton (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547282"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414656"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton (clase)
 
@@ -58,7 +58,7 @@ El `CSplitButton` clase se deriva el [CButton](../../mfc/reference/cbutton-class
 
 La figura siguiente muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha de lista desplegable (2) y se muestra el submenú (3).
 
-![Cuadro de diálogo con un botón de división y control de paginación. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Cuadro de diálogo con un botón de división y control de paginación. ](../../mfc/reference/media/splitbutton_pager.png "Cuadro de diálogo con un botón de división y control de paginación.")
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*dwStyle*|[in] Una combinación bit a bit (OR) de estilos que se va a aplicarse al control. Para obtener más información, consulte [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*Rect*|[in] Una referencia a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene la posición y el tamaño del control.|
+|*rect*|[in] Una referencia a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene la posición y el tamaño del control.|
 |*pParentWnd*|[in] Un puntero no nulo a un [CWnd](../../mfc/reference/cwnd-class.md) objeto que es la ventana primaria del control.|
 |*nID*|[in] El identificador del control.|
 
@@ -188,7 +188,7 @@ El *nMenuId* parámetro identifica una barra de menús, que es una lista de elem
 
 La figura siguiente muestra un cuadro de diálogo que contiene un control de paginación y un control de botón de expansión (1). Ya se ha hecho clic en la flecha de lista desplegable (2) y se muestra el submenú (3).
 
-![Cuadro de diálogo con un botón de división y control de paginación. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Cuadro de diálogo con un botón de división y control de paginación. ](../../mfc/reference/media/splitbutton_pager.png "Cuadro de diálogo con un botón de división y control de paginación.")
 
 ### <a name="example"></a>Ejemplo
 

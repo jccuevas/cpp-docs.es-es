@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-ms.openlocfilehash: a0be64cca6725c0ad0852752e6c6c440377c9e7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1578518b8918f59b1da54f474e82cf899f3c76f6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285547"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl (clase)
 
@@ -54,8 +54,8 @@ El puntero para el IID de la interfaz dispinterface de evento implementado por e
 |Name|Descripción|
 |----------|-----------------|
 |[IDispEventSimpleImpl::Advise](#advise)|Establece una conexión con el origen del evento de forma predeterminada.|
-|[IDispEventSimpleImpl:: DispEventAdvise](#dispeventadvise)|Establece una conexión con el origen del evento.|
-|[IDispEventSimpleImpl:: DispEventUnadvise](#dispeventunadvise)|Interrumpe la conexión con el origen del evento.|
+|[IDispEventSimpleImpl::DispEventAdvise](#dispeventadvise)|Establece una conexión con el origen del evento.|
+|[IDispEventSimpleImpl::DispEventUnadvise](#dispeventunadvise)|Interrumpe la conexión con el origen del evento.|
 |[IDispEventSimpleImpl::GetIDsOfNames](#getidsofnames)|Devuelve E_NOTIMPL.|
 |[IDispEventSimpleImpl::GetTypeInfo](#gettypeinfo)|Devuelve E_NOTIMPL.|
 |[IDispEventSimpleImpl::GetTypeInfoCount](#gettypeinfocount)|Devuelve E_NOTIMPL.|
@@ -125,7 +125,7 @@ Una vez establecida la conexión, los eventos desencadenan desde *pUnk* se enrut
 
 `Advise` establece una conexión con el origen del evento de forma predeterminada, obtiene el IID del origen del evento predeterminado del objeto según lo determinado por [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface).
 
-##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl:: DispEventAdvise
+##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl::DispEventAdvise
 
 Llame a este método para establecer una conexión con el origen del evento representado por *pUnk*.
 
@@ -154,7 +154,7 @@ Posteriormente, los eventos desencadenan desde *pUnk* se enrutará a los control
 
 `DispEventAdvise` establece una conexión con el origen del evento especificado en `pdiid`.
 
-##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl:: DispEventUnadvise
+##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl::DispEventUnadvise
 
 Interrumpe la conexión con el origen del evento representado por *pUnk*.
 
@@ -198,7 +198,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDispatch:: GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) en el SDK de Windows.
+Consulte [IDispatch:: GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) en el SDK de Windows.
 
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo
 
@@ -213,7 +213,7 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDispatch:: GetTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) en el SDK de Windows.
+Consulte [IDispatch:: GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) en el SDK de Windows.
 
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount
 
@@ -225,7 +225,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDispatch:: GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) en el SDK de Windows.
+Consulte [IDispatch:: GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) en el SDK de Windows.
 
 ##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke
 
@@ -245,7 +245,7 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IDispatch:: Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Consulte [IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise
 
@@ -280,5 +280,5 @@ Una vez que la conexión se interrumpe, eventos ya no se enrutarán a las funcio
 [_ATL_FUNC_INFO (estructura)](../../atl/reference/atl-func-info-structure.md)<br/>
 [IDispatchImpl (clase)](../../atl/reference/idispatchimpl-class.md)<br/>
 [IDispEventImpl (clase)](../../atl/reference/idispeventimpl-class.md)<br/>
-[MACRO SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
+[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

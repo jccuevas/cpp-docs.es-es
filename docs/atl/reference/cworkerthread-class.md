@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287783"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread (clase)
 
@@ -54,7 +54,7 @@ La clase que proporciona la función de creación de subproceso, como [CRTThread
 |Name|Descripción|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|El constructor para el subproceso de trabajo.|
-|[CWorkerThread:: ~ CWorkerThread](#dtor)|El destructor para el subproceso de trabajo.|
+|[CWorkerThread::~CWorkerThread](#dtor)|El destructor para el subproceso de trabajo.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -166,7 +166,7 @@ El constructor.
 CWorkerThread() throw();
 ```
 
-##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread
+##  <a name="dtor"></a>  CWorkerThread::~CWorkerThread
 
 Destructor.
 
@@ -214,7 +214,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*subprocesos de POSIX*<br/>
+*pThread*<br/>
 Un subproceso de trabajo existente.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -248,7 +248,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Cuando se quita el identificador [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) se llamará en el objeto asociado a la que se pasó a [AddHandle](#addhandle). Si se produce un error en esta llamada, `CWorkerThread` llamará el Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) función en el identificador.
+Cuando se quita el identificador [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) se llamará en el objeto asociado a la que se pasó a [AddHandle](#addhandle). Si se produce un error en esta llamada, `CWorkerThread` llamará el Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) función en el identificador.
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 

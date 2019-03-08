@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260600"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT (Estructura)
 
@@ -53,4 +53,3 @@ Cuando controle el `TTN_NEEDTEXT` notificación de mensaje, especifique la caden
 ## <a name="see-also"></a>Vea también
 
 [Información sobre herramientas en ventanas no derivadas de CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
-

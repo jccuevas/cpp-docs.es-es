@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: bd10b143753bf908a7a30f8675998e355f331b64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601089"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266372"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Controladores para intervalos de mapa de mensajes
 
@@ -37,9 +37,9 @@ Hay veces cuando tiene que procesar más de una notificación de mensaje o contr
 
 - Puede asignar intervalos de identificadores de comando para:
 
-   - Una función de controlador de comandos.
+  - Una función de controlador de comandos.
 
-   - Una función de controlador de actualización de comandos.
+  - Una función de controlador de actualización de comandos.
 
 - Puede asignar los mensajes de notificación de control para un intervalo de identificadores de control a una función de controlador de mensaje.
 
@@ -63,25 +63,25 @@ La entrada de mapa de mensajes consta de los siguientes elementos:
 
 - La macro de intervalo de mapa de mensajes:
 
-   - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
+  - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
 
-   - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
+  - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
 
-   - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
+  - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
 
 - Parámetros de la macro:
 
-   Las dos primeras macros toman tres parámetros:
+  Las dos primeras macros toman tres parámetros:
 
-   - El identificador de comando inicial del intervalo
+  - El identificador de comando inicial del intervalo
 
-   - El identificador de comando final del intervalo
+  - El identificador de comando final del intervalo
 
-   - El nombre de la función de controlador de mensaje
+  - El nombre de la función de controlador de mensaje
 
-   El intervalo de identificadores de comando debe ser contiguo.
+  El intervalo de identificadores de comando debe ser contiguo.
 
-   La tercera macro, `ON_CONTROL_RANGE`, toma un parámetro adicional de primera: mensaje de notificación de control, como **EN_CHANGE**.
+  La tercera macro, `ON_CONTROL_RANGE`, toma un parámetro adicional de primera: mensaje de notificación de control, como **EN_CHANGE**.
 
 ##  <a name="_core_declaring_the_handler_function"></a> Declarar la función de controlador
 

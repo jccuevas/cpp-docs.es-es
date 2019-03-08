@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: cf4d489661516271e1d21487aaa3b69fe3580e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85422e5abd313aad4f87052748610e099363c1c6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276067"
 ---
 # <a name="cstringarray-class"></a>CStringArray (clase)
 
@@ -109,7 +109,7 @@ se traduce en
 
 |Name|Descripción|
 |----------|-----------------|
-|[[] CObArray::operator](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
+|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Establece u obtiene el elemento en el índice especificado.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -138,4 +138,3 @@ Para obtener más información sobre el uso de `CStringArray`, consulte el artí
 
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

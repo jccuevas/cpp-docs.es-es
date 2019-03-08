@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 4fca5a2ffef7e8da4f6dd79fcd99c72e92cfdf6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296025"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource (interfaz)
 
@@ -55,7 +55,7 @@ interface class ICommandSource
 
 Al hospedar un control de usuario en una vista de MFC, [CWinFormsView (clase)](../../mfc/reference/cwinformsview-class.md) comandos de rutas y actualización de comandos mensajes de interfaz de usuario para el control de usuario para que pueda controlar los comandos MFC (por ejemplo, los elementos de menú del marco y botones de barra de herramientas). Implementando [ICommandTarget (interfaz)](../../mfc/reference/icommandtarget-interface.md), asigne el control de usuario de una referencia a la `ICommandSource` objeto.
 
-Consulte [Cómo: agregar el enrutamiento de comandos para el Control de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obtener un ejemplo de cómo usar `ICommandTarget`.
+Vea [Cómo: Agregar el enrutamiento de comandos para el Control de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obtener un ejemplo de cómo usar `ICommandTarget`.
 
 Para obtener más información sobre el uso de Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -82,7 +82,7 @@ Un identificador para el método de controlador de comandos.
 ### <a name="remarks"></a>Comentarios
 
 Este método agrega el cmdHandler del controlador de comando al objeto de origen de comando y el controlador asigna a cmdID.
-Consulte [Cómo: agregar el enrutamiento de comandos para el Control de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obtener un ejemplo de cómo usar AddCommandHandler.
+Vea [Cómo: Agregar el enrutamiento de comandos para el Control de Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) para obtener un ejemplo de cómo usar AddCommandHandler.
 
 ## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 

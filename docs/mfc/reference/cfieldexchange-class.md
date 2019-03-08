@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: e039a2deaf3372af5daac8fddd8f3a0672719f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588232"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294985"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange (clase)
 
@@ -34,7 +34,7 @@ class CFieldExchange
 |Name|Descripción|
 |----------|-----------------|
 |[CFieldExchange::IsFieldType](#isfieldtype)|Devuelve distinto de cero si la operación actual es adecuado para el tipo de campo que se está actualizando.|
-|[CFieldExchange:: SetFieldType](#setfieldtype)|Especifica el tipo de miembro de datos del conjunto de registros, columna o parámetro, representado por todas las llamadas siguientes a las funciones RFX hasta la siguiente llamada a `SetFieldType`.|
+|[CFieldExchange::SetFieldType](#setfieldtype)|Especifica el tipo de miembro de datos del conjunto de registros, columna o parámetro, representado por todas las llamadas siguientes a las funciones RFX hasta la siguiente llamada a `SetFieldType`.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -55,7 +55,7 @@ Un `CFieldExchange` objeto proporciona la información de contexto necesaria par
 
 - `CFieldExchange::inoutParam` para los miembros de datos de parámetro de entrada/salida.
 
-La mayoría de los miembros de datos y funciones miembro de la clase se proporciona para escribir sus propias rutinas personalizadas de RFX. Va a usar `SetFieldType` con frecuencia. Para obtener más información, consulte los artículos [intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md) y [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obtener información sobre la obtención masiva de filas, vea el artículo [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Para obtener más información acerca de las funciones globales de RFX y de RFX masivo, consulte [funciones de intercambio de campos de registros](../../mfc/reference/record-field-exchange-functions.md) en la sección Macros de MFC y funciones globales de esta referencia.
+La mayoría de los miembros de datos y funciones miembro de la clase se proporciona para escribir sus propias rutinas personalizadas de RFX. Va a usar `SetFieldType` con frecuencia. Para obtener más información, consulte los artículos [intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md) y [conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md). Para obtener información sobre la obtención masiva de filas, vea el artículo [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Para obtener más información acerca de las funciones globales de RFX y de RFX masivo, consulte [funciones de intercambio de campos de registros](../../mfc/reference/record-field-exchange-functions.md) en la sección Macros de MFC y funciones globales de esta referencia.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -86,7 +86,7 @@ Distinto de cero si se puede realizar la operación actual en el tipo de campo o
 
 Siga el modelo de las funciones de RFX existentes.
 
-##  <a name="setfieldtype"></a>  CFieldExchange:: SetFieldType
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType
 
 Necesita una llamada a `SetFieldType` en la clase de conjunto de registros [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) o [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) invalidar.
 
@@ -124,7 +124,7 @@ Si parametrizar la clase de conjunto de registros, se debe llamar a `SetFieldTyp
 
 En general, cada grupo de llamadas de función RFX asociados a los miembros de datos o los miembros de datos de parámetro debe ir precedido por una llamada a `SetFieldType`. El *nFieldType* parámetro de cada `SetFieldType` llamada identifica el tipo de los miembros de datos representados por las llamadas de función RFX que siguen el `SetFieldType` llamar.
 
-Para obtener más información sobre cómo controlar los parámetros de salida y entrada/salida, vea el `CRecordset` función miembro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Para obtener más información acerca de las funciones RFX y de RFX masivo, vea el tema [funciones de intercambio de campos de registros](../../mfc/reference/record-field-exchange-functions.md). Para obtener información relacionada sobre la obtención masiva de filas, vea el artículo [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Para obtener más información sobre cómo controlar los parámetros de salida y entrada/salida, vea el `CRecordset` función miembro [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset). Para obtener más información acerca de las funciones RFX y de RFX masivo, vea el tema [funciones de intercambio de campos de registros](../../mfc/reference/record-field-exchange-functions.md). Para obtener información relacionada sobre la obtención masiva de filas, vea el artículo [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ### <a name="example"></a>Ejemplo
 

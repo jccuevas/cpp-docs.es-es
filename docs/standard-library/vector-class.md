@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 501f6547378b5461fe314410f54a6cc7d64c1221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583370"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411967"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -288,7 +288,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ## <a name="at"></a>  vector::at
@@ -980,7 +979,6 @@ int main()
    std::vector<obj> v;
    v.emplace_back(1, 3.14); // obj in created in place in the vector
 }
-
 ```
 
 ## <a name="empty"></a>  vector::empty
@@ -1298,7 +1296,8 @@ int main( )
       cout << " " << *Iter;
    cout << endl;
 
-   v1.insert( v1.begin( )+1, v1.begin( )+2, v1.begin( )+4 );
+   const auto v2 = v1;
+   v1.insert( v1.begin( )+1, v2.begin( )+2, v2.begin( )+4 );
    cout << "v1 =";
    for (Iter = v1.begin( ); Iter != v1.end( ); Iter++ )
       cout << " " << *Iter;
@@ -1310,7 +1309,6 @@ int main( )
    vv1.insert( vv1.begin(), move( v1 ) );
    if ( vv1.size( ) != 0 && vv1[0].size( ) != 0 )
       {
-      vector < vector <int> >::iterator Iter;
       cout << "vv1[0] =";
       for (Iter = vv1[0].begin( ); Iter != vv1[0].end( ); Iter++ )
          cout << " " << *Iter;
@@ -2215,7 +2213,6 @@ int main()
     }
     cout << endl;
 }
-
 ```
 
 ```Output

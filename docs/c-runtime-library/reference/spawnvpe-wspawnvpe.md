@@ -31,12 +31,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 88838352bb8c4677e8b6693811f8060f698ef47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a98cc3c441261a92876b94e1231e66bb71e9d3d9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525884"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326607"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -82,11 +82,11 @@ El valor devuelto de un valor sincrónico **_spawnvpe** o **_wspawnvpe** (**_P_W
 
 |||
 |-|-|
-**E2BIG**|La lista de argumentos supera los 1024 bytes.
-**EINVAL**|*modo* argumento no es válido.
-**ENOENT**|El archivo o la ruta de acceso no se encuentra.
-**ENOEXEC**|El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido.
-**ENOMEM**|Memoria insuficiente para ejecutar el nuevo proceso.
+| **E2BIG** | La lista de argumentos supera los 1024 bytes. |
+| **EINVAL** | *modo* argumento no es válido. |
+| **ENOENT** | El archivo o la ruta de acceso no se encuentra. |
+| **ENOEXEC** | El archivo especificado no es ejecutable o no tiene un formato de archivo ejecutable válido. |
+| **ENOMEM** | Memoria insuficiente para ejecutar el nuevo proceso. |
 
 Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) para obtener más información sobre estos y otros códigos de retorno.
 

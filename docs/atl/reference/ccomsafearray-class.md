@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 3cbe0ed66addab9ab4ff7a6175083730a8702a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280685"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray (clase)
 
@@ -58,20 +58,20 @@ Tipo de datos que se va a almacenar en la matriz.
 |Name|Descripción|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|El constructor.|
-|[CComSafeArray:: ~ CComSafeArray](#dtor)|Destructor.|
+|[CComSafeArray::~CComSafeArray](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[CComSafeArray:: Add](#add)|Agrega uno o más elementos, o un `SAFEARRAY` estructura, un `CComSafeArray`.|
+|[CComSafeArray::Add](#add)|Agrega uno o más elementos, o un `SAFEARRAY` estructura, un `CComSafeArray`.|
 |[CComSafeArray::Attach](#attach)|Asocia un `SAFEARRAY` estructura a un `CComSafeArray` objeto.|
-|[CComSafeArray:: CopyFrom](#copyfrom)|Copia el contenido de un `SAFEARRAY` estructura en el `CComSafeArray` objeto.|
+|[CComSafeArray::CopyFrom](#copyfrom)|Copia el contenido de un `SAFEARRAY` estructura en el `CComSafeArray` objeto.|
 |[CComSafeArray::CopyTo](#copyto)|Crea una copia del objeto `CComSafeArray` .|
 |[CComSafeArray::Create](#create)|Crea un objeto `CComSafeArray`.|
 |[CComSafeArray::Destroy](#destroy)|Destruye un objeto `CComSafeArray`.|
-|[CComSafeArray:: Detach](#detach)|Desasocia un `SAFEARRAY` desde un `CComSafeArray` objeto.|
-|[CComSafeArray:: GetAt](#getat)|Recupera un único elemento de una matriz unidimensional.|
+|[CComSafeArray::Detach](#detach)|Desasocia un `SAFEARRAY` desde un `CComSafeArray` objeto.|
+|[CComSafeArray::GetAt](#getat)|Recupera un único elemento de una matriz unidimensional.|
 |[CComSafeArray::GetCount](#getcount)|Devuelve el número de elementos de la matriz.|
 |[CComSafeArray::GetDimensions](#getdimensions)|Devuelve el número de dimensiones de la matriz.|
 |[CComSafeArray::GetLowerBound](#getlowerbound)|Devuelve el límite inferior de una determinada dimensión de la matriz.|
@@ -82,7 +82,7 @@ Tipo de datos que se va a almacenar en la matriz.
 |[CComSafeArray::MultiDimGetAt](#multidimgetat)|Recupera un único elemento de una matriz multidimensional.|
 |[CComSafeArray::MultiDimSetAt](#multidimsetat)|Establece el valor de un elemento de una matriz multidimensional.|
 |[CComSafeArray::Resize](#resize)|Cambia el tamaño de un objeto `CComSafeArray` .|
-|[SetAt](#setat)|Establece el valor de un elemento de una matriz unidimensional.|
+|[CComSafeArray::SetAt](#setat)|Establece el valor de un elemento de una matriz unidimensional.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -100,7 +100,7 @@ Tipo de datos que se va a almacenar en la matriz.
 
 ## <a name="remarks"></a>Comentarios
 
-`CComSafeArray` proporciona un contenedor para la clase [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , lo que facilita la creación y administración de matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.
+`CComSafeArray` proporciona un contenedor para la clase [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , lo que facilita la creación y administración de matrices unidimensionales y multidimensionales de casi cualquiera de los tipos compatibles VARIANT.
 
 `CComSafeArray` simplifica el paso de matrices entre procesos y, además, proporciona seguridad adicional al comprobar los valores de índice de matriz con los limites superior e inferior.
 
@@ -136,7 +136,7 @@ Un elemento `CComSafeArray` puede contener el siguiente subconjunto de tipos de 
 
 [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]
 
-##  <a name="add"></a>  CComSafeArray:: Add
+##  <a name="add"></a>  CComSafeArray::Add
 
 Agrega uno o más elementos, o un `SAFEARRAY` estructura, un `CComSafeArray`.
 
@@ -210,7 +210,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 ### <a name="parameters"></a>Parámetros
 
-*Enlazado*<br/>
+*bound*<br/>
 Un estructura `SAFEARRAYBOUND`.
 
 *ulCount*<br/>
@@ -235,7 +235,7 @@ Un puntero a un `SAFEARRAY` estructura. El constructor usa esta dirección para 
 
 Crea un objeto `CComSafeArray`.
 
-##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray
+##  <a name="dtor"></a>  CComSafeArray::~CComSafeArray
 
 Destructor.
 
@@ -247,7 +247,7 @@ Destructor.
 
 Libera todos los recursos asignados.
 
-##  <a name="copyfrom"></a>  CComSafeArray:: CopyFrom
+##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom
 
 Copia el contenido de un `SAFEARRAY` estructura en el `CComSafeArray` objeto.
 
@@ -336,7 +336,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 Destruye una existente `CComSafeArray` objeto y todos los datos que contiene.
 
-##  <a name="detach"></a>  CComSafeArray:: Detach
+##  <a name="detach"></a>  CComSafeArray::Detach
 
 Desasocia un `SAFEARRAY` desde un `CComSafeArray` objeto.
 
@@ -352,7 +352,7 @@ Devuelve un puntero a un `SAFEARRAY` objeto.
 
 Este método separa el `SAFEARRAY` objeto desde el `CComSafeArray` objeto.
 
-##  <a name="getat"></a>  CComSafeArray:: GetAt
+##  <a name="getat"></a>  CComSafeArray::GetAt
 
 Recupera un único elemento de una matriz unidimensional.
 
@@ -633,7 +633,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 Este método solo cambia el tamaño de la dimensión más a la derecha. No cambiará de tamaño las matrices que devuelven `IsResizable` como FALSE.
 
-##  <a name="setat"></a>  SetAt
+##  <a name="setat"></a>  CComSafeArray::SetAt
 
 Establece el valor de un elemento de una matriz unidimensional.
 
@@ -662,7 +662,7 @@ El *bCopy* marca se tiene en cuenta cuando se agregan elementos de tipo BSTR o V
 
 ## <a name="see-also"></a>Vea también
 
-[Tipo de datos SAFEARRAY](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[Tipo de datos SAFEARRAY](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

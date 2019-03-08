@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 5b123eb8d21c7273c41a713de5500df164511dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537207"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259028"
 ---
 # <a name="array-class"></a>array (Clase)
 
@@ -56,6 +56,7 @@ El rango de la matriz.
 |----------|-----------------|
 |[Constructor de matriz](#ctor)|Inicializa una nueva instancia de la clase `array`.|
 |[~ array (destructor)](#dtor)|Destruye el objeto `array`.|
+
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
@@ -74,16 +75,16 @@ El rango de la matriz.
 
 |Name|Descripción|
 |----------|-----------------|
-|[operador std:: vector&lt;value_type&gt;](#operator_vec)|Usa `copy(*this, vector)` para convertir implícitamente la matriz en un std::[vector](../../../standard-library/vector-class.md) objeto.|
+|[operator std::vector&lt;value_type&gt;](#operator_vec)|Usa `copy(*this, vector)` para convertir implícitamente la matriz en un std::[vector](../../../standard-library/vector-class.md) objeto.|
 |[operator()](#operator_call)|Devuelve el valor del elemento especificado por los parámetros.|
-|[operator[]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
+|[operator\[\]](#operator_at)|Devuelve el elemento que se encuentra en el índice especificado.|
 |[operator=](#operator_eq)|Copia el contenido del elemento especificado `array` objeto en este.|
 
 ### <a name="public-constants"></a>Constantes públicas
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Rank (constante)](#rank)|Almacena el rango de la matriz.|
+|[rank Constant](#rank)|Almacena el rango de la matriz.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -120,7 +121,7 @@ El `array<T,N>` tipo se usa en varios escenarios:
 
 **Encabezado:** amp.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ##  <a name="dtor"></a> ~ matriz
 
@@ -432,7 +433,7 @@ Un iterador inicial en el contenedor de origen.
 *_Src_last*<br/>
 Un iterador final en el contenedor de origen.
 
-*_Otro*<br/>
+*_Other*<br/>
 Otro origen de datos.
 
 *_Rank*<br/>
@@ -542,7 +543,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 
 El `extent` objeto de la `array`.
 
-##  <a name="operator_vec"></a> operador std:: vector&lt;value_type&gt;
+##  <a name="operator_vec"></a> operator std::vector&lt;value_type&gt;
 
 Usa `copy(*this, vector)` para convertir implícitamente la matriz a un objeto std:: vector.
 
@@ -559,7 +560,7 @@ El tipo de datos de los elementos del vector.
 
 Un objeto de tipo `vector<T>` que contiene una copia de los datos que se encuentra en la matriz.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Devuelve el valor del elemento especificado por los parámetros.
 
@@ -602,7 +603,7 @@ La ubicación del elemento.
 
 El valor del elemento especificado por los parámetros.
 
-##  <a name="operator_at"></a> operator]
+##  <a name="operator_at"></a> operator[]
 
 Devuelve el elemento que se encuentra en el índice especificado.
 
@@ -644,7 +645,7 @@ array& operator= (
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 La `array` objeto que se va a copiar desde.
 
 *_Src*<br/>

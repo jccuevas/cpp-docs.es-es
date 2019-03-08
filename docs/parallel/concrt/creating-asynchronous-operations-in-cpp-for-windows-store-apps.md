@@ -1,16 +1,16 @@
 ---
 title: Crear operaciones asincrónicas en C++ para aplicaciones UWP
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426789"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Crear operaciones asincrónicas en C++ para aplicaciones UWP
 
@@ -37,7 +37,7 @@ El uso de la programación asincrónica es un componente clave en el modelo de a
 
 - [Crear operaciones asincrónicas](#create-async)
 
-- [Ejemplo: crear un componente de Windows Runtime de C++](#example-component)
+- [Ejemplo: Crear un componente de tiempo de ejecución de Windows de C++](#example-component)
 
 - [Controlar el subproceso de ejecución](#exethread)
 
@@ -51,16 +51,16 @@ El tiempo de ejecución de Windows es una interfaz de programación que puede us
 
 Al usar el tiempo de ejecución de Windows, puede usar las mejores características de diversos lenguajes de programación y combinarlas en una aplicación. Por ejemplo, podría crear una interfaz de usuario en JavaScript y ejecutar la lógica de la aplicación que requiere gran cantidad de recursos de computación en un componente de C++. La capacidad de realizar estas operaciones que requieren gran cantidad de recursos de computación en segundo plano es un factor clave para que la interfaz de usuario siga respondiendo. Dado que la `task` clase es específica de C++, debe utilizar una interfaz de Windows Runtime para comunicar operaciones asincrónicas a otros componentes (que pueden estar escritas en lenguajes distintos de C++). El tiempo de ejecución de Windows proporciona cuatro interfaces que puede usar para representar operaciones asincrónicas:
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Representa una acción asincrónica.
 
-[Windows::Foundation::IAsyncActionWithProgress\<TProgress >](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
+[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
 Representa una acción asincrónica que informa sobre el progreso.
 
-[Iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
+[Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
 Representa una operación asincrónica que devuelve un resultado.
 
-[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 Representa una operación asincrónica que devuelve un resultado e informa sobre el progreso.
 
 El concepto de una *acción* significa que la tarea asincrónica no genera un valor (piense en una función que devuelve `void`). El concepto de una *operación* significa que la tarea asincrónica genera un valor. El concepto de *progreso* significa que la tarea puede informar sobre mensajes de progreso al llamador. JavaScript, .NET Framework y Visual C++ proporcionan su propia manera de crear instancias de estas interfaces para su uso a través del límite de ABI. Para Visual C++, la PPL proporciona la función [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) . Esta función crea una operación que representa la finalización de una tarea o acción asincrónica de Windows en tiempo de ejecución. El `create_async` función toma una función de trabajo (normalmente una expresión lambda), crea internamente un `task` objeto y el ajusta esa tarea en una de las cuatro interfaces asincrónicas de Windows en tiempo de ejecución.
@@ -70,7 +70,7 @@ El concepto de una *acción* significa que la tarea asincrónica no genera un va
 
 El tipo de valor devuelto `create_async` viene determinado por el tipo de sus argumentos. Por ejemplo, si la función de trabajo no devuelve un valor y no informa sobre el progreso, `create_async` devuelve `IAsyncAction`. Si la función de trabajo no devuelve un valor pero informa sobre el progreso, `create_async` devuelve `IAsyncActionWithProgress`. Para informar sobre el progreso, proporcione un objeto [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) como parámetro para la función de trabajo. La capacidad para informar sobre el progreso permite indicar qué cantidad de trabajo se realizó y qué cantidad todavía permanece sin realizar (por ejemplo, como un porcentaje). Permite también informar sobre los resultados cuando están disponibles.
 
-Cada una de las interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`y `IAsyncActionOperationWithProgress<TProgress, TProgress>` proporcionan un método `Cancel` que permite cancelar la operación asincrónica. La clase `task` funciona con tokens de cancelación. Cuando usa un token de cancelación para cancelar el trabajo, el runtime no inicia el nuevo trabajo suscrito a dicho token. El trabajo que ya está activo puede supervisar su token de cancelación y detenerse cuando puede. Este mecanismo se describe con mayor detalle en el documento [Cancellation in the PPL](cancellation-in-the-ppl.md). Puede conectar la cancelación de tareas con el tiempo de ejecución de Windows`Cancel` métodos de dos maneras. Primero, puede definir la función de trabajo que pasa a `create_async` para que tome un objeto [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Cuando se llama al método `Cancel` , este token de cancelación se cancela y las reglas habituales de cancelación se aplican al objeto subyacente `task` que admite la llamada `create_async` . Si no se proporciona un objeto `cancellation_token` , el objeto subyacente `task` define uno implícitamente. Después, defina un objeto `cancellation_token` cuando necesite responder de forma cooperativa a la cancelación en su función de trabajo. La sección [ejemplo: controlar la ejecución en un App en tiempo de ejecución de Windows con C++ y XAML](#example-app) muestra un ejemplo de cómo realizar la cancelación en una aplicación de plataforma Universal de Windows (UWP) con C# y XAML que usa Windows Runtime C++ personalizado componente.
+Cada una de las interfaces `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`y `IAsyncActionOperationWithProgress<TProgress, TProgress>` proporcionan un método `Cancel` que permite cancelar la operación asincrónica. La clase `task` funciona con tokens de cancelación. Cuando usa un token de cancelación para cancelar el trabajo, el runtime no inicia el nuevo trabajo suscrito a dicho token. El trabajo que ya está activo puede supervisar su token de cancelación y detenerse cuando puede. Este mecanismo se describe con mayor detalle en el documento [Cancellation in the PPL](cancellation-in-the-ppl.md). Puede conectar la cancelación de tareas con el tiempo de ejecución de Windows`Cancel` métodos de dos maneras. Primero, puede definir la función de trabajo que pasa a `create_async` para que tome un objeto [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Cuando se llama al método `Cancel` , este token de cancelación se cancela y las reglas habituales de cancelación se aplican al objeto subyacente `task` que admite la llamada `create_async` . Si no se proporciona un objeto `cancellation_token` , el objeto subyacente `task` define uno implícitamente. Después, defina un objeto `cancellation_token` cuando necesite responder de forma cooperativa a la cancelación en su función de trabajo. La sección [ejemplo: Controlar la ejecución en un App en tiempo de ejecución de Windows con C++ y XAML](#example-app) muestra un ejemplo de cómo realizar la cancelación en una aplicación de plataforma Universal de Windows (UWP) con C# y XAML que usa un componente de C++ de Windows en tiempo de ejecución personalizado.
 
 > [!WARNING]
 >  En una cadena de continuaciones de tareas, limpie siempre el estado y llame a [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) cuando se cancele el token de cancelación. Si vuelve antes en lugar de llamar a `cancel_current_task`, la operación evoluciona al estado completado en lugar del estado cancelado.
@@ -90,9 +90,9 @@ El ejemplo siguiente muestra las distintas maneras para crear un `IAsyncAction` 
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> Ejemplo: crear un componente de Windows Runtime de C++ y usarlo desde C#
+##  <a name="example-component"></a> Ejemplo: Crear un componente de tiempo de ejecución de Windows de C++ y usarlo desdeC#
 
-Considere la posibilidad de una aplicación que utiliza XAML y C# para definir la interfaz de usuario y un componente en tiempo de ejecución de Windows de C++ para realizar operaciones de proceso intensivo. En este ejemplo, el componente de C++ calcula que los números de un intervalo dado son primos. Para mostrar las diferencias entre las cuatro interfaces de tarea asincrónica de Windows en tiempo de ejecución, comience, en Visual Studio, creando un **solución en blanco** y asígnele el nombre `Primes`. Luego, agregue a la solución un proyecto **Componente de Windows Runtime** y asígnele el nombre `PrimesLibrary`. Agregue el código siguiente al archivo de encabezado de C++ generado (este ejemplo cambia el nombre de Class1.h a Primes.h). Cada método `public` define una de las cuatro interfaces asincrónicas. Los métodos que devuelven un valor devuelven un [Windows::Foundation::Collections::IVector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) objeto. Los métodos que informan sobre el progreso proporcionan valores `double` que definen el porcentaje del trabajo total completado.
+Considere la posibilidad de una aplicación que utiliza XAML y C# para definir la interfaz de usuario y un componente en tiempo de ejecución de Windows de C++ para realizar operaciones de proceso intensivo. En este ejemplo, el componente de C++ calcula que los números de un intervalo dado son primos. Para mostrar las diferencias entre las cuatro interfaces de tarea asincrónica de Windows en tiempo de ejecución, comience, en Visual Studio, creando un **solución en blanco** y asígnele el nombre `Primes`. Luego, agregue a la solución un proyecto **Componente de Windows Runtime** y asígnele el nombre `PrimesLibrary`. Agregue el código siguiente al archivo de encabezado de C++ generado (este ejemplo cambia el nombre de Class1.h a Primes.h). Cada método `public` define una de las cuatro interfaces asincrónicas. Los métodos que devuelven un valor devuelven un [Windows::Foundation::Collections::IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) objeto. Los métodos que informan sobre el progreso proporcionan valores `double` que definen el porcentaje del trabajo total completado.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,14 +117,14 @@ Agregue el código siguiente a la clase `MainPage` en MainPage.xaml. Este códig
 
 Estos métodos utilizan las palabras clave `async` y `await` para actualizar la interfaz de usuario después de que las operaciones asincrónicas finalicen. Para obtener información sobre la codificación asincrónica en aplicaciones para UWP, vea [subprocesamiento y programación asincrónica](/windows/uwp/threading-async).
 
-Los métodos `getPrimesCancellation` y `cancelGetPrimes` colaboran para permitir al usuario cancelar la operación. Cuando el usuario elige el **cancelar** botón, el `cancelGetPrimes` llamadas al método [IAsyncOperationWithProgress\<TResult, TProgress >:: cancelar](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx) para cancelar la operación. El Runtime de simultaneidad, que administra la operación asincrónica subyacente, se produce un tipo de excepción interna que ha sido detectado por el tiempo de ejecución de Windows para comunicarse de cancelación que se ha completado. Para obtener más información sobre el modelo de cancelación, vea [cancelación](../../parallel/concrt/cancellation-in-the-ppl.md).
+Los métodos `getPrimesCancellation` y `cancelGetPrimes` colaboran para permitir al usuario cancelar la operación. Cuando el usuario elige el **cancelar** botón, el `cancelGetPrimes` llamadas al método [IAsyncOperationWithProgress\<TResult, TProgress >:: cancelar](/uwp/api/windows.foundation.iasyncinfo.cancel) para cancelar la operación. El Runtime de simultaneidad, que administra la operación asincrónica subyacente, se produce un tipo de excepción interna que ha sido detectado por el tiempo de ejecución de Windows para comunicarse de cancelación que se ha completado. Para obtener más información sobre el modelo de cancelación, vea [cancelación](../../parallel/concrt/cancellation-in-the-ppl.md).
 
 > [!IMPORTANT]
 >  Para habilitar la biblioteca PPL informe correctamente a Windows Runtime que ha cancelado la operación, no detecte este tipo de excepción interna. Esto significa que tampoco debe detectar todas las excepciones (`catch (...)`). Si debe detectar todas las excepciones, vuelva a producir la excepción para asegurarse de que el tiempo de ejecución de Windows se puede completar la operación de cancelación.
 
 En la ilustración siguiente se muestra la aplicación `Primes` una vez que se ha elegido cada opción.
 
-![Aplicación de Windows en tiempo de ejecución primos](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Aplicación Primes de Windows en tiempo de ejecución](../../parallel/concrt/media/concrt_windows_primes.png "Primes de la aplicación en tiempo de ejecución de Windows")
 
 Para ver ejemplos en los que se usa `create_async` para crear tareas asincrónicas que se pueden usar en otros lenguajes, consulte [Usar C++ en el ejemplo de Optimizador de recorridos de Mapas de Bing](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) y [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(Operaciones asincrónicas de Windows 8 en C++ con PPL).
 
@@ -148,11 +148,10 @@ Puede pasar un objeto `task_continuation_context` al método [task::then](refere
 En la siguiente sección se muestra una aplicación que lee un archivo desde el disco, encuentra la mayoría de las palabras comunes en ese archivo y, a continuación, muestra los resultados en la interfaz de usuario. La operación final, actualizar la interfaz de usuario, se produce en el subproceso de la interfaz de usuario.
 
 > [!IMPORTANT]
->  Este comportamiento es específico para aplicaciones UWP. En las aplicaciones de escritorio, no se controla donde se ejecutan las continuaciones. En su lugar, el programador elige un subproceso de trabajo en el que ejecutar cada continuación.
+> Este comportamiento es específico para aplicaciones UWP. En las aplicaciones de escritorio, no se controla donde se ejecutan las continuaciones. En su lugar, el programador elige un subproceso de trabajo en el que ejecutar cada continuación.
 
 > [!IMPORTANT]
-
->  No llame a [concurrency::task::wait](reference/task-class.md#wait) en el cuerpo de una continuación que se ejecuta en el STA. De lo contrario, el runtime produce [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](reference/task-class.md#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
+> No llame a [concurrency::task::wait](reference/task-class.md#wait) en el cuerpo de una continuación que se ejecuta en el STA. De lo contrario, el runtime produce [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](reference/task-class.md#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
 
 ##  <a name="example-app"></a> Ejemplo: Controlar la ejecución en una aplicación en tiempo de ejecución de Windows con C++ y XAML
 
@@ -187,7 +186,7 @@ Modifique el constructor `MainPage` para crear una cadena de tareas de continuac
 
 En la ilustración siguiente se muestran los resultados de la aplicación `CommonWords` .
 
-![Aplicación de Windows en tiempo de ejecución CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Aplicación de Windows en tiempo de ejecución CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "Windows aplicación CommonWords de tiempo de ejecución")
 
 En este ejemplo, es posible admitir la cancelación porque los objetos `task` que admiten `create_async` usan un token de cancelación implícito. Defina la función de trabajo para tomar un objeto `cancellation_token` si las tareas deben responder a la cancelación de manera cooperativa. Para obtener más información sobre la cancelación en la PPL, consulte [Cancellation in the PPL](cancellation-in-the-ppl.md)
 

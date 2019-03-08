@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640250"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288420"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar (clase)
 
@@ -221,7 +221,7 @@ class CMFCRibbonBar : public CPane
 |----------|-----------------|
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Activa una categoría de contexto que ya está visible.|
 |[CMFCRibbonBar::AddCategory](#addcategory)|Agrega una nueva categoría de cinta de opciones a la cinta.|
-|[CMFCRibbonBar:: Addcontextcategory](#addcontextcategory)|Agrega una categoría de contexto.|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Agrega una categoría de contexto.|
 |[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Agrega una nueva categoría principal de cinta de opciones.|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
@@ -277,7 +277,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Determina si la información sobre herramientas de la barra de cinta está habilitada.|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
 |[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Indica si la cinta de opciones tiene la apariencia de Windows 7 (botón de aplicación rectangular pequeño).|
-|[CMFCRibbonBar:: LoadFromResource](#loadfromresource)|Sobrecargado. Carga una barra de cinta a partir de los recursos de la aplicación.|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Sobrecargado. Carga una barra de cinta a partir de los recursos de la aplicación.|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(Invalida `CPane::OnRTLChanged`).|
@@ -319,7 +319,7 @@ Los elementos que aparecen en la barra de cinta se expanden y se contrae para op
 
 Puede usar la clase `CMFCRibbonStatusBar` para implementar una barra de estado similar a la que se usaba en Office 2007. Una categoría de cinta de opciones contiene (y muestra) en un grupo de [paneles de cinta de opciones](../../mfc/reference/cmfcribbonpanel-class.md). Cada panel de cinta de opciones contiene uno o varios elementos de cinta de opciones, que se derivan de [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Para obtener información sobre cómo agregar una barra de cinta a la aplicación MFC existente, vea [Tutorial: actualizar la aplicación Scribble de MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Para obtener información sobre cómo agregar una barra de cinta a la aplicación MFC existente, vea [Tutorial: Actualizar la aplicación Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -410,7 +410,7 @@ En el ejemplo siguiente se muestra cómo usar el `AddCategory` método en el `CM
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>  CMFCRibbonBar:: Addcontextcategory
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory
 
 Crea e inicializa una nueva categoría de contexto para la barra de cinta.
 
@@ -738,7 +738,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar la característica de sugerencias de teclas; FALSE para deshabilitar la característica de sugerencias de teclas.
 
 ### <a name="remarks"></a>Comentarios
@@ -755,7 +755,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] True para habilitar la **vista previa de impresión** de características; FALSE para deshabilitar el **vista previa de impresión** característica.
 
 ### <a name="remarks"></a>Comentarios
@@ -776,7 +776,7 @@ void EnableToolTips(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar la información sobre herramientas en la barra de cinta de opciones. FALSO para deshabilitar la información sobre herramientas en la barra de cinta.
 
 *bEnableDescr*<br/>
@@ -1305,7 +1305,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Ubicación del punto en coordenadas de la barra de cinta de opciones.
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1478,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in] Puntero al botón que se hizo clic.
 
-*punto*<br/>
+*point*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -1494,7 +1494,7 @@ virtual void OnEditContextMenu(
 ### <a name="parameters"></a>Parámetros
 
 [in] *pEdit*<br/>
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1545,7 +1545,7 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *x*<br/>
 [in] *y*<br/>
 [in] *pHit*<br/>
@@ -1566,7 +1566,7 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-[in] *conquistado*<br/>
+[in] *pWnd*<br/>
 [in] *x*<br/>
 [in] *y*<br/>
 [in] *pHit*<br/>
@@ -1755,7 +1755,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Puntero a una ventana secundaria MDI.
 
 ### <a name="remarks"></a>Comentarios
@@ -1852,10 +1852,10 @@ void SetMaximizeMode(
 
 ### <a name="parameters"></a>Parámetros
 
-*bmáx*<br/>
+*bMax*<br/>
 [in] TRUE para mostrar los botones de sistema de una ventana secundaria MDI en la barra de cinta de opciones. FALSE para quitar los botones de sistema de una ventana secundaria MDI de la barra de cinta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 [in] Puntero a la ventana de marco principal de la barra de cinta de opciones.
 
 ### <a name="remarks"></a>Comentarios
@@ -1959,7 +1959,7 @@ void ShowCategory(
 *nIndex*<br/>
 [in] El índice de la categoría de cinta de opciones.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Si es TRUE, se muestra la categoría de cinta de opciones; en caso contrario, ocultar la categoría de cinta de opciones.
 
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories
@@ -1977,7 +1977,7 @@ void ShowContextCategories(
 *uiContextID*<br/>
 [in] El identificador de categoría de contexto.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] Si es TRUE, se muestran las categorías que tienen el identificador especificado; en caso contrario, ocultar las categorías que tienen el identificador especificado.
 
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips
@@ -2014,7 +2014,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Parámetros
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Un código de carácter de pulsación de tecla de usuario.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2053,7 +2053,7 @@ TRUE si la cinta de opciones tiene Windows 7 de búsqueda; en caso contrario, FA
 
 ### <a name="remarks"></a>Comentarios
 
-##  <a name="loadfromresource"></a>  CMFCRibbonBar:: LoadFromResource
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource
 
 Sobrecargado. Carga una barra de cinta a partir de los recursos de la aplicación.
 
@@ -2156,4 +2156,3 @@ TRUE vuelve a calcular el diseño de la cinta de opciones; FALSE en caso contrar
 [CMFCRibbonPanel (clase)](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement (clase)](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Tutorial: Actualizar la aplicación Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-

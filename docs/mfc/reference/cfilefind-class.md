@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da08b04b314df4916a290d4929a4cbaac87434d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462164"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289928"
 ---
 # <a name="cfilefind-class"></a>CFileFind (clase)
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parámetros
 
 *pTimeStamp*<br/>
-Un puntero a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estructura que contiene la hora en que se creó el archivo.
+Un puntero a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estructura que contiene la hora en que se creó el archivo.
 
 *refTime*<br/>
 Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.
 
 *pTimeStamp*<br/>
-Un puntero a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estructura que contiene la hora de último acceso al archivo.
+Un puntero a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estructura que contiene la hora de último acceso al archivo.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Parámetros
 
 *pTimeStamp*<br/>
-Un puntero a un [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) estructura que contiene la hora en que se escribió por última vez el archivo a.
+Un puntero a un [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) estructura que contiene la hora en que se escribió por última vez el archivo a.
 
 *refTime*<br/>
 Una referencia a un [CTime](../../atl-mfc-shared/reference/ctime-class.md) objeto.

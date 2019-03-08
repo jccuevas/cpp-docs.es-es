@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: b3e5664064f9c32d6c5f5a1e6751712bc36cc7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fee7101ab72b9a0aecffb8ab8365dda1ec52d170
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668564"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220418"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
 
@@ -28,17 +28,17 @@ Leer la memoria desde una ubicación especificada por un desplazamiento relativo
 ## <a name="syntax"></a>Sintaxis
 
 ```
-unsigned char __readgsbyte( 
-   unsigned long Offset 
-);
-unsigned short __readgsword( 
-   unsigned long Offset 
-);
-unsigned long __readgsdword( 
+unsigned char __readgsbyte(
    unsigned long Offset
 );
-unsigned __int64 __readgsqword( 
-   unsigned long Offset 
+unsigned short __readgsword(
+   unsigned long Offset
+);
+unsigned long __readgsdword(
+   unsigned long Offset
+);
+unsigned __int64 __readgsqword(
+   unsigned long Offset
 );
 ```
 
@@ -64,7 +64,7 @@ El contenido de la memoria del byte, word, palabra doble o quadword (tal y como 
 
 ## <a name="remarks"></a>Comentarios
 
-Estas funciones intrínsecas solo están disponibles en modo kernel, y las rutinas solo están disponibles como intrínsecos.
+Estas rutinas solo están disponibles como intrínseco.
 
 **FIN de Específicos de Microsoft**
 

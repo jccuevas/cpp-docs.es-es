@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 155e96762d47b340ac078fad791f3078dba9a871
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a742c3fd1965882c3fa72cb1fab985cd4d981d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272547"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature (Clase)
 
-La excepción que se produce cuando se usa una característica no compatible.
+La excepción que se produce cuando se usa una función no compatible.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,7 +41,7 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature__ctor"></a> unsupported_feature)
+## <a name="unsupported_feature__ctor"></a> unsupported_feature
 
   Crea una nueva instancia de la excepción unsupported_feature.
 
@@ -56,7 +56,7 @@ unsupported_feature() throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 Descripción del error.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -67,7 +67,7 @@ Objeto `unsupported_feature`.
 
 **Encabezado:** amprt.h
 
-**Espacio de nombres:** Concurrency
+**Espacio de nombres**: simultaneidad
 
 ## <a name="see-also"></a>Vea también
 

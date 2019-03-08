@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669084"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305021"
 ---
 # <a name="cview-class"></a>CView (clase)
 
@@ -90,7 +90,7 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::OnDragScroll](#ondragscroll)|Se llama para determinar si se arrastra el cursor en la región de desplazamiento de la ventana.|
 |[CView::OnDrop](#ondrop)|Se llama cuando se ha quitado un elemento en la región de arrastrar y colocar de una vista, el controlador predeterminado.|
 |[CView::OnDropEx](#ondropex)|Se llama cuando se ha quitado un elemento en la región de arrastrar y colocar de una vista, el controlador principal.|
-|[CView:: OnInitialUpdate](#oninitialupdate)|Se llama después de una vista se adjunta a un documento en primer lugar.|
+|[CView::OnInitialUpdate](#oninitialupdate)|Se llama después de una vista se adjunta a un documento en primer lugar.|
 |[CView::OnPrepareDC](#onpreparedc)|Se llama antes de la `OnDraw` función miembro se llama para presentación en pantalla o el `OnPrint` función miembro se llama para vista previa de impresión o.|
 |[CView::OnScroll](#onscroll)|Se llama cuando se arrastran elementos OLE más allá de los bordes de la vista.|
 |[CView::OnScrollBy](#onscrollby)|Se llama cuando se desplaza una vista que contiene los elementos OLE en contexto activos.|
@@ -101,11 +101,11 @@ class AFX_NOVTABLE CView : public CWnd
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Se llama cuando se activa o desactiva la ventana de marco que contiene la vista.|
 |[CView::OnActivateView](#onactivateview)|Se llama cuando se activa una vista.|
-|[CView:: OnBeginPrinting](#onbeginprinting)|Se llama cuando se inicia un trabajo de impresión; Reemplace este valor para asignar los recursos de interfaz (GDI) de dispositivo de gráficos.|
-|[CView:: OnDraw](#ondraw)|Se llama para presentar una imagen del documento para presentación en pantalla, impresión o vista previa de impresión. Implementación necesaria.|
-|[OnEndPrinting](#onendprinting)|Se llama cuando finaliza un trabajo de impresión; Invalide para desasignar los recursos de GDI.|
+|[CView::OnBeginPrinting](#onbeginprinting)|Se llama cuando se inicia un trabajo de impresión; Reemplace este valor para asignar los recursos de interfaz (GDI) de dispositivo de gráficos.|
+|[CView::OnDraw](#ondraw)|Se llama para presentar una imagen del documento para presentación en pantalla, impresión o vista previa de impresión. Implementación necesaria.|
+|[CView::OnEndPrinting](#onendprinting)|Se llama cuando finaliza un trabajo de impresión; Invalide para desasignar los recursos de GDI.|
 |[CView::OnEndPrintPreview](#onendprintpreview)|Se llama cuando se sale de modo de vista previa.|
-|[CView:: OnPreparePrinting](#onprepareprinting)|Se llama antes de un documento se imprime o muestra una vista previa; invalidar para inicializar el cuadro de diálogo Imprimir.|
+|[CView::OnPreparePrinting](#onprepareprinting)|Se llama antes de un documento se imprime o muestra una vista previa; invalidar para inicializar el cuadro de diálogo Imprimir.|
 |[CView::OnPrint](#onprint)|Se llama para imprimir u obtener una vista previa una página del documento.|
 |[CView::OnUpdate](#onupdate)|Se llama para notificar a una vista que su documento ha sido modificado.|
 
@@ -293,7 +293,7 @@ El *pActivateView* y *pDeactiveView* parámetros apuntan a la misma vista si se 
 
 Estos parámetros son diferentes cuando [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) se llama con una vista que es diferente de lo que [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) devolvería. Esto suele ocurrir con las ventanas divisoras.
 
-##  <a name="onbeginprinting"></a>  CView:: OnBeginPrinting
+##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting
 
 Lo llama el marco al comenzar un trabajo de impresión o de vista previa de impresión, después de llamar a `OnPreparePrinting` .
 
@@ -336,7 +336,7 @@ Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se
 *dwKeyState*<br/>
 Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 La posición actual de mouse (ratón) en relación con el área cliente de la vista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -357,7 +357,7 @@ Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OC
 
 Implementación predeterminada es no hacer nada y devolver DROPEFFECT_NONE.
 
-Reemplace esta función para prepararse para las futuras llamadas a la [OnDragOver](#ondragover) función miembro. Se deben recuperar los datos necesarios del objeto de datos en este momento para su uso posterior en el `OnDragOver` función miembro. La vista también se debe actualizar en este momento para proporcionar información visual al usuario. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de colocación](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Reemplace esta función para prepararse para las futuras llamadas a la [OnDragOver](#ondragover) función miembro. Se deben recuperar los datos necesarios del objeto de datos en este momento para su uso posterior en el `OnDragOver` función miembro. La vista también se debe actualizar en este momento para proporcionar información visual al usuario. Para obtener más información, vea el artículo [arrastrar y colocar: Implementar un destino de colocación](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -390,7 +390,7 @@ Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se
 *dwKeyState*<br/>
 Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 La posición actual del mouse en relación con el área de cliente de vista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -411,7 +411,7 @@ Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OC
 
 La implementación predeterminada es no hacer nada y devolver DROPEFFECT_NONE.
 
-Reemplace esta función para proporcionar al usuario información visual durante la operación de arrastre. Puesto que esta función se invoca de forma continua, cualquier código dentro del mismo se debe optimizar tanto como sea posible. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de colocación](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Reemplace esta función para proporcionar al usuario información visual durante la operación de arrastre. Puesto que esta función se invoca de forma continua, cualquier código dentro del mismo se debe optimizar tanto como sea posible. Para obtener más información, vea el artículo [arrastrar y colocar: Implementar un destino de colocación](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -428,7 +428,7 @@ virtual DROPEFFECT OnDragScroll(
 *dwKeyState*<br/>
 Contiene el estado de las teclas modificadoras. Se trata de una combinación de cualquier número de las siguientes acciones: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON y MK_RBUTTON.
 
-*punto*<br/>
+*point*<br/>
 Contiene la ubicación del cursor, en píxeles, relativo a la pantalla.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -449,9 +449,9 @@ Para obtener más información, vea el ejemplo de conceptos avanzados de MFC [OC
 
 ### <a name="remarks"></a>Comentarios
 
-Reemplace esta función cuando desea proporcionar un comportamiento especial para este evento. La implementación predeterminada desplaza automáticamente windows cuando se arrastra el cursor en la región de desplazamiento predeterminado dentro del borde de cada ventana. Para obtener más información, vea el artículo [arrastrar y colocar: implementar un destino de colocación](../../mfc/drag-and-drop-implementing-a-drop-target.md).
+Reemplace esta función cuando desea proporcionar un comportamiento especial para este evento. La implementación predeterminada desplaza automáticamente windows cuando se arrastra el cursor en la región de desplazamiento predeterminado dentro del borde de cada ventana. Para obtener más información, vea el artículo [arrastrar y colocar: Implementar un destino de colocación](../../mfc/drag-and-drop-implementing-a-drop-target.md).
 
-##  <a name="ondraw"></a>  CView:: OnDraw
+##  <a name="ondraw"></a>  CView::OnDraw
 
 Lo llama el marco de trabajo para representar una imagen del documento.
 
@@ -487,7 +487,7 @@ virtual BOOL OnDrop(
 
 ' pDataObject * apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se coloca en el destino de colocación.
 
-*EfectoColocar*<br/>
+*dropEffect*<br/>
 El efecto de que el usuario ha solicitado.
 
 - DROPEFFECT_COPY crea una copia del objeto de datos que se va a quitar.
@@ -496,7 +496,7 @@ El efecto de que el usuario ha solicitado.
 
 - DROPEFFECT_LINK crea un vínculo entre un objeto de datos y su servidor.
 
-*punto*<br/>
+*point*<br/>
 La posición actual del mouse en relación con el área de cliente de vista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -532,10 +532,10 @@ Apunta a la [COleDataObject](../../mfc/reference/coledataobject-class.md) que se
 *dropDefault*<br/>
 El efecto que el usuario ha elegido para la operación de colocar de forma predeterminada, según el estado actual de la clave. Puede ser DROPEFFECT_NONE. Efectos de colocar se tratan en la sección Comentarios.
 
-*lista desplegable*<br/>
+*dropList*<br/>
 Una lista de los efectos de colocar que admite el origen de colocación. Los valores de efecto de colocar se pueden combinar con la operación OR bit a bit ( **&#124;**) operación. Efectos de colocar se tratan en la sección Comentarios.
 
-*punto*<br/>
+*point*<br/>
 La posición actual del mouse en relación con el área de cliente de vista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -548,7 +548,7 @@ La implementación predeterminada es no hacer nada y devolver un valor ficticio 
 
 Reemplace esta función para implementar el efecto de una derecha del botón del mouse arrastrar y colocar. Derecha del botón del mouse arrastrar y colocar normalmente muestra un menú de opciones cuando se suelta el botón del mouse adecuado.
 
-El reemplazo de `OnDropEx` debe consultar la derecha del botón del mouse. Puede llamar a [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) o almacenar el estado de la derecha del botón del mouse desde el [OnDragEnter](#ondragenter) controlador.
+El reemplazo de `OnDropEx` debe consultar la derecha del botón del mouse. Puede llamar a [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) o almacenar el estado de la derecha del botón del mouse desde el [OnDragEnter](#ondragenter) controlador.
 
 - Si el botón del mouse secundario está inactivo, el reemplazo debe mostrar un menú emergente que ofrece compatibilidad con los efectos de colocar el origen de colocación.
 
@@ -576,7 +576,7 @@ Efectos de colocar describen la acción asociada con una operación de colocar. 
 
 Para obtener más información sobre cómo establecer el comando de menú predeterminado, consulte [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) en el SDK de Windows y [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) en este volumen.
 
-##  <a name="onendprinting"></a>  OnEndPrinting
+##  <a name="onendprinting"></a>  CView::OnEndPrinting
 
 Lo llama el marco de trabajo después de haberse imprime un documento o una vista previa.
 
@@ -618,7 +618,7 @@ Apunta al contexto del dispositivo de impresora.
 *pInfo*<br/>
 Apunta a una estructura [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) que describe el trabajo de impresión actual.
 
-*punto*<br/>
+*point*<br/>
 Especifica el punto en la página que se mostró por última vez en modo de vista previa.
 
 *pView*<br/>
@@ -630,7 +630,7 @@ La implementación predeterminada de esta función llama a la [OnEndPrinting](#o
 
 Llame siempre a la versión de la clase base `OnEndPrintPreview` desde el reemplazo, normalmente al final de la función.
 
-##  <a name="oninitialupdate"></a>  CView:: OnInitialUpdate
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate
 
 Lo llama el marco de trabajo después de la vista se adjunta al documento en primer lugar, pero antes de la vista se muestra inicialmente.
 
@@ -680,7 +680,7 @@ Llame a la versión de la clase base `OnPrepareDC` al principio de la invalidaci
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-##  <a name="onprepareprinting"></a>  CView:: OnPreparePrinting
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting
 
 Lo llama el marco de trabajo antes de imprimir un documento o una vista previa.
 

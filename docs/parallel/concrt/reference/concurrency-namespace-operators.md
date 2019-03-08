@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 49283a9a8cb85cb20b0c48635217d402697caa47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d790833e7dcecb5776d2adecd5e6bc1f681db1cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258806"
 ---
 # <a name="concurrency-namespace-operators"></a>los operadores del espacio de nombres de simultaneidad
 
@@ -18,7 +18,7 @@ ms.locfileid: "50483907"
 |-|-|-|
 |[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
-|[operator==](#operator_eq_eq)|[operator||](#operator_lor)|
+|[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
 ##  <a name="operator_lor"></a>  operador&#124; &#124; operador
 
@@ -50,10 +50,10 @@ inline task<void> operator||(
 *ReturnType*<br/>
 Tipo de la tarea devuelta.
 
-*LHS*<br/>
+*lhs*<br/>
 Primera tarea que debe combinarse en la tarea resultante.
 
-*RHS*<br/>
+*rhs*<br/>
 Segunda tarea que se va a combinar en la tarea resultante.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -99,10 +99,10 @@ inline task<void>  operator&&(
 *ReturnType*<br/>
 Tipo de la tarea devuelta.
 
-*LHS*<br/>
+*lhs*<br/>
 Primera tarea que debe combinarse en la tarea resultante.
 
-*RHS*<br/>
+*rhs*<br/>
 Segunda tarea que se va a combinar en la tarea resultante.
 
 ### <a name="return-value"></a>Valor devuelto

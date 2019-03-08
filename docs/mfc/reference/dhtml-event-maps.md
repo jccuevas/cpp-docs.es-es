@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 329b4176ad4d24651a41b5321c26318cf2af30e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ae37acd3e0b0c2636e6a3e985490a2feab8fa34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547204"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300549"
 ---
 # <a name="dhtml-event-maps"></a>DHTML (Mapas de eventos)
 
@@ -93,7 +93,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos DHTML. Esta clase debe derivar directa o indirectamente de [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e incluyen el [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dentro de su definición de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -118,7 +118,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos DHTML. Esta clase debe derivar directa o indirectamente de [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) e incluyen el [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) macro dentro de su definición de clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -165,7 +165,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 El DISPID de controlar el evento.
 
 *elemName*<br/>
@@ -192,7 +192,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *controlName*<br/>
@@ -219,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *elemName*<br/>
@@ -246,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *elemName*<br/>
@@ -441,7 +441,6 @@ Controla (en el nivel de documento) la `ondatasetcomplete` se originó el evento
 
 ```
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -514,7 +513,6 @@ Controla (en el nivel de documento) la `onerrorupdate` se originó el evento por
 
 ```
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -540,7 +538,6 @@ Controla (en el nivel de documento) la `onfilterchange` se originó el evento po
 ```
 
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -566,7 +563,6 @@ Controla (en el nivel de elemento) el `onfocus` eventos. Se trata de un evento n
 ```
 
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -592,7 +588,6 @@ Controla (en el nivel de documento) la `onhelp` se originó el evento por el ele
 ```
 
 DHTML_EVENT_ONHELP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -618,7 +613,6 @@ Controla (en el nivel de documento) la `onkeydown` se originó el evento por el 
 ```
 
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -644,7 +638,6 @@ Controla (en el nivel de documento) la `onkeypress` se originó el evento por el
 ```
 
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -670,7 +663,6 @@ Controla (en el nivel de documento) la `onkeyup` se originó el evento por el el
 ```
 
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -696,7 +688,6 @@ Controla (en el nivel de documento) la `onmousedown` se originó el evento por e
 ```
 
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -722,7 +713,6 @@ Controla (en el nivel de documento) la `onmousemove` se originó el evento por e
 ```
 
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -748,7 +738,6 @@ Controla (en el nivel de documento) la `onmouseout` se originó el evento por el
 ```
 
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -774,7 +763,6 @@ Controla (en el nivel de documento) la `onmouseover` se originó el evento por e
 ```
 
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -800,7 +788,6 @@ Controla (en el nivel de documento) la `onmouseup` se originó el evento por el 
 ```
 
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -826,7 +813,6 @@ Controla (en el nivel de elemento) el `onresize` eventos. Se trata de un evento 
 ```
 
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -852,7 +838,6 @@ Controla (en el nivel de documento) la `onrowenter` se originó el evento por el
 ```
 
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -878,7 +863,6 @@ Controla (en el nivel de documento) la `onrowexit` se originó el evento por el 
 ```
 
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -904,7 +888,6 @@ Controla (en el nivel de documento) la `onselectstart` se originó el evento por
 ```
 
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -933,7 +916,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 Identificador de envío de controlar el evento.
 
 *elemName*<br/>
@@ -972,7 +955,6 @@ Inicia la definición de un mapa de eventos DHTML y la dirección URL en un cuad
 
 ```
 BEGIN_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -993,15 +975,14 @@ Inicia la definición de un mapa de eventos DHTML incrustado en un cuadro de di�
 
 ```
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). El mapa de eventos DHTML incrustado debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).
 
-*Nombredemapa*<br/>
+*mapName*<br/>
 Especifica la página cuyo evento asignarlo. Esto coincide con *Nombredemapa* en el [URL_EVENT_ENTRY](#url_event_entry) macro definir realmente el recurso de dirección URL o HTML.
 
 ### <a name="remarks"></a>Comentarios
@@ -1026,12 +1007,11 @@ Inicia la definición de una asignación de entrada de evento de dirección URL 
 
 ```
 BEGIN_URL_ENTRIES(className)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene la asignación de entrada de evento de dirección URL. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mapa de entrada de eventos de la dirección URL debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).
 
 ### <a name="remarks"></a>Comentarios
@@ -1052,7 +1032,6 @@ Declara un mapa de eventos DHTML y la dirección URL en una definición de clase
 
 ```
 DECLARE_DHTML_URL_EVENT_MAP()
-
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -1071,12 +1050,11 @@ Marca el final de un mapa de eventos DHTML y la dirección URL.
 
 ```
 END_DHTML_URL_EVENT_MAP(className)
-
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene el mapa de eventos. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Debe coincidir con *className* en las correspondientes [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) macro.
 
 ### <a name="example"></a>Ejemplo
@@ -1093,7 +1071,6 @@ Marca el final de un mapa de eventos DHTML incrustado.
 
 ```
 END_EMBED_DHTML_EVENT_MAP()
-
 ```
 
 ### <a name="example"></a>Ejemplo
@@ -1110,7 +1087,6 @@ Marca el final de una asignación de entrada de evento de dirección URL.
 
 ```
 END_URL_ENTRIES()
-
 ```
 
 ### <a name="example"></a>Ejemplo
@@ -1131,13 +1107,13 @@ URL_EVENT_ENTRY(className, url,  mapName)
 
 ### <a name="parameters"></a>Parámetros
 
-*nombre de clase*<br/>
+*className*<br/>
 El nombre de la clase que contiene la asignación de entrada de evento de dirección URL. Esta clase debe derivar directa o indirectamente de [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md). Mapa de entrada de eventos de la dirección URL debe estar dentro de un [mapa de eventos DHTML y la dirección URL](#begin_dhtml_url_event_map)).
 
-*Dirección URL*<br/>
+*url*<br/>
 El recurso de dirección URL o HTML para la página.
 
-*Nombredemapa*<br/>
+*mapName*<br/>
 Especifica la página cuya dirección URL es *url*. Esto coincide con *Nombredemapa* en el [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map) macro que se asigna a los eventos de esta página.
 
 ### <a name="remarks"></a>Comentarios
@@ -1172,6 +1148,6 @@ Debe usarse junto con [BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inli
 
 **Encabezado:** afxdhtml.h
 
-### <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
 [Macros y funciones globales](mfc-macros-and-globals.md)

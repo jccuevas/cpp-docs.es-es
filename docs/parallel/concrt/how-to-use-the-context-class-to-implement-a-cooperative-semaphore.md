@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Usar la clase Context para implementar un semáforo cooperativo'
+title: Procedimiento Usar la clase Context para implementar un semáforo cooperativo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-ms.openlocfilehash: 460a1de03f34cb8ef9753e761aaef37470cd6d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92f77fade972bff1528bc9a22416670354c70f34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467773"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300770"
 ---
-# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Cómo: Usar la clase Context para implementar un semáforo cooperativo
+# <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>Filtrar Usar la clase Context para implementar un semáforo cooperativo
 
 En este tema se muestra cómo usar la clase Concurrency:: Context para implementar una clase de semáforo cooperativa.
 
@@ -73,7 +73,7 @@ Para obtener más información sobre la `concurrent_queue` de clases, vea [conte
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `cooperative-semaphore.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc cooperative-semaphore.cpp**
+**cl.exe /EHsc cooperative-semaphore.cpp**
 
 ## <a name="robust-programming"></a>Programación sólida
 
@@ -90,4 +90,3 @@ En el ejemplo siguiente se modifica el cuerpo de la función de trabajo que se p
 
 [Contextos](../../parallel/concrt/contexts.md)<br/>
 [Contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md)
-

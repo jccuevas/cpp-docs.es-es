@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 50df9f13b814eb00b309460894d704238bc3e7dc
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 19fc7b16695ebeff35462aaa2c451ff6459bb7b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425229"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Leer cadenas desde el proveedor OLE DB
 
-El `CCustomRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo al proveedor mediante una llamada a [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_strCommandText`. `Execute` lee el nombre del archivo `m_strCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abre el archivo y las llamadas `fgets` para recuperar las cadenas. Para cada conjunto de cadenas se lee, `Execute` crea una instancia del registro de usuario (modificado `CCustomWindowsFile` desde [almacenar cadenas en el proveedor OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) y lo coloca en una matriz.
+El `CCustomRowset::Execute` función abre un archivo y lee las cadenas. El consumidor pasa el nombre de archivo al proveedor mediante una llamada a [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). El proveedor recibe el nombre de archivo y lo almacena en la variable miembro `m_strCommandText`. `Execute` lee el nombre del archivo `m_strCommandText`. Si el nombre de archivo no es válido o no está disponible, el archivo `Execute` devuelve un error. En caso contrario, se abre el archivo y las llamadas `fgets` para recuperar las cadenas. Para cada conjunto de cadenas se lee, `Execute` crea una instancia del registro de usuario (modificado `CCustomWindowsFile` desde [almacenar cadenas en el proveedor OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) y lo coloca en una matriz.
 
 Si no se puede abrir el archivo, `Execute` debe devolver DB_E_NOTABLE. Si devuelve E_FAIL en su lugar, el proveedor no funcionará con muchos consumidores y no se transfiera OLE DB [las pruebas de conformidad](../../data/oledb/testing-your-provider.md).
 

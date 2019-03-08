@@ -13,12 +13,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 76557e64b5b53c32a7d7f63134085e86bf0138df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276772"
 ---
 # <a name="mfc-activex-controls-events"></a>Controles ActiveX MFC: Eventos
 
@@ -26,7 +26,7 @@ Controles ActiveX usar eventos para notificar a un contenedor que ha sucedido al
 
 Los eventos también se denominan mensajes.
 
-MFC admite dos tipos de eventos: estándar y personalizados. Los eventos estándar son los eventos que la clase [COleControl](../mfc/reference/colecontrol-class.md) controla automáticamente. Para obtener una lista completa de eventos estándar, consulte el artículo [controles ActiveX MFC: agregar eventos estándar](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Eventos personalizados permiten un control de la capacidad notificar al contenedor cuando se produce una acción específica en ese control. Algunos ejemplos serían un cambio en el estado interno de un control o la recepción de un determinado mensaje de ventana.
+MFC admite dos tipos de eventos: estándar y personalizados. Los eventos estándar son los eventos que la clase [COleControl](../mfc/reference/colecontrol-class.md) controla automáticamente. Para obtener una lista completa de eventos estándar, consulte el artículo [controles ActiveX MFC: Agregar eventos estándar](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md). Eventos personalizados permiten un control de la capacidad notificar al contenedor cuando se produce una acción específica en ese control. Algunos ejemplos serían un cambio en el estado interno de un control o la recepción de un determinado mensaje de ventana.
 
 Para que el control desencadenar eventos correctamente, la clase del control debe asignar cada evento del control a una función miembro que se debe llamar cuando se produce el evento relacionado. Este mecanismo de asignación (denominado un mapa de eventos) centraliza la información sobre el evento y permite que Visual Studio fácilmente tener acceso y manipular los eventos del control. Este mapa de eventos se declara mediante la siguiente macro, ubicada en el encabezado (. H) archivo de de la declaración de clase de control:
 

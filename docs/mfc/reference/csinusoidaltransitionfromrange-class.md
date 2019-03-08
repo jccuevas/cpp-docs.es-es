@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: 20e910dfa34e90af2c8a2765947ad85a2465c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283818"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Clase CSinusoidalTransitionFromRange
 
@@ -120,10 +120,10 @@ El valor de la variable de animación en un Valle de la onda sinusoidal.
 *dblMaximumValue*<br/>
 El valor de la variable de animación en un pico de la onda sinusoidal.
 
-*Período*<br/>
+*period*<br/>
 El período de oscilación de la onda sinusoidal en segundos.
 
-*pendiente*<br/>
+*slope*<br/>
 La pendiente del principio de la transición.
 
 ##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue

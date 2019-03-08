@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533879"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273067"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox (clase)
 
@@ -80,13 +80,13 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cuad
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON_** notificación **(**`id`, `memberFxn` **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 donde `id` especifica el identificador de ventana secundaria del control que envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
 Prototipo de función del elemento primario es el siguiente:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Hay solo una entrada de mapa de mensajes que pertenecen específicamente a `CCheckListBox` (pero Vea también las entradas de mapa de mensajes para [CListBox](../../mfc/reference/clistbox-class.md)):
 
@@ -145,8 +145,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Especifica el estilo del cuadro de lista de comprobación. El estilo debe ser LBS_HASSTRINGS y LBS_OWNERDRAWFIXED (todos los elementos de la lista tienen la misma altura) o LBS_OWNERDRAWVARIABLE (elementos de la lista son de diferentes alturas). Este estilo se puede combinar con otras [estilos de cuadro de lista](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) excepto LBS_USETABSTOPS.
 
-*Rect*<br/>
-Especifica la posición y tamaño del cuadro de lista de comprobación. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](../../mfc/reference/rect-structure1.md) estructura.
+*rect*<br/>
+Especifica la posición y tamaño del cuadro de lista de comprobación. Puede ser un [CRect](../../atl-mfc-shared/reference/crect-class.md) objeto o un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.
 
 *pParentWnd*<br/>
 Especifica la ventana del elemento primario del cuadro de lista de comprobación (normalmente un `CDialog` objeto). No debe ser NULL.
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpDrawItemStruct*<br/>
-Un puntero largo a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estructura que contiene información sobre el tipo de dibujo necesaria.
+Un puntero largo a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estructura que contiene información sobre el tipo de dibujo necesaria.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -220,7 +220,7 @@ void Enable(
 *nIndex*<br/>
 Índice del elemento de cuadro de lista de comprobación para habilitarse.
 
-*bHabilitado*<br/>
+*bEnabled*<br/>
 Especifica si el elemento está habilitado o deshabilitado.
 
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpMeasureItemStruct*<br/>
-Un puntero largo a un [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) estructura.
+Un puntero largo a un [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) estructura.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -337,7 +337,7 @@ void SetCheck(
 *nIndex*<br/>
 Índice de base cero de la casilla de verificación que se encuentra en el cuadro de lista.
 
-*nCompruebe*<br/>
+*nCheck*<br/>
 El estado del botón de la casilla de verificación especificada. Consulte la sección Comentarios para los valores posibles.
 
 ### <a name="remarks"></a>Comentarios

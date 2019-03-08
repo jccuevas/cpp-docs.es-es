@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273457"
 ---
 # <a name="cdatabase-class"></a>CDatabase (clase)
 
@@ -86,16 +86,16 @@ class CDatabase : public CObject
 |[CDatabase::CanUpdate](#canupdate)|Devuelve cero si el `CDatabase` objeto es actualizable (no de solo lectura).|
 |[CDatabase::Close](#close)|Cierra la conexión de origen de datos.|
 |[CDatabase::CommitTrans](#committrans)|Se completa una transacción iniciada por `BeginTrans`. Los comandos de la transacción que modifica el origen de datos se llevan a cabo.|
-|[CDatabase:: ExecuteSQL](#executesql)|Ejecuta una instrucción SQL. Se devuelve ningún registro de datos.|
-|[CDatabase:: GetBookmarkPersistence](#getbookmarkpersistence)|Identifica las operaciones a través del cual los marcadores son persistentes en los objetos de conjunto de registros.|
-|[CDatabase:: Getconnect](#getconnect)|Devuelve la cadena de conexión ODBC utilizada para conectar el `CDatabase` objeto a un origen de datos.|
-|[CDatabase:: GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifica el efecto de confirmar una transacción en un objeto de conjunto de registros abierto.|
-|[CDatabase:: GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifica el efecto de revertir una transacción en un objeto de conjunto de registros abierto.|
+|[CDatabase::ExecuteSQL](#executesql)|Ejecuta una instrucción SQL. Se devuelve ningún registro de datos.|
+|[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Identifica las operaciones a través del cual los marcadores son persistentes en los objetos de conjunto de registros.|
+|[CDatabase::GetConnect](#getconnect)|Devuelve la cadena de conexión ODBC utilizada para conectar el `CDatabase` objeto a un origen de datos.|
+|[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifica el efecto de confirmar una transacción en un objeto de conjunto de registros abierto.|
+|[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifica el efecto de revertir una transacción en un objeto de conjunto de registros abierto.|
 |[CDatabase::GetDatabaseName](#getdatabasename)|Devuelve el nombre de la base de datos actualmente en uso.|
 |[CDatabase::IsOpen](#isopen)|Devuelve cero si el `CDatabase` objeto actualmente está conectado a un origen de datos.|
 |[CDatabase::OnSetOptions](#onsetoptions)|Lo llama el marco de trabajo para establecer las opciones de conexión estándar. La implementación predeterminada establece el valor de tiempo de espera de consulta. Puede establecer estas opciones antes de tiempo mediante una llamada a `SetQueryTimeout`.|
-|[CDatabase:: Open](#open)|Establece una conexión a un origen de datos (a través de un controlador ODBC).|
-|[CDatabase:: OpenEx](#openex)|Establece una conexión a un origen de datos (a través de un controlador ODBC).|
+|[CDatabase::Open](#open)|Establece una conexión a un origen de datos (a través de un controlador ODBC).|
+|[CDatabase::OpenEx](#openex)|Establece una conexión a un origen de datos (a través de un controlador ODBC).|
 |[CDatabase::Rollback](#rollback)|Invierte los cambios realizados durante la transacción actual. Devuelve el origen de datos a su estado anterior, tal como se define en el `BeginTrans` llamada, sin modificaciones.|
 |[CDatabase::SetLoginTimeout](#setlogintimeout)|Establece el número de segundos tras el cual un intento de conexión del origen de datos agotará el tiempo.|
 |[CDatabase::SetQueryTimeout](#setquerytimeout)|Establece el número de segundos después de la base de datos de operaciones de consulta agotará el tiempo. Afecta al conjunto de registros posterior `Open`, `AddNew`, `Edit`, y `Delete` llamadas.|
@@ -104,18 +104,18 @@ class CDatabase : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDatabase:: M_hdbc](#m_hdbc)|Identificador de conexión de Open Database Connectivity (ODBC) para un origen de datos. Tipo *HDBC*.|
+|[CDatabase::m_hdbc](#m_hdbc)|Identificador de conexión de Open Database Connectivity (ODBC) para un origen de datos. Tipo *HDBC*.|
 
 ## <a name="remarks"></a>Comentarios
 
 Un origen de datos es una instancia específica de datos hospedados por algún sistema de administración de base de datos (DBMS). Algunos ejemplos son Microsoft SQL Server, Microsoft Access, Borland dBASE y xBASE. Puede tener uno o varios `CDatabase` objetos activos a la vez en la aplicación.
 
 > [!NOTE]
->  Si está trabajando con las clases de objetos de acceso a datos (DAO) en lugar de las clases de Open Database Connectivity (ODBC), utilice la clase [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) en su lugar. Para obtener más información, vea el artículo [información general: programación de base de datos](../../data/data-access-programming-mfc-atl.md).
+>  Si está trabajando con las clases de objetos de acceso a datos (DAO) en lugar de las clases de Open Database Connectivity (ODBC), utilice la clase [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) en su lugar. Para obtener más información, vea el artículo [información general: Programación de base de datos](../../data/data-access-programming-mfc-atl.md).
 
 Para usar `CDatabase`, construir un `CDatabase` objeto y llamar a su `OpenEx` función miembro. Esto abre una conexión. Cuando se construye a continuación, `CRecordset` objetos para operar en el origen de datos conectado, pase al constructor de conjunto de registros de un puntero a su `CDatabase` objeto. Cuando termine de utilizar la conexión, llame a la `Close` miembro de función y destruir el `CDatabase` objeto. `Close` cierra los conjuntos de registros que no se ha cerrado previamente.
 
-Para obtener más información acerca de `CDatabase`, consulte los artículos [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md) y [información general: programación de base de datos](../../data/data-access-programming-mfc-atl.md).
+Para obtener más información acerca de `CDatabase`, consulte los artículos [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md) y [información general: Programación de base de datos](../../data/data-access-programming-mfc-atl.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -146,7 +146,7 @@ Una transacción consta de uno o más llamadas a la `AddNew`, `Edit`, `Delete`, 
 > [!CAUTION]
 >  Según el controlador ODBC, abrir un conjunto de registros antes de llamar a `BeginTrans` puede causar problemas al llamar a `Rollback`. Debe comprobar el controlador específico que está utilizando. Por ejemplo, cuando se usa el controlador de Microsoft Access que se incluye en el módulo de controlador de Microsoft ODBC Desktop 3.0, debe tener en cuenta para el requisito del motor de base de datos Jet que no debería comenzar una transacción en cualquier base de datos con un cursor abierto. En las clases de base de datos MFC, un cursor abierto significa una apertura `CRecordset` objeto. Para obtener más información, consulte [Nota técnica 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).
 
-`BeginTrans` También se pueden bloquear los registros de datos en el servidor, dependiendo de la simultaneidad solicitada y las capacidades del origen de datos. Para obtener información acerca de los datos de bloqueos, consulte el artículo [conjunto de registros: bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+`BeginTrans` También se pueden bloquear los registros de datos en el servidor, dependiendo de la simultaneidad solicitada y las capacidades del origen de datos. Para obtener información acerca de los datos de bloqueos, consulte el artículo [conjunto de registros: Bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
 
 Las transacciones definidas por el usuario se explican en el artículo [transacción (ODBC)](../../data/odbc/transaction-odbc.md).
 
@@ -161,7 +161,7 @@ Para obtener más información acerca de las transacciones, vea el artículo [tr
 
 ### <a name="example"></a>Ejemplo
 
-  Consulte el artículo [transacción: realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Consulte el artículo [transacciones: Realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -173,7 +173,7 @@ virtual void BindParameters(HSTMT hstmt);
 
 ### <a name="parameters"></a>Parámetros
 
-*HStmt*<br/>
+*hstmt*<br/>
 El identificador de instrucción ODBC para el que desea enlazar parámetros.
 
 ### <a name="remarks"></a>Comentarios
@@ -288,9 +288,9 @@ Para obtener más información acerca de las transacciones, vea el artículo [tr
 
 ### <a name="example"></a>Ejemplo
 
-  Consulte el artículo [transacción: realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Consulte el artículo [transacciones: Realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
-##  <a name="executesql"></a>  CDatabase:: ExecuteSQL
+##  <a name="executesql"></a>  CDatabase::ExecuteSQL
 
 Llame a esta función miembro cuando se necesita ejecutar un comando SQL directamente.
 
@@ -313,7 +313,7 @@ La mayoría de los comandos para un origen de datos se emite a través de los ob
 
 [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]
 
-##  <a name="getbookmarkpersistence"></a>  CDatabase:: GetBookmarkPersistence
+##  <a name="getbookmarkpersistence"></a>  CDatabase::GetBookmarkPersistence
 
 Llame a esta función miembro para averiguar la persistencia de los marcadores en un objeto de conjunto de registros tras determinadas operaciones.
 
@@ -341,9 +341,9 @@ En la siguiente tabla se enumeran los valores de máscara de bits que se pueden 
 |SQL_BP_UPDATE|El marcador de una fila es válido tras una `Update` operación en esa fila.|
 |SQL_BP_OTHER_HSTMT|Los marcadores asociados con un objeto de conjunto de registros son válidos en un segundo conjunto de registros.|
 
-Para obtener más información acerca de este valor devuelto, vea la función de API de ODBC `SQLGetInfo` en el SDK de Windows. Para obtener más información acerca de los marcadores, vea el artículo [conjunto de registros: marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Para obtener más información acerca de este valor devuelto, vea la función de API de ODBC `SQLGetInfo` en el SDK de Windows. Para obtener más información acerca de los marcadores, vea el artículo [conjunto de registros: Marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
-##  <a name="getconnect"></a>  CDatabase:: Getconnect
+##  <a name="getconnect"></a>  CDatabase::GetConnect
 
 Llame a esta función miembro para recuperar la cadena de conexión utilizada durante la llamada a `OpenEx` o a `Open` que conectó el objeto `CDatabase` a un origen de datos.
 
@@ -359,7 +359,7 @@ Un **const**[CString](../../atl-mfc-shared/reference/cstringt-class.md) que cont
 
 Consulte [CDatabase:: Open](#open) para obtener una descripción de cómo se crea la cadena de conexión.
 
-##  <a name="getcursorcommitbehavior"></a>  CDatabase:: GetCursorCommitBehavior
+##  <a name="getcursorcommitbehavior"></a>  CDatabase::GetCursorCommitBehavior
 
 Llame a esta función miembro para determinar cómo un [CommitTrans](#committrans) operación afecta a los cursores en los objetos de conjunto de registros abierto.
 
@@ -383,7 +383,7 @@ La tabla siguiente enumeran los posibles valores devueltos para `GetCursorCommit
 
 Para obtener más información acerca de este valor devuelto, vea la función de API de ODBC `SQLGetInfo` en el SDK de Windows. Para obtener más información acerca de las transacciones, vea el artículo [transacción (ODBC)](../../data/odbc/transaction-odbc.md).
 
-##  <a name="getcursorrollbackbehavior"></a>  CDatabase:: GetCursorRollbackBehavior
+##  <a name="getcursorrollbackbehavior"></a>  CDatabase::GetCursorRollbackBehavior
 
 Llame a esta función miembro para determinar cómo un [reversión](#rollback) operación afecta a los cursores en los objetos de conjunto de registros abierto.
 
@@ -437,7 +437,7 @@ BOOL IsOpen() const;
 
 Distinto de cero si el `CDatabase` objeto actualmente está conectado; en caso contrario, 0.
 
-##  <a name="m_hdbc"></a>  CDatabase:: M_hdbc
+##  <a name="m_hdbc"></a>  CDatabase::m_hdbc
 
 Contiene un identificador público de una conexión de origen de datos ODBC, un "identificador de conexión".
 
@@ -461,7 +461,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 ### <a name="parameters"></a>Parámetros
 
-*HStmt*<br/>
+*hstmt*<br/>
 El identificador de instrucción ODBC para el que se establecen las opciones.
 
 ### <a name="remarks"></a>Comentarios
@@ -477,7 +477,7 @@ No es necesario invalidar `OnSetOptions` para cambiar el valor de tiempo de espe
 
 Invalidar `OnSetOptions` si desea establecer opciones adicionales. La invalidación debe llamar a la clase base `OnSetOptions` antes o después de llamar a la función de la API de ODBC `SQLSetStmtOption`. Siga el método que se muestra en la implementación de predeterminada de .NET framework de `OnSetOptions`.
 
-##  <a name="open"></a>  CDatabase:: Open
+##  <a name="open"></a>  CDatabase::Open
 
 Llame a esta función miembro para inicializar un recientemente construido `CDatabase` objeto.
 
@@ -530,7 +530,7 @@ Es posible que un intento de conexión en tiempo de espera si, por ejemplo, el h
 
 [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]
 
-##  <a name="openex"></a>  CDatabase:: OpenEx
+##  <a name="openex"></a>  CDatabase::OpenEx
 
 Llame a esta función miembro para inicializar un recientemente construido `CDatabase` objeto.
 
@@ -600,7 +600,7 @@ Después de una operación de reversión, el registro que era el actual antes de
 
 ### <a name="example"></a>Ejemplo
 
-  Consulte el artículo [transacción: realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  Consulte el artículo [transacciones: Realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 

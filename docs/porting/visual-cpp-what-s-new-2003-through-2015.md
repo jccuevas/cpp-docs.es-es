@@ -2,12 +2,12 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499624"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894359"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -260,7 +260,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
    Supongamos, por ejemplo, que el código define tanto **placement new** como **placement delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
    ahora se ajustan mejor al estándar. Las versiones anteriores del compilador generaban un constructor y destructor explícitos para uniones anónimas. Estos se eliminan en Visual Studio 2015.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    El código anterior genera el error siguiente en Visual Studio 2015:
@@ -328,14 +328,14 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -586,7 +586,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Además, aunque el compilador no ofrece un diagnóstico específico, se considera que el operador en línea nuevo está mal formado.
 
 - **Llamada a "operator *type*()" (conversión definida por el usuario) en tipos que no sean de clase** Las versiones anteriores del compilador permitieron que se llamara a "operator *type*()" en tipos que no son de clase mientras que se les ignora en modo silencioso. Este comportamiento anterior creó un riesgo de generación de código incorrecto silencioso, lo que produjo un comportamiento impredecible en tiempo de ejecución. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2228 en su lugar.
 
@@ -648,7 +648,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     error C2668: 'function' : ambiguous call to overloaded function.
    ```
 
-   Ejemplo 1: llamada ambigua a una función sobrecargada (antes)
+   Ejemplo 1: llamada ambigua a una función sobrecargada (antes)
 
    ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)
@@ -1673,10 +1673,10 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 - Compatibilidad con enumeraciones de ámbito. Ahora se admite la clave enum en la clase enum de C++. El código siguiente muestra cómo esta clave enum difiere del comportamiento anterior de enum.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Compatibilidad con el desarrollo de aplicaciones de Windows Runtime
@@ -1836,7 +1836,7 @@ Un trígrafo se compone de dos signos de interrogación consecutivos (??) seguid
 
 **Reconocimiento de valores altos de PPP.** De forma predeterminada, las aplicaciones MFC ahora son compatibles con valores altos de PPP. Si una aplicación es compatible con valores altos de PPP (muchos puntos por pulgada), el sistema operativo puede escalar ventanas, texto y otros elementos de la interfaz de usuario a la resolución de pantalla actual. Esto significa que es más probable que una imagen escalada se distribuya correctamente y no se muestre recortada o pixelada.
 
-**Administrador de reinicio.** El administrador de reinicio guarda documentos automáticamente y reinicia la aplicación si se ha cerrado o se reinicia de forma inesperada. Por ejemplo, puede usar el administrador de reinicio para iniciar la aplicación después de que se cierre por una actualización automática. Para más información sobre cómo configurar la aplicación para usar el administrador de reinicio, vea **Cómo: Agregar compatibilidad con el Administrador de reinicio**.
+**Administrador de reinicio.** El administrador de reinicio guarda documentos automáticamente y reinicia la aplicación si se ha cerrado o se reinicia de forma inesperada. Por ejemplo, puede usar el administrador de reinicio para iniciar la aplicación después de que se cierre por una actualización automática. Para obtener más información sobre cómo configurar la aplicación para usar el Administrador de reinicio, vea **Procedimiento: Agregar compatibilidad con el Administrador de reinicio**.
 
 **CTaskDialog.** La clase `CTaskDialog` se puede usar en lugar del cuadro de mensaje `AfxMessageBox` estándar. La clase `CTaskDialog` muestra y reúne más información que el cuadro de mensaje estándar.
 
@@ -2197,7 +2197,7 @@ El compilador tiene cambios importantes en esta versión.
 
 - Información sobre cómo ejecutar una aplicación de Extensiones administradas para C++ generada con el compilador de la versión actual en una versión anterior del entorno de ejecución.
 - Preguntas más frecuentes sobre las Extensiones administradas para C++.
-- Se ha agregado un tutorial que muestra cómo trasladar una aplicación nativa existente para usar las Extensiones administradas para C++: Walkthrough: Porting an Existing Native C++ Application to Interoperate with .NET Framework Components (Tutorial: Trasladar una aplicación de C++ nativa existente para que interactúe con componentes de .NET Framework).
+- Se ha agregado un tutorial en el que se muestra cómo portar una aplicación nativa existente para utilizar las Extensiones administradas para C++: Tutorial: Portabilidad de una aplicación C++ nativa existente para interoperar con componentes de .NET Framework.
 - Ahora puede crear un delegado en un método de un tipo de valor.
 - La conformidad del compilador con el estándar de C++ se ha mejorado significativamente para Visual C++ .NET 2003.
 - Se ha agregado la opción del compilador `/arch`.

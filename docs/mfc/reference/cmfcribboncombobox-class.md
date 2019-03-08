@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 5c9e6c43c4e87508dc9ab66976309f80cdf09adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541432"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294453"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox (clase)
 
@@ -185,7 +185,7 @@ BOOL DeleteItem(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero del elemento que se va a eliminar.
 
 *dwData*<br/>
@@ -210,7 +210,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] True para habilitar el cambio de tamaño; FALSE para deshabilitar el cambio de tamaño.
 
 ### <a name="remarks"></a>Comentarios
@@ -307,7 +307,7 @@ LPCTSTR GetItem(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -326,7 +326,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -403,7 +403,7 @@ BOOL SelectItem(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento en el cuadro de lista.
 
 *dwData*<br/>

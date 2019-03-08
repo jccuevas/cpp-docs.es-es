@@ -1,6 +1,6 @@
 ---
 title: funciones de mapa de bits grises o interpoladas
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290786"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>funciones de mapa de bits grises o interpoladas
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490901"
 
 MFC proporciona dos funciones para dar a un mapa de bits la apariencia de un control deshabilitado.
 
-![Comparación de versiones de icono grises y originales](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparación de versiones de icono grises y originales](../../mfc/reference/media/vcgraybitmap.gif "comparación de versiones de icono grises y originales")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC proporciona dos funciones para dar a un mapa de bits la apariencia de un con
 
 MFC también proporciona dos funciones para reemplazar el fondo de un mapa de bits por un patrón interpolado.
 
-![Comparación de versiones de icono interpoladas y originales](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Comparación de versiones de icono interpoladas y originales](../../mfc/reference/media/vcditheredbitmap.gif "comparación de versiones de icono interpoladas y originales")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ Nuevo color de fondo (normalmente gris, como COLOR_MENU).
 
 Un mapa de bits dibujado con `AfxDrawGrayBitmap` tendrá el aspecto de un control desactivado.
 
-![Comparación de versiones de icono grises y originales](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparación de versiones de icono grises y originales](../../mfc/reference/media/vcgraybitmap.gif "comparación de versiones de icono grises y originales")
 
 ### <a name="example"></a>Ejemplo
 
@@ -110,7 +110,7 @@ Nuevo color de fondo (normalmente gris, como COLOR_MENU).
 
 Un mapa de bits copiado con `AfxGetGrayBitmap` tendrá el aspecto de un control desactivado.
 
-![Comparación de versiones de icono grises y originales](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![Comparación de versiones de icono grises y originales](../../mfc/reference/media/vcgraybitmap.gif "comparación de versiones de icono grises y originales")
 
 ### <a name="example"></a>Ejemplo
 
@@ -158,7 +158,7 @@ El otro interpolación color, color gris claro normalmente (COLOR_MENU).
 
 El mapa de bits de origen se dibuja en el controlador de dominio de destino con dos colores (*cr1* y *cr2*) reemplazando el fondo del mapa de bits de trama a cuadros. El fondo del mapa de bits de origen se define como todos los píxeles que coinciden con el color del píxel en la esquina superior izquierda del mapa de bits y de sus píxeles en blanco.
 
-![Comparación de versiones de icono interpoladas y originales](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![Comparación de versiones de icono interpoladas y originales](../../mfc/reference/media/vcditheredbitmap.gif "comparación de versiones de icono interpoladas y originales")
 
 ### <a name="example"></a>Ejemplo
 

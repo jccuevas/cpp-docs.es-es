@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MAX_ENV constant
 - _MAX_ENV constant
 ms.assetid: 66f0683e-6132-4297-b99b-6940534898b5
-ms.openlocfilehash: 781e7fbf5b6fdf042aa6664544e0d72d617775c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9035ee0dfa660b3c6eaa3fdac3ce5167312ad9e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575466"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220015"
 ---
 # <a name="maxenv"></a>_MAX_ENV
 
@@ -22,9 +22,7 @@ La longitud máxima permitida de la cadena de una variable de entorno.
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <stdio.h>
-
 ```
 
 ## <a name="see-also"></a>Vea también

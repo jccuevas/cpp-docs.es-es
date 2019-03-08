@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264136"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite (clase)
 
@@ -316,7 +316,7 @@ virtual HRESULT CreateControl(
 *pWndCtrl*<br/>
 Un puntero al objeto window que representa el control.
 
-*CLSID*<br/>
+*clsid*<br/>
 El identificador de clase única del control.
 
 *lpszWindowName*<br/>
@@ -325,7 +325,7 @@ Un puntero al texto que se mostrará en el control. Establece el valor de propie
 *dwStyle*<br/>
 Estilos de Windows. Los estilos disponibles aparecen en la **comentarios** sección.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control. Puede ser un `CRect` objeto o un `RECT` estructura.
 
 *nID*<br/>
@@ -443,7 +443,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si se debe habilitar o deshabilitar la ventana: TRUE si la entrada de ventana está habilitada, en caso contrario, FALSE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1023,7 +1023,7 @@ void SetDefaultButton(BOOL bDefault);
 
 ### <a name="parameters"></a>Parámetros
 
-*bNivel predeterminado*<br/>
+*bDefault*<br/>
 Distinto de cero si el control deben convertirse en el botón predeterminado; en caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Parámetros
 
 *lpmsg*<br/>
-Un puntero a un [estructura MSG](../../mfc/reference/msg-structure1.md). Esta estructura contiene el mensaje de Windows desencadenar el `SetFocus` solicitud para el control contenido en el sitio del control actual.
+Un puntero a un [estructura MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Esta estructura contiene el mensaje de Windows desencadenar el `SetFocus` solicitud para el control contenido en el sitio del control actual.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1148,10 +1148,10 @@ La nueva posición del lado izquierdo de la ventana.
 *y*<br/>
 La nueva posición de la parte superior de la ventana.
 
-*CX*<br/>
+*cx*<br/>
 El nuevo ancho de la ventana
 
-*CY*<br/>
+*cy*<br/>
 El nuevo alto de la ventana.
 
 *nFlags*<br/>

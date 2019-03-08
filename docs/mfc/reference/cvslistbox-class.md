@@ -1,6 +1,6 @@
 ---
 title: CVSListBox (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301525"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox (clase)
 
@@ -81,7 +81,7 @@ La `CVSListBox` clase proporciona un conjunto de botones de edición que permite
 
 La siguiente es una imagen del control de lista modificable. La segunda entrada de lista, que se titula "Item2", está seleccionada para su edición.
 
-![Control CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![Control CVSListBox](../../mfc/reference/media/cvslistbox.png "control CVSListBox")
 
 Si utiliza el editor de recursos para agregar un control de lista modificable, tenga en cuenta que el **cuadro de herramientas** panel del editor no proporciona un control de lista modificable predefinido. En su lugar, agregue un control estático como el **cuadro grupo** control. El marco de trabajo usa el control estático como un marcador de posición para especificar el tamaño y posición del control de lista modificable.
 
@@ -126,7 +126,7 @@ virtual int AddItem(
 *dwData*<br/>
 [in] Un valor de 32 bits específicos de la aplicación que está asociado a la cadena. El valor predeterminado es 0.
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de la posición que va a contener la cadena. Si el *iÍndice* parámetro es -1, la cadena se agrega al final de la lista. El valor predeterminado es -1.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -159,7 +159,7 @@ virtual BOOL EditItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -196,7 +196,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -217,7 +217,7 @@ virtual CString GetItemText(int iIndex) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -266,7 +266,7 @@ virtual BOOL RemoveItem(int iIndex);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -308,7 +308,7 @@ virtual void SetItemData(
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 [in] Índice de base cero de un elemento de control de lista modificable.
 
 *dwData*<br/>

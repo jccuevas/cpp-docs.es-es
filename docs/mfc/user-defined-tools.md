@@ -1,15 +1,15 @@
 ---
 title: Herramientas definidas por el usuario
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607082"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269713"
 ---
 # <a name="user-defined-tools"></a>Herramientas definidas por el usuario
 
@@ -17,7 +17,8 @@ MFC admite herramientas definidas por el usuario. Una herramienta definido por e
 
 Si habilitó la compatibilidad con herramientas definidas por el usuario, el cuadro de diálogo de personalización incluye automáticamente el **herramientas** ficha. La siguiente ilustración muestra el **herramientas** página.
 
-![Pestaña herramientas en el cuadro de diálogo Personalizar](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab") ficha de herramientas del cuadro de diálogo de personalización
+![Pestaña herramientas en el cuadro de diálogo Personalizar](../mfc/media/custdialogboxtoolstab.png "ficha Herramientas en el cuadro de diálogo Personalizar") <br/>
+Ficha de herramientas del cuadro de diálogo de personalización
 
 ## <a name="enabling-user-defined-tools-support"></a>Compatibilidad con herramientas de habilitación definido por el usuario
 
@@ -57,4 +58,3 @@ Si desea predefinir algunas herramientas en el inicio de la aplicación, debe in
 [CUserTool (clase)](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager (clase)](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx (clase)](../mfc/reference/cwinappex-class.md)
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87fdceea4ac71fe4bf0a53d7ae8e473bc97a01d7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551715"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416753"
 ---
 # <a name="base-base-address"></a>/BASE (Dirección base)
 
@@ -33,7 +33,7 @@ Especifica la dirección base para un programa.
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ BASE:**{*dirección*[**,**<em>tamaño</em>] | **\@** <em>filename</em>**,**<em>clave</em>}
+> **/BASE:**{*address*[**,**<em>size</em>] | **\@**<em>filename</em>**,**<em>key</em>}
 
 ## <a name="remarks"></a>Comentarios
 
@@ -46,7 +46,7 @@ El enlazador emite un error si *dirección* no es un múltiplo de 64 K. Opcional
 
 En la línea de comandos, otra manera de especificar la dirección base es mediante un archivo de respuesta de la dirección base. Un archivo de respuesta de la dirección base es un archivo de texto que contiene las direcciones base y los tamaños opcionales de todos los archivos DLL que utilizará el programa y una clave de texto única para cada dirección base. Para especificar una dirección base utilizando un archivo de respuesta, use una arroba (**\@**) seguido del nombre del archivo de respuesta, *filename*, seguido por una coma, a continuación, el *clave*valor para la dirección base utilizar en el archivo. El vinculador busca *filename* en la ruta especificada, o si no se especifica ninguna ruta de acceso, en los directorios especificados en la variable de entorno LIB. Cada línea en *filename* representa una DLL y tiene la siguiente sintaxis:
 
-> *clave* *dirección* [*tamaño*] **;** *comentario*
+> *key* *address* [*size*] **;** *comment*
 
 El *clave* es una cadena de caracteres alfanuméricos y no distingue mayúsculas de minúsculas. Suele ser el nombre de un archivo DLL, pero no es necesario que sea. El *clave* va seguido de una base de *dirección* en notación de lenguaje C, hexadecimal o decimal y un máximo opcional *tamaño*. Los tres argumentos están separados por espacios o tabulaciones. El enlazador emite una advertencia si especificado *tamaño* es menor que el espacio de direcciones virtuales requerido por el programa. Un *comentario* especificado por un punto y coma (**;**) y puede estar en la misma o una línea independiente. El vinculador omite todo el texto desde el punto y coma al final de la línea. En este ejemplo se muestra parte de este tipo de archivo:
 

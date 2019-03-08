@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-ms.openlocfilehash: 95fc66ba55734c415cb41151cdc9b83d1b154898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16aa707792cc1289ced380e54abef3f15289e7cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274562"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog (clase)
 
@@ -43,7 +43,7 @@ class CPaneDialog : public CDockablePane
 |Name|Descripción|
 |----------|-----------------|
 |[CPaneDialog::Create](#create)|Crea un cuadro de diálogo acoplable y lo adjunta a un `CPaneDialog` objeto.|
-|`CPaneDialog::CreateObject`|Usado por el marco para crear una instancia dinámica de este tipo de clase.|
+|`CPaneDialog::CreateObject`|Usado por el marco de trabajo para crear una instancia dinámica de este tipo de clase.|
 |`CPaneDialog::GetThisClass`|Usa el marco de trabajo para obtener un puntero a la [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objeto que está asociado con este tipo de clase.|
 |[CPaneDialog::HandleInitDialog](#handleinitdialog)|Controla el [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) mensaje. (Redefine `CBasePane::HandleInitDialog`.)|
 |`CPaneDialog::OnEraseBkgnd`|Controla el [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) mensaje. (Redefine [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|
@@ -208,4 +208,3 @@ Este método admite la [COccManager](../../mfc/reference/coccmanager-class.md) (
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
 [Estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles)
-

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297884"
 ---
 # <a name="cfontholder-class"></a>CFontHolder (clase)
 
@@ -74,7 +74,7 @@ class CFontHolder
 
 `CFontHolder` no tiene una clase base.
 
-Utilice esta clase para implementar las propiedades de fuente personalizada para el control. Para obtener información sobre la creación de estas propiedades, vea el artículo [controles ActiveX: usar fuentes](../../mfc/mfc-activex-controls-using-fonts.md).
+Utilice esta clase para implementar las propiedades de fuente personalizada para el control. Para obtener información sobre la creación de estas propiedades, vea el artículo [controles ActiveX: Usar fuentes](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

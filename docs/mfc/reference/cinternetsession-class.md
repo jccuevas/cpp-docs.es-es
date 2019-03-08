@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261302"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession (clase)
 
@@ -62,17 +62,17 @@ class CInternetSession : public CObject
 |Name|Descripción|
 |----------|-----------------|
 |[CInternetSession::Close](#close)|Cierra la conexión a Internet cuando se finaliza la sesión de Internet.|
-|[CInternetSession:: EnableStatusCallback](#enablestatuscallback)|Establece una rutina de devolución de llamada de estado.|
+|[CInternetSession::EnableStatusCallback](#enablestatuscallback)|Establece una rutina de devolución de llamada de estado.|
 |[CInternetSession::GetContext](#getcontext)|Cierra la conexión a Internet cuando se finaliza la sesión de Internet.|
 |[CInternetSession::GetCookie](#getcookie)|Devuelve las cookies para la dirección URL especificada y todos su elemento primario de direcciones URL.|
 |[CInternetSession::GetCookieLength](#getcookielength)|Recupera la variable que especifica la longitud de la cookie almacenada en el búfer.|
-|[CInternetSession:: GetFtpConnection](#getftpconnection)|Se abre una sesión de FTP con un servidor. Inicia sesión el usuario.|
-|[CInternetSession:: GetGopherConnection](#getgopherconnection)|Se abre en un servidor gopher para una aplicación que está intentando abrir una conexión.|
-|[CInternetSession:: GetHttpConnection](#gethttpconnection)|Se abre en un servidor HTTP para una aplicación que está intentando abrir una conexión.|
-|[CInternetSession:: OnStatusCallback](#onstatuscallback)|Actualiza el estado de una operación cuando está habilitada la devolución de llamada de estado.|
-|[CInternetSession:: OpenURL](#openurl)|Analiza y se abre una dirección URL.|
+|[CInternetSession::GetFtpConnection](#getftpconnection)|Se abre una sesión de FTP con un servidor. Inicia sesión el usuario.|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|Se abre en un servidor gopher para una aplicación que está intentando abrir una conexión.|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|Se abre en un servidor HTTP para una aplicación que está intentando abrir una conexión.|
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|Actualiza el estado de una operación cuando está habilitada la devolución de llamada de estado.|
+|[CInternetSession::OpenURL](#openurl)|Analiza y se abre una dirección URL.|
 |[CInternetSession::SetCookie](#setcookie)|Establece una cookie para la dirección URL especificada.|
-|[CInternetSession:: SetOption](#setoption)|Establece las opciones de la sesión de Internet.|
+|[CInternetSession::SetOption](#setoption)|Establece las opciones de la sesión de Internet.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -98,10 +98,10 @@ Si abre una dirección URL en un servidor de Internet mediante `OpenURL`, puede 
 
 `CInternetSession` las funciones miembro [SetCookie](#setcookie), [GetCookie](#getcookie), y [GetCookieLength](#getcookielength) proporcionan los medios para administrar una base de datos de la cookie de Win32, a través del cual mantienen servidores y las secuencias de comandos información de estado acerca de la estación de trabajo cliente.
 
-Para obtener más información sobre tareas básicas de programación de Internet, consulte el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md). Para obtener información general sobre el uso de las clases WinInet de MFC, vea el artículo [Internet programar con WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Para obtener más información sobre tareas básicas de programación de Internet, consulte el artículo [Internet primeros pasos: WinInet](../../mfc/wininet-basics.md). Para obtener información general sobre el uso de las clases WinInet de MFC, vea el artículo [Internet programar con WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` se producirá un [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) para tipos de servicio no admitido. Actualmente se admiten los siguientes tipos de servicio: archivo, HTTP, gopher y FTP.
+> `CInternetSession` se producirá un [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) para tipos de servicio no admitido. Actualmente se admiten los siguientes tipos de servicio: FTP, HTTP, gopher y archivo.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -180,7 +180,7 @@ virtual void Close();
 
 Vea el ejemplo de [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
-## <a name="enablestatuscallback"></a>  CInternetSession:: EnableStatusCallback
+## <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback
 
 Llame a esta función miembro para habilitar la devolución de llamada de estado.
 
@@ -190,7 +190,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si la devolución de llamada está habilitada o deshabilitada. El valor predeterminado es TRUE.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -223,7 +223,7 @@ El contexto definido por la aplicación identificador.
 
 [OnStatusCallback](#onstatuscallback) usa el identificador de contexto devuelto por `GetContext` para informar del estado de una aplicación determinada. Por ejemplo, cuando un usuario activa una solicitud de Internet que implica la devolución de información de estado, la devolución de llamada de estado usa el identificador de contexto para informar del estado en esa solicitud determinada. Si el usuario activa independiente dos solicitudes de Internet que ambos involucran devuelve información de estado, `OnStatusCallback` usa los identificadores de contexto para devolver el estado de sus solicitudes correspondientes. Por lo tanto, el identificador de contexto se utiliza para todas las operaciones de devolución de llamada de estado y está asociado con la sesión hasta que finaliza la sesión.
 
-Para obtener más información acerca de las operaciones asincrónicas, vea el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md).
+Para obtener más información acerca de las operaciones asincrónicas, vea el artículo [Internet primeros pasos: WinInet](../../mfc/wininet-basics.md).
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
@@ -294,7 +294,7 @@ Un valor DWORD que indica la longitud de la cookie, se almacena en el búfer. Ce
 
 Este valor se usa por [GetCookie](#getcookie).
 
-## <a name="getftpconnection"></a>  CInternetSession:: GetFtpConnection
+## <a name="getftpconnection"></a>  CInternetSession::GetFtpConnection
 
 Llame a esta función miembro para establecer una conexión FTP y obtener un puntero a un `CFtpConnection` objeto.
 
@@ -318,12 +318,12 @@ Puntero a una cadena terminada en null que especifica el nombre del usuario para
 *pstrPassword*<br/>
 Un puntero a una cadena terminada en null que especifica la contraseña que se utilizará para iniciar sesión. Si ambos *pstrPassword* y *pstrUserName* son NULL, la contraseña anónima predeterminada es el nombre de correo electrónico del usuario. Si *pstrPassword* es NULL (o una cadena vacía) pero *pstrUserName* no es NULL, se utiliza una contraseña en blanco. En la tabla siguiente describe el comportamiento de las cuatro configuraciones posibles de *pstrUserName* y *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Nombre de usuario se envía al servidor FTP|Contraseña que se envían al servidor FTP|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL o ""|NULL o ""|"anónimo"|Nombre de correo electrónico del usuario|
-|Cadena no nula|NULL o ""|*pstrUserName*|" "|
-|NULL|Cadena no nula|ERROR|ERROR||
-|Cadena no nula|Cadena no nula|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | Nombre de usuario se envía al servidor FTP | Contraseña que se envían al servidor FTP |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL o ""   |   NULL o ""   |         "anónimo"         |      Nombre de correo electrónico del usuario      |
+| Cadena no nula |   NULL o ""   |       *pstrUserName*        |             " "             |
+|      NULL       | Cadena no nula |            ERROR            |            ERROR            |
+| Cadena no nula | Cadena no nula |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 Número que identifica el puerto TCP/IP que se usará en el servidor.
@@ -343,7 +343,7 @@ Un puntero a un [CFtpConnection](../../mfc/reference/cftpconnection-class.md) ob
 
 Vea el ejemplo de [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md).
 
-## <a name="getgopherconnection"></a>  CInternetSession:: GetGopherConnection
+## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
 Llame a esta función miembro para establecer una nueva conexión gopher y obtener un puntero a un `CGopherConnection` objeto.
 
@@ -377,7 +377,7 @@ Un puntero a un [CGopherConnection](../../mfc/reference/cgopherconnection-class.
 
 `GetGopherConnection` se conecta a un servidor gopher y crea y devuelve un puntero a un `CGopherConnection` objeto. No realiza ninguna operación específica en el servidor. Por ejemplo, si desea leer o escribir datos, debe realizar esas operaciones en pasos distintos. Vea las clases [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), y [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) para obtener información sobre la búsqueda de archivos, abrir archivos y leer o escribir en archivos. Para obtener información acerca de la exploración de un sitio FTP, vea la función miembro [OpenURL](#openurl). Consulte el artículo [Internet programar con WinInet](../../mfc/win32-internet-extensions-wininet.md) para conocer los pasos en la realización de tareas comunes de conexión gopher.
 
-## <a name="gethttpconnection"></a>  CInternetSession:: GetHttpConnection
+## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
 Llame a esta función miembro para establecer una conexión HTTP y obtener un puntero a un `CHttpConnection` objeto.
 
@@ -410,7 +410,7 @@ Un puntero a una cadena que contiene el nombre de usuario.
 *pstrPassword*<br/>
 Un puntero a una cadena que contiene la contraseña de acceso.
 
-*dwFlags*<br/>
+*dwflags*<br/>
 Cualquier combinación de la `INTERNET_FLAG_*` marcas. Consulte la tabla en la **comentarios** sección de [CHttpConnection:: OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) para obtener una descripción de *dwFlags* valores.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -421,7 +421,7 @@ Un puntero a un [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 
 
 `GetHttpConnection` se conecta a un servidor HTTP y crea y devuelve un puntero a un `CHttpConnection` objeto. No realiza ninguna operación específica en el servidor. Por ejemplo, si desea consultar un encabezado HTTP, debe realizar esta operación como un paso independiente. Vea las clases [CHttpConnection](../../mfc/reference/chttpconnection-class.md) y [CHttpFile](../../mfc/reference/chttpfile-class.md) para obtener información acerca de las operaciones que puede realizar mediante una conexión a un servidor HTTP. Para obtener información acerca de cómo explorar un sitio HTTP, vea la función miembro [OpenURL](#openurl). Consulte el artículo [Internet programar con WinInet](../../mfc/win32-internet-extensions-wininet.md) para conocer los pasos en la realización de tareas comunes de conexión HTTP.
 
-## <a name="onstatuscallback"></a>  CInternetSession:: OnStatusCallback
+## <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback
 
 Esta función miembro se llama el marco de trabajo para actualizar el estado cuando está habilitada la devolución de llamada de estado y una operación está pendiente.
 
@@ -457,7 +457,7 @@ El *dwInternetStatus* parámetro indica la operación se realiza y determina qu�
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Buscar la dirección IP del nombre del contenido en *lpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Encuentra correctamente la dirección IP del nombre del contenido en *lpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Conectarse a la dirección del socket ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) apunta *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Conectarse a la dirección del socket ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) apunta *lpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Conectado correctamente a la dirección de socket (SOCKADDR) apuntada *lpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Enviando la solicitud de información en el servidor. El *lpvStatusInformation* parámetro es NULL.|
 |INTERNET_STATUS_ REQUEST_SENT|La solicitud de información se envió correctamente al servidor. El *lpvStatusInformation* parámetro es NULL.|
@@ -475,9 +475,9 @@ Reemplace esta función miembro para requerir alguna acción antes de realiza un
 
 [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-Para obtener más información acerca de las operaciones asincrónicas, vea el artículo [primeros pasos de Internet: WinInet](../../mfc/wininet-basics.md).
+Para obtener más información acerca de las operaciones asincrónicas, vea el artículo [Internet primeros pasos: WinInet](../../mfc/wininet-basics.md).
 
-## <a name="openurl"></a>  CInternetSession:: OpenURL
+## <a name="openurl"></a>  CInternetSession::OpenURL
 
 Llame a este miembro de función para enviar la solicitud especificada para el servidor HTTP y permitir al cliente especificar RFC822 adicionales, MIME o encabezados HTTP que se envían junto con la solicitud.
 
@@ -529,10 +529,10 @@ El puntero que `OpenURL` devuelve depende *pstrURL*del tipo de servicio. La sigu
 
 |Tipo de dirección URL|Valores devueltos|
 |--------------|-------------|
-|File://|`CStdioFile*`|
+|file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
-|Gopher://|`CGopherFile*`|
-|FTP: / /|`CInternetFile*`|
+|gopher://|`CGopherFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -580,7 +580,7 @@ Devuelve TRUE si se realiza correctamente o falso en caso contrario. Para obtene
 
 Esta función miembro implementa el comportamiento del mensaje de Win32 [InternetSetCookie](/windows/desktop/api/wininet/nf-wininet-internetsetcookiea), tal y como se describe en el SDK de Windows.
 
-## <a name="setoption"></a>  CInternetSession:: SetOption
+## <a name="setoption"></a>  CInternetSession::SetOption
 
 Llame a esta función miembro para establecer las opciones para la sesión de Internet.
 

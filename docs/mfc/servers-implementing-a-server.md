@@ -1,18 +1,18 @@
 ---
-title: 'Servidores: Implementar un servidor'
+title: 'Servidores: Implementación de un servidor'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566766"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267568"
 ---
-# <a name="servers-implementing-a-server"></a>Servidores: Implementar un servidor
+# <a name="servers-implementing-a-server"></a>Servidores: Implementación de un servidor
 
 En este artículo se explica el código que MFC Application Wizard se crea para una aplicación de servidor de edición visual. Si no utiliza al Asistente para aplicaciones, este artículo enumeran las áreas donde debe escribir código para implementar una aplicación de servidor.
 
@@ -22,17 +22,17 @@ El código del servidor que proporciona el Asistente para la aplicación se divi
 
 - Definir recursos de servidor:
 
-   - El recurso de menú que se utiliza cuando el servidor está modificando un elemento incrustado en su propia ventana.
+  - El recurso de menú que se utiliza cuando el servidor está modificando un elemento incrustado en su propia ventana.
 
-   - Los recursos de menú y barra de herramientas usa cuando el servidor está activo en su lugar.
+  - Los recursos de menú y barra de herramientas usa cuando el servidor está activo en su lugar.
 
-   Para obtener más información acerca de estos recursos, consulte [menús y recursos: adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
+  Para obtener más información acerca de estos recursos, consulte [menús y recursos: Adiciones de servidor](../mfc/menus-and-resources-server-additions.md).
 
-- Definir una clase de elemento derivado de `COleServerItem`. Para obtener más información sobre los elementos del servidor, consulte [servidores: elementos del servidor](../mfc/servers-server-items.md).
+- Definir una clase de elemento derivado de `COleServerItem`. Para obtener más información sobre los elementos del servidor, consulte [servidores: Los elementos del servidor](../mfc/servers-server-items.md).
 
-- Cambiar la clase base de la clase de documento para `COleServerDoc`. Para obtener más información, consulte [servidores: implementar documentos de servidor](../mfc/servers-implementing-server-documents.md).
+- Cambiar la clase base de la clase de documento para `COleServerDoc`. Para obtener más información, consulte [servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md).
 
-- Definir una clase de ventana de marco deriva `COleIPFrameWnd`. Para obtener más información, consulte [servidores: implementación de Windows de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md).
+- Definir una clase de ventana de marco deriva `COleIPFrameWnd`. Para obtener más información, consulte [servidores: Implementación de Windows de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md).
 
 - Creación de una entrada para la aplicación de servidor en la base de datos de registro de Windows y registrar la nueva instancia del servidor con el sistema OLE. Para obtener información sobre este tema, consulte [registro](../mfc/registration.md).
 
@@ -46,4 +46,3 @@ Para obtener más información, consulte [COleServerItem](../mfc/reference/coles
 [Contenedores](../mfc/containers.md)<br/>
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registro](../mfc/registration.md)
-

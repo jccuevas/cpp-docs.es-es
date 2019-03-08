@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525756"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274432"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC (clase)
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |Name|Descripción|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|Contiene el [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) se usa para pintar el área de cliente.|
+|[CPaintDC::m_ps](#m_ps)|Contiene el [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) se usa para pintar el área de cliente.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -71,7 +71,7 @@ Para obtener más información sobre el uso de `CPaintDC`, consulte [contextos d
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-Construye un `CPaintDC` prepara la ventana de la aplicación para dibujar el objeto y almacena el [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) estructura en el [m_ps](#m_ps) variable miembro.
+Construye un `CPaintDC` prepara la ventana de la aplicación para dibujar el objeto y almacena el [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) estructura en el [m_ps](#m_ps) variable miembro.
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -79,7 +79,7 @@ explicit CPaintDC(CWnd* pWnd);
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Apunta a la `CWnd` objeto al que el `CPaintDC` pertenece el objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` es una variable de miembro público del tipo [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md).
+`m_ps` es una variable de miembro público del tipo [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct).
 
 ```
 PAINTSTRUCT m_ps;
@@ -131,4 +131,3 @@ Tenga en cuenta que puede tener acceso al identificador del contexto de disposit
 [Ejemplo MDI de MFC](../../visual-cpp-samples.md)<br/>
 [CDC (clase)](../../mfc/reference/cdc-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

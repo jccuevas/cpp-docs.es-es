@@ -1,6 +1,6 @@
 ---
 title: Intercambio de datos de cuadro de diálogo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - initializing dialog boxes
 - canceling data exchange
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: a72be4daf6c10a7d16b8558bfdddb8337ff1b1be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302325"
 ---
 # <a name="dialog-data-exchange"></a>Intercambio de datos de cuadro de diálogo
 
@@ -34,7 +34,8 @@ El mismo mecanismo transfiere los valores de los controles a las variables miemb
 
 La ilustración siguiente muestra el intercambio de datos de cuadro de diálogo.
 
-![Intercambio de datos de cuadro de diálogo](../mfc/media/vc379d1.gif "vc379d1") intercambio de datos de cuadro de diálogo
+![Intercambio de datos de cuadro de diálogo](../mfc/media/vc379d1.gif "intercambio de datos de cuadro de diálogo") <br/>
+Intercambio de datos de cuadro de diálogo
 
 `UpdateData` funciona en ambas direcciones, según lo especificado por el **BOOL** parámetro pasado a él. Para llevar a cabo el intercambio, `UpdateData` configura un `CDataExchange` objeto y llama a la invalidación de la clase de cuadro de diálogo `CDialog`del `DoDataExchange` función miembro. `DoDataExchange` toma un argumento de tipo `CDataExchange`. El `CDataExchange` objeto pasa a `UpdateData` representa el contexto del intercambio, definiendo dicha información como la dirección del intercambio.
 
@@ -53,4 +54,3 @@ Si el usuario cancela el cuadro de diálogo modal, el `OnCancel` función miembr
 [Intercambio y validación de datos de cuadros de diálogo](../mfc/dialog-data-exchange-and-validation.md)<br/>
 [Ciclo de vida de un cuadro de diálogo](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Validación de datos de cuadro de diálogo](../mfc/dialog-data-validation.md)
-

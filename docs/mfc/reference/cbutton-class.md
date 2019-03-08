@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662857"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260145"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -121,7 +121,7 @@ class CButton : public CWnd
 |[CButton::GetSplitStyle](#getsplitstyle)|Recupera los estilos de botón de división que definen el control de botón de división actual.|
 |[CButton::GetState](#getstate)|Recupera el estado de comprobación, el estado de resaltado y el estado del foco de un control de botón.|
 |[CButton::GetTextMargin](#gettextmargin)|Recupera el margen del texto del control de botón.|
-|[CButton:: SetBitmap](#setbitmap)|Especifica un mapa de bits que se mostrará en el botón.|
+|[CButton::SetBitmap](#setbitmap)|Especifica un mapa de bits que se mostrará en el botón.|
 |[CButton::SetButtonStyle](#setbuttonstyle)|Cambia el estilo de un botón.|
 |[CButton::SetCheck](#setcheck)|Establece el estado de activación de un control de botón.|
 |[CButton::SetCursor](#setcursor)|Especifica una imagen de cursor que se mostrará en el botón.|
@@ -153,13 +153,13 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON_** notificación **(**`id`, `memberFxn` **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
-donde `id` especifica el identificador de ventana secundaria del control que envía la notificación y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
+donde *id* especifica el identificador de ventana secundaria del control que envía la notificación y *memberFxn* es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
 Prototipo de función del elemento primario es el siguiente:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Las entradas de mapa de mensajes posibles son los siguientes:
 
@@ -219,7 +219,7 @@ Especifica el texto del control de botón.
 *dwStyle*<br/>
 Especifica el estilo del control de botón. Aplicar cualquier combinación de [estilos de botón](../../mfc/reference/styles-used-by-mfc.md#button-styles) al botón.
 
-*Rect*<br/>
+*rect*<br/>
 Especifica el tamaño y la posición del control de botón. Puede ser un `CRect` objeto o un `RECT` estructura.
 
 *pParentWnd*<br/>
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Parámetros
 
 *lpDrawItemStruct*<br/>
-Un puntero largo a un [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) estructura. La estructura contiene información sobre el elemento que se va a dibujar y el tipo de dibujo necesaria.
+Un puntero largo a un [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) estructura. La estructura contiene información sobre el elemento que se va a dibujar y el tipo de dibujo necesaria.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -384,7 +384,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad del mensaje BCM_GETIDEALSIZE, como se describe en el [botones](https://msdn.microsoft.com/library/windows/desktop/bb775943) sección del SDK de Windows.
+Esta función miembro emula la funcionalidad del mensaje BCM_GETIDEALSIZE, como se describe en el [botones](/windows/desktop/controls/buttons) sección del SDK de Windows.
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad del mensaje BCM_GETIMAGELIST, como se describe en el [botones](https://msdn.microsoft.com/library/windows/desktop/bb775943) sección del SDK de Windows.
+Esta función miembro emula la funcionalidad del mensaje BCM_GETIMAGELIST, como se describe en el [botones](/windows/desktop/controls/buttons) sección del SDK de Windows.
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*pSize*|[out] Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que recibe la descripción de un rectángulo.|
+|*pSize*|[out] Puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que recibe la descripción de un rectángulo.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -581,7 +581,7 @@ Un campo de bits que contiene la combinación de valores que indican el estado a
 |Estado del botón|Valor|Descripción|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|El estado inicial.|
-|BST_CHECKED|0 x 0001|El control de botón está activado.|
+|BST_CHECKED|0x0001|El control de botón está activado.|
 |BST_INDETERMINATE|0x0002|El estado indeterminado (sólo es posible cuando el control de botón tiene tres estados).|
 |BST_PUSHED|0x0004|El control de botón está presionado.|
 |BST_FOCUS|0x0008|El control de botón tiene el foco.|
@@ -617,9 +617,9 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad del mensaje BCM_GETTEXTMARGIN, como se describe en el [botones](https://msdn.microsoft.com/library/windows/desktop/bb775943) sección del SDK de Windows.
+Esta función miembro emula la funcionalidad del mensaje BCM_GETTEXTMARGIN, como se describe en el [botones](/windows/desktop/controls/buttons) sección del SDK de Windows.
 
-##  <a name="setbitmap"></a>  CButton:: SetBitmap
+##  <a name="setbitmap"></a>  CButton::SetBitmap
 
 Llame a esta función miembro para asociar un nuevo mapa de bits con el botón.
 
@@ -696,7 +696,7 @@ void SetCheck(int nCheck);
 
 ### <a name="parameters"></a>Parámetros
 
-*nCompruebe*<br/>
+*nCheck*<br/>
 Especifica el estado de activación. Este parámetro puede ser uno de los siguientes:
 
 |Valor|Significado|
@@ -870,7 +870,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad del mensaje BCM_SETIMAGELIST, como se describe en el [botones](https://msdn.microsoft.com/library/windows/desktop/bb775943) sección del SDK de Windows.
+Esta función miembro emula la funcionalidad del mensaje BCM_SETIMAGELIST, como se describe en el [botones](/windows/desktop/controls/buttons) sección del SDK de Windows.
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*pSize*|[in] Puntero a un [tamaño](https://msdn.microsoft.com/library/windows/desktop/dd145106) estructura que describe un rectángulo delimitador.|
+|*pSize*|[in] Puntero a un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura que describe un rectángulo delimitador.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1112,7 +1112,7 @@ Devuelve TRUE si se ejecuta correctamente, FALSE en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función miembro emula la funcionalidad del mensaje BCM_SETTEXTMARGIN, como se describe en el [botones](https://msdn.microsoft.com/library/windows/desktop/bb775943) sección del SDK de Windows.
+Esta función miembro emula la funcionalidad del mensaje BCM_SETTEXTMARGIN, como se describe en el [botones](/windows/desktop/controls/buttons) sección del SDK de Windows.
 
 ## <a name="see-also"></a>Vea también
 

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523821"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327049"
 ---
 # <a name="locking"></a>_locking
 
@@ -63,10 +63,10 @@ Número de bytes que se van a bloquear.
 
 |valor de errno|Condición|
 |-|-|
-**EACCES**|Infracción de bloqueo (archivo ya bloqueado o desbloqueado).
-**EBADF**|Descriptor de archivo no válido.
-**EDEADLOCK**|Infracción de bloqueo. Devuelve cuando el **_LK_LOCK** o **_LK_RLCK** se especifica la marca y el archivo no se puede bloquear después de 10 intentos.
-**EINVAL**|No se proporcionó un argumento no válido para **_locking**.
+| **EACCES** | Infracción de bloqueo (archivo ya bloqueado o desbloqueado). |
+| **EBADF** | Descriptor de archivo no válido. |
+| **EDEADLOCK** | Infracción de bloqueo. Devuelve cuando el **_LK_LOCK** o **_LK_RLCK** se especifica la marca y el archivo no se puede bloquear después de 10 intentos. |
+| **EINVAL** | No se proporcionó un argumento no válido para **_locking**. |
 
 Si el error se debe a un parámetro incorrecto, como un descriptor de archivo no válido, se invoca al controlador de parámetros no válidos, tal y como se describe en [Validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
@@ -78,11 +78,11 @@ El **_locking** función bloquea o desbloquea *nbytes* bytes del archivo especif
 
 |*modo* valor|Efecto|
 |-|-|
-**_LK_LOCK**|Bloquea los bytes especificados. Si no se pueden bloquear los bytes, el programa lo vuelve a intentar inmediatamente después de 1 segundo. Si después de 10 intentos no se pueden bloquear los bytes, la constante devuelve un error.
-**_LK_NBLCK**|Bloquea los bytes especificados. Si no se pueden bloquear los bytes, la constante devuelve un error.
-**_LK_NBRLCK**|Igual que **_LK_NBLCK**.
-**_LK_RLCK**|Igual que **_LK_LOCK**.
-**_LK_UNLCK**|Desbloquea los bytes especificados, que deben haberse bloqueado anteriormente.
+| **_LK_LOCK** | Bloquea los bytes especificados. Si no se pueden bloquear los bytes, el programa lo vuelve a intentar inmediatamente después de 1 segundo. Si después de 10 intentos no se pueden bloquear los bytes, la constante devuelve un error. |
+| **_LK_NBLCK** | Bloquea los bytes especificados. Si no se pueden bloquear los bytes, la constante devuelve un error. |
+| **_LK_NBRLCK** | Igual que **_LK_NBLCK**. |
+| **_LK_RLCK** | Igual que **_LK_LOCK**. |
+| **_LK_UNLCK** | Desbloquea los bytes especificados, que deben haberse bloqueado anteriormente. |
 
 Se pueden bloquear varias regiones de un archivo que no se superponen. Para desbloquear una región, primero debe haberse bloqueado. **_Locking** combina regiones adyacentes; si dos regiones bloqueadas son adyacentes, cada región debe desbloquearse por separado. Las regiones deberían bloquearse solo brevemente y deberían desbloquearse antes de cerrar un archivo o de salir del programa.
 

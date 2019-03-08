@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d86235893d1f238f4cba9c927fad17f29060e591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258737"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Clase CD2DLinearGradientBrush
 
@@ -54,7 +54,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Construye un objeto CD2DLinearGradientBrush.|
-|[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado lineal D2D.|
+|[CD2DLinearGradientBrush::~CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado lineal D2D.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -74,7 +74,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |Name|Descripción|
 |----------|-----------------|
-|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Interfaz de ID2D1LinearGradientBrush devuelve|
+|[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush*](#operator_id2d1lineargradientbrush_star)|Interfaz de ID2D1LinearGradientBrush devuelve|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
@@ -99,7 +99,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 **Encabezado:** afxrendertarget.h
 
-##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush
+##  <a name="_dtorcd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::~CD2DLinearGradientBrush
 
 Destructor. Se llama cuando se destruye un objeto de pincel de degradado lineal D2D.
 
@@ -273,7 +273,7 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Las coordenadas bidimensionales finales del degradado lineal, en el espacio de coordenadas del pincel
 
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint
@@ -286,7 +286,7 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Las coordenadas bidimensionales iniciales del degradado lineal, en el espacio de coordenadas del pincel
 
 ## <a name="see-also"></a>Vea también

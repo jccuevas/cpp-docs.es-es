@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Implementar el seguimiento en el código'
+title: Filtrar Implementar el seguimiento en el código
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0a6a8313c02566c4d1cde82b288b42e150651b02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283987"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>Cómo: Implementar el seguimiento en el código
+# <a name="how-to-implement-tracking-in-your-code"></a>Filtrar Implementar el seguimiento en el código
 
 Para realizar un seguimiento de un elemento OLE, debe controlar ciertos eventos relacionados con el elemento, por ejemplo, al hacer clic en el elemento o actualizar la vista del documento. En todos los casos, es suficiente declarar un archivo temporal [CRectTracker](../mfc/reference/crecttracker-class.md) de objetos y manipular el elemento mediante este objeto.
 
@@ -55,5 +55,4 @@ La `CRectTracker` clase proporciona varias formas de cursor diferente que se uti
 
 ## <a name="see-also"></a>Vea también
 
-[Seguimiento: Implementar el seguimiento en la aplicación OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
-
+[Seguimiento: Implementar el seguimiento en una aplicación OLE](../mfc/trackers-implementing-trackers-in-your-ole-application.md)

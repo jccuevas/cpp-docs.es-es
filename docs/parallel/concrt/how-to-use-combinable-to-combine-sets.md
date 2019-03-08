@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Usar la clase combinable para combinar conjuntos'
+title: Filtrar Usar la clase combinable para combinar conjuntos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: c4d245688dd000ea61b538c4f3957246b9852ec5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571813"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296103"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>Cómo: Usar la clase combinable para combinar conjuntos
+# <a name="how-to-use-combinable-to-combine-sets"></a>Filtrar Usar la clase combinable para combinar conjuntos
 
 En este tema se muestra cómo usar el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase para calcular el conjunto de números primos.
 
@@ -36,11 +36,10 @@ parallel time: 78 ms
 
 Copie el código de ejemplo y péguelo en un proyecto de Visual Studio o péguelo en un archivo denominado `parallel-combine-primes.cpp` y, a continuación, ejecute el siguiente comando en una ventana del símbolo del sistema de Visual Studio.
 
-**cl.exe/EHsc parallel-combine-primes.cpp**
+**cl.exe /EHsc parallel-combine-primes.cpp**
 
 ## <a name="see-also"></a>Vea también
 
 [Contenedores y objetos paralelos](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable (clase)](../../parallel/concrt/reference/combinable-class.md)<br/>
 [combinable:: combine_each (método)](reference/combinable-class.md#combine_each)
-

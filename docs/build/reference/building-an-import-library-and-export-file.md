@@ -25,18 +25,18 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: e5e7a60bf4607be55525b587df4942875126b50e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556681"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413191"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Compilar bibliotecas de importación y archivos de exportación
 
 Para generar una biblioteca de importación y exportación de archivo, use la sintaxis siguiente:
 
-> **LIB /DEF**[**:**<em>archivo (deffile)</em>] [*opciones*] [*archivos (objfiles)*] [*bibliotecas*]
+> **LIB /DEF**[**:**<em>deffile</em>] [*options*] [*objfiles*] [*libraries*]
 
 Cuando se especifica/def, LIB crea los archivos de salida de las especificaciones de exportación que se pasan en el comando LIB. Hay tres métodos para especificar exportaciones, aparece en el orden recomendado de uso:
 
@@ -60,7 +60,7 @@ Exporta una función desde el programa para permitir que otros programas para ll
 
 El *entrada* es el nombre de la función o elemento de datos que va a ser utilizada por el programa que realiza la llamada. Opcionalmente, puede especificar el *internalname* como la función conocida en el programa que define; de forma predeterminada, *internalname* es el mismo que *entrada*. El *ordinal* especifica un índice en la tabla de exportación en el intervalo 1 a 65535; si no especifica *ordinal*, LIB asigna un valor. El **NONAME** palabra clave exporta la función solo como un valor ordinal, sin un *entrada*. El **datos** palabra clave se usa para exportar objetos sólo de datos.
 
-> **/ INCLUDE:** *símbolos*
+> **/INCLUDE:** *symbol*
 
 Agrega el objeto especificado *símbolos* a la tabla de símbolos. Esta opción es útil para forzar el uso de un objeto de biblioteca que de lo contrario no estarían incluido.
 

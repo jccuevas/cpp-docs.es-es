@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 794280bc3b439a4c833483de51ffad91ebd6fc9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655954"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51597708"
 ---
 # <a name="codeseg"></a>code_seg
 Especifica el segmento de texto donde se almacenan las funciones en el archivo .obj.
@@ -24,7 +24,7 @@ Especifica el segmento de texto donde se almacenan las funciones en el archivo .
 #pragma code_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
 ```
 
-### <a name="paramters"></a>Parámetros
+### <a name="parameters"></a>Parámetros
 
 **push**<br/>
 (Opcional) Inserta un registro en la pila interna del compilador. Un **inserción** puede tener un *identificador* y *nombre de segmento*.

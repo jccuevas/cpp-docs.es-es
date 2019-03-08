@@ -8,12 +8,12 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265553"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Secuencia de operaciones
 
@@ -36,7 +36,7 @@ Hasta el momento de creación de un `CSocketFile` objeto, es precisa (con alguna
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> O bien<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o ambos:|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> O bien<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - o ambos:|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> O bien<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> O bien<br /><br /> `arOut << dwValue;`6|
 
-1. Donde *nPort* es un número de puerto. Consulte [Windows Sockets: puertos y direcciones de Socket](../mfc/windows-sockets-ports-and-socket-addresses.md) para obtener más información acerca de los puertos.
+1. Donde *nPort* es un número de puerto. Consulte [Windows Sockets: Puertos y direcciones de Socket](../mfc/windows-sockets-ports-and-socket-addresses.md) para obtener más información acerca de los puertos.
 
 2. El servidor siempre debe especificar un puerto para que los clientes puedan conectarse. El `Create` llamada a veces también especifica una dirección. En el lado cliente, use los parámetros predeterminados, que indican a MFC que utilice cualquier puerto disponible.
 
@@ -62,9 +62,9 @@ Para obtener más información, consulte:
 
 - [Windows Sockets: Puertos y direcciones de Socket](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Windows Sockets: Sockets de flujos](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagramas](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 
@@ -72,4 +72,3 @@ Para obtener más información, consulte:
 [CSocket (clase)](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583318"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259209"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback (clase)
 
@@ -67,7 +67,7 @@ Especifica las marcas de enlace que se devuelven por [GetBindInfo](#getbindinfo)
 |Name|Descripción|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|El constructor.|
-|[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|Destructor.|
+|[CBindStatusCallback::~CBindStatusCallback](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -82,7 +82,7 @@ Especifica las marcas de enlace que se devuelven por [GetBindInfo](#getbindinfo)
 |[CBindStatusCallback::OnProgress](#onprogress)|Se llama para indicar el progreso de un proceso de descarga de datos. La implementación de ATL devuelve S_OK.|
 |[CBindStatusCallback::OnStartBinding](#onstartbinding)|Se llama cuando se inicia el enlace.|
 |[CBindStatusCallback::OnStopBinding](#onstopbinding)|Se llama cuando se detiene la transferencia de datos asincrónica.|
-|[StartAsyncDownload](#startasyncdownload)|Inicializa los bytes disponibles y los bytes leídos en cero, se crea un objeto de secuencia de tipo de inserción desde una dirección URL y las llamadas `OnDataAvailable` cada vez que los datos están disponibles.|
+|[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)|Inicializa los bytes disponibles y los bytes leídos en cero, se crea un objeto de secuencia de tipo de inserción desde una dirección URL y las llamadas `OnDataAvailable` cada vez que los datos están disponibles.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -135,7 +135,7 @@ Crea un objeto para recibir las notificaciones relativas a la transferencia de d
 
 El constructor inicializa también [m_pT](#m_pt) y [m_pFunc](#m_pfunc) en NULL.
 
-##  <a name="dtor"></a>  CBindStatusCallback:: ~ CBindStatusCallback
+##  <a name="dtor"></a>  CBindStatusCallback::~CBindStatusCallback
 
 Destructor.
 
@@ -357,12 +357,12 @@ STDMETHOD(
 ### <a name="parameters"></a>Parámetros
 
 *grfBSCF*<br/>
-[in] Un valor de enumeración BSCF. Una o varias de las siguientes acciones: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION o BSCF_LASTDATANOTIFICATION.
+[in] Un valor de enumeración BSCF. Uno o varios de los siguientes: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION o BSCF_LASTDATANOTIFICATION.
 
 *dwSize*<br/>
 [in] La cantidad acumulada (en bytes) de datos disponibles desde el principio del enlace. Puede ser cero, lo que indica que la cantidad de datos no es relevante o que ninguna cantidad específica, empezó a estar disponible.
 
-*pFormatEtc*<br/>
+*pformatetc*<br/>
 [in] Puntero a la [FORMATETC](/windows/desktop/com/the-formatetc-structure) estructura que contiene el formato de los datos disponibles. Si no hay ningún formato, puede ser CF_NULL.
 
 *pstgmed*<br/>
@@ -386,7 +386,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwReservado*<br/>
+*dwReserved*<br/>
 Reservado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -406,7 +406,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 *riid*<br/>
 Identificador de interfaz de la interfaz solicitada. Sin usar.
 
-*pUnk*<br/>
+*punk*<br/>
 Dirección de la interfaz IUnknown. Sin usar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -453,7 +453,7 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>Parámetros
 
-*dwReservado*<br/>
+*dwReserved*<br/>
 Reservado para un uso futuro.
 
 *pBinding*<br/>
@@ -469,7 +469,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Parámetros
 
-*HRESULT*<br/>
+*hresult*<br/>
 Devuelve el código de estado de la operación de enlace.
 
 *szError*<br/>
@@ -479,7 +479,7 @@ Dirección de un valor de cadena. Sin usar.
 
 Lo llama el moniker asincrónico proporcionado por el sistema para indicar el final de la operación de enlace.
 
-##  <a name="startasyncdownload"></a>  StartAsyncDownload
+##  <a name="startasyncdownload"></a>  CBindStatusCallback::StartAsyncDownload
 
 Inicia la descarga datos asincrónicamente desde la dirección URL especificada.
 

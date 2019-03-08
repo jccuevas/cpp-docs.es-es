@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588245"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423851"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Conceptos básicos del uso de excepciones administradas
 
@@ -29,7 +29,7 @@ Este tema describe el control de excepciones en aplicaciones administradas. Es d
 
 ## <a name="remarks"></a>Comentarios
 
-Si se compila con la **/CLR** opción, puede controlar excepciones de CLR, así como estándar [control de excepciones de C++](../cpp/cpp-exception-handling.md) y [control estructurado de excepciones](../cpp/structured-exception-handling-c-cpp.md) (SEH). Una excepción de CLR es cualquier excepción producida por un tipo administrado. El [System:: Exception](https://msdn.microsoft.com/library/system.exception.aspx) clase proporciona muchos métodos útiles para procesar las excepciones de CLR y se recomienda como una clase base para clases de excepción definido por el usuario.
+Si se compila con la **/CLR** opción, puede controlar excepciones de CLR, así como estándar <xref:System.Exception> clase proporciona muchos métodos útiles para procesar las excepciones de CLR y se recomienda como una clase base para excepciones definidas por el usuario clases.
 
 Detectar tipos de excepción derivados de una interfaz no es compatible con **/CLR**. Además, common language runtime no le permite detectar las excepciones de desbordamiento de pila; una excepción de desbordamiento de pila finalizará el proceso.
 
@@ -140,7 +140,7 @@ El orden de eventos para una excepción producida es como sigue:
 
 ### <a name="catching-unmanaged-types"></a>Detección de tipos no administrados
 
-Cuando se produce un tipo de objeto no administrado, se encapsula con una excepción de tipo [InteropServices:: SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). Cuando se buscan adecuado **catch** cláusula, existen dos posibilidades.
+Cuando se produce un tipo de objeto no administrado, se encapsula con una excepción de tipo <xref:System.Runtime.InteropServices.SEHException>. Cuando se buscan adecuado **catch** cláusula, existen dos posibilidades.
 
 - Si se encuentra un tipo de C++ nativo, la excepción se desencapsula y en comparación con el tipo encontrado. Esta comparación permite un tipo de C++ nativo detectar de manera normal.
 

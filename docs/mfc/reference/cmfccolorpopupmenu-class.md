@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491461"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283402"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu (clase)
 
@@ -127,10 +127,10 @@ CMFCColorPopupMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*Colores*<br/>
+*colors*<br/>
 [in] Una matriz de colores que el marco de trabajo se muestra en el menú emergente.
 
-*Color*<br/>
+*color*<br/>
 [in] El color seleccionado de forma predeterminada.
 
 *lpszAutoColor*<br/>
@@ -158,7 +158,7 @@ La etiqueta para el botón otro estándar es **más colores...** .
 *nVertDockColumns*<br/>
 [in] El número de columnas que tiene la barra de color cuando se acopla verticalmente.
 
-*automáticoColor*<br/>
+*colorAutomatic*<br/>
 [in] El color predeterminado que se aplica el marco de trabajo al hacer clic en el botón automático.
 
 *uiCommandID*<br/>

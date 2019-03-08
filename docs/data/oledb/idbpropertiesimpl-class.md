@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77385fc8b2869cc59c7a0061951c76a431490efe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638053"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413347"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl (Clase)
 
@@ -62,24 +62,24 @@ La clase derivada de `IDBPropertiesImpl`.
 
 ## <a name="remarks"></a>Comentarios
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607) es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador [IDBInitialize](/previous-versions/windows/desktop/ms713706), debe exponer `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` mediante el uso de una función estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) es una interfaz obligatoria para los objetos de origen de datos y una interfaz opcional para los enumeradores. Sin embargo, si expone un enumerador [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), debe exponer `IDBProperties`. `IDBPropertiesImpl` implementa `IDBProperties` mediante el uso de una función estática definida por [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="getproperties"></a> Idbpropertiesimpl:: GetProperties
+## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
 Devuelve los valores de propiedades de los grupos de propiedades de inicialización, información de origen de datos y origen de datos que actualmente se establecen en el objeto de origen de datos o los valores de propiedades en el grupo de propiedades de inicialización que actualmente se establecen en el enumerador.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(GetProperties)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcProperties, 
+STDMETHOD(GetProperties)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcProperties,
    DBPROPSET ** prgProperties);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344) en el *referencia del programador OLE DB*.
+Consulte [IDBProperties:: GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) en el *referencia del programador OLE DB*.
 
 Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBProperties::GetProperties`:
 
@@ -94,23 +94,23 @@ Algunos parámetros se corresponden con *referencia del programador de OLE DB* p
 
 Si se inicializa el proveedor, este método devuelve los valores de propiedades en el DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO, grupos de propiedades DBPROPSET_DBINIT que actualmente se establecen en el objeto de origen de datos. Si no se ha inicializado el proveedor, devuelve solo las propiedades de grupo DBPROPSET_DBINIT.
 
-## <a name="getpropertyinfo"></a> Idbpropertiesimpl:: GetPropertyInfo
+## <a name="getpropertyinfo"></a> IDBPropertiesImpl::GetPropertyInfo
 
 Devuelve información de propiedad admitida por el origen de datos.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(GetPropertyInfo)(ULONG cPropertySets, 
-   const DBPROPIDSET rgPropertySets[], 
-   ULONG * pcPropertyInfoSets, 
-   DBPROPINFOSET ** prgPropertyInfoSets, 
+STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
+   const DBPROPIDSET rgPropertySets[],
+   ULONG * pcPropertyInfoSets,
+   DBPROPINFOSET ** prgPropertyInfoSets,
    OLECHAR ** ppDescBuffer);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175) en el *referencia del programador OLE DB*.
+Consulte [IDBProperties:: GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) en el *referencia del programador OLE DB*.
 
 Algunos parámetros se corresponden con *referencia del programador de OLE DB* parámetros de nombres diferentes, que se describen en `IDBProperties::GetPropertyInfo`:
 
@@ -123,20 +123,20 @@ Algunos parámetros se corresponden con *referencia del programador de OLE DB* p
 
 Usa [idbinitializeimpl:: M_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) para implementar esta funcionalidad.
 
-## <a name="setproperties"></a> Idbpropertiesimpl:: SetProperties
+## <a name="setproperties"></a> IDBPropertiesImpl::SetProperties
 
 Establece propiedades en los grupos de propiedades origen de datos y la inicialización de objetos de origen de datos, o el grupo de propiedades de inicialización para los enumeradores.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>Parámetros
 
-Consulte [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049) en el *referencia del programador OLE DB*.
+Consulte [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) en el *referencia del programador OLE DB*.
 
 ### <a name="remarks"></a>Comentarios
 

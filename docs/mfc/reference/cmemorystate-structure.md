@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: a1a6912cd736643313306f6453ce19b1f6b97adc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502978"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288134"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState (estructura)
 
@@ -37,10 +37,10 @@ struct CMemoryState
 
 |Name|Descripción|
 |----------|-----------------|
-|[CMemoryState:: Checkpoint](#checkpoint)|Obtiene una instantánea (punto de comprobación) del estado actual de memoria.|
-|[CMemoryState:: Difference](#difference)|Calcula la diferencia entre dos objetos de tipo `CMemoryState`.|
-|[CMemoryState:: DumpAllObjectsSince](#dumpallobjectssince)|Vuelca un resumen de todos los objetos asignados actualmente desde un punto de comprobación anterior.|
-|[CMemoryState:: DumpStatistics](#dumpstatistics)|Imprime las estadísticas de la asignación de memoria para un `CMemoryState` objeto.|
+|[CMemoryState::Checkpoint](#checkpoint)|Obtiene una instantánea (punto de comprobación) del estado actual de memoria.|
+|[CMemoryState::Difference](#difference)|Calcula la diferencia entre dos objetos de tipo `CMemoryState`.|
+|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|Vuelca un resumen de todos los objetos asignados actualmente desde un punto de comprobación anterior.|
+|[CMemoryState::DumpStatistics](#dumpstatistics)|Imprime las estadísticas de la asignación de memoria para un `CMemoryState` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -75,7 +75,7 @@ Para obtener más información sobre cómo usar `CMemoryState` y otros diagnóst
 
 **Encabezado:** afx.h
 
-##  <a name="checkpoint"></a>  CMemoryState:: Checkpoint
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
 
 Toma una instantánea resumen de memoria y lo almacena en esta `CMemoryState` objeto.
 
@@ -103,7 +103,7 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  CMemoryState:: Difference
+##  <a name="difference"></a>  CMemoryState::Difference
 
 Compara dos `CMemoryState` objetos, a continuación, almacena la diferencia en esta `CMemoryState` objeto.
 
@@ -133,13 +133,12 @@ Distinto de cero si los dos Estados de memoria son diferentes; en caso contrario
 
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.
 
-##  <a name="dumpallobjectssince"></a>  CMemoryState:: DumpAllObjectsSince
+##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
 
 Llama a la `Dump` función para todos los objetos de un tipo derivado de clase `CObject` que se asignaron (y todavía se asignan) desde la última [punto de comprobación](#checkpoint) llamar para este `CMemoryState` objeto.
 
 ```
 void DumpAllObjectsSince() const;
-
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -150,13 +149,12 @@ Una llamada a `DumpAllObjectsSince` con sin inicializar `CMemoryState` objeto vo
 
   Vea el ejemplo de la [CMemoryState](#cmemorystate) constructor.
 
-##  <a name="dumpstatistics"></a>  CMemoryState:: DumpStatistics
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
 
 Imprime un informe de estadísticas de memoria concisa desde un `CMemoryState` objeto que se rellena con el [diferencia](#difference) función miembro.
 
 ```
 void DumpStatistics() const;
-
 ```
 
 ### <a name="remarks"></a>Comentarios
@@ -200,4 +198,3 @@ Ahora puede ejecutar el programa en modo de depuración para ver la salida de la
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

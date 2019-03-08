@@ -1,6 +1,6 @@
 ---
 title: CReBar (clase)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBar
 - AFXEXT/CReBar
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 6a63440f5f415901128a09c7b5f34e73539fc3e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267789"
 ---
 # <a name="crebar-class"></a>CReBar (clase)
 
@@ -37,13 +37,13 @@ class CReBar : public CControlBar
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|Agrega una banda a un control rebar.|
 |[CReBar::Create](#create)|Crea el control rebar y lo adjunta a la `CReBar` objeto.|
-|[CReBar:: GetReBarCtrl](#getrebarctrl)|Permite el acceso directo al control subyacente común.|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|Permite el acceso directo al control subyacente común.|
 
 ## <a name="remarks"></a>Comentarios
 
 Un objeto rebar puede contener una variedad de las ventanas secundarias, normalmente otros controles, incluidos los cuadros de edición, barras de herramientas y cuadros de lista. Un objeto rebar puede mostrar sus ventanas secundarias a través de un mapa de bits especificado. La aplicación puede cambiar el tamaño del rebar automáticamente, o el usuario puede cambiar manualmente el tamaño del rebar haciendo clic o arrastrando su barra de controles.
 
-![Ejemplo de RebarMenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")
+![Ejemplo de RebarMenu](../../mfc/reference/media/vc4sc61.gif "ejemplo de RebarMenu")
 
 ## <a name="rebar-control"></a>Control rebar
 
@@ -151,7 +151,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
   Vea el ejemplo de [CReBar::AddBar](#addbar).
 
-##  <a name="getrebarctrl"></a>  CReBar:: GetReBarCtrl
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
 
 Esta función miembro permite el acceso directo al control subyacente común.
 
@@ -178,4 +178,3 @@ Para obtener más información sobre el uso de `CReBarCtrl` para personalizar su
 [Ejemplo MFCIE de MFC](../../visual-cpp-samples.md)<br/>
 [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

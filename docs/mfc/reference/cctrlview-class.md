@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: 26a61f7874efc6494b41d201323a0a2a2d78548a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cb68ab46e2cac8b2f1dcc13989077e32480a2c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511766"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259573"
 ---
 # <a name="cctrlview-class"></a>CCtrlView (clase)
 
@@ -144,8 +144,8 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>Parámetros
 
-*CS*<br/>
-Un [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) estructura.
+*cs*<br/>
+Un [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) estructura.
 
 ### <a name="return-value"></a>Valor devuelto
 

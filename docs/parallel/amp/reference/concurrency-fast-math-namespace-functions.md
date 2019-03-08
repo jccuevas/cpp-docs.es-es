@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259872"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Funciones del espacio de nombres fast_math
 
@@ -674,7 +674,7 @@ Valor de punto flotante
 
 Devuelve un valor distinto de cero si y solo si el argumento tiene un valor infinito
 
-##  <a name="isnan"></a>  isNaN)
+##  <a name="isnan"></a>  isnan
 
 Determina si el argumento es un NaN
 
@@ -711,7 +711,7 @@ Exponente de entero
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="ldexpf"></a>  ldexpf
 
@@ -733,7 +733,7 @@ Exponente de entero
 
 ### <a name="return-value"></a>Valor devuelto
 
-Devuelve _X \* 2 ^ _Exp
+Returns _X \* 2^_Exp
 
 ##  <a name="log"></a>  log
 
@@ -923,7 +923,7 @@ Valor de punto flotante, exponente
 
 ### <a name="return-value"></a>Valor devuelto
 
-##  <a name="round"></a>  redondear
+##  <a name="round"></a>  round
 
 Redondea _X al entero más próximo
 
@@ -1078,7 +1078,7 @@ Valor de punto flotante
 *_S*<br/>
 Devuelve el valor de seno de _X.
 
-*_E*<br/>
+*_C*<br/>
 Devuelve el valor de coseno de _X.
 
 ##  <a name="sincosf"></a>  sincosf
@@ -1100,7 +1100,7 @@ Valor de punto flotante
 *_S*<br/>
 Devuelve el valor de seno de _X.
 
-*_E*<br/>
+*_C*<br/>
 Devuelve el valor de coseno de _X.
 
 ##  <a name="sinh"></a>  sinh
@@ -1275,7 +1275,7 @@ Devuelve el componente de número entero del argumento.
 
 ## <a name="requirements"></a>Requisitos
 
-**Encabezado:** amp_math.h **Namespace:** fast_math
+**Encabezado:** amp_math.h **Namespace:** Concurrency::fast_math
 
 ## <a name="see-also"></a>Vea también
 

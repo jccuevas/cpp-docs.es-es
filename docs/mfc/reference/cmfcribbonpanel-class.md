@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305060"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel (clase)
 
@@ -145,7 +145,7 @@ class CMFCRibbonPanel : public CObject
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cmfcribbonpanel:: Add](#add)|Agrega un elemento de la cinta de opciones en el panel.|
+|[CMFCRibbonPanel::Add](#add)|Agrega un elemento de la cinta de opciones en el panel.|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|Agrega un separador en el panel de la cinta.|
 |[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Agrega una barra de herramientas al panel de cinta de opciones.|
 |[CMFCRibbonPanel::FindByData](#findbydata)||
@@ -221,7 +221,7 @@ En el ejemplo siguiente se muestra cómo configurar un `CMFCRibbonPanel` objeto 
 
 **Encabezado:** afxRibbonPanel.h
 
-##  <a name="add"></a>  Cmfcribbonpanel:: Add
+##  <a name="add"></a>  CMFCRibbonPanel::Add
 
 Anexa el elemento especificado de la cinta de opciones a la matriz de elementos de la cinta de opciones que se encuentra en el panel de la cinta.
 
@@ -569,7 +569,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 [out] No se utiliza este parámetro.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -642,7 +642,7 @@ CPoint point);
 *bHighlight*<br/>
 [in] TRUE para resaltar el panel de la cinta; Si es FALSE, el panel de la cinta la anulación de resaltado.
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="remarks"></a>Comentarios
@@ -659,7 +659,7 @@ BOOL bCheckPanelCaption = FALSE);
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 *bCheckPanelCaption*<br/>
@@ -683,7 +683,7 @@ virtual int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Las coordenadas x e y del puntero, en relación con la esquina superior izquierda de la ventana.
 
 ### <a name="return-value"></a>Valor devuelto

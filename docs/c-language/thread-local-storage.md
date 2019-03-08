@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: e13aa9600cd26fba47ce43a318fa7174995d58fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572229"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152136"
 ---
 # <a name="thread-local-storage"></a>Almacenamiento local para el subproceso
 
@@ -86,7 +86,7 @@ Deben tenerse en cuenta estas instrucciones cuando se declaran variables locales
 
    Observe que una expresión sizeof que incluye la variable que se va inicializar no constituye una referencia a sí misma y está permitida.
 
-- El uso del atributo **__declspec(thread)** puede interferir con la [carga de retraso](../build/reference/linker-support-for-delay-loaded-dlls.md) de importaciones de DLL **.**
+- El uso del atributo **\_\_declspec(thread)** puede interferir con la [carga de retraso](../build/reference/linker-support-for-delay-loaded-dlls.md) de importaciones de DLL.
 
 Para más información sobre cómo utilizar el atributo thread, vea [Temas de multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 

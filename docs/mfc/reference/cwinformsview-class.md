@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-ms.openlocfilehash: 766ce3e0db192cc416b17531864a75d721bfc4ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597526"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289343"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView (clase)
 
@@ -39,7 +39,7 @@ class CWinFormsView : public CView;
 
 |Name|Descripción|
 |----------|-----------------|
-|[:: GetControl](#getcontrol)|Recupera un puntero al control de Windows Forms.|
+|[CWinFormsView::GetControl](#getcontrol)|Recupera un puntero al control de Windows Forms.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -84,7 +84,7 @@ En el ejemplo siguiente, la `CUserView` clase hereda de `CWinFormsView` y pasa e
 
 [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]
 
-##  <a name="getcontrol"></a>  :: GetControl
+##  <a name="getcontrol"></a>  CWinFormsView::GetControl
 
 Recupera un puntero al control de Windows Forms.
 
@@ -100,7 +100,7 @@ Puntero a un objeto `System.Windows.Forms.Control` .
 
 Para obtener un ejemplo de cómo usar Windows Forms, consulte [mediante un Control de usuario de Windows Forms en MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_control"></a>  Control CWinFormsView::operator ^
+##  <a name="operator_control"></a>  CWinFormsView::operator Control^
 
 Convierte un tipo de puntero a un control de Windows Forms.
 

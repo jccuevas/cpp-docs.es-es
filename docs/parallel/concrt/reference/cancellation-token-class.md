@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 60028ce439dc344696bb3814efb74e0daa21f6ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522205"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282297"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token (Clase)
 
@@ -36,7 +36,7 @@ class cancellation_token;
 
 |Name|Descripción|
 |----------|-----------------|
-|[cancellation_token)](#ctor)||
+|[cancellation_token](#ctor)||
 |[~ cancellation_token (destructor)](#dtor)||
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -67,7 +67,7 @@ class cancellation_token;
 
 **Espacio de nombres:** simultaneidad
 
-##  <a name="dtor"></a> ~ cancellation_token
+##  <a name="dtor"></a> ~cancellation_token
 
 ```
 ~cancellation_token();
@@ -135,7 +135,7 @@ static cancellation_token none();
 
 Token de cancelación que no puede cancelarse.
 
-##  <a name="operator_neq"></a> operador! =
+##  <a name="operator_neq"></a> operator!=
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -144,7 +144,8 @@ bool operator!= (const cancellation_token& _Src) const;
 ### <a name="parameters"></a>Parámetros
 
 *_Src*<br/>
-`cancellation_token` que se va comparar.
+
+  `cancellation_token` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -172,7 +173,8 @@ bool operator== (const cancellation_token& _Src) const;
 ### <a name="parameters"></a>Parámetros
 
 *_Src*<br/>
-`cancellation_token` que se va comparar.
+
+  `cancellation_token` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 

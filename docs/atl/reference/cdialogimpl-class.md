@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1124630d8ee15dd284893516bef8057f852b4632
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420666"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl (clase)
 
@@ -70,7 +70,7 @@ La clase base de la nueva clase. La clase base predeterminada es [CWindow](../..
 
 |||
 |-|-|
-|[Función DialogProc](#dialogproc)|Procesa los mensajes enviados al cuadro de diálogo.|
+|[DialogProc](#dialogproc)|Procesa los mensajes enviados al cuadro de diálogo.|
 |[StartDialogProc](#startdialogproc)|Se llama cuando se recibe el primer mensaje procesar los mensajes enviados al cuadro de diálogo.|
 
 ## <a name="remarks"></a>Comentarios
@@ -93,7 +93,7 @@ donde `MyDlg` es el **nombre corto** especificadas en el asistente **nombres** p
 |Crear controles|[Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Uso de cuadros de diálogo ATL|[Clases de ventana ATL](../../atl/atl-window-classes.md)|
 |Asistente para proyectos ATL|[Creación de un proyecto ATL](../../atl/reference/creating-an-atl-project.md)|
-|Cuadros de diálogo|[Cuadros de diálogo](https://msdn.microsoft.com/library/windows/desktop/ms632588) y los temas siguientes en el SDK de Windows|
+|Cuadros de diálogo|[Cuadros de diálogo](/windows/desktop/dlgbox/dialog-boxes) y los temas siguientes en el SDK de Windows|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -119,7 +119,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] El identificador de la ventana propietaria.
 
-**RECT &** *rect* [in] un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el cuadro de diálogo tamaño y posición.
+**RECT &** *rect* [in] un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que especifica el cuadro de diálogo tamaño y posición.
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -197,7 +197,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Parámetros
 
 *hWndParent*<br/>
-[in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) función de Win32.
+[in] El identificador de la ventana propietaria. El valor predeterminado es el valor devuelto de la [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) función de Win32.
 
 *dwInitParam*<br/>
 [in] Especifica el valor para pasar al cuadro de diálogo en el *lParam* parámetro del mensaje WM_INITDIALOG.
@@ -263,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Parámetros
 
 *lpRect*<br/>
-Apunta a un `CRect` objeto o [RECT](../../mfc/reference/rect-structure.md) estructura que va a recibir las coordenadas de cliente de la actualización que rodea la región de actualización.
+Apunta a un `CRect` objeto o [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura que va a recibir las coordenadas de cliente de la actualización que rodea la región de actualización.
 
 ### <a name="return-value"></a>Valor devuelto
 

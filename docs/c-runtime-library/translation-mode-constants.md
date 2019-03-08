@@ -17,21 +17,19 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: a703ec322c4d3788b6a057bacfb6dcf5a7a09716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac318c25b317d783e7fd7e287666bf85bb45b26
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563571"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220535"
 ---
 # <a name="translation-mode-constants"></a>Constantes del modo de traducción
 
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 #include <fcntl.h>
-
 ```
 
 ## <a name="remarks"></a>Comentarios

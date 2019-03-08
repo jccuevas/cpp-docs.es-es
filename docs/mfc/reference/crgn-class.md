@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279382"
 ---
 # <a name="crgn-class"></a>CRgn (clase)
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Establece un `CRgn` objeto para que sea equivalente a la unión de dos especificado `CRgn` objetos.|
 |[CRgn::CopyRgn](#copyrgn)|Establece un `CRgn` para que sea una copia de una clase de objeto `CRgn` objeto.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Inicializa un `CRgn` objeto con una región elíptica.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializa un `CRgn` objeto con una región elíptica definida por un [RECT](../../mfc/reference/rect-structure1.md) estructura.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Inicializa un `CRgn` objeto con una región elíptica definida por un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.|
 |[CRgn::CreateFromData](#createfromdata)|Crea una región de los datos de transformación y región determinados.|
 |[CRgn::CreateFromPath](#createfrompath)|Crea una región de la ruta de acceso que está seleccionado en el contexto de dispositivo determinado.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Inicializa un `CRgn` objeto con una región poligonal. El sistema cierra el polígono automáticamente, si es necesario, al dibujar una línea desde el último vértice al primero.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Inicializa un `CRgn` objeto con una región que consta de una serie de polígonos cerrados. Los polígonos pueden no contiguos, o que es posible que se superponen.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Inicializa un `CRgn` objeto con una región rectangular.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializa un `CRgn` objeto con una región rectangular definida por un [RECT](../../mfc/reference/rect-structure1.md) estructura.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Inicializa un `CRgn` objeto con una región rectangular definida por un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estructura.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Inicializa un `CRgn` objeto con una región rectangular con esquinas redondeadas.|
 |[CRgn::EqualRgn](#equalrgn)|Comprueba dos `CRgn` objetos para determinar si son equivalentes.|
 |[CRgn::FromHandle](#fromhandle)|Devuelve un puntero a un `CRgn` objeto cuando se especifica un identificador a una región de Windows.|
@@ -226,13 +226,13 @@ BOOL CreateEllipticRgn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda del rectángulo delimitador de la elipse.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha del rectángulo delimitador de la elipse.
 
 *y2*<br/>
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Parámetros
 
 *lpXForm*<br/>
-Apunta a un [XFORM](../../mfc/reference/xform-structure.md) estructura de datos que define la transformación que se realizará en la región. Si este puntero es NULL, se utiliza la transformación de identidad.
+Apunta a un [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) estructura de datos que define la transformación que se realizará en la región. Si este puntero es NULL, se utiliza la transformación de identidad.
 
 *nCount*<br/>
 Especifica el número de bytes que señala *pRgnData*.
 
 *pRgnData*<br/>
-Apunta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) estructura de datos que contiene los datos de la región.
+Apunta a un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) estructura de datos que contiene los datos de la región.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -448,13 +448,13 @@ BOOL CreateRectRgn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda de la región.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda de la región.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha de la región.
 
 *y2*<br/>
@@ -528,13 +528,13 @@ BOOL CreateRoundRectRgn(
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x lógica de la esquina superior izquierda de la región.
 
 *y1*<br/>
 Especifica la coordenada y lógica de la esquina superior izquierda de la región.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x lógica de la esquina inferior derecha de la región.
 
 *y2*<br/>
@@ -543,7 +543,7 @@ Especifica la coordenada y lógica de la esquina inferior derecha de la región.
 *x3*<br/>
 Especifica el ancho de la elipse que se usa para crear las esquinas redondeadas.
 
-*Y3*<br/>
+*y3*<br/>
 Especifica el alto de la elipse que se usa para crear las esquinas redondeadas.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Parámetros
 
 *lpRgnData*<br/>
-Apunta a un [RGNDATA](../../mfc/reference/rgndata-structure.md) estructura de datos que recibe la información. Si este parámetro es NULL, el valor devuelto contiene el número de bytes necesarios para los datos de la región.
+Apunta a un [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) estructura de datos que recibe la información. Si este parámetro es NULL, el valor devuelto contiene el número de bytes necesarios para los datos de la región.
 
 *nCount*<br/>
 Especifica el tamaño, en bytes, de la *lpRgnData* búfer.
@@ -705,7 +705,7 @@ Especifica el número de unidades para mover a la izquierda o derecha.
 *y*<br/>
 Especifica el número de unidades que se mueven hacia arriba o hacia abajo.
 
-*punto*<br/>
+*point*<br/>
 La coordenada x de *punto* especifica el número de unidades para mover a la izquierda o derecha. La coordenada y de *punto* especifica el número de unidades que se mueven hacia arriba o hacia abajo. El *punto* parámetro puede ser un `POINT` estructura o un `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -768,7 +768,7 @@ Especifica la coordenada x lógica del punto de prueba.
 *y*<br/>
 Especifica la coordenada y lógica de punto de prueba.
 
-*punto*<br/>
+*point*<br/>
 Las coordenadas x e y de *punto* especificar las coordenadas x e y del punto para probar el valor de. El *punto* parámetro puede ser un `POINT` estructura o un `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -817,13 +817,13 @@ void SetRectRgn(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda de la región rectangular.
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda de la región rectangular.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha de la región rectangular.
 
 *y2*<br/>
@@ -842,4 +842,3 @@ Use esta función en lugar de la `CreateRectRgn` la función miembro para evitar
 
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)
-

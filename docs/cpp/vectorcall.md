@@ -1,6 +1,6 @@
 ---
 title: __vectorcall
-ms.date: 10/10/2018
+ms.date: 12/17/2018
 f1_keywords:
 - __vectorcall_cpp
 - __vectorcall
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - __vectorcall keyword
 - __vectorcall
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-ms.openlocfilehash: ab542a7fbae286a7f39b66bb4857cd8e8ff6ab59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55c383c4bdf83ddb5fdf1c4990d5f2e47b4d819a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507229"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627458"
 ---
 # <a name="vectorcall"></a>__vectorcall
 
 **Específicos de Microsoft**
 
-El **__vectorcall** convención de llamada especifica que los argumentos para funciones deben pasarse en registros, siempre que sea posible. **__vectorcall** utiliza más registros para argumentos que [__fastcall](../cpp/fastcall.md) o el valor predeterminado [x64 convención de llamada](../build/overview-of-x64-calling-conventions.md) usar. El **__vectorcall** solo se admite la convención de llamada en código nativo en procesadores x86 y x64 que incluyen extensiones SIMD de transmisión por secuencias 2 (SSE2) y versiones posteriores. Use **__vectorcall** acelerar funciones que pasan varios punto flotante o argumentos vectoriales SIMD y realizan operaciones que se benefician de los argumentos cargados en registros. En la lista siguiente se muestra las características que son comunes a las implementaciones x86 y x64 de **__vectorcall**. Las diferencias se explican más adelante en este artículo.
+El **__vectorcall** convención de llamada especifica que los argumentos para funciones deben pasarse en registros, siempre que sea posible. **__vectorcall** utiliza más registros para argumentos que [__fastcall](../cpp/fastcall.md) o el valor predeterminado [x64 convención de llamada](../build/x64-calling-convention.md) usar. El **__vectorcall** solo se admite la convención de llamada en código nativo en procesadores x86 y x64 que incluyen extensiones SIMD de transmisión por secuencias 2 (SSE2) y versiones posteriores. Use **__vectorcall** acelerar funciones que pasan varios punto flotante o argumentos vectoriales SIMD y realizan operaciones que se benefician de los argumentos cargados en registros. En la lista siguiente se muestra las características que son comunes a las implementaciones x86 y x64 de **__vectorcall**. Las diferencias se explican más adelante en este artículo.
 
 |Elemento|Implementación|
 |-------------|--------------------|

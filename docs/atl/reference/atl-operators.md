@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-ms.openlocfilehash: 361b0316e27ee06c64b3ed5e11c6aab10210596f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f1bd4f88b8d3a37f051a208a887c5264f61955a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293503"
 ---
 # <a name="atl-operators"></a>Operadores ATL
 
@@ -20,9 +20,9 @@ Esta sección contiene los temas de referencia para los operadores globales de A
 |[operator ==](#operator_eq_eq)|Compara dos `CSid` objetos o `SID` igualdad de estructuras.|
 |[operator !=](#operator_neq)|Compara dos `CSid` objetos o `SID` desigualdad de estructuras.|
 |[operador <](#operator_lt)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es menor que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
-|[operador >](#operator_gt)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es mayor que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
-|[operador < =](#operator_lt__eq)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es menor o igual que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
-|[operador > =](#operator_gt__eq)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es mayor o igual que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
+|[operator >](#operator_gt)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es mayor que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
+|[operator <=](#operator_lt__eq)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es menor o igual que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
+|[operator >=](#operator_gt__eq)|Comprueba si el `CSid` objeto o `SID` estructura en el lado izquierdo del operador es mayor o igual que el `CSid` objeto o `SID` estructura a la derecha (para compatibilidad de la biblioteca estándar de C++).|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,10 +38,10 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -58,10 +58,10 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -78,10 +78,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -102,10 +102,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -126,10 +126,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -150,10 +150,10 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera `CSid` objeto o `SID` estructura para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo `CSid` objeto o `SID` estructura para comparar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -163,4 +163,3 @@ Devuelve TRUE si la dirección de la *lhs* es mayor o igual a la dirección de l
 ### <a name="remarks"></a>Comentarios
 
 Este operador actúa en la dirección de la `CSid` objeto o `SID` estructurar y se implementa para ofrecer compatibilidad con las clases de colección de la biblioteca estándar de C++.
-

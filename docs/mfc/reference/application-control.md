@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 5c155605ceaada7083200dee255214ad68bdf6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578937"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850316"
 ---
 # <a name="application-control"></a>Control de la aplicación
 
@@ -184,7 +184,7 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 El identificador de clase única del control.
 
 *lpszProgID*<br/>
@@ -212,11 +212,6 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **Encabezado:** afxwin.h
 
-### <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[AfxOleUnlockControl](#afxoleunlockcontrol)
-
 ##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
 Esta función permite registrar el servidor en el registro del sistema OLE.
@@ -234,7 +229,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Referencia al Id. del servidor OLE
 
 *lpszClassName*<br/>
@@ -333,10 +328,6 @@ Debe tener la siguiente instrucción en el script de recursos de aplicación de 
 
 **Encabezado**: afxole.h
 
-## <a name="see-also"></a>Vea también
-
-[Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
 Desbloquea el generador de clases del control especificado.
@@ -350,7 +341,7 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 El identificador de clase única del control.
 
 *lpszProgID*<br/>
@@ -370,15 +361,12 @@ Un control esté bloqueado con `AfxOleLockControl`, de modo que los datos creado
 // Unlock control's (Microsoft Calendar Control) class factory.
 
 AfxOleUnlockControl(_T("MSCAL.Calendar"));
-
 ```
 
 ### <a name="requirements"></a>Requisitos
 
 **Encabezado:** afxwin.h
 
-### <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Vea también
 
 [Macros y funciones globales](mfc-macros-and-globals.md)<br/>
-[AfxOleLockControl](#afxolelockcontrol)
-

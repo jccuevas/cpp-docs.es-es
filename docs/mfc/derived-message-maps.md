@@ -1,18 +1,18 @@
 ---
 title: Mapas de mensajes derivados
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcdff67c57e932e414a2b61b28cd0498ab997c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662533"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304241"
 ---
 # <a name="derived-message-maps"></a>Mapas de mensajes derivados
 
@@ -20,7 +20,8 @@ Durante el control de mensajes, comprobación de un mensaje de la clase map no e
 
 Tenga en cuenta que `CView`, la clase base de `CMyView`, se deriva a su vez `CWnd`. Por lo tanto `CMyView` *es* un `CView` y *es* un `CWnd`. Cada una de esas clases tiene su propio mapa de mensajes. La figura "Una jerarquía de vistas" a continuación se muestra la relación jerárquica de las clases, pero tenga en cuenta que un `CMyView` objeto es un objeto único que tiene las características de las tres clases.
 
-![Jerarquía de una vista](../mfc/media/vc38621.gif "vc38621") una jerarquía de vistas
+![Jerarquía de una vista](../mfc/media/vc38621.gif "jerarquía de una vista") <br/>
+A View Hierarchy
 
 Por tanto, si no se puede asociar un mensaje en la clase `CMyView`del mapa de mensajes, el marco de trabajo busca en el mapa de mensajes de su clase base inmediata. El `BEGIN_MESSAGE_MAP` macro al principio del mapa de mensajes especifica dos nombres de clase como argumentos:
 
@@ -37,4 +38,3 @@ Para acelerar la búsqueda de mapas de mensajes, el marco de trabajo almacena en
 ## <a name="see-also"></a>Vea también
 
 [Cómo busca el marco los mapas de mensajes](../mfc/how-the-framework-searches-message-maps.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664573"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524363"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Miembros de datos sobre el estado de un campo en los descriptores de acceso generados por el asistente
 
@@ -58,7 +58,7 @@ Puede usar los valores de estado con fines de depuración. Si el código generad
 
 También puede usar los valores de estado para establecer un valor NULL para un campo determinado. Esto ayuda a en los casos en los que desee distinguir un valor de campo como NULL en lugar de cero. Depende de usted decidir si NULL es un valor válido o un valor especial y decidir cómo debe controlar su aplicación. OLE DB define DBSTATUS_S_ISNULL como la forma correcta de especificar un valor NULL genérico. Si el consumidor lee los datos y el valor es null, el campo de estado se establece en DBSTATUS_S_ISNULL. Si el consumidor desea establecer un valor NULL, el consumidor establece el valor de estado en DBSTATUS_S_ISNULL antes de llamar al proveedor.
 
-A continuación, abra Oledb.h y busque DBSTATUSENUM. A continuación, puede hacer coincidir el valor numérico del estado distinto de cero con los valores de enumeración DBSTATUSENUM. Si el nombre de la enumeración no es suficiente para saber cuál es el problema, consulte el **estado** tema en el **valores de enlace de datos** sección de la [Guía del programador de OLE DB](/previous-versions/windows/desktop/ms713643). Este tema contiene las tablas de valores de estado que se utiliza al obtener o establecer los datos. Para obtener información acerca de los valores de longitud, vea el **longitud** tema en la misma sección.
+A continuación, abra Oledb.h y busque DBSTATUSENUM. A continuación, puede hacer coincidir el valor numérico del estado distinto de cero con los valores de enumeración DBSTATUSENUM. Si el nombre de la enumeración no es suficiente para saber cuál es el problema, consulte el **estado** tema en el **valores de enlace de datos** sección de la [Guía del programador de OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Este tema contiene las tablas de valores de estado que se utiliza al obtener o establecer los datos. Para obtener información acerca de los valores de longitud, vea el **longitud** tema en la misma sección.
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>Recuperar la longitud o el estado de una columna
 

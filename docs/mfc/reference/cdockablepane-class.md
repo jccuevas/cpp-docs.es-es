@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271919"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -161,7 +161,7 @@ class CDockablePane : public CPane
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDockablePane:: Attachtotabwnd](#attachtotabwnd)|Adjunta un panel a otro panel. Esto crea un panel con pestañas.|
+|[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Adjunta un panel a otro panel. Esto crea un panel con pestañas.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Devuelve el tamaño del rectángulo de panel.|
 |[CDockablePane::CanAcceptMiniFrame](#canacceptminiframe)|Determina si se puede acoplar el marco mini especificado en el panel.|
 |[CDockablePane::CanAcceptPane](#canacceptpane)|Determina si se puede acoplar a otro panel al panel actual.|
@@ -171,7 +171,7 @@ class CDockablePane : public CPane
 |[CDockablePane::CopyState](#copystate)|Copia el estado de un panel acoplable.|
 |[CDockablePane::Create](#create)|Crea el control de Windows y lo adjunta a la `CDockablePane` objeto.|
 |[CDockablePane::CreateDefaultPaneDivider](#createdefaultpanedivider)|Crea un divisor de forma predeterminada para el panel como fijarla en una ventana de marco.|
-|[CDockablePane:: CreateEx](#createex)|Crea el control de Windows y lo adjunta a la `CDockablePane` objeto.|
+|[CDockablePane::CreateEx](#createex)|Crea el control de Windows y lo adjunta a la `CDockablePane` objeto.|
 |[CDockablePane::CreateTabbedPane](#createtabbedpane)|Crea un panel con pestañas en el panel actual.|
 |[CDockablePane::DockPaneContainer](#dockpanecontainer)|Acopla un contenedor en el panel.|
 |[CDockablePane::DockPaneStandard](#dockpanestandard)|Acopla un panel mediante el uso de esquema de acoplamiento (estándar).|
@@ -204,12 +204,12 @@ class CDockablePane : public CPane
 |[CDockablePane::IsTabLocationBottom](#istablocationbottom)|Especifica si se encuentran en la parte superior o inferior del panel de pestañas.|
 |[CDockablePane::IsTracked](#istracked)|Especifica si el usuario arrastra un panel.|
 |[CDockablePane::IsVisible](#isvisible)|Determina si está visible el panel actual.|
-|[CDockablePane:: Loadstate](#loadstate)|Lo utiliza internamente.|
+|[CDockablePane::LoadState](#loadstate)|Lo utiliza internamente.|
 |[CDockablePane::OnAfterChangeParent](#onafterchangeparent)|Lo llama el marco de trabajo cuando ha cambiado el elemento primario de un panel. (Invalida [CPane::OnAfterChangeParent](../../mfc/reference/cpane-class.md#onafterchangeparent).)|
 |[CDockablePane::OnAfterDockFromMiniFrame](#onafterdockfromminiframe)|Lo llama el marco de trabajo cuando se acopla una barra de acoplamiento flotante en una ventana de marco.|
 |[CDockablePane::OnBeforeChangeParent](#onbeforechangeparent)|Lo llama el marco cuando el elemento primario del panel que se va a cambiar. (Invalida [CPane::OnBeforeChangeParent](../../mfc/reference/cpane-class.md#onbeforechangeparent).)|
 |[CDockablePane::OnBeforeFloat](#onbeforefloat)|Lo llama el marco cuando un panel se acerca a float. (Invalida [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
-|[CDockablePane:: Removefromdefaultpanedividier](#removefromdefaultpanedividier)|El marco llama a este método cuando se se desacople un panel.|
+|[CDockablePane::RemoveFromDefaultPaneDividier](#removefromdefaultpanedividier)|El marco llama a este método cuando se se desacople un panel.|
 |[CDockablePane::ReplacePane](#replacepane)|Reemplaza el panel con un panel especificado.|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|El marco llama a este método como un panel es deserializar para restaurar el divisor del panel de forma predeterminada.|
 |`CDockablePane::SaveState`|Lo utiliza internamente.|
@@ -220,7 +220,7 @@ class CDockablePane : public CPane
 |[CDockablePane::SetLastPercentInPaneContainer](#setlastpercentinpanecontainer)|Establece el porcentaje de espacio que ocupa un panel dentro de su contenedor.|
 |`CDockablePane::SetResizeMode`|Lo utiliza internamente.|
 |[CDockablePane::SetRestoredDefaultPaneDivider](#setrestoreddefaultpanedivider)|Establece el divisor del panel predeterminado restablecido.|
-|[CDockablePane:: Settabbedpanertc](#settabbedpanertc)|Establece la información de clase en tiempo de ejecución para una ventana con pestañas que se crea cuando dos paneles de acoplamiento entre sí.|
+|[CDockablePane::SetTabbedPaneRTC](#settabbedpanertc)|Establece la información de clase en tiempo de ejecución para una ventana con pestañas que se crea cuando dos paneles de acoplamiento entre sí.|
 |[CDockablePane::ShowPane](#showpane)|Muestra u oculta un panel.|
 |[CDockablePane::Slide](#slide)|Muestra u oculta un panel con una animación deslizante que muestra solo cuando el panel está en modo de ocultación automática.|
 |[CDockablePane::ToggleAutoHide](#toggleautohide)|Modo de ocultación automática de conmutadores. (Invalida [CPane::ToggleAutoHide](../../mfc/reference/cpane-class.md#toggleautohide) .)|
@@ -313,7 +313,7 @@ En el ejemplo siguiente se muestra cómo configurar un `CDockablePane` objeto me
 
 **Encabezado:** afxDockablePane.h
 
-##  <a name="attachtotabwnd"></a>  CDockablePane:: Attachtotabwnd
+##  <a name="attachtotabwnd"></a>  CDockablePane::AttachToTabWnd
 
 El panel actual se asocia a un panel de destino, la creación de un panel con pestañas.
 
@@ -595,7 +595,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in, out] Especifica la ventana primaria.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -671,7 +671,7 @@ Este método devuelve un puntero al divisor recién creada, o NULL si se produce
 |CBRS_ALIGN_LEFT|El panel que se está acoplado a la izquierda del área de cliente de una ventana de marco.|
 |CBRS_ALIGN_RIGHT|El panel que se está acoplado a la derecha del área de cliente de una ventana de marco.|
 
-##  <a name="createex"></a>  CDockablePane:: CreateEx
+##  <a name="createex"></a>  CDockablePane::CreateEx
 
 Crea el control de Windows y lo adjunta a la [CDockablePane](../../mfc/reference/cdockablepane-class.md) objeto.
 
@@ -700,7 +700,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 [in, out] Especifica la ventana primaria.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Especifica el tamaño y posición de la ventana, en coordenadas de cliente de *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -887,7 +887,7 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar la opción Ocultar automáticamente todas las características del panel acoplable; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
@@ -906,7 +906,7 @@ virtual void EnableGripper(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el título; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
@@ -987,7 +987,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 
 ### <a name="parameters"></a>Parámetros
 
-*PT*<br/>
+*pt*<br/>
 [in] La ubicación del puntero en coordenadas de pantalla.
 
 *nSensitivity*<br/>
@@ -1108,7 +1108,7 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 [in] Especifica el punto de prueba.
 
 *bDetectCaption*<br/>
@@ -1276,7 +1276,7 @@ Si el panel acoplable está en modo de ocultación automática y `IsHideInAutoHi
 
 Si el panel acoplable no está en modo de ocultación automática, el estado de visibilidad viene determinada por la [CBasePane::IsVisible](../../mfc/reference/cbasepane-class.md#isvisible) método.
 
-## ##  <a name="loadstate"></a>  CDockablePane:: Loadstate
+## ##  <a name="loadstate"></a>  CDockablePane::LoadState
 
 Sólo para uso interno. Para obtener información más detallada, consulta el código fuente ubicado en la carpeta VC\atlmfc\src\mfc de la instalación de Visual Studio.
 
@@ -1434,7 +1434,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 Invalide este método en una clase derivada para implementar los efectos personalizados de ocultar automáticamente.
 
-##  <a name="removefromdefaultpanedividier"></a>  CDockablePane:: Removefromdefaultpanedividier
+##  <a name="removefromdefaultpanedividier"></a>  CDockablePane::RemoveFromDefaultPaneDividier
 
 El marco llama a este método cuando se se desacople un panel.
 
@@ -1572,7 +1572,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 Cuando se deserializa un panel, se obtiene un divisor de paneles predeterminada restaurada. Para obtener más información, consulte [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider).
 
-##  <a name="settabbedpanertc"></a>  CDockablePane:: Settabbedpanertc
+##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
 
 Establece la información de clase en tiempo de ejecución para una ventana con pestañas que se crea cuando dos paneles de acoplamiento entre sí.
 
@@ -1612,7 +1612,7 @@ virtual void ShowPane(
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el panel. FALSE para ocultar el panel.
 
 *bDelay*<br/>

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d6a750d3c2c6c409a1b7d3ce40ef13566b522cff
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265170"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415947"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Hacer referencia a una propiedad en un proveedor
 
-Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734) en el **referencia del programador de OLE DB**.
+Busque el grupo de propiedades y el identificador de propiedad para la propiedad que desee. Para obtener más información, consulte [propiedades de OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) en el **referencia del programador de OLE DB**.
 
 En el siguiente ejemplo se da por supuesto que está intentando obtener una propiedad del conjunto de filas. El código para el uso de la sesión o el comando es similar, pero usa una interfaz diferente.
 

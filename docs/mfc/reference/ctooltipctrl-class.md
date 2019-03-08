@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500417"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420848"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -121,7 +121,7 @@ class CToolTipCtrl : public CWnd
 |[CToolTipCtrl::HitTest](#hittest)|Prueba en un punto para determinar si está dentro del rectángulo delimitador de la herramienta especificada. Si es así, recupera información acerca de la herramienta.|
 |[CToolTipCtrl::Pop](#pop)|Quita una ventana de sugerencia de la herramienta muestra la vista.|
 |[CToolTipCtrl::Popup](#popup)|Hace que el control de información sobre herramientas actual que se muestra en las coordenadas del último mensaje de mouse.|
-|[CToolTipCtrl:: RelayEvent](#relayevent)|Pasa un mensaje del mouse a un control de información sobre herramientas para el procesamiento.|
+|[CToolTipCtrl::RelayEvent](#relayevent)|Pasa un mensaje del mouse a un control de información sobre herramientas para el procesamiento.|
 |[CToolTipCtrl::SetDelayTime](#setdelaytime)|Establece la inicial, emergente y reshow las duraciones de un control de información sobre herramientas.|
 |[CToolTipCtrl::SetMargin](#setmargin)|Establece la parte superior, izquierda, inferior y los márgenes derechos de una ventana de sugerencia de la herramienta.|
 |[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Establece el ancho máximo de una ventana de información sobre herramientas.|
@@ -203,14 +203,14 @@ BOOL AddTool(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDText*<br/>
 Id. del recurso de cadena que contiene el texto de la herramienta.
 
 *lpRectTool*<br/>
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene las coordenadas de la herramienta rectángulo delimitador. Las coordenadas son relativas a la esquina superior izquierda del área cliente de la ventana identificado por *conquistado*.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene las coordenadas de la herramienta rectángulo delimitador. Las coordenadas son relativas a la esquina superior izquierda del área cliente de la ventana identificado por *conquistado*.
 
 *nIDTool*<br/>
 Id. de la herramienta.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Parámetros
 
 *lprc*<br/>
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que contiene un rectángulo de ventana de sugerencia de herramienta o un rectángulo de presentación de texto.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que contiene un rectángulo de ventana de sugerencia de herramienta o un rectángulo de presentación de texto.
 
 *bLarger*<br/>
 Si es TRUE, *lprc* se usa para especificar un rectángulo de presentación del texto, y recibe el rectángulo de la ventana correspondiente. Si es FALSE, *lprc* se usa para especificar un rectángulo de la ventana, y recibe el rectángulo de presentación de texto correspondientes.
@@ -360,7 +360,7 @@ void DelTool(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Parámetros
 
 *lprc*<br/>
-Dirección de un `RECT` estructura que recibirá la información del margen. Los miembros de la [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura no define un rectángulo delimitador. Con el fin de este mensaje, los miembros de estructura se interpretan como sigue:
+Dirección de un `RECT` estructura que recibirá la información del margen. Los miembros de la [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura no define un rectángulo delimitador. Con el fin de este mensaje, los miembros de estructura se interpretan como sigue:
 
 |Miembro|Representación|
 |------------|--------------------|
@@ -498,7 +498,7 @@ void GetText(
 *str*<br/>
 Hacer referencia a un `CString` objeto que recibe el texto de la herramienta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -586,7 +586,7 @@ BOOL GetToolInfo(
 *ToolInfo*<br/>
 Hacer referencia a un `TOOLINFO` objeto que recibe el texto de la herramienta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
@@ -613,10 +613,10 @@ BOOL HitTest(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
-*PT*<br/>
+*pt*<br/>
 Puntero a un `CPoint` objeto que contiene las coordenadas del punto que va a probarse.
 
 *lpToolInfo*<br/>
@@ -682,7 +682,7 @@ En el ejemplo de código siguiente se muestra una ventana de información sobre 
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  CToolTipCtrl:: RelayEvent
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
 
 Pasa un mensaje del mouse a un control de información sobre herramientas para el procesamiento.
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Parámetros
 
 *lpMsg*<br/>
-Puntero a un [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) estructura que contiene el mensaje de retransmisión.
+Puntero a un [MSG](/windows/desktop/api/winuser/ns-winuser-msg) estructura que contiene el mensaje de retransmisión.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 El nuevo color de fondo.
 
 ### <a name="remarks"></a>Comentarios
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Parámetros
 
-*CLR*<br/>
+*clr*<br/>
 Color del texto nuevo.
 
 ### <a name="remarks"></a>Comentarios
@@ -860,14 +860,14 @@ void SetToolRect(
 
 ### <a name="parameters"></a>Parámetros
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>
 Id. de la herramienta.
 
 *lpRect*<br/>
-Puntero a un [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) estructura que especifica el nuevo rectángulo delimitador.
+Puntero a un [RECT](/previous-versions/dd162897\(v=vs.85\)) estructura que especifica el nuevo rectángulo delimitador.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 
@@ -919,7 +919,7 @@ void UpdateTipText(
 *lpszText*<br/>
 Puntero al texto de la herramienta.
 
-*conquistado*<br/>
+*pWnd*<br/>
 Puntero a la ventana que contiene la herramienta.
 
 *nIDTool*<br/>

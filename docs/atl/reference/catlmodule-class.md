@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302018"
 ---
 # <a name="catlmodule-class"></a>CAtlModule (clase)
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |Name|Descripción|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|El constructor.|
-|[CAtlModule:: ~ CAtlModule](#dtor)|Destructor.|
+|[CAtlModule::~CAtlModule](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -57,9 +57,9 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |[CAtlModule::Lock](#lock)|Incrementa el recuento de bloqueos.|
 |[CAtlModule::Term](#term)|Libera a todos los miembros de datos.|
 |[CAtlModule::Unlock](#unlock)|Reduce el recuento de bloqueos.|
-|[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado.|
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado.|
 |[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Este método es invocado por `UpdateRegistryFromResourceD` para realizar la actualización del registro.|
-|[CAtlModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)|Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado. Este método se vincula estáticamente para el componente de registro de ATL.|
+|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado. Este método se vincula estáticamente para el componente de registro de ATL.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
 
@@ -122,7 +122,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 *pFunc*<br/>
 Puntero a la función para agregar.
 
-*almacenamiento de datos*<br/>
+*dw*<br/>
 Datos definidos por el usuario, se pasa a la función.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -141,7 +141,7 @@ CAtlModule() throw();
 
 Inicializa a los miembros de datos e inicia una sección crítica en torno a los subprocesos del módulo.
 
-##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule
+##  <a name="dtor"></a>  CAtlModule::~CAtlModule
 
 Destructor.
 
@@ -242,7 +242,7 @@ virtual LONG Unlock() throw();
 
 Disminuye el recuento de bloqueos y devuelve el valor actualizado. Este valor puede ser útil para el diagnóstico y depuración.
 
-##  <a name="updateregistryfromresourced"></a>  CAtlModule:: UpdateRegistryFromResourceD
+##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD
 
 Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado.
 
@@ -266,7 +266,7 @@ Un nombre de recurso.
 *nResID*<br/>
 Un identificador de recurso.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 TRUE si se debe registrar el objeto; FALSE en caso contrario.
 
 *pMapEntries*<br/>
@@ -300,7 +300,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 *lpszRes*<br/>
 Un nombre de recurso.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Indica si se debe registrar el objeto.
 
 *pMapEntries*<br/>
@@ -314,7 +314,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 Este método proporciona la implementación de [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced).
 
-##  <a name="updateregistryfromresources"></a>  CAtlModule:: UpdateRegistryFromResourceS
+##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS
 
 Se ejecuta la secuencia de comandos contenida en un recurso para registrar o anular el registro de un objeto especificado. Este método se vincula estáticamente para el componente de registro de ATL.
 
@@ -338,7 +338,7 @@ Un identificador de recurso.
 *lpszRes*<br/>
 Un nombre de recurso.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Indica si se debe registrar el script del recurso.
 
 *pMapEntries*<br/>

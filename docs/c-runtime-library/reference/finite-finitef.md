@@ -1,6 +1,6 @@
 ---
-title: _finite, _finitef
-ms.date: 04/05/2018
+title: isfinite, _finite, _finitef
+ms.date: 01/31/2019
 apiname:
 - _finite
 - _finitef
@@ -16,11 +16,14 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
+- isfinite
 - finite
 - _finite
 - _finitef
+- math/isfinite
 - math/_finite
 - math/_finitef
 - float/_finite
@@ -29,20 +32,29 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431682"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210385"
 ---
-# <a name="finite-finitef"></a>_finite, _finitef
+# <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
 
 Determina si un valor de punto flotante es finito.
 
 ## <a name="syntax"></a>Sintaxis
 
 ```C
+int isfinite(
+   /* floating-point */ x
+); /* C-only macro */
+
+template <class FloatingType>
+inline bool isfinite(
+   FloatingType x
+) throw(); /* C++-only template function */
+
 int _finite(
    double x
 );
@@ -59,23 +71,26 @@ Valor de punto flotante que se va a probar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Ambos **_finite** y **_finitef** devuelven un valor distinto de cero si el argumento *x* es finito; es decir, si -INF < *x* < + INF. Devuelve 0 si el argumento es infinito o un valor NaN (no es un número).
+El `isfinite` macro y `_finite` y `_finitef` funciones devuelven un valor distinto de cero si *x* es cualquier normal o subnormal valor finito. Devuelven 0 si el argumento es infinito o un NaN. La función de plantilla de C++ en línea `isfinite` se comporta del mismo modo, pero devuelve **true** o **false**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_finite** y **_finitef** funciones son específicas de Microsoft. El **_finitef** función sólo está disponible cuando compila para x86, ARM o ARM64 plataformas.
+`isfinite` es una macro, cuando se compila como C y una función de plantilla en línea cuando se compila como C++. El `_finite` y `_finitef` funciones son específicas de Microsoft. La función `_finitef` solo está disponible cuando se compila para las plataformas x86, ARM o ARM64.
 
 ## <a name="requirements"></a>Requisitos
 
 |Función|Encabezado necesario (C)|Encabezado necesario (C++)|
 |--------------|---------------------------|-------------------------------|
-|**_finite**|\<float.h> o \<math.h>|\<float.h>, \<math.h>, \<cfloat> o \<cmath>|
-|**_finitef**|\<math.h>|\<math.h> o \<cmath>|
+|`_finite`|\<float.h> o \<math.h>|\<float.h>, \<math.h>, \<cfloat> o \<cmath>|
+|`isfinite`, `_finitef`|\<math.h>|\<math.h> o \<cmath>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[fpclassify](fpclassify.md)<br/>
 [_fpclass, _fpclassf](fpclass-fpclassf.md)<br/>
+[isinf](isinf.md)<br/>
+[isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
+[isnormal](isnormal.md)<br/>

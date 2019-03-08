@@ -1,21 +1,21 @@
 ---
-title: 'Cómo: Personalizar el botón Aplicación'
-ms.date: 11/04/2016
+title: Filtrar Personalizar el botón aplicación
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592795"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269544"
 ---
-# <a name="how-to-customize-the-application-button"></a>Cómo: Personalizar el botón Aplicación
+# <a name="how-to-customize-the-application-button"></a>Filtrar Personalizar el botón aplicación
 
 Al hacer clic en el botón de la aplicación, se muestra un menú de comandos. Normalmente, el menú contiene comandos relacionados con el archivo como **abierto**, **guardar**, **impresión**, y **Exit**.
 
-![Botón de aplicación de cinta de opciones de MFC](../mfc/media/application_button.png "application_button")
+![Botón de aplicación de cinta de opciones MFC](../mfc/media/application_button.png "botón de aplicación de cinta de opciones MFC")
 
 Para personalizar el botón de la aplicación, ábralo en el **propiedades** , modificar sus propiedades y, a continuación, obtener una vista previa del control de la cinta de opciones.
 
@@ -46,7 +46,7 @@ En la tabla siguiente define las propiedades del botón aplicación.
 |**Título MRU**|Especifica el texto que se muestra en el panel de lista de elementos recientes.|
 |**Imágenes pequeñas**|Especifica el identificador de la imagen que contiene una serie de iconos de 16 x 16. Los iconos se usan con los botones de la colección de botones.|
 |**Use**|Habilita o deshabilita el panel de lista de elementos recientes. El panel de lista de elementos recientes aparece en el menú de la aplicación.|
-|**Ancho**|Especifica el ancho en píxeles, del panel de lista de elementos recientes.|
+|**Width**|Especifica el ancho en píxeles, del panel de lista de elementos recientes.|
 
 El menú de la aplicación no aparece en la superficie de diseño. Para verlo, debe obtener una vista previa de la cinta de opciones o ejecutar la aplicación.
 
@@ -57,4 +57,3 @@ El menú de la aplicación no aparece en la superficie de diseño. Para verlo, d
 ## <a name="see-also"></a>Vea también
 
 [Diseñador de la cinta de opciones (MFC)](../mfc/ribbon-designer-mfc.md)
-

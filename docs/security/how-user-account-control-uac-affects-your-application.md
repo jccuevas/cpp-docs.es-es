@@ -1,18 +1,18 @@
 ---
 title: Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - UAC [C++]
 - security [C++], User Account Control
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 336260ddc1c9da795478d5541af73d9801633843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04bfc16f2d82863faca806d4cb8d5295104a0cc9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556967"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177048"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Cómo el Control de cuentas de usuario (UAC) afecta a la aplicación
 
@@ -34,7 +34,7 @@ La segunda opción es no incrustar un fragmento del UAC en el manifiesto especif
 
 El diagrama de flujo siguiente describe cómo se ejecutará su aplicación en función de si el UAC está habilitado y si la aplicación tiene un manifiesto del UAC:
 
-![Comportamiento del cargador de Windows Vista](media/uacflowchart.png "UACflowchart")
+![Comportamiento del cargador de Windows](media/uacflowchart.png "comportamiento del cargador de Windows")
 
 ## <a name="see-also"></a>Vea también
 

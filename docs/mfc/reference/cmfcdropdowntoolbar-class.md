@@ -1,6 +1,6 @@
 ---
 title: CMFCDropDownToolBar (clase)
-ms.date: 10/188/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCDropDownToolBar
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: ccbdd69baea104f306cfdca69efb46985ee97b91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582005"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303558"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar (clase)
 
@@ -60,7 +60,7 @@ No se pueden personalizar ni acoplada una barra de herramientas de la lista desp
 
 La siguiente ilustración muestra un `CMFCDropDownToolBar` objeto:
 
-![Ejemplo de CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")
+![Ejemplo de CMFCDropDownToolbar](../../mfc/reference/media/cmfcdropdown.png "ejemplo de CMFCDropDownToolbar")
 
 Crear un `CMFCDropDownToolBar` objeto del mismo modo, crear una barra de herramientas normal (vea [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md)).
 
@@ -72,7 +72,7 @@ Para insertar la barra de herramientas desplegable en una barra de herramientas 
 
 3. Reemplazar el botón ficticio con la `CMFCDropDownToolBarButton` objeto mediante el uso de [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Para obtener más información acerca de los botones de barra de herramientas, consulte [Tutorial: poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de una barra de herramientas de la lista desplegable, vea el proyecto de ejemplo VisualStudioDemo.
+Para obtener más información acerca de los botones de barra de herramientas, consulte [Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md). Para obtener un ejemplo de una barra de herramientas de la lista desplegable, vea el proyecto de ejemplo VisualStudioDemo.
 
 ## <a name="example"></a>Ejemplo
 
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú normal.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] TRUE para bloquear la barra de herramientas; en caso contrario, FALSE.
 
 *uiDisabledResID*<br/>
@@ -202,7 +202,7 @@ afx_msg void OnLButtonUp(
 
 [in] *nFlags*<br/>
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -218,7 +218,7 @@ afx_msg void OnMouseMove(
 
 [in] *nFlags*<br/>
 
-[in] *punto*<br/>
+[in] *point*<br/>
 
 ### <a name="remarks"></a>Comentarios
 
@@ -260,5 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [CMFCDropDownToolbarButton (clase)](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Tutorial: Poner controles en las barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Tutorial: Insertar controles en barras de herramientas](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -2,18 +2,18 @@
 title: Intervalo de valores enteros
 ms.date: 11/04/2016
 ms.assetid: 0e9c6161-8f3f-4bfb-9fcc-a6c8dc97d702
-ms.openlocfilehash: bcf79877ed1bbd261a70b56d60df86adc31c897b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e34e700df203004388cd912089711b5849e00fd7
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632054"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152526"
 ---
 # <a name="range-of-integer-values"></a>Intervalo de valores enteros
 
 **ANSI 3.1.2.5** Las representaciones y los conjuntos de valores de los distintos tipos de enteros
 
-Los enteros contienen 32 bits (cuatro bytes). Los enteros con signo se representan en forma de complemento de dos. El bit más significativo contiene el signo: 1 si es negativo y 0 si es positivo o cero. Los valores se muestran a continuación:
+Los enteros contienen 32 bits (cuatro bytes). Los enteros con signo se representan en forma de complemento de dos. El bit más significativo contiene el signo: 1 si es negativo, 0 si es positivo y cero. Los valores se muestran a continuación:
 
 |Tipo|Mínimo y máximo|
 |----------|-------------------------|

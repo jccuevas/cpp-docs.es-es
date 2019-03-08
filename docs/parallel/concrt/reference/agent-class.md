@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289148"
 ---
 # <a name="agent-class"></a>agent (Clase)
 
@@ -40,18 +40,18 @@ class agent;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Agente](#ctor)|Sobrecargado. Construye a un agente.|
+|[agent](#ctor)|Sobrecargado. Construye a un agente.|
 |[~ agent (destructor)](#dtor)|Destruye al agente.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Cancelar](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` indica a la `agent_canceled` estado.|
+|[cancel](#cancel)|Mueve un agente desde el `agent_created` o `agent_runnable` indica a la `agent_canceled` estado.|
 |[start](#start)|Mueve un agente de la `agent_created` estado el `agent_runnable` de estado y se programa para su ejecución.|
 |[status](#status)|Un origen sincrónico de información de estado del agente.|
 |[status_port](#status_port)|Un origen asincrónico de información de estado del agente.|
-|[Espere](#wait)|Espera a que un agente completar su tarea.|
+|[wait](#wait)|Espera a que un agente completar su tarea.|
 |[wait_for_all](#wait_for_all)|Espera a que todos los agentes especificados para completar sus tareas.|
 |[wait_for_one](#wait_for_one)|Espera a que cualquiera de los agentes especificados para completar su tarea.|
 
@@ -59,7 +59,7 @@ class agent;
 
 |Name|Descripción|
 |----------|-----------------|
-|[Listo](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|
+|[done](#done)|Mueve un agente en el `agent_done` estado, que indica que el agente se ha completado.|
 |[run](#run)|Representa la tarea principal de un agente. `run` se debe invalidar en una clase derivada y especifica qué debe hacer el agente después de que se ha iniciado.|
 
 ## <a name="remarks"></a>Comentarios
@@ -100,7 +100,7 @@ La `ScheduleGroup` objeto dentro de la que está programada la tarea de ejecuci�
 
 El runtime usa el programador predeterminado si no se especifican los parámetros `_PScheduler` o `_PGroup` .
 
-##  <a name="dtor"></a> ~ agent
+##  <a name="dtor"></a> ~agent
 
 Destruye al agente.
 
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 Un puntero al agente para esperar.
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 El tiempo máximo de espera en milisegundos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -239,7 +239,7 @@ Una matriz de punteros a los agentes que esperar.
 *_PStatus*<br/>
 Un puntero a una matriz de Estados del agente. Los valores de estado representará el estado del agente correspondiente cuando el método devuelve.
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 El tiempo máximo de espera en milisegundos.
 
 ### <a name="remarks"></a>Comentarios
@@ -275,7 +275,7 @@ Una referencia a una variable donde se colocará el estado del agente.
 *_Index*<br/>
 Una referencia a una variable donde se colocará el índice del agente.
 
-*_Tiempo de espera*<br/>
+*_Timeout*<br/>
 El tiempo máximo de espera en milisegundos.
 
 ### <a name="remarks"></a>Comentarios
