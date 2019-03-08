@@ -1,4 +1,4 @@
----
+﻿---
 title: Información general de la programación para Windows en C++
 ms.date: 11/15/2018
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
@@ -25,7 +25,7 @@ Para empezar a trabajar con programación C++ tradicional de Windows, consulte [
 
 ### <a name="c-or-net"></a>¿C++ o. NET? 
 
-	Para la mayoría de escenarios de aplicaciones de escritorio (es decir, que no se dirigen a UWP), considere la posibilidad de usar C# y .NET. Esto se debe a que la programación de .NET suele ser menos compleja y menos propensa a errores, además de tener una API orientada a objetos más moderna que Win32 o MFC. En la mayoría de los casos, su rendimiento es más que adecuado. .NET cuenta con Windows Presentation Foundation (WPF) para obtener gráficos enriquecidos, y puede consumir Win32, así como la API moderna de Windows Runtime (consulte UWP a continuación). Como norma general, se recomienda usar C++ para aplicaciones de escritorio cuando necesite lo siguiente:
+Para la mayoría de escenarios de aplicaciones de escritorio (es decir, que no se dirigen a UWP), considere la posibilidad de usar C# y .NET. Esto se debe a que la programación de .NET suele ser menos compleja y menos propensa a errores, además de tener una API orientada a objetos más moderna que Win32 o MFC. En la mayoría de los casos, su rendimiento es más que adecuado. .NET cuenta con Windows Presentation Foundation (WPF) para obtener gráficos enriquecidos, y puede consumir Win32, así como la API moderna de Windows Runtime (consulte UWP a continuación). Como norma general, se recomienda usar C++ para aplicaciones de escritorio cuando necesite lo siguiente:
 
 - control preciso sobre el uso de memoria
 - la mayor economía en consumo de energía
