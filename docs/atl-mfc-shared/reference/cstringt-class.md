@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525501"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750876"
 ---
 # <a name="cstringt-class"></a>CStringT (clase)
 
@@ -137,7 +137,7 @@ Determina si la clase string necesita compatibilidad con la biblioteca de tiempo
 |Name|Descripción|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Construye un `CStringT` objetos de varias maneras.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Destruye un objeto `CStringT`.|
+|[CStringT::~CStringT](#_dtorcstringt)|Destruye un objeto `CStringT`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -182,11 +182,11 @@ Determina si la clase string necesita compatibilidad con la biblioteca de tiempo
 
 |||
 |-|-|
-|[operador =](#operator_eq)|Asigna un nuevo valor a un `CStringT` objeto.|
+|[operator =](#operator_eq)|Asigna un nuevo valor a un `CStringT` objeto.|
 |[CStringT::operator +](#operator_add)|Concatena dos cadenas o un carácter y una cadena.|
 |[CStringT::operator +=](#operator_add_eq)|Concatena una nueva cadena al final de una cadena existente.|
 |[CStringT::operator ==](#operator_eq_eq)|Determina si dos cadenas son iguales lógicamente.|
-|[CStringT::operator! =](#operator_neq)|Determina si dos cadenas lógicamente no son iguales.|
+|[CStringT::operator !=](#operator_neq)|Determina si dos cadenas lógicamente no son iguales.|
 |[CStringT::operator &lt;](#operator_lt)|Determina si la cadena en el lado izquierdo del operador es menor que la cadena en el lado derecho.|
 |[CStringT::operator &gt;](#operator_gt)|Determina si la cadena en el lado izquierdo del operador es mayor que en la cadena en el lado derecho.|
 |[CStringT::operator &lt;=](#operator_lt_eq)|Determina si la cadena en el lado izquierdo del operador es menor o igual que la cadena en el lado derecho.|
@@ -273,7 +273,7 @@ Dado que `CStringT` usa un argumento de plantilla para definir el tipo de carác
 
 |Header|Uso de|
 |------------|-------------|
-|CStringT.h|Objetos de cadena solo de MFC|
+|cstringt.h|Objetos de cadena solo de MFC|
 |atlstr.h|Objetos de cadena no están basados en MFC|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
@@ -335,7 +335,7 @@ Una cadena de formato de control.
 *nFormatID*<br/>
 El identificador de recurso de cadena que contiene la cadena de formato de control.
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 ### <a name="remarks"></a>Comentarios
@@ -531,7 +531,7 @@ Un puntero a una matriz de caracteres de longitud *nLength*no terminada en null.
 *nLength*<br/>
 Un recuento del número de caracteres en *pch*.
 
-*CH*<br/>
+*ch*<br/>
 Un único carácter.
 
 *pszSrc*<br/>
@@ -568,9 +568,9 @@ Un identificador para un `CStringT` objeto.
 
 Dado que los constructores copian los datos de entrada en el nuevo almacenamiento asignado, debe tener en cuenta que pueden dar lugar a excepciones de memoria. Tenga en cuenta que algunos de estos constructores actúan como funciones de conversión. Esto permite sustituir, por ejemplo, LPTSTR donde un `CStringT` espera el objeto.
 
-- `CStringT`( `LPCSTR` `lpsz` ): Crea un Unicode `CStringT` de una cadena ANSI. También puede utilizar este constructor para cargar un recurso de cadena, como se muestra en el ejemplo siguiente.
+- `CStringT`( `LPCSTR` `lpsz` ): Construye un Unicode `CStringT` de una cadena ANSI. También puede utilizar este constructor para cargar un recurso de cadena, como se muestra en el ejemplo siguiente.
 
-- `CStringT(` `LPCWSTR` `lpsz` ): Crea un `CStringT` desde una cadena Unicode.
+- `CStringT(` `LPCWSTR` `lpsz` ): Construye un `CStringT` desde una cadena Unicode.
 
 - `CStringT`( `const unsigned char*` `psz` ): Le permite construir un `CStringT` de un puntero a **unsigned char**.
 
@@ -588,7 +588,7 @@ El operador de sobrecarga `CSimpleStringT<>&()` construye un `CStringT` objeto d
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 Destruye el objeto `CStringT`.
 
@@ -610,7 +610,7 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 Índice de base cero del primer carácter en la `CStringT` objeto va a eliminar.
 
 *nCount*<br/>
@@ -652,7 +652,7 @@ Una subcadena que se va a buscar.
 *iStart*<br/>
 El índice del carácter en la cadena debe comenzar la búsqueda con, o 0 para comenzar desde el principio.
 
-*CH*<br/>
+*ch*<br/>
 Un único carácter que se busca.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -709,7 +709,7 @@ El identificador de recurso de cadena que contiene la cadena de formato de contr
 *pszFormat*<br/>
 Una cadena de formato de control.
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 ### <a name="remarks"></a>Comentarios
@@ -743,7 +743,7 @@ El identificador de recurso de cadena que contiene el texto del mensaje sin form
 *pszFormat*<br/>
 Apunta a la cadena de formato de control. Se examinan para las inserciones y con formato en consecuencia. La cadena de formato es similar a la función de tiempo de ejecución *printf*-las cadenas de formato de estilo, salvo que permite para que los parámetros que deben insertarse en un orden arbitrario.
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos opcionales.
 
 ### <a name="remarks"></a>Comentarios
@@ -846,13 +846,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*iÍndice*<br/>
+*iIndex*<br/>
 El índice del carácter antes de que llevará a cabo la inserción.
 
 *psz*<br/>
 Un puntero a la subcadena que se va a insertar.
 
-*CH*<br/>
+*ch*<br/>
 El carácter que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1040,10 +1040,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Parámetros
 
-*canales 1*<br/>
+*ch1*<br/>
 Un carácter ANSI o Unicode que se va a concatenar con una cadena.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un carácter ANSI o Unicode que se va a concatenar con una cadena.
 
 *str1*<br/>
@@ -1103,7 +1103,7 @@ El tipo de base de la cadena.
 *var*<br/>
 Un objeto variant para concatenar con esta cadena.
 
-*CH*<br/>
+*ch*<br/>
 Un carácter ANSI o Unicode que se va a concatenar con una cadena.
 
 *pszSrc*<br/>
@@ -1141,10 +1141,10 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*canales 1*<br/>
+*ch1*<br/>
 Un carácter ANSI o Unicode para la comparación.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un carácter ANSI o Unicode para la comparación.
 
 *str1*<br/>
@@ -1167,7 +1167,7 @@ Comprueba si una cadena o un carácter en el lado izquierdo es igual a una caden
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>  CStringT::operator! =
+##  <a name="operator_neq"></a>  CStringT::operator !=
 
 Determina si dos cadenas lógicamente no son iguales.
 
@@ -1183,10 +1183,10 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*canales 1*<br/>
+*ch1*<br/>
 Un carácter ANSI o Unicode que se va a concatenar con una cadena.
 
-*Ch2*<br/>
+*ch2*<br/>
 Un carácter ANSI o Unicode que se va a concatenar con una cadena.
 
 *str1*<br/>
@@ -1444,7 +1444,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 El carácter que se va a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1733,4 +1733,3 @@ El `CStringT& TrimRight()` versión no requiere ningún parámetro. Recorta cual
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT (clase)](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

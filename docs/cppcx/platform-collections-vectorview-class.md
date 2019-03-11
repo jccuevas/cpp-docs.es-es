@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658190"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745290"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView (Clase)
 
@@ -48,17 +48,17 @@ El `VectorView` la clase implementa la [Windows::Foundation::Collections::IVecto
 
 |Name|Descripción|
 |----------|-----------------|
-|[Vectorview](#ctor)|Inicializa una nueva instancia de la clase VectorView.|
+|[VectorView::VectorView](#ctor)|Inicializa una nueva instancia de la clase VectorView.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Vectorview](#first)|Devuelve un iterador que especifica el primer elemento del objeto VectorView.|
-|[Vectorview](#getat)|Recupera el elemento del objeto VectorView actual indicado por el índice especificado.|
-|[Getmany](#getmany)|Recupera una secuencia de elementos del objeto VectorView actual, empezando en el índice especificado.|
-|[Vectorview](#indexof)|Busca el elemento especificado en el objeto VectorView actual y, si lo encuentra, devuelve el índice del elemento.|
-|[Vectorview](#size)|Devuelve el número de elementos del objeto VectorView actual.|
+|[VectorView::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto VectorView.|
+|[VectorView::GetAt](#getat)|Recupera el elemento del objeto VectorView actual indicado por el índice especificado.|
+|[VectorView::GetMany](#getmany)|Recupera una secuencia de elementos del objeto VectorView actual, empezando en el índice especificado.|
+|[VectorView::IndexOf](#indexof)|Busca el elemento especificado en el objeto VectorView actual y, si lo encuentra, devuelve el índice del elemento.|
+|[VectorView::Size](#size)|Devuelve el número de elementos del objeto VectorView actual.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -68,7 +68,7 @@ El `VectorView` la clase implementa la [Windows::Foundation::Collections::IVecto
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="first"></a>  Vectorview (método)
 
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 El elemento que se va a buscar.
 
 *index*<br/>
@@ -244,7 +244,7 @@ VectorView(
 *InIt*<br/>
 El tipo de una colección de objetos que se utiliza para inicializar el objeto VectorView actual.
 
-*IL*<br/>
+*il*<br/>
 Un [std:: initializer_list](../standard-library/initializer-list-class.md) cuyos elementos se usará para inicializar el objeto VectorView.
 
 *N*<br/>
@@ -253,7 +253,7 @@ El número de elementos en una colección de objetos que se utiliza para inicial
 *size*<br/>
 El número de elementos del objeto VectorView.
 
-*valor*<br/>
+*value*<br/>
 Un valor que se utiliza para inicializar cada elemento en el objeto VectorView actual.
 
 *v*<br/>
@@ -271,7 +271,7 @@ Un [std:: Array](../standard-library/array-class-stl.md) objeto que se usa para 
 *first*<br/>
 El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo de `first` se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Último*<br/>
+*last*<br/>
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto VectorView actual. El tipo de `last` se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 33397ed7061f14d9aeb9c8b5c3d561865ad91cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638092"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739527"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator (Clase)
 
@@ -41,7 +41,7 @@ La clase BackInsertIterator implementa las reglas requeridas por [back_insert_it
 
 |Name|Descripción|
 |----------|-----------------|
-|[Backinsertiterator](#ctor)|Inicializa una nueva instancia de la clase BackInsertIterator.|
+|[BackInsertIterator::BackInsertIterator](#ctor)|Inicializa una nueva instancia de la clase BackInsertIterator.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -59,7 +59,7 @@ La clase BackInsertIterator implementa las reglas requeridas por [back_insert_it
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ---
 ## <a name="ctor"></a>  Constructor Backinsertiterator
@@ -83,7 +83,7 @@ Un IVector\<T > objeto.
 
 Un objeto `BackInsertIterator` inserta elementos a continuación del último elemento del objeto especificado por el parámetro `v`.
 
-## <a name="operator-assign"></a>  Backinsertiterator:: operator = (operador)
+## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
 
 Anexa el objeto especificado al final de la colección secuencial actual.
 
@@ -102,7 +102,7 @@ El objeto que se va a anexar a la colección actual.
 
 Referencia al objeto BackInsertIterator actual.
 
-## <a name="operator-dereference"></a>  Operador de backinsertiterator:: operator
+## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
 
 Recupera una referencia al objeto BackInsertIterator actual.
 
@@ -120,7 +120,7 @@ Referencia al objeto BackInsertIterator actual.
 
 Este operador devuelve una referencia al objeto BackInsertIterator actual, no así a ningún elemento de la colección actual.
 
-## <a name="operator-increment"></a>  Backinsertiterator:: operator ++ (operador)
+## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
 
 Devuelve una referencia al objeto BackInsertIterator actual. El iterador no se modifica.
 

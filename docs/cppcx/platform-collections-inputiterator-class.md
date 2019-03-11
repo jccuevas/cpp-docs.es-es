@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: d01519870d52a51a18e25f73d5caa853d90a8792
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455242"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745803"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator (Clase)
 
@@ -46,7 +46,7 @@ El typename de la clase de plantilla InputIterator.
 
 |Name|Descripción|
 |----------|-----------------|
-|[Inputiterator](#ctor)|Inicializa una nueva instancia de la clase InputIterator.|
+|[InputIterator::InputIterator](#ctor)|Inicializa una nueva instancia de la clase InputIterator.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -66,7 +66,7 @@ El typename de la clase de plantilla InputIterator.
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="ctor"></a>  Constructor Inputiterator
 
@@ -81,10 +81,10 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
 
 ### <a name="parameters"></a>Parámetros
 
-*ITER*<br/>
+*iter*<br/>
 Objeto de iterador.
 
-## <a name="operator-arrow"></a>  Inputiterator:: operator -&gt; operador
+## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
 
 Recupera la dirección del elemento especificado por el objeto InputIterator actual.
 
@@ -98,7 +98,7 @@ pointer operator->() const;
 
 Dirección del elemento especificado por el objeto InputIterator actual.
 
-## <a name="operator-dereference"></a>  Inputiterator:: operator\* operador
+## <a name="operator-dereference"></a>  InputIterator::operator\* Operator
 
 Recupera una referencia al elemento especificado por el objeto InputIterator actual.
 
@@ -152,7 +152,7 @@ Lo primera sintaxis de InputIterator incrementa previamente el objeto InputItera
 
 La segunda sintaxis incrementa posteriormente el objeto InputIterator actual. El tipo `int` de la segunda sintaxis indica una operación de incremento posterior, no un operando entero real.
 
-## <a name="operator-inequality"></a>  Inputiterator:: operator! = (operador)
+## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
 
 Indica si el objeto InputIterator actual no es igual a un objeto InputIterator especificado.
 

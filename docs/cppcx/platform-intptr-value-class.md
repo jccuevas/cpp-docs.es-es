@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449145"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747117"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr (Clase de valor)
 
@@ -32,7 +32,7 @@ IntPtr tiene los siguientes miembros:
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[IntPtr](#ctor)|Inicializa una nueva instancia de IntPtr.|
+|[IntPtr::IntPtr](#ctor)|Inicializa una nueva instancia de IntPtr.|
 |[IntPtr::op_explicit (Operador)](#op-explicit)|Convierte el parámetro especificado un IntPtr o un puntero a un valor de IntPtr.|
 |[IntPtr::ToInt32](#toint32)|Convierte el IntPtr actual en un entero de 32 bits.|
 
@@ -42,7 +42,7 @@ IntPtr tiene los siguientes miembros:
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 
@@ -58,7 +58,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Un identificador o un puntero de 64 bits, o un puntero a un valor de 64 bits, o un valor de 32 bits que se puede convertir en un valor de 64 bits.
 
 ## <a name="op-explicit"> </a> IntPtr::op_explicit (Operador)
@@ -73,10 +73,10 @@ static IntPtr::operator IntPtr( void* value1);   static IntPtr::operator IntPtr(
 
 ### <a name="parameters"></a>Parámetros
 
-*Valor1*<br/>
+*value1*<br/>
 Un puntero a un identificador o IntPtr.
 
-*Value2*<br/>
+*value2*<br/>
 Un entero de 32 bits que se puede convertir en un objeto IntPtr.
 
 *value3*<br/>

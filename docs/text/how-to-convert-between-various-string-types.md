@@ -7,14 +7,14 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 83a652192d2d9055fddffdec96eb91a2ebdd68a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d943bb612d9027368bab4832f369db1d5f6165cc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304228"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743904"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>Filtrar Convertir entre distintos tipos de cadenas
+# <a name="how-to-convert-between-various-string-types"></a>Procedimiento Convertir entre distintos tipos de cadenas
 
 En este tema se muestra cómo convertir a distintos tipos de cadenas de Visual C++ en otras cadenas. Los tipos de cadenas que están cubiertos incluyen `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), y <xref:System.String?displayProperty=fullName>. En todos los casos, se realiza una copia de la cadena cuando se convierte en el nuevo tipo. Los cambios realizados en la nueva cadena no afectará a la cadena original y viceversa.
 

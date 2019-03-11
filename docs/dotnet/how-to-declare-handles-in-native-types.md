@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Declarar controladores en tipos nativos'
+title: Filtrar Declarar controladores en tipos nativos
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: 4b5cd212589be04f5f9f3a5dd6d4496a8f5add2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464933"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746015"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>Cómo: Declarar controladores en tipos nativos
+# <a name="how-to-declare-handles-in-native-types"></a>Procedimiento Declarar controladores en tipos nativos
 
 No se puede declarar un tipo de identificador en un tipo nativo. vcclr.h proporciona la plantilla de contenedor seguro para el tipo `gcroot` para hacer referencia a un objeto CLR del montón de C++. Esta plantilla le permite incrustar un identificador virtual en un tipo nativo y tratarlo como si fuera el tipo subyacente. En la mayoría de los casos, puede usar el `gcroot` object como tipo incrustado sin realizar ninguna conversión. Sin embargo, con [para cada uno, en](../dotnet/for-each-in.md), tiene que usar `static_cast` para recuperar la referencia administrada subyacente.
 

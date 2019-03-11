@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WrongThreadException
 ms.assetid: c193f97e-0392-4535-a4c4-0711e4e4a836
-ms.openlocfilehash: b59191eb739a94f305b656425ee2f3725815c7b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dde8c9afff6be083580042a958f59e057bc44350
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640003"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743957"
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException (Clase)
 
@@ -35,7 +35,7 @@ Para obtener más información, consulta [COMException](../cppcx/platform-comexc
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 
