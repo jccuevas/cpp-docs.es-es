@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::DisconnectedException
 ms.assetid: c25e0d64-5bff-4c21-88e5-c4ec2776fa7f
-ms.openlocfilehash: 2d4f8f4cb52fdb7e50c36eb3f0255bd85c15dbb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56276a7d09cc82e05886c2c67a4784993083adb5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477147"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752017"
 ---
 # <a name="platformdisconnectedexception-class"></a>Platform::DisconnectedException (Clase)
 
@@ -37,7 +37,7 @@ Para obtener más información, consulta la clase [COMException](../cppcx/platfo
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 

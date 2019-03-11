@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327036"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742944"
 ---
 # <a name="platformbox-class"></a>Platform::Box (Clase)
 
@@ -26,18 +26,18 @@ ref class Box abstract;
 
 **Encabezado:** vccorlib.h
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 ### <a name="members"></a>Miembros
 
 |Miembro|Descripción|
 |------------|-----------------|
 |[Box](#ctor) | Crea un `Box` que puede encapsular un valor del tipo especificado. |
-|[operador cuadro&lt;const T&gt;^](#box-const-t) | Permite conversiones boxing de una clase de valor `const` `T` o de una clase `enum` `T` en `Box<T>`. |
-|[operador cuadro&lt;const volatile T&gt;^](#box-const-volatile-t) | Permite conversiones boxing de una clase de valor `const volatile` `T` o de un tipo `enum` `T` en `Box<T>`. |
+|[operador cuadro&lt;const T&gt;^](#box-const-t) | Permite conversiones boxing de una clase de valor `const``T` o de una clase `enum``T` en `Box<T>`. |
+|[operador cuadro&lt;const volatile T&gt;^](#box-const-volatile-t) | Permite conversiones boxing de una clase de valor `const volatile``T` o de un tipo `enum``T` en `Box<T>`. |
 |[operador cuadro&lt;T&gt;^](#box-t) | Permite conversiones boxing de una clase de valor `T` en `Box<T>`. |
-|[operador cuadro&lt;volatile T&gt;^](#box-volatile-t) | Permite conversiones boxing de una clase de valor `volatile` `T` o de un tipo `enum` `T` en `Box<T>`. |
-|[Operador Box:: operator T](#t) | Permite conversiones boxing de una clase de valor `T` o de una clase `enum` `T` en `Box<T>`. |
+|[operador cuadro&lt;volatile T&gt;^](#box-volatile-t) | Permite conversiones boxing de una clase de valor `volatile``T` o de un tipo `enum``T` en `Box<T>`. |
+|[Operador Box:: operator T](#t) | Permite conversiones boxing de una clase de valor `T` o de una clase `enum``T` en `Box<T>`. |
 |[Propiedad Value](#value) | Devuelve el valor encapsulado en el objeto `Box`. |
 
 ## <a name="ctor"></a> Constructor de Box
@@ -57,7 +57,7 @@ Tipo de valor del que se va a realizar la conversión boxing, por ejemplo, `int`
 
 ## <a name="box-const-t"></a> Box:: operator Box&lt;const T&gt;^ (operador)
 
-Permite conversiones boxing de una clase de valor `const` `T` o de una clase `enum` `T` en `Box<T>`.
+Permite conversiones boxing de una clase de valor `const``T` o de una clase `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -76,7 +76,7 @@ Un `Platform::Box<T>^` instancia que representa el valor original en la caja en 
 
 ## <a name="box-const-volatile-t"></a> Box:: operator Box&lt;const volatile T&gt;^ (operador)
 
-Permite conversiones boxing de una clase de valor `const volatile` `T` o de un tipo `enum` `T` en `Box<T>`.
+Permite conversiones boxing de una clase de valor `const volatile``T` o de un tipo `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -114,7 +114,7 @@ Un `Platform::Box<T>^` instancia que representa el valor original en la caja en 
 
 ## <a name="box-volatile-t"></a> Box:: operator Box&lt;volatile T&gt;^ (operador)
 
-Permite conversiones boxing de una clase de valor `volatile` `T` o de un tipo `enum` `T` en `Box<T>`.
+Permite conversiones boxing de una clase de valor `volatile``T` o de un tipo `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -133,7 +133,7 @@ Un `Platform::Box<T>^` instancia que representa el valor original en la caja en 
 
 ## <a name="t"></a>  Operador Box:: operator T
 
-Permite conversiones boxing de una clase de valor `T` o de una clase `enum` `T` en `Box<T>`.
+Permite conversiones boxing de una clase de valor `T` o de una clase `enum``T` en `Box<T>`.
 
 ### <a name="syntax"></a>Sintaxis
 

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 9073dc6e802aa2ed6bfa4fde2a09dd8a0864687b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555671"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743572"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (Clase)
 
@@ -54,7 +54,7 @@ El atributo STAThreadAttribute hereda de [Platform:: Object Class](../cppcx/plat
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 ## <a name="ctor"></a> STAThreadAttribute constructor
 

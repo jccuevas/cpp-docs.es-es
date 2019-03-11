@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-ms.openlocfilehash: 5ff8765d759a14cab63e3c8ae0ba2bc419b00775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1b95e4d32321aadf7de65ecb25109fbecd9eb614
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628532"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741410"
 ---
 # <a name="begin-function"></a>begin (Función)
 
@@ -63,7 +63,7 @@ El objeto VectorIterator objeto devuelto por begin es un iterador de proxy que a
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Windows::Foundation::Collections
+**Espacio de nombres**: Windows::Foundation::Collections
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Platform::ValueType (Clase)
+title: Clase Platform::ValueType
 ms.date: 02/03/2017
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 57fb089f0d9dc53ba8a65cef41e3341168ffea45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596409"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747156"
 ---
-# <a name="platformvaluetype-class"></a>Platform::ValueType (Clase)
+# <a name="platformvaluetype-class"></a>Clase Platform::ValueType
 
 La clase base para las instancias de tipos de valor.
 
@@ -40,7 +40,7 @@ La clase ValueType se usa para construir tipos de valor. ValueType se deriva de 
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 

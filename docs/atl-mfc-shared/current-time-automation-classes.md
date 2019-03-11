@@ -1,5 +1,5 @@
 ---
-title: 'Hora actual: Clases de automatización de'
+title: 'Hora actual: Clases de automatización'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - time, setting current
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Automation classes, current time
 - time, getting current
 ms.assetid: cc967f17-1189-4cf3-85f9-1969462d5f72
-ms.openlocfilehash: 97984376057462daaebbf949e96131e91928a1ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1183bc5fd42a59c73556d6fdecfd45c781e8cd7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596578"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739732"
 ---
-# <a name="current-time-automation-classes"></a>Hora actual: Clases de automatización de
+# <a name="current-time-automation-classes"></a>Hora actual: Clases de automatización
 
 El siguiente procedimiento muestra cómo crear un `COleDateTime` objeto e inicializarlo con la hora actual.
 

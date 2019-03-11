@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: serializar punteros incrustados mediante la interoperabilidad de C++'
+title: Filtrar Convertir punteros incrustados mediante la interoperabilidad de C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: d48297118fde98889acc0fd5f4abd29ee177cd8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493745"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738474"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Cómo: serializar punteros incrustados mediante la interoperabilidad de C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procedimiento Convertir punteros incrustados mediante la interoperabilidad de C++
 
 Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma para implementar administrados y las funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si se definen en archivos independientes. No es necesario que los archivos que contienen solo las funciones no administradas se compilan con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 

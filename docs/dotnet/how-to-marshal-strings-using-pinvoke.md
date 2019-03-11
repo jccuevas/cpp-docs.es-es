@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: serializar cadenas mediante PInvoke'
+title: Filtrar Convertir cadenas utilizando PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598125"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739249"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Cómo: serializar cadenas mediante PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Filtrar Convertir cadenas utilizando PInvoke
 
 En este tema se explica cómo funciones nativas que aceptan cadenas de estilo C se pueden llamar mediante la cadena CLR tipo System:: String con el soporte técnico de invocación de plataforma de .NET Framework. Los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) ya que P/Invoke proporciona pocos informes, de errores de tiempo de compilación no es seguro para el tipo y puede ser tedioso de implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción, pero en caso contrario, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

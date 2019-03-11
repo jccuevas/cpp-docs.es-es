@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Llamar a propiedades y métodos del control de formularios Windows Forms'
+title: Filtrar Controlan la llamada de propiedades y métodos de los formularios de Windows
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 809fa428172dffb5f53e7339e04882b451c8562f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561491"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743764"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Cómo: Llamar a propiedades y métodos del control de formularios Windows Forms
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Filtrar Controlan la llamada de propiedades y métodos de los formularios de Windows
 
 Dado que [:: GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) devuelve un puntero a <xref:System.Windows.Forms.Control?displayProperty=fullName>y no un puntero a `WindowsControlLibrary1::UserControl1`, es aconsejable agregar un miembro del tipo de control de usuario e inicialícelo en [iView:: OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Ahora puede llamar a métodos y propiedades mediante `m_ViewControl`.
 
-En este tema se da por supuesto que ha completado previamente [Cómo: crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) y [Cómo: crear el Control de usuario y el Host en una vista MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+En este tema se da por supuesto que ha completado previamente [Cómo: Crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) y [Cómo: Crear la vista de Control de usuario y el Host MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Para crear la aplicación host MFC
 
-1. Abra la aplicación MFC que creó en [Cómo: crear el Control de usuario y el Host en una vista MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Abra la aplicación MFC que creó en [Cómo: Crear la vista de Control de usuario y el Host MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Agregue la siguiente línea a la sección pública de invalidaciones de la `CMFC02View` declaración en MFC02View.h de clase.
 

@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389934"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747701"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Utilizar ensamblados comprobables con SQL Server (C++/CLI)
 
@@ -19,9 +19,9 @@ Cuando un cliente ejecuta un procedimiento almacenado extendido, SQL Server busc
 
 SQL Server proporciona extensiones a Transact-SQL (T-SQL) para que pueda instalar a los ensamblados comprobables en SQL Server. El conjunto de permisos de SQL Server especifica el contexto de seguridad, con los siguientes niveles de seguridad:
 
-- Modo no restringido: ejecutar código bajo su propia responsabilidad; código no tiene que ser de tipos comprobable.
+- Modo no restringido: Ejecutar código bajo su propia responsabilidad; código no tiene que ser de tipos comprobable.
 
-- Modo seguro: ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.
+- Modo seguro: Ejecutar puede comprobar el código de seguridad de tipos; compilar con/CLR: safe.
 
 > [!IMPORTANT]
 > En desuso de Visual Studio 2015 y Visual Studio 2017 no admite la **/CLR: pure** y **/CLR: safe** creación de proyectos que se pueda comprobar. Si necesita código comprobable, se recomienda que trasladar el código en C#.

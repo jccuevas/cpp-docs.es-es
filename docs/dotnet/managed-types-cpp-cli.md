@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595967"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746922"
 ---
 # <a name="managed-types-ccli"></a>Tipos administrados (C++/CLI)
 
@@ -125,7 +125,7 @@ S.i = 11
 
 Sin embargo, si agrega otro miembro a `struct S` en nested_value_types.cpp, (por ejemplo, `double d;`) y volver a compilar el componente sin volver a compilar el cliente, el resultado es una excepción no controlada (de tipo <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Cómo: probar la igualdad
+## <a name="test_equality"></a> Cómo: Para comprobar la igualdad
 
 En el ejemplo siguiente, una prueba de igualdad que usa Extensiones administradas para C++ se basa en lo que hacen referencia los identificadores.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Cómo: diagnosticar y resolver los problemas de compatibilidad de ensamblados
+## <a name="diagnose_fix"></a> Cómo: Diagnosticar y resolver los problemas de compatibilidad de ensamblados
 
 En este tema se explica qué puede ocurrir cuando la versión de un ensamblado al que hace referencia en tiempo de compilación no coincide con la versión del ensamblado al que hace referencia en tiempo de ejecución y cómo evitar el problema.
 

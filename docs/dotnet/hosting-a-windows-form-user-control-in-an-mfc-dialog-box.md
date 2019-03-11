@@ -6,12 +6,12 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 921e6fac32d37f8976d53d49adab72fb27ab5e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56cf00da71fe6c47e39de2a8fc06df572a301a61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632224"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748572"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>Hospedar un control de usuario de Windows Forms en un cuadro de diálogo MFC
 
@@ -26,7 +26,7 @@ Para una aplicación de ejemplo que muestra los formularios de Windows Forms uti
 
 [Cómo: Crear el control de usuario y el host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)
 
-[Cómo: realizar el enlace de datos DDX/DDV con formularios de Windows](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
+[Cómo: Realice las DDX/DDV enlace de datos con Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)
 
 [Cómo: Recibir eventos de Windows Forms de clases nativas de C++](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
