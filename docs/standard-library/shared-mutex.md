@@ -45,14 +45,14 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467335"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751822"
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex >
+# <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
 El &lt;shared_mutex > encabezado proporciona primitivas de sincronización para la protección de datos compartidos que se pueden tener acceso varios subprocesos. Además del control de acceso exclusivo proporcionado por las clases mutex, las clases mutex compartidas también permiten la propiedad compartida por varios subprocesos para el acceso no exclusivo. Las exclusiones mutuas compartidas pueden usarse para controlar los recursos que varios subprocesos pueden leer sin causar una condición de carrera, pero se deben escribir exclusivamente por un único subproceso.
 

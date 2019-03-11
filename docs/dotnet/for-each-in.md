@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532765"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746329"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -37,10 +37,10 @@ Tipo de `identifier`.
 *identifier*<br/>
 Variable de iteración que representa el elemento de la colección.  Cuando `identifier` es un [operador de referencia de seguimiento](../windows/tracking-reference-operator-cpp-component-extensions.md), puede modificar el elemento.
 
-*Expresión*<br/>
+*expression*<br/>
 Colección o expresión de matriz. El elemento de la colección debe ser de un tipo que el compilador pueda convertir en el tipo `identifier`.
 
-*Instrucciones*<br/>
+*statements*<br/>
 Instrucción o instrucciones que se van a ejecutar.
 
 ### <a name="remarks"></a>Comentarios
@@ -111,7 +111,7 @@ Testing
 
 La sintaxis CLR es el mismo que el **todos los Runtimes** sintaxis, excepto por lo siguiente.
 
-*Expresión*<br/>
+*expression*<br/>
 Expresión o colección de matriz administrada. El elemento de la colección debe ser de tipo que el compilador puede convertir desde <xref:System.Object> a la *identificador* tipo.
 
 *expresión* se evalúa como un tipo que implementa <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, o un tipo que define un `GetEnumerator` método que devuelve un tipo que implementa <xref:System.Collections.IEnumerator> o declara todos los métodos que se definen en `IEnumerator`.
