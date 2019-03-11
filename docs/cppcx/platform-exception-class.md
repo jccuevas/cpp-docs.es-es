@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464966"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743417"
 ---
 # <a name="platformexception-class"></a>Platform::Exception (Clase)
 
@@ -37,7 +37,7 @@ La clase `Exception` también tiene las siguientes clases de miembros.
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[Exception](#ctor)|Inicializa una nueva instancia de la clase `Exception`.|
+|[Exception::Exception](#ctor)|Inicializa una nueva instancia de la clase `Exception`.|
 
 ### <a name="methods"></a>Métodos
 
@@ -45,7 +45,7 @@ La clase `Exception` hereda los métodos `Equals()`, `Finalize()`,`GetHashCode()
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[Exception:: CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|
+|[Exception::CreateException](#createexception)|Crea una excepción que representa el valor HRESULT especificado.|
 
 ### <a name="properties"></a>Propiedades
 
@@ -53,8 +53,8 @@ La clase Exception también tiene las propiedades siguientes.
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[Exception:: HRESULT](#hresult)|HRESULT correspondiente a la excepción.|
-|[Exception:: Message](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|
+|[Exception::HResult](#hresult)|HRESULT correspondiente a la excepción.|
+|[Exception::Message](#message)|Un mensaje que describe la excepción. Este valor es de solo lectura y se no puede modificarse después de que se haya generado `Exception` .|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -62,7 +62,7 @@ La clase Exception también tiene las propiedades siguientes.
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 
@@ -79,7 +79,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Parámetros
 
-*recursos humanos*<br/>
+*hr*<br/>
 Un valor HRESULT que se obtiene normalmente de una llamada a un método COM. Si el valor es 0, lo que es igual a S_OK, este método produce [Platform:: InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) porque los métodos COM que se realice correctamente no deberían producir excepciones.
 
 *message*<br/>
@@ -108,7 +108,7 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Parámetros
 
-*HRESULT*<br/>
+*hresult*<br/>
 Valor HRESULT de error representado por la excepción.
 
 *message*<br/>
@@ -145,7 +145,7 @@ public:property String^ Message;
 
 ## <a name="property-value"></a>Valor de propiedad
 
-En las excepciones que se originan en Windows Runtime, es una descripción del error proporcionada por el sistema.
+En las excepciones que se originan en Windows en tiempo de ejecución, es una descripción del error proporcionada por el sistema.
 
 ### <a name="remarks"></a>Comentarios
 

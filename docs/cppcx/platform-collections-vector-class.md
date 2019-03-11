@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499877"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747130"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector (Clase)
 
@@ -53,7 +53,7 @@ Los tipos permitidos son:
 
 1. enteros
 
-1. clase de interfaz ^
+1. interface class^
 
 1. clase ref pública^
 
@@ -71,25 +71,25 @@ Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro
 
 |Name|Descripción|
 |----------|-----------------|
-|[Vector:: vector](#ctor)|Inicializa una nueva instancia de la clase Vector.|
+|[Vector::Vector](#ctor)|Inicializa una nueva instancia de la clase Vector.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Append](#append)|Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.|
-|[Clear](#clear)|Elimina todos los elementos del Vector actual.|
-|[Vector](#first)|Devuelve un iterador que especifica el primer elemento del objeto Vector.|
-|[Vector:: GetAt](#getat)|Recupera el elemento del objeto Vector actual identificado por el índice especificado.|
-|[Getmany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
-|[Vector:: GetView](#getview)|Devuelve una vista de solo lectura de una clase Vector; es decir, [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
-|[IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
-|[InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
-|[ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
-|[RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
-|[Removeatend](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
-|[SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
-|[Vector:: Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
+|[Vector::Append](#append)|Inserta el elemento especificado a continuación del último elemento en el objeto Vector actual.|
+|[Vector::Clear](#clear)|Elimina todos los elementos del Vector actual.|
+|[Vector::First](#first)|Devuelve un iterador que especifica el primer elemento del objeto Vector.|
+|[Vector::GetAt](#getat)|Recupera el elemento del objeto Vector actual identificado por el índice especificado.|
+|[Vector::GetMany](#getmany)|Recupera una secuencia de elementos del objeto Vector actual, empezando en el índice especificado.|
+|[Vector::GetView](#getview)|Devuelve una vista de solo lectura de una clase Vector; es decir, [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
+|[Vector::IndexOf](#indexof)|Busca el elemento especificado en el objeto Vector actual y, si lo encuentra, devuelve el índice del elemento.|
+|[Vector::InsertAt](#insertat)|Inserta el elemento especificado en el objeto Vector actual detrás del elemento identificado por el índice especificado.|
+|[Vector::ReplaceAll](#replaceall)|Elimina los elementos del objeto Vector actual y después inserta los elementos de la matriz especificada.|
+|[Vector::RemoveAt](#removeat)|Elimina el elemento identificado por el índice especificado del objeto Vector actual.|
+|[Vector::RemoveAtEnd](#removeatend)|Elimina el elemento al final del objeto Vector actual.|
+|[Vector::SetAt](#setat)|Asigna el valor especificado al elemento del objeto Vector actual identificado por el índice especificado.|
+|[Vector::Size](#size)|Devuelve el número de elementos del objeto Vector actual.|
 
 ### <a name="events"></a>Eventos
 
@@ -106,7 +106,7 @@ Si intenta usar un **Vector** tipo en un valor devuelto público o un parámetro
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="append"></a>  Append (método)
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 El elemento que se va a buscar.
 
 *index*<br/>
@@ -257,7 +257,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*Elemento*<br/>
+*item*<br/>
 Un elemento que se va a insertar en el objeto Vector detrás del elemento especificado por *índice*. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="removeat"></a>  RemoveAt (método)
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 Entero sin signo de base cero que especifica un elemento determinado en el objeto Vector.
 
-*Elemento*<br/>
+*item*<br/>
 El valor que se va a asignar al elemento especificado. El tipo de *elemento* está definida por el *T* typename.
 
 ## <a name="size"></a>  Vector:: Size (método)
@@ -366,7 +366,7 @@ Un [Platform:: Array](../cppcx/platform-array-class.md) que se utilizará para i
 *InIt*<br/>
 El tipo de una colección de objetos que se utiliza para inicializar el objeto Vector actual.
 
-*IL*<br/>
+*il*<br/>
 Un [std:: initializer_list](../standard-library/initializer-list-class.md) de objetos de tipo *T* que se utilizará para inicializar el objeto Vector.
 
 *N*<br/>
@@ -375,7 +375,7 @@ El número de elementos en una colección de objetos que se utiliza para inicial
 *size*<br/>
 El número de elementos del objeto Vector.
 
-*valor*<br/>
+*value*<br/>
 Un valor que se utiliza para inicializar cada elemento en el objeto Vector actual.
 
 *v*<br/>
@@ -387,7 +387,7 @@ Puntero a un objeto `std::vector` que se usa para inicializar el objeto Vector a
 *first*<br/>
 El primer elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *primera* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Último*<br/>
+*last*<br/>
 El último elemento de una secuencia de objetos que se utilizan para inicializar el objeto Vector actual. El tipo de *última* se pasa por medio de *el reenvío directo*. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Vea también

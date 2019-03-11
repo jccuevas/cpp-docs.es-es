@@ -1,28 +1,28 @@
 ---
-title: 'Cómo: Crear el control de usuario y hospedarlo en una vista MDI'
+title: Procedimiento Crear el Control de usuario y el Host en una vista MDI
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509127"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738763"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Cómo: Crear el control de usuario y hospedarlo en una vista MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Filtrar Crear el Control de usuario y el Host en una vista MDI
 
 Los pasos siguientes muestran cómo crear un control de usuario de .NET Framework, editarlo en una biblioteca de clases de control (específicamente un proyecto de la Biblioteca de controles de Windows) y, después, compilar el proyecto en un ensamblado. El control, a continuación, se puede consumir desde una aplicación MFC que utiliza clases derivadas de [clase CView](../mfc/reference/cview-class.md) y [CWinFormsView (clase)](../mfc/reference/cwinformsview-class.md).
 
-Para obtener información acerca de cómo crear un control de usuario de Windows Forms y crear una biblioteca de clases de control, vea [Cómo: crear controles de usuario](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Para obtener información acerca de cómo crear un control de usuario de Windows Forms y crear una biblioteca de clases de control, vea [Cómo: Crear controles de usuario](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
 
 > [!NOTE]
 >  En algunos casos, puede que los controles de Windows Forms (por ejemplo, un control Grid de un tercero) no se comporten de forma confiable si se hospedan en una aplicación MFC. La solución recomendada es colocar un control de usuario de formularios Windows Forms en la aplicación MFC y el control Grid de un tercero dentro del control de usuario.
 
-Este procedimiento supone que se creó un proyecto de biblioteca de controles de Windows Forms denominado WindowsFormsControlLibrary1, según el procedimiento de [Cómo: crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Este procedimiento supone que se creó un proyecto de biblioteca de controles de Windows Forms denominado WindowsFormsControlLibrary1, según el procedimiento de [Cómo: Crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Para crear la aplicación host MFC
 

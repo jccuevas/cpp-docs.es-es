@@ -15,16 +15,16 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: 0015e0a7a81abbd3472a8c845a9b8c0d8caf4618
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610544"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750720"
 ---
 # <a name="locales-and-code-pages"></a>Configuraciones regionales y páginas de códigos
 
-Un identificador de configuración regional refleja el idioma y las convenciones locales de una determinada zona geográfica. Un idioma determinado se puede hablar en varios países o regiones; por ejemplo, el portugués se habla en Portugal y Brasil. A la inversa, una región o un país pueden tener más de un idioma oficial. Por ejemplo, Canadá tiene dos idiomas, el inglés y el francés. Es decir, Canadá tiene dos configuraciones regionales distintas, el inglés canadiense y el francés canadiense. Entre las categorías dependientes de la configuración regional se encuentran el formato de fechas y el formato de presentación de valores de moneda.
+Un identificador de configuración regional refleja el idioma y las convenciones locales de una determinada zona geográfica. Un idioma determinado se puede hablar en varios países o regiones; por ejemplo, el portugués se habla en Portugal y Brasil. A la inversa, una región o un país pueden tener más de un idioma oficial. Por ejemplo, Canadá tiene dos idiomas: Inglés y francés. Por lo tanto, Canadá tiene dos configuraciones regionales distintas: Canadá en inglés y francés de Canadá. Entre las categorías dependientes de la configuración regional se encuentran el formato de fechas y el formato de presentación de valores de moneda.
 
 El idioma determina las convenciones de formato de datos y texto, mientras que el país o la región determinan las convenciones locales. Cada idioma tiene una asignación única, representada por páginas de códigos, que incluye caracteres distintos de los del alfabeto (como los signos de puntuación y los números). Una página de códigos es un juego de caracteres y está relacionada con el idioma. Por lo tanto, un [configuración regional](../c-runtime-library/locale.md) es una combinación única de idioma, país o región y página de códigos. La configuración de página de configuración regional y el código puede cambiarse en tiempo de ejecución mediante una llamada a la [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) función.
 

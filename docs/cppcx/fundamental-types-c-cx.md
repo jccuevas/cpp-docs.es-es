@@ -2,12 +2,12 @@
 title: Tipos fundamentales (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529134"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752368"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 

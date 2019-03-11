@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596656"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743911"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Compatibilidad con Unicode y con el juego de caracteres multibyte (MBCS)
 
@@ -36,10 +36,10 @@ Estos archivos DLL, el depurador y la biblioteca se utilizan para admitir Unicod
 |||||
 |-|-|-|-|
 |UAFXCW.LIB|UAFXCW.PDB|UAFXCWD.LIB|UAFXCWD.PDB|
-|MFC*versión*U.LIB|MFC*versión*U.PDB|MFC*versión*U.DLL|MFC*versión*UD. LIB|
-|MFC*versión*UD. PDB|MFC*versión*UD. ARCHIVO DLL|MFCS*versión*U.LIB|MFCS*versión*U.PDB|
-|MFCS*versión*UD. LIB|MFCS*versión*UD. PDB|MFCM*versión*U.LIB|MFCM*versión*U.PDB|
-|MFCM*versión*U.DLL|MFCM*versión*UD. LIB|MFCM*versión*UD. PDB|MFCM*versión*UD. ARCHIVO DLL|
+|MFC*versión*U.LIB|MFC*version*U.PDB|MFC*versión*U.DLL|MFC*version*UD.LIB|
+|MFC*version*UD.PDB|MFC*version*UD.DLL|MFCS*versión*U.LIB|MFCS*version*U.PDB|
+|MFCS*version*UD.LIB|MFCS*version*UD.PDB|MFCM*versión*U.LIB|MFCM*versión*U.PDB|
+|MFCM*versión*U.DLL|MFCM*version*UD.LIB|MFCM*version*UD.PDB|MFCM*versión*UD. ARCHIVO DLL|
 
 (*versión* representa el número de versión del archivo; por ejemplo, "140" significa versión 14.0.)
 

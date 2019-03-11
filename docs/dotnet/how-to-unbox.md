@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Aplicar la conversión unboxing'
+title: Procedimiento aplicar la conversión unboxing
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-ms.openlocfilehash: b2919ecce254a81d6a140fc7906d28646b50ab8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae80497a24b090bc5866b3cfb22748b20adda223
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618535"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747948"
 ---
-# <a name="how-to-unbox"></a>Cómo: Aplicar la conversión unboxing
+# <a name="how-to-unbox"></a>Filtrar aplicar la conversión unboxing
 
 Muestra cómo aplicar la conversión unboxing y modificar un valor.
 

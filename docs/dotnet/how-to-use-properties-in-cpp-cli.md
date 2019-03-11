@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Usar propiedades en C++/CLI'
+title: Filtrar Usar propiedades en C / c++ / CLI
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617495"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739280"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Cómo: Usar propiedades en C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>Filtrar Usar propiedades en C / c++ / CLI
 
 En este artículo se muestra cómo usar las propiedades en C++ / c++ / CLI.
 
@@ -88,7 +88,7 @@ Normalmente, una propiedad indizada expone una estructura de datos que se accede
 
 Si usa una propiedad indizada predeterminada, puede tener acceso a la estructura de datos simplemente haciendo referencia al nombre de clase, pero si usa una propiedad indizada definido por el usuario, debe para especificar el nombre de propiedad para tener acceso a la estructura de datos.
 
-Para obtener información acerca de cómo consumir un indizador que se escribe en C#, vea [Cómo: consumir un indizador de C# (C++ / c++ / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Para obtener información acerca de cómo consumir un indizador que se escribe en C#, consulte [Cómo: Consumir un C# indizador (C++ / c++ / CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 Este ejemplo de código muestra cómo usar el valor predeterminado y las propiedades indizadas definidas por el usuario:
 

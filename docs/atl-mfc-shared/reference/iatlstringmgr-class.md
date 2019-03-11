@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: de0bd720d1806c7950fa9aecc2db6e72aeb1fb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 978d33c719b9cb8c2708dc97fa78874534dfd748
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493943"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749963"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr (clase)
 
@@ -37,11 +37,11 @@ __interface IAtlStringMgr
 
 |||
 |-|-|
-|[asignar](#allocate)|Llame a este método para asignar una nueva estructura de datos de cadena.|
+|[Allocate](#allocate)|Llame a este método para asignar una nueva estructura de datos de cadena.|
 |[Clone](#clone)|Llamar a este método para devolver un puntero a un nuevo administrador de cadena para su uso con otra instancia de `CSimpleStringT`.|
-|[gratis](#free)|Llame a este método para liberar una estructura de datos de cadena.|
+|[Free](#free)|Llame a este método para liberar una estructura de datos de cadena.|
 |[GetNilString](#getnilstring)|Devuelve un puntero a la `CStringData` objeto utilizado por los objetos de cadena vacía.|
-|[Reasignar](#reallocate)|Llame a este método para reasignar una estructura de datos de cadena.|
+|[Reallocate](#reallocate)|Llame a este método para reasignar una estructura de datos de cadena.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -53,7 +53,7 @@ También puede usar esta clase para implementar un administrador de memoria pers
 
 **Encabezado:** atlsimpstr.h
 
-##  <a name="allocate"></a>  Pasado IAtlStringMgr:: Allocate
+##  <a name="allocate"></a>  IAtlStringMgr::Allocate
 
 Asigna una nueva estructura de datos de cadena.
 
@@ -146,7 +146,7 @@ Llame a esta función para devolver la representación de una cadena vacía.
 > [!NOTE]
 > Para obtener ejemplos de uso, consulte [administración de memoria y CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-## <a name="reallocate"></a>  IAtlStringMgr:: ReAllocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Reasigna una estructura de datos de cadena.
 

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178758"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739430"
 ---
 # <a name="crect-class"></a>CRect (clase)
 
@@ -76,7 +76,7 @@ class CRect : public tagRECT
 |[CRect::MoveToX](#movetox)|Mueve `CRect` para la coordenada x especificada.|
 |[CRect::MoveToXY](#movetoxy)|Mueve `CRect` a las coordenadas x e y especificadas.|
 |[CRect::MoveToY](#movetoy)|Mueve `CRect` para la coordenada y especificada.|
-|[CRect:: NormalizeRect](#normalizerect)|Normaliza el alto y ancho de `CRect`.|
+|[CRect::NormalizeRect](#normalizerect)|Normaliza el alto y ancho de `CRect`.|
 |[CRect::OffsetRect](#offsetrect)|Mueve `CRect` por los desplazamientos especificados.|
 |[CRect::PtInRect](#ptinrect)|Determina si el punto especificado está dentro de `CRect`.|
 |[CRect::SetRect](#setrect)|Establece las dimensiones de `CRect`.|
@@ -94,15 +94,15 @@ class CRect : public tagRECT
 |[CRect::operator-](#operator_-)|Resta los desplazamientos especificados desde `CRect` o desinfla `CRect` y devuelve el resultado `CRect`.|
 |[CRect::operator LPCRECT](#operator_lpcrect)|Convierte `CRect` en `LPCRECT`.|
 |[CRect::operator LPRECT](#operator_lprect)|Convierte `CRect` en `LPRECT`.|
-|[CRect::operator! =](#operator_neq)|Determina si `CRect` no es igual a un rectángulo.|
+|[CRect::operator !=](#operator_neq)|Determina si `CRect` no es igual a un rectángulo.|
 |[CRect::operator &amp;](#operator_amp)|Crea la intersección de `CRect` y un rectángulo y devuelve el resultado `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Conjuntos de `CRect` igual a la intersección de `CRect` y un rectángulo.|
-|[CRect::operator&#124;](#operator_or)|Crea la unión de `CRect` y un rectángulo y devuelve el resultado `CRect`.|
+|[CRect::operator &#124;](#operator_or)|Crea la unión de `CRect` y un rectángulo y devuelve el resultado `CRect`.|
 |[CRect::operator &#124;=](#operator_or_eq)|Conjuntos de `CRect` igual que la unión de `CRect` y un rectángulo.|
 |[CRect::operator +](#operator_add)|Agrega los desplazamientos especificados a `CRect` o infla `CRect` y devuelve el resultado `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Agrega los desplazamientos especificados a `CRect` o infla `CRect`.|
 |[CRect::operator =](#operator_eq)|Copia las dimensiones de un rectángulo a `CRect`.|
-|[CRect::operator =](#operator_-_eq)|Resta los desplazamientos especificados desde `CRect` o desinfla `CRect`.|
+|[CRect::operator -=](#operator_-_eq)|Resta los desplazamientos especificados desde `CRect` o desinfla `CRect`.|
 |[CRect::operator ==](#operator_eq_eq)|Determina si `CRect` es igual a un rectángulo.|
 
 ## <a name="remarks"></a>Comentarios
@@ -306,7 +306,7 @@ Hace referencia a la [RECT](/windows/desktop/api/windef/ns-windef-tagrect) estru
 *lpSrcRect*<br/>
 Apunta a la `RECT` estructura con las coordenadas para `CRect`.
 
-*punto*<br/>
+*point*<br/>
 Especifica el punto de origen para el rectángulo que se va a construir. Corresponde a la esquina superior izquierda.
 
 *size*<br/>
@@ -696,7 +696,7 @@ Coordenada x absoluta de la esquina superior izquierda del rectángulo.
 *y*<br/>
 Coordenada y absoluta de la esquina superior izquierda del rectángulo.
 
-*punto*<br/>
+*point*<br/>
 Un `POINT` estructura que especifica la esquina superior izquierda absoluta del rectángulo.
 
 ### <a name="example"></a>Ejemplo
@@ -733,7 +733,7 @@ Coordenada y absoluta de la esquina superior izquierda del rectángulo.
    ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>  CRect:: NormalizeRect
+##  <a name="normalizerect"></a>  CRect::NormalizeRect
 
 Normaliza `CRect` para que el alto y ancho son positivos.
 
@@ -776,7 +776,7 @@ Especifica la cantidad para desplazar a la izquierda o derecha. Debe ser negativ
 *y*<br/>
 Especifica la cantidad para subir o Bajar. Debe ser negativo para mover hacia arriba.
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](cpoint-class.md) especificar tanto las dimensiones de forma que se va a mover el objeto.
 
 *size*<br/>
@@ -855,7 +855,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Hace referencia a un rectángulo de origen. Puede ser un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) o `CRect`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -895,7 +895,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Hace referencia a un rectángulo de origen. Puede ser un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) o `CRect`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -937,7 +937,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](cpoint-class.md) objeto que especifica el número de unidades para mover el rectángulo.
 
 *size*<br/>
@@ -975,7 +975,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](cpoint-class.md) objeto que especifica el número de unidades para mover el rectángulo.
 
 *size*<br/>
@@ -1011,7 +1011,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Contiene un [RECT](/windows/desktop/api/windef/ns-windef-tagrect) o `CRect`.
 
 ### <a name="remarks"></a>Comentarios
@@ -1035,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*Rect*<br/>
+*rect*<br/>
 Contiene un `CRect` o [RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 ### <a name="remarks"></a>Comentarios
@@ -1068,7 +1068,7 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](cpoint-class.md) objeto que especifica el número de unidades para mover el valor devuelto.
 
 *size*<br/>
@@ -1111,7 +1111,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o `CPoint` objeto que especifica el número de unidades para mover el valor devuelto.
 
 *size*<br/>
@@ -1178,7 +1178,7 @@ La intersección es el rectángulo más grande que se encuentra en dos rectángu
    ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>  CRect::operator&#124;
+##  <a name="operator_or"></a>  CRect::operator &#124;
 
 Devuelve un `CRect` que es la unión de `CRect` y *rect2*.
 
@@ -1225,7 +1225,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](cpoint-class.md) objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1277,13 +1277,13 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*X1*<br/>
+*x1*<br/>
 Especifica la coordenada x de la esquina superior izquierda.
 
 *y1*<br/>
 Especifica la coordenada y de la esquina superior izquierda.
 
-*X2*<br/>
+*x2*<br/>
 Especifica la coordenada x de la esquina inferior derecha.
 
 *y2*<br/>
@@ -1504,4 +1504,3 @@ El ancho puede ser negativo.
 [CPoint (clase)](cpoint-class.md)<br/>
 [CSize (clase)](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

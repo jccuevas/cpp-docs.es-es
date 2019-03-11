@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607871"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740927"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semántica de pila de C++ para los tipos de referencia
 
@@ -27,7 +27,7 @@ El compilador no generará un constructor de copias para un tipo de referencia. 
 
 El compilador no generará un operador de asignación predeterminado para un tipo de referencia. Un operador de asignación permite crear un objeto mediante la semántica de pila y se inicializa con un objeto existente que se creó utilizando la semántica de pila. Un operador de asignación para un tipo de referencia tiene una firma de la forma siguiente: `void operator=( R% ){}`.
 
-Si el destructor de su tipo libera los recursos críticos y usa semántica de pila para tipos de referencia, no es necesario llamar explícitamente al destructor (o llamar a `delete`). Para obtener más información sobre los destructores en tipos de referencia, consulte [destructores y finalizadores en cómo: definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Si el destructor de su tipo libera los recursos críticos y usa semántica de pila para tipos de referencia, no es necesario llamar explícitamente al destructor (o llamar a `delete`). Para obtener más información sobre los destructores en tipos de referencia, consulte [destructores y finalizadores en cómo: Definir y utilizar clases y structs (C++ / c++ / CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 Un operador de asignación generados por el compilador seguirá las reglas habituales de C++ estándares con las siguientes adiciones:
 

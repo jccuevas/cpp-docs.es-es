@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Exponer un contenedor de STL/CLR desde un ensamblado'
+title: Filtrar Exponer un contenedor STL/CLR desde un ensamblado
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: ba881210f7ee48acd0e92dce3432cae92f3072ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590091"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748442"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Cómo: Exponer un contenedor de STL/CLR desde un ensamblado
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Filtrar Exponer un contenedor STL/CLR desde un ensamblado
 
 Contenedores STL/CLR como `list` y `map` se implementan como clases ref de plantilla. Dado que se crean instancias de las plantillas de C++ en tiempo de compilación, dos clases de plantilla que tienen exactamente la misma firma pero están en distintos ensamblados son realmente diferentes tipos. Esto significa que no se puede usar las clases de plantilla entre límites de ensamblado.
 

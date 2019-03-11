@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: Especificar un parámetro out'
+title: Procedimiento Especifique un fuera parámetro
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 8c3499a2916eda7ab96f7958df190c803206741e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437095"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747490"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Cómo: Especificar un parámetro out
+# <a name="how-to-specify-an-out-parameter"></a>Filtrar Especifique un fuera parámetro
 
 En este ejemplo se muestra cómo especificar que un parámetro de función es un parámetro de salida y cómo llamar a esa función desde un programa de C#.
 

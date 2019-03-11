@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330624"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744397"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray (Clase)
 
@@ -39,12 +39,12 @@ Estos métodos tienen accesibilidad interna, es decir, solo están accesibles de
 
 |nombre|Descripción|
 |----------|-----------------|
-|[Writeonlyarray](#begin)|Un iterador que apunta al primer elemento de la matriz.|
-|[Writeonlyarray](#data)|Puntero al búfer de datos.|
-|[Writeonlyarray](#end)|Un iterador que apunta a uno más allá del último elemento de la matriz.|
-|[Fastpass](#fastpass)|Indica si la matriz puede usar el mecanismo FastPass, que es una optimización realizada por el sistema de manera transparente. No utilices esto en tu código|
-|[Writeonlyarray](#length)|Devuelve el número de elementos de la matriz.|
-|[Writeonlyarray](#set)|Establece el elemento especificado en el valor indicado.|
+|[WriteOnlyArray::begin](#begin)|Un iterador que apunta al primer elemento de la matriz.|
+|[WriteOnlyArray::Data](#data)|Puntero al búfer de datos.|
+|[WriteOnlyArray::end](#end)|Un iterador que apunta a uno más allá del último elemento de la matriz.|
+|[WriteOnlyArray::FastPass](#fastpass)|Indica si la matriz puede usar el mecanismo FastPass, que es una optimización realizada por el sistema de manera transparente. No utilices esto en tu código|
+|[WriteOnlyArray::Length](#length)|Devuelve el número de elementos de la matriz.|
+|[WriteOnlyArray::set](#set)|Establece el elemento especificado en el valor indicado.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -56,7 +56,7 @@ Opción del compilador: **/ZW**
 
 **Metadatos:** Platform.winmd
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 ## <a name="begin"></a>  WriteOnlyArray::begin (Método)
 

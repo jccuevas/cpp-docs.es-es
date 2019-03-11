@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5376a87aac2b82615cd48f80e0e95208b8132bf0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177920"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750486"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Clases compartidas por MFC y ATL
 
@@ -19,7 +19,7 @@ En la tabla siguiente se enumera las clases que se comparten entre MFC y ATL.
 |-----------|-----------------|-----------------|
 |[CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)|Proporciona métodos para administrar los valores de fecha y hora asociados a un archivo.|atltime.h|
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|Proporciona métodos para administrar asociados a un archivo de valores de hora y fecha relativa.|atltime.h|
-|[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)|Representa un objeto de cadena con un búfer de caracteres fijos.|CStringT.h|
+|[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)|Representa un objeto de cadena con un búfer de caracteres fijos.|cstringt.h|
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|proporciona compatibilidad con mapas de bits mejorada, incluida la capacidad para cargar y guardar imágenes en los formatos GIF, JPEG, BMP y gráficos de red portátiles (PNG).|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Encapsula el tipo de datos de fecha utilizado en la automatización OLE.|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Representa un tiempo relativo, un intervalo de tiempo.|atlcomtime.h|
@@ -37,4 +37,3 @@ En la tabla siguiente se enumera las clases que se comparten entre MFC y ATL.
 ## <a name="see-also"></a>Vea también
 
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
