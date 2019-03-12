@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658021"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744553"
 ---
 # <a name="visual-c-project-types"></a>Tipos de proyecto de Visual C++
 
@@ -85,7 +85,7 @@ Para obtener información general sobre las aplicaciones universales de Windows 
 |Aplicación de pruebas unitarias|Un proyecto para crear una aplicación de prueba unitaria para aplicaciones para Plataforma universal de Windows (UWP).|
 |Archivo DLL|Un proyecto para una biblioteca de vínculos dinámicos nativa (DLL) que se pueda usar en una aplicación para Plataforma universal de Windows o un componente en tiempo de ejecución.|
 |Biblioteca estática|Un proyecto para una biblioteca de vínculos estáticos (LIB) nativa que una aplicación para Plataforma universal de Windows o un componente en tiempo de ejecución puedan usar.|
-|Componente de Windows Runtime|Un proyecto para un componente de Windows Runtime que se pueda usar en una aplicación para Plataforma universal de Windows, con independencia del lenguaje de programación en el que se escriba la aplicación.|
+|Componente de Windows en tiempo de ejecución|Un proyecto para un componente de Windows Runtime que se pueda usar en una aplicación para Plataforma universal de Windows, con independencia del lenguaje de programación en el que se escriba la aplicación.|
 |Proyecto de paquete de aplicación de Windows|Un proyecto que crea un paquete UWP que permite que una aplicación de escritorio se transfiera localmente o se distribuya a través de Microsoft Store.|
 
 ## <a name="todo-comments"></a>Comentarios TODO

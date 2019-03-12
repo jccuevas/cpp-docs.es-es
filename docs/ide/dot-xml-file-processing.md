@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524175"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748481"
 ---
 # <a name="xml-file-processing"></a>Procesamiento de archivos .Xml
 
@@ -27,7 +27,7 @@ El compilador cumple las siguientes reglas cuando genera las cadenas de identifi
   |---------------|-----------------|
   | N | namespace<br /><br /> No se pueden agregar comentarios de documentación a un espacio de nombres, pero se admiten referencias cref a un espacio de nombres. |
   | T | tipo: clase, interfaz, estructura, enumeración y delegado |
-  | D | definición de tipos |
+  | D | typedef |
   | F | campo |
   | P | propiedad (incluidos indizadores u otras propiedades indizadas) |
   | M | método (incluidos métodos especiales como constructores, operadores, etc.) |
