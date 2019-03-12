@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471206"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749285"
 ---
 # <a name="platformagile-class"></a>Platform::Agile (Clase)
 
@@ -47,7 +47,7 @@ La clase `Agile<T>` es una clase de C++ estándar, nativa y requiere `agile.h`. 
 
 |Name|Descripción|
 |----------|-----------------|
-|[Agile](#ctor)|Inicializa una nueva instancia de la clase Agile.|
+|[Agile::Agile](#ctor)|Inicializa una nueva instancia de la clase Agile.|
 |[Agile::~Agile (Destructor)](#dtor)|Destruye la instancia actual de la clase Agile.|
 
 ### <a name="public-methods"></a>Métodos públicos
@@ -78,7 +78,7 @@ La clase `Agile<T>` es una clase de C++ estándar, nativa y requiere `agile.h`. 
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Encabezado:** agile.h
 
@@ -107,7 +107,7 @@ En la segunda versión de este constructor, un objeto utilizado para inicializar
 
 La primera versión de este constructor es el constructor predeterminado. La segunda versión inicializa una nueva clase de instancia de Agile del objeto especificado por el parámetro `object`. La tercera versión es el constructor de copias. La cuarta versión es el constructor de movimiento. Este constructor no puede producir excepciones.
 
-## <a name="dtor"></a>  Agile:: ~ Agile (destructor)
+## <a name="dtor"></a>  Agile::~Agile Destructor
 
 Destruye la instancia actual de la clase Agile.
 
@@ -234,7 +234,7 @@ Tipo especificado por el nombre de tipo de plantilla.
 *object*<br/>
 Objeto o identificador de un objeto que se copia o se mueve al objeto Agile actual.
 
-*LP*<br/>
+*lp*<br/>
 Puntero de interfaz IUnknown de un objeto.
 
 ### <a name="return-value"></a>Valor devuelto

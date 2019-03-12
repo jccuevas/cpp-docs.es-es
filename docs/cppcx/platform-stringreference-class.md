@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498389"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750928"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference (Clase)
 
@@ -34,23 +34,23 @@ class StringReference
 
 |Name|Descripción|
 |----------|-----------------|
-|[Stringreference](#ctor)|Dos constructores para crear instancias de `StringReference`.|
+|[StringReference::StringReference](#ctor)|Dos constructores para crear instancias de `StringReference`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Stringreference](#data)|Devuelve los datos de tipo String como una matriz de valores char16.|
-|[Stringreference](#length)|Devuelve el número de caracteres de la cadena.|
-|[Gethstring](#gethstring)|Devuelve los datos de tipo String como HSTRING.|
-|[Stringreference](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|
+|[StringReference::Data](#data)|Devuelve los datos de tipo String como una matriz de valores char16.|
+|[StringReference::Length](#length)|Devuelve el número de caracteres de la cadena.|
+|[StringReference::GetHSTRING](#gethstring)|Devuelve los datos de tipo String como HSTRING.|
+|[StringReference::GetString](#getstring)|Devuelve los datos de tipo String como `Platform::String^`.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Stringreference:: operator =](#operator-assign)|Asigna `StringReference` a una nueva instancia de `StringReference` .|
-|[Stringreference::operator()](#operator-call)|Convierte `StringReference` en `Platform::String^`.|
+|[StringReference::operator=](#operator-assign)|Asigna `StringReference` a una nueva instancia de `StringReference` .|
+|[StringReference::operator()](#operator-call)|Convierte `StringReference` en `Platform::String^`.|
 
 ### <a name="requirements"></a>Requisitos
 
@@ -58,7 +58,7 @@ class StringReference
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Encabezado:** vccorlib.h
 
@@ -88,7 +88,8 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-`__abi_HSTRING` que contiene los datos de tipo String.
+
+  `__abi_HSTRING` que contiene los datos de tipo String.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -123,7 +124,7 @@ Un entero sin signo que especifica la cantidad de caracteres de la cadena.
 
 ### <a name="remarks"></a>Comentarios
 
-## <a name="operator-assign"></a>  Stringreference:: operator = (operador)
+## <a name="operator-assign"></a>  StringReference::operator= Operator
 
 Asigna el objeto especificado al objeto `StringReference` actual.
 
@@ -150,7 +151,7 @@ Referencia a un objeto de tipo `StringReference`.
 
 Dado que `StringReference` es una clase de C++ estándar y no una clase ref, no aparece en el **Examinador de objetos**.
 
-## <a name="operator-call"></a>  ::Operator() (operador)
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 
 Convierte un objeto `StringReference` en un objeto `Platform::String^`.
 
@@ -181,7 +182,8 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ### <a name="parameters"></a>Parámetros
 
 *__fstrArg*<br/>
-`StringReference` cuyos datos se usan para inicializar la nueva instancia.
+
+  `StringReference` cuyos datos se usan para inicializar la nueva instancia.
 
 *__strArg*<br/>
 Puntero a una matriz de valores char16 que se emplea para inicializar la nueva instancia.

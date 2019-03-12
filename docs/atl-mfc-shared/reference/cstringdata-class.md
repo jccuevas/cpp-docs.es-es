@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 24d1321c66fb6cebbd2e86da3e85fdb8e1a3d33d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5977d26cade89f2e70453d5184323958e99e54c4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589532"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748520"
 ---
 # <a name="cstringdata-class"></a>CStringData (clase)
 
@@ -48,7 +48,7 @@ struct CStringData
 |[IsShared](#isshared)|Determina si el búfer del objeto de cadena asociado se comparte.|
 |[Bloqueo](#lock)|Bloquea el búfer del objeto string asociado.|
 |[Release](#release)|Libera el objeto de cadena especificada.|
-|[Desbloquear](#unlock)|Desbloquea el búfer del objeto string asociado.|
+|[Unlock](#unlock)|Desbloquea el búfer del objeto string asociado.|
 
 ### <a name="data-members"></a>Miembros de datos
 
@@ -253,4 +253,3 @@ Bloqueo y desbloqueo se utilizan cuando el programador debe asegurarse de que no
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases compartidas ATL y MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

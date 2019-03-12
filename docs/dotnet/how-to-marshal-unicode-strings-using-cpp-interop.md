@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: serializar cadenas Unicode mediante la interoperabilidad de C++'
+title: Filtrar Serializar cadenas Unicode mediante la interoperabilidad de C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: f08ea9d6eb879aa3b07ac0ff983637236368a11a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507788"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742666"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Cómo: serializar cadenas Unicode mediante la interoperabilidad de C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedimiento Serializar cadenas Unicode mediante la interoperabilidad de C++
 
 En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

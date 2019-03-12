@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-ms.openlocfilehash: 706877843602861d0dcf7f04a18999f30d3b77de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cadafcc227347bc2f55c8600ae63a5c0996aefae
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500448"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742083"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference (Clase)
 
@@ -30,13 +30,13 @@ class WeakReference
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[WeakReference:: WeakReference](#ctor)|Inicializa una nueva instancia de la clase WeakReference.|
+|[WeakReference::WeakReference](#ctor)|Inicializa una nueva instancia de la clase WeakReference.|
 
 ### <a name="methods"></a>Métodos
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[WeakReference:: Resolve](#resolve)|Devuelve un identificador a la clase ref subyacente o nullptr si el objeto ya no existe.|
+|[WeakReference::Resolve](#resolve)|Devuelve un identificador a la clase ref subyacente o nullptr si el objeto ya no existe.|
 
 ### <a name="operators"></a>Operadores
 
@@ -49,7 +49,7 @@ class WeakReference
 
 La clase WeakReference no es una clase ref y, por tanto, no hereda de Platform::Object^ y no se puede usar en la firma de un método público.
 
-## <a name="operator-assign"></a> WeakReference::operator =
+## <a name="operator-assign"></a> WeakReference::operator=
 
 Asigna un valor a WeakReference.
 
@@ -106,7 +106,7 @@ if (bar != nullptr)
 }
 ```
 
-Ten en cuenta que el parámetro de tipo es T, no T^.
+Ten en cuenta que el tipo de parámetro es T, no T^.
 
 ## <a name="ctor"></a> Constructor de WeakReference
 

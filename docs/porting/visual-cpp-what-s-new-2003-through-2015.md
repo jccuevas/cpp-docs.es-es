@@ -2,12 +2,12 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894359"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749157"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -648,7 +648,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     error C2668: 'function' : ambiguous call to overloaded function.
    ```
 
-   Ejemplo 1: llamada ambigua a una función sobrecargada (antes)
+   Ejemplo 1: llamada ambigua a una función sobrecargada (antes)
 
    ```cpp
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)

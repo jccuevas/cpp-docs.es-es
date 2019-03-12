@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: cd1865320d56d71481cdaf7055f796bfab26eeab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496390"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749261"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView (Clase)
 
@@ -54,17 +54,17 @@ MapView es la implementación concreta en C++ de la [Windows::Foundation::Collec
 
 |Name|Descripción|
 |----------|-----------------|
-|[Mapview](#ctor)|Inicializa una nueva instancia de la clase MapView.|
+|[MapView::MapView](#ctor)|Inicializa una nueva instancia de la clase MapView.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
 |Name|Descripción|
 |----------|-----------------|
-|[Mapview](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|
+|[MapView::First](#first)|Devuelve un iterador que se inicializa el primer elemento en la vista de mapa.|
 |[MapView::HasKey](#haskey)|Determina si el objeto MapView actual contiene la clave especificada.|
-|[Mapview](#lookup)|Recupera el elemento en la clave especificada del objeto MapView actual.|
-|[Mapview](#size)|Devuelve el número de elementos del objeto MapView actual.|
-|[Mapview](#split)|Divide un objeto MapView original en dos objetos MapView.|
+|[MapView::Lookup](#lookup)|Recupera el elemento en la clave especificada del objeto MapView actual.|
+|[MapView::Size](#size)|Devuelve el número de elementos del objeto MapView actual.|
+|[MapView::Split](#split)|Divide un objeto MapView original en dos objetos MapView.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -74,7 +74,7 @@ MapView es la implementación concreta en C++ de la [Windows::Foundation::Collec
 
 **Encabezado:** collection.h
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 ## <a name="first"></a> Mapview (método)
 
@@ -162,7 +162,7 @@ MapView(
 *InIt*<br/>
 El typename del objeto MapView actual.
 
-*Comp.*<br/>
+*comp*<br/>
 Objeto de función que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo en el objeto MapView.
 
 *m*<br/>
@@ -171,10 +171,10 @@ Una referencia o [Lvalues y Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) a
 *first*<br/>
 El iterador de entrada del primer elemento en un intervalo de elementos utilizados para inicializar el objeto MapView actual.
 
-*Último*<br/>
+*last*<br/>
 El iterador de entrada del primer elemento tras un intervalo de elementos utilizados para inicializar el objeto MapView actual.
 
-*IL*<br/>
+*il*<br/>
 Un [std:: initializer_list < std:: Pair\<K, V >>](../standard-library/initializer-list-class.md) cuyos elementos se insertará en el objeto MapView.
 
 ##  <a name="size"></a> Mapview (método)

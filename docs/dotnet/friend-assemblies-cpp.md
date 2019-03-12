@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652626"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748218"
 ---
 # <a name="friend-assemblies-c"></a>Ensamblados de confianza (C++)
 
@@ -165,7 +165,7 @@ Tenga en cuenta que el componente debe especificar su clave pública. Se recomie
 
 **sn -pc friend_assemblies.snk key.publickey**
 
-**sn - tp key.publickey**
+**sn -tp key.publickey**
 
 En el ejemplo de código siguiente se obtiene acceso a un tipo privado en el componente de nombre seguro.
 

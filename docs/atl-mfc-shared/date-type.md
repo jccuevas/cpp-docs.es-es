@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548192"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750395"
 ---
 # <a name="date-type"></a>Tipo de fecha
 
@@ -62,10 +62,9 @@ Cuando se trabaja con estos formatos de fecha y hora en la automatización, debe
 > [!CAUTION]
 >  Tenga en cuenta que debido a 6:00 a. M. siempre se representa mediante un valor fraccionario 0,25 independientemente de si el entero que representa el día es positivo (después del 30 de diciembre de 1899) o negativo (antes del 30 de diciembre de 1899), una comparación de punto flotante simple incorrectamente ordenado cualquier fecha que representa 6:00 A.M. en un día anterior a 30/12/1899 como *más adelante* a una fecha que representa el 7:00 a. M. ese mismo día.
 
-Para obtener más información sobre problemas relacionados con la fecha y `COleDateTime` tipos pueden encontrarse en [COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md) y [fecha y hora: compatibilidad de automatización](../atl-mfc-shared/date-and-time-automation-support.md).
+Para obtener más información sobre problemas relacionados con la fecha y `COleDateTime` tipos pueden encontrarse en [COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md) y [fecha y hora: Compatibilidad de automatización](../atl-mfc-shared/date-and-time-automation-support.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Fecha y hora](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime (clase)](../atl-mfc-shared/reference/coledatetime-class.md)
-

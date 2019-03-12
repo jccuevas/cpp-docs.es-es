@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579288"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748234"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT (clase)
 
@@ -79,7 +79,7 @@ El tipo de carácter de la clase string. Puede ser uno de los siguientes:
 |Name|Descripción|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Construye `CSimpleStringT` objetos de varias maneras.|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Destructor.|
+|[CSimpleStringT::~CSimpleStringT](#dtor)|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -178,7 +178,7 @@ void AppendChar(XCHAR ch);
 
 #### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 El carácter que se debe anexar
 
 ### <a name="remarks"></a>Comentarios
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información, consulte [cadenas: limpieza de excepciones de CString](../cstring-exception-cleanup.md).
+Para obtener más información, consulte [cadenas: Limpieza de excepciones de CString](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -764,7 +764,7 @@ Un puntero a una cadena terminada en null.
 *strSrc*<br/>
 Un puntero a una existente `CSimpleStringT` objeto.
 
-*CH*<br/>
+*ch*<br/>
 Carácter que se va a anexar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1006,7 +1006,7 @@ void SetAt(int iChar, XCHAR ch);
 *iChar*<br/>
 Índice de base cero del carácter en el `CSimpleStringT` objeto. El *iChar* parámetro debe ser mayor o igual que 0 y menor que el valor devuelto por [GetLength](#getlength).
 
-*CH*<br/>
+*ch*<br/>
 El carácter de nueva.
 
 ### <a name="remarks"></a>Comentarios
@@ -1175,7 +1175,7 @@ Llame a este método para restablecer el recuento de referencias de la cadena en
 
 El `CSimpleStringT` destructor llama automáticamente a `UnlockBuffer` para asegurarse de que el búfer no está bloqueado cuando se llama al destructor. Para obtener un ejemplo de este método, consulte [LockBuffer](#lockbuffer).
 
-##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
+##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
 
 Destruye un objeto `CSimpleStringT`.
 

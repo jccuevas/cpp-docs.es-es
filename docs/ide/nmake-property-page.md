@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-ms.openlocfilehash: 7d890794d706a687b9cf945022aa4c230684131d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18d32dd85c39586576686942968a3f6e1735337d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473546"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749908"
 ---
 # <a name="nmake-property-page"></a>NMake (página de propiedades)
 
@@ -73,4 +73,4 @@ Para obtener información sobre cómo acceder mediante programación a los miemb
 ## <a name="see-also"></a>Vea también
 
 [Páginas de propiedades](../ide/property-pages-visual-cpp.md)<br>
-[Cómo: Habilitar IntelliSense para proyectos de archivos MAKE](../ide/how-to-enable-intellisense-for-makefile-projects.md)
+[Cómo: Habilitar IntelliSense para proyectos de archivos Make](../ide/how-to-enable-intellisense-for-makefile-projects.md)

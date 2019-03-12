@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 6ba387b8d3be0e3f91a844bb7633bedfdb7ee9d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607810"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745214"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (Clase)
 
@@ -48,8 +48,8 @@ La clase COMException tiene las propiedades siguientes.
 
 |Miembro|Descripción|
 |------------|-----------------|
-|[Exception:: HRESULT](#hresult)|HRESULT correspondiente a la excepción.|
-|[Exception:: Message](#message)|Mensaje que describe la excepción.|
+|[Exception::HResult](#hresult)|HRESULT correspondiente a la excepción.|
+|[Exception::Message](#message)|Mensaje que describe la excepción.|
 
 ## <a name="derived-exceptions"></a>Excepciones derivadas
 
@@ -77,7 +77,7 @@ Las excepciones predefinidas siguientes se derivan de COMException. Difieren de 
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 
@@ -93,7 +93,7 @@ COMException( int hresult )
 
 ### <a name="parameters"></a>Parámetros
 
-*HRESULT*<br/>
+*hresult*<br/>
 Valor HRESULT de error representado por la excepción.
 
 ## <a name="hresult"></a> Propiedad COMException
