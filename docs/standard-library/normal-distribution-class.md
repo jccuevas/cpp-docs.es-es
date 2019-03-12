@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: e0df3359a27a216692f0127ab7f17e1e1fce469a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519859"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743065"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution (Clase)
 
@@ -209,7 +209,7 @@ La estructura de parámetros utilizada para construir la distribución.
 
 ### <a name="remarks"></a>Comentarios
 
-**Condición previa:** `0.0 ≤ stddev`
+**Condición previa:** `0.0 < stddev`
 
 El primer constructor crea un objeto cuyo valor `mean` almacenado contiene el valor *mean* y cuyo valor `stddev` almacenado contiene el valor *stddev*.
 
@@ -244,7 +244,7 @@ La estructura `param_type` que se usa para comparar.
 
 ### <a name="remarks"></a>Comentarios
 
-**Condición previa:** `0.0 ≤ stddev`
+**Condición previa:** `0.0 < stddev`
 
 Esta estructura se puede pasar al constructor de clases de la distribución en el momento de creación de instancias, a la función miembro `param()` para definir los parámetros almacenados de una distribución existente y a `operator()` para usarse en lugar de los parámetros almacenados.
 

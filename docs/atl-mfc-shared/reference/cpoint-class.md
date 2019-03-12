@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178074"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740388"
 ---
 # <a name="cpoint-class"></a>CPoint (clase)
 
@@ -50,7 +50,7 @@ class CPoint : public tagPOINT
 |[CPoint::operator! =](#operator_neq)|Comprueba la desigualdad entre dos puntos.|
 |[CPoint::operator +](#operator_add)|Devuelve la suma de un `CPoint` y un tamaño o un punto, o un `CRect` por un tamaño de desplazamiento.|
 |[CPoint::operator +=](#operator_add_eq)|Los desplazamientos `CPoint` mediante la adición de un punto o tamaño.|
-|[CPoint::operator =](#operator_-_eq)|Los desplazamientos `CPoint` restando un tamaño o un punto.|
+|[CPoint::operator -=](#operator_-_eq)|Los desplazamientos `CPoint` restando un tamaño o un punto.|
 |[CPoint::operator ==](#operator_eq_eq)|Comprueba la igualdad entre dos puntos.|
 
 ## <a name="remarks"></a>Comentarios
@@ -153,7 +153,7 @@ Especifica la cantidad de desplazamiento del `x` miembro de la `CPoint`.
 *yOffset*<br/>
 Especifica la cantidad de desplazamiento del `y` miembro de la `CPoint`.
 
-*punto*<br/>
+*point*<br/>
 Especifica la cantidad ( [punto](/windows/desktop/api/windef/ns-windef-tagpoint) o `CPoint`) para desplazar la `CPoint`.
 
 *size*<br/>
@@ -173,7 +173,7 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -194,7 +194,7 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o `CPoint` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -219,7 +219,7 @@ void operator+=(POINT point) throw();
 *size*<br/>
 Contiene un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -248,7 +248,7 @@ void operator-=(POINT point) throw();
 *size*<br/>
 Contiene un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -278,7 +278,7 @@ CRect operator+(const RECT* lpRect) const throw();
 *size*<br/>
 Contiene un [tamaño](/windows/desktop/api/windef/ns-windef-tagsize) estructura o [CSize](../../atl-mfc-shared/reference/csize-class.md) objeto.
 
-*punto*<br/>
+*point*<br/>
 Contiene un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *lpRect*<br/>
@@ -298,7 +298,7 @@ Cuando se agrega un rectángulo a un punto de devuelve el rectángulo después d
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator-
+##  <a name="operator_-"></a>  CPoint::operator -
 
 Usar una de las dos primeras sobrecargas para restar un `CPoint` o `CSize` objeto `CPoint`.
 
@@ -311,7 +311,7 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Parámetros
 
-*punto*<br/>
+*point*<br/>
 Un [punto](/windows/desktop/api/windef/ns-windef-tagpoint) estructura o [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objeto.
 
 *size*<br/>
@@ -347,4 +347,3 @@ Use el operador unario para negar un punto. Por ejemplo, mediante el operador un
 [POINT (estructura)](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize (clase)](../../atl-mfc-shared/reference/csize-class.md)
-
