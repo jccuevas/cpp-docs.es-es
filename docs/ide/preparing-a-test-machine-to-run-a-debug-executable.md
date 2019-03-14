@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509114"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744861"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración
 
@@ -20,12 +20,12 @@ Para preparar un equipo con el fin de probar la versión de depuración de una a
 
 Hay tres maneras de implementar versiones de depuración de archivos DLL de biblioteca de Visual C++ junto con la versión de depuración de una aplicación.
 
-- Utilice la implementación central para instalar una versión de depuración de un archivo DLL de Visual C++ determinado en el directorio %windir%\system32\ mediante un proyecto de instalación que incluya módulos de fusión mediante combinación para la versión de biblioteca y la arquitectura de la aplicación correctas. Los módulos de combinación se encuentran en el directorio Archivos de programa o Archivos de programa (x86), en \Common Files\Merge Modules\\. La versión de depuración de un módulo de fusión mediante combinación contiene Debug en el nombre; por ejemplo, Microsoft_VC110 _DebugCRT_x86.msm. Un ejemplo de esta implementación se puede encontrar en [Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+- Utilice la implementación central para instalar una versión de depuración de un archivo DLL de Visual C++ determinado en el directorio %windir%\system32\ mediante un proyecto de instalación que incluya módulos de fusión mediante combinación para la versión de biblioteca y la arquitectura de la aplicación correctas. Los módulos de combinación se encuentran en el directorio Archivos de programa o Archivos de programa (x86), en \Common Files\Merge Modules\\. La versión de depuración de un módulo de fusión mediante combinación contiene Debug en el nombre; por ejemplo, Microsoft_VC110 _DebugCRT_x86.msm. Puede encontrar un ejemplo de esta implementación en [Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 - Use la implementación local para instalar una versión de depuración de un archivo DLL de Visual C++ concreto en el directorio de instalación de la aplicación mediante los archivos que se proporcionan en el directorio Archivos de programa o Archivos de programa (x86), en \Microsoft Visual Studio \<versión>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Para realizar la depuración remota de una aplicación compilada mediante Visual C++ 2005 o Visual C++ 2008 en otro equipo, tiene que implementar versiones de depuración de los archivos DLL de biblioteca de Visual C++ como ensamblados en paralelo compartidos. Puede utilizar un proyecto de instalación o Windows Installer para instalar los módulos de fusión mediante combinación correspondientes.
+    >  Para realizar la depuración remota de una aplicación compilada mediante Visual C++ 2005 o Visual C++ 2008 en otro equipo, tiene que implementar versiones de depuración de los archivos DLL de biblioteca de Visual C++ como ensamblados en paralelo compartidos. Puede utilizar un proyecto de instalación o Windows Installer para instalar los módulos de combinación correspondientes.
 
 - Use la opción **Implementar** del cuadro de diálogo **Administrador de configuración** de Visual Studio para copiar la salida del proyecto y otros archivos en el equipo remoto.
 

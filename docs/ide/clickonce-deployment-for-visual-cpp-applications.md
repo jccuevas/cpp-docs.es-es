@@ -6,16 +6,16 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 29395e5d7e4ba9e2c582d9e5c081a4f667dcaafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1460f13226291e76d297b628d3542a1e147900f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467817"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742157"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Implementación de ClickOnce para aplicaciones de Visual C++
 
-Visual Studio proporciona dos tecnologías diferentes para implementar aplicaciones Windows: implementación de ClickOnce o implementación de [Windows Installer](/windows/desktop/Msi/windows-installer-portal).
+Visual Studio proporciona diferentes tecnologías para implementar aplicaciones Windows: las implementaciones de ClickOnce y de [Windows Installer](/windows/desktop/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>Implementación de ClickOnce en C++
 
@@ -36,7 +36,7 @@ La implementación necesitará la instalación de las bibliotecas de Visual C++ 
 
 También puede que tenga que compilar un programa previo (instalador de requisitos previos) para que la aplicación implemente los componentes de requisito previo; para obtener información sobre el programa previo, vea [Crear paquetes de arranque](/visualstudio/deployment/creating-bootstrapper-packages).
 
-Para obtener una descripción más detallada de la tecnología, vea [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obtener un ejemplo detallado de implementación de ClickOnce, vea [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
+Para obtener una descripción más detallada de la tecnología, vea [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obtener un ejemplo detallado de la implementación ClickOnce, vea [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
 
 ## <a name="see-also"></a>Vea también
 

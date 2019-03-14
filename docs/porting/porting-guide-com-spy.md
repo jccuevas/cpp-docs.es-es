@@ -2,12 +2,12 @@
 title: 'Guía de migración: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441797"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751692"
 ---
 # <a name="porting-guide-com-spy"></a>Guía de migración: COM Spy
 
@@ -166,6 +166,6 @@ Este se ejecutó sin problemas y con COM Spy ejecutándose y configurado para su
 
 ## <a name="see-also"></a>Vea también
 
-[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portabilidad y actualizaciones: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Ejemplo siguiente: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [Ejemplo anterior: Scribble de MFC](../porting/porting-guide-mfc-scribble.md)

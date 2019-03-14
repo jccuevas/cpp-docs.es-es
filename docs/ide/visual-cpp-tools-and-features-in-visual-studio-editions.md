@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463757"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751900"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Herramientas y características de Visual C++ en las ediciones de Visual Studio
 
@@ -58,7 +58,7 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |Aplicación Direct3D|X||X|X|
 |DLL (Windows universal)|X||X|X|
 |Biblioteca estática (Windows universal)|X||X|X|
-|Componente de Windows Runtime|X||X|X|
+|Componente de Windows en tiempo de ejecución|X||X|X|
 |Aplicación de prueba unitaria (Windows universal)|X||X|X|
 |Proyecto ATL|||X|X|
 |Biblioteca de clases (CLR)||X|X|X|
@@ -106,7 +106,7 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |Depuración administrada||X|X|X|
 |Uso de GPU|X||X|X|
 |Uso de memoria|X||X|X|
-|Depuración remota|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |Depuración de SQL|||X|X|
 |Análisis de código estático|Limitado|Limitado|X|X|
 
@@ -147,7 +147,7 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |Compilar personalizaciones|X|X|X|X|
 |Extensibilidad de páginas de propiedades|X|X|X|X|
 
-## <a name="automation-and-extensibility"></a>Automatización y extensibilidad
+## <a name="automation-and-extensibility"></a>Automation y extensibilidad
 
 |Automation y extensibilidad|Visual Studio Express para Windows|Visual Studio Express para escritorio de Windows|Visual Studio Professional/Community|Visual Studio Enterprise|
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
@@ -167,7 +167,7 @@ En las siguientes tablas se muestran las características de Visual C++ que est�
 |Pruebas unitarias (marco administrado)||X|X|X|
 |Cobertura de código||||X|
 |Pruebas manuales||||X|
-|prueba exploratoria||||X|
+|Pruebas exploratorias||||X|
 |Administración de casos de prueba||||X|
 |Mapa de código y gráficos de dependencias|||solo lectura|X|
 |Depuración de mapa de código||||X|
