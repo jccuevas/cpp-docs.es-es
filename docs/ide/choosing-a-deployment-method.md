@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: eb9b0784dc5a31accc086314e64758b5bd91033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e755ad44d088dca77f012569cd3783079cd23f86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607654"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739712"
 ---
 # <a name="choosing-a-deployment-method"></a>Elegir un método de implementación
 
@@ -34,9 +34,9 @@ Puesto que el instalador de Visual Studio instala las bibliotecas de Visual C++ 
 
 En las implementaciones, puede redistribuir cualquier versión de una biblioteca de Visual C++ que está licencia de redistribución. He aquí tres maneras de implementarlas:
 
-- Implementación central mediante paquetes redistribuibles, lo que instala las bibliotecas de Visual C++ como archivos DLL compartidos en %windir%\system32\\. (La instalación en esta carpeta requiere derechos de administrador). Se puede crear un script o un programa de instalación que ejecute el paquete redistribuible antes de instalar la aplicación en el equipo de destino. Hay disponibles paquetes redistribuibles para las plataformas x86, x64 y ARM (VCRedist_x86.exe, VCRedist_x64.exe o VCRedist_arm.exe). Visual Studio incluye estos paquetes en %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. También se pueden descargar desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=132793). (Use el cuadro de búsqueda del Centro de descarga para buscar el "paquete redistribuible de Visual C++ *versión y actualización de Visual Studio*" que coincida con la aplicación. Por ejemplo, si usó la actualización 3 de Visual Studio 2015 para compilar la aplicación, busque "paquete redistribuible de Visual C++ 2015 actualización 3"). Para obtener información sobre cómo usar un paquete redistribuible, vea [Tutorial: Implementar una aplicación de Visual C++ mediante el paquete redistribuible de Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
+- Implementación central mediante paquetes redistribuibles, lo que instala las bibliotecas de Visual C++ como archivos DLL compartidos en %windir%\system32\\. (La instalación en esta carpeta requiere derechos de administrador). Se puede crear un script o un programa de instalación que ejecute el paquete redistribuible antes de instalar la aplicación en el equipo de destino. Hay disponibles paquetes redistribuibles para las plataformas x86, x64 y ARM (VCRedist_x86.exe, VCRedist_x64.exe o VCRedist_arm.exe). Visual Studio incluye estos paquetes en %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\. También se pueden descargar desde el [Centro de descarga de Microsoft](http://go.microsoft.com/fwlink/p/?linkid=132793). (Use el cuadro de búsqueda del Centro de descarga para buscar el "paquete redistribuible de Visual C++ *versión y actualización de Visual Studio*" que coincida con la aplicación. Por ejemplo, si usó la actualización 3 de Visual Studio 2015 para compilar la aplicación, busque "paquete redistribuible de Visual C++ 2015 actualización 3"). Para obtener más información sobre cómo usar un paquete redistribuible, vea [Tutorial: Implementar una aplicación de Visual C++ mediante el paquete redistribuible de Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md).
 
-- Implementación central mediante módulos de combinación, cada uno de los cuales instala una biblioteca concreta de Visual C++ como un archivo DLL compartido en %windir%\system32\\. (La instalación en esta carpeta requiere derechos de administrador). Los módulos de fusión mediante combinación forman parte del archivo instalador .msi de la aplicación. Los módulos de combinación redistribuibles de Visual C++ se incluyen en Visual Studio, en \Archivos de programa (x86)\Common Files\Merge Modules\\. Para obtener más información, vea [Redistribuir mediante módulos de combinación](../ide/redistributing-components-by-using-merge-modules.md).
+- Implementación central mediante módulos de combinación, cada uno de los cuales instala una biblioteca concreta de Visual C++ como un archivo DLL compartido en %windir%\system32\\. (La instalación en esta carpeta requiere derechos de administrador). Los módulos de combinación forman parte del archivo instalador .msi de la aplicación. Los módulos de combinación redistribuibles de Visual C++ se incluyen en Visual Studio, en \Archivos de programa (x86)\Common Files\Merge Modules\\. Para obtener más información, vea [Redistribuir mediante módulos de combinación](../ide/redistributing-components-by-using-merge-modules.md).
 
 - Implementación local, en la que se copian determinados archivos DLL de Visual C++ desde la instalación de Visual Studio (normalmente en \Archivos de programa (x86)\Microsoft Visual Studio `version`\VC\Redist\\`platform`\\`library`\) y se instalan en los equipos de destino en la misma carpeta que el archivo ejecutable de la aplicación. Este método de implementación se puede usar para habilitar la instalación por parte de usuarios que no tienen derechos de administrador, o para las aplicaciones que se pueden ejecutar desde un recurso compartido de red.
 

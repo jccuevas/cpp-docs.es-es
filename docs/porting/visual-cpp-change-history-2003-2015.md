@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525527"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740376"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historial de cambios en Visual C++ 2003-2015
 
@@ -141,7 +141,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
   - Infinito: 1.#INF
 
-  - NaN simple: 1. #QNAN
+  - NaN simple: 1.#QNAN
 
   - NaN de señalización: 1.#SNAN
 
@@ -207,7 +207,7 @@ Además, las mejoras continuas en la conformidad del compilador a veces pueden c
 
 - **Formato de exponente**
 
-   Los especificadores de formato %e y %E dan formato a un número de punto flotante como mantisa decimal y exponente. En algunos casos, los especificadores de formato %g y %G también dan este formato a los números. En versiones anteriores, CRT generaba siempre las cadenas con exponentes de tres dígitos. Por ejemplo, `printf("%e\n", 1.0)` imprimía 1.000000e+000. Ese comportamiento era incorrecto: C exige que si el exponente solo se puede representar mediante uno o dos dígitos, entonces solo se imprimirán dos dígitos.
+   Los especificadores de formato %e y %E dan formato a un número de punto flotante como mantisa decimal y exponente. En algunos casos, los especificadores de formato %g y %G también dan este formato a los números. En versiones anteriores, CRT generaba siempre las cadenas con exponentes de tres dígitos. Por ejemplo, `printf("%e\n", 1.0)` imprimía 1.000000e+000. Ese comportamiento era incorrecto: C exige que si el exponente solo se puede representar mediante uno o dos dígitos, únicamente se imprimirán dos dígitos.
 
    En Visual Studio 2005 se agregó un modificador de conformidad global: [_set_output_format](../c-runtime-library/set-output-format.md). Un programa podía llamar a esta función con el argumento _TWO_DIGIT_EXPONENT, para habilitar la impresión de exponentes conforme a los estándares. El comportamiento predeterminado se ha cambiado al modo de impresión de exponentes conforme a los estándares.
 
@@ -1047,7 +1047,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Llamadas ambiguas a funciones sobrecarfadas**
 
-   El código siguiente produce ahora C266: 'N::bind': llamada ambigua a una función sobrecargada
+   El código siguiente produce ahora C266: "N::bind": llamada ambigua a una función sobrecargada
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1190,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **El valor no puede capturar excepciones de MFC porque no se pueden copiar**
 
-   El siguiente código en una aplicación de MFC produce ahora el error C2316: 'D': no se puede capturar porque el destructor o el constructor de copia son inaccesibles o se han eliminado.
+   El siguiente código en una aplicación de MFC produce ahora el error C2316: 'D': no se puede detectar porque el destructor y/o el constructor de copias están inaccesibles o se eliminaron
 
     ```cpp
     struct B {
@@ -1336,7 +1336,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Corregir inicialización de copia no válida en inicialización de miembro no estático (NSDMI)**
 
-   El código siguiente genera ahora el error C2664: "S1::S1(S1 &&)": no se puede convertir el argumento 1 de "bool" a "const S1 &":
+   El código siguiente produce ahora el error C2664: 'S1::S1(S1 &&)': el argumento 1 no puede convertirse de 'bool' a 'const S1 &':
 
     ```cpp
     struct S1 {
@@ -1358,7 +1358,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Acceso a constructores dentro de instrucciones decltype**
 
-   El código siguiente genera ahora el error C2248: "S::S": no se puede acceder al miembro privado declarado en la clase "S":
+   El código siguiente genera ahora el error C2248: 'S::S': no se puede obtener acceso al miembro privado declarado en la clase 'S':
 
     ```cpp
     class S {
@@ -1480,7 +1480,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **No se puede llamar a un ctor base protegido en el cuerpo de ctor derivado.**
 
-   El código siguiente produce ahora el error C2248: "S1::S1": no se puede acceder al miembro protegido declarado en la clase "S1"
+   El código siguiente produce ahora el error C2248: 'S1::S1': no se puede obtener acceso al miembro protegido declarado en la clase 'S1'
 
     ```cpp
     struct S1 {
@@ -2899,7 +2899,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
     ```
 
-   En versiones anteriores a Visual Studio 2013, este código genera este mensaje: "Advertencia C4370: "S2": el diseño de clase cambió desde una versión anterior del compilador debido a una mejora del empaquetado".
+   En versiones anteriores a Visual Studio 2013, este código genera este mensaje: "Advertencia C4370: 'S2': el diseño de clase cambió desde una versión anterior del compilador debido a una mejora del empaquetado".
 
    El compilador de x86 presenta el mismo problema de disposición en todas las versiones. Por ejemplo, si este código se compila para x86:
 
@@ -2963,7 +2963,7 @@ El Compilador de Microsoft Visual C++ de Visual Studio 2013 detecta las discorda
 
 ### <a name="mfc-and-atl"></a>MFC y ATL
 
-- **Solo Visual Studio 2013**: La biblioteca MFC MBCS no se incluye en Visual Studio debido a la popularidad de Unicode y a que el uso de MBCS se ha reducido significativamente. Este cambio también hace que MFC se adapte más al propio Windows SDK, ya que muchos de los nuevos controles y mensajes son solo Unicode. En cambio, si necesita seguir usando la biblioteca MFC MBCS, puede descargarla del Centro de descarga de MSDN en [Multibyte MFC Library para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  Nota: El archivo DLL de MBCS se incluye en los componentes de instalación de Visual Studio 2015 y versiones posteriores.
+- **Solo Visual Studio 2013**: la biblioteca MFC MBCS no se incluye en Visual Studio debido a la popularidad de Unicode y a que el uso de MBCS se ha reducido considerablemente. Este cambio también hace que MFC se adapte más al propio Windows SDK, ya que muchos de los nuevos controles y mensajes son solo Unicode. En cambio, si necesita seguir usando la biblioteca MFC MBCS, puede descargarla del Centro de descarga de MSDN en [Multibyte MFC Library para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). El paquete redistribuible de Visual C++ todavía incluye esta biblioteca.  (Nota: El archivo DLL de MBCS se incluye en los componentes de instalación de Visual Studio 2015 y versiones posteriores).
 
 - Se ha modificado la accesibilidad de la barra de herramientas de MFC.  En lugar de una arquitectura de una capa, ahora hay una arquitectura jerárquica. Puede seguir utilizando el comportamiento antiguo llamando a `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3043,7 +3043,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
 - Después de un cambio importante entre C++98/03 y estándares C++11, con argumentos de plantilla explícitos para llamar a `make_pair()` (como en `make_pair<int, int>(x, y)`), normalmente no se compila en Visual C++ en Visual Studio 2012. La solución consiste en llamar siempre a `make_pair() ` sin argumentos de plantilla explícitos, como en `make_pair(x, y)`. Proporcionar argumentos de plantilla explícitos acaba con el propósito de la función. Si necesita un control preciso sobre el tipo resultante, use `pair` en lugar de `make_pair` (como en `pair<short, short>(int1, int2)`).
 
-- Otro cambio importante entre C++98/03 y estándares C++11: si A es implícitamente convertible a B y B es implícitamente convertible a C, pero A no es implícitamente convertible a C, C++98/03 y Visual C++2010 permitían que `pair<A, X>` se convirtiera (implícita o explícitamente) en `pair<C, X>`. (El otro tipo, X, no es de interés aquí y no es específico al tipo primero en el par). Puesto que C++11 y el Compilador de Microsoft Visual C++ de Visual Studio 2012 detectan que A no es implícitamente convertible a C, eliminan la conversión de par de la resolución de sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, si sobrecarga `func(const pair<int, int>&)` y `func(const pair<string, string>&)`, y si llama a `func()` con `pair<const char *, const char *>`, se compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar `make_pair(static_cast<B>(a), x)` a una función que espere `pair<C, X>`.
+- Otro cambio importante entre los estándares C++98/03 y C++11: si A es implícitamente convertible a B y B es implícitamente convertible a C, pero A no es implícitamente convertible a C, C++98/03 y Visual C++2010 permitían que `pair<A, X>` se convirtiera (implícita o explícitamente) en `pair<C, X>`. (El otro tipo, X, no es de interés aquí y no es específico al tipo primero en el par). Puesto que C++11 y el Compilador de Microsoft Visual C++ de Visual Studio 2012 detectan que A no es implícitamente convertible a C, eliminan la conversión de par de la resolución de sobrecarga. Se trata de un cambio positivo para muchos escenarios. Por ejemplo, si sobrecarga `func(const pair<int, int>&)` y `func(const pair<string, string>&)`, y si llama a `func()` con `pair<const char *, const char *>`, se compilará con este cambio. En cambio, este cambio interrumpe el código que dependía de conversiones de par agresivas. Normalmente, este código se puede solucionar al realizar una parte de la conversión de forma explícita; por ejemplo, al pasar `make_pair(static_cast<B>(a), x)` a una función que espere `pair<C, X>`.
 
 - Visual C++ 2010 simulaba plantillas variádicas, por ejemplo, `make_shared<T>(arg1, arg2, argN)`, hasta un límite de 10 argumentos, al eliminar sobrecargas y especializaciones con maquinaria de preprocesador. En Visual Studio 2012, este límite se reduce a 5 argumentos para mejorar los tiempos de compilación y el consumo de memoria del compilador para la mayoría de los usuarios. En cambio, puede establecer el límite anterior al definir de forma explícita _VARIADIC_MAX como 10, en todo el proyecto.
 
@@ -3417,7 +3417,7 @@ La enumeración `SchedulerType` de `UmsThreadDefault` está en desuso. La especi
 
    El método `CFrameWnd::GetMenuBarInfo` ahora es un método no virtual. Para obtener más información, consulte la función **GetMenuBarInfo** en el SDK de Windows.
 
-- Compatibilidad con ISAPI de MFC: MFC ya no admite la compilación de aplicaciones con la interfaz de programación de aplicaciones para servidores de Internet (ISAPI). Si quiere compilar una aplicación de ISAPI, llame directamente a las extensiones de ISAPI.
+- Compatibilidad con ISAPI de MFC: MFC ya no admite la compilación de aplicaciones con la Interfaz de programación de aplicaciones para servidores de Internet (ISAPI). Si quiere compilar una aplicación de ISAPI, llame directamente a las extensiones de ISAPI.
 
 - API de ANSI en desuso: las versiones ANSI de varios métodos de MFC están en desuso. Use las versiones Unicode de esos métodos en sus aplicaciones futuras. Para obtener más información, consulte **Requisitos de compilación para los controles comunes de Windows Vista**.
 

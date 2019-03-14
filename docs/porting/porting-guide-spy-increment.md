@@ -2,12 +2,12 @@
 title: 'Guía de migración: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177009"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751379"
 ---
 # <a name="porting-guide-spy"></a>Guía de migración: Spy++
 
@@ -292,7 +292,7 @@ Después de realizar el cambio, tenemos el siguiente código:
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-Puesto que hay unas diez instancias de esta función, todas ellas en distintas clases derivadas de CWnd, resulta útil usar **Ir a definición** (teclado: **F12**) e **Ir a declaración** (teclado: **Ctrl**+**F12**) cuando el cursor está sobre la función en el editor para buscar dichas instancias e ir hasta ellas desde la ventana de la herramienta **Buscar símbolo**. Por lo general, **Ir a definición** es la más útil de las dos. **Ir a declaración** busca declaraciones que no sean la declaración de clase que define, como las declaraciones de la clase friend o las referencias adelantadas.
+Puesto que hay unas diez instancias de esta función, todas ellas en distintas clases derivadas de CWnd, resulta útil usar **Ir a definición** (teclado: **F12**) e **Ir a declaración** (teclado: **CTRL**+**F12**) cuando el cursor está sobre la función en el editor para buscar dichas instancias e ir hasta ellas desde la ventana de la herramienta **Buscar símbolo**. Por lo general, **Ir a definición** es la más útil de las dos. **Ir a declaración** busca declaraciones que no sean la declaración de clase que define, como las declaraciones de la clase friend o las referencias adelantadas.
 
 ##  <a name="mfc_changes"></a> Paso 9. Cambios en MFC
 
@@ -542,7 +542,7 @@ Colocamos \_T alrededor de la literal de cadena para quitar el error.
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-La macro \_T tiene el efecto de hacer que se compile una literal de cadena como **char** o una cadena **wchar_t**, dependiendo de si se establece MBCS o UNICODE. Para reemplazar todas las cadenas por \_T en Visual Studio, abra primero el cuadro **Reemplazo rápido** (teclado: **Ctrl**+**F**) o **Reemplazar en archivos** (teclado: **Ctrl**+**Mayús**+**H**) y, después, elija la casilla **Usar expresiones regulares**. Escriba `((\".*?\")|('.+?'))` como el texto de búsqueda y `_T($1)` como el texto de reemplazo. Si ya tiene la macro \_T alrededor de algunas cadenas, este procedimiento la agregará de nuevo. Además, podrá encontrarse con casos en los que no quiera \_T, como cuando usa `#include`, por lo que es mejor usar **Reemplazar siguiente** en lugar de **Reemplazar todos**.
+La macro \_T tiene el efecto de hacer que se compile una literal de cadena como **char** o una cadena **wchar_t**, dependiendo de si se establece MBCS o UNICODE. Para reemplazar todas las cadenas por \_T en Visual Studio, abra primero el cuadro **Reemplazo rápido** (teclado: **Ctrl**+**F**) o **Reemplazar en archivos** (teclado: **CTRL**+**Mayús**+**H**) y, después, active la casilla **Usar expresiones regulares**. Escriba `((\".*?\")|('.+?'))` como el texto de búsqueda y `_T($1)` como el texto de reemplazo. Si ya tiene la macro \_T alrededor de algunas cadenas, este procedimiento la agregará de nuevo. Además, podrá encontrarse con casos en los que no quiera \_T, como cuando usa `#include`, por lo que es mejor usar **Reemplazar siguiente** en lugar de **Reemplazar todos**.
 
 En realidad, esta función específica, [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa), se define en los encabezados de Windows y en la documentación pertinente se recomienda que no se use, ya que se podría saturar el búfer. No se especifica tamaño para el búfer `szTmp`, así que no hay ninguna manera de que la función compruebe que el búfer sea capaz de retener todos los datos que se vayan a escribir en él. Vea la siguiente sección sobre la migración a las funciones seguras de CRT, en la que corregimos otros problemas similares. Terminamos reemplazándola por [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md).
 
@@ -673,5 +673,5 @@ Migrar Spy++ desde el código original de Visual C++ 6.0 al compilador más reci
 
 ## <a name="see-also"></a>Vea también
 
-[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portabilidad y actualizaciones: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Caso práctico anterior: COM Spy](../porting/porting-guide-com-spy.md)

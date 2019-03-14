@@ -1,17 +1,17 @@
 ---
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622500"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745186"
 ---
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
 
-En este tema se describe cómo configurar un proyecto C++ de Linux en Visual Studio. Para obtener información sobre los proyectos de Linux de CMake en Visual Studio, consulte [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
+En este tema se describe cómo configurar un proyecto C++ de Linux basado en una plantilla de proyecto de Linux en Visual Studio. Para obtener información sobre los proyectos de Linux de CMake en Visual Studio, consulte [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Configuración general
 
@@ -90,7 +90,7 @@ Para administrar la caché de encabezados, vaya a **Herramientas > Opciones, mul
 ## <a name="see-also"></a>Vea también
 
 [Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)<br/>
-[C++ General Properties (Linux C++)](../linux/prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
-[VC++ Directories (Linux C++)](../linux/prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
-[Copy Sources Project Properties (Linux C++)](../linux/prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
-[Build Event Properties (Linux C++)](../linux/prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))
+[C++ General Properties (Linux C++)](prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
+[VC++ Directories (Linux C++)](prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
+[Copy Sources Project Properties (Linux C++)](prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
+[Build Event Properties (Linux C++)](prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))
