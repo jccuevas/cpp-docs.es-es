@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445167"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743262"
 ---
 # <a name="scanf-width-specification"></a>scanf (Especificación de ancho)
 

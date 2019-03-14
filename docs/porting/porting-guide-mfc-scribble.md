@@ -2,12 +2,12 @@
 title: 'Guía de migración: Scribble de MFC'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175657"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741299"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guía de migración: Scribble de MFC
 
@@ -87,5 +87,5 @@ Scribble era una aplicación de escritorio pequeña y simple de Windows, y no fu
 
 ## <a name="see-also"></a>Vea también
 
-[Migración y actualización: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portabilidad y actualizaciones: ejemplos y casos prácticos](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Ejemplo siguiente: COM Spy](../porting/porting-guide-com-spy.md)
