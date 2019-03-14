@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429172"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740820"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio
 
@@ -52,7 +52,7 @@ A continuación, debe actualizar los proyectos y la solución de Visual Studio 2
 
 Una vez finalizada la actualización, si el informe de registro tiene errores o advertencias sobre cualquiera de los proyectos, examínelos detenidamente. La conversión de **VCBuild** a **MSBuild** puede causar problemas. Asegúrese de comprender e implementar los elementos de acción que aparecen en el informe. Para más información sobre el informe de registro de actualización y los problemas que pueden surgir al convertir **VCBuild** en **MSBuild**, vea esta entrada de blog [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) (Compatibilidad nativa con múltiples versiones de C++).
 
-Una vez completada la actualización del proyecto y corregidos los problemas que aparezcan en el archivo de registro, la solución ya tiene realmente como destino el conjunto de herramientas más reciente. Como paso final, cambie las propiedades de cada proyecto de la solución para usar el conjunto de herramientas de Visual Studio 2008. Con la solución cargada en la versión actual de Visual Studio, para cada proyecto de la solución, abra el cuadro de diálogo **Páginas de propiedades**: haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y luego seleccione **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, cambie el valor de la lista desplegable **Configuración** a **Todas las configuraciones**. En **Propiedades de configuración**, seleccione **General** y después cambie **Conjunto de herramientas de la plataforma** a **Visual Studio 2008 (v90)**.
+Una vez completada la actualización del proyecto y corregidos los problemas que aparezcan en el archivo de registro, la solución ya tiene realmente como destino el conjunto de herramientas más reciente. Como paso final, cambie las propiedades de cada proyecto de la solución para usar el conjunto de herramientas de Visual Studio 2008. Con la solución cargada en la versión actual de Visual Studio, para cada proyecto de la solución, abra el cuadro de diálogo **Páginas de propiedades**: haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y, luego, seleccione **Propiedades**. En el cuadro de diálogo **Páginas de propiedades**, cambie el valor de la lista desplegable **Configuración** a **Todas las configuraciones**. En **Propiedades de configuración**, seleccione **General** y después cambie **Conjunto de herramientas de la plataforma** a **Visual Studio 2008 (v90)**.
 
 Después de este cambio, se usan el compilador y las bibliotecas de Visual Studio 2008 para generar archivos binarios de proyecto al compilar la solución en la versión actual de Visual Studio.
 

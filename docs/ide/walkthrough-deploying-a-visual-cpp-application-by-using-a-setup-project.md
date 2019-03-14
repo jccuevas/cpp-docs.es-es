@@ -4,14 +4,14 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565599"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749131"
 ---
-# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Tutorial: Implementar una aplicación de Visual C++ mediante un proyecto de instalación
+# <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>Tutorial: Implementación de una aplicación de Visual C++ mediante un proyecto de instalación
 
 Describe cómo usar un proyecto de instalación para implementar una aplicación de Visual C++.
 
@@ -31,8 +31,8 @@ Necesita los componentes siguientes para completar este tutorial:
 
    > [!NOTE]
    > Si falta el tipo **Aplicación MFC**:<br/>
-   > **Visual Studio 2017**: seleccione el vínculo **Abrir el Instalador de Visual Studio** en el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**. Instale la opción que se encuentra en **Desarrollo para el escritorio con C++** en la sección de componentes **Opcional**, denominada **MFC de Visual C++ para x86 y x64**.<br/>
-   > **Visual Studio 2015**: haga clic en el botón Inicio de Windows y escriba **Agregar o quitar programas**. Abra el programa desde la lista de resultados y, a continuación, busque la instalación de Microsoft Visual Studio 2015 en la lista de programas instalados. Haga doble clic en ella y luego elija **Modificar** y seleccione el componente **Microsoft Foundation Classes** en **Visual C++**.
+   > **Visual Studio 2017**: seleccione **Abrir el Instalador de Visual Studio** en el panel de la izquierda del cuadro de diálogo **Nuevo proyecto**. Instale la opción que se encuentra en **Desarrollo para el escritorio con C++** en la sección de componentes **Opcional**, denominada **MFC de Visual C++ para x86 y x64**.<br/>
+   > **Visual Studio 2015**: haga clic en el botón Inicio de Windows y escriba **Agregar o quitar programas**. Abra el programa desde la lista de resultados y, a continuación, busque la instalación de Microsoft Visual Studio 2015 en la lista de programas instalados. Haga doble clic en ella y luego elija **Modificar** y seleccione el componente **Microsoft Foundation Classes** en **Visual C++**.
 
 1. Cambie la configuración de la solución activa a **Release**. Desde el menú **Compilar**, seleccione **Administrador de configuración**. En el cuadro de diálogo **Administrador de configuración**, seleccione **Release** en la lista desplegable **Configuración de soluciones activas**. Haga clic en **Cerrar**.
 
