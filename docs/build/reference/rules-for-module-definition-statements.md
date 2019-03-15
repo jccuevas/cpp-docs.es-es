@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424761"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821279"
 ---
 # <a name="rules-for-module-definition-statements"></a>Reglas para instrucciones de definición de módulos
 
@@ -34,8 +34,8 @@ Las siguientes reglas sintácticas se aplican a todas las instrucciones en un ar
 
 - Los argumentos numéricos se especifican en base 10 o hexadecimal.
 
-- Si un argumento de cadena coincide con un [palabra reservada](../../build/reference/reserved-words.md), debe incluirse entre comillas dobles (").
+- Si un argumento de cadena coincide con un [palabra reservada](reserved-words.md), debe incluirse entre comillas dobles (").
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos de definición de módulos (.Def)](../../build/reference/module-definition-dot-def-files.md)
+[Archivos de definición de módulos (.Def)](module-definition-dot-def-files.md)

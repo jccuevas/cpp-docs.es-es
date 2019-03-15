@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4634
 ms.assetid: 3e3496ce-2ac7-43d0-a48a-f514c950e81d
-ms.openlocfilehash: a26356dd32f1513eadf4ef2b82175cf71aed13a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d0e2af13128a201d96aa905d85621e14441a673
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536674"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818263"
 ---
 # <a name="compiler-warning-level-4-c4634"></a>Advertencia del compilador (nivel 4) C4634
 
@@ -19,7 +19,7 @@ Comentario del documento XML: no se puede aplicar: motivo
 
 No se pueden aplicar etiquetas de documentación XML a todas las construcciones C++.  Por ejemplo, no puede agregar un comentario de documentación a un espacio de nombres o plantilla.
 
-Para obtener más información, consulta [XML Documentation](../../ide/xml-documentation-visual-cpp.md).
+Para obtener más información, consulta [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 
