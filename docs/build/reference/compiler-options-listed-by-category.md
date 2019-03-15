@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746974"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816339"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 
@@ -218,5 +218,5 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 ## <a name="see-also"></a>Vea también
 
 [Referencia de compilación de C/C++](c-cpp-building-reference.md)<br/>
-[Opciones del compilador](compiler-options.md)<br/>
-[Establecer las opciones del compilador](setting-compiler-options.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>

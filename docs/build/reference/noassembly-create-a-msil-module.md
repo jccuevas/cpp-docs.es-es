@@ -11,12 +11,12 @@ helpviewer_keywords:
 - NOASSEMBLY linker option
 - assemblies [C++], not creating an assembly
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
-ms.openlocfilehash: 67f031f90b263e8edec42efc6a3995cca419fe99
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3350aa10dc7ae3b6f584394c01644c1af2abd2b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413685"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822397"
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (Crear un módulo MSIL)
 
@@ -28,27 +28,27 @@ ms.locfileid: "57413685"
 
 La opción /NOASSEMBLY indica al vinculador que cree una imagen para el archivo de salida actual sin un ensamblado de .NET Framework. Un archivo de salida MSIL sin un manifiesto del ensamblado se denomina un módulo.
 
-De forma predeterminada, se crea un ensamblado. También puede usar el [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) opción del compilador para crear un módulo.
+De forma predeterminada, se crea un ensamblado. También puede usar el [/LN (Create MSIL Module)](ln-create-msil-module.md) opción del compilador para crear un módulo.
 
 Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)
 
-- [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -62,5 +62,5 @@ Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

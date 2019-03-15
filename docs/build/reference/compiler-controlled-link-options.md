@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426711"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822332"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -40,9 +40,9 @@ El compilador de CL llama automáticamente el vínculo a menos que especifique l
 |Zi o/Z7|Fases/Debug|
 |/Zl|Omite el nombre de la biblioteca predeterminada del archivo .obj|
 
-Para obtener más información, consulte [Opciones del compilador](../../build/reference/compiler-options.md).
+Para obtener más información, consulte [opciones del compilador MSVC](compiler-options.md).
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

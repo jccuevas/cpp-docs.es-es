@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0023
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
-ms.openlocfilehash: 75a5669b0f0b12fcc2f4311950ef98e53623a7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73ac5e7d4675dd9ec724a8f4c7118fe6abd663a1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636441"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817561"
 ---
 # <a name="project-build-error-prj0023"></a>Error PRJ0023 al compilar el proyecto
 
@@ -21,4 +21,4 @@ El nombre de archivo *archivo* especificadas para la herramienta *herramienta* n
 
 Ha usado una macro desconocida o no es válida.
 
-Consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md) para obtener información sobre cómo obtener acceso a las propiedades del proyecto.
+Consulte [establecer las propiedades de un proyecto de Visual C++](../../build/working-with-project-properties.md) para obtener información sobre cómo obtener acceso a las propiedades del proyecto.

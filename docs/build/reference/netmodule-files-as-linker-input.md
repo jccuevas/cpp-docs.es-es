@@ -7,38 +7,38 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443582"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818107"
 ---
 # <a name="netmodule-files-as-linker-input"></a>.Archivos netmodule como entrada del vinculador
 
 Link.exe ahora acepta .obj MSIL y los archivos .netmodule como entrada. El archivo de salida generado por el enlazador es un ensamblado o un archivo .netmodule sin ninguna dependencia de tiempo de ejecución con cualquiera de los archivos .obj o .netmodule que se utilizaron como entrada del vinculador.
 
-archivos .netmodule se crean mediante el compilador de Visual C++ con [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) o por el enlazador con [/NOASSEMBLY (crear un módulo MSIL)](../../build/reference/noassembly-create-a-msil-module.md). archivos .obj siempre se crean en una compilación de Visual C++. Para otros compiladores de Visual Studio, use el **/target: module** opción del compilador.
+archivos .netmodule se crean mediante el compilador de MSVC con [/LN (Create MSIL Module)](ln-create-msil-module.md) o por el enlazador con [/NOASSEMBLY (crear un módulo MSIL)](noassembly-create-a-msil-module.md). archivos .obj siempre se crean en una compilación de Visual C++. Para otros compiladores de Visual Studio, use el **/target: module** opción del compilador.
 
 Debe pasar al vinculador el archivo .obj de la compilación de Visual C++ que creó el .netmodule. Pasar de un archivo .netmodule ya no se admite porque el **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
-Para obtener información sobre cómo invocar al vinculador desde la línea de comandos, consulte [sintaxis de línea de comandos del vinculador](../../build/reference/linker-command-line-syntax.md), [código de C o C++ de compilación en la línea de comandos](../../build/building-on-the-command-line.md), y [establecer la ruta de acceso y las Variables de entorno Las compilaciones de línea de comandos](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Para obtener información sobre cómo invocar al vinculador desde la línea de comandos, consulte [sintaxis de línea de comandos del vinculador](linking.md), [usar el conjunto de herramientas desde la línea de comandos MSVC](../building-on-the-command-line.md), y [establecer la ruta de acceso y las Variables de entorno para las compilaciones de línea de comandos](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Pasa un archivo .netmodule o .dll al vinculador que se compiló por el compilador de Visual C++ con **/CLR** puede dar lugar a un error del vinculador. Para obtener más información, consulte [elección del formato de archivos de entrada .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
+Pasa un archivo .netmodule o .dll al vinculador que se ha compilado con el compilador de MSVC **/CLR** puede dar lugar a un error del vinculador. Para obtener más información, consulte [elección del formato de archivos de entrada .netmodule](choosing-the-format-of-netmodule-input-files.md).
 
 El vinculador acepta archivos .obj nativo, así como archivos .obj MSIL compilados con **/CLR**. Cuando se pasan archivos .obj mixtos en la misma compilación, la capacidad de comprobar el archivo de salida resultante, de forma predeterminada, será igual al nivel inferior de verificabilidad de los módulos de entrada.
 
 Si actualmente tiene una aplicación que se compone de dos o más ensamblados y desea que la aplicación para poder estar contenidos en un ensamblado, debe volver a compilar los ensamblados y, a continuación, vincular los archivos .obj o .netmodule para producir un único ensamblado.
 
-Debe especificar un punto de entrada mediante [/Entry (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md) al crear una imagen ejecutable.
+Debe especificar un punto de entrada mediante [/Entry (símbolo de punto de entrada)](entry-entry-point-symbol.md) al crear una imagen ejecutable.
 
-Cuando se vincula con un archivo .obj o .netmodule MSIL, utilice [/LTCG (generación de código de tiempo de vínculo)](../../build/reference/ltcg-link-time-code-generation.md), en caso contrario, cuando el vinculador encuentra los archivos .obj MSIL o .netmodule, reiniciará el vínculo con/LTCG.
+Cuando se vincula con un archivo .obj o .netmodule MSIL, utilice [/LTCG (generación de código de tiempo de vínculo)](ltcg-link-time-code-generation.md), en caso contrario, cuando el vinculador encuentra los archivos .obj MSIL o .netmodule, reiniciará el vínculo con/LTCG.
 
 Los archivos .obj o .netmodule MSIL también se pueden pasar a cl.exe.
 
-MSIL .obj o .netmodule los archivos de entrada no pueden tener recursos incrustados. Un recurso se incrusta en un archivo de salida (módulo o ensamblado) con [/ASSEMBLYRESOURCE (insertar un recurso administrado)](../../build/reference/assemblyresource-embed-a-managed-resource.md) opción del vinculador o con el **/Resource** opción del compilador en otros compiladores de Visual Studio.
+MSIL .obj o .netmodule los archivos de entrada no pueden tener recursos incrustados. Un recurso se incrusta en un archivo de salida (módulo o ensamblado) con [/ASSEMBLYRESOURCE (insertar un recurso administrado)](assemblyresource-embed-a-managed-resource.md) opción del vinculador o con el **/Resource** opción del compilador en otros compiladores de Visual Studio.
 
-Al realizar la vinculación de MSIL, y si no se especifica también [/LTCG (generación de código de tiempo de vínculo)](../../build/reference/ltcg-link-time-code-generation.md), verá un mensaje informativo que se está reiniciando el vínculo de informes. Este mensaje puede omitirse, pero to mejorar el rendimiento del vinculador con vinculación de MSIL, especifique explícitamente **/LTCG**.
+Al realizar la vinculación de MSIL, y si no se especifica también [/LTCG (generación de código de tiempo de vínculo)](ltcg-link-time-code-generation.md), verá un mensaje informativo que se está reiniciando el vínculo de informes. Este mensaje puede omitirse, pero to mejorar el rendimiento del vinculador con vinculación de MSIL, especifique explícitamente **/LTCG**.
 
 ## <a name="example"></a>Ejemplo
 
@@ -98,5 +98,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>Vea también
 
-- [Archivos de entrada de LINK](../../build/reference/link-input-files.md)
-- [Opciones del vinculador](../../build/reference/linker-options.md)
+- [Archivos de entrada de LINK](link-input-files.md)
+- [Opciones del vinculador MSVC](linker-options.md)

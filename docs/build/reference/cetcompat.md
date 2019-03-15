@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418697"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809852"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatible con tecnología de cumplimiento de flujo de Control)
 
@@ -36,7 +36,7 @@ El **/CETCOMPAT** opción está disponible a partir el conjunto de herramientas 
 
 ### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Para establecer la opción del vinculador /CETCOMPAT en Visual Studio
 
-1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
 
@@ -48,5 +48,4 @@ Esta opción no tiene un equivalente mediante programación.
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Opciones del vinculador](linker-options.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: c74766c86048f6dd7358d16b8d5d1f2b493450c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414426"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816118"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemas comunes de migración a 64 bits en Visual C++
 
@@ -42,11 +42,11 @@ El modificador `printf` %x (`int` en formato hexadecimal) no funcionará según 
 
 Para obtener más información, consulte:
 
-- [Opciones del compilador](../build/reference/compiler-options.md)
+- [Opciones del compilador MSVC](reference/compiler-options.md)
 
 - [Sugerencias de migración](/windows/desktop/WinProg64/migration-tips)
 
 ## <a name="see-also"></a>Vea también
 
-[Configuración de Visual C++ en destinos de 64 bits, x64](../build/configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[Configurar los proyectos de C++ de 64 bits, x64 destinos](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Guía de migración y actualización de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

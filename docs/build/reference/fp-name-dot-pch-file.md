@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414101"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820395"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (Dar nombre al archivo .Pch)
 
@@ -32,7 +32,7 @@ Proporciona un nombre de ruta de acceso para un encabezado precompilado en lugar
 
 ## <a name="remarks"></a>Comentarios
 
-Use esta opción con [/Yc (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md) o [/Yu (utilizar el archivo de encabezado precompilado)](../../build/reference/yu-use-precompiled-header-file.md) para proporcionar un nombre de ruta de acceso para un encabezado precompilado en lugar de usar el nombre de ruta de acceso predeterminada. También puede usar **/FP** con **/Yc** para especificar el uso de un archivo de encabezado precompilado que difiere de la **/Yc**<em>filename</em> argumento y desde el nombre base del archivo de origen.
+Use esta opción con [/Yc (crear archivo de encabezado precompilado)](yc-create-precompiled-header-file.md) o [/Yu (utilizar el archivo de encabezado precompilado)](yu-use-precompiled-header-file.md) para proporcionar un nombre de ruta de acceso para un encabezado precompilado en lugar de usar el nombre de ruta de acceso predeterminada. También puede usar **/FP** con **/Yc** para especificar el uso de un archivo de encabezado precompilado que difiere de la **/Yc**<em>filename</em> argumento y desde el nombre base del archivo de origen.
 
 Si no especifica una extensión como parte del nombre de ruta de acceso, se supone una extensión pch. Si especifica un directorio sin un nombre de archivo, el nombre de archivo predeterminado es VC*x*0.pch, donde *x* es la versión principal de Visual C++ en uso.
 
@@ -40,7 +40,7 @@ También puede usar el **/FP** opción con **/Yu**.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -70,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>Vea también
 
-[/F (Opciones del archivo de resultados)](../../build/reference/output-file-f-options.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Especificar la ruta de acceso](../../build/reference/specifying-the-pathname.md)
+[/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Especificar la ruta de acceso](specifying-the-pathname.md)

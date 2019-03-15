@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Migrar a - clr
+title: Filtrar Migrar a - clr
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749119"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816040"
 ---
 # <a name="how-to-migrate-to-clr"></a>Filtrar Migrar a/CLR
 
@@ -98,7 +98,7 @@ Este paso tiene implicaciones diferentes para los proyectos que utilizan archivo
 **/ CLR** se pueden seleccionar en el entorno de desarrollo siguiendo las instrucciones de [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md). Como se mencionó previamente, este paso deshabilitará automáticamente los parámetros de configuración del proyecto en conflicto.
 
 > [!NOTE]
->  Al actualizar una biblioteca administrada o un proyecto de servicio web desde Visual C++ 2003, el **/Zl** se de opción del compilador agregado a la **línea de comandos** página de propiedades. Esto produce el error LNK2001. Quitar **/Zl** desde el **línea de comandos** página de propiedades para resolver. Consulte [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) y [trabajar con las propiedades del proyecto](../ide/working-with-project-properties.md) para obtener más información. O bien, agregue msvcrt.lib y msvcmrt.lib al vinculador **dependencias adicionales** propiedad.
+>  Al actualizar una biblioteca administrada o un proyecto de servicio web desde Visual C++ 2003, el **/Zl** se de opción del compilador agregado a la **línea de comandos** página de propiedades. Esto produce el error LNK2001. Quitar **/Zl** desde el **línea de comandos** página de propiedades para resolver. Consulte [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) y [establecer compilador y las propiedades de compilación](../build/working-with-project-properties.md) para obtener más información. O bien, agregue msvcrt.lib y msvcmrt.lib al vinculador **dependencias adicionales** propiedad.
 
 Para los proyectos generados con archivos MAKE, las opciones del compilador incompatible se deben deshabilitar manualmente una vez **/CLR** se agrega. Ver /[restricciones de /clr](../build/reference/clr-restrictions.md) para obtener información sobre las opciones del compilador que no son compatibles con **/CLR**.
 

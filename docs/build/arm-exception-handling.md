@@ -2,16 +2,16 @@
 title: Control de excepciones de ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694353"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814545"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
-Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado tanto en las excepciones generadas por hardware asincrónicas como en las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. Este documento describe el control de excepciones en Windows en ARM y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de Visual C++.
+Windows en ARM emplea el mismo mecanismo de control de excepciones estructurado tanto en las excepciones generadas por hardware asincrónicas como en las excepciones generadas por software sincrónicas. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. Este documento describe el control de excepciones en Windows en ARM y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de MSVC.
 
 ## <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -104,7 +104,7 @@ Los prólogos para las funciones canónicas pueden tener un máximo de 5 instru
 
 |Instrucción|Código de operación supuestamente presente si:|Tamaño|Código de operación|Códigos de desenredado|
 |-----------------|-----------------------------------|----------|------------|------------------|
-|1|*H*== 1|16|`push {r0-r3}`|04|
+|1|*H*==1|16|`push {r0-r3}`|04|
 |2|*C*== 1 o *L*== 1 o *R*== 0 o PF == 1|16/32|`push {registers}`|80-BF/D0-DF/EC-ED|
 |3a|*C*== 1 y (*L*== 0 y *R*== 1 y PF == 0)|16|`mov r11,sp`|C0-CF/FB|
 |3b|*C*== 1 y (*L*== 1 o *R*== 0 o PF == 1)|32|`add r11,sp,#xx`|FC|
@@ -121,22 +121,22 @@ Las instrucciones 2 y 4 se establecen en función de si se necesita una inserc
 
 |C|L|R|PF|Registros de enteros insertados|Registros de VFP insertados|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|R4-r*N*|ninguna|
-|0|0|0|1|r*S*- r*N*|ninguna|
-|0|0|1|0|ninguna|D8-d*E*|
-|0|0|1|1|r*S*-r3|D8-d*E*|
-|0|1|0|0|R4-r*N*, LR|ninguna|
-|0|1|0|1|r*S*- r*N*, LR|ninguna|
-|0|1|1|0|LR|D8-d*E*|
-|0|1|1|1|r*S*-r3, LR|D8-d*E*|
-|1|0|0|0|R4-r*N*, r11|ninguna|
-|1|0|0|1|r*S*- r*N*, r11|ninguna|
-|1|0|1|0|r11|D8-d*E*|
-|1|0|1|1|r*S*-r3, r11|D8-d*E*|
-|1|1|0|0|R4-r*N*, r11, LR|ninguna|
-|1|1|0|1|r*S*- r*N*, r11, LR|ninguna|
-|1|1|1|0|r11, LR|D8-d*E*|
-|1|1|1|1|r*S*-r3, r11, LR|D8-d*E*|
+|0|0|0|0|r4-r*N*|ninguna|
+|0|0|0|1|r*S*-r*N*|ninguna|
+|0|0|1|0|ninguna|d8-d*E*|
+|0|0|1|1|r*S*-r3|d8-d*E*|
+|0|1|0|0|r4-r*N*, LR|ninguna|
+|0|1|0|1|r*S*-r*N*, LR|ninguna|
+|0|1|1|0|LR|d8-d*E*|
+|0|1|1|1|r*S*-r3, LR|d8-d*E*|
+|1|0|0|0|r4-r*N*, r11|ninguna|
+|1|0|0|1|r*S*-r*N*, r11|ninguna|
+|1|0|1|0|r11|d8-d*E*|
+|1|0|1|1|r*S*-r3, r11|d8-d*E*|
+|1|1|0|0|r4-r*N*, r11, LR|ninguna|
+|1|1|0|1|r*S*-r*N*, r11, LR|ninguna|
+|1|1|1|0|r11, LR|d8-d*E*|
+|1|1|1|1|r*S*-r3, r11, LR|d8-d*E*|
 
 Los epílogos de las funciones canónicas siguen un formato similar, pero a la inversa y con algunas opciones más. El epílogo puede tener una longitud de hasta 5 instrucciones, y su formato se define estrictamente por el formato del prólogo.
 
@@ -147,8 +147,8 @@ Los epílogos de las funciones canónicas siguen un formato similar, pero a la i
 |8|*C*== 1 o (*L*== 1 y *H*== 0) o *R*== 0 o *EF*== 1|16/32|`pop   {registers}`|
 |9a|*H*== 1 y *L*== 0|16|`add   sp,sp,#0x10`|
 |9b|*H*== 1 y *L*== 1|32|`ldr   pc,[sp],#0x14`|
-|10a|*RET*== 1|16|`bx    reg`|
-|10b|*RET*== 2|32|`b     address`|
+|10a|*Ret*==1|16|`bx    reg`|
+|10b|*Ret*==2|32|`b     address`|
 
 Si se especifica un ajuste de no plegamiento, la instrucción 6 será el ajuste de pila explícito. Dado que *PF* es independiente de *EF*, es posible que la instrucción 5 presente sin la instrucción 6, o viceversa.
 
@@ -410,7 +410,7 @@ Si, tras omitir los epílogos con una sola instrucción, no hay más epílogos, 
 
 En los siguientes ejemplos, la base de imagen está a 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Ejemplo 1: Función de hoja, sin asignaciones locales
+### <a name="example-1-leaf-function-no-locals"></a>Ejemplo 1: función de hoja, sin asignaciones locales
 
 ```asm
 Prologue:
@@ -444,7 +444,7 @@ Epilogue:
 
    - *Ajustar la pila* = 0, indica que ningún ajuste de pila
 
-### <a name="example-2-nested-function-with-local-allocation"></a>Ejemplo 2: La función anidada con asignación Local
+### <a name="example-2-nested-function-with-local-allocation"></a>Ejemplo 2: función anidada con asignación local
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *Ajuste de pila* = 3 (= 0x0C/4)
 
-### <a name="example-3-nested-variadic-function"></a>Ejemplo 3: Función Variádica anidada
+### <a name="example-3-nested-variadic-function"></a>Ejemplo 3: función variádica anidada
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *Ajustar la pila* = 0, indica que ningún ajuste de pila
 
-### <a name="example-4-function-with-multiple-epilogues"></a>Ejemplo 4: Función con varios epílogos
+### <a name="example-4-function-with-multiple-epilogues"></a>Ejemplo 4: función con varios epílogos
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - Código de desenredado 2 = 0xFF: final
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Ejemplo 5: Función con pila dinámica y epílogo interior
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>Ejemplo 5: función con pila dinámica y epílogo interior
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *Código palabras* = 0 x 01, que indica una palabra de 32 bits de códigos de desenredado
 
-- Palabra 1: Ámbito de epílogo en el desplazamiento 0xC6 (= 0x18C/2), a partir de índice de código de desenredado 0 x 00, con una condición de 0x0E (siempre)
+- Palabra 1: ámbito de epílogo en el desplazamiento 0xC6 (= 0x18C/2), empezando por el índice de códigos de desenredado en 0x00 y con una condición de 0x0E (siempre)
 
 - Códigos de desenredado, empezando por la palabra 2: (compartido entre el prólogo y epílogo)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - 3 = 0xFD código de desenredado: end, cuenta como instrucción de 16 bits para el epílogo
 
-### <a name="example-6-function-with-exception-handler"></a>Ejemplo 6: Función con controlador de excepciones
+### <a name="example-6-function-with-exception-handler"></a>Ejemplo 6: función con controlador de excepciones
 
 ```asm
 Prologue:
@@ -698,7 +698,7 @@ Epilogue:
 
 - Las palabras 4 en adelante son datos de excepción insertados
 
-### <a name="example-7-funclet"></a>Ejemplo 7: Funclet
+### <a name="example-7-funclet"></a>Ejemplo 7: funclet
 
 ```asm
 Function:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)
+[Información general sobre las convenciones ABI de ARM](overview-of-arm-abi-conventions.md)<br/>
+[Problemas comunes de migración de ARM en Visual C++](common-visual-cpp-arm-migration-issues.md)

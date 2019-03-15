@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 12f4f67eee59137042ef36f6709e921287d5528e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424783"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820083"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Filtrar Modificar la plataforma de destino y el conjunto de herramientas de plataforma
 
@@ -61,4 +61,4 @@ Puede extender la plataforma de destino aún más creando un conjunto de herrami
 
 ## <a name="see-also"></a>Vea también
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+[MSBuild en la línea de comandos - C++](msbuild-visual-cpp.md)

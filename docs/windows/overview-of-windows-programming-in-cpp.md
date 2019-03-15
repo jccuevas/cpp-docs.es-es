@@ -2,12 +2,12 @@
 title: Información general de la programación para Windows en C++
 ms.date: 11/15/2018
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: b33236df6e4c7f679ff1dd9f9f8bc409c86e011a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693869"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810450"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -21,7 +21,7 @@ Las aplicaciones de consola de C++ se ejecutan desde la línea de comandos en un
 
 El término *aplicación cliente de escritorio nativa* hace referencia a una aplicación de división de particiones de C o C++ que usa las API de Win32 de Windows original para tener acceso al sistema operativo. Estas API son escrito principalmente en C. Al crear este tipo de aplicación, tiene la posibilidad de programar directamente con un bucle de mensajes de estilo C que procesa los eventos del sistema operativo, o utilizando *Microsoft Foundation Classes* (MFC), una biblioteca de C++ que se ajusta a Win32 de manera que es un poco orientada a objetos. No se considera "moderna" en comparación con la plataforma Universal de Windows (ver abajo), pero ambas siguen siendo totalmente compatibles y tienen millones de líneas de código que se ejecuta en el mundo de hoy en día.
 
-Para empezar a trabajar con programación C++ tradicional de Windows, consulte [empezar a trabajar con Win32 y C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Después de tener cierto conocimiento de Win32, será más fácil obtener información sobre [MFC Desktop Applications](/mfc/mfc-desktop-applications). Para obtener un ejemplo de una aplicación de escritorio de C++ tradicional que usa gráficos sofisticados, consulte [Hilo: desarrollar aplicaciones de C++ para Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
+Para empezar a trabajar con programación C++ tradicional de Windows, consulte [empezar a trabajar con Win32 y C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Después de tener cierto conocimiento de Win32, será más fácil obtener información sobre [MFC Desktop Applications](/mfc/mfc-desktop-applications). Para obtener un ejemplo de una aplicación de escritorio de C++ tradicional que usa gráficos sofisticados, consulte [Hilo: Desarrollo de aplicaciones de C++ para Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>¿C++ o. NET? 
 
@@ -73,13 +73,13 @@ Puede usar el [Administrador de paquetes de Vcpkg](../vcpkg.md) para instalar c�
 
 Las bibliotecas de Microsoft incluyen:
 
-- Microsoft Foundation Classes (MFC): un marco de trabajo orientado a objetos para crear programas tradicionales de Windows, especialmente aplicaciones empresariales, que tienen interfaces de usuario complejas con botones, cuadros de lista, vistas de árbol y otros controles. Para obtener más información, consulta [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
+- Microsoft Foundation Classes (MFC): Un marco orientado a objetos para crear programas tradicionales de Windows, especialmente aplicaciones empresariales, que tienen interfaces de usuario enriquecidas, botones, cuadros de lista, vistas de árbol y otros controles. Para obtener más información, consulta [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL): una biblioteca del asistente eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Active Template Library (ATL): Una biblioteca auxiliar eficaz para crear componentes COM. Para obtener más información, consulta [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
-- C++ AMP (C++ Accelerated Massive Parallelism): una biblioteca que habilita el trabajo de proceso general de alto rendimiento en la GPU. Para obtener más información, consulta [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
+- C++ AMP (C++ Accelerated Massive Parallelism): Una biblioteca que permite el trabajo de proceso general de alto rendimiento en la GPU. Para obtener más información, consulta [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
-- Runtime de simultaneidad: una biblioteca que simplifica el trabajo de programación paralela y asincrónica para dispositivos de varios núcleos. Para obtener más información, consulta [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+- Runtime de simultaneidad: Una biblioteca que simplifica el trabajo de programación paralela y asincrónica para dispositivos de varios núcleos y varios núcleos. Para obtener más información, consulta [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
 
 En muchos escenarios de programación para Windows también se requiere Windows SDK, que incluye los archivos de encabezado que permiten el acceso a componentes del sistema operativo Windows. De forma predeterminada, Visual Studio instala el SDK de Windows como un componente de la carga de trabajo de escritorio de C++, que permite el desarrollo de aplicaciones de Windows Universal. Para desarrollar aplicaciones para UWP, necesitará la versión de Windows 10 del SDK de Windows. Para obtener información, consulte [SDK de Windows 10](https://dev.windows.com/downloads/windows-10-sdk). (Para obtener más información sobre los SDK de Windows para las versiones anteriores de Windows, consulte el [archivo de Windows SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
@@ -89,7 +89,7 @@ Otras plataformas como Xbox y Azure cuentan con sus propios SDK que puede que te
 
 ## <a name="development-tools"></a>Herramientas del programador
 
-Visual Studio incluye un depurador eficaz de código nativo, herramientas de análisis estático, herramientas de depuración de gráficos, un editor de código completo, compatibilidad con pruebas unitarias, y muchas otras herramientas y utilidades. Para obtener más información, consulte [comience a desarrollar con Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio), y [IDE y herramientas de desarrollo](../ide/ide-and-tools-for-visual-cpp-development.md).
+Visual Studio incluye un depurador eficaz de código nativo, herramientas de análisis estático, herramientas de depuración de gráficos, un editor de código completo, compatibilidad con pruebas unitarias, y muchas otras herramientas y utilidades. Para obtener más información, consulte [comience a desarrollar con Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio), y [desarrollo información general de C++ en Visual Studio](../overview-of-cpp-development.md).
 
 ## <a name="in-this-section"></a>En esta sección
 |Title|Descripción|

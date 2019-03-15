@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420692"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814558"
 ---
 # <a name="mutual-imports"></a>Importaciones mutuas
 
@@ -41,7 +41,7 @@ La solución general para el tratamiento de importaciones mutuas es:
 
 La siguiente ilustración muestra una solución para dos archivos DLL, DLL1 y DLL2. Paso 1 es ejecutar LIB, con la opción /DEF establecida, en DLL1. Paso 1 produce DLL1.lib, una biblioteca de importación y DLL1.exp. En el paso 2, la biblioteca de importación se utiliza para generar DLL2, que a su vez genera una biblioteca de importación para los símbolos de DLL2. Paso 3 genera DLL1, con DLL1.exp y DLL2.lib como entrada. Tenga en cuenta que no es necesario un archivo .exp para DLL2 porque no se utilizó para generar la biblioteca de importación de DLL2 LIB.
 
-![Uso de importaciones mutuas para vincular dos archivos DLL](../build/media/vc37yj1.gif "con importaciones mutuas para vincular dos archivos DLL")<br/>
+![Uso de importaciones mutuas para vincular dos archivos DLL](media/vc37yj1.gif "con importaciones mutuas para vincular dos archivos DLL")<br/>
 Vincular dos archivos DLL con importaciones mutuas
 
 ## <a name="limitations-of-afxext"></a>Limitaciones de _AFXEXT
@@ -109,24 +109,24 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Exportar desde un archivo DLL](../build/exporting-from-a-dll.md)
+- [Exportar desde un archivo DLL](exporting-from-a-dll.md)
 
-- [Exportar desde un archivo DLL mediante. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar desde un archivo DLL mediante. DEF (archivos)](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar desde un archivo DLL mediante__declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar utilizando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar utilizando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [La utilidad LIB y la opción /DEF](../build/reference/lib-reference.md)
+- [La utilidad LIB y la opción /DEF](reference/lib-reference.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Importar y exportar](../build/importing-and-exporting.md)
+[Importar y exportar](importing-and-exporting.md)

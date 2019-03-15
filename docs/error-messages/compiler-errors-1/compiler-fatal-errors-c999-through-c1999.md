@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677336"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814454"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Errores graves del compilador: de C999 a C1999
 
@@ -224,7 +223,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Error irrecuperable C1063|límite del compilador: desbordamiento de la pila del compilador|
 |[Error irrecuperable C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|límite del compilador: desbordamiento de símbolo (token) de búfer interno|
 |[Error irrecuperable C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|límite del compilador: no hay etiquetas|
-|[Error irrecuperable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|límite del compilador: se ha superado el límite de tamaño de 64 K de un registro de tipo|
+|[Error irrecuperable C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|límite del compilador: Se superó el límite de 64K de tamaño de un tipo de registro|
 |Error irrecuperable C1068|no se puede abrir el archivo '*file*'|
 |Error irrecuperable C1069|no se puede leer la línea de comandos del compilador|
 |Error irrecuperable C1070|el par #if/#endif no coincide en el archivo '*file*'|
@@ -234,7 +233,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Error irrecuperable C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|el elemento *token* de la izquierda estaba sin asignar al final del archivo|
 |[Error irrecuperable C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|límite del compilador: se ha alcanzado el límite del montón interno; utilice /Zm para especificar un límite más alto|
 |Error irrecuperable C1077|límite del compilador: no se pueden tener más de *number* opciones de la línea de comandos|
-|[Error irrecuperable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|límite del compilador: se ha superado el límite de tamaño de archivo de encabezado precompilado|
+|[Error irrecuperable C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|límite del compilador: Límite de tamaño de archivo PCH superado|
 |[Error irrecuperable C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|límite del compilador: la opción de la línea de comandos ha superado el límite de *number* caracteres|
 |[Error irrecuperable C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': nombre de archivo demasiado largo|
 |Error irrecuperable C1082|no se puede cerrar el archivo *type* : '*file*': *message*|
@@ -265,7 +264,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Error irrecuperable C1111|hay demasiados parámetros template/generic|
 |Error irrecuperable C1112|límite del compilador: `'number`' demasiados argumentos de macro, solo se permite ' *number* '|
 |[Error irrecuperable C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|error de #using en '*file*'|
-|Error irrecuperable C1114|'*file*': WinRT no admite la instrucción #using de un ensamblado administrado|
+|Error irrecuperable C1114|'*archivo*': WinRT no admite #using de un ensamblado administrado|
 |[Error irrecuperable C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|error al llamar a GetProcAddress debido a '*function*'|
 |[Error irrecuperable C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|no se pudo llamar a CryptoAPI|
 |[Error irrecuperable C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|la asignación automática supera *size*|

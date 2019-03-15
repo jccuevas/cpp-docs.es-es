@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:noexceptTypes
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
-ms.openlocfilehash: f5f2fa3ef85e7ff15b28188e45a4ec397878873c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462236"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812114"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/ Zc: noexcepttypes (reglas c ++ 17 noexcept)
 
@@ -21,7 +21,7 @@ Hace que el estándar C ++ 17 `throw()` como un alias para `noexcept`, quita `th
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: noexcepttypes**[-]
+> **/Zc:noexceptTypes**[-]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -73,7 +73,7 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -81,6 +81,6 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Ajuste)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)

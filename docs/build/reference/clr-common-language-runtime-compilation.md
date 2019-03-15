@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418859"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822473"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Compilación de Common Language Runtime)
 
@@ -47,11 +47,11 @@ Uno o varios de los siguientes modificadores, separados por comas.
 
 - **noAssembly**
 
-   **/ CLR: noAssembly está en desuso**. Utilice [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) en su lugar.
+   **/ CLR: noAssembly está en desuso**. Utilice [/LN (Create MSIL Module)](ln-create-msil-module.md) en su lugar.
 
    Especifica que no se debe insertar un manifiesto de ensamblado en el archivo de salida. De forma predeterminada, la opción **noAssembly** no está activada.
 
-   Un programa administrado que no tiene datos de ensamblado en el manifiesto se conoce como *módulo*. La opción **noAssembly** solo puede usarse para generar un módulo. Si compila con [/c](../../build/reference/c-compile-without-linking.md) y **/clr:noAssembly**, especifique la opción [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) en la fase del enlazador para crear un módulo.
+   Un programa administrado que no tiene datos de ensamblado en el manifiesto se conoce como *módulo*. La opción **noAssembly** solo puede usarse para generar un módulo. Si compila con [/c](c-compile-without-linking.md) y **/clr:noAssembly**, especifique la opción [/NOASSEMBLY](noassembly-create-a-msil-module.md) en la fase del enlazador para crear un módulo.
 
    Antes de Visual C++ 2005, **/clr:noAssembly** requería **/LD**. Ahora,**/LD** está implícita cuando especifica **/clr:noAssembly**.
 
@@ -65,27 +65,27 @@ Uno o varios de los siguientes modificadores, separados por comas.
 
 ## <a name="remarks"></a>Comentarios
 
-Código administrado es código que se puede inspeccionar y administrar con el CLR. El código administrado puede tener acceso a los objetos administrados. Para obtener más información, consulta [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Código administrado es código que se puede inspeccionar y administrar con el CLR. El código administrado puede tener acceso a los objetos administrados. Para obtener más información, consulta [/clr Restrictions](clr-restrictions.md).
 
 Para obtener información sobre cómo desarrollar aplicaciones que definan y usen tipos administrados, consulte [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).
 
 Una aplicación compilada mediante **/clr** puede contener o no datos administrados.
 
-Para habilitar la depuración en una aplicación administrada, consulte [/ASSEMBLYDEBUG (Agregar DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).
+Para habilitar la depuración en una aplicación administrada, consulte [/ASSEMBLYDEBUG (Agregar DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
 Solo se crearán instancias de tipos CLR en el montón de recolección de elementos no utilizados. Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md). Para compilar una función en código nativo, use la pragma `unmanaged` . Para obtener más información, consulte [managed, unmanaged](../../preprocessor/managed-unmanaged.md).
 
-De forma predeterminada, la opción **/clr** no está activada. Cuando **/clr** está activada, **/MD** también lo está. Para obtener más información, consulte [/MD, / MT, /LD (Utilizar la biblioteca en tiempo de ejecución)](../../build/reference/md-mt-ld-use-run-time-library.md). **/MD** garantiza que las versiones multiproceso vinculadas dinámicamente de las rutinas en tiempo de ejecución se seleccionen de los archivos de encabezado estándar (.h). El subprocesamiento múltiple es necesario para la programación administrada porque el recolector de elementos no utilizados de CLR ejecuta los finalizadores en un subproceso auxiliar.
+De forma predeterminada, la opción **/clr** no está activada. Cuando **/clr** está activada, **/MD** también lo está. Para obtener más información, consulte [/MD, / MT, /LD (Utilizar la biblioteca en tiempo de ejecución)](md-mt-ld-use-run-time-library.md). **/MD** garantiza que las versiones multiproceso vinculadas dinámicamente de las rutinas en tiempo de ejecución se seleccionen de los archivos de encabezado estándar (.h). El subprocesamiento múltiple es necesario para la programación administrada porque el recolector de elementos no utilizados de CLR ejecuta los finalizadores en un subproceso auxiliar.
 
-Si se compila con **/c**, puede especificar el tipo CLR del archivo de salida resultante con [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+Si se compila con **/c**, puede especificar el tipo CLR del archivo de salida resultante con [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
 
-**/clr** implica **/EHa**, y ninguna otra opción de **/EH** es compatible con **/clr**. Para obtener más información, consulte [/EH (Modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md).
+**/clr** implica **/EHa**, y ninguna otra opción de **/EH** es compatible con **/clr**. Para obtener más información, consulte [/EH (Modelo de control de excepciones)](eh-exception-handling-model.md).
 
-Para obtener más información sobre cómo determinar el tipo de imagen de CLR de un archivo, consulte [/CLRHEADER](../../build/reference/clrheader.md).
+Para obtener más información sobre cómo determinar el tipo de imagen de CLR de un archivo, consulte [/CLRHEADER](clrheader.md).
 
 Todos los módulos que se pasen a una invocación específica del enlazador tienen que haberse compilado con la misma opción de compilador de la biblioteca en tiempo de ejecución (**/MD** o **/LD**).
 
-Use la opción de enlazador [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) opción del enlazador para insertar un recurso en un ensamblado. Las opciones del enlazador[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)y [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) también le permiten personalizar cómo se crea un ensamblado.
+Use la opción de enlazador [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) opción del enlazador para insertar un recurso en un ensamblado. Las opciones del enlazador[/DELAYSIGN](delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)y [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) también le permiten personalizar cómo se crea un ensamblado.
 
 Cuando se usa **/clr** , el símbolo `_MANAGED` se establece en 1. Para obtener más información, consulta [Predefined Macros](../../preprocessor/predefined-macros.md).
 
@@ -105,5 +105,5 @@ Use ildasm.exe para ver los metadatos.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

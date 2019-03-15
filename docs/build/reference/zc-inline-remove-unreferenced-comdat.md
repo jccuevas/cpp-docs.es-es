@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441241"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820525"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (Quitar COMDAT no referenciada)
 
@@ -23,11 +23,11 @@ Quita los datos o las funciones a los que no se hace referencia y que son COMDAT
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: inline**[**-**]
+> **/Zc:inline**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
-Cuando **/Zc: inline** se especifica, el compilador no emite información de símbolos para las funciones COMDAT sin referencias o datos, o para las funciones o datos que solo tienen vinculación interna. Esta optimización simplifica parte del trabajo realizado por el enlazador en las versiones de lanzamiento o cuando la opción del vinculador [/OPT: ref](../../build/reference/opt-optimizations.md) se especifica. Cuando el compilador realiza esta optimización, puede reducir significativamente el tamaño del archivo .obj y mejorar la velocidad del enlazador. Esta opción del compilador no está habilitada cuando las optimizaciones están deshabilitadas ([/Od](../../build/reference/od-disable-debug.md)) o cuando [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md) se especifica.
+Cuando **/Zc: inline** se especifica, el compilador no emite información de símbolos para las funciones COMDAT sin referencias o datos, o para las funciones o datos que solo tienen vinculación interna. Esta optimización simplifica parte del trabajo realizado por el enlazador en las versiones de lanzamiento o cuando la opción del vinculador [/OPT: ref](opt-optimizations.md) se especifica. Cuando el compilador realiza esta optimización, puede reducir significativamente el tamaño del archivo .obj y mejorar la velocidad del enlazador. Esta opción del compilador no está habilitada cuando las optimizaciones están deshabilitadas ([/Od](od-disable-debug.md)) o cuando [/GL (Whole Program Optimization)](gl-whole-program-optimization.md) se especifica.
 
 De forma predeterminada, esta opción está desactivada (**/Zc:inline-**). El [/ permissive-](permissive-standards-conformance.md) no habilita la opción **/Zc: inline**.
 
@@ -123,7 +123,7 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **lenguaje** página de propiedades.
 
@@ -131,4 +131,4 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Ajuste)](zc-conformance.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623995"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810099"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/ Zc: __cplusplus (macro __cplusplus actualizada de habilitar)
 
@@ -19,7 +19,7 @@ El **/Zc: __cplusplus** habilita la opción del compilador la  **\_ \_cplusplus*
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: __cplusplus**[**-**]
+> **/Zc:__cplusplus**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -30,7 +30,7 @@ Cuando el **/Zc: __cplusplus** opción está habilitada, el valor indicado por e
 |/ Zc: __cplusplus conmutador|conmutador /std:c++|valor __cplusplus|
 |-|-|-|
 Zc:__cplusplus|/ std: c ++ 14 (valor predeterminado)|201402L
-Zc:__cplusplus|/ std: c ++ 17|201703L
+Zc:__cplusplus|/std:c++17|201703L
 Zc:__cplusplus|/ std: c ++ más reciente|201704L
 Zc:__cplusplus-(deshabilitado)|Cualquier valor|199711L
 No se especifica|Cualquier valor|199711L
@@ -41,7 +41,7 @@ Para la detección más precisa de los cambios realizados en el conjunto de herr
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para establecer esta opción del compilador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 

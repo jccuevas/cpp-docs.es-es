@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /SECTION dumpbin option
 - SECTION dumpbin option
 ms.assetid: c223d1c6-88ef-411c-9607-c610726b8d66
-ms.openlocfilehash: d9f12e978516a7449c2ed95b0f1c5487452ca584
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bd0ed68f88df9c5b57b0e7a3a5df64d33a8a6fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415232"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813355"
 ---
 # <a name="section-dumpbin"></a>/SECTION (DUMPBIN)
 
@@ -24,10 +24,10 @@ ms.locfileid: "57415232"
 
 ## <a name="remarks"></a>Comentarios
 
-Esta opción limita la salida para obtener información sobre especificado *sección*. Use la [/HEADERS](../../build/reference/headers.md) opción para obtener una lista de secciones del archivo.
+Esta opción limita la salida para obtener información sobre especificado *sección*. Use la [/HEADERS](headers.md) opción para obtener una lista de secciones del archivo.
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

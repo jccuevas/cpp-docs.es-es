@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412463"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807967"
 ---
 # <a name="cl-environment-variables"></a>Variables de entorno de CL
 
@@ -30,13 +30,13 @@ Puede establecer la CL o \_CL\_ variable de entorno mediante la sintaxis siguien
 
 > ESTABLECER CL = [[*opción*]... [*archivo*]...] [/ link *vínculo-opt* ...] ESTABLECER \_CL\_= [[*opción*]... [*archivo*]...] [/ link *vínculo-opt* ...]
 
-Para obtener más información sobre los argumentos de la CL y \_CL\_ las variables de entorno, vea [sintaxis de línea de comandos del compilador](../../build/reference/compiler-command-line-syntax.md).
+Para obtener más información sobre los argumentos de la CL y \_CL\_ las variables de entorno, vea [sintaxis de línea de comandos del compilador de MSVC](compiler-command-line-syntax.md).
 
 Puede usar estas variables de entorno para definir los archivos y las opciones que usa con más frecuencia, y puede usar la línea de comandos para definir archivos y opciones específicos para fines específicos. La CL y \_CL\_ variables de entorno están limitadas a 1024 caracteres (el límite de entrada de línea de comandos).
 
 No puede usar la opción /D para definir un símbolo que use un signo igual (=). Puede sustituir el signo de número (#) por un signo igual. De este modo, puede usar el CL o \_CL\_ variables de entorno para definir constantes de preprocesador con valores explícitos, por ejemplo, `/DDEBUG#1` para definir `DEBUG=1`.
 
-Para obtener información relacionada, consulte [establecer Variables de entorno](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Para obtener información relacionada, consulte [establecer Variables de entorno](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -58,5 +58,5 @@ Esto tiene el mismo efecto que la línea de comandos siguiente:
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)
+[Establecer las opciones del compilador](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)

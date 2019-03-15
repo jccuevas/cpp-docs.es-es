@@ -7,16 +7,16 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: b1ca214d8c840d9e993d5a89823b63868a664bec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2b6737abd76c03186881e83bbd2bf286be6ffe2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424891"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813232"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>Especificar archivos DLL para carga retrasada
 
-Puede especificar qué archivos DLL retrasar la carga con el [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md):`dllname` opción del vinculador. Si no piensa usar su propia versión de una función del asistente, también debe vincular el programa con delayimp.lib (para aplicaciones de escritorio) o dloadhelper.lib (para aplicaciones de la tienda).
+Puede especificar qué archivos DLL retrasar la carga con el [/DELAYLOAD](delayload-delay-load-import.md):`dllname` opción del vinculador. Si no piensa usar su propia versión de una función del asistente, también debe vincular el programa con delayimp.lib (para aplicaciones de escritorio) o dloadhelper.lib (para aplicaciones de la tienda).
 
 El siguiente es un ejemplo sencillo de retraso de la carga de un archivo DLL:
 
@@ -37,4 +37,4 @@ Genera la versión de depuración del proyecto. Recorra el código usando el dep
 
 ## <a name="see-also"></a>Vea también
 
-[Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Compatibilidad del vinculador con las DLL de carga retrasada](linker-support-for-delay-loaded-dlls.md)

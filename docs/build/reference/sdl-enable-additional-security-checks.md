@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413100"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814207"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (habilitar comprobaciones adicionales de seguridad)
 
@@ -23,7 +23,7 @@ Agrega las comprobaciones recomendadas del ciclo de vida de desarrollo de seguri
 
 ## <a name="remarks"></a>Comentarios
 
-**/SDL** habilita un supraconjunto de las comprobaciones de seguridad de línea de base proporcionado por [/GS](../../build/reference/gs-buffer-security-check.md) e invalida **/GS-**. De forma predeterminada, **/sdl** está desactivada. **/SDL-** deshabilita las comprobaciones de seguridad adicionales.
+**/SDL** habilita un supraconjunto de las comprobaciones de seguridad de línea de base proporcionado por [/GS](gs-buffer-security-check.md) e invalida **/GS-**. De forma predeterminada, **/sdl** está desactivada. **/SDL-** deshabilita las comprobaciones de seguridad adicionales.
 
 ## <a name="compile-time-checks"></a>Comprobaciones en tiempo de compilación
 
@@ -67,7 +67,7 @@ Para obtener más información, consulte [advertencias, /sdl y mejora de la dete
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **C o C++** carpeta.
 
@@ -75,5 +75,5 @@ Para obtener más información, consulte [advertencias, /sdl y mejora de la dete
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

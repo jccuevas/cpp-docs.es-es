@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 084741a3a408fe79e27c3fab81e1f5c4c9f06c4e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414595"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811444"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Archivos DLL y comportamiento de la biblioteca de tiempo de ejecución de Visual C++
 
@@ -32,10 +32,10 @@ En Windows, todos los archivos DLL pueden contener una función de punto de entr
 
 La biblioteca de VCRuntime proporciona una función de punto de entrada denominada `_DllMainCRTStartup` para controlar las operaciones de inicialización y terminación de forma predeterminada. En el proceso de adjuntar, el `_DllMainCRTStartup` función configura las comprobaciones de seguridad de búfer, inicializa el CRT y otras bibliotecas, inicializa la información de tipo en tiempo de ejecución, inicializa y llama a constructores para datos estáticos y no local, inicializa el almacenamiento local de subprocesos , incrementa un contador interno estático para cada operación de adjuntar y, a continuación, llama a un usuario o biblioteca-proporcionado por `DllMain`. En el proceso de desasociación, la función se lleva a cabo estos pasos en orden inverso. Llama a `DllMain`, disminuye el contador interno, llama a los destructores, la terminación de CRT las llamadas a funciones y registrado `atexit` funciones y notifica a cualquier otra biblioteca de terminación. Cuando el contador de los datos adjuntos se llega a cero, la función devuelve `FALSE` para indicar a Windows que se puede descargar el archivo DLL. El `_DllMainCRTStartup` también se denomina función de subproceso durante la asociación y desasociación de subproceso. En estos casos, el código de VCRuntime no ninguna inicialización adicional ni la finalización por sí mismo y simplemente llama a `DllMain` para pasar el mensaje a lo largo. Si `DllMain` devuelve `FALSE` del proceso de adjuntar, error, de señalización `_DllMainCRTStartup` llamadas `DllMain` nuevo y pasa `DLL_PROCESS_DETACH` como el *motivo* argumento, a continuación, recorre el resto de la proceso de finalización.
 
-Al compilar archivos DLL en Visual C++, el punto de entrada predeterminado `_DllMainCRTStartup` proporcionado por VCRuntime se vinculará automáticamente. No es necesario especificar una función de punto de entrada para el archivo DLL mediante la [/Entry (símbolo de punto de entrada)](../build/reference/entry-entry-point-symbol.md) opción del vinculador.
+Al compilar archivos DLL en Visual C++, el punto de entrada predeterminado `_DllMainCRTStartup` proporcionado por VCRuntime se vinculará automáticamente. No es necesario especificar una función de punto de entrada para el archivo DLL mediante la [/Entry (símbolo de punto de entrada)](reference/entry-entry-point-symbol.md) opción del vinculador.
 
 > [!NOTE]
-> Aunque es posible especificar otra función de punto de entrada para un archivo DLL utilizando el/Entry: opción del vinculador, no se recomienda, ya que la función de punto de entrada tendría que duplicar todo lo que `_DllMainCRTStartup` es así, en el mismo orden. VCRuntime proporciona funciones que permiten duplicar su comportamiento. Por ejemplo, puede llamar a [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) inmediatamente en el proceso de adjuntar para admitir la [/GS (comprobación de seguridad de búfer)](../build/reference/gs-buffer-security-check.md) opción de comprobación del búfer. Puede llamar a la `_CRT_INIT` función, pasando los mismos parámetros como la función de punto de entrada, para realizar el resto de las funciones de inicialización o de finalización de la DLL.
+> Aunque es posible especificar otra función de punto de entrada para un archivo DLL utilizando el/Entry: opción del vinculador, no se recomienda, ya que la función de punto de entrada tendría que duplicar todo lo que `_DllMainCRTStartup` es así, en el mismo orden. VCRuntime proporciona funciones que permiten duplicar su comportamiento. Por ejemplo, puede llamar a [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) inmediatamente en el proceso de adjuntar para admitir la [/GS (comprobación de seguridad de búfer)](reference/gs-buffer-security-check.md) opción de comprobación del búfer. Puede llamar a la `_CRT_INIT` función, pasando los mismos parámetros como la función de punto de entrada, para realizar el resto de las funciones de inicialización o de finalización de la DLL.
 
 <a name="initializing-a-dll"></a>
 
@@ -180,6 +180,6 @@ Una función de inicialización de ejemplo que se incluye identificadores de mul
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)<br/>
 [Punto de entrada de DllMain](/windows/desktop/Dlls/dllmain)<br/>
 [Procedimientos recomendados de la biblioteca de vínculos dinámicos](/windows/desktop/Dlls/dynamic-link-library-best-practices)

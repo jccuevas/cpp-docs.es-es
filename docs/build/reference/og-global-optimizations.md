@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420874"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818536"
 ---
 # <a name="og-global-optimizations"></a>/Og (optimizaciones globales)
 
-Desusado. Proporciona las optimizaciones globales y locales, asignación automática de registros y la optimización de bucle. Se recomienda usar ya sea [/O1 (minimizar tamaño)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/O2 (maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) en su lugar.
+Desusado. Proporciona las optimizaciones globales y locales, asignación automática de registros y la optimización de bucle. Se recomienda usar ya sea [/O1 (minimizar tamaño)](o1-o2-minimize-size-maximize-speed.md) o [/O2 (maximizar velocidad)](o1-o2-minimize-size-maximize-speed.md) en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -30,7 +30,7 @@ Desusado. Proporciona las optimizaciones globales y locales, asignación automá
 
 ## <a name="remarks"></a>Comentarios
 
-**/ Og** está en desuso. Por lo general, estas optimizaciones ahora están habilitadas de forma predeterminada. Para obtener más información acerca de las optimizaciones, consulte [/O1, / O2 (minimizar tamaño, maximizar velocidad)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) o [/Ox (habilitar más las optimizaciones de velocidad)](../../build/reference/ox-full-optimization.md).
+**/ Og** está en desuso. Por lo general, estas optimizaciones ahora están habilitadas de forma predeterminada. Para obtener más información acerca de las optimizaciones, consulte [/O1, / O2 (minimizar tamaño, maximizar velocidad)](o1-o2-minimize-size-maximize-speed.md) o [/Ox (habilitar más las optimizaciones de velocidad)](ox-full-optimization.md).
 
 Las siguientes optimizaciones están disponibles en **/Og**:
 
@@ -76,11 +76,11 @@ Las siguientes optimizaciones están disponibles en **/Og**:
    > [!NOTE]
    > Puede habilitar o deshabilitar la optimización global sobre el uso de una función por función la `optimize` pragma junto con el `g` opción.
 
-Para obtener información relacionada, consulte [/Oi (generar funciones intrínsecas)](../../build/reference/oi-generate-intrinsic-functions.md) y [/Ox (habilitar más las optimizaciones de velocidad)](../../build/reference/ox-full-optimization.md).
+Para obtener información relacionada, consulte [/Oi (generar funciones intrínsecas)](oi-generate-intrinsic-functions.md) y [/Ox (habilitar más las optimizaciones de velocidad)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -94,8 +94,4 @@ Para obtener información relacionada, consulte [/Oi (generar funciones intríns
 
 ## <a name="see-also"></a>Vea también
 
-[/O (Opciones) (Optimizar código)](../../build/reference/o-options-optimize-code.md)
-
-[Opciones del compilador](../../build/reference/compiler-options.md)
-
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

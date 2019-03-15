@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491304"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816625"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>Compilador advertencias C4400 a C4599
 
@@ -187,9 +185,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4427|'*operador*': desbordamiento de división de constantes, comportamiento no definido|
 |[Advertencia del compilador (nivel 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|posible incompleto o incorrectamente formado universal: nombre de carácter|
 |[Advertencia (Error) del compilador C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int|
-|[Advertencia del compilador (nivel 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|falta el especificador de tipo; se presupone int. Nota: C no admite default-int|
+|[Advertencia del compilador (nivel 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|falta el especificador de tipo; se presupone int. Nota: C ya no admite default-int|
 |[Advertencia del compilador (nivel 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|un constructor estático debe tener accesibilidad privada; cambiará a acceso privado|
-|[Advertencia del compilador (nivel 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': disposición de los objetos vd2 cambiará debido a la base virtual '*$base_class*'|
+|[Advertencia del compilador (nivel 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*': Diseño de objeto vd2 cambiará debido a la base virtual '*$base_class*'|
 |[Advertencia del compilador (nivel 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|dinámica\_conversión de la base virtual '*$base_class*'para'*derived_class*' en el constructor o destructor podría fallar con objetos construidos parcialmente|
 |[Advertencia del compilador (nivel 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|dinámica\_conversión de la base virtual '*$base_class*'para'*derived_class*' podría producir un error en algunos contextos|
 |Advertencia C4438 del compilador|'*función*': no se puede llamar de forma segura / await: clrcompat modo. Si '*función*' llama a CLR puede causar daños principal de CLR|
@@ -205,9 +203,9 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia C4448 del compilador|'*tipo*1' no tiene una interfaz predeterminada especificada en los metadatos. Realizar una selección: '*type2*', que puede producir un error en tiempo de ejecución.|
 |Advertencia C4449 del compilador|'*tipo*' un tipo no sellado se debe marcar como '[WebHostHidden]'|
 |Advertencia C4450 del compilador|'*type1*'se debe marcar como '[WebHostHidden]' porque deriva de'*type2*'|
-|Advertencia del compilador (nivel 4) C4451|'classname1::member': uso de la clase ref 'classname2::member' dentro de este contexto puede dar lugar a la serialización no válido del objeto en todos los contextos|
+|Advertencia del compilador (nivel 4) C4451|'classname1::member': Uso de la clase ref 'classname2::member' dentro de este contexto puede dar lugar a la serialización no válido del objeto en todos los contextos|
 |Advertencia del compilador (nivel 1) C4452|'*identificador*': no puede ser un tipo público en el ámbito global. Debe estar en un espacio de nombres es un elemento secundario del nombre del archivo de salida .winmd.|
-|Advertencia del compilador (nivel 1) C4453|'*tipo*': un tipo '[WebHostHidden]' no debe usarse en la superficie publicada de un tipo público que no sea '[WebHostHidden]'|
+|Advertencia del compilador (nivel 1) C4453|'*tipo*': Un tipo '[WebHostHidden]' no debe usarse en la superficie publicada de un tipo público que no sea '[WebHostHidden]'|
 |Advertencia del compilador (nivel 1) C4454|'*función*' está sobrecargado por algo más que el número de parámetros de entrada sin necesidad de especificado [DefaultOverload]. Seleccionar '*declaración*' como sobrecarga predeterminada|
 |Advertencia del compilador (nivel 1) C4455|' operador *operador*': los identificadores de sufijo literales que no empiecen por un carácter de subrayado están reservados|
 |[Advertencia del compilador (nivel 4) C4456](compiler-warning-level-4-c4456.md)|declaración de '*identificador*' oculta la declaración local anterior|
@@ -242,7 +240,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4491|'*nombre*': tiene un formato de versión IDL no válido|
 |Advertencia del compilador (nivel 1, Error) C4492|'*función1*': coincide con el método de clase ref de base '*función2*', pero no está marcado como 'override'|
 |Advertencia del compilador (nivel 3, Error) C4493|Expresión DELETE no tiene ningún efecto porque el destructor de '*tipo*' no tiene accesibilidad 'public'|
-|Advertencia del compilador (nivel 1) C4494|'*función*': se omite __declspec (Allocator) porque el tipo de valor devuelto de la función no es un puntero o referencia|
+|Advertencia del compilador (nivel 1) C4494|'*función*': Se omite __declspec (Allocator) porque el tipo de valor devuelto de la función no es un puntero o referencia|
 |Advertencia C4495 del compilador|ha utilizado una extensión '__super': reemplazar por el nombre de clase base explícito|
 |Advertencia C4496 del compilador|usa una extensión no estándar 'for each': reemplazar por la instrucción ranged-for|
 |Advertencia C4497 del compilador|ha utilizado una extensión 'sealed': reemplácela por 'final'|
@@ -273,7 +271,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md)|'continue': salto fuera del bloque ' __finally/finally' tiene un comportamiento indefinido durante el control de finalización|
 |[Advertencia del compilador (nivel 1) C4533](../../error-messages/compiler-warnings/compiler-warning-level-1-c4533.md)|inicialización de '*variable*'se omite en'*goto label*'|
 |[Advertencia del compilador (nivel 3) C4534](../../error-messages/compiler-warnings/compiler-warning-level-3-c4534.md)|'*constructor*'no se puede tener un constructor predeterminado para 'class/struct' '*identificador*' debido al argumento predeterminado|
-|[Advertencia del compilador (nivel 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|llamar a _set_se_translator () requiere /EHa|
+|[Advertencia del compilador (nivel 3) C4535](../../error-messages/compiler-warnings/compiler-warning-level-3-c4535.md)|calling _set_se_translator() requires /EHa|
 |[Advertencia del compilador (nivel 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': nombre de tipo supera el límite de metadatos de '*character_limit*' caracteres|
 |[Advertencia del compilador (nivel 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*objeto*': '.' aplicado al tipo no definido por el usuario|
 |[Advertencia del compilador (nivel 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*tipo*': no se admiten los calificadores const/volatile en este tipo|
@@ -306,20 +304,20 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 3) C4569|'*función*': ningún miembro coincide con la firma de la invalidación explícita|
 |[Advertencia del compilador (nivel 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*tipo*': no se declara explícitamente como abstracto pero tiene funciones abstractas|
 |[Advertencia del compilador (nivel 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|Informativo: semántica de catch (...) cambiada desde Visual C++ 7.1; ya no se detectan excepciones estructuradas (SEH)|
-|[Advertencia del compilador (nivel 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|El atributo [ParamArray] está desusado en /clr; use '...' en su lugar|
+|[Advertencia del compilador (nivel 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|El atributo [ParamArray] está en desuso en/CLR, use '...' en lugar de|
 |Advertencia del compilador (nivel 1) C4573|el uso de '*función lambda*' requiere que el compilador capture 'this' pero no permitir que el modo de captura predeterminado actual|
 |Advertencia del compilador (nivel 4) C4574|'*Identificador*'se define como ' 0': ¿pretendía usar '#if identificador'?|
 |Advertencia del compilador (nivel 1) C4575|'__vectorcall' es incompatible con el ' / clr' opción: convertir a '__stdcall'|
 |Advertencia del compilador (nivel 1, Error) C4576|un tipo entre paréntesis seguido de una lista de inicializadores es una sintaxis de conversión de tipo explícita no estándar|
 |Advertencia del compilador (nivel 1, Off) C4577|Puede usar con ningún modo especificado; de control de excepciones 'noexcept' no se garantiza la finalización de la excepción. Especifique /EHsc|
 |Advertencia del compilador (nivel 1, Error) C4578|'abs': conversión de '*type1*'para'*type2*', posible pérdida de datos (¿pretendía llamar a '*función*' o a #include \<cmath >?)|
-|[Advertencia del compilador (nivel 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] está en desuso; especifique en su lugar System::Attribute o Platform::Metadata como clase base|
+|[Advertencia del compilador (nivel 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] está desusado; especifique en su lugar System::Attribute o Platform::Metadata como clase base|
 |[Advertencia del compilador (nivel 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|comportamiento desusado: ' "*cadena*"' reemplazado por '*cadena*' para procesar el atributo|
 |Advertencia del compilador (nivel 4) C4582|'*tipo*': no se llama implícitamente constructor|
 |Advertencia del compilador (nivel 4) C4583|'*tipo*': no se llama al destructor implícitamente|
 |[Advertencia del compilador (nivel 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'*class1*': clase base*class2*'ya es una clase base de'*class3*'|
-|Advertencia del compilador (nivel 1, Error) C4585|'*clase*': clase no sellada A WinRT 'public ref class' debe estar sellado o derivar de una existente|
-|Advertencia del compilador (nivel 1, Error) C4586|'*tipo*': no se puede declarar un tipo público en un espacio de nombres de nivel superior llamado 'Windows'|
+|Advertencia del compilador (nivel 1, Error) C4585|'*clase*': WinRT 'public ref class' debe estar sellado o derivar una clase no sellada existente|
+|Advertencia del compilador (nivel 1, Error) C4586|'*tipo*': No se puede declarar un tipo público en un espacio de nombres de nivel superior llamado 'Windows'|
 |Advertencia del compilador (nivel 1) C4587|'*anonymous_structure*': cambio de comportamiento: ya no es implícitamente se llama al constructor|
 |Advertencia del compilador (nivel 1) C4588|'*anonymous_structure*': cambio de comportamiento: ya no es implícitamente se llama al destructor|
 |Advertencia del compilador (nivel 1) C4591|límite de profundidad de llamada de 'constexpr' *número* superado (/ constexpr: Depth\<número >)|

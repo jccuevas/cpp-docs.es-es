@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258637"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822670"
 ---
 # <a name="mfc-application-wizard"></a>Asistente para aplicaciones MFC
 
 El Asistente para aplicaciones MFC genera una aplicación que, al compilarse, implementa las características básicas de una aplicación ejecutable para Windows (.exe). La aplicación MFC inicial incluye archivos de código fuente de C++ (.cpp), archivos de recursos (.rc), archivos de encabezado (.h) y un archivo de proyecto (.vcxproj). El código generado en estos archivos iniciales se basa en MFC.
 
 > [!NOTE]
->  El asistente creará archivos adicionales para el proyecto en función de las opciones que seleccione. Por ejemplo, si selecciona **ayuda contextual** en el [características avanzadas](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, el asistente crea los archivos que son necesarios para compilar los archivos de Ayuda del proyecto. Para obtener más información acerca de los archivos que crea el asistente, consulte [tipos de archivo creados para proyectos de Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)y consulte el archivo Readme.txt del proyecto.
+>  El asistente creará archivos adicionales para el proyecto en función de las opciones que seleccione. Por ejemplo, si selecciona **ayuda contextual** en el [características avanzadas](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, el asistente crea los archivos que son necesarios para compilar los archivos de Ayuda del proyecto. Para obtener más información acerca de los archivos que crea el asistente, consulte [tipos de archivo creados para proyectos de Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)y consulte el archivo Readme.txt del proyecto.
 
 ## <a name="overview"></a>Información general
 

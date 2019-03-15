@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 503c3e4399359d793ce660f36844d2edc6602146
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 783677c97835acc98751fc4a19f9405af752b71a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416779"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809605"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Procedimiento Compilar componentes COM sin registro
+# <a name="how-to-build-registration-free-com-components"></a>Filtrar Compilar componentes COM sin registro
 
 Los componentes COM sin registro son componentes COM que tienen manifiestos integrados en los archivos DLL.
 
@@ -29,6 +29,4 @@ Los componentes COM sin registro son componentes COM que tienen manifiestos inte
 
 ## <a name="see-also"></a>Vea también
 
-[Aplicaciones aisladas](/windows/desktop/SbsCs/isolated-applications)<br/>
-[Acerca de los ensamblados en paralelo](/windows/desktop/SbsCs/about-side-by-side-assemblies-)<br/>
-[Cómo: Compilar aplicaciones aisladas que empleen componentes COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Cómo: Compilar aplicaciones aisladas que empleen componentes COM](how-to-build-isolated-applications-to-consume-com-components.md)

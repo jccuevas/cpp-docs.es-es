@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260548"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818640"
 ---
 # <a name="exception-handling-in-mfc"></a>Control de excepciones en MFC
 
@@ -55,7 +55,7 @@ Se puede convertir fácilmente código existente para usar las excepciones de C+
 Si ya ha desarrollado una aplicación mediante las macros de excepción de MFC, aún puede usar estas macros en el código existente, mientras usa las excepciones de C++ en el nuevo código. El artículo [excepciones: Cambios en las Macros de excepción en la versión 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) proporciona instrucciones para hacerlo.
 
 > [!NOTE]
->  Para habilitar en el código de control de excepciones de C++, seleccione Habilitar excepciones de C++ en la página generación de código en la carpeta C/C ++ del proyecto [páginas de propiedades](../ide/property-pages-visual-cpp.md) cuadro de diálogo o utilice el [/EHsc](../build/reference/eh-exception-handling-model.md) opción del compilador.
+>  Para habilitar en el código de control de excepciones de C++, seleccione Habilitar excepciones de C++ en la página generación de código en la carpeta C/C ++ del proyecto [páginas de propiedades](../build/reference/property-pages-visual-cpp.md) cuadro de diálogo o utilice el [/EHsc](../build/reference/eh-exception-handling-model.md) opción del compilador.
 
 En este artículo se tratan los siguientes temas:
 

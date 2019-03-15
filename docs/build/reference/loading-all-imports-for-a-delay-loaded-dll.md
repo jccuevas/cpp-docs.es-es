@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-ms.openlocfilehash: a144f3d4e0d6dbf306938dcc3fddd4faca73c17c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e855b648dc7a9ee0670c3704a11aa1897a238403
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421173"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811919"
 ---
 # <a name="loading-all-imports-for-a-delay-loaded-dll"></a>Cargar todas las importaciones para un archivo DLL de carga retrasada
 
-El **__HrLoadAllImportsForDll** función, que se define en delayhlp.cpp, indica al vinculador que todas las importaciones de carga desde un archivo DLL que se especificó con el [/DELAYLOAD](../../build/reference/delayload-delay-load-import.md) opción del vinculador.
+El **__HrLoadAllImportsForDll** función, que se define en delayhlp.cpp, indica al vinculador que todas las importaciones de carga desde un archivo DLL que se especificó con el [/DELAYLOAD](delayload-delay-load-import.md) opción del vinculador.
 
 Cargar todas las importaciones le permite colocar en un mismo lugar en el código de control de errores y no tiene que usar en torno a las llamadas reales para las importaciones de control de excepciones. También evita una situación donde la aplicación se produce un error parcialmente a través de un proceso como resultado el código auxiliar no se puede cargar una importación.
 
-Una llamada a **__HrLoadAllImportsForDll** no cambia el comportamiento de los enlaces y error de control; vea [notificación y control de errores](../../build/reference/error-handling-and-notification.md) para obtener más información.
+Una llamada a **__HrLoadAllImportsForDll** no cambia el comportamiento de los enlaces y error de control; vea [notificación y control de errores](error-handling-and-notification.md) para obtener más información.
 
 El nombre del archivo DLL que se pasa a **__HrLoadAllImportsForDll** se compara con el nombre almacenado en el propio archivo DLL y distingue mayúsculas de minúsculas.
 
@@ -32,4 +32,4 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 
 ## <a name="see-also"></a>Vea también
 
-[Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Compatibilidad del vinculador con las DLL de carga retrasada](linker-support-for-delay-loaded-dlls.md)

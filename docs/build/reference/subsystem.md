@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415141"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820499"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ Los valores opcionales `major` y `minor` especifican la versión mínima necesar
 
 - Los valores de `major` y `minor` deben oscilar entre 0 y 65.535.
 
-La opción de subsistema afecta a la dirección de inicio predeterminada del programa. Para obtener más información, consulte [/Entry (símbolo de punto de entrada)](../../build/reference/entry-entry-point-symbol.md), el vinculador/ENTRY:*función* opción.
+La opción de subsistema afecta a la dirección de inicio predeterminada del programa. Para obtener más información, consulte [/Entry (símbolo de punto de entrada)](entry-entry-point-symbol.md), el vinculador/ENTRY:*función* opción.
 
-Para obtener más información, incluidos los valores mínimo y predeterminado de los números de versión principal y secundaria para cada subsistema, vea el [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opción del vinculador.
+Para obtener más información, incluidos los valores mínimo y predeterminado de los números de versión principal y secundaria para cada subsistema, vea el [/Subsystem](subsystem-specify-subsystem.md) opción del vinculador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)
+[Opciones de EDITBIN](editbin-options.md)

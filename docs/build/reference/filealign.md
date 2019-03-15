@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -FILEALIGN linker option
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
-ms.openlocfilehash: f2f46796a939d068c893e397499a42fe0bf6f41a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 43cfdd6efb163013d05877e91c8375eb592295a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417975"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814480"
 ---
 # <a name="filealign-align-sections-in-files"></a>/FILEALIGN (Alinear secciones de archivos)
 
@@ -39,7 +39,7 @@ Use [DUMPBIN](dumpbin-reference.md) para ver información sobre las secciones en
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **línea de comandos** página de propiedades de la **vinculador** carpeta.
 
@@ -51,5 +51,5 @@ Use [DUMPBIN](dumpbin-reference.md) para ver información sobre las secciones en
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

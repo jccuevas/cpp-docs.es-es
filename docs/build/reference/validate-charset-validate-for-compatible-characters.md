@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: ca7724922fa579087cf4c6c1790819dc539112a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30c818bcb64c2f2ee57c05a4870e7d30afe98cfe
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423942"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810073"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/ Validate/CharSet (validar los caracteres compatibles)
 
@@ -34,7 +34,7 @@ Visual Studio usa UTF-8 como la codificación de caracteres interno durante la c
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el **propiedades de configuración**, **C o C++**, **línea de comandos** carpeta.
 
@@ -44,8 +44,8 @@ Visual Studio usa UTF-8 como la codificación de caracteres interno durante la c
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (establecer juego de caracteres de ejecución)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/source/charset (Establecer el juego de caracteres de origen)](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[/ Execution-CharSet (establecer juego de caracteres de ejecución)](execution-charset-set-execution-character-set.md)<br/>
+[/source/charset (Establecer el juego de caracteres de origen)](source-charset-set-source-character-set.md)<br/>
+[/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)
