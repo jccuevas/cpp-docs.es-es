@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494983"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807534"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Compatibilidad con Unicode en el compilador y el vinculador
 
@@ -45,8 +45,8 @@ DEF (archivos) y los archivos de respuesta pueden ser UTF-16 con una marca BOM o
 
 ## <a name="asm-and-cod-dumps"></a>volcados de memoria .asm y .cod
 
-volcados de memoria .asm y .cod están en ANSI de manera predeterminada para la compatibilidad con MASM. Use [/FAu](../../build/reference/fa-fa-listing-file.md) para generar UTF-8. Tenga en cuenta que si especifica **/FAS**, la fuente entremezclada se imprimirá directamente y podrá aparecer confusa, por ejemplo, si el código fuente es UTF-8 y no se especificó **/FAsu**.
+volcados de memoria .asm y .cod están en ANSI de manera predeterminada para la compatibilidad con MASM. Use [/FAu](fa-fa-listing-file.md) para generar UTF-8. Tenga en cuenta que si especifica **/FAS**, la fuente entremezclada se imprimirá directamente y podrá aparecer confusa, por ejemplo, si el código fuente es UTF-8 y no se especificó **/FAsu**.
 
 ## <a name="see-also"></a>Vea también
 
-[Compilación de código de C o C++ en la línea de comandos](../../build/building-on-the-command-line.md)
+[Usar el conjunto de herramientas MSVC desde la línea de comandos](../building-on-the-command-line.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750410"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821403"
 ---
 # <a name="include-directive-cc"></a>#include (Directiva) (C/C++)
 
@@ -49,7 +49,7 @@ Incluir archivos que pueden ser "anidados"; es decir, un **#include** directiva 
 
 Cuando se anidan los archivos de inclusión y cuando se compila desde la línea de comandos, la búsqueda en los directorios comienza por los directorios del archivo primario y después continúa por los directorios de cualquier archivo primario principal. Es decir, la búsqueda comienza en relación con el directorio que contiene el origen que se procesa actualmente. Si no se encuentra el archivo, la búsqueda se desplaza a los directorios especificados por el [/I (directorios de inclusión adicionales)](../build/reference/i-additional-include-directories.md) opción del compilador. Por último, se busca en los directorios especificados por la variable de entorno INCLUDE.
 
-Desde el entorno de desarrollo de Visual Studio, se omite la variable de entorno INCLUDE. Para obtener información acerca de cómo establecer los directorios que se buscan archivos de inclusión: Esto también se aplica a la variable de entorno LIB, vea [VC ++ Directories Property Page](../ide/vcpp-directories-property-page.md).
+Desde el entorno de desarrollo de Visual Studio, se omite la variable de entorno INCLUDE. Para obtener información acerca de cómo establecer los directorios que se buscan archivos de inclusión: Esto también se aplica a la variable de entorno LIB, vea [VC ++ Directories Property Page](../build/reference/vcpp-directories-property-page.md).
 
 Este ejemplo muestra la inclusión de archivo mediante corchetes angulares:
 

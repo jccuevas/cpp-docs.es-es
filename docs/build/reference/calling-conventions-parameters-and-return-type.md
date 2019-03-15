@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264808"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812972"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>Convenciones de llamada, parámetros y tipo de valor devuelto
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 Un `const` puntero a un `ImgDelayDescr` que contiene los desplazamientos de diversos datos relacionados con la importación, una marca de tiempo para obtener información de enlace y un conjunto de atributos que proporcionan información adicional sobre el contenido del descriptor. Actualmente no hay un solo atributo, `dlattrRva`, lo que indica que las direcciones del descriptor son direcciones virtuales relativas. Para obtener más información, consulte las declaraciones de *delayimp.h*.
 
-Para obtener la definición de la `PCImgDelayDescr` estructura, vea [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md).
+Para obtener la definición de la `PCImgDelayDescr` estructura, vea [definiciones de estructura y constante](structure-and-constant-definitions.md).
 
 *ppfnIATEntry*<br/>
 Un puntero a la ranura de la tabla de direcciones de carga importación de retraso (IAT) se actualiza con la dirección de la función importada. La rutina auxiliar necesita almacenar el mismo valor que devuelve en esta ubicación.
@@ -137,4 +137,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>Vea también
 
-[Descripción de la función auxiliar](../../build/reference/understanding-the-helper-function.md)
+[Descripción de la función auxiliar](understanding-the-helper-function.md)

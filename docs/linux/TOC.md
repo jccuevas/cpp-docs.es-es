@@ -4,7 +4,7 @@
 # [Creación de un proyecto de Linux](create-a-new-linux-project.md)
 # [Conexión al equipo remoto de Linux](connect-to-your-remote-linux-computer.md)
 # [Implementación, ejecución y depuración del proyecto de Linux](deploy-run-and-debug-your-linux-project.md)
-# [Tutorial: Creación de proyectos multiplataforma de C++ en Visual Studio](../ide/get-started-linux-cmake.md)
+# [Tutorial: Creación de proyectos multiplataforma de C++ en Visual Studio](../build/get-started-linux-cmake.md)
 # [Referencia de las páginas de propiedades de un proyecto de Linux](prop-pages-linux.md)
 ## [Propiedades generales (Linux)](prop-pages/general-linux.md)
 ## [Propiedades de depuración (Linux)](prop-pages/debugging-linux.md)

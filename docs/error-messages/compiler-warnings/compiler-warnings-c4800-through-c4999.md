@@ -97,13 +97,12 @@ f1_keywords:
 - C5043
 - C5044
 - C5045
-- C5046
-ms.openlocfilehash: 672aa1b0e298be3b6754b1706e721ad6798230ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a0eee4e0a7774c1c92a44ad1e8eaa480ce84d3
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642863"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816352"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
 
@@ -144,7 +143,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 4) C4840](compiler-warning-level-4-c4840.md)|uso no portable de la clase*tipo*' como argumento a una función variádica|
 |Advertencia del compilador (nivel 4) C4841|extensión no estándar utilizada: designador de miembro compuesto utilizado en offsetof|
 |Advertencia del compilador (nivel 4) C4842|no se garantiza el resultado de "offsetof" aplicada a un tipo mediante herencia múltiple sea consistente con las versiones del compilador|
-|Advertencia C4843 del compilador|'*type1*': un controlador de excepciones de referencia al tipo de matriz o función no es accesible, use '*type2*' en su lugar|
+|Advertencia C4843 del compilador|'*type1*': Un controlador de excepciones de referencia al tipo de matriz o función no es accesible, use '*type2*' en su lugar|
 |Advertencia C4844 del compilador|"Exportar módulo *module_name*;' es ahora la sintaxis recomendada para declarar una interfaz de módulo|
 |[Advertencia del compilador (nivel 4) C4866](c4866.md)| compilador no puede aplicar el orden de evaluación de izquierda a derecha de la llamada a *nombre_operador*|
 |[Advertencia (Error) del compilador C4867](compiler-warning-c4867.md)|'*función*': falta la lista de argumentos de llamada de función; utilice '*llamar*' para crear un puntero a miembro|
@@ -176,7 +175,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4935|especificador de acceso de ensamblado modificado de '*acceso*'|
 |Advertencia del compilador (nivel 1, Error) C4936|__declspec se admite solamente cuando se compila con /clr o /clr:pure|
 |Advertencia del compilador (nivel 4) C4937|'*text1*'y'*text2*'son pueden distinguir como argumentos a'*directiva*'|
-|Advertencia del compilador (nivel 4) C4938|'*var*': variable de reducción de punto flotante puede causar resultados incoherentes bajo/fp: strict o #pragma fenv_access|
+|Advertencia del compilador (nivel 4) C4938|'*var*': Variable de reducción de punto flotante puede causar resultados incoherentes bajo/fp: strict o #pragma fenv_access|
 |Advertencia C4939 del compilador|#pragma vtordisp está en desuso y se quitará en una próxima versión de Visual C++|
 |Advertencia del compilador (nivel 1) C4944|'*símbolo*': no se puede importar un símbolo desde '*assembly1*': como*símbolo*' ya existe en el ámbito actual|
 |[Advertencia del compilador (nivel 1) C4945](compiler-warning-level-1-c4945.md)|'*símbolo*': no se puede importar un símbolo desde '*assembly1*': como*símbolo*'ya se importó desde otro ensamblado'*assembly2* '|
@@ -196,7 +195,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1, Error) C4959|no se puede definir el tipo no administrado '*tipo*' en/CLR: safe porque el acceso a sus miembros proporciona código no comprobable|
 |Advertencia del compilador (nivel 4) C4960|'*función*' es demasiado grande para generar un perfil|
 |Advertencia del compilador (nivel 1) C4961|No se combinó ningún dato de perfil en 'archivo .pgd'; se han deshabilitado las optimizaciones guiadas por perfil.|
-|Advertencia del compilador (nivel 4) C4962|'*función*': las optimizaciones guiadas por perfil deshabilitadas porque generaban datos de perfil incoherentes|
+|Advertencia del compilador (nivel 4) C4962|'*función*': Optimizaciones guiadas por perfil deshabilitadas porque generaban datos de perfil incoherentes|
 |Advertencia del compilador (nivel 1) C4963|'*descripción*': se encontró ningún perfil de datos; se utilizaron opciones de compilador diferentes en la compilación instrumentada|
 |[Advertencia del compilador (nivel 1) C4964](compiler-warning-level-1-c4964.md)|Se especificó ninguna opción de optimización; no se recopilará la información de perfil|
 |[Advertencia del compilador (nivel 1) C4965](compiler-warning-level-1-c4965.md)|conversión boxing implícita de entero 0; Utilice nullptr o conversión explícita|
@@ -226,7 +225,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 4) C5025|'*tipo*': mover operador de asignación se definió implícitamente como eliminado|
 |Advertencia del compilador (niveles 1 y 4) C5026|'*tipo*': mueva el constructor se definió implícitamente como eliminado|
 |Advertencia del compilador (niveles 1 y 4) C5027|'*tipo*': mover operador de asignación se definió implícitamente como eliminado|
-|Advertencia del compilador (nivel 1) C5028|'*nombre*': especifica la alineación en una declaración anterior (*número*) no se especifica en la definición|
+|Advertencia del compilador (nivel 1) C5028|'*nombre*': La alineación especificada en una declaración anterior (*número*) no se especifica en la definición|
 |Advertencia del compilador (nivel 4) C5029|extensión no estándar utilizada: los atributos de alineación en C++ se aplican a variables, los miembros de datos y solo los tipos de etiquetas|
 |Advertencia del compilador (nivel 3) C5030|atributo '*atributo*' no se reconoce|
 |Advertencia del compilador (nivel 4) C5031|#pragma warning (POP): probable desajuste, extraer el estado de advertencia insertado en otro archivo|
@@ -244,4 +243,4 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 2) los errores C5043|'*especificación*': especificación de excepción no coincide con la declaración anterior|
 |Advertencia del compilador (nivel 4) C5044|Un argumento de opción de línea de comandos *opción* apunta a una ruta de acceso '*ruta*' que no existe|
 |[C5045 de advertencia del compilador](c5045.md)|Compilador insertará la mitigación de Spectre para la carga de memoria si el modificador/qspectre especificado.|
-|[Advertencia del compilador (nivel 2) C5046](c5046.md)|'*función*': símbolo de que impliquen tipo con vinculación interna no definido|
+|[Advertencia del compilador (nivel 2) C5046](c5046.md)|'*función*': Símbolo que implican tipo con vinculación interna no definido|

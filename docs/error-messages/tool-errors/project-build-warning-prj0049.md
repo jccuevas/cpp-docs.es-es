@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447221"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816235"
 ---
 # <a name="project-build-warning-prj0049"></a>Advertencia PRJ0049 al compilar el proyecto
 
@@ -21,7 +21,7 @@ Las aplicaciones creadas con Visual Studio 2008 pueden especificar qué versión
 
 1. Elija una de las siguientes opciones:
 
-   - Cambiar el marco de destino en el proyecto **páginas de propiedades** cuadro de diálogo para que sea posterior o igual a la versión mínima del marco de trabajo de todos los ensamblados referenciados y proyectos. Para obtener más información, consulte [agregar referencias](../../ide/adding-references-in-visual-cpp-projects.md).
+   - Cambiar el marco de destino en el proyecto **páginas de propiedades** cuadro de diálogo para que sea posterior o igual a la versión mínima del marco de trabajo de todos los ensamblados referenciados y proyectos. Para obtener más información, consulte [agregar referencias](../../build/adding-references-in-visual-cpp-projects.md).
 
    - Quite la referencia al ensamblado o proyecto que tiene una versión mínima del marco posterior a la plataforma de destino. Estos elementos se marcan con un icono de advertencia en el proyecto **páginas de propiedades**.
 

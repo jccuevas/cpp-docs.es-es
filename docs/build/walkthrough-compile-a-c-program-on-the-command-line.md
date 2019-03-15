@@ -8,18 +8,18 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 756e0fa820806142f05ba45a52735692298f80d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656877"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822228"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C en la línea de comandos
 
 Visual C++ incluye un compilador de C que puede usar para crear desde programas de consola básicas hasta aplicaciones completas de escritorio de Windows, aplicaciones móviles y mucho más.
 
-En este tutorial se muestra cómo crear un básico "Hola, mundo": el programa de C de estilo mediante el uso de un texto editor y, a continuación, compilarlo en la línea de comandos. Si prefiere trabajar en C++ en la línea de comandos, consulte [Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si desea probar el IDE de Visual Studio en lugar de usar la línea de comandos, consulte [Tutorial: trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [mediante el IDE de Visual Studio para el desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+En este tutorial se muestra cómo crear un básico "Hola, mundo": el programa de C de estilo mediante el uso de un texto editor y, a continuación, compilarlo en la línea de comandos. Si prefiere trabajar en C++ en la línea de comandos, consulte [Tutorial: Compilar un programa nativo de C++ en la línea de comandos](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si desea probar el IDE de Visual Studio en lugar de usar la línea de comandos, consulte [Tutorial: Trabajar con proyectos y soluciones (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) o [mediante el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -32,7 +32,7 @@ Build Tools para Visual Studio, versión de Visual Studio instala solo el conjun
 Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que las herramientas están instaladas y que puede acceder a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos encontrar las herramientas, encabezados y bibliotecas que utiliza. **No se puede utilizar Visual C++ en una ventana del símbolo del sistema sin formato** sin una preparación. Necesita un *símbolo* ventana, que es una ventana de símbolo del sistema normal que tenga todas las variables de entorno necesarias. Afortunadamente, Visual C++ instala accesos directos para iniciar los símbolos del sistema para desarrolladores que tienen el entorno configurado para las compilaciones de línea de comandos. Lamentablemente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde están ubicados son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial consiste en encontrar el método abreviado de derecho a usar.
 
 > [!NOTE]
-> Un acceso directo del símbolo para desarrolladores establece automáticamente las rutas de acceso correctas para el compilador y las herramientas y para los encabezados necesarios y las bibliotecas. Algunos de estos valores son diferentes para cada configuración de compilación. Deben establecer estos valores de entorno usted mismo si no usa uno de los métodos abreviados. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](../build/setting-the-path-and-environment-variables-for-command-line-builds.md). Dado el entorno de compilación es complejo, se recomienda encarecidamente que usar un acceso directo del símbolo para desarrolladores en lugar de crear el suyo propio.
+> Un acceso directo del símbolo para desarrolladores establece automáticamente las rutas de acceso correctas para el compilador y las herramientas y para los encabezados necesarios y las bibliotecas. Algunos de estos valores son diferentes para cada configuración de compilación. Deben establecer estos valores de entorno usted mismo si no usa uno de los métodos abreviados. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](setting-the-path-and-environment-variables-for-command-line-builds.md). Dado el entorno de compilación es complejo, se recomienda encarecidamente que usar un acceso directo del símbolo para desarrolladores en lugar de crear el suyo propio.
 
 ## <a name="open-a-developer-command-prompt"></a>Abra un símbolo del sistema para desarrolladores
 
@@ -57,7 +57,7 @@ Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar
    > [!NOTE]
    > Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes," error de C1034 o LNK1104 al ejecutar el **cl** de comandos, o bien no está usando un símbolo del sistema, o algo va mal con la instalación de Visual C++. Debe corregir este problema antes de continuar.
 
-   Si no se encuentra el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Si usa Visual Studio 2017, intente volver a instalar el **desarrollo de escritorio con C++** carga de trabajo en el instalador de Visual Studio. Para obtener más información, consulte [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md). O bien, vuelva a instalar el [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
+   Si no se encuentra el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Si usa Visual Studio 2017, intente volver a instalar el **desarrollo de escritorio con C++** carga de trabajo en el instalador de Visual Studio. Para obtener más información, consulte [compatibilidad Install C++ en Visual Studio](vscpp-step-0-installation.md). O bien, vuelva a instalar el [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
    > Según la versión de Windows en el equipo y la configuración de seguridad del sistema, es posible que deba haga doble clic para abrir el menú contextual para el acceso de directo del símbolo del sistema para desarrolladores y, a continuación, elija **ejecutar como administrador** a compilar y ejecutar el programa que se crea siguiendo este tutorial correctamente.
@@ -142,25 +142,25 @@ Puede usar los pasos de este tutorial para crear su propio código de C en lugar
 
 `cl file1.c file2.c file3.c`
 
-El compilador genera un programa llamado file1.exe. Para cambiar el nombre a program1.exe, agregue un [/out](../build/reference/out-output-file-name.md) opción del vinculador:
+El compilador genera un programa llamado file1.exe. Para cambiar el nombre a program1.exe, agregue un [/out](reference/out-output-file-name.md) opción del vinculador:
 
 `cl file1.c file2.c file3.c /link /out:program1.exe`
 
-Y para detectar errores de programación más automáticamente, se recomienda compilar mediante el uso del [/w3](../build/reference/compiler-option-warning-level.md) o [/W4](../build/reference/compiler-option-warning-level.md) opción de nivel de advertencia:
+Y para detectar errores de programación más automáticamente, se recomienda compilar mediante el uso del [/w3](reference/compiler-option-warning-level.md) o [/W4](reference/compiler-option-warning-level.md) opción de nivel de advertencia:
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-El compilador, cl.exe, tiene muchas más opciones que puede aplicar para crear, optimizar, depurar y analizar el código. Para obtener una lista rápida, escriba `cl /?` en el símbolo del sistema de desarrollador. También puede compilar y vincular por separado y aplicar las opciones del vinculador en escenarios más complejos de compilación. Para obtener más información sobre el compilador y las opciones del vinculador y uso, consulte [C/C ++ Building Reference](../build/reference/c-cpp-building-reference.md).
+El compilador, cl.exe, tiene muchas más opciones que puede aplicar para crear, optimizar, depurar y analizar el código. Para obtener una lista rápida, escriba `cl /?` en el símbolo del sistema de desarrollador. También puede compilar y vincular por separado y aplicar las opciones del vinculador en escenarios más complejos de compilación. Para obtener más información sobre el compilador y las opciones del vinculador y uso, consulte [C/C ++ Building Reference](reference/c-cpp-building-reference.md).
 
-Puede usar NMAKE y archivos MAKE o archivos de proyecto y MSBuild para configurar y compilar los proyectos más complejos en la línea de comandos. Para obtener más información sobre el uso de estas herramientas, consulte [referencia de NMAKE](../build/nmake-reference.md) y [MSBuild](../build/msbuild-visual-cpp.md).
+Puede usar NMAKE y archivos MAKE o archivos de proyecto y MSBuild para configurar y compilar los proyectos más complejos en la línea de comandos. Para obtener más información sobre el uso de estas herramientas, consulte [referencia de NMAKE](reference/nmake-reference.md) y [MSBuild](msbuild-visual-cpp.md).
 
-Los lenguajes C y C++ son similares, pero no es el mismo. El compilador de Visual C++ usa una regla sencilla para determinar el idioma que desea utilizar cuando se compila el código. De forma predeterminada, el compilador de Visual C++ trata todos los archivos que finalizan en .c como código fuente de C, y todos los archivos que finalizan en .cpp como código fuente de C++. Para forzar al compilador que trate todos los archivos como C no dependientes de la extensión de nombre de archivo, use el [/TC](../build/reference/tc-tp-tc-tp-specify-source-file-type.md) opción del compilador.
+Los lenguajes C y C++ son similares, pero no es el mismo. El compilador de MSVC usa una regla sencilla para determinar el idioma que desea utilizar cuando se compila el código. De forma predeterminada, el compilador de MSVC trata todos los archivos que finalizan en .c como código fuente de C y todos los archivos que finalizan en .cpp como código fuente de C++. Para forzar al compilador que trate todos los archivos como C no dependientes de la extensión de nombre de archivo, use el [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) opción del compilador.
 
-El compilador de C de Visual C++ es compatible con el estándar ISO C99, pero no es totalmente compatible. En la mayoría de los casos, el código de C portátil compilará y ejecutará según lo previsto. Visual C++ no admite la mayoría de los cambios en ISO C11. Ciertas funciones de biblioteca y los nombres de función POSIX están en desuso por el compilador de Visual C++. Se admiten las funciones, pero han cambiado los nombres preferidos. Para obtener más información, consulte [características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md) y [advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+El compilador de C de Visual C++ es compatible con el estándar ISO C99, pero no es totalmente compatible. En la mayoría de los casos, el código de C portátil compilará y ejecutará según lo previsto. Visual C++ no admite la mayoría de los cambios en ISO C11. Ciertas funciones de biblioteca y los nombres de función POSIX están en desuso por el compilador de MSVC. Se admiten las funciones, pero han cambiado los nombres preferidos. Para obtener más información, consulte [características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md) y [advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Tutorial: Crear un programa de C++ estándar (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [Referencia del lenguaje C](../c-language/c-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
+[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)<br/>
 [Compatibilidad](../c-runtime-library/compatibility.md)

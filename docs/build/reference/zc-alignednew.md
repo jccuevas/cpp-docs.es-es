@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-ms.openlocfilehash: 0e6cf408e56dd6e5bc262c39dda460253a32dfc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0d850d54611579288b81a334af4abdfab6e411c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662467"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820343"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/ Zc: alignednew (c ++ 17 asignación alineada en exceso)
 
@@ -20,7 +20,7 @@ Habilitar la compatibilidad con C ++ 17 demasiado alineados **nueva**, asignaci�
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: alignednew**[-]
+> **/Zc:alignedNew**[-]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -97,7 +97,7 @@ Para obtener información acerca de problemas de conformidad en Visual C++, vea 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -105,4 +105,4 @@ Para obtener información acerca de problemas de conformidad en Visual C++, vea 
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)
+[/Zc (Ajuste)](zc-conformance.md)

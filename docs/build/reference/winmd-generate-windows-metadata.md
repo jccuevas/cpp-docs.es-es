@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 83d22a0114b26f53fa9df9d2470c71cd80465d64
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426696"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810372"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (generar metadatos de Windows)
 
@@ -32,11 +32,11 @@ El vinculador genera solo el archivo .winmd, pero no el archivo ejecutable binar
 
 El **/WINMD** opción del vinculador se usa para que aplicaciones de UWP y componentes de Windows en tiempo de ejecución para controlar la creación de un archivo de metadatos (.winmd) de Windows en tiempo de ejecución. Un archivo .winmd es un tipo de archivo DLL que contiene los metadatos para los tipos de Windows en tiempo de ejecución y, en el caso de los componentes en tiempo de ejecución, las implementaciones de esos tipos. Los metadatos siguen el [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) estándar.
 
-De forma predeterminada, el nombre de archivo de salida tiene el formato *NombreBinario*.winmd. Para especificar un nombre de archivo diferente, use el [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) opción.
+De forma predeterminada, el nombre de archivo de salida tiene el formato *NombreBinario*.winmd. Para especificar un nombre de archivo diferente, use el [/WINMDFILE](winmdfile-specify-winmd-file.md) opción.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **Windows metadatos** página de propiedades.
 
@@ -50,5 +50,5 @@ De forma predeterminada, el nombre de archivo de salida tiene el formato *Nombre
 [/WINMDKEYFILE (Especificar archivo de clave winmd)](winmdkeyfile-specify-winmd-key-file.md)<br/>
 [/WINMDKEYCONTAINER (Especificar contenedor de claves)](winmdkeycontainer-specify-key-container.md)<br/>
 [/WINMDDELAYSIGN (Firmar parcialmente un archivo winmd)](winmddelaysign-partially-sign-a-winmd.md)<br/>
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

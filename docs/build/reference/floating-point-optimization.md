@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual C++ optimización de punto flotante
+title: Optimización de punto flotante de MSVC
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504304"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814376"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Optimización de punto flotante de Microsoft Visual C++
 
@@ -40,7 +40,7 @@ Un compilador de C++ ingenua podría suponer que la aritmética de punto flotant
 
 Es decir, que el valor percibido de C es siempre un constante cero. Si este valor constante, a continuación, se propaga a las expresiones subsiguientes, el cuerpo del bucle se reduce a una simple suma. Para ser precisos,
 
-> Y = [i] - C == > Y = [i]<br/>T = suma de x+y == > T = suma + [i]<br/>SUM = T == > sum = suma + [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 Por lo tanto, al compilador ingenua, una transformación lógica de la `KahanSum` función sería:
 
@@ -952,11 +952,11 @@ Los modificadores de línea de comandos son en realidad propiedad abreviada para
 ||||||
 |-|-|-|-|-|
 ||float_control(precise)|float_control(except)|fp_contract|fenv_access|
-|/ fp: strict|el|el|Desactivar|el|
-|/ fp: strict /fp: excepto:|el|Desactivar|Desactivar|el|
-|/ fp: precisa|el|Desactivar|el|Desactivar|
-|/ fp: precise/fp: excepto|el|el|el|Desactivar|
-|/ fp: Fast|Desactivar|Desactivar|el|Desactivar|
+|/fp:strict|en|en|Desactivar|en|
+|/fp:strict /fp:except-|en|Desactivar|Desactivar|en|
+|/fp:precise|en|Desactivar|en|Desactivar|
+|/fp:precise /fp:except|en|en|en|Desactivar|
+|/fp:fast|Desactivar|Desactivar|en|Desactivar|
 
 Por ejemplo, el siguiente habilita explícitamente la semántica de FP: Fast.
 
@@ -1088,4 +1088,4 @@ catch(float_exception)
 
 ## <a name="see-also"></a>Vea también
 
-[Optimizar el código](optimizing-your-code.md)<br/>
+[Optimizar el código](../optimizing-your-code.md)<br/>

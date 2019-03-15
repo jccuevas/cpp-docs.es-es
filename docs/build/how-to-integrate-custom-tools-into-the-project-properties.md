@@ -1,17 +1,17 @@
 ---
-title: Procedimiento Integrar herramientas personalizadas en las propiedades del proyecto
+title: Filtrar Integrar herramientas personalizadas en las propiedades del proyecto
 ms.date: 04/27/2016
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 3464bfb04211969a6d4209ca45a277100a99883d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a959eddb36a2de90ebd5b5b1b9eb5e2f4e67c03a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416402"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810164"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Filtrar Integrar herramientas personalizadas en las propiedades del proyecto
 
@@ -39,4 +39,4 @@ Este documento explica cómo crear un archivo en un directorio de conjunto que c
 
 ## <a name="see-also"></a>Vea también
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)
+[MSBuild en la línea de comandos - C++](msbuild-visual-cpp.md)

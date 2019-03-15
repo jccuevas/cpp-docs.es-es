@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-ms.openlocfilehash: 753c4d2a2a81803c3b52759b560248d0f4dbe2eb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425684"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807655"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (Firmar parcialmente un ensamblado)
 
@@ -31,7 +31,7 @@ Especifica que el ensamblado no se debería firmar parcialmente.
 
 Use **/DELAYSIGN** si solo desea colocar la clave pública del ensamblado. El valor predeterminado es **/delaysign: no**.
 
-El **/DELAYSIGN** opción no tiene ningún efecto a menos que se usa con [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) o [/keycontainer](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md).
+El **/DELAYSIGN** opción no tiene ningún efecto a menos que se usa con [/keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) o [/keycontainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md).
 
 Cuando se solicita un ensamblado totalmente firmado, el compilador genera un valor hash para el archivo que contiene el manifiesto (metadatos del ensamblado) y firma dicho valor mediante la clave privada. La firma digital resultante se almacena en el archivo que contiene el manifiesto. Cuando se retrasa la firma de un ensamblado, el vinculador no de proceso y almacena la firma, pero reserva espacio en el archivo para que la firma se puede agregar más adelante.
 
@@ -41,19 +41,19 @@ Consulte [ensamblados de nombre seguro (firma de ensamblados) (C++ / c++ / CLI)]
 
 Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
-- [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)
+- [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
-- [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)
+- [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework-resource.md)
 
-- [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)
+- [/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)
 
-- [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)
+- [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)
 
-- [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)
+- [/NOASSEMBLY](noassembly-create-a-msil-module.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -67,5 +67,5 @@ Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

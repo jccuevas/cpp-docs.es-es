@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412775"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813804"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (Asignaciones de la pila)
 
@@ -35,11 +35,11 @@ El argumento `commit` está sujeto a interpretación por el sistema operativo. E
 
 Especifique los valores `reserve` y `commit` en notación decimal o en la notación del lenguaje C.
 
-Otra forma de establecer el tamaño de la pila es con la [STACKSIZE](../../build/reference/stacksize.md) instrucción en un archivo de definición de módulo (.def). **STACKSIZE** invalida las asignaciones de pila (/stack) opción si se especifican ambos. Puede cambiar el tamaño de pila después de que el archivo .exe se compila mediante la [EDITBIN](../../build/reference/editbin-reference.md) herramienta.
+Otra forma de establecer el tamaño de la pila es con la [STACKSIZE](stacksize.md) instrucción en un archivo de definición de módulo (.def). **STACKSIZE** invalida las asignaciones de pila (/stack) opción si se especifican ambos. Puede cambiar el tamaño de pila después de que el archivo .exe se compila mediante la [EDITBIN](editbin-reference.md) herramienta.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **vinculador** carpeta.
 
@@ -57,5 +57,5 @@ Otra forma de establecer el tamaño de la pila es con la [STACKSIZE](../../build
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)
