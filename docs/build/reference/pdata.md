@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /PDATA dumpbin option
 - -PDATA dumpbin option
 ms.assetid: 5d41d629-6576-4733-b103-0d61e6b77b50
-ms.openlocfilehash: bbf806a75fa92da81121872ae68e585ed05b2a32
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd763abf7b2a08e6aa54ba37cb451f1ec0f6cef7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417455"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819836"
 ---
 # <a name="pdata"></a>/PDATA
 
@@ -27,8 +27,8 @@ Procesadores RISC.
 
 Esta opción vuelca las tablas de excepciones (.pdata) desde una imagen o un objeto.
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

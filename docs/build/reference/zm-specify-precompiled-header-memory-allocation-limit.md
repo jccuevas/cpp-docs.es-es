@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-ms.openlocfilehash: 3c1362479b2068ee8fb527a4ecaac6e203e83cb0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 09df8e1ee9a97289e29e1191e8c1585580435b79
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751991"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807902"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (Especificar el límite de asignación de memoria del encabezado precompilado)
 
@@ -60,7 +60,7 @@ La tabla siguiente muestra cómo el *factor* argumento afecta el límite de asig
 
 ### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer la opción /Zm del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. En el panel de navegación, seleccione **propiedades de configuración** > **C o C++** > **línea de comandos**.
 
@@ -72,5 +72,5 @@ La tabla siguiente muestra cómo el *factor* argumento afecta el límite de asig
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

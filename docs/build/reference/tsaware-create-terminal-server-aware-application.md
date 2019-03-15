@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421505"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816950"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Crear una aplicación que reconozca Terminal Server)
 
@@ -34,15 +34,15 @@ Si una aplicación está preparada para Terminal Server, no debe depender de arc
 
 Si usa /TSAWARE y la aplicación todavía utiliza archivos INI, se compartirá los archivos de todos los usuarios del sistema. Si es aceptable, todavía puede vincular la aplicación/TSAWARE; en caso contrario, deberá usar/TSAWARE: no.
 
-La opción /TSAWARE está habilitada de forma predeterminada para Windows y aplicaciones de consola. Consulte [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) y [/VERSION](../../build/reference/version-version-information.md) para obtener información.
+La opción /TSAWARE está habilitada de forma predeterminada para Windows y aplicaciones de consola. Consulte [/Subsystem](subsystem-specify-subsystem.md) y [/VERSION](version-version-information.md) para obtener información.
 
 / TSAWARE no es válido para los controladores, vxd o DLL.
 
-Si una aplicación se vinculó TSAWARE, DUMPBIN [/HEADERS](../../build/reference/headers.md) mostrará información al respecto.
+Si una aplicación se vinculó TSAWARE, DUMPBIN [/HEADERS](headers.md) mostrará información al respecto.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -56,7 +56,7 @@ Si una aplicación se vinculó TSAWARE, DUMPBIN [/HEADERS](../../build/reference
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)<br/>
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)<br/>
 [Almacenar información específica del usuario](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Aplicaciones heredadas en un entorno de servicios de Terminal Server](https://msdn.microsoft.com/library/aa382957.aspx)

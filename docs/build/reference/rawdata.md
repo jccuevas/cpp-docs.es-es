@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 4e884ba8bca7b3ccdf900c7da2c43dd741c03d12
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413373"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816469"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -35,8 +35,8 @@ Esta opción muestra el contenido sin procesar de cada sección en el archivo. L
 |NINGUNO|Se suprimen los datos sin procesar. Este argumento es útil para controlar el resultado de/ALL.|
 |*Número*|Las líneas mostradas se establecen en un ancho que contiene `number` valores por línea.|
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

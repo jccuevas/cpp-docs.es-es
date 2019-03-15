@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: 0ca03cc2a3afa0d5665f217ccb0d41eb1e41d3be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480940"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810021"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (especificadores de excepción implícita)
 
@@ -21,7 +21,7 @@ Cuando el **/Zc: implicitnoexcept** se especifica la opción, el compilador agre
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: implicitnoexcept**[**-**]
+> **/Zc:implicitNoexcept**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -129,7 +129,7 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -137,7 +137,7 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Ajuste)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [terminate](../../standard-library/exception-functions.md#terminate)<br/>

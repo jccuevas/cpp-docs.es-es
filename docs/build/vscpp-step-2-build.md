@@ -6,12 +6,12 @@ ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
-ms.openlocfilehash: 09780d5823190eb4cb3b4ad13bb60e33808e4987
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977737"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813555"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Compilar y ejecutar un proyecto de aplicación de consola de C++
 
@@ -19,27 +19,27 @@ Cuando se crea un proyecto de aplicación de consola de C++ y se especificó el 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, siga los pasos de [compatibilidad Install C++ en Visual Studio](../build/vscpp-step-0-installation.md).
+- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, siga los pasos de [compatibilidad Install C++ en Visual Studio](vscpp-step-0-installation.md).
 
-- Crear un "Hello, World!" proyecto y escriba su código fuente. Si aún no lo ha hecho todavía, siga los pasos de [cree un proyecto de aplicación de consola C++](../build/vscpp-step-1-create.md).
+- Crear un "Hello, World!" proyecto y escriba su código fuente. Si aún no lo ha hecho todavía, siga los pasos de [cree un proyecto de aplicación de consola C++](vscpp-step-1-create.md).
 
 Si Visual Studio tiene este aspecto, está listo para compilar y ejecutar la aplicación:
 
-   ![Listo para crear el nuevo proyecto](../build/media/vscpp-ready-to-build.png "listo para compilar el proyecto nuevo")
+   ![Listo para crear el nuevo proyecto](media/vscpp-ready-to-build.png "listo para compilar el proyecto nuevo")
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>Compilar y ejecutar el código en Visual Studio
 
-1. Para compilar el proyecto, elija **compilar solución** desde el **compilar** menú. El **salida** ventana muestra los resultados del proceso de compilación.
+1. Para compilar el proyecto, seleccione **Compilar solución** en el menú **Compilar**. En la ventana **Salida** se muestran los resultados del proceso de compilación.
 
-   ![Compile el proyecto](../build/media/vscpp-build-solution.gif "compilar el proyecto")
+   ![Compilación del proyecto](media/vscpp-build-solution.gif "Build the project")
 
-1. Para ejecutar el código, en la barra de menús, elija **depurar**, **iniciar sin depurar**.
+1. Para ejecutar el código, en la barra de menús, seleccione **Depurar**, **Iniciar sin depurar**.
 
-   ![Iniciar el proyecto](../build/media/vscpp-start-without-debugging.gif "iniciar el proyecto")
+   ![Inicio del proyecto](media/vscpp-start-without-debugging.gif "Start the project")
 
-   Abre una ventana de consola y, a continuación, ejecuta la aplicación. Cuando se inicia una aplicación de consola en Visual Studio, ejecuta el código, a continuación, imprime "Presione cualquier tecla para continuar. . ." para ofrecerle la oportunidad de ver la salida.
+   Se abre una ventana de consola y después se ejecuta la aplicación. Al iniciar una aplicación de consola en Visual Studio, ejecuta el código y después imprime "Presione cualquier tecla para continuar . " para ofrecerle la oportunidad de ver la salida.
 
-¡Enhorabuena! Ha creado su primer "Hello, world!" ¡aplicación de consola en Visual Studio! Presione una tecla para cerrar la ventana de consola y vuelva a Visual Studio.
+¡Enhorabuena! Ha creado la primera aplicación de consola "Hola mundo" en Visual Studio. Presione una tecla para cerrar la ventana de la consola y volver a Visual Studio.
 
 [He tenido un problema.](#build-and-run-your-code-in-visual-studio-issues)
 
@@ -55,7 +55,7 @@ Normalmente, se ejecuta aplicaciones de consola en el símbolo del sistema, no e
 
 1. En la ventana de símbolo del sistema, haga clic en para pegar la ruta de acceso a la aplicación en el símbolo del sistema. Presione ENTRAR para ejecutar la aplicación.
 
-   ![Ejecute la aplicación en el símbolo](../build/media/vscpp-run-in-cmd.gif "ejecutar la aplicación en el símbolo del sistema")
+   ![Ejecute la aplicación en el símbolo](media/vscpp-run-in-cmd.gif "ejecutar la aplicación en el símbolo del sistema")
 
 Enhorabuena, ha compilado y ejecutar una aplicación de consola en Visual Studio.
 

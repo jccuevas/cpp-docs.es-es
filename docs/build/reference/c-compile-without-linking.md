@@ -10,12 +10,12 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
-ms.openlocfilehash: cdce86f9ba74b2541529d922c580d6393a93f775
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfe351daf43b913f10df74b1059ba98f7d5d657b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416467"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815169"
 ---
 # <a name="c-compile-without-linking"></a>/c (Compilar sin vincular)
 
@@ -57,5 +57,5 @@ LINK firsti.obj second.obj third.obj /OUT:filename.exe
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

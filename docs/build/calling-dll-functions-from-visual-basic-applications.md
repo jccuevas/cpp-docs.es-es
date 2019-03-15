@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417624"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814974"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Llamar a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic
 
@@ -33,7 +33,7 @@ se decorará como `_func@12` en la salida.
 
 La convención de llamada de C (`__cdecl`) decora el nombre como `_func`.
 
-Para obtener el nombre representativo, utilice [/MAP](../build/reference/map-generate-mapfile.md). El uso de **__declspec (dllexport)** hace lo siguiente:
+Para obtener el nombre representativo, utilice [/MAP](reference/map-generate-mapfile.md). El uso de **__declspec (dllexport)** hace lo siguiente:
 
 - Si la función se exporta con la convención de llamada de C (`__cdecl`), elimina el carácter de subrayado inicial ( **\_** ) cuando se exporta el nombre.
 
@@ -58,18 +58,18 @@ Para que archivos DLL ser llamado por programas escritos en Visual Basic, la té
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Exportación desde un archivo DLL](../build/exporting-from-a-dll.md)
+- [Exportación desde un archivo DLL](exporting-from-a-dll.md)
 
-- [Exportar desde un archivo DLL mediante archivos. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar desde un archivo DLL mediante archivos. DEF (archivos)](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar desde un archivo DLL mediante __declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar desde un archivo DLL mediante __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Nombres representativos](../build/reference/decorated-names.md)
+- [Nombres representativos](reference/decorated-names.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
+[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)

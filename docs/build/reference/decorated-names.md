@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423318"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815429"
 ---
 # <a name="decorated-names"></a>Nombres representativos
 
@@ -67,7 +67,7 @@ Puede obtener el formato representativo del nombre de un símbolo después de co
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Para usar una lista para ver nombres representativos
 
-1. Genere una lista compilando el archivo de origen que contiene los datos, objeto, o definición de función o prototipo con el [lista Tipo de archivo](../../build/reference/fa-fa-listing-file.md) opción del compilador establecida en ensamblado con código fuente (**/FAS**).
+1. Genere una lista compilando el archivo de origen que contiene los datos, objeto, o definición de función o prototipo con el [lista Tipo de archivo](fa-fa-listing-file.md) opción del compilador establecida en ensamblado con código fuente (**/FAS**).
 
    Por ejemplo, escriba `cl /c /FAs example.cpp` en un símbolo del sistema para desarrolladores para generar un archivo de lista example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>Vea también
 
-[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Herramientas de generación MSVC adicionales](c-cpp-build-tools.md)<br/>
 [Usar extern para especificar la vinculación](../../cpp/using-extern-to-specify-linkage.md)

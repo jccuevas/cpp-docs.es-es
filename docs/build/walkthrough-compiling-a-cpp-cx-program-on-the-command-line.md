@@ -2,12 +2,12 @@
 title: 'Tutorial: Compilación de C++ / c++ / CX programa en la línea de comandos'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413802"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809514"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Tutorial: Compilación de C++ / c++ / CX programa en la línea de comandos
 
@@ -24,11 +24,11 @@ Comprender los aspectos básicos del lenguaje C++.
 
 ## <a name="compiling-a-ccx-program"></a>Compilación de un programa de C++/CX
 
-Para habilitar la compilación de C / c++ / CX, debe usar el [/ZW](../build/reference/zw-windows-runtime-compilation.md) opción del compilador. El compilador de Visual C++ generará un archivo .exe destinado a Windows en tiempo de ejecución y vinculará las bibliotecas necesarias.
+Para habilitar la compilación de C / c++ / CX, debe usar el [/ZW](reference/zw-windows-runtime-compilation.md) opción del compilador. El compilador de MSVC genera un archivo .exe que tiene como destino el tiempo de ejecución de Windows y se proporcionan vínculos a las bibliotecas necesarias.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Para compilar una aplicación de C++/CX en la línea de comandos
 
-1. Abra un **símbolo** ventana. (En el **iniciar** ventana abierta **aplicaciones**. Abra el **Visual Studio Tools** carpeta en su versión de Visual Studio y, a continuación, elija el **símbolo del sistema para desarrolladores** acceso directo.) Para obtener más información sobre cómo abrir una ventana del símbolo del sistema para desarrolladores, consulte [código de C o C++ de compilación en la línea de comandos](../build/building-on-the-command-line.md).
+1. Abra un **símbolo** ventana. (En el **iniciar** ventana abierta **aplicaciones**. Abra el **Visual Studio Tools** carpeta en su versión de Visual Studio y, a continuación, elija el **símbolo del sistema para desarrolladores** acceso directo.) Para obtener más información sobre cómo abrir una ventana del símbolo del sistema para desarrolladores, consulte [usar el conjunto de herramientas desde la línea de comandos MSVC](building-on-the-command-line.md).
 
    Puede que se requieran credenciales de administrador para compilar el código correctamente,en función del sistema operativo y de la configuración del equipo. Para ejecutar la ventana de símbolo del sistema como administrador, abra el menú contextual de **símbolo** y, a continuación, elija **ejecutar como administrador**.
 
@@ -51,7 +51,7 @@ Para habilitar la compilación de C / c++ / CX, debe usar el [/ZW](../build/refe
 
    Ha creado un archivo de código fuente de Visual C++ que usa el Runtime de Windows [espacio de nombres Platform](../cppcx/platform-namespace-c-cx.md) espacio de nombres.
 
-1. En el símbolo del sistema, escriba **cl /EHsc /ZW basiccx.cpp /link/SUBSYSTEM: Console**. El compilador cl.exe compila el código fuente en un archivo .obj y, después, ejecuta el enlazador para generar un programa ejecutable llamado basiccx.exe. (El [/EHsc](../build/reference/eh-exception-handling-model.md) opción del compilador especifica el modelo de control de excepciones de C++ y el [/link](../build/reference/link-pass-options-to-linker.md) marca especifica una aplicación de consola.)
+1. En el símbolo del sistema, escriba **cl /EHsc /ZW basiccx.cpp /link/SUBSYSTEM: Console**. El compilador cl.exe compila el código fuente en un archivo .obj y, después, ejecuta el enlazador para generar un programa ejecutable llamado basiccx.exe. (El [/EHsc](reference/eh-exception-handling-model.md) opción del compilador especifica el modelo de control de excepciones de C++ y el [/link](reference/link-pass-options-to-linker.md) marca especifica una aplicación de consola.)
 
 1. Para ejecutar el programa basiccx.exe, en el símbolo del sistema, escriba **basiccx**.
 
@@ -63,6 +63,5 @@ Para habilitar la compilación de C / c++ / CX, debe usar el [/ZW](../build/refe
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
-[Opciones del compilador](../build/reference/compiler-options.md)
+[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)<br/>
+[Opciones del compilador MSVC](reference/compiler-options.md)

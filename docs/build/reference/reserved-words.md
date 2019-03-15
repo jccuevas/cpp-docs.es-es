@@ -17,37 +17,37 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502471"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822449"
 ---
 # <a name="reserved-words"></a>Palabras reservadas
 
-Las siguientes palabras están reservadas por el vinculador. Estos nombres se pueden utilizar como argumentos en [instrucciones de definición de módulo](../../build/reference/module-definition-dot-def-files.md) solo si el nombre está entre comillas dobles ("").
+Las siguientes palabras están reservadas por el vinculador. Estos nombres se pueden utilizar como argumentos en [instrucciones de definición de módulo](module-definition-dot-def-files.md) solo si el nombre está entre comillas dobles ("").
 
 ||||
 |-|-|-|
 |**OBJETO APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**CARGA PREVIA**|
-|**BASE**|**IOPL**|**PRIVADO**|
-|**CÓDIGO**|**BIBLIOTECA**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
+|**BASE**|**IOPL**|**PRIVATE**|
+|**CODE**|**LIBRARY**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
 |**CONFORME**|**LOADONCALL**<sup>1</sup>|**PURO**<sup>1</sup>|
 |**DATOS**|**LONGNAMES**<sup>2</sup>|**READONLY**|
-|**DESCRIPCIÓN**|**PUEDE MOVER**<sup>1</sup>|**LECTURA Y ESCRITURA**|
+|**DESCRIPCIÓN**|**MOVABLE**<sup>1</sup>|**LECTURA Y ESCRITURA**|
 |**DEV386**|**MOVEABLE**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**PUEDE DESCARTAR**|**VARIOS**|**RESIDENTE**|
-|**DINÁMICO**|**NOMBRE**|**RESIDENTNAME**<sup>1</sup>|
-|**SOLO PARA EJECUTAR**|**NEWFILES**<sup>2</sup>|**SECCIONES**|
-|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTOS**|
-|**EJECUCIÓNLECTURA**|**NOIOPL**<sup>1</sup>|**COMPARTIDO**|
+|**DISCARDABLE**|**VARIOS**|**RESIDENTE**|
+|**DYNAMIC**|**NAME**|**RESIDENTNAME**<sup>1</sup>|
+|**EXECUTE-ONLY**|**NEWFILES**<sup>2</sup>|**SECCIONES**|
+|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**SEGMENTS**|
+|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**COMPARTIDO**|
 |**EXETYPE**|**NONAME**|**ÚNICO**|
 |**EXPORTS**|**NO CONFORMES**<sup>1</sup>|**STACKSIZE**|
 |**FIJO**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**FUNCIONES**<sup>2</sup>|**NINGUNO**|**VERSIÓN**|
+|**FUNCIONES**<sup>2</sup>|**NINGUNO**|**VERSION**|
 |**HEAPSIZE**|**NO COMPARTIDOS**|**WINDOWAPI**|
-|**IMPORTACIONES**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
+|**IMPORTS**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
 |**IMPURAS**<sup>1</sup>|**OBJETOS**|**WINDOWS**|
 |**INCLUIR**<sup>2</sup>|**ANTIGUO**<sup>1</sup>||
 
@@ -57,5 +57,5 @@ Las siguientes palabras están reservadas por el vinculador. Estos nombres se pu
 
 ## <a name="see-also"></a>Vea también
 
-- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)
-- [Opciones del vinculador](../../build/reference/linker-options.md)
+- [Referencia MSVC del vinculador](linking.md)
+- [Opciones del vinculador MSVC](linker-options.md)

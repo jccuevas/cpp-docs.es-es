@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619302"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820798"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(conformidad con los estándares)
 
@@ -23,27 +23,27 @@ Especifique el modo estándar de conformidad del compilador. Use esta opción pa
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ permissive-**
+> **/permissive-**
 
 ## <a name="remarks"></a>Comentarios
 
 Esta opción se admite en Visual Studio 2017 y versiones posteriores.
 
-Puede usar el **/ permissive-** opción del compilador para especificar el comportamiento del compilador cumple las especificaciones de los estándares. Esta opción deshabilita permisivos comportamientos y establece el [/Zc](../../build/reference/zc-conformance.md) opciones del compilador de cumplimiento estricto. En el IDE, esta opción también hace que el código de no cumple las especificaciones de subrayado de motor de IntelliSense.
+Puede usar el **/ permissive-** opción del compilador para especificar el comportamiento del compilador cumple las especificaciones de los estándares. Esta opción deshabilita permisivos comportamientos y establece el [/Zc](zc-conformance.md) opciones del compilador de cumplimiento estricto. En el IDE, esta opción también hace que el código de no cumple las especificaciones de subrayado de motor de IntelliSense.
 
 De forma predeterminada, el **/ permissive-** opción está establecida en los nuevos proyectos creados mediante Visual Studio 2017 versión 15.5 y versiones posteriores. No se establece de forma predeterminada en versiones anteriores. Cuando la opción está establecida, el compilador genera errores de diagnóstico o advertencias al construcciones de lenguaje no estándar se detectan en el código, incluidos algunos errores comunes de pre-código C ++ 11.
 
 El **/ permissive-** opción es compatible con casi todos los archivos de encabezado de los Kits de Windows más recientes, como el Kit de desarrollo de Software (SDK) o Windows Driver Kit (WDK), empezando en el SDK de Windows Fall Creators (10.0.16299.0). Puede que no se compilan en versiones anteriores del SDK de **/ permissive-** por diversas razones de compatibilidad de código de origen. El compilador y el SDK se incluyen en una versión diferente de escalas de tiempo, por lo tanto, hay algunos problemas restantes. Para problemas de archivos de encabezado específicos, consulte [problemas de encabezado de Windows](#windows-header-issues) a continuación.
 
-El **/ permissive-** conjuntos de opciones la [/Zc: strictstrings](../../build/reference/zc-conformance.md) y [/Zc: rvaluecast](../../build/reference/zc-conformance.md) opciones al comportamiento de conformidad. El valor predeterminado para un comportamiento no conforme. Puede pasar específico **/Zc** opciones después **/ permissive-** en la línea de comandos para invalidar este comportamiento.
+El **/ permissive-** conjuntos de opciones la [/Zc: strictstrings](zc-conformance.md) y [/Zc: rvaluecast](zc-conformance.md) opciones al comportamiento de conformidad. El valor predeterminado para un comportamiento no conforme. Puede pasar específico **/Zc** opciones después **/ permissive-** en la línea de comandos para invalidar este comportamiento.
 
-En las versiones del principio del compilador en Visual Studio 2017 versión 15.3, el **/ permissive-** conjuntos de opciones la [/Zc: ternary](../../build/reference/zc-ternary.md) opción. El compilador también implementa más de los requisitos para la búsqueda de nombres en dos fases. Cuando el **/ permissive-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, identificación de nombres dependientes y no dependiente usado en las plantillas. En esta versión, se realiza solo análisis de dependencias de nombre.
+En las versiones del principio del compilador en Visual Studio 2017 versión 15.3, el **/ permissive-** conjuntos de opciones la [/Zc: ternary](zc-ternary.md) opción. El compilador también implementa más de los requisitos para la búsqueda de nombres en dos fases. Cuando el **/ permissive-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, identificación de nombres dependientes y no dependiente usado en las plantillas. En esta versión, se realiza solo análisis de dependencias de nombre.
 
 Extensiones específicas del entorno y las áreas de idioma que el estándar deja hasta la implementación no se ven afectadas por **/ permissive-**. Por ejemplo, específico de Microsoft `__declspec`, convención de llamada y palabras clave y las directivas pragma del compilador específicas o atributos de control de excepciones estructurado no estén marcados por el compilador en **/ permissive-** modo.
 
-El **/ permissive-** opción usa la compatibilidad con la versión actual del compilador para determinar qué construcciones de lenguaje son no conforme. La opción no determina si el código se ajusta a una versión concreta de C++ estándar. Para habilitar todo el soporte técnico para el estándar de borrador más reciente del compilador implementado, use el [/std:latest](../../build/reference/std-specify-language-standard-version.md) opción. Para restringir la compatibilidad del compilador que está implementada actualmente C ++ 17 estándar, use el [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) opción. Para restringir la compatibilidad del compilador para hacerlos coincidir con el estándar C ++ 14, use el [/std: c ++ 14](../../build/reference/std-specify-language-standard-version.md) opción, que es el valor predeterminado.
+El **/ permissive-** opción usa la compatibilidad con la versión actual del compilador para determinar qué construcciones de lenguaje son no conforme. La opción no determina si el código se ajusta a una versión concreta de C++ estándar. Para habilitar todo el soporte técnico para el estándar de borrador más reciente del compilador implementado, use el [/std:latest](std-specify-language-standard-version.md) opción. Para restringir la compatibilidad del compilador que está implementada actualmente C ++ 17 estándar, use el [/std: c ++ 17](std-specify-language-standard-version.md) opción. Para restringir la compatibilidad del compilador para hacerlos coincidir con el estándar C ++ 14, use el [/std: c ++ 14](std-specify-language-standard-version.md) opción, que es el valor predeterminado.
 
-No todos los C ++ 11, C ++ 14 o C ++ 17 que cumple los estándares de código es compatible con el compilador de Visual C++ en Visual Studio 2017. Según la versión de Visual Studio, el **/ permissive-** opción no puede detectar problemas sobre algunos aspectos de la búsqueda de nombres en dos fases, enlazar una referencia distinta de const a un archivo temporal, tratando init copia como init directa, lo que permite varias conversiones definidas por el usuario en la inicialización o símbolos (token) alternativo para los operadores lógicos y otras áreas de conformidad que no son compatibles. Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Para obtener el máximo provecho de **/ permissive-**, actualización de Visual Studio a la versión más reciente.
+No todos los C ++ 11, C ++ 14 o C ++ 17 que cumple los estándares de código es compatible con el compilador de MSVC en Visual Studio 2017. Según la versión de Visual Studio, el **/ permissive-** opción no puede detectar problemas sobre algunos aspectos de la búsqueda de nombres en dos fases, enlazar una referencia distinta de const a un archivo temporal, tratando init copia como init directa, lo que permite varias conversiones definidas por el usuario en la inicialización o símbolos (token) alternativo para los operadores lógicos y otras áreas de conformidad que no son compatibles. Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Para obtener el máximo provecho de **/ permissive-**, actualización de Visual Studio a la versión más reciente.
 
 ### <a name="how-to-fix-your-code"></a>Cómo corregir el código
 
@@ -375,7 +375,7 @@ Estos encabezados de modo de usuario que publicó en el Windows de abril de 2018
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
    ```
 
-- Emitir en um/spddkhlp.h
+- Issue in um/spddkhlp.h
 
    ```Output
    C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
@@ -425,7 +425,7 @@ Estos problemas son específicos a los encabezados de modo de usuario en el SDK 
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   La declaración adelantada de enumeración sin ámbito es una extensión de Microsoft. Para solucionar este problema, compile los archivos que incluyen cellularapi_oem.h sin el **/ permissive-** , o utilizar el [/wd](../../build/reference/compiler-option-warning-level.md) opción para silenciar la advertencia C4471.
+   La declaración adelantada de enumeración sin ámbito es una extensión de Microsoft. Para solucionar este problema, compile los archivos que incluyen cellularapi_oem.h sin el **/ permissive-** , o utilizar el [/wd](compiler-option-warning-level.md) opción para silenciar la advertencia C4471.
 
 - Emitir en um/omscript.h
 
@@ -464,5 +464,5 @@ En las versiones anteriores de Visual Studio 2017 versión 15.5, use este proced
 
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador](../../build/reference/compiler-options.md)
-- [Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+- [Opciones del compilador MSVC](compiler-options.md)
+- [Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

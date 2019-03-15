@@ -1,5 +1,5 @@
 ---
-title: Determinar el método de exportación que se debe utilizar
+title: Determinar qué método de exportación que se usarán
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __declspec(dllexport) keyword [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-ms.openlocfilehash: 38006acfae90c3b216677684e9776f3ed5d7c1b1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422774"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816300"
 ---
-# <a name="determining-which-exporting-method-to-use"></a>Determinar el método de exportación que se debe utilizar
+# <a name="determine-which-exporting-method-to-use"></a>Determinar qué método de exportación que se usarán
 
 Puede exportar las funciones de dos maneras: un archivo .def o `__declspec(dllexport)` palabra clave. Para ayudarle a decidir qué forma le resulta más adecuado para el archivo DLL, tenga en cuenta estas preguntas:
 
@@ -26,11 +26,11 @@ Puede exportar las funciones de dos maneras: un archivo .def o `__declspec(dllex
 
 Exportación de funciones en un archivo .def permite controlar los ordinales de exportación. Cuando se agrega una función exportada al archivo DLL, se puede asignar un valor ordinal mayor que cualquier otra función exportada. Al hacerlo, no es necesario volver a vincular con la biblioteca de importación que contiene la nueva función de las aplicaciones que utilizan la vinculación implícita. Esto resulta muy útil si está diseñando un archivo DLL para su uso por muchas aplicaciones ya que puede agregar nuevas funcionalidades y asegúrese también de que siguen funcionando correctamente con las aplicaciones que ya confían en ella. Por ejemplo, se crean los archivos DLL de MFC mediante archivos DEF.
 
-Otra ventaja de utilizar un archivo .def es que puede usar el `NONAME` atributo para exportar una función. Esto coloca únicamente el ordinal en la tabla de exportaciones en el archivo DLL. Archivos DLL que tiene un gran número de funciones exportadas, mediante el `NONAME` atributo puede reducir el tamaño del archivo DLL. Para obtener información sobre cómo escribir una instrucción de definición de módulo, consulte [reglas para instrucciones de definición de módulo](../build/reference/rules-for-module-definition-statements.md). Para obtener información acerca de la exportación de ordinales, vea [exportar funciones desde un archivo DLL por Ordinal en lugar de por nombre](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+Otra ventaja de utilizar un archivo .def es que puede usar el `NONAME` atributo para exportar una función. Esto coloca únicamente el ordinal en la tabla de exportaciones en el archivo DLL. Archivos DLL que tiene un gran número de funciones exportadas, mediante el `NONAME` atributo puede reducir el tamaño del archivo DLL. Para obtener información sobre cómo escribir una instrucción de definición de módulo, consulte [reglas para instrucciones de definición de módulo](reference/rules-for-module-definition-statements.md). Para obtener información acerca de la exportación de ordinales, vea [exportar funciones desde un archivo DLL por Ordinal en lugar de por nombre](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
-Una desventaja de utilizar un archivo .def es que, si va a exportar funciones en un archivo de C++, tiene que colocar los nombres representativos en el .def de archivos o define las funciones exportadas mediante el uso de extern "C" para evitar la decoración de nombres que ha realizado por el compilador de Visual C++.
+Una desventaja de utilizar un archivo .def es que, si va a exportar funciones en un archivo de C++, tiene que colocar los nombres representativos en el .def de archivos o define las funciones exportadas mediante el uso de extern "C" para evitar la decoración de nombres que ha realizado por el compilador de MSVC.
 
-Si coloca los nombres representativos en el archivo .def, se puede obtener mediante la [DUMPBIN](../build/reference/dumpbin-reference.md) herramienta o mediante el enlazador [/MAP](../build/reference/map-generate-mapfile.md) opción. Los nombres representativos producidos por el compilador son específicas del compilador; por lo tanto, si coloca los nombres representativos producidos por el compilador en un archivo .def, las aplicaciones que se vinculan al archivo DLL también deberán generarse mediante el uso de la misma versión del compilador para que los nombres representativos de la aplicación que realiza la llamada coincidan con los datos exportados nombres i n el archivo .def del archivo DLL.
+Si coloca los nombres representativos en el archivo .def, se puede obtener mediante la [DUMPBIN](reference/dumpbin-reference.md) herramienta o mediante el enlazador [/MAP](reference/map-generate-mapfile.md) opción. Los nombres representativos producidos por el compilador son específicas del compilador; por lo tanto, si coloca los nombres representativos producidos por el compilador en un archivo .def, las aplicaciones que se vinculan al archivo DLL también deberán generarse mediante el uso de la misma versión del compilador para que los nombres representativos de la aplicación que realiza la llamada coincidan con los datos exportados nombres i n el archivo .def del archivo DLL.
 
 ## <a name="pros-and-cons-of-using-declspecdllexport"></a>Ventajas y desventajas del uso de __declspec (dllexport)
 
@@ -38,28 +38,28 @@ Uso de `__declspec(dllexport)` resulta útil porque no tiene que preocuparse por
 
 ### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Exportar desde un archivo DLL mediante. DEF (archivos)](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar desde un archivo DLL mediante. DEF (archivos)](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar desde un archivo DLL mediante__declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar utilizando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar utilizando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exportar funciones de C para utilizarlas en ejecutables en C o C++](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exportar funciones de C para utilizarlas en ejecutables en C o C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializar un archivo DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Importar y exportar funciones inline](../build/importing-and-exporting-inline-functions.md)
+- [Importar y exportar funciones inline](importing-and-exporting-inline-functions.md)
 
-- [Importaciones mutuas](../build/mutual-imports.md)
+- [Importaciones mutuas](mutual-imports.md)
 
-- [Nombres representativos](../build/reference/decorated-names.md)
+- [Nombres representativos](reference/decorated-names.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Exportación desde un archivo DLL](../build/exporting-from-a-dll.md)
+[Exportación desde un archivo DLL](exporting-from-a-dll.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 3eaf4305c58ca70619e032f80e661b9c768f7813
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425528"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822267"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (Dar nombre a un archivo .TLB)
 
@@ -36,13 +36,13 @@ Especifica el nombre del archivo .tlb creado por el compilador MIDL. No se supon
 
 La opción /TLBOUT especifica el nombre y la extensión del archivo .tlb.
 
-El compilador de MIDL es llamado por el vinculador de Visual C++ al vincular los proyectos que tengan el [módulo](../../windows/module-cpp.md) atributo.
+Se llama el compilador de MIDL por el vinculador MSVC al vincular los proyectos que tengan el [módulo](../../windows/module-cpp.md) atributo.
 
-Si no se especifica TLBOUT, el archivo .tlb obtendrá su nombre de [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md) *filename*. Si no se especifica/IDLOUT, se llamará el archivo .tlb vc70.tlb.
+Si no se especifica TLBOUT, el archivo .tlb obtendrá su nombre de [/IDLOUT](idlout-name-midl-output-files.md) *filename*. Si no se especifica/IDLOUT, se llamará el archivo .tlb vc70.tlb.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -56,8 +56,8 @@ Si no se especifica TLBOUT, el archivo .tlb obtendrá su nombre de [/IDLOUT](../
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (No procesar atributos en MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)<br/>
+[/IGNOREIDL (No procesar atributos en MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Compilación de programas con atributos](../../windows/building-an-attributed-program.md)

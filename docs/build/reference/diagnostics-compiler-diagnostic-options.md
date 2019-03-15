@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: c8e9f2b6bc36d8a1dfdada00bca1c7a4dcf65256
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6b7d043e00204fa191530f03bbed069d71a25fc5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423266"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822316"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/Diagnostics (opciones del compilador de diagnóstico)
 
@@ -52,5 +52,5 @@ El **/diagnostics** opción está disponible a partir de Visual Studio 2017.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

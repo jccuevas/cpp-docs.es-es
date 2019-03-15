@@ -10,16 +10,16 @@ helpviewer_keywords:
 - GZ compiler option [C++]
 - debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-ms.openlocfilehash: 35475b87b8f59fbb0fb24e62690f8fc24c7cb4e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3e6ffce487cc8183e45f3a911e7060ea22b28216
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423474"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810502"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Habilitar comprobación de errores del marco de pila en tiempo de ejecución)
 
-Realiza las mismas operaciones que el [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) opción. Desusado.
+Realiza las mismas operaciones que el [/RTC (comprobaciones de errores de tiempo de ejecución)](rtc-run-time-error-checks.md) opción. Desusado.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,13 +29,13 @@ Realiza las mismas operaciones que el [/RTC (comprobaciones de errores de tiempo
 
 ## <a name="remarks"></a>Comentarios
 
-**/GZ** es sólo para su uso en una generación ([/Od (deshabilitar (depurar))](../../build/reference/od-disable-debug.md)) de compilación.
+**/GZ** es sólo para su uso en una generación ([/Od (deshabilitar (depurar))](od-disable-debug.md)) de compilación.
 
-**/GZ** está en desuso desde Visual Studio 2005; use [/RTC (comprobaciones de errores de tiempo de ejecución)](../../build/reference/rtc-run-time-error-checks.md) en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](../../build/reference/compiler-options-listed-by-category.md).
+**/GZ** está en desuso desde Visual Studio 2005; use [/RTC (comprobaciones de errores de tiempo de ejecución)](rtc-run-time-error-checks.md) en su lugar. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -49,5 +49,5 @@ Realiza las mismas operaciones que el [/RTC (comprobaciones de errores de tiempo
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

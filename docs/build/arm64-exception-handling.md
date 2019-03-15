@@ -1,16 +1,16 @@
 ---
 title: Control de excepciones ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176684"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816157"
 ---
 # <a name="arm64-exception-handling"></a>Control de excepciones ARM64
 
-Windows en ARM64 usa el mismo mecanismo de excepciones generadas por el hardware de asincrónicas y sincrónicas excepciones generadas por el software de control de excepciones estructurado. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. Este documento describe el control de excepciones en Windows en ARM64 y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de Visual C++.
+Windows en ARM64 usa el mismo mecanismo de excepciones generadas por el hardware de asincrónicas y sincrónicas excepciones generadas por el software de control de excepciones estructurado. Los controladores de excepciones específicos de lenguaje se basan en el control de excepciones estructurado de Windows por medio de funciones del asistente de lenguaje. Este documento describe el control de excepciones en Windows en ARM64 y las aplicaciones auxiliares de lenguaje utilizadas por el código generado por el ensamblador de ARM Microsoft y el compilador de MSVC.
 
 ## <a name="goals-and-motivation"></a>Los objetivos y motivación
 
@@ -44,7 +44,7 @@ Estos son los supuestos realizados en la descripción de control de excepciones:
 
 1. No hay ningún código condicional de epílogos.
 
-1. Dedicado de registro de puntero de marco: si el sp se guarde en otro registro (r29) en el prólogo, que registre permanece intacta en toda la función, para que el sp original podrá recuperarse en cualquier momento.
+1. Registro de puntero de marco dedicado: Si el sp se guarde en otro registro (r29) en el prólogo, que se registran permanece intacta en toda la función, para que el sp original podrá recuperarse en cualquier momento.
 
 1. A menos que el sp se guarde en otro registro, toda la manipulación de puntero de pila ocurre estrictamente dentro del prólogo y epílogo.
 
@@ -52,7 +52,7 @@ Estos son los supuestos realizados en la descripción de control de excepciones:
 
 ## <a name="arm64-stack-frame-layout"></a>Diseño del marco de pila ARM64
 
-![diseño del marco de pila](../build/media/arm64-exception-handling-stack-frame.png "diseño del marco de pila")
+![diseño del marco de pila](media/arm64-exception-handling-stack-frame.png "diseño del marco de pila")
 
 Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cualquier posición de la variable local area dependiendo de las consideraciones de optimización. El objetivo es maximizar el número de variables locales que se puede tener acceso mediante una única instrucción en función de puntero de marco (r29) o de puntero de pila (sp). Sin embargo para `alloca` funciones, debe estar encadenada y r29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de registro par direccionamiento-modo de, no volátil registrar aave áreas se colocan en la parte superior de la pila del área Local. Estos son ejemplos que ilustran varias de las secuencias de prólogo más eficaces. Para mayor claridad mejor emplazamiento en caché, el orden de almacenar los registros guardados y en todos los prólogos canónicos es en orden "creciente de". `#framesz` a continuación representa el tamaño de pila completa (excepto el área de alloca). `#localsz` y `#outsz` indican el tamaño de área local (incluida la operación de Guardar área para el \<r29, lr > par) y el tamaño del parámetro de salida, respectivamente.
 
@@ -187,7 +187,7 @@ Los registros .pdata son una matriz ordenada de elementos de longitud fija que d
 
 Cada registro .pdata para ARM64 tiene 8 bytes de longitud. El formato general de los cada lugares registros la RVA de 32 bits de la función de inicio en la primera palabra, seguida de un segundo con la que contiene un puntero a un bloque .xdata de longitud variable, o una palabra empaquetada que describe una secuencia de desenredado de función canónica.
 
-![diseño de registro .pdata](../build/media/arm64-exception-handling-pdata-record.png "composición de registro .pdata")
+![diseño de registro .pdata](media/arm64-exception-handling-pdata-record.png "composición de registro .pdata")
 
 Los campos son los siguientes:
 
@@ -203,7 +203,7 @@ Los campos son los siguientes:
 
 Cuando el formato de desenredado empaquetado no basta para describir el desenredado de una función, se debe crear un registro .xdata de longitud variable. La dirección de este registro se almacena en la segunda palabra del registro .pdata. El formato de .xdata es un conjunto de longitud variable empaquetado de palabras:
 
-![diseño de registro .xdata](../build/media/arm64-exception-handling-xdata-record.png "composición de registro .xdata")
+![diseño de registro .xdata](media/arm64-exception-handling-xdata-record.png "composición de registro .xdata")
 
 Estos datos se dividen en cuatro secciones:
 
@@ -293,12 +293,12 @@ Los códigos de desenredado están codificados según la tabla siguiente. Todos 
 |`save_regp`|        110010xx'xxzzzzzz: guardar r(19+#X) par en [sp + #Z * 8], desplazamiento \<= 504 |
 |`save_regp_x`|        110011xx'xxzzzzzz: guardar r(19+#X) par en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
 |`save_reg`|        110100xx'xxzzzzzz: guardar r(19+#X) reg en [sp + #Z * 8], desplazamiento \<= 504 |
-|`save_reg_x`|        x 1101010'xxxzzzzz: guardar r(19+#X) reg en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > =-256. |
+|`save_reg_x`|        1101010x'xxxzzzzz: save reg r(19+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`save_lrpair`|         x 1101011'xxzzzzzz: guardar par \<r19 + 2 *#X, lr > en [sp + #Z*8], desplazamiento \<= 504 |
 |`save_fregp`|        x 1101100'xxzzzzzz: guardar d(8+#X) par en [sp + #Z * 8], desplazamiento \<= 504 |
 |`save_fregp_x`|        x 1101101'xxzzzzzz: guardar d(8+#X) par, en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > = -512 |
 |`save_freg`|        x 1101110'xxzzzzzz: guardar d(8+#X) reg en [sp + #Z * 8], desplazamiento \<= 504 |
-|`save_freg_x`|        11011110' xxxzzzzz: guardar d(8+#X) reg en [sp-(#Z + 1) * 8]!, desplazamiento previamente indizada > =-256. |
+|`save_freg_x`|        11011110'xxxzzzzz: save reg d(8+#X) at [sp-(#Z+1)*8]!, pre-indexed offset >= -256 |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: asignar la pila de gran tamaño con tamaño \< 256 M (2 ^ 24 * 16) |
 |`set_fp`|        11100001: configurar r29: con: r29 mov, sp |
 |`add_fp`|        11100010' xxxxxxxx: configurar r29 con: agregar r29, sp, #x * 8 |
@@ -311,12 +311,12 @@ Los códigos de desenredado están codificados según la tabla siguiente. Todos 
 |`arithmetic(eor)`|    11100111' 010zxxxx: eor lr con cookie reg(z) (0 = x28, 1 = sp); EOR lr, lr, reg(z) |
 |`arithmetic(rol)`|    11100111' 0110xxxx: rol simulado de lr con cookie reg (x28); xip0 = neg x28; lr ROR, xip0 |
 |`arithmetic(ror)`|    11100111' 100zxxxx: ror lr con cookie reg(z) (0 = x28, 1 = sp); lr ROR, lr, reg(z) |
-| |            11100111: xxxz---:---reservado |
+| |            11100111: xxxz----: ---- reserved |
 | |              11101xxx: reservado para casos de pila personalizados siguientes solo se genera para las rutinas de asm |
-| |              11101001: pila personalizado para MSFT_OP_TRAP_FRAME |
-| |              11101010: pila personalizado para MSFT_OP_MACHINE_FRAME |
-| |              11101011: pila personalizado para MSFT_OP_CONTEXT |
-| |              1111xxxx: reservado |
+| |              11101001: Pila personalizada para MSFT_OP_TRAP_FRAME |
+| |              11101010: Pila personalizada para MSFT_OP_MACHINE_FRAME |
+| |              11101011: Pila personalizada para MSFT_OP_CONTEXT |
+| |              1111xxxx: reserved |
 
 En instrucciones con los valores grandes que ocupan múltiples bytes, los bits más significativos se almacenan en primer lugar. Los códigos de desenredado anteriores están diseñados para que simplemente buscando el primer byte del código, es posible conocer el tamaño total en bytes del código de desenredado. Dado que todos los códigos de desenredado se asignan exactamente a una instrucción de prólogo y epílogo, para calcular el tamaño del prólogo o epílogo, todo lo que debe hacerse es guiarlo desde el principio de la secuencia hasta el final, uso de una tabla de búsqueda o un dispositivo similar para determinar cuánto tiempo el cor es el código de operación responde.
 
@@ -334,7 +334,7 @@ Para desenredar funciones empaquetadas cuyo seguimiento de los prólogos y epíl
 
 El formato de un registro .pdata con empaquetado desenredar datos este aspecto:
 
-![datos de desenredo de registro .pdata con empaquetado](../build/media/arm64-exception-handling-packed-unwind-data.png "registro .pdata con empaquetado de datos de desenredo")
+![datos de desenredo de registro .pdata con empaquetado](media/arm64-exception-handling-packed-unwind-data.png "registro .pdata con empaquetado de datos de desenredo")
 
 Los campos son los siguientes:
 
@@ -359,11 +359,11 @@ Los prólogos canónicos que pertenecen a categorías 1, 2 (sin área de paráme
 
 Paso 0: Realizar el cálculo previo del tamaño de cada área.
 
-Paso 1: Guardar los registros guardados y Int.
+Paso 1: Guarde los registros guardados y Int.
 
 Paso 2: Este paso es específica de tipo 4 en las primeras secciones. LR se guardó al final del área de Int.
 
-Paso 3: Guardar los registros guardados y FP.
+Paso 3: Guarde los registros guardados y FP.
 
 Paso 4: Guarde los argumentos de entrada en el área de parámetros de inicio.
 
@@ -372,15 +372,15 @@ Paso 5: Asignar la pila restante, incluido un área local, \<r29, lr > par y el 
 Paso #|Valores de marca|número de instrucciones|Código de operación|Código de desenredado
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regis** < = 10|Regis / 2 + **regis** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**== 01 *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
+1|0 < **RegI** <= 10|Regis / 2 + **regis** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**==01*|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
+3|0 < **RegF** <=7|(RegF + 1) / 2 +<br/>(RegF + 1) % 2).|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** == 1|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 & & #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz < = 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5C|**CR** == 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz < = 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \| \| **CR**== 01) &AMP; &AMP;<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+5a|**CR** == 11 & & #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** == 11 &AMP; &AMP;<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5c|**CR** == 11 & & #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5d|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* Si **CR** == 01 y **regis** es un número impar, paso 2 y última save_rep en el paso 1 se combinan en un save_regp.
 
@@ -531,7 +531,7 @@ Si un fragmento no tiene ningún tipo de prólogo y ningún epílogo, todavía r
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="example-1-frame-chained-compact-form"></a>Ejemplo 1: Encadenados de marco, compact-formulario
+### <a name="example-1-frame-chained-compact-form"></a>Ejemplo 1: Formato compacto, encadenados de marco
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ Si un fragmento no tiene ningún tipo de prólogo y ningún epílogo, todavía r
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Ejemplo 2: Encadenados de marco, formato completo con reflejo prólogo y epílogo
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>Ejemplo 2: Encadenar de marco, de forma completa con reflejo prólogo y epílogo
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ Si un fragmento no tiene ningún tipo de prólogo y ningún epílogo, todavía r
 
 Tenga en cuenta que EpilogStart índice [0] señala a la misma secuencia de código de desenredado del prólogo.
 
-### <a name="example-3-variadic-unchained-function"></a>Ejemplo 3: Variádica (función)
+### <a name="example-3-variadic-unchained-function"></a>Ejemplo 3: Variádica (función)
 
 ```asm
 |Delegate| PROC
@@ -622,9 +622,9 @@ Tenga en cuenta que EpilogStart índice [0] señala a la misma secuencia de cód
     ;end
 ```
 
-Nota: EpilogStart índice [4] apunta a la mitad del código de desenredado del prólogo (parcialmente reutilización desenredo de la matriz).
+Nota: Índice EpilogStart [4] apunta a la mitad del código de desenredado del prólogo (parcialmente reutilización desenredo de la matriz).
 
 ## <a name="see-also"></a>Vea también
 
 [Información general sobre las convenciones ABI ARM64](arm64-windows-abi-conventions.md)<br/>
-[Control de excepciones de ARM](../build/arm-exception-handling.md)
+[Control de excepciones de ARM](arm-exception-handling.md)

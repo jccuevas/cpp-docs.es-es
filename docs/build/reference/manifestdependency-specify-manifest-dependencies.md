@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: debff86b506545862ce4054bf4e210cdb8a29185
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418404"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812231"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Especificar las dependencias del manifiesto)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57418404"
 
 /MANIFESTDEPENDENCY le permite especificar atributos que se colocarán en el \<dependencia > sección del archivo de manifiesto.
 
-Consulte [/manifest (crear Side-by-Side manifiesto del ensamblado)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) para obtener información sobre cómo crear un archivo de manifiesto.
+Consulte [/manifest (crear Side-by-Side manifiesto del ensamblado)](manifest-create-side-by-side-assembly-manifest.md) para obtener información sobre cómo crear un archivo de manifiesto.
 
 Para obtener más información sobre la \<dependencia > sección del archivo de manifiesto, vea [archivos de configuración del publicador](/windows/desktop/SbsCs/publisher-configuration-files).
 
@@ -61,7 +61,7 @@ El vinculador recopilar comentarios/MANIFESTDEPENDENCY, eliminará las entradas 
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **archivo de manifiesto** página de propiedades.
 
@@ -73,5 +73,5 @@ El vinculador recopilar comentarios/MANIFESTDEPENDENCY, eliminará las entradas 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)
