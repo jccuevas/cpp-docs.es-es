@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422213"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816599"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (Suprimir _ftol)
 
@@ -42,16 +42,16 @@ Además de realizar la conversión de un tipo de punto flotante a un tipo entero
 
 Puede usar el [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) función de tiempo de ejecución de C para modificar el comportamiento de redondeo de la FPU. El modo de redondeo predeterminado de la FPU es "Redondeo al más próximo". Uso de **/QIfist** puede mejorar el rendimiento de la aplicación, pero no sin riesgo. Debe probar exhaustivamente las partes del código que sean sensibles al modo de redondeo antes de lanzar un código generado con **/QIfist** en entornos de producción.
 
-[/ arch (x86)](../../build/reference/arch-x86.md) y **/QIfist** no se puede usar en la misma operación de compilación.
+[/ arch (x86)](arch-x86.md) y **/QIfist** no se puede usar en la misma operación de compilación.
 
 > [!NOTE]
 >  **/QIfist** es no en vigor de forma predeterminada porque los bits de redondeo también afectan al punto flotante de punto de redondeo (que se produce después de cada cálculo), por lo que cuando se establecen las marcas para redondeo de estilo C (a cero), su tipo flotante los cálculos pueden ser diferentes. **/QIfist** no debe usarse si el código depende del comportamiento esperado de truncar la parte fraccionaria del número de punto flotante. Si no está seguro, no use **/QIfist**.
 
-El **/QIfist** opción está en desuso a partir de Visual Studio 2005. Se han realizado mejoras importantes en el compilador en cuanto a la velocidad de conversión de los tipos float a int. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](../../build/reference/compiler-options-listed-by-category.md).
+El **/QIfist** opción está en desuso a partir de Visual Studio 2005. Se han realizado mejoras importantes en el compilador en cuanto a la velocidad de conversión de los tipos float a int. Para obtener una lista de opciones del compilador en desuso, consulte **en desuso y opciones del compilador quitó** en [Compiler Options Listed por categoría](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -65,6 +65,6 @@ El **/QIfist** opción está en desuso a partir de Visual Studio 2005. Se han re
 
 ## <a name="see-also"></a>Vea también
 
-[/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[/Q (Opciones) (Operaciones de bajo nivel)](q-options-low-level-operations.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

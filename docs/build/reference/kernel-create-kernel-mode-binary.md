@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414764"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816456"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Crear binario en modo kernel)
 
@@ -46,7 +46,7 @@ En la tabla siguiente se enumera los cambios de comportamiento del compilador cu
 |RTTI|Deshabilitado. Todas las instancias de la `dynamic_cast` y `typeid` palabras clave de emisión de un error del compilador, a menos que `dynamic_cast` se usa de forma estática.|
 |`new` y `delete`|Debe definir explícitamente el `new()` o `delete()` operador; el compilador ni el tiempo de ejecución que proporcionará una definición default.|
 
-Custom convenciones de llamada, el [/GS](../../build/reference/gs-buffer-security-check.md) opción de compilación y todas las optimizaciones se permiten cuando se usa el **/kernel** opción. La inserción en gran medida no se ve afectada por **/kernel**, con la misma semántica que cumple con el compilador. Si desea asegurarse de que el `__forceinline` se respeta el calificador de inserción, debe asegurarse de que aparezca esa advertencia [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) está habilitada para que se sabe cuándo un determinado `__forceinline` función no está entre línea.
+Custom convenciones de llamada, el [/GS](gs-buffer-security-check.md) opción de compilación y todas las optimizaciones se permiten cuando se usa el **/kernel** opción. La inserción en gran medida no se ve afectada por **/kernel**, con la misma semántica que cumple con el compilador. Si desea asegurarse de que el `__forceinline` se respeta el calificador de inserción, debe asegurarse de que aparezca esa advertencia [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) está habilitada para que se sabe cuándo un determinado `__forceinline` función no está entre línea.
 
 Cuando se pasa al compilador la **/kernel** switch, predefine una macro de preprocesador que se denomina `_KERNEL_MODE` y tiene el valor **1**. Puede utilizarlo para compilar condicionalmente en función de si el entorno de ejecución está en modo de usuario o modo núcleo de código. Por ejemplo, el código siguiente especifica que la clase debe estar en un segmento de memoria no paginable cuando se compila para la ejecución en modo kernel.
 
@@ -88,7 +88,7 @@ El **/kernel** opción y la **/driver** opción funcionan de forma independiente
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Para establecer la opción del compilador/kernel en Visual Studio
 
-1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **C o C++** carpeta.
 
@@ -98,5 +98,5 @@ El **/kernel** opción y la **/driver** opción funcionan de forma independiente
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

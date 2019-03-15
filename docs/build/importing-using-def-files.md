@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424787"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815338"
 ---
 # <a name="importing-using-def-files"></a>Importar mediante archivos DEF
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 Uso de constante es más arriesgado porque si se olvida de utilizar el nivel de direccionamiento indirecto adicional, posiblemente puedan acceder a puntero de la tabla de direcciones de importación a la variable, no la propia variable. Este tipo de problema puede manifestarse como una infracción de acceso porque la tabla de direcciones de importación es actualmente de sólo lectura por el compilador y vinculador.
 
-El vinculador actual de Visual C++ emite una advertencia si ve CONSTANT en el archivo .def para tener en cuenta este caso. La única razón para utilizar CONSTANT es que si no se puede volver a compilar un archivo objeto donde el archivo de encabezado no indica **__declspec (dllimport)** en el prototipo.
+El vinculador MSVC actual emite una advertencia si ve CONSTANT en el archivo .def para tener en cuenta este caso. La única razón para utilizar CONSTANT es que si no se puede volver a compilar un archivo objeto donde el archivo de encabezado no indica **__declspec (dllimport)** en el prototipo.
 
 ## <a name="see-also"></a>Vea también
 
-[Importación a una aplicación](../build/importing-into-an-application.md)
+[Importación a una aplicación](importing-into-an-application.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44d85e7614f6a82af2e58f03a6d65d5d7740ab9b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278228"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816443"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Características avanzadas, Asistente para aplicaciones MFC
 
@@ -21,7 +21,7 @@ En este tema se muestran las opciones de algunas características adicionales de
 
    Genera un conjunto de archivos de Ayuda de ayuda contextual, disponible mediante el uso de un menú de ayuda y F1 o haciendo clic en un **ayuda** botón en un cuadro de diálogo. Para agregar la compatibilidad con la Ayuda, se necesita el compilador de ayuda. Si no tiene el compilador de ayuda, puede volver a ejecutar el programa de instalación para instalarlo.
 
-   Consulte [ayuda HTML: Ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) y [archivos de ayuda (Ayuda HTML)](../../ide/help-files-html-help.md) para obtener más información.
+   Consulte [ayuda HTML: Ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) y [archivos de ayuda (Ayuda HTML)](../../build/reference/help-files-html-help.md) para obtener más información.
 
 - **Vista previa de impresión y**
 

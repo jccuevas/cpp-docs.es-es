@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: 0d459c0116a657e12eafa09b50b1a855243f96ea
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416506"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812439"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Exportar funciones de C para utilizarlas en ejecutables creados en C o C++
 
@@ -46,24 +46,24 @@ extern "C" {
 
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Exportar desde un archivo DLL mediante archivos .def](../build/exporting-from-a-dll-using-def-files.md)
+- [Exportar desde un archivo DLL mediante archivos .def](exporting-from-a-dll-using-def-files.md)
 
-- [Exportar desde un archivo DLL mediante__declspec (dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exportar desde un archivo DLL mediante__declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportar e importar utilizando AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Exportar e importar utilizando AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Determinar qué método de exportación para usar](../build/determining-which-exporting-method-to-use.md)
+- [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Inicializar un archivo DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Nombres representativos](../build/reference/decorated-names.md)
+- [Nombres representativos](reference/decorated-names.md)
 
 - [Usar extern para especificar la vinculación](../cpp/using-extern-to-specify-linkage.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Exportación desde un archivo DLL](../build/exporting-from-a-dll.md)
+[Exportación desde un archivo DLL](exporting-from-a-dll.md)

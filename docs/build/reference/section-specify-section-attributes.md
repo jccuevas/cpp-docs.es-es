@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543707"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816560"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (Especificar los atributos de la sección)
 
-> **O sección:**_nombre_, [[**!**] {**DEKPRSW**}] [**, ALIGN =**_número_]
+> **/SECTION:**_name_,[[**!**]{**DEKPRSW**}][**,ALIGN=**_number_]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -31,13 +31,13 @@ No utilice los siguientes nombres, como que entren en conflicto con los nombres 
 
 - .arch
 
-- . BSS
+- .bss
 
-- .Data
+- .data
 
 - .edata
 
-- .IData
+- .idata
 
 - .pdata
 
@@ -45,7 +45,7 @@ No utilice los siguientes nombres, como que entren en conflicto con los nombres 
 
 - .reloc
 
-- . rsrc
+- .rsrc
 
 - .sbss
 
@@ -53,9 +53,9 @@ No utilice los siguientes nombres, como que entren en conflicto con los nombres 
 
 - .srdata
 
-- Text
+- .text
 
-- .XData
+- .xdata
 
 Especifique uno o varios atributos de la sección. Los caracteres de atributo, que se muestran a continuación, no distinguen mayúsculas de minúsculas. Debe especificar todos los atributos que desea que la sección tener; hace que un carácter de atributo se omite ese bit del atributo se puede desactivar. Si no se especifica R, W o E, existente lectura, escritura o estado ejecutable permanece sin cambios.
 
@@ -66,20 +66,20 @@ Para invalidar un atributo, preceden su carácter con un signo de exclamación (
 |E|Ejecutar|La sección es ejecutable|
 |R|Leer|Permite operaciones de lectura de datos|
 |X|Write|Permite que las operaciones de escritura en datos|
-|S|Compartido|Comparte la sección entre todos los procesos que cargan la imagen|
+|S|Shared|Comparte la sección entre todos los procesos que cargan la imagen|
 |D|Puede descartar|Marca la sección como no descartable|
 |K|Puede almacenar en caché|Marca la sección como no almacenable en caché|
 |P|Paginable|Marca la sección como no paginable|
 
-K y P no es habituales en que se usan los indicadores de sección que se corresponden con ellos en el sentido negativo. Si se especifica uno de ellos en la sección .text utilizando el **Text, K** opción, no hay ninguna diferencia en los indicadores de sección al ejecutar [DUMPBIN](../../build/reference/dumpbin-options.md) con el [/HEADERS](../../build/reference/headers.md)opción; la sección ya implícitamente se almacenó en caché. Para quitar el valor predeterminado, especifique **Text,! K** en su lugar. DUMPBIN revela las características de sección, incluidos "No almacenar en caché."
+K y P no es habituales en que se usan los indicadores de sección que se corresponden con ellos en el sentido negativo. Si se especifica uno de ellos en la sección .text utilizando el **Text, K** opción, no hay ninguna diferencia en los indicadores de sección al ejecutar [DUMPBIN](dumpbin-options.md) con el [/HEADERS](headers.md)opción; la sección ya implícitamente se almacenó en caché. Para quitar el valor predeterminado, especifique **Text,! K** en su lugar. DUMPBIN revela las características de sección, incluidos "No almacenar en caché."
 
 Una sección en el archivo PE que no tiene E, R o W establecido es probablemente no es válida.
 
-El **ALIGN =**_número_ argumento le permite especificar un valor de alineación de una sección concreta. El _número_ argumento está en bytes y debe ser una potencia de dos. Consulte [/alinear](../../build/reference/align-section-alignment.md) para obtener más información.
+El **ALIGN =**_número_ argumento le permite especificar un valor de alineación de una sección concreta. El _número_ argumento está en bytes y debe ser una potencia de dos. Consulte [/alinear](align-section-alignment.md) para obtener más información.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Elija la **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
 
@@ -91,5 +91,5 @@ El **ALIGN =**_número_ argumento le permite especificar un valor de alineación
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

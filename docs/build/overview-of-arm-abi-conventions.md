@@ -2,12 +2,12 @@
 title: Información general de las convenciones ABI de ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436028"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810463"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Información general sobre las convenciones ABI de ARM32
 
@@ -23,7 +23,7 @@ La compatibilidad con la división de enteros (UDIV/SDIV) es enormemente recomen
 
 ## <a name="endianness"></a>Modos endian
 
-Windows en ARM se ejecuta en modo little-endian. Tanto el compilador de Visual C++ como Windows en tiempo de ejecución esperan que haya datos little-endian en todo momento. La instrucción SETEND de la arquitectura de conjunto de instrucciones de ARM (ISA) permite incluso que el código de modo de usuario cambie el modo endian actual, pero esto no es aconsejable porque es peligroso para una aplicación. Si se generara una excepción en modo big-endian, el comportamiento sería imprevisible y podría provocar un error de la aplicación en modo de usuario o una comprobación de errores en modo kernel.
+Windows en ARM se ejecuta en modo little-endian. El compilador de MSVC y el tiempo de ejecución de Windows esperan datos little-endian en todo momento. La instrucción SETEND de la arquitectura de conjunto de instrucciones de ARM (ISA) permite incluso que el código de modo de usuario cambie el modo endian actual, pero esto no es aconsejable porque es peligroso para una aplicación. Si se generara una excepción en modo big-endian, el comportamiento sería imprevisible y podría provocar un error de la aplicación en modo de usuario o una comprobación de errores en modo kernel.
 
 ## <a name="alignment"></a>Alineación
 
@@ -137,7 +137,7 @@ La mayoría del hardware de ARM no admite excepciones de punto flotante de IEEE.
 
 En las funciones no variádicas, la ABI de Windows en ARM sigue las reglas de ARM para el paso de parámetros (lo que engloba las extensiones VFP y SIMD avanzadas). Estas reglas siguen la [procedimiento llame al estándar para la arquitectura ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)y consolidada con las extensiones VFP. De forma predeterminada, se pasan en los registros los primeros cuatro argumentos de entero y hasta ocho argumentos de punto flotante o de vector; los argumentos adicionales se pasan en la pila. Se usa el siguiente procedimiento para asignar argumentos a los registros o a la pila:
 
-### <a name="stage-a-initialization"></a>Fase A: inicialización
+### <a name="stage-a-initialization"></a>Fase A: Inicialización
 
 La inicialización se lleva a cabo exactamente una vez, antes de que comience el procesamiento de argumentos:
 
@@ -149,7 +149,7 @@ La inicialización se lleva a cabo exactamente una vez, antes de que comience el
 
 1. Si se llama a una función que devuelve un resultado en la memoria, la dirección de ese resultado se sitúa en r0 y el NCRN se establece en r1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Fase B: relleno previo y extensión de argumentos
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Escenario B: Relleno previo y extensión de argumentos
 
 En cada argumento de la lista se aplica la primera regla que coincida de la siguiente lista:
 
@@ -159,7 +159,7 @@ En cada argumento de la lista se aplica la primera regla que coincida de la sigu
 
 1. Si el argumento es un tipo compuesto, su tamaño se redondea al múltiplo más próximo de 4.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase C: asignación de argumentos a registros y la pila
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Fase C: Asignación de argumentos a registros y la pila
 
 En cada uno de los argumentos de la lista se aplican las siguientes reglas cada vez, hasta que los argumentos se hayan asignado:
 
@@ -205,13 +205,13 @@ Las enumeraciones son tipos de enteros de 32 bits, salvo que al menos un valor 
 
 ## <a name="stack-walking"></a>El recorrido de pila
 
-Código de Windows se compila con punteros de marco habilitados ([/Oy (omisión de puntero de marco)](../build/reference/oy-frame-pointer-omission.md)) para habilitar el recorrido de pila rápidos. Por lo general, el registro r11 apunta al siguiente vínculo de la cadena, que es un par {r11, lr} que especifica el puntero al marco anterior en la pila, así como la dirección de devolución. Le recomendamos que su código tenga habilitados también los punteros de marco, ya que así mejorarán los perfiles y seguimientos.
+Código de Windows se compila con punteros de marco habilitados ([/Oy (omisión de puntero de marco)](reference/oy-frame-pointer-omission.md)) para habilitar el recorrido de pila rápidos. Por lo general, el registro r11 apunta al siguiente vínculo de la cadena, que es un par {r11, lr} que especifica el puntero al marco anterior en la pila, así como la dirección de devolución. Le recomendamos que su código tenga habilitados también los punteros de marco, ya que así mejorarán los perfiles y seguimientos.
 
 ## <a name="exception-unwinding"></a>Desenredado en excepciones
 
 El desenredado de la pila durante el control de excepciones es posible mediante el uso de códigos de desenredado. Los códigos de desenredado son una secuencia de bytes almacenada en la sección .xdata de la imagen ejecutable. Describen la operación del código de prólogo y epílogo de la función de forma abstracta, ya que así los efectos del prólogo de una función se pueden deshacer como preparación para desenredar en el marco de pila del llamador.
 
-La EABI de ARM especifica un modelo de desenredado en excepciones en el que se usan códigos de desenredado. Sin embargo, esta especificación no basta para el desenredado en Windows, donde se deben controlar casos en los que el procesador se encuentra en medio del prólogo y el epílogo de una función. Para obtener más información acerca de Windows en desenredado y los datos de excepción de ARM, consulte [control de excepciones de ARM](../build/arm-exception-handling.md).
+La EABI de ARM especifica un modelo de desenredado en excepciones en el que se usan códigos de desenredado. Sin embargo, esta especificación no basta para el desenredado en Windows, donde se deben controlar casos en los que el procesador se encuentra en medio del prólogo y el epílogo de una función. Para obtener más información acerca de Windows en desenredado y los datos de excepción de ARM, consulte [control de excepciones de ARM](arm-exception-handling.md).
 
 Es recomendable que el código generado dinámicamente se describa por medio de tablas de funciones dinámicas especificadas en llamadas a `RtlAddFunctionTable` y funciones asociadas, ya que así el código generado podrá participar en el tratamiento de excepciones.
 
@@ -223,5 +223,5 @@ El contador es un contador de ciclos auténtico, no un reloj; por lo tanto, la f
 
 ## <a name="see-also"></a>Vea también
 
-[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Control de excepciones de ARM](../build/arm-exception-handling.md)
+[Problemas comunes de migración de ARM en Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[Control de excepciones de ARM](arm-exception-handling.md)

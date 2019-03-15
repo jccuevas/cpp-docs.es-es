@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STUB .def file statement
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
-ms.openlocfilehash: fd2e7c4a3bd9fa09b88f4c3caa9b7d5b73c1ad98
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5224fdaa2a03dc615c9e7e7bb7f7ba822a40807e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412944"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822124"
 ---
 # <a name="stub"></a>STUB
 
@@ -23,10 +23,10 @@ STUB:filename
 
 ## <a name="remarks"></a>Comentarios
 
-Una manera equivalente a especificar *filename* es con el [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md) opción del vinculador.
+Una manera equivalente a especificar *filename* es con el [/STUB](stub-ms-dos-stub-file-name.md) opción del vinculador.
 
 Código auxiliar es válido en un archivo de definición de módulo cuando se desea generar un VxD.
 
 ## <a name="see-also"></a>Vea también
 
-[Reglas para instrucciones de definición de módulos](../../build/reference/rules-for-module-definition-statements.md)
+[Reglas para instrucciones de definición de módulos](rules-for-module-definition-statements.md)

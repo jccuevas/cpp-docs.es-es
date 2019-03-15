@@ -11,12 +11,12 @@ helpviewer_keywords:
 - file names [C++], CL compiler
 - file names [C++]
 ms.assetid: 3ca72586-75be-4477-b323-a1be232e80d4
-ms.openlocfilehash: d2dd51370fd346c4cd7dad7bb97bfa76a9f759d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b20f88e69c6e0d1774f1cd81b3ee833c4f0ff696
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420731"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811776"
 ---
 # <a name="cl-filename-syntax"></a>Sintaxis de nombres de archivo de CL
 
@@ -26,4 +26,4 @@ La extensión del nombre de archivo determina cómo se procesan los archivos. Lo
 
 ## <a name="see-also"></a>Vea también
 
-[Sintaxis de la línea de comandos del compilador](../../build/reference/compiler-command-line-syntax.md)
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

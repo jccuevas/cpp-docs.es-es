@@ -1,12 +1,12 @@
 ---
 title: Información general sobre las convenciones ABI ARM64
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599789"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816547"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Información general sobre las convenciones ABI ARM64
 
@@ -58,11 +58,11 @@ La arquitectura AArch64 admite 32 registros de enteros, resumidos a continuació
 |Registro|¿Volátil?|Rol|
 |-|-|-|
 x0|Volátil|Parámetro/cero registrar 1, el registro de resultados
-X1 x7|Volátil|Register/cero el parámetro 2-8
-X8 x15|Volátil|Registros
-x16 x17|Volátil|Registros de llamada de procedimiento dentro de un borrador
+x1-x7|Volátil|Register/cero el parámetro 2-8
+x8-x15|Volátil|Registros
+x16-x17|Volátil|Registros de llamada de procedimiento dentro de un borrador
 x18|No volátil|Registro de la plataforma: en modo kernel, señala KPCR del procesador actual; en modo de usuario, señala TEB
-x19 x28|No volátil|Registros
+x19-x28|No volátil|Registros
 x29/fp|No volátil|Puntero de marco
 x30/lr|No volátil|Registra el vínculo
 
@@ -80,10 +80,10 @@ La arquitectura AArch64 también admite 32 registros de punto flotante/SIMD, res
 
 Registro|¿Volátil?|Rol
 |-|-|-|
-V0|Volátil|Parámetro/cero registrar 1, el registro de resultados
-V1 v7|Volátil|Parámetro/cero registra 2-8
-v8 v15|No volátil|Scratch registros (tenga en cuenta que solo los 64 bits inferiores son volátiles)
-V16 v31|Volátil|Registros
+v0|Volátil|Parámetro/cero registrar 1, el registro de resultados
+v1-v7|Volátil|Parámetro/cero registra 2-8
+v8-v15|No volátil|Scratch registros (tenga en cuenta que solo los 64 bits inferiores son volátiles)
+v16-v31|Volátil|Registros
 
 Cada registro puede tener acceso como un valor de 128 bits completo (mediante v0 v31 o q0 q31), como un valor de 64 bits (a través de d0-d31), como un valor de 32 bits (a través de s0-s31), como un valor de 16 bits (a través de h0-h31) o como un valor de 8 bits (a través de b0-b31). Accesos inferior a 128 bits tener acceso a solo los bits inferiores del registro de 128 bits y dejar el resto de bits intactos a menos que se especifique lo contrario. (Tenga en cuenta que esto es significativamente diferente de AArch32, donde se empaquetan los registros más pequeños encima de los registros de mayor tamaño.)
 
@@ -95,7 +95,7 @@ Bits|Significado|¿Volátil?|Rol
 25|DN|No volátil|Control de modo de NaN predeterminado
 24|FZ|No volátil|Control de modo de volcado a cero
 23-22|RMode|No volátil|Control de modo de redondeo
-15,12-8|IXE/IDE/etcetera|No volátil|Bits de activación de intercepción de excepciones, debe ser siempre 0
+15,12-8|IDE/IXE/etc|No volátil|Bits de activación de intercepción de excepciones, debe ser siempre 0
 
 ## <a name="system-registers"></a>Registros del sistema
 
@@ -171,7 +171,7 @@ Para cada argumento de la lista de las siguientes reglas se aplican a su vez, ha
 
 1. El argumento se copia en memoria en la NSAA ajustada. La NSAA se incrementará en función del tamaño del argumento. Ahora se ha asignado el argumento.
 
-### <a name="addendum-variadic-functions"></a>Anexo: Las funciones Variádicas
+### <a name="addendum-variadic-functions"></a>Anexo: Funciones Variádicas
 
 Las funciones que toman un número variable de argumentos se controlan de forma diferente a anterior, como sigue:
 
@@ -203,7 +203,7 @@ La pila de modo kernel predeterminada en Windows es seis páginas (24k). Preste 
 
 ## <a name="stack-walking"></a>El recorrido de pila
 
-Código dentro de Windows se compila con punteros de marco habilitados ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) para habilitar el recorrido de pila rápidos. El resultado es que x29 (fp) se apunta en general en el vínculo siguiente en la cadena, que es un {fp, lr} que indica el puntero al fotograma anterior en la pila y la dirección de devolución del par. Se recomienda establecer código de terceros para habilitar los punteros de marcos también para permitir la generación de perfiles mejorada y seguimiento.
+Código dentro de Windows se compila con punteros de marco habilitados ([/Oy-](reference/oy-frame-pointer-omission.md)) para habilitar el recorrido de pila rápidos. El resultado es que x29 (fp) se apunta en general en el vínculo siguiente en la cadena, que es un {fp, lr} que indica el puntero al fotograma anterior en la pila y la dirección de devolución del par. Se recomienda establecer código de terceros para habilitar los punteros de marcos también para permitir la generación de perfiles mejorada y seguimiento.
 
 ## <a name="exception-unwinding"></a>Desenredado en excepciones
 
@@ -221,5 +221,5 @@ Tenga en cuenta que el contador de ciclos aquí es un contador de ciclos autént
 
 ## <a name="see-also"></a>Vea también
 
-[Problemas comunes de migración de ARM en Visual C++](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[Control de excepciones ARM64](../build/arm64-exception-handling.md)
+[Problemas comunes de migración de ARM en Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
+[Control de excepciones ARM64](arm64-exception-handling.md)

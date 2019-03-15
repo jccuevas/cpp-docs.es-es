@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421812"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812257"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-Especifica la arquitectura para la generación de código en x86. Consulte también [/arch (x64)](../../build/reference/arch-x64.md) y [/arch (ARM)](../../build/reference/arch-arm.md).
+Especifica la arquitectura para la generación de código en x86. Consulte también [/arch (x64)](arch-x64.md) y [/arch (ARM)](arch-arm.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -48,9 +48,9 @@ Además de utilizar las instrucciones de SSE y SSE2, el compilador también hace
 
 Dado que el x86 compilador genera código que usa las instrucciones SSE2 de forma predeterminada, debe especificar **/arch: IA32** para deshabilitar la generación de instrucciones SSE y SSE2 para x86 procesadores.
 
-**/ arch** solo afecta a la generación de código para las funciones nativas. Cuando usas [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) para compilar, **/arch** no tiene ningún efecto sobre la generación de código para las funciones administradas.
+**/ arch** solo afecta a la generación de código para las funciones nativas. Cuando usas [/CLR](clr-common-language-runtime-compilation.md) para compilar, **/arch** no tiene ningún efecto sobre la generación de código para las funciones administradas.
 
-**/ arch** y [/QIfist](../../build/reference/qifist-suppress-ftol.md) no se puede usar en la misma operación de compilación. En particular, si no se utiliza `_controlfp` para modificar la palabra de control FP, el código de inicio en tiempo de ejecución establece el campo de control de precisión de la palabra de control FPU x87 en 53 bits. Por consiguiente, cada operación de tipo float y double de una expresión usa un significado de 53 bits y un exponente de 15 bits. Sin embargo, cada operación SSE de precisión sencilla utiliza significados de 24 bits y exponentes de 8 bits, mientras que las operaciones SSE2 de precisión doble utilizan significados de 53 bits y exponentes de 11 bits. Para obtener más información, vea [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Estas diferencias son posibles en un árbol de expresión, pero no en los casos en los que se produce una asignación de usuario después de cada subexpresión. Considere el siguiente caso:
+**/ arch** y [/QIfist](qifist-suppress-ftol.md) no se puede usar en la misma operación de compilación. En particular, si no se utiliza `_controlfp` para modificar la palabra de control FP, el código de inicio en tiempo de ejecución establece el campo de control de precisión de la palabra de control FPU x87 en 53 bits. Por consiguiente, cada operación de tipo float y double de una expresión usa un significado de 53 bits y un exponente de 15 bits. Sin embargo, cada operación SSE de precisión sencilla utiliza significados de 24 bits y exponentes de 8 bits, mientras que las operaciones SSE2 de precisión doble utilizan significados de 53 bits y exponentes de 11 bits. Para obtener más información, vea [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md). Estas diferencias son posibles en un árbol de expresión, pero no en los casos en los que se produce una asignación de usuario después de cada subexpresión. Considere el siguiente caso:
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>Para establecer esta opción del compilador para AVX, AVX2, IA32, SSE o SSE2 en Visual Studio
 
-1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración**, **C o C++** carpeta.
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>Vea también
 
-[/arch (Arquitectura de CPU mínima)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[/arch (Arquitectura de CPU mínima)](arch-minimum-cpu-architecture.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

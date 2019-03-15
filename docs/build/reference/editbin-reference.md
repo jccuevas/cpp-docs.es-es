@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 39fdcfd3221599f20617092118e5cef5267e3d2b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418794"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807924"
 ---
 # <a name="editbin-reference"></a>Referencia de EDITBIN
 
@@ -23,12 +23,12 @@ El Editor de archivos de Microsoft COFF Binary (EDITBIN. (EXE) modifica los arch
 > [!NOTE]
 >  Puede iniciar esta herramienta solo desde el símbolo del sistema de Visual Studio. No puede iniciarla desde un símbolo del sistema ni desde el Explorador de archivos.
 
-EDITBIN no está disponible para su uso en los archivos producidos con la [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador. Las modificaciones en los archivos binarios generados con/GL tendrán que se logra volver a compilar y vincular.
+EDITBIN no está disponible para su uso en los archivos producidos con la [/GL](gl-whole-program-optimization.md) opción del compilador. Las modificaciones en los archivos binarios generados con/GL tendrán que se logra volver a compilar y vincular.
 
-- [Línea de comandos EDITBIN](../../build/reference/editbin-command-line.md)
+- [Línea de comandos EDITBIN](editbin-command-line.md)
 
-- [Opciones de EDITBIN](../../build/reference/editbin-options.md)
+- [Opciones de EDITBIN](editbin-options.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)
+[Herramientas de generación MSVC adicionales](c-cpp-build-tools.md)

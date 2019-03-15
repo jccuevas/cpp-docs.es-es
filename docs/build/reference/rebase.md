@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 42cbcb911fcd0aa7753d84aae5523d28371b9972
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422044"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815416"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -26,7 +26,7 @@ ms.locfileid: "57422044"
 
 ## <a name="remarks"></a>Comentarios
 
-Esta opción establece las direcciones base para los archivos especificados. EDITBIN asigna nuevas direcciones bases en un espacio de direcciones contiguo según el tamaño de cada archivo redondeado a los 64 KB más cercano. Para obtener más información sobre las direcciones bases, vea la [dirección Base](../../build/reference/base-base-address.md) (/ BASE) del vinculador.
+Esta opción establece las direcciones base para los archivos especificados. EDITBIN asigna nuevas direcciones bases en un espacio de direcciones contiguo según el tamaño de cada archivo redondeado a los 64 KB más cercano. Para obtener más información sobre las direcciones bases, vea la [dirección Base](base-base-address.md) (/ BASE) del vinculador.
 
 Especifique los archivos ejecutables y DLL en el programa la *archivos* argumento en la línea de comandos EDITBIN en el orden en que basarse. Opcionalmente, puede especificar uno o varios *modificadores*, separados por punto y coma (**,**):
 
@@ -38,4 +38,4 @@ Especifique los archivos ejecutables y DLL en el programa la *archivos* argument
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de EDITBIN](../../build/reference/editbin-options.md)
+[Opciones de EDITBIN](editbin-options.md)

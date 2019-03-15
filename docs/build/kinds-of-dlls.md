@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424813"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820291"
 ---
 # <a name="kinds-of-dlls"></a>Tipos de archivos DLL
 
@@ -31,13 +31,13 @@ La misma biblioteca MFC está disponible, las bibliotecas de vínculos estático
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [DLL no basada en MFC: información general](../build/non-mfc-dlls-overview.md)
+- [DLL no basada en MFC: información general](non-mfc-dlls-overview.md)
 
-- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Archivos DLL de extensión MFC: información general](../build/extension-dlls-overview.md)
+- [Archivos DLL de extensión MFC: información general](extension-dlls-overview.md)
 
 - [Qué tipo de DLL utilicen](#_core_which_kind_of_dll_to_use)
 
@@ -59,14 +59,14 @@ Antes de la versión 4.0, Visual C++ sólo admitía dos tipos de archivos DLL qu
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [DLL no basada en MFC: información general](../build/non-mfc-dlls-overview.md)
+- [DLL no basada en MFC: información general](non-mfc-dlls-overview.md)
 
-- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Archivos DLL de extensión MFC: información general](../build/extension-dlls-overview.md)
+- [Archivos DLL de extensión MFC: información general](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
+[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: 051eaeb568418a8a01d25f738617fa171039f27d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a9685834fc3e1de246c9d9d60d206538b744ce3e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809865"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Aumentar el número de secciones en el archivo .Obj)
 
@@ -35,7 +35,7 @@ Los vinculadores distribuidos antes de Visual C++ 2005 no pueden leer archivos .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -49,5 +49,5 @@ Los vinculadores distribuidos antes de Visual C++ 2005 no pueden leer archivos .
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

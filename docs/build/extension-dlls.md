@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414569"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820447"
 ---
 # <a name="mfc-extension-dlls"></a>Archivos DLL de extensión MFC
 
@@ -116,7 +116,7 @@ Si el archivo DLL de extensión MFC requiere mantener datos adicionales para cad
 
 ### <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Inicializar un archivo DLL de extensión MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Inicializar un archivo DLL de extensión MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
@@ -124,12 +124,12 @@ Si el archivo DLL de extensión MFC requiere mantener datos adicionales para cad
 
 - [Versión de DLL de MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Uso de archivos DLL de extensión MFC de base de datos, OLE y Sockets en archivos DLL de MFC estándar](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Uso de archivos DLL de extensión MFC de base de datos, OLE y Sockets en archivos DLL de MFC estándar](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
+[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)

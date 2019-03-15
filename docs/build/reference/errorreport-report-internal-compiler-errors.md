@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 70df0f99ccac91ef8b7651faf3c93bb2971fb904
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414556"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811243"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Informar de los errores del compilador)
 
@@ -49,7 +49,7 @@ La capacidad de un usuario de enviar informes depende de los permisos de directi
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -63,5 +63,5 @@ La capacidad de un usuario de enviar informes depende de los permisos de directi
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

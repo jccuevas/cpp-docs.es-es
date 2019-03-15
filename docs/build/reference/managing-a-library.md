@@ -40,12 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-ms.openlocfilehash: fb06fdf0298d627f289448930b490fb0660e381d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 74b8cf198d46f83de327c68ac5f883bd75e5db80
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419624"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812049"
 ---
 # <a name="managing-a-library"></a>Administrar una biblioteca
 
@@ -64,7 +64,7 @@ De forma predeterminada, el archivo de salida con el nombre base del primer arch
 Las siguientes opciones se aplican a la creación y modificación de una biblioteca:
 
 **/LIBPATH:** *dir*<br/>
-Reemplaza la ruta de acceso a la biblioteca de entorno. Para obtener más información, vea la descripción del vínculo [/libpath](../../build/reference/libpath-additional-libpath.md) opción.
+Reemplaza la ruta de acceso a la biblioteca de entorno. Para obtener más información, vea la descripción del vínculo [/libpath](libpath-additional-libpath.md) opción.
 
 **/LIST**<br/>
 Muestra información acerca de la biblioteca de salida a la salida estándar. La salida se puede redirigir a un archivo. Puede usar /LIST para determinar el contenido de una biblioteca existente sin modificarlo.
@@ -73,7 +73,7 @@ Muestra información acerca de la biblioteca de salida a la salida estándar. La
 Al compilar una biblioteca de importación, especifica el nombre del archivo DLL para el que se está compilando la biblioteca de importación.
 
 **/NODEFAULTLIB**<br/>
-Quita una o más bibliotecas predeterminadas de la lista de bibliotecas que realiza búsquedas al resolver referencias externas. Consulte [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) para obtener más información.
+Quita una o más bibliotecas predeterminadas de la lista de bibliotecas que realiza búsquedas al resolver referencias externas. Consulte [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) para obtener más información.
 
 **/ OUT:** *nombre de archivo*<br/>
 Invalida el nombre de archivo de salida predeterminado. De forma predeterminada, se crea la biblioteca de salida en el directorio actual, con el nombre base del primer archivo objeto o biblioteca en la línea de comandos y la extensión. lib.
@@ -82,7 +82,7 @@ Invalida el nombre de archivo de salida predeterminado. De forma predeterminada,
 Omite especificado *objeto* desde la biblioteca de salida. LIB crea una biblioteca de salida combinando todos los objetos (en archivos objeto o bibliotecas) y, a continuación, elimina los objetos especificados con/Remove.
 
 **/ SUBSYSTEM:**{**CONSOLA** &AMP;#124; **EFI_APPLICATION** &AMP;#124; **EFI_BOOT_SERVICE_DRIVER** &AMP;#124; **EFI_ROM** &AMP;#124; **EFI_RUNTIME_DRIVER** &AMP;#124; **NATIVO** &AMP;#124; **POSIX** &AMP;#124; **WINDOWS** &AMP;#124; **WINDOWSCE**} [, #[. ##]]<br/>
-Indica al sistema operativo cómo ejecutar un programa creado mediante la vinculación a la biblioteca de salida. Para obtener más información, vea la descripción del vínculo [/Subsystem](../../build/reference/subsystem-specify-subsystem.md) opción.
+Indica al sistema operativo cómo ejecutar un programa creado mediante la vinculación a la biblioteca de salida. Para obtener más información, vea la descripción del vínculo [/Subsystem](subsystem-specify-subsystem.md) opción.
 
 Opciones de LIB especificadas en la línea de comandos no distinguen mayúsculas de minúsculas.
 
@@ -101,4 +101,4 @@ Puede utilizar LIB para realizar las siguientes tareas de administración de bib
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de LIB](../../build/reference/lib-reference.md)
+[Referencia de LIB](lib-reference.md)

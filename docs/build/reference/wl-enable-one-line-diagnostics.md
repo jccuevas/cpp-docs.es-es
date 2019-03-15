@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-ms.openlocfilehash: 820143e1ff6feb718660fe8b297f2b96e26d2eb9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0d5110615f66dcf4f7dc170d89ee58c2e8fa5cb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413815"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811984"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (Habilitar diagnósticos de una línea)
 
@@ -43,7 +43,7 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -57,5 +57,5 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

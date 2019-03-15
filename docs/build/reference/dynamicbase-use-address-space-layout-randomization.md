@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512403"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807759"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Usar selección aleatoria del diseño del espacio de direcciones)
 
@@ -21,7 +21,7 @@ Especifica si debe generarse una imagen ejecutable que puede reubicarse aleatori
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ DYNAMICBASE**[**: N**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -31,7 +31,7 @@ De forma predeterminada, **/DYNAMICBASE** está habilitado. Para deshabilitar es
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **vinculador** > **avanzadas** página de propiedades.
 
@@ -43,7 +43,7 @@ De forma predeterminada, **/DYNAMICBASE** está habilitado. Para deshabilitar es
 
 ## <a name="see-also"></a>Vea también
 
-- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)
-- [Opciones del vinculador](../../build/reference/linker-options.md)
+- [Referencia MSVC del vinculador](linking.md)
+- [Opciones del vinculador MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Defensas de seguridad de Software de ISV de Windows](https://msdn.microsoft.com/library/bb430720.aspx)

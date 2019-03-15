@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553164"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810086"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>Compilador advertencias C4600 a C4799
 
@@ -147,7 +146,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 4) C4681|'class': coclase no especifica una interfaz predeterminada que sea un origen de eventos|
 |Advertencia del compilador (nivel 4) C4682|'parámetro': ningún parámetro direccional especificado, un atributo [in]|
 |[Advertencia del compilador (nivel 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'function': origen de eventos tiene un 'out'-parámetro; Tenga cuidado al enlazar varios controladores de eventos|
-|[Advertencia del compilador (nivel 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': advertencia!! atributo puede causar una generación de código no válido: usar con precaución|
+|[Advertencia del compilador (nivel 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': ADVERTENCIA!! atributo puede causar una generación de código no válido: usar con precaución|
 |Advertencia del compilador (nivel 1) C4685|se esperaba '> >' pero se encontró '>>' al analizar los parámetros de plantilla|
 |[Advertencia del compilador (nivel 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'tipo definido por el usuario': posible cambio de comportamiento, cambio en la convención de llamada devuelta definida por el usuario|
 |[Advertencia (Error) del compilador C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': una clase abstracta sellada no puede implementar una interfaz 'interface'|
@@ -194,7 +193,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' tiene un tamaño diferente en 'archivo1' y 'archivo2': número y el número de bytes|
 |[Advertencia del compilador (nivel 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' tiene un tipo diferente en 'archivo1' y 'archivo2': 'type1' y 'type2'|
 |[Advertencia del compilador C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|acceso volátil de '*expresión*' está sujeta a /volatile:\<iso&#124;ms >; considere el uso de funciones intrínsecas __iso_volatile_load/store|
-|[Advertencia del compilador (nivel 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Una llamada a 'entrypoint' administrado: no se puede ejecutar código administrado en un bloqueo del cargador, incluido el DLL entrypoint y las llamadas alcanzadas desde el punto|
+|[Advertencia del compilador (nivel 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|Llamada administrada 'entrypoint': No se puede ejecutar código administrado en un bloqueo del cargador, incluido el DLL entrypoint y las llamadas alcanzadas desde el punto|
 |Advertencia del compilador (nivel 4) C4749|condicionalmente compatible: offsetof aplicado al tipo que no son estándar diseño '*tipo*'|
 |Advertencia del compilador (nivel 1) C4750|'identificador': función con _alloca() insertada en un bucle|
 |Advertencia del compilador (nivel 4) C4751|/ arch: AVX no es aplicable a Intel (r) extensiones SIMD de Streaming que están en ASM inline|

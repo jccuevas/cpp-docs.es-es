@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417637"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821474"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (Dar nombre a los archivos de resultados de MIDL)
 
@@ -38,7 +38,7 @@ Especifica el nombre del archivo .idl creado por el compilador MIDL. No se supon
 
 La opción /IDLOUT especifica el nombre y la extensión del archivo. idl.
 
-El compilador de MIDL es llamado por el vinculador de Visual C++ al vincular los proyectos que tengan el [módulo](../../windows/module-cpp.md) atributo.
+Se llama el compilador de MIDL por el vinculador MSVC al vincular los proyectos que tengan el [módulo](../../windows/module-cpp.md) atributo.
 
 /IDLOUT también especifica los nombres de los otros archivos de salida asociados con el compilador de MIDL:
 
@@ -50,13 +50,13 @@ El compilador de MIDL es llamado por el vinculador de Visual C++ al vincular los
 
 - *filename*.h
 
-*nombre de archivo* es el parámetro que pasa a/IDLOUT. Si [TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md) se especifica, el archivo .tlb obtendrá su nombre de TLBOUT *filename*.
+*nombre de archivo* es el parámetro que pasa a/IDLOUT. Si [TLBOUT](tlbout-name-dot-tlb-file.md) se especifica, el archivo .tlb obtendrá su nombre de TLBOUT *filename*.
 
 Si especifica/IDLOUT ni TLBOUT, el vinculador creará vc70.tlb, vc70.idl, vc70_p.c, vc70_i.c y vc70.h.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -70,8 +70,8 @@ Si especifica/IDLOUT ni TLBOUT, el vinculador creará vc70.tlb, vc70.idl, vc70_p
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (No procesar atributos en MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)<br/>
+[/IGNOREIDL (No procesar atributos en MIDL)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (Especificar las opciones de la línea de comandos de MIDL)](midl-specify-midl-command-line-options.md)<br/>
 [Compilación de programas con atributos](../../windows/building-an-attributed-program.md)

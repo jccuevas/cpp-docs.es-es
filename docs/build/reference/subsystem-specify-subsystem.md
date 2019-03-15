@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417013"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821270"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (Especificar subsistema)
 
@@ -42,7 +42,7 @@ Aplicación de modo de caracteres Win32. El sistema operativo proporciona una co
 Los subsistemas de Extensible Firmware Interface. Para obtener más información, vea la especificación EFI. Para obtener ejemplos, vea el sitio Web de Intel. La versión mínima y la versión predeterminada es 1.0.
 
 **NATIVO**<br/>
-Controladores de modo kernel para Windows NT. Esta opción se reserva normalmente para los componentes del sistema operativo Windows. Si [/Driver: WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) se especifica, nativo es el valor predeterminado.
+Controladores de modo kernel para Windows NT. Esta opción se reserva normalmente para los componentes del sistema operativo Windows. Si [/Driver: WDM](driver-windows-nt-kernel-mode-driver.md) se especifica, nativo es el valor predeterminado.
 
 **POSIX**<br/>
 Aplicación que se ejecuta con el subsistema POSIX en Windows NT.
@@ -73,7 +73,7 @@ El mínimo opcional y el valor predeterminado *principales* y *menores* números
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione la carpeta Vinculador.
 
@@ -87,5 +87,5 @@ El mínimo opcional y el valor predeterminado *principales* y *menores* números
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

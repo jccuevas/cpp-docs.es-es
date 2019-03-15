@@ -4,12 +4,12 @@ ms.date: 10/20/2017
 helpviewer_keywords:
 - ATL projects, default configurations
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
-ms.openlocfilehash: 449f92f8924114a85d8ca745c7377d30d25bb763
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24f518f3ca5fefbfed1d89da9209bc2c27d890e2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270101"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815481"
 ---
 # <a name="default-atl-project-configurations"></a>Configuraciones de proyecto ATL predeterminadas
 
@@ -25,6 +25,6 @@ El Asistente para proyectos ATL crea dos configuraciones de proyecto de forma pr
 ## <a name="see-also"></a>Vea también
 
 [Programar con ATL y código en tiempo de ejecución de C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-[Trabajar con configuraciones de proyecto](../../ide/working-with-project-properties.md)<br/>
+[Conjunto de compilador y las propiedades de compilación](../../build/working-with-project-properties.md)<br/>
 [Cuadro de diálogo Administrador de configuración](/visualstudio/ide/understanding-build-configurations)<br/>
 [Compilar y generar en Visual Studio](/visualstudio/ide/compiling-and-building-in-visual-studio)

@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456005"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810515"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>Advertencia del compiladors C4200 a C4399
 
@@ -175,7 +174,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*miembro*': no se puede inicializar el miembro de datos estático mediante una clase derivada|
 |[Advertencia del compilador (nivel 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|argumento de matriz de parámetro se encuentra en la lista de argumentos formal para el delegado '*delegar*'se omite cuando se genera'*función*'|
 |[Advertencia del compilador (nivel 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*operador*': tipo de valor devuelto de los delegados combinados no es 'void'; el valor devuelto es indefinido|
-|[Advertencia del compilador (nivel 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*tipo*': especificador de alineación es menor que la alineación real ('*alineación*') y se omitirá.|
+|[Advertencia del compilador (nivel 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*tipo*': Especificador de alineación es menor que la alineación real ('*alineación*') y se omitirá.|
 |Advertencia del compilador (nivel 2) C4362|'*tipo*': CLR no admite alineaciones mayores de 8 bytes|
 |[Advertencia del compilador (nivel 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|#using para el ensamblado '*ensamblado*'ya aparecía previamente en'*ubicación*' ('*line_number*') sin como\_atributo amigo; como\_friend no aplicar|
 |[Advertencia del compilador (nivel 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*expresión*': conversión de '*type1*'para'*type2*', no coinciden signed/unsigned|
@@ -192,7 +191,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |[Advertencia del compilador (nivel 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|tipos nativos son privados de forma predeterminada; -d1PrivateNativeTypes está en desuso|
 |[Advertencia del compilador (nivel 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|Debe obtener punteros a función para ejecutar a los inicializadores; ModuleHandle:: ResolveMethodHandle|
 |[Advertencia del compilador (nivel 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|Versión '*número_de_versión*' de common language runtime no es compatible con este compilador. Con esta versión puede provocar resultados inesperados|
-|Advertencia del compilador (nivel 1, Error) C4380|'*clase*': un constructor predeterminado no puede estar desusado|
+|Advertencia del compilador (nivel 1, Error) C4380|'*clase*': Un constructor predeterminado no puede estar desusado|
 |[Advertencia del compilador (nivel 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*función1*': no se implementará el método de interfaz mediante el método no público '*función2*'|
 |[Advertencia del compilador (nivel 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|Iniciando '*tipo*': solamente se puede detectar un tipo con el destructor __clrcall o el constructor de copias en/CLR: pure módulo|
 |[Advertencia del compilador (nivel 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*operador_eliminacióndereferencias_instancias*': el significado de desreferenciar un identificador puede cambiar cuando definido por el usuario '*operador_eliminacióndereferencias_instancias*' operador existe; escriba el operador como estático función sea explícito sobre el operando|
