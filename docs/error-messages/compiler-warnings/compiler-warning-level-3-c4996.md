@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472181"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816430"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Del compilador (nivel 3) de la advertencia C4996
 
@@ -45,7 +45,7 @@ Puede desactivar la advertencia globalmente en las compilaciones de línea de co
 
 Para desactivar la advertencia de todo un proyecto en el IDE de Visual Studio:
 
-- Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener información sobre cómo usar el cuadro de diálogo páginas de propiedades, vea [páginas de propiedades](../../ide/property-pages-visual-cpp.md).
+- Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener información sobre cómo usar el cuadro de diálogo páginas de propiedades, vea [páginas de propiedades](../../build/reference/property-pages-visual-cpp.md).
 - Seleccione el **propiedades de configuración**, **C o C++**, **avanzadas** página.
 - Editar el **deshabilitar advertencias específicas** propiedad va a agregar `4996`. Elija **Aceptar** para aplicar los cambios.
 
@@ -53,7 +53,7 @@ También puede usar macros de preprocesador para desactivar determinadas clases 
 
 Para definir una macro de preprocesador en Visual Studio:
 
-- Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener información sobre cómo usar el cuadro de diálogo páginas de propiedades, vea [páginas de propiedades](../../ide/property-pages-visual-cpp.md).
+- Abra el **páginas de propiedades** cuadro de diálogo para el proyecto. Para obtener información sobre cómo usar el cuadro de diálogo páginas de propiedades, vea [páginas de propiedades](../../build/reference/property-pages-visual-cpp.md).
 - Expanda **propiedades de configuración > C/C ++ > preprocesador**.
 - En el **definiciones del preprocesador** propiedad, agregue el nombre de macro. Seleccione **Aceptar** para guardar y, luego, vuelva a generar el proyecto.
 
@@ -81,7 +81,7 @@ Microsoft ha desusado algunas funciones de biblioteca estándar de C++ y CRT y v
 
 Para corregir este problema, se recomienda usar la función o variable *safe_version* en su lugar. Si ha comprobado que no es posible que una sobrescritura de búfer o overread que se produzca en el código y no puede cambiar el código por motivos de portabilidad, puede desactivar la advertencia.
 
-Para desactivar las advertencias sobre desuso para estas funciones de CRT, defina  **\_CRT\_SECURE\_NO\_advertencias**. Para desactivar las advertencias sobre variables globales en desuso, defina  **\_CRT\_SECURE\_NO\_advertencias\_GLOBALS**. Para obtener más información acerca de estas funciones en desuso y variables globales, consulte [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md) y [bibliotecas seguras: biblioteca estándar de C++](../../standard-library/safe-libraries-cpp-standard-library.md).
+Para desactivar las advertencias sobre desuso para estas funciones de CRT, defina  **\_CRT\_SECURE\_NO\_advertencias**. Para desactivar las advertencias sobre variables globales en desuso, defina  **\_CRT\_SECURE\_NO\_advertencias\_GLOBALS**. Para obtener más información acerca de estas funciones en desuso y variables globales, consulte [características de seguridad de CRT](../../c-runtime-library/security-features-in-the-crt.md) y [bibliotecas seguras: Biblioteca estándar de C++](../../standard-library/safe-libraries-cpp-standard-library.md).
 
 ### <a name="unsafe-standard-library-functions"></a>Funciones de biblioteca estándar no seguras
 

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - -w compiler option [C++]
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
-ms.openlocfilehash: 4842e845013bf69a7bc033ba7b6abf5ecc7d5079
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 997a73541ab95a393bda4ebf5412c11f025b03a3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441748"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820694"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/ w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (nivel de advertencia)
 
@@ -98,13 +98,13 @@ En la tabla siguiente se describen las opciones de advertencia y los argumentos 
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|Especifica el nivel de advertencias que se genera el compilador. Los niveles válidos van de 0 a 4:<br />**/ W0** suprime todas las advertencias. Esto es equivalente a **/w**.<br />**/ W1** muestra advertencias de nivel 1 (gravedad). **/ W1** es la configuración predeterminada en el compilador de línea de comandos.<br />**/ W2** muestra el nivel 1 y advertencias de nivel 2 (importantes).<br />**/ W3** muestra el nivel 1, nivel 2 y avisos de nivel 3 (calidad de producción). **/ W3** es la configuración predeterminada en el IDE.<br />**/ W4** muestra de nivel 1, nivel 2 y avisos de nivel 3 y 4 advertencias (informativas) que no están desactivadas de forma predeterminada el nivel todos. Se recomienda que use esta opción para proporcionar advertencias similar a lint. Para un nuevo proyecto, puede ser mejor usar **/W4** en todas las compilaciones; Esto garantizará el menor número de defectos de código difícil de encontrar posibles.|
 |**/Wall**|Muestra todas las advertencias que se muestran por **/W4** y todas las demás advertencias que **/W4** no incluye, por ejemplo, las advertencias que están desactivadas de forma predeterminada. Para obtener más información, consulte [compilador advertencias que está desactivado de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).|
 |**/ Wv**\[**:**_versión_]|Muestra solo advertencias introducidas en la versión del compilador *versión* y versiones anteriores. Puede usar esta opción para suprimir las advertencias nuevas en el código al migrar a una versión más reciente del compilador y para mantener el proceso de compilación existente mientras se corregirlos. El parámetro opcional *versión* adopta la forma *nn*[. *mm*[. *bbbbb*]] donde *nn* es el número de versión principal, *mm* es el número de versión secundaria opcional y *bbbbb* es el número de compilación opcional el compilador. Por ejemplo, usar */Wv:17* para mostrar advertencias introducidas en Visual Studio 2012 (es decir, cualquier versión del compilador que tiene un número de versión principal de 17) o una versión anterior, pero suprimir las advertencias introducidas en Visual Studio 2013 (versión principal 18) y versiones posteriores. De forma predeterminada, **/wv** usa el número de versión del compilador actual y sin advertencias se han suprimido. Para obtener información sobre qué advertencias se han suprimido por versión del compilador, vea [advertencias del compilador por versión del compilador](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md).|
-|**/WX**|Trata todas las advertencias del compilador como errores. Para un nuevo proyecto, puede ser mejor usar **/WX** en todas las compilaciones; resolver todas las advertencias asegura el menor número de defectos de código difícil de encontrar posibles.<br /><br /> El vinculador también tiene un **/WX** opción. Para obtener más información, consulte [/WX (Tratar advertencias del enlazador como errores)](../../build/reference/wx-treat-linker-warnings-as-errors.md).|
-|**/ W1**_nnnn_<br /><br /> **/ W2**_nnnn_<br /><br /> **/ W3**_nnnn_<br /><br /> **/ W4**_nnnn_|Establece el nivel de advertencia para el número de advertencia especificado por _nnnn_. Esto le permite cambiar el comportamiento del compilador para que aparezca esa advertencia cuando se establece un nivel de advertencia específico. Puede usar estas opciones en combinación con otras opciones de advertencia para aplicar los estándares de sus propio código para advertencias en lugar de los valores predeterminados que proporciona Visual Studio.<br /><br /> Por ejemplo, **/w34326** que C4326 se genere como una advertencia de nivel 3 en lugar de nivel 1. Si compila con ambos métodos el **/w34326** opción y la **/W2** opción, no se genera C4326 de advertencia.|
-|**/ wd**_nnnn_|Suprime la advertencia del compilador especificado por _nnnn_.<br /><br /> Por ejemplo, **/wd4326** suprime la advertencia de compilador C4326.|
+|**/WX**|Trata todas las advertencias del compilador como errores. Para un nuevo proyecto, puede ser mejor usar **/WX** en todas las compilaciones; resolver todas las advertencias asegura el menor número de defectos de código difícil de encontrar posibles.<br /><br /> El vinculador también tiene un **/WX** opción. Para obtener más información, consulte [/WX (Tratar advertencias del enlazador como errores)](wx-treat-linker-warnings-as-errors.md).|
+|**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|Establece el nivel de advertencia para el número de advertencia especificado por _nnnn_. Esto le permite cambiar el comportamiento del compilador para que aparezca esa advertencia cuando se establece un nivel de advertencia específico. Puede usar estas opciones en combinación con otras opciones de advertencia para aplicar los estándares de sus propio código para advertencias en lugar de los valores predeterminados que proporciona Visual Studio.<br /><br /> Por ejemplo, **/w34326** que C4326 se genere como una advertencia de nivel 3 en lugar de nivel 1. Si compila con ambos métodos el **/w34326** opción y la **/W2** opción, no se genera C4326 de advertencia.|
+|**/wd**_nnnn_|Suprime la advertencia del compilador especificado por _nnnn_.<br /><br /> Por ejemplo, **/wd4326** suprime la advertencia de compilador C4326.|
 |**/we**_nnnn_|Trata la advertencia del compilador especificado por _nnnn_ como un error.<br /><br /> Por ejemplo, **/we4326** hace que el número de advertencia C4326 se trate como un error por el compilador.|
-|**/ wo**_nnnn_|Informes de la advertencia del compilador que es especificada por _nnnn_ una sola vez.<br /><br /> Por ejemplo, **/wo4326** causas advertencia C4326 se comunique con una sola vez, la primera vez se encuentra el compilador.|
+|**/wo**_nnnn_|Informes de la advertencia del compilador que es especificada por _nnnn_ una sola vez.<br /><br /> Por ejemplo, **/wo4326** causas advertencia C4326 se comunique con una sola vez, la primera vez se encuentra el compilador.|
 
-Si usa cualquiera de las opciones de advertencia cuando se crea un encabezado precompilado utilizando la [/Yc](../../build/reference/yc-create-precompiled-header-file.md) opción, cualquier uso del encabezado precompilado utilizando la [/Yu](../../build/reference/yu-use-precompiled-header-file.md) opción hace que las mismas opciones de advertencia a estar en vigor de nuevo. Puede invalidar las opciones de advertencia establecidas en el encabezado precompilado con otra opción de advertencia en la línea de comandos.
+Si usa cualquiera de las opciones de advertencia cuando se crea un encabezado precompilado utilizando la [/Yc](yc-create-precompiled-header-file.md) opción, cualquier uso del encabezado precompilado utilizando la [/Yu](yu-use-precompiled-header-file.md) opción hace que las mismas opciones de advertencia a estar en vigor de nuevo. Puede invalidar las opciones de advertencia establecidas en el encabezado precompilado con otra opción de advertencia en la línea de comandos.
 
 Puede usar un [advertencia #pragma](../../preprocessor/warning.md) directiva para controlar el nivel de advertencia que es notificado en tiempo de compilación en los archivos de origen específico.
 
@@ -114,7 +114,7 @@ El [documentación sobre errores de compilación](../../error-messages/compiler-
 
 ### <a name="to-set-the-compiler-options-in-the-visual-studio-development-environment"></a>Para establecer las opciones del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Para establecer el **/W0**, **/W1**, **/W2**, **/w3**, **/W4**, **/Wall**m **/Wv**, **/WX** o **/WX-** opciones, seleccionadas el **propiedades de configuración** > **C / C++** > **General** página de propiedades.
 
@@ -140,5 +140,5 @@ El [documentación sobre errores de compilación](../../error-messages/compiler-
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

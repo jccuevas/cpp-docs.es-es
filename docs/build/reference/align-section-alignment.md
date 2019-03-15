@@ -11,22 +11,22 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: b68ec42db9c927fe8f56dad8f5670059359a1843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665795"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809475"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Alineación de sección)
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ ALINEAR**[**:**_número_]
+> **/ALIGN**[**:**_number_]
 
 ### <a name="arguments"></a>Argumentos
 
-*Número*<br/>
+*number*<br/>
 El valor de alineación en bytes.
 
 ## <a name="remarks"></a>Comentarios
@@ -35,13 +35,13 @@ El **/alinear** opción especifica la alineación de cada sección en el espacio
 
 A menos que se está escribiendo una aplicación como un controlador de dispositivo, no es necesario modificar la alineación.
 
-Es posible modificar la alineación de una sección determinada con el parámetro de alineación del [/SECTION](../../build/reference/section-specify-section-attributes.md) opción.
+Es posible modificar la alineación de una sección determinada con el parámetro de alineación del [/SECTION](section-specify-section-attributes.md) opción.
 
 El valor de alineación que especifique no puede ser menor que la alineación de sección mayor.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Elija la **propiedades de configuración** > **vinculador** > **línea de comandos** página de propiedades.
 
@@ -53,5 +53,5 @@ El valor de alineación que especifique no puede ser menor que la alineación de
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

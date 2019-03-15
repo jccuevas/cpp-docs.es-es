@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418820"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818367"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Vincular un ejecutable a un archivo DLL
 
@@ -30,7 +30,7 @@ Un archivo ejecutable puede usar cualquier método de vinculación para vincular
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Determinar el método de vinculación que se debe utilizar
+## <a name="link-an-executable-to-a-dll"></a>Vincular un ejecutable a un archivo DLL
 
 Si se debe utilizar la vinculación implícita o vinculación explícita es una decisión de arquitectura que debe realizar para la aplicación. Existen ventajas y desventajas en cada método.
 
@@ -70,13 +70,13 @@ Hay que tener en cuenta dos posibles peligros en la vinculación explícita:
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Cómo vincular implícitamente a un archivo DLL
+## <a name="link-an-executable-to-a-dll"></a>Vincular un ejecutable a un archivo DLL
 
 Para usar un archivo DLL mediante la vinculación implícita, los ejecutables de cliente deben obtener estos archivos desde el proveedor del archivo DLL:
 
 - Uno o varios archivos de encabezado (.h archivos) que contienen las declaraciones de los datos exportados, funciones o clases de C++ en el archivo DLL. Las clases, funciones y los datos exportados por el archivo DLL deben estar marcados `__declspec(dllimport)` en el archivo de encabezado. Para obtener más información, consulte [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Una biblioteca de importación para vincular en el archivo ejecutable. El vinculador crea la biblioteca de importación cuando se compila el archivo DLL. Para obtener más información, consulte [. Los archivos LIB](../build/reference/dot-lib-files-as-linker-input.md).
+- Una biblioteca de importación para vincular en el archivo ejecutable. El vinculador crea la biblioteca de importación cuando se compila el archivo DLL. Para obtener más información, consulte [. Los archivos LIB](reference/dot-lib-files-as-linker-input.md).
 
 - El archivo DLL real.
 
@@ -139,10 +139,10 @@ A diferencia de en este ejemplo, en la mayoría de los casos debe llamar a `Load
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Trabajar con bibliotecas de importación y archivos de exportación](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Trabajar con bibliotecas de importación y archivos de exportación](reference/working-with-import-libraries-and-export-files.md)
 
 - [Orden de búsqueda de la biblioteca de vínculos dinámicos](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)
+[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
