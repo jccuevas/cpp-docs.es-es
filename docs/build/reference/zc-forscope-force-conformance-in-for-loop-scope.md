@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502029"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810265"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (Forzar ajuste en el ámbito del bucle For)
 
-Se usa para implementar el comportamiento estándar de C++ de los bucles [for](../../cpp/for-statement-cpp.md) con las extensiones de Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Se usa para implementar el comportamiento estándar de C++ de los bucles [for](../../cpp/for-statement-cpp.md) con las extensiones de Microsoft ([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: forScope**[**-**]
+> **/Zc:forScope**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
-El comportamiento estándar consiste en dejar que el inicializador de un bucle **for** salga del ámbito después del bucle **for** . En **/Zc:forScope-** y [/Ze](../../build/reference/za-ze-disable-language-extensions.md), el inicializador del bucle **for** permanece dentro del ámbito hasta que finaliza el ámbito local.
+El comportamiento estándar consiste en dejar que el inicializador de un bucle **for** salga del ámbito después del bucle **for** . En **/Zc:forScope-** y [/Ze](za-ze-disable-language-extensions.md), el inicializador del bucle **for** permanece dentro del ámbito hasta que finaliza el ámbito local.
 
 El **/Zc: forScope** opción está activada de forma predeterminada. **/ Zc: forScope** no se ve afectado cuando el [/ permissive-](permissive-standards-conformance.md) se especifica la opción.
 
@@ -55,13 +55,13 @@ Si usa **/Zc:forScope-**, se generará una advertencia C4288 (desactivada de for
 
 Puede modificar el comportamiento en tiempo de ejecución de **/Zc:forScope** mediante la pragma [conform](../../preprocessor/conform.md) .
 
-Si usa **/Zc:forScope-** en un proyecto con un archivo .pch existente, se genera una advertencia, se ignora **/Zc:forScope-** y la compilación continúa con los archivos .pch existentes. Si desea que genere un nuevo archivo .pch, use [/Yc (crear archivo de encabezado precompilado)](../../build/reference/yc-create-precompiled-header-file.md).
+Si usa **/Zc:forScope-** en un proyecto con un archivo .pch existente, se genera una advertencia, se ignora **/Zc:forScope-** y la compilación continúa con los archivos .pch existentes. Si desea que genere un nuevo archivo .pch, use [/Yc (crear archivo de encabezado precompilado)](yc-create-precompiled-header-file.md).
 
 Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **lenguaje** página de propiedades.
 
@@ -73,5 +73,5 @@ Para obtener más información sobre los problemas de conformidad de Visual C++,
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (Deshabilitar extensiones de lenguaje)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (Ajuste)](zc-conformance.md)<br/>
+[/Za, /Ze (Deshabilitar extensiones de lenguaje)](za-ze-disable-language-extensions.md)<br/>
