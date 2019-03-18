@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: 69e1868990358aeb4d790366b3a0bfa8d8999823
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809735"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Generación de manifiestos en Visual Studio
 
@@ -27,11 +27,8 @@ El sistema de compilación en Visual Studio permite que el manifiesto se incrust
 
 1. Si el manifiesto incrustado en el archivo binario es el mismo que el manifiesto generado por la herramienta manifiesto, la compilación seguirá los pasos de compilación.
 
-El manifiesto está incrustado en el archivo binario final como un recurso de texto y se puede ver abriendo el archivo binario final como un archivo en Visual Studio. Para asegurarse de que el manifiesto señala a las bibliotecas correctas, siga los pasos descritos en [descripción de las dependencias de una aplicación de Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) o siga las sugerencias que se describe en el [desolucióndeproblemas](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sección.
+El manifiesto está incrustado en el archivo binario final como un recurso de texto y se puede ver abriendo el archivo binario final como un archivo en Visual Studio. Para asegurarse de que el manifiesto señala a las bibliotecas correctas, siga los pasos descritos en [descripción de las dependencias de una aplicación de Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) o siga las sugerencias que se describe en el [desolucióndeproblemas](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) sección.
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: Incrustar un manifiesto en una aplicación de C/C++](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)<br/>
-[Acerca de los ensamblados privados](/windows/desktop/SbsCs/about-private-assemblies-)<br/>
-[Herramienta manifiesto](/windows/desktop/SbsCs/mt-exe)<br/>
-[Introducción a la generación de manifiestos para los programas de C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Introducción a la generación de manifiestos para los programas de C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
