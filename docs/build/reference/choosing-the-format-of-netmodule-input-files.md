@@ -2,16 +2,16 @@
 title: Elegir el formato de los archivos de entrada .netmodule
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420055"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807337"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>Elegir el formato de los archivos de entrada .netmodule
 
-Un archivo .obj MSIL (compilado con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md)) también puede usarse como un archivo .netmodule.  los archivos .obj contienen metadatos y símbolos nativos.  archivos .netmodule sólo contienen metadatos.
+Un archivo .obj MSIL (compilado con [/CLR](clr-common-language-runtime-compilation.md)) también puede usarse como un archivo .netmodule.  los archivos .obj contienen metadatos y símbolos nativos.  archivos .netmodule sólo contienen metadatos.
 
 Puede pasar un archivo .obj MSIL a cualquier otro compilador de Visual Studio mediante la opción del compilador/addmodule (pero tenga en cuenta que el archivo .obj pasa a formar parte del ensamblado resultante y se debe enviar con el ensamblado).  Por ejemplo, Visual C# y Visual Basic tienen la opción del compilador/addmodule.
 
@@ -22,11 +22,11 @@ los archivos .obj, junto con sus archivos .h asociados, que se hace referencia a
 
 Otros compiladores de Visual Studio solo pueden consumir tipos administrados desde un módulo.
 
-Use lo siguiente para determinar si necesita usar un archivo .netmodule o un archivo .obj como entrada de módulo para el vinculador de Visual C++:
+Para determinar si necesita usar un archivo .netmodule o un archivo .obj como entrada de módulo al vinculador MSVC, use lo siguiente:
 
 - Si va a compilar con un compilador de Visual Studio distinto de Visual C++, genere un archivo .netmodule y úselo como entrada del vinculador.
 
-- Si usa el compilador de Visual C++ para crear módulos y si los módulos se usará para crear algo distinto de una biblioteca, use los archivos .obj creados por el compilador como entrada de módulo al vinculador; No utilice el archivo .netmodule como entrada.
+- Si usa el compilador de MSVC para crear módulos y si los módulos se usará para crear algo distinto de una biblioteca, use los archivos .obj creados por el compilador como entrada de módulo al vinculador; No utilice el archivo .netmodule como entrada.
 
 - Si los módulos se usará para compilar una biblioteca nativa (no administrado), use archivos .obj como entrada de módulo al vinculador y genere un archivo de biblioteca .lib.
 
@@ -36,4 +36,4 @@ Use lo siguiente para determinar si necesita usar un archivo .netmodule o un arc
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos .netmodule como entrada del vinculador](../../build/reference/netmodule-files-as-linker-input.md)
+[Archivos .netmodule como entrada del vinculador](netmodule-files-as-linker-input.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424618"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815897"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (Comprobaciones de errores en tiempo de ejecución)
 
@@ -75,7 +75,7 @@ Permite comprobaciones marco de pila error de tiempo de ejecución, como sigue:
 
 - Inicialización de variables locales en un valor distinto de cero. Esto ayuda a identificar los errores que no aparecen cuando se ejecuta en modo de depuración. Hay una mayor probabilidad de que las variables de pila será cero en una compilación de depuración en comparación con una versión de lanzamiento debido a optimizaciones del compilador de las variables de pila en una versión de lanzamiento. Una vez que un programa ha utilizado un área de la pila, nunca se restablece en 0 por el compilador. Por lo tanto, las variables de pila posteriores sin inicializar que usen la misma área de pila pueden devolver valores restantes del uso anterior de esta memoria de pila.
 
-- Detección de saturaciones y agotamientos de variables locales como matrices. **/ RTC** `s` no detectará las saturaciones al obtener acceso a memoria que resulta de relleno del compilador dentro de una estructura. Relleno podría producir mediante [alinear](../../cpp/align-cpp.md), [/Zp (alineación de miembros de Struct)](../../build/reference/zp-struct-member-alignment.md), o [pack](../../preprocessor/pack.md), o si se ordenan los elementos de estructura de tal forma que requieren el compilador agregar relleno.
+- Detección de saturaciones y agotamientos de variables locales como matrices. **/ RTC** `s` no detectará las saturaciones al obtener acceso a memoria que resulta de relleno del compilador dentro de una estructura. Relleno podría producir mediante [alinear](../../cpp/align-cpp.md), [/Zp (alineación de miembros de Struct)](zp-struct-member-alignment.md), o [pack](../../preprocessor/pack.md), o si se ordenan los elementos de estructura de tal forma que requieren el compilador agregar relleno.
 
 - Comprobación del puntero de pila, que detecta los daños del puntero de pila. Puntero de pila está dañada puede deberse a una incoherencia de convención de llamada. Por ejemplo, mediante un puntero a función, llamar a una función en un archivo DLL que se exporta como [__stdcall](../../cpp/stdcall.md) pero se declara el puntero a la función como [__cdecl](../../cpp/cdecl.md).
 
@@ -95,17 +95,17 @@ Si una variable se ha inicializado, no se notificarán en tiempo de ejecución *
 
 ## <a name="remarks"></a>Comentarios
 
-Comprobaciones de errores en tiempo de ejecución son una manera de encontrar problemas en su código en ejecución. Para obtener más información, vea [Cómo: Utilizar comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Comprobaciones de errores en tiempo de ejecución son una manera de encontrar problemas en su código en ejecución. Para obtener más información, vea [Cómo: Uso de comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 Si compila el programa en la línea de comandos mediante cualquiera de los **/RTC** opciones del compilador, cualquier directiva pragma [optimizar](../../preprocessor/optimize.md) instrucciones que aparecen en el código en modo silencioso se producirá un error. Esto es porque las comprobaciones de errores en tiempo de ejecución no son válidas en una compilación de versión (optimizado).
 
-Debe usar **/RTC** para las compilaciones de desarrollo; **/RTC** no debe usarse para una compilación comercial. **/ RTC** no se puede usar con las optimizaciones del compilador ([opciones /O (optimizar código)](../../build/reference/o-options-optimize-code.md)). Crea una imagen de programa con **/RTC** será un poco más grande y ligeramente más lenta que una imagen creada con **/Od** (hasta 5 por ciento más lento que una **/Od** compilar).
+Debe usar **/RTC** para las compilaciones de desarrollo; **/RTC** no debe usarse para una compilación comercial. **/ RTC** no se puede usar con las optimizaciones del compilador ([opciones /O (optimizar código)](o-options-optimize-code.md)). Crea una imagen de programa con **/RTC** será un poco más grande y ligeramente más lenta que una imagen creada con **/Od** (hasta 5 por ciento más lento que una **/Od** compilar).
 
-Cuando usas cualquiera, se definirá la directiva de preprocesador __MSVC_RUNTIME_CHECKS **/RTC** opción o [/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md).
+Cuando usas cualquiera, se definirá la directiva de preprocesador __MSVC_RUNTIME_CHECKS **/RTC** opción o [/GZ](gz-enable-stack-frame-run-time-error-checking.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en la carpeta **C/C++** .
 
@@ -119,6 +119,6 @@ Cuando usas cualquiera, se definirá la directiva de preprocesador __MSVC_RUNTIM
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Cómo: Uso de comprobaciones nativas en tiempo de ejecución](/visualstudio/debugger/how-to-use-native-run-time-checks)

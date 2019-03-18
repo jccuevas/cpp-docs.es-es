@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417156"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806784"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Establecer el atributo de subproceso de CLR)
 
@@ -41,7 +41,7 @@ Establecer el atributo thread solo es válido cuando se genera un .exe, ya que a
 
 Si usa el punto de entrada predeterminado (main o wmain, por ejemplo) Especifique el modelo de subprocesos mediante/CLRTHREADATTRIBUTE o colocando el atributo de subprocesamiento (STAThreadAttribute o MTAThreadAttribute) en la función de entrada predeterminada.
 
-Si usa un punto de entrada no predeterminado, especifique el modelo de subprocesos mediante/CLRTHREADATTRIBUTE o colocando el subprocesamiento atributo en la función de entrada no predeterminada y, a continuación, especifique el punto de entrada no predeterminada con [/Entry](../../build/reference/entry-entry-point-symbol.md) .
+Si usa un punto de entrada no predeterminado, especifique el modelo de subprocesos mediante/CLRTHREADATTRIBUTE o colocando el subprocesamiento atributo en la función de entrada no predeterminada y, a continuación, especifique el punto de entrada no predeterminada con [/Entry](entry-entry-point-symbol.md) .
 
 Si el modelo de subprocesos especificado en el código fuente no está de acuerdo con el modelo de subprocesos especificado con/CLRTHREADATTRIBUTE, el vinculador omitirá/CLRTHREADATTRIBUTE y aplicar el modelo de subprocesos especificado en el código fuente.
 
@@ -49,7 +49,7 @@ Será necesario que utilice el subprocesamiento único, por ejemplo, si su progr
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -65,5 +65,5 @@ Será necesario que utilice el subprocesamiento único, por ejemplo, si su progr
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

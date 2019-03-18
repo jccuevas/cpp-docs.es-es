@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OUT dumpbin option
 - -OUT dumpbin option
 ms.assetid: 984f9ab6-685f-480b-a515-69abe9d83a65
-ms.openlocfilehash: f86b33b9671899ef5981bd81381a853719013604
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7f102a6bd43424f3d0e0f607bc9038d9ab351768
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425255"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819251"
 ---
 # <a name="out-dumpbin"></a>/OUT (DUMPBIN)
 
@@ -25,8 +25,8 @@ ms.locfileid: "57425255"
 
 Esta opción especifica un *filename* para la salida. De forma predeterminada, DUMPBIN muestra la información en la salida estándar.
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

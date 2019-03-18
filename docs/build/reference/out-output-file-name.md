@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: 395a2475ec572476f80b17cc5ffab7c2724e6b02
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418053"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812426"
 ---
 # <a name="out-output-file-name"></a>/OUT (Nombre del archivo de resultados)
 
@@ -35,11 +35,11 @@ La opción /OUT invalida el nombre predeterminado y la ubicación del programa q
 
 De forma predeterminada, el vinculador constituye el nombre de archivo con el nombre base del primer archivo .obj especificado y la extensión correspondiente (.exe o .dll).
 
-Esta opción, el nombre de la base predeterminada para una biblioteca .mapfile o importación. Para obtener más información, consulte [generar archivo de asignaciones](../../build/reference/map-generate-mapfile.md) (/Map) y [/IMPLIB](../../build/reference/implib-name-import-library.md).
+Esta opción, el nombre de la base predeterminada para una biblioteca .mapfile o importación. Para obtener más información, consulte [generar archivo de asignaciones](map-generate-mapfile.md) (/Map) y [/IMPLIB](implib-name-import-library.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Haga clic en el **vinculador** carpeta.
 
@@ -53,5 +53,5 @@ Esta opción, el nombre de la base predeterminada para una biblioteca .mapfile o
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

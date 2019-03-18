@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: ae4c6a9f6c41d94aa1e36ba4a79226b49df08b49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628012"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822202"
 ---
 # <a name="fatal-error-c1083"></a>Error irrecuperable C1083
 
@@ -71,11 +71,11 @@ Incluso cuando los archivos de encabezado se enumeran en **el Explorador de solu
 
 Para corregir este problema, corrija la ruta que el compilador utiliza para buscar el archivo incluido o importado. Un nuevo valor predeterminado de usos de proyecto incluyen rutas de búsqueda. Es posible que deba modificar la ruta de búsqueda para agregar un directorio para el proyecto. Si está compilando en la línea de comandos, agregue la ruta de acceso a la **INCLUDE** variable de entorno o el **/I** opción del compilador para especificar la ruta de acceso al archivo.
 
-Para establecer la ruta de acceso del directorio de inclusión en Visual Studio, abra el proyecto **páginas de propiedades** cuadro de diálogo. Seleccione **directorios de VC ++** en **propiedades de configuración** en el panel izquierdo y, a continuación, edite el **directorios de inclusión** propiedad. Para obtener más información acerca de los directorios por usuario y por proyecto búsquedas del compilador en Visual Studio, consulte [VC ++ Directories Property Page](../../ide/vcpp-directories-property-page.md). Para obtener más información sobre la **/I** opción del compilador, vea [/I (directorios de inclusión adicionales)](../../build/reference/i-additional-include-directories.md).
+Para establecer la ruta de acceso del directorio de inclusión en Visual Studio, abra el proyecto **páginas de propiedades** cuadro de diálogo. Seleccione **directorios de VC ++** en **propiedades de configuración** en el panel izquierdo y, a continuación, edite el **directorios de inclusión** propiedad. Para obtener más información acerca de los directorios por usuario y por proyecto búsquedas del compilador en Visual Studio, consulte [VC ++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md). Para obtener más información sobre la **/I** opción del compilador, vea [/I (directorios de inclusión adicionales)](../../build/reference/i-additional-include-directories.md).
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>No se establece la inclusión de línea de comandos o el entorno de LIB
 
-Cuando el compilador se invoca en la línea de comandos, suelen usarse las variables de entorno para especificar rutas de búsqueda. Si la ruta de acceso de búsqueda descrito por el **INCLUDE** o **LIB** variable de entorno no está configurada correctamente, se puede generar un error C1083. Se recomienda encarecidamente usar un acceso directo del símbolo para desarrolladores para establecer el entorno básico de la línea de comandos compila. Para obtener más información, consulte [de compilación de C o C++ en la línea de comandos](../../build/building-on-the-command-line.md). Para obtener más información sobre cómo usar variables de entorno, consulte [Cómo: utilizar Variables de entorno en una compilación](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
+Cuando el compilador se invoca en la línea de comandos, suelen usarse las variables de entorno para especificar rutas de búsqueda. Si la ruta de acceso de búsqueda descrito por el **INCLUDE** o **LIB** variable de entorno no está configurada correctamente, se puede generar un error C1083. Se recomienda encarecidamente usar un acceso directo del símbolo para desarrolladores para establecer el entorno básico de la línea de comandos compila. Para obtener más información, consulte [de compilación de C o C++ en la línea de comandos](../../build/building-on-the-command-line.md). Para obtener más información sobre cómo usar variables de entorno, vea [Cómo: Usar Variables de entorno en una compilación](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build).
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>El archivo esté bloqueado o en uso
 
@@ -87,7 +87,7 @@ Un error C1083 también puede indicar que la versión incorrecta de un archivo e
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>Los encabezados precompilados aún no se precompilan
 
-Cuando se configura un proyecto para usar encabezados precompilados, los archivos pertinentes .pch se tienen que crear para que los archivos que utilizan el contenido del encabezado puedan compilarse. Por ejemplo, el archivo de stdafx.cpp se crea automáticamente en el directorio del proyecto para los proyectos nuevos. Se compila primero el archivo para crear archivos de encabezado precompilados. En el diseño del proceso de compilación normal, esto se hace automáticamente. Para obtener más información, consulte [crear archivos de encabezado precompilado](../../build/reference/creating-precompiled-header-files.md).
+Cuando se configura un proyecto para usar encabezados precompilados, los archivos pertinentes .pch se tienen que crear para que los archivos que utilizan el contenido del encabezado puedan compilarse. Por ejemplo, el archivo de stdafx.cpp se crea automáticamente en el directorio del proyecto para los proyectos nuevos. Se compila primero el archivo para crear archivos de encabezado precompilados. En el diseño del proceso de compilación normal, esto se hace automáticamente. Para obtener más información, consulte [crear archivos de encabezado precompilado](../../build/creating-precompiled-header-files.md).
 
 ## <a name="additional-causes"></a>Otras causas
 
@@ -116,7 +116,7 @@ El ejemplo siguiente genera un error C1083 cuando el archivo de encabezado `"tes
 #include "stdio.h"  // OK
 ```
 
-Para obtener información sobre cómo compilar proyectos de C o C++ en el IDE o en la línea de comandos e información acerca de cómo establecer variables de entorno, consulte [compilar programas de C o C++](../../build/building-c-cpp-programs.md).
+Para obtener información sobre cómo compilar proyectos de C o C++ en el IDE o en la línea de comandos e información sobre cómo establecer variables de entorno, consulte [proyectos y los sistemas de compilación](../../build/projects-and-build-systems-cpp.md).
 
 ## <a name="see-also"></a>Vea también
 

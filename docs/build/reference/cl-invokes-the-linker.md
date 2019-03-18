@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412736"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821494"
 ---
 # <a name="cl-invokes-the-linker"></a>CL invoca el vinculador
 
@@ -28,7 +28,7 @@ CL invoca automáticamente el vinculador después de compilar, a menos que se ut
 |/Zg|Generar prototipos de función|
 |/Zs|Comprobar la sintaxis|
 
-Para obtener más información acerca de la vinculación, vea [opciones del vinculador](../../build/reference/linker-options.md).
+Para obtener más información acerca de la vinculación, vea [las opciones del vinculador MSVC](linker-options.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -46,7 +46,7 @@ Para generar este programa, compile con la siguiente línea de comandos:
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-En primer lugar, CL compila los archivos de código fuente de C y crea los archivos objeto MAIN.obj, MOD1.obj y MOD2.obj. El compilador coloca el nombre de la biblioteca estándar en cada archivo obj. Para obtener más información, consulte [utilizar la biblioteca en tiempo de ejecución](../../build/reference/md-mt-ld-use-run-time-library.md).
+En primer lugar, CL compila los archivos de código fuente de C y crea los archivos objeto MAIN.obj, MOD1.obj y MOD2.obj. El compilador coloca el nombre de la biblioteca estándar en cada archivo obj. Para obtener más información, consulte [utilizar la biblioteca en tiempo de ejecución](md-mt-ld-use-run-time-library.md).
 
 CL pasa los nombres de los archivos .obj, junto con el nombre de MYGRAPH.lib al vinculador. El vinculador resuelve las referencias externas como sigue:
 
@@ -58,5 +58,5 @@ CL pasa los nombres de los archivos .obj, junto con el nombre de MYGRAPH.lib al 
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Establecer las opciones del compilador](compiler-command-line-syntax.md)

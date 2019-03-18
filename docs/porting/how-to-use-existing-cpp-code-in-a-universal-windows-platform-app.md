@@ -1,15 +1,15 @@
 ---
-title: 'Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows'
+title: Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
 ms.date: 08/21/2018
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528718"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745514"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Procedimiento Usar código C++ existente en una aplicación de la Plataforma universal de Windows
 
 Quizás la forma más sencilla de conseguir que un programa de escritorio se ejecute en el entorno de UWP es usar las tecnologías de Puente de dispositivo de escritorio. Entre estas se incluye Desktop App Converter, que empaquetará la aplicación existente como una aplicación para UWP sin necesidad de realizar cambios en el código. Para obtener más información, vea [Puente de dispositivo de escritorio](/windows/uwp/porting/desktop-to-uwp-root).
 
@@ -153,7 +153,7 @@ El siguiente procedimiento se aplica en el caso de que tenga una DLL nativa que 
 
 5. Asegúrese de que el nombre de archivo del encabezado precompilado es correcto. En la sección **Encabezados precompilados**, cambie **Archivo de encabezado precompilado** de pch.h a stdafx.h. Si no lo hace, verá el siguiente error.
 
-   > error C2857: No se encontró la instrucción '#include' especificada con la opción de la línea de comandos /Ycpch.h en el archivo de código fuente
+   > Error C2857: no se encontró la instrucción '#include' especificada con la opción de línea de comandos /Ycpch.h en el archivo de origen
 
    El problema es que los proyectos de Windows universales utilizan una nomenclatura diferente para el archivo de encabezado precompilado.
 

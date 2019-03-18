@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621473"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813375"
 ---
 # <a name="errlook-reference"></a>Referencia de ERRLOOK
 
@@ -20,19 +20,19 @@ Las teclas aceleradoras para copiar (CTRL+C), Cortar (CTRL+X) y pegar (CTRL+V) f
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Valor (Control de edición)](../../build/reference/value-edit-control.md)<br/>
+[Valor (Control de edición)](value-edit-control.md)<br/>
 Describe el control de edición Valor de ERRLOOK.
 
-[Mensaje de error (Control de edición)](../../build/reference/error-message-edit-control.md)<br/>
+[Mensaje de error (Control de edición)](error-message-edit-control.md)<br/>
 Describe el control de edición Mensaje de error de ERRLOOK.
 
-[Módulos (Botón)](../../build/reference/modules-button.md)<br/>
+[Módulos (Botón)](modules-button.md)<br/>
 Describe el botón Módulos de ERRLOOK.
 
-[Buscar (Botón)](../../build/reference/look-up-button.md)<br/>
+[Buscar (Botón)](look-up-button.md)<br/>
 Describe el botón Buscar de ERRLOOK.
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Herramientas de compilación de C/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Herramientas de generación MSVC adicionales](c-cpp-build-tools.md)<br/>
 Proporciona vínculos a temas que explican las herramientas de compilación de C/C++ que se suministran con Visual C++.

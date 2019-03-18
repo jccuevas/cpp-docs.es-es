@@ -1,18 +1,18 @@
 ---
-title: 'Cómo: Definir y utilizar clases y structs (C++/CLI)'
+title: Filtrar Definir y utilizar clases y Structs (C++ / c++ / CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436171"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751835"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Cómo: Definir y utilizar clases y structs (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Filtrar Definir y utilizar clases y Structs (C++ / c++ / CLI)
 
 Este artículo muestra cómo definir y utilizar tipos de referencia definidos por el usuario y tipos de valor C++ / c++ / CLI.
 
@@ -455,7 +455,7 @@ El compilador no puede alinear una llamada a un constructor si la clase tiene un
 
 Defina un constructor estático como función miembro privada, porque está diseñado para que solo lo llame CLR.
 
-Para obtener más información sobre los constructores estáticos, vea [Cómo: definir un Constructor estático de interfaz (C++ / c++ / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Para obtener más información sobre los constructores estáticos, vea [Cómo: Definir un Constructor estático de interfaz (C++ / c++ / CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr
@@ -832,7 +832,8 @@ Si el tipo tiene un destructor, el compilador genera un método `Dispose` que im
 
 Si el tipo tiene un finalizador, el compilador genera un método `Finalize(void)` que invalida <xref:System.Object.Finalize%2A>.
 
-Si un tipo tiene un finalizador o un destructor, el compilador genera un método `Dispose(bool)`, según el patrón de diseño. (Para obtener información, consulte [patrón Dispose](/dotnet/standard/design-guidelines/dispose-pattern)). `Dispose(bool)` no se puede crear o llamar explícitamente en Visual C++.
+Si un tipo tiene un finalizador o un destructor, el compilador genera un método `Dispose(bool)`, según el patrón de diseño. (Para obtener información, consulte [patrón Dispose](/dotnet/standard/design-guidelines/dispose-pattern)). 
+  `Dispose(bool)` no se puede crear o llamar explícitamente en Visual C++.
 
 Si un tipo tiene una clase base que se ajusta al patrón de diseño, se llama a los destructores de todas las clases base cuando se llama al destructor de la clase derivada. (Si el tipo está escrito en Visual C++, el compilador garantiza que los tipos implementen este patrón). Es decir, el destructor de una clase de referencia se encadena a sus bases y miembros tal como especifica el estándar C++: primero se ejecuta el destructor de la clase, después los destructores para sus miembros en el orden inverso al que se construyeron y, finalmente, los destructores para las clases base en el orden inverso al que se construyeron.
 

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421446"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816326"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (Formato de la información de depuración)
 
@@ -50,15 +50,15 @@ De forma predeterminada, si no se especifica ninguna opción de formato de infor
 
 El **/Z7** opción genera archivos de objeto que también contienen información de depuración simbólica completa para su uso con el depurador. Estos archivos de objeto y el ejecutable generado pueden ser considerablemente mayores que los archivos que no tienen ninguna información de depuración. La información de depuración simbólica incluye los nombres y los tipos de las variables, así como las funciones y los números de línea. No se genera ningún archivo PDB.
 
-Para los distribuidores de versiones de depuración de bibliotecas de terceros, hay una ventaja de no tener un archivo PDB. Sin embargo, los archivos de objeto para los encabezados precompilados son necesarios durante la fase de vinculación de la biblioteca y para la depuración. Si no hay tipo sólo información (y ningún código) en el archivo de objeto .pch, también debe usar el [/Yl (Insertar referencia PCH para biblioteca de depuración)](../../build/reference/yl-inject-pch-reference-for-debug-library.md) opción, que está habilitada de forma predeterminada, cuando compile la biblioteca.
+Para los distribuidores de versiones de depuración de bibliotecas de terceros, hay una ventaja de no tener un archivo PDB. Sin embargo, los archivos de objeto para los encabezados precompilados son necesarios durante la fase de vinculación de la biblioteca y para la depuración. Si no hay tipo sólo información (y ningún código) en el archivo de objeto .pch, también debe usar el [/Yl (Insertar referencia PCH para biblioteca de depuración)](yl-inject-pch-reference-for-debug-library.md) opción, que está habilitada de forma predeterminada, cuando compile la biblioteca.
 
-El [/Gm (habilitar recompilación mínima)](../../build/reference/gm-enable-minimal-rebuild.md) opción no está disponible cuando **/Z7** se especifica.
+El [/Gm (habilitar recompilación mínima)](gm-enable-minimal-rebuild.md) opción no está disponible cuando **/Z7** se especifica.
 
 ### <a name="zi"></a>/ZI
 
 El **/Zi** opción genera un archivo PDB independiente que contiene todas la depuración información simbólica para su uso con el depurador. La información de depuración no está incluida en los archivos objeto o ejecutable, lo que hace que sean mucho más pequeño.
 
-El uso de **/Zi** no afecta a las optimizaciones. Sin embargo, **/Zi** implica **/debug**; vea [/DEBUG (Generate Debug Info)](../../build/reference/debug-generate-debug-info.md) para obtener más información.
+El uso de **/Zi** no afecta a las optimizaciones. Sin embargo, **/Zi** implica **/debug**; vea [/DEBUG (Generate Debug Info)](debug-generate-debug-info.md) para obtener más información.
 
 Al especificar ambos **/Zi** y **/CLR**, el <xref:System.Diagnostics.DebuggableAttribute> atributo no se coloca en los metadatos del ensamblado. Si lo desea, debe especificarlo en el código fuente. Este atributo puede afectar al rendimiento de la aplicación en tiempo de ejecución. Para obtener más información acerca de cómo los **atributo Debuggable** atributo afecta al rendimiento y cómo puede modificar el impacto de rendimiento, vea [facilitar una imagen de depuración](/dotnet/framework/debug-trace-profile/making-an-image-easier-to-debug).
 
@@ -70,16 +70,16 @@ Si crea una biblioteca de objetos que se compilaron mediante **/Zi**, el archivo
 
 El **/Zi** es similar a la opción **/Zi**, pero produce un archivo PDB en un formato que admita la [editar y continuar](/visualstudio/debugger/edit-and-continue-visual-cpp) característica. Para utilizar editar y continuar las características de depuración, debe usar esta opción. La característica Editar y continuar es útil para la productividad del desarrollador, pero puede causar problemas de conformidad del compilador, el rendimiento y tamaño de código. Dado que la mayoría de las optimizaciones son incompatibles con Editar y continuar, el uso **/Zi** deshabilita cualquier `#pragma optimize` instrucciones en el código. El **/Zi** opción también es compatible con el uso de la [ &#95; &#95;línea&#95; &#95; la macro predefinida](../../preprocessor/predefined-macros.md); código compilado con **/Zi** no se puede usar **&#95; &#95;Línea&#95; &#95;** como un argumento de plantilla sin tipo, aunque **&#95; &#95;línea&#95; &#95;** se pueden usar en las expansiones de macro.
 
-El **/Zi** opción obliga a ambos el [/Gy (habilitar vinculación en el nivel de función)](../../build/reference/gy-enable-function-level-linking.md) y [/FC (completa ruta de acceso del archivo de código fuente en diagnósticos)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) opciones que se utilizarán en la compilación.
+El **/Zi** opción obliga a ambos el [/Gy (habilitar vinculación en el nivel de función)](gy-enable-function-level-linking.md) y [/FC (completa ruta de acceso del archivo de código fuente en diagnósticos)](fc-full-path-of-source-code-file-in-diagnostics.md) opciones que se utilizarán en la compilación.
 
-**/ Zi** no es compatible con [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md).
+**/ Zi** no es compatible con [/CLR (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 > El **/Zi** opción sólo está disponible en los compiladores con destino procesadores x86 y x64; esta opción del compilador no está disponible en los compiladores con destino procesadores ARM.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Abra el **propiedades de configuración** > **C o C++** > **General** página de propiedades.
 
@@ -91,5 +91,6 @@ El **/Zi** opción obliga a ambos el [/Gy (habilitar vinculación en el nivel de
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+

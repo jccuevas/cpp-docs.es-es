@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663169"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740706"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Ejemplo de un administrador de cadenas personalizado
 
@@ -17,11 +17,11 @@ La biblioteca ATL implementa un ejemplo de un administrador de cadenas personali
 
 El constructor de `CFixedStringMgr` toma tres parámetros:
 
-- *pData:* un puntero a la fijo `CStringData` estructura que se usará.
+- *pData:* Un puntero a la fijo `CStringData` estructura que se usará.
 
-- *nChars:* el número máximo de caracteres del `CStringData` puede contener la estructura.
+- *nChars:* El número máximo de caracteres del `CStringData` puede contener la estructura.
 
-- *pMgr:* un puntero a la `IAtlStringMgr` interfaz de un "Administrador de la cadena de copia de seguridad".
+- *pMgr:* Un puntero a la `IAtlStringMgr` interfaz de un "Administrador de la cadena de copia de seguridad".
 
 El constructor almacena los valores de *pData* y *pMgr* en sus respectivas variables miembro (`m_pData` y `m_pMgr`). A continuación, Establece la longitud del búfer en cero, la longitud disponible igual al tamaño máximo del búfer fijo y el recuento de referencias en -1. El valor de recuento de referencia indica el búfer está bloqueado y usar esta instancia de `CFixedStringMgr` como administrador de cadenas.
 
@@ -64,4 +64,3 @@ Cada vez que el búfer fijo no está en uso, `CFixedStringMgr` garantiza que se 
 ## <a name="see-also"></a>Vea también
 
 [Administración de memoria con CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

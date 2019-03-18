@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Implementar el programa (C++)'
+title: 'Tutorial: Implementación del programa (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: c202d4eae5e9115f847caefce18a8974a4388a04
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657518"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740452"
 ---
-# <a name="walkthrough-deploying-your-program-c"></a>Tutorial: Implementar el programa (C++)
+# <a name="walkthrough-deploying-your-program-c"></a>Tutorial: Implementación del programa (C++)
 
 Ahora que ha creado la aplicación completando los tutoriales relacionados anteriores, que se enumeran en [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), el último paso consiste en crear un instalador para que otros usuarios puedan instalar el programa en sus equipos. Para el instalador, agregue un nuevo proyecto a la solución existente. El resultado de este nuevo proyecto es un archivo setup.exe que instalará la aplicación en otro equipo.
 

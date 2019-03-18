@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 03bbe3d9da0530d4fe3c540d46d1a597fbe9dd2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549310"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822566"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (Deducir tipo de variable)
 
@@ -22,7 +22,7 @@ El **/Zc: auto [-]** opción del compilador indica al compilador cómo usar el [
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ Zc: Auto**[**-**]
+> **/Zc:auto**[**-**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -32,7 +32,7 @@ El compilador emite un mensaje de diagnóstico adecuado si el uso de la `auto` a
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para establecer esta opción del compilador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
@@ -40,5 +40,5 @@ El compilador emite un mensaje de diagnóstico adecuado si el uso de la `auto` a
 
 ## <a name="see-also"></a>Vea también
 
-[/Zc (Ajuste)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (Ajuste)](zc-conformance.md)<br/>
 [Auto (palabra clave)](../../cpp/auto-keyword.md)

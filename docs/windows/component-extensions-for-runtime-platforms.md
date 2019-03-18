@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 3b29b2e8b00aa436d1687cdbbd5f299f4787c71b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9586244c9e2293ba6b484efb158fc3a2529c0ea
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432369"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814493"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensiones de componentes de .NET y UWP
 
@@ -49,7 +49,7 @@ En la tabla siguiente se enumeran las palabras clave en la extensión del lengua
 
 ## <a name="override-specifiers"></a>Especificadores de invalidación
 
-Puede usar las palabras clave siguientes para calificar el comportamiento de invalidación de la derivación. Aunque el **nuevo** palabra clave no es una extensión de C++, se muestra aquí porque se puede utilizar en un contexto adicional. Algunos especificadores también son válidos para la programación nativa. Para obtener más información, consulte [Cómo: declarar especificadores de reemplazo en compilaciones nativas (C++ / c++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Puede usar las palabras clave siguientes para calificar el comportamiento de invalidación de la derivación. Aunque el **nuevo** palabra clave no es una extensión de C++, se muestra aquí porque se puede utilizar en un contexto adicional. Algunos especificadores también son válidos para la programación nativa. Para obtener más información, vea [Cómo: Declarar especificadores de invalidación en compilaciones nativas (C++ / c++ / CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 |Palabra clave|Contextual|Propósito|Referencia|
 |-------------|-----------------------|-------------|---------------|
@@ -64,7 +64,7 @@ Las palabras clave siguientes se han agregado para admitir tipos genéricos. Par
 
 |Palabra clave|Contextual|Propósito|
 |-------------|-----------------------|-------------|
-|**Genérico**|No|Declara un tipo genérico.|
+|**generic**|No|Declara un tipo genérico.|
 |**where**|Sí|Especifica las restricciones que se aplican a un parámetro de tipo genérico.|
 
 ## <a name="miscellaneous-keywords"></a>Palabras clave varias
@@ -128,7 +128,7 @@ En esta sección se muestran construcciones de programación adicionales y temas
 |[Reenvío de tipos (C++/CLI)](../windows/type-forwarding-cpp-cli.md)|Habilita el movimiento de un tipo en un ensamblado de envío a otro ensamblado de modo que no es necesario volver a compilar el código de cliente.|
 |[Atributos definidos por el usuario](../windows/user-defined-attributes-cpp-component-extensions.md)|Muestra atributos definidos por el usuario.|
 |[#using (directiva)](../preprocessor/hash-using-directive-cpp.md)|Importa ensamblados externos.|
-|[Documentación de XML](../ide/xml-documentation-visual-cpp.md)|Explica la documentación de código basado en XML mediante el uso de [/doc (procesar comentarios de documentación) (C/C ++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
+|[Documentación de XML](../build/reference/xml-documentation-visual-cpp.md)|Explica la documentación de código basado en XML mediante el uso de [/doc (procesar comentarios de documentación) (C/C ++)](../build/reference/doc-process-documentation-comments-c-cpp.md)|
 
 ## <a name="see-also"></a>Vea también
 

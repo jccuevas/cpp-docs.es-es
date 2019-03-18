@@ -2,16 +2,16 @@
 title: Configuración de programas para Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582747"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814298"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Configuración de programas para Windows XP
 
-Dado que Visual Studio admite varios conjuntos de herramientas de plataforma, puede dirigirse a los sistemas operativos y las bibliotecas en tiempo de ejecución que no son compatibles con el conjunto de herramientas predeterminada. Por ejemplo, al cambiar el conjunto de herramientas de plataforma, puede usar C ++ 11, C ++ 14 y mejoras del lenguaje C ++ 17 admitidas por el compilador de Visual C++ en Visual Studio para crear aplicaciones que tienen como destino Windows XP y Windows Server 2003. Puede también usar conjuntos de herramientas de plataforma anteriores para mantener la compatibilidad binaria de código heredado y seguir aprovechando las características más recientes del IDE de Visual Studio.
+Dado que Visual Studio admite varios conjuntos de herramientas de plataforma, puede dirigirse a los sistemas operativos y las bibliotecas en tiempo de ejecución que no son compatibles con el conjunto de herramientas predeterminada. Por ejemplo, al cambiar el conjunto de herramientas de plataforma, puede usar C ++ 11, C ++ 14 y mejoras del lenguaje C ++ 17 admitidas por el compilador MSVC en Visual Studio para crear aplicaciones que tienen como destino Windows XP y Windows Server 2003. Puede también usar conjuntos de herramientas de plataforma anteriores para mantener la compatibilidad binaria de código heredado y seguir aprovechando las características más recientes del IDE de Visual Studio.
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Instalar el conjunto de herramientas de la plataforma Windows XP
 

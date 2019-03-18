@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 685d98d166a94f2c17feae7bfafbd64b77786e8d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418781"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807824"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Crear el manifiesto del ensamblado simultáneo)
 
@@ -29,7 +29,7 @@ El valor predeterminado es /MANIFEST.
 
 La opción /MANIFEST:EMBED especifica que el vinculador debe incrustar el archivo de manifiesto en la imagen como recurso de tipo RT_MANIFEST. El parámetro `ID` opcional es el id. de recurso que se utilizará para el manifiesto. Utilice un valor de 1 para un archivo ejecutable. Utilice un valor de 2 en un archivo DLL para habilitarlo si desea especificar dependencias privadas. Si no se especifica el parámetro `ID`, el valor predeterminado es 2 si se establece la opción /DLL; de lo contrario, el valor predeterminado es 1.
 
-A partir de Visual Studio 2008, los archivos de manifiesto para archivos ejecutables contienen una sección que especifica la información de Control de cuentas de usuario (UAC). Si especifica /MANIFEST pero especifica ninguno [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) ni [/DLL](../../build/reference/dll-build-a-dll.md), un fragmento del UAC predeterminado que tiene la configuración de nivel de UAC *asInvoker* se inserta en el manifiesto. Para obtener más información acerca de los niveles UAC, consulte [/MANIFESTUAC (insertar información de UAC en el manifiesto)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).
+A partir de Visual Studio 2008, los archivos de manifiesto para archivos ejecutables contienen una sección que especifica la información de Control de cuentas de usuario (UAC). Si especifica /MANIFEST pero especifica ninguno [/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md) ni [/DLL](dll-build-a-dll.md), un fragmento del UAC predeterminado que tiene la configuración de nivel de UAC *asInvoker* se inserta en el manifiesto. Para obtener más información acerca de los niveles UAC, consulte [/MANIFESTUAC (insertar información de UAC en el manifiesto)](manifestuac-embeds-uac-information-in-manifest.md).
 
 Para cambiar el comportamiento predeterminado de UAC, realice una de las siguientes operaciones:
 
@@ -37,13 +37,13 @@ Para cambiar el comportamiento predeterminado de UAC, realice una de las siguien
 
 - O bien, especifique la opción /MANIFESTUAC:NO si no desea generar un fragmento de UAC en el manifiesto.
 
-Si no especifica /MANIFEST pero especifica [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) comentarios, se crea un archivo de manifiesto. No se creará un archivo de manifiesto si especifica /MANIFEST:NO.
+Si no especifica /MANIFEST pero especifica [/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md) comentarios, se crea un archivo de manifiesto. No se creará un archivo de manifiesto si especifica /MANIFEST:NO.
 
 Si especifica /MANIFEST, el nombre del archivo de manifiesto coincidirá con el nombre del archivo de salida, pero se agregará .manifest al nombre de archivo. Por ejemplo, si el nombre del archivo de salida es MiArchivo.exe, el nombre del archivo de manifiesto será MiArchivo.exe.manifest.  Si especifica/ManifestFile:*nombre*, el nombre del manifiesto es lo que se especifica en *nombre*.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -59,5 +59,5 @@ Si especifica /MANIFEST, el nombre del archivo de manifiesto coincidirá con el 
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: compilar código ATL y MFC mediante - clr'
+title: Filtrar Compilar código ATL y MFC mediante - clr
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - interop [C++], /clr compiler option
 - extension DLLs [C++], /clr compiler option
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
-ms.openlocfilehash: e5e9f800d6316e3b4f1209ec62440ae42233fc13
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a24e82787eb0fce8ff668843e73de9f2d05e1ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638079"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751614"
 ---
-# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Cómo: Compilar código de MFC y ATL mediante /clr
+# <a name="how-to-compile-mfc-and-atl-code-by-using-clr"></a>Filtrar Compilar código By Using ATL y MFC/CLR
 
 En este tema se describe cómo compilar programas MFC y ATL existentes para tener como destino Common Language Runtime.
 

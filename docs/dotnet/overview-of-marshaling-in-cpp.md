@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486286"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746830"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Información general de la serialización en C++
 
@@ -26,7 +26,7 @@ En modo mixto, deben serializar los datos entre los tipos nativos y los administ
 |serializar.h|`marshal_context` clase y las funciones de cálculo de referencias sin contexto|
 |serializar_atl.h| Funciones de serialización de tipos ATL|
 |serializar_cppstd.h|Funciones de serialización de tipos estándares de C++|
-|serializar_windows.h|Funciones de serialización de tipos de Windows|
+|marshal_windows.h|Funciones de serialización de tipos de Windows|
 
 La ruta de acceso predeterminada para **msclr** carpeta es algo parecido a esto dependiendo de qué edición tiene y el número de compilación:
 
@@ -44,33 +44,33 @@ Puede usar la biblioteca de serialización con o sin un [marshal_context Class](
 |System::String^|const wchar_t\*|serializar_context|serializar.h|
 |const wchar_t \*|System::String^|serializar_as|serializar.h|
 |wchar_t \*|System::String^|serializar_as|serializar.h|
-|System::IntPtr|HANDLE|serializar_as|serializar_windows.h|
-|HANDLE|System::IntPtr|serializar_as|serializar_windows.h|
-|System::String^|BSTR|serializar_context|serializar_windows.h|
+|System::IntPtr|HANDLE|serializar_as|marshal_windows.h|
+|HANDLE|System::IntPtr|serializar_as|marshal_windows.h|
+|System::String^|BSTR|serializar_context|marshal_windows.h|
 |BSTR|System::String^|serializar_as|serializar.h|
 |System::String^|bstr_t|serializar_as|marshal_windows.h|
-|bstr_t|System::String^|serializar_as|serializar_windows.h|
-|System::String^|std::string|marshal_as|serializar_cppstd.h|
+|bstr_t|System::String^|serializar_as|marshal_windows.h|
+|System::String^|std::string|serializar_as|serializar_cppstd.h|
 |std::string|System::String^|serializar_as|serializar_cppstd.h|
-|System::String^|std::wstring|serializar_as|marshal_cppstd.h|
+|System::String^|std::wstring|serializar_as|serializar_cppstd.h|
 |std::wstring|System::String^|serializar_as|serializar_cppstd.h|
-|System::String^|CStringT\<char >|serializar_as|serializar_atl.h|
-|CStringT\<char >|System::String^|serializar_as|serializar_atl.h|
+|System::String^|CStringT\<char>|serializar_as|serializar_atl.h|
+|CStringT\<char>|System::String^|serializar_as|serializar_atl.h|
 |System::String^|CStringT<wchar_t>|serializar_as|serializar_atl.h|
 |CStringT<wchar_t>|System::String^|serializar_as|serializar_atl.h|
 |System::String^|CComBSTR|serializar_as|serializar_atl.h|
 |CComBSTR|System::String^|serializar_as|serializar_atl.h|
 
-El cálculo de referencias requiere un contexto solo cuando se calcula de tipos de datos administrados a tipos de datos nativos y el tipo nativo que se va a convertir no tiene un destructor para la limpieza automática. El contexto de cálculo de referencias destruye el tipo de datos nativo asignado en su destructor. Por consiguiente, las conversiones que requieren un contexto serán válidas solo hasta que se elimine el contexto. Para guardar cualquier valor de cálculo de referencias, debe copiar los valores a sus propias variables.
+El cálculo de referencias requiere un contexto solo cuando se calcula de tipos de datos administrados a tipos de datos nativos y el tipo nativo que se va a convertir no tiene un destructor para la limpieza automática. El contexto de serialización destruye el tipo de datos nativo asignado en su destructor. Por consiguiente, las conversiones que requieren un contexto serán válidas solo hasta que se elimine el contexto. Para guardar cualquier valor de cálculo de referencias, debe copiar los valores a sus propias variables.
 
 > [!NOTE]
->  Si ha incrustado valores `NULL`en la cadena, el resultado de calcular la cadena no se puede garantizar. Los valores `NULL` incrustados pueden hacer que la cadena se trunque o no pueda conservarse.
+>  Si ha incrustado valores `NULL`en la cadena, el resultado de serializar la cadena no se puede garantizar. Los valores `NULL` incrustados pueden hacer que la cadena se trunque o no pueda conservarse.
 
 Este ejemplo muestra cómo incluir el directorio msclr en una declaración de encabezado de inclusión:
 
 `#include "msclr\marshal_cppstd.h"`
 
-La biblioteca de cálculo de referencias es extensible para que pueda agregar sus propios tipos de serialización. Para obtener más información sobre cómo extender la biblioteca de serialización, vea [Cómo: Extender la biblioteca de cálculo de referencias](../dotnet/how-to-extend-the-marshaling-library.md).
+La biblioteca de cálculo de referencias es extensible para que pueda agregar sus propios tipos de serialización. Para obtener más información sobre cómo extender la biblioteca de serialización, vea [Cómo: Extender la biblioteca de serialización](../dotnet/how-to-extend-the-marshaling-library.md).
 
 En versiones anteriores, se podían serializar los datos mediante el uso de [de invocación de plataforma](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Para obtener más información acerca de `PInvoke`, consulte [llamar a funciones nativas desde código administrado](../dotnet/calling-native-functions-from-managed-code.md).
 

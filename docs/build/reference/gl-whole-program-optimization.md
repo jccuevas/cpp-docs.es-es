@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: b0aabdc1a2fb86479a165ae9559372316bd02260
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420679"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812387"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (Optimización de todo el programa)
 
@@ -43,21 +43,21 @@ Con información sobre todos los módulos, el compilador puede:
 
 - Inserte una función en un módulo, incluso cuando la función está definida en otro módulo.
 
-archivos .obj generados con **/GL** no estará disponible para las utilidades del vinculador como [EDITBIN](../../build/reference/editbin-reference.md) y [DUMPBIN](../../build/reference/dumpbin-reference.md).
+archivos .obj generados con **/GL** no estará disponible para las utilidades del vinculador como [EDITBIN](editbin-reference.md) y [DUMPBIN](dumpbin-reference.md).
 
-Si compila un programa con **/GL** y [/c](../../build/reference/c-compile-without-linking.md), debe usar la opción de vinculador/LTCG para crear el archivo de salida.
+Si compila un programa con **/GL** y [/c](c-compile-without-linking.md), debe usar la opción de vinculador/LTCG para crear el archivo de salida.
 
-[/ Zi](../../build/reference/z7-zi-zi-debug-information-format.md) no se puede usar con   **/GL**
+[/ Zi](z7-zi-zi-debug-information-format.md) no se puede usar con   **/GL**
 
 El formato de archivos generados con **/GL** en la versión actual puede no ser legible con versiones posteriores de Visual C++. No debe enviar un archivo .lib compuesto por archivos .obj que se hayan generado con **/GL** a menos que esté dispuesto a distribuir copias del archivo .lib para todas las versiones de Visual C++ esperan a los usuarios usar ahora y en el futuro.
 
 archivos .obj generados con **/GL** y archivos de encabezado precompilados no deben usarse para crear un archivo .lib, a menos que se vinculará el archivo .lib en el mismo equipo que generó el **/GL** archivo .obj. Información del archivo de encabezado precompilado del archivo .obj se necesitará en tiempo de vinculación.
 
-Para obtener más información sobre las optimizaciones disponibles con y las limitaciones de la optimización de todo el programa, consulte [/LTCG](../../build/reference/ltcg-link-time-code-generation.md).  **/ GL** también facilita la optimización guiada disponible perfiles; vea/LTCG.  Cuando se compila para guiada por perfiles optimizaciones y si desea que la función de ordenación de las optimizaciones guiadas por perfiles, debe compilar con [/Gy](../../build/reference/gy-enable-function-level-linking.md) o una opción del compilador que implique /Gy.
+Para obtener más información sobre las optimizaciones disponibles con y las limitaciones de la optimización de todo el programa, consulte [/LTCG](ltcg-link-time-code-generation.md).  **/ GL** también facilita la optimización guiada disponible perfiles; vea/LTCG.  Cuando se compila para guiada por perfiles optimizaciones y si desea que la función de ordenación de las optimizaciones guiadas por perfiles, debe compilar con [/Gy](gy-enable-function-level-linking.md) o una opción del compilador que implique /Gy.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Consulte [/LTCG (generación de código de tiempo de vínculo)](../../build/reference/ltcg-link-time-code-generation.md) para obtener información sobre cómo especificar **/GL** en el entorno de desarrollo.
+1. Consulte [/LTCG (generación de código de tiempo de vínculo)](ltcg-link-time-code-generation.md) para obtener información sobre cómo especificar **/GL** en el entorno de desarrollo.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Para establecer esta opción del vinculador mediante programación
 
@@ -65,5 +65,5 @@ Para obtener más información sobre las optimizaciones disponibles con y las li
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

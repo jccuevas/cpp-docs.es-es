@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894099"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818172"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (Especificar comportamiento de punto flotante)
 
@@ -51,7 +51,7 @@ En **/fp: strict**, el compilador genera código que permite al programa de form
 
 #### <a name="fast"></a>Rápida
 
-El **/fp: Fast** opción permite que el compilador reordenar, combinar o simplificar las operaciones de punto flotante para optimizar el código para la velocidad y el espacio de punto flotante. El compilador puede omitir el redondeo en instrucciones de asignación, conversiones de tipo o llamadas de función. Puede reordenar las operaciones o realizar transformaciones algebraicas, por ejemplo, mediante el uso de las leyes asociativas y distributivas, incluso si dichas transformaciones provocan el comportamiento de redondeo de diferente manera visible. Debido a esta optimización mejorada, el resultado de algunos cálculos de punto flotante puede diferir de los generados por otros **/FP** opciones. Los valores especiales (NaN, + infinito, - infinito, -0.0) no se pueden propagar o se comportan estrictamente según el estándar IEEE 754. Contracciones de punto flotante pueden generarse en **/fp: Fast**. El compilador todavía está enlazado por la arquitectura subyacente en **/fp: Fast**, y las optimizaciones adicionales estén disponibles a través del uso de la [/arch](../../build/reference/arch-minimum-cpu-architecture.md) opción.
+El **/fp: Fast** opción permite que el compilador reordenar, combinar o simplificar las operaciones de punto flotante para optimizar el código para la velocidad y el espacio de punto flotante. El compilador puede omitir el redondeo en instrucciones de asignación, conversiones de tipo o llamadas de función. Puede reordenar las operaciones o realizar transformaciones algebraicas, por ejemplo, mediante el uso de las leyes asociativas y distributivas, incluso si dichas transformaciones provocan el comportamiento de redondeo de diferente manera visible. Debido a esta optimización mejorada, el resultado de algunos cálculos de punto flotante puede diferir de los generados por otros **/FP** opciones. Los valores especiales (NaN, + infinito, - infinito, -0.0) no se pueden propagar o se comportan estrictamente según el estándar IEEE 754. Contracciones de punto flotante pueden generarse en **/fp: Fast**. El compilador todavía está enlazado por la arquitectura subyacente en **/fp: Fast**, y las optimizaciones adicionales estén disponibles a través del uso de la [/arch](arch-minimum-cpu-architecture.md) opción.
 
 En **/fp: Fast**, el compilador genera código diseñada para ejecutarse en el entorno de punto flotante de forma predeterminada y se da por supuesto que el entorno de punto flotante no es accedido o modificado en tiempo de ejecución. Es decir, se supone que el código no quitar la máscara de excepciones de punto flotante, leer o escribir registros de estado de punto flotante o cambiar el modo de redondeo.
 
@@ -67,7 +67,7 @@ Tenga en cuenta que **/fp: excepto** no permite las excepciones de punto flotant
 
 Varios **/FP** opciones se pueden especificar en la misma línea de comandos del compilador. Solo uno de **/fp: strict**, **/fp: Fast**, y **/fp: precisa** opciones pueden estar en vigor a la vez. Si no se especifica más de una de estas opciones en la línea de comandos, la opción posterior tiene prioridad y el compilador genera una advertencia. El **/fp: strict** y **/fp: excepto** opciones no son compatibles con **/CLR**.
 
-El [/Za](../../build/reference/za-ze-disable-language-extensions.md) no es compatible con la opción (compatibilidad con ANSI) **/FP**.
+El [/Za](za-ze-disable-language-extensions.md) no es compatible con la opción (compatibilidad con ANSI) **/FP**.
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>Uso de directivas pragma para controlar el comportamiento de punto flotante
 
@@ -75,9 +75,9 @@ El compilador ofrece tres directivas pragma para invalidar el comportamiento de 
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp:fast**|Desactivar|Desactivar|Desactivar|el|
-|**/fp:precise**|el|Desactivar|Desactivar|el|
-|**/fp:strict**|el|el|el|Desactivar|
+|**/fp:fast**|Desactivar|Desactivar|Desactivar|en|
+|**/fp:precise**|en|Desactivar|Desactivar|en|
+|**/fp:strict**|en|en|en|Desactivar|
 
 ### <a name="the-default-floating-point-environment"></a>El entorno de punto flotante predeterminada
 
@@ -256,7 +256,7 @@ En **/O2** **/fp: Fast** se simplifica el código generado, porque todas las con
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **propiedades de configuración** > **C o C++** > **generación de código** página de propiedades.
 
@@ -268,6 +268,6 @@ En **/O2** **/fp: Fast** se simplifica el código generado, porque todas las con
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](compiler-options.md)<br/>
-[Establecer las opciones del compilador](setting-compiler-options.md)<br/>
-[Microsoft Visual C++, optimización de punto flotante](floating-point-optimization.md)<br/>
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Optimización de punto flotante de MSVC](floating-point-optimization.md)<br/>

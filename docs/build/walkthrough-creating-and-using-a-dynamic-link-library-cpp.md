@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416459"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813973"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++)
 
@@ -29,11 +29,11 @@ En este tutorial se tratan las siguientes tareas:
 
 - Ejecute la aplicación completada.
 
-Al igual que una biblioteca vinculada estáticamente, un archivo DLL _exporta_ variables, funciones y los recursos por nombre y la aplicación _importa_ esos nombres para usar esos recursos, funciones y variables. A diferencia de una biblioteca vinculada estáticamente, Windows conecta a las importaciones de la aplicación a las exportaciones en un archivo DLL en tiempo de carga o en tiempo de ejecución, en lugar de conectarse a ellos en tiempo de vinculación. Windows requiere información adicional que no forma parte del modelo de compilación de C++ estándar para realizar estas conexiones. El compilador de Visual C++ implementa algunas extensiones específicas de Microsoft para C++ para proporcionar esta información adicional. Se explican estas extensiones según avanzamos.
+Al igual que una biblioteca vinculada estáticamente, un archivo DLL _exporta_ variables, funciones y los recursos por nombre y la aplicación _importa_ esos nombres para usar esos recursos, funciones y variables. A diferencia de una biblioteca vinculada estáticamente, Windows conecta a las importaciones de la aplicación a las exportaciones en un archivo DLL en tiempo de carga o en tiempo de ejecución, en lugar de conectarse a ellos en tiempo de vinculación. Windows requiere información adicional que no forma parte del modelo de compilación de C++ estándar para realizar estas conexiones. El compilador de MSVC implementa algunas extensiones específicas de Microsoft para C++ para proporcionar esta información adicional. Se explican estas extensiones según avanzamos.
 
 Este tutorial crea dos soluciones de Visual Studio; uno que compila el archivo DLL y otro que compila la aplicación cliente. El archivo DLL utiliza la convención de llamada de C, por lo que puede llamarse desde las aplicaciones compiladas con otros lenguajes, siempre que coincidan con la plataforma y una llamada y las convenciones de vinculación. La aplicación cliente usa _vinculación implícita_, donde Windows vincula la aplicación a la DLL en tiempo de carga. Esta vinculación permite que la aplicación llame a las funciones de proporcionado por el archivo DLL al igual que las funciones en una biblioteca estática vinculada.
 
-En este tutorial no se tratan algunas situaciones comunes. No muestra el uso de archivos DLL de C++ con otros lenguajes de programación. No muestra cómo crear un archivo DLL de recursos. No muestra el uso de la vinculación explícita para cargar los archivos DLL en tiempo de ejecución en lugar de en tiempo de carga. Descanse tranquilo, puede usar Visual C++ para realizar todas estas operaciones. Para obtener vínculos para obtener más información sobre los archivos DLL, consulte [archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md). Para obtener más información sobre la vinculación implícita y vinculación explícita, vea [determinar que el método de vinculación que se usarán](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obtener información acerca de cómo crear archivos DLL de C++ para su uso con idiomas que utilizan las convenciones de vinculación de lenguaje de programación, vea [exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md). Para obtener información sobre cómo crear archivos DLL para su uso con lenguajes de. NET, consulte [llamar a funciones DLL desde aplicaciones de Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md).
+En este tutorial no se tratan algunas situaciones comunes. No muestra el uso de archivos DLL de C++ con otros lenguajes de programación. No muestra cómo crear un archivo DLL de recursos. No muestra el uso de la vinculación explícita para cargar los archivos DLL en tiempo de ejecución en lugar de en tiempo de carga. Descanse tranquilo, puede usar Visual C++ para realizar todas estas operaciones. Para obtener vínculos para obtener más información sobre los archivos DLL, consulte [archivos DLL en Visual C++](dlls-in-visual-cpp.md). Para obtener más información sobre la vinculación implícita y vinculación explícita, vea [determinar que el método de vinculación que se usarán](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use). Para obtener información acerca de cómo crear archivos DLL de C++ para su uso con idiomas que utilizan las convenciones de vinculación de lenguaje de programación, vea [exportar funciones de C++ para utilizarlas en ejecutables en lenguaje C](exporting-cpp-functions-for-use-in-c-language-executables.md). Para obtener información sobre cómo crear archivos DLL para su uso con lenguajes de. NET, consulte [llamar a funciones DLL desde aplicaciones de Visual Basic](calling-dll-functions-from-visual-basic-applications.md).
 
 En este tutorial se usa Visual Studio 2017, pero el código y la mayoría de las instrucciones es aplicable a versiones anteriores. Puede cambiar los pasos para crear nuevos proyectos a partir de Visual Studio 2017 versión 15.3. Este tutorial describe cómo crear proyectos para las versiones anteriores y más recientes. Busque los pasos que coinciden con su versión de Visual Studio.
 
@@ -400,7 +400,4 @@ Al implementar la aplicación, también debe implementar los archivos DLL utiliz
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](../build/dlls-in-visual-cpp.md)<br/>
-[Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Tutorial: Implementar el programa (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[Llamada a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)
+[Llamada a funciones de un archivo DLL desde aplicaciones programadas en Visual Basic](calling-dll-functions-from-visual-basic-applications.md)

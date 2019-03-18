@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572395"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816183"
 ---
 # <a name="project-build-error-prj0003"></a>Error PRJ0003 al compilar el proyecto
 
@@ -27,7 +27,7 @@ Las posibles razones para este error incluyen:
 
 - Privilegios de seguridad insuficientes. Compruebe que dispone de suficientes privilegios de seguridad.
 
-- Las rutas de acceso ejecutable especificados en **directorios de VC ++** no incluyen la ruta de acceso para la herramienta que está intentando ejecutar. Para obtener información, consulte [trabajar con las propiedades del proyecto](../../ide/working-with-project-properties.md)
+- Las rutas de acceso ejecutable especificados en **directorios de VC ++** no incluyen la ruta de acceso para la herramienta que está intentando ejecutar. Para obtener información, consulte [establecer compilador y las propiedades de compilación](../../build/working-with-project-properties.md)
 
 - Para proyectos de archivos MAKE, falta un comando para ejecutarse en cualquiera **crear línea de comandos** o **volver a generar la línea de comandos**.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DEPENDENTS dumpbin option
 - DEPENDENTS dumpbin option
 ms.assetid: 9b31da2a-75ac-4bbf-a3f1-adf8b0ecbbb4
-ms.openlocfilehash: 57224c1db54890327e1a51844d145594953c5402
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 161e7a68888eac3adae26d1798e8bf097503c89b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424748"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807599"
 ---
 # <a name="dependents"></a>/DEPENDENTS
 
@@ -25,8 +25,8 @@ ms.locfileid: "57424748"
 
 Vuelca los nombres de los archivos DLL desde el que la imagen importa funciones. No se vuelca los nombres de las funciones importadas.
 
-Solo el [/HEADERS](../../build/reference/headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](../../build/reference/gl-whole-program-optimization.md) opción del compilador.
+Solo el [/HEADERS](headers.md) está disponible para su uso en los archivos producidos con la opción de DUMPBIN el [/GL](gl-whole-program-optimization.md) opción del compilador.
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones de DUMPBIN](../../build/reference/dumpbin-options.md)
+[Opciones de DUMPBIN](dumpbin-options.md)

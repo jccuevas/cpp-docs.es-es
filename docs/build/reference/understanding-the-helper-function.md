@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421394"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818000"
 ---
 # <a name="understanding-the-helper-function"></a>Descripción de la función del asistente
 
@@ -53,16 +53,16 @@ El código auxiliar predeterminado puede encontrarse en Delayhlp.cpp y Delayimp.
 
 Los temas siguientes describen la función auxiliar:
 
-- [Cambios en la función auxiliar de carga retrasada de DLL desde Visual C++ 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Cambios en la función auxiliar de carga retrasada de DLL desde Visual C++ 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Convenciones de llamada, parámetros y tipo de valor devuelto](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Convenciones de llamada, parámetros y tipo de valor devuelto](calling-conventions-parameters-and-return-type.md)
 
-- [Definiciones de estructura y de constante](../../build/reference/structure-and-constant-definitions.md)
+- [Definiciones de estructura y de constante](structure-and-constant-definitions.md)
 
-- [Calcular valores necesarios](../../build/reference/calculating-necessary-values.md)
+- [Calcular valores necesarios](calculating-necessary-values.md)
 
-- [Descargar un archivo DLL de carga retrasada](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Descargar un archivo DLL de carga retrasada](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Compatibilidad del vinculador con las DLL de carga retrasada](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Compatibilidad del vinculador con las DLL de carga retrasada](linker-support-for-delay-loaded-dlls.md)

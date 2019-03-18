@@ -1,17 +1,17 @@
 ---
-title: 'Cómo: Crear proyectos de C++ comprobables (C++/CLI)'
+title: Filtrar Crear proyectos de C++ comprobables (C++ / c++ / CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630443"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817389"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Cómo: crear proyectos de C++ comprobables (C++ / c++ / CLI)
 
@@ -28,7 +28,7 @@ De forma predeterminada, los proyectos de .NET use la marca de compilador/CLR y 
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Para cambiar la configuración del compilador y vinculador
 
-1. Mostrar la página de propiedades del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+1. Mostrar la página de propiedades del proyecto. Para obtener más información, consulte [establecer compilador y las propiedades de compilación](../build/working-with-project-properties.md).
 
 1. En el **General** página en el **propiedades de configuración** de conjunto de nodos, el **compatible con tiempo de ejecución de Common Language** propiedad **seguro MSIL Common Language Compatibilidad en tiempo de ejecución (/ CLR: safe)**.
 
@@ -56,7 +56,7 @@ Dado que las aplicaciones comprobables no pueden usar las bibliotecas de tiempo 
 
 1. Cambiar _tmain () por Main() en el archivo del proyecto .cpp principal.
 
-1. Mostrar la página de propiedades del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../ide/working-with-project-properties.md).
+1. Mostrar la página de propiedades del proyecto. Para obtener más información, consulte [establecer compilador y las propiedades de compilación](../build/working-with-project-properties.md).
 
 1. En el **avanzadas** página bajo la **vinculador** nodo, escriba `Main` como el **punto de entrada** valor de propiedad.
 

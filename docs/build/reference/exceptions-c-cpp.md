@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 9c86d99b365994870b991967b6cab6e6ee5c5088
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422993"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811672"
 ---
 # <a name="exceptions-cc"></a>Excepciones (C/C++)
 
@@ -41,8 +41,8 @@ Los códigos de excepción que produce son las estándar VcppException (ERROR_SE
 
 Además, si los bits incorrectos se establecen en el campo grAttrs son, se produce la excepción ERROR_INVALID_PARAMETER. Esta excepción es, por todos los propósitos, grave.
 
-Consulte [definiciones de estructura y constante](../../build/reference/structure-and-constant-definitions.md) para obtener más información.
+Consulte [definiciones de estructura y constante](structure-and-constant-definitions.md) para obtener más información.
 
 ## <a name="see-also"></a>Vea también
 
-[Notificación y control de errores](../../build/reference/error-handling-and-notification.md)
+[Notificación y control de errores](error-handling-and-notification.md)

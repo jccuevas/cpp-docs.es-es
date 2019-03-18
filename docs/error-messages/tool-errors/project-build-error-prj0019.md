@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: d99750efcfc400cc85a865ebd30a8c2a3da1d07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808097"
 ---
 # <a name="project-build-error-prj0019"></a>Error PRJ0019 al compilar el proyecto
 
@@ -21,6 +21,6 @@ Un nivel de error era distinto de cero para un paso de compilación personalizad
 
 También verá PRJ0019 cuando una herramienta devolvió un código de error, pero ningún mensaje de error. Esto puede ocurrir, por ejemplo, si se redirige la salida de MIDL a NUL.
 
-Consulte [solución de problemas de los pasos de compilación personalizada y eventos de compilación](../../ide/troubleshooting-build-customizations.md) para obtener más información.
+Consulte [solución de problemas de los pasos de compilación personalizada y eventos de compilación](../../build/troubleshooting-build-customizations.md) para obtener más información.
 
 Este error también puede producirse cuando se ejecuta como un miembro del grupo de usuarios y se necesita acceso administrativo. Para obtener más información, consulte [que se ejecuta como un miembro del grupo de usuarios](../../security/running-as-a-member-of-the-users-group.md).

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413334"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820369"
 ---
 # <a name="running-lib"></a>Ejecutar LIB
 
@@ -66,7 +66,7 @@ Las siguientes opciones se aplican a todos los modos de LIB:
 
 Si lib.exe genera un error en tiempo de ejecución, puede usar **/errorreport** para enviar información a Microsoft sobre estos errores internos.
 
-Para obtener más información acerca de **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Para obtener más información acerca de **/errorreport**, consulte [/errorReport (informar de errores de compilador interno)](errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
@@ -90,10 +90,10 @@ Muestra los detalles sobre el progreso de la sesión, incluidos los nombres de l
 
 > **/WX**[**:NO**]
 
-Tratar advertencias como errores. Consulte [/WX (tratar advertencias del vinculador como errores)](../../build/reference/wx-treat-linker-warnings-as-errors.md) para obtener más información.
+Tratar advertencias como errores. Consulte [/WX (tratar advertencias del vinculador como errores)](wx-treat-linker-warnings-as-errors.md) para obtener más información.
 
 Otras opciones se aplican solo a los modos específicos de LIB. Estas opciones se describen en las secciones que describen cada modo.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia de LIB](../../build/reference/lib-reference.md)
+[Referencia de LIB](lib-reference.md)

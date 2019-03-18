@@ -2,12 +2,12 @@
 title: /WHOLEARCHIVE (incluir todos los archivos de objeto de biblioteca)
 ms.date: 11/04/2016
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: cc260f139a9312bbac7fed34471481401db770d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412918"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808656"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (incluir todos los archivos de objeto de biblioteca)
 
@@ -27,7 +27,7 @@ La opción /WHOLEARCHIVE se introdujo en Visual Studio 2015 Update 2.
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Para establecer esta opción del vinculador en Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades de proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Seleccione el **línea de comandos** página de propiedades bajo **propiedades de configuración**, **vinculador**.
 
@@ -35,5 +35,5 @@ La opción /WHOLEARCHIVE se introdujo en Visual Studio 2015 Update 2.
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

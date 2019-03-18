@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: bea51c7af41df666fd441555daa0d8d8387377ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f1edcc6d29a5b84106b3a5fd91d2446c34e0f7b9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414140"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807473"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (Habilitar la compatibilidad con OpenMP 2.0)
 
@@ -29,7 +29,7 @@ Hace que el compilador procese `#pragma` [omp](../../preprocessor/omp.md).
 
 `#pragma omp` se usa para especificar [directivas](../../parallel/openmp/reference/openmp-directives.md) y [cláusulas](../../parallel/openmp/reference/openmp-clauses.md). Si **/OpenMP** no se especifica en una compilación, el compilador omite las cláusulas de OpenMP y directivas. [Función de OpenMP](../../parallel/openmp/reference/openmp-functions.md) la incluso si compilador procesa las llamadas **/OpenMP** no se especifica.
 
-Las aplicaciones compiladas con **/OpenMP** y **/CLR** solo se pueden ejecutar en un proceso de dominio de aplicación único; no se admiten varios dominios de aplicación. Es decir, cuando se ejecuta el constructor de módulo (.cctor), lo detectará el proceso se compila con **/OpenMP** y si la aplicación se está cargando en un tiempo de ejecución no predeterminado. Para obtener más información, consulte [appdomain](../../cpp/appdomain.md), [/CLR (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md), y [inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md).
+Las aplicaciones compiladas con **/OpenMP** y **/CLR** solo se pueden ejecutar en un proceso de dominio de aplicación único; no se admiten varios dominios de aplicación. Es decir, cuando se ejecuta el constructor de módulo (.cctor), lo detectará el proceso se compila con **/OpenMP** y si la aplicación se está cargando en un tiempo de ejecución no predeterminado. Para obtener más información, consulte [appdomain](../../cpp/appdomain.md), [/CLR (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md), y [inicialización de ensamblados mixtos](../../dotnet/initialization-of-mixed-assemblies.md).
 
 Si intenta cargar una aplicación compilada con **/OpenMP** y **/CLR** en un dominio de aplicación no predeterminado, un <xref:System.TypeInitializationException> se producirá una excepción fuera del depurador y un Se producirá la excepción de OpenMPWithMultipleAppdomainsException en el depurador.
 
@@ -45,7 +45,7 @@ Microsoft aconseja no escribir **/OpenMP** llamadores, uso de confianza de las a
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -113,5 +113,5 @@ int main(int argc, char* argv[]) {
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador](../../build/reference/compiler-options.md)<br/>
-[Establecer las opciones del compilador](../../build/reference/setting-compiler-options.md)
+[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

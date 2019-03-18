@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523135"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746219"
 ---
 # <a name="basic-cstring-operations"></a>Operaciones básicas de CString
 
@@ -85,7 +85,7 @@ El `CStringT` plantilla de clase define los operadores relacionales (<, \<=, > =
 
 ##  <a name="_core_converting_cstring_objects"></a> Convertir objetos CString
 
-Para obtener información sobre cómo convertir objetos CString a otros tipos de cadena, vea [Cómo: convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md).
+Para obtener información sobre cómo convertir objetos CString a otros tipos de cadena, vea [Cómo: Convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md).
 
 ## <a name="using-cstring-with-wcout"></a>Uso de CString con wcout
 
@@ -104,5 +104,4 @@ Sin la conversión, `cs` se trata como un `void*` y `wcout` imprime la direcció
 [Cadenas (ATL y MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CStringT (clase)](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Especialización de plantilla](../cpp/template-specialization-cpp.md)<br/>
-[Procedimiento para convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)
-
+[Cómo: Convertir entre distintos tipos de cadenas](../text/how-to-convert-between-various-string-types.md)

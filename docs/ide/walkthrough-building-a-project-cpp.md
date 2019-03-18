@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Compilar un proyecto (C++)'
+title: 'Tutorial: Compilación de un proyecto (C++)'
 ms.date: 09/14/2018
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524162"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742499"
 ---
-# <a name="walkthrough-building-a-project-c"></a>Tutorial: Compilar un proyecto (C++)
+# <a name="walkthrough-building-a-project-c"></a>Tutorial: Compilación de un proyecto (C++)
 
 En este tutorial, va a introducir deliberadamente un error de sintaxis de Visual C++ en el código para obtener información acerca de cómo es un error de compilación y cómo corregirlo. Cuando compila el proyecto, un mensaje de error indica cuál es el problema y donde se produjo.
 

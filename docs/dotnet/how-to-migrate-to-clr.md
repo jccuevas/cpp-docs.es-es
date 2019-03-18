@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: migrar a - clr'
+title: Filtrar Migrar a - clr
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454449"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816040"
 ---
-# <a name="how-to-migrate-to-clr"></a>Cómo: Migrar a /clr
+# <a name="how-to-migrate-to-clr"></a>Filtrar Migrar a/CLR
 
 En este tema se trata los problemas que surgen al compilar el código nativo con **/CLR** (consulte [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obtener más información). **/ CLR** permite que el código de C++ nativa invocar y se pueden invocar desde ensamblados de .NET además de otro código de C++ nativo. Consulte [ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md) y [nativo e interoperabilidad de .NET](../dotnet/native-and-dotnet-interoperability.md) para obtener más información sobre las ventajas de compilar con **/CLR**.
 
@@ -98,7 +98,7 @@ Este paso tiene implicaciones diferentes para los proyectos que utilizan archivo
 **/ CLR** se pueden seleccionar en el entorno de desarrollo siguiendo las instrucciones de [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md). Como se mencionó previamente, este paso deshabilitará automáticamente los parámetros de configuración del proyecto en conflicto.
 
 > [!NOTE]
->  Al actualizar una biblioteca administrada o un proyecto de servicio web desde Visual C++ 2003, el **/Zl** se de opción del compilador agregado a la **línea de comandos** página de propiedades. Esto produce el error LNK2001. Quitar **/Zl** desde el **línea de comandos** página de propiedades para resolver. Consulte [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) y [trabajar con las propiedades del proyecto](../ide/working-with-project-properties.md) para obtener más información. O bien, agregue msvcrt.lib y msvcmrt.lib al vinculador **dependencias adicionales** propiedad.
+>  Al actualizar una biblioteca administrada o un proyecto de servicio web desde Visual C++ 2003, el **/Zl** se de opción del compilador agregado a la **línea de comandos** página de propiedades. Esto produce el error LNK2001. Quitar **/Zl** desde el **línea de comandos** página de propiedades para resolver. Consulte [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) y [establecer compilador y las propiedades de compilación](../build/working-with-project-properties.md) para obtener más información. O bien, agregue msvcrt.lib y msvcmrt.lib al vinculador **dependencias adicionales** propiedad.
 
 Para los proyectos generados con archivos MAKE, las opciones del compilador incompatible se deben deshabilitar manualmente una vez **/CLR** se agrega. Ver /[restricciones de /clr](../build/reference/clr-restrictions.md) para obtener información sobre las opciones del compilador que no son compatibles con **/CLR**.
 
@@ -114,7 +114,7 @@ Sin embargo, particularmente para los proyectos grandes, los encabezados precomp
 
 Compilar con **/CLR** puede dar lugar a errores del compilador, vinculador o tiempo de ejecución. En esta sección se describen los problemas más comunes.
 
-### <a name="metadata-merge"></a>Combinación de metadatos
+### <a name="metadata-merge"></a>Fusión mediante combinación de metadatos
 
 Las distintas versiones de los tipos de datos pueden hacer que el vinculador produzca un error debido a que los metadatos generados para los dos tipos no coinciden. (Esto ocurre normalmente cuando los miembros de un tipo se definen condicionalmente, pero las condiciones no son las mismas para todos los archivos CPP que usan dicho tipo). En este caso, el vinculador produce un error y solo notifica el nombre de símbolo y el nombre del segundo archivo OBJ en el que se definió el tipo. A menudo resulta útil invertir el orden en que se envían los archivos OBJ al vinculador para detectar la ubicación de la otra versión del tipo de datos.
 

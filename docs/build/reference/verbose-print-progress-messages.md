@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809150"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (Mostrar mensajes de progreso)
 
@@ -33,16 +33,16 @@ El vinculador envía información sobre el progreso de la sesión de vinculació
 |Opción|Descripción|
 |------------|-----------------|
 |/VERBOSE|Muestra detalles sobre el proceso de vinculación.|
-|/VERBOSE:ICF|Mostrar información acerca de la actividad del vinculador que resulta del uso de [/OPT: ICF](../../build/reference/opt-optimizations.md).|
+|/VERBOSE:ICF|Mostrar información acerca de la actividad del vinculador que resulta del uso de [/OPT: ICF](opt-optimizations.md).|
 |/VERBOSE:INCR|Muestra información sobre el proceso de vinculación incremental.|
 |/VERBOSE:LIB|Muestra mensajes de progreso que indican solamente las bibliotecas de búsqueda.<br /><br /> La información presentada incluye el proceso de búsqueda en las bibliotecas y enumera los nombres de las bibliotecas y objetos (con la ruta de acceso completa), el símbolo que se esté resolviendo de cada biblioteca y una lista de los objetos que hacen referencia al símbolo.|
-|/VERBOSE:REF|Muestra información acerca de la actividad del vinculador que resulta del uso de [/OPT: ref](../../build/reference/opt-optimizations.md).|
-|/VERBOSE:SAFESEH|Muestra información acerca de los módulos que no son compatibles con cuando control de excepciones seguro [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) no se especifica.|
+|/VERBOSE:REF|Muestra información acerca de la actividad del vinculador que resulta del uso de [/OPT: ref](opt-optimizations.md).|
+|/VERBOSE:SAFESEH|Muestra información acerca de los módulos que no son compatibles con cuando control de excepciones seguro [/SAFESEH](safeseh-image-has-safe-exception-handlers.md) no se especifica.|
 |/VERBOSE:UNUSEDLIBS|Muestra información sobre los archivos de biblioteca que no se usan cuando se crea la imagen.|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [establecer las propiedades de un proyecto de Visual C++](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el **vinculador** carpeta.
 
@@ -56,5 +56,5 @@ El vinculador envía información sobre el progreso de la sesión de vinculació
 
 ## <a name="see-also"></a>Vea también
 
-[Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)<br/>
-[Opciones del vinculador](../../build/reference/linker-options.md)
+[Referencia MSVC del vinculador](linking.md)<br/>
+[Opciones del vinculador MSVC](linker-options.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565924"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822605"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (quite SuppressUnmanagedCodeSecurityAttribute)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50565924"
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/CLRUNMANAGEDCODECHECK**[**: N**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>Comentarios
 
@@ -39,7 +39,7 @@ Consulte [instrucciones de codificación segura para código no administrado](/d
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del vinculador en el entorno de desarrollo de Visual Studio
 
-1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, vea [Trabajar con propiedades del proyecto](../../ide/working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -55,5 +55,5 @@ Consulte [instrucciones de codificación segura para código no administrado](/d
 
 ## <a name="see-also"></a>Vea también
 
-- [Establecer las opciones del vinculador](../../build/reference/setting-linker-options.md)
-- [Opciones del vinculador](../../build/reference/linker-options.md)
+- [Referencia MSVC del vinculador](linking.md)
+- [Opciones del vinculador MSVC](linker-options.md)

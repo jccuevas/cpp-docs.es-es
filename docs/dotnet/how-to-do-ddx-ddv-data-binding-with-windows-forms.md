@@ -1,19 +1,19 @@
 ---
-title: 'Cómo: realizar enlaces de datos de DDX y DDV con formularios de Windows'
+title: Filtrar Realice las DDX y DDV enlace de datos con Windows Forms
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 793d6728c7726028c02b885784f122792d84dd2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456446"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740953"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Cómo: Enlazar datos DDX/DDV con formularios Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Filtrar Realice las DDX/DDV enlace de datos con Windows Forms
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) llamadas [CWinFormsControl:: CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para crear un control que coincida con el identificador de control de recursos. Si usas `DDX_ManagedControl` para un `CWinFormsControl` control (en el asistente generó código), no debería llamar `CreateManagedControl` explícitamente para el mismo control.
 
@@ -27,7 +27,7 @@ El siguiente es un ejemplo de enlace de datos DDX/DDV de una cadena MFC `m_str` 
 
 Cuando se crea el control [CDialog:: OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) llamadas `CMyDlg::DoDataExchange` por primera vez, por lo que cualquier código que hace referencia a `m_UserControl` debe ir después de la `DDX_ManagedControl` llamar.
 
-Puede implementar este código en la aplicación de MFC01 creada en [Cómo: crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
+Puede implementar este código en la aplicación de MFC01 creada en [Cómo: Crear el Control de usuario y el Host en un cuadro de diálogo](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).
 
 Coloque el código siguiente en la declaración de CMFC01Dlg:
 
@@ -86,4 +86,4 @@ Ahora puede compilar y ejecutar la aplicación. Tenga en cuenta que cualquier te
 
 [CWinFormsControl (clase)](../mfc/reference/cwinformscontrol-class.md)<br/>
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)<br/>
-[CWnd:: DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)
+[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

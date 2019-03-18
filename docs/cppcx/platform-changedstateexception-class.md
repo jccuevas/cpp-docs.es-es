@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ChangedStateException
 ms.assetid: f894beac-9e80-4fac-ac25-89f1dbc0a6a4
-ms.openlocfilehash: 749e242db37944f0c4dcbfb785028b01a0604f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79181702c95f8c666b06bdb26319ccb06e55db0a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581684"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749300"
 ---
 # <a name="platformchangedstateexception-class"></a>Platform::ChangedStateException (Clase)
 
@@ -37,7 +37,7 @@ Para obtener más información, consulta la clase [COMException](../cppcx/platfo
 
 **Servidor mínimo admitido:** Windows Server 2012
 
-**Espacio de nombres:** Plataforma
+**Espacio de nombres**: Plataforma
 
 **Metadatos:** platform.winmd
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 5d487e8a124d2edd7ce5a658d4965f1567756d5a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694158"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807564"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilar aplicaciones aisladas y ensamblados simultáneos de C/C++
 
@@ -26,19 +26,19 @@ En esta sección, se explica cómo compilar una aplicación de C/C++ como aplica
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Conceptos de aplicaciones aisladas y ensamblados simultáneos](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)
+[Conceptos de aplicaciones aisladas y ensamblados simultáneos](concepts-of-isolated-applications-and-side-by-side-assemblies.md)
 
-[Compilación de aplicaciones aisladas de C/C++](../build/building-c-cpp-isolated-applications.md)
+[Compilación de aplicaciones aisladas de C/C++](building-c-cpp-isolated-applications.md)
 
-[Compilación de ensamblados simultáneos de C/C++](../build/building-c-cpp-side-by-side-assemblies.md)
+[Compilación de ensamblados simultáneos de C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Procedimiento para compilar componentes COM de registro gratuito](../build/how-to-build-registration-free-com-components.md)
+[Cómo: Compilar componentes COM de registro gratuito](how-to-build-registration-free-com-components.md)
 
-[Procedimiento para compilar aplicaciones aisladas que empleen componentes COM](../build/how-to-build-isolated-applications-to-consume-com-components.md)
+[Cómo: Compilar aplicaciones aisladas que empleen componentes COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
-[Introducción a la generación de manifiestos para los programas de C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Introducción a la generación de manifiestos para los programas de C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 
-[Solución de problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Solución de problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
 ## <a name="related-sections"></a>Secciones relacionadas
 

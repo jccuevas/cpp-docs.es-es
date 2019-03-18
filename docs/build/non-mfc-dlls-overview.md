@@ -5,12 +5,12 @@ helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 2363d9ab13e120ab72a30628a7c37c411e8de3a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414530"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809295"
 ---
 # <a name="non-mfc-dlls-overview"></a>Archivos DLL no basados en MFC: Información general
 
@@ -20,22 +20,22 @@ Para obtener más información acerca de la DLL MFC, vea [bibliotecas de víncul
 
 ## <a name="what-do-you-want-to-do"></a>¿Qué desea hacer?
 
-- [Tutorial: Crear y utilizar una biblioteca de vínculos dinámicos](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [Tutorial: Crear y utilizar una biblioteca de vínculos dinámicos](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
-- [Exportar desde un archivo DLL](../build/exporting-from-a-dll.md)
+- [Exportar desde un archivo DLL](exporting-from-a-dll.md)
 
-- [Vincular un ejecutable a un archivo DLL](../build/linking-an-executable-to-a-dll.md)
+- [Vincular un ejecutable a un archivo DLL](linking-an-executable-to-a-dll.md)
 
-- [Inicializar un archivo DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados estáticamente a MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Archivos DLL de MFC estándar vinculados dinámicamente a MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Archivos DLL de extensión MFC: información general](../build/extension-dlls-overview.md)
+- [Archivos DLL de extensión MFC: información general](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de archivos DLL](../build/kinds-of-dlls.md)
+[Tipos de archivos DLL](kinds-of-dlls.md)

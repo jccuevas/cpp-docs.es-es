@@ -1,20 +1,18 @@
 ---
 title: Sugerencias de programación para MBCS
 ms.date: 11/04/2016
-f1_keywords:
-- _mbcs
 helpviewer_keywords:
 - programming [C++], MBCS
 - character sets [C++], multibyte
 - MBCS [C++], programming
 - multibyte characters [C++]
 ms.assetid: d8ad36b8-917f-474e-8adb-69462adecd17
-ms.openlocfilehash: 70669f67b78ee4ea4f8073b78d2b9589e56a6356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 420e376d3a66c8f8115732692089f4254847bc0d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552625"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808259"
 ---
 # <a name="mbcs-programming-tips"></a>Sugerencias de programación para MBCS
 

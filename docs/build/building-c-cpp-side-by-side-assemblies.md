@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 6875c4178a405f887166b0606af329614d27907f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413880"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815195"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilar ensamblados simultáneos de C/C++
 
@@ -31,6 +31,5 @@ Este cambio puede permitir la implementación de archivos DLL correspondientes c
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplos de implementación](../ide/deployment-examples.md)<br/>
-[Compilación de aplicaciones aisladas de C/C++](../build/building-c-cpp-isolated-applications.md)<br/>
-[Compilación de aplicaciones aisladas y ensamblados simultáneos de C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Compilación de aplicaciones aisladas de C/C++](building-c-cpp-isolated-applications.md)<br/>
+[Compilación de aplicaciones aisladas y ensamblados simultáneos de C/C++](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

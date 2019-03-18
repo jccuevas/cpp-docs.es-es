@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612373"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822631"
 ---
 # <a name="import-directive-c"></a>#import (Directiva) (C++)
 
@@ -72,7 +72,7 @@ Uno o varios [atributos #import](#_predir_the_23import_directive_import_attribut
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-o -
+O bien
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -121,16 +121,16 @@ Las siguientes optimizaciones del compilador vienen con el **#import** directiva
 
 - Cuando **#import** está procesado, el compilador comprueba primero si el encabezado existe y está actualizado. En caso afirmativo, no necesita volver a crearlo.
 
-El **#import** directiva también participa en la recompilación mínima y puede colocarse en un archivo de encabezado precompilado. Consulte [crear archivos de encabezado precompilado](../build/reference/creating-precompiled-header-files.md) para obtener más información.
+El **#import** directiva también participa en la recompilación mínima y puede colocarse en un archivo de encabezado precompilado. Consulte [crear archivos de encabezado precompilado](../build/creating-precompiled-header-files.md) para obtener más información.
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> Archivo de encabezado de biblioteca de tipos principal
 El archivo de encabezado principal de la biblioteca de tipos se compone de siete secciones:
 
-- Encabezado reutilizable: consta de los comentarios, la instrucción `#include` para COMDEF.H (que define algunas macros estándar utilizadas en el encabezado) y otro tipo de información de instalación.
+- Encabezado reutilizable: Consta de los comentarios, `#include` instrucción para COMDEF. H (que define algunas macros estándar utilizadas en el encabezado) y otra información diversa del programa de instalación.
 
-- Definiciones de tipo y referencias adelantadas: consta de declaraciones de estructura como `struct IMyInterface` y definiciones de tipo.
+- Las referencias adelantadas y definiciones de tipo: Consta de declaraciones de estructura como `struct IMyInterface` y definiciones de tipo.
 
-- Declaraciones de puntero inteligente: la clase de plantilla `_com_ptr_t` es una implementación de puntero inteligente que encapsula punteros de interfaz y elimina la necesidad de llamar a `AddRef`, `Release`, `QueryInterface` funciones. Además, oculta la llamada de `CoCreateInstance` al crear un nuevo objeto COM. En esta sección utiliza la instrucción de macro `_COM_SMARTPTR_TYPEDEF` para establecer definiciones de tipos de interfaces COM que sean especializaciones de plantilla de la [_com_ptr_t](../cpp/com-ptr-t-class.md) clase de plantilla. Por ejemplo, para la interfaz `IMyInterface`, el. Archivo TLH contendrá:
+- Declaraciones de puntero inteligente: La clase de plantilla `_com_ptr_t` es una implementación de puntero inteligente que encapsula punteros de interfaz y elimina la necesidad de llamar a `AddRef`, `Release`, `QueryInterface` funciones. Además, oculta la llamada de `CoCreateInstance` al crear un nuevo objeto COM. En esta sección utiliza la instrucción de macro `_COM_SMARTPTR_TYPEDEF` para establecer definiciones de tipos de interfaces COM que sean especializaciones de plantilla de la [_com_ptr_t](../cpp/com-ptr-t-class.md) clase de plantilla. Por ejemplo, para la interfaz `IMyInterface`, el. Archivo TLH contendrá:
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -144,13 +144,13 @@ El archivo de encabezado principal de la biblioteca de tipos se compone de siete
 
    El tipo `IMyInterfacePtr` se puede utilizar a continuación en lugar del puntero de interfaz sin formato `IMyInterface*`. Por lo tanto, no hay ninguna necesidad de llamar a las diversas `IUnknown` funciones miembro
 
-- Las declaraciones de TypeInfo: principalmente consta de definiciones de clase y otros elementos que exponen los elementos individuales de typeinfo devueltos por `ITypeLib:GetTypeInfo`. En esta sección, cada typeinfo de la biblioteca de tipos se refleja en el encabezado de forma dependiente de la información de `TYPEKIND`.
+- Declaraciones de TypeInfo: Se compone principalmente de las definiciones de clase y otros elementos que exponen los elementos individuales de typeinfo devueltos por `ITypeLib:GetTypeInfo`. En esta sección, cada typeinfo de la biblioteca de tipos se refleja en el encabezado de forma dependiente de la información de `TYPEKIND`.
 
-- Definición de GUID de estilo anterior opcional: contiene inicializaciones de las constantes de GUID con nombre. Estos son los nombres de la forma `CLSID_CoClass` y `IID_Interface`, similares a los generados por el compilador MIDL.
+- Definición de GUID de estilo anterior opcional: Contiene las inicializaciones de las constantes GUID con nombre. Estos son los nombres de la forma `CLSID_CoClass` y `IID_Interface`, similares a los generados por el compilador MIDL.
 
 - Instrucción `#include` para el encabezado secundario de la biblioteca de tipos.
 
-- Sección del pie de página reutilizable: actualmente incluye `#pragma pack(pop)`.
+- Texto reutilizable de pie de página: Actualmente incluye `#pragma pack(pop)`.
 
 Todas las secciones, excepto la sección de código reutilizable encabezado reutilizable y pie de página, se incluyen en un espacio de nombres con el nombre especificado por el `library` instrucción en el archivo IDL original. Puede utilizar los nombres del encabezado de la biblioteca de tipos, ya sea mediante una calificación explícita con el nombre del espacio de nombres o incluyendo la siguiente instrucción:
 

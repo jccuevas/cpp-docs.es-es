@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Realizar la conversión entre System::Guid y _GUID'
+title: 'Filtrar Conversión entre System:: GUID y _GUID'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: 7aa89557c1aeac4b7093ff6fc0bbd3937e99b0b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e74a95eea1018916dcdef6b133ef1f0ab0533f96
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635700"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747753"
 ---
-# <a name="how-to-convert-between-systemguid-and-guid"></a>Cómo: Realizar la conversión entre System::Guid y _GUID
+# <a name="how-to-convert-between-systemguid-and-guid"></a>Procedimiento Conversión entre System:: GUID y _GUID
 
 Ejemplo de código siguiente muestra cómo convertir entre una <xref:System.Guid> y un `_GUID`.
 
