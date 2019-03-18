@@ -1,37 +1,37 @@
 ---
-title: Cree un proyecto de aplicación de consola de C++
-description: Crear una aplicación de consola Hola a todos en Visual C++
+title: Creación de un proyecto de aplicación de consola de C++
+description: Creación de una aplicación de consola Hola mundo en Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 5722dcc06f5141818910e44a6160d12bcd4eaecd
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977763"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817730"
 ---
-# <a name="create-a-c-console-app-project"></a>Cree un proyecto de aplicación de consola de C++
+# <a name="create-a-c-console-app-project"></a>Creación de un proyecto de aplicación de consola de C++
 
 El punto de partida habitual para un programador de C++ es un "Hello, world!", aplicación que se ejecuta en la línea de comandos. Eso es lo que creará en Visual Studio en este paso.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, consulte [soporte de instalación de C++ en Visual Studio 2017](../build/vscpp-step-0-installation.md).
+- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si todavía no está instalada, vea [Instalar compatibilidad con C++ en Visual Studio 2017](vscpp-step-0-installation.md).
 
-## <a name="create-your-app-project"></a>Crear el proyecto de aplicación
+## <a name="create-your-app-project"></a>Creación del proyecto de aplicación
 
-Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, las configuraciones y reglas utilizadas para compilar sus aplicaciones y administra la relación entre todos los archivos del proyecto y todos los archivos externos. Para crear la aplicación, en primer lugar, creará un nuevo proyecto y solución.
+Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, configuraciones y reglas que se usan para compilar las aplicaciones y administra la relación entre todos los archivos del proyecto y los archivos externos. Para crear la aplicación, primero tendrá que crear un proyecto y una solución.
 
 1. En Visual Studio, abra el menú **archivo**  y elija **nuevo > proyecto** para abrir el cuadro de diálogo **nuevo proyecto**.
 
-   ![Abra el cuadro de diálogo nuevo proyecto](../build/media/vscpp-file-new-project.gif "abrir el cuadro de diálogo nuevo proyecto")
+   ![Abra el cuadro de diálogo nuevo proyecto](media/vscpp-file-new-project.gif "abrir el cuadro de diálogo nuevo proyecto")
 
 1. En el cuadro de diálogo **nuevo proyecto** , seleccione **instalado**, y **Visual C++** si aún no está seleccionada, a continuación, elija la plantilla **proyecto vacío** . En el **nombre** , introduzca *HelloWorld*. Elija **Aceptar** para crear el proyecto.
 
-   ![Asigne un nombre y crear el nuevo proyecto](../build/media/vscpp-concierge-project-name-callouts.png "nombre y crear el nuevo proyecto")
+   ![Asigne un nombre y crear el nuevo proyecto](media/vscpp-concierge-project-name-callouts.png "nombre y crear el nuevo proyecto")
 
 Visual Studio crea un proyecto nuevo y vacío, listo para especializar para el tipo de aplicación que quiera crear y agregar los archivos de código fuente. Hará esto a continuación.
 
@@ -45,7 +45,7 @@ Visual Studio puede crear todo tipo de aplicaciones y componentes de Windows y o
 
 1. En el cuadro de diálogo **páginas de propiedades** , en **propiedades de configuración**, seleccione **vinculador > sistema**, a continuación, seleccione el cuadro de edición situado junto a la propiedad **subsistema**. En el menú desplegable que aparece, seleccione **consola (/ SUBSYSTEM: CONSOLE)**  Elija **Aceptar** para guardar los cambios.
 
-   ![Abra el cuadro de diálogo páginas de propiedades](../build/media/vscpp-properties-linker-subsystem.gif "abrir el cuadro de diálogo páginas de propiedades")
+   ![Abra el cuadro de diálogo páginas de propiedades](media/vscpp-properties-linker-subsystem.gif "abrir el cuadro de diálogo páginas de propiedades")
 
 Ahora Visual Studio sabe como compilar el proyecto para que se ejecute en una ventana de consola. A continuación, Agregará un archivo de código fuente y escribirá el código de la aplicación.
 
@@ -57,7 +57,7 @@ Ahora Visual Studio sabe como compilar el proyecto para que se ejecute en una ve
 
 1. En el cuadro de diálogo **Agregar nuevo elemento** , y seleccione **Visual C++** en **instalado** si no está ya seleccionado. En el panel central, seleccione **archivo C++ (.cpp)**. Cambiar el **nombre** a *HelloWorld.cpp*. Elija **agregar** para cerrar el cuadro de diálogo y crear el archivo.
 
-   ![Agregar un archivo de código fuente para HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "agregar un archivo de código fuente para HelloWorld.cpp")
+   ![Agregar un archivo de código fuente para HelloWorld.cpp](media/vscpp-add-new-item.gif "agregar un archivo de código fuente para HelloWorld.cpp")
 
 Visual studio crea un archivo de código fuente nuevo y lo abre en una ventana del editor, lista para escribir el código fuente.
 
@@ -79,7 +79,7 @@ Visual studio crea un archivo de código fuente nuevo y lo abre en una ventana d
 
    En la ventana del editor, el código debe tener el siguiente aspecto:
 
-   ![Hola código del mundo en el editor](../build/media/vscpp-hello-world-editor.png "código Hello World en el editor")
+   ![Hola código del mundo en el editor](media/vscpp-hello-world-editor.png "código Hello World en el editor")
 
 Cuando el código tiene este aspecto en el editor, está listo para continuar con el paso siguiente y compilar la aplicación.
 
