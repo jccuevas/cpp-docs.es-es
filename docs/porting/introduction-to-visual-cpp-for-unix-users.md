@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747013"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57818380"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Introducción a Visual C++ para los usuarios de UNIX
 
@@ -37,7 +37,7 @@ Una aplicación que consta de varias bibliotecas y ejecutables, cada uno compila
 
 ## <a name="importing-your-existing-code"></a>Importar el código existente
 
-Puede usar el compilador de C++ para compilar código existente que se haya configurado para compilaciones con o sin archivos Make y usarlo en un proyecto de Visual Studio. Para obtener más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../ide/how-to-create-a-cpp-project-from-existing-code.md).
+Puede usar el compilador de C++ para compilar código existente que se haya configurado para compilaciones con o sin archivos Make y usarlo en un proyecto de Visual Studio. Para obtener más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../build/how-to-create-a-cpp-project-from-existing-code.md).
 
 ## <a name="creating-a-new-project"></a>Crear un proyecto nuevo
 
@@ -57,7 +57,7 @@ Puede deshabilitar todas las extensiones específicas de Microsoft C++ utilizand
 
 Los compiladores de Microsoft C y C++ ofrecen opciones para precompilar cualquier código de C o C++, incluido el código en línea. Usar esta función de rendimiento le permite compilar un cuerpo estable de código, almacenar el estado compilado del código en un archivo y, en las posteriores compilaciones, combinar el código precompilado con código que aun se esté desarrollando. Cada compilación posterior se realizará más rápidamente porque no se tendrá que volver a compilar el código estable.
 
-De forma predeterminada, todo el código precompilado se especifica en los archivos stdafx.h y stdafx.cpp. El asistente **Nuevo proyecto** creará automáticamente estos archivos, a menos que se desactive la opción **Encabezado precompilado**. Para más información sobre los encabezados precompilados, vea [Crear archivos de encabezado precompilados](../build/reference/creating-precompiled-header-files.md).
+De forma predeterminada, todo el código precompilado se especifica en los archivos stdafx.h y stdafx.cpp. El asistente **Nuevo proyecto** creará automáticamente estos archivos, a menos que se desactive la opción **Encabezado precompilado**. Para más información sobre los encabezados precompilados, vea [Crear archivos de encabezado precompilados](../build/creating-precompiled-header-files.md).
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
@@ -65,4 +65,4 @@ Para más información, vea [Trasladar de UNIX a Win32](../porting/porting-from-
 
 ## <a name="see-also"></a>Vea también
 
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)

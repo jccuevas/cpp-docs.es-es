@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740248"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808045"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -43,7 +43,7 @@ Necesitamos la información de versión completa y la arquitectura de destino de
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Para informar sobre la versión completa del compilador que está usando
 
-1. Abra el **símbolo del sistema para desarrolladores** que coincida con la arquitectura de configuración y la versión de Visual Studio utilizadas para compilar su proyecto. Por ejemplo, si crea una compilación usando Visual Studio 2017 en x64 para destinos x64, elija el **símbolo del sistema de las herramientas nativas x64 para VS 2017**. Para obtener más información, vea [Developer command prompt shortcuts](build/building-on-the-command-line.md#developer-command-prompt-shortcuts) (Accesos directos al símbolo del sistema para desarrolladores).
+1. Abra el **símbolo del sistema para desarrolladores** que coincida con la arquitectura de configuración y la versión de Visual Studio utilizadas para compilar su proyecto. Por ejemplo, si crea una compilación usando Visual Studio 2017 en x64 para destinos x64, elija el **símbolo del sistema de las herramientas nativas x64 para VS 2017**. Para obtener más información, vea [Developer command prompt shortcuts](build/building-on-the-command-line.md#developer_command_prompt_shortcuts) (Accesos directos al símbolo del sistema para desarrolladores).
 
 1. En la ventana de la consola del símbolo del sistema para desarrolladores, escriba el comando **cl /Bv**.
 
