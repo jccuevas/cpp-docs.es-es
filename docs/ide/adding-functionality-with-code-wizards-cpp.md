@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739805"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57822579"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Agregar funcionalidad con los asistentes para código (C++)
 
@@ -73,6 +73,5 @@ Hay tres ubicaciones desde las que se puede acceder a los asistentes para códig
 
 [Reemplazar una función virtual](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Navegar por la estructura de clases](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Crear proyectos de escritorio con asistentes para aplicaciones](../ide/creating-desktop-projects-by-using-application-wizards.md)<br>
-[Tipos de proyecto de Visual C++](../ide/visual-cpp-project-types.md)<br>
-[Tipos de archivos creados para proyectos de Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)
+[Tipos de proyecto de Visual C++](../build/reference/visual-cpp-project-types.md)<br>
+[Tipos de archivos creados para proyectos de Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
