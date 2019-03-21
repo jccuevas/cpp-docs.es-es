@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741964"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278403"
 ---
 # <a name="double-thunking-c"></a>Doble thunk (C++)
 
@@ -27,7 +27,7 @@ Una resolución consiste en indicar al compilador que no se genere un punto de e
 
 De forma similar, si exporta ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) una función administrada, se genera un punto de entrada nativo y cualquier función que se importa y llama a esa función llamará a través del punto de entrada nativo. Para evitar el doble código thunk en esta situación, no utilice la semántica de importación/exportación nativa; basta con hacer referencia a los metadatos a través de `#using` (consulte [#using](../preprocessor/hash-using-directive-cpp.md)).
 
-El compilador se actualizó para reducir el doble código thunk innecesario. Por ejemplo, cualquier función con un tipo administrado en la firma (incluido el tipo de valor devuelto) implícitamente se marcará como `__clrcall`. Para obtener más información sobre la eliminación de doble código thunk, vea [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).
+El compilador se actualizó para reducir el doble código thunk innecesario. Por ejemplo, cualquier función con un tipo administrado en la firma (incluido el tipo de valor devuelto) implícitamente se marcará como `__clrcall`.
 
 ## <a name="example"></a>Ejemplo
 

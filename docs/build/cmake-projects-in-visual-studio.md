@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 67bf20248933b28e9c7c0d87c598c0449d6bed0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827185"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278455"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Proyectos de CMake en Visual Studio
 
@@ -80,7 +80,7 @@ No se importa todo el contenido de la caché.  Propiedades como el generador y l
 
 Para compilar un proyecto de CMake, tienes estas opciones:
 
-1. Seleccione el destino en la lista desplegable **Depurar** y presione **F5**, o bien haga clic en el botón **Ejecutar** (el triángulo de color verde). Primero se compila el proyecto de manera automática, como una solución de Visual Studio.
+1. En la barra de herramientas en General, busque el **configuraciones** desplegable; probablemente se muestra "Linux-Debug" o "x64-Debug" de forma predeterminada. Seleccione la configuración deseada y presione **F5**, o haga clic en el **ejecutar** botón (triángulo verde) en la barra de herramientas. Primero se compila el proyecto de manera automática, como una solución de Visual Studio.
 
 1. Haga clic con el botón derecho en CMakeLists.txt y seleccione **Compilar** en el menú contextual. Si tiene varios destinos en la estructura de carpetas, puede elegir compilarlos todos o solo un destino específico.
 

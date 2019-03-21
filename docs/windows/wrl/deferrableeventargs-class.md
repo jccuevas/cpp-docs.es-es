@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 509686556bd06a6ec9d059593be46d0fc6a3876d
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54337521"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278369"
 ---
 # <a name="deferrableeventargs-class"></a>Clase DeferrableEventArgs
 
-Una clase de plantilla utilizada para los tipos de argumento de evento de los aplazamientos.
+Clase de plantilla usada para los tipos de argumento de evento de los aplazamientos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -43,14 +43,14 @@ La clase que implementa *TEventArgsInterface*.
 
 Name                                                         | Descripción
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Obtiene una referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) el objeto que representa un evento diferido.
+[DeferrableEventArgs::GetDeferral](#getdeferral)             | Obtiene una referencia a la [aplazamiento](/uwp/api/windows.foundation.deferral) el objeto que representa un evento diferido.
 [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Se llama para indicar que se ha completado todo el procesamiento para controlar un evento diferido.
 
 ## <a name="remarks"></a>Comentarios
 
 Las instancias de esta clase se pasan a los controladores de eventos para eventos diferidos. Los parámetros de plantilla representan una interfaz que define los detalles de los argumentos de evento de un tipo específico de evento diferido y una clase que implementa esa interfaz.
 
-La clase aparece como el primer argumento de un controlador de eventos para un evento diferido. Puede llamar a la [GetDeferral](#getdeferral) método para obtener el [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto desde el que puede obtener toda la información sobre el evento diferido. Tras completar el control de eventos, debe llamar a Complete en el objeto Aplazamiento. A continuación, debe llamar a [InvokeAllFinished](#invokeallfinished) al final del método de controlador de eventos, lo que garantiza que la finalización de todos los eventos diferidos se comunique correctamente.
+La clase aparece como el primer argumento de un controlador de eventos para un evento diferido. Puede llamar a la [GetDeferral](#getdeferral) método para obtener el [aplazamiento](/uwp/api/windows.foundation.deferral) objeto desde el que puede obtener toda la información sobre el evento diferido. Tras completar el control de eventos, debe llamar a Complete en el objeto Aplazamiento. A continuación, debe llamar a [InvokeAllFinished](#invokeallfinished) al final del método de controlador de eventos, lo que garantiza que la finalización de todos los eventos diferidos se comunique correctamente.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -60,7 +60,7 @@ La clase aparece como el primer argumento de un controlador de eventos para un e
 
 ## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
 
-Obtiene una referencia a la [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) el objeto que representa un evento diferido.
+Obtiene una referencia a la [aplazamiento](/uwp/api/windows.foundation.deferral) el objeto que representa un evento diferido.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -69,7 +69,7 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ### <a name="parameters"></a>Parámetros
 
 *result*<br/>
-Un puntero que hará referencia el [aplazamiento](http://go.microsoft.com/fwlink/p/?linkid=526520) objeto cuando se complete la llamada.
+Un puntero que hará referencia el [aplazamiento](/uwp/api/windows.foundation.deferral) objeto cuando se complete la llamada.
 
 ### <a name="return-value"></a>Valor devuelto
 
