@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809794"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810476"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Novedades de Visual C++ en Visual Studio 2017
 
@@ -315,7 +315,7 @@ Ahora C++ permite hacer clic presionando la tecla Control para **ir a la definic
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>Proyectos que no son de MSBuild con Abrir carpeta
 
-Visual Studio 2017 incluye la característica **Abrir carpeta**, que permite codificar, compilar y depurar elementos en un carpeta que contenga código fuente sin necesidad de crear soluciones o proyectos. Esto hace que sea mucho más fácil empezar a trabajar con Visual Studio, incluso si el proyecto no es un proyecto basado en MSBuild. Con**Abrir carpeta**, obtiene acceso a funciones útiles para entender, editar, compilar y depurar el código que Visual Studio proporciona para proyectos de MSBuild. Para más información, consulte el artículo sobre los [proyectos Abrir carpeta en Visual C++](ide/non-msbuild-projects.md).
+Visual Studio 2017 incluye la característica **Abrir carpeta**, que permite codificar, compilar y depurar elementos en un carpeta que contenga código fuente sin necesidad de crear soluciones o proyectos. Esto hace que sea mucho más fácil empezar a trabajar con Visual Studio, incluso si el proyecto no es un proyecto basado en MSBuild. Con**Abrir carpeta**, obtiene acceso a funciones útiles para entender, editar, compilar y depurar el código que Visual Studio proporciona para proyectos de MSBuild. Para más información, vea el artículo sobre los [proyectos Abrir carpeta para C++](build/open-folder-projects-cpp.md).
 
 - Mejoras en la experiencia de Abrir carpeta. Puede personalizar la experiencia con estos archivos .json:
   - CppProperties.json para personalizar la experiencia de IntelliSense y de exploración.
@@ -330,7 +330,7 @@ Visual Studio 2017 incluye la característica **Abrir carpeta**, que permite cod
 
 ## <a name="cmake-support-via-open-folder"></a>Compatibilidad con CMake mediante Abrir carpeta
 
-Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin convertirlos en archivos de proyecto de MSBuild (.vcxproj). Para más información, consulte el artículo sobre [proyectos CMake en Visual C++](ide/cmake-tools-for-visual-cpp.md). Si abre proyectos CMake con **Abrir carpeta**, el entorno se configurará automáticamente para la edición, la compilación y la depuración de C++.
+Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin convertirlos en archivos de proyecto de MSBuild (.vcxproj). Para más información, consulte el artículo sobre [proyectos CMake en Visual C++](build/cmake-projects-in-visual-studio.md). Si abre proyectos CMake con **Abrir carpeta**, el entorno se configurará automáticamente para la edición, la compilación y la depuración de C++.
 
 - IntelliSense de C++ funciona sin la necesidad de crear un archivo CppProperties.json en la carpeta raíz. Además, agregamos un nuevo menú desplegable que le permite a los usuarios cambiar fácilmente entre las configuraciones que proporcionan los archivos CMake y CppProperties.json.
 
@@ -342,7 +342,7 @@ Visual Studio 2017 incluye compatibilidad con el uso de proyectos CMake sin conv
 
 **Versión 15.5 de Visual Studio 2017**: se ha agregado compatibilidad para la importación de las memorias caché de CMake existentes.
 
-**Visual Studio 2017 versión 15.7**: se ha agregado compatibilidad para CMake 3.11, el análisis de código en proyectos de CMake, la vista de destinos en el Explorador de soluciones, las opciones de generación de caché y la compilación de archivo único. Para obtener más información, vea [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Compatibilidad con CMake en Visual Studio) y [Proyectos de CMake en Visual C++](ide/cmake-tools-for-visual-cpp.md).
+**Visual Studio 2017 versión 15.7**: se ha agregado compatibilidad para CMake 3.11, el análisis de código en proyectos de CMake, la vista de destinos en el Explorador de soluciones, las opciones de generación de caché y la compilación de archivo único. Para obtener más información, vea [CMake Support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) (Compatibilidad con CMake en Visual Studio) y [Proyectos de CMake en Visual C++](build/cmake-projects-in-visual-studio.md).
 
 ## <a name="windows-desktop-development-with-c"></a>Desarrollo del escritorio de Windows con C++
 

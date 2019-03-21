@@ -2,12 +2,12 @@
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745186"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808370"
 ---
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
 
@@ -89,8 +89,8 @@ Para administrar la caché de encabezados, vaya a **Herramientas > Opciones, mul
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajar con configuraciones de proyecto](../ide/working-with-project-properties.md)<br/>
-[C++ General Properties (Linux C++)](prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
-[VC++ Directories (Linux C++)](prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
-[Copy Sources Project Properties (Linux C++)](prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
-[Build Event Properties (Linux C++)](prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))
+[Set compiler and build properties](../build/working-with-project-properties.md) (Establecer las propiedades del compilador y la compilación)<br/>
+[C++ General Properties (Linux C++)](../linux/prop-pages/general-linux.md) (Propiedades generales de C++ (Linux C++))<br/>
+[VC++ Directories (Linux C++)](../linux/prop-pages/directories-linux.md) (Directorios de VC++ (Linux C++))<br/>
+[Copy Sources Project Properties (Linux C++)](../linux/prop-pages/copy-sources-project.md) (Propiedades del proyecto Copiar orígenes (Linux C++))<br/>
+[Build Event Properties (Linux C++)](../linux/prop-pages/build-events-linux.md) (Propiedades de evento de compilación (Linux C++))
