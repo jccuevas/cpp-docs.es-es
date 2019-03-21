@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289304"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278548"
 ---
 # <a name="task-class-concurrency-runtime"></a>tarea (Clase) (Motor Runtime de simultaneidad)
 
@@ -112,7 +112,7 @@ Resultado de la tarea.
 Si se cancela la tarea, una llamada a `get` producirá un [task_canceled](task-canceled-class.md) excepción. Si la tarea encontró una excepción diferente o si se propagó una excepción desde una tarea anterior, una llamada a `get` iniciará esta excepción.
 
 > [!IMPORTANT]
->  En una aplicación plataforma Universal de Windows (UWP), no llame a [concurrency::task::wait](#wait) o `get` ( `wait` llamadas `get`) en el código que se ejecuta en el STA. En caso contrario, el runtime produce [Concurrency:: invalid_operation](invalid-operation-class.md) porque estos métodos se bloquea el subproceso actual y puede provocar que la aplicación deje de responder. Sin embargo, puede llamar a la `get` método para recibir el resultado de la tarea anterior en una continuación basada en tareas porque el resultado está disponible inmediatamente.
+>  En una aplicación plataforma Universal de Windows (UWP), no llame a [concurrency::task::wait](#wait) o `get` ( `wait` llamadas `get`) en el código que se ejecuta en el subproceso de interfaz de usuario. En caso contrario, el runtime produce [Concurrency:: invalid_operation](invalid-operation-class.md) porque estos métodos se bloquea el subproceso actual y puede provocar que la aplicación deje de responder. Sin embargo, puede llamar a la `get` método para recibir el resultado de la tarea anterior en una continuación basada en tareas porque el resultado está disponible inmediatamente.
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -344,7 +344,7 @@ Un valor de `task_status`, que podría ser `completed` o `canceled`. Si la tarea
 ### <a name="remarks"></a>Comentarios
 
 > [!IMPORTANT]
->  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait` en el código que se ejecuta en el STA. De lo contrario, el runtime produce [concurrency::invalid_operation](invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
+>  En una aplicación plataforma Universal de Windows (UWP), no llame a `wait` en el código que se ejecuta en el subproceso de interfaz de usuario. De lo contrario, el runtime produce [concurrency::invalid_operation](invalid-operation-class.md) porque este método bloquea el subproceso actual y pueden provocar que la aplicación no responda. Sin embargo, puede llamar al método [concurrency::task::get](#get) para recibir el resultado de la tarea anterior en una continuación basada en tareas.
 
 ## <a name="see-also"></a>Vea también
 

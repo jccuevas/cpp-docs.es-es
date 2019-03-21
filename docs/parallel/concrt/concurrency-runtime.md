@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258338"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278559"
 ---
 # <a name="concurrency-runtime"></a>Runtime de simultaneidad
 
@@ -99,7 +99,6 @@ Para obtener documentación de referencia, consulte [referencia](../../parallel/
 |||
 |-|-|
 |[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información sobre cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|
-|[Ejemplos de código para el Runtime de simultaneidad y la biblioteca de patrones de procesamiento paralelo en Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Proporciona aplicaciones de ejemplo y utilidades que muestran el uso del runtime de simultaneidad.|
 |[Blog de programación en paralelo en código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Proporciona artículos de blog detallados adicionales sobre la programación paralela en el runtime de simultaneidad.|
 |[Foro de informática en paralelo en C++ y código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|
 |[Programación en paralelo](/dotnet/standard/parallel-programming/index)|Se explican el modelo de programación paralelo que está disponible en .NET Framework.|
