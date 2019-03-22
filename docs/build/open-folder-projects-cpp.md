@@ -1,15 +1,15 @@
 ---
 title: Compatibilidad de la acción Abrir carpeta con sistemas de compilación de C++ en Visual Studio
-ms.date: 01/21/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a7e352d7978ba5c973d779224639006fa984e4f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 2dedd56759b6bb49260221e22218da6f4300a970
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827215"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356093"
 ---
 # <a name="open-folder-projects-for-c"></a>Proyectos Abrir carpeta para C++
 
@@ -49,7 +49,7 @@ IntelliSense y el comportamiento de exploración dependen en parte de la configu
       "includePath": [ "include" ],
       "defines": [ "_DEBUG" ],
       "compilerSwitches": "/std:c++17",
-      "intelliSenseMode": "msvc-x64",
+      "intelliSenseMode": "windows-msvc-x64",
       "forcedInclude": [ "pch.h" ],
       "undefines": []
     }
@@ -64,7 +64,7 @@ Puede automatizar los scripts de compilación o cualquier otra operación extern
 
 ![Configurar tareas de Abrir carpeta](media/open-folder-config-tasks.png)
 
-Esto crea (o abre) el archivo `tasks.vs.json` en la carpeta .vs que Visual Studio crea en la carpeta raíz del proyecto. En este archivo puede definir cualquier tarea arbitraria y luego invocarla desde el menú contextual del **Explorador de soluciones**. En el ejemplo siguiente se muestra un archivo tasks.vs.json que define una sola tarea. `taskName` define el nombre que aparece en el menú contextual. `appliesTo` define los archivos en los que se puede ejecutar el comando. La propiedad `command` hace referencia a la variable de entorno COMSPEC, que identifica la ruta de acceso de la consola (cmd.exe en Windows). También se puede hacer referencia a variables de entorno que se declaran en CppProperties.json o CMakeSettings.json. La propiedad `args` especifica la línea de comandos que se va a invocar. La macro `${file}` recupera el archivo seleccionado en el **Explorador de soluciones**. En el ejemplo siguiente se muestra el nombre de archivo del archivo .cpp seleccionado actualmente.
+Esto crea (o abre) el **tasks.vs.json** archivo en la carpeta .vs que Visual Studio crea en la carpeta raíz del proyecto. En este archivo puede definir cualquier tarea arbitraria y luego invocarla desde el menú contextual del **Explorador de soluciones**. En el ejemplo siguiente se muestra un archivo tasks.vs.json que define una sola tarea. `taskName` define el nombre que aparece en el menú contextual. `appliesTo` define los archivos en los que se puede ejecutar el comando. La propiedad `command` hace referencia a la variable de entorno COMSPEC, que identifica la ruta de acceso de la consola (cmd.exe en Windows). También se puede hacer referencia a variables de entorno que se declaran en CppProperties.json o CMakeSettings.json. La propiedad `args` especifica la línea de comandos que se va a invocar. La macro `${file}` recupera el archivo seleccionado en el **Explorador de soluciones**. En el ejemplo siguiente se muestra el nombre de archivo del archivo .cpp seleccionado actualmente.
 
 ```json
 {
@@ -87,7 +87,7 @@ Para obtener más información, vea la [referencia del esquema Tasks.vs.json](ta
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>Configurar parámetros de depuración con launch.vs.json
 
-Para personalizar los argumentos de la línea de comandos del programa, haga clic con el botón derecho en el archivo ejecutable en el **Explorador de soluciones** y seleccione **Configuración de depuración e inicio**. Se abrirá un archivo `launch.vs.json` existente, o si no existe ninguno, creará un archivo rellenado previamente con la información sobre el programa que se ha seleccionado.
+Para personalizar los argumentos de la línea de comandos del programa, haga clic con el botón derecho en el archivo ejecutable en el **Explorador de soluciones** y seleccione **Configuración de depuración e inicio**. Se abrirá una existente **launch.vs.json** archivo, o si no existe ninguno, creará un nuevo archivo que se rellena previamente con la información sobre el programa que ha seleccionado.
 
 Para especificar argumentos adicionales, simplemente agréguelos en la matriz de JSON `args` como se muestra en el ejemplo siguiente:
 
