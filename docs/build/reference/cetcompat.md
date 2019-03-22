@@ -1,21 +1,21 @@
 ---
-title: / CETCOMPAT (compatible con tecnología de cumplimiento de flujo de Control)
+title: / CETCOMPAT (pila de sombra CET compatible)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809852"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356020"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (compatible con tecnología de cumplimiento de flujo de Control)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/ CETCOMPAT (pila de sombra CET compatible)
 
-Especifica si se debe marcar una imagen ejecutable como compatible con la tecnología de cumplimiento de flujo de Control (CET).
+Especifica si se debe marcar una imagen ejecutable como compatible con la pila de sombra de la tecnología de cumplimiento (CET) de flujo de Control.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -24,13 +24,13 @@ Especifica si se debe marcar una imagen ejecutable como compatible con la tecnol
 ## <a name="arguments"></a>Argumentos
 
 **NO**<br/>
-Especifica que el archivo ejecutable no se debe marcar compatible con CET.
+Especifica que el archivo ejecutable no se debe marcar compatible con la pila de sombra CET.
 
 ## <a name="remarks"></a>Comentarios
 
-Tecnología de cumplimiento de flujo de control (CET) es una característica de procesador del equipo que proporciona funcionalidades para defenderse contra ciertos tipos de ataques de malware. Para obtener más información, consulte [cumplimiento Technology Preview de flujo de Control de Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
+Pila de sombra de la tecnología de cumplimiento (CET) de flujo de control es una característica de procesador del equipo que proporciona funcionalidades para defenderse de programación orientada a devuelto (superior) en función de los ataques de malware. Para obtener más información, consulte [cumplimiento Technology Preview de flujo de Control de Intel](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf).
 
-El **/CETCOMPAT** opción del vinculador indica al vinculador para marcar el archivo binario como CET compatible. **/CETCOMPAT:no** marca el archivo binario que no es compatible con CET. Si ambas opciones se especifican en la línea de comandos, se usa la última de ellas especificada. Actualmente, este modificador solo es aplicable a las arquitecturas x86 y x64.
+El **/CETCOMPAT** opción del vinculador indica al vinculador para marcar el archivo binario como pila sombra CET compatible. **/CETCOMPAT:no** marca el archivo binario que no es compatible con la pila de sombra CET. Si ambas opciones se especifican en la línea de comandos, se usa la última de ellas especificada. Actualmente, este modificador solo es aplicable a las arquitecturas x86 y x64.
 
 El **/CETCOMPAT** opción está disponible a partir el conjunto de herramientas de Visual Studio 2019 Preview 3.
 

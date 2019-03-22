@@ -1,12 +1,12 @@
 ---
 title: Información general sobre las convenciones ABI ARM64
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816547"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356197"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Información general sobre las convenciones ABI ARM64
 
@@ -191,7 +191,7 @@ Para la devolución por valor que no se puede pasar a través de registros, el l
 
 Las siguientes ABI RAS mediante ARM, la pila debe permanecer 16 bytes alineados en todo momento. AArch64 contiene una característica de hardware que genera la alineación de pila alineados de errores cada vez que se realiza una carga de SP relativa o store y el SP es no 16 bytes. Windows se ejecuta con esta característica está habilitada en todo momento.
 
-Las funciones que asignan 4k o más valorados de pila deben asegurarse de que cada página antes de la página final se toca en orden, lo que garantiza ningún código pueda "saltarse" las páginas de protección que Windows usa para expandir la pila. Normalmente esto se realiza el `__chkstk` auxiliar, que tiene una convención de llamada personalizada que pasa la asignación de pila total dividida por 16 en x8.
+Las funciones que asignan 4k o más valorados de pila deben asegurarse de que cada página antes de la página final se toca en orden, lo que garantiza ningún código pueda "saltarse" las páginas de protección que Windows usa para expandir la pila. Normalmente esto se realiza el `__chkstk` auxiliar, que tiene una convención de llamada personalizada que pasa la asignación de pila total dividida por 16 en x15.
 
 ## <a name="red-zone"></a>Zona roja
 
