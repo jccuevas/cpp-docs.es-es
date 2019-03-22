@@ -1,5 +1,5 @@
 ---
-title: Filtrar Administrar los símbolos
+title: Procedimiento Administrar los símbolos
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562801"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328849"
 ---
 # <a name="how-to-manage-symbols"></a>Filtrar Administrar los símbolos
 
@@ -85,7 +85,7 @@ Los nombres de símbolo tienen prefijos descriptivos que indican el tipo de recu
 
 ### <a name="to-change-a-symbol-name-id"></a>Para cambiar un nombre de símbolo (Id.)
 
-1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), seleccione el recurso.
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), seleccione el recurso.
 
 1. En el **propiedades** ventana, escriba un nombre de símbolo nuevo o seleccione en la lista de símbolos existentes en el **ID** cuadro.
 
@@ -129,7 +129,7 @@ Algunas limitaciones de los valores de símbolo son:
 
 ### <a name="to-change-a-symbol-value"></a>Para cambiar un valor de símbolo
 
-1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), seleccione el recurso.
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), seleccione el recurso.
 
 1. En el **propiedades** ventana, escriba el nombre del símbolo seguido por un signo igual y un número entero en el **ID** cuadro, por ejemplo:
 
@@ -185,7 +185,7 @@ El entorno interpreta correctamente estos símbolos calculados siempre y cuando:
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Para incluir símbolos compartidos (de solo lectura) en el archivo de recursos
 
-1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), haga clic en su *.rc* de archivo y seleccione [incluye recursos](../windows/resource-includes-dialog-box.md).
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic en su *.rc* de archivo y seleccione [incluye recursos](../windows/resource-includes-dialog-box.md).
 
 1. En el **directivas de símbolos de solo lectura** cuadro, use el `#include` directiva de compilador para especificar el archivo donde desea que se conserven los símbolos de solo lectura.
 
@@ -204,7 +204,7 @@ El entorno interpreta correctamente estos símbolos calculados siempre y cuando:
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Para cambiar el nombre del archivo de encabezado de símbolos de recurso
 
-1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), haga clic en su *.rc* de archivo y elija [incluye recursos](../windows/resource-includes-dialog-box.md).
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic en su *.rc* de archivo y elija [incluye recursos](../windows/resource-includes-dialog-box.md).
 
 1. En el **archivo de encabezado de símbolos** , escriba el nuevo nombre del archivo de inclusión.
 

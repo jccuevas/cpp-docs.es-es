@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 2bb15597be5ac4e1bb5f37fb2f12b74631e5a354
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a171e6a7eea5e10b47bf680545bc14618893b155
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592722"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328992"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -26,12 +26,12 @@ Crea una conexión a un origen de datos.
 ### <a name="parameters"></a>Parámetros
 
 *db_source*<br/>
-La cadena de conexión usada para conectarse al origen de datos. Para el formato de la cadena de conexión, consulte [cadenas de conexión y vínculos de datos](/previous-versions/windows/desktop/ms718376) en Microsoft Data Access Components (MDAC) SDK.
+La cadena de conexión usada para conectarse al origen de datos. Para el formato de la cadena de conexión, consulte [cadenas de conexión y vínculos de datos](/previous-versions/windows/desktop/ms718376(v=vs.85)) en Microsoft Data Access Components (MDAC) SDK.
 
 *name*<br/>
 (Opcional) Cuando usas **db_source** en una clase, *nombre* es una instancia de un objeto de origen de datos que tiene el **db_source** atributo aplicado a él (vea el ejemplo 1). Cuando usas **db_source** en línea en una implementación de método *nombre* es una variable (local al método) que se puede usar para acceder a los datos de origen (vea el ejemplo 2). Pase este *nombre* a la *source_name* parámetro de `db_command` para asociar un comando en el origen de datos.
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
 ## <a name="remarks"></a>Comentarios

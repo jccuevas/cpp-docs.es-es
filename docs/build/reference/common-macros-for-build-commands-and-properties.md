@@ -1,6 +1,6 @@
 ---
-title: Macros comunes para propiedades y comandos de compilación
-ms.date: 05/29/2018
+title: Macros comunes para propiedades y comandos de MSBuild
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826645"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327683"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>Macros comunes para propiedades y comandos de compilación
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comunes para propiedades y comandos de MSBuild
 
-Según las opciones de instalación, Visual Studio puede poner a su disposición cientos de macros. Se corresponden con las propiedades de MSBuild que se establecen de forma predeterminada, o en los archivos .props o .targets, o bien en la configuración del proyecto. Estas macros pueden usarse en cualquier parte del cuadro de diálogo **Páginas de propiedades** de un proyecto donde se aceptan cadenas. Estas macros no distinguen mayúsculas de minúsculas.
+Dependiendo de las opciones de instalación, Visual Studio puede realizar cientos de macros disponibles para usted en un proyecto de Visual Studio (basado en MSBuild). Se corresponden con las propiedades de MSBuild que se establecen de forma predeterminada, o en los archivos .props o .targets, o bien en la configuración del proyecto. Estas macros pueden usarse en cualquier parte del cuadro de diálogo **Páginas de propiedades** de un proyecto donde se aceptan cadenas. Estas macros no distinguen mayúsculas de minúsculas.
 
 ## <a name="view-the-current-properties-and-macros"></a>Ver las propiedades y macros actuales
 
-Para mostrar las macros disponibles actualmente, en cualquier página de propiedades del cuadro de diálogo **Páginas de propiedades**, haga clic en la flecha desplegable situada al final de una fila de propiedad. Si **Editar** está disponible, seleccione esa opción y luego en el cuadro de diálogo de edición, haga clic en el botón **Macros**. El conjunto actual de propiedades y macros visibles para Visual Studio se muestra junto con el valor actual para cada una. Para obtener más información, consulte el **Specifying User-Defined valores** sección de [referencia de página de propiedades de proyecto de C++](property-pages-visual-cpp.md).
+Para mostrar todas las macros disponibles actualmente, en el **páginas de propiedades** cuadro de diálogo, en **directorios de VC ++**, elija la flecha de lista desplegable al final de una fila de propiedad. Haga clic en **editar** y, a continuación, en el cuadro de diálogo de edición, elija el **Macros** botón. El conjunto actual de propiedades y macros visibles para Visual Studio se muestra junto con el valor actual para cada una. Para obtener más información, consulte el **Specifying User-Defined valores** sección de [referencia de página de propiedades de proyecto de C++](property-pages-visual-cpp.md).
+
+![Botón de macros de VC ++](../media/vcppdir_libdir_macros.png "menú Macros")
 
 ## <a name="list-of-common-macros"></a>Lista de macros comunes
 
-En esta tabla se describe un subconjunto de uso frecuente de las macros disponibles. Esta lista está muy lejos de ser exhaustiva. Para obtener detalles sobre cómo se crean y usan las definiciones de propiedades de MSBuild como macros en los archivos .props, .targets y .vcxproj, vea [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties).
+Esta tabla describen un subconjunto frecuente de las macros disponibles; Hay muchas más no aparece aquí. Vaya a la **Macros** cuadro de diálogo para ver todas las propiedades y sus valores actuales en el proyecto. Para obtener detalles sobre cómo se crean y usan las definiciones de propiedades de MSBuild como macros en los archivos .props, .targets y .vcxproj, vea [Propiedades de MSBuild](/visualstudio/msbuild/msbuild-properties).
 
 |Macro|Descripción|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ En esta tabla se describe un subconjunto de uso frecuente de las macros disponib
 |**$(IntDir)**|Ruta de acceso al directorio especificado para los archivos intermedios. Si se trata de una ruta de acceso relativa, los archivos intermedios van a esta ruta de acceso anexados al directorio del proyecto. Esta ruta de acceso debe tener una barra diagonal final. Se resuelve en el valor de la propiedad **Intermediate Directory** . No use **$(OutDir)** para definir esta propiedad.|
 |**$(OutDir)**|Ruta de acceso al directorio del archivo de salida. Si se trata de una ruta de acceso relativa, los archivos de salida van a esta ruta de acceso anexados al directorio del proyecto. Esta ruta de acceso debe tener una barra diagonal final. Se resuelve en el valor de la propiedad **Output Directory** . No use **$(IntDir)** para definir esta propiedad.|
 |**$(Platform)**|El nombre de la plataforma del proyecto actual, por ejemplo, "Win32".|
+|**$(PlatformShortName)**|El nombre corto de la arquitectura actual, por ejemplo, "x86" o "x64".|
 |**$(ProjectDir)**|El directorio del proyecto (definido como unidad + ruta de acceso); incluye la barra diagonal inversa "\\".|
 |**$(ProjectExt)**|La extensión de archivo del proyecto. Incluye el "." antes de la extensión de archivo.|
 |**$(ProjectFileName)**|El nombre de archivo del proyecto (definido como nombre base + extensión de archivo).|
@@ -162,6 +166,6 @@ El sistema de compilación de C++ se ha cambiado significativamente entre Visual
 
 ## <a name="see-also"></a>Vea también
 
-- [Proyectos de Visual Studio - C++](../creating-and-managing-visual-cpp-projects.md)
+- [Proyectos de Visual Studio: C++](../creating-and-managing-visual-cpp-projects.md)
 - [Guía de migración y actualización de Visual C++](../../porting/visual-cpp-porting-and-upgrading-guide.md)
 - [Información general sobre posibles problemas de actualización](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)
