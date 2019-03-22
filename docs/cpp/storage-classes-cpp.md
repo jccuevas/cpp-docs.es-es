@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520332"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329031"
 ---
 # <a name="storage-classes-c"></a>Clases de almacenamiento (C++)
 
@@ -24,7 +24,7 @@ Un *clase de almacenamiento* en el contexto de C++, las declaraciones de variabl
 
 1. El [mutable](../cpp/mutable-data-members-cpp.md) palabra clave puede considerarse un especificador de clase de almacenamiento. Sin embargo, solo está disponible en la lista de miembros de una definición de clase.
 
-1. **Visual C++ 2010 y versiones posteriores:** el **automática** palabra clave ya no es un especificador de clase de almacenamiento de C++ y el **registrar** palabra clave está desusada. **Visual Studio 2017 versión 15.7 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave se quitará el lenguaje C++.
+1. **Visual C++ 2010 y versiones posteriores:** El **automática** palabra clave ya no es un especificador de clase de almacenamiento de C++ y el **registrar** palabra clave está desusada. **Visual Studio 2017 versión 15.7 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): El **registrar** palabra clave se quitará el lenguaje C++.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -167,7 +167,7 @@ Los objetos y las variables declaradas como **extern** declarar un objeto que se
 
 Declaración de **const** variables con el **extern** clase de almacenamiento fuerza la variable a tener vinculación externa. Una inicialización de un **extern const** variable se permite en la unidad de traducción de definición. Las inicializaciones en unidades de traducción distintas de la unidad de traducción de la definición generan resultados sin definir. Para obtener más información, consulte [usar extern para especificar la vinculación](../cpp/using-extern-to-specify-linkage.md)
 
-El [/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) opción del compilador hace que el compilador aplique [vinculación externa]() a las variables declaradas con `extern constexpr`. En versiones anteriores de Visual Studio y de forma predeterminada o si **/Zc:externConstexpr-** se especifica, Visual Studio aplica vinculación interna a **constexpr** aunque se utilicen las variables del **extern** se utiliza la palabra clave. El **/Zc: externconstexpr** opción está disponible a partir de Visual Studio 2017 15.6 de actualización. y está desactivada de forma predeterminada. El /permissive-option no permite/Zc: externconstexpr.
+El [/Zc: externconstexpr](../build/reference/zc-externconstexpr.md) opción del compilador hace que el compilador aplique [vinculación externa](../c-language/external-linkage.md) a las variables declaradas con `extern constexpr`. En versiones anteriores de Visual Studio y de forma predeterminada o si **/Zc:externConstexpr-** se especifica, Visual Studio aplica vinculación interna a **constexpr** aunque se utilicen las variables del **extern** se utiliza la palabra clave. El **/Zc: externconstexpr** opción está disponible a partir de Visual Studio 2017 15.6 de actualización. y está desactivada de forma predeterminada. El /permissive-option no permite/Zc: externconstexpr.
 
 El código siguiente muestra dos **extern** declaraciones, `DefinedElsewhere` (que hace referencia a un nombre definido en una unidad de traducción diferente) y `DefinedHere` (que hace referencia a un nombre definido en un ámbito de inclusión):
 
@@ -215,13 +215,13 @@ Cosas a tener en cuenta sobre el `thread_local` especificador:
 
 - Solo puede especificar `thread_local` en elementos de datos con duración de almacenamiento estática. Esto incluye los objetos de datos globales (tanto **estático** y **extern**), objetos estáticos locales y miembros de datos estáticos de clases. Cualquier variable local declarada `thread_local` es implícitamente estático si no se proporciona ninguna otra clase de almacenamiento; es decir, en el ámbito de bloque `thread_local` es equivalente a `thread_local static`.
 
-- Debe especificar `thread_local` para la declaración y la definición de un objeto local para el subproceso, ya sea que la declaración y la definición se realicen en el mismo archivo o en archivos distintos.
+- Debe especificar `thread_local` para la declaración y la definición de un objeto local de subproceso, ya sea que la declaración y la definición se realicen en el mismo archivo o en archivos distintos.
 
 En Windows, `thread_local` es funcionalmente equivalente a [__declspec (Thread)](../cpp/thread.md) , salvo que **__declspec (Thread)** se pueden aplicar a una definición de tipo y es válido en el código de C. Siempre que sea posible, use `thread_local` porque forma parte del estándar de C++ y, por tanto, es más portátil.
 
-##  <a name="register"></a>  registrar
+##  <a name="register"></a>  register
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el **registrar** palabra clave ya no es una clase de almacenamiento compatibles. La palabra clave se mantiene en el estándar para un uso futuro.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): El **registrar** palabra clave ya no es una clase de almacenamiento compatibles. La palabra clave se mantiene en el estándar para un uso futuro.
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

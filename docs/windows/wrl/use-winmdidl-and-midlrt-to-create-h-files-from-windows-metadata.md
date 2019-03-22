@@ -3,22 +3,22 @@ title: Procedimiento Usar winmdidl.exe y midlrt.exe para crear archivos .h desde
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54337497"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328725"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Procedimiento Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Filtrar Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows
 
 Winmdidl.exe y midlrt.exe permiten la interacción de nivel COM entre el código de C++ nativo y los componentes de Windows Runtime. Winmdidl.exe toma como entrada un archivo .winmd que contiene los metadatos para un componente de Windows Runtime y genera un archivo IDL. Midlrt.exe convierte ese archivo IDL en archivos de encabezado que el código de C++ puede utilizar. Ambas herramientas se ejecutan en la línea de comandos.
 
 Estas herramientas se utilizan en dos escenarios principales:
 
-- Crear un archivo IDL personalizado y archivos de encabezado de modo que una aplicación de C++ escrita mediante la Biblioteca de plantillas de Windows en tiempo de ejecución (WRL) pueda utilizar un componente personalizado de Windows en tiempo de ejecución.
+- Crear un archivo IDL personalizado y archivos de encabezado de modo que una aplicación de C++ escrita mediante la Biblioteca de plantillas de Windows Runtime (WRL) pueda utilizar un componente personalizado de Windows Runtime.
 
-- Generar archivos de proxy y código auxiliar para los tipos de eventos definidos por el usuario en un componente de Windows Runtime. Para obtener más información, consulte [eventos personalizados y descriptores de acceso de eventos en componentes de Windows en tiempo de ejecución](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
+- Generar archivos de proxy y código auxiliar para los tipos de eventos definidos por el usuario en un componente de Windows Runtime. Para obtener más información, consulte [eventos personalizados y descriptores de acceso de eventos en componentes de Windows en tiempo de ejecución](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components).
 
 Estas herramientas solo son necesarias para analizar archivos .winmd personalizados. Los archivos .idl y .h para componentes del sistema operativo Windows se generan automáticamente. De forma predeterminada en Windows 8.1, se encuentran en \Program archivos (x86) \Windows Kits\8.1\Include\winrt\\.
 
@@ -75,4 +75,4 @@ A continuación, se ejecuta midlrt en el archivo IDL generado. Tenga en cuenta q
 
 El archivo de salida de una operación de winmdidl tiene el mismo nombre que el archivo de entrada, pero tiene la extensión de nombre de archivo .idl.
 
-Si va a desarrollar un componente de Windows Runtime al que se obtendrá acceso desde WRL, puede especificar que winmdidl.exe y midlrt.exe se ejecuten como pasos posteriores a la compilación para que se generen los archivos .idl y .h en cada compilación. Para obtener un ejemplo, vea [provocar eventos en componentes de Windows en tiempo de ejecución](/uwp/winrt-components/raising-events-in-windows-runtime-components).
+Si va a desarrollar un componente de Windows en tiempo de ejecución al que se obtendrá acceso desde WRL, puede especificar que winmdidl.exe y midlrt.exe se ejecuten como pasos posteriores a la compilación para que se generen los archivos .idl y .h en cada compilación. Para obtener un ejemplo, vea [provocar eventos en componentes de Windows en tiempo de ejecución](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components).

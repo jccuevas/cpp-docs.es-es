@@ -3,12 +3,12 @@ title: Personalización de la configuración de compilación de CMake en Visual 
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826393"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328303"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalización de la configuración de compilación de CMake
 
@@ -53,19 +53,19 @@ Además, puede editar `CMakeSettings.json` directamente para crear configuracion
 
 - **generator**: se asigna al modificador **-G** de CMake y especifica el generador que se va a usar. Esta propiedad también se puede usar como una macro, `${generator}`, al crear otros valores de propiedad. En la actualidad, Visual Studio admite los generadores de CMake siguientes:
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+  - "Ninja"
+  - "Visual Studio 14 2015"
+  - "Visual Studio 14 2015 ARM"
+  - "Visual Studio 14 2015 Win64"
+  - "Visual Studio 15 2017"
+  - "Visual Studio 15 2017 ARM"
+  - "Visual Studio 15 2017 Win64"
 
-    Como Ninja está diseñado para velocidades de compilación rápidas en lugar de flexibilidad y funcionamiento, se establece como el valor predeterminado. Pero es posible que algunos proyectos de CMake no se puedan generar correctamente mediante Ninja. Si esto ocurre, puede indicar a CMake que en su lugar genere un proyecto de Visual Studio.
+  Como Ninja está diseñado para velocidades de compilación rápidas en lugar de flexibilidad y funcionamiento, se establece como el valor predeterminado. Pero es posible que algunos proyectos de CMake no se puedan generar correctamente mediante Ninja. Si esto ocurre, puede indicar a CMake que en su lugar genere un proyecto de Visual Studio.
 
-    Para especificar un generador de Visual Studio, abra el archivo `CMakeSettings.json` en el menú principal mediante **CMake | Cambiar configuración de CMake**. Elimine "Ninja" y escriba "V". Esto activa IntelliSense, lo que permite elegir el generador que quiera.
+  Para especificar un generador de Visual Studio, abra el archivo `CMakeSettings.json` en el menú principal mediante **CMake | Cambiar configuración de CMake**. Elimine "Ninja" y escriba "V". Esto activa IntelliSense, lo que permite elegir el generador que quiera.
 
-    Cuando la configuración activa especifica un generador de Visual Studio, de forma predeterminada se invoca MSBuild.exe con argumentos `-m -v:minimal`. Para personalizar la compilación, en el archivo `CMakeSettings.json`, puede especificar [argumentos adicionales de la línea de comandos de MSBuild](../build/msbuild-visual-cpp-overview.md) que se pasarán al sistema de compilación a través de la propiedad `buildCommandArgs`:
+  Cuando la configuración activa especifica un generador de Visual Studio, de forma predeterminada se invoca MSBuild.exe con argumentos `-m -v:minimal`. Para personalizar la compilación, en el archivo `CMakeSettings.json`, puede especificar [argumentos adicionales de la línea de comandos de MSBuild](../build/reference/msbuild-visual-cpp-overview.md) que se pasarán al sistema de compilación a través de la propiedad `buildCommandArgs`:
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -132,7 +132,7 @@ usage: ninja [options] [targets...]
 |   -n       | Simulacro (no se ejecutan comandos pero se actúa como si fueran correctos).|
 |   -v       | Se muestran todas las líneas de comandos durante la compilación.|
 |   -d MODE  | Se habilita la depuración (use -d list para enumerar los modos).|
-|   -t TOOL  | Se ejecuta una herramienta secundaria (use -t list para enumerar las herramientas secundarias). Finaliza las opciones de nivel superior; se pasan más marcas a la herramienta.|
+|   -t TOOL  | Se ejecuta una herramienta secundaria (use -t list para enumerar las herramientas secundarias). finaliza las opciones de nivel superior; aún más las marcas se pasan a la herramienta|
 |   -w FLAG  | Se ajustan las advertencias (use -w list para enumerar las advertencias).|
 
 ## <a name="inherited-environments"></a>Entornos heredados
@@ -236,7 +236,7 @@ En el ejemplo siguiente, la configuración de depuración x86 define su propio v
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>
 [Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Configuración de sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>

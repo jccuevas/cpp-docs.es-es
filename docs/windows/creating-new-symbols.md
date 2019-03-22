@@ -19,14 +19,14 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 91092b29d7265904e69b093310daa72b673d8745
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563386"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328927"
 ---
-# <a name="how-to-create-symbols-c"></a>Procedimiento Creación de símbolos (C++)
+# <a name="how-to-create-symbols-c"></a>Filtrar Creación de símbolos (C++)
 
 Si está empezando un proyecto nuevo, le resultará conveniente asignar los nombres de símbolo que necesita antes de crear los recursos a los que podrán asignadas.
 
@@ -65,7 +65,7 @@ El cuadro de diálogo contiene las siguientes propiedades:
 
 ## <a name="to-view-resource-symbols"></a>Para ver símbolos de recursos
 
-En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), haga clic en su *.rc* de archivo y seleccione **símbolos de recursos** para ver una tabla de símbolos de recursos en el **símbolos de recursos**cuadro de diálogo.
+En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic en su *.rc* de archivo y seleccione **símbolos de recursos** para ver una tabla de símbolos de recursos en el **símbolos de recursos**cuadro de diálogo.
 
 > [!NOTE]
 > Para ver los símbolos predefinidos, consulte el **mostrar símbolos de solo lectura** casilla de verificación.

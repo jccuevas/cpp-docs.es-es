@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563022"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328810"
 ---
 # <a name="resource-editors-c"></a>Editores de recursos (C++)
 
@@ -63,13 +63,13 @@ Los recursos también se pueden editar fuera del proyecto sin necesidad de abrir
 > [!NOTE]
 > Propiedades de un recurso pueden modificarse mediante el **propiedades** ventana.
 
-- Para editar las propiedades de un recurso, en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), haga clic en el recurso que desea editar y elija **propiedades**.  A continuación, en el [ventana propiedades](/visualstudio/ide/reference/properties-window), cambiar las propiedades del recurso.
+- Para editar las propiedades de un recurso, en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic en el recurso que desea editar y elija **propiedades**.  A continuación, en el [ventana propiedades](/visualstudio/ide/reference/properties-window), cambiar las propiedades del recurso.
 
 - Para deshacer los cambios realizados en las propiedades de un recurso, asegúrese de que el recurso tiene el foco **vista de recursos** y elija **deshacer** desde el **editar** menú.
 
 ### <a name="win32-resources"></a>Recursos de Win32
 
-Puede obtener acceso a los recursos de Win32 en el [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources) panel.
+Puede obtener acceso a los recursos de Win32 en el [vista de recursos](how-to-create-a-resource-script-file.md#create-resources) panel.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Para ver un recurso de Win32 en un editor de recursos
 
@@ -113,7 +113,7 @@ Los siguientes recursos no proporcionan una vista previa: Acelerador de la infor
 
 ### <a name="to-preview-resources"></a>Para obtener una vista previa de recursos
 
-1. En [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources) o una ventana de documento, seleccione el recurso, por ejemplo, **IDD_ABOUTBOX**.
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources) o una ventana de documento, seleccione el recurso, por ejemplo, **IDD_ABOUTBOX**.
 
 1. En el [ventana propiedades](/visualstudio/ide/reference/properties-window), seleccione el **páginas de propiedades** botón.
 

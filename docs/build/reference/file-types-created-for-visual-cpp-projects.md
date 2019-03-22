@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827525"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327586"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de archivos creados para proyectos de C++ de Visual Studio
 
 En este tema se describe todos los tipos de archivos que están asociados con los proyectos de Visual Studio para aplicaciones de escritorio clásicos. Los archivos incluidos en el proyecto dependen del tipo de proyecto y de las opciones que seleccione al usar un asistente.
 
-- [Archivos de proyecto y solución]()
+- [Archivos de proyecto y solución](project-and-solution-files.md)
 
 - [Proyectos de CLR](files-created-for-clr-projects.md)
 
@@ -54,7 +54,7 @@ En la tabla siguiente muestra los archivos comunes en un proyecto de Visual Stud
 |.atp|Proyecto|Archivo de proyecto de plantilla de aplicación.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Recurso|Archivos de imagen general.|
 |.bsc|Compilación|Archivo de código del explorador.|
-|.cpp; .c|Origen|Archivos de código fuente principal de la aplicación.|
+|.cpp, .c|Origen|Archivos de código fuente principal de la aplicación.|
 |.cur|Recurso|Archivo de gráficos de mapa de bits de cursor.|
 |.dbp|Proyecto|Archivo de proyecto de base de datos.|
 |.disco|Origen|Archivo de documento de detección dinámica. Controla la detección de servicios web XML.|
@@ -78,8 +78,8 @@ En la tabla siguiente muestra los archivos comunes en un proyecto de Visual Stud
 |.vap|Proyecto|Archivo de proyecto de Visual Studio Analyzer.|
 |.vbg|Soluciones|Archivo de grupo de proyectos compatible.|
 |.vbp, .vip, .vbproj|Proyecto|Archivo de proyecto de Visual Basic.|
-|.vcxitems|Proyecto|Proyecto de elementos compartidos para compartir archivos de código entre varios proyectos de C++. Consulte [Archivos de proyecto y archivos Make]() para obtener más información.|
-|.vcxproj|Proyecto|El archivo de proyecto de Visual Studio. Consulte [Archivos de proyecto y archivos Make]() para obtener más información.|
+|.vcxitems|Proyecto|Proyecto de elementos compartidos para compartir archivos de código entre varios proyectos de C++. Consulte [archivos de proyecto y solución](project-and-solution-files.md) para obtener más información.|
+|.vcxproj|Proyecto|El archivo de proyecto de Visual Studio. Consulte [archivos de proyecto y solución](project-and-solution-files.md) para obtener más información.|
 |.vcxproj.filters|Proyecto|Cuando se usa el Explorador de soluciones para agregar un archivo a un proyecto, el archivo de filtros define dónde se agrega el archivo en la vista de árbol del Explorador de soluciones, en función de su extensión de nombre de archivo.|
 |.vdproj|Proyecto|Archivo de proyecto de implementación de Visual Studio.|
 |.vmx|Proyecto|Archivo de proyecto de macros.|

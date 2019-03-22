@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416551"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329018"
 ---
 # <a name="crowset-class"></a>CRowset (Clase)
 
@@ -275,7 +275,7 @@ Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.
 |[Cerrar](#close)|Libera las filas y la actual `IRowset` interfaz.|
 |[Compare](#compare)|Compara dos marcadores utilizando [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crea un nuevo `CRowset` objeto y lo asocia a (opcionalmente) un `IRowset` interfaz proporcionada como un parámetro.|
-|[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Busca la siguiente fila coincidente después del marcador especificado.|
 |[GetApproximatePosition](#getapproximateposition)|Devuelve la posición aproximada de una fila correspondiente a un marcador.|
 |[GetData](#getdata)|Recupera datos de copia del conjunto de filas de la fila.|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Las llamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) para eliminar la fila actual del conjunto de filas.
+Las llamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) para eliminar la fila actual del conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
