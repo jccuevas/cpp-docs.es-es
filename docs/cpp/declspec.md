@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645099"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416954"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -23,15 +23,16 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 ## <a name="grammar"></a>Gramática
 
 *decl-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
 *extended-decl-modifier-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**Alinear (** *#* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**asignar ("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**align(** *#* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dominio de aplicación**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**En desuso**<br/>
@@ -45,17 +46,17 @@ La sintaxis de atributo extendido para especificar información de clase de alma
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Proceso**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**propiedad (** { **obtener =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**restringir**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Spectre(nomitigation)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID ("** *ComObjectGUID* **")**
+&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 El espacio en blanco separa la secuencia de modificador de la declaración. En secciones posteriores aparecen ejemplos.
 
-Estos atributos de clase de almacenamiento específico de Microsoft admite la gramática de atributo extendido: [alinear](../cpp/align-cpp.md), [asignar](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [en desuso](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [proceso](../cpp/process.md), [restringir](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), y [subproceso](../cpp/thread.md). También es compatible con estos atributos de objetos COM: [propiedad](../cpp/property-cpp.md) y [uuid](../cpp/uuid-cpp.md).
+Estos atributos de clase de almacenamiento específico de Microsoft admite la gramática de atributo extendido: [alinear](../cpp/align-cpp.md), [asignar](../cpp/allocate.md), [asignador](../cpp/allocator.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [en desuso](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [proceso](../cpp/process.md), [restringir](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), y [subproceso](../cpp/thread.md). También es compatible con estos atributos de objetos COM: [propiedad](../cpp/property-cpp.md) y [uuid](../cpp/uuid-cpp.md).
 
 El **code_seg**, **dllexport**, **dllimport**, **naked**, **noalias**, **nothrow** , **propiedad**, **restringir**, **selectany**, **subproceso**, y **uuid**los atributos de clase de almacenamiento son propiedades solo de la declaración del objeto o función a la que se aplican. El **subproceso** atributo afecta a los datos y solo los objetos. El **naked** y **spectre** atributos que afectan a las funciones solo. El **dllimport** y **dllexport** atributos que afectan a funciones, datos y objetos. El **propiedad**, **selectany**, y **uuid** atributos que afectan a los objetos COM.
 
