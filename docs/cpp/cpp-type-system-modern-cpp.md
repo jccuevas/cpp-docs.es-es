@@ -3,12 +3,12 @@ title: Sistema de tipos de C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220678"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476908"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 
@@ -18,7 +18,7 @@ El concepto de *tipo* es muy importante en C++. Cada variable, argumento de func
 
 **Variable**: El vínculo simbólico nombre de una cantidad de datos para que el nombre se puede utilizar para tener acceso a los datos que hace referencia en el ámbito del código donde se define. En C++, *variable* generalmente se usa para hacer referencia a las instancias de tipos de datos escalares, mientras que las instancias de otros tipos normalmente se denominan *objetos*.
 
-**Objeto**: Por simplicidad y coherencia, este artículo usa el término *objeto* para hacer referencia a cualquier instancia de una clase o estructura, y cuando se usa en el sentido general incluye todos los tipos, incluso las variables escalares.
+**Object**: Por simplicidad y coherencia, este artículo usa el término *objeto* para hacer referencia a cualquier instancia de una clase o estructura, y cuando se usa en el sentido general incluye todos los tipos, incluso las variables escalares.
 
 **Tipo POD** (datos antiguos sin formato): Esta categoría informal de tipos de datos en C++ hace referencia a tipos que son escalares (consulte la sección de tipos fundamentales) o son *clases POD*. Una clase POD no tiene ningún miembro de datos estático que no sea también POD, y no tiene ningún constructor definido por el usuario, ningún destructor definido por el usuario ni ningún operador de asignación definido por el usuario. Además, las clases POD no tienen funciones virtuales, clases base ni ningún miembro de datos no estático privado o protegido. Los tipos POD suelen utilizarse para el intercambio de datos externos, por ejemplo, con un módulo escrito en lenguaje C (que solo tiene tipos POD).
 
@@ -102,9 +102,7 @@ Al definir un **clase**, **struct**, **unión**, o **enum**, esa construcción s
 
 - El compilador no tiene conocimiento integrado de un tipo definido por el usuario. Aprende de tipo de la primera vez que encuentra la definición durante el proceso de compilación.
 
-- El usuario especifica las operaciones que se pueden realizar en el tipo y cómo se puede convertir en otros tipos definiendo (mediante sobrecarga) los operadores adecuados, como los miembros de clase o las funciones que no son miembro. Para obtener más información, consulte [sobrecarga de funciones](function-overloading.md).
-
-- No es necesario que tengan tipos estáticos (la regla establece que el tipo de un objeto nunca cambia). Mediante los mecanismos de *herencia* y *polimorfismo*, una variable declarada como un tipo definido por el usuario de clase (denominada una instancia de objeto de una clase) podría tener un tipo diferente en tiempo de ejecución que en tiempo de compilación. Para obtener más información, vea [Herencia](../cpp/inheritance-cpp.md).
+- El usuario especifica las operaciones que se pueden realizar en el tipo y cómo se puede convertir en otros tipos definiendo (mediante sobrecarga) los operadores adecuados, como los miembros de clase o las funciones que no son miembro. Para obtener más información, consulte [sobrecarga de funciones](function-overloading.md)
 
 ## <a name="pointer-types"></a>Tipos de puntero
 

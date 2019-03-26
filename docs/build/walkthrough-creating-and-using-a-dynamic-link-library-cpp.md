@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813973"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476934"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++)
 
@@ -296,9 +296,11 @@ A continuación, para llamar a las funciones de MathLibrary en el código fuente
 
 1. Haga doble clic en el panel superior de la **directorios de inclusión adicionales** cuadro de diálogo para habilitar un control de edición.
 
-1. En el control de edición, especifique la ruta de acceso a la ubicación de la **MathLibrary.h** archivo de encabezado. En este caso, puede usar una ruta de acceso relativa:
+1. En el control de edición, especifique la ruta de acceso a la ubicación de la **MathLibrary.h** archivo de encabezado. En este caso, puede usar una ruta de acceso relativa desde la carpeta que contiene los archivos .cpp del proyecto de cliente a la carpeta que contiene el archivo .h en el proyecto DLL. Si el proyecto de cliente es una solución independiente en la misma carpeta que la solución DLL, la ruta de acceso relativa debe tener este aspecto:
 
    `..\..\MathLibrary\MathLibrary`
+
+   Si los proyectos DLL y el cliente están en la misma solución, o las soluciones están en carpetas diferentes, debe ajustar la ruta de acceso relativa en consecuencia.
 
    ![Agregue la ubicación del encabezado a la propiedad de directorios de inclusión adicionales](media/mathclient-additional-include-directories.png "agregue la ubicación del encabezado a la propiedad de directorios de inclusión adicionales")
 
