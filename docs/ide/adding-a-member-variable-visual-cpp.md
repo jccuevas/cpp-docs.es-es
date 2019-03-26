@@ -12,16 +12,16 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 2a519c0606a7df6e0ce55997a055d78865afafbf
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694418"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328966"
 ---
 # <a name="add-a-member-variable"></a>Agregar una variable miembro
 
-Se puede agregar una variable miembro a una clase mediante la Vista de clases. Las variables miembro pueden ser para [intercambio y validación de datos](../mfc/dialog-data-exchange-and-validation.md), o bien pueden ser genéricas. El Asistente para agregar variables miembro se ha diseñado para tomar la información relevante y usarla para insertar elementos en los archivos de código fuente en las ubicaciones adecuadas. Una variable miembro se puede agregar desde el [Editor de cuadros de diálogo](../windows/dialog-editor.md) de la [Vista de recursos](../windows/resource-view-window.md), o bien desde la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code).
+Se puede agregar una variable miembro a una clase mediante la Vista de clases. Las variables miembro pueden ser para [intercambio y validación de datos](../mfc/dialog-data-exchange-and-validation.md), o bien pueden ser genéricas. El Asistente para agregar variables miembro se ha diseñado para tomar la información relevante y usarla para insertar elementos en los archivos de código fuente en las ubicaciones adecuadas. Una variable miembro se puede agregar desde el [Editor de cuadros de diálogo](../windows/dialog-editor.md) de la [Vista de recursos](../windows/how-to-create-a-resource-script-file.md#create-resources), o bien desde la [Vista de clases](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 > Cuando diseñe e implemente un cuadro de diálogo, es posible que le resulte más eficaz usar el Editor de cuadros de diálogo para agregar los controles de cuadro de diálogo y luego implementar las variables miembro de los controles.
@@ -163,7 +163,7 @@ En la tabla siguiente se describen todos los tipos de control de cuadro de diál
 |Control de edición de texto enriquecido 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Número máximo de caracteres|
 |Control de edición de texto enriquecido|RICHEDIT|`CRichEditCtrl`|`CString`|Número máximo de caracteres|
 |Barra de desplazamiento (vertical u horizontal)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valor máximo y mínimo|
-|Control deslizante|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valor máximo y mínimo|
+|Slider (control)|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valor máximo y mínimo|
 |Control de botón de número|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Ninguno; solo el control|N/D|
 |Control Tab|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Ninguno; solo el control|N/D|
 |Tree (control)|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Ninguno; solo el control|N/D|
