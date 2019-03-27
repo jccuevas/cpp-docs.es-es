@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811880"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508707"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (Crear archivo .Sbr)
 
@@ -32,6 +32,9 @@ Crea archivos. sbr.
 ```
 
 ## <a name="remarks"></a>Comentarios
+
+> [!WARNING]
+> Aunque BSCMAKE todavía se instala con Visual Studio, el IDE ya no lo utiliza. Desde Visual Studio 2008, la información de examen y de símbolos se almacena automáticamente en un archivo .sdf de SQL Server en la carpeta de soluciones.
 
 Durante el proceso de compilación, la Utilidad de mantenimiento de información de examen de Microsoft (BSCMAKE) usa estos archivos para crear un archivo .BSC, que se usa para mostrar la información del examen.
 
@@ -61,6 +64,6 @@ Si no se especifica el valor de `filename`, el archivo .sbr recibe el mismo nomb
 ## <a name="see-also"></a>Vea también
 
 [/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Especificar la ruta de acceso](specifying-the-pathname.md)
