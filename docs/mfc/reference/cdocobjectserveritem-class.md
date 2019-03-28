@@ -1,25 +1,27 @@
 ---
 title: CDocObjectServerItem (clase)
-ms.date: 09/12/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnDoVerb
 - AFXDOCOB/CDocObjectServerItem::OnHide
 - AFXDOCOB/CDocObjectServerItem::OnShow
 helpviewer_keywords:
 - CDocObjectServerItem [MFC], CDocObjectServerItem
 - CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnDoVerb
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275291"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565628"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem (clase)
 
@@ -49,7 +51,7 @@ class CDocObjectServerItem : public COleServerItem
 
 |Name|Descripción|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Produce una excepción si el marco de trabajo intenta ocultar un elemento de DocObject.|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|Se llama para ejecutar un verbo.|
 |[CDocObjectServerItem::OnHide](#onhide)|Produce una excepción si el marco de trabajo intenta ocultar un elemento de DocObject.|
 |[CDocObjectServerItem::OnShow](#onshow)|Lo llama el marco para que sea el DocObject elemento en el sitio activo. Si el elemento no es un objeto DocObject, llama a [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
 
@@ -108,6 +110,23 @@ Un puntero al documento que contiene el elemento; Es NULL si el elemento no form
 ### <a name="remarks"></a>Comentarios
 
 Esto permite el acceso al documento de servidor que pasa como argumento a la [CDocObjectServerItem](#cdocobjectserveritem) constructor.
+
+##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+
+Lo llama el marco de trabajo para ejecutar el verbo especificado.
+
+```
+virtual void OnDoVerb(LONG iVerb);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*iVerb*<br/>
+Especifica el verbo que se ejecute. Para los valores posibles, vea [DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) en el SDK de Windows.
+
+### <a name="remarks"></a>Comentarios
+
+La implementación predeterminada llama el [OnShow](#onshow) función de miembro si el elemento es un objeto DocObject y se especifica la OLEIVERB_INPLACEACTIVATE o OLEIVERB_SHOW. Si el elemento no es un objeto DocObject o se especifica un verbo diferente, la implementación predeterminada llama [COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
 
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
 

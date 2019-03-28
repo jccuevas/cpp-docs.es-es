@@ -1,6 +1,6 @@
 ---
 title: basic_ostream (Clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543642"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565732"
 ---
 # <a name="basicostream-class"></a>basic_ostream (Clase)
 
@@ -48,7 +48,7 @@ El carácter `traits_type`.
 
 ## <a name="remarks"></a>Comentarios
 
-La mayoría de las funciones miembro que sobrecargan [operator<<](#op_lt_lt) son funciones de salida con formato. Siguen el patrón:
+La mayoría de las funciones miembro que sobrecargan [operator<<](#basic_ostream_operator_lt_lt) son funciones de salida con formato. Siguen el patrón:
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ Vea el ejemplo de [basic_ofstream (Clase)](../standard-library/basic-ofstream-cl
 |[put](#put)|Coloca un carácter en una secuencia.|
 |[seekp](#seekp)|Restablece la posición en el flujo de salida.|
 |[sentry](#sentry)|La clase anidada describe un objeto cuya declaración estructura las funciones de salida con y sin formato.|
-|[swap](#op_eq)|Cambia los valores de este objeto `basic_ostream` por los del objeto `basic_ostream` proporcionado.|
+|[swap](#swap)|Cambia los valores de este objeto `basic_ostream` por los del objeto `basic_ostream` proporcionado.|
 |[tellp](#tellp)|Notifica la posición en el flujo de salida.|
 |[write](#write)|Coloca los caracteres en una secuencia.|
 
@@ -130,7 +130,7 @@ Vea el ejemplo de [basic_ofstream (Clase)](../standard-library/basic-ofstream-cl
 
 |Operador|Descripción|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|Asigna el valor del parámetro de objeto `basic_ostream` a este objeto.|
+|[operator=](#op_eq)|Asigna el valor del parámetro de objeto `basic_ostream` a este objeto.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Escribe en la secuencia.|
 
 ## <a name="requirements"></a>Requisitos
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Parámetros
 
-*PFN*<br/>
+*Pfn*<br/>
 Puntero de función.
 
 *strbuf*<br/>
 Puntero a un objeto `stream_buf` .
 
-*Val*<br/>
+*val*<br/>
 Elemento que se va a escribir en el flujo.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -470,7 +470,7 @@ int main()
 
 La clase anidada describe un objeto cuya declaración estructura las funciones de salida con y sin formato.
 
-Centinela de clase {public: explicit sentry (basic_ostream\<Elem, Tr > & _Ostr); operador bool() const; ~ sentry();};
+class sentry { public: explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operator bool() const; ~sentry(); };
 
 ### <a name="remarks"></a>Comentarios
 

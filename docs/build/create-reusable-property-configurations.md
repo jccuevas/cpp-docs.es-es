@@ -1,16 +1,16 @@
 ---
-title: Recurso compartido o resuse proyecto configuración de Visual Studio - C++
-ms.date: 11/28/2018
+title: Compartir o volver a usar la configuración del proyecto de Visual Studio - C++
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827944"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565131"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>Recurso compartido o resuse configuración del proyecto de Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Compartir o volver a usar la configuración del proyecto de Visual Studio
 
 Para crear un grupo personalizado de configuración que puede compartir con otros usuarios o reutilizar en varios proyectos, use **Administrador de propiedades** para crear un *hoja de propiedades* (archivo .props) para almacenar la configuración para cada tipo de proyecto que desea poder reutilizar o compartir con otros usuarios. Mediante la propiedad hojas son mucho menos propensas a errores que otras formas de crear la configuración "global". 
 

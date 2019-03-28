@@ -1,6 +1,6 @@
 ---
 title: CJumpList (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259080"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565313"
 ---
 # <a name="cjumplist-class"></a>CJumpList (clase)
 
-Un `CJumpList` es la lista de métodos abreviados revelada al que haga clic en un icono en la barra de tareas.
+Un `CJumpList` es la lista de métodos abreviados revelada cuando hace clic en un icono de la barra de tareas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -60,9 +60,9 @@ class CJumpList;
 |Name|Descripción|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|Construye un objeto `CJumpList`.|
-|[CJumpList::~CJumpList](#cjumplist__~cjumplist)|Destruye un objeto `CJumpList`.|
+|[CJumpList::~CJumpList](#_dtorcjumplist)|Destruye un objeto `CJumpList`.|
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CJumpList::AbortList](#abortlist)|Anula una creación de lista de transacciones sin confirmar.|
 |[CJumpList::AddDestination](#adddestination)|Sobrecargado. Agrega el destino a la lista.|
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 Especifica la ruta de acceso de la tarea de destino.
 
 *strCommandLineArgs*<br/>
-Especifica los argumentos de línea de comandos del archivo ejecutable especificado por strTargetExecutablePath.
+Especifica los argumentos de línea de comandos del archivo ejecutable especificado por *strTargetExecutablePath*.
 
 *strTitle*<br/>
 Nombre de la tarea que se mostrará en la lista de destino.

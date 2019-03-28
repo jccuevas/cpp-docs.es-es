@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorViewIterator (Clase)
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743743"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565667"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator (Clase)
 
@@ -61,7 +61,7 @@ El typename de la clase de plantilla VectorViewIterator.
 |[VectorViewIterator::operator\[\]](#operator-at)|Recupera una referencia al elemento que es un desplazamiento especificado del objeto VectorViewIterator actual.|
 |[VectorViewIterator::operator+ (Operador)](#operator-plus)|Devuelve un objeto VectorViewIterator que hace referencia al elemento en el desplazamiento especificado desde el objeto VectorViewIterator especificado.|
 |[VectorViewIterator::operator++ (Operador)](#operator-increment)|Incrementa el objeto VectorViewIterator actual.|
-|[VectorViewIterator::operator+= (Operador)](#operator-plus-assign)|Incrementa el VectorViewIterator actual según el desplazamiento especificado.|
+|[VectorViewIterator::operator+= (Operador)](#operator-plus-equals)|Incrementa el VectorViewIterator actual según el desplazamiento especificado.|
 |[VectorViewIterator::operator< (Operador)](#operator-less-than)|Indica si el objeto VectorViewIterator actual es menor que un objeto VectorViewIterator especificado.|
 |[Vectorviewiterator:: operator\<= (operador)](#operator-less-than-or-equals)|Indica si el objeto VectorViewIterator actual es menor o igual que un objeto VectorViewIterator especificado.|
 |[VectorViewIterator::operator-= (Operador)](#operator-minus-assign)|Disminuye el objeto VectorViewIterator actual según el desplazamiento especificado.|

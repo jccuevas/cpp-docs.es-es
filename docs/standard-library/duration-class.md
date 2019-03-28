@@ -1,6 +1,6 @@
 ---
 title: duration (Clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568899"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565576"
 ---
 # <a name="duration-class"></a>duration (Clase)
 
@@ -59,7 +59,7 @@ El argumento de plantilla `Rep` describe el tipo que se utiliza para almacenar e
 |[count](#count)|Devuelve el número de pasos del reloj del intervalo de tiempo.|
 |[max](#max)|Estático. Devuelve el valor máximo permitido del parámetro de plantilla `Ref`.|
 |[min](#min)|Estático. Devuelve el valor mínimo permitido del parámetro de plantilla `Ref`.|
-|[cero](#zero)|Estático. En efecto, devuelve `Rep`(0).|
+|[zero](#zero)|Estático. En efecto, devuelve `Rep`(0).|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 En efecto, devuelve `duration(duration_values<rep>::min())`.
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.
 
@@ -167,7 +167,7 @@ Devuelve una copia del objeto `duration` junto con un recuento de pasos negado.
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 Disminuye el recuento de pasos almacenado.
 
@@ -271,13 +271,13 @@ duration& operator+=(const duration& Dur);
 ### <a name="parameters"></a>Parámetros
 
 *Duración*<br/>
-Un objeto `duration`.
+Objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 
 Objeto `duration` después del cual se realiza la suma.
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 Resta el recuento de pasos de un objeto `duration` especificado del recuento de pasos almacenado.
 
@@ -288,7 +288,7 @@ duration& operator-=(const duration& Dur);
 ### <a name="parameters"></a>Parámetros
 
 *Duración*<br/>
-Un objeto `duration`.
+Objeto `duration`.
 
 ### <a name="return-value"></a>Valor devuelto
 

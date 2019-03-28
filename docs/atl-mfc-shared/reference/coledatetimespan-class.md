@@ -1,6 +1,6 @@
 ---
 title: COleDateTimeSpan (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748494"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565654"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan (clase)
 
@@ -115,8 +115,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 ### <a name="parameters"></a>Parámetros
 
 *dateSpan*<br/>
-
-  `COleDateTimeSpan` que se va comparar.
+`COleDateTimeSpan` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -746,7 +745,7 @@ Para obtener una breve descripción de estos valores de estado, consulte la list
 - `COleDateTimeSpan::null` Indica que este `COleDateTimeSpan` objeto es null, es decir, que no se ha proporcionado ningún valor para este objeto. (Esto es "null" en el sentido de la base de datos de "no tener ningún valor," en lugar de NULL de C++).
 
    > [!CAUTION]
-   > Esta función es para situaciones de programación avanzadas. Esta función no modifica los datos de este objeto. Más a menudo se usará para establecer el estado en **null** o **válido**. Tenga en cuenta que el operador de asignación ( [operador =](#eq)) y [SetDateTimeSpan](#setdatetimespan) establecer el estado del objeto basado en los valores de origen.
+   > Esta función es para situaciones de programación avanzadas. Esta función no modifica los datos de este objeto. Más a menudo se usará para establecer el estado en **null** o **válido**. Tenga en cuenta que el operador de asignación ([operador =](#operator_eq)) y [SetDateTimeSpan](#setdatetimespan) establecer el estado del objeto basado en los valores de origen.
 
 ### <a name="example"></a>Ejemplo
 

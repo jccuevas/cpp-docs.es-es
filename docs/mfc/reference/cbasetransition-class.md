@@ -1,6 +1,6 @@
 ---
 title: Clase CBaseTransition
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258377"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565914"
 ---
 # <a name="cbasetransition-class"></a>Clase CBaseTransition
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Construye un objeto de base de transición.|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|Destructor. Se llama cuando se destruye un objeto de transición.|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|Destructor. Se llama cuando se destruye un objeto de transición.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -95,7 +95,7 @@ class CBaseTransition : public CObject;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CBaseTransition::m_bAdded](#m_badded)|Especifica si se ha agregado una transición a un guión gráfico.|
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|Almacena un puntero al fotograma clave que especifica el final de la transición.|

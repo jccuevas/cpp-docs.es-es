@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751822"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565391"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ El encabezado &lt;shared_mutex > define las clases `shared_mutex` y `shared_time
 
 |Clases|Descripción|
 |-------------|-----------------|
-|[shared_mutex (Clase)](../standard-library/shared-mutex.md#class_shared_mutex)|Un tipo de exclusión mutua compartida que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|
-|[shared_timed_mutex (Clase)](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Un tipo de exclusión mutua compartida temporizada que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|
-|[shared_lock (Clase)](../standard-library/shared-mutex.md#class_shared_lock)|Una clase de plantilla que contiene una exclusión mutua compartida para admitir operaciones de bloqueo temporizado y que se puede compartir de manera no exclusiva por varios agentes.|
+|[shared_mutex (Clase)](#class_shared_mutex)|Un tipo de exclusión mutua compartida que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|
+|[shared_timed_mutex (Clase)](#class_shared_timed_mutex)|Un tipo de exclusión mutua compartida temporizada que se puede bloquear de manera exclusiva por un agente o compartir de manera no exclusiva por varios agentes.|
+|[shared_lock (Clase)](#class_shared_lock)|Una clase de plantilla que contiene una exclusión mutua compartida para admitir operaciones de bloqueo temporizado y que se puede compartir de manera no exclusiva por varios agentes.|
 
 |Funciones|Descripción|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|Intercambia el contenido de los objetos de exclusión mutua compartida al que hacen referencia los parámetros de función.|
+|[swap](#function_swap)|Intercambia el contenido de los objetos de exclusión mutua compartida al que hacen referencia los parámetros de función.|
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> shared_lock (Clase)
+###  <a name="class_shared_lock"></a> shared_lock (Clase)
 
 La clase de plantilla `shared_lock` controla la propiedad compartida de un objeto de exclusión mutua compartida dentro de un ámbito. El parámetro de plantilla debe ser un tipo de exclusión mutua compartida.
 

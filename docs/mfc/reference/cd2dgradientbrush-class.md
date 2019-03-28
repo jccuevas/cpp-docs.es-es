@@ -1,6 +1,6 @@
 ---
 title: Clase CD2DGradientBrush
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
 - AFXRENDERTARGET/CD2DGradientBrush
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290981"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565469"
 ---
 # <a name="cd2dgradientbrush-class"></a>Clase CD2DGradientBrush
 
@@ -42,7 +42,7 @@ class CD2DGradientBrush : public CD2DBrush;
 |Name|Descripción|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Construye un objeto CD2DGradientBrush.|
-|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado D2D.|
+|[CD2DGradientBrush::~CD2DGradientBrush](#_dtorcd2dgradientbrush)|Destructor. Se llama cuando se destruye un objeto de pincel de degradado D2D.|
 
 ### <a name="protected-methods"></a>Métodos protegidos
 
@@ -52,7 +52,7 @@ class CD2DGradientBrush : public CD2DBrush;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Matriz de las estructuras D2D1_GRADIENT_STOP.|
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|El espacio en el color que se realiza una interpolación entre los delimitadores de degradado.|

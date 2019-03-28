@@ -1,19 +1,19 @@
 ---
 title: Establece el compilador de C++ y crear propiedades en Visual Studio
 description: Usar el IDE de Visual Studio para cambiar las opciones de compilador y vinculador de C++ y otras configuraciones de compilación.
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827885"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564923"
 ---
 # <a name="set-compiler-and-build-properties"></a>Conjunto de compilador y las propiedades de compilación
 
@@ -65,7 +65,7 @@ La ilustración siguiente muestra las páginas de propiedades de un proyecto de 
 
 ![Páginas de propiedades del proyecto](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-Se puede usar el Editor de propiedades para ver los valores de todas las macros disponibles. (Las macros se describen en la sección [Macros de la página de propiedades](#bkmkPropertiesVersusMacros) más adelante en este artículo).
+Se puede usar el Editor de propiedades para ver los valores de todas las macros disponibles.
 
 ### <a name="predefined-macros"></a>Macros predefinidas
 
@@ -79,7 +79,7 @@ Tiene la sintaxis `%(name)`. Para un archivo, una macro de elemento solo se apli
 
 Se pueden crear *macros definidas por el usuario* para usarlas como variables en compilaciones de proyectos. Por ejemplo, puede crear una macro definida por el usuario que proporcione un valor a un paso de compilación personalizada o a una herramienta de compilación personalizada. Una macro definida por el usuario es un par de nombre y valor. En un archivo de proyecto, use la notación **$(**<em>nombre</em>**)** para acceder al valor.
 
-La macro definida por el usuario se almacena en una hoja de propiedades. Si el proyecto no contuviera una hoja de propiedades, puede crear uno siguiendo los pasos descritos en [configuraciones de proyecto de Visual Studio C++ del recurso compartido o resuse](#bkmkPropertySheets).
+La macro definida por el usuario se almacena en una hoja de propiedades. Si el proyecto no contuviera una hoja de propiedades, puede crear uno siguiendo los pasos descritos en [configuraciones de proyecto de Visual Studio de recurso compartido o reutilización](create-reusable-property-configurations.md).
 
 #### <a name="to-create-a-user-defined-macro"></a>Para crear una macro definida por el usuario
 
@@ -128,17 +128,17 @@ En el panel de la derecha, modifique las opciones **Entorno** o **Combinar entor
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Recurso compartido o resuse configuración del proyecto de Visual Studio](create-reusable-property-configurations.md)<br/>
+[Uso compartido o reutilización de la configuración del proyecto de Visual Studio](create-reusable-property-configurations.md)<br/>
 Cómo crear un archivo .props configuraciones de compilación personalizadas que se pueden compartir o resused.
 
 [Herencia de propiedades de proyecto](project-property-inheritance.md)<br/>
 Describe el orden de evaluación de los archivos .props, .targets, .vcxproj archivos y variables de entorno del proceso de compilación.
 
-[Modificar las propiedades y destinos sin necesidad de cambiar el archivo de proyecto](modify-project-properties-without-changing-project-file.md)<br/>
+[Modificación de las propiedades y los destinos sin cambiar el archivo de proyecto](modify-project-properties-without-changing-project-file.md)<br/>
 Cómo crear una configuración de compilación temporal sin tener que modificar un archivo de proyecto. 
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Proyectos de Visual Studio: C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [Estructura de archivo .vcxproj y .props](reference/vcxproj-file-structure.md)<br/>
 [Archivos XML de página de propiedades](reference/property-page-xml-files.md)<br/>

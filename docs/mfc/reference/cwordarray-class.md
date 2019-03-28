@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259456"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565365"
 ---
 # <a name="cwordarray-class"></a>CWordArray (clase)
 
@@ -292,7 +292,7 @@ El índice final del intervalo de Id. de comando.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método quita un grupo de controladores de mensajes, asignada a la del especificado de identificadores de comando por *cmdIDMin* y *cmdIDMax*, desde el objeto de origen del comando.
+Este método quita un grupo de controladores de mensajes, asignada a los identificadores de comando especificados por *cmdIDMin* y *cmdIDMax*, desde el objeto de origen del comando.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ El índice final del intervalo de Id. de comando.
 
 ### <a name="remarks"></a>Comentarios
 
-Este método quita un grupo de controladores de mensajes de comando de interfaz usuario, asignado a del especificado de identificadores de comando por *cmdIDMin* y *cmdIDMax*, desde el objeto de origen del comando.
+Este método quita un grupo de controladores de mensajes de comando de interfaz usuario, asignado a los identificadores de comando especificados por *cmdIDMin* y *cmdIDMax*, desde el objeto de origen del comando.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

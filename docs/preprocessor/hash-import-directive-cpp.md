@@ -1,6 +1,6 @@
 ---
 title: '#Importar directiva) (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822631"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564971"
 ---
 # <a name="import-directive-c"></a>#import (Directiva) (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 inmediatamente después de la **#import** instrucción en el código fuente.
 
-El espacio de nombres se puede suprimir utilizando el [no_namespace](#_predir_no_namespace) atributo de la **#import** directiva. Sin embargo, la supresión del espacio de nombres puede dar lugar a conflictos de nombres. El espacio de nombres también se puede cambiar el nombre por el [rename_namespace](#_predir_rename_namespace) atributo.
+El espacio de nombres se puede suprimir utilizando el [no_namespace](no-namespace.md)) el atributo de la **#import** directiva. Sin embargo, la supresión del espacio de nombres puede dar lugar a conflictos de nombres. El espacio de nombres también se puede cambiar el nombre por el [rename_namespace](rename-namespace.md) atributo.
 
 El compilador proporciona la ruta de acceso completa a cualquier dependencia de la biblioteca de tipos necesaria para la biblioteca de tipos que está actualmente en procesamiento. La ruta de acceso se escribe, en forma de comentarios, en el encabezado de la biblioteca de tipos (.TLH) que el compilador genera para cada biblioteca de tipos procesada.
 

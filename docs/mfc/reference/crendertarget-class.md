@@ -1,6 +1,6 @@
 ---
 title: Clase CRenderTarget
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259885"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565778"
 ---
 # <a name="crendertarget-class"></a>Clase CRenderTarget
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Construye un objeto CRenderTarget.|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|Destructor. Se llama cuando se destruye un objeto de destino de representación.|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|Destructor. Se llama cuando se destruye un objeto de destino de representación.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -208,7 +208,7 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Una lista de punteros a objetos CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Un puntero a un objeto ID2D1RenderTarget.|
@@ -502,7 +502,7 @@ Dibuja el contorno de un rectángulo que tiene las dimensiones especificadas y e
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Parámetros
 
-*rect*<br/>
+*rectangle*<br/>
 Las dimensiones del rectángulo se va a dibujar, en píxeles independientes del dispositivo
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ Dibuja el texto especificado con la información de formato proporcionada por un
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Un puntero a una matriz de caracteres Unicode se va a dibujar.
 
-*rect*<br/>
+*rectangle*<br/>
 El tamaño y posición del área en la que se dibuja el texto.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ Pinta el interior del rectángulo especificado.
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*rect*<br/>
+*rectangle*<br/>
 La dimensión del rectángulo va a pintar, en píxeles independientes del dispositivo.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 El tamaño y posición del área de recorte en píxeles independientes del dispositivo.
 
 *mode*<br/>
-El modo de suavizado de contorno que se utiliza para dibujar los bordes del clip objetos Rect que tiene límites de subpíxeles y para combinar el clip con el contenido de la escena. La combinación se realiza una vez cuando se llama al método PopAxisAlignedClip y no se aplica a cada primitiva dentro de la capa.
+El modo de suavizado de contorno que se utiliza para dibujar los bordes de los rectángulos de clip que tienen límites de subpíxeles y para combinar el clip con el contenido de la escena. La combinación se realiza una vez cuando se llama al método PopAxisAlignedClip y no se aplica a cada primitiva dentro de la capa.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 

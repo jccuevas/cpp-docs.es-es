@@ -1,17 +1,17 @@
 ---
 title: Contenedores y objetos paralelos
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333298"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565953"
 ---
 # <a name="parallel-containers-and-objects"></a>Contenedores y objetos paralelos
 
@@ -27,13 +27,13 @@ En este tema se describe los siguientes contenedores y objetos paralelos en deta
 
 Contenedores simultáneos:
 
-- [concurrent_vector (clase)](#ctor)
+- [concurrent_vector (clase)](#vector)
 
-   - [Diferencias entre concurrent_vector y vector](#ctor)
+   - [Diferencias entre concurrent_vector y vector](#vector-differences)
 
-   - [Operaciones seguras para simultaneidad](#ctor)
+   - [Operaciones seguras para simultaneidad](#vector-safety)
 
-   - [Seguridad de las excepciones](#ctor)
+   - [Seguridad de las excepciones](#vector-exceptions)
 
 - [concurrent_queue (clase)](#queue)
 
@@ -189,7 +189,7 @@ El ejemplo siguiente muestra la estructura básica para el uso de `concurrent_un
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Para obtener un ejemplo que usa `concurrent_unordered_map` para realizar una asignación y reducir las operaciones en paralelo, vea [Cómo: realizar Map y reducir las operaciones en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Para obtener un ejemplo que usa `concurrent_unordered_map` para realizar una asignación y reducir las operaciones en paralelo, vea [Cómo: Realizar la asignación y reducir las operaciones en paralelo](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Unordered_map y diferencias entre concurrent_unordered_map)
 
@@ -291,21 +291,21 @@ Puede almacenar datos adicionales en un `combinable` objeto después de llamar a
 
 Para obtener ejemplos sobre cómo usar el `combinable` de clases, vea los temas siguientes:
 
-- [Procedimiento para usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
+- [Cómo: Usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)
 
-- [Procedimiento para usar la clase combinable para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
+- [Cómo: Usar la clase combinable para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)
 
 [[Arriba](#top)]
 
 ## <a name="related-topics"></a>Temas relacionados
 
-[Procedimiento para usar contenedores paralelos para aumentar la eficacia](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
+[Cómo: Usar contenedores paralelos para aumentar la eficacia](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
 Se muestra cómo usar contenedores paralelos para almacenar de forma eficaz y tener acceso a datos en paralelo.
 
-[Procedimiento para usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
+[Cómo: Usar la clase combinable para mejorar el rendimiento](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 Se muestra cómo usar el `combinable` clase para eliminar el estado compartido y mejorar el rendimiento.
 
-[Procedimiento para usar la clase combinable para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
+[Cómo: Usar la clase combinable para combinar conjuntos](../../parallel/concrt/how-to-use-combinable-to-combine-sets.md)<br/>
 Se muestra cómo usar un `combine` función para combinar conjuntos de datos locales de subproceso.
 
 [Biblioteca de patrones de procesamiento paralelo (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
