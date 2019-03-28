@@ -1,6 +1,6 @@
 ---
 title: IResourceManager (Estructura)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7afb37fb35040975d6e9471a1d12465e5163fafc
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275290"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565209"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager (Estructura)
 
@@ -120,7 +120,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 
 El primer nodo en el orden de enumeración como se define por el Administrador de recursos.
 
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager:: OSVersion (enumeración)
+##  <a name="osversion"></a>  IResourceManager:: OSVersion (enumeración)
 
 Un tipo enumerado que representa la versión del sistema operativo.
 

@@ -1,6 +1,6 @@
 ---
 title: valarray (Clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525319"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565745"
 ---
 # <a name="valarray-class"></a>valarray (Clase)
 
@@ -88,7 +88,7 @@ En concreto, no pueden existir diferencias sutiles entre la construcción de la 
 |-|-|
 |[operator!](#op_not)|Operador unario que obtiene los valores `NOT` lógicos de cada elemento de una `valarray`.|
 |[operator%=](#op_mod_eq)|Obtiene el resto de la división de los elementos de una matriz uno a uno por una `valarray` especificada o por un valor del tipo de elemento.|
-|[operator&=](#op_amp_eq)|Obtiene el `AND` bit a bit de los elementos de una matriz con los elementos correspondientes de una `valarray` especificada o con un valor del tipo de elemento.|
+|[operator&=](#op_and_eq)|Obtiene el `AND` bit a bit de los elementos de una matriz con los elementos correspondientes de una `valarray` especificada o con un valor del tipo de elemento.|
 |[operator>>=](#op_gt_gt_eq)|Desplaza hacia la derecha los bits de cada elemento de un operando `valarray` un número especificado de posiciones o una cantidad de elementos especificada por una segunda `valarray`.|
 |[operator<<=](#op_lt_lt_eq)|Desplaza hacia la izquierda los bits de cada elemento de un operando `valarray` un número especificado de posiciones o una cantidad de elementos especificada por una segunda `valarray`.|
 |[operator*=](#op_star_eq)|Multiplica los elementos de una `valarray` especificada o un valor del tipo de elemento, uno a uno, por un operando `valarray`.|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 Obtiene el **AND** bit a bit de los elementos de una matriz con los elementos correspondientes de una valarray especificada o con un valor del tipo de elemento.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 Un operador unario que aplica un signo menos a cada elemento de una valarray.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 Resta los elementos de una valarray especificada o un valor del tipo de elemento, uno a uno, de una valarray de operando.
 
@@ -1115,7 +1115,7 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 *right*<br/>
 La valarray que se va a copiar en la valarray de operando.
 
-*Val*<br/>
+*val*<br/>
 El valor que se va a asignar a los elementos de la valarray de operando.
 
 *_Slicearray*<br/>
@@ -1276,7 +1276,7 @@ Una valarray cuyos elementos son el lógico exclusivo por elemento, **XOR** de l
 
 ### <a name="remarks"></a>Comentarios
 
-El OR lógico exclusivo, que se conoce como **XOR**, tiene la semántica siguiente: dados los elementos *e*1 y *e*2, *e*1 **XOR** *e*2 es **true** si exactamente uno de los elementos es true. Es **false** si ambos elementos son false o si ambos elementos son true.
+Exclusiva de o lógica, se conoce como **XOR**, tiene la semántica siguiente: Dados elementos *e*1 y *e*2, *e*1 **XOR** *e*2 es **true** si exactamente uno de los elementos es true; **false** si ambos elementos son falsas o si ambos elementos son true.
 
 ### <a name="example"></a>Ejemplo
 
@@ -1528,7 +1528,7 @@ void resize(
 *_Newsize*<br/>
 Número de elementos de la valarray cuyo tamaño se cambió.
 
-*Val*<br/>
+*val*<br/>
 Valor que se asignará a los elementos de la valarray cuyo tamaño se cambió.
 
 ### <a name="remarks"></a>Comentarios
@@ -1852,7 +1852,7 @@ Número de elementos que va a haber en la valarray.
 *Val*<br/>
 Valor que se utilizará al inicializar los elementos de la valarray.
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntero a los valores que se usarán para inicializar los elementos de la valarray.
 
 *Derecha*<br/>

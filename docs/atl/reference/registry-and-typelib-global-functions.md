@@ -1,6 +1,6 @@
 ---
 title: Funciones globales Registry y TypeLib
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301836"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566018"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Funciones globales Registry y TypeLib
 
@@ -33,8 +33,8 @@ Estas funciones proporcionan compatibilidad para cargar y registrar una bibliote
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|Crea la clave del registro especificada.|
-|[AfxRegDeleteKey](#afxrefdeletekey)|Elimina la clave del registro especificada.|
+|[AfxRegCreateKey](#afxregcreatekey)|Crea la clave del registro especificada.|
+|[AfxRegDeleteKey](#afxregdeletekey)|Elimina la clave del registro especificada.|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Una aplicación auxiliar para registrar un controlador de vista previa.|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Una aplicación auxiliar para anular el registro de un controlador de vista previa. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Esta función se invoca para registrar una biblioteca de tipos.|
@@ -343,7 +343,7 @@ Devuelve S_OK si se ejecuta correctamente, o un error HRESULT en caso de error.
 
 ### <a name="remarks"></a>Comentarios
 
-Esta función auxiliar utilizan [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) y [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
+Esta función auxiliar utilizan [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) y [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Requisitos
 

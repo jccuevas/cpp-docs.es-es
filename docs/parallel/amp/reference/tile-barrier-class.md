@@ -1,6 +1,6 @@
 ---
 title: tile_barrier (Clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301173"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564988"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier (Clase)
 
@@ -56,7 +56,7 @@ class tile_barrier;
 
 **Espacio de nombres**: simultaneidad
 
-## <a name="tile_barrier__ctor"></a>  tile_barrier (Constructor)
+## <a name="ctor"></a>  tile_barrier (Constructor)
 
 Inicializa una nueva instancia de la clase mediante la copia de uno existente.
 
@@ -72,7 +72,7 @@ tile_barrier(
 *_Other*<br/>
 La `tile_barrier` objeto que se va a copiar.
 
-## <a name="wait"></a>  wait
+## <a name="wait"></a>Espere
 
 Indica a todos los subprocesos del grupo de subprocesos (mosaico) para detener la ejecución hasta que todos los subprocesos del mosaico hayan terminado de esperar.
 
@@ -82,7 +82,7 @@ Indica a todos los subprocesos del grupo de subprocesos (mosaico) para detener l
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico hayan alcanzado esta llamada. Esto garantiza que todos los accesos de memoria están visibles para otros subprocesos del mosaico de subprocesos y se han ejecutado en el orden programado.
 
@@ -92,7 +92,7 @@ Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
 
 Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico hayan alcanzado esta llamada. Esto garantiza que todos los accesos de memoria globales están visibles para otros subprocesos del mosaico de subprocesos y se han ejecutado en el orden programado.
 
@@ -102,7 +102,7 @@ Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 Bloquea la ejecución de todos los subprocesos de un mosaico hasta que todos los subprocesos de un mosaico hayan alcanzado esta llamada. Esto garantiza que `tile_static` memoria accesos son visibles para otros subprocesos del mosaico de subprocesos y se han ejecutado en el orden programado.
 

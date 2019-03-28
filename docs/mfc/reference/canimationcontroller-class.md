@@ -1,6 +1,6 @@
 ---
 title: Clase CAnimationController
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270285"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565966"
 ---
 # <a name="canimationcontroller-class"></a>Clase CAnimationController
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |Name|Descripción|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Construye un controlador de animación.|
-|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|Destructor. Se llama cuando se está destruyendo el objeto de controlador de animación.|
+|[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|Destructor. Se llama cuando se está destruyendo el objeto de controlador de animación.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -140,7 +140,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::CreateKeyframe](#createkeyframe)|Sobrecargado. Crea un fotograma clave que depende de la transición y lo agrega al grupo especificado.|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Establece o libera un controlador que se debe llamar cuando cambia el estado del Administrador de animaciones.|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Establece o libera un controlador de eventos de control de tiempo y el controlador para las actualizaciones de control de tiempo.|
-|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Establece o libera el controlador de comparación de prioridad para llamar a para determinar si un guion gráfico programado puede ser cancelado, celebrado, recortan o comprimido.|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Establece o libera el controlador de comparación de prioridad a llamar para determinar si un guion gráfico programado puede cancelarse, concluido, recorta o comprimido.|
 |[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Establece o libera un controlador de eventos de estado y la actualización de guión gráfico.|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|Sobrecargado. Busca un grupo de animación por su guión gráfico.|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|Busca el objeto de animación que contiene una variable de animación especificados.|
@@ -181,7 +181,7 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Un fotograma clave que representa el inicio del guión gráfico.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Especifica si un controlador de animación es válido o no. Este miembro se establece en FALSE si el sistema operativo actual no es compatible con la API de animación de Windows.|
@@ -402,7 +402,7 @@ Cuando los controladores se establecen (habilitadas) llamadas de API de animaci�
 
 ##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
 
-Establece o libera el controlador de comparación de prioridad para llamar a para determinar si un guion gráfico programado puede ser cancelado, celebrado, recortan o comprimido.
+Establece o libera el controlador de comparación de prioridad a llamar para determinar si un guion gráfico programado puede cancelarse, concluido, recorta o comprimido.
 
 ```
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);

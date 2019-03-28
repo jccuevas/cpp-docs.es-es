@@ -1,6 +1,6 @@
 ---
 title: CMFCVisualManagerWindows7 (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CMFCVisualManagerWindows7
 - AFXVISUALMANAGERWINDOWS7/CMFCVisualManagerWindows7
@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e729201f1a6b6fd41286cc6af2b8c08fc7ee697c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269402"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565524"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 (clase)
 
@@ -34,7 +34,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |Name|Descripción|
 |----------|-----------------|
 |[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|Constructor predeterminado.|
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|Destructor predeterminado.|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|Destructor predeterminado.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -42,7 +42,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 |----------|-----------------|
 |`CMFCVisualManagerWindows7::CleanStyle`|Borra el estilo visual actual y restablece el estilo visual predeterminado.|
 |`CMFCVisualManagerWindows7::CleanUp`|Borra todos los objetos en la interfaz de usuario y restablece los menús.|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|Dibuja un botón en el área no cliente en el marco. Los usos de framework, este método para dibujar minimizar, maximizar, cierre y restaurar los botones en la esquina superior derecha del marco de ventana. No se llama a este método cuando el programa usa un tema que no son Aero.|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|Dibuja un botón en el área no cliente en el marco. Los usos de framework, este método para dibujar minimizar, maximizar, cierre y restaurar los botones en la esquina superior derecha del marco de ventana. Este método solo se llama cuando el programa usa un `Aero` tema.|
 |`CMFCVisualManagerWindows7::DrawNcText`|Dibuja texto en el área no cliente en el marco. El marco de trabajo usa este método para dibujar el título de la aplicación en la barra de título en la parte superior de la ventana de marco.|
 |`CMFCVisualManagerWindows7::DrawSeparator`|Dibuja un separador en la [CMFCToolBar (clase)](../../mfc/reference/cmfctoolbar-class.md).|
 |`CMFCVisualManagerWindows7::GetRibbonBar`|Recupera el [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md) asociado con la interfaz de usuario.|
@@ -173,7 +173,7 @@ El marco llama a este método cuando rellena el área que rodea una imagen de el
 virtual void OnFillMenuImageRect(
     CDC* pDC,
     CMFCToolBarButton* pButton,
-    CRect rect,
+    CRect rectangle,
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
@@ -185,7 +185,7 @@ virtual void OnFillMenuImageRect(
 *pButton*<br/>
 [in] Un puntero a un `CMFCToolBarButton`. El marco de trabajo rellena el fondo para este botón.
 
-*rect*<br/>
+*rectangle*<br/>
 [in] Un rectángulo que especifica los límites del área de imagen del botón de menú.
 
 *state*<br/>
