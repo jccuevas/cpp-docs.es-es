@@ -1,15 +1,15 @@
 ---
 title: Proyectos de CMake en Visual Studio
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356146"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565300"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Proyectos de CMake en Visual Studio
 
@@ -58,7 +58,7 @@ Si necesita pasar argumentos a un archivo ejecutable en tiempo de depuración, p
 
 ## <a name="import-an-existing-cache"></a>Importar una caché existente
 
-Al importar un archivo CMakeCache.txt existente, Visual Studio extrae variables personalizadas y automáticamente crea rellenada previamente [ **CMakeSettings.json** ](#cmake_settings) basado en archivos en ellos. La caché original no se modifica de ninguna manera y se puede seguir usando desde la línea de comandos o con cualquier herramienta o IDE que se usara para generarla. El nuevo **CMakeSettings.json** archivo se coloca junto con la raíz del proyecto CMakeLists.txt. Visual Studio genera una caché nueva en función del archivo de configuración. La generación automática de caché se puede invalidar en el cuadro de diálogo **Herramientas | Opciones | CMake | General**.
+Cuando se importa un archivo CMakeCache.txt existente, Visual Studio extrae las variables personalizadas de manera automática y crea un archivo **CMakeSettings.json** previamente rellenado basado en ellas. La caché original no se modifica de ninguna manera y se puede seguir usando desde la línea de comandos o con cualquier herramienta o IDE que se usara para generarla. El nuevo **CMakeSettings.json** archivo se coloca junto con la raíz del proyecto CMakeLists.txt. Visual Studio genera una caché nueva en función del archivo de configuración. La generación automática de caché se puede invalidar en el cuadro de diálogo **Herramientas | Opciones | CMake | General**.
 
 No se importa todo el contenido de la caché.  Propiedades como el generador y la ubicación de los compiladores se reemplazan con valores predeterminados que se sabe que funcionan de manera correcta con el IDE.
 
@@ -132,7 +132,7 @@ Para limitar las compilaciones y depurar las sesiones para un subconjunto de los
 
 Si necesita más información sobre el estado de caché de CMake para diagnosticar un problema, abra el menú principal de **CMake** o el menú contextual de **CMakeLists.txt** en el **Explorador de soluciones** para ejecutar uno de estos comandos:
 
-- **Ver caché** abre el archivo CMakeCache.txt desde la carpeta raíz de compilación en el editor. (Cualquier modificación que realice aquí para CMakeCache.txt se borra si limpia la caché. Para realizar cambios que se conserven después de limpiar la caché, vea [Opciones y configuraciones personalizadas de CMake](#cmake_settings) anteriormente en este artículo).
+- **Ver caché** abre el archivo CMakeCache.txt desde la carpeta raíz de compilación en el editor. (Cualquier modificación que realice aquí para CMakeCache.txt se borra si limpia la caché. Para realizar cambios que se conservan cuando se limpia la memoria caché, consulte [CMake Personalizar configuración](customize-cmake-settings.md).)
 
 - **Abrir carpeta de caché** abre una ventana del explorador por la carpeta raíz de compilación.
 
