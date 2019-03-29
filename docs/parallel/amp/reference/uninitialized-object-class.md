@@ -1,6 +1,6 @@
 ---
 title: uninitialized_object (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 05c24672531d50fa9bc31587e6c6733fdff21f29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279349"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565550"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object (clase)
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |Name|Descripción|
 |----------|-----------------|
-|[uninitialized_object (Constructor)](#ctor)|Inicializa una nueva instancia de la clase `uninitialized_object`.|
+|[uninitialized_object (Constructor)](#uninitialized_object)|Inicializa una nueva instancia de la clase `uninitialized_object`.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -46,17 +46,18 @@ class uninitialized_object : public runtime_exception;
 **Encabezado:** amprt.h
 
 **Espacio de nombres**: simultaneidad
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-Crea una nueva instancia de la excepción unsupported_feature.
+## <a name="uninitializedobject"></a>uninitialized_object
+
+Crea una nueva instancia de la `uninitialized_object` excepción.
 
 ### <a name="syntax"></a>Sintaxis
 
 ```
-explicit unsupported_feature(
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>Parámetros
@@ -66,7 +67,7 @@ Descripción del error.
 
 ### <a name="return-value"></a>Valor devuelto
 
-Objeto `unsupported_feature`.
+La `uninitialized_object` objeto de excepción.
 
 ## <a name="see-also"></a>Vea también
 

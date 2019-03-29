@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::InputIterator (Clase)
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745803"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565144"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator (Clase)
 
@@ -53,7 +53,7 @@ El typename de la clase de plantilla InputIterator.
 |Name|Descripción|
 |----------|-----------------|
 |[InputIterator::operator!= (Operador)](#operator-inequality)|Indica si el objeto InputIterator actual no es igual a un objeto InputIterator especificado.|
-|[InputIterator::operator* (Operador)](#operator-decrement)|Recupera una referencia al elemento especificado por el objeto InputIterator actual.|
+|[InputIterator::operator* (Operador)](#operator-dereference)|Recupera una referencia al elemento especificado por el objeto InputIterator actual.|
 |[InputIterator::operator++ (Operador)](#operator-increment)|Incrementa el objeto InputIterator actual.|
 |[InputIterator::operator== (Operador)](#operator-equality)|Indica si el objeto InputIterator actual es igual que un objeto InputIterator especificado.|
 |[InputIterator::operator-> (Operador)](#operator-arrow)|Recupera la dirección del elemento al que hace referencia el objeto InputIterator actual.|
@@ -76,12 +76,12 @@ Inicializa una nueva instancia de la clase InputIterator.
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Parámetros
 
-*iter*<br/>
+*iterator*<br/>
 Objeto de iterador.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
