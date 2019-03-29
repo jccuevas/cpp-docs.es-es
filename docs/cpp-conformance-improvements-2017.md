@@ -1,18 +1,18 @@
 ---
 title: Mejoras de conformidad de C++
-ms.date: 10/31/2018
+ms.date: 03/26/2019
 ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b2c014534ce24b9796510195d6ae5a922fb484d8
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809755"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508876"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159) de Visual Studio 2017
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159) de Visual Studio 2017
 
 Gracias a la compatibilidad de constexpr generalizado y NSDMI con los agregados, el compilador de Microsoft Visual C++ ya tiene la totalidad de las características que se agregaron en el estándar C++14. Tenga en cuenta que al compilador todavía le faltan algunas características de los estándares C++11 y C++98. Consulte [Visual C++ Language Conformance](visual-cpp-language-conformance.md) (Conformidad del lenguaje Visual C++) para ver una tabla que muestra el estado actual del compilador.
 
@@ -335,6 +335,45 @@ En [P0024R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.htm
 ### <a name="c17-constexpr-for-chartraits-partial"></a>constexpr para char_traits para C++17 (parcial)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) incluye cambios relativos a las funciones `length`, `compare` y `find` del miembro `std::traits_type` con el fin de que se pueda usar `std::string_view` en expresiones constantes. (En la versión 15.6 de Visual Studio 2017 solo se admite para Clang/LLVM. En la versión 15.7 Preview 2, la compatibilidad es casi completa con CIXX también).
+
+## <a name="improvements_159"></a> Mejoras de la versión 15.9 de Visual Studio 2017
+
+### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>Orden de evaluación de izquierda a derecha para los operadores ->*, [], >> y <<
+
+A partir de C++17, los operandos de los operadores ->*, [], >> y \<\< deben evaluarse en orden de izquierda a derecha. Hay dos casos en los que el compilador no puede garantizar este orden:
+- cuando una de las expresiones del operando es un objeto que se pasa por valor o contiene un objeto que se pasa por valor, o
+- cuando se compila con **/clr** y uno de los operandos es un campo de un objeto o un elemento de una matriz.
+
+El compilador emite una advertencia [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017) cuando no puede garantizar la evaluación de izquierda a derecha. Esta advertencia solo se genera si se especifica **/std:c++17** o posterior, ya que el requisito de orden de izquierda a derecha de estos operadores se introdujo en C++17.
+
+Para resolver esta advertencia, primero considere si es necesaria la evaluación de izquierda a derecha de los operandos, por ejemplo, cuando la evaluación de los operandos podría producir efectos secundarios dependientes del orden. En muchos casos, el orden en que se evalúan los operandos no tiene un efecto observable. Si el orden de evaluación debe ser de izquierda a derecha, considere si puede pasar los operandos por referencia const en su lugar. Este cambio elimina la advertencia en el siguiente ejemplo de código.
+
+```cpp
+// C4866.cpp
+// compile with: /w14866 /std:c++17
+
+class HasCopyConstructor
+{
+public:
+    int x;
+
+    HasCopyConstructor(int x) : x(x) {}
+    HasCopyConstructor(const HasCopyConstructor& h) : x(h.x) { }
+};
+
+int operator>>(HasCopyConstructor a, HasCopyConstructor b) { return a.x >> b.x; }
+
+// This version of operator>> does not trigger the warning:
+// int operator>>(const HasCopyConstructor& a, const HasCopyConstructor& b) { return a.x >> b.x; }
+
+int main()
+{
+    HasCopyConstructor a{ 1 };
+    HasCopyConstructor b{ 2 };
+
+    a>>b;        // C4866 for call to operator>>
+};
+```
 
 ## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Correcciones de errores en las versiones 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), [15.8](#update_158) y [15.9](#update_159) de Visual Studio
 
