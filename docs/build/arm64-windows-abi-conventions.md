@@ -1,12 +1,12 @@
 ---
 title: Información general sobre las convenciones ABI ARM64
 ms.date: 03/27/2019
-ms.openlocfilehash: 2695ba69c642b2100ec041d1f85debb4ad7041c8
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
+ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508863"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639451"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>Información general sobre las convenciones ABI ARM64
 
@@ -187,27 +187,21 @@ Se devuelven los valores enteros en x0.
 
 Valores de punto flotante se devuelven en s0, d0/v0 según corresponda.
 
-Tipos devueltos por el valor se tratan de forma diferente dependiendo de si tienen algunas propiedades.
+Tipos devueltos por el valor se tratan de forma diferente dependiendo de si tienen algunas propiedades. Tipos que tienen todas estas propiedades,
 
-Tipos tienen un estilo de valor devuelto de "C" si están agregados por la C ++ 14 definición del estándar. Es decir
+- son *agregado* C ++ 14 estándar definición, es decir, tienen ningún constructor proporcionado por el usuario, ningún miembro de datos no estático privado o protegido, ninguna clase base y no hay funciones virtuales, y
+- tienen un operador de asignación de copia trivial, y
+- tienen un destructor trivial,
 
-- disponen de ningún constructor proporcionado por el usuario, ningún miembro de datos no estático privado o protegido, ninguna clase base y ninguna función virtual,
-- tienen un constructor de copias trivial, y
-- tienen un destructor trivial.
+Use el siguiente estilo devuelto:
 
-Todos los demás tipos tienen un estilo de valor devuelto "C++".
+- Tipos de menor o igual a 8 bytes se devuelven en x0.
+- Tipos de menor o igual que 16 bytes se devuelven en x0 y x1 con x0 que contiene los 8 bytes de orden inferior.
+- Para los tipos mayores de 16 bytes, el llamador reservará un bloque de memoria de tamaño suficiente y la alineación para contener el resultado. La dirección del bloque de memoria debe pasarse como un argumento adicional a la función de x8. El destinatario puede modificar el bloque de memoria de resultados en cualquier momento durante la ejecución de la subrutina. El destinatario no es necesario conservar el valor almacenado en x8.
 
-### <a name="c-return-style"></a>Estilo de C devuelto
+Todos los demás tipos usan esta convención:
 
-Tipos de menor o igual a 8 bytes se devuelven en x0.
-
-Tipos de menor o igual que 16 bytes se devuelven en x0 y x1 con x0 que contiene los 8 bytes de orden inferior.
-
-Para los tipos mayores de 16 bytes, el llamador reservará un bloque de memoria de tamaño suficiente y la alineación para contener el resultado. La dirección del bloque de memoria debe pasarse como un argumento adicional a la función de x8. El destinatario puede modificar el bloque de memoria de resultados en cualquier momento durante la ejecución de la subrutina. El destinatario no es necesario conservar el valor almacenado en x8.
-
-### <a name="c-return-style"></a>Estilo de valor devuelto de C++
-
-El llamador reservará de un bloque de memoria de tamaño suficiente y la alineación para contener el resultado. La dirección del bloque de memoria debe pasarse como un argumento adicional a la función de x0 o x1 si $ se pasa en x0. El destinatario puede modificar el bloque de memoria de resultados en cualquier momento durante la ejecución de la subrutina. El destinatario devuelve la dirección del bloque de memoria en x0.
+- El llamador reservará de un bloque de memoria de tamaño suficiente y la alineación para contener el resultado. La dirección del bloque de memoria debe pasarse como un argumento adicional a la función de x0 o x1 si $ se pasa en x0. El destinatario puede modificar el bloque de memoria de resultados en cualquier momento durante la ejecución de la subrutina. El destinatario devuelve la dirección del bloque de memoria en x0.
 
 ## <a name="stack"></a>Pila
 
