@@ -1,2 +1,0 @@
-> [!IMPORTANT]
-> En este ejemplo de código se ilustra un concepto y únicamente se muestra el código correspondiente a dicho concepto. Es posible que no cumpla los requisitos de seguridad de un entorno concreto y, por tanto, no debería utilizarse tal y como se muestra. Se recomienda agregar código de seguridad y de control de errores para que los proyectos sean más seguros y sólidos. Microsoft proporciona este código de ejemplo "tal cual" sin ninguna garantía.
