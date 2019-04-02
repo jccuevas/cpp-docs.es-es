@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486780"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769529"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -48,7 +48,7 @@ long  __unhook(
 - Eventos administrados: *SourceClass* es la clase de origen de eventos y *EventMethod* es el evento.
 
 *interface*<br/>
-El nombre de la interfaz que se va a Desenlazar de *receptor*, solo para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/event-receiver.md) atributo es **true**.
+El nombre de la interfaz que se va a Desenlazar de *receptor*, solo para los receptores de eventos COM en el que el *layout_dependent* parámetro de la [event_receiver](../windows/attributes/event-receiver.md) atributo es **true**.
 
 *source*<br/>
 Un puntero a una instancia del origen de eventos. Según el código de `type` especificado en `event_receiver`, *origen* puede ser uno de los siguientes:
@@ -89,7 +89,7 @@ A excepción de los eventos COM, **__hook** y **__unhook** puede llamarse fuera 
 
 Una alternativa al uso **__unhook** consiste en usar el operador-=.
 
-Para obtener información sobre la codificación de eventos administrados en la nueva sintaxis, vea [eventos](../windows/event-cpp-component-extensions.md).
+Para obtener información sobre la codificación de eventos administrados en la nueva sintaxis, vea [eventos](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Una clase o struct basada en plantilla no puede contener eventos.
@@ -101,8 +101,8 @@ Consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.
 ## <a name="see-also"></a>Vea también
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

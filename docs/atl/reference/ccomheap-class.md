@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276171"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770751"
 ---
 # <a name="ccomheap-class"></a>CComHeap (clase)
 
@@ -149,7 +149,7 @@ Implementa mediante [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combas
 
 ## <a name="see-also"></a>Vea también
 
-[DynamicConsumer Sample](../../visual-cpp-samples.md)<br/>
+[DynamicConsumer Sample](../../overview/visual-cpp-samples.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [CWin32Heap (clase)](../../atl/reference/cwin32heap-class.md)<br/>
 [CLocalHeap (clase)](../../atl/reference/clocalheap-class.md)<br/>

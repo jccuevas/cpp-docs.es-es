@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261588"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771557"
 ---
 # <a name="ccomcontrol-class"></a>CComControl (clase)
 
@@ -73,7 +73,7 @@ La clase base que implementa las funciones de ventana. El valor predeterminado e
 
 Para obtener más información acerca de cómo crear un control, vea el [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md). Para obtener más información sobre el Asistente para proyectos ATL, vea el artículo [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md).
 
-Para ver una demostración de `CComControl` métodos y miembros de datos, vea el [CIRC](../../visual-cpp-samples.md) ejemplo.
+Para ver una demostración de `CComControl` métodos y miembros de datos, vea el [CIRC](../../overview/visual-cpp-samples.md) ejemplo.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 

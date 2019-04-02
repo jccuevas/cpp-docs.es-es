@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565048"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775054"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuración e informe de errores
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Comentarios
 
-La forma abreviada de ATLTRACE2 escribe una cadena en la ventana de salida del depurador. La segunda forma de ATLTRACE2 también escribe la salida en la ventana de salida del depurador, pero está sujeto a la configuración de la herramienta de seguimiento ATL/MFC (vea [ejemplo ATLTraceTool](../../visual-cpp-samples.md)). Por ejemplo, si establece *nivel* a 4 y la herramienta de seguimiento ATL/MFC al nivel 0, no verá el mensaje. *nivel* puede ser 0, 1, 2, 3 o 4. El valor predeterminado, 0, notifica solo los problemas más serios.
+La forma abreviada de ATLTRACE2 escribe una cadena en la ventana de salida del depurador. La segunda forma de ATLTRACE2 también escribe la salida en la ventana de salida del depurador, pero está sujeto a la configuración de la herramienta de seguimiento ATL/MFC (vea [ejemplo ATLTraceTool](../../overview/visual-cpp-samples.md)). Por ejemplo, si establece *nivel* a 4 y la herramienta de seguimiento ATL/MFC al nivel 0, no verá el mensaje. *nivel* puede ser 0, 1, 2, 3 o 4. El valor predeterminado, 0, notifica solo los problemas más serios.
 
 El *categoría* listas de parámetros para establecer las marcas de seguimiento. Estas marcas se corresponden con los tipos de métodos para el que desea informar. Las tablas siguientes muestran las marcas de seguimiento válido puede usar para la *categoría* parámetro.
 

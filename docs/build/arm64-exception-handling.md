@@ -1,12 +1,12 @@
 ---
 title: Control de excepciones ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 78d3d7d206adcb123c9537e91c2d5976b8be5baa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816157"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770075"
 ---
 # <a name="arm64-exception-handling"></a>Control de excepciones ARM64
 
@@ -54,7 +54,7 @@ Estos son los supuestos realizados en la descripción de control de excepciones:
 
 ![diseño del marco de pila](media/arm64-exception-handling-stack-frame.png "diseño del marco de pila")
 
-Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cualquier posición de la variable local area dependiendo de las consideraciones de optimización. El objetivo es maximizar el número de variables locales que se puede tener acceso mediante una única instrucción en función de puntero de marco (r29) o de puntero de pila (sp). Sin embargo para `alloca` funciones, debe estar encadenada y r29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de registro par direccionamiento-modo de, no volátil registrar aave áreas se colocan en la parte superior de la pila del área Local. Estos son ejemplos que ilustran varias de las secuencias de prólogo más eficaces. Para mayor claridad mejor emplazamiento en caché, el orden de almacenar los registros guardados y en todos los prólogos canónicos es en orden "creciente de". `#framesz` a continuación representa el tamaño de pila completa (excepto el área de alloca). `#localsz` y `#outsz` indican el tamaño de área local (incluida la operación de Guardar área para el \<r29, lr > par) y el tamaño del parámetro de salida, respectivamente.
+Para las funciones de marco encadenada, el par de fp y lr se puede guardar en cualquier posición de la variable local area dependiendo de las consideraciones de optimización. El objetivo es maximizar el número de variables locales que se puede tener acceso mediante una única instrucción en función de puntero de marco (r29) o de puntero de pila (sp). Sin embargo para `alloca` funciones, debe estar encadenada y r29 debe apuntar a la parte inferior de la pila. Para permitir una mejor cobertura de registro par direccionamiento-modo de, el registro no volátil áreas de almacenamiento se colocan en la parte superior de la pila del área Local. Estos son ejemplos que ilustran varias de las secuencias de prólogo más eficaces. Para mayor claridad mejor emplazamiento en caché, el orden de almacenar los registros guardados y en todos los prólogos canónicos es en orden "creciente de". `#framesz` a continuación representa el tamaño de pila completa (excepto el área de alloca). `#localsz` y `#outsz` indican el tamaño de área local (incluida la operación de Guardar área para el \<r29, lr > par) y el tamaño del parámetro de salida, respectivamente.
 
 1. Encadenar #localsz \<= 512
 
@@ -267,7 +267,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-Se debe tener en cuenta que aunque el tipo de prólogo y cada epílogo tiene su propio índice en los códigos de desenredado, la tabla se comparte entre ellos y es totalmente posible (y no por completo poco frecuente) que puede todos comparten los mismos códigos (vea el ejemplo 2 en el apéndice A, a continuación). Los autores de compiladores deberían optimizar para este caso, en particular porque el índice más grande que se puede especificar es de 255, lo que limita el número total de códigos de desenredado para una función determinada.
+Se debe tener en cuenta que aunque el tipo de prólogo y cada epílogo tiene su propio índice en los códigos de desenredado, la tabla se comparte entre ellos y es totalmente posible (y no por completo poco frecuente) que puede todos comparten los mismos códigos (vea el ejemplo 2 en la etiqueta de la sección de ejemplos Ow). Los autores de compiladores deberían optimizar para este caso, en particular porque el índice más grande que se puede especificar es de 255, lo que limita el número total de códigos de desenredado para una función determinada.
 
 ### <a name="unwind-codes"></a>Códigos de desenredado
 
@@ -340,7 +340,7 @@ Los campos son los siguientes:
 
 - **Función iniciar RVA** es la RVA de 32 bits del inicio de la función.
 - **Marca** es un campo de 2 bits como se describió anteriormente, con los significados siguientes:
-  - 00 = empaquetada desenredar datos no utilizados; Seleccione un registro .xdata, bits restantes a continuación
+  - 00 = empaquetada desenredar datos no utilizados; Seleccione un registro .xdata bits restantes
   - 01 = empaquetada utilizados como se describe a continuación con solo prólogo y epílogo al principio y al final del ámbito de datos de desenredo
   - 10 = empaquetada desenredar datos que se usan como se describe a continuación para código sin prólogo y epílogo; Esto es útil para describir los segmentos separados por función.
   - 11 = reservados;
@@ -353,7 +353,7 @@ Los campos son los siguientes:
   - 11 = función encadenada, se usa una instrucción de par de almacén o carga en el prólogo y epílogo \<r29, lr >
 - **H** es una marca de 1 bit que indica si la función alberga el parámetro entero registra (r0-r7) almacenándolas del principio de la función. (0 = no alberga registros, 1 = alberga registros).
 - **Regis** es un campo de 4 bits que indica el número de registros INT no volátiles (r19-r28) guardado en la ubicación de la pila canónico.
-- **RegF** es un campo de 3 bits que indica el número de registros FP no volátiles (d8-d15) guardado en la ubicación de la pila canónico. (0 no = FP se guarda el registro, m > 0: m + 1 registros FP se guardan). Para la función Guardar solo uno, el registro de FP empaquetado de desenredo no se puede aplicar los datos.
+- **RegF** es un campo de 3 bits que indica el número de registros FP no volátiles (d8-d15) guardado en la ubicación de la pila canónico. (RegF = 0: no se guarda ningún registro de FP; RegF > 0: RegF + 1 registros FP se guardan). Empaquetado de desenredado datos no se puede usar para la función que guardar el registro de FP solo una.
 
 Los prólogos canónicos que pertenecen a categorías 1, 2 (sin área de parámetros de salida), 3 y 4 en la sección anterior pueden representarse mediante el formato de desenredado empaquetado.  Los epílogos para las funciones canónicas siguen un formato muy similar, excepción **H** no tiene ningún efecto, el `set_fp` instrucción se omite y se invierte el orden de los pasos, así como instrucciones en cada paso en el epílogo. El algoritmo de empaquetado xdata sigue estos pasos, que se detallan en la tabla siguiente:
 
@@ -386,7 +386,7 @@ Paso #|Valores de marca|número de instrucciones|Código de operación|Código d
 
 \*\* Si **regis** == **CR** == 0, y **RegF** ! = 0, el primer stp para el punto flotante no la predecremento.
 
-\*\*\* Ninguna instrucción correspondiente a `mov r29, sp` está presente en el epílogo. Si una función requiere la restauración de sp desde r29, a continuación, no podemos utilizar empaquetan datos de desenredo.
+\*\*\* Ninguna instrucción correspondiente a `mov r29, sp` está presente en el epílogo. Empaquetado de desenredo no se puede usar datos si una función requiere la restauración de sp desde r29.
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>Epílogos y desenredado de prólogos parciales
 

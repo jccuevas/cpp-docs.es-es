@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 61da61b4a213c01ca66e8978c78622fe8b2818d1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 448d2088a9e91de8fc34b4f23721ffec77f6c697
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817587"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773507"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Conceptos de aplicaciones aisladas y ensamblados simultáneos
 
@@ -32,7 +32,7 @@ Después de implementar una aplicación, puede cambiar las dependencias de un en
 
 ## <a name="visual-c-libraries"></a>Bibliotecas de Visual C++
 
-En Visual Studio 2005 y Visual Studio 2008, las bibliotecas redistribuibles, como ATL, MFC, CRT, C++ estándar, OpenMP y MSDIA, se implementaban como ensamblados en paralelo compartidos en la memoria caché de ensamblados nativa. En la versión actual, las bibliotecas redistribuibles utilizan la implementación central. De forma predeterminada, todas las aplicaciones compiladas con Visual C++ se compilan con el manifiesto incrustado en el archivo binario final y en el manifiesto se describen las dependencias de dicho archivo binario sobre las bibliotecas de Visual C++. Para entender la generación de manifiestos para las aplicaciones de Visual C++, vea [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md). No se necesitan manifiestos en las aplicaciones que están vinculadas estáticamente a las bibliotecas que utilizan o que se usan en la implementación local. Para obtener más información sobre la implementación, vea [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
+En Visual Studio 2005 y Visual Studio 2008, las bibliotecas redistribuibles, como ATL, MFC, CRT, C++ estándar, OpenMP y MSDIA, se implementaban como ensamblados en paralelo compartidos en la memoria caché de ensamblados nativa. En la versión actual, las bibliotecas redistribuibles utilizan la implementación central. De forma predeterminada, todas las aplicaciones compiladas con Visual C++ se compilan con el manifiesto incrustado en el archivo binario final y en el manifiesto se describen las dependencias de dicho archivo binario sobre las bibliotecas de Visual C++. Para entender la generación de manifiestos para las aplicaciones de Visual C++, vea [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md). No se necesitan manifiestos en las aplicaciones que están vinculadas estáticamente a las bibliotecas que utilizan o que se usan en la implementación local. Para obtener más información sobre la implementación, vea [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vea también
 

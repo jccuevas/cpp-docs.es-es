@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477992"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768073"
 ---
 # <a name="new-operator-c"></a>new (Operador) (C++)
 
 Asigna memoria para un objeto o una matriz de objetos de *nombre de tipo* del almacén disponible y devuelve un puntero con tipo adecuado distinto de cero al objeto.
 
 > [!NOTE]
->  Extensiones de componentes de Microsoft C++ proporciona compatibilidad para la **nuevo** palabra clave para agregar entradas de ranura de vtable. Para obtener más información, consulte [new (nueva ranura en vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Extensiones de componentes de Microsoft C++ proporciona compatibilidad para la **nuevo** palabra clave para agregar entradas de ranura de vtable. Para obtener más información, consulte [new (nueva ranura en vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -29,7 +29,7 @@ Asigna memoria para un objeto o una matriz de objetos de *nombre de tipo* del al
 
 Si no lo consigue, **nueva** devuelve cero o produce una excepción; vea [el nuevo y eliminar operadores](../cpp/new-and-delete-operators.md) para obtener más información. Puede cambiar este comportamiento predeterminado escribiendo una rutina de control de excepciones personalizada y llamando a la [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) función de biblioteca en tiempo de ejecución con el nombre de función como su argumento.
 
-Para obtener información sobre cómo crear un objeto en el montón administrado, consulte [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Para obtener información sobre cómo crear un objeto en el montón administrado, consulte [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Cuando **nuevo** es usa para asignar memoria para un objeto de clase de C++, el constructor del objeto se llama después de que se asigna la memoria.
 
@@ -61,10 +61,10 @@ Si usa el operador **nueva** sin ningún argumento adicional y compilar con la [
 
 En la lista siguiente se describe los elementos de gramática de **nuevo**:
 
-*selección de ubicación*<br/>
+*placement*<br/>
 Proporciona una manera de pasar argumentos adicionales si sobrecarga **nuevo**.
 
-*nombre de tipo*<br/>
+*type-name*<br/>
 Especifica el tipo que se va a asignar; puede ser un tipo integrado o un tipo definido por el usuario. Si la especificación de tipo es compleja, puede ir entre paréntesis para forzar el orden de enlace.
 
 *initializer*<br/>

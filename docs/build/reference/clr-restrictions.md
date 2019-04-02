@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816105"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777823"
 ---
 # <a name="clr-restrictions"></a>Restricciones de /clr
 
@@ -29,7 +29,7 @@ Tenga en cuenta las siguientes restricciones sobre el uso de **/CLR**:
 
 - El [naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) se omite el modificador en/CLR.
 
-- Establece la función de traductor [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) afectará solo las capturas en código no administrado. Consulte [Exception Handling](../../windows/exception-handling-cpp-component-extensions.md) para obtener más información.
+- Establece la función de traductor [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) afectará solo las capturas en código no administrado. Consulte [Exception Handling](../../extensions/exception-handling-cpp-component-extensions.md) para obtener más información.
 
 - No se permite la comparación de punteros a función **/CLR**.
 
