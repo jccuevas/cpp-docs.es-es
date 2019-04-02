@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Declarar especificadores de invalidación (C++ / c++ / CLI)
+title: Filtrar Declarar especificadores de invalidación (C++ / c++ / CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752390"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777186"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Filtrar Declarar especificadores de invalidación en compilaciones nativas (C++ / c++ / CLI)
 
-[sellado](../windows/sealed-cpp-component-extensions.md), [abstracta](../windows/abstract-cpp-component-extensions.md), y [invalidar](../windows/override-cpp-component-extensions.md) están disponibles en las compilaciones que no usan **/ZW** o [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+[sellado](../extensions/sealed-cpp-component-extensions.md), [abstracta](../extensions/abstract-cpp-component-extensions.md), y [invalidar](../extensions/override-cpp-component-extensions.md) están disponibles en las compilaciones que no usan **/ZW** o [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
 >  El ISO C ++ 11 estándar lenguaje tiene la [invalidar](../cpp/override-specifier.md) identificador y el [final](../cpp/final-specifier.md) identificador y ambos se admiten en Visual Studio, Use `final` en lugar de `sealed` en el código que está pensado para se compila como sólo nativo.
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Especificadores de invalidación](../windows/override-specifiers-cpp-component-extensions.md)
+[Especificadores de invalidación](../extensions/override-specifiers-cpp-component-extensions.md)

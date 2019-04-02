@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 07f942e6582eb9fabe6001c4823ec9e2b1a83bf6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328979"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777290"
 ---
 # <a name="chtmlview-class"></a>CHtmlView (clase)
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|Crea el control WebBrowser.|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|Reemplazable usado para crear una instancia del sitio de control para hospedar un control en el formulario.|
@@ -2233,7 +2233,7 @@ Se aplica a Internet Explorer y WebBrowser.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MFCIE de MFC](../../visual-cpp-samples.md)<br/>
+[Ejemplo MFCIE de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CFormView (clase)](../../mfc/reference/cformview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

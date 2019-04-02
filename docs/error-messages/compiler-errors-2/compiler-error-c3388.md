@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-ms.openlocfilehash: 1f6e51542cc852543d648f9f94a964ae0cab3b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512701"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780033"
 ---
 # <a name="compiler-error-c3388"></a>Error del compilador C3388
 
 'type': no se permite como restricción; se supone 'ref class' para continuar con el análisis
 
-Se especificó una restricción en un tipo genérico, pero la restricción no se especificó correctamente. Consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
+Se especificó una restricción en un tipo genérico, pero la restricción no se especificó correctamente. Consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

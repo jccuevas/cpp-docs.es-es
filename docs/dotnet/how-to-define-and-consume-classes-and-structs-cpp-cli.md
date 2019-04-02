@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751835"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774924"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Filtrar Definir y utilizar clases y Structs (C++ / c++ / CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 Un *clase implícitamente abstracta* no pueden crearse instancias. Una clase es implícitamente abstracta si el tipo base de la clase es una interfaz y la clase no implementa todas las funciones miembro de la interfaz.
 
-Si no puede construir objetos de una clase que se derive de una interfaz, el motivo puede ser que la clase es implícitamente abstracta. Para obtener más información sobre las clases abstractas, vea [abstracta](../windows/abstract-cpp-component-extensions.md).
+Si no puede construir objetos de una clase que se derive de una interfaz, el motivo puede ser que la clase es implícitamente abstracta. Para obtener más información sobre las clases abstractas, vea [abstracta](../extensions/abstract-cpp-component-extensions.md).
 
 El ejemplo de código siguiente muestra que no se pueden crear instancias de la clase `MyClass` porque la función `MyClass::func2` no se implementa. Para permitir que el ejemplo se compile, quite el comentario `MyClass::func2`.
 
@@ -229,7 +229,7 @@ En esta tabla se resume el efecto de los distintos especificadores de acceso:
 |public|El miembro es accesible dentro y fuera del ensamblado.  Consulte [pública](../cpp/public-cpp.md) para obtener más información.|
 |private|El miembro no es accesible, ni dentro ni fuera del ensamblado.  Consulte [privada](../cpp/private-cpp.md) para obtener más información.|
 |protected|El miembro es accesible dentro y fuera del ensamblado, pero solo para los tipos derivados.  Consulte [protegido](../cpp/protected-cpp.md) para obtener más información.|
-|internal|El miembro es público dentro del ensamblado, pero es privado fuera del ensamblado.  `internal` es una palabra clave contextual.  Para obtener más información, consulte [palabras clave contextuales](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|El miembro es público dentro del ensamblado, pero es privado fuera del ensamblado.  `internal` es una palabra clave contextual.  Para obtener más información, consulte [palabras clave contextuales](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |público protegido - o - protegido pública|El miembro es público dentro del ensamblado, pero está protegido fuera del ensamblado.|
 |private protected - o - protected privada|El miembro está protegido dentro del ensamblado, pero es privado fuera del ensamblado.|
 
@@ -499,9 +499,9 @@ Estas semánticas diferentes del puntero `this` pueden provocar un comportamient
 
 Para obtener más información, consulte
 
-- [Identificador de operador de objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Identificador de operador de objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ Código que ha escrito en Visual C++ y compilado mediante **/CLR** ejecuta el de
 
 - El objeto es miembro de un objeto cuyo destructor está en ejecución.
 
-- Se llama a la [eliminar](../cpp/delete-operator-cpp.md) operador en un identificador ([identificador de operador de objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Se llama a la [eliminar](../cpp/delete-operator-cpp.md) operador en un identificador ([identificador de operador de objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Se llama explícitamente al destructor.
 
@@ -832,8 +832,7 @@ Si el tipo tiene un destructor, el compilador genera un método `Dispose` que im
 
 Si el tipo tiene un finalizador, el compilador genera un método `Finalize(void)` que invalida <xref:System.Object.Finalize%2A>.
 
-Si un tipo tiene un finalizador o un destructor, el compilador genera un método `Dispose(bool)`, según el patrón de diseño. (Para obtener información, consulte [patrón Dispose](/dotnet/standard/design-guidelines/dispose-pattern)). 
-  `Dispose(bool)` no se puede crear o llamar explícitamente en Visual C++.
+Si un tipo tiene un finalizador o un destructor, el compilador genera un método `Dispose(bool)`, según el patrón de diseño. (Para obtener información, consulte [patrón Dispose](/dotnet/standard/design-guidelines/dispose-pattern)). `Dispose(bool)` no se puede crear o llamar explícitamente en Visual C++.
 
 Si un tipo tiene una clase base que se ajusta al patrón de diseño, se llama a los destructores de todas las clases base cuando se llama al destructor de la clase derivada. (Si el tipo está escrito en Visual C++, el compilador garantiza que los tipos implementen este patrón). Es decir, el destructor de una clase de referencia se encadena a sus bases y miembros tal como especifica el estándar C++: primero se ejecuta el destructor de la clase, después los destructores para sus miembros en el orden inverso al que se construyeron y, finalmente, los destructores para las clases base en el orden inverso al que se construyeron.
 
@@ -845,7 +844,7 @@ Una vez que se ejecuta el finalizador de un objeto, también se llama a los fina
 
 Si un finalizador elimina un puntero nativo en un tipo administrado, debe asegurarse de que las referencias o a través del puntero nativo no se recopilen prematuramente; llame al destructor en el tipo administrado en lugar de utilizar <xref:System.GC.KeepAlive%2A>.
 
-En tiempo de compilación, puede detectar si un tipo tiene un finalizador o un destructor. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+En tiempo de compilación, puede detectar si un tipo tiene un finalizador o un destructor. Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 El ejemplo siguiente muestra dos tipos, uno con recursos no administrados y otro con recursos administrados que se liberan de forma determinista.
 
@@ -915,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807954"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766064"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Solucionar problemas de aplicaciones aisladas y ensamblados simultáneos de C/C++
 
@@ -31,7 +31,7 @@ Si la aplicación no tiene ningún manifiesto y depende de un archivo DLL que Wi
 
 Si la aplicación se implementa en un equipo que no tiene Visual Studio, se bloquea y muestra mensajes de error similares a los anteriores, compruebe lo siguiente:
 
-1. Siga los pasos que se describen en [descripción de las dependencias de una aplicación de Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker puede mostrar la mayoría de las dependencias de una aplicación o de un archivo DLL. Si observa que faltan algunos archivos DLL, instálelos en el equipo en el que está intentando ejecutar la aplicación.
+1. Siga los pasos que se describen en [descripción de las dependencias de una aplicación de Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker puede mostrar la mayoría de las dependencias de una aplicación o de un archivo DLL. Si observa que faltan algunos archivos DLL, instálelos en el equipo en el que está intentando ejecutar la aplicación.
 
 1. El cargador del sistema operativo utiliza el manifiesto de la aplicación para cargar los ensamblados de los que depende la aplicación. El manifiesto se puede incrustar en el binario como un recurso o se puede instalar como un archivo independiente en la carpeta de la aplicación. Para comprobar si el manifiesto está incrustado en el archivo binario, abra el archivo binario en Visual Studio y busque RT_MANIFEST en su lista de recursos. Si no se encuentra un manifiesto incrustado, busque en la carpeta de aplicación para un archivo que se denomina algo parecido a < nombredebinario >. \<extensión > .manifest.
 

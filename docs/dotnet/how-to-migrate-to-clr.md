@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816040"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781320"
 ---
 # <a name="how-to-migrate-to-clr"></a>Filtrar Migrar a/CLR
 
@@ -152,7 +152,7 @@ En algunos casos, CLR puede cerrarse antes de que el código administrado termin
 
 ## <a name="using-new-visual-c-features"></a>Utilizar las nuevas características de Visual C++
 
-Después de la aplicación compila, vínculos y se ejecuta, puede empezar a usar las características de .NET en cualquier módulo compilado con **/CLR**. Para obtener más información, vea [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md).
+Después de la aplicación compila, vínculos y se ejecuta, puede empezar a usar las características de .NET en cualquier módulo compilado con **/CLR**. Para obtener más información, vea [Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md).
 
 Si utilizó las Extensiones administradas para C++, puede convertir el código para usar la nueva sintaxis. Para obtener más información sobre la conversión de extensiones administradas para C++, vea [C++ / c++ / CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).
 
@@ -162,7 +162,7 @@ Para obtener información sobre la programación de .NET en Visual C++, vea:
 
 - [Interoperabilidad nativa y de .NET](../dotnet/native-and-dotnet-interoperability.md)
 
-- [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md)
+- [Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>Vea también
 

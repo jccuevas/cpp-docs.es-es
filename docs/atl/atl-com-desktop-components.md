@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644189"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780436"
 ---
 # <a name="atl-com-desktop-components"></a>Componentes de escritorio COM de ATL
 
@@ -47,7 +47,7 @@ Proporciona temas sobre cómo programar utilizando Active Template Library (ATL)
 [Tutorial de ATL](../atl/active-template-library-atl-tutorial.md)<br/>
 Le guía a través de la creación de un control y enseña los fundamentos de ATL en el proceso.
 
-[Ejemplos de ATL](../visual-cpp-samples.md)<br/>
+[Ejemplos de ATL](../overview/visual-cpp-samples.md)<br/>
 Código de ejemplo que muestra cómo utilizar ATL para escribir objetos COM.
 
 [Plantillas OLE DB](../data/oledb/ole-db-templates.md)<br/>

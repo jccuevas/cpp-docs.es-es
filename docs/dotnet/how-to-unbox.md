@@ -1,15 +1,15 @@
 ---
-title: Procedimiento aplicar la conversión unboxing
+title: Filtrar aplicar la conversión unboxing
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-ms.openlocfilehash: ae80497a24b090bc5866b3cfb22748b20adda223
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 640d2488d0fa1111262af371d88aea8f61511fa8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747948"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780904"
 ---
 # <a name="how-to-unbox"></a>Filtrar aplicar la conversión unboxing
 
@@ -41,4 +41,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Conversión boxing](../windows/boxing-cpp-component-extensions.md)
+[Conversión boxing](../extensions/boxing-cpp-component-extensions.md)

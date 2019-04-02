@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear una colección con seguridad de tipos
+title: Filtrar Crear una colección con seguridad de tipos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295193"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781528"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Procedimiento Crear una colección con seguridad de tipos
+# <a name="how-to-make-a-type-safe-collection"></a>Filtrar Crear una colección con seguridad de tipos
 
 En este artículo se explica cómo hacer que las colecciones de seguridad de tipos para sus propios tipos de datos. Entre los temas se incluyen los siguientes:
 
@@ -27,7 +27,7 @@ En este artículo se explica cómo hacer que las colecciones de seguridad de tip
 
 - [Usar clases de colección no es de plantilla](#_core_using_nontemplate_collection_classes)
 
-La biblioteca Microsoft Foundation Class proporciona colecciones con seguridad de tipos predefinidas basadas en plantillas de C++. Dado que son plantillas, estas clases ayudan a proporcionar seguridad de tipos y facilidad de uso sin la conversión de tipos y cualquier otro trabajo adicional implica el uso de una clase sin plantilla para este propósito. El ejemplo MFC [recopilar](../visual-cpp-samples.md) muestra el uso de las clases de colección basadas en plantillas en una aplicación MFC. En general, use estas clases siempre al que escribir código nuevo de colecciones.
+La biblioteca Microsoft Foundation Class proporciona colecciones con seguridad de tipos predefinidas basadas en plantillas de C++. Dado que son plantillas, estas clases ayudan a proporcionar seguridad de tipos y facilidad de uso sin la conversión de tipos y cualquier otro trabajo adicional implica el uso de una clase sin plantilla para este propósito. El ejemplo MFC [recopilar](../overview/visual-cpp-samples.md) muestra el uso de las clases de colección basadas en plantillas en una aplicación MFC. En general, use estas clases siempre al que escribir código nuevo de colecciones.
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> Uso de clases basadas en plantillas para seguridad de tipos
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302109"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781450"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (clase)
 
@@ -175,9 +175,9 @@ Para obtener más información sobre las ventanas divisoras, consulte [29 de not
 
 Para obtener más información sobre cómo crear ventanas divisoras dinámicas, consulte:
 
-- Ejemplo de MFC [Scribble](../../visual-cpp-samples.md)
+- Ejemplo de MFC [Scribble](../../overview/visual-cpp-samples.md)
 
-- Ejemplo de MFC [VIEWEX](../../visual-cpp-samples.md).
+- Ejemplo de MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -1036,7 +1036,7 @@ Puntero a un contexto de dispositivo.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo VIEWEX de MFC](../../visual-cpp-samples.md)<br/>
+[Ejemplo VIEWEX de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CView (clase)](../../mfc/reference/cview-class.md)<br/>

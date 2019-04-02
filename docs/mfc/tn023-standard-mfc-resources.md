@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277685"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780319"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Recursos de MFC estándar
 
@@ -23,7 +23,7 @@ Esta nota describe los recursos estándar proporcionada con y es necesario por l
 
 MFC proporciona dos categorías de recursos predefinidos que puede usar en la aplicación: recursos de imágenes prediseñadas y recursos de marco estándar.
 
-Los recursos de imágenes prediseñadas son recursos adicionales que no dependen de la plataforma, pero que desea agregar a la interfaz de usuario de la aplicación. Los siguientes recursos de imagen prediseñada contenidos en el ejemplo General de MFC [CLIPART](../visual-cpp-samples.md):
+Los recursos de imágenes prediseñadas son recursos adicionales que no dependen de la plataforma, pero que desea agregar a la interfaz de usuario de la aplicación. Los siguientes recursos de imagen prediseñada contenidos en el ejemplo General de MFC [CLIPART](../overview/visual-cpp-samples.md):
 
 - Common.rc: Un único archivo de recursos que contiene:
 

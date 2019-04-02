@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3290
 ms.assetid: 0baf684b-1143-4953-ac99-a2fa267d8017
-ms.openlocfilehash: d82d3272563f7a5af5de399a2f7fff621500e612
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a346354d8da7d78c5517b01b4438bfb8af50ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490486"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774846"
 ---
 # <a name="compiler-error-c3290"></a>Error del compilador C3290
 
@@ -19,7 +19,7 @@ ms.locfileid: "50490486"
 
 Se ha declarado incorrectamente una propiedad. Cuando se declara una propiedad trivial, el compilador crea una variable que actualizará la propiedad y no es posible tener una variable de referencia de seguimiento en una clase.
 
-Consulte [propiedad](../../windows/property-cpp-component-extensions.md) y [operador de referencia de seguimiento](../../windows/tracking-reference-operator-cpp-component-extensions.md) para obtener más información.
+Consulte [propiedad](../../extensions/property-cpp-component-extensions.md) y [operador de referencia de seguimiento](../../extensions/tracking-reference-operator-cpp-component-extensions.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 
