@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3296
 ms.assetid: fc4c9dcd-16cf-4eee-a1ac-c43e7c29e443
-ms.openlocfilehash: 2e9787b063a5a37af8d0e0fdd04492a743792646
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0a162590ac2a72dda17b2ecfc96899e94cde24c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588115"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767046"
 ---
 # <a name="compiler-error-c3296"></a>Error del compilador C3296
 
@@ -19,7 +19,7 @@ ms.locfileid: "50588115"
 
 El compilador encontró más de una propiedad con el mismo nombre. Cada propiedad de un tipo debe tener un nombre único.
 
-Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 
