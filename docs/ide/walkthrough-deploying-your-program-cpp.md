@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820213"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769269"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Tutorial: Implementación del programa (C++)
 
-Ahora que ha creado la aplicación completando los tutoriales relacionados anteriores, que se enumeran en [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), el último paso consiste en crear un instalador para que otros usuarios puedan instalar el programa en sus equipos. Para el instalador, agregue un nuevo proyecto a la solución existente. El resultado de este nuevo proyecto es un archivo setup.exe que instalará la aplicación en otro equipo.
+Ahora que ha creado la aplicación completando los tutoriales relacionados anteriores, el último paso es crear un instalador para que otros usuarios puedan instalar el programa en sus equipos. Para el instalador, agregue un nuevo proyecto a la solución existente. El resultado de este nuevo proyecto es un archivo setup.exe que instalará la aplicación en otro equipo.
 
-En este tutorial se muestra cómo utilizar Windows Installer para implementar la aplicación. También puede utilizar ClickOnce para implementar una aplicación. Para obtener más información, vea [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Para obtener más información sobre el desarrollo en general, vea [Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components).
+En este tutorial se muestra cómo utilizar Windows Installer para implementar la aplicación. También puede utilizar ClickOnce para implementar una aplicación. Para obtener más información, vea [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Para obtener más información sobre el desarrollo en general, vea [Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - En el tutorial se da por supuesto que conoce los fundamentos del lenguaje C++.
 
-- También se presupone que ha completado los tutoriales relacionados anteriores que se enumeran en [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- También se presupone que ha completado los tutoriales relacionados anteriores que se enumeran en [Usar el IDE de Visual Studio para desarrollo de escritorio de C++](using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 - El tutorial no se puede completar en las ediciones Express de Visual Studio.
 
@@ -72,10 +72,10 @@ En este tutorial se muestra cómo utilizar Windows Installer para implementar la
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Anterior:** [Tutorial: Depuración de un proyecto (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Anterior:** [Tutorial: Depuración de un proyecto (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>
-[Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Implementar aplicaciones de escritorio](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>
