@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746922"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356184"
 ---
 # <a name="managed-types-ccli"></a>Tipos administrados (C++/CLI)
 
@@ -46,19 +46,21 @@ La siguiente tabla muestra las palabras clave para los tipos integrados de Visua
 
 |Tipo de Visual C++|Tipo de .NET Framework|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**firmado char** (consulte [/j](../build/reference/j-default-char-type-is-unsigned.md) para obtener más información)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**Double** y **long double**|**System.Double**|
-|**float**|**System.Single**|
-|**int**, **firmado int**, **largo**, y **long con signo**|**System.Int32**|
-|**int sin signo** y **unsigned long**|**System.UInt32**|
-|**__int64** y **firmado __int64**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**short** y **firmado resumen**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**carácter con signo** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**short** y **firmado resumen**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**, **firmado int**, **largo**, y **long con signo**|<xref:System.Int32?displayProperty=nameWithType>|
+|**int sin signo** y **unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**__int64** y **firmado __int64**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**Double** y **long double**|<xref:System.Double?displayProperty=nameWithType>|
+
+Para obtener más información acerca de la opción del compilador en la configuración predeterminada a con o sin signo **char**, consulte [/J (el tipo de carácter predeterminado es sin signo)](../build/reference/j-default-char-type-is-unsigned.md).
 
 ## <a name="version_issues"></a> Problemas de versión con tipos de valor anidados en tipos nativos
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827115"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773052"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Tutorial: Compilar C++ / c++ / CLI programa orientado a CLR en Visual Studio
 
@@ -57,7 +57,7 @@ En estos temas se da por supuesto que comprende los fundamentos del lenguaje C++
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   Para obtener más información sobre la nueva sintaxis de Visual C++, vea [Extensiones de componentes para plataformas de tiempo de ejecución](../windows/component-extensions-for-runtime-platforms.md).
+   Para obtener más información sobre la nueva sintaxis de Visual C++, vea [Extensiones de componentes para plataformas de tiempo de ejecución](../extensions/component-extensions-for-runtime-platforms.md).
 
 1. En el menú **Compilar** , haga clic en **Compilar solución**.
 
@@ -77,4 +77,4 @@ En estos temas se da por supuesto que comprende los fundamentos del lenguaje C++
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Los proyectos y los sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

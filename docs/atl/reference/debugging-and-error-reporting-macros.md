@@ -1,6 +1,6 @@
 ---
 title: Macros de depuración e informe de errores
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287328"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775054"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de depuración e informe de errores
 
@@ -29,7 +29,7 @@ Estas macros proporcionan útiles instalaciones de depuración y seguimiento.
 |[ATLASSERT](#atlassert)|Realiza la misma funcionalidad que el [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) macro se encuentra en la biblioteca de tiempo de ejecución de C.|
 |[ATLENSURE](#atlensure)|Realiza la validación de parámetros. Llamar a `AtlThrow` si es necesario|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Envía un mensaje en el dispositivo de volcado de memoria que no implementa la función especificada.|
-|[ATLTRACE](#alttrace)|Advertencias de informes a un dispositivo de salida, como la ventana del depurador, según las marcas indicadas y los niveles. Se incluye por compatibilidad con versiones anteriores.|
+|[ATLTRACE](#atltrace)|Advertencias de informes a un dispositivo de salida, como la ventana del depurador, según las marcas indicadas y los niveles. Se incluye por compatibilidad con versiones anteriores.|
 |[ATLTRACE2](#atltrace2)|Advertencias de informes a un dispositivo de salida, como la ventana del depurador, según las marcas indicadas y los niveles.|
 
 ##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Comentarios
 
-La forma abreviada de ATLTRACE2 escribe una cadena en la ventana de salida del depurador. La segunda forma de ATLTRACE2 también escribe la salida en la ventana de salida del depurador, pero está sujeto a la configuración de la herramienta de seguimiento ATL/MFC (vea [ejemplo ATLTraceTool](../../visual-cpp-samples.md)). Por ejemplo, si establece *nivel* a 4 y la herramienta de seguimiento ATL/MFC al nivel 0, no verá el mensaje. *nivel* puede ser 0, 1, 2, 3 o 4. El valor predeterminado, 0, notifica solo los problemas más serios.
+La forma abreviada de ATLTRACE2 escribe una cadena en la ventana de salida del depurador. La segunda forma de ATLTRACE2 también escribe la salida en la ventana de salida del depurador, pero está sujeto a la configuración de la herramienta de seguimiento ATL/MFC (vea [ejemplo ATLTraceTool](../../overview/visual-cpp-samples.md)). Por ejemplo, si establece *nivel* a 4 y la herramienta de seguimiento ATL/MFC al nivel 0, no verá el mensaje. *nivel* puede ser 0, 1, 2, 3 o 4. El valor predeterminado, 0, notifica solo los problemas más serios.
 
 El *categoría* listas de parámetros para establecer las marcas de seguimiento. Estas marcas se corresponden con los tipos de métodos para el que desea informar. Las tablas siguientes muestran las marcas de seguimiento válido puede usar para la *categoría* parámetro.
 

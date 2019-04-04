@@ -1,17 +1,17 @@
 ---
 title: Advertencia del compilador (nivel 1) C4789
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 f1_keywords:
 - C4789
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: f489915f07eefd0909cbcd806a590f93f674c258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677401"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476860"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Advertencia del compilador (nivel 1) C4789
 
@@ -19,9 +19,11 @@ ms.locfileid: "50677401"
 
 ## <a name="remarks"></a>Comentarios
 
-Advierte de saturación del búfer cuando se usan funciones específicas de tiempo de ejecución de C (CRT), se pasan parámetros y se realizan asignaciones, de forma que el tamaño de los datos se conoce en tiempo de compilación. Esta advertencia se usa en situaciones en las que puede eludirse la detección de discrepancias de tamaño de datos.
+**C4789** advierte acerca de las saturaciones del búfer cuando se usan funciones específicas de C (CRT) en tiempo de ejecución. También puede notificar errores de coincidencia de tamaño cuando se pasan parámetros o se realizan asignaciones. La advertencia es posible si el tamaño de los datos se conoce en tiempo de compilación. Esta advertencia se usa en situaciones en las que puede eludirse la detección de discrepancias de tamaño de datos.
 
-La advertencia aparece cuando los datos, cuya longitud se conoce en tiempo de compilación, se copian y se colocan en un bloque de datos cuyo tamaño se revela —en tiempo de compilación— insuficiente para albergar los datos. La copia debe hacerse mediante la forma intrínseca de una de las siguientes funciones de CRT:
+**C4789** advierte cuando se copian datos en un bloque de datos que se sabe que es demasiado pequeño en tiempo de compilación.
+
+La advertencia se produce si la copia usa la forma intrínseca de una de estas funciones de CRT:
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -29,18 +31,18 @@ La advertencia aparece cuando los datos, cuya longitud se conoce en tiempo de co
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-La advertencia también aparece cuando se produce un error de coincidencia de tipos de datos de parámetro al usar una conversión de tipos y, a continuación, se intenta realizar una asignación de copia de una referencia lvalue.
+La advertencia también aparece cuando se convierte un parámetro a un tipo de datos mayor y, a continuación, realizan una asignación de copia de una referencia lvalue.
 
-Visual C++ puede generar esta advertencia para una ruta de acceso del código que no se ejecuta nunca. La advertencia se puede deshabilitar temporalmente con `#pragma`, como se muestra en este ejemplo:
+Visual C++ puede generar esta advertencia para una ruta de acceso del código que nunca se ejecuta. La advertencia se puede deshabilitar temporalmente con `#pragma`, como se muestra en este ejemplo:
 
 ```cpp
-#pragma(push)
-#pragma warning ( disable : 4789 )
+#pragma warning( push )
+#pragma warning( disable : 4789 )
 // unused code that generates compiler warning C4789`
-#pragma(pop)
+#pragma warning( pop )
 ```
 
-Esto impide que Visual C++ genera la advertencia para ese bloque de código específico. `#pragma(push)` conserva el estado antes de que `#pragma warning(disable: 4789)` lo cambie. `#pragma(pop)` restaura el estado insertado y quita los efectos de la `#pragma warning(disable:4789)`. Para obtener más información acerca de la directiva de preprocesador de C++ `#pragma`, consulte [advertencia](../../preprocessor/warning.md) y [directivas Pragma y la palabra clave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Esta expresión impide que Visual C++ genera la advertencia para ese bloque de código específico. `#pragma warning(push)` conserva el estado antes de que `#pragma warning(disable: 4789)` lo cambie. `#pragma warning(pop)` restaura el estado insertado y quita los efectos de la `#pragma warning(disable:4789)`. Para obtener más información acerca de la directiva de preprocesador de C++ `#pragma`, consulte [advertencia](../../preprocessor/warning.md) y [directivas Pragma y la palabra clave __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572918"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767930"
 ---
 # <a name="subscript-operator-"></a>Operador de subíndice]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Una expresión de postfijo (que también se puede ser una expresión primaria) seguida del operador de subíndice, **[]**, especifica la indexación de matrices.
 
-Para obtener información sobre las matrices administradas, vea [matrices](../windows/arrays-cpp-component-extensions.md).
+Para obtener información sobre las matrices administradas en C++ / c++ / CLI, consulte [matrices](../extensions/arrays-cpp-component-extensions.md).
 
 Normalmente, el valor representado por *postfix-expression* es un valor de puntero, como un identificador de matriz y *expresión* es un valor entero (incluidos los tipos enumerados). Sin embargo, todo lo que se necesita desde el punto de vista sintáctico es que una de las expresiones sea de tipo puntero y que la otra sea de tipo entero. Por tanto, el valor entero podría estar en el *postfix-expression* posición y el valor de puntero podría estar en los corchetes en la *expresión* o posición de subíndice. Observe el fragmento de código siguiente:
 

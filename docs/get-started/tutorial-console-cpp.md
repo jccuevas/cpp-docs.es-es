@@ -2,16 +2,16 @@
 title: Creación de un proyecto de aplicación de consola de C++
 description: Creación de una aplicación de consola Hola mundo en Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 03/25/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 49fc20f3040f50ddc1b8014cc4dcf8df20f7af87
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.openlocfilehash: 1b2fe7b95ec27a559de73673412cb2d28507b656
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "57700653"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476882"
 ---
 # <a name="create-a-c-console-app-project"></a>Creación de un proyecto de aplicación de consola de C++
 
@@ -23,7 +23,7 @@ El punto de partida habitual para un programador de C++ es una aplicación "Hola
 
 ## <a name="create-your-app-project"></a>Creación del proyecto de aplicación
 
-Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, configuraciones y reglas que se usan para compilar las aplicaciones y administra la relación entre todos los archivos del proyecto y los archivos externos. Para crear la aplicación, primero tendrá que crear un proyecto y una solución.
+Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, las configuraciones y las reglas que se usan para compilar las aplicaciones. También sirve para administrar la relación entre todos los archivos del proyecto y cualquier archivo externo. Para crear la aplicación, primero tendrá que crear un proyecto y una solución.
 
 1. En la barra de menús de Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto**. Se abrirá la ventana **Nuevo proyecto**.
 
@@ -33,7 +33,7 @@ Visual Studio usa *proyectos* para organizar el código de una aplicación y *so
 
    ![Cuadro de diálogo Nuevo proyecto](./media/calculator-new-project-dialog.png "The New Project dialog")
 
-   Esto crea una aplicación de consola de Windows de C++ vacía. Las aplicaciones de consola usan una ventana de consola de Windows para mostrar la salida y aceptar la entrada del usuario. En Visual Studio, se abre una ventana del editor en la que se muestra el código generado, que debería tener este aspecto:
+   Se crea una aplicación de consola de Windows de C++ vacía. Las aplicaciones de consola usan una ventana de consola de Windows para mostrar la salida y aceptar la entrada del usuario. En Visual Studio, se abre una ventana del editor en la que se muestra el código generado:
 
     ```cpp
     // CalculatorTutorial.cpp : This file contains the 'main' function. Program execution begins and ends there.
@@ -58,8 +58,6 @@ Visual Studio usa *proyectos* para organizar el código de una aplicación y *so
     //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
     //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
     ```
-
-[He tenido un problema.](#create-your-app-project-issues)
 
 ## <a name="verify-that-your-new-app-builds-and-runs"></a>Compruebe que la nueva aplicación se compila y ejecuta
 
@@ -124,13 +122,11 @@ Ahora, el código de esta plantilla se va a convertir en una aplicación de calc
 
 1. Para guardar el archivo, presione **Ctrl+S**, o bien haga clic en el icono **Guardar** situado cerca de la parte superior del IDE, el icono de disco de la barra de herramientas en la barra de menús.
 
-1. Para ejecutar la aplicación, presione **Ctrl+F5**, o bien vaya al menú **Depurar** y seleccione **Iniciar sin depurar**. Si aparece el mensaje emergente **Este proyecto no está actualizado**, puede activar **No volver a mostrar este cuadro de diálogo** y, después, hacer clic en **Sí** para compilar la aplicación. Debería ver una ventana de consola emergente con el texto especificado en el código.
+1. Para ejecutar la aplicación, presione **Ctrl+F5**, o bien vaya al menú **Depurar** y seleccione **Iniciar sin depurar**. Si aparece el mensaje emergente **Este proyecto no está actualizado**, puede activar **No volver a mostrar este cuadro de diálogo** y, después, hacer clic en **Sí** para compilar la aplicación. Debería ver aparecer una ventana de consola que muestra el texto especificado en el código.
 
    ![Compilación e inicio de la aplicación](./media/calculator-first-launch.gif "Build and start your application")
 
 1. Cuando haya terminado, cierre la ventana de la consola.
-
-[He tenido un problema.](#edit-the-code-issues)
 
 ## <a name="add-code-to-do-some-math"></a>Adición de código para realizar cálculos matemáticos
 
@@ -138,7 +134,7 @@ Es el momento de agregar cierta lógica matemática.
 
 ### <a name="to-add-a-calculator-class"></a>Para agregar una clase Calculator
 
-1. Vaya al menú **Proyecto** y seleccione **Agregar clase**. En el cuadro de edición **Nombre de clase**, escriba *Calculator*. Elija **Aceptar**. Esto agrega dos archivos nuevos al proyecto. Para guardar todos los archivos modificados a la vez, presione **Ctrl+Mayús+S**. Se trata de un método abreviado de teclado para **Archivo** > **Guardar todo**. También hay un botón de la barra de herramientas para **Guardar todo**, un icono de dos discos, que se encuentra junto al botón **Guardar**. En general, se recomienda **Guardar todo** con frecuencia, para no perder ningún archivo al guardar.
+1. Vaya al menú **Proyecto** y seleccione **Agregar clase**. En el cuadro de edición **Nombre de clase**, escriba *Calculator*. Elija **Aceptar**. Se agregan dos nuevos archivos al proyecto. Para guardar todos los archivos modificados a la vez, presione **Ctrl+Mayús+S**. Se trata de un método abreviado de teclado para **Archivo** > **Guardar todo**. También hay un botón de la barra de herramientas para **Guardar todo**, un icono de dos discos, que se encuentra junto al botón **Guardar**. En general, se recomienda **Guardar todo** con frecuencia, para no perder ningún archivo al guardar.
 
    ![Creación de la clase Calculator](./media/calculator-create-class.gif "Create the Calculator class")
 
@@ -268,19 +264,19 @@ Como el usuario tiene libertad para escribir lo que quiera en la ventana de la c
 
 ### <a name="to-run-the-app-in-the-debugger"></a>Para ejecutar la aplicación en el depurador
 
-1. Establezca un punto de interrupción en la línea `result = c.Calculate(x, oper, y);`, justo después de que se haya solicitado la entrada al usuario. Para ello, haga clic en la barra vertical de color gris del borde izquierdo de la ventana del editor junto a la línea para que aparezca un punto de color rojo.
+1. Establezca un punto de interrupción en la línea `result = c.Calculate(x, oper, y);`, justo después de que se haya solicitado la entrada al usuario. Para ello, haga clic en la línea en la barra vertical de color gris del borde izquierdo de la ventana del editor. Aparece un punto rojo.
 
    ![Establecimiento de un punto de interrupción](./media/calculator-set-breakpoint.gif "Set a breakpoint")
 
-   Ahora, cuando se depure el programa, la ejecución siempre se detendrá en esa línea. Pero ya tenemos una idea aproximada de que el programa funciona para los casos sencillos y no queremos pausar la ejecución cada vez, por lo que el punto de interrupción se convertirá en condicional.
+   Ahora, cuando se depure el programa, la ejecución siempre se detendrá en esa línea. Ya tenemos una idea aproximada de que el programa funciona para casos sencillos. Ya que no queremos pausar la ejecución cada vez, vamos a hacer condicional un punto de interrupción.
 
-1. Haga clic con el botón derecho en el punto de color rojo que representa el punto de interrupción y seleccione **Condiciones**. En el cuadro de edición para la condición, escriba `(y == 0) && (oper == '/')`. Haga clic en el botón **Cerrar** cuando haya terminado; la condición se guarda automáticamente.
+1. Haga clic con el botón derecho en el punto de color rojo que representa el punto de interrupción y seleccione **Condiciones**. En el cuadro de edición para la condición, escriba `(y == 0) && (oper == '/')`. Elija el botón **Cerrar** cuando haya terminado. La condición se guarda automáticamente.
 
    ![Establecimiento de un punto de interrupción condicional](./media/calculator-conditional-breakpoint.gif "Set a conditional breakpoint")
 
    Ahora, la ejecución se detiene en el punto de interrupción solo si se intenta realizar una división por 0.
 
-1. Para depurar el programa, presione **F5** o haga clic en el botón **Depurador local de Windows** (el botón de la barra de herramientas con el icono de flecha de color verde). En la aplicación de consola, si escribe algo parecido a "5 - 0", el programa se comporta con normalidad y se sigue ejecutando. Pero si escribe "10 / 0", se detiene en el punto de interrupción. Incluso puede agregar cualquier número de espacios entre el operador y los números; `cin` es lo suficientemente inteligente como para analizar la entrada de forma adecuada.
+1. Para depurar el programa, presione **F5** o haga clic en el botón de la barra de herramientas **Depurador local de Windows** con el icono de flecha de color verde. En la aplicación de consola, si escribe algo parecido a "5 - 0", el programa se comporta con normalidad y se sigue ejecutando. Pero si escribe "10 / 0", se detiene en el punto de interrupción. Incluso puede agregar cualquier número de espacios entre el operador y los números; `cin` es lo suficientemente inteligente como para analizar la entrada de forma adecuada.
 
    ![Pausa en el punto de interrupción condicional](./media/calculator-debug-conditional.gif "Pause at the conditional breakpoint")
 
@@ -290,29 +286,29 @@ Cada vez que se depura el código, es posible que observe que aparecen ventanas 
 
    ![La ventana Automático](./media/calculator-autos.png "The Autos window")
 
-Para ver todas las variables de esa función, cambie a la ventana **Variables locales**. En realidad puede modificar los valores de estas variables sobre la marcha durante la depuración, para ver qué efecto tienen en el programa. En este caso, se dejarán como están.
+Para ver todas las variables de esa función, cambie a la ventana **Variables locales**. En realidad puede modificar los valores de estas variables durante la depuración, para ver qué efecto tienen en el programa. En este caso, se dejarán como están.
 
    ![La ventana Variables locales](./media/calculator-locals.png "The Locals window")
 
-También puede mantener el puntero sobre las variables en el propio código para ver sus valores actuales en donde se detiene la ejecución. Para asegurarse de que la ventana del editor tiene el foco, haga clic en ella antes de intentar esto.
+También puede mantener el puntero sobre las variables en el propio código para ver sus valores actuales en donde se detiene la ejecución. Para asegurarse de que la ventana del editor tiene el foco, haga clic en ella primero.
 
    ![Mantenimiento del cursor para ver los valores de variable actuales](./media/calculator-hover-tooltip.gif "Hover to view current variable values")
 
 ### <a name="to-continue-debugging"></a>Para continuar la depuración
 
-1. En la línea de color amarillo de la izquierda se muestra el punto de ejecución actual. Actualmente está en una línea que llama a `Calculate`, por lo que presione **F11** para **Depurar paso a paso por instrucciones** la función. Se encontrará en el cuerpo de la función `Calculate`. Debe tener cuidado con **Depurar paso a paso por instrucciones**; si lo usa demasiado, puede desperdiciar mucho tiempo, ya que accede a cualquier código que se use en la línea en la que se encuentre, incluidas las funciones de biblioteca estándar.
+1. En la línea de color amarillo de la izquierda se muestra el punto de ejecución actual. La línea actual llama a `Calculate`, por lo que presione **F11** para **Depurar paso a paso por instrucciones** la función. Se encontrará en el cuerpo de la función `Calculate`. Tenga cuidado con **Depurar paso a paso por instrucciones**; si lo ejecuta demasiado, puede perder mucho tiempo. Pasa por cualquier código que se utilice en la línea en la que se encuentre, incluidas las funciones de biblioteca estándar.
 
-1. Ahora que el punto de ejecución está al principio de la función `Calculate`, presione **F10** para pasar a la línea siguiente en la ejecución del programa. Esto también se conoce como **Depurar paso a paso por procedimientos**. Se puede usar **Depurar paso a paso por procedimientos** para pasar de una línea a otra, sin profundizar en los detalles de lo que ocurre en cada elemento de la línea. En general, se debe usar **Depurar paso a paso por procedimientos** en lugar de **Depurar paso a paso por instrucciones**, a menos que quiera profundizar más en el código que se llama desde otra parte (como hizo para llegar al cuerpo de `Calculate`).
+1. Ahora que el punto de ejecución está al principio de la función `Calculate`, presione **F10** para pasar a la línea siguiente en la ejecución del programa. **F10** también se conoce como **Depurar paso a paso por procedimientos**. Se puede usar **Depurar paso a paso por procedimientos** para pasar de una línea a otra, sin profundizar en los detalles de lo que ocurre en cada elemento de la línea. En general, se debe usar **Depurar paso a paso por procedimientos** en lugar de **Depurar paso a paso por instrucciones**, a menos que quiera profundizar más en el código que se llama desde otra parte (como hizo para llegar al cuerpo de `Calculate`).
 
 1. Siga presionando **F10** para **Depurar paso a paso por procedimientos** cada línea hasta que regrese a la función `main()` del otro archivo, y deténgase en la línea `cout`.
 
    ![Depuración paso a paso por procedimientos de Calculate y comprobación del resultado](./media/calculator-undefined-zero.gif "Step out of Calculate and check result")
 
-1. Parece que el programa hace lo que se espera: toma el primer número y lo divide por el segundo. En la línea `cout`, mantenga el puntero sobre la variable `result` o examine `result` en la ventana **Automático**. Verá que su valor se muestra como "inf". No parece correcto, por lo que se va a solucionar este problema. En la línea `cout` solo se muestra el valor almacenado en `result`, por lo que al avanzar una línea más mediante **F10**, en la ventana de consola se muestra esto:
+1. Parece que el programa hace lo que se espera: toma el primer número y lo divide por el segundo. En la línea `cout`, mantenga el puntero sobre la variable `result` o examine `result` en la ventana **Automático**. Verá que su valor se muestra como "inf", que no se ve bien, así que vamos a arreglarlo. En la línea `cout` solo se muestra el valor almacenado en `result`, por lo que al avanzar una línea más mediante **F10**, en la ventana de consola se muestra:
 
    ![El resultado de la división por cero](./media/calculator-divide-by-zero-fail.png "The result of divide by zero")
 
-   Esto sucede porque la división por cero no está definida, por lo que el programa no tiene una respuesta numérica a la operación solicitada.
+   Este resultado sucede porque la división por cero no está definida, por lo que el programa no tiene una respuesta numérica a la operación solicitada.
 
 ### <a name="to-fix-the-divide-by-zero-error"></a>Para corregir el error de "división por cero"
 
@@ -332,9 +328,9 @@ Vamos a controlar la división por cero de forma más elegante, para que un usua
 
     int main()
     {
-        double x = 0.0
-        double y = 0.0
-        double result = 0.0
+        double x = 0.0;
+        double y = 0.0;
+        double result = 0.0;
         char oper = '+';
 
         cout << "Calculator Console Application" << endl << endl;
@@ -360,7 +356,7 @@ Vamos a controlar la división por cero de forma más elegante, para que un usua
     }
     ```
 
-1. Ahora presione **F5** una vez. Esto continúa la ejecución del programa hasta que tiene que detenerse para solicitar la entrada del usuario. Vuelva a escribir `10 / 0`. Ahora, se imprime un mensaje más útil. Al usuario se le solicita una entrada adicional y el programa se continúa ejecutando con normalidad.
+1. Ahora presione **F5** una vez. La ejecución del programa continúa hasta que tiene que detenerse para solicitar la entrada del usuario. Vuelva a escribir `10 / 0`. Ahora, se imprime un mensaje más útil. Al usuario se le solicita una entrada adicional y el programa se continúa ejecutando con normalidad.
 
    ![El resultado final después de realizar los cambios](./media/calculator-final-verification.gif "The final result after changes")
 

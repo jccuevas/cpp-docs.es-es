@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: da77e2ba93554cb65d4cc92353d05d54467b50d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269648"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356249"
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 
@@ -21,11 +21,15 @@ C++ Accelerated Massive Parallelism (C++ AMP) acelera la ejecución del código 
 
 ## <a name="system-requirements"></a>Requisitos del sistema
 
-- Windows 7, Windows 8, Windows Server 2008 R2 o Windows Server 2012
+- Windows 7 o posterior
+
+- Windows Server 2008 R2 o posterior
 
 - Característica de nivel 11.0 de DirectX 11 o hardware posterior
 
 - Para depurar en el emulador de software, se requiere Windows 8 o Windows Server 2012. Para depurar en el hardware, debe instalar los controladores de su tarjeta gráfica. Para obtener más información, consulte [depurar código de GPU](/visualstudio/debugger/debugging-gpu-code).
+
+- Nota: AMP no se admite actualmente en ARM64.
 
 ## <a name="introduction"></a>Introducción
 
@@ -443,7 +447,7 @@ void MathExample() {
     parallel_for_each(
         logs.extent,
         [=] (index<1> idx) restrict(amp) {
-            logs[idx] = concurrency::fast_math::log10(logs[idx]);
+            logs[idx] = concurrency::fast_math::log10(numbers[idx]);
         }
     );
 

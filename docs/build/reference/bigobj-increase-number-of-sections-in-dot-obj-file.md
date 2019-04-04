@@ -1,6 +1,6 @@
 ---
 title: /bigobj (Aumentar el número de secciones en el archivo .Obj)
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - /bigobj
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-ms.openlocfilehash: a9685834fc3e1de246c9d9d60d206538b744ce3e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46399dc0c1ff552b4fc963b686ac6aa6df8b6f71
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809865"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508720"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Aumentar el número de secciones en el archivo .Obj)
 
@@ -21,27 +21,23 @@ ms.locfileid: "57809865"
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-/bigobj
-```
+> **/bigobj**
 
 ## <a name="remarks"></a>Comentarios
 
-De manera predeterminada, un archivo objeto puede contener hasta 65.536 (2^16) secciones direccionables. Este es el caso independientemente de la plataforma de destino que se especifique. **/bigobj** incrementa esa capacidad de direccionamiento a 4.294.967.296 (2 ^ 32).
+De forma predeterminada, un archivo objeto puede contener hasta 65.279 (casi 2 ^ 16) secciones direccionables. Este límite se aplica independientemente de qué destino de plataforma especificada. **/bigobj** incrementa esa capacidad de direccionamiento a 4.294.967.296 (2 ^ 32).
 
-La mayoría de los módulos nunca generarán un archivo .obj que contenga más de 65.536 secciones. Sin embargo, un código generado por el equipo o un código que usa intensivamente las bibliotecas de plantillas puede requerir archivos .obj que puedan contener más secciones. **/ bigobj** está habilitada de forma predeterminada en los proyectos de plataforma Universal de Windows (UWP) porque el código XAML generado por la máquina incluye un gran número de encabezados. Si deshabilita esta opción en un proyecto de aplicación para UWP es probable que encuentre el error del compilador C1128.
+La mayoría de los módulos nunca generan un archivo .obj que contiene más de 65.279 secciones. Sin embargo, el código generado a la máquina o código que hace un uso intensivo de las bibliotecas de plantillas, puede requerir archivos .obj que puedan contener más secciones. **/ bigobj** está habilitada de forma predeterminada en los proyectos de plataforma Universal de Windows (UWP) porque el código XAML generado por la máquina incluye un gran número de encabezados. Si deshabilita esta opción en un proyecto de aplicación para UWP, el código puede generar el error del compilador C1128.
 
-Los vinculadores distribuidos antes de Visual C++ 2005 no pueden leer archivos .obj que se hayan generado con **/bigobj**.
+Para obtener información sobre el formato de archivo objeto COFF de PE, consulte [formato PE](/windows/desktop/debug/pe-format) en la documentación de Windows.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
-1. Haga clic en la carpeta **C/C++** .
+1. Seleccione el **propiedades de configuración** > **C o C++** > **línea de comandos** página de propiedades.
 
-1. Haga clic en la página de propiedades **Línea de comandos** .
-
-1. Escriba la opción del compilador en el cuadro **Opciones adicionales** .
+1. Escriba el **/bigobj** opción del compilador en el **opciones adicionales** cuadro.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para establecer esta opción del compilador mediante programación
 
@@ -49,5 +45,5 @@ Los vinculadores distribuidos antes de Visual C++ 2005 no pueden leer archivos .
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

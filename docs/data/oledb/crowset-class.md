@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: cb79bfe7cf0a30e0ff4ed2a4a6860bc3042983ee
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416551"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779461"
 ---
 # <a name="crowset-class"></a>CRowset (Clase)
 
@@ -275,7 +275,7 @@ Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.
 |[Cerrar](#close)|Libera las filas y la actual `IRowset` interfaz.|
 |[Compare](#compare)|Compara dos marcadores utilizando [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crea un nuevo `CRowset` objeto y lo asocia a (opcionalmente) un `IRowset` interfaz proporcionada como un parámetro.|
-|[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
+|[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Busca la siguiente fila coincidente después del marcador especificado.|
 |[GetApproximatePosition](#getapproximateposition)|Devuelve la posición aproximada de una fila correspondiente a un marcador.|
 |[GetData](#getdata)|Recupera datos de copia del conjunto de filas de la fila.|
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Las llamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) para eliminar la fila actual del conjunto de filas.
+Las llamadas [IRowsetChange:: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) para eliminar la fila actual del conjunto de filas.
 
 ### <a name="syntax"></a>Sintaxis
 
@@ -534,7 +534,7 @@ Un HRESULT estándar.
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener un ejemplo de cómo usar esta función, vea el [ejemplo MultiRead](../../visual-cpp-samples.md).
+Para obtener un ejemplo de cómo usar esta función, vea el [ejemplo MultiRead](../../overview/visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ Un HRESULT estándar.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo DBViewer](../../visual-cpp-samples.md)<br/>
-[Ejemplo multiRead](../../visual-cpp-samples.md)<br/>
-[Ejemplo de atributos multiRead](../../visual-cpp-samples.md)<br/>
+[Ejemplo DBViewer](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo multiRead](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de atributos multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -2,12 +2,12 @@
 title: Guía de migración y actualización de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752433"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767683"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guía de migración y actualización de Visual C++
 
@@ -76,8 +76,8 @@ Por otro lado, quizás ahora tiene nuevos requisitos o puede prever la necesidad
 |Title|Descripción|
 |-----------|-----------------|
 |[Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Explica cómo utilizar los proyectos creados en versiones anteriores de Visual C++.|
-|[Novedades del Compilador de Microsoft Visual C++ en Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Cambios en el IDE y las herramientas entre Visual Studio 2015 y Visual Studio 2017|
-|[Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)|Mejoras de conformidad con los estándares de Visual Studio 2015 a Visual Studio 2017|
+|[Novedades del Compilador de Microsoft Visual C++ en Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Cambios en el IDE y las herramientas entre Visual Studio 2015 y Visual Studio 2017|
+|[Mejoras de conformidad de C++ en Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Mejoras de conformidad con los estándares de Visual Studio 2015 a Visual Studio 2017|
 |[Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)|Una lista de todos los cambios en las herramientas de compilación y las bibliotecas de Visual C++ de Visual Studio 2003 a 2015 que podrían precisar de modificaciones en su código.|
 |[Novedades de Visual C++ de 2003 a 2015](visual-cpp-what-s-new-2003-through-2015.md)|Toda la información sobre novedades de Visual C++, de Visual Studio 2003 a Visual Studio 2015.|
 |[Migración de bibliotecas de terceros](porting-third-party-libraries.md)|Descripción del uso de la herramienta de línea de comandos **vcpkg** para migrar bibliotecas de código abierto antiguas a versiones compiladas con conjuntos de herramientas más recientes de Visual C++.|
@@ -88,4 +88,4 @@ Por otro lado, quizás ahora tiene nuevos requisitos o puede prever la necesidad
 
 ## <a name="see-also"></a>Vea también
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

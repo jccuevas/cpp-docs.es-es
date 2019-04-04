@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419002"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781658"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (clase)
 
@@ -830,9 +830,9 @@ Llame a `SetWizardMode` antes de llamar a [DoModal](#domodal). Después de llama
 
 ## <a name="see-also"></a>Vea también
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

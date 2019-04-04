@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283662"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778304"
 ---
 # <a name="cregkey-class"></a>CRegKey (clase)
 
@@ -1058,5 +1058,5 @@ El tercer método llama a [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo DCOM](../../visual-cpp-samples.md)<br/>
+[Ejemplo DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

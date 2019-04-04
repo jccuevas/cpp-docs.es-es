@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175930"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778343"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 
@@ -45,11 +45,11 @@ La sintaxis siguiente describe el **try-finally** instrucción:
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_Pruebe** *compound-statement*  **\_ \_finalmente** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
 El **try-finally** instrucción es una extensión de Microsoft a los lenguajes C y C++ que permite a las aplicaciones de destino garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. El **try-finally** instrucción resulta especialmente útil para las rutinas que tienen varios lugares donde se realiza una comprobación para un error que podría provocar prematura de devolución de la rutina.
 
-Para obtener información relacionada y un ejemplo de código, vea [intente-excepto instrucción](../cpp/try-except-statement.md). Para obtener más información sobre el control general de excepciones estructurado, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre cómo controlar las excepciones en aplicaciones administradas, vea [control de excepciones en /clr](../windows/exception-handling-cpp-component-extensions.md).
+Para obtener información relacionada y un ejemplo de código, vea [intente-excepto instrucción](../cpp/try-except-statement.md). Para obtener más información sobre el control general de excepciones estructurado, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre cómo controlar las excepciones en aplicaciones administradas con C++ / c++ / CLI, consulte [control de excepciones en /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
 > El control de excepciones estructurado funciona con Win32 para archivos de código fuente de C y C++. Sin embargo, no está diseñado específicamente para C++. Para asegurarse de que el código será más portable, use el control de excepciones de C++. Además, el control de excepciones de C++ es más flexible, ya que puede controlar excepciones de cualquier tipo. Para los programas de C++, se recomienda utilizar el mecanismo de control de excepciones de C++ ([try, catch y throw](../cpp/try-throw-and-catch-statements-cpp.md) instrucciones).
@@ -66,7 +66,7 @@ El control alcanza un **__try** instrucción mediante la ejecución secuencial s
 
 Si se produce una excepción en el **__try** bloque, el sistema operativo debe buscar un controlador para la excepción o se producirá un error en el programa. Si se encuentra un controlador, todos los **__finally** se ejecutan bloques y se reanuda la ejecución en el controlador.
 
-Por ejemplo, suponga que una serie de llamadas de función vincula la función A a la función D, como se muestra en la ilustración siguiente. Cada función tiene un controlador de finalización. Si se produce una excepción en la función D y se controla en A, se llama a los controladores de finalización en este orden mientras el sistema desenreda la pila: D, C, B.
+Por ejemplo, suponga que una serie de llamadas de función vincula la función A a la función D, como se muestra en la ilustración siguiente. Cada función tiene un controlador de finalización. Si una excepción se genera en la función D y se controla en A, los controladores de terminación se llaman en este orden mientras el sistema desenreda la pila: D, C, B.
 
 ![Orden de terminación&#45;ejecución del controlador](../cpp/media/vc38cx1.gif "orden de terminación&#45;ejecución del controlador") <br/>
 Orden de terminación-ejecución de controladores

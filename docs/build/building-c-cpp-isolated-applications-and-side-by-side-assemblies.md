@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: e3c39595008d92b390b03a56bdcf5fc8990b2103
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b962796c3bf32bc312d3047535ae90a40a37094d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807564"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772467"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Compilar aplicaciones aisladas y ensamblados simultáneos de C/C++
 
@@ -22,7 +22,7 @@ Visual C++ admite un modelo de implementación para aplicaciones cliente de Wind
 
 Compilar programas de C/C++ como aplicaciones aisladas presenta varias ventajas. Por ejemplo, a las aplicaciones aisladas no les afecta que otras aplicaciones de C/C++ instalen o desinstalen bibliotecas de Visual C++. Las bibliotecas de Visual C++ usadas por las aplicaciones aisladas, aun así, se pueden redistribuir en la carpeta local de la aplicación o instalándolas en la caché de ensamblados nativa (WinSxS). Sin embargo, el mantenimiento de las bibliotecas de Visual C++ para las aplicaciones ya implementadas se puede simplificar con un [archivo de configuración del publicador](/windows/desktop/SbsCs/publisher-configuration). Con el modelo de implementación de aplicaciones aisladas, es más fácil que las aplicaciones de C/C++ que se ejecutan en un equipo determinado usen la última versión de las bibliotecas de Visual C++ y, al mismo tiempo, se deja abierta la posibilidad de que los administradores del sistema y los autores de aplicaciones controlen el enlace explícito de versiones de las aplicaciones a las DLL dependientes.
 
-En esta sección, se explica cómo compilar una aplicación de C/C++ como aplicación aislada y enlazarla a bibliotecas de Visual C++ con un manifiesto. La información de esta sección se aplica, principalmente, a las aplicaciones de Visual C++ nativas o no administradas. Para obtener información sobre la implementación de aplicaciones nativas compiladas con Visual C++, vea [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
+En esta sección, se explica cómo compilar una aplicación de C/C++ como aplicación aislada y enlazarla a bibliotecas de Visual C++ con un manifiesto. La información de esta sección se aplica, principalmente, a las aplicaciones de Visual C++ nativas o no administradas. Para obtener información sobre la implementación de aplicaciones nativas compiladas con Visual C++, vea [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 ## <a name="in-this-section"></a>En esta sección
 
@@ -44,4 +44,4 @@ En esta sección, se explica cómo compilar una aplicación de C/C++ como aplica
 
 [Aplicaciones aisladas y ensamblados en paralelo](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
 
-[Implementar aplicaciones de escritorio](../ide/deploying-native-desktop-applications-visual-cpp.md)
+[Implementar aplicaciones de escritorio](../windows/deploying-native-desktop-applications-visual-cpp.md)

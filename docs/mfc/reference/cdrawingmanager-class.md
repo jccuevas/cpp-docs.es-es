@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293451"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781697"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager (clase)
 
@@ -389,7 +389,7 @@ Si establece *bRightShadow* en FALSE, se dibujará la sombra debajo y a la izqui
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `DrawShadow` método de la `CDrawingManager` clase. Este fragmento de código forma parte de la [ejemplo de demostración de hoja Prop](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `DrawShadow` método de la `CDrawingManager` clase. Este fragmento de código forma parte de la [ejemplo de demostración de hoja Prop](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `FillGradient` método de la `CDrawingManager` clase. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `FillGradient` método de la `CDrawingManager` clase. Este fragmento de código forma parte de la [ejemplo de demostración de MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ Use *nAngle* para especificar la dirección del degradado de color. Cuando se es
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `FillGradient2` método de la `CDrawingManager` clase. Este fragmento de código forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `FillGradient2` método de la `CDrawingManager` clase. Este fragmento de código forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
@@ -617,7 +617,7 @@ La representación RGB del color HLS proporcionado.
 
 ### <a name="remarks"></a>Comentarios
 
-Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](/windows/desktop/uxguide/vis-color).
 
 Este método y el `CDrawingManager::HLStoRGB_TWO` método realiza la misma operación, pero requieren valores diferentes para el *H* parámetro. En este método, *H* es un porcentaje del círculo. En el `CDrawingManager::HLStoRGB_TWO` método *H* es un valor de grado, entre 0 y 360, que representan el rojo. Por ejemplo, con `HLStoRGB_ONE`, un valor de 0,25 para *H* es equivalente a un valor de 90 con `HLStoRGB_TWO`.
 
@@ -649,7 +649,7 @@ La representación RGB del color HLS proporcionado.
 
 ### <a name="remarks"></a>Comentarios
 
-Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](/windows/desktop/uxguide/vis-color).
 
 Este método y el [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) método realiza la misma operación, pero requieren valores diferentes para el *H* parámetro. En este método, *H* es un valor de grado, entre 0 y 360, que representan el rojo. En el [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one) método *H* es un porcentaje del círculo. Por ejemplo, con `HLStoRGB_ONE`, un valor de 0,25 para *H* es equivalente a un valor de 90 con `HLStoRGB_TWO`.
 
@@ -679,7 +679,7 @@ La representación RGB del color HSV proporcionado.
 
 ### <a name="remarks"></a>Comentarios
 
-Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](/windows/desktop/uxguide/vis-color).
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Comentarios
 
-Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](/windows/desktop/uxguide/vis-color).
 
 El valor devuelto para *H* se representa como una fracción de entre 0 y 1, donde 0 y 1 representan rojo. Los valores devueltos para *S* y *L* son números comprendidos entre 0 y 1.
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Comentarios
 
-Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](http://go.microsoft.com/fwlink/p/?linkid=119126).
+Un color puede representarse como HSV (matiz, saturación y valor), HSL (matiz, saturación y luminosidad) o RGB (rojo, verde y azul). Para obtener más información acerca de las diferentes representaciones del color, vea [Color](/windows/desktop/uxguide/vis-color).
 
 El valor devuelto para *H* es un número entre 0 y 360, donde 0 y 360 indican rojo. Los valores de la devolución de *S* y *V* son números comprendidos entre 0 y 1.
 

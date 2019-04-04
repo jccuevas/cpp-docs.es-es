@@ -1,18 +1,18 @@
 ---
 title: '&lt;system_error&gt;'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - <system_error>
 - system_error
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: cb4870a22fd06039751f87f26dfa40e8ddcf2500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bba893f63ca935e0feeb891faa4e141e1958306
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662766"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172990"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
@@ -30,12 +30,6 @@ Incluya el encabezado \<system_error > para definir la clase de excepción `syst
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Representa la categoría de errores genéricos.|
 |[system_category](../standard-library/system-error-functions.md#system_category)|Representa la categoría de los errores causados por desbordamientos del sistema de bajo nivel.|
-
-### <a name="typedefs"></a>Typedefs
-
-|Nombre de tipo|Descripción|
-|-|-|
-|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|Un tipo que representa la enumeración que proporciona los nombres simbólicos para todas las macros de código de error definidas por Posix en `<errno.h>`.|
 
 ### <a name="functions"></a>Funciones
 

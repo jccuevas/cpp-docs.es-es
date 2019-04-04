@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519236"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820070"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Tutorial: Trabajar con proyectos y soluciones (C++)
 
@@ -22,7 +22,7 @@ En Visual Studio, el trabajo se organiza en proyectos y soluciones. Una solució
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-Para completar este tutorial, necesita Visual Studio 2017 versión 15.3 o posterior. Si necesita una copia, aquí tiene una guía breve: [Instalación de la compatibilidad con C++ en Visual Studio](../build/vscpp-step-0-installation.md). Si todavía no lo ha hecho, siga los pasos siguientes después de la instalación del tutorial "Hello, World" para asegurarse de que Visual C++ está instalado correctamente y todo funciona.
+Para completar este tutorial, necesita Visual Studio 2017 versión 15.3 o posterior. Si necesita una copia, aquí tiene una guía breve: [Compatibilidad con Install C++ en Visual Studio](../build/vscpp-step-0-installation.md). Si todavía no lo ha hecho, siga los pasos siguientes después de la instalación del tutorial "Hello, World" para asegurarse de que Visual C++ está instalado correctamente y todo funciona.
 
 Resulta útil conocer los fundamentos del lenguaje C++ y saber para qué se usa un compilador, un vinculador y un depurador. En el tutorial también se supone que está familiarizado con Windows y cómo usar los menús y los cuadros de diálogo.
 
@@ -83,11 +83,13 @@ Esta parte del tutorial muestra cómo agregar una clase al proyecto. Al agregar 
 
       Modifique el constructor para tomar un parámetro del tipo `int`, denominado *players*.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - Después del destructor predeterminado, agregue una declaración insertada para una función miembro `static int` denominada *GetParticipants* que no tome parámetros y devuelva el valor `totalParticipants`.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    El archivo Cardgame.h debería ser similar al código siguiente después de cambiarlo:
 
@@ -221,4 +223,4 @@ Enhorabuena, ha compilado correctamente un proyecto de aplicación y la solució
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

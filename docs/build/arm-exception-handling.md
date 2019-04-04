@@ -2,12 +2,12 @@
 title: Control de excepciones de ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814545"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476947"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -220,7 +220,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 }
 ```
 
-A pesar de que el prólogo y cada epílogo tienen un índice en los códigos de desenredado, comparten la tabla. No es inusual que todos compartan los mismos códigos de desenredado. Recomendamos a los autores de compiladores que optimicen esto, dado que el índice más grande que se puede especificar es de 255, lo cual constituye un límite para el número total de códigos de desenredado posibles de una función en particular.
+Aunque el prólogo y cada epílogo tienen un índice en los códigos de desenredado, la tabla se comparte entre ellos. No es inusual que todos compartan los mismos códigos de desenredado. Recomendamos a los autores de compiladores que optimicen esto, dado que el índice más grande que se puede especificar es de 255, lo cual constituye un límite para el número total de códigos de desenredado posibles de una función en particular.
 
 ### <a name="unwind-codes"></a>Códigos de desenredado
 
@@ -239,20 +239,20 @@ En la siguiente tabla se muestra la asignación de códigos de desenredado a có
 |Byte 1|Byte 2|Byte 3|Byte 4|Tamaño de operación|Explicación|
 |------------|------------|------------|------------|------------|-----------------|
 |00-7F||||16|`add   sp,sp,#X`<br /><br /> donde X es (código y 0x7F) \* 4|
-|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> donde LR se extrae si Código y 0x2000 y r0-r12 se extraen si el bit correspondiente está establecido en Código y 0x1FFF|
-|C0-CF||||16|`mov   sp,rX`<br /><br /> donde X es Código y 0x0F|
-|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> donde X es (Código y 0x03) + 4 y LR se extrae si Código y 0x04|
-|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> donde X es (Código y 0x03) + 8 y LR se extrae si Código y 0x04|
-|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> donde X es (Código y 0x07) + 8|
+|80-BF|00-FF|||32|`pop   {r0-r12, lr}`<br /><br /> donde LR se extrae si código y 0 x 2000 y r0-r12 se extraen si el bit correspondiente está establecido en código y 0x1FFF|
+|C0-CF||||16|`mov   sp,rX`<br /><br /> donde X es código y 0x0F|
+|D0-D7||||16|`pop   {r4-rX,lr}`<br /><br /> donde X es (código y 0 x 03) + 4 y LR se extrae si código y 0 x 04|
+|D8-DF||||32|`pop   {r4-rX,lr}`<br /><br /> donde X es (código y 0 x 03) + 8 y LR se extrae si código y 0 x 04|
+|E0-E7||||32|`vpop  {d8-dX}`<br /><br /> donde X es (código y 0 x 07) + 8|
 |E8-EB|00-FF|||32|`addw  sp,sp,#X`<br /><br /> donde X es (código y 0x03FF) \* 4|
-|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> donde LR se extrae si Código y 0x0100 y r0-r7 se extraen si el bit correspondiente está establecido en Código y 0x00FF|
+|EC-ED|00-FF|||16|`pop   {r0-r7,lr}`<br /><br /> donde LR se extrae si código y 0 x 0100 y r0-r7 se extraen si el bit correspondiente está establecido en código y 0x00FF|
 |EE|00-0F|||16|Específico de Microsoft|
 |EE|10-FF|||16|Disponible|
 |EF|00-0F|||32|`ldr   lr,[sp],#X`<br /><br /> donde X es (código y 0x000F) \* 4|
 |EF|10-FF|||32|Disponible|
 |F0-F4||||-|Disponible|
-|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> donde S es (Código y 0x00F0) >> 4 y E es Código y 0x000F|
-|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> donde S es ([Código y 0x00F0] >> 4) + 16 y E es (Código y 0x000F) + 16|
+|F5|00-FF|||32|`vpop  {dS-dE}`<br /><br /> donde S es (código y 0x00F0) >> 4 y E es código y 0x000F|
+|F6|00-FF|||32|`vpop  {dS-dE}`<br /><br /> donde S es ((Code & 0x00F0) >> 4) + 16 y E es (código y 0x000F) + 16|
 |F7|00-FF|00-FF||16|`add   sp,sp,#X`<br /><br /> donde X es (código y 0x00FFFF) \* 4|
 |F8|00-FF|00-FF|00-FF|16|`add   sp,sp,#X`<br /><br /> donde X es (código y 0x00FFFFFF) \* 4|
 |F9|00-FF|00-FF||32|`add   sp,sp,#X`<br /><br /> donde X es (código y 0x00FFFF) \* 4|
@@ -410,7 +410,7 @@ Si, tras omitir los epílogos con una sola instrucción, no hay más epílogos, 
 
 En los siguientes ejemplos, la base de imagen está a 0x00400000.
 
-### <a name="example-1-leaf-function-no-locals"></a>Ejemplo 1: función de hoja, sin asignaciones locales
+### <a name="example-1-leaf-function-no-locals"></a>Ejemplo 1: función de hoja, sin asignaciones locales
 
 ```asm
 Prologue:

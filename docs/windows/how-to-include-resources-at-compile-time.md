@@ -1,5 +1,5 @@
 ---
-title: Filtrar Incluir recursos en tiempo de compilación (C++)
+title: Procedimiento Incluir recursos en tiempo de compilación (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.resvw.resource.including
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562840"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328394"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Filtrar Incluir recursos en tiempo de compilación (C++)
 
@@ -48,7 +48,7 @@ Si tiene secciones en los archivos .rc que cumplen alguna de estas condiciones, 
 
 Puede agregar recursos de otros archivos al proyecto en tiempo de compilación enumerándolos en el **Rectivas de tiempo** cuadro el **incluye recursos** cuadro de diálogo. Use la **incluye recursos** cuadro de diálogo para modificar el trabajo habitual del entorno de proyecto de almacenamiento de todos los recursos en el archivo .rc del proyecto y todos [símbolos](../windows/symbols-resource-identifiers.md) en `Resource.h`.
 
-Para empezar, abra el **incluye recursos** haciendo clic en un archivo .rc en el cuadro de diálogo [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources), seleccione **incluye recursos** y tenga en cuenta las siguientes propiedades:
+Para empezar, abra el **incluye recursos** haciendo clic en un archivo .rc en el cuadro de diálogo [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), seleccione **incluye recursos** y tenga en cuenta las siguientes propiedades:
 
 | Property | Descripción |
 |---|---|
@@ -65,7 +65,7 @@ Una vez que se realizan cambios en el archivo de recursos mediante el **incluye 
 
 1. Sitúe los recursos en un archivo de script de recursos con un nombre de archivo único. No use *projectname.rc*, ya que esto es el nombre del archivo usado para el archivo de script de recursos principal.
 
-1. Haga clic en el *.rc* archivo [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources) y seleccione **incluye recursos**.
+1. Haga clic en el *.rc* archivo [vista de recursos](how-to-create-a-resource-script-file.md#create-resources) y seleccione **incluye recursos**.
 
 1. En el **Rectivas de tiempo** , agregue el [#include](../preprocessor/hash-include-directive-c-cpp.md) directiva de compilador para incluir el nuevo archivo de recursos en el archivo de recursos principal en el entorno de desarrollo.
 

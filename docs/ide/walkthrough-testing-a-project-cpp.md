@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: aa1af9cd355265214827527b986b8602a25e93f3
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744607"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808279"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Tutorial: Probar un proyecto (C++)
 
@@ -63,4 +63,4 @@ En este tutorial, verá el valor de una variable mientras el programa se ejecuta
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Compilación de programas de C/C++](../build/building-c-cpp-programs.md)<br/>
+[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

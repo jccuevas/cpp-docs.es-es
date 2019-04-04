@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: 73e646c386d5c9b8b43d86ab743989b2525f76a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70375950543b9525fca10fff3084c923095fa35e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460936"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780761"
 ---
 # <a name="compiler-error-c3467"></a>Error del compilador C3467
 
@@ -19,7 +19,7 @@ ms.locfileid: "50460936"
 
 El compilador encontró más de una declaración de tipo de enrutamiento para el mismo tipo. Solo se permite una declaración por tipo.
 
-Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

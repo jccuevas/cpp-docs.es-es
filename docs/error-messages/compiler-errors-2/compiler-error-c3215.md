@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3215
 ms.assetid: d0d16007-8885-42e0-b086-2d3a61f348c5
-ms.openlocfilehash: b9a6d9cd57572f65b24656fa527725c9c605143d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24f17d2990c9258168a6d37fef101c21f62cb08d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628272"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768658"
 ---
 # <a name="compiler-error-c3215"></a>Error del compilador C3215
 
@@ -19,7 +19,7 @@ ms.locfileid: "50628272"
 
 Se especificó una restricción más de una vez.
 
-Para más información sobre genéricos, vea [Generics](../../windows/generics-cpp-component-extensions.md).
+Para más información sobre genéricos, vea [Generics](../../extensions/generics-cpp-component-extensions.md).
 
 El ejemplo siguiente genera la advertencia C3215:
 

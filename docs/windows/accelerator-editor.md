@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562951"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328407"
 ---
 # <a name="accelerator-editor-c"></a>Editor de aceleradores (C++)
 
@@ -116,7 +116,7 @@ Los procedimientos siguientes hacen referencia al uso de páginas de propiedades
 
 ### <a name="to-edit-in-an-accelerator-table"></a>Para editar el contenido de una tabla de aceleradores
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Seleccione una entrada en la tabla y seleccione esta opción para activar la edición en contexto.
 
@@ -132,7 +132,7 @@ Los procedimientos siguientes hacen referencia al uso de páginas de propiedades
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>Para buscar una entrada en una tabla de aceleradores abierta:
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Seleccione un encabezado de columna para ordenar el contenido de la columna alfabéticamente. Por ejemplo, seleccione **ID** para mostrar alfabéticamente todos los identificadores de la tabla de aceleradores.
 
@@ -140,7 +140,7 @@ Los procedimientos siguientes hacen referencia al uso de páginas de propiedades
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>Para agregar una entrada a una tabla de aceleradores
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Haga doble clic en la tabla de aceleradores y elija **nuevo acelerador**, o seleccione la entrada de fila vacía en la parte inferior de la tabla.
 
@@ -155,7 +155,7 @@ Los procedimientos siguientes hacen referencia al uso de páginas de propiedades
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Para eliminar una entrada de una tabla de aceleradores
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Seleccione la entrada que desee eliminar, o mantenga presionada la **Ctrl** o **MAYÚS** clave durante la selección para elegir varias entradas.
 
@@ -177,7 +177,7 @@ Los procedimientos siguientes hacen referencia al uso de páginas de propiedades
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Para cambiar las propiedades de varias teclas de aceleración
 
-1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Abra la tabla de aceleradores haciendo doble clic en el icono correspondiente en [vista de recursos](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Seleccione las teclas de aceleración que desee cambiar, mantenga presionada la **Ctrl** clave mientras selecciona cada uno de ellos.
 

@@ -1,6 +1,6 @@
 ---
 title: runtime_exception (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289668"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565498"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception (clase)
 
@@ -39,7 +39,7 @@ class runtime_exception : public std::exception;
 
 |Name|Descripción|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|Devuelve el código de error que provocó la excepción.|
+|[get_error_code](#get_error_code)|Devuelve el código de error que provocó la excepción.|
 
 ### <a name="public-operators"></a>Operadores públicos
 
@@ -59,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **Espacio de nombres**: simultaneidad
 
-## <a name="runtime_exception__ctor"></a>  runtime_exception (Constructor)
+## <a name="ctor"></a>  runtime_exception (Constructor)
 
 Inicializa una nueva instancia de la clase.
 
@@ -102,7 +102,7 @@ Destruye el objeto.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 Devuelve el código de error que provocó la excepción.
 
@@ -116,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 El valor HRESULT de error que provocó la excepción.
 
-## <a name="runtime_exception__operator_eq"></a>  operator=
+## <a name="operator_eq"></a>  operator=
   Copia el contenido del elemento especificado `runtime_exception` objeto en este.
 
 ### <a name="syntax"></a>Sintaxis

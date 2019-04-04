@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266229"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780371"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString (clase)
 
@@ -71,7 +71,7 @@ por ejemplo, se traduce en
 
 ### <a name="public-structures"></a>Estructuras públicas
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|Una estructura anidada que contiene un valor de clave y el valor del objeto string asociado.|
 
@@ -226,6 +226,6 @@ Llame a este método para buscar un elemento de mapa con una clave que coincida 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

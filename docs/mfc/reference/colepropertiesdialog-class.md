@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263876"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781866"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog (clase)
 
@@ -261,7 +261,7 @@ La implementación predeterminada no hace nada. Se debe reemplazar esta función
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC CIRC](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CIRC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog (clase)](../../mfc/reference/coledialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog (clase)](../../mfc/reference/coledialog-class.md)<br/>

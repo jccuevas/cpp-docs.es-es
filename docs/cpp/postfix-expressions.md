@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332444"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779266"
 ---
 # <a name="postfix-expressions"></a>Expresiones postfijas
 
@@ -23,7 +23,7 @@ Las expresiones de postfijo constan de expresiones primarias o expresiones en la
 |-------------------|-----------------------|
 |[Operador de subíndice](../cpp/subscript-operator.md)|**[ ]**|
 |[Operador de llamada de función](../cpp/function-call-operator-parens.md)|**( )**|
-|[Operador de conversión explícita de tipos](../cpp/explicit-type-conversion-operator-parens.md)|*nombre de tipo* **)**|
+|[Operador de conversión explícita de tipos](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[Operador de acceso a miembros](../cpp/member-access-operators-dot-and.md)|**.** O **->**|
 |[Operador de incremento de postfijo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[Operador de decremento de postfijo](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -149,7 +149,7 @@ Los puntos suspensivos denotan que los argumentos pueden ser necesarios pero no 
 
 Los puntos suspensivos, si se utilizan, se deben declarar en último lugar en la lista de argumentos. Para obtener más información acerca de cómo pasar un número variable de argumentos, vea la explicación de [va_arg, va_start y va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) en el *referencia de la biblioteca de tiempo de ejecución*.
 
-Para obtener información sobre los argumentos predeterminados en la programación de CLR, vea [listas de argumentos variables (...) (C++ / C++ / CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Para obtener información sobre los argumentos predeterminados en la programación de CLR, vea [listas de argumentos variables (...) (C++ / C++ / CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Los argumentos predeterminados permiten especificar el valor que un argumento debe asumir si no se proporciona ninguno en la llamada a función. El fragmento de código siguiente muestra cómo funcionan los argumentos predeterminados. Para obtener más información sobre las restricciones sobre cómo especificar argumentos predeterminados, consulte [argumentos predeterminados](../cpp/default-arguments.md).
 

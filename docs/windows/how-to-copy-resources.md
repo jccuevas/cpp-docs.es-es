@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563048"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328628"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedimiento Administrar los recursos (C++)
 
@@ -52,7 +52,7 @@ No se puede arrastrar y soltar, copiar, cortar o pegar entre archivos de recurso
 
 ### <a name="to-copy-resources"></a>Para copiar recursos
 
-1. Abra ambos archivos de recursos independientes (vea cómo [para abrir un archivo de script de recursos](/how-to-create-a-resource-script-file#use-resource-script-files)). Por ejemplo, abra *Source1.RF* y *Source2.rc*.
+1. Abra ambos archivos de recursos de manera independiente. (Consulte [usan archivos de script de recursos](how-to-create-a-resource-script-file.md#use-resource-script-files)). Por ejemplo, abra *Source1.RF* y *Source2.rc*.
 
 1. En el primer archivo .rc, ya sea:
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Para copiar un recurso existente y cambiar su idioma o su condición
 
-En el *.rc* archivo o en el [vista de recursos](../windows/resource-view-window.md) ventana, haga clic en el recurso que desea copiar y elija **Insertar copia**. A continuación, establezca lo siguiente:
+En el *.rc* archivo o en el [vista de recursos](how-to-create-a-resource-script-file.md#create-resources) ventana, haga clic en el recurso que desea copiar y elija **Insertar copia**. A continuación, establezca lo siguiente:
 
 - Para el **lenguaje** cuadro de lista, seleccione el idioma.
 
@@ -107,7 +107,7 @@ Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de h
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>Para importar un recurso en el archivo de script de recursos
 
-1. En [vista de recursos](../windows/resource-view-window.md) haga clic en el nodo del archivo de script (.rc) de recursos al que desea agregar un recurso y seleccione **importación**.
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources) haga clic en el nodo del archivo de script (.rc) de recursos al que desea agregar un recurso y seleccione **importación**.
 
 1. Busque y seleccione el nombre de archivo de mapa de bits (.bmp), icono (.ico), cursor (.cur), el archivo html (.htm) u otro archivo para importar.
 
@@ -118,7 +118,7 @@ Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de h
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Para exportar un recurso para su uso fuera de Visual C++
 
-1. En [vista de recursos](../windows/resource-view-window.md), haga clic en el recurso que desea exportar y seleccione **exportar**. Puede aceptar el nombre de archivo actual o escriba uno nuevo.
+1. En [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), haga clic en el recurso que desea exportar y seleccione **exportar**. Puede aceptar el nombre de archivo actual o escriba uno nuevo.
 
 1. Navegue hasta la carpeta donde desea guardar el archivo y seleccione **exportar**.
 

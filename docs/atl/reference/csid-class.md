@@ -1,6 +1,6 @@
 ---
 title: CSid (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301901"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770514"
 ---
 # <a name="csid-class"></a>CSid (clase)
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|Comprueba dos objetos de descriptor de seguridad para la igualdad|
 |[operator !=](#operator_neq)|Comprueba dos objetos de descriptor de seguridad no son iguales|
-|[Operador \<](#operator_lt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
-|[operator >](#operator_gt_)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
+|[Operador \<](#operator_lt)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
+|[operator >](#operator_gt)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
 |[Operador \<=](#operator_lt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
 |[operator >=](#operator_gt__eq)|Compara el valor relativo de dos objetos de descriptor de seguridad.|
 
@@ -119,7 +119,7 @@ Devuelve el LPCTSTR seleccionando el nombre de la cuenta.
 
 Este método intenta encontrar un nombre para el elemento especificado `SID` (identificador de seguridad). Para obtener más información, consulte [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Si ningún nombre de cuenta para el `SID` puede encontrarse, `AccountName` devuelve una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un inicio de sesión `SID` que identifica una sesión de inicio de sesión.
+Si ningún nombre de cuenta para el `SID` puede encontrarse, `AccountName` devuelve una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un `SID` que identifica una sesión de inicio de sesión.
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ Devuelve el `LPCTSTR` que apunta al dominio.
 
 Este método intenta encontrar un nombre para el elemento especificado `SID` (identificador de seguridad). Para obtener más información, consulte [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida).
 
-Si ningún nombre de cuenta para el `SID` puede encontrarse, `Domain` devuelve el dominio como una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un inicio de sesión `SID` que identifica una sesión de inicio de sesión.
+Si ningún nombre de cuenta para el `SID` puede encontrarse, `Domain` devuelve el dominio como una cadena vacía. Esto puede ocurrir si un tiempo de espera de la red impide que buscar el nombre de este método. También se produce para los identificadores de seguridad con ningún nombre de cuenta correspondiente, como un `SID` que identifica una sesión de inicio de sesión.
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 
@@ -574,7 +574,7 @@ Llame a [CSid::LoadAccount](#loadaccount) para actualizar el `CSid` objeto antes
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de seguridad](../../visual-cpp-samples.md)<br/>
+[Ejemplo de seguridad](../../overview/visual-cpp-samples.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [Funciones globales de seguridad](../../atl/reference/security-global-functions.md)<br/>
 [Operadores](../../atl/reference/atl-operators.md)

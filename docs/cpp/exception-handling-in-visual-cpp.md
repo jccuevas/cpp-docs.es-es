@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: a155d56cc234c11534f5456ef92ea913e094f1a8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627285"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779526"
 ---
 # <a name="exception-handling-in-visual-c"></a>Control de excepciones en Visual C++
 
@@ -33,7 +33,7 @@ Visual C++ admite tres tipos de control de excepciones:
 
 Utilice la [/EH](../build/reference/eh-exception-handling-model.md) opción del compilador para especificar el tipo de control de excepciones para usar en un proyecto; Control de excepciones de C++ es el valor predeterminado. No combine los mecanismos de control de errores; por ejemplo, no use las excepciones de C++ con control de excepciones estructurado. Si usa el control de excepciones de C++, el código será más portátil y podrá controlar todo tipo de excepciones. Para obtener más información sobre los inconvenientes de control de excepciones estructurado, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre la combinación de macros de MFC y excepciones de C++, consulte [Excepciones: Uso de macros de MFC y excepciones de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-Para obtener información sobre cómo controlar las excepciones en aplicaciones de CLR, vea [control de excepciones (C++ / c++ / CLI y c++ / CX)](../windows/exception-handling-cpp-component-extensions.md).
+Para obtener información sobre cómo controlar las excepciones en aplicaciones de CLR, vea [control de excepciones (C++ / c++ / CLI y c++ / CX)](../extensions/exception-handling-cpp-component-extensions.md).
 
 Para obtener información sobre el control de excepciones en x64 procesadores, consulte [x64 control de excepciones](../build/exception-handling-x64.md).
 

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301342"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780228"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton (clase)
 
@@ -105,7 +105,7 @@ El cuadro de diálogo Selector de color se crea durante el procesamiento de la [
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo crear y configurar un botón de menú de color mediante distintos métodos en el `CMFCColorMenuButton` clase. En el ejemplo, un `CPalette` objeto se crea por primera vez y, a continuación, se usa para construir un objeto de la `CMFCColorMenuButton` clase. El `CMFCColorMenuButton` habilitar otros botones y sus automáticos y establecer su color y el número de columnas, a continuación, configura el objeto. Este código forma parte de la [ejemplo de WordPad](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo crear y configurar un botón de menú de color mediante distintos métodos en el `CMFCColorMenuButton` clase. En el ejemplo, un `CPalette` objeto se crea por primera vez y, a continuación, se usa para construir un objeto de la `CMFCColorMenuButton` clase. El `CMFCColorMenuButton` habilitar otros botones y sus automáticos y establecer su color y el número de columnas, a continuación, configura el objeto. Este código forma parte de la [ejemplo de WordPad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]

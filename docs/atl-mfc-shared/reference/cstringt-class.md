@@ -1,6 +1,6 @@
 ---
 title: CStringT (clase)
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750876"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565823"
 ---
 # <a name="cstringt-class"></a>CStringT (clase)
 
@@ -182,7 +182,7 @@ Determina si la clase string necesita compatibilidad con la biblioteca de tiempo
 
 |||
 |-|-|
-|[operator =](#operator_eq)|Asigna un nuevo valor a un `CStringT` objeto.|
+|[CStringT::operator =](#operator_eq)|Asigna un nuevo valor a un `CStringT` objeto.|
 |[CStringT::operator +](#operator_add)|Concatena dos cadenas o un carácter y una cadena.|
 |[CStringT::operator +=](#operator_add_eq)|Concatena una nueva cadena al final de una cadena existente.|
 |[CStringT::operator ==](#operator_eq_eq)|Determina si dos cadenas son iguales lógicamente.|
@@ -251,7 +251,7 @@ Los tipos de cadena siguientes están disponibles en proyectos donde ATL_CSTRING
 
 Dado que `CStringT` usa un argumento de plantilla para definir el tipo de carácter (ya sea [wchar_t](../../c-runtime-library/standard-types.md) o [char](../../c-runtime-library/standard-types.md)) compatibles, tipos de parámetro de método pueden ser complicados a veces. Para simplificar este problema, se define un conjunto de tipos predefinidos y se usa en toda la `CStringT` clase. En la tabla siguiente se enumera los distintos tipos:
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`XCHAR`|Un único carácter (ya sea **wchar_t** o **char**) con el mismo tipo de carácter, como el `CStringT` objeto.|
 |`YCHAR`|Un único carácter (ya sea **wchar_t** o **char**) con el tipo de carácter opuesto como el `CStringT` objeto.|
@@ -1023,6 +1023,56 @@ Esta función no está disponible si se define _UNICODE.
 ### <a name="example"></a>Ejemplo
 
 Vea el ejemplo de [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Asigna un nuevo valor a la cadena.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Parámetros
+
+*strSrc*<br/>
+Un `CStringT` para asignar a esta cadena.
+
+*str*<br/>
+Referencia a un objeto `CThisSimpleString`.
+
+*bMFCDLL*<br/>
+Valor booleano que especifica si el proyecto es una DLL de MFC o no.
+
+*BaseType*<br/>
+El tipo de base de la cadena.
+
+*var*<br/>
+Un objeto variant para asignar a esta cadena.
+
+*ch*<br/>
+Un carácter ANSI o Unicode para asignar a la cadena.
+
+*pszSrc*<br/>
+Un puntero a la cadena original que se va a asignar.
+
+### <a name="remarks"></a>Comentarios
+
+El operador de asignación acepta otro `CStringT` objeto, un puntero de carácter o un único carácter. Debe tener en cuenta que las excepciones pueden producirse siempre que utilice este operador porque se puede asignar el nuevo almacenamiento de memoria.
+
+Para obtener información sobre `CThisSimpleString`, vea la sección Comentarios de [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Aunque es posible crear `CStringT` instancias que contienen caracteres null incrustan, es recomendable evitar usarlo. Llamar a métodos y operadores en `CStringT` objetos que contienen caracteres nulos incrustados pueden producir resultados imprevistos.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

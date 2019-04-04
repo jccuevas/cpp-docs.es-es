@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298638"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780397"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery (clase)
 
@@ -155,7 +155,7 @@ Un botón de la galería se comporta igual que un botón de menú normal excepto
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCRibbonGallery` clase para configurar un `CMFCRibbonGallery` objeto. El ejemplo muestra cómo especificar el número de elementos por fila en la galería, habilitar el cambio de tamaño del panel de menú, habilitar la barra lateral a la izquierda del menú emergente y mostrar la Galería de la cinta de opciones como una paleta directamente en la barra de cinta. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCRibbonGallery` clase para configurar un `CMFCRibbonGallery` objeto. El ejemplo muestra cómo especificar el número de elementos por fila en la galería, habilitar el cambio de tamaño del panel de menú, habilitar la barra lateral a la izquierda del menú emergente y mostrar la Galería de la cinta de opciones como una paleta directamente en la barra de cinta. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 

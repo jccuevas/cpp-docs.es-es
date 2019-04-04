@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283055"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768021"
 ---
 # <a name="atl-collections-and-enumerators"></a>Colecciones y enumeradores de ATL
 
@@ -40,7 +40,7 @@ Un ejemplo completo que le guiará a través de la implementación de una colecc
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Proporciona vínculos a temas sobre cómo programar utilizando Active Template Library.
 
-[Ejemplo ATLCollections](../visual-cpp-samples.md)<br/>
+[Ejemplo ATLCollections](../overview/visual-cpp-samples.md)<br/>
 Un ejemplo que muestra el uso de `ICollectionOnSTLImpl` y `CComEnumOnSTL`y la implementación de clases de directivas de copia personalizadas.
 
 ## <a name="see-also"></a>Vea también

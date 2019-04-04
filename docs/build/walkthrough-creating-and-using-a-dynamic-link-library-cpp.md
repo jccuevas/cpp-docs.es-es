@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813973"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770153"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Tutorial: Crear y usar su propia biblioteca de vínculo dinámico (C++)
 
@@ -296,9 +296,11 @@ A continuación, para llamar a las funciones de MathLibrary en el código fuente
 
 1. Haga doble clic en el panel superior de la **directorios de inclusión adicionales** cuadro de diálogo para habilitar un control de edición.
 
-1. En el control de edición, especifique la ruta de acceso a la ubicación de la **MathLibrary.h** archivo de encabezado. En este caso, puede usar una ruta de acceso relativa:
+1. En el control de edición, especifique la ruta de acceso a la ubicación de la **MathLibrary.h** archivo de encabezado. En este caso, puede usar una ruta de acceso relativa desde la carpeta que contiene los archivos .cpp del proyecto de cliente a la carpeta que contiene el archivo .h en el proyecto DLL. Si el proyecto de cliente es una solución independiente en la misma carpeta que la solución DLL, la ruta de acceso relativa debe tener este aspecto:
 
    `..\..\MathLibrary\MathLibrary`
+
+   Si los proyectos DLL y el cliente están en la misma solución, o las soluciones están en carpetas diferentes, debe ajustar la ruta de acceso relativa en consecuencia.
 
    ![Agregue la ubicación del encabezado a la propiedad de directorios de inclusión adicionales](media/mathclient-additional-include-directories.png "agregue la ubicación del encabezado a la propiedad de directorios de inclusión adicionales")
 
@@ -396,7 +398,7 @@ Presione cualquier tecla para cerrar la ventana de comandos.
 
 Ahora que ha creado un archivo DLL y una aplicación cliente, puede experimentar. Intente establecer puntos de interrupción en el código de la aplicación cliente y ejecutar la aplicación en el depurador. Vea Qué sucede cuando entre en una llamada a la biblioteca. Agregar otras funciones a la biblioteca o escribir otra aplicación de cliente que utiliza el archivo DLL.
 
-Al implementar la aplicación, también debe implementar los archivos DLL utiliza. La manera más sencilla para que los archivos DLL que se compila o que incluyen de terceros estén disponibles para la aplicación es colocarlos en el mismo directorio que la aplicación, también conocido como *implementación local de la aplicación*. Para obtener más información sobre la implementación, vea [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
+Al implementar la aplicación, también debe implementar los archivos DLL utiliza. La manera más sencilla para que los archivos DLL que se compila o que incluyen de terceros estén disponibles para la aplicación es colocarlos en el mismo directorio que la aplicación, también conocido como *implementación local de la aplicación*. Para obtener más información sobre la implementación, vea [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Vea también
 

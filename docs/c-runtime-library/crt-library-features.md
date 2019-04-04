@@ -18,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 08d85cd6993a2f3558ddb501dacac671c0d5d797
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9a2691d492a277ffe0018b6e86b00cd245840ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540275"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767696"
 ---
 # <a name="crt-library-features"></a>Características de la biblioteca CRT
 
@@ -33,7 +33,7 @@ En este tema se describen los distintos archivos .lib que forman las bibliotecas
 
 La biblioteca de tiempo de ejecución de C (CRT) es la parte de la biblioteca estándar de C++ que incorpora la biblioteca del estándar ISO C99. Las bibliotecas de Visual C++ que implementan CRT admiten el desarrollo de código nativo, así como código mixto (nativo y administrado) y código administrado. Todas las versiones de CRT admiten el desarrollo multiproceso. La mayoría de las bibliotecas admite la vinculación estática, para vincular la biblioteca directamente en el código, o la vinculación dinámica para permitir que el código use archivos DLL comunes.
 
-A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, vea [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).
+A partir de Visual Studio 2015, el CRT se ha refactorizado en nuevos binarios. CRT Universal (UCRT) contiene las funciones y variables globales exportadas por la biblioteca CRT del estándar C99. El UCRT ahora es un componente de Windows y se incluye en Windows 10. La biblioteca estática, la biblioteca de importación de DLL y los archivos de encabezado para el UCRT ahora se encuentran en el SDK de Windows 10. Cuando se instala Visual C++, el programa de instalación de Visual Studio instala el subconjunto del SDK de Windows 10 necesario para usar el UCRT. Se puede usar el UCRT en cualquier versión de Windows compatible con Visual Studio 2015 y versiones posteriores. También se puede redistribuir mediante vcredist para las versiones compatibles de Windows que no sean Windows 10. Para obtener más información, vea [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md).
 
 En la tabla siguiente se muestran las bibliotecas que implementan el UCRT.
 

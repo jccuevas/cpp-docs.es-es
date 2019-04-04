@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 59f8e7d095f3d514ab41b28dc37f5d3c707bbd08
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820304"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769334"
 ---
 # <a name="using-idispeventimpl"></a>Usar IDispEventImpl
 
@@ -29,7 +29,7 @@ Cuando se usa `IDispEventImpl` para controlar eventos, tendrá que:
 
 El ejemplo siguiente muestra cómo controlar el `DocumentChange` eventos desencadenados por la palabra **aplicación** objeto. Este evento se define como un método en el `ApplicationEvents` dispinterface.
 
-El ejemplo proviene del [ejemplo ATLEventHandling](../visual-cpp-samples.md).
+El ejemplo proviene del [ejemplo ATLEventHandling](../overview/visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -58,4 +58,4 @@ Aparece el siguiente código en NotSoSimple.h. El código relevante se anota med
 ## <a name="see-also"></a>Vea también
 
 [Control de eventos](../atl/event-handling-and-atl.md)<br/>
-[Ejemplo ATLEventHandling](../visual-cpp-samples.md)
+[Ejemplo ATLEventHandling](../overview/visual-cpp-samples.md)

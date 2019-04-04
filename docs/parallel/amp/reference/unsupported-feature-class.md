@@ -1,6 +1,6 @@
 ---
 title: unsupported_feature (Clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - unsupported_feature
 - AMPRT/unsupported_feature
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 6a742c3fd1965882c3fa72cb1fab985cd4d981d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7635f999b227d02ec7fd56296fef1b0b047abd29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272547"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564975"
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature (Clase)
 
@@ -31,7 +31,7 @@ class unsupported_feature : public runtime_exception;
 
 |Name|Descripción|
 |----------|-----------------|
-|[unsupported_feature (Constructor)](#ctor)|Crea una nueva instancia de la `unsupported_feature` excepción.|
+|[unsupported_feature (Constructor)](#unsupported_feature)|Crea una nueva instancia de la `unsupported_feature` excepción.|
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -41,9 +41,9 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature__ctor"></a> unsupported_feature
+## <a name="unsupportedfeature"></a>unsupported_feature
 
-  Crea una nueva instancia de la excepción unsupported_feature.
+  Crea una nueva instancia de la `unsupported_feature` excepción.
 
 ### <a name="syntax"></a>Sintaxis
 

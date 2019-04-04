@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266138"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779851"
 ---
 # <a name="carray-class"></a>CArray (clase)
 
@@ -630,7 +630,7 @@ El *nGrowBy* parámetro afecta a la asignación de memoria interna mientras est�
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CObArray (clase)](../../mfc/reference/cobarray-class.md)<br/>

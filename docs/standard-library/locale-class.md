@@ -1,6 +1,6 @@
 ---
 title: locale (Clase)
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677921"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278520"
 ---
 # <a name="locale-class"></a>locale (Clase)
 
@@ -291,7 +291,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene la faceta que se va a insertar en la configuración regional de destino.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -360,7 +360,7 @@ static locale global(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que el programa usará como configuración regional predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -403,8 +403,14 @@ The previous locale was: C
 
 La clase miembro proporciona un identificador único de faceta que se usa como índice para buscar facetas en una configuración regional.
 
-class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Comentarios
 
 La clase de miembro describe el objeto de miembro estático requerido por cada faceta de configuración regional única. Tenga en cuenta que no se puede copiar o asignar un objeto de clase `id`.
@@ -431,7 +437,7 @@ locale(const locale& Loc, const Facet* Fac);
 *Locname*<br/>
 Nombre de una configuración regional.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que se va a copiar en la construcción de la nueva configuración regional.
 
 *Otros problemas*<br/>

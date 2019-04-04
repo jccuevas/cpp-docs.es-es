@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301199"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779682"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>Varios tipos de documentos, vistas y ventanas de marco
 
@@ -67,9 +67,9 @@ En la siguiente imagen, dividida en las partes a, b y c, se muestran los tres mo
 ![Varios&#45;ver las interfaces de usuario](../mfc/media/vc37a71.gif "varios&#45;ver las interfaces de usuario") <br/>
 Interfaces de usuarios de varias vistas
 
-Para proporcionar estos modelos, el marco de trabajo implementa el comando Nueva ventana y proporciona la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como se describe en [Ventanas divisoras](#_core_splitter_windows). Se pueden implementar otros modelos teniendo estos como punto de partida. Para ver programas de ejemplo que ilustran distintas configuraciones de vistas, ventanas de marco y divisores, vea [MFC Samples](../visual-cpp-samples.md)(Ejemplos de MFC).
+Para proporcionar estos modelos, el marco de trabajo implementa el comando Nueva ventana y proporciona la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), como se describe en [Ventanas divisoras](#_core_splitter_windows). Se pueden implementar otros modelos teniendo estos como punto de partida. Para ver programas de ejemplo que ilustran distintas configuraciones de vistas, ventanas de marco y divisores, vea [MFC Samples](../overview/visual-cpp-samples.md)(Ejemplos de MFC).
 
-Para obtener más información sobre `UpdateAllViews`, vea la clase [CView](../mfc/reference/cview-class.md) en *MFC Reference* (Referencia de MFC), así como [Scribble sample](../visual-cpp-samples.md)(Ejemplo de Scribble).
+Para obtener más información sobre `UpdateAllViews`, vea la clase [CView](../mfc/reference/cview-class.md) en *MFC Reference* (Referencia de MFC), así como [Scribble sample](../overview/visual-cpp-samples.md)(Ejemplo de Scribble).
 
 ##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
@@ -79,11 +79,11 @@ Puede usar el comando Nueva ventana del menú Ventana de las aplicaciones MDI pa
 
 En una ventana divisora, la ventana se divide (o puede dividirse) en dos o más paneles desplazables. Un control divisor (o "cuadro de división") del marco de ventana, situado junto a las barras de desplazamiento, permite ajustar los tamaños relativos de los paneles. Cada panel es una vista en el mismo documento. En los divisores "dinámicos", las vistas son de la misma clase, como se muestra en la parte b de la ilustración, las Interfaces de usuario de varias vistas. En los divisores "estáticos", las vistas pueden pertenecer a clases diferentes. Las ventanas divisoras de ambos tipos son compatibles con la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).
 
-Las ventanas divisoras dinámicas, con vistas de la misma clase, permiten dividir una ventana en múltiples paneles a placer y, después, desplazarse por esos paneles para ver diferentes partes del documento. También se pueden eliminar las divisiones de ventana para quitar las vistas adicionales. Las ventanas divisoras agregadas a [Scribble sample](../visual-cpp-samples.md) (Ejemplo de Scribble) son un ejemplo. En dicho tema se detalla la técnica para crear ventanas divisoras dinámicas. Se muestra una ventana divisora dinámica en la parte b de la ilustración, las Interfaces de usuario de varias vistas.
+Las ventanas divisoras dinámicas, con vistas de la misma clase, permiten dividir una ventana en múltiples paneles a placer y, después, desplazarse por esos paneles para ver diferentes partes del documento. También se pueden eliminar las divisiones de ventana para quitar las vistas adicionales. Las ventanas divisoras agregadas a [Scribble sample](../overview/visual-cpp-samples.md) (Ejemplo de Scribble) son un ejemplo. En dicho tema se detalla la técnica para crear ventanas divisoras dinámicas. Se muestra una ventana divisora dinámica en la parte b de la ilustración, las Interfaces de usuario de varias vistas.
 
 Las ventanas divisoras estáticas, con vistas de clases distintas, comienzan con la división de la ventana en varios paneles, cada uno con un propósito diferente. Por ejemplo, en el editor de mapa de bits de Visual C++, la ventana de imagen muestra dos paneles en paralelo. El panel de la izquierda muestra una imagen en tamaño real del mapa de bits, mientras que el de la derecha muestra una imagen ampliada o agrandada del mismo mapa de bits. Los paneles están separados por una "barra divisora" que se puede arrastrar para cambiar el tamaño relativo de los paneles. Se muestra una ventana divisora estática en la parte c de la ilustración, las Interfaces de usuario de varias vistas.
 
-Para obtener más información, vea la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) en *MFC Reference* (Referencia de MFC), así como [MFC Samples](../visual-cpp-samples.md)(Ejemplos de MFC).
+Para obtener más información, vea la clase [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) en *MFC Reference* (Referencia de MFC), así como [MFC Samples](../overview/visual-cpp-samples.md)(Ejemplos de MFC).
 
 ## <a name="see-also"></a>Vea también
 

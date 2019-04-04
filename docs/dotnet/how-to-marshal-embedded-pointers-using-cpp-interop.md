@@ -10,20 +10,20 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738474"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780241"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Procedimiento Convertir punteros incrustados mediante la interoperabilidad de C++
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Filtrar Convertir punteros incrustados mediante la interoperabilidad de C++
 
 Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/managed-unmanaged.md) directivas #pragma para implementar administrados y las funciones en el mismo archivo, pero estas funciones interoperan de la misma manera, si se definen en archivos independientes. No es necesario que los archivos que contienen solo las funciones no administradas se compilan con [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo se puede llamar una función no administrada que toma una estructura que contiene punteros desde una función administrada. La función administrada crea una instancia de la estructura e inicializa el puntero incrustado con la palabra clave new (en lugar de la [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) palabra clave). Dado que esto asigna la memoria en el montón nativo, no hay ninguna necesidad para anclar la matriz para suprimir la recolección de elementos. Sin embargo, la memoria se debe eliminar explícitamente para evitar fugas de memoria.
+El ejemplo siguiente muestra cómo se puede llamar una función no administrada que toma una estructura que contiene punteros desde una función administrada. La función administrada crea una instancia de la estructura e inicializa el puntero incrustado con la palabra clave new (en lugar de la [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) palabra clave). Dado que esto asigna la memoria en el montón nativo, no hay ninguna necesidad para anclar la matriz para suprimir la recolección de elementos. Sin embargo, la memoria se debe eliminar explícitamente para evitar fugas de memoria.
 
 ```
 // marshal_embedded_pointer.cpp

@@ -1,6 +1,6 @@
 ---
 title: CPathT (clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273028"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565797"
 ---
 # <a name="cpatht-class"></a>CPathT (clase)
 
 Esta clase representa una ruta de acceso.
 
 > [!IMPORTANT]
->  Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
+> Esta clase y sus miembros no se puede usar en aplicaciones que se ejecutan en el tiempo de ejecución de Windows.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -139,7 +139,7 @@ La clase de cadena ATL/MFC que se usará para la ruta de acceso (vea [CStringT](
 |----------|-----------------|
 |[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Este operador permite que el objeto se traten como una cadena.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Este operador permite que el objeto se traten como una cadena.|
-|[CPathT::operator StringType &](#operator_stringtype)|Este operador permite que el objeto se traten como una cadena.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Este operador permite que el objeto se traten como una cadena.|
 |[CPathT::operator +=](#operator_add_eq)|Este operador anexa una cadena a la ruta de acceso.|
 
 ### <a name="public-data-members"></a>Miembros de datos públicos
@@ -653,7 +653,7 @@ Devuelve la ruta de acceso actualizada.
 Este operador permite que el objeto se traten como una cadena.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Valor devuelto
@@ -665,19 +665,19 @@ Devuelve una cadena que representa la ruta de acceso actual administrado por est
 Este operador permite que el objeto se traten como una cadena.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Valor devuelto
 
 Devuelve una cadena que representa la ruta de acceso actual administrado por este objeto.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Este operador permite que el objeto se traten como una cadena.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Valor devuelto

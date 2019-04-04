@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Solicitar explícitamente la conversión Boxing
+title: Filtrar Solicitar explícitamente la conversión Boxing
 ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-ms.openlocfilehash: 1e720923c89a79f75350b6e7d0781ad6fc5759ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c27330e4e7699b6f0e9d6c612c2befe884a69b4c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748754"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781437"
 ---
 # <a name="how-to-explicitly-request-boxing"></a>Filtrar Solicitar explícitamente la conversión Boxing
 
@@ -47,4 +47,4 @@ f(Object^ o)
 
 ## <a name="see-also"></a>Vea también
 
-[Conversión boxing](../windows/boxing-cpp-component-extensions.md)
+[Conversión boxing](../extensions/boxing-cpp-component-extensions.md)

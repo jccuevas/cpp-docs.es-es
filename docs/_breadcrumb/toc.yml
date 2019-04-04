@@ -9,7 +9,7 @@ items:
     items:
     - name: Documentación
       tocHref: /cpp/
-      topicHref: /cpp/visual-cpp-in-visual-studio
+      topicHref: /cpp/overview/visual-cpp-in-visual-studio
       items:
       - name: Lenguaje C++
         tocHref: /cpp/cpp/
@@ -91,8 +91,8 @@ items:
           tocHref: /cpp/data/odbc/
           topicHref: /cpp/data/odbc/open-database-connectivity-odbc
       - name: Edición, navegación y refactorización de código
-        tocHref: /cpp/ide/
-        topicHref: /cpp/ide/ide-and-tools-for-visual-cpp-development
+        tocHref: /cpp/ide
+        topicHref: /cpp/overview-of-cpp-development
         items:
         - name: IDE
           tocHref: /cpp/ide/
@@ -125,9 +125,9 @@ items:
       - name: Nube y Web
         tocHref: /cpp/cloud
         topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
-ms.openlocfilehash: 4c353d1f7e1d4e03a9dc86f24c95251e5dc12eac
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 24cac73c1777d61b15be9fa6f39358ef583445c1
+ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816417"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870746"

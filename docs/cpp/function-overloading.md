@@ -1,23 +1,23 @@
 ---
 title: Sobrecarga de funciones
-ms.date: 11/19/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 6cc432e404a7a66de63cf87f0fe87f0ccdcb5d70
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176307"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565979"
 ---
 # <a name="function-overloading"></a>Sobrecarga de funciones
 
-C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Se denominan *sobrecargado* funciones. Las funciones sobrecargadas permiten proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos.
+C++ permite especificar más de una función del mismo nombre en el mismo ámbito. Estas funciones se denominan *sobrecargado* funciones. Las funciones sobrecargadas permiten proporcionar una semántica diferente para una función, dependiendo de los tipos y el número de argumentos.
 
-Por ejemplo, un `print` función que toma un `std::string` argumento podría realizar tareas muy diferentes que una que toma un argumento de tipo **doble**. Sobrecarga evita tener que usar nombres como `print_string` o `print_double`. En tiempo de compilación, el compilador elige la sobrecarga que usar según el tipo de argumentos pasados por el llamador.  Si se llama a `print(42.0)` el `void print(double d)` se invocará la función. Si se llama a `print("hello world")` el `void print(std::string)` sobrecarga que se va a invocar.
+Por ejemplo, un `print` función que toma un `std::string` argumento podría realizar tareas muy diferentes que una que toma un argumento de tipo **doble**. Sobrecarga evita tener que usar nombres como `print_string` o `print_double`. En tiempo de compilación, el compilador elige la sobrecarga que usar según el tipo de argumentos pasados por el llamador.  Si se llama a `print(42.0)`, el `void print(double d)` se invocará la función. Si se llama a `print("hello world")`, el `void print(std::string)` sobrecarga que se va a invocar.
 
 Puede sobrecargar funciones miembro y funciones no miembro. En la tabla siguiente se muestran las partes de una declaración de función que usa C++ para distinguir entre grupos de funciones con el mismo nombre en el mismo ámbito.
 
@@ -32,7 +32,7 @@ Puede sobrecargar funciones miembro y funciones no miembro. En la tabla siguient
 |El uso de **typedef** nombres|No|
 |Límites de matriz sin especificar|No|
 |**Const** o **volátil**|Sí, cuando se aplica a la función completa|
-|[calificador de referencia](#ref-qualifier)|Sí|
+|[Calificadores de referencia](#ref-qualifiers)|Sí|
 
 ## <a name="example"></a>Ejemplo
 
@@ -115,11 +115,11 @@ El código anterior muestra la sobrecarga de la función `print` en el ámbito d
 
 El argumento predeterminado no se considera parte del tipo de función. Por lo tanto, no se utiliza en la selección de funciones sobrecargadas. Dos funciones que solo difieren en sus argumentos predeterminados se consideran varias definiciones en lugar de funciones sobrecargadas.
 
-Los argumentos predeterminados no se pueden proporcionar para operadores sobrecargados.
+No se pueden proporcionar argumentos predeterminados para los operadores sobrecargados.
 
 ## <a name="argument-matching"></a>Coincidencia de argumentos
 
-Las funciones sobrecargadas se seleccionan para obtener la mejor coincidencia entre las declaraciones de función del ámbito y los argumentos proporcionados en la llamada de función. Si se encuentra una función adecuada, se llama a esa función. “Adecuado”, en este contexto, tiene uno de los significados siguientes:
+Las funciones sobrecargadas se seleccionan para obtener la mejor coincidencia entre las declaraciones de función del ámbito y los argumentos proporcionados en la llamada de función. Si se encuentra una función adecuada, se llama a esa función. "Adecuada" en este contexto, bien:
 
 - Se encontró una coincidencia exacta.
 
@@ -135,7 +135,7 @@ Las funciones sobrecargadas se seleccionan para obtener la mejor coincidencia en
 
 El compilador crea un conjunto de funciones de candidato para cada argumento. Las funciones de candidato son funciones en las que el argumento real de esa posición se puede convertir al tipo de argumento formal.
 
-Compila un conjunto de “funciones de coincidencia óptima” para cada argumento y la función seleccionada es la intersección de todos los conjuntos. Si la intersección contiene más de una función, la sobrecarga es ambigua y genera un error. La función seleccionada finalmente siempre es una coincidencia mejor que cada una de las demás funciones del grupo para al menos un argumento. En caso contrario (si no hay un ganador claro), la llamada a la función genera un error.
+Compila un conjunto de “funciones de coincidencia óptima” para cada argumento y la función seleccionada es la intersección de todos los conjuntos. Si la intersección contiene más de una función, la sobrecarga es ambigua y genera un error. La función seleccionada finalmente siempre es una coincidencia mejor que cada una de las demás funciones del grupo para al menos un argumento. Si no hay ningún ganador claro, la llamada de función genera un error.
 
 Considere las siguientes declaraciones (las funciones se marcan como `Variant 1`, `Variant 2` y `Variant 3` para su identificación en la siguiente discusión):
 
@@ -155,12 +155,12 @@ F1 = Add( F2, 23 );
 
 La instrucción anterior compila dos conjuntos:
 
-|Conjunto 1: funciones de candidato cuyo primer argumento es de tipo fracción|Conjunto 2: Candidato funciones cuyo segundo argumento se puede convertir al tipo **int**|
+|Conjunto 1: Funciones de candidato cuyo primer argumento de tipo fracción|Conjunto 2: Candidato funciones cuyo segundo argumento se puede convertir al tipo **int**|
 |--------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 |Variante 1|Variante 1 (**int** puede convertirse en **largo** mediante una conversión estándar)|
 |Variante 3||
 
-Las funciones del conjunto 2 son funciones para las que hay conversiones implícitas del tipo de parámetro real al tipo de parámetro formal y, entre esas funciones, hay una función cuyo “costo” de conversión del tipo de parámetro real al tipo de parámetro formal es el menor.
+Las funciones del conjunto 2 son funciones para el que hay conversiones implícitas de tipo de parámetro real al tipo de parámetro formal, y entre esas funciones, hay una función para el que el "costo" de la conversión del tipo de parámetro real al tipo de parámetro formal es el más pequeño.
 
 La intersección de estos dos conjuntos es Variante 1. Un ejemplo de una llamada de función ambigua es:
 
@@ -174,14 +174,14 @@ La llamada de función anterior compila los conjuntos siguientes:
 |---------------------------------------------------------------------|----------------------------------------------------------------------|
 |Variante 2 (**int** puede convertirse en **largo** mediante una conversión estándar)|Variante 1 (**int** puede convertirse en **largo** mediante una conversión estándar)|
 
-Observe que la intersección entre estos dos conjuntos está vacía. Por lo tanto, el compilador genera un mensaje de error.
+Dado que la intersección de estos dos conjuntos está vacía, el compilador genera un mensaje de error.
 
 Para la coincidencia de argumentos, una función con *n* argumentos predeterminados se trata como *n*funciones de + 1 separadas, cada uno con un número diferente de argumentos.
 
-Los puntos suspensivos (...) actúan como comodín; coinciden con cualquier argumento real. Esto puede conducir a muchos conjuntos ambiguos, si no se diseñan los conjuntos de funciones sobrecargadas con extremo cuidado.
+Los puntos suspensivos (...) actúan como comodín; coinciden con cualquier argumento real. Se puede producir muchos conjuntos ambiguos, si no diseña los conjuntos de funciones sobrecargadas con extremo cuidado.
 
 > [!NOTE]
->  La ambigüedad de las funciones sobrecargadas no se puede determinar hasta que se encuentra una llamada de función. En ese momento, se compilan los conjuntos para cada argumento de la llamada de función y se puede determinar si existe una sobrecarga inequívoca. Esto significa que las ambigüedades pueden permanecer en el código hasta que las evoque una llamada de función determinada.
+>  Ambigüedad de funciones sobrecargadas no se puede determinar hasta que se encuentra una llamada de función. En ese momento, se compilan los conjuntos para cada argumento de la llamada de función y se puede determinar si existe una sobrecarga inequívoca. Esto significa que las ambigüedades pueden permanecer en el código hasta que las evoque una llamada de función determinada.
 
 ## <a name="argument-type-differences"></a>Diferencias de tipo de argumento
 
@@ -189,7 +189,7 @@ Las funciones sobrecargadas distinguen entre los tipos de los argumentos que tom
 
 Para la misma razón, argumentos de función de un tipo modificado por **const** o **volátil** no reciben un tratamiento diferente que el tipo base para los fines de sobrecarga.
 
-Sin embargo, el mecanismo de sobrecarga de función puede distinguir entre las referencias que están calificadas por **const** y **volátil** y las referencias al tipo base. Así es posible código como el siguiente:
+Sin embargo, el mecanismo de sobrecarga de función puede distinguir entre las referencias que están calificadas por **const** y **volátil** y las referencias al tipo base. Hace que el código como el siguiente:
 
 ```cpp
 // argument_type_differences.cpp
@@ -243,7 +243,7 @@ La secuencia resultante de las conversiones, si existe, se denomina la mejor coi
 
 - Convertir de **int** a **unsigned long**.
 
-La primera secuencia, aunque logra el objetivo deseado, no es la mejor coincidencia de secuencia (existe una secuencia más corta).
+La primera secuencia, aunque logra el objetivo deseado, no es la mejor coincidencia de secuencia, existe una secuencia más corta.
 
 En la tabla siguiente se muestra un grupo de conversiones, denominadas conversiones triviales, que tienen un efecto limitado en la determinación de la secuencia que se considera la mejor coincidencia. Los casos en los que las conversiones triviales influyen en la elección de la secuencia se analizan en la lista que sigue a la tabla.
 
@@ -251,18 +251,18 @@ En la tabla siguiente se muestra un grupo de conversiones, denominadas conversio
 
 |Conversión del tipo|Conversión al tipo|
 |-----------------------|---------------------|
-|*nombre de tipo*|*nombre de tipo* **&**|
-|*nombre de tipo* **&**|*nombre de tipo*|
-|*nombre de tipo* **]**|*nombre de tipo* __\*__|
-|*nombre de tipo* **(** *lista de argumentos* **)**|**(** __\*__ *nombre de tipo* **) (** *lista de argumentos* **)**|
-|*nombre de tipo*|**Const** *nombre de tipo*|
-|*nombre de tipo*|**volatile** *nombre de tipo*|
-|*nombre de tipo* __\*__|**Const** *nombre de tipo* __\*__|
-|*nombre de tipo* __\*__|**volatile** *nombre de tipo* __\*__|
+|*type-name*|*type-name* **&**|
+|*type-name* **&**|*type-name*|
+|*type-name* **[ ]**|*type-name* __\*__|
+|*type-name* **(** *argument-list* **)**|**(** __\*__ *type-name* **) (** *argument-list* **)**|
+|*type-name*|**const** *type-name*|
+|*type-name*|**volatile** *type-name*|
+|*type-name* __\*__|**const** *type-name* __\*__|
+|*type-name* __\*__|**volatile** *type-name* __\*__|
 
 Las conversiones se intentan en la siguiente secuencia:
 
-1. Coincidencia exacta. Una coincidencia exacta entre los tipos con los que se llama a la función y los tipos declarados en el prototipo de función siempre es la mejor coincidencia. Las secuencias de conversiones triviales se clasifican como coincidencias exactas. Sin embargo, las secuencias que no realizan ninguna de estas conversiones se consideran mejores que las secuencias que convierten:
+1. Coincidencia exacta. Una coincidencia exacta entre los tipos con los que se llama a la función y los tipos declarados en el prototipo de función siempre es la mejor coincidencia. Las secuencias de conversiones triviales se clasifican como coincidencias exactas. Sin embargo, las secuencias que no tienen ninguna de estas conversiones se consideran mejores que las secuencias que convierten:
 
    - De puntero a puntero a **const** (`type` <strong>\*</strong> a **const** `type` <strong>\*</strong> ).
 
@@ -294,11 +294,11 @@ La regla anterior solo se aplica a lo largo de una ruta de derivación determina
 ![Varios&#45;herencia que muestra conversiones preferidas](../cpp/media/vc391t2.gif "varios&#45;herencia que muestra conversiones preferidas") <br/>
 Gráfico de herencia múltiple que muestra conversiones preferidas
 
-La conversión del tipo `C*` al tipo `B*` es preferible a la conversión del tipo `C*` al tipo `A*`. La razón es que están en la misma ruta y `B*` está más cerca. Sin embargo, la conversión del tipo `C*` al tipo `D*` no es preferible a la conversión al tipo `A*`; no hay ninguna preferencia, porque las conversiones siguen diferentes rutas.
+La conversión del tipo `C*` al tipo `B*` es preferible a la conversión del tipo `C*` al tipo `A*`. La razón es que están en la misma ruta y `B*` está más cerca. Sin embargo, la conversión de tipo `C*` escriba `D*` no es preferible a la conversión al tipo `A*`; no hay ninguna preferencia porque las conversiones siguen diferentes rutas de acceso.
 
-1. Coincidencia con conversiones definidas por el usuario. Esta secuencia no se puede clasificar como coincidencia exacta, coincidencia mediante promociones o coincidencia mediante conversiones estándar. La secuencia debe contener solo conversiones definidas por el usuario, conversiones estándar o conversiones triviales para clasificarse como coincidencia con conversiones definidas por el usuario. Una coincidencia con conversiones definidas por el usuario se considera una coincidencia mejor que una coincidencia con puntos suspensivos, pero no tan buena como una coincidencia con conversiones estándar.
+1. Coincidencia con conversiones definidas por el usuario. Esta secuencia no se puede clasificar como una coincidencia exacta, coincidencia mediante promociones o coincidencia mediante conversiones estándares. La secuencia debe contener solo conversiones definidas por el usuario, conversiones estándar o conversiones triviales para clasificarse como coincidencia con conversiones definidas por el usuario. Una coincidencia con conversiones definidas por el usuario se considera una coincidencia mejor que una coincidencia con puntos suspensivos, pero no tan buena como una coincidencia con conversiones estándar.
 
-1. Coincidencia con puntos suspensivos. La secuencia que coincida con puntos suspensivos en la declaración se clasifica como coincidencia con puntos suspensivos. Se considera la coincidencia más débil.
+1. Coincidencia con puntos suspensivos. La secuencia que coincida con puntos suspensivos en la declaración se clasifica como coincidencia con puntos suspensivos. Se considera a la coincidencia más débil.
 
 Se aplican las conversiones definidas por el usuario si no existe ninguna promoción o conversión integrada. Estas conversiones se seleccionan en función del tipo de argumento que se coteja. Observe el código siguiente:
 
@@ -337,9 +337,9 @@ UDC udc;
 LogToFile( udc );
 ```
 
-En el ejemplo anterior, la conversión definida por el usuario, **operador long**, se llama para convertir `udc` escriba **largo**. Si ninguna conversión definida por el usuario escriba **largo** había sido definido, la conversión se habría realizado como sigue: tipo `UDC` habría convertido al tipo **int** mediante definido por el usuario conversión. A continuación, la conversión estándar del tipo **int** escriba **largo** habría aplicado para que coincida con el argumento en la declaración.
+En el ejemplo anterior, la conversión definida por el usuario, **operador long**, se llama para convertir `udc` escriba **largo**. Si ninguna conversión definida por el usuario escriba **largo** se hubiera definido, la conversión se habría realizado como sigue: Tipo `UDC` habría convertido al tipo **int** mediante la conversión definida por el usuario. A continuación, la conversión estándar del tipo **int** escriba **largo** habría aplicado para que coincida con el argumento en la declaración.
 
-Si es necesario que las conversiones definidas por el usuario coincidan con un argumento, no se usan las conversiones estándar al evaluar la mejor coincidencia. Esto es así incluso si varias funciones candidatas requieren una conversión definida por el usuario; en este caso, las funciones se consideran iguales. Por ejemplo:
+Si las conversiones definidas por el usuario deben coincidir con un argumento, no se usan las conversiones estándar al evaluar a la mejor coincidencia. Incluso si más de una función de candidatos requiere una conversión definida por el usuario, las funciones se consideran iguales. Por ejemplo:
 
 ```cpp
 // argument_matching2.cpp
@@ -371,7 +371,7 @@ Ambas versiones de `Func` requieren una conversión definida por el usuario debe
 
 - Conversión de tipo **int** escriba **largo**; a continuación, convertir al tipo `UDC2` (conversión en dos pasos).
 
-Aunque el segundo de ellos requiere una conversión estándar, así como la conversión definida por el usuario, las dos conversiones todavía se consideran iguales.
+Aunque la segunda requiere una conversión estándar y la conversión definida por el usuario, las dos conversiones todavía se consideran iguales.
 
 > [!NOTE]
 >  Las conversiones definidas por el usuario se consideran conversión por construcción o conversión por inicialización (función de conversión). Ambos métodos se consideran iguales al considerar la mejor coincidencia.
@@ -451,7 +451,7 @@ Se puede sobrecargar **new (operador)** únicamente en la base del tipo de valor
 
 **FIN de Específicos de Microsoft**
 
-- Las funciones miembro no se pueden sobrecargar basándose solo en que una sea estática y la otra no estática.
+- Las funciones miembro no se puede sobrecargar basándose solo en una sea estática y la otra no estática.
 
 - **TypeDef** declaraciones no definen nuevos tipos; presentan los sinónimos de tipos existentes. No afectan al mecanismo de sobrecarga. Observe el código siguiente:
 
@@ -466,7 +466,7 @@ Se puede sobrecargar **new (operador)** únicamente en la base del tipo de valor
 
 - Los tipos enumerados son tipos distintos y se pueden utilizar para diferenciar funciones sobrecargadas.
 
-- Los tipos “matriz de” y “puntero a” se consideran idénticos para el propósito de la distinción entre funciones sobrecargadas. Esto solo es así para las matrices de una única dimensión. Por consiguiente, las funciones sobrecargadas siguientes están en conflicto y generan un mensaje de error:
+- Los tipos "matriz de" y "puntero a" se consideran idénticos para los fines de distinguir entre funciones sobrecargadas, pero solo para las matrices dimensión individualmente. Por eso estos funciones sobrecargadas entran en conflicto y generar un mensaje de error:
 
     ```cpp
     void Print( char *szToPrint );
@@ -485,11 +485,11 @@ Se puede sobrecargar **new (operador)** únicamente en la base del tipo de valor
 
 Dos declaraciones de función cualquiera con el mismo nombre en el mismo ámbito pueden hacer referencia a la misma función o a dos funciones discretas sobrecargadas. Si las listas de argumentos de las declaraciones contienen argumentos de tipos equivalentes (como se describe en la sección anterior), las declaraciones de función hacen referencia a la misma función. Si no, hacen referencia a dos funciones diferentes que se seleccionan mediante la sobrecarga.
 
-El ámbito de clase se respeta estrictamente; por consiguiente, una función declarada en una clase base no está en el mismo ámbito que una función declarada en una clase derivada. Si una función en una clase derivada se declara con el mismo nombre que una función virtual en la clase base, la función de la clase derivada *invalida* la función de la clase base. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).
+Ámbito de clase se respeta estrictamente; por lo tanto, una función declarada en una clase base no se encuentra en el mismo ámbito que una función declarada en una clase derivada. Si una función en una clase derivada se declara con el mismo nombre que una función virtual en la clase base, la función de la clase derivada *invalida* la función de la clase base. Para obtener más información, consulte [funciones virtuales](../cpp/virtual-functions.md).
 
-Si la función de la clase base no se ha declarado como 'virtual', a continuación, se dice que la función de la clase derivada *ocultar* lo. Tanto reemplazar y ocultar son distintas de sobrecarga.
+Si la función de la clase base no está declarada como 'virtual', a continuación, se dice que la función de la clase derivada *ocultar* lo. Tanto reemplazar y ocultar son distintas de sobrecarga.
 
-El ámbito de bloque se respeta estrictamente; por consiguiente, una función declarada en el ámbito del archivo no está en el mismo ámbito que una función declarada localmente. Si una función declarada localmente tiene el mismo nombre que una función declarada en el ámbito del archivo, la función declarada localmente oculta la función del ámbito del archivo, en lugar de producir una sobrecarga. Por ejemplo:
+Ámbito de bloque se respeta estrictamente; por lo tanto, no es una función declarada en el ámbito de archivo en el mismo ámbito que una función declarado localmente. Si una función declarada localmente tiene el mismo nombre que una función declarada en el ámbito del archivo, la función declarada localmente oculta la función del ámbito del archivo, en lugar de producir una sobrecarga. Por ejemplo:
 
 ```cpp
 // declaration_matching1.cpp
@@ -521,9 +521,9 @@ En el código anterior se muestran dos definiciones de la función `func`. La de
 
 Para funciones miembro sobrecargadas, diferentes versiones de la función pueden recibir diferentes privilegios de acceso. Continúan considerándose en el ámbito de la clase envolvente y, por lo tanto, son funciones sobrecargadas. Considere el código siguiente, en el que se sobrecarga la función miembro `Deposit`; una versión es pública y la otra privada.
 
-El propósito de este ejemplo es proporcionar una clase `Account` que requiera una contraseña correcta para realizar depósitos. Esto se logra mediante la sobrecarga.
+El propósito de este ejemplo es proporcionar una clase `Account` que requiera una contraseña correcta para realizar depósitos. Se hace mediante el uso de la sobrecarga.
 
-Observe que la llamada a `Deposit` en `Account::Deposit` llama a la función miembro privada. Esta llamada es correcta porque `Account::Deposit` es una función miembro y, por consiguiente, tiene acceso a los miembros privados de la clase.
+La llamada a `Deposit` en `Account::Deposit` llama a la función de miembro privado. Esta llamada es correcta porque `Account::Deposit` es una función miembro, y tiene acceso a los miembros privados de la clase.
 
 ```cpp
 // declaration_matching2.cpp

@@ -4,14 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: 7724069a401aadcdb2e3e8487dc85273dac357fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 61035ce0f211e6a474bb83fc7de7d95b4a29cf3d
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818653"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508772"
 ---
 # <a name="bscmake-command-line"></a>Línea de comandos de BSCMAKE
+
+> [!WARNING]
+> Aunque BSCMAKE todavía se instala con Visual Studio, el IDE ya no lo utiliza. Desde Visual Studio 2008, la información de examen y de símbolos se almacena automáticamente en un archivo .sdf de SQL Server en la carpeta de soluciones.
 
 Para ejecutar BSCMAKE, use la sintaxis de línea de comandos siguiente:
 

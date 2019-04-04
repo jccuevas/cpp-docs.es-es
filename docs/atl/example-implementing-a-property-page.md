@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267243"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777043"
 ---
 # <a name="example-implementing-a-property-page"></a>Ejemplo: Implementación de una página de propiedades
 
 En este ejemplo se muestra cómo crear una página de propiedades que muestra las propiedades de (y le permite cambiar) la [clases de documento](../mfc/document-classes.md) interfaz.
 
-En el ejemplo se basa en el [ejemplo ATLPages](../visual-cpp-samples.md).
+En el ejemplo se basa en el [ejemplo ATLPages](../overview/visual-cpp-samples.md).
 
 Para completar este ejemplo, hará lo siguiente:
 
@@ -164,4 +164,4 @@ Al ejecutar esta macro, se mostrará la página de propiedades que muestra el no
 ## <a name="see-also"></a>Vea también
 
 [Páginas de propiedades](../atl/atl-com-property-pages.md)<br/>
-[Ejemplo ATLPages](../visual-cpp-samples.md)
+[Ejemplo ATLPages](../overview/visual-cpp-samples.md)

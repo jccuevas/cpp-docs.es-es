@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291644"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776978"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -120,7 +120,7 @@ Utilice las siguientes funciones para controlar el comportamiento de la ventana 
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo usar varios métodos en el `CMFCDesktopAlertWnd` clase para configurar un `CMFCDesktopAlertWnd` objeto. El ejemplo muestra cómo establecer el tipo de animación, la transparencia de la ventana emergente, especifique que la ventana de alerta muestra un título pequeño y el tiempo que transcurre antes de la ventana de alerta se cierra automáticamente. El ejemplo también muestra cómo crear e inicializar la ventana de alerta de escritorio. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).
+El ejemplo siguiente muestra cómo usar varios métodos en el `CMFCDesktopAlertWnd` clase para configurar un `CMFCDesktopAlertWnd` objeto. El ejemplo muestra cómo establecer el tipo de animación, la transparencia de la ventana emergente, especifique que la ventana de alerta muestra un título pequeño y el tiempo que transcurre antes de la ventana de alerta se cierra automáticamente. El ejemplo también muestra cómo crear e inicializar la ventana de alerta de escritorio. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 

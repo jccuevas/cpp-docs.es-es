@@ -1,6 +1,6 @@
 ---
 title: Clase CAnimationGroup
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304384"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565992"
 ---
 # <a name="canimationgroup-class"></a>Clase CAnimationGroup
 
@@ -70,7 +70,7 @@ class CAnimationGroup;
 |Name|Descripción|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Crea un grupo de animación.|
-|[CAnimationGroup::~CAnimationGroup](#canimationgroup__~canimationgroup)|Destructor. Se llama cuando se está destruyendo un grupo de animación.|
+|[CAnimationGroup::~CAnimationGroup](#_dtorcanimationgroup)|Destructor. Se llama cuando se está destruyendo un grupo de animación.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -106,7 +106,7 @@ class CAnimationGroup;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Un identificador único del grupo de animación.|
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Un puntero al controlador de animación que pertenece este grupo.|

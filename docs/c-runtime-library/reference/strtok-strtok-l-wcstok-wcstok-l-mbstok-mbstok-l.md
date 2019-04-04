@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: b984460d5b87e6a1d195e4127234479f8f7c8b0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649480"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476921"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -66,16 +66,26 @@ char *strtok(
    char *strToken,
    const char *strDelimit
 );
+char *strtok_l(
+   char *strToken,
+   const char *strDelimit,
+   _locale_t locale
+);
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
 );
-unsigned char *_mbstok(
-   unsigned char*strToken,
-   const unsigned char *strDelimit
+wchar_t *wcstok_l(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
+   const unsigned char *strDelimit
+);
+unsigned char *_mbstok_l(
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -94,7 +104,7 @@ Configuración regional que se va a usar.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Devuelve un puntero al siguiente token se encuentra en *strToken*. Devuelven **NULL** cuando se encuentren no hay más tokens. Cada llamada modifica *strToken* sustituyendo un carácter null para el primer delimitador que se produce después del token devuelto.
+Devuelve un puntero al siguiente token se encuentra en *strToken*. Las funciones devuelven **NULL** cuando se encuentren no hay más tokens. Cada llamada modifica *strToken* sustituyendo un carácter null para el primer delimitador que se produce después del token devuelto.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -105,7 +115,9 @@ El **strtok** función busca el siguiente token en *strToken*. El juego de carac
 
 En la primera llamada a **strtok**, la función omite los delimitadores iniciales y devuelve un puntero al primer token de *strToken*, finaliza el token con un carácter nulo. Más tokens se pueden extraer el resto de *strToken* mediante una serie de llamadas a **strtok**. Cada llamada a **strtok** modifica *strToken* insertando un carácter nulo después la **token** devuelto por la llamada. Para leer el token siguiente de *strToken*, llame a **strtok** con un **NULL** valor para el *strToken* argumento. El **NULL** *strToken* argumento causas **strtok** para buscar el siguiente token en modificado *strToken*. El *strDelimit* argumento puede tomar cualquier valor de una llamada a la siguiente para que el conjunto de delimitadores puede variar.
 
-El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de la configuración regional; vea [setlocale](setlocale-wsetlocale.md) para obtener más información. Las versiones de estas funciones sin el sufijo **_l** usan la configuración regional actual de su comportamiento dependiente de la configuración regional; las versiones con el sufijo **_l** son idénticas salvo que usan el parámetro de configuración regional que se pasa. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
+El valor de salida se ve afectado por el valor de la **LC_CTYPE** valor de la categoría de la configuración regional. Para obtener más información, vea [setlocale](setlocale-wsetlocale.md).
+
+Las versiones de estas funciones sin el **_l** sufijo usar la configuración regional actual para este comportamiento dependiente de la configuración regional. Las versiones con el **_l** sufijo son idénticas salvo que usan el parámetro locale pasado en su lugar. Para obtener más información, vea [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Cada función usa una variable estática local de subproceso para dividir la cadena en tokens. Por consiguiente, varios subprocesos pueden llamar simultáneamente a estas funciones sin que se produzcan efectos no deseados. Sin embargo, dentro de un único subproceso, la intercalación de llamadas a una de estas funciones generará probablemente daños en los datos y resultados poco precisos. Al analizar diferentes cadenas, termine de analizar una cadena antes de empezar a analizar la siguiente. Además, tenga en cuenta el riesgo que puede existir al llamar a una de estas funciones dentro de un bucle donde se llama a otra función. Si la otra función usa una de estas funciones, se producirá una secuencia intercalada de llamadas y se generarán daños en los datos.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-ms.openlocfilehash: 3e1dd623ef6dc49e0d48e7ff91b18041e1c46916
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 47ee0c7d6d2ed464318ab80385ac71cff426a002
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811763"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770985"
 ---
 # <a name="specifying-property-pages"></a>Especificar páginas de propiedades
 
@@ -38,4 +38,4 @@ La siguiente clase de un calendario de control usa el `ISpecifyPropertyPages` in
 ## <a name="see-also"></a>Vea también
 
 [Páginas de propiedades](../atl/atl-com-property-pages.md)<br/>
-[Ejemplo ATLPages](../visual-cpp-samples.md)
+[Ejemplo ATLPages](../overview/visual-cpp-samples.md)

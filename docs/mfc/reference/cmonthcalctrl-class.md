@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413932"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777173"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl (clase)
 
@@ -1304,7 +1304,7 @@ Este método envía el [MCM_SIZERECTTOMIN](/windows/desktop/Controls/mcm-sizerec
 
 ## <a name="see-also"></a>Vea también
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CDateTimeCtrl (clase)](../../mfc/reference/cdatetimectrl-class.md)

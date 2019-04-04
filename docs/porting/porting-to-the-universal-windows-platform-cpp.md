@@ -2,12 +2,12 @@
 title: Migrar a la Plataforma universal de Windows (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518546"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278468"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Migrar a la Plataforma universal de Windows (C++)
 
@@ -21,7 +21,7 @@ Este tema contiene los siguientes procedimientos para portar código a UWP.
 
 - [Portar un componente de Windows 8.1 en tiempo de ejecución a UWP](#BK_81Component)
 
-Si tiene un archivo DLL de Win32 de escritorio clásico, puede llamarlo desde una aplicación UWP si lo desea. Con estos procedimientos puede crear una capa de interfaz de usuario de UWP para una aplicación de C++ de escritorio de Windows clásico o para el código de C++ estándar multiplataforma. Vea [Cómo: utilizar código C++ existente en una aplicación universal de la plataforma Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
+Si tiene un archivo DLL de Win32 de escritorio clásico, puede llamarlo desde una aplicación UWP si lo desea. Con estos procedimientos puede crear una capa de interfaz de usuario de UWP para una aplicación de C++ de escritorio de Windows clásico o para el código de C++ estándar multiplataforma. Vea [Cómo: Usar código C++ existente en una aplicación para la Plataforma universal de Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
 ## <a name="BK_81StoreApp"></a> Portar una aplicación de la Tienda Windows 8.1 a UWP
 
@@ -74,7 +74,7 @@ Si tiene un archivo DLL o un componente de tiempo de ejecución de Windows que y
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>Para migrar un componente de Windows 8.1 en tiempo de ejecución a UWP
 
-1. En el cuadro de diálogo **Nuevo proyecto** de Visual Studio 2017, busque el nodo **Windows Universal**. Si no ve este nodo, instale primero las [herramientas para Windows 10](http://go.microsoft.com/fwlink/p/?LinkID=617903) . Elija la plantilla **Windows Runtime Component** , asigne un nombre al componente y elija el botón **Aceptar** . El nombre del componente se usará como nombre del espacio de nombres, por lo que es posible que quiera usar el mismo nombre que el espacio de nombres de sus proyectos antiguos. Para ello, debe crear el proyecto en una carpeta diferente de la antigua. Si elige un nombre distinto, puede actualizar el nombre del espacio de nombres en los archivos de código generado.
+1. En el cuadro de diálogo **Nuevo proyecto** de Visual Studio 2017, busque el nodo **Windows Universal**. Si no ve este nodo, instale primero el [SDK de Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk). Elija la plantilla **Windows Runtime Component** , asigne un nombre al componente y elija el botón **Aceptar** . El nombre del componente se usará como nombre del espacio de nombres, por lo que es posible que quiera usar el mismo nombre que el espacio de nombres de sus proyectos antiguos. Para ello, debe crear el proyecto en una carpeta diferente de la antigua. Si elige un nombre distinto, puede actualizar el nombre del espacio de nombres en los archivos de código generado.
 
 1. Cierre el proyectos.
 

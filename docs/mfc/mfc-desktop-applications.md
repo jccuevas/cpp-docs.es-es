@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 042412000ba59c8400c5a3a64edae5d60756116a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291290"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766500"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 
@@ -79,13 +79,13 @@ Describe el gráfico de jerarquías de MFC por categoría.
 [Clases compartidas ATL y MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Proporciona vínculos a las clases que se comparten entre MFC y ATL.
 
-[Ejemplos de MFC](../visual-cpp-samples.md)<br/>
+[Ejemplos de MFC](../overview/visual-cpp-samples.md)<br/>
 Proporciona vínculos a ejemplos que muestran cómo utilizar MFC.
 
 [Referencia de bibliotecas de Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Proporciona vínculos a las diversas bibliotecas suministradas con Visual C++, incluidas las bibliotecas de ATL, MFC, las plantillas OLE DB, la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++.
 
-[Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+[Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Proporciona vínculos sobre cómo utilizar el depurador de Visual Studio para corregir errores lógicos en sus aplicaciones o procedimientos almacenados.
 
 ## <a name="see-also"></a>Vea también
