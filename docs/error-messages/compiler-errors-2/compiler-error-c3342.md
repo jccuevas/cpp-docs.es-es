@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3342
 ms.assetid: 5c6d784f-bebe-4f7e-8615-44ca6f78bfba
-ms.openlocfilehash: fe95b1ac194e7eef4db04d6ba970505b99021285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 822da2a04446938e49b3190d01c6252585b90ce6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438408"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781788"
 ---
 # <a name="compiler-error-c3342"></a>Error del compilador C3342
 
@@ -21,7 +21,7 @@ El compilador encontró más de una definición de un atributo.
 
 Un atributo se definió más de una vez.
 
-Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener más información, consulte [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294998"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781736"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Ventanas divisoras
 
@@ -46,7 +46,7 @@ El número máximo de paneles que se pueden especificar para los separadores din
 
 ## <a name="splitter-examples"></a>Ejemplos del divisor
 
-Muchos de los programas de ejemplo MFC usan ventanas divisoras directa o indirectamente. El ejemplo General de MFC [VIEWEX](../visual-cpp-samples.md) se muestran varios usos de divisores estáticas, incluida la forma de colocar un divisor en un divisor.
+Muchos de los programas de ejemplo MFC usan ventanas divisoras directa o indirectamente. El ejemplo General de MFC [VIEWEX](../overview/visual-cpp-samples.md) se muestran varios usos de divisores estáticas, incluida la forma de colocar un divisor en un divisor.
 
 También puede usar ClassWizard para crear un nuevo varios documento MDI (interfaz) ventana clase de marco secundario que contiene una ventana divisora. Para obtener más información sobre las ventanas divisoras, consulte [varios tipos de documentos, vistas y marco Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 

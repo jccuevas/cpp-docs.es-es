@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740927"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772610"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semántica de pila de C++ para los tipos de referencia
 
-Antes de Visual C++ 2005, una instancia de un tipo de referencia solo se creara con la `new` operador, que se creó el objeto en la basura recopilados de montón. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que usaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.
+Antes de Visual C++ 2005, una instancia de un tipo de referencia solo se creara con la `new` operador, que se creó el objeto en la basura recopilados de montón. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que usaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -41,9 +41,9 @@ El compilador también proporciona un `%` operador unario para convertir una ins
 
 Los siguientes tipos de referencia no están disponibles para su uso con semántica de pila:
 
-- [delegate (Extensiones de componentes de C++)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (Extensiones de componentes de C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Matrices](../windows/arrays-cpp-component-extensions.md)
+- [Matrices](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)

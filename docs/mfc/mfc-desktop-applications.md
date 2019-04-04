@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 60c50eb25132a38c72be762ab96d8ee262f5b349
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 042412000ba59c8400c5a3a64edae5d60756116a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328836"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766500"
 ---
 # <a name="mfc-desktop-applications"></a>Aplicaciones de escritorio de MFC
 
@@ -79,7 +79,7 @@ Describe el gráfico de jerarquías de MFC por categoría.
 [Clases compartidas ATL y MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Proporciona vínculos a las clases que se comparten entre MFC y ATL.
 
-[Ejemplos de MFC](../visual-cpp-samples.md)<br/>
+[Ejemplos de MFC](../overview/visual-cpp-samples.md)<br/>
 Proporciona vínculos a ejemplos que muestran cómo utilizar MFC.
 
 [Referencia de bibliotecas de Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>

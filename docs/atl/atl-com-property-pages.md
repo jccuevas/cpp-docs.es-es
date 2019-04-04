@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-ms.openlocfilehash: 90dafc411f3262dc458c5158df049740a9d7a683
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d374569c6c3e9bb63b6b026d2b0f86226d158f36
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266905"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768418"
 ---
 # <a name="atl-com-property-pages"></a>Páginas de propiedades COM de ATL
 
@@ -36,7 +36,7 @@ Se enumeran los pasos para implementar páginas de propiedades, incluidos los m�
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-[Ejemplo ATLPages](../visual-cpp-samples.md)<br/>
+[Ejemplo ATLPages](../overview/visual-cpp-samples.md)<br/>
 El extracto del ejemplo ATLPages, que implementa una página de propiedad mediante `IPropertyPageImpl`.
 
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>

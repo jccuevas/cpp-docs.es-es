@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303612"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779812"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager (clase)
 
@@ -81,7 +81,7 @@ No debería crear un `CKeyboardManager` objeto manualmente. Se creará automáti
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CKeyboardManager` objeto desde un `CWinAppEx` clase y cómo mostrar todas las teclas de método abreviado asociadas con los comandos de menú. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CKeyboardManager` objeto desde un `CWinAppEx` clase y cómo mostrar todas las teclas de método abreviado asociadas con los comandos de menú. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

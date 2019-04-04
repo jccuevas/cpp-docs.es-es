@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601713"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776926"
 ---
 # <a name="staticcast-operator"></a>static_cast (Operador)
 
@@ -29,7 +29,7 @@ En Standard C++, no se realiza ninguna comprobación de tipo en tiempo de ejecuc
 
 El **static_cast** operador puede usarse para realizar operaciones como convertir un puntero a una clase base a un puntero a una clase derivada. Estas conversiones no siempre son seguras.
 
-En general utilice **static_cast** algunos de los tipos de datos cuando desee convertir tipos de datos numéricos como enumeraciones en enteros o valores de tipo int en flotantes y están implicados en la conversión. **static_cast** conversiones no son tan seguras como **dynamic_cast** conversiones, porque **static_cast** ningún tipo de tiempo de ejecución comprueba, mientras **dynamic_cast** lo hace. Un **dynamic_cast** a un puntero ambiguo producirá un error, mientras que un **static_cast** devuelve como si hubiera nada incorrecto; Esto puede ser peligroso. Aunque **dynamic_cast** conversiones son más seguras, **dynamic_cast** solo funciona en punteros o referencias y la comprobación del tipo de tiempo de ejecución es una sobrecarga. Para obtener más información, consulte [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md).
+En general utilice **static_cast** algunos de los tipos de datos cuando desee convertir tipos de datos numéricos como enumeraciones en enteros o valores de tipo int en flotantes y están implicados en la conversión. **static_cast** conversiones no son tan seguras como **dynamic_cast** conversiones, porque **static_cast** ningún tipo de tiempo de ejecución comprueba, mientras **dynamic_cast** hace. Un **dynamic_cast** a un puntero ambiguo producirá un error, mientras que un **static_cast** devuelve como si hubiera nada incorrecto; Esto puede ser peligroso. Aunque **dynamic_cast** conversiones son más seguras, **dynamic_cast** solo funciona en punteros o referencias y la comprobación del tipo de tiempo de ejecución es una sobrecarga. Para obtener más información, consulte [dynamic_cast (operador)](../cpp/dynamic-cast-operator.md).
 
 En el ejemplo siguiente, la línea `D* pd2 = static_cast<D*>(pb);` no es segura porque `D` puede tener campos y métodos que no están en `B`. Sin embargo, la línea `B* pb2 = static_cast<B*>(pd);` es una conversión segura porque `D` siempre contiene todo `B`.
 
@@ -103,7 +103,7 @@ Cualquier expresión se puede convertir explícitamente al tipo void el **static
 
 El **static_cast** operador no se puede desechar el **const**, **volátil**, o **__unaligned** atributos. Consulte [const_cast (operador)](../cpp/const-cast-operator.md) para obtener información acerca de cómo quitar estos atributos.
 
-Debido al riesgo que supone realizar conversiones no comprobadas en la parte superior de una reubicación recolector de elementos no utilizados, el uso de **static_cast** solo debe utilizarse en código crítico para el rendimiento cuando esté seguro de funcionará correctamente. Si debe usar **static_cast** en modo de lanzamiento, sustitúyalo con [safe_cast](../windows/safe-cast-cpp-component-extensions.md) en las compilaciones de depuración para garantizar el éxito.
+**C++/CLI:** Debido al riesgo que supone realizar conversiones no comprobadas en la parte superior de una reubicación recolector de elementos no utilizados, el uso de **static_cast** solo debe utilizarse en código crítico para el rendimiento cuando esté seguro de funcionará correctamente. Si debe usar **static_cast** en modo de lanzamiento, sustitúyalo con [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) en las compilaciones de depuración para garantizar el éxito.
 
 ## <a name="see-also"></a>Vea también
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821409"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898757"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(deshabilitar la búsqueda de nombres en dos fases)
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 En **/Zc:twoPhase-** y en compiladores antiguos, el compilador sólo requiere la `template` palabra clave en la línea 2. De forma predeterminada y en modo de conformidad, el compilador ahora también requiere la `template` palabra clave en la línea 4 para indicar que `T::X<T>` es una plantilla. Buscar código que le falta la palabra clave this y proporcionarlo para que el código se ajusta al estándar.
 
-Para obtener más información acerca de problemas de conformidad, consulte [mejoras de conformidad de C++ en Visual Studio](../../cpp-conformance-improvements-2017.md) y [comportamiento no estándar](../../cpp/nonstandard-behavior.md).
+Para obtener más información acerca de problemas de conformidad, consulte [mejoras de conformidad de C++ en Visual Studio](../../overview/cpp-conformance-improvements.md) y [comportamiento no estándar](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 

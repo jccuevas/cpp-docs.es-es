@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: cd3b27e0667b5ab9707db4b2cce2d7eef4611219
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743185"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772428"
 ---
 # <a name="user-defined-conversions-ccli"></a>Conversiones definidas por el usuario (C++/CLI)
 
@@ -21,7 +21,7 @@ Una conversión definida por el usuario puede ser implícita o explícita.  Una 
 
 Constructor de la clase nativa puede usarse para convertir a un tipo de valor o referencia a una clase nativa.
 
-Para obtener más información sobre las conversiones, vea [Boxing](../windows/boxing-cpp-component-extensions.md) y [conversiones estándar](../cpp/standard-conversions.md).
+Para obtener más información sobre las conversiones, vea [Boxing](../extensions/boxing-cpp-component-extensions.md) y [conversiones estándar](../cpp/standard-conversions.md).
 
 ```
 // mcpp_User_Defined_Conversions.cpp
@@ -321,4 +321,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Clases y structs](../windows/classes-and-structs-cpp-component-extensions.md)
+[Clases y structs](../extensions/classes-and-structs-cpp-component-extensions.md)

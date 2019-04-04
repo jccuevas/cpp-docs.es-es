@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: 4d1f6a19e0fb2ddb88602600e02aec45936ce599
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8a0c11352ffab37f50ede5c67aa810fa20e838ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305112"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777277"
 ---
 # <a name="cformview-class"></a>CFormView (clase)
 
@@ -115,8 +115,8 @@ True si se ha completado la función de inicialización para este cuadro de diá
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
-[Ejemplo VIEWEX de MFC](../../visual-cpp-samples.md)<br/>
+[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo VIEWEX de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CScrollView (clase)](../../mfc/reference/cscrollview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CDialog (clase)](../../mfc/reference/cdialog-class.md)<br/>

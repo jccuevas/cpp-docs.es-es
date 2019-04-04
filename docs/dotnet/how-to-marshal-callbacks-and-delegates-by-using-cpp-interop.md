@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++
+title: Filtrar Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739220"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766942"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Filtrar Serializar devoluciones de llamadas y delegados mediante la interoperabilidad de C++
 
@@ -27,7 +27,7 @@ Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/man
 
 El ejemplo siguiente muestra cómo configurar una API no administrada para desencadenar a un delegado administrado. Se crea un delegado administrado y uno de los métodos de interoperabilidad, <xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>, se usa para recuperar el punto de entrada subyacente para el delegado. Esta dirección, a continuación, se pasa a la función no administrada, que se llama sin el conocimiento del hecho de que se implementa como una función administrada.
 
-Tenga en cuenta que es posible, aunque no es necesario, para anclar el delegado mediante [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md) para evitar que lo que se va a volver a encontrar o eliminado por el recolector de elementos no utilizados. Protección de la recolección prematura es necesario, pero anclar ofrece más protección de la necesaria, ya que evita la colección y también impide la reubicación.
+Tenga en cuenta que es posible, aunque no es necesario, para anclar el delegado mediante [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) para evitar que lo que se va a volver a encontrar o eliminado por el recolector de elementos no utilizados. Protección de la recolección prematura es necesario, pero anclar ofrece más protección de la necesaria, ya que evita la colección y también impide la reubicación.
 
 Si un delegado se encuentra volver a una recolección, no afectará a la devolución de llamada administrada subyacente, por lo que <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> se usa para agregar una referencia al delegado, lo que permite la reubicación del delegado, pero impide su eliminación. El uso de GCHandle en lugar de pin_ptr reduce el potencial de la fragmentación del montón administrado.
 

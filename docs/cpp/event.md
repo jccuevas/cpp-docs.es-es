@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: bd5f53e5d2b80b22c3a38f413c4fa79b27fa7026
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606484"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778265"
 ---
 # <a name="event"></a>__event
 
@@ -62,7 +62,7 @@ Consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.
 
 Los eventos COM son interfaces. Los parámetros de un método en una interfaz de origen de eventos deben ser *en* parámetros (pero esto no se aplica rigurosamente), porque un *out* parámetro no es útil cuando se realiza multidifusión. Se emitirá una advertencia de nivel 1 si usas un *out* parámetro.
 
-El tipo de valor devuelto es normalmente HRESULT o **void**, pero puede ser cualquier tipo entero, incluidos **enum**. Cuando un evento usa un tipo de valor devuelto entero y un controlador de eventos devuelve un valor distinto de cero se produce un estado de error, en cuyo caso el evento que se provoca anula las llamadas a los otros delegados. Tenga en cuenta que el compilador marcará automáticamente una interfaz de origen del evento como un [origen](../windows/source-cpp.md) en el archivo IDL generado.
+El tipo de valor devuelto es normalmente HRESULT o **void**, pero puede ser cualquier tipo entero, incluidos **enum**. Cuando un evento usa un tipo de valor devuelto entero y un controlador de eventos devuelve un valor distinto de cero se produce un estado de error, en cuyo caso el evento que se provoca anula las llamadas a los otros delegados. Tenga en cuenta que el compilador marcará automáticamente una interfaz de origen del evento como un [origen](../windows/attributes/source-cpp.md) en el archivo IDL generado.
 
 El [__interface](../cpp/interface.md) siempre es necesario después de la palabra clave **__event** para un origen de eventos COM.
 
@@ -75,7 +75,7 @@ Consulte [control de eventos en COM](../cpp/event-handling-in-com.md) para códi
 
 ## <a name="managed-events"></a>Eventos administrados
 
-Para obtener información sobre la codificación de eventos en la nueva sintaxis, vea [eventos](../windows/event-cpp-component-extensions.md).
+Para obtener información sobre la codificación de eventos en la nueva sintaxis, vea [eventos](../extensions/event-cpp-component-extensions.md).
 
 Los eventos administrados son miembros de datos o métodos. Cuando se usa con un evento, el tipo de valor devuelto de un delegado debe ser compatible con la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). El tipo de valor devuelto del controlador de eventos debe coincidir con el del delegado. Para obtener más información sobre los delegados, vea [delegados y eventos](../dotnet/delegates-and-events.md). Si un evento administrado es un miembro de datos, el tipo debe ser un puntero a un delegado.
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 Al declarar implícitamente un evento administrado, puede especificar que se agreguen y quiten los descriptores de acceso a los que se llamará cuando se agreguen o quiten los controladores de eventos. También puede definir el método que llama (genera) el evento desde fuera de la clase.
 
-## <a name="example-native-events"></a>Ejemplo: eventos nativos
+## <a name="example-native-events"></a>Ejemplo: Eventos nativos
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Ejemplo: eventos COM
+## <a name="example-com-events"></a>Ejemplo: Eventos COM
 
 ```cpp
 // EventHandling_COM_Event.cpp
@@ -131,8 +131,8 @@ public:
 
 [Palabras clave](../cpp/keywords-cpp.md)<br/>
 [Control de eventos](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)

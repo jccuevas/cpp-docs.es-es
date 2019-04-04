@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: d66a9ed445e28de2341aa2a07f249c10cba83da4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812010"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779747"
 ---
 # <a name="std-specify-language-standard-version"></a>/STD (especificar la versión estándar del lenguaje)
 
@@ -37,11 +37,11 @@ El valor predeterminado **/std: c ++ 14** opción habilita el conjunto de caract
 
 - [literales de caracteres de U8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-Para obtener más información sobre qué características C ++ 14 y C ++ 17 están habilitados cuando **/std: c ++ 14** está especificado, vea las notas de [conformidad del lenguaje Visual C++](../../visual-cpp-language-conformance.md).
+Para obtener más información sobre qué características C ++ 14 y C ++ 17 están habilitados cuando **/std: c ++ 14** está especificado, vea las notas de [conformidad del lenguaje Visual C++](../../overview/visual-cpp-language-conformance.md).
 
 El **/std: c ++ 17** opción permite que el conjunto completo de características C ++ 17 implementada por el compilador de MSVC. Esta opción deshabilita la compatibilidad del compilador y la biblioteca estándar con las características nuevas o que se han modificado en las versiones del borrador de trabajo y las actualizaciones de defectos de C++ Standard posteriores a C++17.
 
-El **/std: c ++ más reciente** opción habilita la publicación-C ++ 17 características del lenguaje y biblioteca implementadas actualmente en el compilador y bibliotecas. Estos pueden incluir características de la C ++ 20 Working Draft y dar de baja las actualizaciones del estándar de C++ que no están incluidas en C ++ 17, así como experimentales propuestas del estándar de borrador. Para obtener una lista de características de la biblioteca y los idiomas admitidos, consulte [What ' s New for Visual C++](../../what-s-new-for-visual-cpp-in-visual-studio.md). El **/std: c ++ más reciente** opción no habilita las características protegidas por el **/ experimental** cambiar, pero es posible que deba habilitarlas.
+El **/std: c ++ más reciente** opción habilita la publicación-C ++ 17 características del lenguaje y biblioteca implementadas actualmente en el compilador y bibliotecas. Estos pueden incluir características de la C ++ 20 Working Draft y dar de baja las actualizaciones del estándar de C++ que no están incluidas en C ++ 17, así como experimentales propuestas del estándar de borrador. Para obtener una lista de características de la biblioteca y los idiomas admitidos, consulte [What ' s New for Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). El **/std: c ++ más reciente** opción no habilita las características protegidas por el **/ experimental** cambiar, pero es posible que deba habilitarlas.
 
 > [!IMPORTANT]
 > Las características del compilador y la biblioteca habilitadas por **/std: c ++ más reciente** se proporcionan como-es y sin soporte técnico. Están sujetos a cambios drásticos eliminación sin previo aviso. Se han diseñado como una vista previa de las características del lenguaje que pueden aparecer en la próxima versión del estándar pero el estándar es un trabajo en curso. Usar **/std: c ++ 17** para usar las características en el estándar ISO C++ más reciente.
@@ -51,7 +51,7 @@ El **/std** opción vigente durante una compilación en C++ se puede detectar me
 El **/std: c ++ 14** y **/std: c ++ más reciente** opciones están disponibles a partir de Visual C++ 2015 Update 3. El **/std: c ++ 17** opción está disponible a partir de Visual C++ 2017 versión 15.3. Como se mencionó anteriormente, algunos estándar C ++ 17 comportamiento está habilitado de forma el **/std: c ++ 14** opción, pero todas las demás características C ++ 17 están habilitadas de forma **/std: c ++ 17**.
 
 > [!NOTE]
-> Según el nivel de versión o actualización de compilador MSVC, ciertas características C ++ 14 y C ++ 17 pueden no ser completamente implementadas o totalmente conforme al especificar el **/std: c ++ 14** o **/std: c ++ 17** opciones. Por ejemplo, el compilador de Visual C++ 2017 RTM no admite totalmente C ++ 14 ajustan `constexpr`, expresión SFINAE, o la búsqueda de nombres de 2 fases. Para obtener información general de conformidad del lenguaje C++ en Visual C++ por número de versión, consulte [conformidad del lenguaje Visual C++](../../visual-cpp-language-conformance.md).
+> Según el nivel de versión o actualización de compilador MSVC, ciertas características C ++ 14 y C ++ 17 pueden no ser completamente implementadas o totalmente conforme al especificar el **/std: c ++ 14** o **/std: c ++ 17** opciones. Por ejemplo, el compilador de Visual C++ 2017 RTM no admite totalmente C ++ 14 ajustan `constexpr`, expresión SFINAE, o la búsqueda de nombres de 2 fases. Para obtener información general de conformidad del lenguaje C++ en Visual C++ por número de versión, consulte [conformidad del lenguaje Visual C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio
 
@@ -63,5 +63,5 @@ El **/std: c ++ 14** y **/std: c ++ más reciente** opciones están disponibles 
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

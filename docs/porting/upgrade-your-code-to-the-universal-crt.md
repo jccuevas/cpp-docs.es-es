@@ -2,12 +2,12 @@
 title: Actualizar código a CRT universal
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: ba987c6c88a3b559b8fe6224fd27dfbfe8c9d821
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741335"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769191"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Actualizar código a CRT universal
 
@@ -35,9 +35,9 @@ Al actualizar los proyectos de Visual C++, si ha establecido la propiedad del **
 
 Dado que UCRT ahora es un componente del sistema operativo Microsoft Windows, se incluye como parte del sistema operativo en Windows 10 y está disponible a través de Windows Update para sistemas operativos anteriores, de Windows Vista a Windows 8.1. Hay una versión redistribuible disponible para Windows XP. Como componente del sistema operativo, Windows Update administra las actualizaciones y el mantenimiento de UCRT independientemente de las versiones de Visual Studio y el Compilador de Microsoft Visual C++. Puesto que UCRT es un componente de Windows, por motivos de seguridad y de facilidad de las actualizaciones, así como por el menor tamaño de imagen, se recomienda encarecidamente la implementación central de UCRT para la aplicación.
 
-UCRT se puede usar en cualquier versión de Windows compatible con Visual Studio 2015 o Visual Studio 2017. Se puede redistribuir mediante un paquete vcredist para versiones compatibles de Windows que no sean Windows 10. Los paquetes vcredist incluyen los componentes de UCRT y los instalan automáticamente en los sistemas operativos Windows que no los tienen instalados de forma predeterminada. Para obtener más información, consulte [Redistribuir archivos de Visual C++](../ide/redistributing-visual-cpp-files.md).
+UCRT se puede usar en cualquier versión de Windows compatible con Visual Studio 2015 o Visual Studio 2017. Se puede redistribuir mediante un paquete vcredist para versiones compatibles de Windows que no sean Windows 10. Los paquetes vcredist incluyen los componentes de UCRT y los instalan automáticamente en los sistemas operativos Windows que no los tienen instalados de forma predeterminada. Para obtener más información, consulte [Redistribuir archivos de Visual C++](../windows/redistributing-visual-cpp-files.md).
 
-Se admite la implementación local de aplicación de UCRT, aunque no se recomienda por motivos de rendimiento y seguridad. Los archivos DLL para la implementación local de aplicación se incluyen como parte del SDK de Windows, en el subdirectorio **redist**. Los archivos DLL necesarios incluyen ucrtbase.dll y un conjunto de archivos DLL **reenviador APISet** denominado api-ms-win-_subset_.dll. El conjunto de archivos DLL necesario en cada sistema operativo varía, por lo que se recomienda incluir todos los archivos DLL cuando se use la implementación local de aplicación. Para obtener detalles adicionales y advertencias sobre la implementación local de aplicación, vea [Implementación en Visual C++](../ide/deployment-in-visual-cpp.md).
+Se admite la implementación local de aplicación de UCRT, aunque no se recomienda por motivos de rendimiento y seguridad. Los archivos DLL para la implementación local de aplicación se incluyen como parte del SDK de Windows, en el subdirectorio **redist**. Los archivos DLL necesarios incluyen ucrtbase.dll y un conjunto de archivos DLL **reenviador APISet** denominado api-ms-win-_subset_.dll. El conjunto de archivos DLL necesario en cada sistema operativo varía, por lo que se recomienda incluir todos los archivos DLL cuando se use la implementación local de aplicación. Para obtener detalles adicionales y advertencias sobre la implementación local de aplicación, vea [Implementación en Visual C++](../windows/deployment-in-visual-cpp.md).
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Cambios en las funciones y macros de CRT universal
 
@@ -49,4 +49,4 @@ En UCRT se han agregado o actualizado muchas funciones para mejorar la conformid
 [Información general sobre posibles problemas de actualización (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Actualizar proyectos desde versiones anteriores de Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Historial de cambios en Visual C++ 2003-2015](visual-cpp-change-history-2003-2015.md)<br/>
-[Mejoras de conformidad de C++ en Visual Studio 2017](../cpp-conformance-improvements-2017.md)
+[Mejoras de conformidad de C++ en Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)

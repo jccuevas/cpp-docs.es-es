@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751458"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774742"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>Filtrar Definir y usar enumeraciones en C++ / c++ / CLI
 
@@ -92,7 +92,7 @@ Operadores &#124; ^ & ~ ++--se definen sólo para las enumeraciones con integral
 El compilador no realiza ninguna comprobación estática o dinámica del resultado de una operación de enumeración; una operación puede producir un valor no está en el intervalo de enumeradores válido de la enumeración.
 
 > [!NOTE]
->  C ++ 11 incluye tipos de clase de enumeración en código no administrado que son significativamente diferentes de las clases de enumeración administrada en C++ / c++ / CLI. En concreto, el tipo de clase C ++ 11 enum no admite los mismos operadores que el tipo de clase de enumeración administrada en C++ / c++ / CLI y C++ / c++ / CLI origen el código debe proporcionar un especificador de accesibilidad en la enumeración administrada declaraciones de clase para distinguirlos de los no administrados (C++ 11) declaraciones de clase enum de. Para obtener más información acerca de las clases de enumeración en C / c++ / CLI, C++ / c++ / CX y C ++ 11, vea [clase enum](../windows/enum-class-cpp-component-extensions.md).
+>  C ++ 11 incluye tipos de clase de enumeración en código no administrado que son significativamente diferentes de las clases de enumeración administrada en C++ / c++ / CLI. En concreto, el tipo de clase C ++ 11 enum no admite los mismos operadores que el tipo de clase de enumeración administrada en C++ / c++ / CLI y C++ / c++ / CLI origen el código debe proporcionar un especificador de accesibilidad en la enumeración administrada declaraciones de clase para distinguirlos de los no administrados (C++ 11) declaraciones de clase enum de. Para obtener más información acerca de las clases de enumeración en C / c++ / CLI, C++ / c++ / CX y C ++ 11, vea [clase enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>Vea también
 
-[clase Enum](../windows/enum-class-cpp-component-extensions.md)
+[clase Enum](../extensions/enum-class-cpp-component-extensions.md)

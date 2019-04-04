@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425099"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780618"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
 
@@ -4422,7 +4422,7 @@ Esta función también organiza el control de vista de lista si tiene el estilo 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](cwnd-class.md)<br/>
 [Gráfico de jerarquías](../hierarchy-chart.md)<br/>
 [CImageList (clase)](cimagelist-class.md)

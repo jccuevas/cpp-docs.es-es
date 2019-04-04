@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418612"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770820"
 ---
 # <a name="cdatasource-class"></a>CDataSource (Clase)
 
@@ -98,7 +98,7 @@ class CDataSource
 
 Una o varias sesiones de base de datos se pueden crear para una sola conexión. Estas sesiones se representan mediante `CSession`. Debe llamar a [CDataSource:: Open](../../data/oledb/cdatasource-open.md) para abrir la conexión antes de crear una sesión con `CSession::Open`.
 
-Para obtener un ejemplo de cómo usar `CDataSource`, consulte el [CatDB](../../visual-cpp-samples.md) ejemplo.
+Para obtener un ejemplo de cómo usar `CDataSource`, consulte el [CatDB](../../overview/visual-cpp-samples.md) ejemplo.
 
 ## <a name="close"></a> CDataSource::Close
 

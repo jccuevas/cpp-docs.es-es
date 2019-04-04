@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 86841e15469f15ebb329e0957d4dacb5a96d6fe3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518507"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780683"
 ---
 # <a name="compiler-error-c2440"></a>Error del compilador C2440
 
@@ -167,7 +167,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-El error C2440 también se puede producir si se intenta crear una instancia de una matriz de Visual C++ cuyo tipo es un <xref:System.Array>.  Para obtener más información, consulte [matrices](../../windows/arrays-cpp-component-extensions.md).  El ejemplo siguiente genera el error C2440:
+El error C2440 también se puede producir si se intenta crear una instancia de una matriz de Visual C++ cuyo tipo es un <xref:System.Array>.  Para obtener más información, consulte [matrices](../../extensions/arrays-cpp-component-extensions.md).  El ejemplo siguiente genera el error C2440:
 
 ```cpp
 // C2440e.cpp

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751523"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780878"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>Procedimiento Serializar cadenas COM mediante la interoperabilidad de C++
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Filtrar Serializar cadenas COM mediante la interoperabilidad de C++
 
 Este tema muestra cómo puede ser una cadena BSTR (el formato de cadena básicas preferido en programación COM) pase de una a una función no administrada y viceversa. Para interoperar con otros tipos de cadenas, vea los temas siguientes:
 
@@ -28,7 +28,7 @@ Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/man
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo se puede pasar una cadena BSTR (un formato de cadena usado en la programación COM) de administrado a una función no administrada. Realiza la llamada administrada usa función <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obtener la dirección de una representación de BSTR del contenido de un objeto .NET System.String. Este puntero se ancla mediante [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md) para asegurarse de que su dirección física no se cambia durante un ciclo de recopilación de elementos no utilizados mientras se ejecuta la función no administrada. El recolector de elementos no utilizados se le permite mover la memoria hasta que el [pin_ptr (C++ / c++ / CLI)](../windows/pin-ptr-cpp-cli.md) sale del ámbito.
+El ejemplo siguiente muestra cómo se puede pasar una cadena BSTR (un formato de cadena usado en la programación COM) de administrado a una función no administrada. Realiza la llamada administrada usa función <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> para obtener la dirección de una representación de BSTR del contenido de un objeto .NET System.String. Este puntero se ancla mediante [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) para asegurarse de que su dirección física no se cambia durante un ciclo de recopilación de elementos no utilizados mientras se ejecuta la función no administrada. El recolector de elementos no utilizados se le permite mover la memoria hasta que el [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) sale del ámbito.
 
 ```
 // MarshalBSTR1.cpp

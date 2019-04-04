@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293789"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774560"
 ---
 # <a name="catlmap-class"></a>CAtlMap (clase)
 
@@ -91,7 +91,7 @@ El código utilizado para copiar o mover elementos de valor.
 
 ### <a name="cpair-data-members"></a>Miembros de datos CPair
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CPair::m_key](#m_key)|Almacenar el elemento clave de miembro de datos.|
 |[CPair::m_value](#m_value)|El miembro de datos almacenar el elemento de valor.|
@@ -782,6 +782,6 @@ El tipo de elemento de valor.
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de marquesina](../../visual-cpp-samples.md)<br/>
+[Ejemplo de marquesina](../../overview/visual-cpp-samples.md)<br/>
 [Ejemplo UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

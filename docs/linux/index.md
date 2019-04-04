@@ -59,7 +59,7 @@ Use Visual Studio 2017 para crear y depurar aplicaciones que se ejecutan en Linu
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
                         <p><a href="/cpp/overview-of-cpp-development">IDE y herramientas para desarrollo de Visual C++</a></p>
                     </div>
                 </div>

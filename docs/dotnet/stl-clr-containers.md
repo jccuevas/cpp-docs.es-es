@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744356"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774547"
 ---
 # <a name="stlclr-containers"></a>Contenedores de STL/CLR
 
@@ -37,7 +37,7 @@ No se puede insertar tipos de valor con conversión boxing en cualquiera de los 
 
 ### <a name="handles-to-reference-types"></a>Identificadores de tipos de referencia
 
-Puede insertar un identificador de un tipo de referencia en un contenedor de STL/CLR. Un identificador de C++ orientado a CLR es análoga a un puntero en C++ nativo. Para obtener más información, consulte [identificador de operador de objeto (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+Puede insertar un identificador de un tipo de referencia en un contenedor de STL/CLR. Un identificador de C++ orientado a CLR es análoga a un puntero en C++ nativo. Para obtener más información, consulte [identificador de operador de objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Ejemplo
 
@@ -229,7 +229,7 @@ int main()
 
 También puede insertar un tipo de valor con conversión unboxing en un contenedor STL/CLR. Un tipo de valor con conversión unboxing es un tipo de valor que no ha sido *boxed* en un tipo de referencia.
 
-Un elemento de tipo de valor puede ser uno de los tipos de valor estándar, como un `int`, o puede ser un tipo de valor definido por el usuario, como un `value class`. Para obtener más información, consulte [clases y Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+Un elemento de tipo de valor puede ser uno de los tipos de valor estándar, como un `int`, o puede ser un tipo de valor definido por el usuario, como un `value class`. Para obtener más información, consulte [clases y Structs](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Ejemplo
 

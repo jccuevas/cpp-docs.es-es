@@ -10,19 +10,19 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: 3ed135c0fc32f9218783c964ed4ce79a9b3ec067
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332418"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772570"
 ---
 # <a name="enumerations-c"></a>Enumeraciones [C++]
 
 Una enumeración es un tipo definido por el usuario que consta de un conjunto de constantes enteras con nombre conocidas como enumeradores.
 
 > [!NOTE]
->  Este artículo trata sobre el lenguaje C++ estándar de ISO **enum** tipo y el ámbito (o fuertemente tipado) **clase enum** tipo que se introdujo en C ++ 11. Para obtener información sobre la **clase enum pública** o **clase enum privada** tipos en C++ / c++ / CLI y c++ / CX, consulte [clase enum](../windows/enum-class-cpp-component-extensions.md).
+>  Este artículo trata sobre el lenguaje C++ estándar de ISO **enum** tipo y el ámbito (o fuertemente tipado) **clase enum** tipo que se introdujo en C ++ 11. Para obtener información sobre la **clase enum pública** o **clase enum privada** tipos en C++ / c++ / CLI y c++ / CX, consulte [clase enum](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -52,7 +52,7 @@ Nombre del tipo dado a la enumeración.
 *type*<br/>
 El tipo subyacente de los enumeradores; cada enumerador tiene el mismo tipo subyacente. Puede ser cualquier tipo entero.
 
-*lista de enumeración*<br/>
+*enum-list*<br/>
 Una lista delimitada por comas de los enumeradores en la enumeración. Cada enumerador o nombre de variable en el ámbito debe ser único. Sin embargo, los valores pueden estar duplicados. En una enumeración sin ámbito, el ámbito es el ámbito adyacente; en una enumeración con ámbito, el ámbito es el *enum lista* propio.  En una enumeración con ámbito, la lista puede estar vacía que define en vigor un nuevo tipo entero.
 
 *class*<br/>
@@ -145,7 +145,7 @@ Observe que la línea `hand = account_num;` aún produce el error que se produce
 
 ## <a name="no_enumerators"></a> Enumeraciones con ningún enumeradores
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): al definir una enumeración (normal o con ámbito) con un tipo explícito subyacente y no los enumeradores, puede vigente introducir un nuevo tipo de entero no tiene ninguna conversión implícita a cualquier otro tipo. Con este tipo en lugar de su tipo subyacente integrado, puede eliminar la posibilidad de errores sutiles debidos a involuntarias conversiones implícitas.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Al definir una enumeración (normal o con ámbito) con un tipo explícito subyacente y no los enumeradores, en efecto puede introducir a un nuevo tipo entero que no tiene ninguna conversión implícita a cualquier otro tipo. Con este tipo en lugar de su tipo subyacente integrado, puede eliminar la posibilidad de errores sutiles debidos a involuntarias conversiones implícitas.
 
 ```cpp
 enum class byte : unsigned char { };

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
-ms.openlocfilehash: 0d650d5c3a361ae91e9a35a39866d30bff93f5f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed6561d1e8d4281cd57e78808744d018c3cc9b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654199"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774898"
 ---
 # <a name="compiler-error-c3903"></a>Error del compilador C3903
 
 'property': does no ha establecido o get (método)
 
-Una propiedad debe tener al menos un `get` o un `set` método. Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+Una propiedad debe tener al menos un `get` o un `set` método. Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C3903:
 

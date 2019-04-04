@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 3891741cb6998ec8621795801ce409aa40ab6d1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270389"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769555"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT (clase)
 
@@ -353,7 +353,7 @@ Este método puede invalidarse. Si se reemplaza [CAtlExeModuleT::PreMessageLoop]
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo ATLDuck](../../visual-cpp-samples.md)<br/>
+[Ejemplo ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [CAtlModuleT (clase)](../../atl/reference/catlmodulet-class.md)<br/>
 [CAtlDllModuleT (clase)](../../atl/reference/catldllmodulet-class.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)

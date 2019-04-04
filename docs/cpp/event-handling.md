@@ -6,18 +6,18 @@ helpviewer_keywords:
 - intrinsic functions [C++], event handling
 - event handling [C++], Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: d1a89d5afce2e3715b5a61c0815d88ed2fbae8b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523258"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769477"
 ---
 # <a name="event-handling"></a>Control de eventos
 
-Control de eventos es compatible principalmente para las clases COM (las clases de C++ que implementan objetos COM, normalmente mediante clases ATL o [coclase](../windows/coclass.md) atributo).  Para obtener más información, consulte [control de eventos en COM](../cpp/event-handling-in-com.md).
+Control de eventos es compatible principalmente para las clases COM (las clases de C++ que implementan objetos COM, normalmente mediante clases ATL o [coclase](../windows/coclass.md) atributo). Para obtener más información, consulte [control de eventos en COM](../cpp/event-handling-in-com.md).
 
-El control de eventos también se admite para las clases de C++ nativo (clases de C++ que no implementan objetos COM); sin embargo, esa compatibilidad está en desuso y se quitará en futuras versiones.  Para obtener más información, consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md).
+El control de eventos también se admite para las clases de C++ nativo (clases de C++ que no implementan objetos COM); sin embargo, esa compatibilidad está desusada y se quitará en futuras versiones.  Para obtener más información, consulte [control de eventos en C++ nativo](../cpp/event-handling-in-native-cpp.md).
 
 El control de eventos admite el uso de único subproceso y multiproceso y protege los datos de acceso multiproceso simultáneo. También permite que se deriven subclases de clases del origen de eventos o del receptor y que se admita el suministro y la recepción de eventos extendidos en la clase derivada.
 
@@ -25,8 +25,8 @@ Visual C++ incluye atributos y palabras clave para declarar eventos y controlado
 
 |Tema|Descripción|
 |-----------|-----------------|
-|[event_source](../windows/event-source.md)|Crea un origen de eventos.|
-|[event_receiver](../windows/event-receiver.md)|Crea un receptor de eventos (receptor).|
+|[event_source](../windows/attributes/event-source.md)|Crea un origen de eventos.|
+|[event_receiver](../windows/attributes/event-receiver.md)|Crea un receptor de eventos (receptor).|
 |[__event](../cpp/event.md)|Declara un evento.|
 |[__raise](../cpp/raise.md)|Resalta el sitio de llamada de un evento.|
 |[__hook](../cpp/hook.md)|Asocia un método de control a un evento.|

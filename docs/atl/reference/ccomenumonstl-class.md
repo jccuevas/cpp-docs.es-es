@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: 56d0de1131791def3ea536c6e5a7f5ce0bef9617
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290513"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779864"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL (clase)
 
@@ -102,7 +102,7 @@ Este código crea un **typedef** para `CComEnumOnSTL` que expone un vector de `C
 ## <a name="see-also"></a>Vea también
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[Ejemplo de ATLCollections: Muestra las clases de directivas de copia personalizadas, ICollectionOnSTLImpl y CComEnumOnSTL](../../visual-cpp-samples.md)<br/>
+[Ejemplo de ATLCollections: Muestra las clases de directivas de copia personalizadas, ICollectionOnSTLImpl y CComEnumOnSTL](../../overview/visual-cpp-samples.md)<br/>
 [Información general de clases](../../atl/atl-class-overview.md)<br/>
 [CComObjectRootEx (clase)](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
