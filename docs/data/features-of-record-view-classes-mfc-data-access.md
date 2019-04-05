@@ -5,12 +5,12 @@ helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-ms.openlocfilehash: 2feda8f8f446e02a5056287c656707ea038f5387
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f8de956065571109c988bd2940d21822bba7cfd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461157"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029880"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>Características de las clases de vistas de registros (acceso a datos MFC)
 
@@ -22,7 +22,7 @@ Puede hacer la programación de acceso a datos basada en formularios con la clas
 
 - Actualiza los cambios en el registro actual cuando el usuario se mueve a otro registro.
 
-Para obtener más información sobre la navegación, consulte [vistas de registros: permitir la navegación en una vista de registros](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).
+Para obtener más información sobre la navegación, consulte [vistas de registros: Permitir la navegación en una vista de registros](../data/supporting-navigation-in-a-record-view-mfc-data-access.md).
 
 ## <a name="see-also"></a>Vea también
 
