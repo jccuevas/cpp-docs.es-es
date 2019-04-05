@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8d0d891f74da8df2351b0a861fb7501e72f5e2de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587179"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029919"
 ---
 # <a name="importidl"></a>importidl
 
@@ -60,7 +60,7 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 
 [Atributos de compilador](compiler-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>
-[import](import.md)<br/>
+[importación](import.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

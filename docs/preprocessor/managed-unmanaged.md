@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 0cc253ad7d0d4529340a13546f931075b0c7dfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473832"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022351"
 ---
 # <a name="managed-unmanaged"></a>managed, unmanaged
 Habilite el control de nivel de función para compilar las funciones como administradas o no administradas.
@@ -89,4 +89,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
