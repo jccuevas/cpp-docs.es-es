@@ -6,12 +6,12 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: 6167c024ae76952573475a815f24d2cf4be01119
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828035"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038169"
 ---
 # <a name="release-builds"></a>Versiones de lanzamiento
 
@@ -22,8 +22,8 @@ Una versión de lanzamiento usa las optimizaciones. Cuando usa las optimizacione
 [Problemas comunes al crear versiones de lanzamiento](common-problems-when-creating-a-release-build.md)<br/>
 [Solucionar problemas de versiones de lanzamiento](fixing-release-build-problems.md)<br/>
 [Usar VERIFY en lugar de ASSERT](using-verify-instead-of-assert.md)<br/>
-[Usar la versión de depuración para comprobar si se ha sobrescrito la memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[Cómo: Depuración de una compilación de versión](how-to-debug-a-release-build.md)<br/>
+[Utilizar la versión de depuración para comprobar si se ha sobrescrito la memoria](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[Filtrar Depurar una versión de lanzamiento](how-to-debug-a-release-build.md)<br/>
 [Comprobar si se ha sobrescrito la memoria](checking-for-memory-overwrites.md)<br/>
 [Optimizar el código](optimizing-your-code.md)<br/>
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780475"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038772"
 ---
 # <a name="consuming-libraries-and-components"></a>Consumo de bibliotecas y componentes
 
@@ -128,7 +128,7 @@ Las siguientes propiedades se encuentran en las referencias de ensamblado de .NE
 
    Muestra el nombre del ensamblado al que se hace referencia.
 
-- **Referencia cultural**
+- **culture**
 
    Muestra la referencia cultural de la referencia seleccionada.
 
@@ -140,15 +140,15 @@ Las siguientes propiedades se encuentran en las referencias de ensamblado de .NE
 
    Muestra la ruta de acceso del directorio del ensamblado al que se hace referencia.
 
-- **Identity**
+- **identidad**
 
    Para los ensamblados de .NET Framework, muestra la ruta de acceso completa. Para los componentes COM, muestra el GUID.
 
-- **Label**
+- **Etiqueta**
 
    Muestra la etiqueta de la referencia.
 
-- **Nombre**
+- **Name**
 
    Muestra el nombre de la referencia.
 
@@ -167,4 +167,4 @@ Las siguientes propiedades se encuentran en las referencias de ensamblado de .NE
 ## <a name="see-also"></a>Vea también
 
 [Referencia de página de propiedades de proyecto de C++](reference/property-pages-visual-cpp.md)<br>
-[Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md)
+[Establece el compilador de C++ y crear propiedades en Visual Studio](working-with-project-properties.md)

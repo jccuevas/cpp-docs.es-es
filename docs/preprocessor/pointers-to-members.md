@@ -10,12 +10,12 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-ms.openlocfilehash: 57b316fafd6f55a5979cd42fb6ac1825e3a9ea08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ee45a77a7094fb1ef9ba536bae391aaad00e812
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511077"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032068"
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 
@@ -44,8 +44,8 @@ El *most-general-representation* argumento especifica la representación de punt
 
 |Argumento|Comentarios|
 |--------------|--------------|
-|*herencia única*|La representación más general es single-inheritance, puntero a una función miembro. Produce un error si el modelo de herencia de una definición de clase para la que se declara un puntero a un miembro es múltiple o virtual.|
-|*herencia múltiple*|La representación más general es multiple-inheritance, puntero a una función miembro. Produce un error si el modelo de herencia de una definición de clase para la que se declara un puntero a un miembro es virtual.|
+|*single_inheritance*|La representación más general es single-inheritance, puntero a una función miembro. Produce un error si el modelo de herencia de una definición de clase para la que se declara un puntero a un miembro es múltiple o virtual.|
+|*multiple_inheritance*|La representación más general es multiple-inheritance, puntero a una función miembro. Produce un error si el modelo de herencia de una definición de clase para la que se declara un puntero a un miembro es virtual.|
 |*virtual_inheritance*|La representación más general es virtual-inheritance, puntero a una función miembro. Nunca produce un error. Este es el argumento predeterminado cuando `#pragma pointers_to_members(full_generality)` se utiliza.|
 
 > [!CAUTION]
@@ -62,4 +62,4 @@ El *most-general-representation* argumento especifica la representación de punt
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

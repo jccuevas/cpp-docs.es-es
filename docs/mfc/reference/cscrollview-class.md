@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259261"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774158"
 ---
 # <a name="cscrollview-class"></a>CScrollView (clase)
 
@@ -82,7 +82,7 @@ Para desplazarse automáticamente en respuesta a los mensajes del teclado, agreg
 
 Puede controlar la rueda del mouse usted mismo desplazamiento invalidando el mensaje asigna [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) y [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) funciones miembro. Tal como están para `CScrollView`, estas funciones miembro admiten el comportamiento recomendado para [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), el mensaje de rotación de la rueda.
 
-Para aprovechar las ventajas de desplazamiento automático, derive la clase de vista de `CScrollView` en lugar de desde `CView`. Cuando la vista se crea por primera vez, si desea calcular el tamaño de la vista desplazable, en función del tamaño del documento, llamada la `SetScrollSizes` función miembro desde el reemplazo de uno de ellos [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) o [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Debe escribir su propio código para consultar el tamaño del documento. Para obtener un ejemplo, vea el [ejemplo Scribble](../../visual-cpp-samples.md).)
+Para aprovechar las ventajas de desplazamiento automático, derive la clase de vista de `CScrollView` en lugar de desde `CView`. Cuando la vista se crea por primera vez, si desea calcular el tamaño de la vista desplazable, en función del tamaño del documento, llamada la `SetScrollSizes` función miembro desde el reemplazo de uno de ellos [CView:: OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) o [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Debe escribir su propio código para consultar el tamaño del documento. Para obtener un ejemplo, vea el [ejemplo Scribble](../../overview/visual-cpp-samples.md).)
 
 La llamada a la `SetScrollSizes` función miembro establece el modo de asignación de la vista, las dimensiones de la vista de desplazamiento y los importes en desplazamiento horizontal y vertical total. Todos los tamaños están en unidades lógicas. Normalmente se calcula el tamaño lógico de la vista de datos almacenados en el documento, pero en algunos casos es posible que desee especificar un tamaño fijo. Para obtener ejemplos de ambos enfoques, consulte [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -376,7 +376,7 @@ Debe establecer el modo de asignación a cualquiera de los modos de asignación 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView (clase)](../../mfc/reference/cview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CView (clase)](../../mfc/reference/cview-class.md)<br/>

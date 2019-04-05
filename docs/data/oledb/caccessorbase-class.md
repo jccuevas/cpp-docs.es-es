@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 5fb39d2291c2698dc57150eb44a6bbd6778812bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34c92f9057f2273d57b69bdb42c49a81923c3d2a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509313"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034957"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase (Clase)
 
@@ -58,7 +58,7 @@ Todos los descriptores de acceso de las plantillas OLE DB que se derivan de esta
 
 **Encabezado:** atldbcli.h
 
-## <a name="close"></a> CAccessorBase:: Close
+## <a name="close"></a> CAccessorBase::Close
 
 Cierra los descriptores de acceso.
 
@@ -72,7 +72,7 @@ void Close();
 
 Debe llamar a [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) primero.
 
-## <a name="geth"></a> CAccessorBase:: Gethaccessor
+## <a name="geth"></a> CAccessorBase::GetHAccessor
 
 Recupera el identificador de descriptor de acceso de un descriptor de acceso especificada.
 
@@ -91,7 +91,7 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 
 El identificador de descriptor de acceso.
 
-## <a name="getnum"></a> CAccessorBase:: Getnumaccessors
+## <a name="getnum"></a> CAccessorBase::GetNumAccessors
 
 Recupera el número de descriptores de acceso creado por la clase.
 
@@ -105,7 +105,7 @@ ULONG GetNumAccessors() const;
 
 El número de descriptores de acceso creado por la clase.
 
-## <a name="isauto"></a> CAccessorBase:: Isautoaccessor
+## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
 
 Devuelve true si se recuperan automáticamente los datos para el descriptor de acceso durante una operación de movimiento.
 
@@ -124,7 +124,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 Devuelve **true** si el descriptor de acceso es autoaccessor. En caso contrario, devuelve **false**.
 
-## <a name="release"></a> CAccessorBase:: Releaseaccessors
+## <a name="release"></a> CAccessorBase::ReleaseAccessors
 
 Libera los descriptores de acceso creados por la clase.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: ffedf366453a800ce420914376b8d9bb441a602a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603568"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041064"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 
@@ -38,7 +38,7 @@ void __svm_vmrun(
 
 El `__svm_vmrun` función usa una cantidad mínima de información en el VMCB para empezar a ejecutar el código de invitado de máquina virtual. Use la [__svm_vmsave](../intrinsics/svm-vmsave.md) o [__svm_vmload](../intrinsics/svm-vmload.md) funcionando si necesita más información para controlar una interrupción compleja o para cambiar a otro invitado.
 
-La función `__svm_vmrun` equivale a la instrucción máquina `VMRUN` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número de documento 24593, revisión 3.11 o posterior, en el [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.
+La función `__svm_vmrun` equivale a la instrucción máquina `VMRUN` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: Sistema de programación,"núm. 24593, revisión 3.11 o posterior, en el [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.
 
 ## <a name="requirements"></a>Requisitos
 

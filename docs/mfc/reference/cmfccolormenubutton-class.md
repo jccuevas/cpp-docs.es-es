@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
 ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780228"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton (clase)
@@ -208,7 +208,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Especifica un nuevo color automático.
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] Especifica si el botón es automático o no.
 
 ### <a name="remarks"></a>Comentarios
@@ -230,7 +230,7 @@ void EnableDocumentColors(
 *lpszLabel*<br/>
 [in] Especifica el texto del botón.
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para mostrar colores específicos del documento o FALSE para mostrar los colores del sistema.
 
 ### <a name="remarks"></a>Comentarios
@@ -256,7 +256,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Especifique TRUE para mostrar el `CMFCColorDialog` cuadro de diálogo o FALSE para mostrar el cuadro de diálogo de colores estándar del sistema.
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] Especifique "true" para mostrar el botón "other"; en caso contrario, FALSE. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -506,7 +506,7 @@ static void SetColorByCmdID(
 *uiCmdID*<br/>
 [in] El identificador de recurso de un botón de menú de color.
 
-*color*<br/>
+*colores*<br/>
 [in] Un valor de color RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName
@@ -521,7 +521,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*colores*<br/>
 [in] El valor RGB del color cuyo nombre cambia.
 
 *strName*<br/>

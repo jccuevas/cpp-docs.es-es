@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: 2188b2cdbf5c5f8836197f8cf2ee33928b7e9425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624463"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036765"
 ---
 # <a name="sidt"></a>__sidt
 
@@ -42,7 +42,7 @@ void __sidt(void * Destination);
 
 ## <a name="remarks"></a>Comentarios
 
-La función `__sidt` equivale a la instrucción máquina `SIDT` . Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
+La función `__sidt` equivale a la instrucción máquina `SIDT` . Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: Establecer referencia de instrucciones,"en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
 
 **FIN de Específicos de Microsoft**
 

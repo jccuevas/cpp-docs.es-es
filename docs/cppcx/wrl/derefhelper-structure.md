@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 7709ae63e4d49e25aec83a069ad1ac614bfbd953
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 96b7e83a854765fb872b87d062928311731cfd26
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785918"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032016"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (estructura)
 
@@ -59,4 +59,4 @@ Representa un puntero sin referencia a la `T*` parámetro de plantilla.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)

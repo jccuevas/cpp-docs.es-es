@@ -1,19 +1,19 @@
 ---
-title: 'SQL: tipos de datos de SQL y C++ (ODBC)'
+title: 'SQL: SQL y tipos de datos de C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649506"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024353"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: tipos de datos de SQL y C++ (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL y tipos de datos de C++ (ODBC)
 
 > [!NOTE]
 >  Esta información se aplica a las clases ODBC de MFC. Si está trabajando con las clases DAO de MFC, vea el tema "Comparación de Microsoft Jet base de datos de motor de SQL y ANSI SQL" en la Ayuda de DAO.
@@ -28,7 +28,7 @@ La siguiente tabla asigna los tipos de datos de ANSI SQL a tipos de datos de C++
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**REAL**|**float**|
-|**ENTERO**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
 |**NUMÉRICO**|`CString` 1|
@@ -41,8 +41,8 @@ La siguiente tabla asigna los tipos de datos de ANSI SQL a tipos de datos de C++
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**TIEMPO**|`CTime`, `CString`|
-|**MARCA DE TIEMPO**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
+|**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **DECIMAL** y **numérico** se asignan a `CString` porque **SQL_C_CHAR** es el tipo de transferencia predeterminado ODBC.
 

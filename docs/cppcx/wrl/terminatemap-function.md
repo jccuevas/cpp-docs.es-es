@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 17d02ea9cade0301798a5d6625f8eb9a568cb2cc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785797"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026654"
 ---
 # <a name="terminatemap-function"></a>TerminateMap (Función)
 
@@ -54,4 +54,4 @@ Cierra los generadores de clases en el módulo especificado.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)

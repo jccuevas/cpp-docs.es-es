@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301927"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780202"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Estructuras, estilos, devoluciones de llamada y mapas de mensajes
 
@@ -22,10 +22,10 @@ Esta sección documentan las estructuras, estilos y funciones de devolución de 
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Estructuras usadas por MFC](../../mfc/reference/structures-used-by-mfc.md)<br/>
+[Estructuras utilizadas por MFC](../../mfc/reference/structures-used-by-mfc.md)<br/>
 Proporciona vínculos a las estructuras que se llama desde distintas funciones miembro.
 
-[Estilos usados por MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
+[Estilos utilizados por MFC](../../mfc/reference/styles-used-by-mfc.md)<br/>
 Proporciona vínculos a los estilos usados al crear objetos MFC.
 
 [Funciones de devolución de llamada usadas por MFC](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
@@ -39,5 +39,5 @@ Describe las macros de asignación de mensaje y `CWnd` entradas de mapa de mensa
 [Información general de la biblioteca de clases](../../mfc/class-library-overview.md)<br/>
 Muestra las clases de la biblioteca MFC por categorías.
 
-[Ejemplos de MFC](../../visual-cpp-samples.md)<br/>
+[Ejemplos de MFC](../../overview/visual-cpp-samples.md)<br/>
 Proporciona vínculos a ejemplos que muestran cómo utilizar la biblioteca MFC.

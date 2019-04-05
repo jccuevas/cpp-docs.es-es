@@ -3,12 +3,12 @@ title: Filtrar Activar y usar un componente de tiempo de ejecución de Windows m
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: ccc64769ca319e8aba141ce95a00eb876cc051f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8c0bed825f76fdf0f2c5cc1fa095e54f08bb8a67
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785839"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037222"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Filtrar Activar y usar un componente de tiempo de ejecución de Windows mediante WRL
 
@@ -80,4 +80,4 @@ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto d
 
 ## <a name="see-also"></a>Vea también
 
-[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Biblioteca de plantillas de Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)

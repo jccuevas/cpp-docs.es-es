@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: b6c34a603f3ba8abaf070759a22ddf2b8e9c2106
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663260"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036307"
 ---
 # <a name="entry"></a>entry
 
@@ -25,7 +25,7 @@ Especifica una constante o una función exportada de un módulo mediante la iden
 
 ### <a name="parameters"></a>Parámetros
 
-*identificador*<br/>
+*id*<br/>
 El identificador del punto de entrada.
 
 ## <a name="remarks"></a>Comentarios
@@ -42,7 +42,7 @@ Vea el ejemplo de [idl_module](idl-module.md) para un ejemplo del uso de **entra
 
 |||
 |-|-|
-|**Se aplica a**|Atributo `idl_module`|
+|**Se aplica a**|`idl_module` Atributo|
 |**Reiterativo**|No|
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|

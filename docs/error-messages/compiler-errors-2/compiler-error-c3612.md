@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: a6084632ac0a84cc058ea73eb3c2b632208792eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475938"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781411"
 ---
 # <a name="compiler-error-c3612"></a>Error del compilador C3612
 
@@ -19,7 +19,7 @@ ms.locfileid: "50475938"
 
 Tipos definidos mediante `value` son sealed de forma predeterminada, y una clase es abstracta, a menos que lo implementa todos los métodos de su base. Una clase abstracta sellada no puede ser una clase base ni se puede crear instancias.
 
-Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).
+Para obtener más información, consulte [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

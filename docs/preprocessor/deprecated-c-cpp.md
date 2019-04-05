@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: edbad2f666ac0c6546f03da0ffbdb87f19b7e4e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642824"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023322"
 ---
 # <a name="deprecated-cc"></a>(C/C++) en desuso
 
@@ -77,4 +77,4 @@ int main() {
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

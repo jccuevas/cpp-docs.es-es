@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 52ffd992480df517f8677e14161b697eb3ecc321
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786423"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041476"
 ---
 # <a name="windows-desktop-wizard"></a>Asistente para escritorio de Windows
 
@@ -52,7 +52,7 @@ Crea el tipo de aplicación especificado.
 |Opción|Descripción|
 |------------|-----------------|
 |**Aplicación de consola**|Crea una aplicación de consola. Programas de consola se desarrollan con [consola funciones](https://msdn.microsoft.com/library/ms813137.aspx), que proporcionan compatibilidad con modo de carácter en ventanas de consola. Visual C++ [bibliotecas en tiempo de ejecución](../c-runtime-library/c-run-time-library-reference.md) también proporcionan entrada y salida de ventanas de consola con funciones estándar de E/S, tales como `printf_s()` y `scanf_s()`. Las aplicaciones de consola no tienen interfaz gráfica de usuario. Al compilarse producen un archivo .exe que se puede ejecutar como una aplicación independiente desde la línea de comandos.<br /><br /> Puede agregar compatibilidad con MFC y ATL a las aplicaciones de consola.|
-|**Aplicación de Windows**|Crea un programa Win32. Un programa Win32 es una aplicación ejecutable (EXE) escrita en C o C++, que utiliza llamadas a la API de Win32 para crear una interfaz gráfica de usuario.<br /><br /> No se puede agregar compatibilidad con MFC y ATL a una aplicación Windows.|
+|**Aplicación para Windows**|Crea un programa Win32. Un programa Win32 es una aplicación ejecutable (EXE) escrita en C o C++, que utiliza llamadas a la API de Win32 para crear una interfaz gráfica de usuario.<br /><br /> No se puede agregar compatibilidad con MFC y ATL a una aplicación Windows.|
 |**Biblioteca de vínculos dinámicos**|Crea una biblioteca de vínculos dinámicos (DLL) de Win32. Una DLL de Win32 es un archivo binario, escrito en C o C++, que utiliza llamadas a la API de Win32 en lugar de llamadas a clases MFC y que actúa como una biblioteca compartida de funciones que múltiples aplicaciones pueden utilizar simultáneamente.<br /><br /> No se puede agregar compatibilidad con MFC o ATL a una aplicación de la DLL creada con este asistente, pero puede crear una DLL de MFC por elegir **nuevo > proyecto > DLL de MFC**.|
 |**Biblioteca estática**|Crea una biblioteca estática. Una biblioteca estática es un archivo que contiene objetos y sus funciones, así como datos que vincula al programa cuando se compila el archivo ejecutable. En este tema se explica cómo crear los archivos de inicio y [las propiedades del proyecto](../build/reference/property-pages-visual-cpp.md) para una biblioteca estática. Un archivo de biblioteca estática proporciona las siguientes ventajas:<br /><br />-Una biblioteca estática Win32 resulta útil si la aplicación que está trabajando realiza llamadas a la API de Win32 en lugar de a clases MFC.<br />-El proceso de vinculación es el mismo si el resto de la aplicación de Windows se escribe en C o C++.<br />-Puede vincular una biblioteca estática a un programa basado en MFC o a un programa no basados en MFC.|
 
@@ -65,7 +65,7 @@ Permite definir las compatibilidades y las opciones de la aplicación, en funci�
 |**Proyecto vacío**|Especifica que los archivos de proyecto están en blanco. Si tiene un conjunto de archivos de código fuente (como archivos .cpp, archivos de encabezado, iconos, barras de herramientas, cuadros de diálogo, etc.) y desea crear un proyecto en el entorno de desarrollo de Visual C++, primero deberá crear un archivo de proyecto en blanco y después agregar los archivos al proyecto.<br /><br /> Esta selección no está disponible para los proyectos de biblioteca estática.|
 |**Exportar símbolos**|Especifica que el proyecto DLL exporta símbolos.|
 |**Encabezado precompilado**|Especifica que el proyecto de biblioteca estática utiliza un encabezado precompilado.|
-|**Comprueba el ciclo de vida de desarrollo de seguridad (SDL)**|Para obtener más información sobre SDL, vea [Guía de procesos de ciclo de vida de desarrollo de seguridad (SDL) de Microsoft](../build/reference/sdl-enable-additional-security-checks.md)|
+|**Comprobaciones del ciclo de vida de desarrollo de seguridad (SDL)**|Para obtener más información sobre SDL, vea [Guía de procesos de ciclo de vida de desarrollo de seguridad (SDL) de Microsoft](../build/reference/sdl-enable-additional-security-checks.md)|
 
 ## <a name="add-common-headers-for"></a>Agregar encabezados comunes para:
 

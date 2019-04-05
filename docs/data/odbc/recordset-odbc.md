@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435261"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034500"
 ---
 # <a name="recordset-odbc"></a>Conjunto de registros (ODBC)
 
@@ -69,9 +69,9 @@ Hay dos tipos principales de conjuntos de registros: [instantáneas](../../data/
 
 ##  <a name="_core_your_recordsets"></a> Los conjuntos de registros
 
-Para cada tabla, vista o procedimiento almacenado que desea tener acceso a, normalmente definen una clase derivada de `CRecordset`. (La excepción es una combinación de la base de datos, en el que un conjunto de registros representa las columnas de dos o más tablas). Al derivar una clase de conjunto de registros, habilita el mecanismo de campos de registros (RFX) de exchange o el mecanismo de intercambio (RFX masivo) campos de registros de forma masiva, que son similares para el mecanismo de intercambio (DDX) de datos de cuadro de diálogo. RFX y RFX masivo simplifican a la transferencia de datos del origen de datos en el conjunto de registros; Además, RFX transfiere datos desde el conjunto de registros para el origen de datos. Para obtener más información, consulte [intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md) y [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Para cada tabla, vista o procedimiento almacenado que desea tener acceso a, normalmente definen una clase derivada de `CRecordset`. (La excepción es una combinación de la base de datos, en el que un conjunto de registros representa las columnas de dos o más tablas). Al derivar una clase de conjunto de registros, habilita el mecanismo de campos de registros (RFX) de exchange o el mecanismo de intercambio (RFX masivo) campos de registros de forma masiva, que son similares para el mecanismo de intercambio (DDX) de datos de cuadro de diálogo. RFX y RFX masivo simplifican a la transferencia de datos del origen de datos en el conjunto de registros; Además, RFX transfiere datos desde el conjunto de registros para el origen de datos. Para obtener más información, consulte [intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md) y [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Un objeto de conjunto de registros proporciona acceso a todos los registros seleccionados. Se desplaza por los diferentes registros seleccionados mediante `CRecordset` funciones miembro, como `MoveNext` y `MovePrev`. Al mismo tiempo, un objeto de conjunto de registros representa solo uno de los registros seleccionados, el registro actual. Puede examinar los campos del registro actual mediante la declaración de variables de miembro de clase que corresponden a columnas de la tabla o de los registros que se derivan de la consulta de base de datos de conjunto de registros. Para obtener información acerca de los miembros de datos del conjunto de registros, vea [conjunto de registros: arquitectura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
+Un objeto de conjunto de registros proporciona acceso a todos los registros seleccionados. Se desplaza por los diferentes registros seleccionados mediante `CRecordset` funciones miembro, como `MoveNext` y `MovePrev`. Al mismo tiempo, un objeto de conjunto de registros representa solo uno de los registros seleccionados, el registro actual. Puede examinar los campos del registro actual mediante la declaración de variables de miembro de clase que corresponden a columnas de la tabla o de los registros que se derivan de la consulta de base de datos de conjunto de registros. Para obtener información acerca de los miembros de datos del conjunto de registros, vea [conjunto de registros: Arquitectura (ODBC)](../../data/odbc/recordset-architecture-odbc.md).
 
 Los siguientes temas explican los detalles del uso de objetos de conjunto de registros. Los temas se muestran en categorías funcionales y en orden natural de exploración para permitir una lectura secuencial.
 
@@ -117,9 +117,9 @@ Los siguientes temas explican los detalles del uso de objetos de conjunto de reg
 
 ### <a name="topics-about-how-recordsets-work"></a>Temas acerca de cómo funcionan los conjuntos de registros
 
-- [Conjunto de registros: Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Conjunto de registros: Actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>Vea también
 

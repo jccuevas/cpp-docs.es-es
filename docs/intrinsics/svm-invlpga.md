@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544305"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031143"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -30,12 +30,12 @@ void __svm_invlpga(void *Va, int ASID);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Evaluación de vulnerabilidad*|[in] La dirección virtual de la página que se va a invalidar.|
+|*Va*|[in] La dirección virtual de la página que se va a invalidar.|
 |*ASID*|[in] El identificador de espacio de dirección (ASID) de la página que se va a invalidar.|
 
 ## <a name="remarks"></a>Comentarios
 
-La función `__svm_invlpga` equivale a la instrucción máquina `INVLPGA` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número 24593, 3.11, revisión del documento en el [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.
+La función `__svm_invlpga` equivale a la instrucción máquina `INVLPGA` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: Sistema de programación,"número 24593, 3.11, revisión del documento en el [corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.
 
 ## <a name="requirements"></a>Requisitos
 

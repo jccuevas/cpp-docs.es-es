@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: d69b06d29c366d0ff9c525421311001cab4e501c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501106"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034266"
 ---
 # <a name="using-directive-ccli"></a>#using (directiva) (C++ / c++ / CLI)
 
@@ -31,7 +31,7 @@ Importa metadatos en un programa compilado con [/CLR](../build/reference/clr-com
 
 ### <a name="parameters"></a>Parámetros
 
-*file*<br/>
+*archivo*<br/>
 Archivo .dll, .exe, .netmodule u .obj de MSIL. Por ejemplo,
 
 `#using <MyComponent.dll>`

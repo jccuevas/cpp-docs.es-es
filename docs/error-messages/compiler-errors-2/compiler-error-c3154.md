@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: d14b921afa3888f1a9497f19bfeaa013b147b086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430555"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781385"
 ---
 # <a name="compiler-error-c3154"></a>Error del compilador C3154
 
@@ -19,7 +19,7 @@ Se esperaba ',' antes de puntos suspensivos. No coma separada por puntos suspens
 
 No se declaró correctamente una función de argumento variable.
 
-Para obtener más información, consulte [listas de argumentos variables (...) (C++ / C++ / CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Para obtener más información, consulte [listas de argumentos variables (...) (C++ / C++ / CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

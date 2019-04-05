@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466344"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040811"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Trabajar con plantillas de consumidor OLE DB
 
@@ -26,23 +26,23 @@ Los temas siguientes proporcionan algunos ejemplos de cómo usar las plantillas 
 
 - [Obtener datos](../../data/oledb/fetching-data.md)
 
-- [Actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md)
+- [actualizar conjuntos de filas](../../data/oledb/updating-rowsets.md)
 
-- [Usar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)
+- [Utilizar procedimientos almacenados](../../data/oledb/using-stored-procedures.md)
 
-- [Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+- [Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)
 
 - [Obtener metadatos con conjuntos de filas de esquema](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)
 
 - [Admitir transacciones en OLE DB](../../data/oledb/supporting-transactions-in-ole-db.md)
 
-- [Usar las vistas de registros de OLE DB](../../data/oledb/using-ole-db-record-views.md)
+- [Utilizar las vistas de registros de OLE DB](../../data/oledb/using-ole-db-record-views.md)
 
-- [Usar un conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)
+- [Utilizar un conjunto de registros ADO existente](../../data/oledb/using-an-existing-ado-recordset.md)
 
 - [Actualizar una columna cuando otra tabla contiene una referencia a la fila](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
 
-- [Usar marcadores](../../data/oledb/using-bookmarks.md)
+- [Utilizar marcadores](../../data/oledb/using-bookmarks.md)
 
 - [Recuperar un objeto BLOB](../../data/oledb/retrieving-a-blob.md)
 

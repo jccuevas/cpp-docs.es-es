@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom attributes
 - custom attributes, defining
 ms.assetid: af9998a5-aa12-4b94-9a43-97ce99026e29
-ms.openlocfilehash: bfd09ee0a53b0677bc53bede918b9a4972a3abba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fbb1c629f23c5d70a78d62db2a3634cbfc489967
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777394"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034055"
 ---
 # <a name="custom-attributes-c"></a>Atributos personalizados (C++)
 
@@ -24,5 +24,5 @@ Para obtener información acerca de cómo definir nuevos atributos personalizado
 
 ## <a name="see-also"></a>Vea también
 
-[attribute](attribute.md)<br/>
+[Atributo](attribute.md)<br/>
 [Atributos personalizados (C++)](custom-attributes-cpp.md)

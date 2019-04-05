@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-ms.openlocfilehash: 9e6cf38cbe4d4f9ad585a3f13d6f83696574e0b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4eaedfca0c93aca89cbfd985c1de0f57306e470c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532741"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026745"
 ---
 # <a name="using-accessors"></a>Utilizar descriptores de acceso
 
@@ -19,11 +19,11 @@ Los siguientes temas explican cómo determinar qué tipo de descriptor de acceso
 
 - [Determinar qué descriptor de acceso que se usarán](../../data/oledb/determining-which-type-of-accessor-to-use.md)
 
-- [Usar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
+- [Utilizar varios descriptores de acceso en un conjunto de filas](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
 
-- [Usar descriptores de acceso dinámicos](../../data/oledb/using-dynamic-accessors.md)
+- [Utilizar descriptores de acceso dinámicos](../../data/oledb/using-dynamic-accessors.md)
 
-- [Usar descriptores de acceso manuales](../../data/oledb/using-manual-accessors.md)
+- [Utilizar descriptores de acceso manuales](../../data/oledb/using-manual-accessors.md)
 
 - [Obtener acceso a datos XML](../../data/oledb/accessing-xml-data.md)
 

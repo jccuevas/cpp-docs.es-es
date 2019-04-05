@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 8c7f4a2861825a35d676328b5e283a5e4087d85b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4675bf95012c8e6662d7dba281c38ed2d684c448
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519787"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779877"
 ---
 # <a name="compiler-error-c3904"></a>Error del compilador C3904
 
@@ -23,7 +23,7 @@ Compruebe el número de parámetros en su `get` y `set` métodos con dimensiones
 
 - El número de parámetros de la `set` método debe ser uno más que el número de dimensiones de la propiedad.
 
-Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

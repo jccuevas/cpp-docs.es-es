@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: Información adicional sobre las actualizaciones (ODBC)'
+title: 'Conjunto de registros: Más información acerca de las actualizaciones (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665301"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040773"
 ---
-# <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: Información adicional sobre las actualizaciones (ODBC)
+# <a name="recordset-more-about-updates-odbc"></a>Conjunto de registros: Más información acerca de las actualizaciones (ODBC)
 
 Este tema es aplicable a las clases ODBC de MFC.
 
@@ -30,7 +30,7 @@ En este tema se explica:
 - [Más información acerca de las funciones miembro Update y Delete](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si ha implementado la obtención masiva de filas, parte de la información no es aplicable. Por ejemplo, no puede llamar a la `AddNew`, `Edit`, `Delete`, y `Update` funciones miembro; sin embargo, puede realizar transacciones. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si ha implementado la obtención masiva de filas, parte de la información no es aplicable. Por ejemplo, no puede llamar a la `AddNew`, `Edit`, `Delete`, y `Update` funciones miembro; sin embargo, puede realizar transacciones. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Cómo otras operaciones afectan a las actualizaciones
 
@@ -53,7 +53,7 @@ Si cierra un conjunto de registros o su asociado `CDatabase` objeto con una tran
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Cómo afecta el desplazamiento a las actualizaciones
 
-Cuando se [conjunto de registros: desplazamiento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) en un conjunto de registros, el búfer de edición se rellena con cada nuevo registro actual (el registro anterior no se almacena en primer lugar). El desplazamiento pasa a través de los registros eliminados anteriormente. Si se desplaza después un `AddNew` o `Edit` llamada sin llamar a `Update`, `CommitTrans`, o `Rollback` en primer lugar, los cambios se pierden (ninguna advertencia previa) cuando se pone un nuevo registro en el búfer de edición. El búfer de edición se rellena con el registro que se desplaza, se libera el registro almacenado y se produce ningún cambio en el origen de datos. Esto se aplica a ambos `AddNew` y `Edit`.
+Cuando se [conjunto de registros: Desplazamiento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) en un conjunto de registros, el búfer de edición se rellena con cada nuevo registro actual (el registro anterior no se almacena en primer lugar). El desplazamiento pasa a través de los registros eliminados anteriormente. Si se desplaza después un `AddNew` o `Edit` llamada sin llamar a `Update`, `CommitTrans`, o `Rollback` en primer lugar, los cambios se pierden (ninguna advertencia previa) cuando se pone un nuevo registro en el búfer de edición. El búfer de edición se rellena con el registro que se desplaza, se libera el registro almacenado y se produce ningún cambio en el origen de datos. Esto se aplica a ambos `AddNew` y `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Las actualizaciones y las actualizaciones de otros usuarios
 
@@ -105,7 +105,7 @@ Cuando se producen estas excepciones, permanece en el `AddNew` o `Edit` que esta
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [Excepciones: Excepciones de base de datos](../../mfc/exceptions-database-exceptions.md)

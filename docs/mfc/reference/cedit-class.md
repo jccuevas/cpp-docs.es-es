@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417006"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773754"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Construye un `CEdit` objeto de control.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Determina si se puede deshacer una operación de control de edición.|
 |[CEdit::CharFromPos](#charfrompos)|Recupera los índices de la línea y el carácter para el carácter más próximo a una posición especificada.|
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parámetros
 
-*nMax*<br/>
+*Nmáx.*<br/>
 El nuevo límite de texto, en caracteres.
 
 ### <a name="remarks"></a>Comentarios
@@ -1196,7 +1196,7 @@ void SetPasswordChar(TCHAR ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*ch*<br/>
+*CH*<br/>
 Especifica el carácter que se mostrará en lugar del carácter escrito por el usuario. Si *ch* es 0, se muestran los caracteres reales escritos por el usuario.
 
 ### <a name="remarks"></a>Comentarios
@@ -1449,8 +1449,8 @@ Para obtener más información, consulte [EM_UNDO](/windows/desktop/Controls/em-
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
-[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CWnd (clase)](cwnd-class.md)<br/>

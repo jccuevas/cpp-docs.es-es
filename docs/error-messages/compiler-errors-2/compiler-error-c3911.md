@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 6c00a3bb388130d9a570e9fd731a9ed1200ed179
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25bf8def4e0a8085e20dc6ba9a04dc7f27cee651
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622188"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775990"
 ---
 # <a name="compiler-error-c3911"></a>Error del compilador C3911
 
@@ -19,7 +19,7 @@ ms.locfileid: "50622188"
 
 Método de descriptor de acceso de un evento no se declaró correctamente.
 
-Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).
+Para obtener más información, consulte [eventos](../../extensions/event-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C3911:
 

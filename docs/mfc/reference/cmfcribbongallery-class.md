@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780397"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery (clase)
@@ -328,7 +328,7 @@ void EnableMenuResize(
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para habilitar el menú; el cambio de tamaño en caso contrario, FALSE.
 
 *bVertcalOnly*<br/>
@@ -348,7 +348,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para especificar que la barra lateral está habilitada; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] La ventana primaria de la ventana de galería de la cinta de opciones.
 
-*data*<br/>
+*datos*<br/>
 [out] Un `CAccessibilityData` objeto que recibe los datos de accesibilidad desde la Galería de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -820,5 +820,5 @@ Para determinar el elemento específico que el usuario seleccionado desde la gal
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonButton (clase)](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[Clase CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [CMFCRibbonGalleryMenuButton (clase)](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

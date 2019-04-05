@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304085"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775262"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar (clase)
 
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Comentarios
 
-Para obtener un ejemplo de una barra de Outlook, consulte el [OutlookDemo ejemplo: Aplicación de MFC OutlookDemo](../../visual-cpp-samples.md).
+Para obtener un ejemplo de una barra de Outlook, consulte el [OutlookDemo ejemplo: Aplicación de MFC OutlookDemo](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Implementación de la barra de Outlook
 
@@ -294,7 +294,7 @@ Consulte [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `Create` método de la `CMFCOutlookBar` clase. Este fragmento de código forma parte de la [ejemplo Outlook con varias vistas](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `Create` método de la `CMFCOutlookBar` clase. Este fragmento de código forma parte de la [ejemplo Outlook con varias vistas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
@@ -578,5 +578,5 @@ De forma predeterminada, este modo está deshabilitado.
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane (clase)](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl (clase)](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [CMFCOutlookBarPane (clase)](../../mfc/reference/cmfcoutlookbarpane-class.md)

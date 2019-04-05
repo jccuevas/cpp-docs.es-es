@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545722"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033292"
 ---
 # <a name="lastis"></a>last_is
 
@@ -25,7 +25,7 @@ Especifica el índice del último elemento de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expresión*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
@@ -52,7 +52,7 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>

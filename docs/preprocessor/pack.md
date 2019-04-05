@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627519"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038452"
 ---
 # <a name="pack"></a>pack
 Especifica la alineación de empaquetado de los miembros de estructura, unión y clase.
@@ -26,7 +26,7 @@ Especifica la alineación de empaquetado de los miembros de estructura, unión y
 
 ### <a name="parameters"></a>Parámetros
 
-**Show**<br/>
+**show**<br/>
 (Opcional) Muestra el valor de byte actual para la alineación de empaquetado. El valor se muestra mediante un mensaje de advertencia.
 
 **push**<br/>
@@ -117,4 +117,4 @@ El ejemplo siguiente muestra cómo usar el *inserción*, *pop*, y *mostrar* sint
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

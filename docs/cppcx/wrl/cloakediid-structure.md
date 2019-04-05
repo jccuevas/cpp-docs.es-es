@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: a47b9e5fdb4a6e7f49b9704244b4e62e3647a04e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786058"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033728"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid (estructura)
 
@@ -48,4 +48,4 @@ El siguiente es un ejemplo de cómo **CloakedIid** sirve: `struct MyRuntimeClass
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)
+[Microsoft::WRL (Espacio de nombres)](microsoft-wrl-namespace.md)

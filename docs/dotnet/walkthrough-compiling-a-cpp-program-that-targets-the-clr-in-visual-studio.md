@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58773052"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034675"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Tutorial: Compilar C++ / c++ / CLI programa orientado a CLR en Visual Studio
 
@@ -77,4 +77,4 @@ En estos temas se da por supuesto que comprende los fundamentos del lenguaje C++
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Proyectos y sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>
+[Los proyectos y los sistemas de compilación](../build/projects-and-build-systems-cpp.md)<br/>

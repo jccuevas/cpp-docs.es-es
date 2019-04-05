@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 304d4139cb1adbbb7c345cd3ce6f7fc985907712
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555134"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024379"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -25,7 +25,7 @@ Ejecuta el script de registro personalizado especificado.
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia de comandos*<br/>
+*script*<br/>
 La ruta de acceso completa a un archivo de script (.rgs) de registro personalizado. Un valor de **ninguno**, tales como `script = "none"`, indica que la coclase no tiene ningún requisito de registro.
 
 ## <a name="remarks"></a>Comentarios

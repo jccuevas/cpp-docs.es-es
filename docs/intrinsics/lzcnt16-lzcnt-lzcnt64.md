@@ -14,12 +14,12 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523460"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041343"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
@@ -43,7 +43,7 @@ unsigned __int64 __lzcnt64(
 
 #### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 [in] El 16, 32 o entero sin signo de 64 bits para buscar los ceros iniciales.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -56,7 +56,7 @@ El número de los líderes de bits cero en el `value` parámetro. Si `value` es 
 |---------------|------------------|
 |`__lzcnt16`|AMD: Manipulación de bits avanzada (ABN)<br /><br /> Intel: Haswell|
 |`__lzcnt`|AMD: Manipulación de bits avanzada (ABN)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD: Advanced manipulación de bits (ABN) en modo de 64 bits.<br /><br /> Intel: Haswell|
+|`__lzcnt64`|AMD: Manipulación de bits avanzada (ABN) en modo de 64 bits.<br /><br /> Intel: Haswell|
 
 **Archivo de encabezado** \<intrin.h >
 

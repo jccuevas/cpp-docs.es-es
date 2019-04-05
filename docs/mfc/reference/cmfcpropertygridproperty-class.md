@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305073"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779032"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty (clase)
 
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Cadena de formato para un valor de tipo double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Cadena de formato para un valor de tipo float.|
@@ -297,7 +297,7 @@ Un objeto de propiedad puede representar tipos de datos como cadenas, fechas y l
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo construir un `CMFCPropertyGridProperty` objeto. El ejemplo también muestra cómo utilizar distintos métodos en el `CMFCPropertyGridProperty` clase para agregar una opción, agregue un elemento secundario, habilite una propiedad y mostrar una propiedad. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo construir un `CMFCPropertyGridProperty` objeto. El ejemplo también muestra cómo utilizar distintos métodos en el `CMFCPropertyGridProperty` clase para agregar una opción, agregue un elemento secundario, habilite una propiedad y mostrar una propiedad. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bAllow*<br/>
+*bPermitir*<br/>
 [in] TRUE para hacer que la propiedad modificable; FALSE para que la propiedad de solo lectura. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para habilitar la propiedad; FALSE para deshabilitar la propiedad. Propiedades deshabilitadas no responden a la entrada del teclado o mouse (ratón). El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para habilitar el control de botón de número; FALSE para deshabilitar el control de botón de número. El valor predeterminado es TRUE.
 
 *nMin*<br/>
 [in] El valor mínimo del control de botón de número. El valor predeterminado es 0.
 
-*nMax*<br/>
+*Nmáx.*<br/>
 [in] El valor máximo del control de botón de número. El valor predeterminado es 0.
 
 ### <a name="remarks"></a>Comentarios
@@ -801,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 Un puntero a un objeto de propiedad que es un elemento secundario de esta propiedad.
 
-O bien
+-o bien-
 
 En el modo de venta directa, es NULL si el *nIndex* parámetro no es válido. En modo de depuración, este método valida.
 
@@ -1704,7 +1704,7 @@ void Show(
 
 ### <a name="parameters"></a>Parámetros
 
-*bShow*<br/>
+*bMostrar*<br/>
 [in] TRUE para mostrar la propiedad actual y sus subelementos; FALSE para ocultar la propiedad actual y sus elementos secundarios. El valor predeterminado es TRUE.
 
 *bAdjustLayout*<br/>

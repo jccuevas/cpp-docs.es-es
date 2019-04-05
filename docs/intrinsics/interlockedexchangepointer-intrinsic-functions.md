@@ -20,12 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627498"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024535"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchangePointer
 
@@ -64,7 +64,7 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>Parámetros
 
-*Target*<br/>
+*Destino*<br/>
 [in, out] Puntero al puntero al valor que se intercambian. La función establece el valor en `Value` y devuelve su valor anterior.
 
 *Valor*<br/>
@@ -78,9 +78,9 @@ La función devuelve el valor inicial al que apunta `Target`.
 
 |Función intrínseca|Arquitectura|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchangePointer`|x86, ARM, x64|\<INTRIN.h >|
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<INTRIN.h >|
-|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 con compatibilidad HLE|\<immintrin.h >|
+|`_InterlockedExchangePointer`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|x64 con compatibilidad HLE|\<immintrin.h>|
 
 En la arquitectura x86, `_InterlockedExchangePointer` es una macro que llama a `_InterlockedExchange`.
 

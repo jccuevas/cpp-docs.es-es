@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428111"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780306"
 ---
 # <a name="compiler-error-c2978"></a>Error del compilador C2978
 
 error de sintaxis: se esperaba 'palabraClave1' o 'palabraClave2'; se encontró el tipo 'palabraClave3'; no se admiten parámetros sin tipo en genéricos
 
-Se declaró una clase genérica incorrectamente. Consulte [genéricos](../../windows/generics-cpp-component-extensions.md)para obtener más información.
+Se declaró una clase genérica incorrectamente. Consulte [genéricos](../../extensions/generics-cpp-component-extensions.md)para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

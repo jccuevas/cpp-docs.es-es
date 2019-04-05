@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
 ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780969"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog (clase)
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Especifica el identificador de categoría en la que se va a insertar en el botón.
 
-*button*<br/>
+*botón*<br/>
 [in] Especifica el botón que se va a insertar.
 
 *iInsertBefore*<br/>
@@ -357,7 +357,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para habilitar las barras de herramientas definidas por el usuario; FALSE para deshabilitar las barras de herramientas.
 
 ### <a name="remarks"></a>Comentarios
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Un puntero a la ventana primaria.
 
-*bitmap*<br/>
+*mapa de bits*<br/>
 [in] Una referencia a un objeto de mapa de bits que se va a editar.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Especifica el comando del botón que se debe reemplazar.
 
-*button*<br/>
+*botón*<br/>
 [in] Un **const** referencia al objeto de botón de barra de herramientas que reemplaza al botón anterior.
 
 ### <a name="remarks"></a>Comentarios

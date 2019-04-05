@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: e5cccd337514df34729fc916900a7b16a15596fc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785773"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041395"
 ---
 # <a name="callback-function-wrl"></a>Función de devolución de llamada (WRL)
 
@@ -230,10 +230,10 @@ Un parámetro de plantilla que especifica el tipo del noveno argumento del méto
 *callback*<br/>
 Un objeto que representa el objeto de devolución de llamada y su función miembro.
 
-*object*<br/>
+*objeto*<br/>
 El objeto a cuya función miembro se llama cuando se produce un evento.
 
-*Método*<br/>
+*método*<br/>
 La función miembro a la que se llamará cuando se produzca un evento.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -252,4 +252,4 @@ La base de un objeto delegado debe ser `IUnknown`, no `IInspectable`.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)
+[Microsoft::WRL (Espacio de nombres)](microsoft-wrl-namespace.md)

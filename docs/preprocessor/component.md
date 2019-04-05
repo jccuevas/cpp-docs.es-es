@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: af0e4d7267fab92c867431ab70f4d8a0240a79d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfb9d2bb9d6ddd2d430c2c031f3c8a51946391b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666120"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032971"
 ---
 # <a name="component"></a>component
 Controla la recopilación de información de examen o información de dependencia en los archivos de código fuente.
@@ -87,4 +87,4 @@ Para obtener más información, consulte el [habilitar recompilación mínima](.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564971"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031990"
 ---
 # <a name="import-directive-c"></a>#import (Directiva) (C++)
 
@@ -65,7 +65,7 @@ Especifica la biblioteca de tipos que se va a importar. *nombre de archivo* pued
 
 - Cualquier otro formato de archivo que pueda entender el **LoadTypeLib** API.
 
-*Atributos*<br/>
+*atributos*<br/>
 Uno o varios [atributos #import](#_predir_the_23import_directive_import_attributes). Separa los atributos con un espacio en blanco o con una coma. Por ejemplo:
 
 ```cpp
@@ -148,7 +148,7 @@ El archivo de encabezado principal de la biblioteca de tipos se compone de siete
 
 - Definición de GUID de estilo anterior opcional: Contiene las inicializaciones de las constantes GUID con nombre. Estos son los nombres de la forma `CLSID_CoClass` y `IID_Interface`, similares a los generados por el compilador MIDL.
 
-- Instrucción `#include` para el encabezado secundario de la biblioteca de tipos.
+- `#include` instrucción para el encabezado de la biblioteca de tipo secundario.
 
 - Texto reutilizable de pie de página: Actualmente incluye `#pragma pack(pop)`.
 
@@ -189,7 +189,7 @@ Debe determinar cuál de la dependencia de comentarios no se proporcionan en cas
 
 Para obtener más información, consulte [atributos #import](../preprocessor/hash-import-attributes-cpp.md).
 
-**FIN de específicos de C++**
+**Específicos de C++: END**
 
 ## <a name="see-also"></a>Vea también
 

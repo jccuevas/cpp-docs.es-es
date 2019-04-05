@@ -9,12 +9,12 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-ms.openlocfilehash: 75fc7f7c768094d90d41840fc47effa8179556fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513004"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036158"
 ---
 # <a name="phases-of-translation"></a>Fases de traducción
 
@@ -48,13 +48,13 @@ El archivo de código fuente se divide en tokens de preprocesamiento y caractere
 *Preprocesamiento*<br/>
 Se ejecutan las directivas de preprocesamiento y se expanden las macros al archivo de código fuente. La instrucción `#include` invoca la traslación que comienza con los tres pasos anteriores de traslación en cualquier texto incluido.
 
-*Asignación del juego de caracteres*<br/>
+*Asignación de juegos de caracteres*<br/>
 Todos los miembros y secuencias de escape de juego de caracteres de origen se convierten en sus equivalentes en el juego de caracteres de ejecución. Para Microsoft C y C++, tanto el juego de caracteres de ejecución de origen como el de ejecución son ASCII.
 
 *Concatenación de cadenas*<br/>
 Se concatenan todos los literales adyacentes de cadena y cadena de caracteres anchos. Por ejemplo, `"String " "concatenation"` se convierte en `"String concatenation"`.
 
-*traducción*<br/>
+*Conversión*<br/>
 Todos los tokens se analizan sintáctica y semánticamente; estos tokens se convierten en código de objeto.
 
 *Vinculación*<br/>

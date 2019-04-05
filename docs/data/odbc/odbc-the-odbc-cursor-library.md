@@ -1,5 +1,5 @@
 ---
-title: 'ODBC: Biblioteca de cursores ODBC'
+title: 'ODBC: La biblioteca de cursores ODBC'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cursor library [ODBC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-ms.openlocfilehash: e175a9b27cb19b0c2a67a08751b7a7717226ac55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 862303a0dc66fbd49bfcba83336ab29dfc7145c0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435144"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032237"
 ---
-# <a name="odbc-the-odbc-cursor-library"></a>ODBC: Biblioteca de cursores ODBC
+# <a name="odbc-the-odbc-cursor-library"></a>ODBC: La biblioteca de cursores ODBC
 
 En este tema se describe la biblioteca de cursores ODBC y se explica cómo usarlo. Para obtener más información, consulte:
 

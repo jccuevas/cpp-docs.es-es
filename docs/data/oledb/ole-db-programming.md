@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: fccf9ee553160d687a6094ccc9b95f4c55f7094f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328550"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031652"
 ---
 # <a name="ole-db-programming"></a>Programación de OLE DB
 
@@ -28,7 +28,7 @@ Además, puede usar atributos para implementar las plantillas de consumidor OLE 
 |Utilizar las plantillas de consumidor OLE DB (temas conceptuales)|[Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
 |Utilizar las plantillas de proveedor OLE DB (temas conceptuales)|[Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
 |Clases y macros de plantillas OLE DB|[Referencia de plantillas OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|
-|Atributos de consumidor OLE DB|[Atributos de consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)|
+|Atributos de consumidor OLE DB|[Atributos del consumidor OLE DB](../../windows/ole-db-consumer-attributes.md)|
 |Interfaces OLE DB|[Referencia del programador de OLE DB](/sql/connect/oledb/oledb-driver-for-sql-server) (en el SDK de Windows)|
 |Ejemplos de plantillas OLE DB|[Ejemplos de plantillas OLE DB](https://github.com/Microsoft/VCSamples)|
 |Información general sobre la programación de acceso a datos (Visual C++)|[Programación con Data Access](../../data/data-access-programming-mfc-atl.md)|
@@ -36,4 +36,4 @@ Además, puede usar atributos para implementar las plantillas de consumidor OLE 
 
 ## <a name="see-also"></a>Vea también
 
-[Acceso a datos](../data-access-in-cpp.md)
+[Acceso a datos en ASP.NET (Visual Studio)](../data-access-in-cpp.md)

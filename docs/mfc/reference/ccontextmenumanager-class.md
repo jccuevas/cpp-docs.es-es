@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304343"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779799"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager (clase)
 
@@ -81,7 +81,7 @@ El `CContextMenuManager` también se puede guardar y cargar su estado en el regi
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo agregar un menú a un `CContextMenuManager` objeto y no para cerrar el menú emergente activo cuando el `CContextMenuManager` objeto muestra un menú emergente de nuevo. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo agregar un menú a un `CContextMenuManager` objeto y no para cerrar el menú emergente activo cuando el `CContextMenuManager` objeto muestra un menú emergente de nuevo. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: a4324fad7668907600cbaebeb5c9de4ad0e7c1e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302729"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776432"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl (clase)
 
@@ -53,7 +53,7 @@ Al hacer clic en un botón que se deriva el `CMFCLinkCtrl` (clase), el marco de 
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo establecer el tamaño de un `CMFCLinkCtrl` objeto y cómo establecer una dirección url y una información sobre herramientas en un `CMFCLinkCtrl` objeto. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo establecer el tamaño de un `CMFCLinkCtrl` objeto y cómo establecer una dirección url y una información sobre herramientas en un `CMFCLinkCtrl` objeto. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]

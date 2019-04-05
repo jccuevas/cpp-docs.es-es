@@ -3,12 +3,12 @@ title: Filtrar Crear un componente COM clásico mediante WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: e19ff4a331a98e64c39dc2e163459b2696bbdee5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785990"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031847"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Filtrar Crear un componente COM clásico mediante WRL
 
@@ -90,4 +90,4 @@ Este documento usa funciones COM estándar para demostrar que puede usar la bibl
 
 ## <a name="see-also"></a>Vea también
 
-[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Biblioteca de plantillas de Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512697"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037651"
 ---
 # <a name="snapshot"></a>Depurador de
 
@@ -37,7 +37,7 @@ Compatibilidad con las instantáneas se basa en la biblioteca de cursores ODBC, 
 Las instantáneas están disponibles sólo si la biblioteca de cursores ODBC se cargó cuando el `CDatabase` se construye el objeto o el controlador ODBC que usa es compatible con los cursores estáticos.
 
 > [!NOTE]
->  Algunos controladores ODBC, las instantáneas (cursores estáticos) podrían no ser actualizables. Compruebe la documentación del controlador para los tipos de cursor admitidos y los tipos de simultaneidad que admiten. Para garantizar que las instantáneas actualizables, asegúrese de cargar la biblioteca de cursores en la memoria cuando se crea un `CDatabase` objeto. Para obtener más información, consulte [ODBC: biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+>  Algunos controladores ODBC, las instantáneas (cursores estáticos) podrían no ser actualizables. Compruebe la documentación del controlador para los tipos de cursor admitidos y los tipos de simultaneidad que admiten. Para garantizar que las instantáneas actualizables, asegúrese de cargar la biblioteca de cursores en la memoria cuando se crea un `CDatabase` objeto. Para obtener más información, consulte [ODBC: La biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 >  Si desea utilizar instantáneas y conjuntos de registros dinámicos, se debe basar en dos diferentes `CDatabase` objetos (dos conexiones distintas).

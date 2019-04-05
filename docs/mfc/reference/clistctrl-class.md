@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780618"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (clase)
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pos*<br/>
+*posición*<br/>
 Una referencia a un valor de posición devuelto por una llamada anterior a `GetNextSelectedItem` o `GetFirstSelectedItemPosition`. El valor se actualiza a la siguiente posición de esta llamada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2416,7 +2416,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*pti*<br/>
+*pTI*<br/>
 Un puntero a un [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) estructura que recibe la información de los iconos.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Parámetros
 
-*index*<br/>
+*índice*<br/>
 Índice del elemento donde se insertará el grupo.
 
 *pgrp*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*index*|[in] Índice de base cero de un elemento en el control de vista de lista actual.|
+|*índice*|[in] Índice de base cero de un elemento en el control de vista de lista actual.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2897,7 +2897,7 @@ UINT MapIDToIndex(UINT id) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*identificador*|[in] El identificador único de un elemento.|
+|*id*|[in] El identificador único de un elemento.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*index*|[in] Índice de base cero de un elemento.|
+|*índice*|[in] Índice de base cero de un elemento.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -3043,7 +3043,7 @@ BOOL RedrawItems(
 *nFirst*<br/>
 Índice del primer elemento que se vuelva a dibujar.
 
-*nLast*<br/>
+*Núltimo*<br/>
 Índice del último elemento que se vuelva a dibujar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3598,7 +3598,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*colores*<br/>
 Un [COLORREF](/windows/desktop/gdi/colorref) estructura que especifica el color para establecer el punto de inserción.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3955,7 +3955,7 @@ COLORREF SetOutlineColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*color*<br/>
+*colores*<br/>
 El nuevo [COLORREF](/windows/desktop/gdi/colorref) estructura que contiene el color del contorno.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -4075,7 +4075,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 
 ### <a name="parameters"></a>Parámetros
 
-*pti*<br/>
+*pTI*<br/>
 Un puntero a un [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) estructura que contiene la información que debe establecerse.
 
 ### <a name="return-value"></a>Valor devuelto

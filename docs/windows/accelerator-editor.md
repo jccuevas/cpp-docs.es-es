@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328407"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041129"
 ---
 # <a name="accelerator-editor-c"></a>Editor de aceleradores (C++)
 
@@ -71,10 +71,10 @@ Los siguientes son entradas legales para el **modificador** propiedad en la tabl
 
    |Valor|Descripción|
    |-----------|-----------------|
-   |**Ninguno**|Usuario presiona sólo el **clave** valor.<br/><br/>Este valor se utiliza la forma más eficaz con los valores ASCII/ANSI 001 a 026, que se interpreta como ^ A ^ Z (**CTRL+a** a través de **CTRL+z**).|
+   |**Ninguna**|Usuario presiona sólo el **clave** valor.<br/><br/>Este valor se utiliza la forma más eficaz con los valores ASCII/ANSI 001 a 026, que se interpreta como ^ A ^ Z (**CTRL+a** a través de **CTRL+z**).|
    |**Alt**|El usuario debe presionar **Alt** antes de la **clave** valor.|
    |**Ctrl**|El usuario debe presionar **Ctrl** antes de la **clave** valor, no es válido con el tipo de ASCII.|
-   |**Mayús**|El usuario debe presionar **MAYÚS** antes de la **clave** valor.|
+   |**Shift**|El usuario debe presionar **MAYÚS** antes de la **clave** valor.|
    |**Ctrl+Alt**|El usuario debe presionar **Ctrl** y **Alt** antes de la **clave** valor, no es válido con el tipo de ASCII.|
    |**CTRL + MAYÚS**|El usuario debe presionar **Ctrl** y **MAYÚS** antes de la **clave** valor, no es válido con el tipo de ASCII.|
    |**ALT + MAYÚS**|El usuario debe presionar **Alt** y **MAYÚS** antes de la **clave** valor, no es válido con el tipo de ASCII.|
@@ -192,5 +192,5 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)<br/>
+[editores de recursos](../windows/resource-editors.md)<br/>
 [Teclas de aceleración](../windows/predefined-accelerator-keys.md)<br/>

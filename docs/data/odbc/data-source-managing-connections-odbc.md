@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568511"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041169"
 ---
 # <a name="data-source-managing-connections-odbc"></a>Origen de datos: Administrar conexiones (ODBC)
 
@@ -72,7 +72,7 @@ Puede usar un archivo de Excel como origen de datos, y deberá configurar el arc
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> Trabajar en un entorno multiusuario
 
-Si varios usuarios están conectados a un origen de datos, pueden cambiar los datos mientras se manipulan en los conjuntos de registros. De forma similar, los cambios pueden afectar a los conjuntos de registros de otros usuarios. Para obtener más información, consulte [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [transacción (ODBC)](../../data/odbc/transaction-odbc.md).
+Si varios usuarios están conectados a un origen de datos, pueden cambiar los datos mientras se manipulan en los conjuntos de registros. De forma similar, los cambios pueden afectar a los conjuntos de registros de otros usuarios. Para obtener más información, consulte [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [transacción (ODBC)](../../data/odbc/transaction-odbc.md).
 
 ##  <a name="_core_generalizing_the_connection_string"></a> Generalizar la cadena de conexión
 

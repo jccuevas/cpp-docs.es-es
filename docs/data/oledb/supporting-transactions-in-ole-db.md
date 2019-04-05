@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 2e3605b636bbcb16a1c6f543bc9090d2b212a60b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418582"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038753"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Admitir transacciones en OLE DB
 
@@ -56,4 +56,4 @@ Una transacción distribuida es una transacción que actualiza datos distribuido
 
 ## <a name="see-also"></a>Vea también
 
-[Usar descriptores de acceso](../../data/oledb/using-accessors.md)
+[Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)

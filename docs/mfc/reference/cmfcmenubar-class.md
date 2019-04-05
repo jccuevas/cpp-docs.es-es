@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775899"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar (clase)
 
@@ -191,7 +191,7 @@ Para usar un `CMFCMenuBar` de objetos, insertarlo en el objeto de marco de venta
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCMenuBar` . El ejemplo muestra cómo establecer el estilo del panel, habilitar el botón Personalizar, habilite un cuadro de ayuda, habilitar las sombras en los menús emergentes y actualizar la barra de menús. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCMenuBar` . El ejemplo muestra cómo establecer el estilo del panel, habilitar el botón Personalizar, habilite un cuadro de ayuda, habilitar las sombras en los menús emergentes y actualizar la barra de menús. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ Para obtener listas de estilos adicionales, vea [Control de barra de herramienta
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `CreateEx` método de la `CMFCMenuBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `CreateEx` método de la `CMFCMenuBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
@@ -464,7 +464,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] Un parámetro booleano que indica si se deben habilitar las sombras en los menús emergentes.
 
 ### <a name="remarks"></a>Comentarios
@@ -994,7 +994,7 @@ void SetMaximizeMode(
 
 ### <a name="parameters"></a>Parámetros
 
-*bMax*<br/>
+*bmáx*<br/>
 [in] Un valor booleano que especifica el modo. Vea la sección Comentarios para obtener más información.
 
 *pWnd*<br/>
@@ -1062,7 +1062,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bOn*<br/>
+*Ben*<br/>
 [in] Un valor booleano que controla si se muestran los comandos de menú usados recientemente.
 
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands

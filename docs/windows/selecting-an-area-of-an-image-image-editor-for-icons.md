@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Editar una imagen
+title: Filtrar Editar una imagen
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562996"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033299"
 ---
 # <a name="how-to-edit-an-image"></a>Filtrar Editar una imagen
 
@@ -208,12 +208,12 @@ Puede establecer o modificar las propiedades de una imagen mediante la [ventana 
    |Property|Descripción|
    |--------------|-----------------|
    |**Colores**|Especifica la combinación de colores para la imagen. Seleccione **monocromático**, **16**, o **256**, o **Color verdadero**.<br/><br/>Si ya ha dibujado la imagen con una paleta de colores de 16, si selecciona **monocromático** hace que las sustituciones de blanco y negro para los colores en la imagen. No se mantiene siempre contraste: por ejemplo, las áreas adyacentes de color rojo y verde se ambos convierten a negro.|
-   |**Nombre de archivo**|Especifica el nombre del archivo de imagen.<br/><br/>De forma predeterminada, Visual Studio asigna un nombre de archivo base creado mediante la eliminación de los primeros cuatro caracteres ("IDB_") desde el identificador de recursos predeterminado (IDB_BITMAP1) y agregando la extensión adecuada. El nombre de archivo para la imagen en este ejemplo sería *BITMAP1.bmp*. Puede cambiar el nombre *este nombre a MIBITMAP1.bmp*.|
-   |**Height**|Establece el alto de la imagen (en píxeles). El valor predeterminado es 48.<br/><br/>La imagen se recorta o se agrega espacio en blanco debajo de la imagen existente.|
+   |**Filename**|Especifica el nombre del archivo de imagen.<br/><br/>De forma predeterminada, Visual Studio asigna un nombre de archivo base creado mediante la eliminación de los primeros cuatro caracteres ("IDB_") desde el identificador de recursos predeterminado (IDB_BITMAP1) y agregando la extensión adecuada. El nombre de archivo para la imagen en este ejemplo sería *BITMAP1.bmp*. Puede cambiar el nombre *este nombre a MIBITMAP1.bmp*.|
+   |**Alto**|Establece el alto de la imagen (en píxeles). El valor predeterminado es 48.<br/><br/>La imagen se recorta o se agrega espacio en blanco debajo de la imagen existente.|
    |**ID**|Establece el identificador de recursos.<br/><br/>Para una imagen, Microsoft Visual Studio, de forma predeterminada, asigna el siguiente identificador disponible en una serie: IDB_BITMAP1, IDB_BITMAP2 y así sucesivamente. Se usan nombres similares para iconos y cursores.|
-   |**Palette**|Cambia las propiedades de color.<br/><br/>Haga doble clic para seleccionar un color y mostrar el [cuadro de diálogo Selector de colores personalizados](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Definir el color escribiendo los valores RGB o HSL en los cuadros de texto correspondientes.|
+   |**Paleta**|Cambia las propiedades de color.<br/><br/>Haga doble clic para seleccionar un color y mostrar el [cuadro de diálogo Selector de colores personalizados](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md). Definir el color escribiendo los valores RGB o HSL en los cuadros de texto correspondientes.|
    |**SaveCompressed**|Indica si la imagen está en un formato comprimido. Esta propiedad es de sólo lectura.<br/><br/>Visual Studio no le permite guardar las imágenes en un formato comprimido, por lo que las imágenes creadas en Visual Studio, esta propiedad será **False**. Si abre una imagen comprimida (creada en otro programa) en Visual Studio, esta propiedad será **True**. Si guarda una imagen comprimida con Visual Studio, se descomprimen y esta propiedad se restablecerá a **False**.|
-   |**Width**|Establece el ancho de la imagen (en píxeles). El valor predeterminado para los mapas de bits es 48.<br/><br/>La imagen se recorta o espacio en blanco se agrega a la derecha de la imagen existente.|
+   |**Ancho**|Establece el ancho de la imagen (en píxeles). El valor predeterminado para los mapas de bits es 48.<br/><br/>La imagen se recorta o espacio en blanco se agrega a la derecha de la imagen existente.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -222,7 +222,7 @@ Ninguna
 ## <a name="see-also"></a>Vea también
 
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Cómo: Creación de un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Cómo: Uso de una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Cómo: Trabajo con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Filtrar Crear un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Filtrar Usar una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Filtrar Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

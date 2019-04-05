@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: e7e213d1b0679f17ce070de85ee9410ff9546716
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785898"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040759"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (función)
 
@@ -32,7 +32,7 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ### <a name="parameters"></a>Parámetros
 
-*flags*<br/>
+*marcas*<br/>
 Una combinación de uno o varios [RuntimeClassType](runtimeclasstype-enumeration.md) valores de enumeración.
 
 *entry*<br/>
@@ -60,4 +60,4 @@ Se genera un error de aserción si el parámetro de plantilla *Factory* no se de
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Wrappers::Details (espacio de nombres)](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft::WRL::Wrappers::Details (Espacio de nombres)](microsoft-wrl-wrappers-details-namespace.md)

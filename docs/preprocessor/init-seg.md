@@ -9,12 +9,12 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532640"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026636"
 ---
 # <a name="initseg"></a>init_seg
 
@@ -42,7 +42,7 @@ Reservada para la inicialización de la biblioteca en tiempo de ejecución de C 
 *lib*<br/>
 Disponible para las inicializaciones de los proveedores de bibliotecas de clases de terceros. Los objetos de este grupo se construyen después de los marcados como *compilador* pero antes de los demás.
 
-*Usuario*<br/>
+*usuario*<br/>
 Disponible para cualquier usuario. Los objetos de este grupo se construyen en último lugar.
 
 *nombre de sección* permite la especificación explícita de la sección de inicialización. Los objetos de la especificada por el usuario *nombre de sección* no se construyen implícitamente; sin embargo, sus direcciones se colocan en la sección designada por *nombre de sección*.
@@ -156,4 +156,4 @@ A()
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
