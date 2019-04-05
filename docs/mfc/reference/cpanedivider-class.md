@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273639"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58773858"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider (clase)
 
@@ -159,7 +159,7 @@ class CPaneDivider : public CBasePane
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Especifica el ancho predeterminado en píxeles de todos los divisores de paneles en la aplicación.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Contiene un puntero a la información de clase en tiempo de ejecución sobre un `CPaneDivider`-objeto derivado.|
@@ -176,7 +176,7 @@ Hay dos tipos de divisores de paneles:
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo obtener un objeto `CPaneDivider` desde un objeto `CWorkspaceBar`. Este fragmento de código forma parte de la [ejemplo de demostración de pestañas de MDI](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo obtener un objeto `CPaneDivider` desde un objeto `CWorkspaceBar`. Este fragmento de código forma parte de la [ejemplo de demostración de pestañas de MDI](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
@@ -738,4 +738,4 @@ void StoreRecentTabRelatedInfo(
 [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md)<br/>
 [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md)<br/>
 [CDockingManager (clase)](../../mfc/reference/cdockingmanager-class.md)<br/>
-[CBasePane (clase)](../../mfc/reference/cbasepane-class.md)
+[CBasePane Class](../../mfc/reference/cbasepane-class.md)
