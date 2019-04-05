@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460377"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033049"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>Conjunto de registros: Trabajar con grandes elementos de datos (ODBC)
 
 En este tema se aplica a las clases ODBC de MFC y las clases DAO de MFC.
 
 > [!NOTE]
->  Si utiliza las clases DAO de MFC, administrar los elementos de datos de gran tamaño con la clase [CByteArray](../../mfc/reference/cbytearray-class.md) en lugar de la clase [CLongBinary](../../mfc/reference/clongbinary-class.md). Si utiliza las clases ODBC de MFC con la obtención masiva de filas, use `CLongBinary` lugar `CByteArray`. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si utiliza las clases DAO de MFC, administrar los elementos de datos de gran tamaño con la clase [CByteArray](../../mfc/reference/cbytearray-class.md) en lugar de la clase [CLongBinary](../../mfc/reference/clongbinary-class.md). Si utiliza las clases ODBC de MFC con la obtención masiva de filas, use `CLongBinary` lugar `CByteArray`. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Supongamos que la base de datos puede almacenar grandes conjuntos de datos, como mapas de bits (fotografías de los empleados, mapas, imágenes de productos, los objetos OLE y así sucesivamente). Este tipo de datos a menudo se conoce como un objeto binario grande (o BLOB) porque:
 

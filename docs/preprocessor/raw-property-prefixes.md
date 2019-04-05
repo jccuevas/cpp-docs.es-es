@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 1e44b5265e486f0e5b5896bed41b62ebbdaa4fd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647142"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033260"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 
@@ -40,9 +40,9 @@ Prefijo que se usará para el `propputref` métodos.
 
 De forma predeterminada, de bajo nivel `propget`, `propput`, y `propputref` métodos expuestos por funciones miembro denominadas con prefijos de **get_**, **put_**, y **putref_** respectivamente. Estos prefijos son compatibles con los nombres que se usan en los archivos de encabezado generados por MIDL.
 
-**FIN de específicos de C++**
+**Específicos de C++: END**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576847"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037862"
 ---
 # <a name="sql"></a>SQL
 
@@ -50,9 +50,9 @@ Las clases de base de datos usan una parte de SQL que se conoce como lenguaje de
 |**SELECT**|Para identificar qué tablas y columnas del origen de datos que se van a utilizar.|
 |**WHERE**|Para aplicar un filtro que limita la selección.|
 |**ORDER BY**|Para aplicar un criterio de ordenación para el conjunto de registros.|
-|**INSERTAR**|Para agregar nuevos registros a un conjunto de registros.|
-|**ELIMINAR**|Para eliminar registros de un conjunto de registros.|
-|**ACTUALIZACIÓN DE**|Para modificar los campos de un registro.|
+|**INSERT**|Para agregar nuevos registros a un conjunto de registros.|
+|**SUPRIMIR**|Para eliminar registros de un conjunto de registros.|
+|**UPDATE**|Para modificar los campos de un registro.|
 
 Además, las clases de base de datos reconocen ODBC **llamar** instrucciones, que puede usar para llamar a una consulta predefinida (o un procedimiento almacenado) en algunos orígenes de datos. El controlador de base de datos ODBC interpreta estas instrucciones y sustituye el comando apropiado para cada DBMS.
 
@@ -61,9 +61,9 @@ Además, las clases de base de datos reconocen ODBC **llamar** instrucciones, qu
 
 Si las clases no reconocen una instrucción proporcionada por el usuario en `CRecordset::Open`, se interpreta como un nombre de tabla.
 
-Para obtener una explicación de cómo el marco de trabajo crea instrucciones SQL, consulte [conjunto de registros: cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) y [SQL: SQL instrucción (ODBC de personalizar un conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Para obtener una explicación de cómo el marco de trabajo crea instrucciones SQL, consulte [conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) y [SQL: Personalizar la instrucción de SQL del conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
-Las bases de datos SQL usan tipos de datos similares a aquellos utilizados en C y C++. Para obtener una explicación de estas similitudes, consulte [SQL: SQL y tipos de datos de C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Las bases de datos SQL usan tipos de datos similares a aquellos utilizados en C y C++. Para obtener una explicación de estas similitudes, consulte [SQL: Tipos de datos de C++ (ODBC) y SQL](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
 Puede encontrar más información sobre SQL, incluida una lista de instrucciones SQL compatibles, tipos de datos, gramática básica de SQL y una lista de lectura recomendada publicaciones sobre SQL, en el *ODBC SDK* *referencia del programador*  en el CD de MSDN Library.
 
@@ -79,7 +79,7 @@ Los temas siguientes proporcionan más información acerca del usan de las clase
 
 - [SQL: Personalizar la instrucción de SQL del conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: Tipos de datos de SQL y C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: SQL y tipos de datos de C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
 - [SQL: Realizar llamadas directas a SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 

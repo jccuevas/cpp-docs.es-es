@@ -67,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: b59d4de6751dd2a7f90c5de766b5f95cb7e7b330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525189"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030146"
 ---
 # <a name="cbookmark-class"></a>CBookmark (Clase)
 
@@ -118,7 +118,7 @@ El tamaño del búfer del marcador en bytes. Cuando *nSize* es cero, el búfer d
 
 `CBookmark<0>` es una especialización de plantilla de `CBookmark`; su búfer se crea dinámicamente en tiempo de ejecución.
 
-## <a name="cbookmark"></a> CBookmark:: CBookmark
+## <a name="cbookmark"></a> CBookmark::CBookmark
 
 El constructor.
 
@@ -155,7 +155,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Un puntero al búfer de marcador.
 
-## <a name="getsize"></a> CBookmark:: GetSize
+## <a name="getsize"></a> CBookmark::GetSize
 
 Recupera el tamaño del búfer del marcador.
 
@@ -169,7 +169,7 @@ virtual DBLENGTH GetSize() const throw();
 
 El tamaño del búfer en bytes.
 
-## <a name="setbookmark"></a> CBookmark:: SetBookmark
+## <a name="setbookmark"></a> CBookmark::SetBookmark
 
 Copia el valor de marcador al que hace referencia *pBuffer* a la `CBookmark` búfer y se establece el tamaño de búfer en *nSize*.
 

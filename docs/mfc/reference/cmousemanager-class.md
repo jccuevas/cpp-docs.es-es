@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-ms.openlocfilehash: d58293b94eeaf499c48f750972b15256e9c19794
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293191"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773741"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager (clase)
 
@@ -117,7 +117,7 @@ Para obtener más información acerca de cómo proporcionar un comportamiento pe
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CMouseManager` objeto utilizando el `CWinAppEx::GetMouseManager` método y el `AddView` método en el `CMouseManager` clase. Este fragmento de código forma parte de la [ejemplo de la colección de estados](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo recuperar un puntero a un `CMouseManager` objeto utilizando el `CWinAppEx::GetMouseManager` método y el `AddView` método en el `CMouseManager` clase. Este fragmento de código forma parte de la [ejemplo de la colección de estados](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]
 

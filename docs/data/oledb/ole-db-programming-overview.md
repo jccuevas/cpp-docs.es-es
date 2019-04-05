@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-ms.openlocfilehash: d19e98d7c5743207dba224214b0d9a0e9f308e81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68ada06514defe0f7f5332288ad8e91a7d8d9351
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608954"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035535"
 ---
 # <a name="ole-db-programming-overview"></a>Información general sobre la programación de OLE DB
 
@@ -29,4 +29,4 @@ Basado en la especificación COM, OLE DB define una colección ampliable y mante
 [Programación de OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Plantillas OLE DB](../../data/oledb/ole-db-templates.md)
+[plantillas OLE DB](../../data/oledb/ole-db-templates.md)

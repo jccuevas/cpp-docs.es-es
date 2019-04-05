@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482759"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024600"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Conjunto de registros: Volver a consultar un conjunto de registros (ODBC)
 
@@ -29,7 +29,7 @@ Las principales razones para volver a consultar un conjunto de registros son:
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Poner el vertical del conjunto de registros hasta la fecha
 
-Con frecuencia, deseará volver a consultar el objeto de conjunto de registros para ponerlo al día. En un entorno de base de datos multiusuario, otros usuarios pueden realizar cambios a los datos durante la vida del conjunto de registros. Para obtener más información acerca de cuándo el conjunto de registros refleja los cambios realizados por otros usuarios y cuando los conjuntos de registros de otros usuarios reflejan los cambios, consulte [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [Dynaset](../../data/odbc/dynaset.md).
+Con frecuencia, deseará volver a consultar el objeto de conjunto de registros para ponerlo al día. En un entorno de base de datos multiusuario, otros usuarios pueden realizar cambios a los datos durante la vida del conjunto de registros. Para obtener más información acerca de cuándo el conjunto de registros refleja los cambios realizados por otros usuarios y cuando los conjuntos de registros de otros usuarios reflejan los cambios, consulte [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) y [Dynaset](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Volver a consultar según los nuevos parámetros
 
@@ -48,7 +48,7 @@ Como conjuntos de registros dinámicos están diseñados para presentar un conju
 
 Como alternativa, puede cerrar y volver a abrir el conjunto de registros original. En cualquier caso, el nuevo conjunto de registros representa el estado actual del origen de datos.
 
-Para obtener un ejemplo, vea [vistas de registros: llenar un cuadro de lista de otro conjunto de registros](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Para obtener un ejemplo, vea [vistas de registros: Rellenar un cuadro de lista de otro conjunto de registros](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  Para optimizar `Requery` rendimiento, evite cambiar el conjunto de registros [filtro](../../data/odbc/recordset-filtering-records-odbc.md) o [ordenación](../../data/odbc/recordset-sorting-records-odbc.md). Cambiar solo el valor del parámetro antes de llamar a `Requery`.

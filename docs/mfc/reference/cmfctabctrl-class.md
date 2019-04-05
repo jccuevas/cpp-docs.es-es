@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281686"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778460"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Impide que pierde el foco cuando se inserta una nueva pestaña y se habilita la vista activa.|
 
@@ -243,7 +243,7 @@ Para obtener un ejemplo de cómo crear una ventana con pestañas como una barra 
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCTabCtrl` clase para configurar un `CMFCTabCtrl` objeto. En el ejemplo se explica cómo agregar una pestaña, mostrar el botón Cerrar en la pestaña activa, habilitar etiquetas de pestaña editables y mostrar un menú emergente de etiquetas de la ventana con pestañas. Este ejemplo forma parte de la [ejemplo de la colección de estados](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCTabCtrl` clase para configurar un `CMFCTabCtrl` objeto. En el ejemplo se explica cómo agregar una pestaña, mostrar el botón Cerrar en la pestaña activa, habilitar etiquetas de pestaña editables y mostrar un menú emergente de etiquetas de la ventana con pestañas. Este ejemplo forma parte de la [ejemplo de la colección de estados](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*style*<br/>
+*estilo*<br/>
 [in] El estilo del control de ficha. Para obtener más información, vea la sección Comentarios.
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] El identificador del control de ficha.
 
-*location*<br/>
+*ubicación*<br/>
 [in] La ubicación de fichas. El valor predeterminado es LOCATION_BOTTOM. Para obtener más información, vea la sección Comentarios.
 
 *bCloseBtn*<br/>
@@ -355,7 +355,7 @@ En la tabla siguiente se enumera los valores que se puede especificar para el *u
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `Create` método en el `CMFCTabCtrl` clase. Este ejemplo forma parte de la [ejemplo de la colección de estados](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `Create` método en el `CMFCTabCtrl` clase. Este ejemplo forma parte de la [ejemplo de la colección de estados](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para mostrar el botón Cerrar en la pestaña activa; FALSE para mostrar el botón Cerrar en la esquina superior derecha del área de ficha. El valor predeterminado es TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para habilitar las etiquetas de pestaña modificable; FALSE para deshabilitar las etiquetas de pestaña editable.
 
 ### <a name="remarks"></a>Comentarios
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para mostrar un menú emergente de etiquetas de la ventana con pestañas; FALSE para mostrar los botones de desplazamiento hacia delante y hacia atrás. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parámetros
 
-*style*<br/>
+*estilo*<br/>
 [in] Uno de los valores de enumeración que especifica la apariencia del control de ficha. Para obtener más información, vea la tabla en la sección Comentarios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -846,7 +846,7 @@ Siempre es TRUE.
 
 El valor de la *estilo* parámetro puede ser uno de los siguientes `CMFCTabCtrl::Style` enumeraciones.
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |STYLE_3D|Muestra las fichas tridimensionales, rectangulares con esquinas redondeadas.|
 |STYLE_3D_ONENOTE|Muestra las fichas tridimensionales que tienen uno de los lados vertical y un lado inclinado y que tienen esquinas redondeadas.|
@@ -944,7 +944,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parámetros
 
-*bActive*<br/>
+*bSecuencias de ActiveX*<br/>
 [in] TRUE para que sea la ficha actual en la pestaña activa; FALSE para hacer que la ficha actual esté inactivo.
 
 ### <a name="remarks"></a>Comentarios
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 El *resizeMode* parámetro puede ser uno de los siguientes `ResizeMode` valores de enumeración.
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |RESIZE_NO|No puede cambiarse el control de ficha.|
 |RESIZE_VERT|El control de ficha puede cambiar el tamaño verticalmente, pero no horizontalmente.|
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parámetros
 
-*bCancel*<br/>
+*bCancelar*<br/>
 [in] TRUE para abandonar la operación de cambio de tamaño actual; FALSE para completar actual cambiar el tamaño de operación. En cualquier caso, el marco de trabajo deja de dibujar el rectángulo de cambio de tamaño.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1139,6 +1139,6 @@ Este método afecta a solo un control de ficha que muestra pestañas sin formato
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl (clase)](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

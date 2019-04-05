@@ -8,19 +8,19 @@ helpviewer_keywords:
 - CommitTrans method
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
-ms.openlocfilehash: 68ff6970243b36b56ab206b16bb2c3608cef71e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437861"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033121"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Transacción: Cómo afectan las transacciones a las actualizaciones (ODBC)
 
-Actualiza a la [origen de datos](../../data/odbc/data-source-odbc.md) se administran durante las transacciones mediante el uso de un búfer de edición (el mismo método usado fuera de las transacciones). Los miembros de datos de campo de un conjunto de registros actúan en conjunto como un búfer de edición que contiene el registro actual, que el conjunto de registros realiza copias de seguridad temporal durante una `AddNew` o `Edit`. Durante una `Delete` operación, el registro actual no se copia en una transacción. Para obtener más información sobre el búfer de edición y cómo las actualizaciones de almacenan el registro actual, vea [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Actualiza a la [origen de datos](../../data/odbc/data-source-odbc.md) se administran durante las transacciones mediante el uso de un búfer de edición (el mismo método usado fuera de las transacciones). Los miembros de datos de campo de un conjunto de registros actúan en conjunto como un búfer de edición que contiene el registro actual, que el conjunto de registros realiza copias de seguridad temporal durante una `AddNew` o `Edit`. Durante una `Delete` operación, el registro actual no se copia en una transacción. Para obtener más información sobre el búfer de edición y cómo las actualizaciones de almacenan el registro actual, vea [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 > [!NOTE]
->  Si ha implementado la obtención masiva de filas, no puede llamar a `AddNew`, `Edit`, o `Delete`. En su lugar, debe escribir sus propias funciones para realizar actualizaciones en el origen de datos. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Si ha implementado la obtención masiva de filas, no puede llamar a `AddNew`, `Edit`, o `Delete`. En su lugar, debe escribir sus propias funciones para realizar actualizaciones en el origen de datos. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Durante las transacciones `AddNew`, `Edit`, y `Delete` operaciones pueden ser confirmadas o revertidas. Los efectos de `CommitTrans` y `Rollback` puede provocar que el registro no debe restaurarse en el búfer de edición actual. Para asegurarse de que el registro actual se ha restaurado correctamente, es importante comprender cómo el `CommitTrans` y `Rollback` funciones miembro de `CDatabase` funcionan con las funciones de actualización de `CRecordset`.
 
@@ -48,7 +48,7 @@ La siguiente tabla explica los efectos de `Rollback` en transacciones.
 |---------------|------------------------------|-------------------|---------------------------|
 |`AddNew` y `Update`, a continuación, `Rollback`|Contenido del registro actual se almacena temporalmente para dejar espacio para el nuevo registro. Nuevo registro se escribe en el búfer de edición. Después de `Update` se denomina actual se restaura el registro en el búfer de edición.||La adición al origen de datos realizada por `Update` se invierte.|
 |`AddNew` (sin `Update`), a continuación, `Rollback`|Contenido del registro actual se almacena temporalmente para dejar espacio para el nuevo registro. Editar búfer contiene el nuevo registro.|Llamar a `AddNew` nuevo para restaurar el búfer de edición en un registro nuevo y vacío. O llame a `Move`(0) para restaurar los valores antiguos en el búfer de edición.|Dado que `Update` no se llamó, no había cambios realizados en el origen de datos.|
-|`Edit` y `Update`, a continuación, `Rollback`|Una versión no modificada del registro actual se almacena temporalmente. Las modificaciones se realizan en el contenido del búfer de edición. Después de `Update` se llama, el no editado versión del registro continúa almacenada temporalmente.|*Conjunto de registros dinámicos*: desplácese fuera del registro actual y después volver a restaurar la versión no modificada del registro en el búfer de edición.<br /><br /> *Instantánea*: llamar a `Requery` para actualizar el conjunto de registros del origen de datos.|Los cambios realizados por el origen de datos `Update` están invertidas.|
+|`Edit` y `Update`, a continuación, `Rollback`|Una versión no modificada del registro actual se almacena temporalmente. Las modificaciones se realizan en el contenido del búfer de edición. Después de `Update` se llama, el no editado versión del registro continúa almacenada temporalmente.|*Dynaset*: Desplácese hacia fuera del registro actual, a continuación, volver a restaurar la versión no modificada del registro en el búfer de edición.<br /><br /> *Instantánea*: Llame a `Requery` para actualizar el conjunto de registros del origen de datos.|Los cambios realizados por el origen de datos `Update` están invertidas.|
 |`Edit` (sin `Update`), a continuación, `Rollback`|Una versión no modificada del registro actual se almacena temporalmente. Las modificaciones se realizan en el contenido del búfer de edición.|Llamar a `Edit` nuevo para restaurar la versión no modificada del registro en el búfer de edición.|Dado que `Update` no se llamó, no había cambios realizados en el origen de datos.|
 |`Delete` A continuación `Rollback`|Se elimina el contenido del registro actual.|Llame a `Requery` para restaurar el contenido del registro actual del origen de datos.|Se invierte la eliminación de datos de origen de datos.|
 

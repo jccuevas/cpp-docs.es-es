@@ -1,5 +1,5 @@
 ---
-title: 'Origen de datos: Configurar un origen de datos ODBC mediante programación'
+title: 'Origen de datos: Configurar mediante programación un origen de datos ODBC'
 ms.date: 11/04/2016
 f1_keywords:
 - SQLConfigDataSource
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677375"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037969"
 ---
-# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origen de datos: Configurar un origen de datos ODBC mediante programación
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Origen de datos: Configurar mediante programación un origen de datos ODBC
 
 En este tema se explica cómo se pueden configurar mediante programación los nombres de origen de datos Open Database Connectivity (ODBC). Esto proporciona flexibilidad al acceder a los datos sin obligar al usuario utilizar explícitamente el Administrador de ODBC u otros programas para especificar los nombres de orígenes de datos.
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 Tenga en cuenta que el origen de datos es realmente un directorio (C:\EXCELDIR); Este directorio debe existir. El controlador Excel utiliza directorios como orígenes de datos y archivos como tablas individuales (una tabla por archivo .xls).
 
-Para obtener más información sobre la creación de tablas, consulte [origen de datos: crear una tabla en un origen de datos ODBC mediante programación](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Para obtener más información sobre la creación de tablas, consulte [origen de datos: Crear una tabla en un origen de datos ODBC mediante programación](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
 La siguiente información explica los parámetros que deben pasarse a la `::SQLConfigDataSource` función de la API de ODBC. Para usar `::SQLConfigDataSource`, debe incluir el archivo de encabezado Odbcinst.h y utilizar la biblioteca de importación Odbcinst.lib. Además, Odbccp32.dll debe estar en la ruta de acceso en tiempo de ejecución (u Odbcinst.dll para 16 bits).
 
@@ -94,7 +94,7 @@ Una forma de encontrar los nombres de clave y valores para el *lpszAttributes* p
 
    - Para 32 bits, busque la clave **HKEY_CURRENT_USER\Software\ODBC\ODBC. Los orígenes de datos INI\ODBC** en el panel izquierdo.
 
-      El panel derecho muestra las entradas de la forma: "pub: REG_SZ:*<data source name>*", donde *<data source name>* es un origen de datos que ya se ha configurado con la configuración deseada para el controlador desea Para usar. Seleccione el origen de datos que desee, por ejemplo, SQL Server. Los elementos que siguen a la cadena "pub:" son, en orden, el keyname y el valor para usar en su *lpszAttributes* parámetro.
+      El panel derecho muestra las entradas de la forma: "pub: REG_SZ:*<data source name>*", donde *<data source name>* es un origen de datos que ya se ha configurado con la configuración deseada para el controlador que se va a utilizar. Seleccione el origen de datos que desee, por ejemplo, SQL Server. Los elementos que siguen a la cadena "pub:" son, en orden, el keyname y el valor para usar en su *lpszAttributes* parámetro.
 
    - Para 16 bits, busque la sección en el archivo Odbc.ini marcado por [*\<el nombre del origen de datos >*].
 

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: caef4752469f7535d3c7ff3a3b36f0e255819bab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785873"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030652"
 ---
 # <a name="agileactivationfactory-class"></a>AgileActivationFactory (Clase)
 
@@ -42,5 +42,5 @@ class AgileActivationFactory :
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)<br/>
+[Microsoft::WRL (Espacio de nombres)](microsoft-wrl-namespace.md)<br/>
 [ActivationFactory (clase)](activationfactory-class.md)

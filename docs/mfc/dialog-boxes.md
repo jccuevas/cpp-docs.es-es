@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282063"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778499"
 ---
 # <a name="dialog-boxes"></a>Cuadros de diálogo
 
@@ -61,7 +61,7 @@ La mayoría de los cuadros de diálogo son modales, que requieren que el usuario
 
 - [Cuadros de diálogo en OLE](../mfc/dialog-boxes-in-ole.md)
 
-- Crear una aplicación cuya interfaz de usuario es un cuadro de diálogo: vea la [CMNCTRL1](../visual-cpp-samples.md) o [CMNCTRL2](../visual-cpp-samples.md) programas de ejemplo. El Asistente para aplicaciones proporciona esta opción también.
+- Crear una aplicación cuya interfaz de usuario es un cuadro de diálogo: vea la [CMNCTRL1](../overview/visual-cpp-samples.md) o [CMNCTRL2](../overview/visual-cpp-samples.md) programas de ejemplo. El Asistente para aplicaciones proporciona esta opción también.
 
 - [Muestras](../mfc/dialog-sample-list.md)
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: bde951a2915bf980e09d94c16edc1a9b462c662e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563334"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037794"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>Filtrar Usar una herramienta de dibujo
 
@@ -141,7 +141,7 @@ Ninguna
 ## <a name="see-also"></a>Vea también
 
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Cómo: Creación de un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Cómo: Edición de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Cómo: Trabajo con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Filtrar Crear un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Filtrar Editar una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Filtrar Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

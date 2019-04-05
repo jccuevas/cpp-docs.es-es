@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296980"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776835"
 ---
 # <a name="coledatasource-class"></a>COleDataSource (clase)
 
@@ -488,8 +488,8 @@ void SetClipboard();
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo HIERSVR](../../visual-cpp-samples.md)<br/>
-[Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ejemplo HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleDataObject (clase)](../../mfc/reference/coledataobject-class.md)

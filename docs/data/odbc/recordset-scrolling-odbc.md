@@ -11,12 +11,12 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-ms.openlocfilehash: e41b526b86922bafd1d923fa5848a5ef8ed4825e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5df8151664bd7e726087cb5323c1e4622264ad23
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579613"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040061"
 ---
 # <a name="recordset-scrolling-odbc"></a>Conjunto de registros: Desplazamiento (ODBC)
 
@@ -32,7 +32,7 @@ En este tema se explica:
 
 ##  <a name="_core_scrolling_from_one_record_to_another"></a> Desplazamiento de un registro a otro
 
-Clase `CRecordset` proporciona el `Move` funciones miembro para el desplazamiento dentro de un conjunto de registros. Estas funciones mover conjuntos de filas del registro actual. Si ha implementado la obtención masiva de filas, un `Move` operación cambia de posición el conjunto de registros por el tamaño del conjunto de filas. Si no ha implementado la obtención de una llamada a masiva de filas un `Move` función cambia de posición el conjunto de registros mediante un registro cada vez. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+Clase `CRecordset` proporciona el `Move` funciones miembro para el desplazamiento dentro de un conjunto de registros. Estas funciones mover conjuntos de filas del registro actual. Si ha implementado la obtención masiva de filas, un `Move` operación cambia de posición el conjunto de registros por el tamaño del conjunto de filas. Si no ha implementado la obtención de una llamada a masiva de filas un `Move` función cambia de posición el conjunto de registros mediante un registro cada vez. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Al desplazarse por un conjunto de registros, es posible que no se omitan los registros eliminados. Para obtener más información, consulte el [IsDeleted](../../mfc/reference/crecordset-class.md#isdeleted) función miembro.
@@ -89,11 +89,11 @@ rsCustSet.MoveFirst( );
 
 `IsEOF` Devuelve un valor distinto de cero si se coloca el conjunto de registros más allá del último registro. `IsBOF` Devuelve un valor distinto de cero si el conjunto de registros se coloca delante del primer registro (antes de todos los registros). En cualquier caso, no hay ningún registro actual para operar en. Si se llama a `MovePrev` cuando `IsBOF` es ya TRUE o llamar a `MoveNext` cuando `IsEOF` ya es TRUE, el marco de trabajo produce una `CDBException`. También puede usar `IsBOF` y `IsEOF` para comprobar si un conjunto de registros vacío.
 
-Para obtener más información sobre la navegación del conjunto de registros, vea [conjunto de registros: marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Para obtener más información sobre la navegación del conjunto de registros, vea [conjunto de registros: Marcadores y posiciones absolutas (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="_core_when_scrolling_is_supported"></a> Cuando se admite el desplazamiento
 
-Según su diseño original, SQL proporciona desplazamiento sólo hacia delante, pero ODBC extiende las funciones de desplazamiento. El nivel de compatibilidad con desplazamiento disponible depende de los controladores ODBC, la aplicación funciona con nivel de cumplimiento de la API de ODBC de su controlador, y si la biblioteca de cursores ODBC está cargada en memoria. Para obtener más información, consulte [ODBC](../../data/odbc/odbc-basics.md) y [ODBC: biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Según su diseño original, SQL proporciona desplazamiento sólo hacia delante, pero ODBC extiende las funciones de desplazamiento. El nivel de compatibilidad con desplazamiento disponible depende de los controladores ODBC, la aplicación funciona con nivel de cumplimiento de la API de ODBC de su controlador, y si la biblioteca de cursores ODBC está cargada en memoria. Para obtener más información, consulte [ODBC](../../data/odbc/odbc-basics.md) y [ODBC: La biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!TIP]
 >  Puede controlar si se utiliza la biblioteca de cursores. Consulte la *bUseCursorLib* y *dwOptions* parámetros [CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open).

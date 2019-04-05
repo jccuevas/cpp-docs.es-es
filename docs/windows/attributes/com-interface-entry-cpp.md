@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 9d83cae79b257c9ddfc6d9ab910bb5502ae78307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559697"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030412"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -120,4 +120,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)

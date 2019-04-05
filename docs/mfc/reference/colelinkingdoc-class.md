@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300415"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773559"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc (clase)
 
@@ -57,7 +57,7 @@ class COleLinkingDoc : public COleDocument
 
 ## <a name="remarks"></a>Comentarios
 
-Una aplicación de contenedor que admite la vinculación de elementos incrustados se denomina un "contenedor de vínculo". El [OCLIENT](../../visual-cpp-samples.md) aplicación de ejemplo es un ejemplo de un contenedor de vínculo.
+Una aplicación de contenedor que admite la vinculación de elementos incrustados se denomina un "contenedor de vínculo". El [OCLIENT](../../overview/visual-cpp-samples.md) aplicación de ejemplo es un ejemplo de un contenedor de vínculo.
 
 Cuando el origen de un elemento vinculado es un elemento incrustado en otro documento, que debe cargarse que contiene el documento en el orden del elemento incrustado que se va a editarse. Por este motivo, un contenedor de vínculo debe ser capaz de iniciar otra aplicación de contenedor cuando el usuario desea editar el origen de un elemento vinculado. La aplicación también debe utilizar el [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) clase para que pueden crear documentos cuando se inicia mediante programación.
 
@@ -75,7 +75,7 @@ Conectar su `COleTemplateServer` objeto a las plantillas de documento mediante u
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Para obtener un ejemplo `CWinApp`-derivados de la definición de clase y `InitInstance` de función, vea OCLIENT. H y OCLIENT. CPP en el ejemplo MFC [OCLIENT](../../visual-cpp-samples.md).
+Para obtener un ejemplo `CWinApp`-derivados de la definición de clase y `InitInstance` de función, vea OCLIENT. H y OCLIENT. CPP en el ejemplo MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Para obtener más información sobre el uso de `COleLinkingDoc`, consulte los artículos [contenedores: Implementación de un contenedor](../../mfc/containers-implementing-a-container.md) y [contenedores: Características avanzadas](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ Debe llamar a esta función cuando se cierra un archivo con nombre, pero normalm
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ejemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument (clase)](../../mfc/reference/coledocument-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CDocTemplate (clase)](../../mfc/reference/cdoctemplate-class.md)

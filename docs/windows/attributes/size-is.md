@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 95b0e16e5f5d085e526f45e8e98898474fc5a17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449444"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033237"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -25,7 +25,7 @@ Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expresión*<br/>
 El tamaño de memoria asignada para un tamaño punteros.
 
 ## <a name="remarks"></a>Comentarios
@@ -52,7 +52,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [last_is](last-is.md)<br/>

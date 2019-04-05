@@ -3,12 +3,12 @@ title: Configuración de sesiones de depuración de CMake en Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356171"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035353"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sesiones de depuración de CMake
 
@@ -42,7 +42,7 @@ Tan pronto como guarda el **launch.vs.json** archivo, se crea una entrada en el 
 
 ## <a name="support-for-cmakesettings-variables"></a>Compatibilidad con las variables de CMakeSettings
 
- **Launch.VS.JSON** admite variables que se declaran en **CMakeSettings.json** (ver abajo) y que se aplican a la configuración seleccionada actualmente. También tiene una clave denominada `currentDir`, que establece el directorio actual de la aplicación de inicio:
+ **Launch.VS.JSON** admite variables que se declaran en **CMakeSettings.json** (ver abajo) y que se aplican a la configuración seleccionada actualmente. También tiene una clave denominada `currentDir`, que establece el directorio actual de la aplicación de inicio para un proyecto local:
 
 ```json
 {
@@ -59,12 +59,19 @@ Al ejecutar la aplicación, el valor de `currentDir` es similar al siguiente:
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+La clave "cwd" establece el directorio actual de la aplicación al iniciar un proyecto remoto. El valor predeterminado es '${debugInfo.defaultWorkingDirectory}' que se evalúa como 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
-[Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>
-[Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Configuración de un proyecto de CMake de Linux](../linux/cmake-linux-project.md)<br/>
+[Conexión al equipo remoto Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Personalización de la configuración de compilación de CMake](customize-cmake-settings.md)<br/>
-[Configuración de sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
-[Implementación, ejecución y depuración del proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Configurar sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
+[Implementar, ejecutar y depurar el proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referencia de configuración predefinida de CMake](cmake-predefined-configuration-reference.md)<br/>

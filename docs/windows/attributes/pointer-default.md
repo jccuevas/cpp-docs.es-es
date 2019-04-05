@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 8261d789f50c2750cccce48dac675ef478a70420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504395"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022671"
 ---
 # <a name="pointerdefault"></a>pointer_default
 
@@ -25,7 +25,7 @@ Especifica el atributo de puntero predeterminado para todos los punteros, except
 
 ### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Un valor que describe el tipo de puntero: **ptr**, **ref**, o **único**.
 
 ## <a name="remarks"></a>Comentarios
@@ -42,7 +42,7 @@ Vea el ejemplo de [defaultvalue](defaultvalue.md) para un ejemplo de uso de **po
 
 |||
 |-|-|
-|**Se aplica a**|**interface**|
+|**Se aplica a**|**interfaz**|
 |**Reiterativo**|No|
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|

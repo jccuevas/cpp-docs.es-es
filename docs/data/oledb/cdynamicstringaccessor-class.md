@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: dff36dfb2b898c6a4df65492e2d9386c748f049b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534620"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035668"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor (Clase)
 
@@ -55,7 +55,7 @@ La información de columna se almacena en un búfer creado y administrado por es
 
 Para obtener una explicación y ejemplos del uso de las clases de descriptor de acceso dinámico, consulte [utilizar descriptores de acceso dinámico](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor:: GetString
+## <a name="getstring"></a> CDynamicStringAccessor::GetString
 
 Recupera los datos de la columna especificada como una cadena.
 
@@ -85,7 +85,7 @@ Recupera un puntero al valor de cadena de la columna especificada. El valor es d
 
 La segunda invalidación formulario toma el nombre de columna como una cadena ANSI. La tercera invalidar formulario toma el nombre de columna como una cadena Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor:: SetString
+## <a name="setstring"></a> CDynamicStringAccessor::SetString
 
 Establece los datos de la columna especificada como una cadena.
 
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Un puntero a una cadena de caracteres que contiene el nombre de columna.
 
-*data*<br/>
+*datos*<br/>
 [in] Un puntero a los datos de cadena se escriban en la columna especificada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -128,7 +128,7 @@ Si _SECURE_ATL se define con un valor distinto de cero, se generará un error de
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor (Clase)](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor (clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)<br/>
 [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicStringAccessorA (Clase)](../../data/oledb/cdynamicstringaccessora-class.md)<br/>

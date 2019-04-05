@@ -5,12 +5,12 @@ helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-ms.openlocfilehash: cd5d1237bc025cceb25cc290509b929b595a215f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499897"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024921"
 ---
 # <a name="macros-and-c"></a>Macros y C++
 C++ proporciona nuevas capacidades que suplantan, algunas de ellas, a las proporcionadas por el preprocesador de ANSI C. Estas nuevas capacidades mejoran la seguridad de tipos y la previsibilidad del lenguaje:

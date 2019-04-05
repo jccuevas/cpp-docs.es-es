@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 97aa0f6318a47a93b0079a81dea772b900b5484b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441774"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030159"
 ---
 # <a name="access-to-odbc-and-sql"></a>Acceso a ODBC y SQL
 
@@ -22,7 +22,7 @@ La biblioteca Microsoft Foundation Class encapsula muchas llamadas de API de Win
 
 De forma similar, las clases de base de datos evitan tener que trabajar mucho con [SQL](../../data/odbc/sql.md), pero se puede usar SQL directamente si desea. Puede personalizar los objetos de conjunto de registros pasando una instrucción SQL personalizada (o partes de la configuración de la instrucción predeterminada) al abrir el conjunto de registros. También puede realizar llamadas a SQL directamente mediante el [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) función miembro de clase [CDatabase](../../mfc/reference/cdatabase-class.md).
 
-Para obtener más información, consulte [ODBC: llamar a ODBC API directamente a funciones](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) y [SQL: realizar directo SQL llamadas (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
+Para obtener más información, consulte [ODBC: API de ODBC que realiza la llamada directamente a las funciones](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) y [SQL: Realizar llamadas directas a SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58779461"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032331"
 ---
 # <a name="crowset-class"></a>CRowset (Clase)
 
@@ -273,7 +273,7 @@ Una clase de descriptor de acceso. De manera predeterminada, es `CAccessorBase`.
 |-|-|
 |[AddRefRows](#addrefrows)|Incrementa el recuento de referencias asociadas con la fila actual.|
 |[Cerrar](#close)|Libera las filas y la actual `IRowset` interfaz.|
-|[Compare](#compare)|Compara dos marcadores utilizando [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Comparar](#compare)|Compara dos marcadores utilizando [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Crea un nuevo `CRowset` objeto y lo asocia a (opcionalmente) un `IRowset` interfaz proporcionada como un parámetro.|
 |[Eliminar](#delete)|Elimina las filas del conjunto de filas mediante [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Busca la siguiente fila coincidente después del marcador especificado.|
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Parámetros
 
-*bookmark*<br/>
+*marcador*<br/>
 [in] Un marcador de marcar la ubicación desde la que desea capturar datos.
 
 *lSkip*<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563126"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025090"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Teclas de aceleración (Editor de C++ imágenes para iconos)
 
@@ -69,7 +69,7 @@ Ninguna
 ## <a name="see-also"></a>Vea también
 
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Cómo: Creación de un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Cómo: Edición de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Cómo: Uso de una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Cómo: Trabajo con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Filtrar Crear un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Filtrar Editar una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Filtrar Usar una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Filtrar Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
