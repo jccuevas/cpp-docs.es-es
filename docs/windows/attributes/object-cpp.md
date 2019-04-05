@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: 1cae9e6b014f33dfbbcccdeb4172d6f35349e307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526178"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022364"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -39,7 +39,7 @@ Consulte [nonbrowsable](nonbrowsable.md) para obtener un ejemplo de cómo usar *
 
 |||
 |-|-|
-|**Se aplica a**|**interface**|
+|**Se aplica a**|**interfaz**|
 |**Reiterativo**|No|
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
@@ -52,5 +52,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 [Atributos de interfaz](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[custom](custom-cpp.md)<br/>
+[personalizadas](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)
