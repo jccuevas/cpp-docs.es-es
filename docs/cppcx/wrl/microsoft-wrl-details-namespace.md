@@ -3,12 +3,12 @@ title: Microsoft::WRL::Details (Espacio de nombres)
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-ms.openlocfilehash: 149b78a20061dc9083c62df4e58d638009c5e0a2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: fce6e620600164e73d3708d98d8a7fa979e8ab42
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785889"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027488"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details (Espacio de nombres)
 
@@ -29,11 +29,11 @@ namespace Microsoft::WRL::Details;
 |[ComPtrRef (clase)](comptrref-class.md)|Representa una referencia a un objeto de tipo ComPtr\<T >.|
 |[ComPtrRefBase (clase)](comptrrefbase-class.md)|Representa la clase base para el [ComPtrRef](comptrref-class.md) clase.|
 |[DontUseNewUseMake (clase)](dontusenewusemake-class.md)|Impide el uso de operador `new` en `RuntimeClass`. Por lo tanto, debe usar el [función](make-function.md) en su lugar.|
-|[EventTargetArray (clase)](eventtargetarray-class.md)|Representa una matriz de controladores de eventos.|
+|[EventTargetArray (Clase)](eventtargetarray-class.md)|Representa una matriz de controladores de eventos.|
 |[MakeAllocator (clase)](makeallocator-class.md)|Asigna memoria para una clase activable, con o sin compatibilidad con la referencia débil.|
-|[ModuleBase (clase)](modulebase-class.md)|Representa la clase base de la [módulo](module-class.md) clases.|
-|[RemoveIUnknown (clase)](removeiunknown-class.md)|Convierte un tipo que es equivalente a un `IUnknown`-tipo de función, pero tiene no virtual `QueryInterface`, `AddRef`, y `Release` métodos.|
-|[WeakReference (clase)](weakreference-class.md)|Representa un *referencia débil* que puede utilizarse con el tiempo de ejecución de Windows o COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
+|[ModuleBase (Clase)](modulebase-class.md)|Representa la clase base de la [módulo](module-class.md) clases.|
+|[RemoveIUnknown (Clase)](removeiunknown-class.md)|Convierte un tipo que es equivalente a un `IUnknown`-tipo de función, pero tiene no virtual `QueryInterface`, `AddRef`, y `Release` métodos.|
+|[WeakReference (Clase)](weakreference-class.md)|Representa un *referencia débil* que puede utilizarse con el tiempo de ejecución de Windows o COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
 
 ### <a name="structures"></a>Estructuras
 
@@ -54,10 +54,10 @@ namespace Microsoft::WRL::Details;
 |[InvokeHelper (estructura)](invokehelper-structure.md)|Proporciona una implementación de la `Invoke()` método según el número especificado y el tipo de argumentos.|
 |[IsBaseOfStrict (estructura)](isbaseofstrict-structure.md)|Comprueba si un tipo es la base de otro.|
 |[IsSame (estructura)](issame-structure.md)|Las pruebas si un tipo especificado es igual que otro tipo especificado.|
-|[Nil (estructura)](nil-structure.md)|Se utiliza para indicar un parámetro de plantilla opcional no especificado.|
+|[Nil (Estructura)](nil-structure.md)|Se utiliza para indicar un parámetro de plantilla opcional no especificado.|
 |[RemoveReference (estructura)](removereference-structure.md)|Elimina el rasgo de referencia o referencia de rvalue desde el parámetro de plantilla de clase especificada.|
-|[RuntimeClassBase (estructura)](runtimeclassbase-structure.md)|Utilizado para detectar `RuntimeClass` en el [realizar](make-function.md) función.|
-|[RuntimeClassBaseT (estructura)](runtimeclassbaset-structure.md)|Proporciona métodos auxiliares para `QueryInterface` operaciones y obtener los identificadores de interfaz.|
+|[RuntimeClassBase (Estructura)](runtimeclassbase-structure.md)|Utilizado para detectar `RuntimeClass` en el [realizar](make-function.md) función.|
+|[RuntimeClassBaseT (Estructura)](runtimeclassbaset-structure.md)|Proporciona métodos auxiliares para `QueryInterface` operaciones y obtener los identificadores de interfaz.|
 |[VerifyInheritanceHelper (estructura)](verifyinheritancehelper-structure.md)|Comprueba si una interfaz se deriva de otra interfaz.|
 |[VerifyInterfaceHelper (estructura)](verifyinterfacehelper-structure.md)|Comprueba que la interfaz especificada por el parámetro de plantilla cumple determinados requisitos.|
 
@@ -75,7 +75,7 @@ namespace Microsoft::WRL::Details;
 |[Move (función)](move-function.md)|Mueve el argumento especificado de una ubicación a otra.|
 |[RaiseException (función)](raiseexception-function.md)|Genera una excepción en el subproceso de llamada.|
 |[Swap (función) (WRL)](swap-function-wrl.md)|Intercambia los valores de los dos argumentos especificados.|
-|[TerminateMap (función)](terminatemap-function.md)|Cierra los generadores de clases en el módulo especificado.|
+|[TerminateMap (Función)](terminatemap-function.md)|Cierra los generadores de clases en el módulo especificado.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -85,5 +85,5 @@ namespace Microsoft::WRL::Details;
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)<br/>
-[Microsoft::WRL::Wrappers (espacio de nombres)](microsoft-wrl-wrappers-namespace.md)
+[Microsoft::WRL (Espacio de nombres)](microsoft-wrl-namespace.md)<br/>
+[Microsoft::WRL::Wrappers (Espacio de nombres)](microsoft-wrl-wrappers-namespace.md)
