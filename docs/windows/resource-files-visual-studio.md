@@ -1,4 +1,4 @@
----
+﻿---
 title: Archivos de recursos (C++)
 ms.date: 02/14/2019
 f1_keywords:

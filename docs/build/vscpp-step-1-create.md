@@ -1,4 +1,4 @@
----
+﻿---
 title: Creación de un proyecto de aplicación de consola de C++
 description: Creación de una aplicación de consola Hola mundo en Visual C++
 ms.custom: mvc

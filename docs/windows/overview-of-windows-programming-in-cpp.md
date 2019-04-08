@@ -1,4 +1,4 @@
----
+﻿---
 title: Información general de la programación para Windows en C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
