@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 93db10e19cce0658bf731c14e7ac76b575841bf3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785834"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021610"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (función)
 
@@ -53,4 +53,4 @@ El tiempo de ejecución de Windows llama a esta función de devolución de llama
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)

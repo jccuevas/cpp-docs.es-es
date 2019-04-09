@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781697"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager (clase)
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |Parámetro|Descripción|
 |*size*|[in] Un [CSize](../../atl-mfc-shared/reference/csize-class.md) parámetro que indica el tamaño del mapa de bits.|
 |*pBits*|[out] Un puntero a un puntero de datos que recibe la ubicación de la imagen de DIB valores de bit.|
-|*bitmap*|Un identificador para el mapa de bits original|
+|*mapa de bits*|Un identificador para el mapa de bits original|
 |*clrTransparent*|Un valor RGB especificando un color transparente del mapa de bits original.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -972,7 +972,7 @@ static void __stdcall SetPixel(
 |*cy*|[in] La altura total del mapa de bits.|
 |*x*|[in] La coordenada x del píxel del mapa de bits a cambiar.|
 |*y*|[in] Coordenada y del píxel del mapa de bits a cambiar.|
-|*color*|[in] El nuevo color del píxel que se identifica mediante las coordenadas proporcionadas.|
+|*colores*|[in] El nuevo color del píxel que se identifica mediante las coordenadas proporcionadas.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 

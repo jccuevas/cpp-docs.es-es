@@ -8,12 +8,12 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 69e174a000edfea7027a04f9cf97bf5a1aeb585e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518768"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023911"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Mensajes del vectorizador y paralelizador
 
@@ -23,7 +23,7 @@ Puede usar las opciones del compilador de Visual C++ [/qpar-Report](../../build/
 
 - [5xx](#BKMK_ReasonCode50x)
 
-- [10xxx](#BKMK_ReasonCode100x)
+- [10xx](#BKMK_ReasonCode100x)
 
 - [11xx](#BKMK_ReasonCode110x)
 
@@ -216,7 +216,7 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xxx
+###  <a name="BKMK_ReasonCode100x"></a> 10xx
 
 Los 10*xx* códigos de motivo que se aplican al paralelizador automático.
 
@@ -986,5 +986,5 @@ void code_1505(int *A, int *B)
 [Programación en paralelo en código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [#pragma loop()](../../preprocessor/loop.md)<br/>
 [/Q (Opciones) (Operaciones de bajo nivel)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar/report (Nivel de información de paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
-[/Qvec/report (Nivel de información de vectorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qpar-report (Nivel de información de paralelizador automático)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[/Qvec-report (Nivel de información de vectorizador automático)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593498"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039517"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -36,7 +36,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[async_uuid](async-uuid.md)|Especifica el UUID que indica al compilador MIDL para definir las versiones sincrónicas y asincrónicas de una interfaz COM.|
 |[bindable](bindable.md)|Indica que la propiedad admite enlace de datos.|
 |[call_as](call-as.md)|Permite que una función utilizables para asignarse a una función remota.|
-|[case](case-cpp.md)|Puede usar con el [switch_type](switch-type.md) atributo en una unión.|
+|[mayúsculas y minúsculas](case-cpp.md)|Puede usar con el [switch_type](switch-type.md) atributo en una unión.|
 |[coclase](coclass.md)|Sitios de la clase definición en un archivo .idl como coclase.|
 |[control](control.md)|Especifica que el tipo definido por el usuario es un control.|
 |[cpp_quote](cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo de encabezado generado.|
@@ -58,11 +58,11 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[hidden](hidden.md)|Indica que el elemento existe pero no debe mostrarse en un explorador orientado al usuario.|
 |[idl_module](idl-module.md)|Especifica un punto de entrada en un archivo DLL.|
 |[idl_quote](idl-quote.md)|Le permite usar los atributos o IDL construcciones que no se admiten en la versión actual de Visual C++.|
-|[identificador](id.md)|Especifica un DISPID para una función miembro (una propiedad o un método en una interfaz o interfaz dispinterface).|
+|[id](id.md)|Especifica un DISPID para una función miembro (una propiedad o un método en una interfaz o interfaz dispinterface).|
 |[iid_is](iid-is.md)|Especifica el IID de la interfaz COM que apunta a un puntero de interfaz.|
 |[immediatebind](immediatebind.md)|Indica que la base de datos será notificada inmediatamente de todos los cambios a una propiedad de un objeto enlazado a datos.|
 |[importlib](importlib.md)|Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén disponibles en la biblioteca de tipos que se está creando.|
-|[import](import.md)|Especifica otro archivo .idl, .odl o encabezado que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|
+|[importación](import.md)|Especifica otro archivo .idl, .odl o encabezado que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|
 |[include](include-cpp.md)|Especifica uno o varios archivos de encabezado que se incluirán en el archivo .idl generado.|
 |[includelib](includelib-cpp.md)|Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.|
 |[in](in-cpp.md)|Indica que es un parámetro que se pasan desde el procedimiento que realiza la llamada al procedimiento llamado.|
@@ -70,7 +70,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[lcid](lcid.md)|Le permite pasar un identificador de configuración regional a una función.|
 |[length_is](length-is.md)|Especifica el número de elementos de matriz que se transmitan.|
 |[licensed](licensed.md)|Indica que la coclase al que se aplica con licencia y se debe crear instancias mediante `IClassFactory2`.|
-|[local](local-cpp.md)|Permite usar el compilador de MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|
+|[locales](local-cpp.md)|Permite usar el compilador de MIDL como un generador de encabezado cuando se utiliza en el encabezado de la interfaz. Cuando se utiliza en una función individual, designa un procedimiento local para el que no se genera ningún código auxiliar.|
 |[max_is](max-is.md)|Designa el valor máximo para un índice de matriz válida.|
 |[module](module-cpp.md)|Define el bloque de biblioteca en el archivo .idl.|
 |[ms_union](ms-union.md)|Controla la alineación de representación de datos de red de uniones nonencapsulated.|
@@ -78,10 +78,10 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[nonbrowsable](nonbrowsable.md)|Indica que un miembro de interfaz no debe mostrarse en un explorador de propiedades.|
 |[noncreatable](noncreatable.md)|Define un objeto que no pueden crearse instancias por sí mismo.|
 |[nonextensible](nonextensible.md)|Especifica que el `IDispatch` implementación incluye solo las propiedades y los métodos enumeran en la descripción de la interfaz y no se pueden ampliar con miembros adicionales en tiempo de ejecución.|
-|[object](object-cpp.md)|Identifica una interfaz personalizada; es sinónimo de atributo personalizado.|
+|[objeto](object-cpp.md)|Identifica una interfaz personalizada; es sinónimo de atributo personalizado.|
 |[odl](odl.md)|Identifica una interfaz como una interfaz de lenguaje de descripción de objetos (ODL).|
 |[oleautomation](oleautomation.md)|Indica que una interfaz es compatible con la automatización.|
-|[optional](optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
+|[opcionales](optional-cpp.md)|Especifica un parámetro opcional para una función miembro.|
 |[out](out-cpp.md)|Identifica los parámetros de puntero devueltos desde el procedimiento llamado al procedimiento que realiza la llamada (desde el servidor al cliente).|
 |[pointer_default](pointer-default.md)|Especifica el atributo de puntero predeterminado para todos los punteros, excepto los punteros de nivel superior que aparecen en las listas de parámetros.|
 |[pragma](pragma.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo .idl generado.|
@@ -94,12 +94,12 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a una variable.|
 |[ref](ref-cpp.md)|Identifica un puntero de referencia.|
-|[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
+|[requestedit](requestedit.md)|Indica que la propiedad admite la notificación `OnRequestEdit`.|
 |[restricted](restricted.md)|Especifica que una biblioteca o miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.|
 |[retval](retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|
 |[size_is](size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo - o matrices multidimensionales.|
-|[source](source-cpp.md)|Indica que un miembro de clase, propiedad o método es un origen de eventos.|
-|[string](string-cpp.md)|Indica que unidimensional **char**, **wchar_t**, `byte`, o matriz equivalente o el puntero a este tipo de matriz debe tratarse como una cadena.|
+|[origen](source-cpp.md)|Indica que un miembro de clase, propiedad o método es un origen de eventos.|
+|[cadena](string-cpp.md)|Indica que unidimensional **char**, **wchar_t**, `byte`, o matriz equivalente o el puntero a este tipo de matriz debe tratarse como una cadena.|
 |[switch_is](switch-is.md)|Especifica la expresión o el identificador que actúa como la unión discriminante que selecciona al miembro de unión.|
 |[switch_type](switch-type.md)|Identifica el tipo de la variable utilizada como la unión discriminante.|
 |[transmit_as](transmit-as.md)|Indica al compilador para asociar un tipo presentado, manipulan las aplicaciones cliente y servidor, con un tipo transmitido.|

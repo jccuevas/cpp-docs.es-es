@@ -5,18 +5,18 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478642"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033010"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Rol del programador al utilizar una vista de registros (acceso a datos MFC)
 
 La siguiente tabla muestra qué se debe hacer normalmente para trabajar con una vista de registros y qué tareas realiza el marco de trabajo.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabajar con una vista de registros: el programador y el marco de trabajo
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Trabajar con una vista de registros: Usted y el marco de trabajo
 
 |El programador|El marco de trabajo|
 |---------|-------------------|
@@ -29,7 +29,7 @@ La siguiente tabla muestra qué se debe hacer normalmente para trabajar con una 
 |[Opcional] Escribe código para las validaciones especiales.||
 |[Opcional] Escribe código para agregar o eliminar registros.||
 
-La programación basada en formularios es solo una forma de trabajar con una base de datos. Para obtener información acerca de las aplicaciones que usan cualquier otra interfaz de usuario, o ninguna interfaz de usuario, consulte [MFC: utilizar clases de base de datos con documentos y vistas](../data/mfc-using-database-classes-with-documents-and-views.md) y [MFC: utilizar clases de base de datos sin documentos y vistas](../data/mfc-using-database-classes-without-documents-and-views.md). Enfoques alternativos para mostrar los registros de base de datos, vea clases [CListView](../mfc/reference/clistview-class.md) y [CTreeView](../mfc/reference/ctreeview-class.md).
+La programación basada en formularios es solo una forma de trabajar con una base de datos. Para obtener información acerca de las aplicaciones que usan cualquier otra interfaz de usuario, o ninguna interfaz de usuario, consulte [MFC: Uso de las clases de base de datos con documentos y vistas](../data/mfc-using-database-classes-with-documents-and-views.md) y [MFC: Uso de clases de base de datos sin documentos ni vistas](../data/mfc-using-database-classes-without-documents-and-views.md). Enfoques alternativos para mostrar los registros de base de datos, vea clases [CListView](../mfc/reference/clistview-class.md) y [CTreeView](../mfc/reference/ctreeview-class.md).
 
 ## <a name="see-also"></a>Vea también
 

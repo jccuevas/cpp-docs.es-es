@@ -8,12 +8,12 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-ms.openlocfilehash: 3adb7ab30b445ab3223246d247be006d24475afa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534607"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039889"
 ---
 # <a name="once"></a>once
 Especifica que el compilador incluirá (abrirá) el archivo una sola vez al compilar un archivo de código fuente.
@@ -56,4 +56,4 @@ Tenga cuidado de no usar `#pragma once` o `#include guard` modismo en archivos d
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

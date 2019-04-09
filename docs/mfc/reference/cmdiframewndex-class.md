@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275433"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778564"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
 
@@ -259,7 +259,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determina si los paneles de acoplamiento se pueden convertir a las ventanas secundarias MDI.|
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Habilita o deshabilita la optimización de renegociación para ventanas secundarias MDI.|
@@ -270,7 +270,7 @@ Para aprovechar las características de personalización extendido en la aplicac
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente deriva una clase de `CMDIFrameWndEx`. Este fragmento de código procede de la [DrawClient ejemplo: Aplicación de dibujo de objeto OLE basados en la cinta de opciones MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente deriva una clase de `CMDIFrameWndEx`. Este fragmento de código procede de la [DrawClient ejemplo: Aplicación de dibujo de objeto OLE basados en la cinta de opciones MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -449,7 +449,7 @@ Invalide este método para crear documentos cuando se cargan desde el registro.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `CreateDocumentWindow` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `CreateDocumentWindow` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 En este ejemplo, `g_strStartViewName` podría ser el nombre de un "documento virtual" (por ejemplo, "Página de inicio") que no se carga realmente desde un archivo de disco. Por lo tanto, necesitamos un procesamiento especial para controlar ese caso.
 
@@ -505,7 +505,7 @@ Este método acopla especificado el panel a uno de los lados de la ventana de ma
 
 ### <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra el uso del método `DockPane`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra el uso del método `DockPane`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ Llame a este método para acoplar varios objetos de panel en un orden predefinid
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo el `DockPaneLeftOf` método se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo el `DockPaneLeftOf` método se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ Llame a esta función para habilitar el modo de ocultación automática de los p
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo el `EnableAutoHidePanes` método se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo el `EnableAutoHidePanes` método se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ Llame a esta función para habilitar el acoplamiento de paneles que pertenecen a
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo el `EnableDocking` método se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo el `EnableDocking` método se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] TRUE para habilitar la carga de estado de acoplamiento, FALSE para deshabilitar la carga del estado de acoplamiento.
 
 ### <a name="remarks"></a>Comentarios
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] Si es TRUE, se habilita la característica de grupos con fichas MDI; Si es FALSE, se deshabilita la característica de grupos con fichas MDI.
 
 *params*<br/>
@@ -686,7 +686,7 @@ Para obtener más información sobre cómo usar MDI con fichas a grupos, consult
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `EnableMDITabbedGroups` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `EnableMDITabbedGroups` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 Especifica si están habilitadas las pestañas.
 
 *bIcons*<br/>
@@ -719,7 +719,7 @@ Especifica la ubicación de las etiquetas de pestaña.
 *bTabCloseButton*<br/>
 Especifica si se debe mostrar botones Cerrar pestaña.
 
-*style*<br/>
+*estilo*<br/>
 Especifica el estilo de fichas. Utilice STYLE_3D_SCROLLED para pestañas normales o STYLE_3D_ONENOTE para las pestañas de Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -738,7 +738,7 @@ Si *bTabCustomTooltips* es TRUE, se enviará un mensaje AFX_WM_ON_GET_TAB_TOOLTI
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `EnableMDITabs` se utiliza en el [MDITabsDemo ejemplo: MFC con fichas MDI aplicación](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `EnableMDITabs` se utiliza en el [MDITabsDemo ejemplo: MFC con fichas MDI aplicación](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*bEnable*<br/>
+*bHabilitar el*<br/>
 [in] Si es TRUE, el control automático del menú panel está habilitado; Si es FALSE, el control automático está deshabilitado.
 
 *uiCustomizeCmd*<br/>
@@ -807,7 +807,7 @@ El menú emergente de panel muestra la lista de paneles de la aplicación y perm
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `EnablePaneMenu` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `EnablePaneMenu` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ Use este método para insertar un elemento de menú cuyo comando llama a un cuad
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `EnableWindowsDialog` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `EnableWindowsDialog` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1224,7 +1224,7 @@ Para cargar o guardar el estado de grupos y pestañas de MDI y la lista de los d
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `LoadMDIState` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `LoadMDIState` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bNext*<br/>
+*bSiguiente*<br/>
 [in] Si es TRUE, mover la ficha al siguiente grupo de pestañas. Si es FALSE, muévalo al grupo de pestañas anterior.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1260,7 +1260,7 @@ Use esta función para crear una nueva con pestañas de ventana (nuevo grupo con
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `MDITabNewGroup` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `MDITabNewGroup` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ El valor predeterminado es `FALSE`.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `m_bCanCovertControlBarToMDIChild` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `m_bCanCovertControlBarToMDIChild` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1621,7 +1621,7 @@ Si no se procesan `OnShowMDITabContextMenu`, no se mostrará el menú contextual
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `OnShowMDITabContextMenu` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `OnShowMDITabContextMenu` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1635,7 +1635,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bShow*<br/>
+*bMostrar*<br/>
 [in] TRUE para mostrar paneles, FALSE para ocultar paneles.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1856,7 +1856,7 @@ Para cargar o guardar el estado de grupos y pestañas de MDI y la lista de los d
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `SaveMDIState` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `SaveMDIState` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1924,7 +1924,7 @@ void ShowPane(
 *pBar*<br/>
 [in] Puntero al panel para mostrar u ocultar.
 
-*bShow*<br/>
+*bMostrar*<br/>
 [in] TRUE para mostrar el panel. FALSE para ocultar el panel.
 
 *bDelay*<br/>
@@ -1939,7 +1939,7 @@ Llame a este método para mostrar u ocultar el panel. No use `ShowWindow` para a
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `ShowPane` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `ShowPane` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `ShowWindowsDialog` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `ShowWindowsDialog` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ Utilice este método para convertir un documento con pestañas en un panel acopl
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo `TabbedDocumentToControlBar` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo `TabbedDocumentToControlBar` se utiliza en el [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

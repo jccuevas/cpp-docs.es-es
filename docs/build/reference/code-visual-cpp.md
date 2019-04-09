@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: c50b14d1905d7d827215ba9583026f8489c3a1e0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826874"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035814"
 ---
 # <a name="ltcodegt"></a>&lt;code&gt;
 
@@ -27,7 +27,7 @@ La etiqueta \<code> proporciona una manera de indicar una o varias líneas como 
 
 #### <a name="parameters"></a>Parámetros
 
-*content*<br/>
+*contenido*<br/>
 El texto que quiere marcar como código.
 
 ## <a name="remarks"></a>Comentarios

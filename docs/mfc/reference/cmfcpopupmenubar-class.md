@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: 14f1636917244efe4decc0108579f81fbad2f457
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300783"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776783"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar (clase)
 
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Especifica si la barra lateral deshabilitada se mostrará cuando la aplicación tiene una apariencia de Windows XP.|
 
@@ -101,7 +101,7 @@ El `CMFCPopupMenuBar` se crea al mismo tiempo que un [CMFCPopupMenu (clase)](../
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo inicializar un `CMFCPopupMenuBar` objeto desde un `CMFCPopupMenu` objeto. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo inicializar un `CMFCPopupMenuBar` objeto desde un `CMFCPopupMenu` objeto. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 

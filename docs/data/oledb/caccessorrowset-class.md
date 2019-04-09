@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420159"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033909"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset (Clase)
 
@@ -67,7 +67,7 @@ Una clase de conjunto de filas.
 
 |||
 |-|-|
-|[Bind](#bind)|Crea los enlaces (se usa cuando `bBind` se especifica como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
+|[Enlazar](#bind)|Crea los enlaces (se usa cuando `bBind` se especifica como **false** en [CCommand:: Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Constructor.|
 |[Cerrar](#close)|Cierra el conjunto de filas y los descriptores de acceso.|
 |[FreeRecordMemory](#freerecordmemory)|Libera las columnas en el registro actual que necesitan ser liberados.|

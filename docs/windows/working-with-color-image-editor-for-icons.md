@@ -62,12 +62,12 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: f50d734ab35968aa107e23b8450d60f316b6002e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563152"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034149"
 ---
 # <a name="how-to-work-with-color"></a>Filtrar Trabajar con colores
 
@@ -108,12 +108,12 @@ El **Selector de colores personalizados** cuadro de diálogo le permite personal
 |**Presentación de Color degradado**|Cambia los valores de un color seleccionado.<br/><br/>Coloque la cruz en el color que desee cambiar y mueva el control deslizante hacia arriba o hacia abajo para cambiar la luminosidad o los valores RGB del color.|
 |**Barra Luminosidad**|Establece la luminosidad del color seleccionado en el **muestra de Color degradado** cuadro.<br/><br/>Seleccione y arrastre la flecha blanca de la barra para aumentar el brillo o hacia abajo para menor. El **Color** cuadro muestra el color que ha seleccionado y el efecto de la luminosidad establece.|
 |**Color**|Muestra el matiz (valor de la rueda de colores) del color que se va a definir. El intervalo de valores está comprendido entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 es verde, 180 es aguamarina, 200 es magenta y 240 es azul.|
-|**HUE**|Muestra el matiz (valor de la rueda de colores) del color que se va a definir. El intervalo de valores está comprendido entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 es verde, 180 es aguamarina, 200 es magenta y 240 es azul.|
-|**Sáb**|Especifica el valor de saturación del color que se va a definir. La saturación es la cantidad de color en un matiz especificado. Los valores comprendidos entre 0 y 240.|
-|**Lum.**|Enumera la luminosidad (brillo) del color que se va a definir. Los valores comprendidos entre 0 y 240.|
-|**Red**|Especifica el valor de color rojo del color que se va a definir. El intervalo de valores está comprendido entre 0 y 255.|
-|**Green**|Especifica el valor de color verde del color que se va a definir. El intervalo de valores está comprendido entre 0 y 255.|
-|**Blue**|Especifica el valor azul del color que se va a definir. El intervalo de valores está comprendido entre 0 y 255.|
+|**Matiz**|Muestra el matiz (valor de la rueda de colores) del color que se va a definir. El intervalo de valores está comprendido entre 0 y 240, donde 0 es rojo, 60 es amarillo, 120 es verde, 180 es aguamarina, 200 es magenta y 240 es azul.|
+|**Sab**|Especifica el valor de saturación del color que se va a definir. La saturación es la cantidad de color en un matiz especificado. Los valores comprendidos entre 0 y 240.|
+|**Lum**|Enumera la luminosidad (brillo) del color que se va a definir. Los valores comprendidos entre 0 y 240.|
+|**Rojo**|Especifica el valor de color rojo del color que se va a definir. El intervalo de valores está comprendido entre 0 y 255.|
+|**Verde**|Especifica el valor de color verde del color que se va a definir. El intervalo de valores está comprendido entre 0 y 255.|
+|**Azul**|Especifica el valor azul del color que se va a definir. El intervalo de valores está comprendido entre 0 y 255.|
 
 Puede guardar y cargar un **colores** paleta que contiene colores personalizados. De forma predeterminada, el **colores** paleta usado más recientemente se carga automáticamente al iniciar Visual Studio.
 
@@ -125,7 +125,7 @@ Utilice la **Cargar paleta de colores** cuadro de diálogo para cargar las palet
 |Property|Descripción|
 |-----------------|-----------------|
 |**Buscar en**|Especifica la ubicación donde desea ubicar un archivo o carpeta.<br/><br/>Seleccione la flecha para elegir otra ubicación, o seleccione el icono de carpeta en la barra de herramientas para mover los niveles.|
-|**Nombre de archivo**|Proporciona un espacio para que escriba el nombre del archivo que desea abrir.<br/><br/>Para buscar rápidamente un archivo que ha abierto anteriormente, seleccione el nombre de archivo en la lista desplegable, si está disponible.<br/><br/>Si está buscando un archivo, puede utilizar asteriscos (*) como caracteres comodín. Por ejemplo, puede escribir \*.\* para ver una lista de todos los archivos. También puede escribir la ruta de acceso completa de un archivo, por ejemplo, *Documentos\MiPaletaDeColores. PAL C:\My* o  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
+|**Nombre del archivo**|Proporciona un espacio para que escriba el nombre del archivo que desea abrir.<br/><br/>Para buscar rápidamente un archivo que ha abierto anteriormente, seleccione el nombre de archivo en la lista desplegable, si está disponible.<br/><br/>Si está buscando un archivo, puede utilizar asteriscos (*) como caracteres comodín. Por ejemplo, puede escribir \*.\* para ver una lista de todos los archivos. También puede escribir la ruta de acceso completa de un archivo, por ejemplo, *Documentos\MiPaletaDeColores. PAL C:\My* o  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|
 |**Tipo de archivo**|Enumera los tipos de archivos que se va a mostrar.<br/><br/>Paleta (*. PAL) es el tipo de archivo predeterminado para las paletas de colores.|
 
 ## <a name="how-to"></a>Procedimientos
@@ -228,7 +228,7 @@ Ninguna
 ## <a name="see-also"></a>Vea también
 
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Cómo: Creación de un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Cómo: Edición de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Cómo: Uso de una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Filtrar Crear un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Filtrar Editar una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Filtrar Usar una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
 [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

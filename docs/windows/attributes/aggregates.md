@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: aaf138ab3b0fa69f2a8c201eed631569b33b079f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486793"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028710"
 ---
 # <a name="aggregates"></a>agregados
 
@@ -28,7 +28,7 @@ Indica que el objeto agrega el objeto especificado por el CLSID.
 
 ### <a name="parameters"></a>Parámetros
 
-*CLSID*<br/>
+*clsid*<br/>
 Especifica el CLSID del objeto agregable.
 
 *variable_name*<br/>
@@ -94,7 +94,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregación](/windows/desktop/com/aggregation)<br/>
-[Agregables](/windows/desktop/Midl/aggregatable)<br/>
+[Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

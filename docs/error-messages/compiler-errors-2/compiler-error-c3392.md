@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556577"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779539"
 ---
 # <a name="compiler-error-c3392"></a>Error del compilador C3392
 
 'arg_tipo': argumento de tipo no válido para el parámetro genérico 'parámetro' del 'tipo_genérico' genérico, debe tener un constructor sin parámetros público.
 
-Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, consulte [genéricos](../../windows/generics-cpp-component-extensions.md).
+Se crearon incorrectamente instancias de un tipo genérico. Compruebe la definición de tipo. Para obtener más información, consulte [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

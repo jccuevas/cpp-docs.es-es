@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 8a4d6cad399b1773102dc0bc64e28049cca30d2d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523356"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030094"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividad abierta de bases de datos (ODBC)
 
@@ -36,7 +36,7 @@ Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [O
 
 - [SQL](sql.md) para ODBC
 
-- [Transacciones de base de datos](transaction-odbc.md)
+- [Transacciones de bases de datos](transaction-odbc.md)
 
 - [Determinar el esquema de origen de datos ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) en tiempo de ejecución
 
@@ -64,18 +64,18 @@ Estas tareas se basan en MFC [ODBC](odbc-basics.md) clases. Para obtener más in
 
 - [Diseñar y crear una aplicación de base de datos ODBC](design-and-create-an-odbc-database-application.md)
 
-- [Usar formularios de base de datos (vistas de registros) con ODBC](use-database-forms-record-views-with-odbc.md)
+- [Utilizar formularios de base de datos (Vistas de registros) con ODBC](use-database-forms-record-views-with-odbc.md)
 
-- [Usar ODBC para trabajar con otros usuarios](use-odbc-to-work-with-other-users.md)
+- [Utilizar ODBC para trabajar con otros usuarios](use-odbc-to-work-with-other-users.md)
 
 - [Trabajar con conexiones de base de datos ODBC](work-with-odbc-database-connections.md)
 
 - [Trabajar con ODBC y controladores](work-with-odbc-and-drivers.md)
 
-- [Usar la biblioteca de cursores ODBC](use-the-odbc-cursor-library.md)
+- [Utilizar la biblioteca de cursores ODBC](use-the-odbc-cursor-library.md)
 
-- [Usar conjuntos de registros ODBC de MFC](use-mfc-odbc-recordsets.md)
+- [Utilizar conjuntos de registros ODBC de MFC](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Acceso a los datos de programación (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Programación del acceso a datos (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

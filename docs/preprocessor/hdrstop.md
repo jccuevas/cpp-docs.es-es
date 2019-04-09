@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-ms.openlocfilehash: 5dc47e4b2ec264182d26925df60bf3ee29871b65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1590b5916a8d9c00b6e988bacc7cd857c29d6775
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497093"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035220"
 ---
 # <a name="hdrstop"></a>hdrstop
 Proporciona control adicional sobre los nombres de archivo de la precompilación y sobre la ubicación en la que se guarda el estado de la compilación.
@@ -80,4 +80,4 @@ En este ejemplo, el **hdrstop** pragma aparece después de que se han incluido d
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

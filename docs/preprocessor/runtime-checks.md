@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-ms.openlocfilehash: 38df7ccc384830bb547c11e1a3d5458a1298574c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027089"
 ---
 # <a name="runtimechecks"></a>runtime_checks
 Deshabilita o restaura la configuración de [/RTC](../build/reference/rtc-run-time-error-checks.md) .
@@ -62,4 +62,4 @@ El uso de la directiva pragma **runtime_checks** con la cadena vacía (**""**) e
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-ms.openlocfilehash: cfc8d13ead28c0b817d7de015b9c507db152de6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508971"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039129"
 ---
 # <a name="makepublic"></a>make_public
 Indica que un tipo nativo debe tener accesibilidad pública de ensamblado.
@@ -63,4 +63,4 @@ public ref struct A {
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

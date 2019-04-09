@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565511"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021636"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection (Clase)
 
@@ -102,11 +102,11 @@ class CDataConnection
 |||
 |-|-|
 |[operador BOOL](#op_bool)|Determina si la sesión actual está abierta o no.|
-|[operator bool](#op_bool_ole)|Determina si la sesión actual está abierta o no.|
+|[operador bool](#op_bool_ole)|Determina si la sesión actual está abierta o no.|
 |[operator CDataSource &](#op_cdata_amp)|Devuelve una referencia a la `CDataSource` objeto.|
 |[operator CDataSource *](#op_cdata_star)|Devuelve un puntero para el objeto contenido `CDataSource` objeto.|
-|[operador CSession &](#op_csession_amp)|Devuelve una referencia a la `CSession` objeto.|
-|[operador CSession *](#op_csession_star)|Devuelve un puntero para el objeto contenido `CSession` objeto.|
+|[operador CSession&](#op_csession_amp)|Devuelve una referencia a la `CSession` objeto.|
+|[operador CSession*](#op_csession_star)|Devuelve un puntero para el objeto contenido `CSession` objeto.|
 
 ## <a name="remarks"></a>Comentarios
 

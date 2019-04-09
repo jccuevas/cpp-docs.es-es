@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 6f098b25848d4fca0431663bd61ad71646c8d644
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661076"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024444"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>Advertencia del compilador (nivel 4) C4985
 
@@ -27,4 +27,4 @@ Observe que las macros SAL no se expandirán a menos que el proyecto tenga el ma
 
 ## <a name="see-also"></a>Vea también
 
-[Anotaciones SAL](../../c-runtime-library/sal-annotations.md)
+[Anotaciones de SAL](../../c-runtime-library/sal-annotations.md)

@@ -1,4 +1,4 @@
----
+﻿---
 title: Archivos de recursos (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563009"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029404"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
@@ -131,6 +131,6 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
+[Trabajar con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Editores de recursos](../windows/resource-editors.md)<br/>
+[editores de recursos](../windows/resource-editors.md)<br/>

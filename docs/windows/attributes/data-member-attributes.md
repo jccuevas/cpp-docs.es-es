@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512936"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041155"
 ---
 # <a name="data-member-attributes"></a>Atributos de miembros de datos
 
@@ -27,11 +27,11 @@ Los siguientes atributos se aplican a los miembros de datos en una clase, coclas
 |[db_table](db-table.md)|Se abre una tabla de OLE DB.|
 |[defaultbind](defaultbind.md)|Indica la única propiedad enlazable que mejor representa al objeto.|
 |[displaybind](displaybind.md)|Indica una propiedad que debe mostrarse al usuario como enlazable.|
-|[identificador](id.md)|Especifica un DISPID para una función miembro (una propiedad o un método en una interfaz o interfaz dispinterface).|
+|[id](id.md)|Especifica un DISPID para una función miembro (una propiedad o un método en una interfaz o interfaz dispinterface).|
 |[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[rdx](rdx.md)|Crea una clave del registro o modifica una clave del registro existente.|
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a un miembro de datos.|
-|[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
+|[requestedit](requestedit.md)|Indica que la propiedad admite la notificación `OnRequestEdit`.|
 
 ## <a name="see-also"></a>Vea también
 

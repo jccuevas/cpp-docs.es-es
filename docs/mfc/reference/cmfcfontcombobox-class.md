@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: 6d0b2fc22d1d0779db17e970118694270a206439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272677"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781307"
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox (clase)
 
@@ -56,7 +56,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Indica qué fuente se utiliza para dibujar las etiquetas de elemento en el cuadro combinado de fuente actual para el marco de trabajo.|
 
@@ -151,7 +151,7 @@ Utilice este método para seleccionar y desplácese hasta el elemento en el cuad
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `SelectFont` método en el `CMFCFontComboBox` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `SelectFont` método en el `CMFCFontComboBox` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
@@ -188,7 +188,7 @@ Este método inicializa el cuadro combinado de fuente al enumerar las fuentes in
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `Setup` método en el `CMFCFontComboBox` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `Setup` método en el `CMFCFontComboBox` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

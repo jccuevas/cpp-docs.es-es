@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520428"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028096"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else, and #endif (Directivas) (C/C++)
 
@@ -35,10 +35,10 @@ El **#if** la directiva con la **#elif**, **#else**, y **#endif** directivas, co
 ## <a name="grammar"></a>Gramática
 
 *condicional* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-partes de la parte de si*<sub>opt</sub> *parte else*<sub>opt</sub> *endif-línea*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
 
 *parte de si* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*texto de la línea de If*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line text*
 
 *If-línea* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#if***expresión constante*<br/>
@@ -46,14 +46,14 @@ El **#if** la directiva con la **#elif**, **#else**, y **#endif** directivas, co
 &nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificador*
 
 *elif-partes* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*texto elif-línea*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-line text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto de elif-partes elif-línea*
 
 *elif-línea* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#elif***expresión constante*
 
 *otro-parte* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*texto de la línea Else*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line text*
 
 *otro-línea* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
@@ -65,7 +65,7 @@ Cada **#if** directiva en un archivo de origen debe coincidir por un cierre **#e
 
 El **#if**, **#elif**, **#else**, y **#endif** directivas pueden anidarse en partes de texto de otros **#if**directivas. Cada uno anidado **#else**, **#elif**, o **#endif** directiva pertenece a la anterior más cercana **#if** directiva.
 
-Todas las directivas de compilación condicional, como **#if** y **#ifdef**, debe coincidir con el cierre **#endif** directivas antes del final del archivo; en caso contrario, un error se genera el mensaje. Cuando las directivas de compilación condicional están contenidas en archivos de inclusión, deben cumplir las mismas condiciones: no debe haber directivas de compilación condicional sin coincidencia al final del archivo de inclusión.
+Todas las directivas de compilación condicional, como **#if** y **#ifdef**, debe coincidir con el cierre **#endif** directivas antes del final del archivo; en caso contrario, un error se genera el mensaje. Cuando las directivas de compilación condicional están contenidas en archivos de inclusión, deben cumplir las mismas condiciones: No debe haber ningún directivas de compilación condicional sin coincidencia al final del archivo de inclusión.
 
 Reemplazo de macros se realiza dentro de la parte de la línea de comandos que sigue un **#elif** de comandos, por lo que se puede usar una llamada de macro en el *expresión-constante*.
 
@@ -97,7 +97,7 @@ El operador de preprocesador **definido** se puede usar en expresiones constante
 
 defined( `identifier` )
 
-defined `identifier`
+definición `identifier`
 
 Esta expresión constante se considera true (distinto de cero) si el *identificador* está definido actualmente; en caso contrario, la condición es false (0). Un identificador definido como texto vacío se considera definido. El **definido** directiva puede utilizarse en una **#if** y un **#elif** directiva, pero ningún otro lugar.
 
@@ -174,7 +174,7 @@ El código anterior realiza comprobaciones para ver si se define la constante si
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 versión 15.3 y versiones posterior**: determina si un encabezado de la biblioteca está disponible para su inclusión:
+**Visual Studio 2017 versión 15.3 y posteriores:**  Determina si un encabezado de la biblioteca está disponible para su inclusión:
 
 ```cpp
 #ifdef __has_include

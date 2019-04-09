@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648349"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029627"
 ---
 # <a name="constseg"></a>const_seg
 Especifica el segmento donde [const](../cpp/const-cpp.md) las variables se almacenan en el archivo .obj.
@@ -37,10 +37,10 @@ Especifica el segmento donde [const](../cpp/const-cpp.md) las variables se almac
 
 Uso de *identificador* permite varios registros que se saque con una sola **pop** comando.
 
-"*nombre de segmento*"<br/>
+"*segment-name*"<br/>
 (Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.
 
-"*clase de segmento*"<br/>
+"*segment-class*"<br/>
 (Opcional) Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.
 
 ## <a name="remarks"></a>Comentarios
@@ -51,7 +51,7 @@ Archivos OBJ pueden verse con el [dumpbin](../build/reference/dumpbin-command-li
 
 Definir un objeto que requiera una inicialización dinámica en un `const_seg` produce un comportamiento no definido.
 
-`#pragma const_seg` sin parámetros restablece el segmento en .rdata.
+`#pragma const_seg` sin parámetros restablece el segmento rdata.
 
 ## <a name="example"></a>Ejemplo
 
@@ -97,4 +97,4 @@ También puede especificar secciones para datos inicializados ([data_seg](../pre
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

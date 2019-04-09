@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3625
 ms.assetid: fdf49f21-d6b1-42f4-9eec-23b04ae8b4aa
-ms.openlocfilehash: 08ad1d09cb9149811566f67a585a718340254de9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3c69b05e22c2d267ad07f19a0d0ab60f3eebb94
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635410"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779019"
 ---
 # <a name="compiler-error-c3625"></a>Error del compilador C3625
 
 'native_type': un tipo nativo no puede derivar de un tipo administrado o WinRT 'type'
 
-Una clase nativa no puede heredarse de una clase administrada o WinRT. Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).
+Una clase nativa no puede heredarse de una clase administrada o WinRT. Para obtener más información, consulte [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

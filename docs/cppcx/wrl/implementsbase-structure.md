@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 6ee3d0c7fcb8fe1a032dad47b60125791cd4e4c5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785902"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021450"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase (estructura)
 
@@ -42,4 +42,4 @@ El **ImplementsBase** estructura está vacía por diseño.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)

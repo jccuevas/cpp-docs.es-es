@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289980"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773078"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 
@@ -394,7 +394,7 @@ Según su tamaño, un elemento de la cinta muestra una imagen pequeña o grande.
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonBaseElement` . En el ejemplo se muestra cómo obtener un `CMFCRibbonBaseElement` objeto desde un `CMFCRibbonStatusBar` clase, establezca la descripción del elemento de la cinta, establecer el texto, establecer keytip y establecer el texto de información sobre herramientas para el elemento de la cinta de opciones. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonBaseElement` . En el ejemplo se muestra cómo obtener un `CMFCRibbonBaseElement` objeto desde un `CMFCRibbonStatusBar` clase, establezca la descripción del elemento de la cinta, establecer el texto, establecer keytip y establecer el texto de información sobre herramientas para el elemento de la cinta de opciones. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -1870,7 +1870,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bShow*<br/>
+*bMostrar*<br/>
 [in] No se utiliza este parámetro.
 
 ### <a name="remarks"></a>Comentarios
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 La ventana principal para el elemento de la cinta de opciones.
 
-*data*<br/>
+*datos*<br/>
 Los datos de accesibilidad para el elemento de la cinta de opciones.
 
 ### <a name="return-value"></a>Valor devuelto

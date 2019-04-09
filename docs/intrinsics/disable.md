@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rsm instruction
 - disable intrinsic
 ms.assetid: 52da3df9-815c-4524-9839-6d1742cff5c6
-ms.openlocfilehash: 64e7031ab578632322dfd5c73eb81e0750c1e0b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93db063c6b53f0bec739ba134728b83379a21f53
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587816"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024687"
 ---
 # <a name="disable"></a>_disable
 
@@ -38,7 +38,7 @@ void _disable(void);
 
 ## <a name="remarks"></a>Comentarios
 
-`_disable` indica al procesador que debe borrar la marca de la interrupción. En sistemas x86, esta función genera la instrucción Borrar marca de interrupción (`cli`).
+`_disable` indica al procesador para borrar la marca de interrupción. En sistemas x86, esta función genera la instrucción Borrar marca de interrupción (`cli`).
 
 Esta función solo está disponible en modo kernel. Si se utiliza en modo de usuario, se produce una excepción de Instrucción privilegiada en tiempo de ejecución.
 

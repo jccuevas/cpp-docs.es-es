@@ -4,12 +4,12 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e8d5e5379a60128ace9502712a1d240f947ddcd5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826465"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021909"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Parámetros internos de MSBuild para proyectos de C++
 
@@ -91,14 +91,14 @@ En la tabla siguiente se enumera varios destinos útiles orientado al usuario.
 ## <a name="see-also"></a>Vea también
 
 [Referencia de tareas de MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
-[Tarea BscMake](/visualstudio/msbuild/bscmake-task)<br/>
-[Tarea CL](/visualstudio/msbuild/cl-task)<br/>
-[Tarea CPPClean](/visualstudio/msbuild/cppclean-task)<br/>
-[Tarea LIB](/visualstudio/msbuild/lib-task)<br/>
+[BscMake (Tarea)](/visualstudio/msbuild/bscmake-task)<br/>
+[CL (Tarea)](/visualstudio/msbuild/cl-task)<br/>
+[CPPClean (Tarea)](/visualstudio/msbuild/cppclean-task)<br/>
+[LIB (tarea)](/visualstudio/msbuild/lib-task)<br/>
 [Vincular tarea](/visualstudio/msbuild/link-task)<br/>
-[Tarea MIDL](/visualstudio/msbuild/midl-task)<br/>
-[Tarea MT](/visualstudio/msbuild/mt-task)<br/>
-[Tarea RC](/visualstudio/msbuild/rc-task)<br/>
-[Tarea SetEnv](/visualstudio/msbuild/setenv-task)<br/>
-[Tarea VCMessage](/visualstudio/msbuild/vcmessage-task)<br/>
-[Tarea XDCMake](/visualstudio/msbuild/xdcmake-task)<br/>
+[MIDL (tarea)](/visualstudio/msbuild/midl-task)<br/>
+[MT (Tarea)](/visualstudio/msbuild/mt-task)<br/>
+[RC (Tarea)](/visualstudio/msbuild/rc-task)<br/>
+[SetEnv (Tarea)](/visualstudio/msbuild/setenv-task)<br/>
+[VCMessage (Tarea)](/visualstudio/msbuild/vcmessage-task)<br/>
+[XDCMake (Tarea)](/visualstudio/msbuild/xdcmake-task)<br/>

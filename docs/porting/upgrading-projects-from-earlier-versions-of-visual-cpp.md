@@ -5,12 +5,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: dae4937661db945fa17f15ea39b0d17a8bf72640
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768229"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034918"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Actualizar proyectos desde versiones anteriores de Visual C++
 
@@ -37,9 +37,9 @@ Para obtener información sobre cómo actualizar las versiones de Windows de des
 
 [Actualizar código a CRT universal](upgrade-your-code-to-the-universal-crt.md)<br/>
 [Modificar WINVER y _WIN32_WINNT](modifying-winver-and-win32-winnt.md)<br/>
-[Corregir dependencias en los datos internos de biblioteca](fix-your-dependencies-on-library-internals.md)<br/>
+[Corrección de dependencias en los datos internos de biblioteca](fix-your-dependencies-on-library-internals.md)<br/>
 [Problemas de migración de punto flotante](floating-point-migration-issues.md)<br/>
-[Usar compatibilidad nativa con múltiples versiones en Visual Studio para compilar proyectos antiguos](use-native-multi-targeting.md)<br/>
+[Usar compatibilidad nativa con múltiples versiones para compilar proyectos antiguos en Visual Studio](use-native-multi-targeting.md)<br/>
 [Características de Visual C++ en desuso en la versión preliminar de Visual Studio 2019](features-deprecated-in-visual-studio.md)<br/>
 [Cambios del sistema de compilación](build-system-changes.md)<br/>
 

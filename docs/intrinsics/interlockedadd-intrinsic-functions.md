@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 473d113ff9af3b009075dfef657082034b1bbcb6
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626911"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040960"
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>Funciones intrínsecas _InterlockedAdd
 

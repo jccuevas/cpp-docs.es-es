@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, optimize
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
-ms.openlocfilehash: 65948f2b466bdd40bd753dbba99e2e235c57b0f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615870"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035405"
 ---
 # <a name="optimize"></a>optimize
 
@@ -35,7 +35,7 @@ El *optimization-list* puede ser cero o más de los parámetros mostrados en la 
 
 |Parámetros|Tipo de optimización|
 |--------------------|--------------------------|
-|*g*|Habilitar optimizaciones globales.|
+|*e*|Habilitar optimizaciones globales.|
 |*s* o *t*|Especificar secuencias cortas o rápidas de código máquina.|
 |*y*|Generar punteros de marco en la pila del programa.|
 
@@ -61,4 +61,4 @@ Cuando se usa el *en* parámetro, restablece las optimizaciones a aquellas que e
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

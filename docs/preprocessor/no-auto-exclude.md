@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 04e3b261e24bbe9870a6d3fc428cd68e8c1a8132
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537636"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038947"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
 **Específicos de C++**
@@ -28,9 +28,9 @@ no_auto_exclude
 
 Las bibliotecas de tipos pueden incluir definiciones de elementos definidos en encabezados de sistema u otras bibliotecas de tipos. `#import` intenta evitar varios errores de definición mediante la exclusión automática de dichos elementos. Cuando esto sucede, [advertencia del compilador (nivel 3) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) se emitirá para que cada elemento que desea excluir. Se puede deshabilitar esta exclusión automática con este atributo.
 
-**FIN de específicos de C++**
+**Específicos de C++: END**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: cd8eee564fa17b21d5421a3471fd676af921f444
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462145"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023248"
 ---
 # <a name="section"></a>section
 
@@ -37,12 +37,12 @@ Cuando se define una sección, sigue siendo válida para el resto de la compilac
 
 |Atributo|Descripción|
 |-|-|
-|**read**|Permite operaciones de lectura en los datos.|
-|**write**|Permite operaciones de escritura en los datos.|
-|**Ejecutar**|Permite que el código se ejecute.|
-|**Compartido**|Comparte la sección entre todos los procesos que cargan la imagen.|
+|**leer**|Permite operaciones de lectura en los datos.|
+|**escribir**|Permite operaciones de escritura en los datos.|
+|**execute**|Permite que el código se ejecute.|
+|**shared**|Comparte la sección entre todos los procesos que cargan la imagen.|
 |**nopage**|Marca la sección como no paginable; útil para controladores de dispositivo de Win32.|
-|**NoCache**|Marca la sección como no almacenable en caché; útil para controladores de dispositivo de Win32.|
+|**nocache**|Marca la sección como no almacenable en caché; útil para controladores de dispositivo de Win32.|
 |**discard**|Marca la sección como no descartable; útil para controladores de dispositivo de Win32.|
 |**remove**|Marca la sección como no residente en memoria; controladores de dispositivos virtuales (V*x*d.) solo.|
 
@@ -65,4 +65,4 @@ int main(){}
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

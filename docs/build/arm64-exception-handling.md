@@ -1,12 +1,12 @@
 ---
 title: Control de excepciones ARM64
 ms.date: 11/19/2018
-ms.openlocfilehash: 43e43beae5ee02f9ef4537da08a1c9915056b777
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58870798"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031737"
 ---
 # <a name="arm64-exception-handling"></a>Control de excepciones ARM64
 
@@ -219,15 +219,15 @@ Estos datos se dividen en cuatro secciones:
 
    e. **Recuento de epílogo** es un campo de 5 bits que tiene dos significados posibles, dependiendo del estado de **E** bits:
 
-      1. Si **E** se establece en 0: especifica el recuento del número total de ámbitos de excepción que se describe en la sección 2. Si existen más de 31 ámbitos en la función, el **código palabras** campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
+      1. Si **E** se establece en 0: especifica el recuento del número total de ámbitos de epílogo se describe en la sección 2. Si existen más de 31 ámbitos en la función, el **código palabras** campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
 
       2. Si **E** está establecido en 1, a continuación, este campo especifica el índice del primer código de desenredado que describe el uno y solo epílogo.
 
-   f. **Código palabras** es un campo de 5 bits que especifica el número de palabras de 32 bits necesarios para contener todos los códigos de desenredado en la sección 4. Si se requieren más de 31 palabras (es decir, más de 124 desenredar bytes de código), a continuación, este campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
+   f. **Código palabras** es un campo de 5 bits que especifica el número de palabras de 32 bits necesarios para contener todos los códigos de desenredado en la sección 3. Si se requieren más de 31 palabras (es decir, más de 124 desenredar bytes de código), a continuación, este campo debe establecerse en 0 para indicar que se necesita una palabra de extensión.
 
    g. **Cuenta de epílogo extendida** y **extendidos código palabras** son campos de 16 bits y 8 bits, respectivamente, que proporcionan más espacio para codificar un número inusualmente grande de epílogos o un número inusualmente grande de palabras de código de desenredado. La palabra de extensión que contiene estos campos solo está presente si tanto el **epílogo recuento** y **código palabras** campos en la primera palabra del encabezado se establecen en 0.
 
-1. Después de los datos de excepción, si **epílogo recuento** no es cero, es una lista de información sobre los ámbitos de epílogo, uno empaquetado en una palabra y se almacenan en orden creciente de desplazamiento inicial. Cada ámbito contiene los bits siguientes:
+1. Después del encabezado y el encabezado extendido opcional que se ha descrito anteriormente, si **epílogo recuento** no es cero, es una lista de información sobre los ámbitos de epílogo, uno empaquetado en una palabra y se almacenan en orden creciente de desplazamiento inicial. Cada ámbito contiene los bits siguientes:
 
    a. **Desplazamiento de inicio del epílogo** es un campo de 18 bits que describe el desplazamiento en bytes dividida entre 4 del epílogo en relación con el inicio de la función
 
@@ -237,7 +237,7 @@ Estos datos se dividen en cuatro secciones:
 
 1. Después de la lista de ámbitos de epílogo viene una matriz de bytes que contiene códigos de desenredado, se describe en detalle en una sección posterior. Esta matriz se rellena al final del límite de palabra completa más cercano. Los bytes se almacenan en orden little-endian, por lo que se pueden recuperar directamente en modo little-endian.
 
-1. Por último, después los bytes de código de desenredado (y si el **X** bit en el encabezado se establece en 1) incluye la información del controlador de excepción. Esto se compone de una sola **RVA del controlador de excepción** proporcionando la dirección del controlador de excepciones, seguida inmediatamente de una cantidad de longitud variable de datos requeridos por el controlador de excepciones.
+1. Por último, después los bytes de código de desenredado, si la **X** bit en el encabezado se establece en 1, incluye la información del controlador de excepción. Esto se compone de una sola **RVA del controlador de excepción** proporcionando la dirección del controlador de excepciones, seguida inmediatamente de una cantidad de longitud variable de datos requeridos por el controlador de excepciones.
 
 El registro .xdata anterior está diseñado para que es posible capturar los primeros 8 bytes y desde el calcular el tamaño completo del registro (menos la longitud de los datos de tamaño variable que sigue). El fragmento de código siguiente calcula el tamaño del registro:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579908"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023924"
 ---
 # <a name="callas"></a>call_as
 
@@ -25,7 +25,7 @@ Permite un [local](local-cpp.md) función a la que se asignan a una función rem
 
 ### <a name="parameters"></a>Parámetros
 
-*function*<br/>
+*función*<br/>
 La función local que desea que se llama cuando se invoca una función remota.
 
 ## <a name="remarks"></a>Comentarios
@@ -65,4 +65,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[local](local-cpp.md)
+[locales](local-cpp.md)

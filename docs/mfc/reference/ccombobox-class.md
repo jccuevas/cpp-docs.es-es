@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304475"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778525"
 ---
 # <a name="ccombobox-class"></a>CComboBox (clase)
 
@@ -674,7 +674,7 @@ BOOL GetCueBanner(
 
 En la primera sobrecarga, una [CString](../../atl-mfc-shared/using-cstring.md) objeto que contiene el texto del titular de indicación de si existe; de lo contrario, un `CString` objeto que tiene una longitud cero.
 
-O bien
+-o bien-
 
 En la segunda sobrecarga, TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
@@ -1312,7 +1312,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bExtended*<br/>
+*bEl*<br/>
 Especifica si el cuadro combinado debe usar la interfaz de usuario extendida o la interfaz de usuario de forma predeterminada. Un valor TRUE selecciona la interfaz de usuario extendido; un valor FALSE, selecciona la interfaz de usuario estándar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1557,12 +1557,12 @@ Esta función miembro no tiene ningún efecto en un cuadro combinado que se cre�
 
 ## <a name="see-also"></a>Vea también
 
-[CTRLBARS de ejemplo](../../visual-cpp-samples.md)<br/>
+[CTRLBARS de ejemplo](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [CButton (clase)](../../mfc/reference/cbutton-class.md)<br/>
-[CEdit (clase)](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CListBox (clase)](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic (clase)](../../mfc/reference/cstatic-class.md)<br/>

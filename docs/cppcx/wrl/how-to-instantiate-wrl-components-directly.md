@@ -3,12 +3,12 @@ title: Filtrar Crear instancias de componentes WRL directamente
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-ms.openlocfilehash: 3caa29125de0de8cbe73379b8d7244206a5f9229
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785786"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035749"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>Filtrar Crear instancias de componentes WRL directamente
 
@@ -47,6 +47,6 @@ En este documento se muestran dos ejemplos. El primer ejemplo utiliza la funció
 
 ## <a name="see-also"></a>Vea también
 
-[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
+[Biblioteca de plantillas de Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft::WRL::Make](make-function.md)<br/>
 [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)

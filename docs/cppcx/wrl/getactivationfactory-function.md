@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 82c83e95648eeb0fc8985777156659a2ffb876a8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785768"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033948"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (función)
 
@@ -53,4 +53,4 @@ S_OK si se realiza correctamente; en caso contrario, un error HRESULT que indica
 
 ## <a name="see-also"></a>Vea también
 
-[Windows::Foundation (espacio de nombres)](windows-foundation-namespace.md)
+[Windows::Foundation (Espacio de nombres)](windows-foundation-namespace.md)

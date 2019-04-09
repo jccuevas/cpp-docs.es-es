@@ -1,13 +1,13 @@
----
+﻿---
 title: Aplicaciones de escritorio (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694574"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033125"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
 
@@ -39,21 +39,21 @@ Puede usar cualquier aplicación de escritorio de C++ en tiempo de ejecución de
 |-----------|-----------------|
 |[Aplicaciones de consola de Windows en C++](console-applications-in-visual-cpp.md)|Contiene información acerca de las aplicaciones de consola. Una aplicación de consola Win32 (o Win64) no tiene ninguna ventana propia ni ningún bucle de mensajes. Se ejecuta en la ventana de la consola; la entrada y la salida se controlan a través de la línea de comandos.|
 |[Tutorial: Crear aplicaciones de escritorio de Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crear una sencilla aplicación de escritorio de Windows.|
-|[Creación de una aplicación de escritorio de Windows vacía](creating-an-empty-windows-desktop-application.md)|Cómo crear un proyecto de escritorio de Windows que no tiene ningún archivo de forma predeterminada.|
-|[Adición de archivos a una aplicación de Win32 vacía](adding-files-to-an-empty-win32-applications.md)|Cómo agregar archivos a un proyecto vacío.|
-|[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, las tablas de cadenas y otros recursos a una aplicación de escritorio.|
+|[Crear una aplicación de escritorio de Windows vacía](creating-an-empty-windows-desktop-application.md)|Cómo crear un proyecto de escritorio de Windows que no tiene ningún archivo de forma predeterminada.|
+|[Agregar archivos a una aplicación de Win32 vacía](adding-files-to-an-empty-win32-applications.md)|Cómo agregar archivos a un proyecto vacío.|
+|[Trabajar con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, las tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego usando DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
 |[Tutorial: Crear y utilizar una biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md)|Cómo crear un archivo binario .lib.|
-|[Procedimiento para usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Filtrar Use Windows 10 SDK en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 
 ## <a name="related-articles"></a>Artículos relacionados
 
 |Título|Descripción|
 |-----------|-----------------|
 |[Desarrollo de Windows](/windows/desktop/index)|Contiene información sobre la API de Windows y COM. (Algunas API de Windows y archivos DLL de terceros se implementan como objetos COM).|
-|[Hilo: desarrollo de aplicaciones en C++ para Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Describe cómo crear una aplicación de escritorio de Windows de cliente que use animaciones de Windows y Direct2D para crear una interfaz de usuario basada en carrusel.  En este tutorial no se ha actualizado desde Windows 7, pero sigue proporcionando una introducción exhaustiva a la programación de Win32.|
+|[Hilo: Desarrollo de aplicaciones de C++ para Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Describe cómo crear una aplicación de escritorio de Windows de cliente que use animaciones de Windows y Direct2D para crear una interfaz de usuario basada en carrusel.  En este tutorial no se ha actualizado desde Windows 7, pero sigue proporcionando una introducción exhaustiva a la programación de Win32.|
 |[Información general de la programación para Windows en C++](overview-of-windows-programming-in-cpp.md)|Describe las características clave de programación en C++ de escritorio de Windows.|
 
 ## <a name="see-also"></a>Vea también
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

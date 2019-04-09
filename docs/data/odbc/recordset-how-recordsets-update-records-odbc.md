@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: Actualizar los registros (ODBC)'
+title: 'Conjunto de registros: Cómo actualizar los registros (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510011"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034487"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: Actualizar los registros (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: Cómo actualizar los registros (ODBC)
 
 Este tema es aplicable a las clases ODBC de MFC.
 
@@ -25,7 +25,7 @@ Además de su capacidad para seleccionar registros de un origen de datos, conjun
 >  El código SQL en el que su `CRecordset` se basa el objeto pueden afectar a la capacidad de actualización del conjunto de registros. Por ejemplo, si su SQL contiene una combinación o un **GROUP BY** cláusula, MFC establece su propiedad de actualización en FALSE.
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si usas la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si usas la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 En este tema se explica:
 
@@ -41,7 +41,7 @@ En este tema se explica:
 
 En la tabla siguiente se muestra su rol en usar conjuntos de registros para agregar, editar o eliminar registros, junto con lo que hace el marco de trabajo para usted.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Actualizando el conjunto de registros: El y el marco de trabajo
+### <a name="recordset-updating-you-and-the-framework"></a>Actualizando el conjunto de registros: Usted y el marco de trabajo
 
 |El programador|El marco de trabajo|
 |---------|-------------------|
@@ -73,4 +73,4 @@ Cuando se llama a [AddNew](../../mfc/reference/crecordset-class.md#addnew) o [ed
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Funcionamiento de AddNew, Edit y Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Conjunto de registros: Cómo AddNew, Edit y Delete (ODBC) de trabajo](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

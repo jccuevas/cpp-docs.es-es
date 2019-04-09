@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489570"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039915"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -25,7 +25,7 @@ Especifica el número de elementos de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expresión*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
@@ -52,7 +52,7 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de parámetro](parameter-attributes.md)<br/>
 [first_is](first-is.md)<br/>
 [max_is](max-is.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 511da8ebe896cb2d0e2869f36bdb474cae5ba521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85654e266c3157ab145e7ac7aab454a0d4f6c102
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507762"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776459"
 ---
 # <a name="compiler-error-c3915"></a>Error del compilador C3915
 
@@ -19,7 +19,7 @@ ms.locfileid: "50507762"
 
 Un tipo no tiene un valor predeterminado, la propiedad indizada.
 
-Para obtener más información, consulta [property](../../windows/property-cpp-component-extensions.md).
+Para obtener más información, consulta [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

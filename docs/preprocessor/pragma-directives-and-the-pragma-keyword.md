@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 9e79ba7378e28fdea863af010decb7064df415cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660101"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027446"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma y la palabra clave __pragma
 
@@ -46,19 +46,19 @@ Los compiladores de Microsoft C y C++ reconocen las pragmas siguientes:
 ||||
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comentario](../preprocessor/comment-c-cpp.md)|
 |[component](../preprocessor/component.md)|[se ajustan](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
-|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
+|[data_seg](../preprocessor/data-seg.md)|[en desuso](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
-|[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
+|[función](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[intrinsic](../preprocessor/intrinsic.md)|[bucle](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[Administrado](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
+|[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
+|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
 |[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
 |[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[no administrado](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
 |[warning](../preprocessor/warning.md)|||
 
 <sup>1</sup> admite únicamente por el compilador de C++.
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>La palabra clave __pragma()
 
-**Específicas de Microsoft**
+**Específicos de Microsoft**
 
 El compilador también admite la **__pragma** palabra clave, que tiene la misma funcionalidad como la **#pragma** directiva, pero pueden utilizarse alineada en una definición de macro. El **#pragma** directiva no se puede usar en una definición de macro porque el compilador interpreta el carácter de signo de número ('#') en la directiva como el [operador de generación de cadenas (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -104,7 +104,7 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Finalizar específico de Microsoft**
+**Fin de Específicos de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 

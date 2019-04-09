@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556623"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023417"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>Comentarios
 
-La función `__svm_vmsave` equivale a la instrucción máquina `VMSAVE` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: sistema de programación," número de documento 24593, revisión 3.11 o posterior, en el [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) sitio.
+La función `__svm_vmsave` equivale a la instrucción máquina `VMSAVE` . Esta función admite la interacción del monitor de máquina virtual de un host con un sistema operativo invitado y sus aplicaciones. Para obtener más información, busque el documento, "volumen de Manual de programadores de arquitecturas AMD64 2: Sistema de programación,"núm. 24593, revisión 3.11 o posterior, en el [Corporation AMD](https://developer.amd.com/resources/developer-guides-manuals/) sitio.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4580
 ms.assetid: fef6e8e0-0d6a-44fa-b22a-2fe7ba2ef379
-ms.openlocfilehash: e215dc98f62a90325e83068a640b0503a612c434
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd2ecff5adc6538f75c61772b785acbfc89092ae
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427812"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781775"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>Advertencia del compilador (nivel 3) C4580
 
-[attribute] está en desuso; especifique en su lugar System::Attribute o Platform::Metadata como clase base
+[attribute] está desusado; especifique en su lugar System::Attribute o Platform::Metadata como clase base
 
-[[atributo](../../windows/attributes/attribute.md)] ya no es la sintaxis recomendada para crear atributos definidos por el usuario. Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md). Para el código CLR, derive los atributos de `System::Attribute`. Para el código Windows en tiempo de ejecución, derive los atributos de `Platform::Metadata`.
+[[atributo](../../windows/attributes/attribute.md)] ya no es la sintaxis recomendada para crear atributos definidos por el usuario. Para obtener más información, consulte [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md). Para el código CLR, derive los atributos de `System::Attribute`. Para el código Windows en tiempo de ejecución, derive los atributos de `Platform::Metadata`.
 
 ## <a name="example"></a>Ejemplo
 

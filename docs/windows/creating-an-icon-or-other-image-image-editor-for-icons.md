@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328498"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027602"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Cómo Crear un icono u otra imagen
 
@@ -155,8 +155,8 @@ El **imagen personalizada** cuadro de diálogo le permite crear una nueva imagen
 
 |Property|Descripción|
 |---|---|
-|**Width**|Proporciona un espacio para que escriba el ancho de la imagen personalizada en píxeles (1-512, límite de 2048).|
-|**Height**|Proporciona un espacio para escribir el alto de la imagen personalizada en píxeles (1-512, límite de 2048).|
+|**Ancho**|Proporciona un espacio para que escriba el ancho de la imagen personalizada en píxeles (1-512, límite de 2048).|
+|**Alto**|Proporciona un espacio para escribir el alto de la imagen personalizada en píxeles (1-512, límite de 2048).|
 |**Colores**|Proporciona un espacio para elegir el número de colores para la imagen personalizada: 2, 16 o 256.|
 
 Use la **abrir &lt;dispositivo&gt; imagen** cuadro de diálogo para abrir las imágenes de dispositivo en los proyectos de C++. Enumera las imágenes de dispositivo existentes en el recurso actual (imágenes que forman parte del recurso actual). Es la siguiente propiedad incluida:
@@ -320,9 +320,9 @@ Ninguna
 ## <a name="see-also"></a>Vea también
 
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Cómo: Edición de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Cómo: Uso de una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Cómo: Trabajo con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Filtrar Editar una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Filtrar Usar una herramienta de dibujo](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Filtrar Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>

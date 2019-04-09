@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591729"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033247"
 ---
 # <a name="odbc-basics"></a>Conceptos básicos de ODBC
 
 Este tema proporciona los conceptos básicos de la conectividad abierta de bases de datos (ODBC):
 
-- [Cómo trabaja ODBC con las clases de base de datos](../../data/odbc/odbc-and-the-database-classes.md)
+- [Cómo trabaja ODBC con las clases de base de datos.](../../data/odbc/odbc-and-the-database-classes.md)
 
-- [Cómo trabajan los controladores ODBC con conjuntos de registros dinámicos](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
+- [Cómo trabajan los controladores ODBC con conjuntos de registros dinámicos.](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
 
-- [¿Qué componentes ODBC necesarios para redistribuir con las aplicaciones](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
+- [Componentes de ODBC necesarios para redistribuir con las aplicaciones](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-También deseará leer el tema relacionado [ODBC: biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+También deseará leer el tema relacionado [ODBC: La biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 > Mediante las clases ODBC de MFC, como se describe en este tema, o las clases DAO de MFC se puede tener acceso a los orígenes de datos ODBC.

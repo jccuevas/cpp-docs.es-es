@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259521"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773728"
 ---
 # <a name="cricheditview-class"></a>CRichEditView Class
 
@@ -194,7 +194,7 @@ Un "control rich edit" es una ventana en la que el usuario puede escribir y edit
 
 Este control común de Windows (y por lo tanto, el [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) y las clases relacionadas) está disponible solo para programas que se ejecutan en versiones de Windows 95/98 y Windows NT 3.51 y versiones posteriores.
 
-Para obtener un ejemplo del uso de una vista de rich edit en una aplicación MFC, vea el [WORDPAD](../../visual-cpp-samples.md) aplicación de ejemplo.
+Para obtener un ejemplo del uso de una vista de rich edit en una aplicación MFC, vea el [WORDPAD](../../overview/visual-cpp-samples.md) aplicación de ejemplo.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 El [COleDataObject](../../mfc/reference/coledataobject-class.md) que contiene los datos que se va a pegar.
 
-*cf*<br/>
+*CF*<br/>
 El formato de Portapapeles deseado.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Indica si la búsqueda distingue mayúsculas de minúsculas.
 *bWord*<br/>
 Indica si la búsqueda debe coincidir con palabras completas, no partes de palabras.
 
-*bNext*<br/>
+*bSiguiente*<br/>
 Indica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -336,7 +336,7 @@ Indica si la búsqueda distingue mayúsculas de minúsculas.
 *bWord*<br/>
 Indica si la búsqueda debe coincidir con palabras completas, no partes de palabras.
 
-*bNext*<br/>
+*bSiguiente*<br/>
 Indica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*cf*<br/>
+*CF*<br/>
 El formato del Portapapeles de interés.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Cadena que se va a buscar.
 
-*bNext*<br/>
+*bSiguiente*<br/>
 La dirección de búsqueda: TRUE indica abajo; Es FALSE, arriba.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 El texto que se debe reemplazar.
 
-*bNext*<br/>
+*bSiguiente*<br/>
 Indica la dirección de la búsqueda: TRUE si está presionada; Es FALSE, arriba.
 
 *bCase*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*cf*<br/>
+*CF*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura que contiene los atributos de formato de carácter predeterminado nuevo.
 
 ### <a name="remarks"></a>Comentarios
@@ -1284,7 +1284,7 @@ Esta función para modificar el modo de vista de edición de la amplia responde 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView (clase)](../../mfc/reference/cctrlview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md)<br/>

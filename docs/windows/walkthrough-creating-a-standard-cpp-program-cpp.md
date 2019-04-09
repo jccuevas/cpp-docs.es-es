@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un programa estándar de C++ (C++)'
+title: 'Tutorial: Creación de un programa estándar de C++ (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: 78d19a277f8bedcdbd098a662c69d6fc622a7cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647478"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030626"
 ---
-# <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Crear un programa estándar de C++ (C++)
+# <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Creación de un programa estándar de C++ (C++)
 
 Puede usar Visual C++ en el entorno de desarrollo integrado (IDE) de Visual Studio para crear programas de C++ estándar. Siguiendo los pasos descritos en este tutorial, puede crear un proyecto, agregue un nuevo archivo al proyecto, modificar el archivo para agregar código de C++ y, a continuación, compilar y ejecutar el programa mediante el uso de Visual Studio.
 
@@ -73,8 +73,8 @@ Para completar este tutorial, debe comprender los conceptos básicos del lenguaj
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-**Anterior:** [consola las aplicaciones en Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
-**A continuación:** [Tutorial: compilar un programa de C++ nativo en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**Anterior:** [Aplicaciones de consola en Visual C++](../windows/console-applications-in-visual-cpp.md)<br/>
+**Siguiente:** [Tutorial: Compilación de un programa nativo de C++ en la línea de comandos](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 
 ## <a name="see-also"></a>Vea también
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418937"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58782009"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -279,7 +279,7 @@ Para obtener más información sobre el uso de `CTreeCtrl`, consulte:
 
 - [Controles](../../mfc/controls-mfc.md)
 
-- [Uso de CTreeCtrl](../../mfc/using-ctreectrl.md)
+- [Usar CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [Referencia de Control de vista de árbol](/windows/desktop/Controls/tree-view-control-reference) en el SDK de Windows.
 
@@ -2341,7 +2341,7 @@ El *lParam1* y *lParam2* parámetros corresponden a la `lParam` miembro de la [e
 
 ## <a name="see-also"></a>Vea también
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CImageList (clase)](../../mfc/reference/cimagelist-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 1045c240a283a8a534c2266186f941312216f206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544282"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033594"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -60,6 +60,6 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[Clave de Id. de programa](/windows/desktop/com/-progid--key)
+[ProgID Key](/windows/desktop/com/-progid--key)

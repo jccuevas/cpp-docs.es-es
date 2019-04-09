@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562762"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024548"
 ---
 # <a name="predefined-symbol-ids"></a>Identificadores de símbolo predefinidos
 
@@ -36,5 +36,5 @@ Win32, MFC o ATL
 ## <a name="see-also"></a>Vea también
 
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Cómo: Crear símbolos](../windows/creating-new-symbols.md)<br/>
-[Cómo: Administrar símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[Filtrar Creación de símbolos](../windows/creating-new-symbols.md)<br/>
+[Filtrar Administrar los símbolos](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

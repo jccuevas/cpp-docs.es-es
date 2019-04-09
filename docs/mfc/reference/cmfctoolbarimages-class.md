@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303353"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776419"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages (clase)
 
@@ -242,7 +242,7 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|TRUE si se deshabilita alfa del color verdadero (32 bits de color) de fusión.|
 
@@ -252,7 +252,7 @@ El mapa de bits completo de imágenes de barra de herramientas administrados por
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un `CMFCToolBarImages` objeto mediante distintos métodos en el `CMFCToolBarImages` clase. El ejemplo muestra cómo establecer el tamaño de la imagen de la barra de herramientas, cargue una imagen y establecer el color transparente de la imagen. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar un `CMFCToolBarImages` objeto mediante distintos métodos en el `CMFCToolBarImages` clase. El ejemplo muestra cómo establecer el tamaño de la imagen de la barra de herramientas, cargue una imagen y establecer el color transparente de la imagen. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
@@ -482,7 +482,7 @@ BOOL Draw(
 *bHilite*<br/>
 [in] TRUE si la imagen se resaltarse; en caso contrario, FALSE.
 
-*bDisabled*<br/>
+*bDeshabilitado*<br/>
 [in] Es TRUE si la imagen se dibuja en el estilo deshabilitado; en caso contrario, FALSE.
 
 *bIndeterminate*<br/>
@@ -893,7 +893,7 @@ BOOL Load(
 *hinstRes*<br/>
 [in] Una instancia de la DLL de recursos.
 
-*bAdd*<br/>
+*bAgregar*<br/>
 [in] TRUE para agregar el mapa de bits cargado en el mapa de bits existente, o FALSE para reemplazar el mapa de bits existente.
 
 *lpszBmpFileName*<br/>
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>Parámetros
 
-*nValue*<br/>
+*nvalor*<br/>
 [in] El nuevo valor del canal alfa.
 
 ### <a name="remarks"></a>Comentarios

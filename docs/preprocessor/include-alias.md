@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
-ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
+ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53587881"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024106"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -21,8 +21,8 @@ Especifica que, cuando *alias_filename* se encuentra en un `#include` la directi
 
 ## <a name="syntax"></a>Sintaxis
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias ("*alias_filename*","*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias("*alias_filename*", "*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias(\<*alias_filename*>, \<*actual_filename*>)
 
 ## <a name="remarks"></a>Comentarios
 
@@ -105,4 +105,4 @@ el compilador busca el archivo two.h en lugar de Three.h.
 
 ## <a name="see-also"></a>Vea también
 
-[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

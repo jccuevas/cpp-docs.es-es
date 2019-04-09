@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: b17bf5fb5f44d5453de29febe001f9e8737102b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540444"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028722"
 ---
 # <a name="nonamespace"></a>no_namespace
 **Específicos de C++**
@@ -30,9 +30,9 @@ El contenido de la biblioteca de tipos en el archivo de encabezado `#import` se 
 
 Si desea usar un nombre de espacio de nombres diferente, a continuación, utilice el [rename_namespace](../preprocessor/rename-namespace.md) atributo en su lugar.
 
-**FIN de específicos de C++**
+**Específicos de C++: END**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-ms.openlocfilehash: d4e55d06bef823d28c5deb3467654bc530a3853e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26527ca69c66c73f5d41084dc42df5faa34481d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456789"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030546"
 ---
 # <a name="noimplementation"></a>no_implementation
 **Específicos de C++**
@@ -30,9 +30,9 @@ Si se especifica este atributo, el encabezado.tlh, con las declaraciones para ex
 
 Este atributo se utiliza junto con [implementation_only](../preprocessor/implementation-only.md).
 
-**FIN de específicos de C++**
+**Específicos de C++: END**
 
 ## <a name="see-also"></a>Vea también
 
-[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

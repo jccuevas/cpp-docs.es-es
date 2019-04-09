@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330091"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033766"
 ---
 # <a name="compiler-error-c3409"></a>Error del compilador C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330091"
 
 ## <a name="remarks"></a>Comentarios
 
-Los corchetes se interpretaron en el compilador como un [atributo](../../windows/cpp-attributes-reference.md) bloque, pero no hay atributos que se han encontrado.
+Los corchetes se interpretaron en el compilador como un [atributo](../../windows/attributes-alphabetical-reference.md) bloque, pero no hay atributos que se han encontrado.
 
 El compilador puede generar este error cuando utilice corchetes como parte de la definición de una expresión lambda. Este error se produce cuando el compilador no puede determinar si los corchetes son parte de la definición de una expresión lambda o de un bloque de atributos. Para obtener más información sobre las expresiones lambda, vea [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>Vea también
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[Atributo](../../windows/attributes-alphabetical-reference.md)<br/>
 [Expresiones lambda](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Sintaxis de la expresión lambda](../../cpp/lambda-expression-syntax.md)

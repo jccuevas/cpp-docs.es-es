@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: Funcionamiento de AddNew, Edit y Delete (ODBC)'
+title: 'Conjunto de registros: Cómo AddNew, Edit y Delete (ODBC) de trabajo'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331976"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033214"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: Funcionamiento de AddNew, Edit y Delete (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Conjunto de registros: Cómo AddNew, Edit y Delete (ODBC) de trabajo
 
 Este tema es aplicable a las clases ODBC de MFC.
 
@@ -39,9 +39,9 @@ Este tema se explica cómo el `AddNew`, `Edit`, y `Delete` funciones miembro de 
 - [Funcionamiento de la eliminación de registros](#_core_deleting_a_record)
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si usas la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si usas la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Como complemento, es posible que desee leer [intercambio de campos de registros: funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que describe la función correspondiente de RFX en las operaciones de actualización.
+Como complemento, es posible que desee leer [intercambio de campos de registro: Funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), que describe la función correspondiente de RFX en las operaciones de actualización.
 
 ##  <a name="_core_adding_a_record"></a> Adición de un registro
 
@@ -118,7 +118,7 @@ Cuando se llama a `Update` para el registro modificado:
 
    1. Si hay cambios, `Update` construye una instancia de SQL **actualización** instrucción. Las columnas enumeradas en la **actualización** instrucción se basan en los miembros de datos de campo que han cambiado.
 
-   1. `Update` Confirma los cambios: ejecuta el **actualización** instrucción y se modifica el registro en el origen de datos, pero no se confirma si hay una transacción está en curso (consulte [transacción: realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) para obtener información sobre cómo afecta la transacción a la actualización). ODBC conserva una copia del registro, que también cambia.
+   1. `Update` Confirma los cambios, ejecuta el **actualización** instrucción y se modifica el registro en el origen de datos, pero no se confirma si hay una transacción está en curso (consulte [transacciones: Realizar una transacción en un conjunto de registros (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) para obtener información sobre cómo afecta la transacción a la actualización). ODBC conserva una copia del registro, que también cambia.
 
    1. A diferencia del proceso `AddNew`, el `Edit` proceso no restaura el registro almacenado. El registro modificado se mantiene como el registro actual.
 
@@ -160,5 +160,5 @@ Para obtener información acerca de las instrucciones SQL usadas en las operacio
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Información adicional sobre las actualizaciones (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[Conjunto de registros: Más información acerca de las actualizaciones (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)

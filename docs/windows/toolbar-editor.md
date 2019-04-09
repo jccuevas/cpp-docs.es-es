@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328862"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038172"
 ---
 # <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
 
@@ -91,8 +91,8 @@ Un botón de barra de herramientas tiene las siguientes propiedades:
 |Property|Descripción|
 |--------------|-----------------|
 |**ID**|Define el identificador del botón. La lista desplegable proporciona comunes **ID** nombres.|
-|**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|
-|**Height**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomienda 15 píxeles.|
+|**Ancho**|Establece el ancho del botón. se recomienda 16 píxeles.|
+|**Alto**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomienda 15 píxeles.|
 |**Preguntar**|Define el mensaje que se muestra en la barra de estado. Agregar *\n* y agrega un nombre de un **información sobre herramientas** a ese botón de barra de herramientas. Para obtener más información, consulte [creación de una información sobre herramientas](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
 **Ancho** y **alto** se aplican a todos los botones. Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho máximo de 2048, por lo que si establece el ancho del botón en *512*, solo puede tener cuatro botones y si se establece el ancho en *513*, solo puede tener tres botones.
@@ -203,7 +203,7 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[Editores de recursos](../windows/resource-editors.md)
+[editores de recursos](../windows/resource-editors.md)
 <!--
 [Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
 [Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->

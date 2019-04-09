@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 1d57251e48f2496b07a4eb4f94976c7a44b165f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328518"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036106"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor (Clase)
 
@@ -62,7 +62,7 @@ La información de columna se almacena en un búfer creado y administrado por es
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> CXMLAccessor:: GetXMLColumnData
+## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
 
 Recupera la información de tipo de columna de una tabla como datos de cadena en formato XML, por columna.
 
@@ -91,7 +91,7 @@ A continuación muestra cómo se da formato a la información de tipo de columna
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> CXMLAccessor:: GetXMLRowData
+## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
 
 Recupera todo el contenido de una tabla como datos de cadena en formato XML, por fila.
 
@@ -130,7 +130,7 @@ A continuación muestra cómo se da formato a la fila de datos en XML. `DATA` a 
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor (Clase)](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)<br/>
-[CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor (clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CDynamicStringAccessor (Clase)](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
 [CDynamicStringAccessorA (Clase)](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
 [CDynamicStringAccessorW (Clase)](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>

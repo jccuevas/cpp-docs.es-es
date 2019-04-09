@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: ff16c6c5a2ce09313283198fe0b86e95d572e46c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 0e5b45042c9959b87ad5db97ab755e49de469149
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785974"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035285"
 ---
 # <a name="invokemodeoptions-structure"></a>Estructura InvokeModeOptions
 
@@ -41,5 +41,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)<br/>
+[Microsoft::WRL (Espacio de nombres)](microsoft-wrl-namespace.md)<br/>
 [Microsoft::WRL::AgileEventSource Class](agileeventsource-class.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Administrar los símbolos
+title: Filtrar Administrar los símbolos
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328849"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034000"
 ---
 # <a name="how-to-manage-symbols"></a>Filtrar Administrar los símbolos
 
@@ -215,5 +215,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Cómo: Crear símbolos](../windows/creating-new-symbols.md)<br/>
+[Filtrar Creación de símbolos](../windows/creating-new-symbols.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>

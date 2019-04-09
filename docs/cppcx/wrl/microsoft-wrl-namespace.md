@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: d402f2a1292088b52ce921bbc0007ab96554189e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785779"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033526"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL (Espacio de nombres)
 
@@ -47,14 +47,14 @@ namespace Microsoft::WRL;
 |[AsyncBase (clase)](asyncbase-class.md)|Implementa la máquina de estados asincrónica de Windows Runtime.|
 |[ClassFactory (clase)](classfactory-class.md)|Implementa la funcionalidad básica de la interfaz `IClassFactory`.|
 |[ComPtr (clase)](comptr-class.md)|Crea un tipo de *puntero inteligente* que representa la interfaz especificada por el parámetro de plantilla. ComPtr mantiene automáticamente un recuento de referencias para el puntero de la interfaz subyacente y la libera cuando el recuento de referencias llega a cero.|
-|[DeferrableEventArgs (clase)](deferrableeventargs-class.md)|Clase de plantilla usada para los tipos de argumento de evento de los aplazamientos.|
-|[EventSource (clase)](eventsource-class.md)|Representa un evento. Las funciones miembro `EventSource` agregan, quitan e invocan controladores de eventos.|
+|[Clase DeferrableEventArgs](deferrableeventargs-class.md)|Clase de plantilla usada para los tipos de argumento de evento de los aplazamientos.|
+|[EventSource (clase)](eventsource-class.md)|Representa un evento. `EventSource` las funciones miembro agregar, quitarán e invocan controladores de eventos.|
 |[FtmBase (clase)](ftmbase-class.md)|Representa un objeto de cálculo de referencias con subprocesamiento libre.|
 |[Module (clase)](module-class.md)|Representa una colección de objetos relacionados.|
-|[RuntimeClass (clase)](runtimeclass-class.md)|Representa una clase con instancias que hereda el número especificado de interfaces y proporciona la compatibilidad especificada con Windows Runtime, COM clásico y referencia débil.|
+|[RuntimeClass (Clase)](runtimeclass-class.md)|Representa una clase con instancias que hereda el número especificado de interfaces y proporciona la compatibilidad especificada con Windows Runtime, COM clásico y referencia débil.|
 |[SimpleActivationFactory (clase)](simpleactivationfactory-class.md)|Proporciona un mecanismo fundamental para crear una clase base de Windows en tiempo de ejecución o COM clásico.|
 |[SimpleClassFactory (clase)](simpleclassfactory-class.md)|Proporciona un mecanismo fundamental para crear una clase base.|
-|[WeakRef (clase)](weakref-class.md)|Representa una *referencia débil* que solo puede usar Windows en tiempo de ejecución, no COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
+|[WeakRef (Clase)](weakref-class.md)|Representa una *referencia débil* que solo puede usar Windows en tiempo de ejecución, no COM clásico. Una referencia débil representa un objeto que puede ser o no accesible.|
 
 ### <a name="structures"></a>Estructuras
 
@@ -79,10 +79,10 @@ namespace Microsoft::WRL;
 |Name|Descripción|
 |----------|-----------------|
 |[AsWeak (función)](asweak-function.md)|Recupera una referencia débil a una instancia especificada.|
-|[Callback (función) (WRL)](callback-function-wrl.md)|Crea un objeto cuya función de miembro es un método de devolución de llamada.|
+|[Función de devolución de llamada (WRL)](callback-function-wrl.md)|Crea un objeto cuya función de miembro es un método de devolución de llamada.|
 |[CreateActivationFactory (función)](createactivationfactory-function.md)|Crea un generador que produce instancias de la clase especificada que puede activar Windows en tiempo de ejecución.|
 |[CreateClassFactory (función)](createclassfactory-function.md)|Crea un generador que produce instancias de la clase especificada.|
-|[Make (función)](make-function.md)|Inicializa la clase en tiempo de ejecución de Windows especificada.|
+|[Make (Función)](make-function.md)|Inicializa la clase en tiempo de ejecución de Windows especificada.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -92,4 +92,4 @@ namespace Microsoft::WRL;
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Wrappers (espacio de nombres)](microsoft-wrl-wrappers-namespace.md)
+[Microsoft::WRL::Wrappers (Espacio de nombres)](microsoft-wrl-wrappers-namespace.md)

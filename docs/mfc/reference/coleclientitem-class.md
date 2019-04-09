@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295362"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773988"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (clase)
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Parámetros
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ Puntero al nombre de archivo desde el que se creará el elemento OLE.
 *clsid*<br/>
 Reservado para un uso futuro.
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Parámetros
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Puntero al nombre de archivo desde el que se creará el elemento OLE.
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 Id. que identifica el tipo de elemento OLE para crear.
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Parámetros
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Puntero a la [COleDataObject](../../mfc/reference/coledataobject-class.md) objeto desde el que se creará el elemento OLE.
 
-*render*<br/>
+*representar*<br/>
 Marca que especifica cómo el servidor representará el elemento OLE. Para los valores posibles, vea [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) en el SDK de Windows.
 
 *cfFormat*<br/>
@@ -1877,7 +1877,7 @@ virtual BOOL OnShowControlBars(
 *pFrameWnd*<br/>
 Puntero a la ventana de marco de la aplicación contenedora. Puede tratarse de una ventana de marco principal o una ventana secundaria MDI.
 
-*bShow*<br/>
+*bMostrar*<br/>
 Especifica si las barras de control se puede mostrar u ocultar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -2187,8 +2187,8 @@ Para obtener más información, consulte [IOleLink::Update](/windows/desktop/api
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem (clase)](../../mfc/reference/cdocitem-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleServerItem (clase)](../../mfc/reference/coleserveritem-class.md)

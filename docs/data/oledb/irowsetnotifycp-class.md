@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: e3c85092b4abf074107eadb73ca0d589742c6ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420861"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031691"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP (Clase)
 
@@ -77,7 +77,7 @@ Una matriz de tipo [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray
 
 ## <a name="remarks"></a>Comentarios
 
-`IRowsetNotifyCP` implementa funciones aconsejar a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
+`IRowsetNotifyCP` Implementa funciones para advertir a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
 
 Tenga en cuenta que también debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como "receptor") mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor puede controlar las notificaciones. Consulte [recibir notificaciones](../../data/oledb/receiving-notifications.md) acerca de cómo implementar la interfaz de punto de conexión del consumidor.
 

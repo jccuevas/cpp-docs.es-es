@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775327"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038043"
 ---
 # <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio - C++
 
@@ -60,13 +60,13 @@ En la lista de errores, puede presionar **F1** en un error resaltado para ir a s
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md)<br/>
+[Establece el compilador de C++ y crear propiedades en Visual Studio](working-with-project-properties.md)<br/>
 Aprenda a utilizar hojas de propiedades y páginas de propiedades para especificar la configuración del proyecto.
 
 [Bibliotecas de referencia y los componentes en tiempo de compilación](adding-references-in-visual-cpp-projects.md)<br/>
 Cómo incluir los componentes COM y .NET en bibliotecas, archivos DLL, en un proyecto.
  
-[Organización de archivos de salida del proyecto](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organizar los archivos de salida del proyecto](how-to-organize-project-output-files-for-builds.md)<br/>
 Cómo personalizar la ubicación de los archivos ejecutables que se creó en el proceso de compilación.
 
 [Pasos de compilación personalizada y eventos de compilación](understanding-custom-build-steps-and-build-events.md)<br/>
@@ -77,4 +77,4 @@ Cómo crear un nuevo proyecto de Visual Studio de una colección de archivos de 
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br>
+[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)<br>

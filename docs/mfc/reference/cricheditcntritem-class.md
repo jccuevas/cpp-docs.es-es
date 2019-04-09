@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268491"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773845"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem (clase)
 
@@ -49,7 +49,7 @@ Un "control rich edit" es una ventana en la que el usuario puede escribir y edit
 
 Este control común de Windows (y por lo tanto, el [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) y las clases relacionadas) está disponible solo para programas que se ejecutan en versiones de Windows 95/98 y Windows NT 3.51 y versiones posteriores.
 
-Para obtener un ejemplo del uso de los elementos de contenedor de edición enriquecida en una aplicación MFC, vea el [WORDPAD](../../visual-cpp-samples.md) aplicación de ejemplo.
+Para obtener un ejemplo del uso de los elementos de contenedor de edición enriquecida en una aplicación MFC, vea el [WORDPAD](../../overview/visual-cpp-samples.md) aplicación de ejemplo.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -110,8 +110,8 @@ Para obtener más información, consulte [DVASPECT](/windows/desktop/api/wtypes/
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem (clase)](../../mfc/reference/coleclientitem-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md)<br/>
-[CRichEditView (clase)](../../mfc/reference/cricheditview-class.md)
+[CRichEditView Class](../../mfc/reference/cricheditview-class.md)

@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299080"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774188"
 ---
 # <a name="cdocument-class"></a>CDocument (clase)
 
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *guid*<br/>
 Especifica el GUID de un fragmento a buscar.
 
-*pid*<br/>
+*PID*<br/>
 Especifica un PID de un fragmento a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1070,10 +1070,10 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parámetros
 
-*Guid*<br/>
+*GUID*<br/>
 Especifica el GUID de un fragmento que se va a quitar.
 
-*Pid*<br/>
+*PID*<br/>
 Especifica el PID de un fragmento que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 Señala al nombre del documento que se va a guardar o cargar.
 
-*e*<br/>
+*h*<br/>
 Apunta a la excepción que se produjo. Puede ser NULL.
 
 *bSaving*<br/>
@@ -1254,9 +1254,9 @@ Esta función llama a la [CView::OnUpdate](../../mfc/reference/cview-class.md#on
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC NPP](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC NPP](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>

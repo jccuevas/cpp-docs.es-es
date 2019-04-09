@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624411"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036145"
 ---
 # <a name="import-attributes-c"></a>#import (Atributos) (C++)
 Proporciona vínculos a los atributos utilizados con el `#import` directiva.
@@ -51,4 +51,4 @@ Los siguientes atributos están disponibles para el `#import` directiva.
 
 ## <a name="see-also"></a>Vea también
 
-[directiva #import](../preprocessor/hash-import-directive-cpp.md)
+[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)

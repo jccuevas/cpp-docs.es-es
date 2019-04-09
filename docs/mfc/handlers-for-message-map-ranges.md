@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266372"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774001"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Controladores para intervalos de mapa de mensajes
 
@@ -95,7 +95,7 @@ Para obtener más información sobre los requisitos de parámetros de funciones 
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> Ejemplo de un intervalo de identificadores de comandos
 
-Es posible que al usar intervalos es un ejemplo en el control de comandos, como el comando de Zoom en el ejemplo MFC [HIERSVR](../visual-cpp-samples.md). Este comando permite variar el tamaño de la vista entre 25 y 300% de su tamaño normal. Clase de vista de HIERSVR utiliza un intervalo para controlar los comandos de Zoom con una entrada de mapa de mensajes parecida a ésta:
+Es posible que al usar intervalos es un ejemplo en el control de comandos, como el comando de Zoom en el ejemplo MFC [HIERSVR](../overview/visual-cpp-samples.md). Este comando permite variar el tamaño de la vista entre 25 y 300% de su tamaño normal. Clase de vista de HIERSVR utiliza un intervalo para controlar los comandos de Zoom con una entrada de mapa de mensajes parecida a ésta:
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 
@@ -147,4 +147,4 @@ El código que se muestra en el ejemplo es típico: convertir el valor pasado a 
 
 ## <a name="see-also"></a>Vea también
 
-[Declaración de funciones del controlador de mensajes](../mfc/declaring-message-handler-functions.md)
+[Declarar funciones del controlador de mensajes](../mfc/declaring-message-handler-functions.md)

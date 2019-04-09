@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893527"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040585"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -72,7 +72,7 @@ Especifica la biblioteca de tipos.
 *restricted*<br/>
 (Opcional) Los miembros de la biblioteca no se puede llamar arbitrariamente. Consulte el atributo MIDL [restricted](/windows/desktop/Midl/restricted) para obtener más información.
 
-*custom*<br/>
+*personalizadas*<br/>
 (Opcional) Uno o más atributos; Esto es similar a la [personalizado](custom-cpp.md) atributo. El primer parámetro *personalizado* es el GUID del atributo. Por ejemplo:
 
 ```
@@ -107,7 +107,7 @@ Si este atributo se usa en un proyecto que usa ATL, el comportamiento del atribu
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) se usa como clase base y como el punto de entrada ejecutable estándar [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
-- `type` = **unspecified**
+- `type` = **No se especifica**
 
    Deshabilita la inserción de código ATL relacionado con el atributo de módulo.
 
@@ -164,9 +164,9 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Atributos independientes](stand-alone-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/desktop/Midl/library)<br/>
+[biblioteca](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

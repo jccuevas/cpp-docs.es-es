@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: c4c4ecce92bce3fbd2cb37f69b9aa02a9af4d7c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c22a11c54b1957c1d4ac735fe8cb577d9c483d35
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291436"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781710"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 2)
 
@@ -17,7 +17,7 @@ ms.locfileid: "57291436"
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-[Ejemplos de Visual C++](../visual-cpp-samples.md)
+[Ejemplos de Visual C++](../overview/visual-cpp-samples.md)
 
 ##  <a name="top"></a> Secciones
 

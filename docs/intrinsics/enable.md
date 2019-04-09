@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-ms.openlocfilehash: 1d129db17b489972555efb0b5df2de52e01fa649
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ece6d6f4040b81b55d8400407d46f165b56b53
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631257"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024522"
 ---
 # <a name="enable"></a>_enable
 
@@ -38,7 +38,7 @@ void _enable(void);
 
 ## <a name="remarks"></a>Comentarios
 
-`_enable` indica al procesador que establezca el indicador de interrupción. En sistemas x86, esta función genera la instrucción Establecer marca de interrupción (`sti`).
+`_enable` indica al procesador para establecer la marca de interrupción. En sistemas x86, esta función genera la instrucción Establecer marca de interrupción (`sti`).
 
 Esta función solo está disponible en modo kernel. Si se utiliza en modo de usuario, se produce una excepción Instrucción privilegiada.
 

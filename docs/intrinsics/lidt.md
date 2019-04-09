@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 8ac86674dfa0dc269328854d363db24922cf20ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 757309603af48820a17668cfe272bbeaad9239b3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623891"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038478"
 ---
 # <a name="lidt"></a>__lidt
 
@@ -43,7 +43,7 @@ void __lidt(void * Source);
 
 ## <a name="remarks"></a>Comentarios
 
-El `__lidt` función es equivalente a la `LIDT` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: referencia de conjunto de instrucciones," en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
+El `__lidt` función es equivalente a la `LIDT` instrucción máquina y solo está disponible en modo kernel. Para obtener más información, busque el documento, "Manual del desarrollador de Software de arquitectura Intel, volumen 2: Establecer referencia de instrucciones,"en el [Intel Corporation](https://software.intel.com/articles/intel-sdm) sitio.
 
 **FIN de Específicos de Microsoft**
 
