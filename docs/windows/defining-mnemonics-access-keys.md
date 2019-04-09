@@ -22,14 +22,14 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c49913597f51ef231073b89d60ad9718b1113f44
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041489"
 ---
-# <a name="how-to-define-control-access-and-values-c"></a>Procedimiento Definir el Control de acceso y valores (C++)
+# <a name="how-to-define-control-access-and-values-c"></a>Filtrar Definir el Control de acceso y valores (C++)
 
 ## <a name="tab-order"></a>Orden de tabulación
 
@@ -42,7 +42,7 @@ Incluso los controles que no tienen la **Tabstop** propiedad establecida en **Tr
 > [!NOTE]
 > Si el cuadro de diálogo contiene controles que se superponen, el orden de tabulación se cambia la manera en que se muestran los controles. Controles que se proporcionan más adelante en el orden de tabulación se muestran siempre encima de los controles que se superponen que preceden a ellos en el orden de tabulación.
 
-- Para ver el orden de tabulación para todos los controles, vaya al menú **formato** > **orden de tabulación**, o bien presione **Ctrl** + **d**.
+- Para ver el orden de tabulación para todos los controles, vaya al menú **formato** > **orden de tabulación**, o bien presione **Ctrl** + **d.**.
 
    Un número en la esquina superior izquierda de cada control muestra su lugar en el orden de tabulación.
 
@@ -156,5 +156,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Administrar controles de cuadro de diálogo](controls-in-dialog-boxes.md)<br/>
-[Cómo: Agregar, editar o eliminar controles](adding-editing-or-deleting-controls.md)<br/>
-[Cómo: Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Cómo Agregar, editar o eliminar los controles](adding-editing-or-deleting-controls.md)<br/>
+[Cómo Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>
