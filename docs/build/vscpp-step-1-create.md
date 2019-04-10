@@ -2,16 +2,16 @@
 title: Creación de un proyecto de aplicación de consola de C++
 description: Creación de una aplicación de consola Hola mundo en Visual C++
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817730"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898783"
 ---
 # <a name="create-a-c-console-app-project"></a>Creación de un proyecto de aplicación de consola de C++
 
@@ -19,11 +19,31 @@ El punto de partida habitual para un programador de C++ es un "Hello, world!", a
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si todavía no está instalada, vea [Instalar compatibilidad con C++ en Visual Studio 2017](vscpp-step-0-installation.md).
+- Tenga Visual Studio con el entorno de desarrollo para escritorio de C++ instalado y ejecutándose en el equipo. Si aún no está instalado, consulte [compatibilidad Install C++ en Visual Studio](vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Creación del proyecto de aplicación
 
 Visual Studio usa *proyectos* para organizar el código de una aplicación y *soluciones* para organizar los proyectos. Un proyecto contiene todas las opciones, configuraciones y reglas que se usan para compilar las aplicaciones y administra la relación entre todos los archivos del proyecto y los archivos externos. Para crear la aplicación, primero tendrá que crear un proyecto y una solución.
+
+::: moniker range=">=vs-2019"
+
+1. En Visual Studio, abra el **archivo** menú y elija **New** > **proyecto** para abrir el **crear un nuevo proyecto** cuadro de diálogo. Seleccione el **aplicación de consola** plantilla y, a continuación, elija **siguiente**.
+
+   ![Cree un nuevo proyecto](media/vs2019-choose-console-app.png "abrir el crear un cuadro de diálogo nuevo proyecto")
+
+1. En el **configurar el nuevo proyecto** cuadro de diálogo, escriba *HelloWorld* en el **nombre del proyecto** cuadro de edición. Elija **crear** para crear el proyecto.
+
+   ![Asigne un nombre y crear el nuevo proyecto](media/vs2019-configure-new-project-hello-world.png "nombre y crear el nuevo proyecto")
+
+   Visual Studio crea un nuevo proyecto, listo para agregar y editar el código fuente. De forma predeterminada, la plantilla de aplicación de consola se rellena en el código fuente con una aplicación "Hello World":
+
+   ![Proyecto de Hello World en el IDE](media/vs2019-hello-world-code.png "proyecto Hello World en el IDE")
+
+   Cuando el código tiene este aspecto en el editor, está listo para continuar con el paso siguiente y compilar la aplicación.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. En Visual Studio, abra el menú **archivo**  y elija **nuevo > proyecto** para abrir el cuadro de diálogo **nuevo proyecto**.
 
@@ -35,7 +55,7 @@ Visual Studio usa *proyectos* para organizar el código de una aplicación y *so
 
 Visual Studio crea un proyecto nuevo y vacío, listo para especializar para el tipo de aplicación que quiera crear y agregar los archivos de código fuente. Hará esto a continuación.
 
-[He tenido un problema.](#create-your-app-project-issues)
+[Tenido un problema.](#create-your-app-project-issues)
 
 ## <a name="make-your-project-a-console-app"></a>Convertir el proyecto en una aplicación de consola
 
@@ -49,7 +69,7 @@ Visual Studio puede crear todo tipo de aplicaciones y componentes de Windows y o
 
 Ahora Visual Studio sabe como compilar el proyecto para que se ejecute en una ventana de consola. A continuación, Agregará un archivo de código fuente y escribirá el código de la aplicación.
 
-[He tenido un problema.](#make-your-project-a-console-app-issues)
+[Tenido un problema.](#make-your-project-a-console-app-issues)
 
 ## <a name="add-a-source-code-file"></a>Agregar un archivo de código fuente
 
@@ -61,7 +81,7 @@ Ahora Visual Studio sabe como compilar el proyecto para que se ejecute en una ve
 
 Visual studio crea un archivo de código fuente nuevo y lo abre en una ventana del editor, lista para escribir el código fuente.
 
-[He tenido un problema.](#add-a-source-code-file-issues)
+[Tenido un problema.](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>Agregue código al archivo de origen
 
@@ -83,12 +103,16 @@ Visual studio crea un archivo de código fuente nuevo y lo abre en una ventana d
 
 Cuando el código tiene este aspecto en el editor, está listo para continuar con el paso siguiente y compilar la aplicación.
 
-[He tenido un problema.](#add-a-source-code-file-issues)
+[Tenido un problema.](#add-a-source-code-file-issues)
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
 > [Compilar y ejecutar un proyecto de C++](vscpp-step-2-build.md)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="troubleshooting-guide"></a>Guía de solución de problemas
 
@@ -125,5 +149,7 @@ Si accidentalmente ha cerrado la ventana del editor del archivo de código fuent
 Si aparece un subrayado ondulado rojo bajo cualquier elemento en el editor de código fuente, compruebe que el código coincide con el ejemplo de ortografía, puntuación y case. Case es una palabra reservada en código C++.
 
 [Volver atrás](#add-code-to-the-source-file).
+
+::: moniker-end
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />
