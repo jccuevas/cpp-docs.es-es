@@ -1,6 +1,6 @@
 ---
 title: /FD (Recompilación mínima de IDE)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - /FD
 helpviewer_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - -FD compiler option [C++]
 - FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-ms.openlocfilehash: 323a0045ab11f23ab996d5179a135d0eb4184f20
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ac63b021dc0cb9ee5964af7fa2e168f710653979
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424058"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (Recompilación mínima de IDE)
 
-**/FD** no se expone a los usuarios, excepto en el [línea de comandos](command-line-property-pages.md) página de propiedades de un proyecto de C++ **páginas de propiedades** cuadro de diálogo si y solo si [/Gm (habilitar recompilación mínima)](gm-enable-minimal-rebuild.md) también no se selecciona. **/FD** no tiene ningún efecto distinto del entorno de desarrollo. **/FD** no se expone en la salida de **cl /?**.
+**/FD** solo se expone a los usuarios de la [línea de comandos](command-line-property-pages.md) página de propiedades de un C++ del proyecto **páginas de propiedades** cuadro de diálogo. Está disponible si y solo si está en desuso y desactivada de forma predeterminada [/Gm (habilitar recompilación mínima)](gm-enable-minimal-rebuild.md) no está seleccionada la opción. **/FD** no tiene ningún efecto distinto del entorno de desarrollo. **/FD** no se exponen en la salida de `cl /?`.
 
-Si no habilita **/Gm** en el entorno de desarrollo **/FD** se usará. **/FD** garantiza que el archivo .idb tiene suficiente información de dependencia. **/FD** solo se utiliza en el entorno de desarrollo, y no debe usarse desde la línea de comandos o un script de compilación.
+Si no habilita el desuso **/Gm** opción en el entorno de desarrollo **/FD** se utiliza. **/FD** garantiza que el archivo .idb tiene suficiente información de dependencia. **/FD** solo se utiliza en el entorno de desarrollo, y no debería utilizarse desde la línea de comandos o un script de compilación.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,19 +1,19 @@
 ---
 title: expresiones lambda de constexpr en C++
-ms.date: 07/19/2017
+ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424188"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>expresiones lambda de constexpr en C++
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): una expresión lambda se puede declarar como **constexpr** o usar en una expresión constante cuando la inicialización de cada uno miembro de datos que se captura o presenta está permitida en una expresión constante.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Una expresión lambda se puede declarar como **constexpr** o se usan en una expresión constante cuando se permite la inicialización de cada miembro de datos que captura o se introduce dentro de una expresión constante.
 
 ```cpp
     int y = 32;
