@@ -2,19 +2,19 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768690"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898861"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
 En esta página, se recopilan todas las páginas de novedades de todas las versiones de Visual C++, de Visual Studio 2015 a 2003. Esta información se pone a su disposición en caso de que pueda servir de ayuda al actualizar desde versiones anteriores de Visual C++.
 
 > [!NOTE]
-> Para obtener más información sobre Visual Studio 2017, consulte [What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio 2017) y [Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) (Mejoras de conformidad de Visual C++ en Visual Studio 2017).
+> Para obtener información sobre la versión actual de Visual Studio, vea [What's new for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio) y [Conformance Improvements in Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md) (Mejoras de conformidad de Visual C++ en Visual Studio).
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Novedades de C++ en Visual Studio 2015
 
@@ -24,13 +24,13 @@ Afortunadamente, estas diferencias tienen poco o ningún efecto en la mayoría d
 
 Aunque estas diferencias pueden afectar a su código fuente u otros artefactos de compilación, no afectan a la compatibilidad binaria entre actualizaciones de versiones de Visual C++. Un tipo de cambio más drástico, el *cambio importante*, puede afectar a la compatibilidad binaria, pero este tipo de alteraciones de compatibilidad binaria solo se producen entre las versiones principales de Visual C++. por ejemplo, entre Visual C++ 2013 y Visual C++ 2015. Para obtener información sobre los cambios importantes que se produjeron entre Visual C++ 2013 y Visual C++ 2015, vea [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md).
 
-- [Mejoras de conformidad en Visual Studio 2015](#VS_RTM)
+- [Mejoras de conformidad en Visual Studio 2015](#VS_RTM)
 
-- [Mejoras de conformidad en Visual Studio 2015 Update 1](#VS_Update1)
+- [Mejoras de conformidad en Visual Studio 2015 Update 1](#VS_Update1)
 
-- [Mejoras de conformidad en Visual Studio 2015 Update 2](#VS_Update2)
+- [Mejoras de conformidad en Visual Studio 2015 Update 2](#VS_Update2)
 
-- [Mejoras de conformidad en Visual Studio 2015 Update 3](#VS_Update3)
+- [Mejoras de conformidad en Visual Studio 2015 Update 3](#VS_Update3)
 
 ### <a name="VS_RTM"></a> Mejoras de conformidad en Visual Studio 2015
 
@@ -57,7 +57,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Opción del compilador /Zg.**
+- **Opción del compilador Zg.**
 
    La opción de compilador `/Zg` (Generar prototipos de función) ya no está disponible. Esta opción del compilador quedó en desuso anteriormente.
 
@@ -83,7 +83,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para corregir el error, basta con quitar la palabra clave **mutable** redundante.
 
-- **char_16_t y char32_t**
+- **char_16_t and char32_t**
 
    Ya no puede usar `char16_t` o `char32_t` como alias en una definición de tipo (typedef), ya que estos tipos ahora se consideran integrados. Era habitual que los usuarios y creadores de bibliotecas definieran `char16_t` y `char32_t` como alias de `uint16_t` y `uint32_t`, respectivamente.
 
@@ -251,7 +251,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     char * str = "abc" "def";
    ```
 
-- **Placement new y delete**
+- **Nuevo placement delete**
 
    Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa **placement new**, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
 
@@ -301,7 +301,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Para solucionar este problema, cambie los tipos de referencia a un puntero o a un valor. Para poder cambiar el tipo a un puntero, hay que hacer cambios en el código que usa el campo union. Si se cambia el código a un valor, también cambian los datos almacenados en la unión, lo que afecta a otros campos, ya que los campos de tipos union comparten la misma memoria. En función del tamaño del valor, también podrá cambiar el tamaño de la unión.
 
-- Las **uniones anónimas**
+- **Uniones anónimas**
 
    ahora se ajustan mejor al estándar. Las versiones anteriores del compilador generaban un constructor y destructor explícitos para uniones anónimas. Estos se eliminan en Visual Studio 2015.
 
@@ -566,7 +566,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     }
    ```
 
-- **Operador new y operador delete sobrecargados**
+- **operator new y delete sobrecargado**
 
    Las versiones anteriores del compilador permitieron que **operator new** no miembro y **operator delete** no miembro se declarasen como static y que se declararan en espacios de nombres distintos del espacio de nombres global.  Este comportamiento anterior provocó el riesgo de que el programa no llamaba a la implementación del operador **new** o **delete** tal y como estaba diseñada por el programador, lo que daba lugar a un comportamiento en tiempo de ejecución incorrecto silencioso. El compilador ya no acepta el código escrito de este modo y emite el error del compilador C2323 en su lugar.
 
@@ -977,7 +977,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    Como resultado del seguimiento del cambio de estado de `#pragma warning` mejorado, es posible emitir ahora las advertencias anteriormente suprimidas de manera incorrecta o las advertencias relacionadas con problemas que anteriormente tenían un mal diagnóstico.
 
-- **Mejora de la identificación del código inaccesible**
+- **Mejora de la identificación del código inalcanzable**
 
    Los cambios en la biblioteca estándar de C++ y la mejora en la capacidad para llamadas a funciones insertadas respecto a versiones anteriores del compilador pueden permitirle a este demostrar que determinado código ahora es inaccesible. Este nuevo comportamiento puede producir nuevas instancias de advertencia C4720 emitidas con mayor frecuencia.
 
@@ -1104,7 +1104,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
    ```
 
-- Las variables de miembro `volatile`  **evitaban de forma implícita los constructores y operadores de asignación definidos** Las versiones anteriores del compilador permitían a las clases que tenían variables de miembro **volatile** que generaran automáticamente constructores para copiar o mover y operadores de asignación para copiar o mover predeterminados. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. Ahora, el compilador considera que una clase que tiene variables de miembro volátiles tiene operadores de asignación y construcción no triviales, lo que impide que se generen implementaciones predeterminadas de estos operadores automáticamente. Cuando esta clase es miembro de una unión (o una unión anónima dentro de una clase), los constructores para copiar o mover y los operadores de asignación de copiar o mover de la unión (o la clase que contiene la unión anónima) se definirán implícitamente como eliminados. Intentar crear o copiar la unión (o la clase que contiene la unión anónima) sin definirlas explícitamente es un error y, en tal caso, el compilador genera el error de compilador C2280 como resultado.
+- `volatile` ***Las variables de miembro evitaban de forma implícita los constructores y operadores de asignación definidos** Las versiones anteriores del compilador permitían a las clases que tenían variables de miembro **volatile** que generaran automáticamente constructores para copiar o mover y operadores de asignación para copiar o mover predeterminados.TEste comportamiento anterior era incorrecta y no se ajusta al estándar de C++.TAhora, el compilador considera que una clase que tiene variables de miembro volátiles tiene operadores de asignación y construcción no triviales, lo que impide que se generen implementaciones predeterminadas de estos operadores automáticamente.WCuando esta clase es miembro de una unión (o una unión anónima dentro de una clase), los constructores para copiar o mover y los operadores de asignación de copiar o mover de la unión (o la clase que contiene la unión anónima) se definirán implícitamente como eliminados.AIntentar crear o copiar la unión (o la clase que contiene la unión anónima) sin definirlas explícitamente es un error y, en tal caso, el compilador genera el error de compilador C2280 como resultado.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1301,7 +1301,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
    En versiones anteriores de Visual C++, las aserciones estáticas de la parte inferior de este ejemplo se aceptaban porque `std::is_convertable<>::value` estaba establecido de forma incorrecta en **true**. Ahora, `std::is_convertable<>::value` se ha establecido de forma correcta en **false**, lo que hace que se produzcan errores en las aserciones estáticas.
 
-- **Los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados respetan los especificadores de acceso**
+- **Los constructores de copia y movimiento triviales establecidos como valor predeterminado o eliminados respetan los especificadores de acceso**
 
    Las versiones anteriores del compilador no comprobaban el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados antes de permitir llamarlos. Este comportamiento anterior era incorrecta y no se ajusta al estándar de C++. En algunos casos, este comportamiento anterior ha creado un riesgo de generación de código no válido silencioso, lo que ha producido un comportamiento impredecible en tiempo de ejecución. Ahora, el compilador comprueba el especificador de acceso de los constructores de copias y movimiento triviales establecidos como valor predeterminado o eliminados para determinar si se pueden llamar y, en caso contrario, emite como resultado una advertencia del compilador C2248.
 
@@ -1799,7 +1799,7 @@ Un trígrafo se compone de dos signos de interrogación consecutivos (??) seguid
 
 **Nueva directiva pragma detect_mismatch.** La directiva pragma detect_mismatch le permite colocar una etiqueta en los archivos que se compara con otras etiquetas que tienen el mismo nombre. Si hay varios valores para el mismo nombre, el enlazador emite un error.
 
-**XOP intrínsecos, FMA4 intrínsecos y LWP intrínsecos.** Se han agregado nuevas funciones intrínsecas para admitir las funciones intrínsecas XOP agregadas para Visual Studio 2010 SP1, las funciones intrínsecas FMA4 agregadas para Visual Studio 2010 SP1 y las funciones intrínsecas LWP agregadas para las tecnologías de procesador de Visual Studio 2010 SP1. Use __cpuid, __cpuidex para determinar qué tecnologías de procesador son compatibles en un equipo determinado.
+**Funciones intrínsecas XOP, FMA4 y LWP.** Se han agregado nuevas funciones intrínsecas para admitir las funciones intrínsecas XOP agregadas para Visual Studio 2010 SP1, las funciones intrínsecas FMA4 agregadas para Visual Studio 2010 SP1 y las funciones intrínsecas LWP agregadas para las tecnologías de procesador de Visual Studio 2010 SP1. Use __cpuid, __cpuidex para determinar qué tecnologías de procesador son compatibles en un equipo determinado.
 
 ### <a name="visual-c-projects-and-the-build-system"></a>Proyectos de Visual C++ y el sistema de compilación
 
@@ -1830,7 +1830,7 @@ Un trígrafo se compone de dos signos de interrogación consecutivos (??) seguid
 
 ### <a name="microsoft-foundation-class-mfc-library"></a>Biblioteca MFC (Microsoft Foundation Class)
 
-**Características de Windows 7.** MFC admite muchas características de Windows 7, por ejemplo, la interfaz de usuario (UI) de la cinta de opciones, la barra de tareas, las listas de accesos directos, las miniaturas con pestañas, las vistas previas en miniatura, la barra de progreso, la superposición de icono y la indexación de búsqueda. Dado que MFC admite automáticamente muchas características de Windows 7, puede que no tenga que modificar la aplicación existente. Para admitir otras características en las aplicaciones nuevas, use el Asistente para aplicaciones MFC para especificar la funcionalidad que quiera usar.
+**Características de Windows 7.** MFC admite muchas características de Windows 7, por ejemplo, la interfaz de usuario (UI) de la cinta de opciones, la barra de tareas, las listas de accesos directos, las miniaturas con pestañas, las vistas previas en miniatura, la barra de progreso, la superposición de icono y la indexación de búsqueda. Dado que MFC admite automáticamente muchas características de Windows 7, puede que no tenga que modificar la aplicación existente. Para admitir otras características en las aplicaciones nuevas, use el Asistente para aplicaciones MFC para especificar la funcionalidad que quiera usar.
 
 **Reconocimiento multitáctil.** MFC es compatible con las aplicaciones que tienen una interfaz de usuario multitáctil, por ejemplo, las aplicaciones escritas para el sistema operativo de Microsoft Surface. Una aplicación multitáctil puede controlar mensajes táctiles y mensajes de gestos de Windows, que son combinaciones de mensajes táctiles. Solo tiene que registrar la aplicación para eventos táctiles y de gestos, y el sistema operativo enrutará los eventos multitáctil a los controladores de eventos.
 
@@ -1862,7 +1862,7 @@ MFC ahora admite la animación y los gráficos de Direct2D. La biblioteca MFC co
 Debido a esta separación de obligaciones, las características de exploración como **Vista de clases** y el nuevo cuadro de diálogo **Navegar a** se controlan mediante un sistema que se basa en un nuevo archivo de base de datos de escritorio (.sdf) de SQL Server que reemplaza al antiguo archivo de exploración sin compilación (.ncb). Las características de IntelliSense como Información rápida, Finalización automática y Ayuda del parámetro analizan unidades de traducción solo cuando es necesario. Las características híbridas como la nueva ventana **Jerarquía de llamadas** usan una combinación de las características de exploración e IntelliSense.
 Puesto que IntelliSense solo procesa la información que necesita en el momento, el IDE tiene una mayor capacidad de respuesta. Además, dado que la información está más actualizada, las ventanas y vistas del IDE son más precisas. Por último, dado que la infraestructura del IDE está mejor organizada, tiene más capacidad y es más escalable, puede controlar proyectos más grandes.
 
-**Errores de IntelliSense mejorado.** El IDE detecta mejor los errores que pudieron provocar una pérdida de IntelliSense y muestra un subrayado ondulado rojo debajo de ellos. Además, el IDE notifica los errores de IntelliSense en la ventana **Lista de errores**. Para mostrar el código que está causando el problema, haga doble clic en el error en la ventana **Lista de errores**.
+**Errores de IntelliSense mejorados.** El IDE detecta mejor los errores que pudieron provocar una pérdida de IntelliSense y muestra un subrayado ondulado rojo debajo de ellos. Además, el IDE notifica los errores de IntelliSense en la ventana **Lista de errores**. Para mostrar el código que está causando el problema, haga doble clic en el error en la ventana **Lista de errores**.
 
 **Característica Autocompletar de #include.** El IDE es compatible con la función Autocompletar de la palabra clave `#include`. Cuando escriba `#include`, el IDE creará un cuadro de lista desplegable de archivos de encabezado válidos. Si sigue escribiendo un nombre de archivo, el IDE filtra la lista en función de lo que escriba. En cualquier momento, puede seleccionar en la lista el archivo que quiere incluir. Esto le permite incluir rápidamente los archivos sin conocer su nombre exacto.
 
@@ -1935,7 +1935,7 @@ La adición del tipo de datos YMMWORD es compatible con los operandos multimedia
 - Se ha actualizado la función `__cpuid`. Las funciones `__cpuid` y `__cpuidex` ahora admiten varias características nuevas de las revisiones más recientes de los procesadores AMD e Intel. La función intrínseca `__cpuidex` es nueva y recopila más información de procesadores recientes.
 - La opción del compilador `/MP` reduce el tiempo de compilación total. La opción `/MP` puede reducir significativamente el tiempo total para compilar varios archivos de código fuente mediante la creación de varios procesos que compilan los archivos al mismo tiempo. Esta opción es especialmente útil en equipos compatibles con hyperthreading, varios procesadores o varios núcleos.
 - La opción del compilador `/Wp64` y la palabra clave **__w64** están en desuso. La opción del compilador `/Wp64` y la palabra clave **__w64**, que detecta problemas de portabilidad de 64 bits, están en desuso y se quitarán en una versión futura del compilador. En lugar de esta opción del compilador y palabra clave, use un compilador de Visual C++ que tenga una plataforma de 64 bits como destino.
-- `/Qfast_transcendentals` genera código alineado para las funciones transcendentales.
+- `/Qfast_transcendentals` genera código alineado para funciones transcendentales.
 - `/Qimprecise_fwaits` quita los comandos fwait internos para probar bloques al usar la opción del compilador `/fp:except`.
 
 ### <a name="linker-changes"></a>Cambios del enlazador
@@ -1985,71 +1985,71 @@ __sptr, __uptr
 El compilador tiene cambios importantes en esta versión.
 
 - Compiladores cruzados y nativos de 64 bits.
-- Se ha agregado la opción del compilador `/analyze` (análisis de código de empresa).
-- Se ha agregado la opción del compilador `/bigobj`.
-- Se han agregado `/clr:pure`, `/clr:safe` y `/clr:oldSyntax`. (Las versiones posteriores están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017).
+- `/analyze` (análisis de código de empresa). Se ha agregado esta opción del compilador.
+- `/bigobj` Se ha agregado esta opción del compilador.
+- `/clr:pure`, `/clr:safe` y `/clr:oldSyntax` se han agregado. (Las versiones posteriores están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017).
 - Opciones del compilador en desuso: muchas opciones del compilador han quedado en desuso en esta versión; para más información, vea **Opciones obsoletas del compilador**.
 - Se ha reducido la aplicación doble de código thunk en código `/clr`; para más información, vea **Doble thunk (C++)**.
-- Ya no se pueden usar `/EH` (modelo de control de excepciones) o `/EHs` para detectar una excepción que se inicia con un valor que no sea throw; use `/EHa`.
-- Se ha agregado la opción del compilador `/errorReport` (informar de los errores internos del compilador).
-- Se ha agregado la opción del compilador `/favor` (optimizar para 64).
-- Se ha agregado la opción del compilador `/FA`, `/Fa` (archivo de listas).
-- Se ha agregado la opción del compilador `/FC` (ruta de acceso completa de archivo de código fuente en diagnósticos).
-- Se ha agregado la opción del compilador `/fp` (especificar comportamiento de punto flotante).
-- Se ha agregado la opción del compilador `/G` (optimizar para procesador, opciones).
-- Se ha agregado la opción del compilador `/G` (optimizar para procesador, opciones).
-- Se han quitado las opciones del compilador `/G3`, `/G4`, `/G5`, `/G6`, `/G7` y `/GB`. El compilador ahora usa un "modo de fusión" que intenta crear el mejor archivo de salida para todas las arquitecturas.
-- Se ha quitado `/Gf`. Use `/GF` (eliminar cadenas duplicadas) en su lugar.
+- `/EH` (modelo de control de excepciones) o `/EHs` ya no se pueden usar para detectar una excepción que se inicia con un valor que no sea throw; use `/EHa`.
+- `/errorReport` (informar de los errores internos del compilador). Se ha agregado esta opción del compilador.
+- `/favor` (optimizar para 64). Se ha agregado esta opción del compilador.
+- `/FA`, `/Fa` (archivo de listas). Se ha agregado esta opción del compilador.
+- `/FC` (ruta de acceso completa de archivo de código fuente en diagnósticos). Se ha agregado esta opción del compilador.
+- `/fp` (especificar comportamiento de punto flotante). Se ha agregado esta opción del compilador.
+- `/G` (optimizar para procesador). Se ha agregado esta opción del compilador.
+- `/G` (optimizar para procesador). Se ha agregado esta opción del compilador.
+- `/G3`, `/G4`, `/G5`, `/G6`, `/G7` y `/GB`. Se han quitado estas opciones del compilador. El compilador ahora usa un "modo de fusión" que intenta crear el mejor archivo de salida para todas las arquitecturas.
+- `/Gf` se ha quitado. Use `/GF` (eliminar cadenas duplicadas) en su lugar.
 - `/GL` (optimización de todo el programa) ahora es compatible con `/CLRHEADER`.
 - `/GR` está ahora activado de manera predeterminada.
-- `/GS` (comprobación de seguridad del búfer) ahora proporciona protección de seguridad para parámetros de puntero vulnerables. `/GS` está ahora activado de manera predeterminada. Ahora, `/GS` también funciona en funciones compiladas en MSIL con `/clr` (compilación de Common Language Runtime).
-- Se ha agregado la opción del compilador `/homeparams` (copiar los parámetros del Registro en la pila).
-- Se ha agregado la opción del compilador `/hotpatch` (crear imagen a la que aplicar una revisión activa).
+- `/GS` (comprobación de seguridad del búfer) ahora proporciona protección de seguridad para parámetros de puntero vulnerables. `/GS` está ahora activado de manera predeterminada. `/GS` ahora también funciona en funciones compiladas en MSIL con `/clr` (compilación de Common Language Runtime).
+- `/homeparams` (copiar los parámetros del Registro en la pila). Se ha agregado esta opción del compilador.
+- `/hotpatch` (crear imagen a la que se puede aplicar una revisión activa). Se ha agregado esta opción del compilador.
 - Se ha actualizado la heurística de función insertada; vea **inline**, **__inline**, **__forceinline** e **inline_depth** para más información.
 - Se han agregado muchas funciones intrínsecas nuevas y ahora se documentan muchas funciones intrínsecas que antes no estaban documentadas.
 - De forma predeterminada, las llamadas a las funciones nuevas que producen un error iniciarán una excepción.
-- Se han quitado las opciones del compilador `/ML` y `/MLd`. Visual C++ ya no admite la compatibilidad con la biblioteca CRT vinculada estáticamente y de un único subproceso.
+- `/ML` y `/MLd`. Se han quitado estas opciones del compilador. Visual C++ ya no admite la compatibilidad con la biblioteca CRT vinculada estáticamente y de un único subproceso.
 - El compilador ha implementado la optimización del valor devuelto con nombre, que está habilitada cuando se compila con `/O1`, `/O2` (minimizar tamaño, maximizar velocidad), `/Og` (optimizaciones globales) y `/Ox` (optimización completa).
-- Se ha quitado la opción del compilador `/Oa`, pero se omitirá de forma silenciosa; use los modificadores `noalias` o `restrict__declspec` para especificar cómo crea alias el compilador.
-- Se ha quitado la opción del compilador `/Op`. Use `/fp` (especificar comportamiento de punto flotante) en su lugar.
+- `/Oa` Se ha quitado esta opción del compilador, pero se omitirá de forma silenciosa; use los modificadores `noalias` o `restrict__declspec` para especificar cómo crea alias el compilador.
+- `/Op` Se ha quitado esta opción del compilador. Use `/fp` (especificar comportamiento de punto flotante) en su lugar.
 - OpenMP ahora es compatible con Visual C++.
-- Se ha agregado la opción del compilador `/openmp` (habilitar la compatibilidad con OpenMP 2.0).
-- Se ha quitado la opción del compilador `/Ow`, pero se omitirá de forma silenciosa. Use los modificadores `noalias` o `restrict__declspec` para especificar cómo crea alias el compilador.
+- `/openmp` (habilitar la compatibilidad con OpenMP 2.0). Se ha agregado esta opción del compilador.
+- `/Ow` Se ha quitado esta opción del compilador, pero se omitirá de forma silenciosa. Use los modificadores `noalias` o `restrict__declspec` para especificar cómo crea alias el compilador.
 
 ### <a name="profile-guided-optimizations"></a>Optimizaciones guiadas por perfiles
 
-- Se ha quitado `/QI0f`.
-- Se ha quitado `/QIfdiv`.
-- Se ha agregado la opción del compilador `/QIPF_B` (error en la ejecución de instrucciones paso a paso de CPU en B).
-- Se ha agregado la opción del compilador `/QIPF_C` (error en la ejecución de instrucciones paso a paso de CPU en C).
-- Se ha agregado la opción del compilador `/QIPF_fr32` (no usar los 96 registros de punto flotante superiores).
-- Se ha agregado la opción del compilador `/QIPF_noPIC` (generar código dependiente de la posición).
-- Se ha agregado la opción del compilador `/QIPF_restrict_plabels` (suponer que no se crean funciones en tiempo de ejecución).
+- `/QI0f` se ha quitado.
+- `/QIfdiv` se ha quitado.
+- `/QIPF_B` (error en la ejecución de instrucciones paso a paso de CPU en B). Se ha agregado esta opción del compilador.
+- `/QIPF_C` (error en la ejecución de instrucciones paso a paso de CPU en C). Se ha agregado esta opción del compilador.
+- `/QIPF_fr32` (no usar los 96 registros de punto flotante superiores). Se ha agregado esta opción del compilador.
+- `/QIPF_noPIC` (generar código dependiente de la posición). Se ha agregado esta opción del compilador.
+- `/QIPF_restrict_plabels` (suponer que no se crean funciones en tiempo de ejecución). Se ha agregado esta opción del compilador.
 
 ### <a name="unicode-support-in-the-compiler-and-linker"></a>Compatibilidad con Unicode en el compilador y el vinculador
 
-- `/vd` (deshabilitar desplazamientos de constructores) ahora permite usar el operador dynamic_cast en un objeto que se está construyendo (/vd2)
-- Se ha quitado la opción del compilador `/YX`. Use `/Yc` (crear archivo de encabezado precompilado) o `/Yu` (usar el archivo de encabezado precompilado) en su lugar. Si quita `/YX` de las configuraciones de compilación y no lo reemplaza por nada, puede dar lugar a compilaciones más rápidas.
+- `/vd` (deshabilitar desplazamientos de constructores) ahora permite usar el operador dynamic_cast en un objeto que se está construyendo (/vd2).
+- `/YX` Se ha quitado esta opción del compilador. Use `/Yc` (crear archivo de encabezado precompilado) o `/Yu` (usar el archivo de encabezado precompilado) en su lugar. Si quita `/YX` de las configuraciones de compilación y no lo reemplaza por nada, puede dar lugar a compilaciones más rápidas.
 - `/Zc:forScope` está ahora activado de manera predeterminada.
 - `/Zc:wchar_t` está ahora activado de manera predeterminada.
-- Se ha quitado la opción del compilador `/Zd`. Ya no se admite la información de depuración solo de número de línea. Use `/Zi` en su lugar [vea **/Z7, /Zi, /ZI (Formato de la información de depuración)** para más información].
-- `/Zg` ahora solo es válida en archivos de código fuente de C y no en archivos de código fuente de C++.
-- Se ha agregado la opción del compilador `/Zx` (depurar código optimizado para Itanium).
+- `/Zd` Se ha quitado esta opción del compilador. Ya no se admite la información de depuración solo de número de línea. Use `/Zi` en su lugar [vea **/Z7, /Zi, /ZI (Formato de la información de depuración)** para más información].
+- `/Zg` ahora solo es válido en archivos de código fuente de C y no en archivos de código fuente de C++.
+- `/Zx` (depurar código optimizado para Itanium). Se ha agregado esta opción del compilador.
 
 ### <a name="new-language-features"></a>Nuevas características de lenguaje
 
 - attributeattribute está en desuso.
-- Se ha agregado el modificador `appdomain__declspec`.
-- Se ha agregado la convención de llamada `__clrcall`.
+- `appdomain__declspec` Se ha agregado este modificador.
+- `__clrcall` Se ha agregado esta convención de llamada.
 - El modificador **declspec** (C++) en desuso ahora le permite especificar una cadena que se mostrará en tiempo de compilación, cuando un usuario intente acceder a una función o clase en desuso.
 - El operador **dynamic_cast** tiene cambios importantes.
 - Las enumeraciones nativas ahora le permiten especificar el tipo subyacente.
-- Se ha agregado el modificador `jitintrinsicdeclspec`.
-- Se ha agregado el modificador `noaliasdeclspec`.
-- Se ha agregado el modificador `process__declspec`.
+- `jitintrinsicdeclspec` Se ha agregado este modificador.
+- `noaliasdeclspec` Se ha agregado este modificador.
+- `process__declspec` Se ha agregado este modificador.
 - **abstract**, **override** y **sealed** son opciones válidas para las compilaciones nativas.
 - Se ha agregado la palabra clave **__restrict**.
-- Se ha agregado el modificador `restrictdeclspec`.
+- `restrictdeclspec` Se ha agregado este modificador.
 - **__thiscall** es ahora una palabra clave.
 - Ahora se documenta la palabra clave **__unaligned**.
 - **volatile (C++)** ha actualizado su comportamiento con respecto a las optimizaciones.
@@ -2058,7 +2058,7 @@ El compilador tiene cambios importantes en esta versión.
 
 - Se ha agregado la macro predefinida __CLR_VER.
 - La directiva pragma comment (C/C++) ahora acepta `/MANIFESTDEPENDENCY` como comentario del enlazador. La opción exestr para comentar está en desuso.
-- El atributo `embedded_idl` (directiva `#import`) ahora toma un parámetro opcional.
+- `embedded_idl` (directiva `#import`) es un atributo que ahora toma un parámetro opcional.
 - `fenv_access` pragma
 - `float_control` pragma
 - `fp_contract` pragma
@@ -2070,12 +2070,12 @@ El compilador tiene cambios importantes en esta versión.
 - Se ha agregado la macro predefinida _M_IX86_FP.
 - Se ha agregado la macro predefinida _M_X64.
 - `make_public` pragma
-- Se ha actualizado la sintaxis de pragma `managed`, `unmanaged` (ahora tiene `push` y `pop`).
+- `managed`, `unmanaged`. Se ha actualizado esta sintaxis de pragma (ahora tiene `push` y `pop`).
 - Ahora, la directiva `#using` hace referencia de forma implícita a mscorlib.dll en todas las compilaciones `/clr`.
 - Se ha agregado la macro predefinida _OPENMP.
 - Se ha actualizado el pragma optimize, a y w ya no son parámetros válidos.
 - Se ha agregado el atributo no_registry#import.
-- Se han agregado los pragmas `region`, `endregion`.
+- `region`, `endregion`. Se han agregado estos pragmas.
 - Se ha agregado la macro predefinida _VC_NODEFAULTLIB.
 - Ahora se implementan macros variádicas.
 - `vtordisp` está en desuso y se quitará en una próxima versión de Visual C++.
@@ -2084,46 +2084,46 @@ El compilador tiene cambios importantes en esta versión.
 ### <a name="new-linker-features"></a>Nuevas características del enlazador
 
 - Ahora se permiten los módulos (archivos de salida de MSIL de no ensamblado) como entrada al enlazador.
-- Se ha agregado la opción del enlazador `/ALLOWISOLATION` (búsqueda de manifiesto).
-- `/ASSEMBLYRESOURCE` (insertar un recurso administrado) se ha actualizado y ahora le permite especificar el nombre del recurso en el ensamblado, además de especificar que el recurso es privado en el ensamblado.
-- Se ha agregado la opción del enlazador `/CLRIMAGETYPE` (especificar tipo de imagen CLR).
-- Se ha agregado la opción del enlazador `/CLRSUPPORTLASTERROR` (conservar el último código de error para las llamadas a PInvoke).
-- Se ha agregado la opción del enlazador `/CLRTHREADATTRIBUTE` (establecer el atributo del subproceso de CLR).
-- Se ha agregado la opción del enlazador `/CLRUNMANAGEDCODECHECK` (agregar SuppressUnmanagedCodeSecurityAttribute).
-- Se ha agregado la opción del enlazador `/ERRORREPORT` (informar de los errores internos del enlazador).
-- Se ha quitado la opción del enlazador `/EXETYPE`. El enlazador ya no admite la creación de controladores de dispositivos de Windows 95 y Windows 98. Use un DDK adecuado para crear estos controladores de dispositivos. La palabra clave EXETYPE ya no es válida para los archivos de definición de módulo.
-- Se ha agregado la opción del enlazador `/FUNCTIONPADMIN` (crear imagen a la que aplicar una revisión activa).
-- Ahora se admite la opción del enlazador `/LTCG` en módulos compilados con `/clr`. `/LTCG` también se ha actualizado para admitir las optimizaciones guiadas por perfiles.
-- Se ha agregado la opción del enlazador `/MANIFEST` (crear el manifiesto del ensamblado en paralelo).
-- Se ha agregado la opción del enlazador `/MANIFESTDEPENDENCY` (especificar las dependencias del manifiesto).
-- Se ha agregado la opción del enlazador `/MANIFESTFILE` (nombre del archivo de manifiesto).
-- Se ha quitado la opción del enlazador `/MAPINFO:LINES`.
-- Se ha agregado la opción del enlazador `/NXCOMPAT` (compatible con la prevención de ejecución de datos).
-- Se ha agregado la opción del enlazador `/PGD` (especificar la base de datos para las optimizaciones guiadas por perfiles).
-- Se ha agregado la opción del enlazador `/PROFILE` (generador de perfiles de herramientas de rendimiento).
-- La opción del enlazador `/SECTION` (especificar atributos de sección) ahora admite la negación de atributos y ya no es compatible con los atributos L o D (relacionados con VxD).
+- `/ALLOWISOLATION` (búsqueda de manifiesto). Se ha agregado esta opción del enlazador.
+- `/ASSEMBLYRESOURCE` (insertar un recurso administrado). Se ha actualizado y ahora permite especificar el nombre del recurso en el ensamblado, además de especificar que el recurso es privado en el ensamblado.
+- `/CLRIMAGETYPE` (especificar tipo de imagen CLR). Se ha agregado esta opción del enlazador.
+- `/CLRSUPPORTLASTERROR` (conservar el último código de error para las llamadas a PInvoke). Se ha agregado esta opción del enlazador.
+- `/CLRTHREADATTRIBUTE` (establecer el atributo del subproceso de CLR). Se ha agregado esta opción del enlazador.
+- `/CLRUNMANAGEDCODECHECK` (agregar SuppressUnmanagedCodeSecurityAttribute). Se ha agregado esta opción del enlazador.
+- `/ERRORREPORT` (informar de los errores internos del enlazador). Se ha agregado esta opción del enlazador.
+- `/EXETYPE` Se ha quitado esta opción del enlazador. El enlazador ya no admite la creación de controladores de dispositivos de Windows 95 y Windows 98. Use un DDK adecuado para crear estos controladores de dispositivos. La palabra clave EXETYPE ya no es válida para los archivos de definición de módulo.
+- `/FUNCTIONPADMIN` (crear imagen a la que se puede aplicar una revisión activa). Se ha agregado esta opción del enlazador.
+- `/LTCG` Esta opción del enlazador ahora se admite en módulos compilados con `/clr`. `/LTCG` también se ha actualizado para admitir optimizaciones guiadas por perfiles.
+- `/MANIFEST` (crear el manifiesto del ensamblado en paralelo). Se ha agregado esta opción del enlazador.
+- `/MANIFESTDEPENDENCY` (especificar las dependencias del manifiesto). Se ha agregado esta opción del enlazador.
+- `/MANIFESTFILE` (nombre del archivo de manifiesto). Se ha agregado esta opción del enlazador.
+- `/MAPINFO:LINES` Se ha quitado esta opción del enlazador.
+- `/NXCOMPAT` (compatible con la prevención de ejecución de datos). Se ha agregado esta opción del enlazador.
+- `/PGD` (especificar la base de datos para las optimizaciones guiadas por perfiles). Se ha agregado esta opción del enlazador.
+- `/PROFILE` (generador de perfiles de herramientas de rendimiento). Se ha agregado esta opción del enlazador.
+- `/SECTION` (especificar atributos de sección). Esta opción del enlazador ahora admite la negación de atributos y ya no es compatible con los atributos L o D (relacionados con VxD).
 - Compatibilidad con Unicode en el compilador y el vinculador
-- La opción del enlazador `/VERBOSE` (mostrar mensajes de progreso) ahora también acepta ICF y REF.
-- Se ha quitado la opción del enlazador `/VXD`. El enlazador ya no admite la creación de controladores de dispositivos de Windows 95 y Windows 98. Use un DDK adecuado para crear estos controladores de dispositivos. La palabra clave VXD ya no es válida para los archivos de definición de módulo.
-- Se ha quitado la opción del enlazador `/WS`. `/WS` se usaba para modificar imágenes destinadas a Windows NT 4.0. Se puede usar el nombre de archivo IMAGECFG.exe -R en lugar de `/WS`. IMAGECFG.exe se puede encontrar en el CD-ROM de Windows NT 4.0 en SUPPORT\DEBUG\I386\IMAGECFG. EXE.
-- Ahora se documenta la opción del enlazador `/WX` (tratar advertencias del enlazador como errores).
+- `/VERBOSE` (mostrar mensajes de progreso). Esta opción del enlazador ahora también acepta ICF y REF.
+- `/VXD` Se ha quitado esta opción del enlazador. El enlazador ya no admite la creación de controladores de dispositivos de Windows 95 y Windows 98. Use un DDK adecuado para crear estos controladores de dispositivos. La palabra clave VXD ya no es válida para los archivos de definición de módulo.
+- `/WS` Se ha quitado esta opción del enlazador. `/WS` se usaba para modificar imágenes destinadas a Windows NT 4.0. Se puede usar el nombre de archivo IMAGECFG.exe -R en lugar de `/WS`. IMAGECFG.exe se puede encontrar en el CD-ROM de Windows NT 4.0 en SUPPORT\DEBUG\I386\IMAGECFG. EXE.
+- `/WX` (tratar advertencias del enlazador como errores). Ahora se documenta esta opción del enlazador.
 
 ### <a name="new-linker-utility-features"></a>Nuevas características de la utilidad del enlazador
 
-- Se ha agregado la opción de editbin `/ALLOWISOLATION`.
+- `/ALLOWISOLATION` Se ha agregado esta opción de editbin.
 - Se ha quitado la instrucción de archivo de definición de módulo DESCRIPTION. El enlazador ya no admite la creación de controladores de dispositivos virtuales.
-- Se ha agregado la opción `/ERRORREPORT` a bscmake.exe, dumpbin.exe, editbin.exe y lib.exe.
-- Se ha agregado la opción de lib `/LTCG`.
-- Se ha agregado la opción de editbin `/NXCOMPAT`.
-- Se ha agregado la opción de dumpbin `/RANGE`.
-- Se ha agregado la opción de dumpbin `/TLS`.
-- Se ha quitado la opción de editbin `/WS`. `/WS` se usaba para modificar imágenes destinadas a Windows NT 4.0. Se puede usar el nombre de archivo IMAGECFG.exe -R en lugar de `/WS`. IMAGECFG.exe se puede encontrar en el CD-ROM de Windows NT 4.0 en SUPPORT\DEBUG\I386\IMAGECFG. EXE.
+- `/ERRORREPORT` Se ha agregado esta opción a bscmake.exe, dumpbin.exe, editbin.exe y lib.exe.
+- `/LTCG` Se ha agregado esta opción de lib.
+- `/NXCOMPAT` Se ha agregado esta opción de editbin.
+- `/RANGE` Se ha agregado esta opción de dumpbin.
+- `/TLS` Se ha agregado esta opción de dumpbin.
+- `/WS` Se ha quitado esta opción de editbin. `/WS` se usaba para modificar imágenes destinadas a Windows NT 4.0. Se puede usar el nombre de archivo IMAGECFG.exe -R en lugar de `/WS`. IMAGECFG.exe se puede encontrar en el CD-ROM de Windows NT 4.0 en SUPPORT\DEBUG\I386\IMAGECFG. EXE.
 - Se ha agregado la opción de lib /WX[:NO].
 
 ### <a name="new-nmake-features"></a>Nuevas características de NMAKE
 
-- Se ha agregado `/ERRORREPORT`.
-- Se ha agregado `/G`.
+- `/ERRORREPORT` Se ha agregado.
+- `/G` Se ha agregado.
 - Se han actualizado las reglas predefinidas.
 - La macro $(MAKE), que está documentada en Macros de recursividad, ahora proporciona la ruta de acceso completa a nmake.exe.
 
@@ -2132,7 +2132,7 @@ El compilador tiene cambios importantes en esta versión.
 - Las expresiones MASM ahora son valores de 64 bits. En versiones anteriores, las expresiones MASM eran valores de 32 bits.
 - La expresión __asm int 3 ahora produce que una función se compile en código nativo.
 - Ahora se documenta ALIAS (MASM).
-- Se ha agregado la opción de ml.exe y ml64.exe `/ERRORREPORT`.
+- `/ERRORREPORT` Se ha agregado esta opción de ml.exe y ml64.exe.
 - Ahora se documenta .FPO.
 - H2INC.exe no se distribuye en Visual C++ 2005. Si necesita seguir usando H2INC, use H2INC.exe de una versión anterior de Visual C++.
 - Se ha agregado el operador IMAGEREL.
@@ -2200,9 +2200,9 @@ El compilador tiene cambios importantes en esta versión.
 - Se ha agregado un tutorial en el que se muestra cómo portar una aplicación nativa existente para utilizar las Extensiones administradas para C++: Tutorial: Portabilidad de una aplicación C++ nativa existente para interoperar con componentes de .NET Framework.
 - Ahora puede crear un delegado en un método de un tipo de valor.
 - La conformidad del compilador con el estándar de C++ se ha mejorado significativamente para Visual C++ .NET 2003.
-- Se ha agregado la opción del compilador `/arch`.
+- `/arch` Se ha agregado esta opción del compilador.
 - `/Gf` está en desuso y se quitará en la próxima versión de Visual C++.
-- Se ha agregado la opción del compilador `/G7`.
+- `/G7` Se ha agregado esta opción del compilador.
 - La opción del compilador `/GS` se ha mejorado para ayudar a proteger las variables locales de saturaciones directas del búfer.
 - Se ha quitado la opción del compilador `/noBool`. El compilador ahora permite que **bool** aparezca solo como una palabra clave (y no un identificador) en un archivo de código fuente de C++.
 - El tipo **long long** ahora está disponible como **typedef** de **__int64**. Tenga en cuenta que aún no se admite **long long** en CRT.
@@ -2216,7 +2216,7 @@ El compilador tiene cambios importantes en esta versión.
 
 ### <a name="attributes"></a>Atributos
 
-- Ahora se documenta el atributo `implements`.
+- `implements` Ahora se documenta este atributo.
 
 ### <a name="linker-features"></a>Características del enlazador
 

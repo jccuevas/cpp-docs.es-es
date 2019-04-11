@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782375"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898718"
 ---
 # <a name="c-in-visual-studio"></a>C++ en Visual Studio
 
@@ -26,14 +26,14 @@ Microsoft Visual C++, con frecuencia abreviado como Visual C++ o MSVC, es el nom
 
 ## <a name="whats-new-and-conformance-history"></a>Historial de cumplimiento y novedades
 
-[Novedades de C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Descubra las novedades de Visual Studio 2017.
+[Novedades de C++ en Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Descubra las novedades de Visual Studio.
 
 [Novedades de C++ desde Visual Studio 2003 hasta 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Descubra las novedades de C++ para cada versión de Visual Studio desde 2003 hasta 2015.
 
-[Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-Obtenga más información sobre las mejoras de conformidad de C++ en Visual Studio 2017.
+[Mejoras de conformidad de C++ en Visual Studio](cpp-conformance-improvements.md)<br/>
+Obtenga información sobre las mejoras de conformidad de C++ en Visual Studio.
 
 [Conformidad del lenguaje Visual C++](visual-cpp-language-conformance.md)<br/>
 Lista de estados de conformidad por característica del Compilador de Microsoft Visual C++.
@@ -43,7 +43,7 @@ Obtenga información sobre los cambios importantes de versiones anteriores.
 
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Instalación de Visual Studio y actualización de versiones anteriores
 
-[Instalación de la compatibilidad con C++ en Visual Studio](../build/vscpp-step-0-installation.md)<br/>
+[Instalación de compatibilidad con C++ en Visual Studio](../build/vscpp-step-0-installation.md)<br/>
 Descargue Visual Studio 2015 o Visual Studio 2017 e instale el conjunto de herramientas de Visual C++.
 
 [Guía de migración y actualización de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
@@ -83,7 +83,7 @@ Cómo se usan las características de productividad en el editor de C++ para re
 [Depuración de código nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Use el depurador de Visual Studio con proyectos de C++.
 
-[Información general del análisis de código de C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Análisis de código para obtener información general de C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Use anotaciones de SAL o comprobadores de C++ Core Guidelines para realizar un análisis estático.
 
 [Escribir pruebas unitarias para C/C++ en Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -115,7 +115,7 @@ Obtenga información sobre cómo proteger las aplicaciones del código malintenc
 [Programación web y para la nube](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 En C++, existen varias opciones para conectarse a la Web y a la nube.
 
-[Acceso a datos](../data/data-access-in-cpp.md)<br/>
+[Acceso a datos en ASP.NET (Visual Studio)](../data/data-access-in-cpp.md)<br/>
 Conectarse a bases de datos mediante ODBC y otras tecnologías de acceso a bases de datos.
 
 [Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)<br/>
@@ -129,7 +129,7 @@ Obtenga información sobre cómo trabajar con diferentes codificaciones y format
 
 [Referencia del lenguaje C](../c-language/c-language-reference.md)
 
-[Intrínsecos del compilador y lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Intrínsecos del compilador y del lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Bibliotecas de C++ en Visual Studio
 
@@ -147,7 +147,7 @@ Compatibilidad con aplicaciones y componentes COM.
 [Bibliotecas de Microsoft Foundation Class (MFC)](../mfc/mfc-desktop-applications.md)<br/>
 Compatibilidad para la creación de aplicaciones de escritorio que tienen interfaces de usuario tradicionales o del estilo de Office.
 
-[Biblioteca de patrones de procesamiento paralelo (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Parallel Patterns Library (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Algoritmos asincrónicos y paralelos que se ejecutan en la CPU.
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
@@ -178,4 +178,4 @@ Descubra cómo obtener ayuda, errores de archivo y hacer sugerencias para Visual
 
 - [Referencia del lenguaje C](../c-language/c-language-reference.md)
 - [Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)
-- [Intrínsecos del compilador y lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Intrínsecos del compilador y del lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
