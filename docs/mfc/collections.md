@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 5b74ee8a779ad2fffa801749d9818f985bc8c352
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273314"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767189"
 ---
 # <a name="collections"></a>Colecciones
 
@@ -55,7 +55,7 @@ Cada una de las tres formas de colección proporcionada se describe brevemente m
 
 ##  <a name="_core_the_template_based_collection_classes"></a> Las clases de colección basadas en plantillas
 
-La manera más fácil de implementar una colección con seguridad de tipos que contiene objetos de cualquier tipo es usar una de las clases basadas en plantillas MFC. Para obtener ejemplos de estas clases, vea el ejemplo MFC [recopilar](../visual-cpp-samples.md).
+La manera más fácil de implementar una colección con seguridad de tipos que contiene objetos de cualquier tipo es usar una de las clases basadas en plantillas MFC. Para obtener ejemplos de estas clases, vea el ejemplo MFC [recopilar](../overview/visual-cpp-samples.md).
 
 En la tabla siguiente se enumera las clases de colección basadas en plantillas MFC.
 

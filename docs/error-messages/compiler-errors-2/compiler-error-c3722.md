@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: d3c721490e0af32d91fcc51412e3c02b6a2d7f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9a8c9cc26aeedf49484bb1f7357a76d0eb42bb5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451004"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768611"
 ---
 # <a name="compiler-error-c3722"></a>Error del compilador C3722
 
 no se permite un evento genérico
 
-El compilador sólo permite funciones, structs y clases genéricas.  Para más información, vea [Genéricos](../../windows/generics-cpp-component-extensions.md).
+El compilador sólo permite funciones, structs y clases genéricas.  Para más información, vea [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C3722:
 

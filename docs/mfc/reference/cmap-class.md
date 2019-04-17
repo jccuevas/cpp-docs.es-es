@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305177"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769841"
 ---
 # <a name="cmap-class"></a>CMap (clase)
 
@@ -73,7 +73,7 @@ Tipo de datos utilizado para *valor* argumentos; normalmente, una referencia a *
 
 ### <a name="public-structures"></a>Estructuras públicas
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Una estructura anidada que contiene un valor de clave y el valor del objeto asociado.|
 
@@ -538,6 +538,6 @@ En primer lugar, se busca la clave. Si se encuentra la clave, a continuación, s
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

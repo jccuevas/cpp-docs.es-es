@@ -9,18 +9,18 @@ helpviewer_keywords:
 - drag and drop [MFC], initiating drag operations
 - drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
-ms.openlocfilehash: cceed8517c7b63588c7b1b90e3306d90f0921b78
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2aa593fa953f7a9874036d48124ae7b92d88e0a6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300757"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768645"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>Arrastrar y colocar: Implementación de un origen de colocación
 
 En este artículo se explica cómo obtener la aplicación para proporcionar datos a una operación de arrastrar y colocar.
 
-Implementación básica de un origen de colocación es relativamente sencilla. El primer paso es determinar qué eventos inician una operación de arrastre. Recomienda directrices de interfaz de usuario definen el inicio de una operación de arrastre como la selección de datos y un **WM_LBUTTONDOWN** eventos que se producen en un punto dentro de los datos seleccionados. Los ejemplos OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md) siga estas instrucciones.
+Implementación básica de un origen de colocación es relativamente sencilla. El primer paso es determinar qué eventos inician una operación de arrastre. Recomienda directrices de interfaz de usuario definen el inicio de una operación de arrastre como la selección de datos y un **WM_LBUTTONDOWN** eventos que se producen en un punto dentro de los datos seleccionados. Los ejemplos OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md) y [HIERSVR](../overview/visual-cpp-samples.md) siga estas instrucciones.
 
 Si la aplicación es un contenedor y los datos seleccionados están un objeto vinculado o incrustado de tipo `COleClientItem`, llame a su `DoDragDrop` función miembro. En caso contrario, construir un `COleDataSource` objeto, inicializarlo con la selección y llamar al objeto de origen de datos `DoDragDrop` función miembro. Si la aplicación es un servidor, use `COleServerItem::DoDragDrop`. Para obtener información acerca de cómo personalizar el comportamiento estándar de arrastrar y colocar, vea el artículo [arrastrar y colocar: Personalizar](../mfc/drag-and-drop-customizing.md).
 

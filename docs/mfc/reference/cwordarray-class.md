@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 945a77436f41f4981392e583c831723e667f867c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565365"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770580"
 ---
 # <a name="cwordarray-class"></a>CWordArray (clase)
 
@@ -417,7 +417,7 @@ property UICheckState Check;
 
 Esta propiedad establece el elemento de interfaz de usuario para este comando en el estado de comprobación adecuada. Establecer `Check` en los siguientes valores:
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |0|Desactive la opción|
 |1|de Azure Functions|
@@ -546,6 +546,6 @@ Esta función permite que la vista que actualice su presentación para reflejar 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

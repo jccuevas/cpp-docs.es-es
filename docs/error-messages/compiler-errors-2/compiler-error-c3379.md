@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553509"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769997"
 ---
 # <a name="compiler-error-c3379"></a>Error del compilador C3379
 
@@ -19,7 +19,7 @@ ms.locfileid: "50553509"
 
 Cuando se aplica a un tipo administrado, como una clase o estructura, el [pública](../../cpp/public-cpp.md) y [privada](../../cpp/private-cpp.md) palabras clave indican si la clase se expondrá a través de los metadatos del ensamblado. `public` o `private` no se puede aplicar a una clase anidada, que heredará el acceso al ensamblado de la clase envolvente.
 
-Cuando se usa con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` y `value` palabras clave indican que una clase es administrada (vea [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md)).
+Cuando se usa con [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` y `value` palabras clave indican que una clase es administrada (vea [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 El ejemplo siguiente genera C3379:
 

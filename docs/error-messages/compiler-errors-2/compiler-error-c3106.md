@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3106
 ms.assetid: 39d97a32-0905-4702-87d3-7f8ce473fb93
-ms.openlocfilehash: 072c87c0264afd585326e5207a494dfb45961b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5ed544549aecd9811279e065d7c252fe085e545
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434507"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769854"
 ---
 # <a name="compiler-error-c3106"></a>Error del compilador C3106
 
@@ -19,7 +19,7 @@ ms.locfileid: "50434507"
 
 Argumentos sin nombre deben pasarse a un atributo antes de argumentos con nombre.
 
-Para obtener más información, consulte [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Para obtener más información, consulte [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-ms.openlocfilehash: 2ae7c941b527a7cbaa01bf43ef4d41c9a4975dac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302408"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768307"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (clase)
 
@@ -143,7 +143,7 @@ Si especifica el estilo de alineación CBRS_TOP o CBRS_BOTTOM, es el ancho de la
 
 ## <a name="see-also"></a>Vea también
 
-[CTRLBARS de ejemplo](../../visual-cpp-samples.md)<br/>
+[CTRLBARS de ejemplo](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CFormView (clase)](../../mfc/reference/cformview-class.md)<br/>

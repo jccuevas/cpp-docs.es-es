@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283142"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775639"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar (clase)
 
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Especifica si se debe escalar o no las imágenes de barra de herramientas en el modo de alto PPP.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Especifica la proporción entre la dimensión (alto o ancho) de imágenes de gran tamaño y la dimensión de las imágenes normales.|
@@ -525,7 +525,7 @@ Para insertar un botón especial, como un cuadro combinado o la barra de herrami
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCToolBar` . El ejemplo muestra cómo establecer el texto de la etiqueta de la ventana de la barra de herramientas, los bordes, establecer el estilo del panel y habilitar el **agregar o quitar botones** botón que aparece en el extremo de la barra de herramientas. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCToolBar` . El ejemplo muestra cómo establecer el texto de la etiqueta de la ventana de la barra de herramientas, los bordes, establecer el estilo del panel y habilitar el **agregar o quitar botones** botón que aparece en el extremo de la barra de herramientas. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ Llame a este método en lugar de [CMFCToolBar::Create](#create) cuando desee pro
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `CreateEx` método de la `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `CreateEx` método de la `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ El `CRect` objeto al que *lpRect* puntos se establece en 0 si no existe un botó
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `GetItemRect` método de la `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `GetItemRect` método de la `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ El marco llama a este método durante la inicialización para cargar las imágen
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `LoadToolBar` método en el `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `LoadToolBar` método en el `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ Llame a este método cuando desee agregar botones de barra de herramientas que n
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `ReplaceButton` método en el `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `ReplaceButton` método en el `CMFCToolBar` clase. Este fragmento de código forma parte de la [ejemplo de demostración de IE](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]
