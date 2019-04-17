@@ -1,6 +1,6 @@
 ---
 title: bitset (Clase)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 5e5d1e14e6cdf35c907b2bb1f7816fc07bbd416f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f580e56efe1db42e464deedfa66da861ff897bcb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562843"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "58566122"
 ---
 # <a name="bitset-class"></a>bitset (Clase)
 
@@ -111,8 +111,8 @@ Un bit se establece si su valor es 1 y se restablece si su valor es 0. Voltear o
 |[operator>>=](#op_rshift_eq)|Desplaza los bits de un `bitset` a la derecha un número especificado de posiciones y devuelve el resultado al `bitset` de destino.|
 |[operator&#91;&#93;](#op_at)|Devuelve una referencia a un bit en una posición especificada en un `bitset` si el `bitset` es modificable; en caso contrario, devuelve el valor del bit en esa posición.|
 |[operator^=](#op_xor_eq)|Realiza una combinación bit a bit de los conjuntos de bits con la operación `OR` exclusiva.|
-|[operator&#124;=](#op_or_eq')|Realiza una combinación bit a bit de los conjuntos de bits con la operación `OR` inclusiva.|
-|[operator~](#op_dtor)|Invierte todos los bits en un `bitset` de destino y devuelve el resultado.|
+|[operator&#124;=](#op_or_eq)|Realiza una combinación bit a bit de los conjuntos de bits con la operación `OR` inclusiva.|
+|[operator~](#op_not)|Invierte todos los bits en un `bitset` de destino y devuelve el resultado.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -228,7 +228,7 @@ explicit bitset(
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 El entero sin signo cuya representación de base dos se usa para inicializar los bits del conjunto de bits que se está construyendo.
 
 *str*<br/>
@@ -246,7 +246,7 @@ El número de caracteres de la cadena que se usa para proporcionar los valores i
 *_Zero*<br/>
 El carácter que se usa para representar un cero. El valor predeterminado es "0".
 
-*_Una*<br/>
+*_One*<br/>
 El carácter que se usa para representar un uno. El valor predeterminado es "1".
 
 ### <a name="remarks"></a>Comentarios
@@ -1149,7 +1149,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-## <a name="op_dtor"></a>  bitset::operator~
+## <a name="op_not"></a>  bitset::operator~
 
 Invierte todos los bits en un conjunto de bits de destino y devuelve el resultado.
 
@@ -1212,7 +1212,7 @@ public:
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 El valor del objeto del tipo **bool** que se asignará a un poco en un conjunto de bits.
 
 *_Bitref*<br/>
@@ -1226,7 +1226,7 @@ Una referencia al bit en el conjunto de bits especificado por la posición del a
 
 La clase `reference` solo existe como una clase del asistente para el conjunto de bits `operator[]`. La clase de miembro describe un objeto que puede tener acceso a un bit individual dentro de un conjunto de bits. Permiten *b* ser un objeto de tipo **bool**, *x* y *y* los objetos de tipo **bitset\<**  *N* **>**, y *i* y *j* posiciones válidas dentro de este tipo de objeto. La notación *x [i]* hace referencia al bit en la posición *i* en el conjunto de bits *x*. Las funciones miembro de clase `reference` proporcionan, en orden, las siguientes operaciones:
 
-|Operación|de esquema JSON|
+|Operación|Definición|
 |---------------|----------------|
 |*x*[*i*] = *b*|Almacenes **bool** valor *b* en la posición de bit *i* BitSet *x*.|
 |*x*[*i*] = *y*[*j*]|Almacena el valor del bit *y*[ *j*] en la posición de bit *i* en el conjunto de bits *x*.|
@@ -1393,7 +1393,7 @@ bitset\<N>& set(
 *_Pos*<br/>
 La posición del bit en el conjunto de bits que se establecerá para que asigne un valor.
 
-*Val*<br/>
+*val*<br/>
 Valor que se asignará al bit en la posición especificada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1506,3 +1506,129 @@ La posición del bit en el conjunto de bits al que se comprobará el valor.
 ### <a name="remarks"></a>Comentarios
 
 La función miembro produce un [out_of_range](../standard-library/out-of-range-class.md)
+
+## <a name="to_string"></a> bitset::to_string
+
+Convierte un objeto de conjunto de bits en una representación de cadena.
+
+```
+template <class charT = char, class traits = char_traits<charT>, class Allocator = allocator<charT> >
+   basic_string<charT, traits, Allocator> to_string(charT zero = charT('0'), charT one = charT('1')) const;
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Un objeto de cadena de clase `basic_string`, donde cada bit establecido en el conjunto de bits tiene un carácter correspondiente de 1 y un carácter de 0 si el bit está establecido.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// bitset_to_string.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+#include <string>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 7 );
+
+   cout << "The ordered set of bits in the bitset<5> b1( 7 )"
+        << "\n  that was generated by the number 7 is: ( "
+        << b1 << " )" << endl;
+
+   string s1;
+   s1 =  b1.template to_string<char, 
+   char_traits<char>, allocator<char> >( );
+   cout << "The string returned from the bitset b1"
+        << "\n  by the member function to_string( ) is: "
+        << s1 << "." << endl;
+}
+```
+
+```Output
+The ordered set of bits in the bitset<5> b1( 7 )
+  that was generated by the number 7 is: ( 00111 )
+The string returned from the bitset b1
+  by the member function to_string( ) is: 00111.
+```
+
+## <a name="to_ullong"></a> bitset::to_ullong
+
+Devuelve un **long long sin signo** valor que contiene los mismos bits establecidos como contenido del objeto bitset.
+
+```
+unsigned long long to_ullong() const;
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Devuelve la suma de los valores de bits que se encuentran en la secuencia de bits como un **long long sin signo**. Esto **long long sin signo** valor volvería a crear los mismos bits establecidos si se usa para inicializar un bitset.
+
+### <a name="exceptions"></a>Excepciones
+
+Se produce un [overflow_error](overflow-error-class.md) objeto si algún bit de la secuencia de bits un poco valor hash tiene que no se puede representar como un valor de tipo **long long sin signo**.
+
+### <a name="remarks"></a>Comentarios
+
+Devuelve la suma de los valores de bits que se encuentran en la secuencia de bits como un **long long sin signo**.
+
+## <a name="to_ulong"></a> bitset::to_ulong
+
+Convierte un objeto de conjunto de bits en el entero que generaría la secuencia de bits contenida si se usa para inicializar el conjunto de bits.
+
+```
+unsigned long to_ulong( ) const;
+```
+
+### <a name="return-value"></a>Valor devuelto
+
+Un entero que generaría los bits en un conjunto de bits si se usa en la inicialización del conjunto de bits.
+
+### <a name="remarks"></a>Comentarios
+
+Aplicar la función miembro devuelve el entero que tenga la misma secuencia de dígitos de 0 y 1 que se encuentra en la secuencia de bits que contiene el conjunto de bits.
+
+La función miembro produce una [overflow_error](overflow-error-class.md) objeto si algún bit de la secuencia de bits un poco valor hash tiene que no se puede representar como un valor de tipo **unsigned long**.
+
+### <a name="example"></a>Ejemplo
+
+```cpp
+// bitset_to_ulong.cpp
+// compile with: /EHsc
+#include <bitset>
+#include <iostream>
+
+int main( )
+{
+   using namespace std;
+
+   bitset<5> b1 ( 7 );
+
+   cout << "The ordered set of bits in the bitset<5> b1( 7 )"
+        << "\n  that was generated by the number 7 is: ( "
+        << b1 << " )" << endl;
+
+   unsigned long int i;
+   i = b1.to_ulong( );
+   cout << "The integer returned from the bitset b1,"
+        << "\n  by the member function to_long( ), that"
+        << "\n  generated the bits as a base two number is: "
+        << i << "." << endl;
+}
+```
+
+```Output
+The ordered set of bits in the bitset<5> b1( 7 )
+  that was generated by the number 7 is: ( 00111 )
+The integer returned from the bitset b1,
+  by the member function to_long( ), that
+  generated the bits as a base two number is: 7.
+```
+
+## <a name="see-also"></a>Vea también
+
+[\<bitset>](bitset.md)<br/>
+[operadores de conjunto de bits](bitset-operators.md)<br/>
