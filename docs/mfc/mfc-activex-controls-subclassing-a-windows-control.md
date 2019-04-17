@@ -16,16 +16,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
-ms.openlocfilehash: 08cdb90537dd50855a5bf223fbe54d58dfd6c365
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277058"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773260"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Controles ActiveX MFC: Creación de subclases de un Control de Windows
 
-En este artículo se describe el proceso de creación de subclases de un control común de Windows para crear un control ActiveX. Creación de subclases de una existente Windows control es una forma rápida de desarrollar un control ActiveX. El nuevo control tendrán las capacidades del control de Windows con subclases, tales como dibujar y responder a clics del mouse. Ejemplo de los controles ActiveX de MFC [botón](../visual-cpp-samples.md) es un ejemplo de creación de subclases de un control de Windows.
+En este artículo se describe el proceso de creación de subclases de un control común de Windows para crear un control ActiveX. Creación de subclases de una existente Windows control es una forma rápida de desarrollar un control ActiveX. El nuevo control tendrán las capacidades del control de Windows con subclases, tales como dibujar y responder a clics del mouse. Ejemplo de los controles ActiveX de MFC [botón](../overview/visual-cpp-samples.md) es un ejemplo de creación de subclases de un control de Windows.
 
 >[!IMPORTANT]
 > ActiveX es una tecnología heredada que no se recomienda para nuevo desarrollo. Para obtener más información acerca de las tecnologías modernas que sustituyen a ActiveX, vea [controles ActiveX](activex-controls.md).
@@ -93,7 +93,7 @@ Para agregar un controlador de mensajes para un mensaje de ventana reflejada man
 
 - También en el. Archivo CPP, implemente el `OnOcmCommand` función de miembro para procesar el mensaje reflejado. El *wParam* y *lParam* parámetros son los mismos que los del mensaje de ventana original.
 
-Para un ejemplo de cómo se refleja los mensajes se procesan, consulte el ejemplo de controles ActiveX MFC [botón](../visual-cpp-samples.md). Muestra una `OnOcmCommand` controlador que detecta el código de notificación BN_CLICKED y responde mediante la activación (enviar) un `Click` eventos.
+Para un ejemplo de cómo se refleja los mensajes se procesan, consulte el ejemplo de controles ActiveX MFC [botón](../overview/visual-cpp-samples.md). Muestra una `OnOcmCommand` controlador que detecta el código de notificación BN_CLICKED y responde mediante la activación (enviar) un `Click` eventos.
 
 ## <a name="see-also"></a>Vea también
 

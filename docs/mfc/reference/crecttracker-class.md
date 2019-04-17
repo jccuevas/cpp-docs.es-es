@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259586"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775691"
 ---
 # <a name="crecttracker-class"></a>CRectTracker (clase)
 
@@ -481,8 +481,8 @@ Seguimiento se realiza con una selección de tipo de banda de goma en el control
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo MFC TRACKER](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC DRAWCLI](../../visual-cpp-samples.md)<br/>
+[Ejemplo MFC TRACKER](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar (clase)](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect (clase)](../../atl-mfc-shared/reference/crect-class.md)

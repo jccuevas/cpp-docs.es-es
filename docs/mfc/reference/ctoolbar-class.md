@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301459"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773143"
 ---
 # <a name="ctoolbar-class"></a>CToolBar (clase)
 
@@ -717,9 +717,9 @@ Llamar a esta función miembro solo para las barras de herramientas que no sigue
 
 ## <a name="see-also"></a>Vea también
 
-[CTRLBARS de ejemplo](../../visual-cpp-samples.md)<br/>
-[DLGCBR32 de ejemplo MFC](../../visual-cpp-samples.md)<br/>
-[Ejemplo MFC DOCKTOOL](../../visual-cpp-samples.md)<br/>
+[CTRLBARS de ejemplo](../../overview/visual-cpp-samples.md)<br/>
+[DLGCBR32 de ejemplo MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo MFC DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CToolBarCtrl (clase)](../../mfc/reference/ctoolbarctrl-class.md)<br/>

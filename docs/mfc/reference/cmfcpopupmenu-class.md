@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292281"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776016"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu (clase)
 
@@ -278,7 +278,7 @@ Normalmente, MFC crea automáticamente los menús emergentes. Si desea crear un 
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo configurar un objeto de menú emergente. En el ejemplo se muestra cómo configurar el logotipo y el sonido del menú emergente, el tipo y velocidad de animación, menú dibujar sombras cuando aparezca el menú emergente fuera del marco principal, establezca el ancho máximo, y establecer la alineación del menú de la derecha del menú emergente. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../visual-cpp-samples.md).
+El ejemplo siguiente muestra cómo configurar un objeto de menú emergente. En el ejemplo se muestra cómo configurar el logotipo y el sonido del menú emergente, el tipo y velocidad de animación, menú dibujar sombras cuando aparezca el menú emergente fuera del marco principal, establezca el ancho máximo, y establecer la alineación del menú de la derecha del menú emergente. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ Si *bOwnMessage* es TRUE, el marco de trabajo enruta los mensajes de menú a *pW
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `Create` método de la `CMFCPopuMenu` clase. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `Create` método de la `CMFCPopuMenu` clase. Este fragmento de código forma parte de la [ejemplo Custom Pages](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

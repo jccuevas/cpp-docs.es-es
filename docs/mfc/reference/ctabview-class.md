@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326600"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772102"
 ---
 # <a name="ctabview-class"></a>CTabView (clase)
 
@@ -65,7 +65,7 @@ Esta clase facilita la poner una vista con pestañas en una aplicación de docum
 
 Por ejemplo, podría tener un documento que se puede representar de maneras diferentes: como una hoja de cálculo, un gráfico, un formulario modificable y así sucesivamente. Puede crear vistas individuales de los datos de dibujo según sea necesario, insertarlos en su `CTabView`-objeto derivado y tenerlos por pestañas sin ninguna codificación adicional.
 
-[Ejemplo de TabbedView: Aplicación de vista de MFC con fichas](../../visual-cpp-samples.md) se muestra el uso de `CTabView`.
+[Ejemplo de TabbedView: Aplicación de vista de MFC con fichas](../../overview/visual-cpp-samples.md) se muestra el uso de `CTabView`.
 
 ## <a name="example"></a>Ejemplo
 

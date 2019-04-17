@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 7138f1a3cecaaf75fbab01fd1aee18529b7a3a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652479"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772101"
 ---
 # <a name="compiler-warning-c4485"></a>Advertencia del compilador C4485
 
@@ -19,7 +19,7 @@ ms.locfileid: "50652479"
 
 Reemplaza un descriptor de acceso, con o sin el `virtual` palabra clave, una función de descriptor de acceso de la clase base, pero la `override` o `new` especificador no formaba parte de la firma de función de reemplazo. Agregar el `new` o `override` especificador para resolver esta advertencia.
 
-Consulte [invalidar](../../windows/override-cpp-component-extensions.md) y [new (nueva ranura en vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) para obtener más información.
+Consulte [invalidar](../../extensions/override-cpp-component-extensions.md) y [new (nueva ranura en vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) para obtener más información.
 
 C4485 siempre se emite como un error. Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir C4485.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742471"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769867"
 ---
 # <a name="security-best-practices-for-c"></a>Procedimientos recomendados para la seguridad en C++
 
@@ -46,13 +46,13 @@ La Biblioteca en tiempo de ejecución de C (CRT) se ha ampliado para incluir ver
 
 ## <a name="safeint-library"></a>Biblioteca SafeInt
 
-[Biblioteca SafeInt](../windows/safeint-library.md) ayuda a evita desbordamientos de enteros y otros errores explotables que se podrían producir cuando la aplicación realiza operaciones matemáticas. El `SafeInt` biblioteca incluye el [clase SafeInt](../windows/safeint-class.md), [SafeIntException (clase)](../windows/safeintexception-class.md)y varias [SafeInt (funciones)](../windows/safeint-functions.md).
+[Biblioteca SafeInt](../safeint/safeint-library.md) ayuda a evita desbordamientos de enteros y otros errores explotables que se podrían producir cuando la aplicación realiza operaciones matemáticas. El `SafeInt` biblioteca incluye el [clase SafeInt](../safeint/safeint-class.md), [SafeIntException (clase)](../safeint/safeintexception-class.md)y varias [SafeInt (funciones)](../safeint/safeint-functions.md).
 
 La clase `SafeInt` protege ante el desbordamiento de enteros y los ataques de división por cero. Puede utilizarla para controlar las comparaciones entre valores de tipos diferentes. Proporciona dos directivas de control de errores. La directiva predeterminada es para que la clase `SafeInt` produzca una excepción de clase `SafeIntException` que indique por qué no se puede completar una operación matemática. La segunda directiva es para que la clase `SafeInt` detenga la ejecución de programas. También puede definir una directiva personalizada.
 
 Cada función `SafeInt` protege una operación matemática ante un error explotable. Se pueden utilizar dos clases diferentes de parámetros sin convertirlos a mismo tipo. Para proteger varias operaciones matemáticas, utilice la clase `SafeInt`.
 
-## <a name="checked-iterators"></a>Iteradores comprobados
+## <a name="checked-iterators"></a>Checked Iterators
 
 Un iterador comprobado aplica límites de contenedor. De forma predeterminada, cuando un iterador comprobado está fuera de los límites, genera una excepción y finaliza la ejecución de programas. Un iterador comprobado proporciona otros niveles de respuesta que dependen de los valores que se asignan al preprocesador se define como  **\_SECURE\_SCL\_produce** y  **\_ITERADOR\_depurar\_nivel**. Por ejemplo, en  **\_ITERADOR\_depurar\_LEVEL = 2**, un iterador comprobado proporciona comprobaciones de corrección completa en modo de depuración que se hacen disponibles mediante aserciones. Para obtener más información, consulte [iteradores comprobados](../standard-library/checked-iterators.md) y [ \_ITERADOR\_depurar\_nivel](../standard-library/iterator-debug-level.md).
 

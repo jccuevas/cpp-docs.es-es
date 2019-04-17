@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285352"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771154"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx (clase)
 
@@ -170,7 +170,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo crear subclases de una instancia de la clase `COleIPFrameWndEx` e invalidar sus métodos. En el ejemplo se muestra cómo invalidar el método `OnDestory` , el método `RepositionFrame` , el método `RecalcLayout` y el método `CalcWindowRect` . Este fragmento de código forma parte del [ejemplo de WordPad](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo crear subclases de una instancia de la clase `COleIPFrameWndEx` e invalidar sus métodos. En el ejemplo se muestra cómo invalidar el método `OnDestory` , el método `RepositionFrame` , el método `RecalcLayout` y el método `CalcWindowRect` . Este fragmento de código forma parte del [ejemplo de WordPad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

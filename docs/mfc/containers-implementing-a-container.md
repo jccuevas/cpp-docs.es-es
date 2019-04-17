@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271429"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767891"
 ---
 # <a name="containers-implementing-a-container"></a>Contenedores: Implementación de un contenedor
 
@@ -36,7 +36,7 @@ Estas características se proporcionan automáticamente cuando se usa el Asisten
 
 1. Implemente un `OnSize` controlador de mensajes para informar a OLE incrustados elemento que debe cambiar el rectángulo para reflejar el cambio de tamaño de la vista contenedora.
 
-Dado que la implementación de estas características varía considerablemente de una aplicación a la siguiente, el Asistente para aplicaciones proporciona solo una implementación básica. Probablemente tendrá que personalizar estas funciones para que la aplicación funcione correctamente. Para obtener un ejemplo de esto, consulte el [contenedor](../visual-cpp-samples.md) ejemplo.
+Dado que la implementación de estas características varía considerablemente de una aplicación a la siguiente, el Asistente para aplicaciones proporciona solo una implementación básica. Probablemente tendrá que personalizar estas funciones para que la aplicación funcione correctamente. Para obtener un ejemplo de esto, consulte el [contenedor](../overview/visual-cpp-samples.md) ejemplo.
 
 #### <a name="to-handle-embedded-and-linked-items"></a>Para controlar los elementos vinculados e incrustados
 
@@ -44,7 +44,7 @@ Dado que la implementación de estas características varía considerablemente d
 
 1. Invalidar `OnChange`, `OnChangeItemPosition`, y `OnGetItemPosition`. Estas funciones controlan el ajuste de tamaño, posición y la modificación de elementos vinculados e incrustados.
 
-El Asistente para aplicaciones derivará la clase para usted, pero es probable que deba reemplazar `OnChange` y las demás funciones mostradas con ella en el paso 2 del procedimiento anterior. Las implementaciones de esqueleto deben personalizarse para la mayoría de las aplicaciones, ya que estas funciones se implementan de forma diferente de una aplicación a la siguiente. Para obtener ejemplos de esto, consulte los ejemplos MFC [DRAWCLI](../visual-cpp-samples.md) y [contenedor](../visual-cpp-samples.md).
+El Asistente para aplicaciones derivará la clase para usted, pero es probable que deba reemplazar `OnChange` y las demás funciones mostradas con ella en el paso 2 del procedimiento anterior. Las implementaciones de esqueleto deben personalizarse para la mayoría de las aplicaciones, ya que estas funciones se implementan de forma diferente de una aplicación a la siguiente. Para obtener ejemplos de esto, consulte los ejemplos MFC [DRAWCLI](../overview/visual-cpp-samples.md) y [contenedor](../overview/visual-cpp-samples.md).
 
 Debe agregar un número de elementos a la estructura de menús de la aplicación contenedora para admitir OLE. Para obtener más información, consulte [menús y recursos: Adiciones de contenedor](../mfc/menus-and-resources-container-additions.md).
 

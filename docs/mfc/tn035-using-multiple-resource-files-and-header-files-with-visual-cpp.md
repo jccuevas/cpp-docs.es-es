@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279932"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772769"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Usar varios archivos de recursos y archivos de encabezado con Visual C++
 
@@ -177,7 +177,7 @@ Visual C++ y el compilador de recursos admiten varios archivos .RC en el mismo p
 
 - Si desea mantener un recurso con un editor de texto en un formato legible, debe mantenerlo en un archivo .RC independiente del que edite Visual C++.
 
-- Si necesita conservar un recurso definido por el usuario en un archivo de formato binario o de texto que sea interpretable por otro editor de datos especializado, debe mantenerlo en un archivo .RC independiente para que Visual C++ no cambie el formato a datos hexadecimales. El archivo. Recursos de archivos WAV (sonido) en el ejemplo de conceptos avanzados de MFC [SPEAKN](../visual-cpp-samples.md) son un buen ejemplo.
+- Si necesita conservar un recurso definido por el usuario en un archivo de formato binario o de texto que sea interpretable por otro editor de datos especializado, debe mantenerlo en un archivo .RC independiente para que Visual C++ no cambie el formato a datos hexadecimales. El archivo. Recursos de archivos WAV (sonido) en el ejemplo de conceptos avanzados de MFC [SPEAKN](../overview/visual-cpp-samples.md) son un buen ejemplo.
 
 Puede usar #include con SECOND.RC en las directivas de tiempo de compilación en el cuadro de diálogo Archivos de inclusión establecidos:
 

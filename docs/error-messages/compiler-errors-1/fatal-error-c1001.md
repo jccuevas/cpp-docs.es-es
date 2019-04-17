@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821370"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770933"
 ---
 # <a name="fatal-error-c1001"></a>Error irrecuperable C1001
 
@@ -23,4 +23,4 @@ A menudo puede corregir un problema de optimización mediante la eliminación de
 
 Si las optimizaciones no son responsables del error, intente volver a escribir la línea donde se notifica el error, o varias líneas de código que rodea esa línea. Para ver el código tal y como ve en el compilador tras el preprocesamiento, puede usar el [/P (Preprocesar para un archivo)](../../build/reference/p-preprocess-to-a-file.md) opción.
 
-Para obtener más información sobre cómo aislar la causa del error y cómo notificar un error interno del compilador a Microsoft, consulte [cómo notificar un problema con el conjunto de herramientas de Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Para obtener más información sobre cómo aislar la causa del error y cómo notificar un error interno del compilador a Microsoft, consulte [cómo notificar un problema con el conjunto de herramientas de Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301641"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768294"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo Class
 
@@ -47,7 +47,7 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Identificador del icono que se muestra.|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|El identificador de comando asociado con un vínculo en la ventana de alerta de escritorio.|
@@ -68,7 +68,7 @@ Si el cuadro de diálogo predeterminado no es suficiente, puede crear un cuadro 
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar los diversos miembros de la `CMFCDesktopAlertWndInfo` clase. En el ejemplo se muestra cómo establecer el identificador del icono que se muestra, el texto que se muestra en la ventana de alerta de escritorio, el vínculo que se muestra en la ventana de alerta de escritorio y el identificador de comando que está asociado con un vínculo en la ventana de alerta de escritorio. Este ejemplo forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo utilizar los diversos miembros de la `CMFCDesktopAlertWndInfo` clase. En el ejemplo se muestra cómo establecer el identificador del icono que se muestra, el texto que se muestra en la ventana de alerta de escritorio, el vínculo que se muestra en la ventana de alerta de escritorio y el identificador de comando que está asociado con un vínculo en la ventana de alerta de escritorio. Este ejemplo forma parte de la [ejemplo de demostración de alerta de escritorio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2959
 ms.assetid: d66bb2a8-70c3-4209-a358-b0c47f111a50
-ms.openlocfilehash: c45466fdf8d0c4bec67779943a5868299f05cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3465c3275783a625c172b711e9c41789b6f36713
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535738"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770232"
 ---
 # <a name="compiler-error-c2959"></a>Error del compilador C2959
 
 una función o clase genérica no puede ser un miembro de una plantilla
 
-Para obtener más información, consulte [en tiempo de ejecución de Windows y plantillas administradas](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md) y [genéricos](../../windows/generics-cpp-component-extensions.md).
+Para obtener más información, consulte [en tiempo de ejecución de Windows y plantillas administradas](../../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md) y [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

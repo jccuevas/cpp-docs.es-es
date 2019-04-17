@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: f6440ef202d0eafc4730b1e63ca4627d5dab61bc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d5b9d2a0dc1e716ea8cb20f0d0dcb4c5d765079
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299964"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769061"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException (clase)
 
@@ -131,7 +131,7 @@ Este miembro se establece mediante la función [AfxThrowOleDispatchException](ex
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [CException (clase)](../../mfc/reference/cexception-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleDispatchDriver (clase)](../../mfc/reference/coledispatchdriver-class.md)<br/>

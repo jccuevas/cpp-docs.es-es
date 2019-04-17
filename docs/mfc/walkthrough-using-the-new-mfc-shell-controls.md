@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288797"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772155"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Tutorial: Usar los nuevos controles de Shell MFC
 
@@ -90,7 +90,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 1. Ahora vamos a actualizar la clase `CMFCShellControlsView` para controlar el mensaje de Windows `WM_CREATE`. Abra el **vista de clases** ventana y seleccione el `CMFCShellControlsView` clase. Haga clic en y seleccione **propiedades**.
 
-    A continuación, en el **propiedades** ventana, haga clic en el **mensajes** icono. Desplácese hacia abajo hasta que encuentre el mensaje `WM_CREATE`. En la lista desplegable lista junto a `WM_CREATE`, seleccione  **\<Add > OnCreate**. El comando crea un controlador de mensajes para nosotros y actualiza automáticamente el mapa de mensajes MFC.
+    A continuación, en el **propiedades** ventana, haga clic en el **mensajes** icono. Desplácese hacia abajo hasta que encuentre el mensaje `WM_CREATE`. En la lista desplegable lista junto a `WM_CREATE`, seleccione **\<Add > OnCreate**. El comando crea un controlador de mensajes para nosotros y actualiza automáticamente el mapa de mensajes MFC.
 
    En el `OnCreate` método, vamos a crear ahora nuestro `CMFCShellListCtrl` objeto. Busque la definición del método de `OnCreate` en el archivo de código fuente MFCShellControlsView.cpp y reemplace la implementación por el código siguiente:
 
@@ -166,7 +166,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 - El Asistente para crea una barra de Outlook con ambos un **carpetas** panel y un **calendario** panel. Probablemente no tiene sentido tener un **calendario** panel en un **Explorer** ventana, así que vamos a quitarlo ahora.
 
-- El `CMFCShellListCtrl` admite la visualización, como archivos de distintos modos, **iconos grandes**, **iconos pequeños**, **lista**, y **detalles**. Actualice la aplicación para implementar esta funcionalidad. Sugerencia: vea [ejemplos de Visual C++](../visual-cpp-samples.md).
+- El `CMFCShellListCtrl` admite la visualización, como archivos de distintos modos, **iconos grandes**, **iconos pequeños**, **lista**, y **detalles**. Actualice la aplicación para implementar esta funcionalidad. Sugerencia: vea [ejemplos de Visual C++](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vea también
 

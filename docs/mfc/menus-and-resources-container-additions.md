@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279361"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770348"
 ---
 # <a name="menus-and-resources-container-additions"></a>Menús y recursos: Adiciones de contenedor
 
@@ -29,7 +29,7 @@ En este artículo se explica los cambios que deben realizarse en los menús y ot
 
 En las aplicaciones de contenedor, es necesario realizar dos tipos de cambios: modificaciones a los recursos existentes para admitir la edición visual OLE y la adición de nuevos recursos para la activación en contexto. Si usa al Asistente para aplicaciones para crear la aplicación contenedora, estos pasos se realizará automáticamente, pero pueden requerir alguna personalización.
 
-Si no usa al Asistente para aplicaciones, puede mirar OCLIENT. RC, el script de recursos para la aplicación de ejemplo OCLIENT, para ver cómo se implementan estos cambios. Vea el ejemplo OLE de MFC [OCLIENT](../visual-cpp-samples.md).
+Si no usa al Asistente para aplicaciones, puede mirar OCLIENT. RC, el script de recursos para la aplicación de ejemplo OCLIENT, para ver cómo se implementan estos cambios. Vea el ejemplo OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 Los temas tratados en este artículo incluyen:
 
@@ -43,7 +43,7 @@ Los temas tratados en este artículo incluyen:
 
 Debe agregar los siguientes elementos al menú Edición:
 
-|Elemento|Propósito|
+|Elemento|Finalidad|
 |----------|-------------|
 |**Insertar nuevo objeto**|Se abre el cuadro de diálogo Insertar objeto OLE para insertar un elemento vinculado o incrustado en el documento.|
 |**Pegar vínculo**|Pega un vínculo al elemento en el Portapapeles en el documento.|
@@ -58,13 +58,13 @@ Debe crear un nuevo menú de la aplicación de contenedor si desea admitir la ac
 
 Los pequeños cambios en los recursos de tabla de aceleradores de la aplicación de contenedor son necesarios si son compatibles con la activación en contexto. El primer cambio permite al usuario presionar la tecla escape (ESC) para cancelar el modo de edición en contexto. Agregue la siguiente entrada en la tabla de aceleradores principal:
 
-|Id.|Key|Tipo|
+|ID|Key|Tipo|
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-El segundo cambio consiste en crear una nueva tabla de aceleradores que se corresponde con el recurso de menú nuevo creado para la activación en contexto. Esta tabla contiene entradas para los menús archivo y ventana además de la entrada VK_ESCAPE anterior. El ejemplo siguiente es la tabla de aceleradores creada para la activación en contexto en el ejemplo MFC [contenedor](../visual-cpp-samples.md):
+El segundo cambio consiste en crear una nueva tabla de aceleradores que se corresponde con el recurso de menú nuevo creado para la activación en contexto. Esta tabla contiene entradas para los menús archivo y ventana además de la entrada VK_ESCAPE anterior. El ejemplo siguiente es la tabla de aceleradores creada para la activación en contexto en el ejemplo MFC [contenedor](../overview/visual-cpp-samples.md):
 
-|Id.|Key|Tipo|
+|ID|Key|Tipo|
 |--------|---------|----------|
 |ID_FILE_NEW|CTRL+N|**VIRTKEY**|
 |ID_FILE_OPEN|CTRL+O|**VIRTKEY**|
@@ -78,7 +78,7 @@ El segundo cambio consiste en crear una nueva tabla de aceleradores que se corre
 
 La mayoría de los cambios en las tablas de cadenas para las aplicaciones de contenedor se corresponde con los elementos de menú adicionales que se mencionan en [adiciones de menú contenedor](#_core_container_menu_additions). Que suministran el texto mostrado en la barra de estado cuando se muestra cada elemento de menú. Por ejemplo, estas son las entradas de tabla de cadenas que genera el Asistente para aplicaciones:
 
-|Id.|String|
+|ID|String|
 |--------|------------|
 |IDP_OLE_INIT_FAILED|Error de inicialización OLE. Asegúrese de que las bibliotecas OLE son la versión correcta.|
 |IDP_FAILED_TO_CREATE|No se pudo crear el objeto. Asegúrese de que el objeto existe en el registro del sistema.|

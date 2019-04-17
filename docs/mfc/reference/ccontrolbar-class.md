@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291631"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773247"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -543,7 +543,7 @@ Puntero a un objeto `CWnd` .
 
 ## <a name="see-also"></a>Vea también
 
-[CTRLBARS de ejemplo](../../visual-cpp-samples.md)<br/>
+[CTRLBARS de ejemplo](../../overview/visual-cpp-samples.md)<br/>
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar (clase)](../../mfc/reference/ctoolbar-class.md)<br/>

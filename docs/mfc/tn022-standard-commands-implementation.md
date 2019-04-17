@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279377"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775836"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: Implementación de comandos estándar
 
@@ -221,7 +221,7 @@ Para cada identificador de comando, hay una cadena de mensaje de la línea de me
 
    Actualmente no hay ninguna implementación estándar para este comando. Esto debe implementar para cada `CView`-clase derivada.
 
-   Si decide implementar este comando, se recomienda que usar este identificador de comando. Vea el ejemplo de Tutorial de MFC [SCRIBBLE](../visual-cpp-samples.md) para una implementación de ejemplo.
+   Si decide implementar este comando, se recomienda que usar este identificador de comando. Vea el ejemplo de Tutorial de MFC [SCRIBBLE](../overview/visual-cpp-samples.md) para una implementación de ejemplo.
 
 - ID_EDIT_COPY copia la selección actual en el Portapapeles.
 
@@ -438,7 +438,7 @@ Para cada identificador de comando, hay una cadena de mensaje de la línea de me
 
    Todas las aplicaciones de cliente OLE deben implementar este comando. Asistente para aplicaciones, con la opción OLE, creará una implementación de esqueleto `OnInsertObject` en la clase de vista que debe completar.
 
-   Vea el ejemplo OLE de MFC [OCLIENT](../visual-cpp-samples.md) ejemplo para una implementación completa de este comando.
+   Vea el ejemplo OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md) ejemplo para una implementación completa de este comando.
 
 - ID_OLE_EDIT_LINKS edita vínculos OLE
 

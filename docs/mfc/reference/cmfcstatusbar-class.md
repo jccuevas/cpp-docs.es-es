@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326756"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775964"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar (clase)
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Comentarios
 
-El siguiente diagrama muestra una ilustración de la barra de estado de [ejemplo de demostración de la barra de estado](../../visual-cpp-samples.md) aplicación.
+El siguiente diagrama muestra una ilustración de la barra de estado de [ejemplo de demostración de la barra de estado](../../overview/visual-cpp-samples.md) aplicación.
 
 ![Ejemplo de CMFCStatusBar](../../mfc/reference/media/cmfcstatusbar.png "ejemplo de CMFCStatusBar")
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra las variables locales que la aplicación usa para llamar a métodos distintos en la `CMFCStatusBar` clase. Estas variables se declaran en StatusBarDemoView.h. El marco principal se declara en MainFrm.h, se declara el documento en StatusBarDemoDoc.h y la vista se declara en StatusBarDemoView.h. Este fragmento de código forma parte de la [ejemplo de demostración de la barra de estado](../../visual-cpp-samples.md).
+El ejemplo siguiente muestra las variables locales que la aplicación usa para llamar a métodos distintos en la `CMFCStatusBar` clase. Estas variables se declaran en StatusBarDemoView.h. El marco principal se declara en MainFrm.h, se declara el documento en StatusBarDemoDoc.h y la vista se declara en StatusBarDemoView.h. Este fragmento de código forma parte de la [ejemplo de demostración de la barra de estado](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo obtener una referencia a `CMFCStatusBar` objeto introduciendo el `GetStatusBar` método MainFrm.h y, a continuación, llamar a este método desde el `GetStatusBar` método StatusBarDemoView.h. Este fragmento de código forma parte de la [ejemplo de demostración de la barra de estado](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo obtener una referencia a `CMFCStatusBar` objeto introduciendo el `GetStatusBar` método MainFrm.h y, a continuación, llamar a este método desde el `GetStatusBar` método StatusBarDemoView.h. Este fragmento de código forma parte de la [ejemplo de demostración de la barra de estado](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo llamar a métodos distintos en la `CMFCStatusBar` clase StatusBarDemoView.cpp. Las constantes se declaran en MainFrm.h. El ejemplo muestra cómo establecer el icono, establecer el texto de información sobre herramientas del panel de barra de estado, mostrar una barra de progreso en el panel especificado, asignar una animación en el panel especificado, Establece el texto y el ancho del panel de barra de estado y establezca el indicador de progreso actual de la progr barra de acceso para el panel de barra de estado. Este fragmento de código forma parte de la [ejemplo de demostración de la barra de estado](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo llamar a métodos distintos en la `CMFCStatusBar` clase StatusBarDemoView.cpp. Las constantes se declaran en MainFrm.h. El ejemplo muestra cómo establecer el icono, establecer el texto de información sobre herramientas del panel de barra de estado, mostrar una barra de progreso en el panel especificado, asignar una animación en el panel especificado, Establece el texto y el ancho del panel de barra de estado y establezca el indicador de progreso actual de la progr barra de acceso para el panel de barra de estado. Este fragmento de código forma parte de la [ejemplo de demostración de la barra de estado](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

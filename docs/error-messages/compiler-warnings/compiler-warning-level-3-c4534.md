@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: a2af04502082f7fb30d59af5e6434161227c6d30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437281"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772662"
 ---
 # <a name="compiler-warning-level-3-c4534"></a>Advertencia del compilador (nivel 3) C4534
 
@@ -19,7 +19,7 @@ ms.locfileid: "50437281"
 
 Una clase no administrada puede tener un constructor con parámetros que tienen valores predeterminados y el compilador usará esto como el constructor predeterminado. Una clase marcada con el `value` palabra clave no usará un constructor con valores predeterminados para sus parámetros como un constructor predeterminado.
 
-Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).
+Para obtener más información, consulte [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C4534:
 
