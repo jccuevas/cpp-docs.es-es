@@ -1,23 +1,25 @@
 ---
 title: Advertencia de las herramientas del vinculador LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477358"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674258"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Advertencia de las herramientas del vinculador LNK4049
 
 > símbolo '*símbolo*'definido en'*nombreDeArchivo.obj*' se importa
 
-El símbolo se ha exportado desde tanto importado al programa.
+[__declspec (dllimport)](../../cpp/dllexport-dllimport.md) se especificó para *símbolo* , aunque el símbolo está definido en el archivo objeto *nombreDeArchivo.obj* en la misma imagen. Quitar el `__declspec(dllimport)` modificador para resolver esta advertencia.
+
+## <a name="remarks"></a>Comentarios
 
 Esta advertencia se genera el vinculador al definir un símbolo en el archivo de un objeto y hacer referencia a él mediante el uso de la `__declspec(dllimport)` modificador de declaración en otro.
 
