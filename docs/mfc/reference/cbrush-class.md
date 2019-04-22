@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: f2a2e385a9f210b3644d7fade00b72c4befa47ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778876"
 ---
 # <a name="cbrush-class"></a>CBrush (clase)
@@ -184,7 +184,7 @@ BOOL CreateDIBPatternBrush(
 *hPackedDIB*<br/>
 Identifica un objeto de memoria global que contiene un mapa de bits empaquetado de independientes del dispositivo (DIB).
 
-*Nuso*<br/>
+*nUsage*<br/>
 Especifica si el `bmiColors[]` campos de la [BITMAPINFO](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo) estructura de datos (parte de la "DIB empaquetan") contienen explícita los valores RGB o índices en la paleta lógica realizada actualmente. El parámetro debe ser uno de los valores siguientes:
 
 - La tabla de colores DIB_PAL_COLORS consta de una matriz de índices de 16 bits.

@@ -6,10 +6,10 @@ f1_keywords:
 - implements/Microsoft::WRL::Details::Nil
 ms.assetid: ea6dddc1-2bd0-44eb-804e-477572215712
 ms.openlocfilehash: 143b5133589198341cb68378778631e6a78af006
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024756"
 ---
 # <a name="nil-structure"></a>Nil (Estructura)
@@ -40,4 +40,4 @@ Se utiliza para indicar un parámetro de plantilla opcional no especificado.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

@@ -3,10 +3,10 @@ title: Información general de la programación para Windows en C++
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772909"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
@@ -101,14 +101,14 @@ Visual Studio incluye un depurador eficaz de código nativo, herramientas de an�
 |[Asistente para escritorio de Windows](windows-desktop-wizard.md)|Use el Asistente para crear nuevos proyectos de Windows.|
 |[Biblioteca de plantillas activas (ATL)](../atl/TOC.md)|Utilice la biblioteca ATL para crear componentes COM en C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|Usar MFC para crear grandes o pequeñas aplicaciones de Windows con controles y cuadros de diálogo|
-|[Clases comparten de ATL y MFC](../atl-mfc-shared/TOC.md)|Utilice las clases como CString que se comparten en ATL y MFC.|
-|[Acceso a datos en ASP.NET (Visual Studio)](../data/data-access-in-cpp.md)| OLE DB y ODBC|
+|[Clases compartidas ATL y MFC](../atl-mfc-shared/TOC.md)|Utilice las clases como CString que se comparten en ATL y MFC.|
+|[Acceso a datos](../data/data-access-in-cpp.md)| OLE DB y ODBC|
 |[Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)|Distintos tipos de cadenas en Windows.|
-|[Recursos para crear un juego usando DirectX](resources-for-creating-a-game-using-directx.md)
-|[Filtrar Use Windows 10 SDK en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
-|[Trabajar con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, las tablas de cadenas y otros recursos a una aplicación de escritorio.|
+|[Recursos para crear un juego mediante DirectX](resources-for-creating-a-game-using-directx.md)
+|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, las tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego usando DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
-|[Filtrar Use Windows 10 SDK en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 |[Implementación de aplicaciones de escritorio nativas](deploying-native-desktop-applications-visual-cpp.md)|Implementar aplicaciones nativas en Windows.|
 
 
@@ -117,8 +117,8 @@ Visual Studio incluye un depurador eficaz de código nativo, herramientas de an�
 |Título|Descripción|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Tema primario para el contenido del desarrollador de Visual C++.|
-[Desarrollo de .NET con C++ / c++ / CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Crear contenedores para las bibliotecas nativas de C++ que le permiten la comunicación con aplicaciones de .NET y componentes.|
+[Desarrollo de .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Crear contenedores para las bibliotecas nativas de C++ que le permiten la comunicación con aplicaciones de .NET y componentes.|
 |[Extensiones de componentes de .NET y UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referencia de elementos de sintaxis compartidos por C++ / c++ / CX y c++ / CLI.|
-|[Aplicaciones Windows universales (C++)](universal-windows-apps-cpp.md)|Escribir aplicaciones para UWP con C++ / c++ / CX o biblioteca de plantillas de Windows en tiempo de ejecución (WRL).|
+|[Aplicaciones de Windows universales (C++)](universal-windows-apps-cpp.md)|Escribir aplicaciones para UWP con C++ / c++ / CX o biblioteca de plantillas de Windows en tiempo de ejecución (WRL).|
 |[Atributos de C++ para COM y .NET](attributes/cpp-attributes-com-net.md)|Atributos no estándares para la programación de Windows solo mediante .NET o COM.|
 

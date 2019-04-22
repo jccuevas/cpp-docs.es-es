@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777342"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar (clase)
@@ -485,7 +485,7 @@ BOOL SetPaneText(
 *lpszNewText*<br/>
 Puntero en el nuevo texto del panel.
 
-*bActualización*<br/>
+*bUpdate*<br/>
 Si es TRUE, se invalida el panel después de establece el texto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -508,7 +508,7 @@ Después de llamar a `SetPaneText`, debe agregar un controlador de actualizació
 
 [CTRLBARS de ejemplo](../../overview/visual-cpp-samples.md)<br/>
 [DLGCBR32 de ejemplo MFC](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl (clase)](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar (clase)](../../mfc/reference/ccontrolbar-class.md)

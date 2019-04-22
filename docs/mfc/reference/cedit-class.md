@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773754"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -1117,7 +1117,7 @@ void SetLimitText(UINT nMax);
 
 ### <a name="parameters"></a>Parámetros
 
-*Nmáx.*<br/>
+*nMax*<br/>
 El nuevo límite de texto, en caracteres.
 
 ### <a name="remarks"></a>Comentarios
@@ -1196,7 +1196,7 @@ void SetPasswordChar(TCHAR ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 Especifica el carácter que se mostrará en lugar del carácter escrito por el usuario. Si *ch* es 0, se muestran los caracteres reales escritos por el usuario.
 
 ### <a name="remarks"></a>Comentarios

@@ -1,5 +1,5 @@
 ---
-title: db_column (atributo de COM de C++)
+title: db_column (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
 ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024847"
 ---
 # <a name="dbcolumn"></a>db_column
@@ -36,16 +36,16 @@ El número de columna ordinal (`DBCOLUMNINFO` ordinal) o nombre de columna (cade
 *dbtype*<br/>
 (Opcional) OLE DB [indicador de tipo](/previous-versions/windows/desktop/ms711251(v=vs.85)) para la entrada de columna.
 
-*precisión*<br/>
+*precision*<br/>
 (Opcional) La precisión que se usará para la entrada de columna. Para obtener más información, vea la descripción de la `bPrecision` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*escala*<br/>
+*scale*<br/>
 (Opcional) La escala que se usará para la entrada de columna. Para obtener más información, vea la descripción de `bScale` elemento de la [estructura DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el estado de esta columna. El estado indica si el valor de columna es un valor de datos o algún otro valor, como valores NULL. Para los valores posibles, vea [estado](/previous-versions/windows/desktop/ms722617(v=vs.85)) en el *referencia del programador de OLE DB*.
 
-*longitud*<br/>
+*length*<br/>
 (Opcional) Una variable de miembro que se usa para mantener el tamaño de la columna en bytes.
 
 ## <a name="remarks"></a>Comentarios
@@ -113,5 +113,5 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos del consumidor OLE DB](ole-db-consumer-attributes.md)<br/>
+[Atributos de consumidor OLE DB](ole-db-consumer-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)

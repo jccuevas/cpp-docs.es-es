@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
 ms.openlocfilehash: 23bc20355e1e2b17ac20cf975df2ff58d6553ef9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023092"
 ---
 # <a name="retrieving-a-blob"></a>Recuperar un objeto BLOB
@@ -55,5 +55,5 @@ Para obtener más información acerca de las macros que controlan datos BLOB, co
 
 ## <a name="see-also"></a>Vea también
 
-[Utilizar descriptores de acceso](../../data/oledb/using-accessors.md)<br/>
+[Usar descriptores de acceso](../../data/oledb/using-accessors.md)<br/>
 [Macros y funciones globales para las plantillas de consumidor OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>

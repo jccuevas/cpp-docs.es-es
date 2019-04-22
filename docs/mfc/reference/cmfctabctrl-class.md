@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778460"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Parámetros
 
-*estilo*<br/>
+*style*<br/>
 [in] El estilo del control de ficha. Para obtener más información, vea la sección Comentarios.
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in] El identificador del control de ficha.
 
-*ubicación*<br/>
+*location*<br/>
 [in] La ubicación de fichas. El valor predeterminado es LOCATION_BOTTOM. Para obtener más información, vea la sección Comentarios.
 
 *bCloseBtn*<br/>
@@ -387,7 +387,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para mostrar el botón Cerrar en la pestaña activa; FALSE para mostrar el botón Cerrar en la esquina superior derecha del área de ficha. El valor predeterminado es TRUE.
 
 ##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit
@@ -400,7 +400,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar las etiquetas de pestaña modificable; FALSE para deshabilitar las etiquetas de pestaña editable.
 
 ### <a name="remarks"></a>Comentarios
@@ -415,7 +415,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para mostrar un menú emergente de etiquetas de la ventana con pestañas; FALSE para mostrar los botones de desplazamiento hacia delante y hacia atrás. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Parámetros
 
-*estilo*<br/>
+*style*<br/>
 [in] Uno de los valores de enumeración que especifica la apariencia del control de ficha. Para obtener más información, vea la tabla en la sección Comentarios.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -944,7 +944,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Parámetros
 
-*bSecuencias de ActiveX*<br/>
+*bActive*<br/>
 [in] TRUE para que sea la ficha actual en la pestaña activa; FALSE para hacer que la ficha actual esté inactivo.
 
 ### <a name="remarks"></a>Comentarios
@@ -1111,7 +1111,7 @@ void StopResize(BOOL bCancel);
 
 ### <a name="parameters"></a>Parámetros
 
-*bCancelar*<br/>
+*bCancel*<br/>
 [in] TRUE para abandonar la operación de cambio de tamaño actual; FALSE para completar actual cambiar el tamaño de operación. En cualquier caso, el marco de trabajo deja de dibujar el rectángulo de cambio de tamaño.
 
 ##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar
@@ -1139,6 +1139,6 @@ Este método afecta a solo un control de ficha que muestra pestañas sin formato
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl (clase)](../../mfc/reference/cmfcbasetabctrl-class.md)

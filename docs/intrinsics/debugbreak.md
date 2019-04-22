@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
 ms.openlocfilehash: b52c34014402a235e03c45f82dcd1e5c542e4919
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023105"
 ---
 # <a name="debugbreak"></a>__debugbreak
@@ -38,7 +38,7 @@ void __debugbreak();
 El `__debugbreak` compilador intrínseco, de forma similar a [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), es una manera portable de Win32 para producir un punto de interrupción.
 
 > [!NOTE]
->  Cuando se compila con **/CLR**, una función que contiene `__debugbreak` se compilará en MSIL. `asm int 3` hace que una función que se compilarán en código nativo. Para obtener más información, consulte [__asm](../assembler/inline/asm.md).
+>  Cuando se compila con **/CLR**, una función que contiene `__debugbreak` se compilará en MSIL. `asm int 3` produce una función que se va a compilar en código nativo. Para obtener más información, consulte [__asm](../assembler/inline/asm.md).
 
 Por ejemplo:
 

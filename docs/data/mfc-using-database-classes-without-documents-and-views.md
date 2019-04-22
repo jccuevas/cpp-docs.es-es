@@ -18,10 +18,10 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024639"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Uso de clases de base de datos sin documentos ni vistas
@@ -54,7 +54,7 @@ El Asistente para aplicaciones MFC tiene varias opciones **seleccione soporte t�
 
 |Opción|Ver|Documento|
 |------------|----------|--------------|
-|**Ninguna**|Se deriva de `CView`.|No proporciona ninguna compatibilidad de base de datos. Ésta es la opción predeterminada.<br /><br /> Si selecciona el **compatibilidad con la arquitectura documento/vista** opción el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página, obtendrá compatibilidad con documentos completo incluida la serialización y **nuevo** , **Abierto**, **guardar**, y **Guardar como** comandos en el **archivo** menú. Consulte [aplicaciones sin documentos](#_core_applications_with_no_document).|
+|**Ninguno**|Se deriva de `CView`.|No proporciona ninguna compatibilidad de base de datos. Ésta es la opción predeterminada.<br /><br /> Si selecciona el **compatibilidad con la arquitectura documento/vista** opción el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página, obtendrá compatibilidad con documentos completo incluida la serialización y **nuevo** , **Abierto**, **guardar**, y **Guardar como** comandos en el **archivo** menú. Consulte [aplicaciones sin documentos](#_core_applications_with_no_document).|
 |**Archivos de encabezado**|Se deriva de `CView`.|Proporciona el nivel básico de compatibilidad de base de datos para la aplicación.<br /><br /> Incluye Afxdb.h. Agrega las bibliotecas de vínculos, pero no crea clases específicas de la base de datos. Puede crear conjuntos de registros más adelante y usarlos para examinar y actualizar registros.|
 |**Vista de base de datos sin compatibilidad con archivos**|Deriva de `CRecordView`|Proporciona compatibilidad con documentos pero no con la serialización. Puede almacenar el conjunto de registros y coordinar varias vistas; documento no admite la serialización o la **New**, **abierto**, **guardar**, y **Guardar como** comandos. Consulte [aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents). Si incluye una vista de base de datos, debe especificar el origen de datos.<br /><br /> Incluye un conjunto de registros, las bibliotecas de vínculos, una vista de registros y archivos de encabezado de la base de datos. (Disponible solo para las aplicaciones con el **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
 |**Vista de base de datos con compatibilidad con archivos**|Deriva de `CRecordView`|Proporciona compatibilidad total con documentos, incluida la serialización y relacionadas con documentos **archivo** comandos de menú. Las aplicaciones de base de datos se suelen aplicar a una base por registro en lugar de en un archivo por lo que no necesitan la serialización. Sin embargo, podría tener un uso especial para la serialización. Consulte [aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents). Si incluye una vista de base de datos, debe especificar el origen de datos.<br /><br /> Incluye un conjunto de registros, las bibliotecas de vínculos, una vista de registros y archivos de encabezado de la base de datos. (Disponible solo para las aplicaciones con el **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
@@ -121,4 +121,4 @@ Porque no hay ningún documento posee el `CRecordset` objeto, que probablemente 
 
 ## <a name="see-also"></a>Vea también
 
-[Clases de base de datos MFC](../data/mfc-database-classes-odbc-and-dao.md)
+[Clases de bases de datos MFC](../data/mfc-database-classes-odbc-and-dao.md)

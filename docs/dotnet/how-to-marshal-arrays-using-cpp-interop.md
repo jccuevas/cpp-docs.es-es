@@ -1,5 +1,5 @@
 ---
-title: Filtrar Interoperabilidad de C++ utilizando serializar matrices
+title: Procedimiento Interoperabilidad de C++ utilizando serializar matrices
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776900"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>Filtrar Interoperabilidad de C++ utilizando serializar matrices
+# <a name="how-to-marshal-arrays-using-c-interop"></a>Procedimiento Interoperabilidad de C++ utilizando serializar matrices
 
 En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -24,7 +24,7 @@ Uso de ejemplos de código siguiente el [managed, unmanaged](../preprocessor/man
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo pasar una matriz administrada a una función no administrada. Usa la función administrada [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) para suprimir la recolección de la matriz antes de llamar a la función no administrada. Proporcionando la función no administrada con un puntero anclado en el montón GC, se puede evitar la sobrecarga que supone realizar una copia de la matriz. Para demostrar que la función no administrada tiene acceso a la memoria del montón GC, modifica el contenido de la matriz y los cambios son refleja cuando la función administrada reanuda el control.
+El ejemplo siguiente muestra cómo pasar una matriz administrada a una función no administrada. Usa la función administrada [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para suprimir la recolección de la matriz antes de llamar a la función no administrada. Proporcionando la función no administrada con un puntero anclado en el montón GC, se puede evitar la sobrecarga que supone realizar una copia de la matriz. Para demostrar que la función no administrada tiene acceso a la memoria del montón GC, modifica el contenido de la matriz y los cambios son refleja cuando la función administrada reanuda el control.
 
 ```
 // PassArray1.cpp

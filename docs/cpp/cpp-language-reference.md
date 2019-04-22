@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774040"
 ---
 # <a name="c-language-reference"></a>Referencia del lenguaje C++
@@ -81,7 +81,7 @@ Declaración de eventos y controladores de eventos.
 Modificadores específicos de Microsoft C++. La memoria de direccionamiento, convenciones de llamada, **naked** funciones, atributos extendidos de clase de almacenamiento (**__declspec**), **__w64**.
 
 [Ensamblador insertado](../assembler/inline/inline-assembler.md)<br/>
-Usando el lenguaje de ensamblado y C++ en **__asm** bloques.
+Mediante el lenguaje ensamblador y C++ en **__asm** bloques.
 
 [Compatibilidad con COM del compilador](../cpp/compiler-com-support.md)<br/>
 Una referencia a las clases específicas de Microsoft y funciones globales utilizadas para admitir tipos COM.

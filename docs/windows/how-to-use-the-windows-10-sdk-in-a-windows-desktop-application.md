@@ -1,16 +1,16 @@
 ---
-title: Filtrar Use Windows 10 SDK en una aplicación de escritorio de Windows
+title: Procedimiento Use Windows 10 SDK en una aplicación de escritorio de Windows
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
 ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021533"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Filtrar Use Windows 10 SDK en una aplicación de escritorio de Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Procedimiento Use Windows 10 SDK en una aplicación de escritorio de Windows
 
 Al crear un proyecto de escritorio clásico de Windows en Visual Studio 2017, se configura de forma predeterminada para compilar con la versión del SDK de Windows 10 que se instaló cuando la carga de trabajo de escritorio de C++ se instaló o actualizó por última vez. Esta versión del SDK de Windows es compatible con Windows 7 y versiones posteriores. Consulte [mediante los encabezados de Windows](/windows/desktop/WinProg/using-the-windows-headers) para obtener más información sobre cómo destinar versiones específicas de Windows.
 

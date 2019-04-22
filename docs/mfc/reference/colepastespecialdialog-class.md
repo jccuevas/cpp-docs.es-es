@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776913"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog (clase)
@@ -131,10 +131,10 @@ Cadena que describe el formato para el usuario.
 *lpszResult*<br/>
 Cadena que describe el resultado si se elige este formato en el cuadro de diálogo.
 
-*marcas*<br/>
+*flags*<br/>
 Los diferentes vincular e incrustar las opciones disponibles para este formato. Este indicador es una combinación bit a bit de uno o varios de los diferentes valores en el OLEUIPASTEFLAG tipo enumeran.
 
-*CF*<br/>
+*cf*<br/>
 Para agregar el formato del Portapapeles.
 
 *tymed*<br/>
@@ -146,7 +146,7 @@ El identificador de la cadena que identifica este formato. El formato de esta ca
 *bEnableIcon*<br/>
 Marca que determina si la casilla de verificación Mostrar como icono está habilitada cuando se elige este formato en el cuadro de lista.
 
-*Intermitencia*<br/>
+*bLink*<br/>
 Marca que determina si el botón de radio Pegar vínculo está habilitado cuando se elige este formato en el cuadro de lista.
 
 ### <a name="remarks"></a>Comentarios
@@ -167,7 +167,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 Para agregar el formato del Portapapeles.
 
 ### <a name="return-value"></a>Valor devuelto

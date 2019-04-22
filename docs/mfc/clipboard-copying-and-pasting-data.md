@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776107"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Portapapeles: Copiar y pegar datos
@@ -63,7 +63,7 @@ Para controlar la opción Pegado especial en el menú Edición, vea el tema [cua
 
 - [Transferencia de datos uniformes y orígenes de datos y objetos de datos OLE](../mfc/data-objects-and-data-sources-ole.md)
 
-- [funciones OLE de arrastrar y colocar](../mfc/drag-and-drop-ole.md)
+- [Arrastrar y colocar OLE](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 

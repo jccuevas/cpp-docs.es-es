@@ -7,10 +7,10 @@ helpviewer_keywords:
 - auto_search attribute
 ms.assetid: 0fee2503-cd28-4d8c-b4d5-15ca0a91d2d2
 ms.openlocfilehash: 29638afbe42a5c5f1894bc7047d10e05363f494e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023560"
 ---
 # <a name="autosearch"></a>auto_search
@@ -27,9 +27,9 @@ auto_search
 
 ## <a name="remarks"></a>Comentarios
 
-**Específicos de C++: END**
+**FIN de específicos de C++**
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

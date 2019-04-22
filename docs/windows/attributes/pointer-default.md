@@ -1,5 +1,5 @@
 ---
-title: pointer_default (atributo de COM de C++)
+title: pointer_default (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
 ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022671"
 ---
 # <a name="pointerdefault"></a>pointer_default
@@ -30,7 +30,7 @@ Un valor que describe el tipo de puntero: **ptr**, **ref**, o **único**.
 
 ## <a name="remarks"></a>Comentarios
 
-El **pointer_default** atributo de C++ tiene la misma funcionalidad que el [pointer_default](/windows/desktop/Midl/pointer-default) atributo MIDL.
+El **pointer_default** C++ atributo tiene la misma funcionalidad que el [pointer_default](/windows/desktop/Midl/pointer-default) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 
@@ -42,7 +42,7 @@ Vea el ejemplo de [defaultvalue](defaultvalue.md) para un ejemplo de uso de **po
 
 |||
 |-|-|
-|**Se aplica a**|**interfaz**|
+|**Se aplica a**|**interface**|
 |**Reiterativo**|No|
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|Ninguna|
