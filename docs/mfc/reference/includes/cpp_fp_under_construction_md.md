@@ -1,1 +1,0 @@
-Este tema se incluye a efectos de integridad. Para obtener información más detallada, consulta el código fuente ubicado en la carpeta VC\atlmfc\src\mfc de la instalación de Visual Studio.
