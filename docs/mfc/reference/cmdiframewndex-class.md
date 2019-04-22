@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778564"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx (clase)
@@ -641,7 +641,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar la carga de estado de acoplamiento, FALSE para deshabilitar la carga del estado de acoplamiento.
 
 ### <a name="remarks"></a>Comentarios
@@ -658,7 +658,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Si es TRUE, se habilita la característica de grupos con fichas MDI; Si es FALSE, se deshabilita la característica de grupos con fichas MDI.
 
 *params*<br/>
@@ -707,7 +707,7 @@ void EnableMDITabs(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 Especifica si están habilitadas las pestañas.
 
 *bIcons*<br/>
@@ -719,7 +719,7 @@ Especifica la ubicación de las etiquetas de pestaña.
 *bTabCloseButton*<br/>
 Especifica si se debe mostrar botones Cerrar pestaña.
 
-*estilo*<br/>
+*style*<br/>
 Especifica el estilo de fichas. Utilice STYLE_3D_SCROLLED para pestañas normales o STYLE_3D_ONENOTE para las pestañas de Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -783,7 +783,7 @@ void EnablePaneMenu(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Si es TRUE, el control automático del menú panel está habilitado; Si es FALSE, el control automático está deshabilitado.
 
 *uiCustomizeCmd*<br/>
@@ -1238,7 +1238,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bSiguiente*<br/>
+*bNext*<br/>
 [in] Si es TRUE, mover la ficha al siguiente grupo de pestañas. Si es FALSE, muévalo al grupo de pestañas anterior.
 
 ##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
@@ -1635,7 +1635,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar paneles, FALSE para ocultar paneles.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1924,7 +1924,7 @@ void ShowPane(
 *pBar*<br/>
 [in] Puntero al panel para mostrar u ocultar.
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el panel. FALSE para ocultar el panel.
 
 *bDelay*<br/>

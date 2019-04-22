@@ -1,5 +1,5 @@
 ---
-title: v1_enum (atributo de COM de C++)
+title: v1_enum (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
 ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024574"
 ---
 # <a name="v1enum"></a>v1_enum
@@ -25,7 +25,7 @@ Indica que el tipo enumerado especificado se transmite como una entidad de 32 bi
 
 ## <a name="remarks"></a>Comentarios
 
-El **v1_enum** atributo de C++ tiene la misma funcionalidad que el [v1_enum](/windows/desktop/Midl/v1-enum) atributo MIDL.
+El **v1_enum** C++ atributo tiene la misma funcionalidad que el [v1_enum](/windows/desktop/Midl/v1-enum) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 
@@ -58,4 +58,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

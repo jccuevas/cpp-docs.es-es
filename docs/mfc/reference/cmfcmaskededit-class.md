@@ -25,10 +25,10 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
 ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773793"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit (clase)
@@ -131,7 +131,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para especificar que el [CMFCMaskedEdit::GetWindowText](#getwindowtext) método retrieve enmascara solo caracteres; FALSE para especificar que el método recuperar todo el texto. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -170,7 +170,7 @@ Utilice este método para crear la máscara para el control de edición con más
 
 La tabla siguiente se enumeran los caracteres de máscara de forma predeterminada:
 
-|Carácter de máscara|de esquema JSON|
+|Carácter de máscara|Definición|
 |--------------------|----------------|
 |D|Dígito.|
 |d|Dígito o espacio.|
@@ -191,7 +191,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para seleccionar únicamente grupos; FALSE para seleccionar todo el texto. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -225,7 +225,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para validar la entrada con solo enmascarar caracteres; del usuario FALSE para validar la máscara completa. El valor predeterminado es TRUE.
 
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText
@@ -340,4 +340,4 @@ Este método vuelve a definir [CWnd::SetWindowText](../../mfc/reference/cwnd-cla
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)
+[CEdit (clase)](../../mfc/reference/cedit-class.md)

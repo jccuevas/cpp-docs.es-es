@@ -1,5 +1,5 @@
 ---
-title: Filtrar Incluir recursos en tiempo de compilación (C++)
+title: Procedimiento Incluir recursos en tiempo de compilación (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vs.resvw.resource.including
@@ -24,13 +24,13 @@ helpviewer_keywords:
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041513"
 ---
-# <a name="how-to-include-resources-at-compile-time-c"></a>Filtrar Incluir recursos en tiempo de compilación (C++)
+# <a name="how-to-include-resources-at-compile-time-c"></a>Procedimiento Incluir recursos en tiempo de compilación (C++)
 
 De forma predeterminada, todos los recursos se encuentran en un archivo de recursos (.rc) de la secuencia de comandos, pero hay muchas razones para incluir recursos en un archivo distinto del archivo .rc principal:
 
@@ -50,7 +50,7 @@ Puede agregar recursos de otros archivos al proyecto en tiempo de compilación e
 
 Para empezar, abra el **incluye recursos** haciendo clic en un archivo .rc en el cuadro de diálogo [vista de recursos](how-to-create-a-resource-script-file.md#create-resources), seleccione **incluye recursos** y tenga en cuenta las siguientes propiedades:
 
-| Property | Descripción |
+| Propiedad | Descripción |
 |---|---|
 | **Archivo de encabezado de símbolos** | Permite cambiar el nombre del archivo de encabezado donde se almacenan las definiciones de símbolos para los archivos de recursos.<br/><br/>Para obtener más información, consulte [cambiar los archivos de encabezado de los nombres de símbolos](../windows/changing-the-names-of-symbol-header-files.md). |
 | **Directivas de símbolos de solo lectura** | Permite incluir archivos de encabezado que contienen los símbolos que no deberían modificarse.<br/><br/>Por ejemplo, los archivos de símbolos para compartirse con otros proyectos. Esto también puede incluir archivos .h de MFC. Para obtener más información, consulte [símbolos incluidos compartidos (de solo lectura) o calculados](../windows/including-shared-read-only-or-calculated-symbols.md). |
@@ -98,5 +98,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-[Filtrar Creación de recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Filtrar Administración de recursos](../windows/how-to-copy-resources.md)<br/>
+[Cómo: Crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Cómo: Administrar recursos](../windows/how-to-copy-resources.md)<br/>

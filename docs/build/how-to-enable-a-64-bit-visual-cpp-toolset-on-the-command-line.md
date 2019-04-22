@@ -1,5 +1,5 @@
 ---
-title: Filtrar Habilitar un conjunto de herramientas MSVC de 64 bits en la línea de comandos
+title: Procedimiento Habilitar un conjunto de herramientas MSVC de 64 bits en la línea de comandos
 ms.date: 03/29/2018
 helpviewer_keywords:
 - x64 [C++]
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769282"
 ---
-# <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Filtrar Habilitar 64 bits, x64 hospeda el conjunto de herramientas MSVC en la línea de comandos
+# <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Procedimiento Habilitar 64 bits, x64 hospeda el conjunto de herramientas MSVC en la línea de comandos
 
 Visual Studio incluye los compiladores de C++, los enlazadores y otras herramientas que puede usar para crear versiones específicas de la plataforma de las aplicaciones que se pueden ejecutar en los sistemas operativos de Windows de 32 bits, 64 bits o basados en ARM. Otras cargas de trabajo opcionales de Visual Studio le permiten usar herramientas de C++ como destino otras plataformas como iOS, Android y Linux. La arquitectura de compilación predeterminada usa herramientas de 32 bits, hospedados en x86 para compilar código de Windows de 32 bits, nativo x86. Sin embargo, probablemente tiene un equipo de 64 bits. Se puede aprovechar el procesador y el espacio de memoria disponible para el código de 64 bits utilizando el conjunto de herramientas de 64 bits, hospedadas en x64 64 al compilar código para x86, x64 o procesadores ARM.
 

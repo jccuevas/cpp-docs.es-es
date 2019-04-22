@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear una colección con seguridad de tipos
+title: Procedimiento Crear una colección con seguridad de tipos
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
 ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781528"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>Filtrar Crear una colección con seguridad de tipos
+# <a name="how-to-make-a-type-safe-collection"></a>Procedimiento Crear una colección con seguridad de tipos
 
 En este artículo se explica cómo hacer que las colecciones de seguridad de tipos para sus propios tipos de datos. Entre los temas se incluyen los siguientes:
 

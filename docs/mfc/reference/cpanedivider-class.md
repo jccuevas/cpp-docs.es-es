@@ -85,10 +85,10 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
 ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773858"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider (clase)
@@ -738,4 +738,4 @@ void StoreRecentTabRelatedInfo(
 [CPaneContainerManager (clase)](../../mfc/reference/cpanecontainermanager-class.md)<br/>
 [CPaneContainer (clase)](../../mfc/reference/cpanecontainer-class.md)<br/>
 [CDockingManager (clase)](../../mfc/reference/cdockingmanager-class.md)<br/>
-[CBasePane Class](../../mfc/reference/cbasepane-class.md)
+[CBasePane (clase)](../../mfc/reference/cbasepane-class.md)
