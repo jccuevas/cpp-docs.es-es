@@ -9,10 +9,10 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 ms.openlocfilehash: 020c044cc0b3b96df102a5ab6625c945f1033f67
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781346"
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>Secuencia de operaciones para crear controles ActiveX
@@ -31,7 +31,7 @@ En la tabla siguiente se muestra su rol y roles de .NET framework en la creació
 
 ## <a name="see-also"></a>Vea también
 
-[Compilar en el marco](../mfc/building-on-the-framework.md)<br/>
+[Compilación en el marco](../mfc/building-on-the-framework.md)<br/>
 [Secuencia de operaciones para compilar aplicaciones MFC](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
 [Secuencia de operaciones para crear aplicaciones OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)<br/>
 [Secuencia de operaciones para crear aplicaciones de base de datos](../mfc/sequence-of-operations-for-creating-database-applications.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767930"
 ---
 # <a name="subscript-operator-"></a>Operador de subíndice]
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="positive-and-negative-subscripts"></a>Subíndices positivos y negativos
 
-El primer elemento de una matriz es el elemento 0. El intervalo de una matriz de C++ es de *matriz*[0] a *matriz*[*tamaño* - 1]. Sin embargo, C++ admite subíndices positivos y negativos. Los subíndices negativos deben situarse dentro de los límites de la matriz, ya que de lo contrario los resultados son impredecibles. En el código siguiente se muestran subíndices de matriz positivos y negativos:
+El primer elemento de una matriz es el elemento 0. El intervalo de un C++ proviene de la matriz *matriz*[0] a *matriz*[*tamaño* - 1]. Sin embargo, C++ admite subíndices positivos y negativos. Los subíndices negativos deben situarse dentro de los límites de la matriz, ya que de lo contrario los resultados son impredecibles. En el código siguiente se muestran subíndices de matriz positivos y negativos:
 
 ```cpp
 #include <iostream>

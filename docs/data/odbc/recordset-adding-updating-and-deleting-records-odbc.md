@@ -19,10 +19,10 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024613"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Conjunto de registros: Agregar, actualizar y eliminar registros (ODBC)
@@ -65,9 +65,9 @@ Un objeto de conjunto de registros es actualizable si el origen de datos lo es y
 
 1. Llamar al objeto de conjunto de registros [CanUpdate](../../mfc/reference/crecordset-class.md#canupdate) función miembro.
 
-   `CanUpdate` Devuelve un valor distinto de cero si el conjunto de registros es actualizable.
+   `CanUpdate` devuelve un valor distinto de cero si el conjunto de registros es actualizable.
 
-De forma predeterminada, los conjuntos de registros son totalmente actualizables (se pueden realizar `AddNew`, `Edit`, y `Delete` operaciones). Pero también puede usar el [appendOnly](../../mfc/reference/crecordset-class.md#open) opción para abrir conjuntos de registros actualizables. Un conjunto de registros abierto de esta forma sólo permite agregar nuevos registros con `AddNew`. No se pueden editar ni eliminar registros existentes. Puede probar si un conjunto de registros está abierto solo para anexar llamando a la [CanAppend](../../mfc/reference/crecordset-class.md#canappend) función miembro. `CanAppend` Devuelve un valor distinto de cero si el conjunto de registros es totalmente actualizable o abierto solo para anexar.
+De forma predeterminada, los conjuntos de registros son totalmente actualizables (se pueden realizar `AddNew`, `Edit`, y `Delete` operaciones). Pero también puede usar el [appendOnly](../../mfc/reference/crecordset-class.md#open) opción para abrir conjuntos de registros actualizables. Un conjunto de registros abierto de esta forma sólo permite agregar nuevos registros con `AddNew`. No se pueden editar ni eliminar registros existentes. Puede probar si un conjunto de registros está abierto solo para anexar llamando a la [CanAppend](../../mfc/reference/crecordset-class.md#canappend) función miembro. `CanAppend` devuelve un valor distinto de cero si el conjunto de registros es totalmente actualizable o si está abierto solo para anexar.
 
 El código siguiente muestra cómo se puede usar `CanUpdate` para un objeto de conjunto de registros denominado `rsStudentSet`:
 

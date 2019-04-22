@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024704"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>Referencia de MSBuild para proyectos de C++
@@ -30,7 +30,7 @@ Describe los distintos tipos de archivos que crea Visual Studio para diferentes 
 [Plantillas de proyecto de Visual Studio C++](visual-cpp-project-types.md)<br>
 Describe los tipos de proyecto basado en MSBuild que están disponibles para C++.
 
-[Nuevas plantillas de elemento de C++](using-visual-cpp-add-new-item-templates.md)<br>
+[Nuevas plantillas de elemento C++](using-visual-cpp-add-new-item-templates.md)<br>
 Describe los archivos de origen y otros elementos que puede agregar a un proyecto de Visual Studio.
 
 [Archivos de encabezado precompilado](../creating-precompiled-header-files.md) cómo utilizar archivos de encabezado precompilado y cómo crear uno personalizado precompilado acelerar los tiempos de compilación de código.

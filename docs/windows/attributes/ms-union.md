@@ -1,5 +1,5 @@
 ---
-title: ms_union (atributo de COM de C++)
+title: ms_union (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
 ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022313"
 ---
 # <a name="msunion"></a>ms_union
@@ -25,7 +25,7 @@ Controla la alineación de representación de datos de red de uniones nonencapsu
 
 ## <a name="remarks"></a>Comentarios
 
-El **ms_union** atributo de C++ tiene la misma funcionalidad que el [ms_union](/windows/desktop/Midl/ms-union-attrib) atributo MIDL.
+El **ms_union** C++ atributo tiene la misma funcionalidad que el [ms_union](/windows/desktop/Midl/ms-union-attrib) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 
@@ -70,4 +70,4 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

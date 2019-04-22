@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780371"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString (clase)
@@ -110,7 +110,7 @@ por ejemplo, se traduce en
 
 ## <a name="remarks"></a>Comentarios
 
-`CMapStringToString` incorpora el `IMPLEMENT_SERIAL` macro para admitir la serialización y el volcado de sus elementos. Cada elemento se serializa a su vez si una asignación se almacena en un archivo, ya sea con la inserción sobrecargada ( **<<**) operador o con el `Serialize` función miembro.
+`CMapStringToString` incorpora la macro `IMPLEMENT_SERIAL` para admitir la serialización y el volcado de sus elementos. Cada elemento se serializa a su vez si una asignación se almacena en un archivo, ya sea con la inserción sobrecargada ( **<<**) operador o con el `Serialize` función miembro.
 
 Si se necesita un volcado de persona `CString` -  `CString` elementos, debe establecer la profundidad del contexto de volcado en 1 o mayor.
 

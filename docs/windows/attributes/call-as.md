@@ -1,5 +1,5 @@
 ---
-title: call_as (atributo de COM de C++)
+title: call_as (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
 ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023924"
 ---
 # <a name="callas"></a>call_as
@@ -25,12 +25,12 @@ Permite un [local](local-cpp.md) función a la que se asignan a una función rem
 
 ### <a name="parameters"></a>Parámetros
 
-*función*<br/>
+*function*<br/>
 La función local que desea que se llama cuando se invoca una función remota.
 
 ## <a name="remarks"></a>Comentarios
 
-El **call_as** atributo de C++ tiene la misma funcionalidad que el [call_as](/windows/desktop/Midl/call-as) atributo MIDL.
+El **call_as** C++ atributo tiene la misma funcionalidad que el [call_as](/windows/desktop/Midl/call-as) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 
@@ -65,4 +65,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[locales](local-cpp.md)
+[local](local-cpp.md)

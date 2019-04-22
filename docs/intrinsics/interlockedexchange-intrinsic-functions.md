@@ -45,10 +45,10 @@ helpviewer_keywords:
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
 ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021500"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchange
@@ -144,7 +144,7 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Parámetros
 
-*Destino*<br/>
+*Target*<br/>
 [in, out] Puntero al valor que se van a intercambiar. La función establece esta variable en `Value` y devuelve su valor anterior.
 
 *Valor*<br/>

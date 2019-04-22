@@ -8,10 +8,10 @@ helpviewer_keywords:
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
 ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025135"
 ---
 # <a name="testing-the-read-only-provider"></a>Probar el proveedor de sólo lectura
@@ -108,4 +108,4 @@ Ahora podrá compilar y probar el programa.
 
 ## <a name="see-also"></a>Vea también
 
-[Mejorar un proveedor sencillo de sólo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[Mejorar un proveedor sencillo de solo lectura](../../data/oledb/enhancing-the-simple-read-only-provider.md)

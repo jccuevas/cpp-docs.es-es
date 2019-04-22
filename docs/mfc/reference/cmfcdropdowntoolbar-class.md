@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
 ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776796"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar (clase)
@@ -138,7 +138,7 @@ virtual BOOL LoadBitmap(
 *uiMenuResID*<br/>
 [in] El identificador de recurso del mapa de bits que hace referencia a las imágenes de menú normal.
 
-*Bloqueado*<br/>
+*bLocked*<br/>
 [in] TRUE para bloquear la barra de herramientas; en caso contrario, FALSE.
 
 *uiDisabledResID*<br/>

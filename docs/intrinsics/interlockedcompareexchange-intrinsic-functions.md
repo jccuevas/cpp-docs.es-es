@@ -49,10 +49,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
 ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021474"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Funciones intrínsecas de _InterlockedCompareExchange
@@ -202,7 +202,7 @@ El valor devuelto es el valor inicial del puntero `Destination`.
 
 ## <a name="remarks"></a>Comentarios
 
-`_InterlockedCompareExchange` realiza una comparación atómica de la `Destination` valor con el `Comparand` valor. Si el valor `Destination` es igual al valor `Comparand`, el valor `Exchange` se almacena en la dirección especificada por `Destination`. De lo contrario, no se realiza ninguna operación.
+`_InterlockedCompareExchange` realiza una comparación atómica del valor `Destination` con el valor `Comparand`. Si el valor `Destination` es igual al valor `Comparand`, el valor `Exchange` se almacena en la dirección especificada por `Destination`. De lo contrario, no se realiza ninguna operación.
 
 `_InterlockedCompareExchange` proporciona compatibilidad intrínseca del compilador para el SDK de Windows de Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) función.
 

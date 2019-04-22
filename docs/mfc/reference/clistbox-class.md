@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778772"
 ---
 # <a name="clistbox-class"></a>CListBox (clase)
@@ -1143,7 +1143,7 @@ int SelItemRange(
 
 ### <a name="parameters"></a>Parámetros
 
-*bSeleccione*<br/>
+*bSelect*<br/>
 Especifica cómo se establece la selección. Si *bSelect* es TRUE, la cadena está seleccionada y resaltada; si es FALSE, se quita el resaltado y la cadena ya no está seleccionada.
 
 *nFirstItem*<br/>
@@ -1412,7 +1412,7 @@ int SetSel(
 *nIndex*<br/>
 Contiene el índice de base cero de la cadena debe establecerse. Si -1, la selección se agrega o quita de todas las cadenas, dependiendo del valor de *bSelect*.
 
-*bSeleccione*<br/>
+*bSelect*<br/>
 Especifica cómo se establece la selección. Si *bSelect* es TRUE, la cadena está seleccionada y resaltada; si es FALSE, se quita el resaltado y la cadena ya no está seleccionada. La cadena especificada se selecciona y se resalta de forma predeterminada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1544,6 +1544,6 @@ Un valor devuelto de 0 o mayor especifica el índice de un elemento en el cuadro
 [CWnd (clase)](../../mfc/reference/cwnd-class.md)<br/>
 [CButton (clase)](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox (clase)](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit (clase)](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar (clase)](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic (clase)](../../mfc/reference/cstatic-class.md)

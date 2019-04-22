@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
 ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026797"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl (Clase)
@@ -91,7 +91,7 @@ Una interfaz de comandos. De manera predeterminada, es `ICommand`.
 |[Cancelar](#cancel)|Cancela la ejecución del comando actual.|
 |[CancelExecution](#cancelexecution)|Cancela la ejecución del comando actual.|
 |[CreateRowset](#createrowset)|Crea un objeto de conjunto de filas.|
-|[Ejecutar](#execute)|Ejecuta el comando.|
+|[Execute](#execute)|Ejecuta el comando.|
 |[GetDBSession](#getdbsession)|Devuelve un puntero de interfaz a la sesión que creó el comando.|
 |[ICommandImpl](#icommandimpl)|El constructor.|
 

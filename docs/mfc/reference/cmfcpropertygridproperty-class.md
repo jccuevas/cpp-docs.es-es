@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779032"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty (clase)
@@ -406,7 +406,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bPermitir*<br/>
+*bAllow*<br/>
 [in] TRUE para hacer que la propiedad modificable; FALSE para que la propiedad de solo lectura. El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -545,7 +545,7 @@ void Enable(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar la propiedad; FALSE para deshabilitar la propiedad. Propiedades deshabilitadas no responden a la entrada del teclado o mouse (ratón). El valor predeterminado es TRUE.
 
 ### <a name="remarks"></a>Comentarios
@@ -563,13 +563,13 @@ void EnableSpinControl(
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el control de botón de número; FALSE para deshabilitar el control de botón de número. El valor predeterminado es TRUE.
 
 *nMin*<br/>
 [in] El valor mínimo del control de botón de número. El valor predeterminado es 0.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 [in] El valor máximo del control de botón de número. El valor predeterminado es 0.
 
 ### <a name="remarks"></a>Comentarios
@@ -1704,7 +1704,7 @@ void Show(
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar la propiedad actual y sus subelementos; FALSE para ocultar la propiedad actual y sus elementos secundarios. El valor predeterminado es TRUE.
 
 *bAdjustLayout*<br/>

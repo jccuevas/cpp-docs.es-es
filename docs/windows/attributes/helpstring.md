@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
 ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022210"
 ---
 # <a name="helpstring"></a>helpstring
@@ -25,7 +25,7 @@ Especifica una cadena de caracteres que se usa para describir el elemento al que
 
 ### <a name="parameters"></a>Parámetros
 
-*cadena*<br/>
+*string*<br/>
 El texto de la cadena de ayuda.
 
 ## <a name="remarks"></a>Comentarios
@@ -55,6 +55,6 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 [Atributos de interfaz](interface-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpcontext](helpcontext.md)

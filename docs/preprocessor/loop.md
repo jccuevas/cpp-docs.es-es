@@ -6,10 +6,10 @@ f1_keywords:
 - vc-pragma.loop
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
 ms.openlocfilehash: a1640881d98073381a941478f4b78177a95698d7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023171"
 ---
 # <a name="loop"></a>bucle
@@ -44,4 +44,4 @@ Para usar el **bucle** pragma, lo coloca inmediatamente antes, no en: una defini
 ## <a name="see-also"></a>Vea también
 
 [Paralelización y vectorización automáticas](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

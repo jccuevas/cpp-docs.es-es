@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
 ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58785816"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Biblioteca de plantillas de Windows Runtime C++ (WRL)
@@ -147,5 +147,5 @@ Un objeto `WeakRef` normalmente representa un objeto cuya existencia se controla
 |-|-|
 |[API clave por categoría](key-wrl-apis-by-category.md)|Se resaltan los tipos, funciones y macros de biblioteca de plantillas C++ de Windows en tiempo de ejecución principal.|
 |[Referencia](wrl-reference.md)|Contiene información de referencia para la biblioteca de plantillas C++ de Windows en tiempo de ejecución.|
-|[Referencia rápida (en tiempo de ejecución de Windows y Visual C++)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente el C + + / características CX que admiten el tiempo de ejecución de Windows.|
+|[Referencia rápida (en tiempo de ejecución de Windows y Visual C++)](../../cppcx/quick-reference-c-cx.md)|Describe brevemente el C++/CX características compatibles con el tiempo de ejecución de Windows.|
 |[Usar los componentes de Windows en tiempo de ejecución en Visual C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Se muestra cómo usar C++ / c++ / CX para crear un componente básico de Windows en tiempo de ejecución.|

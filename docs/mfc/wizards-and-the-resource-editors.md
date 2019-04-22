@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773832"
 ---
 # <a name="wizards-and-the-resource-editors"></a>Asistentes y editores de recursos
@@ -52,4 +52,4 @@ El marco de trabajo MFC, editores de recursos, los asistentes de Visual C++ y MF
 
 ## <a name="see-also"></a>Vea también
 
-[Usar las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+[Uso de las clases para escribir aplicaciones para Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

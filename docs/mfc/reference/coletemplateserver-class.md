@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781216"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer (clase)
@@ -100,7 +100,7 @@ Referencia al identificador de clase OLE que solicita la plantilla.
 *pDocTemplate*<br/>
 Puntero a la plantilla de documento.
 
-*bMultiInstance al*<br/>
+*bMultiInstance*<br/>
 Indica si una sola instancia de la aplicación puede admitir varias creaciones de instancias. Si es TRUE, se inician múltiples instancias de la aplicación para que cada solicitud crear un objeto.
 
 ### <a name="remarks"></a>Comentarios
@@ -156,7 +156,7 @@ Una lista de entradas que se escribe en el registro solo si hay entradas.
 *rglpszOverwrite*<br/>
 Una lista de entradas que se escribe en el registro, independientemente de que existan las entradas anteriores.
 
-*bInscríbase al*<br/>
+*bRegister*<br/>
 Determina si la clase es que se registrarán. Si *bInscríbase al* es TRUE, la clase se registra con el registro del sistema. En caso contrario, anula el registro de la clase.
 
 ### <a name="remarks"></a>Comentarios

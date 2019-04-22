@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774188"
 ---
 # <a name="cdocument-class"></a>CDocument (clase)
@@ -375,7 +375,7 @@ virtual POSITION FindChunk(
 *guid*<br/>
 Especifica el GUID de un fragmento a buscar.
 
-*PID*<br/>
+*pid*<br/>
 Especifica un PID de un fragmento a buscar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1070,10 +1070,10 @@ virtual void RemoveChunk(
 
 ### <a name="parameters"></a>Parámetros
 
-*GUID*<br/>
+*Guid*<br/>
 Especifica el GUID de un fragmento que se va a quitar.
 
-*PID*<br/>
+*Pid*<br/>
 Especifica el PID de un fragmento que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 Señala al nombre del documento que se va a guardar o cargar.
 
-*h*<br/>
+*e*<br/>
 Apunta a la excepción que se produjo. Puede ser NULL.
 
 *bSaving*<br/>

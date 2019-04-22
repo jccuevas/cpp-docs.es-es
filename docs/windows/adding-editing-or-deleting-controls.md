@@ -44,10 +44,10 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025369"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Cómo Agregar, editar o eliminar los controles (C++)
@@ -190,9 +190,9 @@ Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo. Pa
 
 El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles ActiveX en el cuadro de diálogo al usar el [Editor de cuadro de diálogo](../windows/dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
-|**Control ActiveX**|Muestra una lista de controles ActiveX.<br/><br/>Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear uno, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md).<br/><br/>Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.|
+|**ActiveX Control**|Muestra una lista de controles ActiveX.<br/><br/>Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear uno, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md).<br/><br/>Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.|
 |**Ruta de acceso**|Muestra el archivo donde se encuentra el control ActiveX.|
 
 > [!CAUTION]
@@ -231,8 +231,8 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Administrar controles de cuadro de diálogo](controls-in-dialog-boxes.md)<br/>
-[Cómo Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Filtrar Definir el Control de acceso y valores](defining-mnemonics-access-keys.md)<br/>
+[Cómo: Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Cómo: Definición del control de acceso y los valores](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

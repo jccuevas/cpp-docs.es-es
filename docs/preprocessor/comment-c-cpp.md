@@ -11,10 +11,10 @@ helpviewer_keywords:
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
 ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025275"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
@@ -39,7 +39,7 @@ Coloca el nombre y número de versión del compilador en el archivo objeto. El v
 
 Lugares *commentstring* en el archivo objeto. En el momento de la vinculación, esta cadena se coloca en el archivo ejecutable. La cadena no se carga en memoria cuando se carga el archivo ejecutable; sin embargo, se puede encontrar con un programa que encuentre las cadenas imprimibles en los archivos. Un uso para este tipo de registro de comentario es incrustar un número de versión o información similar en un archivo ejecutable.
 
-`exestr` está en desuso y se quitará en futuras versiones. el vinculador no procesa el registro de comentario.
+`exestr` está desusado y se quitará en una futura versión; el vinculador no procesa el registro de comentario.
 
 ### <a name="lib"></a>lib
 
@@ -94,4 +94,4 @@ La directiva pragma siguiente hace que el compilador coloque el nombre y el núm
 
 ## <a name="see-also"></a>Vea también
 
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780488"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit (clase)
@@ -286,7 +286,7 @@ void EnableSpinButtons(
 *nMin*<br/>
 [in] El valor mínimo del botón de número.
 
-*Nmáx.*<br/>
+*nMax*<br/>
 [in] El valor máximo del botón de número.
 
 ### <a name="remarks"></a>Comentarios
@@ -555,7 +555,7 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Parámetros
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] TRUE para habilitar el control; FALSE para deshabilitar el control.
 
 ### <a name="remarks"></a>Comentarios
@@ -649,7 +649,7 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>Parámetros
 
-*bMostrar*<br/>
+*bShow*<br/>
 [in] TRUE para mostrar el control; FALSE para ocultar el control.
 
 ### <a name="remarks"></a>Comentarios
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Puntero a la ventana primaria para el `CMFCRibbonEdit` objeto.
 
-*datos*<br/>
+*data*<br/>
 Los datos de accesibilidad para el `CMFCRibbonEdit` objeto.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -754,5 +754,5 @@ El `CMFCRibbonEdit` control tiene dos anchos según su modo de presentación: fl
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[Clase CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
+[CMFCRibbonButton (clase)](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [CMFCRibbonBar (clase)](../../mfc/reference/cmfcribbonbar-class.md)

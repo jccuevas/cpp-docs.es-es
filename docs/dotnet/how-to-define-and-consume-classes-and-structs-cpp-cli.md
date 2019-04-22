@@ -1,18 +1,18 @@
 ---
-title: Filtrar Definir y utilizar clases y Structs (C++ / c++ / CLI)
+title: Procedimiento Definir y utilizar clases y Structs (C++ / c++ / CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774924"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Filtrar Definir y utilizar clases y Structs (C++ / c++ / CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Procedimiento Definir y utilizar clases y Structs (C++ / c++ / CLI)
 
 Este artículo muestra cómo definir y utilizar tipos de referencia definidos por el usuario y tipos de valor C++ / c++ / CLI.
 
@@ -499,7 +499,7 @@ Estas semánticas diferentes del puntero `this` pueden provocar un comportamient
 
 Para obtener más información, consulte
 
-- [Identificador de operador de objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Identificador a un operador de objeto (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
 - [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
