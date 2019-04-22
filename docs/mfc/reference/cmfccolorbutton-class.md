@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780007"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton (clase)
@@ -162,7 +162,7 @@ void EnableAutomaticButton(
 *colorAutomatic*<br/>
 [in] Un valor RGB que especifica el color predeterminado de automático del botón.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Especifica si el botón automático está habilitado o deshabilitado.
 
 ### <a name="remarks"></a>Comentarios
@@ -186,7 +186,7 @@ void EnableOtherButton(
 *bAltColorDlg*<br/>
 [in] Especifica si el [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) cuando el usuario hace clic en el botón, se abre el cuadro de diálogo o el cuadro de diálogo de color del sistema.
 
-*bHabilitar el*<br/>
+*bEnable*<br/>
 [in] Especifica si el botón "otro" está habilitado o deshabilitado.
 
 ### <a name="remarks"></a>Comentarios
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*colores*<br/>
+*color*<br/>
 [in] Un valor RGB.
 
 ### <a name="remarks"></a>Comentarios
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Parámetros
 
-*colores*<br/>
+*color*<br/>
 [in] El valor del color RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Parámetros
 
-*colores*<br/>
+*color*<br/>
 [in] Un color seleccionado por el usuario.
 
 ### <a name="remarks"></a>Comentarios

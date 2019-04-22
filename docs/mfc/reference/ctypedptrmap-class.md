@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781801"
 ---
 # <a name="ctypedptrmap-class"></a>Clase CTypedPtrMap
@@ -40,7 +40,7 @@ Clase base de la clase de mapa de puntero con tipo. debe ser una clase de mapa d
 *KEY*<br/>
 Clase del objeto se utiliza como clave para la asignación.
 
-*VALUE*<br/>
+*VALOR*<br/>
 Clase del objeto almacenado en el mapa.
 
 ## <a name="members"></a>Miembros
@@ -100,10 +100,10 @@ Parámetro de plantilla que especifica el tipo de las claves del mapa.
 *rKey*<br/>
 Especifica la clave devuelta del elemento recuperado.
 
-*VALUE*<br/>
+*VALOR*<br/>
 Parámetro de plantilla que especifica el tipo de valores del mapa.
 
-*valor r*<br/>
+*rValue*<br/>
 Especifica el valor devuelto del elemento recuperado.
 
 ### <a name="remarks"></a>Comentarios
@@ -130,10 +130,10 @@ Parámetro de plantilla que especifica la clase base de la clase de este mapa.
 *key*<br/>
 La clave del elemento que se va a buscar.
 
-*VALUE*<br/>
+*VALOR*<br/>
 Parámetro de plantilla que especifica el tipo de los valores almacenados en este mapa.
 
-*valor r*<br/>
+*rValue*<br/>
 Especifica el valor devuelto del elemento recuperado.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -154,7 +154,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Parámetros
 
-*VALUE*<br/>
+*VALOR*<br/>
 Parámetro de plantilla que especifica el tipo de los valores almacenados en este mapa.
 
 *BASE_CLASS*<br/>

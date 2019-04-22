@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781450"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd (clase)
@@ -388,7 +388,7 @@ virtual BOOL CreateView(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica la fila de la ventana divisora donde desea colocar la nueva vista.
 
 *col*<br/>
@@ -475,7 +475,7 @@ virtual void DeleteView(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica la fila de la ventana divisora en la que se va a eliminar la vista.
 
 *col*<br/>
@@ -649,7 +649,7 @@ CWnd* GetPane(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica una fila.
 
 *col*<br/>
@@ -684,7 +684,7 @@ void GetRowInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica una fila.
 
 *cyCur*<br/>
@@ -727,7 +727,7 @@ int IdFromRowCol(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica la fila de la ventana divisora.
 
 *col*<br/>
@@ -877,7 +877,7 @@ virtual void SetActivePane(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Si *conquistado* es NULL, que especifica la fila en el panel que estará activo.
 
 *col*<br/>
@@ -937,7 +937,7 @@ void SetRowInfo(
 
 ### <a name="parameters"></a>Parámetros
 
-*Fila*<br/>
+*row*<br/>
 Especifica una fila de la ventana divisora.
 
 *cyIdeal*<br/>
