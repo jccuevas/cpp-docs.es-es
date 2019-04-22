@@ -21,10 +21,10 @@ helpviewer_keywords:
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
 ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024535"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Funciones intrínsecas _InterlockedExchangePointer
@@ -64,7 +64,7 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>Parámetros
 
-*Destino*<br/>
+*Target*<br/>
 [in, out] Puntero al puntero al valor que se intercambian. La función establece el valor en `Value` y devuelve su valor anterior.
 
 *Valor*<br/>

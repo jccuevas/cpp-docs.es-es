@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041246"
 ---
 # <a name="codeseg"></a>code_seg
@@ -87,4 +87,4 @@ También puede especificar secciones para datos inicializados ([data_seg](../pre
 ## <a name="see-also"></a>Vea también
 
 [code_seg (__declspec)](../cpp/code-seg-declspec.md)<br/>
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

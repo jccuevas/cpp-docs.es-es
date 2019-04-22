@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777588"
 ---
 # <a name="scrolling-and-scaling-views"></a>Desplazar y escalar vistas
@@ -35,7 +35,7 @@ Con frecuencia el tamaño de un documento es mayor que el tamaño que puede most
 
 Cualquier vista puede controlar mensajes de la barra de desplazamiento en su `OnHScroll` y `OnVScroll` funciones miembro. Puede hacer todo el trabajo usted mismo cualquier control de mensajes de barra de desplazamiento de implementar en estas funciones, o puede usar el `CScrollView` clase para controlar el desplazamiento por usted.
 
-`CScrollView` ocurre lo siguiente:
+`CScrollView` hace lo siguiente:
 
 - Administra los tamaños de ventana y la ventanilla y modos de asignación.
 
@@ -49,4 +49,4 @@ Si desea que la vista se ajuste automáticamente el tamaño de su ventana de mar
 
 ## <a name="see-also"></a>Vea también
 
-[Usar vistas](../mfc/using-views.md)
+[Uso de vistas](../mfc/using-views.md)

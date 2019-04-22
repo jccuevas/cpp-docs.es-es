@@ -11,10 +11,10 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
 ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773845"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem (clase)
@@ -114,4 +114,4 @@ Para obtener más información, consulte [DVASPECT](/windows/desktop/api/wtypes/
 [COleClientItem (clase)](../../mfc/reference/coleclientitem-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md)<br/>
-[CRichEditView Class](../../mfc/reference/cricheditview-class.md)
+[CRichEditView (clase)](../../mfc/reference/cricheditview-class.md)

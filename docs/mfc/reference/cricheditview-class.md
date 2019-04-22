@@ -101,10 +101,10 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773728"
 ---
 # <a name="cricheditview-class"></a>CRichEditView Class
@@ -263,7 +263,7 @@ void DoPaste(
 *dataobj*<br/>
 El [COleDataObject](../../mfc/reference/coledataobject-class.md) que contiene los datos que se va a pegar.
 
-*CF*<br/>
+*cf*<br/>
 El formato de Portapapeles deseado.
 
 *hMetaPict*<br/>
@@ -298,7 +298,7 @@ Indica si la búsqueda distingue mayúsculas de minúsculas.
 *bWord*<br/>
 Indica si la búsqueda debe coincidir con palabras completas, no partes de palabras.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Indica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -336,7 +336,7 @@ Indica si la búsqueda distingue mayúsculas de minúsculas.
 *bWord*<br/>
 Indica si la búsqueda debe coincidir con palabras completas, no partes de palabras.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Indica la dirección de la búsqueda. Si es TRUE, la dirección de búsqueda es hacia el final del búfer. Si es FALSE, la dirección de búsqueda es hacia el principio del búfer.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -683,7 +683,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 El formato del Portapapeles de interés.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -786,7 +786,7 @@ virtual void OnFindNext(
 *lpszFind*<br/>
 Cadena que se va a buscar.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 La dirección de búsqueda: TRUE indica abajo; Es FALSE, arriba.
 
 *bCase*<br/>
@@ -932,7 +932,7 @@ virtual void OnReplaceSel(
 *lpszFind*<br/>
 El texto que se debe reemplazar.
 
-*bSiguiente*<br/>
+*bNext*<br/>
 Indica la dirección de la búsqueda: TRUE si está presionada; Es FALSE, arriba.
 
 *bCase*<br/>
@@ -1159,7 +1159,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="parameters"></a>Parámetros
 
-*CF*<br/>
+*cf*<br/>
 [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) estructura que contiene los atributos de formato de carácter predeterminado nuevo.
 
 ### <a name="remarks"></a>Comentarios
