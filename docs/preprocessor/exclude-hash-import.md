@@ -7,10 +7,10 @@ helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
 ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032393"
 ---
 # <a name="exclude-import"></a>excluir (\#importar)
@@ -27,19 +27,19 @@ exclude("Name1"[, "Name2",...])
 
 ### <a name="parameters"></a>Parámetros
 
-*Nombre1*<br/>
+*Name1*<br/>
 Primer elemento que se excluirá.
 
-*Nombre2*<br/>
+*Name2*<br/>
 Segundo elemento que se excluirá (si es necesario).
 
 ## <a name="remarks"></a>Comentarios
 
 Las bibliotecas de tipos pueden incluir definiciones de elementos definidos en encabezados de sistema u otras bibliotecas de tipos. Este atributo puede tomar cualquier número de argumentos, cada uno de los cuales es un elemento de nivel superior de la biblioteca de tipos que se va a excluir.
 
-**Específicos de C++: END**
+**FIN de específicos de C++**
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

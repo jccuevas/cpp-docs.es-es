@@ -24,10 +24,10 @@ helpviewer_keywords:
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
 ms.openlocfilehash: 7910522578d89657adb09eb7729eb7539e010027
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027655"
 ---
 # <a name="version-information-editor-c"></a>Editor de información de versión (C++)
@@ -86,7 +86,7 @@ Win32
 
 ## <a name="see-also"></a>Vea también
 
-[editores de recursos](../windows/resource-editors.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
 <!--
 [Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
 [Version Information (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms646981.aspx)-->

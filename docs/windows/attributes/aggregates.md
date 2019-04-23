@@ -10,10 +10,10 @@ helpviewer_keywords:
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
 ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028710"
 ---
 # <a name="aggregates"></a>agregados
@@ -94,7 +94,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Agregación](/windows/desktop/com/aggregation)<br/>
 [Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

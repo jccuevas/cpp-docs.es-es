@@ -13,10 +13,10 @@ helpviewer_keywords:
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
 ms.openlocfilehash: ddae6137e94e10f5701e1e7d0f8f7a7514b18662
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034266"
 ---
 # <a name="using-directive-ccli"></a>#using (directiva) (C++ / c++ / CLI)
@@ -31,7 +31,7 @@ Importa metadatos en un programa compilado con [/CLR](../build/reference/clr-com
 
 ### <a name="parameters"></a>Parámetros
 
-*archivo*<br/>
+*file*<br/>
 Archivo .dll, .exe, .netmodule u .obj de MSIL. Por ejemplo,
 
 `#using <MyComponent.dll>`

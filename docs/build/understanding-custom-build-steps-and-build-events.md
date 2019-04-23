@@ -12,10 +12,10 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028511"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Descripción de los pasos de compilación personalizada y los eventos de compilación
@@ -66,12 +66,12 @@ Los eventos de compilación y los pasos de compilación personalizada se ejecuta
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Especificar las herramientas de compilación personalizadas](specifying-custom-build-tools.md)<br/>
-[Especificar eventos de compilación](specifying-build-events.md)<br/>
+[Especificación de las herramientas de compilación personalizadas](specifying-custom-build-tools.md)<br/>
+[Especificación de eventos de compilación](specifying-build-events.md)<br/>
 [Solución de problemas de personalizaciones de compilación](troubleshooting-build-customizations.md)<br/>
-[Dar formato al resultado de un paso de compilación personalizada o un evento de compilación](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[Aplicación de formato a la presentación de un paso de compilación personalizada o de un evento de compilación](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Proyectos de Visual Studio: C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Macros comunes para propiedades y comandos de compilación](reference/common-macros-for-build-commands-and-properties.md)

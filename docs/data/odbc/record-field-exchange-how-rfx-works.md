@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032682"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Intercambio de campos de registro: Funcionamiento de RFX
@@ -90,7 +90,7 @@ Si agrega un nuevo registro, el conjunto de registros funciona como un búfer de
 
 1. `AddNew` o `Edit` prepara los campos en el búfer de edición para que RFX pueda detectar los miembros de datos de campo modificados.
 
-   Dado que un nuevo registro no tiene ningún valor anterior para comparar los nuevos, `AddNew` establece el valor de cada miembro de datos de campo en un valor PSEUDO_NULL. Más adelante, cuando se llama a `Update`, RFX compara el valor de cada miembro de datos con el valor PSEUDO_NULL. Si hay una diferencia, se estableció el miembro de datos. (PSEUDO_NULL no es igual a una columna de registro con un valor Null es true ni ninguno de ellos igual que NULL de C++.)
+   Dado que un nuevo registro no tiene ningún valor anterior para comparar los nuevos, `AddNew` establece el valor de cada miembro de datos de campo en un valor PSEUDO_NULL. Más adelante, cuando se llama a `Update`, RFX compara el valor de cada miembro de datos con el valor PSEUDO_NULL. Si hay una diferencia, se estableció el miembro de datos. (PSEUDO_NULL no es igual a una columna de registro con un valor Null es true ni ninguno de ellos igual C++ NULL.)
 
    A diferencia de la `Update` llamar para `AddNew`, `Update` llamar para `Edit` compara los valores actualizados con los valores almacenados previamente en lugar de utilizar PSEUDO_NULL. La diferencia es que `AddNew` no tiene ningún valor almacenado previamente para la comparación.
 
@@ -124,6 +124,6 @@ Cuando se elimina un registro, RFX establece todos los campos en NULL como recor
 
 [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
-[Macros, funciones globales y variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
+[Macros, funciones globales y Variables globales](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange (clase)](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

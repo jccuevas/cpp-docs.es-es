@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: cb4802fbf4d647f11298848e3dac1b1d92300ce8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0c688ad4d9b607cc1f5fb6b1c6d536a1c7888e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654745"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031146"
 ---
 # <a name="progid"></a>progid
 
@@ -64,4 +64,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 [Atributos IDL](idl-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
-[Clave de Id. de programa](/windows/desktop/com/-progid--key)
+[ProgID Key](/windows/desktop/com/-progid--key)

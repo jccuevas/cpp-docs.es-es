@@ -3,10 +3,10 @@ title: Aplicaciones de escritorio (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033125"
 ---
 # <a name="desktop-applications-visual-c"></a>Aplicaciones de escritorio (Visual C++)
@@ -39,12 +39,12 @@ Puede usar cualquier aplicación de escritorio de C++ en tiempo de ejecución de
 |-----------|-----------------|
 |[Aplicaciones de consola de Windows en C++](console-applications-in-visual-cpp.md)|Contiene información acerca de las aplicaciones de consola. Una aplicación de consola Win32 (o Win64) no tiene ninguna ventana propia ni ningún bucle de mensajes. Se ejecuta en la ventana de la consola; la entrada y la salida se controlan a través de la línea de comandos.|
 |[Tutorial: Crear aplicaciones de escritorio de Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Crear una sencilla aplicación de escritorio de Windows.|
-|[Crear una aplicación de escritorio de Windows vacía](creating-an-empty-windows-desktop-application.md)|Cómo crear un proyecto de escritorio de Windows que no tiene ningún archivo de forma predeterminada.|
-|[Agregar archivos a una aplicación de Win32 vacía](adding-files-to-an-empty-win32-applications.md)|Cómo agregar archivos a un proyecto vacío.|
-|[Trabajar con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, las tablas de cadenas y otros recursos a una aplicación de escritorio.|
+|[Creación de una aplicación de escritorio de Windows vacía](creating-an-empty-windows-desktop-application.md)|Cómo crear un proyecto de escritorio de Windows que no tiene ningún archivo de forma predeterminada.|
+|[Adición de archivos a una aplicación de Win32 vacía](adding-files-to-an-empty-win32-applications.md)|Cómo agregar archivos a un proyecto vacío.|
+|[Trabajo con archivos de recursos](working-with-resource-files.md)|Cómo agregar imágenes, iconos, las tablas de cadenas y otros recursos a una aplicación de escritorio.|
 |[Recursos para crear un juego usando DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Vínculos a contenido para crear juegos en C++.|
 |[Tutorial: Crear y utilizar una biblioteca estática](walkthrough-creating-and-using-a-static-library-cpp.md)|Cómo crear un archivo binario .lib.|
-|[Filtrar Use Windows 10 SDK en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
+|[Cómo: Usar el SDK de Windows 10 en una aplicación de escritorio de Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Indica los pasos necesarios para configurar el proyecto de desarrollo con el SDK de Windows 10.|
 
 ## <a name="related-articles"></a>Artículos relacionados
 

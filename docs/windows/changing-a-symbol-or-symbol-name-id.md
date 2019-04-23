@@ -1,5 +1,5 @@
 ---
-title: Filtrar Administrar los símbolos
+title: Procedimiento Administrar los símbolos
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
@@ -36,13 +36,13 @@ helpviewer_keywords:
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
 ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034000"
 ---
-# <a name="how-to-manage-symbols"></a>Filtrar Administrar los símbolos
+# <a name="how-to-manage-symbols"></a>Procedimiento Administrar los símbolos
 
 Cuando se crea un nuevo recurso u objeto de recurso, el entorno de desarrollo le asigna un nombre de símbolo predeterminado, por ejemplo, `IDD_DIALOG1`. Puede usar el [ventana propiedades](/visualstudio/ide/reference/properties-window) para cambiar el nombre del símbolo predeterminado o para cambiar el nombre de cualquier símbolo ya asociado a un recurso.
 
@@ -215,5 +215,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Filtrar Creación de símbolos](../windows/creating-new-symbols.md)<br/>
+[Cómo: Crear símbolos](../windows/creating-new-symbols.md)<br/>
 [Identificadores de símbolo predefinidos](../windows/predefined-symbol-ids.md)<br/>

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
 ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030094"
 ---
 # <a name="open-database-connectivity-odbc"></a>Conectividad abierta de bases de datos (ODBC)
@@ -36,7 +36,7 @@ Para obtener más información sobre el uso de la API de ODBC sin MFC, vea el [O
 
 - [SQL](sql.md) para ODBC
 
-- [Transacciones de bases de datos](transaction-odbc.md)
+- [Transacciones de base de datos](transaction-odbc.md)
 
 - [Determinar el esquema de origen de datos ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) en tiempo de ejecución
 
@@ -64,18 +64,18 @@ Estas tareas se basan en MFC [ODBC](odbc-basics.md) clases. Para obtener más in
 
 - [Diseñar y crear una aplicación de base de datos ODBC](design-and-create-an-odbc-database-application.md)
 
-- [Utilizar formularios de base de datos (Vistas de registros) con ODBC](use-database-forms-record-views-with-odbc.md)
+- [Usar formularios de base de datos (vistas de registros) con ODBC](use-database-forms-record-views-with-odbc.md)
 
-- [Utilizar ODBC para trabajar con otros usuarios](use-odbc-to-work-with-other-users.md)
+- [Usar ODBC para trabajar con otros usuarios](use-odbc-to-work-with-other-users.md)
 
 - [Trabajar con conexiones de base de datos ODBC](work-with-odbc-database-connections.md)
 
 - [Trabajar con ODBC y controladores](work-with-odbc-and-drivers.md)
 
-- [Utilizar la biblioteca de cursores ODBC](use-the-odbc-cursor-library.md)
+- [Usar la biblioteca de cursores ODBC](use-the-odbc-cursor-library.md)
 
-- [Utilizar conjuntos de registros ODBC de MFC](use-mfc-odbc-recordsets.md)
+- [Usar conjuntos de registros ODBC de MFC](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>Vea también
 
-[Programación del acceso a datos (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Acceso a los datos de programación (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

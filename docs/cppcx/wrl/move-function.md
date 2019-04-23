@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
 ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031279"
 ---
 # <a name="move-function"></a>Move (función)
@@ -53,4 +53,4 @@ Para obtener más información, consulte el **mover semántica** sección de [de
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

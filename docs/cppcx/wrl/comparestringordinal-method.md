@@ -6,10 +6,10 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
 ms.openlocfilehash: a1ac0576bdd374daa5cbd445af480e7652b61e45
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027708"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal (Método)
@@ -26,10 +26,10 @@ inline INT32 CompareStringOrdinal(
 
 ### <a name="parameters"></a>Parámetros
 
-*LHS*<br/>
+*lhs*<br/>
 La primera HSTRING para comparar.
 
-*RHS*<br/>
+*rhs*<br/>
 El segundo HSTRING para comparar.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -52,4 +52,4 @@ Compara dos objetos HSTRING especificados y devuelve un entero que indica su pos
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Wrappers::Details (Espacio de nombres)](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft::WRL::Wrappers::Details (espacio de nombres)](microsoft-wrl-wrappers-details-namespace.md)

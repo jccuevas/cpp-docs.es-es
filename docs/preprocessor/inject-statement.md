@@ -7,10 +7,10 @@ helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
 ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034292"
 ---
 # <a name="injectstatement"></a>inject_statement
@@ -34,9 +34,9 @@ Texto original que se inserta en el archivo de encabezado de la biblioteca de ti
 
 El texto se coloca al principio de la declaración de espacio de nombres que incluye el contenido de la biblioteca de tipos en el archivo de encabezado.
 
-**Específicos de C++: END**
+**FIN de específicos de C++**
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031370"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>Comentarios
 
-El **alloc_text** pragma no controla funciones miembro de C++ o funciones sobrecargadas. Es aplicable solo a las funciones declaradas con vinculación C, es decir, las funciones declaradas con el **extern "C"** especificación de vinculación. Si intenta utilizar esta directiva pragma en una función con vinculación de C++, se genera un error del compilador.
+El **alloc_text** pragma no controla C++ funciones miembro o funciones sobrecargadas. Es aplicable solo a las funciones declaradas con vinculación C, es decir, las funciones declaradas con el **extern "C"** especificación de vinculación. Si intenta utilizar esta directiva pragma en una función con vinculación de C++, se genera un error del compilador.
 
 Ya que el uso del direccionamiento de función `__based` no se admite, especificar ubicaciones de sección requiere el uso de la **alloc_text** pragma. El nombre especificado por *textsection* debe incluirse entre comillas dobles.
 
@@ -44,4 +44,4 @@ Otra limitación respecto al **alloc_text** son los siguientes:
 
 ## <a name="see-also"></a>Vea también
 
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

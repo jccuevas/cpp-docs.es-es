@@ -6,10 +6,10 @@ f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
 ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027573"
 ---
 # <a name="swap-function-wrl"></a>Swap (función) (WRL)
@@ -27,7 +27,7 @@ WRL_NOTHROW inline void Swap(
 
 ### <a name="parameters"></a>Parámetros
 
-*izquierda*<br/>
+*left*<br/>
 Primer argumento.
 
 *right*<br/>
@@ -47,4 +47,4 @@ Intercambia los valores de los dos argumentos especificados.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

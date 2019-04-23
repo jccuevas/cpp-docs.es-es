@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
 ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028748"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
@@ -39,7 +39,7 @@ unsigned short _rotr16(
 *value*<br/>
 [in] El valor se va a girar.
 
-*desplazamiento*<br/>
+*shift*<br/>
 [in] El número de bits que se va a girar.
 
 ## <a name="return-value"></a>Valor devuelto

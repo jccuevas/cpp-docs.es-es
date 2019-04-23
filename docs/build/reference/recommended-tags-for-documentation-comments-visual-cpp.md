@@ -3,10 +3,10 @@ title: Etiquetas recomendadas para comentarios de documentación (comentarios de
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
 ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027901"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>Etiquetas recomendadas para los comentarios de documentación

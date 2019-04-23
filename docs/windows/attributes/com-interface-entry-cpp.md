@@ -1,5 +1,5 @@
 ---
-title: COM_INTERFACE_ENTRY (atributo de COM de C++)
+title: COM_INTERFACE_ENTRY (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
 ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030412"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
@@ -31,7 +31,7 @@ Una cadena que contiene el texto real de la entrada. Para obtener una lista de v
 
 ## <a name="remarks"></a>Comentarios
 
-El **com_interface_entry** atributo de C++ inserta el contenido íntegra de una cadena de caracteres en el mapa de interfaz COM del objeto de destino. Si el atributo se aplica una vez al objeto de destino, se inserta la entrada en el principio de la asignación de interfaz existente. Si se aplica el atributo varias veces al mismo objeto de destino, las entradas se insertan al principio de la asignación de interfaz en el orden en que se reciben.
+El **com_interface_entry** C++ atributo inserta el contenido íntegra de una cadena de caracteres en el mapa de interfaz COM del objeto de destino. Si el atributo se aplica una vez al objeto de destino, se inserta la entrada en el principio de la asignación de interfaz existente. Si se aplica el atributo varias veces al mismo objeto de destino, las entradas se insertan al principio de la asignación de interfaz en el orden en que se reciben.
 
 Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento. Si se usa cualquier atributo único, los otros dos se aplicarán automáticamente. Por ejemplo, si `progid` se aplica, `vi_progid` y `coclass` también se aplican.
 
@@ -120,4 +120,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 
 [Atributos COM](com-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

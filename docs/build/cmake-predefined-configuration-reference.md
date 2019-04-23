@@ -5,10 +5,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake redefined configurations
 ms.openlocfilehash: cecadaec2e409dfba3b1929e406c36df3e498307
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031456"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configuraciones de compilación predefinidas de CMake
@@ -346,9 +346,9 @@ Estas opciones permiten ejecutar comandos en el sistema remoto antes y después 
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
-[Configuración de un proyecto de CMake de Linux](../linux/cmake-linux-project.md)<br/>
-[Conexión al equipo remoto Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Configurar sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
-[Implementar, ejecutar y depurar el proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>
+[Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Configuración de sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
+[Implementación, ejecución y depuración del proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referencia de configuración predefinida de CMake](cmake-predefined-configuration-reference.md)<br/>
