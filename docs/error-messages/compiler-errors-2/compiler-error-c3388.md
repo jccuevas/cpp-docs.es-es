@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
 ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780033"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776735"
 ---
 # <a name="compiler-error-c3388"></a>Error del compilador C3388
 

@@ -1,5 +1,5 @@
 ---
-title: idl_quote (atributo de COM de C++)
+title: idl_quote (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037122"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -30,7 +30,7 @@ El nombre del atributo que desea que el compilador de Visual C++ que pasan a tra
 
 ## <a name="remarks"></a>Comentarios
 
-Si el **idl_quote** atributo de C++ se usa como un atributo independiente (con un punto y coma después del corchete de cierre), a continuación, *texto* se coloca en el archivo .idl combinados tal cual. Si **idl_quote** se utiliza en un símbolo, *texto* se coloca dentro del bloque de atributos para dicho símbolo.
+Si el **idl_quote** C++ atributo se utiliza como un atributo independiente (con un punto y coma después del corchete de cierre), a continuación, *texto* se coloca en el archivo .idl combinados tal cual. Si **idl_quote** se utiliza en un símbolo, *texto* se coloca dentro del bloque de atributos para dicho símbolo.
 
 ## <a name="example"></a>Ejemplo
 

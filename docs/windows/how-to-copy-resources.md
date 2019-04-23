@@ -1,5 +1,5 @@
 ---
-title: Filtrar Administrar los recursos (C++)
+title: Procedimiento Administrar los recursos (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
 ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036067"
 ---
-# <a name="how-to-manage-resources-c"></a>Filtrar Administrar los recursos (C++)
+# <a name="how-to-manage-resources-c"></a>Procedimiento Administrar los recursos (C++)
 
 ## <a name="copy-and-edit-resources"></a>Copiar y editar recursos
 
@@ -129,5 +129,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Archivos de recursos](../windows/resource-files-visual-studio.md)<br/>
-[Filtrar Creación de recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Filtrar Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Cómo: Crear recursos](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Cómo: Incluir recursos en tiempo de compilación](../windows/how-to-include-resources-at-compile-time.md)<br/>

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
 ms.openlocfilehash: 52c4313de5017b97a193be1afebc020c9896fe6a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035655"
 ---
 # <a name="supporting-notifications"></a>Admitir notificaciones
@@ -22,7 +22,7 @@ ms.locfileid: "59035655"
 
 Para implementar notificaciones, una clase de proveedor debe heredar de [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) y [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` Implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` Implementa funciones para advertir a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
+`IRowsetNotifyCP` implementa el sitio del proveedor para la interfaz de punto de conexión [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` implementa funciones aconsejar a los agentes de escucha en el punto de conexión de difusión `IID_IRowsetNotify` de los cambios en el contenido del conjunto de filas.
 
 También debe implementar y registrar `IRowsetNotify` en el consumidor (también conocido como el receptor) mediante [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) para que el consumidor puede controlar las notificaciones. Para obtener información acerca de cómo implementar la interfaz de punto de conexión del consumidor, consulte [recibir notificaciones](../../data/oledb/receiving-notifications.md).
 
@@ -83,7 +83,7 @@ Este mapa de puntos de conexión permite a los componentes buscando el `IRowsetN
 
 También deberá agregar las siguientes propiedades para el proveedor. Solo deberá agregar propiedades en función de las interfaces que proporciona soporte técnico.
 
-|Property|Agregar si admite|
+|Propiedad|Agregar si admite|
 |--------------|------------------------|
 |DBPROP_IConnectionPointContainer|Siempre|
 |DBPROP_NOTIFICATIONGRANULARITY|Siempre|

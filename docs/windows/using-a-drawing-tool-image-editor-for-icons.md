@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar una herramienta de dibujo
+title: Procedimiento Usar una herramienta de dibujo
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037794"
 ---
-# <a name="how-to-use-a-drawing-tool"></a>Filtrar Usar una herramienta de dibujo
+# <a name="how-to-use-a-drawing-tool"></a>Procedimiento Usar una herramienta de dibujo
 
 El **Editor de imágenes** tiene a mano alzada herramientas de dibujo y borradas que todo funcione de la misma manera. Seleccione la herramienta y, si es necesario, [seleccionar los colores de primer plano y fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y opciones de tamaño y forma. A continuación, mueva el puntero a la imagen y haga clic o arrastre para dibujar y borrar.
 
@@ -141,7 +141,7 @@ Ninguna
 ## <a name="see-also"></a>Vea también
 
 [Editor de imágenes para iconos](../windows/image-editor-for-icons.md)<br/>
-[Filtrar Crear un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Filtrar Editar una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[Filtrar Trabajar con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Cómo: Creación de un icono u otra imagen](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Cómo: Edición de una imagen](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Cómo: Trabajo con colores](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Teclas de aceleración](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

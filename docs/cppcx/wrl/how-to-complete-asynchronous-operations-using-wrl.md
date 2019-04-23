@@ -1,16 +1,16 @@
 ---
-title: Filtrar Completar operaciones asincrónicas mediante WRL
+title: Procedimiento Completar operaciones asincrónicas mediante WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
 ms.openlocfilehash: 09c341e5e3d4f6007d5d5f66b7c06e1f0af5a65c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040230"
 ---
-# <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Filtrar Completar operaciones asincrónicas mediante WRL
+# <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Procedimiento Completar operaciones asincrónicas mediante WRL
 
 Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para iniciar operaciones asincrónicas y realizar el trabajo cuando las operaciones se completan.
 
@@ -123,4 +123,4 @@ Para compilar el código, cópielo y, a continuación, péguelo en un proyecto d
 
 ## <a name="see-also"></a>Vea también
 
-[Biblioteca de plantillas de Windows Runtime C++ (WRL)](windows-runtime-cpp-template-library-wrl.md)
+[Biblioteca de plantillas C++ de Windows en tiempo de ejecución (WRL)](windows-runtime-cpp-template-library-wrl.md)

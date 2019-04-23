@@ -8,10 +8,10 @@ helpviewer_keywords:
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
 ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035603"
 ---
 # <a name="create-a-c-makefile-project"></a>Crear un proyecto de archivos MAKE de C++
@@ -54,7 +54,7 @@ Después de crear un proyecto de archivos MAKE, puede ver y editar cada una de l
 
 - **Vuelva a generar la línea de comandos:** Especifica la línea de comandos que se ejecutará cuando el usuario seleccione volver a generar en el menú compilar. Muestra en la regeneración de todos los campos de la línea de comandos en la página de Nmake de página de propiedades del proyecto.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Filtrar Habilitar IntelliSense para proyectos de archivos Make
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedimiento Habilitar IntelliSense para proyectos de archivos Make
 
 IntelliSense se produce un error en los proyectos de archivos MAKE cuando ciertas opciones de proyecto o las opciones del compilador se ha configurado correctamente. Siga estos pasos para configurar proyectos de archivos MAKE para que IntelliSense funcione según lo esperado:
 
@@ -86,7 +86,7 @@ La próxima vez que abra el proyecto de archivo Make en el entorno de desarrollo
 
 ## <a name="see-also"></a>Vea también
 
-[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
+[Usar IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Referencia de NMAKE](nmake-reference.md)<br>
 [Cómo: Crear un proyecto de C++ desde el código existente](../how-to-create-a-cpp-project-from-existing-code.md)
 [caracteres especiales en un archivo MAKE](special-characters-in-a-makefile.md)<br/>

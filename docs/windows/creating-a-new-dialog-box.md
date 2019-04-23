@@ -15,13 +15,13 @@ helpviewer_keywords:
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
 ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036333"
 ---
-# <a name="how-to-create-a-dialog-box-c"></a>Filtrar Crear un cuadro de diálogo (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Procedimiento Crear un cuadro de diálogo (C++)
 
 La ubicación y el tamaño de un cuadro de diálogo de C++ y la ubicación y tamaño de los controles dentro de ella, se miden en unidades de cuadro de diálogo. Los valores de los controles individuales y el cuadro de diálogo aparecen en la esquina inferior derecha de la barra cuando seleccionarlas de estado de Visual Studio.
 
@@ -105,4 +105,4 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Editor de cuadros de diálogo](../windows/dialog-editor.md)<br/>
-[Filtrar Administrar controles de cuadro de diálogo](../windows/controls-in-dialog-boxes.md)<br/>
+[Cómo: Administrar controles de cuadro de diálogo](../windows/controls-in-dialog-boxes.md)<br/>

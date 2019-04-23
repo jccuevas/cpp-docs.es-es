@@ -7,10 +7,10 @@ helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
 ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037946"
 ---
 # <a name="tlbid"></a>tlbid
@@ -27,7 +27,7 @@ tlbid(number)
 
 ### <a name="parameters"></a>Parámetros
 
-*número*<br/>
+*number*<br/>
 Número de la biblioteca de tipos en `filename`.
 
 ## <a name="remarks"></a>Comentarios
@@ -46,9 +46,9 @@ equivale a:
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**Específicos de C++: END**
+**FIN de específicos de C++**
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

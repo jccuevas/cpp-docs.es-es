@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038172"
 ---
 # <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
@@ -76,7 +76,7 @@ Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho m
 
 El **nuevo recurso de barra de herramientas** cuadro de diálogo tiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---------------|
 |**Ancho del botón**|Proporciona un espacio para escribir el ancho de los botones de barra de herramientas que está convirtiendo de un recurso de mapa de bits a un recurso de barra de herramientas.|
 |**Alto de botón**|Proporciona un espacio para escribir el alto de los botones de barra de herramientas que está convirtiendo de un recurso de mapa de bits a un recurso de barra de herramientas.|
@@ -88,11 +88,11 @@ De forma predeterminada, se muestra un botón nuevo o en blanco en el extremo de
 
 Un botón de barra de herramientas tiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |**ID**|Define el identificador del botón. La lista desplegable proporciona comunes **ID** nombres.|
-|**Ancho**|Establece el ancho del botón. se recomienda 16 píxeles.|
-|**Alto**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomienda 15 píxeles.|
+|**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|
+|**Height**|Establece el alto del botón. El alto de un botón cambia el alto de todos los botones de la barra de herramientas. se recomienda 15 píxeles.|
 |**Preguntar**|Define el mensaje que se muestra en la barra de estado. Agregar *\n* y agrega un nombre de un **información sobre herramientas** a ese botón de barra de herramientas. Para obtener más información, consulte [creación de una información sobre herramientas](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|
 
 **Ancho** y **alto** se aplican a todos los botones. Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho máximo de 2048, por lo que si establece el ancho del botón en *512*, solo puede tener cuatro botones y si se establece el ancho en *513*, solo puede tener tres botones.
@@ -203,7 +203,7 @@ MFC o ATL
 
 ## <a name="see-also"></a>Vea también
 
-[editores de recursos](../windows/resource-editors.md)
+[Editores de recursos](../windows/resource-editors.md)
 <!--
 [Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
 [Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->

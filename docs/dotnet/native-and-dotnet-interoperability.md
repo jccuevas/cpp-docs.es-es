@@ -15,10 +15,10 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
 ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237151"
 ---
 # <a name="native-and-net-interoperability"></a>Interoperabilidad nativa y de .NET
@@ -30,7 +30,7 @@ Visual C++ admite características de interoperabilidad que permiten a las const
 [Ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 Describe ensamblados generados con el [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) opción del compilador que contienen tanto funcionalidad administrada y.
 
-[Utilizar un control de usuario de Windows Forms en MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[Usar un control de usuario de Windows Forms en MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 Explica cómo utilizar las clases de soporte de formularios Windows Forms de MFC para hospedar controles de formularios Windows Forms dentro de las aplicaciones MFC.
 
 [Llamar a funciones nativas desde código administrado](../dotnet/calling-native-functions-from-managed-code.md)<br/>

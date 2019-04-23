@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037862"
 ---
 # <a name="sql"></a>SQL
@@ -51,7 +51,7 @@ Las clases de base de datos usan una parte de SQL que se conoce como lenguaje de
 |**WHERE**|Para aplicar un filtro que limita la selección.|
 |**ORDER BY**|Para aplicar un criterio de ordenación para el conjunto de registros.|
 |**INSERT**|Para agregar nuevos registros a un conjunto de registros.|
-|**SUPRIMIR**|Para eliminar registros de un conjunto de registros.|
+|**ELIMINAR**|Para eliminar registros de un conjunto de registros.|
 |**UPDATE**|Para modificar los campos de un registro.|
 
 Además, las clases de base de datos reconocen ODBC **llamar** instrucciones, que puede usar para llamar a una consulta predefinida (o un procedimiento almacenado) en algunos orígenes de datos. El controlador de base de datos ODBC interpreta estas instrucciones y sustituye el comando apropiado para cada DBMS.

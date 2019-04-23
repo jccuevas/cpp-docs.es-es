@@ -9,10 +9,10 @@ helpviewer_keywords:
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
 ms.openlocfilehash: 18d772c8a9f6218ed3afaa385f214445bd0fe8e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039025"
 ---
 # <a name="inlinedepth"></a>inline_depth
@@ -43,5 +43,5 @@ El **inline_depth** pragma no surte ningún efecto en las funciones marcadas con
 
 ## <a name="see-also"></a>Vea también
 
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

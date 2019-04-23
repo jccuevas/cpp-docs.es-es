@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424098"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Tipos de archivos creados para proyectos de C++ de Visual Studio
@@ -50,16 +50,16 @@ En la tabla siguiente muestra los archivos comunes en un proyecto de Visual Stud
 |Extensión de archivo|Tipo|Contenido|
 |--------------------|----------|--------------|
 |.asmx|Origen|Archivo de implementación.|
-|.asp|Origen|Archivo de página Active Server.|
+|.asp|Source|Archivo de página Active Server.|
 |.atp|Proyecto|Archivo de proyecto de plantilla de aplicación.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Recurso|Archivos de imagen general.|
 |.bsc|Compilación|Archivo de código del explorador.|
-|.cpp, .c|Origen|Archivos de código fuente principal de la aplicación.|
+|.cpp, .c|Source|Archivos de código fuente principal de la aplicación.|
 |.cur|Recurso|Archivo de gráficos de mapa de bits de cursor.|
 |.dbp|Proyecto|Archivo de proyecto de base de datos.|
-|.disco|Origen|Archivo de documento de detección dinámica. Controla la detección de servicios web XML.|
+|.disco|Source|Archivo de documento de detección dinámica. Controla la detección de servicios web XML.|
 |.exe, .dll|Proyecto|Archivos de biblioteca de vínculos dinámicos o ejecutable.|
-|.h|Origen|Archivo de inclusión de encabezado.|
+|.h|Source|Archivo de inclusión de encabezado.|
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Recurso|Archivos web comunes.|
 |.HxC|Proyecto|Archivo de proyecto de ayuda.|
 |.ico|Recurso|Archivo de gráficos de mapa de bits de icono.|
