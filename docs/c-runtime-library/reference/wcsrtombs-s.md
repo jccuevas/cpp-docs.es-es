@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-ms.openlocfilehash: 9ece21737b1e0b4d157b241286638ac376843fc6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd965271a65fa91b427c7af7bbd4173b129e1d8c
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459064"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124920"
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 
@@ -58,7 +58,7 @@ errno_t wcsrtombs_s(
 ### <a name="parameters"></a>Parámetros
 
 *pReturnValue*<br/>
-El número de caracteres convertidos.
+El tamaño en bytes de la cadena convertida, incluido el terminador nulo.
 
 *mbstr*<br/>
 Dirección de un búfer para la cadena de caracteres multibyte convertida resultante.
