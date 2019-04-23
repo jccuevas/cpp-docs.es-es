@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899461"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779502"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Novedades de C++ en Visual Studio 2017
 
@@ -80,7 +80,7 @@ La opción [/Zc:noexceptTypes-](../../build/reference/zc-noexcepttypes.md) se pu
 - Mejora en el rendimiento: `basic_string::operator==` ahora comprueba el tamaño de las cadenas antes de comparar el contenido de estas.
 - Mejora en el rendimiento: se ha eliminado el acoplamiento de control en `basic_string`, ya que era difícil de analizar para el optimizador de compilador. Tenga en cuenta que, para todas las cadenas cortas, las llamadas a `reserve` siguen teniendo un costo distinto a cero para no hacer nada.
 - Se ha agregado \<any\>, \<string_view\>, `apply()` y `make_from_tuple()`.
-- `std::vector` se ha mejorado para aumentar la precisión y el rendimiento: los alias durante la inserción y el emplazamiento ahora se controlan correctamente según lo requerido por el estándar, y la garantía de excepción sólida ahora se proporciona cuando el estándar lo solicita a través de `move_if_noexcept()` y otra lógica. Además, la inserción y el emplazamiento realizan menos operaciones de elementos.
+- Se ha mejorado `std::vector` para aumentar la precisión y el rendimiento: los alias durante la inserción y el emplazamiento ahora se controlan correctamente según lo requerido por el estándar, y la garantía de excepción sólida ahora se proporciona cuando el estándar lo solicita a través de `move_if_noexcept()` y otra lógica. Además, la inserción y el emplazamiento realizan menos operaciones de elementos.
 - Ahora, la biblioteca estándar de C++ evita desreferenciar punteros elaborados nulos.
 - Se ha agregado \<optional\>, \<variant\>, `shared_ptr::weak_type` y \<cstdalign\>.
 - Se ha habilitado `constexpr` de C++14 en `min(initializer_list)`, `max(initializer_list)`, `minmax(initializer_list)`, `min_element()`, `max_element()` y `minmax_element()`.
@@ -117,7 +117,7 @@ Se implementaron varias características adicionales de C++17. Para más informa
 - `normal_distribution<float>` ya no emite advertencias dentro de la biblioteca estándar con respecto a la restricción de "double" a "float".
 - Se han corregido algunas operaciones `basic_string` que se comparaban con `npos` en lugar de con `max_size()` al comprobar el desbordamiento de tamaño máximo.
 - `condition_variable::wait_for(lock, relative_time, predicate)` permitiría esperar durante todo el período de tiempo relativo en el caso de una activación falsa. Ahora solo esperará un intervalo único del tiempo relativo.
-- `future::get()` ahora invalida `future`, tal como requiere el estándar.
+- `future::get()` ahora permite invalidar `future`, tal como requiere el estándar.
 - `iterator_traits<void *>` solía ser un error porque intentaba formar `void&`. Ahora se convierte limpiamente en una estructura vacía para permitir el uso de `iterator_traits` en condiciones SFINAE "is iterator".
 - Se han corregido algunas advertencias que **-Wsystem-headers** ha notificado.
 - También se ha corregido el mensaje "la especificación de la excepción en la declaración no coincide con la declaración anterior" que Clang **-Wmicrosoft-exception-spec** ha notificado.
@@ -143,7 +143,7 @@ Se implementaron varias características adicionales de C++17. Para más informa
 - Se ha habilitado la optimización del valor devuelto con nombre en `system_category::message()`.
 - `conjunction` y `disjunction` ahora crean instancias de tipos N + 1, en lugar de tipos 2N + 2.
 - `std::function` ya no crea instancias de maquinaria de compatibilidad con el asignador para cada elemento invocable con tipo borrado, lo que mejora el rendimiento y disminuye el tamaño de .obj en programas que pasan muchas expresiones lambda distintas a `std::function`.
-- `allocator_traits<std::allocator>` contiene las operaciones `std::allocator` insertadas manualmente, lo que permite reducir el tamaño del código que interactúa con `std::allocator` mediante `allocator_traits` (es decir, la mayoría del código).
+- `allocator_traits<std::allocator>` contiene las operaciones `std::allocator` insertadas manualmente, lo que permite reducir el tamaño del código que interactúa con `std::allocator` mediante `allocator_traits`, es decir, la mayoría del código.
 - La biblioteca estándar ahora controla la interfaz de asignador mínimo de C++11 con una llamada directa a `allocator_traits`, en lugar de encapsular el asignador en una clase interna `_Wrap_alloc`. Esto disminuye el tamaño del código que se genera para la compatibilidad del asignador y mejora la experiencia de depuración y la capacidad del optimizador para razonar sobre los contenedores de la biblioteca estándar en ciertos casos, ya que en el depurador ahora puede ver el tipo de asignador, en lugar de `_Wrap_alloc<your_allocator_type>`.
 - Se ha eliminado la metaprogramación para el elemento personalizado `allocator::reference`, un elemento que, de hecho, los asignadores no tienen permitido personalizar. (Los asignadores pueden hacer que los contenedores usen punteros sofisticados pero no referencias sofisticadas).
 - El front-end del compilador se diseñó para desencapsular los iteradores de depuración en Bucles for basados en intervalos, lo que mejora el rendimiento de las compilaciones de depuración.
@@ -156,7 +156,7 @@ Se implementaron varias características adicionales de C++17. Para más informa
 - Se ha completado el cambio de la expresión basada en funciones SFINAE para que, en su lugar, se base en `struct` y `void_t`.
 - Los algoritmos de la biblioteca estándar ahora evitan el postincremento de los iteradores.
 - Se corrigieron las advertencias de truncamiento cuando se usan asignadores de 32 bits en sistemas de 64 bits.
-- `std::vector` ahora es una asignación de movimiento más eficaz en el caso de los asignadores que no coincidan y que no sean POCMA, ya que permite volver a usar el búfer cuando es posible.
+- La asignación de movimiento `std::vector` ahora es más eficaz en el caso de los asignadores que no coincidan y que no sean POCMA, ya que permite volver a usar el búfer cuando es posible.
 
 #### <a name="readability-and-other-improvements"></a>Legibilidad y otras mejoras
 
@@ -211,13 +211,13 @@ Se han agregado, puesto en desuso o eliminado varias características de la bibl
 
 #### <a name="correctness-fixes-in-visual-studio-2017-version-155"></a>Mejoras de exactitud en la versión 15.5 de Visual Studio 2017
 
-- `std::partition` ahora llama al predicado N veces, en lugar de N+1, tal y como requiere el estándar.
+- `std::partition` ahora llama al predicado N veces, en lugar de N+1, tal y como requiere el estándar.
 - Los intentos de evitar estáticas mágicas en la versión 15.3 se han reparado en la 15.5.
 - `std::atomic<T>` ya no requiere que `T` sea construible de forma predeterminada.
 - Los algoritmos de montón que necesiten un valor de tiempo logarítmico ya no realizan una aserción de tiempo lineal en la que la entrada es un montón cuando se habilita la depuración del iterador.
 - `__declspec(allocator)` ahora solo está protegido por C1XX para evitar advertencias de Clang que este elemento desclspec no entiende.
 - `basic_string::npos` ahora está disponible como una constante de tiempo de compilación.
-- `std::allocator` en C++17 ahora manipula adecuadamente la asignación de tipos sobrealineados, que son aquellos cuya alineación es superior a `max_align_t`, a menos que **/Zc:alignedNew-** lo deshabilite.  Por ejemplo, los vectores de objetos con una alineación de 16 o 32 bytes ahora se alinearán adecuadamente con instrucciones SSE y AVX.
+- En C++17, `std::allocator` ahora manipula adecuadamente la asignación de tipos sobrealineados, que son aquellos cuya alineación es superior a `max_align_t`, a menos que **/Zc:alignedNew-** lo deshabilite.  Por ejemplo, los vectores de objetos con una alineación de 16 o 32 bytes ahora se alinearán adecuadamente con instrucciones SSE y AVX.
 
 ### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017, versión 15.6
 
