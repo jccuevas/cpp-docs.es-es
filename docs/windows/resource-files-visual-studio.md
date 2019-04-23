@@ -1,4 +1,4 @@
----
+﻿---
 title: Archivos de recursos (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -133,4 +133,3 @@ Win32
 
 [Trabajo con archivos de recursos](../windows/working-with-resource-files.md)<br/>
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
-[Editores de recursos](../windows/resource-editors.md)<br/>
