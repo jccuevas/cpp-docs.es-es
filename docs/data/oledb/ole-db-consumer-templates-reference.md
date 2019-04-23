@@ -13,10 +13,10 @@ helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
 ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032276"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referencia de plantillas de consumidor OLE DB
@@ -86,7 +86,7 @@ Se utiliza para capturar y manipular las filas de forma masiva mediante la recup
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Puede usarse como un argumento de plantilla, si el comando no devuelve un conjunto de filas.
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 Se utiliza para especificar restricciones para los conjuntos de filas de esquema.
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>
@@ -143,4 +143,4 @@ Se utiliza para recuperar información de error de OLE DB.
 ## <a name="see-also"></a>Vea también
 
 [Referencia de plantillas de proveedores OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[plantillas OLE DB](../../data/oledb/ole-db-templates.md)
+[Plantillas OLE DB](../../data/oledb/ole-db-templates.md)

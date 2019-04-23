@@ -5,10 +5,10 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034120"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Intercambio de campos de registro: Utilizar RFX
@@ -45,5 +45,5 @@ En la tabla siguiente se muestra su rol en relación con lo que hace el marco de
 [Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset (clase)](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange (clase)](../../mfc/reference/cfieldexchange-class.md)<br/>
-[Macros, funciones globales y variables globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros, funciones globales y Variables globales](../../mfc/reference/mfc-macros-and-globals.md)
 

@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040973"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor (Clase)
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Un puntero a una cadena de caracteres que contiene el nombre de columna.
 
-*datos*<br/>
+*data*<br/>
 [in] Puntero a la memoria que contiene los datos.
 
 *nColumn*<br/>
@@ -713,5 +713,5 @@ Para los demás tipos de datos, es más fácil de usar las versiones con plantil
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor (Clase)](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor (clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)

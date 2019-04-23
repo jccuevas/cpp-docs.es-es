@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
 ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038465"
 ---
 # <a name="dispinterface"></a>dispinterface
@@ -48,7 +48,7 @@ Consulte el ejemplo de [bindable](bindable.md) para ver un ejemplo de cómo usar
 
 |||
 |-|-|
-|**Se aplica a**|**interfaz**|
+|**Se aplica a**|**interface**|
 |**Reiterativo**|No|
 |**Atributos requeridos**|Ninguna|
 |**Atributos no válidos**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
@@ -61,6 +61,6 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 [Atributos por uso](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[personalizadas](custom-cpp.md)<br/>
-[objeto](object-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
+[object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

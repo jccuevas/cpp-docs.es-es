@@ -43,10 +43,10 @@ helpviewer_keywords:
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
 ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041554"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imágenes para iconos (C++)
@@ -93,12 +93,12 @@ El **imagen** menú, que solo aparece cuando el **Editor de imágenes** está ac
 
 El **configuración de la cuadrícula** cuadro de diálogo le permite especificar la configuración de la cuadrícula para la imagen y muestra las líneas de cuadrícula a lo largo de la imagen editada. Las líneas son útiles para editar la imagen, pero no se guardan como parte de la imagen en Sí.
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Cuadrícula de píxeles**|Cuando está activada, se muestra una cuadrícula alrededor de cada píxel de la **Editor de imágenes**.<br/><br/>La cuadrícula aparece sólo en 4 × y resoluciones más altas.|
 |**Cuadrícula de mosaico**|Cuando se selecciona, muestra una cuadrícula alrededor de los bloques de píxeles de la **Editor de imágenes**, especificado por los valores de espaciado de cuadrícula.|
-|**Ancho**|Especifica el ancho de cada bloque del mosaico.<br/><br/>Esta propiedad es útil al dibujar mapas de bits que contiene varias imágenes que se organizan en intervalos regulares.|
-|**Alto**|Especifica el alto de cada bloque del mosaico.<br/><br/>Esta propiedad es útil al dibujar mapas de bits que contiene varias imágenes que se organizan en intervalos regulares.|
+|**Width**|Especifica el ancho de cada bloque del mosaico.<br/><br/>Esta propiedad es útil al dibujar mapas de bits que contiene varias imágenes que se organizan en intervalos regulares.|
+|**Height**|Especifica el alto de cada bloque del mosaico.<br/><br/>Esta propiedad es útil al dibujar mapas de bits que contiene varias imágenes que se organizan en intervalos regulares.|
 
 ## <a name="toolbar"></a>Barra de herramientas
 
@@ -139,11 +139,11 @@ Abra el **fuente de herramienta de texto** cuadro de diálogo para cambiar la fu
 
 Para obtener acceso a este cuadro de diálogo, seleccione el **fuente** situado en la **texto herramienta** cuadro de diálogo. Las propiedades disponibles son:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Fuente**|Enumera las fuentes disponibles.|
 |**Estilo de fuente**|Se enumeran los estilos disponibles para la fuente especificada.|
-|**Tamaño**|Enumera los tamaños de punto disponibles para la fuente especificada.|
+|**Size**|Enumera los tamaños de punto disponibles para la fuente especificada.|
 |**Ejemplo**|Muestra un ejemplo de cómo aparecerá el texto con la configuración de fuente especificado.|
 |**Script**|Enumera las secuencias de comandos de idioma disponibles para la fuente especificada.<br/><br/>Cuando se selecciona un script de idioma diferente, el juego de caracteres para ese idioma estará disponible para la creación de documentos en varios idiomas.|
 
@@ -219,6 +219,6 @@ Ninguna
 
 ## <a name="see-also"></a>Vea también
 
-[editores de recursos](../windows/resource-editors.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
 
 <!--[Icons](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)-->

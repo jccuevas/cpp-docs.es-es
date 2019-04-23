@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
 ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038043"
 ---
 # <a name="visual-studio-projects---c"></a>Proyectos de Visual Studio - C++
@@ -60,13 +60,13 @@ En la lista de errores, puede presionar **F1** en un error resaltado para ir a s
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Establece el compilador de C++ y crear propiedades en Visual Studio](working-with-project-properties.md)<br/>
+[Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](working-with-project-properties.md)<br/>
 Aprenda a utilizar hojas de propiedades y páginas de propiedades para especificar la configuración del proyecto.
 
 [Bibliotecas de referencia y los componentes en tiempo de compilación](adding-references-in-visual-cpp-projects.md)<br/>
 Cómo incluir los componentes COM y .NET en bibliotecas, archivos DLL, en un proyecto.
  
-[Organizar los archivos de salida del proyecto](how-to-organize-project-output-files-for-builds.md)<br/>
+[Organización de archivos de salida del proyecto](how-to-organize-project-output-files-for-builds.md)<br/>
 Cómo personalizar la ubicación de los archivos ejecutables que se creó en el proceso de compilación.
 
 [Pasos de compilación personalizada y eventos de compilación](understanding-custom-build-steps-and-build-events.md)<br/>
@@ -77,4 +77,4 @@ Cómo crear un nuevo proyecto de Visual Studio de una colección de archivos de 
 
 ## <a name="see-also"></a>Vea también
 
-[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)<br>
+[Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br>

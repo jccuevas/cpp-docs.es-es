@@ -7,10 +7,10 @@ helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
 ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038283"
 ---
 # <a name="threading-c"></a>threading (C++)
@@ -25,7 +25,7 @@ Especifica el modelo de subprocesos para un objeto COM.
 
 ### <a name="parameters"></a>Parámetros
 
-*modelo*<br/>
+*model*<br/>
 (Opcional) Uno de los modelos de subprocesamiento siguientes:
 
 - `apartment` (apartamento de subproceso)
@@ -68,7 +68,7 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 ## <a name="see-also"></a>Vea también
 
 [Atributos COM](com-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Compatibilidad del código antiguo con multithreading (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
 [Apartamentos neutros](/windows/desktop/cossdk/neutral-apartments)

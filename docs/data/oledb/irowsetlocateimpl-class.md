@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039824"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl (Clase)
@@ -94,10 +94,10 @@ La unidad de almacenamiento para todos los identificadores de fila mantenidos po
 
 |||
 |-|-|
-|[Comparar](#compare)|Compara dos marcadores.|
+|[Compare](#compare)|Compara dos marcadores.|
 |[GetRowsAt](#getrowsat)|Captura de filas a partir de la fila especificada por un desplazamiento de un marcador.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Captura las filas que coinciden con los marcadores especificados.|
-|[Hash](#hash)|Devuelve el hash valores para los marcadores especificados.|
+|[hash](#hash)|Devuelve el hash valores para los marcadores especificados.|
 
 ### <a name="data-members"></a>Miembros de datos
 

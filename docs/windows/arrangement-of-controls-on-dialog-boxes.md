@@ -81,10 +81,10 @@ helpviewer_keywords:
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
 ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037426"
 ---
 # <a name="how-to-layout-controls-c"></a>Cómo Controles de diseño (C++)
@@ -111,15 +111,15 @@ El [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-o
 
 El **configuración de la guía** cuadro de diálogo tiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Guías de diseño**|Muestra la configuración de las guías de diseño.|
-|**Ninguna**|Oculta las herramientas de diseño.|
+|**Ninguno**|Oculta las herramientas de diseño.|
 |**Reglas y guías**|Cuando se habilita, agrega reglas a las herramientas de diseño y permite que las guías que se colocarán en las reglas. Las guías predeterminadas son los márgenes.|
-|**Cuadrícula**|Crea una cuadrícula de diseño. Nuevos controles se alinearán automáticamente a la cuadrícula.|
-|**espaciado de cuadrícula**|Muestra la configuración para el espaciado de cuadrícula en unidades de cuadro de diálogo (DLU).|
+|**Grid**|Crea una cuadrícula de diseño. Nuevos controles se alinearán automáticamente a la cuadrícula.|
+|**Espaciado de cuadrícula**|Muestra la configuración para el espaciado de cuadrícula en unidades de cuadro de diálogo (DLU).|
 |**Ancho: DLU**|Establece el ancho de la cuadrícula de diseño en DLU. Una DLU horizontal es el ancho promedio de la fuente del cuadro de diálogo dividido entre 4.|
-|**Altura: DLU**|Establece el alto de la cuadrícula de diseño en DLU. Una vertical equivale al alto medio de la fuente del cuadro de diálogo dividido por 8.|
+|**Alto: DLU**|Establece el alto de la cuadrícula de diseño en DLU. Una vertical equivale al alto medio de la fuente del cuadro de diálogo dividido por 8.|
 
 ### <a name="guides-and-margins"></a>Guías y márgenes
 
@@ -248,7 +248,7 @@ Puede ajustar el tamaño de un cuadro combinado cuando se agrega al cuadro de di
    |Alineación|Descripción|
    |-----|-----------|
    |**Lados izquierdos**|Alinea los controles seleccionados a lo largo de los lados izquierdos.|
-   |**Centros**|Alinea los controles seleccionados horizontalmente a lo largo de sus puntos centrales.|
+   |**Centers**|Alinea los controles seleccionados horizontalmente a lo largo de sus puntos centrales.|
    |**Derechos**|Alinea los controles seleccionados a lo largo de los lados derecho.|
    |**Lados superiores**|Alinea los controles seleccionados por sus bordes superiores.|
    |**Puntos medios**|Alinea los controles seleccionados verticalmente a lo largo de sus puntos medios.|
@@ -260,8 +260,8 @@ Puede ajustar el tamaño de un cuadro combinado cuando se agrega al cuadro de di
 
    |Espaciado|Descripción|
    |---|---|
-   |**Horizontalmente**|Controles de espacio uniformemente entre el extremo izquierdo y el extremo derecho control seleccionado.|
-   |**Verticalmente**|Controles de espacio uniformemente entre el primer y el más bajo control seleccionado.|
+   |**A través de**|Controles de espacio uniformemente entre el extremo izquierdo y el extremo derecho control seleccionado.|
+   |**Abajo**|Controles de espacio uniformemente entre el primer y el más bajo control seleccionado.|
 
 - Para centrar controles, seleccione el control o controles que desea reorganizar. Vaya al menú **formato** > **centrar en el cuadro de diálogo** y elija una de las distribuciones siguientes:
 
@@ -274,8 +274,8 @@ Puede ajustar el tamaño de un cuadro combinado cuando se agrega al cuadro de di
 
    |Organización|Descripción|
    |---|---|
-   |**Derecho**|Alinea los botones de inserción en el borde derecho del cuadro de diálogo.|
-   |**Bottom**|Alinea los botones de inserción en el borde inferior del cuadro de diálogo.|
+   |**Derecha**|Alinea los botones de inserción en el borde derecho del cuadro de diálogo.|
+   |**Inferior**|Alinea los botones de inserción en el borde inferior del cuadro de diálogo.|
 
    Si selecciona un control que no sea un botón de comando, su posición no se ve afectada.
 
@@ -286,5 +286,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Administrar controles de cuadro de diálogo](controls-in-dialog-boxes.md)<br/>
-[Cómo Agregar, editar o eliminar los controles](adding-editing-or-deleting-controls.md)<br/>
-[Filtrar Definir el Control de acceso y valores](defining-mnemonics-access-keys.md)<br/>
+[Cómo: Agregar, editar o eliminar controles](adding-editing-or-deleting-controls.md)<br/>
+[Cómo: Definición del control de acceso y los valores](defining-mnemonics-access-keys.md)<br/>

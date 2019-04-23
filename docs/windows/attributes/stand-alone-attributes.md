@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
 ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033065"
 ---
 # <a name="stand-alone-attributes"></a>Atributos independientes
@@ -21,12 +21,12 @@ Un atributo independiente no funciona en una palabra clave de C++, pero es más 
 |Atributo|Descripción|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Emite la cadena especificada, sin los caracteres de comillas en el archivo de encabezado generado.|
-|[personalizadas](custom-cpp.md)|Le permite definir su propio atributo.|
+|[custom](custom-cpp.md)|Le permite definir su propio atributo.|
 |[db_command](db-command.md)|Crea un comando OLE DB.|
 |[emitidl](emitidl.md)|Determina si todos los atributos IDL posteriores se procesará y se coloca en el archivo .idl generado.|
 |[idl_module](idl-module.md)|Especifica un punto de entrada en un archivo DLL.|
 |[idl_quote](idl-quote.md)|Le permite usar construcciones IDL que no se admiten en la versión actual de Visual C++ y pídales que pasen al archivo .idl generado.|
-|[importación](import.md)|Especifica otro archivo .idl, .odl o .h que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|
+|[import](import.md)|Especifica otro archivo .idl, .odl o .h que contiene las definiciones que desea hacer referencia desde el archivo .idl principal.|
 |[importidl](importidl.md)|Inserta el archivo .idl especificado en el archivo .idl generado|
 |[importlib](importlib.md)|Hace que los tipos que ya se han compilado en otra biblioteca de tipos estén disponibles en la biblioteca de tipos que se está creando.|
 |[include](include-cpp.md)|Especifica uno o varios archivos de encabezado que se incluirán en el archivo .idl generado.|

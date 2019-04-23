@@ -1,13 +1,13 @@
 ---
 title: Interfaz de programación de aplicaciones de OpenMP C y C++
-ms.date: 11/04/2016
+ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-ms.openlocfilehash: c389029b6e9d2690899e086a59c6e023288e4b4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290214"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124842"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>Interfaz de programación de aplicaciones de OpenMP C y C++
 
@@ -19,7 +19,30 @@ Copyright 1997-2002 OpenMP Architecture Review Board.
 
 Se concede permiso para copiar sin cargo todos o parte de este material, proporciona el aviso de propiedad intelectual del Consejo de revisión de arquitectura de OpenMP y que aparezca el título de este documento. Tenga en cuenta es dado que la copia está en el permiso de Consejo de revisión de arquitectura de OpenMP.
 
+## <a name="contents"></a>Contenido
+
+1. [Introducción](1-introduction.md)
+
+1. [Directivas](2-directives.md)
+
+1. [Funciones de biblioteca en tiempo de ejecución](3-run-time-library-functions.md)
+
+1. [Variables de entorno](4-environment-variables.md)
+
+### <a name="appendices"></a>Apéndices
+
+R. [Ejemplos](a-examples.md)
+
+B. [Códigos auxiliares para funciones de biblioteca en tiempo de ejecución](b-stubs-for-run-time-library-functions.md)
+
+C. [Gramática de OpenMP C y C++](c-openmp-c-and-cpp-grammar.md)
+
+D. [La cláusula schedule](d-using-the-schedule-clause.md)
+
+E. [Definido por la implementación de comportamientos en OpenMP C/C ++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+
+F. [Las nuevas características y aclaraciones de la versión 2.0](f-new-features-and-clarifications-in-version-2-0.md)
+
 ## <a name="see-also"></a>Vea también
 
 [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)<br/>
-[Contenido](../../parallel/openmp/contents.md)

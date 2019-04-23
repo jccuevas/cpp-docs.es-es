@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037742"
 ---
 # <a name="working-with-resource-files"></a>Trabajar con archivos de recursos
@@ -44,7 +44,7 @@ Describe los archivos de recursos y cómo se usan en aplicaciones de escritorio 
 [Identificadores de recursos (símbolos)](../windows/symbols-resource-identifiers.md)<br/>
 Describe los símbolos y proporciona información sobre el uso del cuadro de diálogo **Símbolos de recursos** para administrar los símbolos de los proyectos.
 
-[editores de recursos](../windows/resource-editors.md)<br/>
+[Editores de recursos](../windows/resource-editors.md)<br/>
 Describe los editores de recursos proporcionados en Visual Studio y los tipos de recursos que se puede modificar con cada editor. También proporciona vínculos a información detallada sobre el uso de cada editor.
 
 ## <a name="related-sections"></a>Secciones relacionadas
@@ -52,7 +52,7 @@ Describe los editores de recursos proporcionados en Visual Studio y los tipos de
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Proporciona vínculos a la documentación de Visual C++.
 
-[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
+[Hable con nosotros](/visualstudio/ide/talk-to-us)<br/>
 Proporciona vínculos a información acerca del uso del conjunto de documentación, el contacto con el servicio de soporte técnico y el uso de características de accesibilidad.
 
 ## <a name="see-also"></a>Vea también

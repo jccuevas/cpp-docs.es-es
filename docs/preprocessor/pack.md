@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
 ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038452"
 ---
 # <a name="pack"></a>pack
@@ -117,4 +117,4 @@ El ejemplo siguiente muestra cómo usar el *inserción*, *pop*, y *mostrar* sint
 
 ## <a name="see-also"></a>Vea también
 
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

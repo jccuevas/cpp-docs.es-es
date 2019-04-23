@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
 ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026636"
 ---
 # <a name="initseg"></a>init_seg
@@ -36,13 +36,13 @@ Dado que la inicialización de objetos estáticos globales puede implicar la eje
 
 Las opciones para la **init_seg** pragma son:
 
-*compilador*<br/>
+*compiler*<br/>
 Reservada para la inicialización de la biblioteca en tiempo de ejecución de C de Microsoft. Los objetos de este grupo se construyen en primer lugar.
 
 *lib*<br/>
 Disponible para las inicializaciones de los proveedores de bibliotecas de clases de terceros. Los objetos de este grupo se construyen después de los marcados como *compilador* pero antes de los demás.
 
-*usuario*<br/>
+*user*<br/>
 Disponible para cualquier usuario. Los objetos de este grupo se construyen en último lugar.
 
 *nombre de sección* permite la especificación explícita de la sección de inicialización. Los objetos de la especificada por el usuario *nombre de sección* no se construyen implícitamente; sin embargo, sus direcciones se colocan en la sección designada por *nombre de sección*.
@@ -156,4 +156,4 @@ A()
 
 ## <a name="see-also"></a>Vea también
 
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

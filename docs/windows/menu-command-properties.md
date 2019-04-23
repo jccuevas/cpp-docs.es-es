@@ -18,21 +18,21 @@ helpviewer_keywords:
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
 ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026284"
 ---
 # <a name="menu-commands-c"></a>Comandos de menú (C++)
 
 La siguiente información se organiza según el **menú** propiedades que aparecen en la [ventana propiedades](/visualstudio/ide/reference/properties-window) cuando se selecciona un comando de menú. Están ordenadas alfabéticamente, aunque el **propiedades** ventana también le permite ver estas propiedades por categoría.
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |**Break**|Puede ser uno de estos valores:<br/>  - **Ninguno**: Sin interrupción. Este es el valor predeterminado.<br/>  - **Columna**: En los menús estáticos, este valor sitúa el comando de menú en una nueva línea.<br/>      En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas.<br/>      Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />   - **Bar**: Igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical.<br/>      Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **Editor de menús**.|
 |**Título**|El texto que etiqueta el comando de menú (el nombre del menú). Para convertir una de las letras del título de un comando de menú en la tecla de acceso, sitúe delante de ella una Y comercial (&).|
-|**Activado**|Si **True**, el comando de menú se activa inicialmente. Tipo: **BOOL**. Predeterminado: **False**.|
+|**Activadas**|Si **True**, el comando de menú se activa inicialmente. Tipo: **BOOL**. Predeterminado: **False**.|
 |**Habilitado**|Si es **False**, se deshabilita el elemento de menú.|
 |**Grayed**|Si **True**, el comando de menú inicialmente está atenuado e inactivo. Tipo: **BOOL**. Predeterminado: **False**.|
 |**Ayuda**|Alinea el elemento de menú a la derecha. Predeterminado: **False**.<br/><br/>Por ejemplo, el comando de menú **Ayuda** siempre está a la derecha en todas las aplicaciones de Windows. Si establece esta propiedad en un elemento de menú, ese elemento aparecerá en el extremo derecho y al final del menú. Se aplica a los elementos de nivel superior.|
@@ -41,7 +41,7 @@ La siguiente información se organiza según el **menú** propiedades que aparec
 |**Preguntar**|Contiene el texto que aparece en la barra de estado cuando se resalta el comando de menú. El texto se sitúa en la tabla de cadenas con el mismo identificador que el comando de menú.<br/><br/>Esta propiedad se encuentra disponible para cualquier tipo de proyecto, pero la funcionalidad en tiempo de ejecución es específica de MFC.|
 |**Right to Left Justify**|Justifica a la derecha el comando de menú en la barra de menús, en tiempo de ejecución. Tipo: **BOOL**. Predeterminado: **False**.|
 |**Right to Left Order**|Permite mostrar los comandos de menú de derecha a izquierda cuando la interfaz se localiza a idiomas con esta dirección de lectura, como el hebreo o el árabe.|
-|**Separador**|Si **True**, el comando de menú es un separador. Tipo: **BOOL**. Predeterminado: **False**.|
+|**Separator**|Si **True**, el comando de menú es un separador. Tipo: **BOOL**. Predeterminado: **False**.|
 
 ## <a name="associate-menu-commands"></a>Asociar comandos de menú
 

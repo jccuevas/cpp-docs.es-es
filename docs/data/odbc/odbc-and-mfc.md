@@ -11,10 +11,10 @@ helpviewer_keywords:
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
 ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031185"
 ---
 # <a name="odbc-and-mfc"></a>ODBC y MFC
@@ -24,11 +24,11 @@ ms.locfileid: "59031185"
 
 Este tema presenta los conceptos principales de las clases de base de datos basadas en ODBC de la biblioteca Microsoft Foundation Classes (MFC) y proporciona información general sobre cómo funcionan conjuntamente las clases. Para obtener más información sobre ODBC y MFC, vea los temas siguientes:
 
-- [Conectarse a un origen de datos](connecting-to-a-data-source.md)
+- [Conexión a un origen de datos](connecting-to-a-data-source.md)
 
-- [Seleccionar y manipular registros](selecting-and-manipulating-records.md)
+- [Selección y manipulación de registros](selecting-and-manipulating-records.md)
 
-- [Mostrar y manipular datos en un formulario](displaying-and-manipulating-data-in-a-form.md)
+- [Visualización y manipulación de datos en un formulario](displaying-and-manipulating-data-in-a-form.md)
 
 - [Trabajar con documentos y vistas](working-with-documents-and-views.md)
 

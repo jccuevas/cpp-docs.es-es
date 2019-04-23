@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775431"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124764"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Los proyectos de C o C++ y los sistemas de compilación en Visual Studio
 
@@ -35,7 +35,7 @@ Compilación en C++ básica implica tres pasos principales:
 
 ## <a name="the-msvc-toolset"></a>El conjunto de herramientas MSVC
 
-El compilador, vinculador, bibliotecas estándar y utilidades relacionadas de Microsoft C++ conforman el conjunto de herramientas del compilador MSCV (también denominada una cadena de herramientas o "herramientas de compilación"). Estos se incluyen en Visual Studio. También puede descargar y usar el conjunto de herramientas como un paquete independiente de forma gratuita desde el [ubicación de descarga de Build Tools para Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Microsoft C++ compilador, vinculador, bibliotecas estándar y utilidades relacionadas conforman el conjunto de herramientas del compilador MSVC (también denominada una cadena de herramientas o "herramientas de compilación"). Estos se incluyen en Visual Studio. También puede descargar y usar el conjunto de herramientas como un paquete independiente de forma gratuita desde el [ubicación de descarga de Build Tools para Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 Puede crear programas sencillos al invocar el compilador de MSVC (cl.exe) directamente desde la línea de comandos. El comando siguiente acepta un archivo de código fuente único e invoca cl.exe para compilar un archivo ejecutable denominado *hello.exe*: 
 

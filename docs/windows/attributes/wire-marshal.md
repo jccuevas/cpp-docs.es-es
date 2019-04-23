@@ -1,5 +1,5 @@
 ---
-title: wire_marshal (atributo de COM de C++)
+title: wire_marshal (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
 ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029867"
 ---
 # <a name="wiremarshal"></a>wire_marshal
@@ -25,7 +25,7 @@ Especifica un tipo de datos que se usará para la transmisión en lugar de un ti
 
 ## <a name="remarks"></a>Comentarios
 
-El **wire_marshal** atributo de C++ tiene la misma funcionalidad que el [wire_marshal](/windows/desktop/Midl/wire-marshal) atributo MIDL.
+El **wire_marshal** C++ atributo tiene la misma funcionalidad que el [wire_marshal](/windows/desktop/Midl/wire-marshal) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 
@@ -63,4 +63,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 ## <a name="see-also"></a>Vea también
 
 [Atributos IDL](idl-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)

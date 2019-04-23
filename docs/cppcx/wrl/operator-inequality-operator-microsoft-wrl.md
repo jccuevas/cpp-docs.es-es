@@ -6,10 +6,10 @@ f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
 ms.openlocfilehash: 6068a7ddad78e3347f6987b30cc2884dc3f648fd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040094"
 ---
 # <a name="operator-operator-microsoftwrl"></a>Operador operator!= (Microsoft::WRL)
@@ -73,4 +73,4 @@ Objeto derecho.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL (Espacio de nombres)](microsoft-wrl-namespace.md)
+[Microsoft::WRL (espacio de nombres)](microsoft-wrl-namespace.md)

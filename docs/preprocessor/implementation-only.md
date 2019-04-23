@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
 ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026661"
 ---
 # <a name="implementationonly"></a>implementation_only
@@ -35,9 +35,9 @@ El **implementation_only** atributo está pensado para su uso junto con el [no_i
 > [!NOTE]
 > El **implementation_only** atributo en uno `#import` instrucción debe usarse junto con otra `#import` instrucción de la misma biblioteca de tipos, con el `no_implementation` atributo. De lo contrario, se generarán errores de compilador. Esto es porque las definiciones de clase de contenedor generan por el `#import` instrucción con el `no_implementation` atributo son necesarias para compilar las implementaciones generadas por el **implementation_only** atributo.
 
-**Específicos de C++: END**
+**FIN de específicos de C++**
 
 ## <a name="see-also"></a>Vea también
 
-[Atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[#import (Directiva)](../preprocessor/hash-import-directive-cpp.md)
+[atributos #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[directiva #import](../preprocessor/hash-import-directive-cpp.md)

@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898809"
 ---
 # <a name="visual-c-language-conformance"></a>Conformidad del lenguaje Visual C++
@@ -88,7 +88,7 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 
 |Área de características| |
 |----|---|
-|__Características principales del lenguaje C++17 (informes de defectos)__|__Compatible__|
+|__Características principales del lenguaje C++17 Core (informes de defectos)__|__Compatible__|
 |&nbsp;&nbsp;[P0702R1 Corrección de deducción de argumento de plantilla para constructores initializer-list](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 Simplifying implicit lambda capture](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html) (Simplificación de la captura de lambda implícita)|No|
 |&nbsp;&nbsp;[CWG 1581: When are constexpr member functions defined?](https://wg21.cmeerw.net/cwg/issue1581) (¿Cuándo se definen las funciones miembro de las expresiones constantes?)|No|
@@ -317,6 +317,6 @@ Los siguientes no se paralelizan en la actualidad:
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Mejoras de conformidad de C++ en Visual Studio](cpp-conformance-improvements.md)<br/>
 [Novedades de Visual C++ en Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Historial de cambios de Visual C++ de 2003 a 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Novedades de Visual C++ de 2003 a 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Novedades de Visual C++ de 2003 a 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Blog del equipo de Visual C++](https://blogs.msdn.microsoft.com/vcblog/)

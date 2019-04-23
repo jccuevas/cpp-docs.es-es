@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035138"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)
@@ -92,9 +92,9 @@ Deberá trabajar con las listas de cuatro se muestran en la tabla siguiente.
 |||
 |-|-|
 |**Current-Table-Columns**| (Lista en la ilustración 1) Una lista de las columnas actualmente en la tabla del origen de datos. Esta lista podría coincidir con la lista de columnas enlazadas actualmente en el conjunto de registros.|
-|**Columnas enlazadas del conjunto de registros**| (Lista en la ilustración 2) Enlaza una lista de las columnas en el conjunto de registros. Estas columnas ya contienen instrucciones RFX su `DoFieldExchange` función.|
-|**Columnas para enlazar dinámicamente**| (Lista 3 en la ilustración) Una lista de columnas en la tabla pero no en el conjunto de registros. Estas son las columnas que desea enlazar dinámicamente.|
-|**Valores de columna dinámica**| (Lista en la ilustración 4) Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlazar dinámicamente. Elementos de esta lista se corresponden con los de columnas-para enlazar dinámicamente, uno a uno.|
+|**Bound-Recordset-Columns**| (Lista en la ilustración 2) Enlaza una lista de las columnas en el conjunto de registros. Estas columnas ya contienen instrucciones RFX su `DoFieldExchange` función.|
+|**Columns-To-Bind-Dynamically**| (Lista 3 en la ilustración) Una lista de columnas en la tabla pero no en el conjunto de registros. Estas son las columnas que desea enlazar dinámicamente.|
+|**Dynamic-Column-Values**| (Lista en la ilustración 4) Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlazar dinámicamente. Elementos de esta lista se corresponden con los de columnas-para enlazar dinámicamente, uno a uno.|
 
 ###  <a name="_core_building_your_lists"></a> Generar las listas
 

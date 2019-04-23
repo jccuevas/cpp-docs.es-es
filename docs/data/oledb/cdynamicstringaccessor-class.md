@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035668"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor (Clase)
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Un puntero a una cadena de caracteres que contiene el nombre de columna.
 
-*datos*<br/>
+*data*<br/>
 [in] Un puntero a los datos de cadena se escriban en la columna especificada.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -128,7 +128,7 @@ Si _SECURE_ATL se define con un valor distinto de cero, se generará un error de
 [Plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Referencia de plantillas de consumidor OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor (Clase)](../../data/oledb/caccessor-class.md)<br/>
-[CDynamicParameterAccessor (clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
+[CDynamicParameterAccessor (Clase)](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor (Clase)](../../data/oledb/cmanualaccessor-class.md)<br/>
 [CDynamicAccessor (Clase)](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicStringAccessorA (Clase)](../../data/oledb/cdynamicstringaccessora-class.md)<br/>

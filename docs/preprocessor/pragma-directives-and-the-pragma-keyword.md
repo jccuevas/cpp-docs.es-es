@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
 ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027446"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Directives pragma y la palabra clave __pragma
@@ -46,11 +46,11 @@ Los compiladores de Microsoft C y C++ reconocen las pragmas siguientes:
 ||||
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comentario](../preprocessor/comment-c-cpp.md)|
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
 |[component](../preprocessor/component.md)|[se ajustan](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
-|[data_seg](../preprocessor/data-seg.md)|[en desuso](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
+|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
-|[función](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
+|[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
 |[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
 |[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>La palabra clave __pragma()
 
-**Específicos de Microsoft**
+**Específicas de Microsoft**
 
 El compilador también admite la **__pragma** palabra clave, que tiene la misma funcionalidad como la **#pragma** directiva, pero pueden utilizarse alineada en una definición de macro. El **#pragma** directiva no se puede usar en una definición de macro porque el compilador interpreta el carácter de signo de número ('#') en la directiva como el [operador de generación de cadenas (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -104,7 +104,7 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Fin de Específicos de Microsoft**
+**Finalizar específico de Microsoft**
 
 ## <a name="see-also"></a>Vea también
 

@@ -3,12 +3,12 @@ title: Personalización de la configuración de compilación de CMake en Visual 
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 4864e094ab967a563b153fa79fd0bf5c375f40f7
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59037528"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124894"
 ---
 # <a name="customize-cmake-build-settings"></a>Personalización de la configuración de compilación de CMake
 
@@ -79,14 +79,18 @@ Además, puede editar `CMakeSettings.json` directamente para crear configuracion
 "variables": [
     {
       "name": "CMAKE_CXX_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     },
     {
       "name": "CMAKE_C_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     }
   ]
 ```
+
+Tenga en cuenta que si no se define la `"type"`, se asumirá que el tipo "STRING" de forma predeterminada.
 
 - **cmakeCommandArgs**: especifica los modificadores adicionales que se quieren a pasar a CMake.exe.
 
@@ -100,16 +104,16 @@ Hay disponibles configuraciones adicionales para proyectos de Linux de CMake. Ve
 
 ## <a name="environment-variables"></a>Variables de entorno
 
- `CMakeSettings.json` También es compatible con variables de entorno que lo consume en cualquiera de las propiedades mencionadas anteriormente. La sintaxis que se usa es `${env.FOO}` para expandir la variable de entorno %FOO%.
+ `CMakeSettings.json` también admite el consumo de variables de entorno en cualquiera de las propiedades mencionadas anteriormente. La sintaxis que se usa es `${env.FOO}` para expandir la variable de entorno %FOO%.
 También se puede acceder a las macros integradas dentro de este archivo:
 
-- `${workspaceRoot}` : proporciona la ruta de acceso completa de la carpeta del área de trabajo
-- `${workspaceHash}` – hash de la ubicación del área de trabajo; útil para crear un identificador único para el área de trabajo actual (por ejemplo, para usar en las rutas de acceso de carpeta)
-- `${projectFile}` : la ruta de acceso completa del archivo CMakeLists.txt raíz
-- `${projectDir}` : la ruta de acceso completa de la carpeta del archivo CMakeLists.txt raíz
-- `${thisFile}` : la ruta de acceso completa de la `CMakeSettings.json` archivo
-- `${name}` : el nombre de la configuración
-- `${generator}` : el nombre del generador de CMake utilizado en esta configuración
+- `${workspaceRoot}`: proporciona la ruta de acceso completa de la carpeta de área de trabajo.
+- `${workspaceHash}`: hash de ubicación del área de trabajo; es útil para crear un identificador único para el área de trabajo actual (por ejemplo, para usarlo en las rutas de acceso de carpeta).
+- `${projectFile}`: la ruta de acceso completa del archivo CMakeLists.txt raíz.
+- `${projectDir}`: la ruta de acceso completa de la carpeta del archivo CMakeLists.txt raíz.
+- `${thisFile}`: ruta de acceso completa del archivo `CMakeSettings.json`.
+- `${name}`: el nombre de la configuración
+- `${generator}`: el nombre del generador de CMake que se usa en esta configuración.
 
 ## <a name="ninja-command-line-arguments"></a>Argumentos de la línea de comandos de Ninja
 
@@ -137,7 +141,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>Entornos heredados
 
- `CMakeSettings.json` admite hereda los entornos. Esta característica permite (1) heredar los entornos predeterminados y (2) crear variables de entorno personalizadas que se pasan a CMake.exe cuando se ejecuta.
+ `CMakeSettings.json` admite entornos heredados. Esta característica permite (1) heredar los entornos predeterminados y (2) crear variables de entorno personalizadas que se pasan a CMake.exe cuando se ejecuta.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -210,7 +214,9 @@ En el ejemplo siguiente, la configuración de depuración x86 define su propio v
       "environments": [
         {
           // Replace the global property entirely.
-          "BuildDir": "D:\\custom-builddir",
+          "BuildDir": "D:\\custom-builddir"
+          // This environment does not specify a namespace, hence by default "env" will be assumed.
+          // "namespace" : "name" would require that this variable be referenced with "${name.BuildDir}".
         }
       ],
 
@@ -236,9 +242,9 @@ En el ejemplo siguiente, la configuración de depuración x86 define su propio v
 
 ## <a name="see-also"></a>Vea también
 
-[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
-[Configuración de un proyecto de CMake de Linux](../linux/cmake-linux-project.md)<br/>
-[Conexión al equipo remoto Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
-[Configurar sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
-[Implementar, ejecutar y depurar el proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>
+[Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/>
+[Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
+[Configuración de sesiones de depuración de CMake](configure-cmake-debugging-sessions.md)<br/>
+[Implementación, ejecución y depuración del proyecto de Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Referencia de configuración predefinida de CMake](cmake-predefined-configuration-reference.md)<br/>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
 ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034383"
 ---
 # <a name="vtordisp"></a>vtordisp
@@ -41,10 +41,10 @@ Quita el registro superior de la pila interna del compilador y restaura el valor
 *n*<br/>
 Especifica el nuevo valor de vtordisp. Los valores posibles son 0, 1 o 2, correspondiente a la `/vd0`, `/vd1`, y `/vd2` opciones del compilador. Para obtener más información, consulte [/vd (deshabilitar desplazamientos de constructores)](../build/reference/vd-disable-construction-displacements.md).
 
-*en*<br/>
+*on*<br/>
 Equivalente a `#pragma vtordisp(1)`.
 
-*Desactivar*<br/>
+*off*<br/>
 Equivalente a `#pragma vtordisp(0)`.
 
 ## <a name="remarks"></a>Comentarios
@@ -65,8 +65,8 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**Específicos de C++: END**
+**FIN de específicos de C++**
 
 ## <a name="see-also"></a>Vea también
 
-[Directives pragma y la palabra clave __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directivas pragma y la palabra clave __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

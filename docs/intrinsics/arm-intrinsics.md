@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027636"
 ---
 # <a name="arm-intrinsics"></a>Intrínsecos ARM
@@ -2208,7 +2208,7 @@ Número de coprocesador comprendido entre 0 y 15.
 *opcode1*<br/>
 Código de operación específicos del coprocesador entre 0 y 7.
 
-*CRN*<br/>
+*crn*<br/>
 Número de registro del coprocesador, entre 0 y 15, que especifica el primer operando de la instrucción.
 
 *crm*<br/>
@@ -2250,7 +2250,7 @@ Código de operación específico del coprocesador entre 0 y 15.
 *crm*<br/>
 Número de registro del coprocesador, entre 0 y 15, que especifica un operando adicional de origen o de destino.
 
-**Valor devuelto**
+**Devuelve el valor**
 
 El valor que se lee desde el coprocesador.
 
@@ -2295,7 +2295,7 @@ Número de coprocesador comprendido entre 0 y 15.
 *opcode1*<br/>
 Código de operación específico del coprocesador entre 0 y 7.
 
-*CRN*<br/>
+*crn*<br/>
 Número de registro del coprocesador, entre 0 y 15, que especifica el primer operando de la instrucción.
 
 *crm*<br/>

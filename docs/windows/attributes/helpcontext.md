@@ -7,10 +7,10 @@ helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
 ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038179"
 ---
 # <a name="helpcontext"></a>helpcontext
@@ -25,7 +25,7 @@ Especifica un identificador de contexto que permite al usuario ver información 
 
 ### <a name="parameters"></a>Parámetros
 
-*id*<br/>
+*identificador*<br/>
 Identificador de contexto del tema de ayuda. Consulte [ayuda HTML: Ayuda contextual para los programas](../../mfc/html-help-context-sensitive-help-for-your-programs.md) para obtener más información sobre identificadores de contexto.
 
 ## <a name="remarks"></a>Comentarios
@@ -55,6 +55,6 @@ Para obtener más información, vea [Contextos de atributo](cpp-attributes-com-n
 [Atributos de interfaz](interface-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
 [Atributos de método](method-attributes.md)<br/>
-[Typedef, Enum, Union y Struct (Atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [helpfile](helpfile.md)<br/>
 [helpstring](helpstring.md)

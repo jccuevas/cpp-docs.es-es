@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037677"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Cuestiones de diseño de arquitectura OLE DB
@@ -33,7 +33,7 @@ Por ejemplo, si desea actualizar los datos de un conjunto de filas, pero se olvi
 
 Dadas las posibles combinaciones de tecnologías (por ejemplo, usar componentes de ADO con componentes de OLE DB y migrar código ODBC a OLE DB), que abarcan todas las situaciones está fuera del ámbito de la documentación de Visual C++. Sin embargo, existen muchos artículos que abarcan varios escenarios en los siguientes sitios web de Microsoft:
 
-- [Ayuda y soporte técnico](https://support.microsoft.com/)
+- [Ayuda y Soporte Técnico de Microsoft](https://support.microsoft.com/)
 
 - [Información general de artículos técnicos de Microsoft Data Access](https://msdn.microsoft.com/library/ms810811.aspx)
 

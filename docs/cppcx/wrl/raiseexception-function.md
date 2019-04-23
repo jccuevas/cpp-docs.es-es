@@ -8,10 +8,10 @@ helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
 ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029964"
 ---
 # <a name="raiseexception-function"></a>RaiseException (función)
@@ -48,4 +48,4 @@ Para obtener más información, consulte el Windows `RaiseException` función.
 
 ## <a name="see-also"></a>Vea también
 
-[Microsoft::WRL::Details (Espacio de nombres)](microsoft-wrl-details-namespace.md)
+[Microsoft::WRL::Details (espacio de nombres)](microsoft-wrl-details-namespace.md)

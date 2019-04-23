@@ -1,5 +1,5 @@
 ---
-title: Filtrar Definir el Control de acceso y valores (C++)
+title: Procedimiento Definir el Control de acceso y valores (C++)
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.combo
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
 ms.openlocfilehash: c49913597f51ef231073b89d60ad9718b1113f44
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041489"
 ---
-# <a name="how-to-define-control-access-and-values-c"></a>Filtrar Definir el Control de acceso y valores (C++)
+# <a name="how-to-define-control-access-and-values-c"></a>Procedimiento Definir el Control de acceso y valores (C++)
 
 ## <a name="tab-order"></a>Orden de tabulación
 
@@ -156,5 +156,5 @@ Win32
 ## <a name="see-also"></a>Vea también
 
 [Administrar controles de cuadro de diálogo](controls-in-dialog-boxes.md)<br/>
-[Cómo Agregar, editar o eliminar los controles](adding-editing-or-deleting-controls.md)<br/>
-[Cómo Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Cómo: Agregar, editar o eliminar controles](adding-editing-or-deleting-controls.md)<br/>
+[Cómo: Controles de diseño](arrangement-of-controls-on-dialog-boxes.md)<br/>

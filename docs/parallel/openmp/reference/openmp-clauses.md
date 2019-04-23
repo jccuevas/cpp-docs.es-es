@@ -1,6 +1,6 @@
 ---
 title: Cláusulas de OpenMP
-ms.date: 10/22/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP clauses
 - copyin
@@ -33,34 +33,41 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 7d65b8315ad42f4993e54c07d31d42fffa43c4db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 590cb7d619895a04dfc511b6b77dad4074dc3f42
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519141"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124933"
 ---
 # <a name="openmp-clauses"></a>Cláusulas de OpenMP
 
 Proporciona vínculos a las cláusulas que se utilizan en la API de OpenMP.
 
-Visual C++ admite las cláusulas de OpenMP siguientes:
+Visual C++ admite las siguientes cláusulas de OpenMP.
+
+Para los atributos generales:
 
 |Cláusula|Descripción|
 |------|-----------|
+|[if](#if-openmp)|Especifica si se debe ejecutar un bucle en paralelo o en serie.|
+|[num_threads](#num-threads)|Establece el número de subprocesos en un equipo de subproceso.|
+|[ordered](#ordered-openmp-clauses)|Necesario en un paralelo [para](openmp-directives.md#for-openmp) instrucción si un [ordenados](openmp-directives.md#ordered-openmp-directives) directiva es que se usará en el bucle.|
+|[schedule](#schedule)|Se aplica a la [para](openmp-directives.md#for-openmp) directiva.|
+|[nowait](#nowait)|Invalida la barrera implícita en una directiva.|
+
+Para compartir datos de atributos:
+
+|Cláusula|Descripción|
+|------|-----------|
+|[private](#private-openmp)|Especifica que cada subproceso debe tener su propia instancia de una variable.|
+|[firstprivate](#firstprivate)|Especifica que cada subproceso debe tener su propia instancia de una variable, y que la variable debe inicializarse con el valor de la variable, porque existe antes de la construcción paralela.|
+|[lastprivate](#lastprivate)|Especifica que versión envolvente del contexto de la variable se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).|
+|[shared](#shared-openmp)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|
+|[default](#default-openmp)|Especifica el comportamiento de las variables sin ámbito de una región paralela.|
+|[reduction](#reduction)|Especifica que una o más variables que son privadas para cada subproceso se el sujeto de una operación de reducción al final de la región paralela.|
 |[copyin](#copyin)|Permite que los subprocesos tener acceso a valor del subproceso principal, para un [threadprivate](openmp-directives.md#threadprivate) variable.|
 |[copyprivate](#copyprivate)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|
-|[default](#default-openmp)|Especifica el comportamiento de las variables sin ámbito de una región paralela.|
-|[firstprivate](#firstprivate)|Especifica que cada subproceso debe tener su propia instancia de una variable, y que la variable debe inicializarse con el valor de la variable, porque existe antes de la construcción paralela.|
-|[if](#if-openmp)|Especifica si se debe ejecutar un bucle en paralelo o en serie.|
-|[lastprivate](#lastprivate)|Especifica que versión envolvente del contexto de la variable se establece igual que la versión privada de cualquier subproceso que ejecuta la última iteración (construcción de bucle for) o la última sección (#pragma secciones).|
-|[nowait](#nowait)|Invalida la barrera implícita en una directiva.|
-|[num_threads](#num-threads)|Establece el número de subprocesos en un equipo de subproceso.|
-|[Ordenada](#ordered-openmp-clauses)|Necesario en un paralelo [para](openmp-directives.md#for-openmp) instrucción si un [ordenados](openmp-directives.md#ordered-openmp-directives) directiva es que se usará en el bucle.|
-|[private](#private-openmp)|Especifica que cada subproceso debe tener su propia instancia de una variable.|
-|[reduction](#reduction)|Especifica que una o más variables que son privadas para cada subproceso se el sujeto de una operación de reducción al final de la región paralela.|
-|[schedule](#schedule)|Se aplica a la [para](openmp-directives.md#for-openmp) directiva.|
-|[Compartido](#shared-openmp)|Especifica que una o más variables deben compartirse entre todos los subprocesos.|
 
 ## <a name="copyin"></a>copyin
 
@@ -110,7 +117,7 @@ Para obtener más información, consulte [2.7.2.8 copyprivate](../../../parallel
 
 ### <a name="example"></a>Ejemplo
 
-```
+```cpp
 // omp_copyprivate.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -174,7 +181,7 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default-openmp"></a>predeterminado (OpenMP)
+## <a name="default-openmp"></a>Valor predeterminado
 
 Especifica el comportamiento de las variables sin ámbito de una región paralela.
 
@@ -236,7 +243,7 @@ if(expression)
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expression*<br/>
 Una expresión entera que, si se evalúa como True (distinto de cero,) hace que el código en la región paralela para ejecutar en paralelo. Si la expresión se evalúa como false (cero), la región paralela se ejecuta en serie (mediante un único subproceso).
 
 ### <a name="remarks"></a>Comentarios
@@ -251,7 +258,7 @@ Para obtener más información, consulte [2.3 parallel (construcción)](../../..
 
 ### <a name="example"></a>Ejemplo
 
-```
+```cpp
 // omp_if.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -311,7 +318,7 @@ Para obtener más información, consulte [2.7.2.3 lastprivate](../../../parallel
 
 Consulte [programación](#schedule) para obtener un ejemplo del uso de `lastprivate` cláusula.
 
-## <a name="nowait"></a>NOWAIT
+## <a name="nowait"></a>nowait
 
 Invalida la barrera implícita en una directiva.
 
@@ -331,7 +338,7 @@ Para obtener más información, consulte [2.4.1 for (construcción)](../../../pa
 
 ### <a name="example"></a>Ejemplo
 
-```
+```cpp
 // omp_nowait.cpp
 // compile with: /openmp /c
 #include <stdio.h>
@@ -405,7 +412,7 @@ Para obtener más información, consulte [2.3 parallel (construcción)](../../..
 
 Consulte [paralelo](openmp-directives.md#parallel) para obtener un ejemplo del uso de `num_threads` cláusula.
 
-## <a name="ordered-openmp-clauses"></a>ordered (cláusulas de OpenMP)
+## <a name="ordered-openmp-clauses"></a>Ordenada
 
 Necesario en un paralelo [para](openmp-directives.md#for-openmp) instrucción si un [ordenados](openmp-directives.md#ordered-openmp-directives) directiva es que se usará en el bucle.
 
@@ -423,7 +430,7 @@ Para obtener más información, consulte [2.4.1 for (construcción)](../../../pa
 
 Consulte [ordenados](openmp-directives.md#ordered-openmp-directives) para obtener un ejemplo del uso de `ordered` cláusula.
 
-## <a name="private-openmp"></a>Private (OpenMP)
+## <a name="private-openmp"></a>privado
 
 Especifica que cada subproceso debe tener su propia instancia de una variable.
 
@@ -449,7 +456,7 @@ Para obtener más información, consulte [2.7.2.1 privada](../../../parallel/ope
 
 ### <a name="example"></a>Ejemplo
 
-```C
+```c
 // openmp_private.c
 // compile with: /openmp
 #include <windows.h>
@@ -635,8 +642,8 @@ reduction(operation:var)
 
 ### <a name="parameters"></a>Parámetros
 
-*Operación*<br/>
-El operador para la operación de hacer en las variables (`var`) al final de la región paralela.
+*operation*<br/>
+El operador para la operación de hacer en las variables *var* al final de la región paralela.
 
 *var*<br/>
 Una o más variables en el que se va a realizar la reducción escalar. Si se especifica más de una variable, separe los nombres de variable con una coma.
@@ -645,15 +652,15 @@ Una o más variables en el que se va a realizar la reducción escalar. Si se esp
 
 `reduction` se aplica a las siguientes directivas:
 
-- [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
+- [for](openmp-directives.md#for-openmp)
 - [Secciones](openmp-directives.md#sections-openmp)
 
 Para obtener más información, consulte [2.7.2.6 reducción](../../../parallel/openmp/2-7-2-6-reduction.md).
 
 ### <a name="example"></a>Ejemplo
 
-```
+```cpp
 // omp_reduction.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -764,7 +771,7 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the functions, func1 through func5 succeeded!
 ```
 
-## <a name="schedule"></a>Programación
+## <a name="schedule"></a>schedule
 
 Se aplica a la [para](openmp-directives.md#for-openmp) directiva.
 
@@ -775,15 +782,10 @@ schedule(type[,size])
 ### <a name="parameters"></a>Parámetros
 
 *type*<br/>
-El tipo de programación:
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+El tipo de programación, ya sea `dynamic`, `guided`, `runtime`, o `static`.
 
 *size*<br/>
-(Opcional) Especifica el tamaño de las iteraciones. `size` debe ser un entero. No es válido cuando `type` es `runtime`.
+(Opcional) Especifica el tamaño de las iteraciones. *tamaño* debe ser un entero. No es válido cuando *tipo* es `runtime`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -903,7 +905,7 @@ int main( )
 ------------------------------------------------
 ```
 
-## <a name="shared-openmp"></a>compartido (OpenMP)
+## <a name="shared-openmp"></a>Compartido
 
 Especifica que una o más variables deben compartirse entre todos los subprocesos.
 
@@ -922,8 +924,8 @@ Otra manera de compartir variables entre subprocesos es con el [copyprivate](#co
 
 `shared` se aplica a las siguientes directivas:
 
-- [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
+- [for](openmp-directives.md#for-openmp)
 - [Secciones](openmp-directives.md#sections-openmp)
 
 Para obtener más información, consulte [2.7.2.4 compartido](../../../parallel/openmp/2-7-2-4-shared.md).
