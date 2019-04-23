@@ -1,6 +1,6 @@
 ---
 title: Variables de entorno de OpenMP
-ms.date: 10/23/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP environment variables
 - OMP_DYNAMIC
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 99868fec581d93f451d321af365f6c4546319077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449691"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124972"
 ---
 # <a name="openmp-environment-variables"></a>Variables de entorno de OpenMP
 
@@ -29,10 +29,10 @@ La implementación de Visual C++ del estándar OpenMP incluye las siguientes var
 
 |Variable de entorno|Descripción|
 |--------------------|-----------|
+|[OMP_SCHEDULE](#omp-schedule)|Modifica el comportamiento de la [programación](openmp-clauses.md#schedule) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](openmp-functions.md#omp-set-num-threads) o [num_threads](openmp-clauses.md#num-threads).|
 |[OMP_DYNAMIC](#omp-dynamic)|Especifica si el tiempo de ejecución de OpenMP puede ajustar el número de subprocesos en una región paralela.|
 |[OMP_NESTED](#omp-nested)|Especifica si está habilitado paralelismo anidado, a menos que está habilitado o deshabilitado con paralelismo anidado `omp_set_nested`.|
-|[OMP_NUM_THREADS](#omp-num-threads)|Establece el número máximo de subprocesos en la región paralela, a menos que se reemplaza por [omp_set_num_threads ()](openmp-functions.md#omp-set-num-threads) o [num_threads](openmp-clauses.md#num-threads).|
-|[OMP_SCHEDULE](#omp-schedule)|Modifica el comportamiento de la [programación](openmp-clauses.md#schedule) cláusula cuando `schedule(runtime)` se especifica en un `for` o `parallel for` directiva.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -117,7 +117,7 @@ Para obtener más información, consulte [4.2 OMP_NUM_THREADS](../../../parallel
 
 ### <a name="example"></a>Ejemplo
 
-El comando siguiente establece la `OMP_NUM_THREADS` variable de entorno a 16:
+El comando siguiente establece la `OMP_NUM_THREADS` variable de entorno `16`:
 
 ```
 set OMP_NUM_THREADS=16
@@ -140,15 +140,10 @@ set OMP_SCHEDULE[=type[,size]]
 ### <a name="parameters"></a>Parámetros
 
 *size*<br/>
-(Opcional) Especifica el tamaño de las iteraciones. `size` Debe ser un entero positivo. El valor predeterminado es 1, excepto cuando `type` es estático. No es válido cuando `type` es `runtime`.
+(Opcional) Especifica el tamaño de las iteraciones. *tamaño* debe ser un entero positivo. El valor predeterminado es `1`, salvo cuando *tipo* es estático. No es válido cuando *tipo* es `runtime`.
 
 *type*<br/>
-El tipo de programación:
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+El tipo de programación, ya sea `dynamic`, `guided`, `runtime`, o `static`.
 
 ### <a name="remarks"></a>Comentarios
 

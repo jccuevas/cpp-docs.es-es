@@ -1,17 +1,17 @@
 ---
-title: max_is (atributo de COM de C++)
+title: max_is (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 10732d5ba3251185dc7027e3449486af3037f763
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627479"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041314"
 ---
 # <a name="maxis"></a>max_is
 
@@ -25,12 +25,12 @@ Designa el valor máximo para un índice de matriz válida.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expression*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
 
-El **max_is** atributo de C++ tiene la misma funcionalidad que el [max_is](/windows/desktop/Midl/max-is) atributo MIDL.
+El **max_is** C++ atributo tiene la misma funcionalidad que el [max_is](/windows/desktop/Midl/max-is) atributo MIDL.
 
 ## <a name="requirements"></a>Requisitos
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 832dbf711307b81527bcaff0d1e1b8138f208e46
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328758"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040389"
 ---
 # <a name="binary-editor-c"></a>Editor binario (C++)
 

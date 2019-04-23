@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 34b3c93b60009284897c4b7c1c29ceb4fefa2c49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592639"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038413"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 

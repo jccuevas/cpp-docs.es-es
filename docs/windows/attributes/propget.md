@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 495c6e974bbe226a77d5685c7d1d8adb29e30830
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f60e8e8fc98ba3b75acefe80812069bfac78e6c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646010"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027303"
 ---
 # <a name="propget"></a>propget
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: 309ed876c71f453336ecc2ed10eedc07f2a80be8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d3f99fa85a777ae8361ed6f7cb82fe97ddd8d667
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785835"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028059"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType (enumeración)
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: 2311c61c4d661d58302308f06b08971f94cdacab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d9a32fbf961e980633635f277a76955a706a4b0e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816313"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021461"
 ---
 # <a name="command-line-warning-d9041"></a>Advertencia de la línea de comandos D9041
 
@@ -32,4 +32,4 @@ Para corregir la advertencia, agregue el **/ analyze** opción de línea de coma
 ## <a name="see-also"></a>Vea también
 
 [Errores de la línea de comandos de D8000 a D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
-[Opciones del compilador MSVC](../../build/reference/compiler-options.md)
+[Opciones del compilador de MSVC](../../build/reference/compiler-options.md)

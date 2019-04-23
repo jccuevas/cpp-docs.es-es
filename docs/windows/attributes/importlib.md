@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: d0bedb4bac91aa1a5aa72c8334db07aea0f04a97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649883"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041450"
 ---
 # <a name="importlib"></a>importlib
 

@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259521"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773728"
 ---
 # <a name="cricheditview-class"></a>CRichEditView Class
 
@@ -194,7 +194,7 @@ Un "control rich edit" es una ventana en la que el usuario puede escribir y edit
 
 Este control común de Windows (y por lo tanto, el [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) y las clases relacionadas) está disponible solo para programas que se ejecutan en versiones de Windows 95/98 y Windows NT 3.51 y versiones posteriores.
 
-Para obtener un ejemplo del uso de una vista de rich edit en una aplicación MFC, vea el [WORDPAD](../../visual-cpp-samples.md) aplicación de ejemplo.
+Para obtener un ejemplo del uso de una vista de rich edit en una aplicación MFC, vea el [WORDPAD](../../overview/visual-cpp-samples.md) aplicación de ejemplo.
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
@@ -1284,7 +1284,7 @@ Esta función para modificar el modo de vista de edición de la amplia responde 
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView (clase)](../../mfc/reference/cctrlview-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc (clase)](../../mfc/reference/cricheditdoc-class.md)<br/>

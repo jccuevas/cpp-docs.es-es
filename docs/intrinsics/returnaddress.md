@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641788"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041142"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641788"
 
 El `_ReturnAddress` intrínseco proporciona la dirección de la instrucción en la función de llamada que se va a ejecutar después de que el control vuelve al llamador.
 
-Cree el siguiente programa y paso a través de él en el depurador. Paso a paso a través del programa, tenga en cuenta la dirección que se devuelve desde `_ReturnAddress`. A continuación, inmediatamente después de volver de la función donde `_ReturnAddress` se ha usado, abra el [Cómo: usar la ventana Desensamblado](/visualstudio/debugger/how-to-use-the-disassembly-window) y tenga en cuenta que la dirección de la siguiente instrucción que se ejecutará coincide con la dirección devuelta de `_ReturnAddress`.
+Cree el siguiente programa y paso a través de él en el depurador. Paso a paso a través del programa, tenga en cuenta la dirección que se devuelve desde `_ReturnAddress`. A continuación, inmediatamente después de volver de la función donde `_ReturnAddress` se ha usado, abra el [Cómo: Utilice la ventana Desensamblado](/visualstudio/debugger/how-to-use-the-disassembly-window) y tenga en cuenta que la dirección de la siguiente instrucción que se ejecutará coincide con la dirección devuelta de `_ReturnAddress`.
 
 Optimizaciones, como la inclusión entre líneas puede afectar a la dirección de retorno. Por ejemplo, si el programa de ejemplo siguiente se compila con [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` se inserten en la función de llamada, `main`. Por lo tanto, las llamadas a `_ReturnAddress` desde `inline_func` y `main` cada uno, se producirá el mismo valor.
 

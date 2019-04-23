@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258949"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767670"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox (clase)
 
@@ -57,7 +57,7 @@ Cuando el usuario selecciona una nueva fuente en un `CMFCToolBarFontComboBox` ob
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCToolBarFontSizeComboBox` clase para configurar un `CMFCToolBarFontSizeComboBox` objeto. El ejemplo muestra cómo recuperar el tamaño de fuente, en twips, desde el cuadro de texto, rellene el cuadro combinado de tamaño de fuente con todos los tamaños válidos de la fuente determinada y especificar el tamaño de fuente en twips. Este fragmento de código forma parte del [ejemplo de WordPad](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo utilizar distintos métodos en el `CMFCToolBarFontSizeComboBox` clase para configurar un `CMFCToolBarFontSizeComboBox` objeto. El ejemplo muestra cómo recuperar el tamaño de fuente, en twips, desde el cuadro de texto, rellene el cuadro combinado de tamaño de fuente con todos los tamaños válidos de la fuente determinada y especificar el tamaño de fuente en twips. Este fragmento de código forma parte del [ejemplo de WordPad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

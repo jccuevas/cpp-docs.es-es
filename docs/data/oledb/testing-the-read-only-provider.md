@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265105"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025135"
 ---
 # <a name="testing-the-read-only-provider"></a>Probar el proveedor de sólo lectura
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: a476fefa4338e73bf6eaf70fa16a5328a427b56d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649246"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032276"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Referencia de plantillas de consumidor OLE DB
 
@@ -86,7 +86,7 @@ Se utiliza para capturar y manipular las filas de forma masiva mediante la recup
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
 Puede usarse como un argumento de plantilla, si el comando no devuelve un conjunto de filas.
 
-[cRestrictions](../../data/oledb/crestrictions-class.md)<br/>
+[CRestrictions](../../data/oledb/crestrictions-class.md)<br/>
 Se utiliza para especificar restricciones para los conjuntos de filas de esquema.
 
 [CRowset](../../data/oledb/crowset-class.md)<br/>

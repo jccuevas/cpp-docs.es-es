@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3384
 ms.assetid: c9f92c6a-62a9-4333-b2b1-bc55c7f288b6
-ms.openlocfilehash: 0c9804666bfd73f98541f95434b9cebf5185d2ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1b7e1a69035df358cf84ad791f611928dab8b5a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566821"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779159"
 ---
 # <a name="compiler-error-c3384"></a>Error del compilador C3384
 
@@ -19,7 +19,7 @@ ms.locfileid: "50566821"
 
 No se puede restringir un tipo genérico tanto a `value class` como a `ref class`.
 
-Consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
+Consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

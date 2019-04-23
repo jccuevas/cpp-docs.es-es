@@ -1,5 +1,5 @@
 ---
-title: 'Intercambio de campos de registros: Trabajar con el código de asistente'
+title: 'Intercambio de campos de registro: Trabajar con el código de Asistente'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492124"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041298"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Intercambio de campos de registros: Trabajar con el código de asistente
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Intercambio de campos de registro: Trabajar con el código de Asistente
 
 En este tema se explica el código que el Asistente para aplicaciones MFC y **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) para la compatibilidad con RFX y cómo desea modificar ese código.
 
 > [!NOTE]
->  En este tema se aplica a las clases derivadas de `CRecordset` en qué fila de forma masiva captura no se ha implementado. Si usas la obtención masiva de filas, se implementa el intercambio masivo de campos de registros (RFX masivo). RFX masivo es similar a RFX. Para comprender las diferencias, consulte [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  En este tema se aplica a las clases derivadas de `CRecordset` en qué fila de forma masiva captura no se ha implementado. Si usas la obtención masiva de filas, se implementa el intercambio masivo de campos de registros (RFX masivo). RFX masivo es similar a RFX. Para comprender las diferencias, consulte [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Cuando crea una clase de conjunto de registros con el Asistente para aplicaciones MFC o **Agregar clase**, el asistente escribe los siguientes elementos relacionados con RFX para usted, basándose en el origen de datos, tabla y opciones de columna que se realice en el Asistente para:
 
@@ -99,7 +99,7 @@ Tenga en cuenta las siguientes características clave de la función:
 
 - Una llamada a `CFieldExchange::SetFieldType`, mediante el `pFX` puntero. Esta llamada especifica que todas las llamadas de función RFX al final de `DoFieldExchange` o la siguiente llamada a `SetFieldType` columnas de salida. Para obtener más información, consulte [CFieldExchange:: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Varias llamadas a la `RFX_Text` función global, una por cada miembro de datos de campo (todas de las cuales se `CString` variables en el ejemplo). Estas llamadas especifican la relación entre un nombre de columna en el origen de datos y un miembro de datos de campo. Las funciones de RFX realizan la transferencia de datos reales. La biblioteca de clases proporciona funciones RFX para todos los tipos de datos comunes. Para obtener más información acerca de las funciones RFX, consulte [intercambio de campos de registros: utilizar las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Varias llamadas a la `RFX_Text` función global, una por cada miembro de datos de campo (todas de las cuales se `CString` variables en el ejemplo). Estas llamadas especifican la relación entre un nombre de columna en el origen de datos y un miembro de datos de campo. Las funciones de RFX realizan la transferencia de datos reales. La biblioteca de clases proporciona funciones RFX para todos los tipos de datos comunes. Para obtener más información acerca de las funciones RFX, consulte [intercambio de campos de registro: Uso de las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  El orden de las columnas del conjunto de resultados debe coincidir con el orden de las llamadas de función RFX de `DoFieldExchange`.

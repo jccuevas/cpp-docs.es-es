@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220561"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59237203"
 ---
 # <a name="how-to-design-for-exception-safety"></a>Procedimiento Diseño de seguridad de las excepciones
 
@@ -23,7 +23,7 @@ Independientemente de cómo una función controla una excepción, para ayudar a 
 
 ### <a name="keep-resource-classes-simple"></a>Mantener clases de recursos simples
 
-Cuando se encapsula la administración de recursos manual en las clases, use una clase que no haga nada más que administrar cada recurso; de lo contrario, podrían producirse pérdidas. Use [inteligente punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.
+Al encapsular la administración de recursos manual de clases, use una clase que no hace nada, salvo que administrar un único recurso. Si se mantiene la clase simple, reducir el riesgo de introducir pérdidas de recursos. Use [inteligente punteros](../cpp/smart-pointers-modern-cpp.md) cuando sea posible, como se muestra en el ejemplo siguiente. Este ejemplo es deliberadamente artificial y simplista para resaltar las diferencias cuando se utiliza `shared_ptr`.
 
 ```cpp
 // old-style new/delete version
@@ -122,4 +122,4 @@ Los tipos integrados garantizan todos que no se produzca ningún error y los tip
 ## <a name="see-also"></a>Vea también
 
 [Controlar errores y excepciones (C++ moderno)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Cómo: La interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Cómo: Interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

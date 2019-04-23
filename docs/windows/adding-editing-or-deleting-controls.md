@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328511"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025369"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Cómo Agregar, editar o eliminar los controles (C++)
 
@@ -190,7 +190,7 @@ Visual Studio le permite insertar controles ActiveX en el cuadro de diálogo. Pa
 
 El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles ActiveX en el cuadro de diálogo al usar el [Editor de cuadro de diálogo](../windows/dialog-editor.md). Este cuadro de diálogo contiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**ActiveX Control**|Muestra una lista de controles ActiveX.<br/><br/>Insertar un control de este cuadro de diálogo no genera una clase contenedora. Si necesita una clase contenedora, utilice [vista de clases](/visualstudio/ide/viewing-the-structure-of-code) para crear uno, consulte [agregar una clase](../ide/adding-a-class-visual-cpp.md).<br/><br/>Si un control ActiveX no aparece en este cuadro de diálogo, intente instalar el control de acuerdo con las instrucciones del proveedor.|
 |**Ruta de acceso**|Muestra el archivo donde se encuentra el control ActiveX.|

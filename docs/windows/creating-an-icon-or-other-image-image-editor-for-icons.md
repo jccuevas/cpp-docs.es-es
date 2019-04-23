@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328498"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027602"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Cómo Crear un icono u otra imagen
 
@@ -153,7 +153,7 @@ El **personalizado** propiedad abre el **imagen personalizada** cuadro de diálo
 
 El **imagen personalizada** cuadro de diálogo le permite crear una nueva imagen con un tamaño personalizado y el número de colores. Las siguientes propiedades que se incluyen son:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Width**|Proporciona un espacio para que escriba el ancho de la imagen personalizada en píxeles (1-512, límite de 2048).|
 |**Height**|Proporciona un espacio para escribir el alto de la imagen personalizada en píxeles (1-512, límite de 2048).|
@@ -161,7 +161,7 @@ El **imagen personalizada** cuadro de diálogo le permite crear una nueva imagen
 
 Use la **abrir &lt;dispositivo&gt; imagen** cuadro de diálogo para abrir las imágenes de dispositivo en los proyectos de C++. Enumera las imágenes de dispositivo existentes en el recurso actual (imágenes que forman parte del recurso actual). Es la siguiente propiedad incluida:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Imágenes actuales**|Enumera las imágenes incluidas en el recurso. Seleccione el tipo de imagen que desea abrir.|
 

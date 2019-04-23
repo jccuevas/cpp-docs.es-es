@@ -1,17 +1,17 @@
 ---
-title: last_is (atributo de COM de C++)
+title: last_is (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ce19d8d727a359054289200b2cdcb6a6427dc706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545722"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033292"
 ---
 # <a name="lastis"></a>last_is
 
@@ -25,12 +25,12 @@ Especifica el índice del último elemento de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expression*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
 
-El **last_is** atributo de C++ tiene la misma funcionalidad que el [last_is](/windows/desktop/Midl/last-is) atributo MIDL.
+El **last_is** C++ atributo tiene la misma funcionalidad que el [last_is](/windows/desktop/Midl/last-is) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

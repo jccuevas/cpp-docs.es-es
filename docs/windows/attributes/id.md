@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: b7bcbd9229529ec00a3b778cafd5678d47af950c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630053"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034701"
 ---
 # <a name="id"></a>id
 
@@ -25,7 +25,7 @@ Especifica un *dispid* parámetro para una función miembro (una propiedad o un 
 
 ### <a name="parameters"></a>Parámetros
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío para el método de interfaz.
 
 ## <a name="remarks"></a>Comentarios

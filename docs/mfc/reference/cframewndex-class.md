@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d336e85020d8d2e855afb0568058057594ec8829
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302991"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769659"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx (clase)
 
@@ -291,7 +291,7 @@ class CFrameWndEx : public CFrameWnd
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo se hereda de una clase desde el `CFrameWndEx` clase. El ejemplo ilustra las firmas de método en la subclase y cómo reemplazar el `OnShowPopupMenu` método. Este fragmento de código forma parte del [ejemplo de WordPad](../../visual-cpp-samples.md).
+El ejemplo siguiente muestra cómo se hereda de una clase desde el `CFrameWndEx` clase. El ejemplo ilustra las firmas de método en la subclase y cómo reemplazar el `OnShowPopupMenu` método. Este fragmento de código forma parte del [ejemplo de WordPad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#3](../../mfc/reference/codesnippet/cpp/cframewndex-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#4](../../mfc/reference/codesnippet/cpp/cframewndex-class_2.cpp)]

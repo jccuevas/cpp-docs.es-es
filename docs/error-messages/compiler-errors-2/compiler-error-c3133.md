@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
 ms.openlocfilehash: 0a0c30203f886934a19fde35e51602b57cc1b14d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781723"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776306"
 ---
 # <a name="compiler-error-c3133"></a>Error del compilador C3133
 

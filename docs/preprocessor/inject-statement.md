@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: cf7d06eddb5ae6d08f57fb82613d97c7dcc36074
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566717"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034292"
 ---
 # <a name="injectstatement"></a>inject_statement
 

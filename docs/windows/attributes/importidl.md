@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8d0d891f74da8df2351b0a861fb7501e72f5e2de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587179"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029919"
 ---
 # <a name="importidl"></a>importidl
 
@@ -30,7 +30,7 @@ Identifica el nombre del archivo .idl que desea combinar con el archivo .idl que
 
 ## <a name="remarks"></a>Comentarios
 
-El **importidl** atributo de C++ coloca la sección fuera del bloque de biblioteca (en *idl_file*) en el archivo .idl generado del programa y la sección de biblioteca (en *idl_file*) en la biblioteca de la sección de su programa genera el archivo .idl.
+El **importidl** C++ atributo coloca la sección fuera del bloque de biblioteca (en *idl_file*) en el archivo .idl generado del programa y la sección de biblioteca (en *idl_file*) en la sección de la biblioteca del archivo .idl generado del programa.
 
 Es posible que desee usar **importidl**, por ejemplo, si desea usar un archivo .idl codificadas con el archivo .idl generado.
 

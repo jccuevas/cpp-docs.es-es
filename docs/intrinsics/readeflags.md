@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: e5294180904d0d7ca3bbd1de75e45e058a33c88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594277"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026375"
 ---
 # <a name="readeflags"></a>__readeflags
 

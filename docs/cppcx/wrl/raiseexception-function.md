@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 0a1c661378c4b71378456f2813159b7415cf3fad
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786007"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029964"
 ---
 # <a name="raiseexception-function"></a>RaiseException (función)
 

@@ -1,17 +1,17 @@
 ---
-title: registration_script (atributo de COM de C++)
+title: registration_script (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 304d4139cb1adbbb7c345cd3ce6f7fc985907712
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555134"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024379"
 ---
 # <a name="registrationscript"></a>registration_script
 
@@ -25,12 +25,12 @@ Ejecuta el script de registro personalizado especificado.
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia de comandos*<br/>
+*script*<br/>
 La ruta de acceso completa a un archivo de script (.rgs) de registro personalizado. Un valor de **ninguno**, tales como `script = "none"`, indica que la coclase no tiene ningún requisito de registro.
 
 ## <a name="remarks"></a>Comentarios
 
-El **registration_script** atributo de C++ ejecuta el script de registro personalizado especificado por *script*. Si no se especifica este atributo, se usa un archivo .rgs estándar (que contiene información para registrar el componente). Para obtener más información sobre los archivos .rgs, consulte [el componente de registro de ATL (registrador)](../../atl/atl-registry-component-registrar.md).
+El **registration_script** C++ atributo ejecuta el script de registro personalizado especificado por *script*. Si no se especifica este atributo, se usa un archivo .rgs estándar (que contiene información para registrar el componente). Para obtener más información sobre los archivos .rgs, consulte [el componente de registro de ATL (registrador)](../../atl/atl-registry-component-registrar.md).
 
 Este atributo requiere que el atributo [coclass](coclass.md), [progid](progid.md)o [vi_progid](vi-progid.md) (u otro atributo que implique uno de estos) se aplique también al mismo elemento.
 

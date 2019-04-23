@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276018"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772363"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl (clase)
 
@@ -111,7 +111,7 @@ Siga estos pasos para incorporar el `CMFCColorPickerCtrl` control en el cuadro d
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un `CMFCColorPickerCtrl` objeto mediante distintos métodos en el `CMFCColorPickerCtrl` clase. El ejemplo muestra cómo establecer el tipo de control de selector de y cómo establecer su color, matiz, luminancia y saturación. El ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar un `CMFCColorPickerCtrl` objeto mediante distintos métodos en el `CMFCColorPickerCtrl` clase. El ejemplo muestra cómo establecer el tipo de control de selector de y cómo establecer su color, matiz, luminancia y saturación. El ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]

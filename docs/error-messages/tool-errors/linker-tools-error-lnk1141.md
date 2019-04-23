@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: 3f5ab7fd3d9ab720db17e72844a19065c822263e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817483"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021597"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Error de las herramientas del vinculador LNK1141
 

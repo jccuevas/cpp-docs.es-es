@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: c8f2252c05e3e264740004f4126c7557f30b126a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657346"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777312"
 ---
 # <a name="compiler-error-c3662"></a>Error del compilador C3662
 
@@ -19,7 +19,7 @@ ms.locfileid: "50657346"
 
 Se usó un especificador de invalidación en un miembro de tipo nativo, lo que no está permitido.
 
-Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 743069c0ed3103a2ed8d459def65083146b971e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497043"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778009"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Advertencia del compilador (nivel 4) C4487
 
@@ -19,7 +19,7 @@ ms.locfileid: "50497043"
 
 Una función en una clase derivada tiene la misma firma que una función de la clase base no virtuales. C4487 le recuerda que la función de la clase derivada no reemplaza la función de la clase base. Marcar explícitamente la función de la clase derivada como `new` para resolver esta advertencia.
 
-Para obtener más información, consulte [new (nueva ranura en vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md).
+Para obtener más información, consulte [new (nueva ranura en vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

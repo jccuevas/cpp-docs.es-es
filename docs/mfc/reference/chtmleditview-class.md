@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: c03d580b1b01fd0d0e858278d8b752c3e4b115b9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413386"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767215"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView (clase)
 
@@ -144,5 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Ejemplo HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)

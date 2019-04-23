@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
 ms.openlocfilehash: 3b0ad3aa7395f5f423c8c36f547d4a0e2ad792c1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777108"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779065"
 ---
 # <a name="compiler-error-c3669"></a>Error del compilador C3669
 

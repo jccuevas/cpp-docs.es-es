@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448872"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025421"
 ---
 # <a name="class-attributes"></a>Atributos de clase
 
@@ -44,7 +44,7 @@ Los siguientes atributos se aplican a la [clase](../../cpp/class-cpp.md) palabra
 |[noncreatable](noncreatable.md)|Define un objeto que no pueden crearse instancias por sí mismo.|
 |[progid](progid.md)|Define el ProgID de un control.|
 |[registration_script](registration-script.md)|Ejecuta el script de registro especificado.|
-|[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
+|[requestedit](requestedit.md)|Indica que la propiedad admite la notificación `OnRequestEdit`.|
 |[source](source-cpp.md)|Especifica las interfaces de origen del control de puntos de conexión en una clase. En una propiedad o método, el `source` atributo indica que el miembro devuelve un objeto o `VARIANT` que es un origen de eventos.|
 |[support_error_info](support-error-info.md)|Admite informes de errores para el objeto de destino.|
 |[threading](threading-cpp.md)|Especifica el modelo de subprocesos para un control.|

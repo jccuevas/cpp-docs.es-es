@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-ms.openlocfilehash: 4d7e2ed29daac276c9b6cba07a727371a212fd4a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331898"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029520"
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 

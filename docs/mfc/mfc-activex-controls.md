@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262615"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769217"
 ---
 # <a name="mfc-activex-controls"></a>Controles ActiveX MFC
 
@@ -75,8 +75,7 @@ Comunicación entre un contendor de controles ActiveX y un control ActiveX
 
 En la ilustración anterior se muestra también cómo los controles administran otras interfaces OLE (además de la automatización y los eventos).
 
-
-  `COleControl` realiza toda la comunicación de un control con el contenedor. Para controlar algunas de las solicitudes de contenedor, `COleControl` llamará a las funciones que se implementan en la clase de control de miembro. Todos los métodos y algunas propiedades se controlan de esta manera. La clase del control también puede iniciar la comunicación con el contenedor si se llama a las funciones miembro de `COleControl`. Los eventos se desencadenan de esta manera.
+`COleControl` realiza toda la comunicación de un control con el contenedor. Para controlar algunas de las solicitudes de contenedor, `COleControl` llamará a las funciones que se implementan en la clase de control de miembro. Todos los métodos y algunas propiedades se controlan de esta manera. La clase del control también puede iniciar la comunicación con el contenedor si se llama a las funciones miembro de `COleControl`. Los eventos se desencadenan de esta manera.
 
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Estados activos e inactivos de un Control ActiveX
 
@@ -117,7 +116,7 @@ De forma predeterminada, las clases de controles ActiveX y herramientas se insta
 
    Contiene las bibliotecas necesarias para desarrollar controles ActiveX con MFC
 
-También hay ejemplos para controles ActiveX de MFC. Para obtener más información acerca de estos ejemplos, vea [ejemplos de controles: Controles ActiveX basados en MFC](../visual-cpp-samples.md)
+También hay ejemplos para controles ActiveX de MFC. Para obtener más información acerca de estos ejemplos, vea [ejemplos de controles: Controles ActiveX basados en MFC](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 15b82ddca42f9b70ac16538cea19f8aedd799c05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574452"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037586"
 ---
 # <a name="out-c"></a>out (C++)
 

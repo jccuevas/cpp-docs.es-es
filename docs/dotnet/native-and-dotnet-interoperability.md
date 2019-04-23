@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: ae5a4583d5f074b98e346ba090246f533b80803d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742143"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59237151"
 ---
 # <a name="native-and-net-interoperability"></a>Interoperabilidad nativa y de .NET
 
@@ -35,5 +35,3 @@ Explica cómo utilizar las clases de soporte de formularios Windows Forms de MFC
 
 [Llamar a funciones nativas desde código administrado](../dotnet/calling-native-functions-from-managed-code.md)<br/>
 Describe cómo se pueden utilizar los archivos DLL que no son de CLR desde las aplicaciones .NET.
-
-## <a name="see-also"></a>Vea también

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593498"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039517"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -94,7 +94,7 @@ Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL q
 |[range](range-cpp.md)|Especifica un intervalo de valores permitidos para los argumentos o los campos cuyos valores se establecen en tiempo de ejecución.|
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a una variable.|
 |[ref](ref-cpp.md)|Identifica un puntero de referencia.|
-|[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
+|[requestedit](requestedit.md)|Indica que la propiedad admite la notificación `OnRequestEdit`.|
 |[restricted](restricted.md)|Especifica que una biblioteca o miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.|
 |[retval](retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|
 |[size_is](size-is.md)|Especifica el tamaño de memoria asignada para los punteros de tamaño, tamaño de punteros a punteros de tamaño y solo - o matrices multidimensionales.|

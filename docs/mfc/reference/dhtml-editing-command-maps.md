@@ -2,16 +2,16 @@
 title: Mapas de comandos de edición de DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278267"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776159"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mapas de comandos de edición de DHTML
 
-Se pueden usar las macros siguientes para asignar comandos de edición de DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-las clases derivadas. Para obtener un ejemplo de su uso, consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Se pueden usar las macros siguientes para asignar comandos de edición de DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-las clases derivadas. Para obtener un ejemplo de su uso, consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="dhtml-editing-command-map-macros"></a>Macros de mapa de comandos de edición de DHTML
 
@@ -46,7 +46,7 @@ Use [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) para implementar la 
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -89,7 +89,7 @@ Use junto con [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -113,7 +113,7 @@ El comando para que de edición de HTML *cmdID* asigna (por ejemplo, IDM_COPY).
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -140,7 +140,7 @@ El nombre de la función de controlador de mensajes a la que se asigna el comand
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -167,7 +167,7 @@ El tipo de elemento de interfaz de usuario; uno de AFX_UI_ELEMTYPE_NORMAL, AFX_U
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -197,7 +197,7 @@ El tipo de elemento de interfaz de usuario; uno de AFX_UI_ELEMTYPE_NORMAL, AFX_U
 
 ### <a name="example"></a>Ejemplo
 
-Consulte [ejemplo HTMLEdit](../../visual-cpp-samples.md).
+Consulte [ejemplo HTMLEdit](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Requisitos
 

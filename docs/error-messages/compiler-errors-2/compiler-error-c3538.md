@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-ms.openlocfilehash: 50c6d108c8f2bc42a624ce6376d66111df00478b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8b97c8c6e5d23c406bf2d5831279810e7de0902
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608915"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035035"
 ---
 # <a name="compiler-error-c3538"></a>Error del compilador C3538
 

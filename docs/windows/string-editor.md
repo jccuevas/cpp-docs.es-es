@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 47d5835356863383b32baffc4475e01a652e9856
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328901"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037190"
 ---
 # <a name="string-editor-c"></a>Editor de cadenas (C++)
 

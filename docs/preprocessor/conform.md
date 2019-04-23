@@ -9,12 +9,12 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432908"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026583"
 ---
 # <a name="conform"></a>conform
 **Específicos de C++**
@@ -23,17 +23,17 @@ Especifica el comportamiento de tiempo de ejecución de la [/Zc: forScope](../bu
 
 ## <a name="syntax"></a>Sintaxis
 
-> **se ajustan #pragma (** *nombre* [**, mostrar** ] [**,** { **en** | **desactivar** }] [[**,** { **inserción** | **pop** }] [**,** *identificador* ]] **)**
+> **#pragma conform(** *name* [**, show** ] [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
 
 ### <a name="parameters"></a>Parámetros
 
 *name*<br/>
 Especifica el nombre de la opción del compilador que se va a modificar. El único valor válido *nombre* es `forScope`.
 
-**Show**<br/>
+**show**<br/>
 (Opcional) Hace que la configuración actual de *nombre* (true o false) que se mostrará por medio de un mensaje de advertencia durante la compilación. Por ejemplo: `#pragma conform(forScope, show)`.
 
-**en**, **desactivado**<br/>
+**on**, **off**<br/>
 (Opcional) Establecer *nombre* a **en** permite la [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) opción del compilador. El valor predeterminado es **desactivar**.
 
 **push**<br/>

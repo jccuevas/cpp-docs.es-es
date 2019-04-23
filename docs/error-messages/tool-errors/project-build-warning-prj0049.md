@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0252103757df1c5dc95c9691c6da1d3630d29772
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816235"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035564"
 ---
 # <a name="project-build-warning-prj0049"></a>Advertencia PRJ0049 al compilar el proyecto
 

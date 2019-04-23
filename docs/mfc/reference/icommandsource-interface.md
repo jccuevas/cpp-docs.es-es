@@ -1,6 +1,6 @@
 ---
 title: ICommandSource (interfaz)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296025"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565615"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource (interfaz)
 
@@ -179,7 +179,7 @@ Identificador del comando.
 
 Este método quita el controlador de comando asignado al cmdID desde el objeto de origen del comando.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Quita un grupo de controladores de comandos de un objeto de origen del comando.
 ```
@@ -196,7 +196,7 @@ El índice inicial del intervalo de Id. de comando.
 El índice final del intervalo de Id. de comando.
 ### <a name="remarks"></a>Comentarios
 
-Este método quita un grupo de controladores de mensajes, asignado para el especificado de identificadores de comando cmdIDMin y cmdIDMax, desde el objeto de origen del comando.
+Este método quita un grupo de controladores de mensajes, asignada a los identificadores de comando especificados por cmdIDMin y cmdIDMax, desde el objeto de origen del comando.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ El índice inicial del intervalo de Id. de comando.
 El índice final del intervalo de Id. de comando.
 ### <a name="remarks"></a>Comentarios
 
-Este método quita un grupo de controladores de mensajes de comando de interfaz usuario, asignado para el especificado de identificadores de comando cmdIDMin y cmdIDMax, desde el objeto de origen del comando.
+Este método quita un grupo de controladores de mensajes de comando de interfaz usuario, asignado a los identificadores de comando especificados por cmdIDMin y cmdIDMax, desde el objeto de origen del comando.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

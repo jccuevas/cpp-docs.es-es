@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288793"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769490"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
 
@@ -107,7 +107,7 @@ Los temas siguientes describen cómo usar las características del diseñador de
 
 - **Panel:** Un área de la barra de cinta de opciones que muestra un grupo de controles relacionados. Cada categoría de la cinta de opciones contiene uno o más paneles de cinta de opciones.
 
-- **Elementos de la cinta de opciones:** Controles de los paneles, por ejemplo, botones y cuadros combinados. Para ver los distintos controles que pueden hospedarse en una cinta de opciones, consulte [ejemplo RibbonGadgets: Aplicación de Gadgets de la cinta de opciones](../visual-cpp-samples.md).
+- **Elementos de la cinta de opciones:** Controles de los paneles, por ejemplo, botones y cuadros combinados. Para ver los distintos controles que pueden hospedarse en una cinta de opciones, consulte [ejemplo RibbonGadgets: Aplicación de Gadgets de la cinta de opciones](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vea también
 

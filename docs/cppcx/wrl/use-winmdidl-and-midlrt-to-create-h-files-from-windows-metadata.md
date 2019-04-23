@@ -1,16 +1,16 @@
 ---
-title: Filtrar Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows
+title: Procedimiento Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
 ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58785863"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Filtrar Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Procedimiento Usar winmdidl.exe y midlrt.exe para crear archivos .h desde metadatos de windows
 
 Winmdidl.exe y midlrt.exe permiten la interacción de nivel COM entre el código de C++ nativo y los componentes de Windows Runtime. Winmdidl.exe toma como entrada un archivo .winmd que contiene los metadatos para un componente de Windows Runtime y genera un archivo IDL. Midlrt.exe convierte ese archivo IDL en archivos de encabezado que el código de C++ puede utilizar. Ambas herramientas se ejecutan en la línea de comandos.
 

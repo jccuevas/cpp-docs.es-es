@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: e7e213d1b0679f17ce070de85ee9410ff9546716
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 323fce053707d6d00d1e17b641613d15607ab6f8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785898"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040759"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory (función)
 

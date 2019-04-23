@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-ms.openlocfilehash: 42b7b95f2da4313bdfcb1d9d8a064ca5be563e40
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 23bc20355e1e2b17ac20cf975df2ff58d6553ef9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423253"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023092"
 ---
 # <a name="retrieving-a-blob"></a>Recuperar un objeto BLOB
 

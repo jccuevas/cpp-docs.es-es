@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512377"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024613"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Conjunto de registros: Agregar, actualizar y eliminar registros (ODBC)
 
 Este tema es aplicable a las clases ODBC de MFC.
 
 > [!NOTE]
->  Ahora se pueden agregar registros de forma masiva con mayor eficiencia. Para obtener más información, consulte [conjunto de registros: agregar registros de forma masiva (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
+>  Ahora se pueden agregar registros de forma masiva con mayor eficiencia. Para obtener más información, consulte [conjunto de registros: Agregar registros de forma masiva (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md).
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si usas la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si usas la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Los conjuntos de registros dinámicos y as instantáneas actualizables permiten agregar, editar (actualizar) y eliminar registros. En este tema se explica:
 
@@ -45,7 +45,7 @@ Los conjuntos de registros dinámicos y as instantáneas actualizables permiten 
 
 - [Cómo eliminar un registro](#_core_deleting_a_record_from_a_recordset).
 
-Para obtener más información sobre cómo se realizan las actualizaciones y cómo aparecen las actualizaciones a otros usuarios, vea [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalmente, al agregar, editar o eliminar un registro, el conjunto de registros cambia el origen de datos inmediatamente. En su lugar, se pueden agrupar las actualizaciones relacionadas en transacciones. Si hay una transacción en progreso, la actualización no es final hasta que se confirma la transacción. Esto permite recuperar o revertir los cambios. Para obtener información acerca de las transacciones, vea [transacción (ODBC)](../../data/odbc/transaction-odbc.md).
+Para obtener más información sobre cómo se realizan las actualizaciones y cómo aparecen las actualizaciones a otros usuarios, vea [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md). Normalmente, al agregar, editar o eliminar un registro, el conjunto de registros cambia el origen de datos inmediatamente. En su lugar, se pueden agrupar las actualizaciones relacionadas en transacciones. Si hay una transacción en progreso, la actualización no es final hasta que se confirma la transacción. Esto permite recuperar o revertir los cambios. Para obtener información acerca de las transacciones, vea [transacción (ODBC)](../../data/odbc/transaction-odbc.md).
 
 La siguiente tabla resume las opciones disponibles para conjuntos de registros con diferentes características de actualización.
 
@@ -102,9 +102,9 @@ Puede agregar nuevos registros a un conjunto de registros si su [CanAppend](../.
 
 1. Llamar al objeto de conjunto de registros `Update` función miembro.
 
-   `Update` completa la adición escribiendo el nuevo registro en el origen de datos. Para obtener información sobre cómo se realiza si no se llama a `Update`, consulte [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` completa la adición escribiendo el nuevo registro en el origen de datos. Para obtener información sobre cómo se realiza si no se llama a `Update`, consulte [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
-Para obtener información acerca de cómo se agregan registros y cuando los registros agregados son visibles en el conjunto de registros, vea [conjunto de registros: cómo AddNew, Edit y Delete trabajo (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
+Para obtener información acerca de cómo se agregan registros y cuando los registros agregados son visibles en el conjunto de registros, vea [conjunto de registros: Cómo AddNew, Edit y Delete (ODBC) de trabajo](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md).
 
 El siguiente ejemplo muestra cómo agregar un nuevo registro:
 
@@ -147,7 +147,7 @@ Puede editar los registros existentes si el conjunto de registros [CanUpdate](..
 
 1. Llamar al objeto de conjunto de registros `Update` función miembro.
 
-   `Update` completa la acción de editar escribiendo el registro modificado en el origen de datos. Para obtener información sobre cómo se realiza si no se llama a `Update`, consulte [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+   `Update` completa la acción de editar escribiendo el registro modificado en el origen de datos. Para obtener información sobre cómo se realiza si no se llama a `Update`, consulte [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 Después de editar un registro, éste continúa siendo el registro actual.
 
@@ -197,7 +197,7 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-Para obtener más información sobre los efectos de la `AddNew`, `Edit`, y `Delete` funciones miembro, vea [conjunto de registros: actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
+Para obtener más información sobre los efectos de la `AddNew`, `Edit`, y `Delete` funciones miembro, vea [conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).
 
 ## <a name="see-also"></a>Vea también
 

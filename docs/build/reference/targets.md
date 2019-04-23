@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - targets, specifying in NMAKE
 ms.assetid: 826ee849-4278-4c6e-97c3-79a2b5fe6463
-ms.openlocfilehash: 4bb80b01993ee3f3715f551c73337cf24cd43f2c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 52b2f3293b97955b605e2821102247f506c2950b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826624"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040853"
 ---
 # <a name="targets"></a>Destinos
 

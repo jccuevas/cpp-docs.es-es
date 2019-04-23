@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 170979b5cf463d72f645599e146d1e8e2a10154d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645407"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035233"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 
@@ -53,8 +53,8 @@ El bit en la posición especificada.
 
 |Función intrínseca|Arquitectura|Header|
 |---------------|------------------|------------|
-|`_bittest`|x86, ARM, x64|\<INTRIN.h >|
-|`_bittest64`|ARM, x64|\<INTRIN.h >|
+|`_bittest`|x86, ARM, x64|\<intrin.h>|
+|`_bittest64`|ARM, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Comentarios
 

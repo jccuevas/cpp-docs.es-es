@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-ms.openlocfilehash: fa7e279f6b7c9c0932d404c336bcfd89bfd553a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb87d3861c6b3066cf482108e2ce2243c8196093
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644098"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038934"
 ---
 # <a name="com-attributes"></a>Atributos COM
 

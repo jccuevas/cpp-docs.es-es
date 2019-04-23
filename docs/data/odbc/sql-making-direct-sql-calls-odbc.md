@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: 17b3279a4803a61595af64ab18629d6cf69f0f10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd528e7abb713e4b3eb2bd5388a29958a1bb006c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549856"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024986"
 ---
 # <a name="sql-making-direct-sql-calls-odbc"></a>SQL: Realizar llamadas directas a SQL (ODBC)
 
@@ -28,7 +28,7 @@ En este tema se explica:
 
 ##  <a name="_core_when_to_call_sql_directly"></a> Cuándo se debe llamar directamente a SQL
 
-Para crear nuevas tablas, quitar (eliminar) tablas, modificar las tablas existentes, crear índices y realizar otras funciones SQL que cambien el [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md) esquema, debe emitir una instrucción SQL directamente al origen de datos con la base de datos Lenguaje de definición (DDL). Cuando se utiliza un Asistente para crear un conjunto de registros para una tabla (en tiempo de diseño), puede elegir qué columnas de la tabla que se va a representar en el conjunto de registros. No se permite para las columnas que usted u otro usuario del origen de datos agregue a la tabla más adelante, después de que el programa se ha compilado. Las clases de base de datos no admiten DDL directamente, pero todavía puede escribir código para enlazar una columna nueva para el conjunto de registros de forma dinámica, en tiempo de ejecución. Para obtener información acerca de cómo realizar este enlace, vea [conjunto de registros: enlace dinámicamente las columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Para crear nuevas tablas, quitar (eliminar) tablas, modificar las tablas existentes, crear índices y realizar otras funciones SQL que cambien el [origen de datos (ODBC)](../../data/odbc/data-source-odbc.md) esquema, debe emitir una instrucción SQL directamente al origen de datos con la base de datos Lenguaje de definición (DDL). Cuando se utiliza un Asistente para crear un conjunto de registros para una tabla (en tiempo de diseño), puede elegir qué columnas de la tabla que se va a representar en el conjunto de registros. No se permite para las columnas que usted u otro usuario del origen de datos agregue a la tabla más adelante, después de que el programa se ha compilado. Las clases de base de datos no admiten DDL directamente, pero todavía puede escribir código para enlazar una columna nueva para el conjunto de registros de forma dinámica, en tiempo de ejecución. Para obtener información acerca de cómo realizar este enlace, vea [conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
 Puede usar la instancia de DBMS para modificar el esquema u otra herramienta que le permite realizar funciones DDL. También puede utilizar llamadas a funciones ODBC para enviar instrucciones SQL, como llamar a una consulta predefinida (procedimiento almacenado) que no devuelve ningún registro.
 

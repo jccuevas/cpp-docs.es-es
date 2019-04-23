@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: e7d90cc2d1081b52370bcc189ce7545edf34a425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631340"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026047"
 ---
 # <a name="uuid-c-attributes"></a>uuid (Atributos de C++)
 

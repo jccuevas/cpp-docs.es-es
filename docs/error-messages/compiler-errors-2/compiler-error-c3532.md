@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
-ms.openlocfilehash: 91d8e28e053d8ce1b307f9345ab3249386bdf1ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b5d1fe61ae08811186e25547ccc3f33e3b0198e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568900"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023976"
 ---
 # <a name="compiler-error-c3532"></a>Error del compilador C3532
 

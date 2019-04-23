@@ -4,12 +4,12 @@ ms.date: 10/02/2018
 helpviewer_keywords:
 - arrays [C++], attributes
 ms.assetid: 36f80b76-7f20-41ae-a6bf-460e5379f26b
-ms.openlocfilehash: 9b980ce1f971fb8a00b60ee0b342e5e8bb6e9367
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6bcaf4c0ae6b199d6c0bb12e7efb5b976295e0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468411"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026401"
 ---
 # <a name="array-attributes"></a>Atributos de matriz
 

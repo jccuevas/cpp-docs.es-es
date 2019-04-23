@@ -1,17 +1,17 @@
 ---
-title: library_block (atributo de COM de C++)
+title: library_block (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 76e643cb45d8a87408015e6e0726e47d423147f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459931"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033221"
 ---
 # <a name="libraryblock"></a>library_block
 

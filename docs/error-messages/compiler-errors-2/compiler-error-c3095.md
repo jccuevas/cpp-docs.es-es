@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
 ms.openlocfilehash: d0cf35e7964925623be39c0177d77fc5a6231ad2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58774118"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776761"
 ---
 # <a name="compiler-error-c3095"></a>Error del compilador C3095
 

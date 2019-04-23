@@ -2,12 +2,12 @@
 title: Referencias parciales y ruptura de ciclos (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-ms.openlocfilehash: 252c9c1d2af0bc6911beca094d97f46e681ba2f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 19252b8684eade131394e98dc705f2f1d451f0cf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747078"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778662"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Referencias parciales y ruptura de ciclos (C++/CX)
 
@@ -52,5 +52,3 @@ Class1::Class1()
 ```
 
 Cuando un controlador de eventos produce una excepción `DisconnectedException`, hace que el evento quite el controlador de la lista de suscriptores.
-
-## <a name="see-also"></a>Vea también

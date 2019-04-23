@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_native_types attribute
 ms.assetid: 9f38daa8-8dc0-46a5-aff9-f1ff9c1e6f48
-ms.openlocfilehash: e48aa2ca1469d38b67dcb06a3377713141a158e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32b77905ef7025334e5101e76864da9a15c50cf6
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620446"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024973"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
 **Específicos de C++**

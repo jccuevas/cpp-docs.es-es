@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651196"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039655"
 ---
 # <a name="recordset-architecture-odbc"></a>Conjunto de registros: Arquitectura (ODBC)
 
@@ -33,7 +33,7 @@ En este tema se describe a los miembros de datos que componen la arquitectura de
 - [Uso de los miembros de datos m_nFields y m_nParams](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se implementa la obtención masiva de filas, la arquitectura es similar. Para comprender las diferencias, consulte [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Si se implementa la obtención masiva de filas, la arquitectura es similar. Para comprender las diferencias, consulte [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Clase de ejemplo
 
@@ -83,13 +83,13 @@ Al definir los miembros de datos de parámetro, indicar al marco acerca de los p
 >  MFC no hace nada por sí misma con los parámetros, en concreto, no realiza una sustitución de texto. En su lugar, MFC indica ODBC dónde obtener el parámetro; ODBC recupera los datos y realiza la parametrización necesaria.
 
 > [!NOTE]
->  Es importante el orden de parámetros. Para obtener información sobre este y obtener más información acerca de los parámetros, vea [conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+>  Es importante el orden de parámetros. Para obtener información sobre este y obtener más información acerca de los parámetros, vea [conjunto de registros: Parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> Utilizar m_nFields y m_nParams
 
 Cuando un asistente, escribe un constructor para la clase, también inicializa la [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) miembro de datos, que especifica el número de [miembros de datos de campo](#_core_field_data_members) en la clase. Si agrega [parámetros](#_core_parameter_data_members) a la clase, también debe agregar código de inicialización para la [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) miembro de datos, que especifica el número de miembros de datos de parámetro. El marco de trabajo usa estos valores para trabajar con los miembros de datos.
 
-Para obtener más información y ejemplos, vea [intercambio de campos de registros: Utilizar RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Para obtener más información y ejemplos, vea [intercambio de campos de registro: Utilizar RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>Vea también
 

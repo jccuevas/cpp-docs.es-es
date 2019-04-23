@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 2564d4d9b0a2e5df1f575d6f2627ce80f48533c1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770820"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021922"
 ---
 # <a name="cdatasource-class"></a>CDataSource (Clase)
 

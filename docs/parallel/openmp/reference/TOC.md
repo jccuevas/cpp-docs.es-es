@@ -1,7 +1,0 @@
-# [Directivas de OpenMP](openmp-directives.md)
-# [Cláusulas de OpenMP](openmp-clauses.md)
-# [Referencia de la biblioteca de OpenMP](openmp-library-reference.md)
-## [Bibliotecas de OpenMP](openmp-libraries.md)
-## [Tipos de datos de OpenMP](openmp-data-types.md)
-## [Variables de entorno de OpenMP](openmp-environment-variables.md)
-## [Funciones de OpenMP](openmp-functions.md)

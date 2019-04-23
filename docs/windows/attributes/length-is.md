@@ -1,17 +1,17 @@
 ---
-title: length_is (atributo de COM de C++)
+title: length_is (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489570"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039915"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -25,12 +25,12 @@ Especifica el número de elementos de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expression*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
 
-El **length_is** atributo de C++ tiene la misma funcionalidad que el [length_is](/windows/desktop/Midl/length-is) atributo MIDL.
+El **length_is** C++ atributo tiene la misma funcionalidad que el [length_is](/windows/desktop/Midl/length-is) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

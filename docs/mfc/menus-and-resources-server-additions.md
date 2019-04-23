@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281961"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767208"
 ---
 # <a name="menus-and-resources-server-additions"></a>Menús y recursos: Adiciones de servidor
 
 En este artículo se explica los cambios que deben realizarse en los menús y otros recursos en una aplicación de servidor (componente) de edición visual. Una aplicación de servidor requiere muchas adiciones a la estructura de menús y otros recursos, porque se puede iniciar en uno de tres modos: independiente, incrustado, o en su lugar. Como se describe en el [menús y recursos (OLE)](../mfc/menus-and-resources-ole.md) del artículo, hay un máximo de cuatro conjuntos de menús. Los cuatro se usan para una aplicación de servidor completo MDI, mientras que sólo se utilizan tres para un miniservidor. El Asistente para aplicaciones creará el diseño de menú necesarios para el tipo de servidor que desee. Alguna personalización puede ser necesario.
 
-Si no usa al Asistente para aplicaciones, puede mirar HIERSVR. RC, el script de recursos para la aplicación de ejemplo MFC [HIERSVR](../visual-cpp-samples.md), para ver cómo se implementan estos cambios.
+Si no usa al Asistente para aplicaciones, puede mirar HIERSVR. RC, el script de recursos para la aplicación de ejemplo MFC [HIERSVR](../overview/visual-cpp-samples.md), para ver cómo se implementan estos cambios.
 
 Los temas tratados en este artículo incluyen:
 
@@ -56,13 +56,13 @@ Se deben agregar dos nuevos recursos de tabla de aceleradores a aplicaciones de 
 
 La segunda tabla es casi una copia exacta de la tabla de aceleradores de la vista. Las diferencias en paralelo los cambios realizados en el menú completamente abierto mencionado en [adiciones de menú del servidor](#_core_server_menu_additions).
 
-Para obtener un ejemplo de estos cambios de la tabla de aceleradores, compare las tablas de aceleradores IDR_HIERSVRTYPE_SRVR_IP y IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME en el archivo HIERSVR. Archivo RC incluido en el ejemplo OLE de MFC [HIERSVR](../visual-cpp-samples.md). Faltan los aceleradores de archivo y la ventana de la tabla local y son copias exactas de ellas en la tabla insertada.
+Para obtener un ejemplo de estos cambios de la tabla de aceleradores, compare las tablas de aceleradores IDR_HIERSVRTYPE_SRVR_IP y IDR_HIERSVRTYPE_SRVR_EMB con IDR_MAINFRAME en el archivo HIERSVR. Archivo RC incluido en el ejemplo OLE de MFC [HIERSVR](../overview/visual-cpp-samples.md). Faltan los aceleradores de archivo y la ventana de la tabla local y son copias exactas de ellas en la tabla insertada.
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> Agregar tablas de cadenas para las aplicaciones de servidor
 
 Adición de la tabla de solo una cadena es necesaria en una aplicación de servidor: una cadena para indicar el error de inicialización OLE. Por ejemplo, aquí es la entrada de tabla de cadenas que genera el Asistente para aplicaciones:
 
-|Id.|String|
+|ID|String|
 |--------|------------|
 |IDP_OLE_INIT_FAILED|Error de inicialización OLE. Asegúrese de que las bibliotecas OLE son la versión correcta.|
 

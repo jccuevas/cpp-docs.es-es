@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286028"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767995"
 ---
 # <a name="ctypedptrlist-class"></a>Clase CTypedPtrList
 
@@ -379,7 +379,7 @@ Para obtener comentarios más detallada, consulte [CObList::SetAt](../../mfc/ref
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CPtrList (clase)](../../mfc/reference/cptrlist-class.md)<br/>
 [CObList (clase)](../../mfc/reference/coblist-class.md)

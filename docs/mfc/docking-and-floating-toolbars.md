@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294676"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768139"
 ---
 # <a name="docking-and-floating-toolbars"></a>Barras de herramientas de acoplamiento y flotantes
 
@@ -50,7 +50,7 @@ Otros temas tratados en este artículo incluyen:
 
 - [Establecer posiciones de ajuste para una barra de herramientas de estilo fijo](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Vea el ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md) para obtener ejemplos.
+Vea el ejemplo General de MFC [DOCKTOOL](../overview/visual-cpp-samples.md) para obtener ejemplos.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Habilitar el acoplamiento en una ventana de marco
 
@@ -104,7 +104,7 @@ Para una barra de herramientas con el estilo de tamaño fijo, designar la barra 
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-El ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md) se muestra cómo utilizar las funciones miembro de clases [CControlBar](../mfc/reference/ccontrolbar-class.md) y [CToolBar](../mfc/reference/ctoolbar-class.md) para administrar el diseño dinámico de una barra de herramientas. Vea el archivo EDITBAR. CPP en DOCKTOOL.
+El ejemplo General de MFC [DOCKTOOL](../overview/visual-cpp-samples.md) se muestra cómo utilizar las funciones miembro de clases [CControlBar](../mfc/reference/ccontrolbar-class.md) y [CToolBar](../mfc/reference/ctoolbar-class.md) para administrar el diseño dinámico de una barra de herramientas. Vea el archivo EDITBAR. CPP en DOCKTOOL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 

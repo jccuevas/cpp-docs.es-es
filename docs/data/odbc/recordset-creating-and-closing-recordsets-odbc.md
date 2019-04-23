@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581511"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041272"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Conjunto de registros: Crear y cerrar conjuntos de registros (ODBC)
 
@@ -71,10 +71,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Después de llamar a `Open`, usar los miembros de datos y funciones de miembro del objeto para trabajar con los registros. En algunos casos, es posible que desee volver a consultar o actualizar el conjunto de registros para incluir los cambios que se han producido en el origen de datos. Para obtener más información, consulte [conjunto de registros: volver a consultar un conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Después de llamar a `Open`, usar los miembros de datos y funciones de miembro del objeto para trabajar con los registros. En algunos casos, es posible que desee volver a consultar o actualizar el conjunto de registros para incluir los cambios que se han producido en el origen de datos. Para obtener más información, consulte [conjunto de registros: Volver a consultar un conjunto de registros (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La cadena de conexión que usa durante el desarrollo podría no ser la misma cadena de conexión que necesitan los usuarios eventual. Para obtener ideas sobre cómo generalizar la aplicación en este sentido, consulte [origen de datos: administrar conexiones (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La cadena de conexión que usa durante el desarrollo podría no ser la misma cadena de conexión que necesitan los usuarios eventual. Para obtener ideas sobre cómo generalizar la aplicación en este sentido, consulte [origen de datos: Administrar conexiones (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
 ##  <a name="_core_setting_recordset_options"></a> Establecer las opciones de conjunto de registros
 

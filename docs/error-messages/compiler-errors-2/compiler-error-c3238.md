@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: d81fd0fb3612a8c22fa6365aa7fc6dddb89cf120
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481164"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778623"
 ---
 # <a name="compiler-error-c3238"></a>Error del compilador C3238
 
@@ -19,7 +19,7 @@ ms.locfileid: "50481164"
 
 Un tipo se definió en una aplicación cliente que también se definió, a través de la sintaxis de reenvío de tipos, en un ensamblado de referencia. No se pueden definir ambos tipos en el ámbito de la aplicación.
 
-Consulte [reenvío de tipos (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md) para obtener más información.
+Consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

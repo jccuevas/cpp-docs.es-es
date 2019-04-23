@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-ms.openlocfilehash: 90f6000c7d4c4bfa0d610bd5942df0b958e47c60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd4368faaf323a75116128ec3a47666260436fce
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643634"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029124"
 ---
 # <a name="compiler-error-c3530"></a>Error del compilador C3530
 

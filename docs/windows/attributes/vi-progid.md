@@ -1,17 +1,17 @@
 ---
-title: vi_progid (atributo de COM de C++)
+title: vi_progid (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 1045c240a283a8a534c2266186f941312216f206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544282"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033594"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -32,7 +32,7 @@ ProgID presentan una versión legible del identificador de clase (CLSID) usado p
 
 ## <a name="remarks"></a>Comentarios
 
-El **vi_progid** atributo de C++ le permite especificar un ProgID independientes de la versión de un objeto COM. Un ProgID tiene la forma *name1.name2.version*. Un ProgID independientes de la versión no tiene un *versión*. Es posible especificar ambos el `progid` y **vi_progid** atributos en un `coclass`. Si no especifica **vi_progid**, el ProgID independientes de la versión es el valor especificado por el [progid](progid.md) atributo.
+El **vi_progid** C++ atributo permite especificar un ProgID independientes de la versión de un objeto COM. Un ProgID tiene la forma *name1.name2.version*. Un ProgID independientes de la versión no tiene un *versión*. Es posible especificar ambos el `progid` y **vi_progid** atributos en un `coclass`. Si no especifica **vi_progid**, el ProgID independientes de la versión es el valor especificado por el [progid](progid.md) atributo.
 
 **vi_progid** implica la `coclass` atributo, es decir, si especifica **vi_progid**, es lo mismo que si se especifica la `coclass` y **vi_progid** atributos.
 
@@ -62,4 +62,4 @@ Para obtener más información acerca de los contextos de atributo, consulte [Co
 [Atributos IDL](idl-attributes.md)<br/>
 [Typedef, Enum, Union y Struct (atributos)](typedef-enum-union-and-struct-attributes.md)<br/>
 [Atributos de clase](class-attributes.md)<br/>
-[Clave de Id. de programa](/windows/desktop/com/-progid--key)
+[ProgID Key](/windows/desktop/com/-progid--key)

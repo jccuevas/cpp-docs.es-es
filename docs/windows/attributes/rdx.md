@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 0b21e94ce3c54c0234dd7883aac3ef5cadbbc009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677882"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023885"
 ---
 # <a name="rdx"></a>rdx
 
@@ -28,7 +28,7 @@ Crea una clave del registro o modifica una clave del registro existente.
 *key*<br/>
 El nombre de la clave que se crea o se abre.
 
-*VALUENAME*<br/>
+*valuename*<br/>
 (Opcional) Especifica el campo de valor debe establecerse. Si un campo de valor con este nombre no existe en la clave, se agrega.
 
 *regtype*<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0044
 ms.assetid: 5d78c45a-f9e9-4d2b-a3b6-5a5d1421ab84
-ms.openlocfilehash: 9321bb500f69c4d79da45ef9d74bc1644fb90280
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 3d9fd25dc5b39de69735c7d3d5cf0a6bb64c0482
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812166"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026199"
 ---
 # <a name="project-build-error-prj0044"></a>Error PRJ0044 al compilar el proyecto
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: c45ce5e2e72c6a987a0053cb4b1bbb151c149faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496548"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778337"
 ---
 # <a name="compiler-error-c3352"></a>Error del compilador C3352
 
@@ -19,7 +19,7 @@ ms.locfileid: "50496548"
 
 Las listas de parámetros para `function` y el delegado no coinciden.
 
-Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../../windows/delegate-cpp-component-extensions.md).
+Para obtener más información, consulte [delegate (extensiones de componentes de C++)](../../extensions/delegate-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C3352:
 

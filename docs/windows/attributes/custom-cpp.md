@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7aca125879591f71fe2ba60f34b712918350940f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565703"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029439"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -31,7 +31,7 @@ Define los metadatos de un objeto en la biblioteca de tipos.
 *uuid*<br/>
 Identificador único.
 
-*valor*<br/>
+*value*<br/>
 Un valor que se puede colocar en una variante.
 
 ## <a name="remarks"></a>Comentarios

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6fb385877285602c1eb6649d11e16558d7fb07ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544760"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033702"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -25,7 +25,7 @@ Especifica uno o varios archivos de encabezado que se incluirán en el archivo .
 
 ### <a name="parameters"></a>Parámetros
 
-*HEADER_FILE*<br/>
+*header_file*<br/>
 El nombre de un archivo que desee incluido en el archivo .idl generado.
 
 ## <a name="remarks"></a>Comentarios

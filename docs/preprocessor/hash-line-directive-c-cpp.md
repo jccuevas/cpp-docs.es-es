@@ -8,12 +8,12 @@ helpviewer_keywords:
 - line directive (#line)
 - '#line directive'
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
-ms.openlocfilehash: e478d287af097081910d192e2ac0fbee6890bfa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad0fe1514e89b861bab046652b1768862cc8045b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614765"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023742"
 ---
 # <a name="line-directive-cc"></a>#line (Directiva) (C/C++)
 

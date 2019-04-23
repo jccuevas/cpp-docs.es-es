@@ -1,17 +1,17 @@
 ---
-title: Filtrar Definir e instalar a un controlador de excepciones Global
+title: Procedimiento Definir e instalar a un controlador de excepciones Global
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
 ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777213"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>Filtrar Definir e instalar a un controlador de excepciones Global
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Procedimiento Definir e instalar a un controlador de excepciones Global
 
 El ejemplo de código siguiente muestra las excepciones no controladas de cómo se pueden capturar. El formulario de ejemplo contiene un botón que, cuando se presionan, realiza una referencia nula, provocando que se produzca una excepción. Esta funcionalidad representa un error de código típico. El controlador de excepciones en toda la aplicación instalado por la función principal detecta la excepción resultante.
 

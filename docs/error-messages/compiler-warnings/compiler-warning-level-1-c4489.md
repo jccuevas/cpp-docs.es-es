@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-ms.openlocfilehash: 4da96fd13fe9ba03c19808d32d3cdd9c73ec2b18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd150621ad3474444861982c095ae8a6addb52fa
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584735"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779211"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>Advertencia del compilador (nivel 1) C4489
 
@@ -19,7 +19,7 @@ ms.locfileid: "50584735"
 
 Se usó incorrectamente una palabra clave de especificador en un método de interfaz.
 
-Para obtener más información, consulte [especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).
+Para obtener más información, consulte [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

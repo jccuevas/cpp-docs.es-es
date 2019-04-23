@@ -1,17 +1,17 @@
 ---
-title: idl_module (atributo de COM de C++)
+title: idl_module (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: c58997928fb3121c1ab8e277790969a93d9066de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608696"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034983"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -55,7 +55,7 @@ La función que va a definir.
 
 ## <a name="remarks"></a>Comentarios
 
-El **idl_module** atributo de C++ le permite especificar el punto de entrada en un archivo .dll, que permite importar desde un archivo DLL.
+El **idl_module** C++ atributo permite especificar el punto de entrada en un archivo .dll, que permite importar desde un archivo DLL.
 
 El **idl_module** atributo tiene una funcionalidad similar a la [módulo](/windows/desktop/Midl/module) atributo MIDL.
 

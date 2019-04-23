@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3771
 ms.assetid: 68c23b25-7f21-4eaa-8f7e-38fda1130a69
-ms.openlocfilehash: 8ff2993cbd5f289ca9208d8c532d7fa8329af086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b15d867bbaf66f511cbda200d692f5db4371ab3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453395"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026712"
 ---
 # <a name="compiler-error-c3771"></a>Error del compilador C3771
 

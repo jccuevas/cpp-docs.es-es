@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258403"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58775496"
 ---
 # <a name="toolbar-fundamentals"></a>Fundamentos de las barras de herramientas
 
@@ -62,7 +62,7 @@ Creación de la barra de herramientas se produce en `CMainFrame::OnCreate`. Las 
 1. Llama a las funciones para habilitar el acoplamiento, flotante e información sobre herramientas. Para obtener más información acerca de estas llamadas, vea el artículo [acoplamiento y barras de herramientas flotante](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  El ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md) incluye las ilustraciones de barras de herramientas MFC antiguos y nuevos. Las barras de herramientas que usan `COldToolbar` requieren llamadas en el paso 2 para `LoadBitmap` (en lugar de `LoadToolBar`) y a `SetButtons`. Las barras de herramientas nueva requieren llamadas a `LoadToolBar`.
+>  El ejemplo General de MFC [DOCKTOOL](../overview/visual-cpp-samples.md) incluye las ilustraciones de barras de herramientas MFC antiguos y nuevos. Las barras de herramientas que usan `COldToolbar` requieren llamadas en el paso 2 para `LoadBitmap` (en lugar de `LoadToolBar`) y a `SetButtons`. Las barras de herramientas nueva requieren llamadas a `LoadToolBar`.
 
 El acoplamiento, flotante y llamadas de herramienta sugerencias son opcionales. Puede quitar las líneas del `OnCreate` si lo prefiere. El resultado es una barra de herramientas que permanece fijo, no se puede float o volver a acoplarse y no se puede mostrar información sobre herramientas.
 

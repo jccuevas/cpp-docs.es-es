@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar una herramienta de dibujo
+title: Procedimiento Usar una herramienta de dibujo
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: bde951a2915bf980e09d94c16edc1a9b462c662e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563334"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037794"
 ---
-# <a name="how-to-use-a-drawing-tool"></a>Filtrar Usar una herramienta de dibujo
+# <a name="how-to-use-a-drawing-tool"></a>Procedimiento Usar una herramienta de dibujo
 
 El **Editor de imágenes** tiene a mano alzada herramientas de dibujo y borradas que todo funcione de la misma manera. Seleccione la herramienta y, si es necesario, [seleccionar los colores de primer plano y fondo](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md) y opciones de tamaño y forma. A continuación, mueva el puntero a la imagen y haga clic o arrastre para dibujar y borrar.
 

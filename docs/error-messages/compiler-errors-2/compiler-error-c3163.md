@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: b5c689842f59a9cf999de08f10926efce0ade5ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eda3910c99f4c8ea96568f2d475c5d6a1e4cdc7c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490212"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041051"
 ---
 # <a name="compiler-error-c3163"></a>Error del compilador C3163
 

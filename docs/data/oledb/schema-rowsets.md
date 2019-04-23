@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - schema rowsets, defined
 ms.assetid: 0716a065-230c-4c20-bb53-98870e79ea29
-ms.openlocfilehash: 9be586d4bd9c0b5591dbab3202b9fc44d0924a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0ec284b4bb366b72eae86f684346f70bfb44239
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556590"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028239"
 ---
 # <a name="schema-rowsets"></a>Conjuntos de filas de esquema
 

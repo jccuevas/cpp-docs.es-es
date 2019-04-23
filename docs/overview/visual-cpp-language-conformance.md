@@ -5,18 +5,18 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 151ffecc0a9497d84b23a631477827ed2e86711a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782338"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58898809"
 ---
 # <a name="visual-c-language-conformance"></a>Conformidad del lenguaje Visual C++
 
 En este tema se resume la conformidad con los estándares del lenguaje ISO C++03, C++11, C++14, C++17 y el borrador C++20 de las características del compilador y de las características de la biblioteca estándar del Compilador de Microsoft Visual C++ en Visual Studio 2017 y versiones anteriores. El nombre de cada una de las características del compilador y de la biblioteca estándar vincula al documento de propuesta del estándar ISO C++ que describe la característica, si hubiera alguno disponible en el momento de la publicación. La columna Compatible muestra la versión de Visual Studio en la que aparece por primera vez la compatibilidad de la característica.
 
-Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual Studio 2017, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md) y [Novedades de Visual C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Para conocer los cambios de conformidad en versiones anteriores, consulte [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md) y [Novedades de Visual C++ de 2003 a 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Para mantenerse al tanto de las noticias actuales del equipo de C++, visite el [blog del equipo de Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
+Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual Studio 2017, consulte [Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements.md) y [Novedades de Visual C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md). Para conocer los cambios de conformidad en versiones anteriores, consulte [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md) y [Novedades de Visual C++ de 2003 a 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md). Para mantenerse al tanto de las noticias actuales del equipo de C++, visite el [blog del equipo de Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
 
 > [!NOTE]
 > No existen cambios principales binarios entre Visual Studio 2015 y Visual Studio 2017.
@@ -315,8 +315,8 @@ Los siguientes no se paralelizan en la actualidad:
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Mejoras de conformidad de C++ en Visual Studio 2017](cpp-conformance-improvements-2017.md)<br/>
-[Novedades de Visual C++ en Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Mejoras de conformidad de C++ en Visual Studio](cpp-conformance-improvements.md)<br/>
+[Novedades de Visual C++ en Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Novedades de Visual C++ de 2003 a 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Novedades de Visual C++ de 2003 a 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Blog del equipo de Visual C++](https://blogs.msdn.microsoft.com/vcblog/)

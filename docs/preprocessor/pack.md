@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bf1ae81184d53dd271f63c26e8f9a52a6410b232
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627519"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038452"
 ---
 # <a name="pack"></a>pack
 Especifica la alineación de empaquetado de los miembros de estructura, unión y clase.
@@ -26,7 +26,7 @@ Especifica la alineación de empaquetado de los miembros de estructura, unión y
 
 ### <a name="parameters"></a>Parámetros
 
-**Show**<br/>
+**show**<br/>
 (Opcional) Muestra el valor de byte actual para la alineación de empaquetado. El valor se muestra mediante un mensaje de advertencia.
 
 **push**<br/>

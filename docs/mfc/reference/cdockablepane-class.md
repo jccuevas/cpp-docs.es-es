@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271919"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769698"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Especifica si se deshabilita la animación de ocultación automática del panel acoplable.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Determina el comportamiento del panel cuando el panel está en modo de ocultación automática.|
@@ -290,7 +290,7 @@ Las sugerencias siguientes se aplican a `CDockablePane` objetos:
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un `CDockablePane` objeto mediante distintos métodos en el `CDockablePane` clase. El ejemplo muestra cómo habilitar la opción Ocultar automáticamente todas las características del panel acoplable, habilitar el título o la barra de redimensionamiento, habilitar el modo de ocultación automática, mostrar el panel y animar un panel que está en modo de ocultación automática. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar un `CDockablePane` objeto mediante distintos métodos en el `CDockablePane` clase. El ejemplo muestra cómo habilitar la opción Ocultar automáticamente todas las características del panel acoplable, habilitar el título o la barra de redimensionamiento, habilitar el modo de ocultación automática, mostrar el panel y animar un panel que está en modo de ocultación automática. Este fragmento de código forma parte de la [ejemplo de demostración de Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]

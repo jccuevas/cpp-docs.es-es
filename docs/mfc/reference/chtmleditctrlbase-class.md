@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423241"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772584"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase (clase)
 
@@ -2565,4 +2565,4 @@ Este método envía el [identificador de comando de IDM UNORDERLIST](/previous-v
 ## <a name="see-also"></a>Vea también
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
-[Ejemplo HTMLEdit](../../visual-cpp-samples.md)
+[Ejemplo HTMLEdit](../../overview/visual-cpp-samples.md)

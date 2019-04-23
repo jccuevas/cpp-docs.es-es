@@ -6,12 +6,12 @@ helpviewer_keywords:
 - schemas [C++], data sources
 - data sources [C++], determining schema
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
-ms.openlocfilehash: ed6500c5718cf90b39600b12659a3090fe9532ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c419a3ac2d870e6a85675492ee6c9b726427a0e9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580792"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040035"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Origen de datos: Determinar el esquema del origen de datos (ODBC)
 

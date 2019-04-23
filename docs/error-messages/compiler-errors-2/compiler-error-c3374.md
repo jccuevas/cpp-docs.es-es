@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3374
 ms.assetid: 41431299-bd20-47d4-a0c8-1334dd79018b
-ms.openlocfilehash: c9ee9130d77e844ab435ecc34dcf53e12449abba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b00b1cea8ac462c82c11d9f5b207706af74959c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474937"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59022637"
 ---
 # <a name="compiler-error-c3374"></a>Error del compilador C3374
 

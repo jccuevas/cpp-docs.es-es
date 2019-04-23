@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: 3e0175c6b554c319a662ffd726023caf7176d9fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461976"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037677"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Cuestiones de diseño de arquitectura OLE DB
 

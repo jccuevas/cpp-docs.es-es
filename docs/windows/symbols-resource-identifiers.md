@@ -10,12 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 63971ba381394bcaf905d614496511b7aa0d01f3
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563321"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036054"
 ---
 # <a name="resource-identifiers-symbols-c"></a>Identificadores de recursos (símbolos) (C++)
 

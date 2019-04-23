@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: 35e8ea4a761fd3cf36da335dc8519ba71772b4e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1844e72ecd1fe7c0f4255426eb48f5c70471e5f5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647735"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036213"
 ---
 # <a name="immediatebind"></a>immediatebind
 

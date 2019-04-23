@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
-ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
+ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53587881"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024106"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -21,8 +21,8 @@ Especifica que, cuando *alias_filename* se encuentra en un `#include` la directi
 
 ## <a name="syntax"></a>Sintaxis
 
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias ("*alias_filename*","*actual_filename*")
-> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias("*alias_filename*", "*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>pragma include_alias(\<*alias_filename*>, \<*actual_filename*>)
 
 ## <a name="remarks"></a>Comentarios
 

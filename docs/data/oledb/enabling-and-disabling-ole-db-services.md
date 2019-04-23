@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 445f97eb-32a8-41c2-ad26-1169f78a074f
-ms.openlocfilehash: c5eaff8b3b37096eeca8777b6ba8bb91e01d7cd2
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: df17a55950b03d4d63dea2199e3bc19bedb8a7e3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265209"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028959"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>Habilitar y deshabilitar servicios OLE DB
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3909
 ms.assetid: 0a443132-e53f-42dc-a58b-f086da3e7bfd
-ms.openlocfilehash: 435288ba657bd22ba29c6681014ae15baa051cec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95de97a27fc42e98247675b1b48325593ff3c21e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636467"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779380"
 ---
 # <a name="compiler-error-c3909"></a>Error del compilador C3909
 
 aWinRT o declaración de evento administrado debe aparecer en un tipo administrado o WinRT
 
-Se declaró un evento de Windows Runtime o administrado en un tipo nativo. Para corregir este error, declare los eventos en tipos de Windows Runtime o en tipos administrados.
+Se declaró un evento de Windows en tiempo de ejecución o administrado en un tipo nativo. Para corregir este error, declare los eventos en tipos de Windows Runtime o en tipos administrados.
 
-Para obtener más información, consulte [eventos](../../windows/event-cpp-component-extensions.md).
+Para obtener más información, consulte [eventos](../../extensions/event-cpp-component-extensions.md).
 
 El ejemplo siguiente genera el error C3909 y muestra cómo corregirlo:
 

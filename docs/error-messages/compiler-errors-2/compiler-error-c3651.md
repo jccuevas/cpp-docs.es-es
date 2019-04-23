@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3651
 ms.assetid: a03e692e-c219-4654-9827-8415cfa5a22d
-ms.openlocfilehash: 5601dd2f510e4322e67f49478eefce795312e380
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e773201e3bc9a4edb1ee77f1ddcd555e0ae0c0e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494187"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779341"
 ---
 # <a name="compiler-error-c3651"></a>Error del compilador C3651
 
@@ -19,7 +19,7 @@ ms.locfileid: "50494187"
 
 Se especificó un reemplazo explícito, pero la función que se está reemplaza estaba en un tipo que no es un tipo base.
 
-Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C3651:
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_auto_exclude attribute
 ms.assetid: 3241ef9c-758a-4e86-bdc5-37da6072430f
-ms.openlocfilehash: 04e3b261e24bbe9870a6d3fc428cd68e8c1a8132
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bde7535bd181057750ab9dd4c3999321b4990c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537636"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038947"
 ---
 # <a name="noautoexclude"></a>no_auto_exclude
 **Específicos de C++**

@@ -7,12 +7,12 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: a18b4fd7873bcc0895354186dc9b0cc7e6b71bd4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785777"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025871"
 ---
 # <a name="agileeventsource-class"></a>Clase AgileEventSource
 

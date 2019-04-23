@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827585"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035603"
 ---
 # <a name="create-a-c-makefile-project"></a>Crear un proyecto de archivos MAKE de C++
 
@@ -22,7 +22,7 @@ Si tiene un proyecto de archivo Make existente, tiene estas opciones si desea co
 
 - Cree un proyecto de archivos MAKE de Visual Studio que usa el archivo MAKE existente para configurar un archivo .vcxproj que va a usar Visual Studio para IntelliSense. (No tendrá todas las características del IDE que obtendrá con un proyecto de MSBuild nativo). Vea [Para crear un proyecto de archivos Make](#create_a_makefile_project) a continuación.
 - Use el asistente para **Crear nuevo proyecto de archivos de código fuente existentes** para crear un proyecto de MSBuild nativo a partir del código fuente. No se usará el archivo MAKE original después de esto. Para obtener más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 y versiones posteriores**: Use la **Abrir carpeta** característica para editar y compilar un proyecto de archivos MAKE como-sin ninguna participación del sistema MSBuild. Para obtener más información, consulte [proyectos Abrir carpeta para C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2017 y versiones posteriores**: Use la **Abrir carpeta** característica para editar y compilar un proyecto de archivos MAKE como-sin ninguna participación del sistema MSBuild. Para más información, vea el artículo sobre los [proyectos Abrir carpeta para C++](../open-folder-projects-cpp.md).
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para crear un proyecto de archivos MAKE con la plantilla de proyecto de archivos MAKE
 
@@ -54,7 +54,7 @@ Después de crear un proyecto de archivos MAKE, puede ver y editar cada una de l
 
 - **Vuelva a generar la línea de comandos:** Especifica la línea de comandos que se ejecutará cuando el usuario seleccione volver a generar en el menú compilar. Muestra en la regeneración de todos los campos de la línea de comandos en la página de Nmake de página de propiedades del proyecto.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Filtrar Habilitar IntelliSense para proyectos de archivos Make
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedimiento Habilitar IntelliSense para proyectos de archivos Make
 
 IntelliSense se produce un error en los proyectos de archivos MAKE cuando ciertas opciones de proyecto o las opciones del compilador se ha configurado correctamente. Siga estos pasos para configurar proyectos de archivos MAKE para que IntelliSense funcione según lo esperado:
 

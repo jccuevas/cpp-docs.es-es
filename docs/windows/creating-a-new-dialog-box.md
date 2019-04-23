@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 7e7cfcc206ce58ab401bcdb9c9ac6103c50e997f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328641"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036333"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>Procedimiento Crear un cuadro de diálogo (C++)
 

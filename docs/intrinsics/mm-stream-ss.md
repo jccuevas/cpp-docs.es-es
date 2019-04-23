@@ -7,12 +7,12 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 089f8d5501c18b679a3d5878bb30762d2dcc1e04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438914"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031203"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
 
@@ -89,7 +89,7 @@ f[2] = -3, f[3] = 3
 
 **FIN de Específicos de Microsoft**
 
-Copyright 2007 por Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
+Copyright 2007 by Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vea también
 

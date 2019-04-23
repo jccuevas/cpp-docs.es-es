@@ -1,17 +1,17 @@
 ---
-title: async_uuid (atributo de COM de C++)
+title: async_uuid (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 559500a1390e0d1bac8344d0ffcfc1bdd9ad55f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490914"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035801"
 ---
 # <a name="asyncuuid"></a>async_uuid
 
@@ -30,7 +30,7 @@ Un UUID que identifica la versión de la interfaz.
 
 ## <a name="remarks"></a>Comentarios
 
-El **async_uuid** atributo de C++ tiene la misma funcionalidad que el [async_uuid](/windows/desktop/Midl/async-uuid) atributo MIDL.
+El **async_uuid** C++ atributo tiene la misma funcionalidad que el [async_uuid](/windows/desktop/Midl/async-uuid) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

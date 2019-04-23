@@ -16,12 +16,12 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: c0fb12a56a8c6e0220818d54ee5ec7413fe56b43
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220262"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023352"
 ---
 # <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
@@ -48,7 +48,7 @@ void __incgsqword(
 
 #### <a name="parameters"></a>Parámetros
 
-*Desplazamiento*<br/>
+*Offset*<br/>
 [in] El desplazamiento desde el principio del `GS`.
 
 ## <a name="requirements"></a>Requisitos

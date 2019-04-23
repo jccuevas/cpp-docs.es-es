@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562996"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033299"
 ---
-# <a name="how-to-edit-an-image"></a>Filtrar Editar una imagen
+# <a name="how-to-edit-an-image"></a>Procedimiento Editar una imagen
 
 Puede usar herramientas de selección para definir un área de una imagen que desee cortar, copiar, borrar, cambiar el tamaño, invertir o mover. Con el **rectángulo de selección** herramienta puede definir y seleccionar una región rectangular de la imagen. Con el **selección Irregular** herramienta que puede dibujar un contorno del área que desea seleccionar para la operación de cortar, copiar u otra operación a mano alzada.
 
@@ -205,7 +205,7 @@ Puede establecer o modificar las propiedades de una imagen mediante la [ventana 
 
 1. En el **propiedades** ventana, cambie cualquiera o todas las propiedades para la imagen.
 
-   |Property|Descripción|
+   |Propiedad|Descripción|
    |--------------|-----------------|
    |**Colores**|Especifica la combinación de colores para la imagen. Seleccione **monocromático**, **16**, o **256**, o **Color verdadero**.<br/><br/>Si ya ha dibujado la imagen con una paleta de colores de 16, si selecciona **monocromático** hace que las sustituciones de blanco y negro para los colores en la imagen. No se mantiene siempre contraste: por ejemplo, las áreas adyacentes de color rojo y verde se ambos convierten a negro.|
    |**Nombre de archivo**|Especifica el nombre del archivo de imagen.<br/><br/>De forma predeterminada, Visual Studio asigna un nombre de archivo base creado mediante la eliminación de los primeros cuatro caracteres ("IDB_") desde el identificador de recursos predeterminado (IDB_BITMAP1) y agregando la extensión adecuada. El nombre de archivo para la imagen en este ejemplo sería *BITMAP1.bmp*. Puede cambiar el nombre *este nombre a MIBITMAP1.bmp*.|

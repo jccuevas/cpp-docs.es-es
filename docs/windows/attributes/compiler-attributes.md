@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667368"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030824"
 ---
 # <a name="compiler-attributes"></a>Atributos de compilador
 

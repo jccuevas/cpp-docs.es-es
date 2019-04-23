@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: db448b462cd3a3f325c529e730e5c8f65e2b8f51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598815"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777788"
 ---
 # <a name="compiler-error-c3185"></a>Error del compilador C3185
 
 'typeid' usado en un tipo ’type’ administrado o de WinRT; use 'operator' en su lugar
 
-No se puede aplicar el [typeid](../../cpp/typeid-operator.md) operador administrado o WinRT tipo; use [typeid](../../windows/typeid-cpp-component-extensions.md) en su lugar.
+No se puede aplicar el [typeid](../../cpp/typeid-operator.md) operador administrado o WinRT tipo; use [typeid](../../extensions/typeid-cpp-component-extensions.md) en su lugar.
 
 El ejemplo siguiente genera el error C3185 y muestra cómo corregirlo:
 

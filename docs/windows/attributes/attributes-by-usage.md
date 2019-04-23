@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-ms.openlocfilehash: 2536309025506ca66d9c4b7cdfbaabf5787945e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449377"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038075"
 ---
 # <a name="attributes-by-usage"></a>Atributos por uso
 
@@ -22,7 +22,7 @@ Si un atributo precede a un elemento que no está en el ámbito del atributo, el
 |Atributo|Descripción|
 |---------------|-----------------|
 |[Atributos de módulo](module-attributes.md)|Se aplica a la [módulo](module-cpp.md) atributo.|
-|[Atributos de interfaz](interface-attributes.md)|Se aplica a la [__interface](../../cpp/interface.md) palabra clave de C++.|
+|[Atributos de interfaz](interface-attributes.md)|Se aplica a la [__interface](../../cpp/interface.md) C++ palabra clave.|
 |[Atributos de clase](class-attributes.md)|Se aplica a la palabra clave de C++.|
 |[Atributos de método](method-attributes.md)|Se aplica a los métodos en una clase, coclase o interfaz.|
 |[Atributos de parámetro](parameter-attributes.md)|Se aplica a los parámetros de un método en una clase o interfaz.|
@@ -41,7 +41,7 @@ Solo se puede aplicar el atributo siguiente a la [módulo](module-cpp.md) atribu
 
 ## <a name="interface-attributes"></a>Atributos de interfaz
 
-Los siguientes atributos se aplican a la [interfaz (o __interface)](../../cpp/interface.md) palabra clave de C++.
+Los siguientes atributos se aplican a la [interfaz (o __interface)](../../cpp/interface.md) C++ palabra clave.
 
 |Atributo|Descripción|
 |---------------|-----------------|

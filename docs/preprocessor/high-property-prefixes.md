@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 130d19f275612e153955ae49f299fe2f36d098bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579821"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029374"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 

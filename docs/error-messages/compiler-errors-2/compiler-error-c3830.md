@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
-ms.openlocfilehash: 5c484b2b9267bf5f9be3593c20c8b261dafde206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25f2b86e21d4672c9e0907c366da17072bafa183
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631418"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778688"
 ---
 # <a name="compiler-error-c3830"></a>Error del compilador C3830
 
 'type1': no puede heredar de 'tipo2', valor tipos solo pueden heredar de clases interface
 
-Un tipo de valor no puede heredar una clase base.  Para obtener más información, consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).
+Un tipo de valor no puede heredar una clase base.  Para obtener más información, consulte [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

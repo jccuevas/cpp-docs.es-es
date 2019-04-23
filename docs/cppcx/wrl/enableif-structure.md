@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: 7b65b11b9a67ba69ca546e9bf5c169f3f2b61765
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: daaba919acaa35615af56831f9458831c3d35427
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785939"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029990"
 ---
 # <a name="enableif-structure"></a>EnableIf (estructura)
 

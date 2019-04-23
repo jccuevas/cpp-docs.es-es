@@ -2,16 +2,16 @@
 title: Advertencia del compilador (nivel 4) C4435
 ms.date: 11/04/2016
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 7db1d483f571289c5b890c223ba1e59ba3d1f41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572333"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041233"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>Advertencia del compilador (nivel 4) C4435
 
-'clase1': La distribución de objetos de /vd2 cambiará debido a la base virtual 'clase2'
+'class1': Diseño de objeto vd2 cambiará debido a la base virtual 'clase2'
 
 De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
 

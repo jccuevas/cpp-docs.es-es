@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815884"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025103"
 ---
 # <a name="attribute-programming-faq"></a>Preguntas más frecuentes de programación con atributos
 
@@ -40,7 +40,7 @@ En este tema responde a las siguientes preguntas más frecuentes:
 
 Un HRESULT es un tipo de datos simple que suele utilizarse como un valor devuelto por los atributos y ATL en general. En la tabla siguiente se describe los distintos valores. En el archivo winerror.h, encabezado contiene más valores.
 
-|nombre|Descripción|Valor|
+|Name|Descripción|Valor|
 |----------|-----------------|-----------|
 |S_OK|Operación realizada correctamente|0x00000000|
 |E_UNEXPECTED|Error inesperado|0x8000FFFF|

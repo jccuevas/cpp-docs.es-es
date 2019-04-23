@@ -1,17 +1,17 @@
 ---
-title: switch_is (atributo de COM de C++)
+title: switch_is (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: e70f7d3d7419c25f0c5f9df8006e1d795c8b4361
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccac405480e415df17b42f02dce74759f578d025
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467297"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031094"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -25,7 +25,7 @@ Especifica la expresión o el identificador que actúa como la unión discrimina
 
 ## <a name="remarks"></a>Comentarios
 
-El **switch_is** atributo de C++ tiene la misma funcionalidad que el [switch_is](/windows/desktop/Midl/switch-is) atributo MIDL.
+El **switch_is** C++ atributo tiene la misma funcionalidad que el [switch_is](/windows/desktop/Midl/switch-is) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

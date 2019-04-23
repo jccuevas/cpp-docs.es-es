@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849758"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026297"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Uso de clases de base de datos con documentos y vistas
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: 15673a8b9ebaf298ae1b2b45c9a76a1691e681b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514197"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037072"
 ---
 # <a name="rename-import"></a>cambiar el nombre (\#importar)
 

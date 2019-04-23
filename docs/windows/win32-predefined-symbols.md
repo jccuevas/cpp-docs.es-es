@@ -6,12 +6,12 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: c7d1250eef52164054f8181fff2384d6a12f0b99
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 8a238021f255da30a132755a297a471dd1f51246
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562905"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024947"
 ---
 # <a name="win32-predefined-symbols"></a>Símbolos predefinidos de Win32
 

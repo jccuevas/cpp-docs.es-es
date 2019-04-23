@@ -1,17 +1,17 @@
 ---
-title: switch_type (atributo de COM de C++)
+title: switch_type (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: e8827fe576282b86f1d3bc633ec7f9f954c015b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448794"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027862"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -32,7 +32,7 @@ El tipo de conmutador, puede ser un tipo entero, carácter, un valor booleano o 
 
 ## <a name="remarks"></a>Comentarios
 
-El **switch_type** atributo de C++ tiene la misma funcionalidad que el [switch_type](/windows/desktop/Midl/switch-type) atributo MIDL.
+El **switch_type** C++ atributo tiene la misma funcionalidad que el [switch_type](/windows/desktop/Midl/switch-type) atributo MIDL.
 
 Atributos de C++ no admiten [encapsulado uniones](/windows/desktop/Midl/encapsulated-unions). [Uniones nonencapsulated](/windows/desktop/Midl/nonencapsulated-unions) solo se admiten en el formato siguiente:
 

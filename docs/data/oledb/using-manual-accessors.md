@@ -6,12 +6,12 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: 8b969b7bb939d8e7d2217234795b564e8d137208
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a7e2dcde20cdb06a2f4e708149e24ee7144597c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651768"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028340"
 ---
 # <a name="using-manual-accessors"></a>Utilizar descriptores de acceso manuales
 

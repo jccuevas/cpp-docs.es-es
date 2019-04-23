@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514756"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041220"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: Filtrar registros (ODBC)
 
@@ -44,7 +44,7 @@ Debe establecer el filtro del objeto de un conjunto de registros después de cre
     > [!NOTE]
     >  La cadena literal "MATH101" se muestra con comillas simples. En la especificación de ODBC SQL, se usan comillas simples para denotar un literal de cadena de caracteres. Compruebe la documentación del controlador ODBC para los requisitos de entrecomillado de DBMS en esta situación. Esta sintaxis también se explica más adelante, hacia el final de este tema.
 
-1. Establecer otras opciones que necesite, como el criterio de ordenación, el modo de bloqueo o parámetros. Es especialmente útil si se especifica un parámetro. Para obtener información acerca de cómo parametrizar un filtro, vea [conjunto de registros: parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Establecer otras opciones que necesite, como el criterio de ordenación, el modo de bloqueo o parámetros. Es especialmente útil si se especifica un parámetro. Para obtener información acerca de cómo parametrizar un filtro, vea [conjunto de registros: Parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Llame a `Open` para el nuevo objeto (o `Requery` para un objeto abierto anteriormente).
 
@@ -82,15 +82,15 @@ Tenga en cuenta el uso de caracteres de comillas simples. Si se establece la cad
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-El uso de comillas anterior se ajusta a la especificación ODBC, pero algunos de los DBMS pueden requerir otros caracteres de comillas. Para obtener más información, consulte [SQL: SQL instrucción (ODBC de personalizar un conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+El uso de comillas anterior se ajusta a la especificación ODBC, pero algunos de los DBMS pueden requerir otros caracteres de comillas. Para obtener más información, consulte [SQL: Personalizar la instrucción de SQL del conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Si opta por reemplazar la cadena SQL predeterminada del conjunto de registros pasando su propia cadena SQL a `Open`, no debe establecer un filtro si la cadena personalizada contiene una **donde** cláusula. Para obtener más información sobre cómo invalidar el valor predeterminado SQL, consulte [SQL: SQL instrucción (ODBC de personalizar un conjunto de registros)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Si opta por reemplazar la cadena SQL predeterminada del conjunto de registros pasando su propia cadena SQL a `Open`, no debe establecer un filtro si la cadena personalizada contiene una **donde** cláusula. Para obtener más información sobre cómo invalidar el valor predeterminado SQL, consulte [SQL: Personalizar la instrucción de SQL del conjunto de registros (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Conjunto de registros: Ordenar registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Conjunto de registros: Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Conjunto de registros: Actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Conjunto de registros: Bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

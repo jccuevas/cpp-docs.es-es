@@ -2,8 +2,13 @@
 layout: LandingPage
 title: Documentación de desarrollo de Linux con C++
 description: Cree y depure aplicaciones que se ejecutan en Linux.
+ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779773"
 ---
-
 # <a name="linux-development-with-c-documentation"></a>Documentación de desarrollo de Linux con C++
 
 Use Visual Studio 2017 para crear y depurar aplicaciones que se ejecutan en Linux.

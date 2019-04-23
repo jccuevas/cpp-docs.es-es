@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
-ms.openlocfilehash: 305c08497a600f602767496cba48d108335fdeb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4950b9e90ef968fcf0c42e4f0a9775c58ea7ec
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636987"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030172"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
 **Específicos de C++**

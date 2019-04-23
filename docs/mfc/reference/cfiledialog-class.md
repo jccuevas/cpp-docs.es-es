@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262108"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779214"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog (clase)
 
@@ -251,7 +251,7 @@ Algunos `CFileDialog` métodos no se admiten en Windows Vista o posterior. Consu
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Los mensajes de windows para el `CFileDialog` clase varían en función de qué sistema operativo que está usando. Por ejemplo, no es compatible con Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) y [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para el `CFileDialog` clase. Sin embargo, Windows Vista y sistemas operativos posteriores son compatibles con ellos. Para obtener más información sobre los distintos mensajes que se generan y el orden en que se reciben, consulte [CFileDialog ejemplo: Orden de los eventos de registro](../../visual-cpp-samples.md).
+Los mensajes de windows para el `CFileDialog` clase varían en función de qué sistema operativo que está usando. Por ejemplo, no es compatible con Windows XP [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) y [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) para el `CFileDialog` clase. Sin embargo, Windows Vista y sistemas operativos posteriores son compatibles con ellos. Para obtener más información sobre los distintos mensajes que se generan y el orden en que se reciben, consulte [CFileDialog ejemplo: Orden de los eventos de registro](../../overview/visual-cpp-samples.md).
 
 Para usar un `CFileDialog` de objetos, primero cree el objeto utilizando el `CFileDialog` constructor. Después de que se ha construido el cuadro de diálogo, puede establecer o modificar los valores de la [CFileDialog::m_ofn](#m_ofn) estructura para inicializar los valores o los Estados de los controles de cuadro de diálogo. El `m_ofn` estructura es de tipo `OPENFILENAME`. Para obtener más información, consulte el [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) estructura en el SDK de Windows.
 

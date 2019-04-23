@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-ms.openlocfilehash: 9fbc871b6fdf046c5bbc5053da9bde39580ed279
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537688"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041567"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Error de las herramientas del vinculador LNK1332
 

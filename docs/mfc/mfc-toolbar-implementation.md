@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267815"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773182"
 ---
 # <a name="mfc-toolbar-implementation"></a>Implementación de barra de herramientas de MFC
 
@@ -84,7 +84,7 @@ Esta nueva implementación da lugar a menos código MFC para las barras de herra
 > [!TIP]
 >  Si ha invertido mucho en la implementación MFC anterior de `CToolBar`, esa compatibilidad sigue estando disponible. Consulte el artículo [utilizando los barras de herramientas anteriores](../mfc/using-your-old-toolbars.md).
 
-Vea también el ejemplo General de MFC [DOCKTOOL](../visual-cpp-samples.md).
+Vea también el ejemplo General de MFC [DOCKTOOL](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_the_toolbar_bitmap"></a> El mapa de bits de la barra de herramientas
 

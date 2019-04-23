@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288888"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773442"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane (clase)
 
@@ -111,7 +111,7 @@ Para obtener un ejemplo de una barra de Outlook, consulte el proyecto de ejemplo
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo utilizar distintos métodos de la `CMFCOutlookBarPane` clase. El ejemplo muestra cómo crear un panel de barra de Outlook, habilitar el modo de desplazamiento de página, habilite el acoplamiento y establecer el color de fondo de la barra de Outlook. Este fragmento de código forma parte de la [ejemplo Outlook con varias vistas](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo utilizar distintos métodos de la `CMFCOutlookBarPane` clase. El ejemplo muestra cómo crear un panel de barra de Outlook, habilitar el modo de desplazamiento de página, habilite el acoplamiento y establecer el color de fondo de la barra de Outlook. Este fragmento de código forma parte de la [ejemplo Outlook con varias vistas](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]

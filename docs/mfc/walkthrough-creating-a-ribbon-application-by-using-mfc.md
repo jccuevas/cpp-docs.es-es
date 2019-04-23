@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271338"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58781229"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 
@@ -87,9 +87,9 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 [Cómo: Personalizar el botón aplicación](../mfc/how-to-customize-the-application-button.md)
 
-Para obtener ejemplos de extremo a otro, consulte [ejemplos (MFC Feature Pack)](../visual-cpp-samples.md).
+Para obtener ejemplos de extremo a otro, consulte [ejemplos (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Tutoriales](../mfc/walkthroughs-mfc.md)<br/>
-[Ejemplos (MFC Feature Pack)](../visual-cpp-samples.md)
+[Ejemplos (MFC Feature Pack)](../overview/visual-cpp-samples.md)

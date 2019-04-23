@@ -27,12 +27,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418274"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039798"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl (Clase)
 

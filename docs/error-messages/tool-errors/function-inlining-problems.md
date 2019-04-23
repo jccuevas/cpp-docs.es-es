@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: e8d2a97e4d887b914d15871ce1679c95cc3cda97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452733"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031529"
 ---
 # <a name="function-inlining-problems"></a>Problemas en la inclusión de funciones en línea
 

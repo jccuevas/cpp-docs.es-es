@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
 ms.openlocfilehash: bb8f5fe9d55a44193325a2fcfe9ef7675a2b3b89
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58774885"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779224"
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Advertencia del compilador (nivel 1) C4803
 

@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299080"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58774188"
 ---
 # <a name="cdocument-class"></a>CDocument (clase)
 
@@ -1254,9 +1254,9 @@ Esta función llama a la [CView::OnUpdate](../../mfc/reference/cview-class.md#on
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC NPP](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC NPP](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget (clase)](../../mfc/reference/ccmdtarget-class.md)<br/>

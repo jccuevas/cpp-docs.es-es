@@ -1,17 +1,17 @@
 ---
-title: size_is (atributo de COM de C++)
+title: size_is (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 95b0e16e5f5d085e526f45e8e98898474fc5a17f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449444"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033237"
 ---
 # <a name="sizeis"></a>size_is
 
@@ -25,12 +25,12 @@ Especifique el tamaño de memoria asignada para los punteros de tamaño, tamaño
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expression*<br/>
 El tamaño de memoria asignada para un tamaño punteros.
 
 ## <a name="remarks"></a>Comentarios
 
-El **size_is** atributo de C++ tiene la misma funcionalidad que el [size_is](/windows/desktop/Midl/size-is) atributo MIDL.
+El **size_is** C++ atributo tiene la misma funcionalidad que el [size_is](/windows/desktop/Midl/size-is) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

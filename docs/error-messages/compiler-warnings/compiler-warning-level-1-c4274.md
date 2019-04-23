@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: dcdf804ac6e02d2bb161751db054d7f1f62ddbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f73fa8e09baab127e7755ebe3def69c2fb585744
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564598"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028472"
 ---
 # <a name="compiler-warning-level-1-c4274"></a>Compilador advertencia (nivel 1) C4274
 

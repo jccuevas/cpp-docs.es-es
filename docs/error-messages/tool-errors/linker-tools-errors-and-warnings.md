@@ -6,12 +6,12 @@ helpviewer_keywords:
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: 7fc68641feae286c85d6f8ebec00387cdca1a43c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fe4a37cc3665ac2b7886589018339b77babab2d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521186"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59477423"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>Errores y advertencias de las herramientas del vinculador
 
@@ -123,7 +123,7 @@ VÍNCULO, LIB, DUMPBIN y EDITBIN generan estos errores y advertencias.
 
 [Error de las herramientas del vinculador LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
-[LNK1318 de Error de las herramientas del vinculador](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+[Error de las herramientas del vinculador LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
 
 [Error de las herramientas del vinculador LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
@@ -175,7 +175,7 @@ VÍNCULO, LIB, DUMPBIN y EDITBIN generan estos errores y advertencias.
 
 [Advertencia de las herramientas del vinculador LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
 
-[Advertencia LNK4020 de las herramientas del vinculador](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
+[Advertencia de las herramientas del vinculador LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [Advertencia de las herramientas del vinculador LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 
@@ -258,3 +258,5 @@ VÍNCULO, LIB, DUMPBIN y EDITBIN generan estos errores y advertencias.
 [Advertencia de las herramientas del vinculador LNK4253](../../error-messages/tool-errors/linker-tools-warning-lnk4253.md)
 
 [Advertencia de las herramientas del vinculador LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md)
+
+[Advertencia de las herramientas del vinculador LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)

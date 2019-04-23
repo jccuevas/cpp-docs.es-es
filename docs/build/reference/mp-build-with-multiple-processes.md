@@ -1,6 +1,6 @@
 ---
 title: /MP (Compilar con varios procesos)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808461"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59424149"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (Compilar con varios procesos)
 
@@ -51,7 +51,7 @@ En la siguiente tabla aparecen las opciones del compilador y las característica
 |--------------------------------|-----------------|
 |Directiva de preprocesador[#import](../../preprocessor/hash-import-directive-cpp.md) |Convierte los tipos en una biblioteca de tipos en clases de C++ y las escribe en un archivo de encabezado.|
 |[/E](e-preprocess-to-stdout.md), [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copia los resultados del preprocesador en los resultados estándar (**stdout**).|
-|[/Gm](gm-enable-minimal-rebuild.md)|Permite una reconstrucción incremental.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Permite una reconstrucción incremental.|
 |[/showIncludes](showincludes-list-include-files.md)|Escribe una lista de archivos de inclusión en el error estándar (**stderr**).|
 |[/Yc](yc-create-precompiled-header-file.md)|Escribe un archivo de encabezado precompilado.|
 
@@ -124,10 +124,6 @@ El criterio para decidir si se debe usar MSBuild o **/MP** tecnología es como s
 - Si hay pocos proyectos con muchos archivos en cada proyecto, use la opción **/MP** .
 
 - Si el número de proyectos y archivos por proyecto está equilibrado, use ambos MSBuild y **/MP**. Para comenzar, establezca la opción **maxcpucount** en el número de proyectos que se van a crear y la opción **/MP** en el número de procesadores que hay en su equipo. Mida el rendimiento y, luego, ajuste la configuración para conseguir los mejores resultados. Repita este ciclo hasta que esté satisfecho con el tiempo de compilación total.
-
-#### <a name="the-gm-compiler-option"></a>Opción del compilador /Gm
-
-De forma predeterminada, la compilación de un proyecto permite la opción del compilador **/Gm** (compilaciones incrementales) para las compilaciones de depuración y la deshabilita para las compilaciones de versión. Por lo tanto, la opción del compilador **/MP** se deshabilita automáticamente en las compilaciones de depuración, puesto que entra en conflicto con la opción del compilador **/Gm** predeterminada.
 
 ## <a name="see-also"></a>Vea también
 

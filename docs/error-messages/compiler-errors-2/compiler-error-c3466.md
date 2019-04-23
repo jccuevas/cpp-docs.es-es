@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3466
 ms.assetid: 69a877d9-a749-474b-bfc3-8d3fd53ba8fd
-ms.openlocfilehash: d24980760ee86551946876e8af5c370af2753276
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6eae1c44d8dae9118258c83c5919947803f49215
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527379"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777255"
 ---
 # <a name="compiler-error-c3466"></a>Error del compilador C3466
 
@@ -19,7 +19,7 @@ ms.locfileid: "50527379"
 
 No se puede usar en una especialización de una clase genérica de reenvío de tipos.
 
-Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

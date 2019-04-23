@@ -1,19 +1,19 @@
 ---
-title: Filtrar Usar referencias de seguimiento en C++ / c++ / CLI
+title: Procedimiento Usar referencias de seguimiento en C++ / c++ / CLI
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777056"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Filtrar Usar referencias de seguimiento en C++ / c++ / CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Procedimiento Usar referencias de seguimiento en C++ / c++ / CLI
 
-En este artículo se muestra cómo usar una referencia de seguimiento (%) en C / c++ / CLI para pasar de common language runtime (CLR) tipos por referencia.
+En este artículo se muestra cómo usar una referencia de seguimiento (%) en C++/CLI para pasar de common language runtime (CLR) tipos por referencia.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Para pasar tipos CLR por referencia
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-El ejemplo siguiente muestra que tomar la dirección de una referencia de seguimiento devuelve un [interior_ptr (C++ / c++ / CLI)](../extensions/interior-ptr-cpp-cli.md)y se muestra cómo modificar y tener acceso a datos a través de una referencia de seguimiento.
+El ejemplo siguiente muestra que tomar la dirección de una referencia de seguimiento devuelve un [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)y se muestra cómo modificar y tener acceso a datos a través de una referencia de seguimiento.
 
 ```cpp
 // tracking_reference_data.cpp

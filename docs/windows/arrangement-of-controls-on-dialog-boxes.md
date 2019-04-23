@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 3d79e48411006156ee4682adc736e83e226743af
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562983"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037426"
 ---
 # <a name="how-to-layout-controls-c"></a>Cómo Controles de diseño (C++)
 
@@ -111,7 +111,7 @@ El [barra de herramientas del Editor de cuadro de diálogo](../windows/showing-o
 
 El **configuración de la guía** cuadro de diálogo tiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Guías de diseño**|Muestra la configuración de las guías de diseño.|
 |**Ninguno**|Oculta las herramientas de diseño.|

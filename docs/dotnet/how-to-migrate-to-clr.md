@@ -1,5 +1,5 @@
 ---
-title: Filtrar Migrar a - clr
+title: Procedimiento Migrar a - clr
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781320"
 ---
-# <a name="how-to-migrate-to-clr"></a>Filtrar Migrar a/CLR
+# <a name="how-to-migrate-to-clr"></a>Procedimiento Migrar a/CLR
 
 En este tema se trata los problemas que surgen al compilar el código nativo con **/CLR** (consulte [/CLR (Common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) para obtener más información). **/ CLR** permite que el código de C++ nativa invocar y se pueden invocar desde ensamblados de .NET además de otro código de C++ nativo. Consulte [ensamblados mixtos (nativos y administrados)](../dotnet/mixed-native-and-managed-assemblies.md) y [nativo e interoperabilidad de .NET](../dotnet/native-and-dotnet-interoperability.md) para obtener más información sobre las ventajas de compilar con **/CLR**.
 

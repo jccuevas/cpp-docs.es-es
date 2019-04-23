@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659602"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035246"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transacción: Realizar una transacción en un conjunto de registros (ODBC)
 
@@ -22,7 +22,7 @@ En este tema se explica cómo realizar una transacción en un conjunto de regist
 
 1. Llame a la `CDatabase` del objeto `BeginTrans` función miembro.
 
-1. Si no ha implementado la obtención masiva de filas, llame a la `AddNew/Update`, `Edit/Update`, y `Delete` las funciones miembro de uno o más objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, consulte [conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.
+1. Si no ha implementado la obtención masiva de filas, llame a la `AddNew/Update`, `Edit/Update`, y `Delete` las funciones miembro de uno o más objetos de conjunto de registros de la misma base de datos tantas veces como sea necesario. Para obtener más información, consulte [conjunto de registros: Agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si ha implementado la obtención masiva de filas, debe escribir sus propias funciones para actualizar el origen de datos.
 
 1. Por último, llame a la `CDatabase` del objeto `CommitTrans` función miembro. Si se produce un error en una de las actualizaciones o si decide cancelar los cambios, llame a su `Rollback` función miembro.
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: e70330a023dc48b7e763bfb874da5290f2fa519f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424527"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023184"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl (Clase)
 

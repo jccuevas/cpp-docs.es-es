@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521406"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024745"
 ---
 # <a name="creating-an-updatable-provider"></a>Crear un proveedor actualizable
 
@@ -109,13 +109,13 @@ Tenga en cuenta que `IRowsetUpdateImpl` deriva `IRowsetChangeImpl`. Por lo tanto
 
    Si implementa `IRowsetChangeImpl`, debe establecer las siguientes propiedades en el proveedor. Estas propiedades se utilizan principalmente para solicitar interfaces a través de `ICommandProperties::SetProperties`.
 
-   - `DBPROP_IRowsetChange`: Esta acción automáticamente establecer establece `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: Establece automáticamente este establece `DBPROP_IRowsetChange`.
 
    - `DBPROP_UPDATABILITY`: Una máscara de bits que especifica los métodos admitidos en `IRowsetChange`: `SetData`, `DeleteRows`, o `InsertRow`.
 
-   - `DBPROP_CHANGEINSERTEDROWS`: El consumidor puede llamar a `IRowsetChange::DeleteRows` o `SetData` para las filas recién insertadas.
+   - `DBPROP_CHANGEINSERTEDROWS`: Consumidor puede llamar a `IRowsetChange::DeleteRows` o `SetData` para las filas recién insertadas.
 
-   - `DBPROP_IMMOBILEROWS`: El conjunto de filas no reordenará las filas insertadas o actualizadas.
+   - `DBPROP_IMMOBILEROWS`: Conjunto de filas no reordenará las filas insertadas o actualizadas.
 
    **Si implementa IRowsetUpdateImpl**
 
@@ -413,7 +413,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>Indicadores de columna
 
-Si decide admitir valores predeterminados en las columnas, deberá establecerlo mediante metadatos en el \<clase de proveedor\>SchemaRowset clase. Establecer `m_bColumnHasDefault = VARIANT_TRUE`.
+Si decide admitir valores predeterminados en las columnas, deberá establecerlo mediante metadatos en el \<clase de proveedor\>SchemaRowset clase. Establezca `m_bColumnHasDefault = VARIANT_TRUE`.
 
 También tiene la responsabilidad para establecer los marcadores de columna, que se especifican con el enumerado DBCOLUMNFLAGS tipo. Los indicadores de columna describen las características de la columna.
 

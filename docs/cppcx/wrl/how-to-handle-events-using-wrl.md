@@ -1,16 +1,16 @@
 ---
-title: Filtrar Controlar eventos mediante WRL
+title: Procedimiento Controlar eventos mediante WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-ms.openlocfilehash: 35c806660c18ad234f37dba92780b7633e032644
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 959a85d6cf6de666ae56d09035acefe9a3828ae8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785899"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033182"
 ---
-# <a name="how-to-handle-events-using-wrl"></a>Filtrar Controlar eventos mediante WRL
+# <a name="how-to-handle-events-using-wrl"></a>Procedimiento Controlar eventos mediante WRL
 
 Este documento muestra cómo usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL) para suscribirse y controlar los eventos de un objeto en tiempo de ejecución de Windows.
 

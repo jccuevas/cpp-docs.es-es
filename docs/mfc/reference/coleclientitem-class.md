@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295362"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773988"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem (clase)
 
@@ -2187,8 +2187,8 @@ Para obtener más información, consulte [IOleLink::Update](/windows/desktop/api
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Ejemplo MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CDocItem (clase)](../../mfc/reference/cdocitem-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [COleServerItem (clase)](../../mfc/reference/coleserveritem-class.md)

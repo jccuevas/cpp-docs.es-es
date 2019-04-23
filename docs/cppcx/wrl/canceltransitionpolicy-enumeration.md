@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cfd8e25f98ec1001a8fbd287eaec12408b9f240e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785766"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038059"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy (Enumeración)
 

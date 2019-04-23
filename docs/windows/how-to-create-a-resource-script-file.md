@@ -36,14 +36,14 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: a18c24685ff0d5f65970a094730d1587abffb601
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563035"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028527"
 ---
-# <a name="how-to-create-resources-c"></a>Filtrar Creación de recursos (C++)
+# <a name="how-to-create-resources-c"></a>Procedimiento Creación de recursos (C++)
 
 Puede crear recursos para su proyecto:
 
@@ -115,7 +115,7 @@ También puede usar el botón secundario en el **vista de recursos** ventana par
 
 El **vista de recursos** windows incluye el **Agregar recurso** cuadro de diálogo con las siguientes propiedades para agregar recursos a un proyecto de aplicación de escritorio de Windows de C++:
 
-| Property | Descripción |
+| Propiedad | Descripción |
 |---|---|
 | **Tipo de recurso** | Especifique el tipo de recurso que desea crear.<br/><br/>Puede expandir las categorías de recursos de cuadro de cursor y el cuadro de diálogo para mostrar otros recursos, que se encuentran en *... \Microsoft visual Studio \<versión\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*. Si necesita agregar archivos .rct, colocarlos aquí o especificar otro [incluir ruta de acceso](../windows/how-to-specify-include-directories-for-resources.md). Recursos que se muestran en el nivel superior en el control de árbol son los recursos predeterminados suministrados por Visual Studio. Los recursos en archivos .rct aparecen en el segundo nivel bajo la categoría apropiada. No hay ningún límite preestablecido respecto al número de archivos .rct que puede agregar.<br/><br/> |
 | **Nuevo** | Crear un recurso en función del tipo seleccionado en el **tipo de recurso** cuadro y abra el recurso en el editor adecuado.<br/><br/>Por ejemplo, si crea un recurso de cuadro de diálogo, abre el recurso en el [Editor de cuadro de diálogo](../windows/dialog-editor.md). |

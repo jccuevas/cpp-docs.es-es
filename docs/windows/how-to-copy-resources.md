@@ -1,5 +1,5 @@
 ---
-title: Filtrar Administrar los recursos (C++)
+title: Procedimiento Administrar los recursos (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328628"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036067"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedimiento Administrar los recursos (C++)
 

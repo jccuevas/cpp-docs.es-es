@@ -1,5 +1,5 @@
 ---
-title: Filtrar Trabajar con colores
+title: Procedimiento Trabajar con colores
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.color
@@ -62,14 +62,14 @@ helpviewer_keywords:
 - images [C++], colors
 - colors [C++], inverting
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-ms.openlocfilehash: f50d734ab35968aa107e23b8450d60f316b6002e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c424d2e613c51f901def13c4bf42a066797cc65c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563152"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034149"
 ---
-# <a name="how-to-work-with-color"></a>Filtrar Trabajar con colores
+# <a name="how-to-work-with-color"></a>Procedimiento Trabajar con colores
 
 El **Editor de imágenes** contiene muchas características que controlan específicamente y personalización los colores. Puede establecer el color de primer plano o en segundo plano, rellenar áreas delimitadas con color o seleccione un color en una imagen que se usará como el color de primer plano o actual. Puede usar herramientas en el [barra de herramientas del Editor de imágenes](../windows/toolbar-image-editor-for-icons.md) junto con la paleta de colores en el **colores** ventana para crear imágenes.
 
@@ -103,7 +103,7 @@ El **colores** paleta muestra inicialmente los 16 colores estándar. Con los col
 
 El **Selector de colores personalizados** cuadro de diálogo le permite personalizar los colores utilizados para la imagen con las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------------------|--------------------------|
 |**Presentación de Color degradado**|Cambia los valores de un color seleccionado.<br/><br/>Coloque la cruz en el color que desee cambiar y mueva el control deslizante hacia arriba o hacia abajo para cambiar la luminosidad o los valores RGB del color.|
 |**Barra Luminosidad**|Establece la luminosidad del color seleccionado en el **muestra de Color degradado** cuadro.<br/><br/>Seleccione y arrastre la flecha blanca de la barra para aumentar el brillo o hacia abajo para menor. El **Color** cuadro muestra el color que ha seleccionado y el efecto de la luminosidad establece.|
@@ -122,7 +122,7 @@ Puede guardar y cargar un **colores** paleta que contiene colores personalizados
 
 Utilice la **Cargar paleta de colores** cuadro de diálogo para cargar las paletas de colores para usar en el proyecto de C++ con las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |-----------------|-----------------|
 |**Buscar en**|Especifica la ubicación donde desea ubicar un archivo o carpeta.<br/><br/>Seleccione la flecha para elegir otra ubicación, o seleccione el icono de carpeta en la barra de herramientas para mover los niveles.|
 |**Nombre de archivo**|Proporciona un espacio para que escriba el nombre del archivo que desea abrir.<br/><br/>Para buscar rápidamente un archivo que ha abierto anteriormente, seleccione el nombre de archivo en la lista desplegable, si está disponible.<br/><br/>Si está buscando un archivo, puede utilizar asteriscos (*) como caracteres comodín. Por ejemplo, puede escribir \*.\* para ver una lista de todos los archivos. También puede escribir la ruta de acceso completa de un archivo, por ejemplo, *Documentos\MiPaletaDeColores. PAL C:\My* o  *\\\NetworkServer\MyFolder\MyColorPalette.pal*.|

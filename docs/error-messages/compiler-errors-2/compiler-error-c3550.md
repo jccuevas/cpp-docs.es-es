@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3550
 ms.assetid: 9f2d5ffc-e429-41a1-89e3-7acc4fd47e14
-ms.openlocfilehash: dbed14b9f2fa0f2163484edd8b5dfa330af9cbf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 106ac93496eebb25ee603251d84680053e1310b7
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498892"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032342"
 ---
 # <a name="compiler-error-c3550"></a>Error del compilador C3550
 

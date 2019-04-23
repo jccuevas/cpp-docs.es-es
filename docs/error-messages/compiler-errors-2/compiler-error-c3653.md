@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: d7936303dab4fbb273a01f98def5b9af99f89dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477628"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776449"
 ---
 # <a name="compiler-error-c3653"></a>Error del compilador C3653
 
 'function': no se puede utilizar como invalidación con nombre: una función que se va a reemplazar no se encuentra; ¿Olvidó nombre a la función explícitamente, mediante un:: operador?
 
-Invalidación explícita especifica una función que no se encontró en ninguna interfaz. Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Invalidación explícita especifica una función que no se encontró en ninguna interfaz. Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 El ejemplo siguiente genera C3653:
 

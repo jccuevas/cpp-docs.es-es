@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: cab261724399107c57b36a9020906a96697f7eca
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785776"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028252"
 ---
 # <a name="make-function"></a>Make (Función)
 

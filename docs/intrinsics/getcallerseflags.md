@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: 0093ce67547881470e17c447afd8eb2c5a36e8bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2df7087c605882340da16f56dae2e991c5d7dd1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519654"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039944"
 ---
 # <a name="getcallerseflags"></a>__getcallerseflags
 

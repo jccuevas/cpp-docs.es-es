@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 70565081338f953abb65d2cdc7c5f1eb869f75e5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 745348e81888b5a87c57fbb99d397fcd423c3ee1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785861"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025554"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList (estructura)
 

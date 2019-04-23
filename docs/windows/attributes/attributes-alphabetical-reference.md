@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ecf59b0d920b39d8f129e3ff25b5518f985d78f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516914"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038218"
 ---
 # <a name="attributes-alphabetical-reference"></a>Referencia alfabética de los atributos
 
@@ -103,7 +103,7 @@ Los siguientes atributos están disponibles en el compilador de C++ de Microsoft
 |[readonly](readonly-cpp.md)|Prohíbe la asignación a una variable.|
 |[ref](ref-cpp.md)|Identifica un puntero de referencia.|
 |[registration_script](registration-script.md)|Ejecuta el script de registro especificado.|
-|[requestedit](requestedit.md)|Indica que la propiedad admite la `OnRequestEdit` notificación.|
+|[requestedit](requestedit.md)|Indica que la propiedad admite la notificación `OnRequestEdit`.|
 |[requires_category](requires-category.md)|Especifica las categorías de los componentes necesarios para la clase.|
 |[restricted](restricted.md)|Especifica que una biblioteca o miembro de un módulo, interfaz o dispinterface no se puede llamar arbitrariamente.|
 |[retval](retval.md)|Designa el parámetro que recibe el valor devuelto del miembro.|

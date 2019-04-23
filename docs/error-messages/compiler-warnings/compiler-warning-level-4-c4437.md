@@ -2,12 +2,12 @@
 title: Advertencia del compilador (nivel 4) C4437
 ms.date: 11/04/2016
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 29dd5e7aff8a12ab3df2e56c9f7517ca0f80bdbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569187"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037825"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Advertencia del compilador (nivel 4) C4437
 

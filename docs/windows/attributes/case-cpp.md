@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 1ed107b78ea5638d93a773e19de13b4c1fe1036c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648414"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038205"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -25,7 +25,7 @@ Puede usar con el [switch_type](switch-type.md) atributo en un **union**.
 
 #### <a name="parameters"></a>Parámetros
 
-*valor*<br/>
+*value*<br/>
 Un valor de entrada posibles para el que desea proporcionar un procesamiento. El tipo de **valor** puede ser uno de los siguientes tipos:
 
 - `int`

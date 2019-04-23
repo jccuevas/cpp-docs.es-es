@@ -17,18 +17,18 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 62249bff7a278963ea67b2d2015ff52f22fcfc85
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562931"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026284"
 ---
 # <a name="menu-commands-c"></a>Comandos de menú (C++)
 
 La siguiente información se organiza según el **menú** propiedades que aparecen en la [ventana propiedades](/visualstudio/ide/reference/properties-window) cuando se selecciona un comando de menú. Están ordenadas alfabéticamente, aunque el **propiedades** ventana también le permite ver estas propiedades por categoría.
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |**Break**|Puede ser uno de estos valores:<br/>  - **Ninguno**: Sin interrupción. Este es el valor predeterminado.<br/>  - **Columna**: En los menús estáticos, este valor sitúa el comando de menú en una nueva línea.<br/>      En los menús emergentes, este valor sitúa el comando de menú en una columna nueva, sin línea divisoria entre las columnas.<br/>      Esta propiedad solo afecta a la apariencia del menú en tiempo de ejecución, no en el editor de menús.<br />   - **Bar**: Igual que **columna** , excepto en los menús emergentes, este valor separa la nueva columna de la columna antigua con una línea vertical.<br/>      Esta propiedad afecta a la apariencia del menú en tiempo de ejecución, no en el **Editor de menús**.|
 |**Título**|El texto que etiqueta el comando de menú (el nombre del menú). Para convertir una de las letras del título de un comando de menú en la tecla de acceso, sitúe delante de ella una Y comercial (&).|

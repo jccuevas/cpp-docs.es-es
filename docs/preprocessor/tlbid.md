@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: 31b71f7c195a7e2ee649b40197551e4ff5efda2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584523"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037946"
 ---
 # <a name="tlbid"></a>tlbid
 
@@ -27,7 +27,7 @@ tlbid(number)
 
 ### <a name="parameters"></a>Parámetros
 
-*Número*<br/>
+*number*<br/>
 Número de la biblioteca de tipos en `filename`.
 
 ## <a name="remarks"></a>Comentarios

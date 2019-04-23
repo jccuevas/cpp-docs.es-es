@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: 678128c4b09b083b4afe3a86c9b2315eb3c87b1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d1e4645c60fb4231a53aaefdcf1fe0f3c876c4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584489"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59024782"
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
 

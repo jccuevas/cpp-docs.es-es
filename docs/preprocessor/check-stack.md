@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451992"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023385"
 ---
 # <a name="checkstack"></a>check_stack
 Indica al compilador que desactive la opción comprobaciones de la pila si `off` (o `-`) se especifica, o bien para activar los sondeos de pila si `on` (o `+`) se ha especificado.

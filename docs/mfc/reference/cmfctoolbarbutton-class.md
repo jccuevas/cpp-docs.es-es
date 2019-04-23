@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275238"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776393"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton (clase)
 
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Especifica si una imagen se muestra en el botón.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Especifica si una etiqueta de texto se muestra en el botón.|
@@ -287,7 +287,7 @@ El `CMFCToolBarButton` clase es la clase base para otras clases de botón de bar
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un `CMFCToolBarButton` objeto mediante distintos métodos en el `CMFCToolBarButton` clase. El ejemplo muestra cómo habilitar el mouse y las entradas mediante teclado, configurar el índice de imagen del botón, el rectángulo delimitador del botón y hacer visible el botón. Este fragmento de código forma parte de la [ejemplo de Control de ficha](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar un `CMFCToolBarButton` objeto mediante distintos métodos en el `CMFCToolBarButton` clase. El ejemplo muestra cómo habilitar el mouse y las entradas mediante teclado, configurar el índice de imagen del botón, el rectángulo delimitador del botón y hacer visible el botón. Este fragmento de código forma parte de la [ejemplo de Control de ficha](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include() attribute
 ms.assetid: 86c9dcb2-d9e0-4fd5-97d7-0bb3e23d6ecc
-ms.openlocfilehash: 8f3227ba49cc0928fec5d5917efcd8869982d94a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1208f14a9f6b3724dd5353df57213baa3910d07f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599750"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040932"
 ---
 # <a name="include"></a>include()
 
@@ -27,10 +27,10 @@ include("Name1"[,"Name2", ...])
 
 ### <a name="parameters"></a>Parámetros
 
-*Nombre1*<br/>
+*Name1*<br/>
 Primer elemento que se incluirá forzosamente.
 
-*Nombre2*<br/>
+*Name2*<br/>
 Segundo elemento que se incluirá forzosamente (si es necesario).
 
 ## <a name="remarks"></a>Comentarios

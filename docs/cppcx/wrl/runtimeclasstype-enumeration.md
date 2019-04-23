@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 3b869be00cdc405569b82bdf3730f8d4ca4f3aab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786079"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035963"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType (enumeración)
 

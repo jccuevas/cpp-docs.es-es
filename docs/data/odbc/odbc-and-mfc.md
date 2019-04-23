@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 7c7540528bed2499ed9dfb09ed39658914c81e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560636"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031185"
 ---
 # <a name="odbc-and-mfc"></a>ODBC y MFC
 

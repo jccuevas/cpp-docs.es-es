@@ -6,12 +6,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: b6d177d793451b7c5e9c19f6d40add973a627d60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 65a7e5b8f169d06ca11d8d27ec99ce3db4b63014
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423006"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028553"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Arquitectura de plantillas de proveedores OLE DB
 

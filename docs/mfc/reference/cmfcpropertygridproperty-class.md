@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305073"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58779032"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty (clase)
 
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Cadena de formato para un valor de tipo double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Cadena de formato para un valor de tipo float.|
@@ -297,7 +297,7 @@ Un objeto de propiedad puede representar tipos de datos como cadenas, fechas y l
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo construir un `CMFCPropertyGridProperty` objeto. El ejemplo también muestra cómo utilizar distintos métodos en el `CMFCPropertyGridProperty` clase para agregar una opción, agregue un elemento secundario, habilite una propiedad y mostrar una propiedad. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo construir un `CMFCPropertyGridProperty` objeto. El ejemplo también muestra cómo utilizar distintos métodos en el `CMFCPropertyGridProperty` clase para agregar una opción, agregue un elemento secundario, habilite una propiedad y mostrar una propiedad. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -801,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 Un puntero a un objeto de propiedad que es un elemento secundario de esta propiedad.
 
-O bien
+-o bien-
 
 En el modo de venta directa, es NULL si el *nIndex* parámetro no es válido. En modo de depuración, este método valida.
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297494"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772129"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Controles personalizados
 
 Esta nota describe la compatibilidad de MFC para controles personalizados y dibujo automático. También describe la creación de subclases dinámica y describe la relación entre [CWnd](../mfc/reference/cwnd-class.md) objetos y `HWND`s.
 
-La aplicación de ejemplo MFC CTRLTEST ilustra cómo usar muchos controles personalizados. Vea el código fuente para el ejemplo General de MFC [CTRLTEST](../visual-cpp-samples.md) y ayuda en línea.
+La aplicación de ejemplo MFC CTRLTEST ilustra cómo usar muchos controles personalizados. Vea el código fuente para el ejemplo General de MFC [CTRLTEST](../overview/visual-cpp-samples.md) y ayuda en línea.
 
 ## <a name="owner-draw-controlsmenus"></a>Controles dibujados por el propietario o los menús
 
@@ -104,7 +104,7 @@ Para dibujar los cuadros de lista y cuadros combinados, `OnDeleteItem` normalmen
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Ejemplos de dibujo de los controles y menús
 
-El ejemplo General de MFC [CTRLTEST](../visual-cpp-samples.md) se proporcionan ejemplos de un menú propio dibujo y un cuadro de lista dibujar automáticamente.
+El ejemplo General de MFC [CTRLTEST](../overview/visual-cpp-samples.md) se proporcionan ejemplos de un menú propio dibujo y un cuadro de lista dibujar automáticamente.
 
 El ejemplo más habitual de un botón de dibujo automático es un botón de mapa de bits. Un botón de mapa de bits es un botón que muestra uno, dos o tres imágenes de mapa de bits para los distintos Estados. Se proporciona un ejemplo de esto en la clase MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ Puede lograr subclases dinámica mediante los métodos [CWnd:: SubclassWindow](.
 
 Tanto las rutinas de adjuntar un `CWnd` objeto a una existente `HWND`. `SubclassWindow` toma el `HWND` directamente. `SubclassDlgItem` es una función auxiliar que toma un identificador de control y la ventana primaria. `SubclassDlgItem` está diseñado para asociar los objetos de C++ a controles de cuadro de diálogo creados a partir de una plantilla de cuadro de diálogo.
 
-Consulte la [CTRLTEST](../visual-cpp-samples.md) ejemplo para ver varios ejemplos de cuándo usar `SubclassWindow` y `SubclassDlgItem`.
+Consulte la [CTRLTEST](../overview/visual-cpp-samples.md) ejemplo para ver varios ejemplos de cuándo usar `SubclassWindow` y `SubclassDlgItem`.
 
 ## <a name="see-also"></a>Vea también
 

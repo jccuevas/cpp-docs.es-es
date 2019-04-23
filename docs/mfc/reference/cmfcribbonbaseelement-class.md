@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289980"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773078"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement (clase)
 
@@ -394,7 +394,7 @@ Según su tamaño, un elemento de la cinta muestra una imagen pequeña o grande.
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonBaseElement` . En el ejemplo se muestra cómo obtener un `CMFCRibbonBaseElement` objeto desde un `CMFCRibbonStatusBar` clase, establezca la descripción del elemento de la cinta, establecer el texto, establecer keytip y establecer el texto de información sobre herramientas para el elemento de la cinta de opciones. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CMFCRibbonBaseElement` . En el ejemplo se muestra cómo obtener un `CMFCRibbonBaseElement` objeto desde un `CMFCRibbonStatusBar` clase, establezca la descripción del elemento de la cinta, establecer el texto, establecer keytip y establecer el texto de información sobre herramientas para el elemento de la cinta de opciones. Este fragmento de código forma parte del [Ejemplo de cliente de dibujo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]

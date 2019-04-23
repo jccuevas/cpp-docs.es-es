@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293867"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58770855"
 ---
 # <a name="cmenu-class"></a>CMenu (clase)
 
@@ -561,7 +561,7 @@ Consulte [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) para o
 
 ### <a name="example"></a>Ejemplo
 
-El código siguiente procede de la MFC [CTRLTEST](../../visual-cpp-samples.md) ejemplo:
+El código siguiente procede de la MFC [CTRLTEST](../../overview/visual-cpp-samples.md) ejemplo:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ Consulte [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 
 
 ### <a name="example"></a>Ejemplo
 
-El código siguiente procede de la MFC [CTRLTEST](../../visual-cpp-samples.md) ejemplo:
+El código siguiente procede de la MFC [CTRLTEST](../../overview/visual-cpp-samples.md) ejemplo:
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ Un menú emergente flotante puede aparecer en cualquier lugar en la pantalla. Pa
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC DYNAMENU](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CObject (clase)](../../mfc/reference/cobject-class.md)

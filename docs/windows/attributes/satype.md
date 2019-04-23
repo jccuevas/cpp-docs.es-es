@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 3d2d921e750adad0089df0d00590f256b56c732e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7588e8d855d648309c46d981898cfbbf7888f4c9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517694"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025729"
 ---
 # <a name="satype"></a>satype
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data [MFC]
 - data [MFC], displaying in a form
 ms.assetid: c56185c4-12cb-40b1-b499-02b29ea83e3a
-ms.openlocfilehash: 1694d9cbc770e02c550891fc83c1cc0a9f64824a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50c433e701fbae2e607d79d7abb34efe8eba5b5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517798"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033753"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>Mostrar y manipular datos en un formulario
 

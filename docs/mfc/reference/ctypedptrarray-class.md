@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 8a6fc0786a169f9c1e73eb8acadfc51d063334c9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 080e47746b83b6ff12db9f6df0fc27bcd202bb51
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275342"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768697"
 ---
 # <a name="ctypedptrarray-class"></a>Clase CTypedPtrArray
 
@@ -328,7 +328,7 @@ Para obtener comentarios más detallada, consulte [CObArray::SetAtGrow](../../mf
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC COLLECT](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray (clase)](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray (clase)](../../mfc/reference/cobarray-class.md)

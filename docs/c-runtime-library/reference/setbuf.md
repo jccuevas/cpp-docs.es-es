@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440501"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59424175"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -44,7 +44,7 @@ void setbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*stream*<br/>
 Puntero a la estructura **FILE**.
 
 *buffer*<br/>
@@ -52,9 +52,9 @@ Búfer asignado por el usuario.
 
 ## <a name="remarks"></a>Comentarios
 
-El **setbuf** funcionar los controles para el almacenamiento en búfer *secuencia*. El *secuencia* argumento debe hacer referencia a un archivo abierto que no leído o escrito. Si el *búfer* argumento es **NULL**, la secuencia es no almacenado en búfer. Si no, el búfer debe apuntar a una matriz de caracteres de longitud **BUFSIZ**, donde **BUFSIZ** es el tamaño del búfer como se define en STDIO. H. Para el almacenamiento en búfer de E/S se usa el búfer especificado por el usuario, y no el búfer predeterminado asignado por el sistema para la secuencia especificada. El **stderr** secuencia es no almacenado en búfer de forma predeterminada, pero puede usar **setbuf** para asignar búferes a **stderr**.
+El **setbuf** funcionar los controles para el almacenamiento en búfer *secuencia*. El *secuencia* argumento debe hacer referencia a un archivo abierto que aún no se ha leído o escrito. Si el *búfer* argumento es **NULL**, la secuencia se almacena en búfer. Si no, el búfer debe apuntar a una matriz de caracteres de longitud **BUFSIZ**, donde **BUFSIZ** es el tamaño del búfer como se define en STDIO. H. Para el almacenamiento en búfer de E/S se usa el búfer especificado por el usuario, y no el búfer predeterminado asignado por el sistema para la secuencia especificada. El **stderr** secuencia es no almacenar en búfer de forma predeterminada, pero puede usar **setbuf** para asignar búferes a **stderr**.
 
-**setbuf** ha sido reemplazado por [setvbuf](setvbuf.md), que es la rutina preferida para el nuevo código. **setbuf** se conserva por compatibilidad con el código existente.
+**setbuf** ha sido reemplazado por [setvbuf](setvbuf.md), que es la rutina preferida para el nuevo código. A diferencia de **setvbuf**, **setbuf** no tiene ninguna manera de informar de errores. **setvbuf** también le permite controlar el modo de almacenamiento en búfer y el tamaño del búfer. **setbuf** existe por compatibilidad con el código existente.
 
 ## <a name="requirements"></a>Requisitos
 

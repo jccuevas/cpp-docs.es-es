@@ -21,12 +21,12 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500950"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023794"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Conjunto de registros: Marcadores y posiciones absolutas (ODBC)
 
@@ -80,7 +80,7 @@ Para mover el puntero de registro actual mediante la posición absoluta, llame a
 > [!NOTE]
 >  La posición absoluta de un registro es potencialmente no confiable. Si el usuario elimina los registros del conjunto de registros, se cambia la posición ordinal de los registros posteriores. Los marcadores son el método recomendado para mover el registro actual. Para obtener más información, consulte [marcadores en ODBC de MFC](#_core_bookmarks_in_mfc_odbc).
 
-Para obtener más información sobre la navegación del conjunto de registros, vea [conjunto de registros: desplazamiento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Para obtener más información sobre la navegación del conjunto de registros, vea [conjunto de registros: Desplazamiento (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ## <a name="see-also"></a>Vea también
 

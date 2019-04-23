@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
-ms.openlocfilehash: 20b971e838488d3e974b393a5e280ca765dac893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446584"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035126"
 ---
 # <a name="autorename"></a>auto_rename
 

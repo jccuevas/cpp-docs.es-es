@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2674
 ms.assetid: 7cbd70d8-d992-44d7-a5cb-dd8cf9c759d2
-ms.openlocfilehash: eb56651967f8fdc33b7c76b29883b25295d752d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29371f2987eaae1aa7a56c9f4eb56c332fdf31c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456815"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779146"
 ---
 # <a name="compiler-error-c2674"></a>Error del compilador C2674
 
 no se permite una declaración genérica en este contexto
 
-Un tipo genérico se ha declarado incorrectamente. Para más información, vea [Genéricos](../../windows/generics-cpp-component-extensions.md).
+Un tipo genérico se ha declarado incorrectamente. Para más información, vea [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

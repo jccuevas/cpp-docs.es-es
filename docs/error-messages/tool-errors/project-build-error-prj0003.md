@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816183"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039525"
 ---
 # <a name="project-build-error-prj0003"></a>Error PRJ0003 al compilar el proyecto
 

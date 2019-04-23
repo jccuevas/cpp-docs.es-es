@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, omp
 - omp pragma
 ms.assetid: 652414c5-78ed-4b7f-8283-1a9fe4c5e78d
-ms.openlocfilehash: 691c3095c2a9312885f8cf4f89e35e2e9696a7b1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dda3b8df18772a328e56fb7347a746325c4cdec
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502835"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032029"
 ---
 # <a name="omp"></a>omp
 Toma una o más directivas de OpenMP, junto con cualquier cláusula directiva opcional.

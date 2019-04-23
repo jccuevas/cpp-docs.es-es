@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator<
 ms.assetid: bfae0e1c-1648-482b-99c2-3217d62aba46
-ms.openlocfilehash: 8b9d9936eabb75b58eabde487db8d1eb42abc9dd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 4887a7ebf3906edbc4a5a2a723caff0ad7732c46
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785954"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036856"
 ---
 # <a name="operatorlt-operator-microsoftwrl"></a>operador&lt; (Microsoft:: wrl)
 

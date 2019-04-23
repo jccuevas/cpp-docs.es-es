@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: e04a44007161fcfae5bab948584809590edbc095
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35b6e38290acddb41bdf53d9663a058259300ee8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668707"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779251"
 ---
 # <a name="compiler-error-c2140"></a>Error del compilador C2140
 
@@ -19,7 +19,7 @@ ms.locfileid: "50668707"
 
 Un especificador de tipo no válido se pasó un rasgo de tipo.
 
-Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Para obtener más información, consulte [compatibilidad de compilador para Type Traits](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

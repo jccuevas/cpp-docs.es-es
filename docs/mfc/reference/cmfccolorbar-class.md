@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283259"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58771412"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar (clase)
 
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`m_bInternal`|Un campo booleano que determina si se procesan los eventos del mouse. Normalmente, se procesan los eventos del mouse cuando este campo es TRUE y el modo de personalización es FALSE.|
 |`m_bIsEnabled`|Un valor booleano que indica si un control está habilitado.|
@@ -202,7 +202,7 @@ Cuando el usuario hace clic en un botón de control de barra de color, el marco 
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar una barra de colores mediante distintos métodos en el `CMFCColorBar` clase. Los métodos de establecer los márgenes horizontales y verticales, habilitar el botón otro, creación una ventana de control de barra de colores y establece el color seleccionado actualmente. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar una barra de colores mediante distintos métodos en el `CMFCColorBar` clase. Los métodos de establecer los márgenes horizontales y verticales, habilitar el botón otro, creación una ventana de control de barra de colores y establece el color seleccionado actualmente. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-ms.openlocfilehash: 6eaaa4c1f16e2ac2c5029511430a145fd9b943e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428348"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778844"
 ---
 # <a name="compiler-warning-c4694"></a>Advertencia del compilador C4694
 
@@ -19,7 +19,7 @@ ms.locfileid: "50428348"
 
 Una clase abstracta y sellada no puede heredar de un tipo de referencia. Una clase sellada y abstracta no puede implementar las funciones de clase base ni permitir que se use como clase base.
 
-Para obtener más información, consulte [abstracta](../../windows/abstract-cpp-component-extensions.md), [sealed](../../windows/sealed-cpp-component-extensions.md), y [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md).
+Para obtener más información, consulte [abstracta](../../extensions/abstract-cpp-component-extensions.md), [sealed](../../extensions/sealed-cpp-component-extensions.md), y [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 Esta advertencia suele convertirse automáticamente en un error. Si desea modificar este comportamiento, use [advertencia #pragma](../../preprocessor/warning.md).
 

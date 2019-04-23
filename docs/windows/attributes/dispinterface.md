@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: d0ace76fdbbc1ff930bccb4e6fc203895b4f1637
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677284"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038465"
 ---
 # <a name="dispinterface"></a>dispinterface
 

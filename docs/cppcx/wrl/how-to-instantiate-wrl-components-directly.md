@@ -1,16 +1,16 @@
 ---
-title: Filtrar Crear instancias de componentes WRL directamente
+title: Procedimiento Crear instancias de componentes WRL directamente
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-ms.openlocfilehash: 3caa29125de0de8cbe73379b8d7244206a5f9229
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785786"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035749"
 ---
-# <a name="how-to-instantiate-wrl-components-directly"></a>Filtrar Crear instancias de componentes WRL directamente
+# <a name="how-to-instantiate-wrl-components-directly"></a>Procedimiento Crear instancias de componentes WRL directamente
 
 Aprenda a usar la biblioteca de plantillas de C++ de Windows en tiempo de ejecución (WRL)[Microsoft::WRL::Make](make-function.md) y [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md) funciones para crear instancias de un componente desde el módulo que lo define.
 

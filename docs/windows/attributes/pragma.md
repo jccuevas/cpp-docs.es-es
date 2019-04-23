@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: d90e37e27f7e2a13ffebd11043e415c1d43751c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430504"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041194"
 ---
 # <a name="pragma"></a>pragma
 

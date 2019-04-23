@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
 ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781463"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775433"
 ---
 # <a name="compiler-error-c3394"></a>Error del compilador C3394
 

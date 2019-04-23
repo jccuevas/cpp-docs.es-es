@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: 55580533d6a1a6b80f79b017ba78a08fb44df744
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e6c3c502290e88feec89877de7ad791084401cf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478161"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023261"
 ---
 # <a name="compiler-error-c3490"></a>Error del compilador C3490
 

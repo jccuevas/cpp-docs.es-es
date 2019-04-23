@@ -1,20 +1,20 @@
 ---
 title: Opciones del compilador por orden alfabético
-ms.date: 08/20/2018
+ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811945"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59424123"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Opciones del compilador por orden alfabético
 
 A continuación se muestra una lista completa por orden alfabético de las opciones del compilador. Para obtener una lista por categoría, vea [Opciones del compilador, por categoría](compiler-options-listed-by-category.md).
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|Especifica un archivo de respuesta.|
 |[/?](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
@@ -45,7 +45,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/Fe](fe-name-exe-file.md)|Cambia el nombre del archivo ejecutable.|
 |[/FI](fi-name-forced-include-file.md)|Preprocesa el archivo de inclusión especificado.|
 |[/Fi](fi-preprocess-output-file-name.md)|Establece el nombre del archivo de salida preprocesado.|
-|[/Fm](fm-name-mapfile.md)|Crea un archivo de asignaciones.|
+|[/Fm](fm-name-mapfile.md)|Crea un archivo de asignación.|
 |[/Fo](fo-object-file-name.md)|Crea un archivo de objeto.|
 |[/fp](fp-specify-floating-point-behavior.md)|Especifica el comportamiento de punto flotante.|
 |[/Fp](fp-name-dot-pch-file.md)|Especifica el nombre de un archivo de encabezado precompilado.|
@@ -60,7 +60,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/GH](gh-enable-pexit-hook-function.md)|Llama a la función de enlace `_pexit`.|
 |[/Gh](gh-enable-penter-hook-function.md)|Llama a la función de enlace `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Habilita la optimización completa del programa.|
-|[/Gm](gm-enable-minimal-rebuild.md)|Habilita la recompilación mínima.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Desusado. Habilita la recompilación mínima.|
 |[/GR](gr-enable-run-time-type-information.md)|Habilita la información de tipo en tiempo de ejecución (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Usa la convención de llamada `__fastcall` (solo x86).|
 |[/GS](gs-buffer-security-check.md)|Almacena en un búfer la comprobación de seguridad.|
@@ -76,7 +76,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/H](h-restrict-length-of-external-names.md)|Desusado. Restringe la longitud de los nombres externos (públicos).|
 |[/HELP](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Fuerza la escritura de parámetros pasados en registros en sus ubicaciones en la pila a la entrada de la función. Esta opción del compilador es solo para el x64 compiladores (compilación nativos y cruzada).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea una imagen a la que se puede aplicar una revisión reciente.|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Crea una imagen patchable "hot".|
 |[/I](i-additional-include-directories.md)|Busca archivos de inclusión en un directorio.|
 |[/J](j-default-char-type-is-unsigned.md)|Cambia el tipo `char` predeterminado.|
 |[/JMC](jmc.md)|Admite la depuración nativa de C++ solo mi código.|
@@ -97,7 +97,7 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 |[/Od](od-disable-debug.md)|Deshabilita la optimización.|
 |[/Og](og-global-optimizations.md)|Desusado. Usa optimizaciones globales.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Genera funciones intrínsecas.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) en el código fuente.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita la [ `#pragma omp` ](../../preprocessor/omp.md) la directiva en el código fuente.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código pequeño.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Favorece el código rápido.|
 |[/Ox](ox-full-optimization.md)|Usa la optimización máxima (/Ob2gity /Gs).|
@@ -164,5 +164,5 @@ A continuación se muestra una lista completa por orden alfabético de las opcio
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

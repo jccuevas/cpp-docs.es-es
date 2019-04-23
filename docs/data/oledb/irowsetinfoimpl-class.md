@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414621"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029176"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl (Clase)
 

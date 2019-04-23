@@ -5,16 +5,16 @@ helpviewer_keywords:
 - month calendar controls [MFC], examples
 - CMonthCalCtrl class [MFC], examples
 ms.assetid: 1af7fb59-d6fd-46e0-aaa5-b0394a0a3ed5
-ms.openlocfilehash: bdcd9105c28fca344fa6605937aefd31e093973a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b798b5f9fd71b6d18b7fe52d6407ea7b89892c90
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274237"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58773520"
 ---
 # <a name="month-calendar-control-examples"></a>Ejemplo de control de calendario mensual
 
-El [CMNCTRL1](../visual-cpp-samples.md) aplicación de ejemplo muestra los distintos atributos de la `CMonthCalCtrl` clase. El control, que se encuentra en una pestaña independiente en el ejemplo, muestra la funcionalidad básica y permite al usuario modificar ciertos atributos de forma dinámica.
+El [CMNCTRL1](../overview/visual-cpp-samples.md) aplicación de ejemplo muestra los distintos atributos de la `CMonthCalCtrl` clase. El control, que se encuentra en una pestaña independiente en el ejemplo, muestra la funcionalidad básica y permite al usuario modificar ciertos atributos de forma dinámica.
 
 ## <a name="see-also"></a>Vea también
 

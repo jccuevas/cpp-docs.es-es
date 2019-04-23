@@ -4,12 +4,12 @@ ms.date: 10/24/2018
 helpviewer_keywords:
 - rowsets, column updates
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
-ms.openlocfilehash: 2adca735558033aa9324f37b5a61385b5f48096c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46de5f54a3ec6525f779a6b55a700429a2a84fef
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519905"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039220"
 ---
 # <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>Actualizar una columna cuando otra tabla contiene una referencia a la fila
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
-ms.openlocfilehash: 3a7fe5c6bbb7198f18f5a5cf7cac26add6e6709b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ffbc5102855574aba668a2c501cd08dbaebe5b8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676699"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777944"
 ---
 # <a name="compiler-error-c3460"></a>Error del compilador C3460
 
 'type': solamente se puede reenviar un tipo definido por el usuario
 
-Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -4,18 +4,18 @@ ms.date: 10/15/2018
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 05ab045e104e3035f8ccd2fa1924b6959164b8d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538195"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032355"
 ---
 # <a name="creating-the-provider"></a>Crear un proveedor
 
 ## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>Para crear un proveedor OLE DB con el Asistente para proveedores OLE DB ATL
 
-1. Haga clic en el proyecto.
+1. Haga clic con el botón derecho en el proyecto.
 
 1. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.
 
@@ -25,11 +25,11 @@ ms.locfileid: "50538195"
 
 1. Editar otros cuadros con nombre, si es necesario. Además de los nombres de objeto y el archivo, puede modificar lo siguiente:
 
-   - **Coclase**: el nombre que utiliza COM para crear el proveedor.
+   - **Coclase**: El nombre que utiliza COM para crear el proveedor.
 
-   - **Id. de programa**: el identificador de programación, que es una cadena de texto que se puede usar en lugar de un GUID.
+   - **ProgID**: El identificador de programación, que es una cadena de texto que se puede usar en lugar de un GUID.
 
-   - **Versión**: se utiliza con los ProgID y Coclass para generar un identificador de programación dependientes de la versión.
+   - **Versión**: Se utiliza con los ProgID y Coclass para generar un identificador de programación dependientes de la versión.
 
 1. Haga clic en **Finalizar**.
 

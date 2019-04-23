@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1000
 ms.assetid: 86421b9a-460a-4285-8dce-9b8257d78122
 ms.openlocfilehash: b0e6eb3ba44216e9300506eb84adb61a6529903d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781502"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778324"
 ---
 # <a name="linker-tools-error-lnk1000"></a>Error de las herramientas del vinculador LNK1000
 

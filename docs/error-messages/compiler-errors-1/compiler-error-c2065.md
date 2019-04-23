@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482527"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779406"
 ---
 # <a name="compiler-error-c2065"></a>Error del compilador C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Ejemplo: C + + / error de deducción de tipo CLI
+## <a name="example-ccli-type-deduction-failure"></a>Ejemplo: C++ / c++ / error de deducción de tipo CLI
 
-Este error puede producirse cuando se llama a una función genérica, si no se puede deducir el argumento de tipo previsto desde los parámetros utilizados. Para obtener más información, consulte [funciones genéricas (C++ / c++ / CLI)](../../windows/generic-functions-cpp-cli.md).
+Este error puede producirse cuando se llama a una función genérica, si no se puede deducir el argumento de tipo previsto desde los parámetros utilizados. Para obtener más información, consulte [funciones genéricas (C++ / c++ / CLI)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Ejemplo: C + + / parámetros de atributo de la CLI
+## <a name="example-ccli-attribute-parameters"></a>Ejemplo: C++ / c++ / parámetros de atributo de la CLI
 
 Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: comprobación de parámetros de atributos de Visual C++.
 

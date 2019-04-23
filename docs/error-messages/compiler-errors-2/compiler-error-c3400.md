@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3400
 ms.assetid: d44169a8-73b6-4766-b406-b3a6c93f2a4d
-ms.openlocfilehash: 70d23e22780b6efc8220675655d8ed095ca50bab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4b4cb64da83115ab5b6a5234cda2ea3c7ba3a53
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557383"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778857"
 ---
 # <a name="compiler-error-c3400"></a>Error del compilador C3400
 
@@ -19,7 +19,7 @@ dependencia de restricción circular que implica 'constraint_1' y 'constraint_2'
 
 El compilador detectó restricciones circulares.
 
-Para obtener más información, consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Para obtener más información, consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

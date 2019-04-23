@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 17e70a54024b8e5a3ab29e2420f60fbf3eec08a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677245"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025210"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 

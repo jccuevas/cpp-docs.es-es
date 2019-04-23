@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: b38d58603eafeaa76c79873bbf375b4a3b405cdb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f12bf4aafc87e44a6e2fb15ba79de4a9744bea58
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785897"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59029731"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal (enumeración)
 

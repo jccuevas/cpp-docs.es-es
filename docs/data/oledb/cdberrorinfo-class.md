@@ -44,12 +44,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 9a047263022c45ddc2fcb98dc618a4c6075bfd75
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bc13137a4222ba51cf3745f9706353d48068a072
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58778356"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021545"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo (Clase)
 

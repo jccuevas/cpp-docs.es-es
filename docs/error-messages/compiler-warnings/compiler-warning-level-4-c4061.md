@@ -1,25 +1,25 @@
 ---
 title: Del compilador (nivel 4) de la advertencia C4061
-ms.date: 11/30/2017
+ms.date: 04/05/2019
 f1_keywords:
 - C4061
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 073e3e9cb1cb5bb6b0f66157c986072227960212
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453279"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59237125"
 ---
 # <a name="compiler-warning-level-4-c4061"></a>Del compilador (nivel 4) de la advertencia C4061
 
 > enumerador '*identificador*'en el conmutador de la enumeración'*enumeración*' no está controlado de forma explícita por una etiqueta de caso
 
-El enumerador tiene asociado ningún controlador un `switch` instrucción.
+El enumerador especificado *identificador* tiene asociado ningún controlador un `switch` instrucción que tenga un `default` caso. El caso de que falta puede ser un descuido, o puede que no sea un problema. Puede depender de si el enumerador está controlado por el caso predeterminado o no. Para una advertencia relacionada con los enumeradores no utilizadas en `switch` las instrucciones que no tienen ningún `default` case, consulte [C4062](compiler-warning-level-4-c4062.md).
 
-De forma predeterminada, esta advertencia está desactivada. Vea [Advertencias del compilador desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md) para más información.
+De forma predeterminada, esta advertencia está desactivada. Para obtener más información acerca de cómo habilitar las advertencias que están desactivadas de forma predeterminada, consulte [compilador advertencias que están desactivadas de forma predeterminada](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -46,3 +46,7 @@ int main()
 {
 }
 ```
+
+## <a name="see-also"></a>Vea también
+
+[Advertencia del compilador (nivel 4) C4062](compiler-warning-level-4-c4062.md)

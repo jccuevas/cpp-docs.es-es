@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259820"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58774482"
 ---
 # <a name="cbasepane-class"></a>CBasePane Class
 
@@ -342,7 +342,7 @@ Las siguientes sugerencias de personalización que pertenecen a la `CBasePane Cl
 
 ## <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CBasePane` . En el ejemplo se muestra cómo recuperar un panel desde el `CFrameWndEx` clase y cómo establecer el modo de acoplamiento, la alineación del panel y el estilo del panel. El código está tomado del [ejemplo de WordPad](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra cómo usar los distintos métodos en la clase `CBasePane` . En el ejemplo se muestra cómo recuperar un panel desde el `CFrameWndEx` clase y cómo establecer el modo de acoplamiento, la alineación del panel y el estilo del panel. El código está tomado del [ejemplo de WordPad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 

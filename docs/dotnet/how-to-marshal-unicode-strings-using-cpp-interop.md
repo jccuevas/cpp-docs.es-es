@@ -1,5 +1,5 @@
 ---
-title: Filtrar Serializar cadenas Unicode mediante la interoperabilidad de C++
+title: Procedimiento Serializar cadenas Unicode mediante la interoperabilidad de C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
 ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777680"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Filtrar Serializar cadenas Unicode mediante la interoperabilidad de C++
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Procedimiento Serializar cadenas Unicode mediante la interoperabilidad de C++
 
 En este tema se muestra un aspecto de la interoperabilidad de Visual C++. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
@@ -30,7 +30,7 @@ Este tema muestra cómo las cadenas de Unicode pueden ser pase de una a una func
 
 ## <a name="example"></a>Ejemplo
 
-Para pasar una cadena Unicode de administrado a una función no administrada, se puede usar la función PtrToStringChars (declarada en Vcclr.h) para el acceso en la memoria donde se almacena la cadena administrada. Dado que esta dirección se pasará a una función nativa, es importante que se ha anclado la memoria con [pin_ptr (C++ / c++ / CLI)](../extensions/pin-ptr-cpp-cli.md) para evitar que los datos de cadena que se ha reubicado, un ciclo de recopilación de elementos no utilizados tendrá lugar mientras el ejecuta la función no administrada.
+Para pasar una cadena Unicode de administrado a una función no administrada, se puede usar la función PtrToStringChars (declarada en Vcclr.h) para el acceso en la memoria donde se almacena la cadena administrada. Dado que esta dirección se pasará a una función nativa, es importante que la memoria se anclado con [pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md) para evitar que los datos de cadena que se ha reubicado, un ciclo de recopilación de elementos no utilizados tendrá lugar mientras el ejecuta la función no administrada.
 
 ```
 // MarshalUnicode1.cpp

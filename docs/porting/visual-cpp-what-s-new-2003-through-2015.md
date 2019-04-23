@@ -2,19 +2,19 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768690"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58898861"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
 En esta página, se recopilan todas las páginas de novedades de todas las versiones de Visual C++, de Visual Studio 2015 a 2003. Esta información se pone a su disposición en caso de que pueda servir de ayuda al actualizar desde versiones anteriores de Visual C++.
 
 > [!NOTE]
-> Para obtener más información sobre Visual Studio 2017, consulte [What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio 2017) y [Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) (Mejoras de conformidad de Visual C++ en Visual Studio 2017).
+> Para obtener información sobre la versión actual de Visual Studio, vea [What's new for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio) y [Conformance Improvements in Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md) (Mejoras de conformidad de Visual C++ en Visual Studio).
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Novedades de C++ en Visual Studio 2015
 

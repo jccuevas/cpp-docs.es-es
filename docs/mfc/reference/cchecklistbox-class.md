@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273067"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768047"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox (clase)
 
@@ -379,7 +379,7 @@ Para obtener información acerca de estos estilos, consulte [estilos de botón](
 
 ## <a name="see-also"></a>Vea también
 
-[Ejemplo de MFC TSTCON](../../visual-cpp-samples.md)<br/>
+[Ejemplo de MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [CListBox (clase)](../../mfc/reference/clistbox-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CListBox (clase)](../../mfc/reference/clistbox-class.md)

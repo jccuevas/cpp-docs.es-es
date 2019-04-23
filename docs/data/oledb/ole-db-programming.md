@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: fccf9ee553160d687a6094ccc9b95f4c55f7094f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328550"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031652"
 ---
 # <a name="ole-db-programming"></a>Programación de OLE DB
 

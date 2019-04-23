@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 008fe318ee96248dfca0c3c87bf660726beb3092
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4af302d8a391de359f3b8ac66d41b5d7198fd8f6
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660837"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033130"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175670"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035138"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)
 
@@ -26,7 +26,7 @@ Conjuntos de registros administran columnas de la tabla de enlace que especifiqu
 - [Cómo enlazar columnas dinámicamente en tiempo de ejecución](#_core_how_to_bind_columns_dynamically).
 
 > [!NOTE]
->  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Las técnicas descritas por lo general no se recomiendan si usas la obtención masiva de filas. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Este tema se aplica a objetos derivados de `CRecordset` donde no se haya implementado la obtención masiva de filas. Las técnicas descritas por lo general no se recomiendan si usas la obtención masiva de filas. Para obtener más información sobre la obtención masiva de filas, vea [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> Cuando se podrían enlazar columnas dinámicamente
 
@@ -91,10 +91,10 @@ Deberá trabajar con las listas de cuatro se muestran en la tabla siguiente.
 
 |||
 |-|-|
-|**Columnas de la tabla actual**| (Lista en la ilustración 1) Una lista de las columnas actualmente en la tabla del origen de datos. Esta lista podría coincidir con la lista de columnas enlazadas actualmente en el conjunto de registros.|
-|**Columnas enlazadas del conjunto de registros**| (Lista en la ilustración 2) Enlaza una lista de las columnas en el conjunto de registros. Estas columnas ya contienen instrucciones RFX su `DoFieldExchange` función.|
-|**Columnas para enlazar dinámicamente**| (Lista 3 en la ilustración) Una lista de columnas en la tabla pero no en el conjunto de registros. Estas son las columnas que desea enlazar dinámicamente.|
-|**Valores de columna dinámica**| (Lista en la ilustración 4) Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlazar dinámicamente. Elementos de esta lista se corresponden con los de columnas-para enlazar dinámicamente, uno a uno.|
+|**Current-Table-Columns**| (Lista en la ilustración 1) Una lista de las columnas actualmente en la tabla del origen de datos. Esta lista podría coincidir con la lista de columnas enlazadas actualmente en el conjunto de registros.|
+|**Bound-Recordset-Columns**| (Lista en la ilustración 2) Enlaza una lista de las columnas en el conjunto de registros. Estas columnas ya contienen instrucciones RFX su `DoFieldExchange` función.|
+|**Columns-To-Bind-Dynamically**| (Lista 3 en la ilustración) Una lista de columnas en la tabla pero no en el conjunto de registros. Estas son las columnas que desea enlazar dinámicamente.|
+|**Dynamic-Column-Values**| (Lista en la ilustración 4) Una lista que contiene almacenamiento para los valores recuperados de las columnas que enlazar dinámicamente. Elementos de esta lista se corresponden con los de columnas-para enlazar dinámicamente, uno a uno.|
 
 ###  <a name="_core_building_your_lists"></a> Generar las listas
 
@@ -140,7 +140,7 @@ A continuación, configure las ubicaciones de almacenamiento para las columnas q
 
    En el caso más común, los valores de columna dinámica tiene elementos de tipo `CString`. Si está trabajando con columnas de distintos tipos de datos, necesita una lista que puede contener elementos de una variedad de tipos.
 
-El resultado de los procedimientos anteriores es dos listas principales: columnas-para enlazar dinámicamente que contiene los nombres de columnas y dinámica valores de columna que contiene los valores de las columnas para el registro actual.
+El resultado de los procedimientos anteriores es dos listas principales: Las columnas para: enlazar dinámicamente que contiene los nombres de columnas y dinámica valores de columna que contiene los valores de las columnas para el registro actual.
 
 > [!TIP]
 > Si las nuevas columnas no son todas del mismo tipo de datos, es posible que desee una lista paralela adicional que contiene elementos que definan el tipo de cada elemento correspondiente en la lista de columnas. (Puede usar los valores AFX_RFX_BOOL, AFX_RFX_BYTE, y así sucesivamente, para este si desea. Estas constantes se definen en AFXDB. H.) Elija un tipo de lista en función de cómo se representan los tipos de datos de columna.

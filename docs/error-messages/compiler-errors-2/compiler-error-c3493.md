@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3493
 ms.assetid: 734b4257-12a3-436f-8488-c8c55ec81634
-ms.openlocfilehash: ece70a99477b018f6d7a935911f475e4fb4397cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bbf9b269075717ae397b7d29ee28c278b1e4ec8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548010"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034944"
 ---
 # <a name="compiler-error-c3493"></a>Error del compilador C3493
 

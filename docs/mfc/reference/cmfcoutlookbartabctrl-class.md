@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269947"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776809"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ Para crear una barra de Outlook que es compatible con acoplamiento, use un `CMFC
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo inicializar un `CMFCOutlookBarTabCtrl` de objetos y usar varios métodos en la `CMFCOutlookBarTabCtrl` clase. El ejemplo muestra cómo habilitar la edición en contexto de la etiqueta de texto en los botones de la página de ficha de la barra de Outlook, habilitar la animación, habilite los identificadores de desplazamiento que permiten al usuario desplazarse por los botones en el panel de la barra de Outlook, establezca el tamaño del borde de la continuación de la pestaña de Outlook rol y establece la alineación de las etiquetas de texto en los botones de ficha de la barra de Outlook. Este fragmento de código forma parte de la [ejemplo de demostración de Outlook](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo inicializar un `CMFCOutlookBarTabCtrl` de objetos y usar varios métodos en la `CMFCOutlookBarTabCtrl` clase. El ejemplo muestra cómo habilitar la edición en contexto de la etiqueta de texto en los botones de la página de ficha de la barra de Outlook, habilitar la animación, habilite los identificadores de desplazamiento que permiten al usuario desplazarse por los botones en el panel de la barra de Outlook, establezca el tamaño del borde de la continuación de la pestaña de Outlook rol y establece la alineación de las etiquetas de texto en los botones de ficha de la barra de Outlook. Este fragmento de código forma parte de la [ejemplo de demostración de Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Si establece *bDetachable* en TRUE, `AddControl` crea internamente un `CDockable
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `AddControl` método en el `CMFCOutlookBarTabCtrl` clase. Este fragmento de código forma parte de la [ejemplo de demostración de Outlook](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `AddControl` método en el `CMFCOutlookBarTabCtrl` clase. Este fragmento de código forma parte de la [ejemplo de demostración de Outlook](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 

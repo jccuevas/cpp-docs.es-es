@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: 9c486921e41732ef7736ca5b62b44a86010dcf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621877"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041025"
 ---
 # <a name="llrshift"></a>__ll_rshift
 

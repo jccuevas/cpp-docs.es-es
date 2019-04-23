@@ -13,12 +13,12 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-ms.openlocfilehash: f9f0bef89b32e1901c2f6b173baa90153b25a71d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e1e2630f8c0a66b681be2aa550f9c9255c92173
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577912"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027008"
 ---
 # <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
@@ -42,7 +42,7 @@ void __incfsdword(
 
 #### <a name="parameters"></a>Parámetros
 
-*Desplazamiento*<br/>
+*Offset*<br/>
 [in] El desplazamiento desde el principio del `FS`.
 
 ## <a name="requirements"></a>Requisitos

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9040
 ms.assetid: 415e7f04-c1bd-4ac1-924a-03efa4645140
-ms.openlocfilehash: 8daec0225301ef96b8e394af616f14bc39772adb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73640eef0cc7dc8fa625ac9cef2e39fab0c22018
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814337"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035022"
 ---
 # <a name="command-line-warning-d9040"></a>Advertencia de la línea de comandos D9040
 
@@ -22,4 +22,4 @@ El **/ analyze** opción de línea de comandos no está disponible en todas las 
 ## <a name="see-also"></a>Vea también
 
 [Errores de la línea de comandos de D8000 a D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
-[Opciones del compilador MSVC](../../build/reference/compiler-options.md)
+[Opciones del compilador de MSVC](../../build/reference/compiler-options.md)

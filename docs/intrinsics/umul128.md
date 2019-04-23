@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 94f26a6baeb4d3440d7f16af298b9880b91860f2
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220496"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034970"
 ---
 # <a name="umul128"></a>_umul128
 
@@ -48,7 +48,7 @@ Los 64 bits inferiores del producto.
 
 |Función intrínseca|Arquitectura|Header|
 |---------------|------------------|------------|
-|`_umul128`|x64|\<INTRIN.h >|
+|`_umul128`|x64|\<intrin.h>|
 
 ## <a name="example"></a>Ejemplo
 

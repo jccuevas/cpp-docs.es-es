@@ -1,5 +1,5 @@
 ---
-title: Filtrar Creación de símbolos (C++)
+title: Procedimiento Creación de símbolos (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.creating
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328927"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59026362"
 ---
-# <a name="how-to-create-symbols-c"></a>Filtrar Creación de símbolos (C++)
+# <a name="how-to-create-symbols-c"></a>Procedimiento Creación de símbolos (C++)
 
 Si está empezando un proyecto nuevo, le resultará conveniente asignar los nombres de símbolo que necesita antes de crear los recursos a los que podrán asignadas.
 
@@ -37,7 +37,7 @@ El **símbolos de recursos** cuadro de diálogo le permite agregar símbolos de 
 
 El cuadro de diálogo contiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------------------|------------------------------------------|
 |**Name**|Muestra el nombre del símbolo.<br/><br/>Para obtener más información, consulte [restricciones de nombre de símbolo](../windows/symbol-name-restrictions.md).|
 |**Valor**|Muestra el valor numérico del símbolo.<br/><br/>Para obtener más información, consulte [restricciones de valor de símbolo](../windows/symbol-value-restrictions.md).|
@@ -45,7 +45,7 @@ El cuadro de diálogo contiene las siguientes propiedades:
 |**Mostrar símbolos de solo lectura**|Si se selecciona, muestra los recursos de solo lectura.<br/><br/>De forma predeterminada, el **símbolos de recursos** cuadro de diálogo muestra únicamente los recursos modificables en el archivo de script de recursos, pero con esta opción seleccionada, los recursos modificables aparecen en negrita y los recursos de solo lectura aparecen en texto sin formato.|
 |**Utilizado por**|Muestra el o los recursos que usan el símbolo seleccionado en la lista de símbolos.<br/><br/>Para abrir el editor para un recurso determinado, seleccione el recurso en el **usando** y elija **Ver uso**.|
 |**Nuevo**|Se abre el **nuevo símbolo** cuadro de diálogo que le permite definir el nombre y, si es necesario, un valor para un nuevo identificador de recurso simbólico.|
-|**Change**|Se abre el **cambiar símbolo** cuadro de diálogo que le permite cambiar el nombre o valor de un símbolo.<br/><br/>Si el símbolo es para un control o un recurso en uso, solo se puede cambiar desde el editor de recursos correspondiente. Para obtener más información, consulte [administrar símbolos](../windows/changing-unassigned-symbols.md).|
+|**Cambio**|Se abre el **cambiar símbolo** cuadro de diálogo que le permite cambiar el nombre o valor de un símbolo.<br/><br/>Si el símbolo es para un control o un recurso en uso, solo se puede cambiar desde el editor de recursos correspondiente. Para obtener más información, consulte [administrar símbolos](../windows/changing-unassigned-symbols.md).|
 |**Ver uso**|Abre el recurso que contiene el símbolo en el editor de recursos correspondiente.|
 
 ## <a name="create-symbols"></a>Creación de símbolos

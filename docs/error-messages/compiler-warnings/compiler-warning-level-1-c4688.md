@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4688
 ms.assetid: a027df3c-b2b8-4c49-8539-c2bc42db74e8
 ms.openlocfilehash: 1c94198eca0a88174c8655e0d571c37f82a2df36
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781970"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777555"
 ---
 # <a name="compiler-warning-level-1-c4688"></a>Advertencia del compilador (nivel 1) C4688
 

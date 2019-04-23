@@ -10,10 +10,10 @@ helpviewer_keywords:
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
 ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774768"
 ---
 # <a name="keywords-c"></a>Palabras clave (C++)
@@ -42,7 +42,7 @@ Las palabras clave son identificadores reservados predefinidos que tienen un sig
 |[const_cast](const-cast-operator.md)|[constexpr](constexpr-cpp.md)|[continue](continue-statement-cpp.md)|[decltype](decltype-cpp.md)|
 |[default](switch-statement-cpp.md)|[delegar](../extensions/delegate-cpp-component-extensions.md)(C++ / c++ / CLI)|[delete](delete-operator-cpp.md)|[deprecated](deprecated-cpp.md) <sup>1</sup>|
 |[dllexport](dllexport-dllimport.md) <sup>1</sup>|[dllimport](dllexport-dllimport.md) <sup>1</sup>|[do](do-while-statement-cpp.md)|[double](fundamental-types-cpp.md)|
-|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[clase Enum](../extensions/enum-class-cpp-component-extensions.md)|
+|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[enum class](../extensions/enum-class-cpp-component-extensions.md)|
 |[enum struct](../extensions/enum-class-cpp-component-extensions.md)|[evento](../extensions/event-cpp-component-extensions.md)(C++ / c++ / CLI)|[explicit](user-defined-type-conversions-cpp.md)|[extern](using-extern-to-specify-linkage.md)|
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
 |[para cada uno de](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C++/CLI)|
@@ -80,7 +80,7 @@ Las extensiones de Microsoft están habilitadas de manera predeterminada. Para a
 
 Con las extensiones de Microsoft habilitadas, puede usar las palabras clave específicas de Microsoft en los programas. Para la compatibilidad con ANSI, estas palabras clave van precedidas por un subrayado doble. Compatibilidad con versiones anteriores, se admiten las versiones de un solo subrayado de muchas de las palabras clave con doble subrayado. Además, **__cdecl** está disponible sin subrayado inicial.
 
-El **__asm** palabra clave reemplaza C++ `asm` sintaxis. `asm` está reservada por compatibilidad con otras implementaciones de C++, pero no se implementa. Use **__asm**.
+El **__asm** reemplaza la palabra clave C++ `asm` sintaxis. `asm` está reservada por compatibilidad con otras implementaciones de C++, pero no se implementa. Use **__asm**.
 
 La palabra clave **__based** tiene usos limitados para las compilaciones de destino de 32 y 64 bits.
 

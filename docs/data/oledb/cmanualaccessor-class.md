@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 9050415795bab51992e21cedeb5188fd885b56b2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776822"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027615"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor (Clase)
 

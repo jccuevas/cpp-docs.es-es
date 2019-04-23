@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 28529ad0d9204034ea25fbca3696982a38889951
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ea7d37332ce50fd1d21acba058da721a23f2097
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437263"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030344"
 ---
 # <a name="popmacro"></a>pop_macro
 Establece el valor de la *macro_name* macro en el valor en la parte superior de la pila para esta macro.

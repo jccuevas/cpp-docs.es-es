@@ -12,12 +12,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: 9276c727d93491e3d85cbae26f6b3df9c0384c59
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220249"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041437"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
@@ -48,7 +48,7 @@ void __writegsqword(
 
 #### <a name="parameters"></a>Parámetros
 
-*Desplazamiento*<br/>
+*Offset*<br/>
 [in] El desplazamiento desde el principio de GS para escribir en.
 
 *Data*<br/>

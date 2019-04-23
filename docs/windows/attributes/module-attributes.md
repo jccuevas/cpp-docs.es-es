@@ -5,12 +5,12 @@ helpviewer_keywords:
 - module attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: 46d135dc-613f-4810-90a4-e155ab8ed91a
-ms.openlocfilehash: b420a77b85e692385b406e32a099356dcdc781a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69c0834c95b6e8bc33c984da5a3589269ed62e97
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553340"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037083"
 ---
 # <a name="module-attributes"></a>Atributos de módulo
 Solo se puede aplicar el atributo siguiente a la [módulo](module-cpp.md) atributo.

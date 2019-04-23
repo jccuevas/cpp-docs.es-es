@@ -1,5 +1,5 @@
 ---
-title: Instalar compatibilidad con C++ en Visual Studio
+title: Instalación de compatibilidad con C++ en Visual Studio
 description: Instalar la compatibilidad de Visual Studio para Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870785"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Instalar compatibilidad con C++ en Visual Studio
+# <a name="install-c-support-in-visual-studio"></a>Instalación de compatibilidad con C++ en Visual Studio
 
 Si aún no ha descargado e instalado Visual Studio y las herramientas de Visual C++ aún, aquí le mostramos cómo empezar a trabajar.
 
@@ -49,7 +49,7 @@ Para ver las preguntas sobre la ejecución de las versiones anteriores de Visual
 A continuación, descargue el archivo de programa previo de Visual Studio. Para ello, elija el botón siguiente, elija la edición de Visual Studio que desee, elija **guardar**y, a continuación, elija **Abrir carpeta**.
 
  > [!div class="button"]
- > [Descargue Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
+ > [Descarga de Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>Paso 3: Desinstalar el Instalador de Visual Studio
 

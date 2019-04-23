@@ -1,17 +1,17 @@
 ---
-title: transmit_as (atributo de COM de C++)
+title: transmit_as (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573268"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032107"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -30,7 +30,7 @@ Especifica el tipo de datos que se transmite entre el cliente y servidor.
 
 ## <a name="remarks"></a>Comentarios
 
-El **transmit_as** atributo de C++ tiene la misma funcionalidad que el [transmit_as](/windows/desktop/Midl/transmit-as) atributo MIDL.
+El **transmit_as** C++ atributo tiene la misma funcionalidad que el [transmit_as](/windows/desktop/Midl/transmit-as) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

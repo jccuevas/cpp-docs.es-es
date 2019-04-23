@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
-ms.openlocfilehash: d1645571ce3102687d5054e066ec1dc7d633b3aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b21810d6df1fbfaf5ea94d9515487b16d00af548
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503140"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776488"
 ---
 # <a name="compiler-error-c3464"></a>Error del compilador C3464
 
@@ -19,7 +19,7 @@ ms.locfileid: "50503140"
 
 El reenvío de tipos no funciona en tipos anidados.
 
-Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../windows/type-forwarding-cpp-cli.md).
+Para obtener más información, consulte [reenvío de tipos (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

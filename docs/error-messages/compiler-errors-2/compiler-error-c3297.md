@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3297
 ms.assetid: 2a718b4c-6cdb-4418-92c0-fc3a259431c4
-ms.openlocfilehash: 6df8fd3df023602f65c872dedd74da36bbbc6bd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4661119680dff34dfaa43fb9ce71bf97150a8bd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649922"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777684"
 ---
 # <a name="compiler-error-c3297"></a>Error del compilador C3297
 
@@ -19,7 +19,7 @@ ms.locfileid: "50649922"
 
 Las clases de valor son de tipo sealed. Si una restricción es una clase de valor, otra restricción nunca puede derivar de ella.
 
-Para obtener más información, consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Para obtener más información, consulte [restricciones en parámetros de tipo genérico (C++ / c++ / CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

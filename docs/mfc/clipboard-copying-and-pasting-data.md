@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270740"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776107"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Portapapeles: Copiar y pegar datos
 
@@ -32,7 +32,7 @@ Para poder implementar copiar o pegar, primero debe proporcionar las funciones p
 
 1. Si el usuario selecciona una operación de cortar en lugar de una operación de copia, eliminar los datos seleccionados de la aplicación.
 
-Para ver un ejemplo de esta secuencia, vea la `OnEditCut` y `OnEditCopy` programas de ejemplo de funciones en la aplicación OLE [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md). Tenga en cuenta que estos ejemplos mantienen un puntero a los datos seleccionados actualmente, por lo que el paso 1 ya está completando.
+Para ver un ejemplo de esta secuencia, vea la `OnEditCut` y `OnEditCopy` programas de ejemplo de funciones en la aplicación OLE [OCLIENT](../overview/visual-cpp-samples.md) y [HIERSVR](../overview/visual-cpp-samples.md). Tenga en cuenta que estos ejemplos mantienen un puntero a los datos seleccionados actualmente, por lo que el paso 1 ya está completando.
 
 ##  <a name="_core_pasting_data"></a> Pegar datos
 
@@ -50,7 +50,7 @@ Pegado de datos es más complicado que copiarlo, debe elegir el formato que se u
 
 1. La operación de pegar el formato.
 
-Para obtener un ejemplo de cómo funciona esto, vea la implementación de la `OnEditPaste` funciones miembro en las clases de vista definidas en los programas de ejemplo OLE de MFC [OCLIENT](../visual-cpp-samples.md) y [HIERSVR](../visual-cpp-samples.md).
+Para obtener un ejemplo de cómo funciona esto, vea la implementación de la `OnEditPaste` funciones miembro en las clases de vista definidas en los programas de ejemplo OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md) y [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  La principal ventaja de separar la operación de pegado en su propia función es que se puede usar el mismo código de pegar cuando se colocan los datos en la aplicación durante una operación de arrastrar y colocar. Al igual que en OCLIENT y HIERSVR, su `OnDrop` también puede llamar la función `DoPasteItem`, reutilizar el código escrito para implementar operaciones de pegar.

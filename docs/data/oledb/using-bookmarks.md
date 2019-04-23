@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 1f8ef4c25ad921dad66e5587f4005585b3e017f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 579e67151858904e877a34bf30467e3cb97fe2c4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635661"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028498"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 

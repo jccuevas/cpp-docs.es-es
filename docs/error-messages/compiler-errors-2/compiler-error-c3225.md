@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 81316864c9c04c18ca1c96d1e74ad9988734eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541497"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778298"
 ---
 # <a name="compiler-error-c3225"></a>Error del compilador C3225
 
@@ -19,7 +19,7 @@ argumento de tipo genérico para 'arg' no puede ser 'tipo', debe ser un tipo de 
 
 El argumento de tipo genérico no era del tipo correcto.
 
-Para más información, vea [Genéricos](../../windows/generics-cpp-component-extensions.md).
+Para más información, vea [Genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 4fcf94c7501156d84e80d4cc4ff0d5ea8659b45e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532046"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035720"
 ---
 # <a name="stringizing-operator-"></a>Operador de conversión a cadenas (#)
 

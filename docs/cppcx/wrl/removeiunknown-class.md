@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-ms.openlocfilehash: bfe397f64650caedab1408f1f74fabd005dd98cf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3b54f6a3072d82d40db4ac698503f0939e745472
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785784"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59036778"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown (Clase)
 

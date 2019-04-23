@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 498aefae4dfe8fd13184b9da1685494d533575dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556434"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778441"
 ---
 # <a name="compiler-error-c3764"></a>Error del compilador C3764
 
 'función_de_reemplazo': no se puede invalidar el método de clase base 'función_de_clase_base'
 
-El compilador detectó una invalidación con formato incorrecto. Por ejemplo, la función de la clase base no era `virtual`. Para obtener más información, consulte [invalidar](../../windows/override-cpp-component-extensions.md).
+El compilador detectó una invalidación con formato incorrecto. Por ejemplo, la función de la clase base no era `virtual`. Para obtener más información, consulte [invalidar](../../extensions/override-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a54770e3c5c2bc3805024b237f9875bded1ab26
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772389"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030185"
 ---
 # <a name="cenumerator-class"></a>CEnumerator (Clase)
 

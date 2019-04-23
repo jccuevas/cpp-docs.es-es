@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], connecting to
 - ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-ms.openlocfilehash: 780a6a1feff33e23b4373fbd9f341a5fda240119
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dc6706f945a5a7b0aa21c9ced8017d0a9905fb1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628428"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031292"
 ---
 # <a name="work-with-odbc-database-connections"></a>Trabajar con conexiones de base de datos ODBC
 

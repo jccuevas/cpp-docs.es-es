@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3246
 ms.assetid: ad85224a-e540-479b-a5eb-a3bc3964c30b
 ms.openlocfilehash: eb5ba268508922daf00adb49cf611c038db76343
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776706"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777450"
 ---
 # <a name="compiler-error-c3246"></a>Error del compilador C3246
 

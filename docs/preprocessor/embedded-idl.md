@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525611"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034094"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *param*<br/>
 Puede ser uno de dos valores:
 
-- **emitidl**: información de tipo importada de typelib estará presente en el archivo IDL generado para el proyecto con atributos.  Este es el valor predeterminado y estará en vigor si no se especifica un parámetro para `embedded_idl`.
+- **emitidl**: Información de tipo importada de typelib estará presente en el archivo IDL generado para el proyecto con atributos.  Este es el valor predeterminado y estará en vigor si no se especifica un parámetro para `embedded_idl`.
 
-- **no_emitidl**: información de tipo importada de typelib no estará presente en el archivo IDL generado para el proyecto con atributos.
+- **no_emitidl**: Información de tipo importada de typelib no estará presente en el archivo IDL generado para el proyecto con atributos.
 
 ## <a name="example"></a>Ejemplo
 

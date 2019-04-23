@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-ms.openlocfilehash: 5f98a438769073dc5abb10f3de7fb0af2e8e88d4
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 6115db7611de521d66df3b1f555349891d72cc03
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278442"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025802"
 ---
 # <a name="compiler-warning-level-4-c4703"></a>Advertencia del compilador (nivel 4) C4703
 

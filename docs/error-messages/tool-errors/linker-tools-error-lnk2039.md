@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-ms.openlocfilehash: fad8960424cd73240d547ef894b2ae5cdf358601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498287"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027578"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Error de las herramientas del vinculador LNK2039
 

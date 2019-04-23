@@ -1,6 +1,6 @@
 ---
 title: / permissive-(conformidad con los estándares)
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820798"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59424136"
 ---
 # <a name="permissive--standards-conformance"></a>/ permissive-(conformidad con los estándares)
 
@@ -35,15 +35,15 @@ De forma predeterminada, el **/ permissive-** opción está establecida en los n
 
 El **/ permissive-** opción es compatible con casi todos los archivos de encabezado de los Kits de Windows más recientes, como el Kit de desarrollo de Software (SDK) o Windows Driver Kit (WDK), empezando en el SDK de Windows Fall Creators (10.0.16299.0). Puede que no se compilan en versiones anteriores del SDK de **/ permissive-** por diversas razones de compatibilidad de código de origen. El compilador y el SDK se incluyen en una versión diferente de escalas de tiempo, por lo tanto, hay algunos problemas restantes. Para problemas de archivos de encabezado específicos, consulte [problemas de encabezado de Windows](#windows-header-issues) a continuación.
 
-El **/ permissive-** conjuntos de opciones la [/Zc: strictstrings](zc-conformance.md) y [/Zc: rvaluecast](zc-conformance.md) opciones al comportamiento de conformidad. El valor predeterminado para un comportamiento no conforme. Puede pasar específico **/Zc** opciones después **/ permissive-** en la línea de comandos para invalidar este comportamiento.
+El **/ permissive-** conjuntos de opciones la [/Zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md), [/Zc: strictstrings](zc-strictstrings-disable-string-literal-type-conversion.md), y [/Zc: rvaluecast](zc-rvaluecast-enforce-type-conversion-rules.md) opciones para que se ajuste comportamiento. Estos valores predeterminados de las opciones para un comportamiento no conforme. Puede pasar específico **/Zc** opciones después **/ permissive-** en la línea de comandos para invalidar este comportamiento.
 
-En las versiones del principio del compilador en Visual Studio 2017 versión 15.3, el **/ permissive-** conjuntos de opciones la [/Zc: ternary](zc-ternary.md) opción. El compilador también implementa más de los requisitos para la búsqueda de nombres en dos fases. Cuando el **/ permissive-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, identificación de nombres dependientes y no dependiente usado en las plantillas. En esta versión, se realiza solo análisis de dependencias de nombre.
+En las versiones del principio del compilador en Visual Studio 2017 versión 15.3, el **/ permissive-** conjuntos de opciones la [/Zc: ternary](zc-ternary.md) opción. El compilador también implementa más de los requisitos para la búsqueda de nombres en dos fases. Cuando el **/ permissive-** opción está activada, el compilador analiza las definiciones de plantilla de función y de clase e identifica nombres dependientes y no dependientes utilizados en las plantillas. En esta versión, se realiza solo análisis de dependencias de nombre.
 
 Extensiones específicas del entorno y las áreas de idioma que el estándar deja hasta la implementación no se ven afectadas por **/ permissive-**. Por ejemplo, específico de Microsoft `__declspec`, convención de llamada y palabras clave y las directivas pragma del compilador específicas o atributos de control de excepciones estructurado no estén marcados por el compilador en **/ permissive-** modo.
 
 El **/ permissive-** opción usa la compatibilidad con la versión actual del compilador para determinar qué construcciones de lenguaje son no conforme. La opción no determina si el código se ajusta a una versión concreta de C++ estándar. Para habilitar todo el soporte técnico para el estándar de borrador más reciente del compilador implementado, use el [/std:latest](std-specify-language-standard-version.md) opción. Para restringir la compatibilidad del compilador que está implementada actualmente C ++ 17 estándar, use el [/std: c ++ 17](std-specify-language-standard-version.md) opción. Para restringir la compatibilidad del compilador para hacerlos coincidir con el estándar C ++ 14, use el [/std: c ++ 14](std-specify-language-standard-version.md) opción, que es el valor predeterminado.
 
-No todos los C ++ 11, C ++ 14 o C ++ 17 que cumple los estándares de código es compatible con el compilador de MSVC en Visual Studio 2017. Según la versión de Visual Studio, el **/ permissive-** opción no puede detectar problemas sobre algunos aspectos de la búsqueda de nombres en dos fases, enlazar una referencia distinta de const a un archivo temporal, tratando init copia como init directa, lo que permite varias conversiones definidas por el usuario en la inicialización o símbolos (token) alternativo para los operadores lógicos y otras áreas de conformidad que no son compatibles. Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Para obtener el máximo provecho de **/ permissive-**, actualización de Visual Studio a la versión más reciente.
+No todos los C ++ 11, C ++ 14 o C ++ 17 que cumple los estándares de código es compatible con el compilador de MSVC en todas las versiones de Visual Studio 2017. Según la versión de Visual Studio, el **/ permissive-** opción no puede detectar problemas sobre algunos aspectos de la búsqueda de nombres en dos fases, enlazar una referencia distinta de const a un archivo temporal, tratando init copia como init directa, lo que permite varias conversiones definidas por el usuario en la inicialización o símbolos (token) alternativo para los operadores lógicos y otras áreas de conformidad que no son compatibles. Para obtener más información sobre los problemas de conformidad de Visual C++, vea [Nonstandard Behavior](../../cpp/nonstandard-behavior.md). Para obtener el máximo provecho de **/ permissive-**, actualización de Visual Studio a la versión más reciente.
 
 ### <a name="how-to-fix-your-code"></a>Cómo corregir el código
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>Miembros de la búsqueda en base dependiente
+#### <a name="look-up-members-in-dependent-base"></a>Buscar miembros de base dependiente
 
 ```cpp
 template <typename T>
@@ -237,7 +237,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 En las versiones del compilador antes de Visual Studio 2017 versión 15.3, el compilador acepta argumentos para el operador condicional (o el operador ternario) `?:` que se consideran ambiguos por el estándar. En **/ permissive-** modo, el compilador ahora emite uno o más diagnósticos en los casos que se compilan sin diagnósticos en versiones anteriores.
 
-Common errores que pudieran derivarse de este cambio se incluyen:
+Errores comunes que pudieran derivarse de este cambio se incluyen:
 
 - ¿Error C2593: 'operador'? es ambiguo
 
@@ -247,7 +247,7 @@ Common errores que pudieran derivarse de este cambio se incluyen:
 
 - Error C2446: ':': ninguna conversión de 'B' a 'A'
 
-Un modelo de código típico que puede causar este problema es cuando alguna clase de C proporciona un constructor que no sea explícito de otro tipo T y un operador de conversión no explícita al tipo T. En este caso, la conversión de 2do argumento al tipo de los 3 y la conversión de 3er argumento al tipo del 2 º son conversiones válidas, que es ambiguo según el estándar.
+Un modelo de código típico que puede causar este problema es cuando alguna clase de C proporciona un constructor que no sea explícito de otro tipo T y un operador de conversión no explícita al tipo T. En este caso, la conversión del segundo argumento al tipo del tercer argumento tanto la conversión del tercer argumento para el tipo del segundo argumento son conversiones válidas. Dado que ambos son válidos, es ambiguo según el estándar.
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -313,7 +313,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up"></a>Búsqueda de nombres en dos fases
 
-Cuando el **/ permissive-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, que identifica el dependientes y no dependiente de los nombres utilizados en plantillas según sea necesario para la búsqueda de nombres en dos fases. En Visual Studio 2017 versión 15.3, se realizan el análisis de dependencias de nombre. En concreto, los nombres no dependientes que no se declaran en el contexto de una definición de plantilla provocar un mensaje de diagnóstico según sea necesario por los estándares ISO C++. En Visual Studio 2017 versión 15.7, también se realiza el enlace de nombres no dependientes que requieren argumentos dependientes de búsqueda en el contexto de la definición.
+Cuando el **/ permissive-** opción está activada, el compilador analiza definiciones de plantilla de función y de clase, que identifica el dependientes y no dependiente de los nombres utilizados en plantillas según sea necesario para la búsqueda de nombres en dos fases. En Visual Studio 2017 versión 15.3, se realizan el análisis de dependencias de nombre. En concreto, los nombres no dependientes que no se declaran en el contexto de una definición de plantilla provocar un mensaje de diagnóstico según sea necesario por los estándares ISO C++. En Visual Studio 2017 versión 15.7, también se realiza el enlace de nombres no dependientes que requieren la búsqueda dependiente de argumentos en el contexto de la definición.
 
 ```cpp
 // dependent base
@@ -464,5 +464,5 @@ En las versiones anteriores de Visual Studio 2017 versión 15.5, use este proced
 
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador MSVC](compiler-options.md)
-- [Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+- [Opciones del compilador de MSVC](compiler-options.md)
+- [Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

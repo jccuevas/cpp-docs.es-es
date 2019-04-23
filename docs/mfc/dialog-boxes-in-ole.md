@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270896"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767657"
 ---
 # <a name="dialog-boxes-in-ole"></a>Cuadros de diálogo en OLE
 
@@ -31,7 +31,7 @@ Este cuadro de diálogo permite al usuario controlar el formato utilizado para p
 Este cuadro de diálogo permite al usuario seleccionar qué icono se muestra para representar el elemento vinculado o incrustado. Mostrar este cuadro de diálogo cuando el usuario elige el icono de cambio en el menú Edición o elige el botón Cambiar icono en el pegado especial o cuadros de diálogo de Convert. Hacer que aparezca cuando el usuario abre el cuadro de diálogo Insertar objeto y seleccione Mostrar como icono. Use la [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md) clase para mostrar este cuadro de diálogo.
 
 *Convertir*<br/>
-Este cuadro de diálogo permite al usuario cambiar el tipo de un elemento incrustado o vinculado. Por ejemplo, si ha incrustado un metarchivo en un documento compuesto y posteriormente desea utilizar otra aplicación para modificar el metarchivo incrustado, puede usar el cuadro de diálogo convertir. Normalmente, se muestra este cuadro de diálogo, haga clic en *tipo de elemento* objeto en el menú Editar y, a continuación, en el menú en cascada, haciendo clic en convertir. Use la [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) clase para mostrar este cuadro de diálogo. Por ejemplo, ejecutar el ejemplo OLE de MFC [OCLIENT](../visual-cpp-samples.md).
+Este cuadro de diálogo permite al usuario cambiar el tipo de un elemento incrustado o vinculado. Por ejemplo, si ha incrustado un metarchivo en un documento compuesto y posteriormente desea utilizar otra aplicación para modificar el metarchivo incrustado, puede usar el cuadro de diálogo convertir. Normalmente, se muestra este cuadro de diálogo, haga clic en *tipo de elemento* objeto en el menú Editar y, a continuación, en el menú en cascada, haciendo clic en convertir. Use la [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md) clase para mostrar este cuadro de diálogo. Por ejemplo, ejecutar el ejemplo OLE de MFC [OCLIENT](../overview/visual-cpp-samples.md).
 
 *Editar vínculos o actualizar vínculos*<br/>
 El cuadro de diálogo Editar vínculos permite al usuario cambiar la información sobre el origen de un objeto vinculado. El cuadro de diálogo vínculos de actualización comprueba los orígenes de todos los elementos vinculados en el cuadro de diálogo actual y muestra el cuadro de diálogo Editar vínculos si es necesario. Mostrar el cuadro de diálogo Editar vínculos cuando el usuario elige los vínculos en el menú Edición. Normalmente, se muestra el cuadro de diálogo vínculos de actualización cuando se abre un documento compuesto por primera vez. Usar el [COleLinksDialog](../mfc/reference/colelinksdialog-class.md) o [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md) class, dependiendo de qué cuadro de diálogo que desea mostrar.

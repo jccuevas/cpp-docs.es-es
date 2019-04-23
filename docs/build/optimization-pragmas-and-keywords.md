@@ -6,12 +6,12 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: df5df59f6c18a7372b0f0af0e0447c00ff524c4b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: db9af687c7de560b0012ceea50a7cbfcc7d5de9c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826594"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035509"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Directivas pragma y palabras clave de optimización
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: e5afec6257c421c0d3d5c95ba77c29767d0df280
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620901"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037065"
 ---
 # <a name="synchronize"></a>synchronize
 

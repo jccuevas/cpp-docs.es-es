@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3255
 ms.assetid: 877ffca2-fd92-44b6-9060-6091b928b1c1
-ms.openlocfilehash: a5b483f3aaa82e543d561cb7c550495069a19f7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 129d2698a782d2b98267877e8d575a6ee641b94b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519943"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778220"
 ---
 # <a name="compiler-error-c3255"></a>Error del compilador C3255
 
 'tipo de valor': no se puede asignar dinámicamente este objeto de tipo de valor en el montón nativo
 
-Las instancias de un tipo de valor (consulte [clases y Structs](../../windows/classes-and-structs-cpp-component-extensions.md)) que contienen miembros administrados pueden crearse en la pila, pero no en el montón.
+Las instancias de un tipo de valor (consulte [clases y Structs](../../extensions/classes-and-structs-cpp-component-extensions.md)) que contienen miembros administrados pueden crearse en la pila, pero no en el montón.
 
 El ejemplo siguiente genera C3255:
 

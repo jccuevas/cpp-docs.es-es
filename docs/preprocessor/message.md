@@ -8,12 +8,12 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: a55721fb954cf9383022b4fc8e84327ea4c772e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627388"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030211"
 ---
 # <a name="message"></a>message
 Envía un literal de cadena al resultado estándar sin finalizar la compilación.

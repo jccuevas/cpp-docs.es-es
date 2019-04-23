@@ -5,16 +5,16 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556656"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027210"
 ---
 # <a name="interface-attributes"></a>Atributos de interfaz
 
-Los siguientes atributos se aplican a la [interfaz (o __interface)](../../cpp/interface.md) palabra clave de C++.
+Los siguientes atributos se aplican a la [interfaz (o __interface)](../../cpp/interface.md) C++ palabra clave.
 
 |Atributo|Descripción|
 |---------------|-----------------|

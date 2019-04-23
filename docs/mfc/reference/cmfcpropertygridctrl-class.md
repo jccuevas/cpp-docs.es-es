@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296012"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58781983"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl (clase)
 
@@ -297,7 +297,7 @@ Las siguientes ilustraciones muestran un control de cuadrícula de propiedades q
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo configurar un objeto de control de cuadrícula de propiedad mediante distintos métodos en el `CMFCPropertyGridCtrl` clase. El ejemplo muestra cómo habilitar el control de encabezado, habilitar el área de descripción y establecer la apariencia del control de cuadrícula de propiedad. El ejemplo también muestra cómo establecer el modo del control mediante el cual se ordena el control es un carácter alfabético todas las propiedades que contiene por su nombre de propiedad y cómo establecer los colores personalizados para distintos elementos del control de cuadrícula de propiedad. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo configurar un objeto de control de cuadrícula de propiedad mediante distintos métodos en el `CMFCPropertyGridCtrl` clase. El ejemplo muestra cómo habilitar el control de encabezado, habilitar el área de descripción y establecer la apariencia del control de cuadrícula de propiedad. El ejemplo también muestra cómo establecer el modo del control mediante el cual se ordena el control es un carácter alfabético todas las propiedades que contiene por su nombre de propiedad y cómo establecer los colores personalizados para distintos elementos del control de cuadrícula de propiedad. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ Para crear un control de cuadrícula de propiedades, la primera llamada [CMFCPro
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo usar el `Create` método `CMFCPropertyGridCtrl` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo usar el `Create` método `CMFCPropertyGridCtrl` clase. Este ejemplo forma parte de la [ejemplo de controles nuevos](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 

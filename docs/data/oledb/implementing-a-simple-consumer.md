@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 141c2f48b2069410b14f969171f2b1c185a0506e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669032"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033539"
 ---
 # <a name="implementing-a-simple-consumer"></a>Implementar un consumidor sencillo
 

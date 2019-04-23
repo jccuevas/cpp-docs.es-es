@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-ms.openlocfilehash: cac397e4588c493fb8c47932feb97a5f12cf2583
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578222"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778291"
 ---
 # <a name="compiler-error-c3391"></a>Error del compilador C3391
 
 'type_arg': argumento de tipo no válido para el parámetro genérico 'param' de 'generic_type' genérico debe ser un tipo de valor distinto de null
 
-Se crearon instancias de un tipo genérico incorrectamente. Compruebe la definición de tipo. Para obtener más información, consulte <xref:System.Nullable> y [genéricos](../../windows/generics-cpp-component-extensions.md).
+Se crearon instancias de un tipo genérico incorrectamente. Compruebe la definición de tipo. Para obtener más información, consulte <xref:System.Nullable> y [genéricos](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

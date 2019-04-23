@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [C++], decorated
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
-ms.openlocfilehash: c01e684be62dbb8716f8556680b1c692af1efc45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b916a73e0b8f86755384914fa85ef8a901e4a64c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598866"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041528"
 ---
 # <a name="name-decoration"></a>Decoración de nombres
 

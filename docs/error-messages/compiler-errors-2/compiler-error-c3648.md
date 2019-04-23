@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3648
 ms.assetid: 5d042989-41cb-4cd0-aa50-976b70146aaf
-ms.openlocfilehash: f3ef949b2651631f30a9c614a0d21b2668b7239f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7394f6b9789caa09ffc2ad6c2cf56f037b5d57b8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653770"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775798"
 ---
 # <a name="compiler-error-c3648"></a>Error del compilador C3648
 
@@ -19,7 +19,7 @@ Esta sintaxis de invalidación explícita requiere/CLR: oldSyntax
 
 Cuando se compila para la última sintaxis administrada, el compilador encontró explícito invalidar la sintaxis para las versiones anteriores que ya no se admite.
 
-Para obtener más información, consulte [invalidaciones explícitas](../../windows/explicit-overrides-cpp-component-extensions.md).
+Para obtener más información, consulte [invalidaciones explícitas](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

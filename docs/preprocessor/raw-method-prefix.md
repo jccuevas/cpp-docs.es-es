@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: c3015cf8b51646d25fd8f36a7336c63dc8fe492b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 963e04752dcb797343550d9b89f778bfe0e8a593
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565602"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021416"
 ---
 # <a name="rawmethodprefix"></a>raw_method_prefix
 

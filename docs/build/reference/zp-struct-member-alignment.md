@@ -1,6 +1,6 @@
 ---
 title: /Zp (Alineación de miembros de estructura)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807694"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59237169"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Alineación de miembros de estructura)
 
@@ -28,7 +28,7 @@ Controla cómo se empaquetan los miembros de una estructura en memoria y especif
 
 ## <a name="remarks"></a>Comentarios
 
-Al especificar el **/Zp**_n_ opción, cada miembro de la estructura detrás del primero se almacena en el tamaño del tipo del miembro o *n*-límites de bytes (donde *n* es 1, 2, 4, 8 o 16), lo que sea menor.
+El **/Zp**_n_ opción indica al compilador dónde almacenar cada miembro de estructura. El compilador almacena los miembros después de la primera de ellas en un límite que es el menor del tamaño del tipo de miembro, o un *n*-límite de bytes.
 
 Los valores de empaquetado disponibles se describen en la tabla siguiente:
 
@@ -37,13 +37,13 @@ Los valores de empaquetado disponibles se describen en la tabla siguiente:
 |1|Empaqueta las estructuras en límites de 1 byte. Igual que **/Zp**.|
 |2|Empaqueta las estructuras en límites de 2 bytes.|
 |4|Empaqueta las estructuras en límites de 4 bytes.|
-|8|Empaqueta las estructuras en límites de 8 bytes (valor predeterminado).|
-|16| Empaqueta las estructuras en límites de 16 bytes.|
+|8|Empaqueta las estructuras en límites de 8 bytes (valor predeterminado para x86, ARM y ARM64).|
+|16| Empaqueta las estructuras en límites de 16 bytes (valor predeterminado para x64).|
 
-No debe utilizar esta opción a menos que tenga requisitos específicos de alineación.
+No use esta opción a menos que tenga requisitos específicos de alineación.
 
 > [!WARNING]
-> Encabezados de C++ en el SDK de Windows se suponen **/zp8** de empaquetado. Memoria pueden dañarse si la **/Zp** se cambia la configuración al usar los encabezados del SDK de Windows.
+> Encabezados de C++ en el SDK de Windows, establecer y suponen **/zp8** empaquetado internamente. Memoria pueden dañarse si la **/Zp** se cambia la configuración dentro de los encabezados del SDK de Windows. Los encabezados no se ven afectados por ninguna **/Zp** opción se establece en la línea de comandos.
 
 También puede usar [pack](../../preprocessor/pack.md) empaquetado de estructura de control. Para obtener más información sobre la alineación, vea:
 
@@ -59,7 +59,7 @@ También puede usar [pack](../../preprocessor/pack.md) empaquetado de estructura
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione el **C o C++** > **generación de código** página de propiedades.
+1. Seleccione el **propiedades de configuración** > **C o C++** > **generación de código** página de propiedades.
 
 1. Modificar el **alineación de miembros de Struct** propiedad.
 
@@ -69,5 +69,5 @@ También puede usar [pack](../../preprocessor/pack.md) empaquetado de estructura
 
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador MSVC](compiler-options.md)
-- [Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador MSVC](compiler-options.md) \
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

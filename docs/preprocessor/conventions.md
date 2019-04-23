@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, conventions
 ms.assetid: 469ce448-dc6c-4d0e-ba2b-e2e7a10155e1
-ms.openlocfilehash: 222b84739809cfbad73a0f3e8e7febeebefef694
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c84be60938752e7401e2178dbcbf98c6ed32b1cc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629806"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034279"
 ---
 # <a name="conventions"></a>Convenciones
 Las convenciones utilizan distintos atributos de fuente de diferentes componentes de la sintaxis. Los símbolos y fuentes son los siguientes:

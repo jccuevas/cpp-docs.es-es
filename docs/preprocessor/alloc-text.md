@@ -8,12 +8,12 @@ helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: 43f516830d0aa0fb8de6195c5958beadbeba9df6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450380"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031370"
 ---
 # <a name="alloctext"></a>alloc_text
 Designa la sección de código donde residirán las definiciones de función especificadas. La directiva pragma debe aparecer entre un declarador de función y la definición de función para las funciones designadas.
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>Comentarios
 
-El **alloc_text** pragma no controla funciones miembro de C++ o funciones sobrecargadas. Es aplicable solo a las funciones declaradas con vinculación C, es decir, las funciones declaradas con el **extern "C"** especificación de vinculación. Si intenta utilizar esta directiva pragma en una función con vinculación de C++, se genera un error del compilador.
+El **alloc_text** pragma no controla C++ funciones miembro o funciones sobrecargadas. Es aplicable solo a las funciones declaradas con vinculación C, es decir, las funciones declaradas con el **extern "C"** especificación de vinculación. Si intenta utilizar esta directiva pragma en una función con vinculación de C++, se genera un error del compilador.
 
 Ya que el uso del direccionamiento de función `__based` no se admite, especificar ubicaciones de sección requiere el uso de la **alloc_text** pragma. El nombre especificado por *textsection* debe incluirse entre comillas dobles.
 

@@ -1,17 +1,17 @@
 ---
-title: ms_union (atributo de COM de C++)
+title: ms_union (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 6b9788fc02a3bf4d59d34823ba83d86f97298597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642473"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59022313"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -25,7 +25,7 @@ Controla la alineación de representación de datos de red de uniones nonencapsu
 
 ## <a name="remarks"></a>Comentarios
 
-El **ms_union** atributo de C++ tiene la misma funcionalidad que el [ms_union](/windows/desktop/Midl/ms-union-attrib) atributo MIDL.
+El **ms_union** C++ atributo tiene la misma funcionalidad que el [ms_union](/windows/desktop/Midl/ms-union-attrib) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

@@ -1,6 +1,6 @@
 ---
 title: /ZW (Compilación de Windows en tiempo de ejecución)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809436"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59424045"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Compilación de Windows en tiempo de ejecución)
 
@@ -44,7 +44,7 @@ Al especificar el **/ZW** opción, el compilador admite estas características:
 
 - Automático: recuento de referencias de objetos de Windows Runtime y descarte de un objeto cuando su recuento de referencias llega a cero automático.
 
-Dado que el enlazador incremental no admite los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción, el [/Gm (habilitar recompilación mínima)](gm-enable-minimal-rebuild.md) es incompatible con la opción  **/ZW**.
+Dado que el enlazador incremental no admite los metadatos de Windows incluidos en los archivos .obj mediante la **/ZW** opción desusado [/Gm (habilitar recompilación mínima)](gm-enable-minimal-rebuild.md) opción no es compatible con **/ZW**.
 
 Para obtener más información, consulte [referencia del lenguaje Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 
@@ -52,5 +52,5 @@ Para obtener más información, consulte [referencia del lenguaje Visual C++](..
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

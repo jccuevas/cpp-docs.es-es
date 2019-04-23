@@ -1,17 +1,17 @@
 ---
-title: first_is (atributo de COM de C++)
+title: first_is (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: fcabad8d6c512a84e44f050cd5b34d985d687636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512842"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033088"
 ---
 # <a name="firstis"></a>first_is
 
@@ -25,12 +25,12 @@ Especifica el índice del primer elemento de matriz que se transmitan.
 
 ### <a name="parameters"></a>Parámetros
 
-*Expresión*<br/>
+*expression*<br/>
 Una o varias expresiones de lenguaje C. Se permiten las ranuras de argumentos vacía.
 
 ## <a name="remarks"></a>Comentarios
 
-El **first_is** atributo de C++ tiene la misma funcionalidad que el [first_is](/windows/desktop/Midl/first-is) atributo MIDL.
+El **first_is** C++ atributo tiene la misma funcionalidad que el [first_is](/windows/desktop/Midl/first-is) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

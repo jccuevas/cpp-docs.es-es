@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 074ab4c6ea51c8b3a2543d9b43248a8da37567cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 674b5170dd2bba7038dfe11af906e31540acd993
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613021"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030237"
 ---
 # <a name="noop"></a>__noop
 

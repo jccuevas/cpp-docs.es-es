@@ -1,17 +1,17 @@
 ---
-title: call_as (atributo de COM de C++)
+title: call_as (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.call_as
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 16839f5a5040e6b0019005912782ba359178cc47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579908"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023924"
 ---
 # <a name="callas"></a>call_as
 
@@ -30,7 +30,7 @@ La función local que desea que se llama cuando se invoca una función remota.
 
 ## <a name="remarks"></a>Comentarios
 
-El **call_as** atributo de C++ tiene la misma funcionalidad que el [call_as](/windows/desktop/Midl/call-as) atributo MIDL.
+El **call_as** C++ atributo tiene la misma funcionalidad que el [call_as](/windows/desktop/Midl/call-as) atributo MIDL.
 
 ## <a name="example"></a>Ejemplo
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 85d3d9d4339634ea7948d7d5e9e09725b7fd8758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d65fb047e758f449ed76c954bb4ac0c3623f6dd
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611373"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032133"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor (Clase)
 

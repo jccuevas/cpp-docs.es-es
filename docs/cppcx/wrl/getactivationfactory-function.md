@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 82c83e95648eeb0fc8985777156659a2ffb876a8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785768"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033948"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory (función)
 

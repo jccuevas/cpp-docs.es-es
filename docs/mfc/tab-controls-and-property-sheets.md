@@ -6,20 +6,20 @@ helpviewer_keywords:
 - tab controls [MFC], and property sheets
 - CTabCtrl class [MFC], and property sheets
 ms.assetid: f3b87bea-9ad9-41e6-a7ff-a9285308267e
-ms.openlocfilehash: be612038683ea4d8546e5811beaf6e62c5f88888
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e765316880749ae5fb065e048b66b1203d7f222e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265761"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768827"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Controles de pestaña y hojas de propiedades
 
 Hojas de propiedades son cuadros de diálogo de varias páginas o "fichas" que se pueden mostrar hasta 24 recursos de plantilla de cuadro de diálogo al usuario. Para obtener ejemplos de las hojas de propiedades, vea el cuadro de diálogo Propiedades de presentación de Windows o la siguiente aplicación de ejemplo MFC:
 
-[CMNCTRL1: Muestra las clases de controles comunes, parte 1](../visual-cpp-samples.md)
+[CMNCTRL1: Muestra las clases de controles comunes, parte 1](../overview/visual-cpp-samples.md)
 
-[CMNCTRL2: Muestra las clases de controles comunes, parte 2](../visual-cpp-samples.md)
+[CMNCTRL2: Muestra las clases de controles comunes, parte 2](../overview/visual-cpp-samples.md)
 
 Hojas de propiedades se pueden implementar fácilmente mediante la clase MFC [CPropertySheet](../mfc/reference/cpropertysheet-class.md).
 

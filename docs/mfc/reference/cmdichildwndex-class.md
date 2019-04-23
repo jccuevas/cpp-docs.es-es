@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293434"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58781762"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx (clase)
 
@@ -201,7 +201,7 @@ Para aprovechar las ventajas de las características de acoplamiento extendidas 
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente deriva una clase de `CMDIChildWndEx`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente deriva una clase de `CMDIChildWndEx`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ Cuando el marco de trabajo es restaurar el estado más adelante, el nombre del d
 
 ### <a name="example"></a>Ejemplo
 
-En el siguiente ejemplo se muestra el uso del método `GetDocumentName`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+En el siguiente ejemplo se muestra el uso del método `GetDocumentName`. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ Esta función se utiliza para evitar que guarden de documentos de sólo lectura.
 
 ### <a name="example"></a>Ejemplo
 
-El ejemplo siguiente se muestra cómo reemplazar el `IsReadOnly` método. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../visual-cpp-samples.md).
+El ejemplo siguiente se muestra cómo reemplazar el `IsReadOnly` método. Este fragmento de código procede de la [VisualStudioDemo ejemplo: Aplicación de Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 

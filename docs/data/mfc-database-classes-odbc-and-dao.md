@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: c6baa07b5bc5e63927f00ecf912c69f8c96a34f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520385"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039383"
 ---
 # <a name="mfc-database-classes"></a>Clases de base de datos MFC
 

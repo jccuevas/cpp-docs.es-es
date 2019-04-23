@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 44a1a55114bcf2466aa5b084f2b53c5457f1a0aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487027"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032211"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260756"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772728"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (clase)
 
@@ -574,10 +574,10 @@ El marco de trabajo realiza el seguimiento de las páginas son "sucios", es deci
 
 ## <a name="see-also"></a>Vea también
 
-[MFC Sample CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC Sample CMNCTRL2](../../visual-cpp-samples.md)<br/>
-[Ejemplo de MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Ejemplo SNAPVW de MFC](../../visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC Sample CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo de MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Ejemplo SNAPVW de MFC](../../overview/visual-cpp-samples.md)<br/>
 [CDialog (clase)](../../mfc/reference/cdialog-class.md)<br/>
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [CPropertySheet (clase)](../../mfc/reference/cpropertysheet-class.md)<br/>

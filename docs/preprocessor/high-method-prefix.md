@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-ms.openlocfilehash: 69e96a8a8f92316e32074a861456fffb83c79434
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616474"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59028991"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 

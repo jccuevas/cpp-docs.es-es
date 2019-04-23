@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3223
 ms.assetid: 1f4380b4-0413-40db-a868-62f97babaf78
 ms.openlocfilehash: 5771de24cd07978903a3e598f1ff5658cb61eafa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776861"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778555"
 ---
 # <a name="compiler-error-c3223"></a>Error del compilador C3223
 

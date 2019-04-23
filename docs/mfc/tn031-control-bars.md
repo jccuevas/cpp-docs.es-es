@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 07178597e66975a006a0ea5293192ee7ea099e42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39309408c6d1fc6cbb4223eda22c511865f14498
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286471"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772519"
 ---
 # <a name="tn031-control-bars"></a>TN031: Barras de controles
 
@@ -136,7 +136,7 @@ Todos los botones de mapa de bits de la barra de herramientas proceden de un map
 
 Cada botón debe ser del mismo tamaño. El valor predeterminado es el valor estándar 24 x 22 píxeles. Cada glifo o imagen debe ser del mismo tamaño y debe estar en paralelo en el mapa de bits. El tamaño de la imagen o glifo predeterminado es 16 x 15 píxeles. Por lo tanto, para una barra de herramientas con 10 botones (con tamaños estándar), es necesario un mapa de bits de 160 píxeles de ancho y 15 píxeles de alto.
 
-Cada botón solo tiene una imagen o glifo. Los diferentes estados y estilos del botón (por ejemplo, presionado, arriba, abajo, deshabilitado, deshabilitado hacia abajo, indeterminado) se generan de forma algorítmica desde una imagen o glifo. En teoría puede usar cualquier mapa de bits de color o DIB. El algoritmo para generar los diferentes estados del botón funciona mejor si la imagen original es de tonalidad gris. Examine los botones de la barra de herramientas estándar y las imágenes prediseñadas del botón de la barra de herramientas proporcionados en el ejemplo general de MFC [CLIPART](../visual-cpp-samples.md) para obtener ejemplos.
+Cada botón solo tiene una imagen o glifo. Los diferentes estados y estilos del botón (por ejemplo, presionado, arriba, abajo, deshabilitado, deshabilitado hacia abajo, indeterminado) se generan de forma algorítmica desde una imagen o glifo. En teoría puede usar cualquier mapa de bits de color o DIB. El algoritmo para generar los diferentes estados del botón funciona mejor si la imagen original es de tonalidad gris. Examine los botones de la barra de herramientas estándar y las imágenes prediseñadas del botón de la barra de herramientas proporcionados en el ejemplo general de MFC [CLIPART](../overview/visual-cpp-samples.md) para obtener ejemplos.
 
 Los colores usados en la barra de herramientas también son coherentes con la recomendación de la Guía de diseño de aplicaciones de interfaz de Windows. Estos colores no se codifican de forma rígida y se cambian dinámicamente en respuesta a la personalización del usuario en el Panel de Control.
 

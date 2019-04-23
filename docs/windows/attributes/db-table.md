@@ -1,17 +1,17 @@
 ---
-title: db_table (atributo de COM de C++)
+title: db_table (C++ atributo COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_table
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607277"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023872"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -34,7 +34,7 @@ Cadena que especifica el nombre de una tabla de base de datos (por ejemplo, "pro
 *source_name*<br/>
 (Opcional) El `CSession` variable o instancia de una clase que tiene el `db_source` atributo aplicado a él en el que se ejecuta el comando. Consulte [db_source](db-source.md).
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
 ## <a name="remarks"></a>Comentarios

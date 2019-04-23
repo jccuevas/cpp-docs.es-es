@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326646"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025142"
 ---
 # <a name="creating-a-simple-consumer"></a>Crear un consumidor sencillo
 
@@ -56,7 +56,7 @@ A continuación, use el **el Asistente para consumidores OLE DB ATL** para agreg
    1. En el **conexión** ficha, especifique la información necesaria, como nombre del servidor, Id. de inicio de sesión y contraseña para el origen de datos y la base de datos en el servidor.
 
       > [!NOTE]
-      > Hay un problema de seguridad con el **Permitir guardar contraseña** característica de la **propiedades de vínculo de datos** cuadro de diálogo. En **especificar información para iniciar sesión en el servidor**, hay dos botones de radio: **seguridad integrada de uso Windows NT** y **utilizar un nombre de usuario específico y una contraseña**.
+      > Hay un problema de seguridad con el **Permitir guardar contraseña** característica de la **propiedades de vínculo de datos** cuadro de diálogo. En **especificar información para iniciar sesión en el servidor**, hay dos botones de radio: **La seguridad integrada de Windows NT de uso** y **utilizar un nombre de usuario específico y una contraseña**.
 
       > [!NOTE]
       > Si selecciona **utilizar un nombre de usuario específico y una contraseña**, tiene la opción de guardar la contraseña (mediante la **Permitir guardar contraseña** casilla de verificación); sin embargo, esta opción no es segura. Se recomienda que seleccione **seguridad integrada de uso Windows NT**; esta opción utiliza Windows NT para verificar tu identidad.

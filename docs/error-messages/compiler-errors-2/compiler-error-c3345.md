@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: 196928d7a171aa7ffe2d6b8f38b529d3d3588bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624788"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027568"
 ---
 # <a name="compiler-error-c3345"></a>Error del compilador C3345
 

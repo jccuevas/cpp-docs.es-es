@@ -3,12 +3,12 @@ title: Configuración de sesiones de depuración de CMake en Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356171"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035353"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurar sesiones de depuración de CMake
 
@@ -42,7 +42,7 @@ Tan pronto como guarda el **launch.vs.json** archivo, se crea una entrada en el 
 
 ## <a name="support-for-cmakesettings-variables"></a>Compatibilidad con las variables de CMakeSettings
 
- **Launch.VS.JSON** admite variables que se declaran en **CMakeSettings.json** (ver abajo) y que se aplican a la configuración seleccionada actualmente. También tiene una clave denominada `currentDir`, que establece el directorio actual de la aplicación de inicio:
+ **Launch.VS.JSON** admite variables que se declaran en **CMakeSettings.json** (ver abajo) y que se aplican a la configuración seleccionada actualmente. También tiene una clave denominada `currentDir`, que establece el directorio actual de la aplicación de inicio para un proyecto local:
 
 ```json
 {
@@ -59,6 +59,13 @@ Al ejecutar la aplicación, el valor de `currentDir` es similar al siguiente:
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+La clave "cwd" establece el directorio actual de la aplicación al iniciar un proyecto remoto. El valor predeterminado es '${debugInfo.defaultWorkingDirectory}' que se evalúa como 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>Vea también
 
 [Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/>

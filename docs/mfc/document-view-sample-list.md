@@ -2,12 +2,12 @@
 title: Lista de ejemplos de documentos y vistas
 ms.date: 11/04/2016
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
-ms.openlocfilehash: 41cb41bb6924bda5db3c19871e0379c2f8d6036d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ae7104478fb643701c1f659136a33dd3cd69f6e1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300575"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58770712"
 ---
 # <a name="documentview-sample-list"></a>Lista de ejemplos de documentos y vistas
 
@@ -15,25 +15,25 @@ Vea los siguientes programas de ejemplo que ilustran el uso de arquitectura docu
 
 *Las variaciones de documento/vista*
 
-- [MDI](../visual-cpp-samples.md)
+- [MDI](../overview/visual-cpp-samples.md)
 
-- [SCRIBBLE](../visual-cpp-samples.md)
+- [SCRIBBLE](../overview/visual-cpp-samples.md)
 
-- [VIEWEX](../visual-cpp-samples.md)
+- [VIEWEX](../overview/visual-cpp-samples.md)
 
 *Cuadro de diálogo interfaz reemplaza el documento/vista*
 
-- [CMNCTRL1](../visual-cpp-samples.md)
+- [CMNCTRL1](../overview/visual-cpp-samples.md)
 
-- [CMNCTRL2](../visual-cpp-samples.md)
+- [CMNCTRL2](../overview/visual-cpp-samples.md)
 
 *Uso de COleDocument y sus clases derivadas*
 
-- [CONTENEDOR](../visual-cpp-samples.md)
+- [CONTENEDOR](../overview/visual-cpp-samples.md)
 
-- [HIERSVR](../visual-cpp-samples.md)
+- [HIERSVR](../overview/visual-cpp-samples.md)
 
-- [OCLIENT](../visual-cpp-samples.md)
+- [OCLIENT](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Vea también
 

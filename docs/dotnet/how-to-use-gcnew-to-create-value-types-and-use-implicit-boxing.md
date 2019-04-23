@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar gcnew para crear tipos de valor y usar la conversión Boxing implícita
+title: Procedimiento Usar gcnew para crear tipos de valor y usar la conversión Boxing implícita
 ms.date: 11/04/2016
 helpviewer_keywords:
 - gcnew keyword [C++], creating value types
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
 ms.openlocfilehash: c67f8e0b9511f4ed1610e72e4a7df41c949b1d27
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770827"
 ---
-# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Filtrar Usar gcnew para crear tipos de valor y usar la conversión Boxing implícita
+# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Procedimiento Usar gcnew para crear tipos de valor y usar la conversión Boxing implícita
 
 Uso de [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) en un valor de tipo crea un tipo de valor con conversión boxing, que, a continuación, se puede colocar en el montón administrado, la recolección.
 

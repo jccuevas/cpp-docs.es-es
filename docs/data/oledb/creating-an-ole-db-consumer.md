@@ -4,12 +4,12 @@ ms.date: 10/22/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-ms.openlocfilehash: af7b1f9da10228af6be8438086ce4d1a4d3ede85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9198ecce949a53190551a9c0c86c414ecdcbeb9f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471099"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032055"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Crear un consumidor OLE DB
 

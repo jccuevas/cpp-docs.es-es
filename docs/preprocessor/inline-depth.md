@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-ms.openlocfilehash: b08578406fab4fe3a025d502f71cfd90f8dca75b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18d772c8a9f6218ed3afaa385f214445bd0fe8e6
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471371"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039025"
 ---
 # <a name="inlinedepth"></a>inline_depth
 Especifica que ninguna función se inserte si se encuentra en una profundidad (en el gráfico de llamadas) mayor que la profundidad de búsqueda de la heurística de alineación *n*.

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2844
 ms.assetid: dcaf4cd2-21b0-4280-ae42-0a706c524d83
 ms.openlocfilehash: 2676a32cee487595a2241359496ae9b0380126b8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775016"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776897"
 ---
 # <a name="compiler-error-c2844"></a>Error del compilador C2844
 

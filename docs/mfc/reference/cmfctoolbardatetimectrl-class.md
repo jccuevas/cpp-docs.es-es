@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: c93d8a2a18518cad8b6fb7fe014828011f78a653
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dfe1d3dc058371dd13cc335968b9c3a89e057da2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280997"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776055"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl (clase)
 
@@ -172,7 +172,7 @@ Este objeto se inicializa en la fecha del sistema y la hora. El estilo de ventan
 
 ### <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCToolBarDateTimeCtrl` clase. Este fragmento de código forma parte de la [ejemplo de la barra de herramientas Date Time Picker](../../visual-cpp-samples.md).
+En el ejemplo siguiente se muestra cómo construir un objeto de la `CMFCToolBarDateTimeCtrl` clase. Este fragmento de código forma parte de la [ejemplo de la barra de herramientas Date Time Picker](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]
 

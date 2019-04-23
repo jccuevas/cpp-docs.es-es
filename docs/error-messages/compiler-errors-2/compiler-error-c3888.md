@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-ms.openlocfilehash: 20251292ec4635ea855a56890878bc55f567ab62
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: e4d52946126e7be6c6f2aef34b5eb5a93a0babad
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777472"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033646"
 ---
 # <a name="compiler-error-c3888"></a>Error del compilador C3888
 

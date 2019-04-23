@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 9a0aec5ec2142159feb592419056da0f100914d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482100"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034717"
 ---
 # <a name="control"></a>control
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 428eeaa61843bbd195de7936656815b5e3c6115f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551182"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59039195"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Invalidar un descriptor de acceso dinámico
 

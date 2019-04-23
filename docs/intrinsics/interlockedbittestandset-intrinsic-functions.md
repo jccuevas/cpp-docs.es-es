@@ -18,12 +18,12 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 2f7dc1cf6501f789d969143bc23469a6ecf7239c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627220"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59023209"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>Funciones intrínsecas _interlockedbittestandset
 
@@ -88,11 +88,11 @@ El valor del bit en la posición `b` antes de establecerse.
 
 |Función intrínseca|Arquitectura|Header|
 |---------------|------------------|------------|
-|`_interlockedbittestandset`|x86, ARM, x64|\<INTRIN.h >|
-|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<INTRIN.h >|
-|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h >|
-|`_interlockedbittestandset64`|x64|\<INTRIN.h >|
-|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|x64|\<immintrin.h >|
+|`_interlockedbittestandset`|x86, ARM, x64|\<intrin.h>|
+|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86, x64|\<immintrin.h>|
+|`_interlockedbittestandset64`|x64|\<intrin.h>|
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Comentarios
 

@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282440"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58778941"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>CMFCVisualManagerOffice2007 (clase)
 
@@ -376,7 +376,7 @@ Use `CMFCVisualManagerOffice2007` para cambiar la apariencia visual de la aplica
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo usar el administrador visual de Office 2007. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../visual-cpp-samples.md).
+El ejemplo siguiente muestra cómo usar el administrador visual de Office 2007. Este fragmento de código forma parte de la [ejemplo de demostración de alerta de escritorio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
 

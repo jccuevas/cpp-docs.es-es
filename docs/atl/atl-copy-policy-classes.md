@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
 ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776965"
 ---
 # <a name="atl-copy-policy-classes"></a>Clases de directivas de copia ATL
@@ -29,7 +29,7 @@ ATL utiliza clases de directivas de copia en sus implementaciones de las siguien
 
 Al encapsular la información necesaria para copiar o convertir los datos en una clase de directiva de copia que se puede pasar como argumento de plantilla, los desarrolladores ATL han proporcionado para poder reutilizarlo extreme de estas clases. Por ejemplo, si necesita implementar una colección con cualquier tipo de datos arbitrarios, todo lo que necesita proporcionar es la directiva de copia correspondiente; nunca tiene que tocar el código que implementa la colección.
 
-## <a name="definition"></a>de esquema JSON
+## <a name="definition"></a>Definición
 
 Por definición, una clase que proporciona las siguientes funciones estáticas es una clase de directiva de copia:
 

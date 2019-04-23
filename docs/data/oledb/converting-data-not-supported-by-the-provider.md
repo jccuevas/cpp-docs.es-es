@@ -4,12 +4,12 @@ ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB provider templates, unsupported data types
 ms.assetid: f495e50f-530a-4fab-ab54-e0c359785845
-ms.openlocfilehash: 44cdde2bad24d21adbc728c90ecd173717c02b04
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: e60f6cd4f7dca1ed3e176cabefc42f69946436a4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265196"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59033844"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>Convertir datos no compatibles con el proveedor
 

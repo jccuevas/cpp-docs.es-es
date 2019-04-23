@@ -1,5 +1,5 @@
 ---
-title: 'Intercambio de campos de registros: Utilizar las funciones de RFX'
+title: 'Intercambio de campos de registro: Uso de las funciones de RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC [C++], data types
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: 00b995890cf0cced5d06c52c4d702c1c89111dc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489965"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035989"
 ---
-# <a name="record-field-exchange-using-the-rfx-functions"></a>Intercambio de campos de registros: Utilizar las funciones de RFX
+# <a name="record-field-exchange-using-the-rfx-functions"></a>Intercambio de campos de registro: Uso de las funciones de RFX
 
 En este tema se explica cómo usar las llamadas de función RFX que componen el cuerpo de la `DoFieldExchange` invalidar.
 
 > [!NOTE]
->  En este tema se aplica a las clases derivadas de [CRecordset](../../mfc/reference/crecordset-class.md) en qué fila de forma masiva captura no se ha implementado. Si usas la obtención masiva de filas, se implementa el intercambio masivo de campos de registros (RFX masivo). RFX masivo es similar a RFX. Para comprender las diferencias, consulte [conjunto de registros: obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  En este tema se aplica a las clases derivadas de [CRecordset](../../mfc/reference/crecordset-class.md) en qué fila de forma masiva captura no se ha implementado. Si usas la obtención masiva de filas, se implementa el intercambio masivo de campos de registros (RFX masivo). RFX masivo es similar a RFX. Para comprender las diferencias, consulte [conjunto de registros: Obtener registros de forma masiva (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Las funciones globales de RFX intercambian datos entre las columnas en los miembros de datos de origen y el campo de datos en el conjunto de registros. Escribir llamadas de función RFX en su conjunto de registros [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) función miembro. En este tema se describe brevemente las funciones y se muestra los tipos de datos para el cual RFX funciones están disponibles. [La nota técnica 43](../../mfc/tn043-rfx-routines.md) describe cómo escribir sus propias funciones RFX para tipos de datos adicionales.
 
@@ -40,7 +40,7 @@ Cada función RFX toma tres parámetros (y algunos toman un cuarto o quinto par�
 
 - (Opcional) En el `RFX_Text` función, a veces se utiliza un quinto parámetro para especificar el tipo de datos de una columna.
 
-Para obtener más información, vea las funciones RFX en [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *Class Library Reference*. Para obtener un ejemplo de cuándo se podría hacer especial uso de los parámetros, vea [conjunto de registros: obtener cálculos SUM y otros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
+Para obtener más información, vea las funciones RFX en [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *Class Library Reference*. Para obtener un ejemplo de cuándo se podría hacer especial uso de los parámetros, vea [conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
 
 ##  <a name="_core_rfx_data_types"></a> Tipos de datos RFX
 
@@ -60,12 +60,12 @@ La biblioteca de clases proporciona funciones RFX para transferir muchos tipos d
 |`RFX_Date`|`CTime`|
 
 
-Para obtener más información, consulte la documentación de función RFX en [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *Class Library Reference*. Para obtener información acerca de cómo se asignan los tipos de datos de C++ a tipos de datos SQL, vea la tabla ANSI SQL datos tipos asignan a tipos de datos de C++ en [SQL: SQL y tipos de datos de C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
+Para obtener más información, consulte la documentación de función RFX en [Macros y funciones globales](../../mfc/reference/mfc-macros-and-globals.md) en el *Class Library Reference*. Para obtener información acerca de cómo se asignan los tipos de datos de C++ a tipos de datos SQL, vea la tabla ANSI SQL datos tipos asignan a tipos de datos de C++ en [SQL: Tipos de datos de C++ (ODBC) y SQL](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
 ## <a name="see-also"></a>Vea también
 
 [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Intercambio de campos de registros: Funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Intercambio de campos de registro: Funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
 [Conjunto de registros: Parametrizar un conjunto de registros (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [Conjunto de registros: Enlazar dinámicamente columnas de datos (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [CRecordset (clase)](../../mfc/reference/crecordset-class.md)<br/>

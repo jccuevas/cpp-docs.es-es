@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2452
 ms.assetid: a4ec7642-6660-4c7a-9866-853d1cc67daf
-ms.openlocfilehash: 9b9f2c41da1eb36aceece7f14ad5c33b38404bb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2d583efa2b634cf49d8588fa398bd81f24c607
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523710"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778573"
 ---
 # <a name="compiler-error-c2452"></a>Error del compilador C2452
 
 'type': tipo de origen no válido para safe_cast
 
-El tipo de origen para [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) no era válido.  Por ejemplo, todos los tipos en un `safe_cast` operación debe ser tipos CLR.
+El tipo de origen para [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) no era válido.  Por ejemplo, todos los tipos en un `safe_cast` operación debe ser tipos CLR.
 
 El ejemplo siguiente genera C2452:
 

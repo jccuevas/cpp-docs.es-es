@@ -1,16 +1,16 @@
 ---
-title: Filtrar Crear un componente COM clásico mediante WRL
+title: Procedimiento Crear un componente COM clásico mediante WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: e19ff4a331a98e64c39dc2e163459b2696bbdee5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785990"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031847"
 ---
-# <a name="how-to-create-a-classic-com-component-using-wrl"></a>Filtrar Crear un componente COM clásico mediante WRL
+# <a name="how-to-create-a-classic-com-component-using-wrl"></a>Procedimiento Crear un componente COM clásico mediante WRL
 
 Puede usar la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución para crear componentes COM clásicos básicos para su uso en aplicaciones de escritorio, además de usarlo para las aplicaciones de la plataforma Universal de Windows (UWP). Para la creación de componentes COM, la biblioteca de plantillas C++ de Windows en tiempo de ejecución puede requerir menos código que ATL. Para obtener información sobre el subconjunto de COM que admite la biblioteca de plantillas C++ de Windows en tiempo de ejecución, consulte [biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución](windows-runtime-cpp-template-library-wrl.md).
 

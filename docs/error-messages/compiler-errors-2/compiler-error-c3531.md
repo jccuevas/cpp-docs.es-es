@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 0f6094daddf40b0899dc7f341f50a31daf7a999b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6961d99d1a0d7d0ea063aee5544a1009af2547c7
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435456"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59031266"
 ---
 # <a name="compiler-error-c3531"></a>Error del compilador C3531
 

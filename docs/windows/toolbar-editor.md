@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328862"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59038172"
 ---
 # <a name="toolbar-editor-c"></a>Barra de herramientas del Editor (C++)
 
@@ -76,7 +76,7 @@ Un mapa de bits que se usa para crear una barra de herramientas tiene un ancho m
 
 El **nuevo recurso de barra de herramientas** cuadro de diálogo tiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---------------|
 |**Ancho del botón**|Proporciona un espacio para escribir el ancho de los botones de barra de herramientas que está convirtiendo de un recurso de mapa de bits a un recurso de barra de herramientas.|
 |**Alto de botón**|Proporciona un espacio para escribir el alto de los botones de barra de herramientas que está convirtiendo de un recurso de mapa de bits a un recurso de barra de herramientas.|
@@ -88,7 +88,7 @@ De forma predeterminada, se muestra un botón nuevo o en blanco en el extremo de
 
 Un botón de barra de herramientas tiene las siguientes propiedades:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |**ID**|Define el identificador del botón. La lista desplegable proporciona comunes **ID** nombres.|
 |**Width**|Establece el ancho del botón. se recomienda 16 píxeles.|

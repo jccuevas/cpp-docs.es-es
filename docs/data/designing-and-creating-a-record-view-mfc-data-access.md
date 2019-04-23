@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: b97ac5e61530742280dd8ee2183ec54229fb4441
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613452"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59035548"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Diseñar y crear una vista de registros (acceso a datos MFC)
 
@@ -36,9 +36,9 @@ Los siguientes temas explican más detalles sobre el uso de vistas de registros:
 
 - [Vistas de registros: Permitir la navegación en una vista de registros](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Vistas de registros: Utilizar una vista de registros](../data/using-a-record-view-mfc-data-access.md)
+- [Vistas de registros: Uso de una vista de registros](../data/using-a-record-view-mfc-data-access.md)
 
-- [Vistas de registros: Llenar un cuadro de lista de otro conjunto de registros](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Vistas de registros: Rellenar un cuadro de lista de otro conjunto de registros](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>Vea también
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: c29a44249b432a7e0c15164307e95c51ae8b0536
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 03bfed00147daef22fe91e6f061ea6720834090f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785870"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025116"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper (estructura)
 

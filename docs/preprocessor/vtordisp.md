@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557188"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59034383"
 ---
 # <a name="vtordisp"></a>vtordisp
 
@@ -44,7 +44,7 @@ Especifica el nuevo valor de vtordisp. Los valores posibles son 0, 1 o 2, corres
 *on*<br/>
 Equivalente a `#pragma vtordisp(1)`.
 
-*Desactivar*<br/>
+*off*<br/>
 Equivalente a `#pragma vtordisp(0)`.
 
 ## <a name="remarks"></a>Comentarios

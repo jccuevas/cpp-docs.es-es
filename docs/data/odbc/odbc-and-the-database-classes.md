@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ODBC classes [C++], MFC database classes
 - MFC [C++], ODBC and
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
-ms.openlocfilehash: 709608098a0c979cd7816ae4f8012372099ef52d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7692a8128e3dac97c9107e986f6698db76c22c58
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575609"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025995"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC y las clases de base de datos
 

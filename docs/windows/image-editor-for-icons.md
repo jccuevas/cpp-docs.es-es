@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328433"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59041554"
 ---
 # <a name="image-editor-for-icons-c"></a>Editor de imágenes para iconos (C++)
 
@@ -93,7 +93,7 @@ El **imagen** menú, que solo aparece cuando el **Editor de imágenes** está ac
 
 El **configuración de la cuadrícula** cuadro de diálogo le permite especificar la configuración de la cuadrícula para la imagen y muestra las líneas de cuadrícula a lo largo de la imagen editada. Las líneas son útiles para editar la imagen, pero no se guardan como parte de la imagen en Sí.
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Cuadrícula de píxeles**|Cuando está activada, se muestra una cuadrícula alrededor de cada píxel de la **Editor de imágenes**.<br/><br/>La cuadrícula aparece sólo en 4 × y resoluciones más altas.|
 |**Cuadrícula de mosaico**|Cuando se selecciona, muestra una cuadrícula alrededor de los bloques de píxeles de la **Editor de imágenes**, especificado por los valores de espaciado de cuadrícula.|
@@ -139,7 +139,7 @@ Abra el **fuente de herramienta de texto** cuadro de diálogo para cambiar la fu
 
 Para obtener acceso a este cuadro de diálogo, seleccione el **fuente** situado en la **texto herramienta** cuadro de diálogo. Las propiedades disponibles son:
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |---|---|
 |**Fuente**|Enumera las fuentes disponibles.|
 |**Estilo de fuente**|Se enumeran los estilos disponibles para la fuente especificada.|

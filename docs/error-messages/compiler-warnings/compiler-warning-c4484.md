@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 71a3d903ba32fecac4b2d8bfc3e0a93f19d0f4ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473182"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58766805"
 ---
 # <a name="compiler-warning-c4484"></a>Advertencia del compilador C4484
 
@@ -23,9 +23,9 @@ Para obtener más información, consulte:
 
 - [/clr (Compilación de Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [override](../../windows/override-cpp-component-extensions.md)
+- [override](../../extensions/override-cpp-component-extensions.md)
 
-- [New (nueva ranura en vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (nueva ranura en vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 C4484 siempre se emite como un error. Use la [advertencia](../../preprocessor/warning.md) pragma para suprimir C4484.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - __addfsword intrinsic
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-ms.openlocfilehash: 477d8ddfe970c6d04e61a47eb4bb10e3fbc570de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 61053d9f8c56d8352b12ed535dfa870c0856f558
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329077"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59032708"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 
@@ -45,7 +45,7 @@ void __addfsdword(
 
 #### <a name="parameters"></a>Parámetros
 
-*Desplazamiento*<br/>
+*Offset*<br/>
 [in] El desplazamiento desde el principio del `FS`.
 
 *Data*<br/>

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265575"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767735"
 ---
 # <a name="automation"></a>automatización
 
@@ -55,17 +55,17 @@ El tipo **VARIANT** se encapsula en la clase [COleVariant](../mfc/reference/cole
 
 ## <a name="automation-samples"></a>Ejemplos de automatización
 
-- [AUTOCLIK](../visual-cpp-samples.md) Use este ejemplo para aprender técnicas de automatización y como base para aprender sobre automatización remota.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) Use este ejemplo para aprender técnicas de automatización y como base para aprender sobre automatización remota.
 
-- [ACDUAL](../visual-cpp-samples.md) Agrega interfaces duales a una aplicación de servidor de automatización.
+- [ACDUAL](../overview/visual-cpp-samples.md) Agrega interfaces duales a una aplicación de servidor de automatización.
 
-- [CALCDRIV](../visual-cpp-samples.md) Aplicación de cliente de automatización que controla MFCCALC.
+- [CALCDRIV](../overview/visual-cpp-samples.md) Aplicación de cliente de automatización que controla MFCCALC.
 
-- [INPROC](../visual-cpp-samples.md) Ilustra una aplicación de servidor de automatización en proceso.
+- [INPROC](../overview/visual-cpp-samples.md) Ilustra una aplicación de servidor de automatización en proceso.
 
-- [IPDRIVE](../visual-cpp-samples.md) Aplicación de cliente de automatización que controla INPROC.
+- [IPDRIVE](../overview/visual-cpp-samples.md) Aplicación de cliente de automatización que controla INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) Muestra una aplicación de cliente de automatización.
+- [MFCCALC](../overview/visual-cpp-samples.md) Muestra una aplicación de cliente de automatización.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué desea saber más sobre
 

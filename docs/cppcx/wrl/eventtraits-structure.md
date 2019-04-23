@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - EventTraits structure
 ms.assetid: 2cf308a4-50e3-4321-bafc-4c7c0364e148
-ms.openlocfilehash: 84f535648e06905b6669a0c74c9607363aa318de
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: cb54bce8f271b01ee838cfecb891b78c5a9eb6e6
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785914"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027290"
 ---
 # <a name="eventtraits-structure"></a>EventTraits (estructura)
 

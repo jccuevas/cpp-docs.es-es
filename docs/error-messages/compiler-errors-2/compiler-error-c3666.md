@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3666
 ms.assetid: 459e51dd-cefb-4346-99b3-644f2d8b65b2
-ms.openlocfilehash: aba1d3dfcf620db0f1fbaf14d0fb01745ca82659
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edca117da585fee731041d696e05af1baf6d3e5c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465551"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776540"
 ---
 # <a name="compiler-error-c3666"></a>Error del compilador C3666
 
 'constructor': 'keyword' no se permite en un constructor de especificador de invalidación
 
-Se usó un especificador de invalidación en un constructor, y que no se permite. Para obtener más información, consulte [especificadores de invalidación](../../windows/override-specifiers-cpp-component-extensions.md).
+Se usó un especificador de invalidación en un constructor, y que no se permite. Para obtener más información, consulte [especificadores de invalidación](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Ejemplo
 

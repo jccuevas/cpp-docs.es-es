@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: 7e6f485eef5e3c54cb406d0c2b3abe824dbf584b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d265fe75abaa7ad3cfd508613766cc3b600ee14
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438771"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59025671"
 ---
 # <a name="readdr"></a>__readdr
 

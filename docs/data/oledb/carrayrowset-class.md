@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330988"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59040243"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset (Clase)
 
@@ -93,7 +93,7 @@ El tipo de clase de descriptor de acceso que desea que las filas que se va a usa
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|El número de filas ya leídas.|
 
-## <a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 Crea un nuevo objeto `CArrayRowset`.
 
@@ -105,10 +105,10 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>Parámetros
 
-*Nmáx.*<br/>
+*nMax*<br/>
 [in] Número máximo de filas del conjunto de filas.
 
-## <a name="snapshot"></a> CArrayRowset:: Snapshot
+## <a name="snapshot"></a> CArrayRowset::Snapshot
 
 Lee el conjunto de filas completo en memoria, la creación de una imagen o instantánea de él.
 
@@ -118,7 +118,7 @@ Lee el conjunto de filas completo en memoria, la creación de una imagen o insta
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset:: operator
+## <a name="operator"></a> CArrayRowset::operator
 
 Proporciona la sintaxis de matriz para obtener acceso a una fila del conjunto de filas.
 
@@ -133,7 +133,7 @@ TAccessor & operator[](int nrow);
 *TAccessor*<br/>
 Un parámetro de plantilla que especifica el tipo de descriptor de acceso almacenada en el conjunto de filas.
 
-*funciones nRow*<br/>
+*nRow*<br/>
 [in] Número de la fila (elemento de matriz) que desea tener acceso.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -144,7 +144,7 @@ El contenido de la fila solicitada.
 
 Si *funciones nRow* supera el número de filas del conjunto de filas, se produce una excepción.
 
-## <a name="nrowsread"></a> CArrayRowset:: M_nrowsread
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
 Contiene el número de filas del conjunto de filas que ya se han leído.
 

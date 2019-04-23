@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 575bc2c347275bfb96f64e60f35379629b4eac18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614544"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027459"
 ---
 # <a name="output-parameters"></a>Parámetros de salida
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: ca9e2d272a5e9ab8fd69094bc1633dbd6ea2c3e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624706"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59037888"
 ---
 # <a name="compiler-error-c3498"></a>Error del compilador C3498
 
@@ -21,7 +21,7 @@ No se puede capturar una variable que tiene un tipo administrado o un tipo de Wi
 
 ### <a name="to-correct-this-error"></a>Para corregir este error
 
-- Pase la variable administrada o de Windows Runtime a la lista de parámetros de la expresión lambda.
+- Pase la variable administrada o de Windows en tiempo de ejecución a la lista de parámetros de la expresión lambda.
 
 ## <a name="example"></a>Ejemplo
 

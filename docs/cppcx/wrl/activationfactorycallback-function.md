@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 93db10e19cce0658bf731c14e7ac76b575841bf3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785834"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59021610"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback (función)
 

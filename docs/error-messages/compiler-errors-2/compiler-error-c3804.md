@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: e83380696aca3d6d45c235925b830bef9e3061a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544591"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775811"
 ---
 # <a name="compiler-error-c3804"></a>Error del compilador C3804
 
@@ -19,7 +19,7 @@ ms.locfileid: "50544591"
 
 Al definir una propiedad no trivial, las funciones de descriptor de acceso pueden ser estáticas o instancia, pero no ambos.
 
-Vea [property](../../windows/property-cpp-component-extensions.md) para obtener más información.
+Vea [property](../../extensions/property-cpp-component-extensions.md) para obtener más información.
 
 ## <a name="example"></a>Ejemplo
 

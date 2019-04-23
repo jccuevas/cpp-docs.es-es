@@ -10,12 +10,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 99867f146ca80d8b48c9be9deb59044207b33af1
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210502"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59027524"
 ---
 # <a name="accelerator-keys-c"></a>Teclas de aceleración (C++)
 

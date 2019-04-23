@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 4cfadc84b9131aa787323b4967ae9cfc4baabbcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570422"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59030005"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -25,7 +25,7 @@ Hace que un archivo IDL o .h para incluirse en el archivo .idl generado.
 
 ### <a name="parameters"></a>Parámetros
 
-*Name.idl*<br/>
+*name.idl*<br/>
 El nombre del archivo .idl que desee incluir como parte del archivo .idl generado.
 
 ## <a name="remarks"></a>Comentarios
