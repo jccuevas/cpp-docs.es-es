@@ -1,39 +1,32 @@
-items:
 - name: C++ en Visual Studio
   href: index.yml
   items:
-  - name: Información general
-    items:
-    - name: Acerca del editor de código
-      href: /visualstudio/get-started/tutorial-editor
-    - name: Acerca de los proyectos y las soluciones
-      href: /visualstudio/get-started/tutorial-projects-solutions
-    - name: Más características de Visual Studio
-      href: /visualstudio/ide/advanced-feature-overview?toc=/cpp/get-started/toc.json&bc=/cpp/get-started/breadcrumb/toc.json
-  - name: Tutoriales
-    items:
-    - name: Creación de la primera aplicación C++
-      href: tutorial-console-cpp.md
-    - name: Creación de una aplicación UWP
-      href: /windows/uwp/cpp-and-winrt-apis/get-started
-    - name: Creación de una aplicación de escritorio de Windows
-      href: /windows/desktop/learnwin32/learn-to-program-for-windows
-    - name: Creación de un juego DirectX
-      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
-    expanded: true
-  - name: Aprendizaje de Visual Studio
-    items:
-    - name: Escribir y editar código
-      href: /visualstudio/get-started/tutorial-editor
-    - name: Compilar y generar
-      href: /visualstudio/ide/compiling-and-building-in-visual-studio
-    - name: Depurar el código
-      href: /visualstudio/debugger/getting-started-with-the-debugger-cpp
-    - name: Implementación de un proyecto
-      href: /visualstudio/deployment/index
-ms.openlocfilehash: fd03cd392d732b7dd5f68846362cfefadb7eb2f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816248"
+    - name: Información general
+      items:
+        - name: Acerca del editor de código
+          href: /visualstudio/get-started/tutorial-editor
+        - name: Acerca de los proyectos y las soluciones
+          href: /visualstudio/get-started/tutorial-projects-solutions
+        - name: Más características de Visual Studio
+          href: /visualstudio/ide/advanced-feature-overview?toc=/cpp/get-started/toc.json&bc=/cpp/get-started/breadcrumb/toc.json
+    - name: Tutoriales
+      expanded: true
+      items:
+        - name: Creación de la primera aplicación C++
+          href: tutorial-console-cpp.md
+        - name: Creación de una aplicación UWP
+          href: /windows/uwp/cpp-and-winrt-apis/get-started
+        - name: Creación de una aplicación de escritorio de Windows
+          href: /windows/desktop/learnwin32/learn-to-program-for-windows
+        - name: Creación de un juego DirectX
+          href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+    - name: Aprendizaje de Visual Studio
+      items:
+        - name: Escribir y editar código
+          href: /visualstudio/get-started/tutorial-editor
+        - name: Compilar y generar
+          href: /visualstudio/ide/compiling-and-building-in-visual-studio
+        - name: Depurar el código
+          href: /visualstudio/debugger/getting-started-with-the-debugger-cpp
+        - name: Implementación de un proyecto
+          href: /visualstudio/deployment/index
