@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
 ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158583"
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex (Clase, biblioteca estándar de C++)
 
@@ -57,7 +57,7 @@ class mutex;
 
 **Espacio de nombres:** std
 
-## <a name="lock"></a>  Mutex
+## <a name="lock"></a>  mutex::lock
 
 Bloquea el subproceso que realiza la llamada hasta que este obtiene la propiedad `mutex`.
 
@@ -89,7 +89,7 @@ Libera todos los recursos usados por el objeto `mutex`.
 
 Si el objeto está bloqueado cuando se ejecuta el destructor, el comportamiento es indefinido.
 
-## <a name="native_handle"></a>  Mutex:: native_handle
+## <a name="native_handle"></a>  mutex::native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador de exclusión mutua. El controlador de exclusión mutua puede usarse en aspectos específicos de la implementación.
 
@@ -101,7 +101,7 @@ native_handle_type native_handle();
 
 `native_handle_type` se define como un `Concurrency::critical_section *` que se convierte en `void *`.
 
-## <a name="try_lock"></a>  Mutex::try_lock
+## <a name="try_lock"></a>  mutex::try_lock
 
 Intenta obtener la propiedad de `mutex` sin bloquearlo.
 
@@ -117,7 +117,7 @@ bool try_lock();
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="unlock"></a>  Mutex::Unlock
+## <a name="unlock"></a>  mutex::unlock
 
 Libera la propiedad de `mutex`.
 

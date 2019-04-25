@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
 ms.openlocfilehash: 9a3ca3980a9cdff4e67885b2ad47ffa2385b0774
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321649"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (Crear el manifiesto del ensamblado simultáneo)
 
@@ -59,5 +59,5 @@ Si especifica /MANIFEST, el nombre del archivo de manifiesto coincidirá con el 
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

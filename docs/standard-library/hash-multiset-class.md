@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 6b271adbaf3fe4d2d5c3b41e974bf3036e7b1947
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159345"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset (Clase)
 
@@ -115,7 +115,7 @@ Tipo de datos de elemento que se almacenará en hash_multiset.
 *Rasgos*<br/>
 Tipo que incluye dos objetos de función, uno de clase que es comparar un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es una clave asignación predicado unario valores de los elementos en tipos sin signo enteros de tipo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key> >` es el valor predeterminado.
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de hash_multiset. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -555,7 +555,7 @@ El número de elementos del objeto hash_multiset con el criterio especificado po
 
 La función miembro devuelve el número de elementos del intervalo siguiente:
 
-\[ lower_bound (*clave*), upper_bound (*clave*)).
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -795,7 +795,7 @@ iterator insert(ValTy&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor de un elemento que se va a insertar en el objeto [hash_multiset](../standard-library/hash-multiset-class.md) a menos que `hash_multiset` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
+|*val*|Valor de un elemento que se va a insertar en el objeto [hash_multiset](../standard-library/hash-multiset-class.md) a menos que `hash_multiset` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -847,8 +847,8 @@ iterator insert(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor de un elemento que se va a insertar en el objeto [hash_multiset](../standard-library/hash-multiset-class.md) a menos que `hash_multiset` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
-|*_WHERE*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Inserción se puede realizar en tiempo constante amortizado, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.)|
+|*val*|Valor de un elemento que se va a insertar en el objeto [hash_multiset](../standard-library/hash-multiset-class.md) a menos que `hash_multiset` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
+|*_Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Inserción se puede realizar en tiempo constante amortizado, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.)|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1100,13 +1100,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 Posición del elemento que se va a quitar de hash_multiset.
 
 *first*<br/>
 Posición del primer elemento que se quitó de hash_multiset.
 
-*Último*<br/>
+*last*<br/>
 Posición inmediatamente siguiente al último elemento que se quitó de hash_multiset.
 
 *key*<br/>
@@ -1416,7 +1416,7 @@ hash_multiset(
 |*Al*|Clase de asignador de almacenamiento que se va a utilizar para este objeto `hash_multiset`, que toma como valor predeterminado `Allocator`.|
 |*Comp.*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos de `hash_multiset`, que toma como valor predeterminado `hash_compare`.|
 |*Derecha*|`hash_multiset` del que el `hash_multiset` construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 
@@ -1430,7 +1430,7 @@ Todos los constructores almacenan un objeto de función de tipo `Traits` que se 
 
 Los tres primeros constructores especifican un inicial vacío `hash_multiset`, el segundo especifica el tipo de función de comparación (*Comp*) que se usará en establecer el orden de los elementos y el tercero especifica explícitamente el tipo de asignador (*Al*) que se usará. La palabra clave **explicit** suprime ciertos tipos de conversión automática de tipos.
 
-El cuarto constructor mueve `hash_multiset` según `Right`.
+El cuarto constructor mueve el `hash_multiset` `Right`.
 
 El quinto, el sexto y el séptimo constructores utilizan una initializer_list.
 
@@ -1484,7 +1484,7 @@ iterator insert(
 |-|-|
 |*Val*|Valor de un elemento que se va a insertar en el hash_multiset a menos que el hash_multiset ya contenga ese elemento o, más en general, un elemento cuya clave esté ordenada de manera equivalente.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (La inserción se puede realizar en tiempo constante amortizado, en lugar de en tiempo logarítmico, si el punto de inserción sigue inmediatamente a `_Where`).|
-|*Primero*|Posición del primer elemento que se va a copiar de un hash_multiset.|
+|*First*|Posición del primer elemento que se va a copiar de un hash_multiset.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar de un hash_multiset.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 

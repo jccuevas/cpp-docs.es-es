@@ -1,18 +1,18 @@
 ---
-title: LNK1318 de Error de las herramientas del vinculador
+title: Error de las herramientas del vinculador LNK1318
 ms.date: 05/29/2018
 f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
 ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160996"
 ---
-# <a name="linker-tools-error-lnk1318"></a>LNK1318 de Error de las herramientas del vinculador
+# <a name="linker-tools-error-lnk1318"></a>Error de las herramientas del vinculador LNK1318
 
 > Error inesperado de PDB; *provocar* '*detalles*'
 

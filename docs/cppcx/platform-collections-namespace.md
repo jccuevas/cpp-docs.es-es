@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
 ms.openlocfilehash: 025c25d6c01ab9a28c68574cc2a13e09dbf28388
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161750"
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections (Espacio de nombres)
 
@@ -35,7 +35,7 @@ using namespace Platform::Collections;
 
 Este espacio de nombres contiene los miembros siguientes.
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator (Clase)](../cppcx/platform-collections-backinsertiterator-class.md)|Representa un iterador que inserta un elemento al final de una colección.|
 |[Platform::Collections::InputIterator (Clase)](../cppcx/platform-collections-inputiterator-class.md)|Representa un iterador que inserta un elemento al principio de una colección.|
@@ -54,7 +54,7 @@ Este espacio de nombres contiene los miembros siguientes.
 
 **Metadatos:** platform.winmd
 
-**Espacio de nombres:** Platform::Collections
+**Espacio de nombres**: Platform::Collections
 
 **Opción del compilador:** /ZW
 
