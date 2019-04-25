@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
 ms.openlocfilehash: e1d7c9fcb94a9351ce94b66e04b4bfc523248f4e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319803"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (Especificar la base de datos para las optimizaciones guiadas por perfiles)
 
@@ -49,5 +49,5 @@ Para obtener más información, consulte [optimizaciones guiadas por perfiles](.
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)<br/>
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)<br/>

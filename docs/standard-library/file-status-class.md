@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160022"
 ---
 # <a name="filestatus-class"></a>file_status (Clase)
 
@@ -72,16 +72,16 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>Parámetros
 
-*FTYPE*<br/>
+*ftype*<br/>
 Especifica `file_type`, el valor predeterminado es `file_type::none`.
 
-*Máscara*<br/>
+*mask*<br/>
 Archivo especificado `perms`, el valor predeterminado es `perms::unknown`.
 
 *file_status*<br/>
 El objeto almacenado.
 
-## <a name="op_as"></a> file_status::operator =
+## <a name="op_as"></a> file_status::operator=
 
 Los operadores predeterminados de asignación de miembros se comportan según lo previsto.
 
@@ -106,7 +106,7 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>Parámetros
 
-*FTYPE*<br/>
+*ftype*<br/>
 Especificado `file_type`.
 
 ## <a name="permissions"></a> Permisos
@@ -122,7 +122,7 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Parámetros
 
-*Máscara*<br/>
+*mask*<br/>
 Especificado `perms`.
 
 ## <a name="see-also"></a>Vea también
