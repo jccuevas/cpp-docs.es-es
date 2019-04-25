@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::future [C++], wait_for
 - std::future [C++], wait_until
 ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159332"
 ---
 # <a name="future-class"></a>future (Clase)
 
@@ -55,9 +55,9 @@ Cada *proveedor asincrónico* estándar devuelve un objeto cuyo tipo es una crea
 |Name|Descripción|
 |----------|-----------------|
 |[get](#get)|Recupera el resultado almacenado en el estado asincrónico asociado.|
-|[Compartir](#share)|Convierte el objeto en un `shared_future`.|
+|[share](#share)|Convierte el objeto en un `shared_future`.|
 |[valid](#valid)|Especifica si el objeto no está vacío.|
-|[Espere](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
+|[wait](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
 |[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|
 |[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|
 
@@ -85,7 +85,7 @@ future(future&& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*<br/>
-Un objeto `future`.
+Objeto `future`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -126,7 +126,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Derecha*<br/>
-Un objeto `future`.
+Objeto `future`.
 
 ### <a name="return-value"></a>Valor devuelto
 

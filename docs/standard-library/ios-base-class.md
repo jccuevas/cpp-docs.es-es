@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158596"
 ---
 # <a name="iosbase-class"></a>ios_base (Clase)
 
@@ -570,7 +570,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Parámetros
 
-*IDX*<br/>
+*idx*<br/>
 Índice del valor que se va a almacenar como `iword`.
 
 ### <a name="remarks"></a>Comentarios
@@ -740,10 +740,10 @@ void register_callback(
 
 ### <a name="parameters"></a>Parámetros
 
-*PFN*<br/>
+*pfn*<br/>
 Puntero a la función de devolución de llamada.
 
-*IDX*<br/>
+*idx*<br/>
 Número definido por el usuario.
 
 ### <a name="remarks"></a>Comentarios
@@ -902,7 +902,7 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Máscara de*<br/>
+*_Mask*<br/>
 Marcas que se van a activar.
 
 *_Unset*<br/>
@@ -975,7 +975,7 @@ void unsetf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Máscara de*<br/>
+*_Mask*<br/>
 Marcas que quiere desactivar.
 
 ### <a name="remarks"></a>Comentarios

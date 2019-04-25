@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159787"
 ---
 # <a name="forwardlist-class"></a>forward_list (Clase)
 
@@ -104,7 +104,7 @@ class forward_list
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Type*|Tipo de datos de elemento que se almacenará en forward_list.|
-|*Asignador*|Objeto de asignador almacenado que encapsula detalles sobre la asignación y desasignación de memoria de forward_list. Este parámetro es opcional. El valor predeterminado es allocator< `Type`>.|
+|*Allocator*|Objeto de asignador almacenado que encapsula detalles sobre la asignación y desasignación de memoria de forward_list. Este parámetro es opcional. El valor predeterminado es allocator< `Type`>.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -215,11 +215,11 @@ void assign(InputIterator First, InputIterator Last);
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*first*|Principio del intervalo de reemplazo.|
-|*Último*|Final del intervalo de reemplazo.|
+|*last*|Final del intervalo de reemplazo.|
 |*count*|Número de elementos que se van a asignar.|
-|*Val*|Valor que se va a asignar a cada elemento.|
+|*val*|Valor que se va a asignar a cada elemento.|
 |*Type*|Tipo del valor.|
-|* IList'|initializer_list que se va a copiar.|
+|* IList'| Initializer_list que se va a copiar.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -397,7 +397,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Where*|Posición de la lista de reenvíos de destino donde se crea el nuevo elemento.|
-|*Val*|El argumento del constructor.|
+|*val*|El argumento del constructor.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -420,7 +420,7 @@ void emplace_front(Type&& val);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Val*|El elemento que se agrega al principio de la lista de reenvíos.|
+|*val*|El elemento que se agrega al principio de la lista de reenvíos.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -468,7 +468,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 |---------------|-----------------|
 |*Where*|Posición de la lista de reenvíos de destino donde se borra el elemento.|
 |*first*|Comienzo del intervalo que se va a borrar.|
-|*Último*|Final del intervalo que se va a borrar.|
+|*last*|Final del intervalo que se va a borrar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -513,7 +513,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Recuento*|Número de elementos de la lista construida.|
 |*Val*|Valor de los elementos de la lista construida.|
 |*Derecha*|Lista de la que la lista construida va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list que se va a copiar.|
 
@@ -577,7 +577,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 |---------------|-----------------|
 |*Where*|Posición de la lista de reenvíos de destino donde se inserta el primer elemento.|
 |*Recuento*|Número de elementos que se van a insertar.|
-|*Primero*|Principio del intervalo de inserción.|
+|*First*|Principio del intervalo de inserción.|
 |*Último*|Final del intervalo de inserción.|
 |*Val*|Elemento agregado a la lista de reenvíos.|
 |*IList*|initializer_list que se va a insertar.|
@@ -645,7 +645,7 @@ void merge(forward_list& right, Predicate comp);
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*right*|La lista de reenvíos desde la que se combinará.|
-|*Comp.*|El objeto de función de comparación que se usa para ordenar elementos.|
+|*comp*|El objeto de función de comparación que se usa para ordenar elementos.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -719,7 +719,7 @@ void push_front(Type&& val);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Val*|El elemento que se agrega al principio de la lista de reenvíos.|
+|*val*|El elemento que se agrega al principio de la lista de reenvíos.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -747,7 +747,7 @@ void remove(const Type& val);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Val*|Valor que, si lo contiene un elemento, hará que se quite ese elemento de la lista.|
+|*val*|Valor que, si lo contiene un elemento, hará que se quite ese elemento de la lista.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -768,7 +768,7 @@ void remove_if(Predicate pred);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Pred*|Predicado unario que, si lo satisface un elemento, da lugar a la eliminación de ese elemento de la lista.|
+|*pred*|Predicado unario que, si lo satisface un elemento, da lugar a la eliminación de ese elemento de la lista.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -790,7 +790,7 @@ void resize(size_type _Newsize, const Type& val);
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*_Newsize*|Número de elementos de la lista de reenvíos a la que se le ha cambiado el tamaño.|
-|*Val*|Valor que se va a usar para el relleno.|
+|*val*|Valor que se va a usar para el relleno.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -832,7 +832,7 @@ void sort(Predicate pred);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Pred*|El predicado de ordenación.|
+|*pred*|El predicado de ordenación.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -877,10 +877,10 @@ La posición de la forward_list de destino después de la cual se insertan.
 *Origen*<br/>
 La forward_list de origen que debe insertarse en la forward_list de destino.
 
-*ITER*<br/>
+*Iter*<br/>
 El elemento que debe insertarse de la forward_list de origen.
 
-*Primero*<br/>
+*First*<br/>
 El elemento del intervalo que debe insertarse de la forward_list de origen.
 
 *Último*<br/>
@@ -1003,7 +1003,7 @@ void unique(BinaryPredicate comp);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Comp.*|El predicado binario que se usa para comparar los elementos sucesivos.|
+|*comp*|El predicado binario que se usa para comparar los elementos sucesivos.|
 
 ### <a name="remarks"></a>Comentarios
 

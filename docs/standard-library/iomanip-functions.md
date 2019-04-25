@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158565"
 ---
 # <a name="ltiomanipgt-functions"></a>Funciones de &lt;iomanip&gt;
 
@@ -53,7 +53,7 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cantidad*<br/>
+*_Amount*<br/>
 Valor monetario extraído.
 
 *_Intl*<br/>
@@ -97,7 +97,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Cantidad*<br/>
+*_Amount*<br/>
 Importe monetario que se va a insertar en el flujo.
 
 *_Intl*<br/>
@@ -150,7 +150,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Un std:: String, char\*, una cadena literal de cadena sin formato o literal o una versión ancha de cualquiera de estos (por ejemplo, std:: wstring, wchar_t\*).
 
-*Delimitador*<br/>
+*delimiter*<br/>
 Un carácter especificado por el usuario o carácter ancho, que se utilizará como delimitador para el principio y el final de la cadena.
 
 *escape*<br/>
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Carácter que se usará para rellenar los espacios en una presentación justificada a la derecha.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -425,7 +425,7 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Parámetros
 
-*Amplia*<br/>
+*Wide*<br/>
 Ancho del campo de presentación.
 
 ### <a name="return-value"></a>Valor devuelto

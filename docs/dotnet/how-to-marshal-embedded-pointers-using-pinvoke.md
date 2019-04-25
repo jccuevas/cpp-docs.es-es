@@ -10,13 +10,13 @@ helpviewer_keywords:
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
 ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325213"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Filtrar Serializar punteros incrustados mediante PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Procedimiento Serializar punteros incrustados mediante PInvoke
 
 Funciones que se implementan en archivos DLL no administrado se pueden llamar desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md) y [Cómo: Serializar punteros incrustados mediante la interoperabilidad de C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).
 
