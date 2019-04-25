@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
 ms.openlocfilehash: 4cf9a6c4356872b727a10a360396e51e38928b29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160567"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Error de las herramientas del vinculador LNK1245
 

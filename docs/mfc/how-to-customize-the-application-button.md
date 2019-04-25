@@ -1,17 +1,17 @@
 ---
-title: Filtrar Personalizar el botón aplicación
+title: Procedimiento Personalizar el botón aplicación
 ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
 ms.openlocfilehash: d45ceaf1cce21f77871e966e0e8f525f95cb4c37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160369"
 ---
-# <a name="how-to-customize-the-application-button"></a>Filtrar Personalizar el botón aplicación
+# <a name="how-to-customize-the-application-button"></a>Procedimiento Personalizar el botón aplicación
 
 Al hacer clic en el botón de la aplicación, se muestra un menú de comandos. Normalmente, el menú contiene comandos relacionados con el archivo como **abierto**, **guardar**, **impresión**, y **Exit**.
 
@@ -31,7 +31,7 @@ Para personalizar el botón de la aplicación, ábralo en el **propiedades** , m
 
 En la tabla siguiente define las propiedades del botón aplicación.
 
-|Property|de esquema JSON|
+|Propiedad|Definición|
 |--------------|----------------|
 |**Botones**|Contiene la colección de hasta tres botones que aparecen en la esquina inferior derecha del menú de aplicación.|
 |**Título**|Especifica el texto del control. A diferencia de otros elementos de la cinta de opciones, el botón de la aplicación no muestra el texto del título. En su lugar, el texto se utiliza para mejorar la accesibilidad.|

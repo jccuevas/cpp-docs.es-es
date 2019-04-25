@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
 ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157294"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -85,10 +85,10 @@ Las versiones de estas funciones con el **_l** sufijo son idénticas salvo que u
 
 |Rutina|Condición de prueba|Ejemplo de la página de códigos 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa minúscula ASCII: 0 x 61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa minúscula ASCII: 0 x 61 < =*c*< = 0x7A.|
-|**_ismbcupper**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa mayúscula ASCII: 0 x 41 < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa mayúscula ASCII: 0 x 41 < =*c*< = 0x5A.|
+|**_ismbclower**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa minúscula ASCII: 0x61<=*c*<=0x7A.|
+|**_ismbclower_l**|Alfabético en minúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa minúscula ASCII: 0x61<=*c*<=0x7A.|
+|**_ismbcupper**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa mayúscula ASCII: 0x41<=*c*<=0x5A.|
+|**_ismbcupper_l**|Alfabético en mayúscula|Devuelve cero si y solo si *c* es una representación de un byte de una letra inglesa mayúscula ASCII: 0x41<=*c*<=0x5A.|
 
 ## <a name="requirements"></a>Requisitos
 

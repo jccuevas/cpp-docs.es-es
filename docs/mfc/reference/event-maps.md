@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322246"
 ---
 # <a name="event-maps"></a>Mapas de eventos
 
@@ -21,7 +21,7 @@ La biblioteca Microsoft Foundation Class ofrece un modelo de programación optim
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-El `EVENT_STOCK_CLICK` macro indica que el control activará una acción, haga clic en evento cada vez que detecta un mouse. Para obtener una lista más detallada de otros eventos estándar, consulte el artículo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md). Macros también están disponibles para indicar eventos personalizados.
+El `EVENT_STOCK_CLICK` macro indica que el control activará una acción, haga clic en evento cada vez que detecta un mouse. Para obtener una lista más detallada de otros eventos estándar, consulte el artículo [controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md). Macros también están disponibles para indicar eventos personalizados.
 
 Aunque las macros de mapa de eventos son importantes, por lo general no insertarlos directamente. Esto es porque la ventana Propiedades crea automáticamente las entradas de mapa de eventos en los archivos de origen cuando se usa para asociar las funciones de activación de eventos con eventos. Siempre que desee editar o agregar una entrada de mapa de eventos, puede usar la ventana Propiedades.
 
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 Utilice el declare_event_map (macro) al final de la declaración de clase. A continuación, en el archivo .cpp que define las funciones miembro de la clase, utilice el BEGIN_EVENT_MAP (macro), las entradas de la macro para cada uno de los eventos del control y la end_event_map (macro) para declarar el final de la lista de eventos.
 
-Para obtener más información sobre los mapas de eventos, vea el artículo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
+Para obtener más información sobre los mapas de eventos, vea el artículo [controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -89,7 +89,7 @@ Especifica el nombre de la clase base de *theClass*.
 
 En el archivo de implementación (.cpp) que define las funciones de miembro para la clase, inicie el mapa de eventos con el BEGIN_EVENT_MAP (macro), a continuación, agregue entradas de macro para cada uno de los eventos y completar la asignación de eventos con el end_event_map (macro).
 
-Para obtener más información sobre los mapas de eventos y el BEGIN_EVENT_MAP (macro), consulte el artículo [controles ActiveX: eventos](../../mfc/mfc-activex-controls-events.md).
+Para obtener más información sobre los mapas de eventos y el BEGIN_EVENT_MAP (macro), consulte el artículo [controles ActiveX: Eventos](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Requisitos
 
@@ -145,7 +145,7 @@ El `VTS_` constantes y sus significados son los siguientes:
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|MONEDA|
 |VTS_DATE|DATE|
-|VTS_BSTR|**Const** __char\*__|
+|VTS_BSTR|**const** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -190,7 +190,7 @@ EVENT_CUSTOM_ID(
 *pszName*<br/>
 Nombre del evento.
 
-*DISPID*<br/>
+*dispid*<br/>
 El identificador de envío utilizado por el control al activar el evento.
 
 *pfnFire*<br/>

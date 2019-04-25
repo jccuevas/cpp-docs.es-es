@@ -15,11 +15,11 @@ helpviewer_keywords:
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
 ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166560"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>Uso de C o C++ en bloques __asm
 
@@ -47,7 +47,7 @@ Dentro de un bloque `__asm`, puede especificar constantes de tipo entero con not
 
 - [Uso de operadores en bloques __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [Uso de C o C++ símbolos bloques __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [Mediante C o C++ símbolos __asm (bloques)](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Acceso a datos de C o C++ en bloques __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 

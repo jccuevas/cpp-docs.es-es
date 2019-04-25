@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159852"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -31,7 +31,7 @@ using namespace std::experimental::filesystem::v1;
 > [!IMPORTANT]
 > A partir de la versión de Visual Studio 2017, el \<filesystem > encabezado aún no era un estándar de C++. Visual C++ 2017 implementa el borrador final del estándar, que se encuentra en [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Este encabezado admite sistemas de archivos para uno de dos tipos amplios de sistemas operativos host: Microsoft Windows y Posix.
+Este encabezado admite sistemas de archivos para uno de los dos tipos amplios de sistemas operativos host: Microsoft Windows y Posix.
 
 Mientras que la mayoría de las funciones son comunes a ambos sistemas operativos, en este documento se identifican las diferencias. Por ejemplo:
 
@@ -102,7 +102,7 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 
 ## <a name="structs"></a>Estructuras
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[space_info (Estructura)](../standard-library/space-info-structure.md)|Contiene información sobre un volumen.|
 
@@ -116,13 +116,13 @@ Para obtener más información y ejemplos de código, vea [Exploración del sist
 
 ## <a name="enumerations"></a>Enumeraciones
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
-|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
-|[copy_options)](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Enumeración que se utiliza con [copy_file](../standard-library/filesystem-functions.md#copy_file) y determina el comportamiento si ya existe un archivo de destino.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Enumeración que especifica las opciones de los iteradores de directorio.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Enumeración de tipos de archivo.|
-|[Perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
+|[perms](../standard-library/filesystem-enumerations.md#perms)|Un tipo de máscara de bits que se usa para transmitir los permisos y las opciones de permisos.|
 
 ## <a name="see-also"></a>Vea también
 

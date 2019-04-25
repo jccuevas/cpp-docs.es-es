@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159722"
 ---
 # <a name="function-class"></a>function (Clase)
 
@@ -82,7 +82,7 @@ public:
 *Fty*<br/>
 Tipo de función que se va a contener.
 
-*AX*<br/>
+*Ax*<br/>
 Función de asignador.
 
 ## <a name="remarks"></a>Comentarios
@@ -162,7 +162,7 @@ Un objeto al que se puede llamar.
 *_Fnref*<br/>
 Un contenedor de referencia que contiene un objeto al que se puede llamar.
 
-*AX*<br/>
+*Ax*<br/>
 Un objeto de asignador.
 
 ### <a name="remarks"></a>Comentarios
@@ -197,7 +197,7 @@ template <class Fx, class Alloc>
 *right*<br/>
 El objeto de función que se va a copiar.
 
-*FX*<br/>
+*Fx*<br/>
 El tipo del objeto al que se puede llamar.
 
 *_Func*<br/>
@@ -206,7 +206,7 @@ El objeto al que se puede llamar que se va a encapsular.
 *Alloc*<br/>
 El tipo de asignador.
 
-*AX*<br/>
+*Ax*<br/>
 Asignador.
 
 *_Fnref*<br/>
@@ -394,7 +394,7 @@ template <class Fty>
 
 ### <a name="parameters"></a>Parámetros
 
-*NPC*<br/>
+*npc*<br/>
 Una constante de puntero nulo.
 
 *right*<br/>

@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159865"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ La función de plantilla `async` y las clases de plantilla `promise` y `packaged
 
 Cada una de las clases de plantilla `promise`, `future`, y `shared_future` tiene una especialización para el tipo **void** y una especialización parcial para almacenar y recuperar un valor por referencia. Estas especializaciones solo difieren de la plantilla principal en las signaturas y la semántica de las funciones que almacenan y recuperan el valor devuelto.
 
-Las clases de plantilla `future` y `shared_future` nunca se bloquean en sus destructores, excepto en un caso que se conserva por compatibilidad con versiones anteriores: a diferencia de todos los demás future, para un `future` (o para el último `shared_future`) que está adjunto a una tarea iniciada con `std::async`, el destructor se bloquea si la tarea no se ha completado; es decir, se bloquea si este subproceso no ha llamado aún a `.get()` o `.wait()` y la tarea todavía se está ejecutando. Se ha agregado la siguiente nota de uso a la descripción de `std::async` en el borrador del estándar: "[Nota: si un future obtenido de std::async se desplaza fuera del ámbito local, otro código que utilice el future debe saber que el destructor del future puede bloquearse para que el estado compartido esté listo.—fin de la nota]" En todos los demás casos, los destructores de `future` y `shared_future` son necesarios y se garantiza que nunca se bloquean.
+Las clases de plantilla `future` y `shared_future` no bloquear nunca en sus destructores, excepto en un caso que se conserva por compatibilidad con versiones anteriores: A diferencia de otros de futures, para un `future`, o el último `shared_future`, que está asociado a una tarea iniciada con `std::async`, el destructor se bloquea si la tarea no se ha completado; es decir, se bloquea si este subproceso aún no ha llamado a `.get()` o `.wait()`y todavía se está ejecutando la tarea. La siguiente nota de facilidad de uso se ha agregado a la descripción de `std::async` en el estándar de borrador: "[Nota: Si se mueve un futuro obtenido std::async fuera del ámbito local, otro código que usa el futuro debe tener en cuenta que el destructor del futuro puede bloquear para que el estado compartido esté listo. — fin de la nota] "en todos los demás casos, `future` y `shared_future` los destructores son necesarios y se garantiza que nunca se bloqueará.
 
 ## <a name="members"></a>Miembros
 
@@ -73,11 +73,11 @@ Las clases de plantilla `future` y `shared_future` nunca se bloquean en sus dest
 
 ### <a name="enumerations"></a>Enumeraciones
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Proporciona nombres simbólicos para los errores notificados por la clase `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Proporciona nombres simbólicos para los motivos que una función que ha agotado el tiempo de espera puede devolver.|
-|[iniciar](../standard-library/future-enums.md#launch)|Representa un tipo de máscara de bits que describe los posibles modos para la función de plantilla `async`.|
+|[launch](../standard-library/future-enums.md#launch)|Representa un tipo de máscara de bits que describe los posibles modos para la función de plantilla `async`.|
 
 ## <a name="see-also"></a>Vea también
 

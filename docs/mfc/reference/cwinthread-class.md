@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323286"
 ---
 # <a name="cwinthread-class"></a>CWinThread (clase)
 
@@ -90,7 +90,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filtra los mensajes antes de enviarlos a las funciones de Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) y [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Intercepta determinados mensajes antes de llegar a la aplicación.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercepta todas las excepciones no controladas producidas por el mensaje del subproceso y controladores de comandos.|
-|[CWinThread::PumpMessage](#pumpmessage)|Contiene el bucle de mensajes del subproceso.|
+|[CWinThread::PumpMessage](#pumpmessage)|contiene el bucle de mensajes del subproceso.|
 |[CWinThread::ResumeThread](#resumethread)|Disminuye un del subproceso recuento de suspensiones.|
 |[CWinThread::Run](#run)|Función controladora para subprocesos con un suministro de mensajes. Invalidar para personalizar el bucle de mensajes de forma predeterminada.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Establece la prioridad del subproceso actual.|
@@ -535,7 +535,7 @@ Esta función miembro se usa solo en subprocesos que tienen un bombeo de mensaje
 
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
 
-Contiene el bucle de mensajes del subproceso.
+contiene el bucle de mensajes del subproceso.
 
 ```
 virtual BOOL PumpMessage();
