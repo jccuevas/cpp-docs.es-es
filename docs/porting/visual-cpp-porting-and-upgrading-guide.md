@@ -3,10 +3,10 @@ title: Guía de migración y actualización de Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898796"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Guía de migración y actualización de Visual C++
@@ -84,7 +84,7 @@ Por otro lado, quizás ahora tiene nuevos requisitos o puede prever la necesidad
 |[Portabilidad y actualizaciones: ejemplos y casos prácticos](porting-and-upgrading-examples-and-case-studies.md)|En esta sección migramos y actualizamos varios ejemplos y aplicaciones y analizamos las experiencias y los resultados. Puede que leer estos ejemplos le dé una idea de lo que conlleva el proceso de migración y actualización. Durante el proceso ofreceremos sugerencias y trucos para llevar a cabo la actualización y mostraremos cómo se corrigieron errores concretos.|
 |[Migrar a la Plataforma universal de Windows](porting-to-the-universal-windows-platform-cpp.md)|Contiene información sobre el traslado de código a Windows 10.|
 |[Introducción a Visual C++ para los usuarios de UNIX](introduction-to-visual-cpp-for-unix-users.md)|Proporciona información a los usuarios de UNIX que no estén familiarizados con Visual C++ y quieran ser más productivos con él.|
-|[Trasladar de UNIX a Win32](porting-from-unix-to-win32.md)|Describe las opciones para migrar aplicaciones de UNIX a Windows.|
+|[Migrar de UNIX a Win32](porting-from-unix-to-win32.md)|Describe las opciones para migrar aplicaciones de UNIX a Windows.|
 
 ## <a name="see-also"></a>Vea también
 
