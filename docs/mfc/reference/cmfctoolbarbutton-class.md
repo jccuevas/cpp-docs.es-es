@@ -161,10 +161,10 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
 ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776393"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton (clase)
@@ -925,7 +925,7 @@ BOOL m_bWholeText;
 
 ### <a name="remarks"></a>Comentarios
 
-Si este miembro de datos se establece en TRUE, el marco de trabajo muestra la etiqueta de texto completo ampliando el botón. En caso contrario, el marco de trabajo se trunca y anexa un botón de puntos suspensivos ( **...** ) a la etiqueta de texto.
+Si este miembro de datos se establece en TRUE, el marco de trabajo muestra la etiqueta de texto completo ampliando el botón. En caso contrario, el marco de trabajo se trunca y anexa un botón de puntos suspensivos ( **...**) a la etiqueta de texto.
 
 ##  <a name="m_bwrap"></a>  CMFCToolBarButton::m_bWrap
 

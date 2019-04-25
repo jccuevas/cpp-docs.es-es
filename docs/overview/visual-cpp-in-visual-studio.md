@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898718"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124751"
 ---
 # <a name="c-in-visual-studio"></a>C++ en Visual Studio
 
@@ -43,7 +43,7 @@ Obtenga información sobre los cambios importantes de versiones anteriores.
 
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Instalación de Visual Studio y actualización de versiones anteriores
 
-[Instalación de compatibilidad con C++ en Visual Studio](../build/vscpp-step-0-installation.md)<br/>
+[Instalación de la compatibilidad con C++ en Visual Studio](../build/vscpp-step-0-installation.md)<br/>
 Descargue Visual Studio 2015 o Visual Studio 2017 e instale el conjunto de herramientas de Visual C++.
 
 [Guía de migración y actualización de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
@@ -83,7 +83,7 @@ Cómo se usan las características de productividad en el editor de C++ para re
 [Depuración de código nativo](/visualstudio/debugger/debugging-native-code)<br/>
 Use el depurador de Visual Studio con proyectos de C++.
 
-[Análisis de código para obtener información general de C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Información general del análisis de código de C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Use anotaciones de SAL o comprobadores de C++ Core Guidelines para realizar un análisis estático.
 
 [Escribir pruebas unitarias para C/C++ en Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -115,7 +115,7 @@ Obtenga información sobre cómo proteger las aplicaciones del código malintenc
 [Programación web y para la nube](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 En C++, existen varias opciones para conectarse a la Web y a la nube.
 
-[Acceso a datos en ASP.NET (Visual Studio)](../data/data-access-in-cpp.md)<br/>
+[Acceso a datos](../data/data-access-in-cpp.md)<br/>
 Conectarse a bases de datos mediante ODBC y otras tecnologías de acceso a bases de datos.
 
 [Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)<br/>
@@ -129,7 +129,7 @@ Obtenga información sobre cómo trabajar con diferentes codificaciones y format
 
 [Referencia del lenguaje C](../c-language/c-language-reference.md)
 
-[Intrínsecos del compilador y del lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Intrínsecos del compilador y lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Bibliotecas de C++ en Visual Studio
 
@@ -147,7 +147,7 @@ Compatibilidad con aplicaciones y componentes COM.
 [Bibliotecas de Microsoft Foundation Class (MFC)](../mfc/mfc-desktop-applications.md)<br/>
 Compatibilidad para la creación de aplicaciones de escritorio que tienen interfaces de usuario tradicionales o del estilo de Office.
 
-[Parallel Patterns Library (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Biblioteca de patrones de procesamiento paralelo (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Algoritmos asincrónicos y paralelos que se ejecutan en la CPU.
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
@@ -168,8 +168,8 @@ La herramienta de línea de comandos **vcpkg** multiplataforma simplifica mucho 
 [Cómo notificar un problema con el conjunto de herramientas de Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Aprenda a crear informes de error eficaces en el conjunto de herramientas de Visual C++ (compilador, enlazador y otras herramientas) y las formas de enviar el informe.
 
-[Blog del equipo de Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
-Obtenga más información acerca de las nuevas características y la información más reciente de los desarrolladores de [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].
+[Blog del equipo de C++](https://devblogs.microsoft.com/cppblog/) de Microsoft<br/>
+Obtenga más información sobre las nuevas características y la información más reciente de los desarrolladores de las herramientas de C++ en Visual Studio.
 
 [Comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Descubra cómo obtener ayuda, errores de archivo y hacer sugerencias para Visual Studio.
@@ -178,4 +178,4 @@ Descubra cómo obtener ayuda, errores de archivo y hacer sugerencias para Visual
 
 - [Referencia del lenguaje C](../c-language/c-language-reference.md)
 - [Referencia de la biblioteca en tiempo de ejecución de C](../c-runtime-library/c-run-time-library-reference.md)
-- [Intrínsecos del compilador y del lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Intrínsecos del compilador y lenguaje ensamblador](../intrinsics/compiler-intrinsics-and-assembly-language.md)
