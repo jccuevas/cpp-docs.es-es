@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157375"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -199,7 +199,7 @@ Para usar estas funciones sin la advertencia de desuso, defina el **_CRT_SECURE_
 
 En C++, estas funciones tienen sobrecargas de plantilla que invocan a sus homólogos más seguros. Para obtener más información, consulta [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-Los nombres Posix **itoa**, **ltoa**, y **ultoa** existe como alias para el **_itoa**, **_ltoa**, y **_ultoa** funciones. Los nombres Posix están en desuso porque no siguen las convenciones de nombres de función específicos de la implementación de ISO C. De forma predeterminada, estas funciones generan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **El nombre POSIX de este elemento está en desuso. En su lugar, use el nombre conforme a ISO C y C++:** *new_name*. Le recomendamos que cambie el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**, o **_ultoa_s**. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
+Los nombres Posix **itoa**, **ltoa**, y **ultoa** existe como alias para el **_itoa**, **_ltoa**, y **_ultoa** funciones. Los nombres Posix están en desuso porque no siguen las convenciones de nombres de función específicos de la implementación de ISO C. De forma predeterminada, estas funciones generan la advertencia de desuso [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **El nombre POSIX de este elemento está en desuso. En su lugar, use ISO C y C++ nombre conforme:** *new_name*. Le recomendamos que cambie el código fuente para usar las versiones más seguras de estas funciones, **_itoa_s**, **_ltoa_s**, o **_ultoa_s**. Para obtener más información, consulte [_itoa_s, _itow_s funciones](itoa-s-itow-s.md).
 
 Para la portabilidad de código fuente, prefiere conservar los nombres Posix en el código. Para usar estas funciones sin la advertencia de desuso, defina ambos el **_CRT_NONSTDC_NO_WARNINGS** y **_CRT_SECURE_NO_WARNINGS** macros de preprocesador antes de incluir los encabezados de CRT. Puede hacerlo en la línea de comandos en un símbolo del sistema para desarrolladores agregando el **/D_CRT_SECURE_NO_WARNINGS** y **/D_CRT_NONSTDC_NO_WARNINGS** opciones del compilador para el **cl**comando. En caso contrario, definir las macros en los archivos de origen. Si usa encabezados precompilados, definir las macros en la parte superior del encabezado precompilado incluyen archivo, normalmente stdafx.h. Para definir las macros en el código fuente, utilice **#define** directivas antes de incluir los encabezados de CRT, como en este ejemplo:
 

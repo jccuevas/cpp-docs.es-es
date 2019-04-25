@@ -11,11 +11,11 @@ helpviewer_keywords:
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
 ms.openlocfilehash: ecc30baabdcb60a030418e9643e2fcffe5ba8281
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321376"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (Incrustar información de UAC en el manifiesto)
 
@@ -78,5 +78,5 @@ El nivel y los valores de uiAccess se pueden especificar en un solo paso mediant
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)
