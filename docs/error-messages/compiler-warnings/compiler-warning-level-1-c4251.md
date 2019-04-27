@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207362"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>Advertencia del compilador (nivel 1) C4251
 
@@ -29,7 +29,7 @@ Para minimizar la posibilidad de daños en los datos al exportar una clase con [
 
 Puede evitar la exportación de clases definiendo un archivo DLL que define una clase con funciones virtuales y funciones que se puede llamar para crear instancias y eliminar objetos del tipo.  , A continuación, simplemente puede llamar a funciones virtuales en el tipo.
 
-C4251 puede omitirse si se va a derivar de un tipo en la biblioteca estándar de C++, compilar una versión de depuración (**/MTd**) y donde el mensaje de error del compilador hace referencia a _Container_base.
+C4251 puede omitirse si se va a derivar de un tipo en el C++ biblioteca estándar de compilar una versión de depuración (**/MTd**) y donde el mensaje de error del compilador hace referencia a _Container_base.
 
 ```cpp
 // C4251.cpp
