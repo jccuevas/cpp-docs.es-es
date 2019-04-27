@@ -11,11 +11,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195321"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Exportar desde un archivo DLL mediante __declspec(dllexport)
 
@@ -68,7 +68,7 @@ Como referencia, busque el archivo de encabezado Winbase.h de Win32. Este archiv
 
 - [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -76,7 +76,7 @@ Como referencia, busque el archivo de encabezado Winbase.h de Win32. Este archiv
 
 - [La palabra clave __declspec](../cpp/declspec.md)
 
-- [Importar y exportar funciones inline](importing-and-exporting-inline-functions.md)
+- [Importación y exportación de funciones insertadas](importing-and-exporting-inline-functions.md)
 
 - [Importaciones mutuas](mutual-imports.md)
 
