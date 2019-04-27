@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183876"
 ---
 # <a name="expressions-with-unary-operators"></a>Expresiones con operadores unarios
 
@@ -59,13 +59,13 @@ Estas son las posibles formas de expresiones unarias.
 
 - **sizeof** *unary-expression*
 
-- `sizeof(` *nombre de tipo* `)`
+- `sizeof(` *type-name* `)`
 
 - `decltype(` *Expresión* `)`
 
-- *expresión de asignación*
+- *allocation-expression*
 
-- *expresión de desasignación*
+- *deallocation-expression*
 
 Cualquier *postfix-expression* se considera un *unary-expression*, y dado que cualquier expresión primaria se considera un *postfix-expression*, es cualquier expresión primaria considera un *unary-expression* también. Para obtener más información, consulte [expresiones de postfijo](../cpp/postfix-expressions.md) y [expresiones primarias](../cpp/primary-expressions.md).
 
