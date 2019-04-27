@@ -1,5 +1,5 @@
 ---
-title: Filtrar Controlan la llamada de propiedades y métodos de los formularios de Windows
+title: Procedimiento Controlan la llamada de propiedades y métodos de los formularios de Windows
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
 ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152818"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Filtrar Controlan la llamada de propiedades y métodos de los formularios de Windows
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Procedimiento Controlan la llamada de propiedades y métodos de los formularios de Windows
 
 Dado que [:: GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) devuelve un puntero a <xref:System.Windows.Forms.Control?displayProperty=fullName>y no un puntero a `WindowsControlLibrary1::UserControl1`, es aconsejable agregar un miembro del tipo de control de usuario e inicialícelo en [iView:: OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). Ahora puede llamar a métodos y propiedades mediante `m_ViewControl`.
 

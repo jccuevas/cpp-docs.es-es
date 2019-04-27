@@ -10,11 +10,11 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 ms.openlocfilehash: 4a3a4e158794e06f28c638e87e014ddc3fb99837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183744"
 ---
 # <a name="extern-c"></a>extern (C++)
 
@@ -58,7 +58,7 @@ extern const int i = 42; // extern const definition
 extern const int i;  // declaration only. same as i in FileA
 ```
 
-## <a name="extern-constexpr-linkage"></a>vinculación de extern constexpr
+## <a name="extern-constexpr-linkage"></a>extern constexpr linkage
 
 En Visual Studio 2017 versión 15.3 y versiones anterior, el compilador siempre proporcionaba una vinculación interna de variable de constexpr, aunque la variable se marcase como extern. En la versión 15.5 de Visual Studio 2017, un nuevo conmutador de compilador ([/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)) permite un comportamiento correcto que cumple con los estándares. Este acabará convirtiéndose en el conmutador predeterminado.
 

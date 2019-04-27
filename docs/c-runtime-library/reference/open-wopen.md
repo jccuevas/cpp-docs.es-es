@@ -32,11 +32,11 @@ helpviewer_keywords:
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
 ms.openlocfilehash: 7ef28d6cafa0b74b50ee2c50ec380b8bd3aed79f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156089"
 ---
 # <a name="open-wopen"></a>_open, _wopen
 
@@ -99,16 +99,16 @@ El **_open** función abre el archivo especificado por *filename* y prepararlo p
 | **_O_APPEND** | Mueve un puntero de archivo al final del archivo antes de cada operación de escritura. |
 | **_O_BINARY** | Abre el archivo en modo binario (sin traducir). (Vea [fopen](fopen-wfopen.md) para ver una descripción del modo binario.) |
 | **_O_CREAT** | Crea un archivo y lo abre para escribir en él. No tiene ningún efecto si el archivo especificado por *filename* existe. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Crea un archivo temporal y, si es posible, no se vuelca en el disco. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Crea un archivo temporal. El archivo se elimina cuando se cierra el último descriptor de archivo. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
-| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Devuelve un valor de error si un archivo especificado por *filename* existe. Se aplica solo cuando se usa con **_O_CREAT**. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crea un archivo temporal y, si es posible, no se vuelca en el disco. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Crea un archivo temporal. El archivo se elimina cuando se cierra el último descriptor de archivo. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
+| **_O_CREAT** &#124; ` _O_EXCL` | Devuelve un valor de error si un archivo especificado por *filename* existe. Se aplica solo cuando se usa con **_O_CREAT**. |
 | **_O_NOINHERIT** | Impide que se cree un descriptor de archivo compartido. |
 | **_O_RANDOM** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
 | **_O_RDONLY** | Abre un archivo únicamente para leerlo. No se puede especificar con **_O_RDWR** o **_O_WRONLY**. |
 | **_O_RDWR** | Abre un archivo tanto para lectura como para escritura. No se puede especificar con **_O_RDONLY** o **_O_WRONLY**. |
 | **_O_SEQUENTIAL** | Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco. |
 | **_O_TEXT** | Abre un archivo en modo de texto (traducido). (Para obtener más información, vea [E/S de archivo en modo binario y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [fopen](fopen-wfopen.md)). |
-| **_O_TRUNC** | Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizado con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** el **_O_TRUNC** marca destruye el contenido del archivo especificado. |
+| **_O_TRUNC** | Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizado con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** El **_O_TRUNC** marca destruye el contenido del archivo especificado. |
 | **_O_WRONLY** | Abre un archivo únicamente para escribir en él. No se puede especificar con **_O_RDONLY** o **_O_RDWR**. |
 | **_O_U16TEXT** | Abre un archivo en modo Unicode UTF-16. |
 | **_O_U8TEXT** | Abre un archivo en modo Unicode UTF-8. |
@@ -130,7 +130,7 @@ El *pmode* argumento es obligatorio solo cuando **_O_CREAT** se especifica. Si e
 |-|-|
 | **_S_IREAD** | Solo se permite la lectura. |
 | **_S_IWRITE** | Escritura permitida. (De hecho, se permiten la lectura y escritura). |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Lectura y escritura permitidas. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Lectura y escritura permitidas. |
 
 Cuando ambas constantes se proporcionan, se unen con el operador OR bit a bit ( **&#124;** ). En Windows, todos los archivos se pueden leer; es decir, el permiso de solo escritura no está disponible. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** son equivalentes.
 

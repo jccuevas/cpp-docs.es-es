@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _HAS_ITERATOR_DEBUGGING
 ms.assetid: 90077dbb-8a76-4963-83a6-29f4854007a8
 ms.openlocfilehash: 339c32f9b487db2e318f8763ac01a0d155fc1dc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159709"
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING
 
@@ -41,4 +41,4 @@ Para deshabilitar los iteradores de depuración en compilaciones de depuración,
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
 [Checked Iterators](../standard-library/checked-iterators.md)<br/>
-[Bibliotecas seguras: Biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Bibliotecas seguras: biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

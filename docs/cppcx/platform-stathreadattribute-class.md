@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
 ms.openlocfilehash: 05fb2879839c504f49f56e25ffe28329aa969c69
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183387"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute (Clase)
 
@@ -40,7 +40,7 @@ public ref class STAThreadAttribute sealed : Attribute
 
 El atributo STAThreadAttribute hereda de [Platform:: Object Class](../cppcx/platform-object-class.md). STAThreadAttribute también sobrecarga o tiene los siguientes miembros:
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[STAThreadAttribute::Equals](#equals)|Determina si el objeto especificado es igual al objeto actual.|
 |[STAThreadAttribute::GetHashCode](#gethashcode)|Devuelve el código hash de esta instancia.|

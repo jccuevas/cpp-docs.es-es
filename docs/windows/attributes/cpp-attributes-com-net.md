@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148330"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Atributos de C++ para COM y .NET
 
@@ -60,7 +60,7 @@ En la siguiente ilustración se muestra la relación entre el compilador y el pr
 > [!NOTE]
 > Uso de atributos no modifica el contenido del archivo de origen. Es el único momento en que el código generado del atributo está visible durante las sesiones de depuración. Además, para cada archivo de código fuente en el proyecto, puede generar un archivo de texto que muestra los resultados de la sustitución de atributos. Para obtener más información sobre este procedimiento, consulte [/Fx (combinar código insertado)](../../build/reference/fx-merge-injected-code.md) y [depurar código insertado](/visualstudio/debugger/how-to-debug-injected-code).
 
-Al igual que la mayoría de las construcciones de C++, los atributos tienen un conjunto de características que define su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el [coclase](coclass.md) atributo solo puede aplicarse a una clase o estructura existente, en contraposición a la [cpp_quote](cpp-quote.md) atributo, que se puede insertar en cualquier lugar dentro de un archivo de código fuente de C++.
+Al igual que la mayoría de las construcciones de C++, los atributos tienen un conjunto de características que define su uso correcto. Esto se conoce como el contexto del atributo y se trata en la tabla de contexto de atributo para cada tema de referencia de atributo. Por ejemplo, el [coclase](coclass.md) atributo solo puede aplicarse a una clase o estructura existente, en contraposición a la [cpp_quote](cpp-quote.md) atributo, que se puede insertar en cualquier lugar dentro de un C++ archivo de código fuente.
 
 ## <a name="building-an-attributed-program"></a>Compilar programas con atributos
 
