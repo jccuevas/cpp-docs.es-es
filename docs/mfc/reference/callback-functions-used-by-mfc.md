@@ -10,17 +10,17 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152155"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Funciones de devolución de llamada usadas por MFC
 
 Tres funciones de devolución de llamada aparecen en la biblioteca Microsoft Foundation Class. Estas funciones de devolución de llamada se pasan a [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: graystring](../../mfc/reference/cdc-class.md#graystring), y [CDC:: SETABORTPROC](../../mfc/reference/cdc-class.md#setabortproc). Tenga en cuenta que todas las funciones de devolución de llamada deben interceptar las excepciones de MFC antes de volver a Windows, puesto que no se puede producir excepciones en los límites de devolución de llamada. Para obtener más información sobre las excepciones, vea el artículo [excepciones](../../mfc/exception-handling-in-mfc.md).
 
-|nombre||
+|Name||
 |----------|-----------------|
 |[Función de devolución de llamada para CDC::EnumObjects](#enum_objects)||
 |[Función de devolución de llamada para CDC::GrayString](#graystring)||

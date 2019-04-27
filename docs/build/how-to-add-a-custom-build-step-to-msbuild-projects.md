@@ -1,5 +1,5 @@
 ---
-title: Filtrar Agregar un paso de compilación personalizado a proyectos de MSBuild
+title: Procedimiento Agregar un paso de compilación personalizado a proyectos de MSBuild
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
 ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57814012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188930"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Filtrar Agregar un paso de compilación personalizado a proyectos de MSBuild
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Procedimiento Agregar un paso de compilación personalizado a proyectos de MSBuild
 
 Un paso de compilación personalizado es un paso definido por el usuario en una compilación. Un paso de compilación personalizada se comporta como cualquier otro *herramienta de comando* paso, por ejemplo, el paso de la herramienta de compilación o vínculo estándar.
 

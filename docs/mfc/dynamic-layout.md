@@ -3,11 +3,11 @@ title: Diseño dinámico
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175335"
 ---
 # <a name="dynamic-layout"></a>Diseño dinámico
 
@@ -61,7 +61,7 @@ El procedimiento anterior es útil para configurar las propiedades del diseño d
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. Para el primer control al que desea agregar comportamiento dinámico, utilice los métodos estáticos en la clase de diseño dinámico para crear el [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) estructura que codifica la forma en que se debe ajustar el control. Para ello, elija en primer lugar el método estático apropiado: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), o [CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Se pasa un porcentaje de los aspectos horizontales o verticales del movimiento. Todos estos métodos estáticos devuelven un objeto MoveSettings recién creado que se puede utilizar para especificar el comportamiento de movimiento de un control.
+1. Para el primer control al que desea agregar comportamiento dinámico, utilice los métodos estáticos en la clase de diseño dinámico para crear el [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure) estructura que codifica la forma en que se debe ajustar el control. Para ello elija en primer lugar el método estático apropiado: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal), [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical), [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone), o [CMFCDynamicLayout:: MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). Se pasa un porcentaje de los aspectos horizontales o verticales del movimiento. Todos estos métodos estáticos devuelven un objeto MoveSettings recién creado que se puede utilizar para especificar el comportamiento de movimiento de un control.
 
    Tenga en cuenta que 100 significa que el control se moverá exactamente la misma cantidad que se cambie de tamaño el diálogo, lo que hace que el borde de un control permanezca a una distancia fija del nuevo borde.
 

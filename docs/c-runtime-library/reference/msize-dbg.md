@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156309"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ Se completa correctamente, **_msize_dbg** devuelve el tamaño (en bytes) del blo
 
 ## <a name="remarks"></a>Comentarios
 
-**_msize_dbg** es una versión de depuración de la _[msize](msize.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_msize_dbg** se reduce a una llamada a **_msize**. Ambos **_msize** y **_msize_dbg** calcular el tamaño de un bloque de memoria del montón base, pero **_msize_dbg** agrega dos características de depuración: incluye los búferes situados a cada lado parte del bloque de memoria en el tamaño devuelto y permite que los cálculos de tamaño para los tipos de bloques concretos del usuario.
+**_msize_dbg** es una versión de depuración de la _[msize](msize.md) función. Cuando [_DEBUG](../../c-runtime-library/debug.md) no está definido, cada llamada a **_msize_dbg** se reduce a una llamada a **_msize**. Ambos **_msize** y **_msize_dbg** calcular el tamaño de un bloque de memoria del montón base, pero **_msize_dbg** agrega dos características de depuración: Incluye los búferes situados a cada lado de la parte del usuario del bloque de memoria en el tamaño devuelto y permite que los cálculos de tamaño para los tipos de bloques concretos.
 
 Para obtener información sobre cómo se asignan, inicializan y administran los bloques de memoria en la versión de depuración del montón base, vea [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre la asignación de tipos de bloque y cómo se usan, consulte [Tipos de bloques en el montón de depuración](/visualstudio/debugger/crt-debug-heap-details). Para obtener información sobre las diferencias entre llamar a una función estándar del montón y su versión de depuración en una compilación de depuración de una aplicación, consulte [Versiones de depuración de las funciones de asignación del montón](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

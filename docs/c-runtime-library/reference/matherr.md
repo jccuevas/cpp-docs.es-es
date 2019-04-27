@@ -23,11 +23,11 @@ helpviewer_keywords:
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156920"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,7 +73,7 @@ El **tipo** miembro especifica el tipo de error matemático. Es uno de los valor
 
 |Macro|Significado|
 |-|-|
-| **_DOMINIO** | Error de argumento de dominio |
+| **_DOMAIN** | Error de argumento de dominio |
 | **_SING** | Singularidad del argumento |
 | **_OVERFLOW** | Error de intervalo de desbordamiento |
 | **_PLOSS** | Pérdida parcial de significado |

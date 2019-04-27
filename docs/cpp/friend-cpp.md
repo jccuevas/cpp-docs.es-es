@@ -9,11 +9,11 @@ helpviewer_keywords:
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154492"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno. **C ++ 11**: el segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.
+El primer formulario presenta una nueva clase F si no se encontró ninguna clase existente con ese nombre en el espacio de nombres más interno. **C++11**: El segundo formulario no presenta una nueva clase; se puede usar cuando la clase ya se ha declarado y se debe usar cuando se declara un parámetro de tipo de plantilla o una definición de tipo como un amigo.
 
 Use `class friend F` cuando el tipo que se hace referencia no ha declarado:
 

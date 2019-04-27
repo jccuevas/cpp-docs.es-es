@@ -10,11 +10,11 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
 ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182995"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference (Clase)
 
@@ -88,8 +88,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-
-  `__abi_HSTRING` que contiene los datos de tipo String.
+`__abi_HSTRING` que contiene los datos de tipo String.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -182,8 +181,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ### <a name="parameters"></a>Parámetros
 
 *__fstrArg*<br/>
-
-  `StringReference` cuyos datos se usan para inicializar la nueva instancia.
+`StringReference` cuyos datos se usan para inicializar la nueva instancia.
 
 *__strArg*<br/>
 Puntero a una matriz de valores char16 que se emplea para inicializar la nueva instancia.

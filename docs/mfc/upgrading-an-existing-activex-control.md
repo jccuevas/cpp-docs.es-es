@@ -13,11 +13,11 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180764"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Actualizar un control ActiveX existente
 
@@ -274,4 +274,4 @@ Un explorador tiene opciones para el nivel de seguridad, configurable por el usu
 
 [Tareas de programación para Internet de MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Fundamentos de programación para Internet de MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Controles ActiveX MFC: Licencias de un Control ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+[Controles ActiveX de MFC: otorgar licencias a un control ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

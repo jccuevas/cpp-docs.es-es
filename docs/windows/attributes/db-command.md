@@ -1,5 +1,5 @@
 ---
-title: db_command (atributo de COM de C++)
+title: db_command (C++ atributo COM)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148203"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -39,7 +39,7 @@ La sintaxis del *comando* es la siguiente:
 
 Se define *un bloque de parámetros de enlace* del siguiente modo:
 
-> **(\[**  *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[,...]]] **)**
+> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
 
 donde:
 
@@ -89,15 +89,15 @@ TCHAR m_state[3] = 'CA';
 
 **db_command** se asegura de que la variable usada para *source_name* sea válida, por lo que la variable especificada debe estar en el ámbito global o de función.
 
-*HRESULT*<br/>
+*hresult*<br/>
 (Opcional) Identifica la variable que recibirá el valor HRESULT de este comando de base de datos. Si la variable no existe, el atributo la insertará automáticamente.
 
-*enlaces*<br/>
+*bindings*<br/>
 (Opcional) Le permite separar los parámetros de enlace del comando de OLE DB.
 
 Si especifica un valor para *enlaces*, **db_command** analizará el valor asociado y no analizará el \[ *bindtype*] parámetro. De este modo, puede usar la sintaxis del proveedor OLE DB. Para deshabilitar el análisis sin enlazar parámetros, especifique `Bindings=""`.
 
-Si no especifica un valor para *enlaces*, **db_command** analizará el bloque de parámetros de enlace, buscando "**(**', seguido de **\[** _bindtype_**]** entre corchetes, seguido de uno o más declarado previamente C++ variables de miembro, seguido por '**)**'. Todo el texto incluido entre los paréntesis se quitará del comando resultante y los parámetros se usarán para construir los enlaces de columnas y de parámetros para este comando.
+Si no especifica un valor para *enlaces*, **db_command** analizará el bloque de parámetros de enlace, buscando "**(**', seguido de **\[** _bindtype_**]** entre corchetes, seguido de uno o más anteriormente declarado C++ variables de miembro, seguidas de '**)**'. Todo el texto incluido entre los paréntesis se quitará del comando resultante y los parámetros se usarán para construir los enlaces de columnas y de parámetros para este comando.
 
 *bulk_fetch*<br/>
 (Opcional) Un valor entero que especifica el número de filas que se va a capturar.
@@ -122,7 +122,7 @@ Cuando el proveedor de atributos de consumidor aplica este atributo a una clase,
 
 En este ejemplo se define un comando que selecciona los nombres y apellidos de una tabla en la que la columna state coincide con “CA”. **db_command** crea y lee un conjunto de filas en el que puede llamar a funciones generadas por el asistente, como [OpenAll y CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), así como funciones de miembro `CRowset` , como [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Tenga en cuenta que, en este código, debe proporcionar su propia cadena de conexión que se conecte a la base de datos pubs. Para obtener información sobre cómo hacer esto en el entorno de desarrollo, consulte [Cómo: conectarse a una base de datos y examinar objetos existentes](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) y [agregar nuevas conexiones](/visualstudio/data-tools/add-new-connections).
+Tenga en cuenta que, en este código, debe proporcionar su propia cadena de conexión que se conecte a la base de datos pubs. Para obtener información sobre cómo hacer esto en el entorno de desarrollo, consulte [Cómo: Conectarse a una base de datos y examinar objetos existentes](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) y [agregar nuevas conexiones](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h

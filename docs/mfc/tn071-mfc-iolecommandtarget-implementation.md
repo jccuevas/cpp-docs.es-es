@@ -8,11 +8,11 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168003"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Implementación de IOleCommandTarget en MFC
 
@@ -23,7 +23,7 @@ El `IOleCommandTarget` interfaz permite que los objetos y sus contenedores para 
 
 `IOleCommandTarget` es una interfaz de automatización similares en que se utiliza un cliente para invocar métodos en un servidor. No obstante, el uso `IOleCommandTarget` ahorra la sobrecarga que supone realizar llamadas a través de interfaces de automatización porque los programadores no tienen que usar suele ser caro `Invoke` método `IDispatch`.
 
-En MFC, la `IOleCommandTarget` interfaz se usa por servidores de documentos activos para permitir que los contenedores de documentos activos enviar comandos al servidor. La clase de servidor del documento activo, `CDocObjectServerItem`, usa mapas de interfaz MFC (vea [TN038: implementación de IUnknown en MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) para implementar el `IOleCommandTarget` interfaz.
+En MFC, la `IOleCommandTarget` interfaz se usa por servidores de documentos activos para permitir que los contenedores de documentos activos enviar comandos al servidor. La clase de servidor del documento activo, `CDocObjectServerItem`, usa mapas de interfaz MFC (vea [TN038: Implementación de IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) para implementar el `IOleCommandTarget` interfaz.
 
 `IOleCommandTarget` También se implementa en el `COleFrameHook` clase. `COleFrameHook` es una clase MFC no documentada que implementa la funcionalidad de la ventana de marco de contenedores de edición en contexto. `COleFrameHook` También usa mapas de interfaz MFC para implementar la `IOleCommandTarget` interfaz. `COleFrameHook`de implementación de `IOleCommandTarget` envía comandos OLE a `COleDocObjectItem`-derivados de contenedores de documentos activos. Esto permite a cualquier contenedor de documentos activo de MFC recibir mensajes desde los servidores de contenido de documentos activos.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CVE-2017-5753
 - Speculative Execution
 ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179324"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Instrucciones para desarrolladores de C++ para los canales del lado de ejecución especulativa
 

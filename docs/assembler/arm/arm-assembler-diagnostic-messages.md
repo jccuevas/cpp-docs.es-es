@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167848"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Mensajes de diagnóstico del ensamblador de ARM
 
@@ -60,7 +60,7 @@ El ensamblador puede intentar codificar una bifurcación de 16 bits y se produce
 label
 ```
 
-> A2202: Sintaxis de instrucción de Pre-UAL que no se admite en la región de control de posición
+> A2202: Sintaxis de instrucción de pre-UAL que no se admite en la región de control de posición
 
 Código Thumb debe usar la sintaxis de Lenguaje unificado de ensamblador (UAL).  Ya no se acepta la sintaxis antigua
 
@@ -90,7 +90,7 @@ En la estructura de NEÓN, cargar y almacenar instrucciones (`VLDn`, `VSTn`), ha
 
 ## <a name="diagnostic-messages---warnings"></a>Mensajes de diagnóstico - advertencias
 
-> A4228: Alineación área; supera el valor de alineación No garantizada de alineación
+> A4228: Alineación de área; supera el valor de alineación No garantizada de alineación
 
 La alineación que se especifica en un `ALIGN` directiva es mayor que la alineación de la envolvente `AREA`.  Como resultado, el ensamblador no puede garantizar que el `ALIGN` se respetará la directiva.
 

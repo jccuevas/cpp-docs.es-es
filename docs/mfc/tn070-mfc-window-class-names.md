@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
 ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168042"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070: Nombres de clase de ventana MFC
 
@@ -46,4 +46,4 @@ El primer formulario (`Afx:%x:%x`) se utiliza cuando **hCursor**, **hbrBackgroun
 
 [Notas técnicas por número](../mfc/technical-notes-by-number.md)<br/>
 [Notas técnicas por categoría](../mfc/technical-notes-by-category.md)<br/>
-[TN020: Id. de nomenclatura y numeración convenciones](../mfc/tn020-id-naming-and-numbering-conventions.md)
+[TN020: Convenciones de nomenclatura y numeración de identificadores](../mfc/tn020-id-naming-and-numbering-conventions.md)

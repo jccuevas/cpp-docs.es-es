@@ -8,15 +8,15 @@ helpviewer_keywords:
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
 ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184366"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Aserción y mensajes proporcionados por el usuario (C++)
 
-El C++ language admite tres error mecanismos de control que le ayudan a depuración la aplicación: el [directiva #error](../preprocessor/hash-error-directive-c-cpp.md), el [static_assert](../cpp/static-assert.md) palabra clave y el [assert (macro), _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Los tres mecanismos emiten mensajes de error y dos de ellos también prueban las aserciones de software. Una aserción de software especifica una condición que se espera que sea cierta (valor true) en un determinado punto del programa. Si se produce un error de aserción en tiempo de compilación, el compilador emite un mensaje de diagnóstico y un error de compilación. Si se produce un error de aserción en tiempo de ejecución, el sistema operativo emite un mensaje de diagnóstico y cierra la aplicación.
+El C++ mecanismos de control de errores de es compatible con tres de lenguaje que le ayudan a depuración la aplicación: el [directiva #error](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) palabra clave y el [assert (macro), _ Assert, _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) macro. Los tres mecanismos emiten mensajes de error y dos de ellos también prueban las aserciones de software. Una aserción de software especifica una condición que se espera que sea cierta (valor true) en un determinado punto del programa. Si se produce un error de aserción en tiempo de compilación, el compilador emite un mensaje de diagnóstico y un error de compilación. Si se produce un error de aserción en tiempo de ejecución, el sistema operativo emite un mensaje de diagnóstico y cierra la aplicación.
 
 ## <a name="remarks"></a>Comentarios
 

@@ -5,11 +5,11 @@ author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
 ms.openlocfilehash: deb2c91d6d09d8945e5eb57a7ac742c5b1705e83
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196439"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Tutorial: Creación de proyectos multiplataforma de C++ en Visual Studio 
 
@@ -187,7 +187,7 @@ En este tutorial, ha visto la clonación directa de una base de código desde Gi
 Más información sobre cómo configurar y depurar proyectos de CMake en Visual Studio:
 
 > [!div class="nextstepaction"]
-> [Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/><br/>
+> [Proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md)<br/><br/>
 > [Configuración de un proyecto de CMake en Linux](../linux/cmake-linux-project.md)<br/><br/>
 > [Conexión al equipo remoto de Linux](../linux/connect-to-your-remote-linux-computer.md)<br/><br/>
 > [Personalización de la configuración de compilación de CMake](customize-cmake-settings.md)<br/><br/>

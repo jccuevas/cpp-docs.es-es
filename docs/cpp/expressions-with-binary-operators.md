@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154313"
 ---
 # <a name="expressions-with-binary-operators"></a>Expresiones con operadores binarios
 
@@ -45,7 +45,7 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
    - Menor o igual a (\<=)
 
-   - Mayor o igual que (>=)
+   - Mayor o igual que (> =)
 
    - Igual a (==)
 
@@ -81,9 +81,9 @@ Los operadores binarios actúan sobre dos operandos de una expresión. Los opera
 
    - Asignación de desplazamiento a la izquierda (<\<=)
 
-   - Asignación y desplazamiento a la derecha (>>=)
+   - Asignación de desplazamiento a la derecha (>> =)
 
-   - Asignación y AND bit a bit (&=)
+   - Asignación de AND bit a bit (& =)
 
    - Asignación y OR exclusivo bit a bit (^=)
 

@@ -1,18 +1,18 @@
 ---
-title: Filtrar Seleccionar tareas completadas
+title: Procedimiento Seleccionar tareas completadas
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
 ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205647"
 ---
-# <a name="how-to-select-among-completed-tasks"></a>Filtrar Seleccionar tareas completadas
+# <a name="how-to-select-among-completed-tasks"></a>Procedimiento Seleccionar tareas completadas
 
 En este ejemplo se muestra cómo usar el [Concurrency:: choice](../../parallel/concrt/reference/choice-class.md) y [Concurrency:: join](../../parallel/concrt/reference/join-class.md) clases para seleccionar la primera tarea para completar un algoritmo de búsqueda.
 
