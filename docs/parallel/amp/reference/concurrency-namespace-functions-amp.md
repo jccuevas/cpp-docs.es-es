@@ -14,21 +14,21 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180393"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Funciones del espacio de nombres de simultaneidad (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange (función) (C++ AMP))](#atomic_exchange)|[atomic_fetch_add (función) (C++ AMP))](#atomic_fetch_add)|[atomic_fetch_and (función) (C++ AMP))](#atomic_fetch_and)|
+|[atomic_exchange (función) (C++ AMP)](#atomic_exchange)|[atomic_fetch_add (función) (C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and (función) (C++ AMP)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or (función) (C++ AMP))](#atomic_fetch_or)|[atomic_fetch_sub (función) (C++ AMP))](#atomic_fetch_sub)|
-|[atomic_fetch_xor (función) (C++ AMP))](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or (función) (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub (función) (C++ AMP)](#atomic_fetch_sub)|
+|[atomic_fetch_xor (función) (C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each (función) (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
@@ -86,7 +86,7 @@ El valor que se almacenará en la ubicación de memoria especificada en forma `_
 
 **True** si la operación se realiza correctamente; en caso contrario, **false**.
 
-##  <a name="atomic_exchange"></a>  atomic_exchange (función) (C++ AMP))
+##  <a name="atomic_exchange"></a>  atomic_exchange (función) (C++ AMP)
 
 Establece el valor de la ubicación de destino como una operación atómica.
 
@@ -119,7 +119,7 @@ Nuevo valor.
 
 El valor original de la ubicación de destino.
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add (función) (C++ AMP))
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add (función) (C++ AMP)
 
 Agregar de forma atómica un valor para el valor de una ubicación de memoria.
 
@@ -147,7 +147,7 @@ Valor que se va a agregar.
 
 El valor original de la ubicación de memoria.
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and (función) (C++ AMP))
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and (función) (C++ AMP)
 
 Lleva a cabo una operación AND bit a bit de un valor y el valor de una ubicación de memoria de forma atómica.
 
@@ -270,7 +270,7 @@ El valor que se compara con el valor en la ubicación especificada.
 
 El valor original almacenado en la ubicación de la ubicación especificada.
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or (función) (C++ AMP))
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or (función) (C++ AMP)
 
 Lleva a cabo una operación OR bit a bit con un valor y el valor de una ubicación de memoria de forma atómica.
 
@@ -298,7 +298,7 @@ El valor que se usará en el cálculo de OR bit a bit.
 
 El valor original de la ubicación de memoria.
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub (función) (C++ AMP))
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub (función) (C++ AMP)
 
 Resta de forma atómica un valor de una ubicación de memoria.
 
@@ -326,7 +326,7 @@ El valor que se va a restar.
 
 El valor original de la ubicación de memoria.
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor (función) (C++ AMP))
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor (función) (C++ AMP)
 
 Atómicamente realiza una operación XOR bit a bit de un valor y una ubicación de memoria.
 
@@ -453,7 +453,7 @@ El tipo de datos de los elementos que se copian.
 
 ##  <a name="copy_async"></a>  copy_async
 
-Copia un objeto C++ AMP y devuelve un [completion_future](completion-future-class.md) objeto que se puede esperar. No se puede copiar datos al ejecutar código en un acelerador.  La forma general de esta función es `copy(src, dest)`.
+Copia un C++ objeto AMP y devuelve un [completion_future](completion-future-class.md) objeto que se puede esperar. No se puede copiar datos al ejecutar código en un acelerador.  La forma general de esta función es `copy(src, dest)`.
 
 ```
 template <typename value_type, int _Rank>

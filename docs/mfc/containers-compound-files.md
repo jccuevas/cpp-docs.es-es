@@ -15,11 +15,11 @@ helpviewer_keywords:
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152623"
 ---
 # <a name="containers-compound-files"></a>Contenedores: Archivos compuestos
 
@@ -85,6 +85,6 @@ En el *referencia del programador OLE*, consulte [IStream](/windows/desktop/api/
 ## <a name="see-also"></a>Vea también
 
 [Contenedores](../mfc/containers.md)<br/>
-[Contenedores: Problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)<br/>
+[Contenedores: problemas de la interfaz de usuario](../mfc/containers-user-interface-issues.md)<br/>
 [COleStreamFile (clase)](../mfc/reference/colestreamfile-class.md)<br/>
 [COleDocument (clase)](../mfc/reference/coledocument-class.md)

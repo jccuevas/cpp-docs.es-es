@@ -6,11 +6,11 @@ f1_keywords:
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180458"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Enumeraciones del espacio de nombres de simultaneidad (AMP)
 
@@ -28,7 +28,7 @@ enum access_type;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`access_type_auto`|Elija automáticamente el mejor `access_type` para el acelerador.|
 |`access_type_none`|Dedicado. La asignación solo está disponible en el acelerador y no en la CPU.|
@@ -46,7 +46,7 @@ enum queuing_mode;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`queuing_mode_immediate`|Por ejemplo, un modo de puesta en cola que especifica que los comandos [parallel_for_each (función) (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), se envían al dispositivo acelerador correspondiente en cuanto vuelven al llamador.|
 |`queuing_mode_automatic`|Un modo de puesta en cola que especifica que los comandos se encolan en una cola de comando que corresponde a la [accelerator_view](accelerator-view-class.md) objeto. Los comandos se envían al dispositivo cuando [accelerator_view:: Flush](accelerator-view-class.md#flush) se llama.|

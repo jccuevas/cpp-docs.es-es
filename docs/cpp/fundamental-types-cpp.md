@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153806"
 ---
 # <a name="fundamental-types--c"></a>Tipos fundamentales (C++)
 
@@ -77,7 +77,7 @@ En la tabla siguiente se explican las restricciones en los tamaños de tipo. Est
 ||**long long**|Mayor que unsigned **largo**.<br /><br /> Los objetos de tipo **long long** se pueden declarar como **long long con signo** o **long long sin signo**. **long long con signo** es un sinónimo de **long long**.|
 ||**wchar_t**, **__wchar_t**|Una variable de tipo **wchar_t** designa un tipo de caracteres anchos o multibyte. De forma predeterminada, **wchar_t** es un tipo nativo, pero puede usar [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) realizar **wchar_t** un typedef para **entero corto sin signo**. El **__wchar_t** tipo es un sinónimo específico de Microsoft para nativo **wchar_t** tipo.<br /><br /> Use el prefijo L delante de un carácter o un literal de cadena para designar el tipo de carácter ancho.|
 |Punto flotante|**float**|Tipo **float** es flotante más pequeño tipo de punto.|
-||**double**|Tipo **doble** es un tipo de punto flotante que es mayor que o igual al tipo **float**, pero inferior o igual que el tamaño del tipo **long double**.<br /><br /> Específico de Microsoft: la representación de **long double** y **doble** es idéntico. Sin embargo, **long double** y **doble** son tipos distintos.|
+||**double**|Tipo **doble** es un tipo de punto flotante que es mayor que o igual al tipo **float**, pero inferior o igual que el tamaño del tipo **long double**.<br /><br /> Específicas de Microsoft: La representación de **long double** y **doble** es idéntico. Sin embargo, **long double** y **doble** son tipos distintos.|
 ||**long double**|Tipo **long double** es un tipo que es mayor que o igual al tipo flotante **doble**.|
 
 **Específicos de Microsoft**
@@ -89,9 +89,9 @@ En la tabla siguiente se muestra la cantidad de almacenamiento necesaria para lo
 |Tipo|Tamaño|
 |----------|----------|
 |**BOOL**, **char**, **unsigned char**, **firmado char**, **__int8**|1 byte|
-|**__int16**, **corto**, **entero corto sin signo**, **wchar_t**, **__wchar_t**|2 bytes|
+|**__int16**, **short**, **unsigned short**, **wchar_t**, **__wchar_t**|2 bytes|
 |**float**, **__int32**, **int**, **int sin signo**, **largo**, **unsigned long**|4 bytes|
-|**Double**, **__int64**, **long double**, **long long**|8 bytes|
+|**double**, **__int64**, **long double**, **long long**|8 bytes|
 
 **FIN de Específicos de Microsoft**
 

@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
 ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200082"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problemas comunes de migración a 64 bits en Visual C++
 
 Al utilizar Visual C++ para crear aplicaciones que se ejecutan en un sistema operativo Windows de 64 bits, debe tener en cuenta lo siguiente:
 
-- 
-  `int` y `long` son valores de 32 bits en sistemas operativos Windows de 64 bits. Debe tener cuidado de no asignar punteros a variables de 32 bits en los programas que piense compilar para plataformas de 64 bits. Los punteros son de 64 bits en las plataformas de 64 bits; si asigna un puntero a una variable de 32 bits, se truncará su valor.
+- `int` y `long` son valores de 32 bits en sistemas operativos Windows de 64 bits. Debe tener cuidado de no asignar punteros a variables de 32 bits en los programas que piense compilar para plataformas de 64 bits. Los punteros son de 64 bits en las plataformas de 64 bits; si asigna un puntero a una variable de 32 bits, se truncará su valor.
 
 - `size_t`, `time_t`, y `ptrdiff_t` son valores de 64 bits en sistemas operativos de Windows de 64 bits.
 
@@ -42,7 +41,7 @@ El modificador `printf` %x (`int` en formato hexadecimal) no funcionará según 
 
 Para obtener más información, consulte:
 
-- [Opciones del compilador MSVC](reference/compiler-options.md)
+- [Opciones del compilador de MSVC](reference/compiler-options.md)
 
 - [Sugerencias de migración](/windows/desktop/WinProg64/migration-tips)
 

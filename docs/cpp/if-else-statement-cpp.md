@@ -10,11 +10,11 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183653"
 ---
 # <a name="if-else-statement-c"></a>if-else (Instrucción) (C++)
 
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a> Si la instrucción con un inicializador
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): un **si** instrucción también puede contener una expresión que se declara e inicializa una variable con nombre. Utilice este formulario de la instrucción if cuando la variable solo es necesario dentro del ámbito del bloque de if.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Un **si** instrucción también puede contener una expresión que se declara e inicializa una variable con nombre. Utilice este formulario de la instrucción if cuando la variable solo es necesario dentro del ámbito del bloque de if.
 
 ## <a name="example"></a>Ejemplo
 
@@ -165,7 +165,7 @@ El **else** cláusula de una `if...else` instrucción está asociada con el más
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Si las instrucciones de constexpr
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): en las plantillas de función, puede usar un **si constexpr** instrucción para tomar decisiones de bifurcación de tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una sola función ese parámetro de identificadores para desempaquetar (no se necesita ninguna sobrecarga de parámetro de cero):
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): En las plantillas de función, puede usar un **si constexpr** instrucción para tomar decisiones de bifurcación de tiempo de compilación sin tener que recurrir a varias sobrecargas de función. Por ejemplo, puede escribir una sola función ese parámetro de identificadores para desempaquetar (no se necesita ninguna sobrecarga de parámetro de cero):
 
 ```cpp
 template <class T, class... Rest>

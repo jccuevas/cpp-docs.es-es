@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182904"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: Uso de clases de base de datos con documentos y vistas
 
@@ -63,7 +63,7 @@ Muchas aplicaciones sencillas basadas en formularios no es necesario documentos.
 
 ##  <a name="_core_other_factors"></a> Otros factores
 
-Aplicaciones basadas en formularios a menudo no tienen ningún uso para el mecanismo de serialización de documentos de .NET framework, por lo que es posible que desee quitar, deshabilitar o reemplazar el **New** y **abierto** comandos en el **Archivo** menú. Consulte el artículo [serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
+Aplicaciones basadas en formularios a menudo no tienen ningún uso para el mecanismo de serialización de documentos de .NET framework, por lo que es posible que desee quitar, deshabilitar o reemplazar el **New** y **abierto** comandos en el **Archivo** menú. Consulte el artículo [serialización: serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
 
 También puede hacer uso de las muchas posibilidades de interfaz de usuario que puede admitir el marco de trabajo. Por ejemplo, podría utilizar varios `CRecordView` objetos en una ventana divisora, abrir múltiples conjuntos de registros en diferentes varias ventanas de documento MDI (interfaz) secundarias y así sucesivamente.
 

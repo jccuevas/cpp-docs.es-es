@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156962"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -60,7 +60,7 @@ Objeto que se va a buscar.
 *base*<br/>
 Puntero a la base de la matriz en la que se va a buscar.
 
-*Número*<br/>
+*number*<br/>
 Número de elementos.
 
 *size*<br/>
@@ -80,7 +80,7 @@ Si se pasan parámetros no válidos a la función, se invoca el controlador de p
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*key*|*base*|*compare*|*Número*|*size*|**errno**|
+|*key*|*base*|*compare*|*number*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|

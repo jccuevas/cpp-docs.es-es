@@ -3,17 +3,17 @@ title: Alineación (declaraciones de C++)
 ms.date: 11/04/2016
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
 ms.openlocfilehash: 0709ad414af3f167a64d9c89c342690015190287
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155399"
 ---
 # <a name="alignment-c-declarations"></a>Alineación (declaraciones de C++)
 
 Una de las características de bajo nivel de C++ es la capacidad para especificar la alineación precisa de los objetos en la memoria para sacar el máximo partido de una arquitectura de hardware específica. De forma predeterminada, el compilador alinea los miembros de clase y estructura en su valor de tamaño: bool y char se alinea en límites de un byte, short en dos bytes, int en cuatro bytes y long long, double y long dos en ocho bytes. En la mayoría de los escenarios no tendrá que preocuparse jamás por la alineación, puesto que la alineación predeterminada ya es óptima. No obstante, en algunos casos se pueden conseguir importantes mejoras de rendimiento o ahorros de memoria al especificar una alineación personalizada para sus estructuras de datos. Antes de Visual Studio 2015 podía usar las palabras clave __alignof y declspec(alignas) específicas de Microsoft para especificar una alineación mayor que el valor predeterminado. A partir de Visual Studio 2015, debe utilizar el C ++ 11 palabras clave estándar [alignof y alignas](../cpp/alignof-and-alignas-cpp.md) para la portabilidad de código al máximo. A efectos prácticos, las nuevas palabras clave se comportan de la misma manera que las extensiones específicas de Microsoft. Además, la documentación de esas extensiones también se aplica a las nuevas palabras clave. Consulte [operador __alignof](../cpp/alignof-operator.md) y [alinear](../cpp/align-cpp.md) para obtener más información. El estándar de C++ no especifica el comportamiento de empaquetado para alinear en límites menores que el valor predeterminado del compilador para la plataforma de destino, por lo que deberá usar Microsoft #pragma [pack](../preprocessor/pack.md) en ese caso.
 
-La biblioteca estándar de C++ proporciona el [aligned_storage (clase)](../standard-library/aligned-storage-class.md) para asignar memoria para las estructuras de datos con alineaciones personalizadas y la [clase aligned_union](../standard-library/aligned-union-class.md) para especificar la alineación de uniones con no trivial constructores o destructores.
+El C++ biblioteca estándar proporciona el [aligned_storage (clase)](../standard-library/aligned-storage-class.md) para asignar memoria para las estructuras de datos con alineaciones personalizadas y la [clase aligned_union](../standard-library/aligned-union-class.md) para especificar la alineación de uniones con constructores no triviales o destructores.
 
 ## <a name="about-alignment"></a>Acerca de la alineación
 

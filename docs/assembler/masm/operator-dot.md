@@ -9,11 +9,11 @@ helpviewer_keywords:
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
 ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62177206"
 ---
 # <a name="operator-"></a>Operador .
 
@@ -21,9 +21,9 @@ El primer operador devuelve *expresión* más el desplazamiento de *campo* dentr
 
 ## <a name="syntax"></a>Sintaxis
 
-> *expresión* __.__ *campo* \[ __.__ *campo*]...
+> *expresión* __.__ *field* \[__.__ *campo*]...
 >
-> __\[__*registrar*__]__ __.__ *campo* \[ __.__ *campo*]...
+> __\[__*registrar*__]__ __.__ *field* \[__.__ *campo*]...
 
 ## <a name="see-also"></a>Vea también
 

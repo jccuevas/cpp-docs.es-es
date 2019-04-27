@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
 ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195486"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Exportar desde un archivo DLL mediante archivos DEF
 
@@ -66,7 +66,7 @@ Tenga en cuenta que MFC utiliza archivos DEF para exportar funciones y clases de
 
 - [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Inicializar un archivo DLL](run-time-library-behavior.md#initializing-a-dll)
 
@@ -78,7 +78,7 @@ Tenga en cuenta que MFC utiliza archivos DEF para exportar funciones y clases de
 
 - [Nombres representativos](reference/decorated-names.md)
 
-- [Importar y exportar funciones inline](importing-and-exporting-inline-functions.md)
+- [Importación y exportación de funciones insertadas](importing-and-exporting-inline-functions.md)
 
 - [Importaciones mutuas](mutual-imports.md)
 

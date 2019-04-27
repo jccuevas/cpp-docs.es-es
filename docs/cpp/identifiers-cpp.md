@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184606"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-El rango de caracteres permitidos en un identificador es menos restrictivo cuando se compila código C++/CLI. Los identificadores del código compilado con /clr deben regirse por el  [Estándar ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+El rango de caracteres permitidos en un identificador es menos restrictivo cuando se compila código C++/CLI. Los identificadores en el código compilado con/CLR deben seguir [estándar ECMA-335: Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 **FIN de Específicos de Microsoft**
 
@@ -95,7 +95,7 @@ El primer carácter de un identificador debe ser un carácter alfabético, en ma
 
 Los identificadores no pueden escribirse igual ni presentar el mismo uso de mayúsculas y minúsculas que las palabras clave. Los identificadores que contienen palabras clave son válidos. Por ejemplo, `Pint` es un identificador válido, aunque contenga **int**, que es una palabra clave.
 
-Uso de dos caracteres de subrayado secuenciales ( **__** ) en un identificador o un único carácter de subrayado inicial seguido por una letra mayúscula, está reservado para implementaciones de C++ en todos los ámbitos. Evite el uso de un carácter de subrayado inicial seguido de una letra minúscula en los nombres con ámbito de archivo a fin de evitar posibles conflictos con los identificadores reservados actuales o futuros.
+Uso de dos caracteres de subrayado secuenciales ( **__** ) en un identificador o un único carácter de subrayado inicial seguido por una letra mayúscula, se reserva para C++ implementaciones en todos los ámbitos. Evite el uso de un carácter de subrayado inicial seguido de una letra minúscula en los nombres con ámbito de archivo a fin de evitar posibles conflictos con los identificadores reservados actuales o futuros.
 
 ## <a name="see-also"></a>Vea también
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186807"
 ---
 # <a name="ole-background-linking-and-embedding"></a>Nociones de OLE: Vinculación e incrustación de objetos
 
@@ -31,5 +31,5 @@ Todos los elementos OLE, si incrustado o vinculado, tienen un tipo asociado con 
 
 [Nociones de OLE](../mfc/ole-background.md)<br/>
 [Nociones de OLE: Contenedores y servidores](../mfc/ole-background-containers-and-servers.md)<br/>
-[Contenedores: Elementos de cliente](../mfc/containers-client-items.md)<br/>
-[servidores: Elementos del servidor](../mfc/servers-server-items.md)
+[Contenedores: elementos de cliente](../mfc/containers-client-items.md)<br/>
+[Servidores: elementos del servidor](../mfc/servers-server-items.md)

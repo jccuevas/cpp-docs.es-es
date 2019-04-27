@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
 ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155207"
 ---
 # <a name="comerror-class"></a>_com_error (Clase)
 
@@ -29,7 +29,7 @@ Un **_com_error** objeto representa una condición de excepción detectada por l
 
 |||
 |-|-|
-|[operador =](../cpp/com-error-operator-equal.md)|Asigna una existente **_com_error** objeto a otro.|
+|[operator =](../cpp/com-error-operator-equal.md)|Asigna una existente **_com_error** objeto a otro.|
 
 ### <a name="extractor-functions"></a>Funciones de extractor
 
@@ -53,7 +53,7 @@ Un **_com_error** objeto representa una condición de excepción detectada por l
 
 |||
 |-|-|
-|[Mensaje de error](../cpp/com-error-errormessage.md)|Recupera el mensaje de cadena para HRESULT almacenado en el **_com_error** objeto.|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Recupera el mensaje de cadena para HRESULT almacenado en el **_com_error** objeto.|
 
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Asignadores de ExepInfo.wCode a HRESULT
 
@@ -73,4 +73,4 @@ Un **_com_error** objeto representa una condición de excepción detectada por l
 ## <a name="see-also"></a>Vea también
 
 [Clases de compatibilidad con COM del compilador](../cpp/compiler-com-support-classes.md)<br/>
-[Interfaz IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[IErrorInfo Interface](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)

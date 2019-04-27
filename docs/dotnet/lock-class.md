@@ -15,11 +15,11 @@ helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
 ms.openlocfilehash: 43418da36aa2d87608a9d672e4345d24011be0b3
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153445"
 ---
 # <a name="lock-class"></a>lock (Clase)
 
@@ -41,14 +41,14 @@ Internamente, los usos de la clase de bloqueo <xref:System.Threading.Monitor> pa
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |---------|-----------|
 |[lock::lock](#lock)|Construye un `lock` objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.|
 |[lock::~lock](#tilde-lock)|Destructs un `lock` objeto.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |---------|-----------|
 |[lock::acquire](#acquire)|Adquiere un bloqueo en un objeto, opcionalmente esperando para adquirir el bloqueo para siempre, durante un período determinado de tiempo o no en absoluto.|
 |[lock::is_locked](#is-locked)|Indica si se encuentra un bloqueo.|
@@ -57,7 +57,7 @@ Internamente, los usos de la clase de bloqueo <xref:System.Threading.Monitor> pa
 
 ### <a name="public-operators"></a>Operadores públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |---------|-----------|
 |[lock::operator&nbsp;bool](#operator-bool)|Operador para el uso de `lock` en una expresión condicional.|
 |[lock::operator==](#operator-equality)|Operador de igualdad.|

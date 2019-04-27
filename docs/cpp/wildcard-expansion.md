@@ -12,11 +12,11 @@ helpviewer_keywords:
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
 ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209520"
 ---
 # <a name="wildcard-expansion"></a>Expansión de caracteres comodín
 
@@ -30,4 +30,4 @@ Argumentos de línea de comandos se controlan mediante una rutina denominada `_s
 
 ## <a name="see-also"></a>Vea también
 
-[main: Inicio de programa](../cpp/main-program-startup.md)
+[main: inicio de programa](../cpp/main-program-startup.md)
