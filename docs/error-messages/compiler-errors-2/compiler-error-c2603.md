@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
 ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62215406"
 ---
 # <a name="compiler-error-c2603"></a>Error del compilador C2603
 
-> '*función*': hay demasiados objetos static en ámbito de bloque con constructores/destructores en la función
+> '*función*': Hay demasiados objetos static en ámbito de bloque con constructores/destructores en la función
 
 En las versiones del compilador de Visual C++ antes de Visual Studio 2015, o cuando el [/Zc: threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) se especifica la opción del compilador, hay un límite de 31 en el número de objetos estáticos puede tener en una función insertada visible externamente .
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340734"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -72,13 +72,13 @@ El coseno hiperbólico inverso de *z*, en radianes. El resultado es ilimitado y 
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cacosh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacosh** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **cacosh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacosh** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**cacosh**, **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

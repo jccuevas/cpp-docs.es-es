@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347969"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -66,9 +66,9 @@ De forma predeterminada, si *x* es menor que -1 o mayor que 1, **asin** devuelve
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NO VÁLIDO**|**_DOMINIO**|
-|+ **QNAN**, **IND**|ninguna|**_DOMINIO**|
-|&#124;x&#124;>1|**NO VÁLIDO**|**_DOMINIO**|
+|± ∞|**INVALID**|**_DOMAIN**|
+|± **QNAN**, **IND**|ninguna|**_DOMAIN**|
+|&#124;x&#124;>1|**INVALID**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -78,7 +78,7 @@ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **asin** con **fl
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C++)|
 |-------------|---------------------|-|
-|**ASIN**, **asinf**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
+|**asin**, **asinf**, **asinl**|\<math.h>|\<cmath> o \<math.h>|
 
 ## <a name="example"></a>Ejemplo
 

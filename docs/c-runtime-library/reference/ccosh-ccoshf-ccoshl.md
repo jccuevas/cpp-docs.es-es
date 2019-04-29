@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
 ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335560"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 
@@ -72,13 +72,13 @@ El coseno hiperbólico de *z*, en radianes.
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ccosh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ccosh** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **ccosh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ccosh** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**ccosh**, **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
+|**ccosh**,               **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

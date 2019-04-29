@@ -37,11 +37,11 @@ helpviewer_keywords:
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
 ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356828"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 
@@ -84,10 +84,10 @@ errno_t _wsearchenv_s(
 *filename*<br/>
 Nombre del archivo que se va a buscar.
 
-*VarName*<br/>
+*varname*<br/>
 Entorno en el que se va a buscar.
 
-*ruta de acceso*<br/>
+*pathname*<br/>
 Búfer en el que se va a almacenar la ruta de acceso completa.
 
 *numberOfElements*<br/>
@@ -101,7 +101,7 @@ Si *filename* es una cadena vacía, el valor devuelto es **ENOENT**.
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*filename*|*VarName*|*ruta de acceso*|*numberOfElements*|Valor devuelto|Contenido de *pathname*|
+|*filename*|*varname*|*pathname*|*numberOfElements*|Valor devuelto|Contenido de *pathname*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |any|any|**NULL**|any|**EINVAL**|N/D|
 |**NULL**|any|any|any|**EINVAL**|no cambia|

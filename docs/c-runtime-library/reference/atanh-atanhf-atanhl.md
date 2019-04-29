@@ -28,11 +28,11 @@ helpviewer_keywords:
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
 ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341293"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -73,7 +73,7 @@ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **atanh** que tom
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**ATANH**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
+|**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> o \<math.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
