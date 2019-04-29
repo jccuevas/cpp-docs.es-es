@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369129"
 ---
 # <a name="regextraits-class"></a>regex_traits (Clase)
 
@@ -95,9 +95,9 @@ Cada objeto `regex_traits` contiene un objeto de tipo `regex_traits::locale` que
 |[lookup_collatename](#lookup_collatename)|Asigna una secuencia a un elemento de intercalación.|
 |[transform](#transform)|Convierte a la secuencia ordenada equivalente.|
 |[transform_primary](#transform_primary)|Convierte a la secuencia ordenada caseless equivalente.|
-|[Traducir](#translate)|Convierte a un elemento coincidente equivalente.|
+|[translate](#translate)|Convierte a un elemento coincidente equivalente.|
 |[translate_nocase](#translate_nocase)|Convierte al elemento equivalente que coincide sin distinción entre mayúsculas y minúsculas.|
-|[valor](#value)|Convierte un elemento en un valor de dígito.|
+|[value](#value)|Convierte un elemento en un valor de dígito.|
 
 ## <a name="requirements"></a>Requisitos
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*LOC*<br/>
+*loc*<br/>
 El objeto de configuración regional que se va a almacenar.
 
 ### <a name="remarks"></a>Comentarios
@@ -238,10 +238,10 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 Elemento que se va a comprobar.
 
-*CLS*<br/>
+*cls*<br/>
 Las clases que se van a probar.
 
 ### <a name="remarks"></a>Comentarios
@@ -292,7 +292,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 *first*<br/>
 Principio de la secuencia que se va a buscar.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -317,7 +317,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 *first*<br/>
 Principio de la secuencia que se va a buscar.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -376,7 +376,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 *first*<br/>
 Principio de la secuencia que se va a transformar.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que se va a transformar.
 
 ### <a name="remarks"></a>Comentarios
@@ -397,7 +397,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 *first*<br/>
 Principio de la secuencia que se va a transformar.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que se va a transformar.
 
 ### <a name="remarks"></a>Comentarios
@@ -414,7 +414,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 El elemento que se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
@@ -431,7 +431,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 El elemento que se va a convertir.
 
 ### <a name="remarks"></a>Comentarios
@@ -448,7 +448,7 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*ch*<br/>
 El elemento que se va a convertir.
 
 *radix*<br/>

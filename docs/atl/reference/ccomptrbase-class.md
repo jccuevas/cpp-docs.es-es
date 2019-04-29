@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246236"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase (clase)
 
@@ -237,8 +237,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="parameters"></a>Parámetros
 
 *pOther*<br/>
-
-  `IUnknown *` que se va comparar.
+`IUnknown *` que se va comparar.
 
 ### <a name="return-value"></a>Valor devuelto
 

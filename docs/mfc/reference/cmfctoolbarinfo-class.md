@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMFCToolBarInfo [MFC], m_uiMenuResID
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
 ms.openlocfilehash: b2f8af439a2534f24cdba9b0ccdb12b150db6d0a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217818"
 ---
 # <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo (clase)
 
@@ -43,7 +43,7 @@ class CMFCToolBarInfo
 
 ### <a name="data-members"></a>Miembros de datos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|Identificador de recurso del mapa de bits de barra de herramientas que contiene imágenes normales de barra de herramientas (inactiva).|
 |[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|Identificador de recurso del mapa de bits de barra de herramientas que contiene imágenes de barra de herramientas deshabilitada.|

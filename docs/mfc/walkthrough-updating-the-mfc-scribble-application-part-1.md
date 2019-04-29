@@ -10,11 +10,11 @@ helpviewer_keywords:
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358299"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Tutorial: Actualizar la aplicación Scribble MFC (parte 1)
 
@@ -269,4 +269,4 @@ Ha modificado el clásico ejemplo de Scribble de MFC 1.0 para usar el **Ribbon D
 ## <a name="see-also"></a>Vea también
 
 [Tutoriales](../mfc/walkthroughs-mfc.md)<br/>
-[Tutorial: Actualizar la aplicación Scribble MFC (parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Tutorial: actualizar la aplicación Scribble de MFC (Parte 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

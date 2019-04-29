@@ -9,11 +9,11 @@ helpviewer_keywords:
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
 ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218569"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Recomendaciones para el control de entrada/salida
 
@@ -49,4 +49,4 @@ Para obtener información acerca de la serialización, vea [serialización](../m
 
 ## <a name="see-also"></a>Vea también
 
-[Serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)
+[Serialización: serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md)

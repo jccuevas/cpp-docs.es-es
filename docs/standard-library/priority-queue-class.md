@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370022"
 ---
 # <a name="priorityqueue-class"></a>priority_queue (Clase)
 
@@ -254,7 +254,7 @@ El objeto priority_queue del que el conjunto creado va a ser una copia.
 *first*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
-*Último*<br/>
+*last*<br/>
 Posición del primer elemento más allá del intervalo de elementos que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 El elemento que se ha agregado a la parte superior de priority_queue.
 
 ### <a name="remarks"></a>Comentarios

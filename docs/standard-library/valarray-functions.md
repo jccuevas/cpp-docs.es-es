@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365189"
 ---
 # <a name="ltvalarraygt-functions"></a>Funciones de &lt;valarray&gt;
 
@@ -974,7 +974,7 @@ Una valarray cuyos elementos son iguales al seno hiperbólico de los elementos d
 
 Identidades que definen el seno hiperbólico en términos de la función exponencial:
 
-SINH ( *z* ) = (exp ( *z* )-exp (- *z* )) / 2
+sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2
 
 ### <a name="example"></a>Ejemplo
 

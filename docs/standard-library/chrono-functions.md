@@ -6,11 +6,11 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 5aadf776cc25e22a40ed75f854481dff63cce4bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371671"
 ---
 # <a name="ltchronogt-functions"></a>Funciones de &lt;chrono&gt;
 
@@ -18,7 +18,7 @@ ms.locfileid: "50597501"
 |-|-|-|
 |[duration_cast](#duration_cast)|[time_point_cast](#time_point_cast)|
 
-## <a name="duration_cast"></a>  duration_cast)
+## <a name="duration_cast"></a>  duration_cast
 
 Convierte un objeto `duration` a un tipo especificado.
 
@@ -35,7 +35,7 @@ Objeto `duration` de tipo `To` que representa el intervalo de tiempo `Dur`, que 
 
 Si `To` es una creación de instancia de `duration`, esta función no participa en la resolución de sobrecarga.
 
-## <a name="time_point_cast"></a>  time_point_cast)
+## <a name="time_point_cast"></a>  time_point_cast
 
 Convierte un objeto [time_point](../standard-library/time-point-class.md) en un tipo especificado.
 

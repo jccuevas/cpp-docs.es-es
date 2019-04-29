@@ -6,11 +6,11 @@ helpviewer_keywords:
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358312"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 
@@ -83,9 +83,9 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Cómo: Personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+[Cómo: personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[Cómo: Personalizar el botón aplicación](../mfc/how-to-customize-the-application-button.md)
+[Cómo: personalizar el botón Aplicación](../mfc/how-to-customize-the-application-button.md)
 
 Para obtener ejemplos de extremo a otro, consulte [ejemplos (MFC Feature Pack)](../overview/visual-cpp-samples.md).
 

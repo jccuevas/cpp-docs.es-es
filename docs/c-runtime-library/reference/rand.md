@@ -27,15 +27,15 @@ helpviewer_keywords:
 - pseudorandom numbers
 - numbers, generating pseudorandom
 ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357777"
 ---
 # <a name="rand"></a>rand
 
-Genera un número pseudoaleatorio mediante un algoritmo muy conocido y completamente reproducible. Una versión más mediante programación segura de esta función está disponible; consulte [rand_s](rand-s.md). Los números generan por **rand** no son seguras criptográficamente. Para más seguros criptográficamente generación de números aleatorios, utilice [rand_s](rand-s.md) o las funciones se declaran en la biblioteca estándar de C++ en [ \<aleatorio >](../../standard-library/random.md).
+Genera un número pseudoaleatorio mediante un algoritmo muy conocido y completamente reproducible. Una versión más mediante programación segura de esta función está disponible; consulte [rand_s](rand-s.md). Los números generan por **rand** no son seguras criptográficamente. Para más seguros criptográficamente generación de números aleatorios, utilice [rand_s](rand-s.md) o las funciones se declaran en el C++ biblioteca estándar de [ \<aleatorio >](../../standard-library/random.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,7 +51,7 @@ int rand( void );
 
 El **rand** función devuelve un entero pseudoaleatorio entre 0 y **RAND_MAX** (32767). Use la [srand](srand.md) función para inicializar el generador de números pseudoaleatorios antes de llamar a **rand**.
 
-El **rand** función genera una secuencia conocida y no es adecuado para su uso como una función criptográfica. Para más seguros criptográficamente generación de números aleatorios, utilice [rand_s](rand-s.md) o las funciones se declaran en la biblioteca estándar de C++ en [ \<aleatorio >](../../standard-library/random.md). Para obtener información acerca de cuál es el problema con **rand** y cómo \<aleatorio > aborda estas desventajas, vea este vídeo titulado [rand considera perjudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
+El **rand** función genera una secuencia conocida y no es adecuado para su uso como una función criptográfica. Para más seguros criptográficamente generación de números aleatorios, utilice [rand_s](rand-s.md) o las funciones se declaran en el C++ biblioteca estándar de [ \<aleatorio >](../../standard-library/random.md). Para obtener información acerca de cuál es el problema con **rand** y cómo \<aleatorio > aborda estas desventajas, vea este vídeo titulado [rand considera perjudicial](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful).
 
 ## <a name="requirements"></a>Requisitos
 

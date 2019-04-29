@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217576"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Byte Ordering
 
@@ -83,7 +83,7 @@ Este ejemplo se llama para las conversiones de orden de bytes de datos porque ha
 
 ### <a name="windows-sockets-byte-order-conversion-functions"></a>Funciones de conversión de orden de bytes de Windows Sockets
 
-|Función|Propósito|
+|Función|Finalidad|
 |--------------|-------------|
 |**ntohs**|Convierte una cantidad de 16 bits de orden de bytes de red al orden de bytes del host (de big-Endian a little-Endian).|
 |**ntohl**|Convierte una cantidad de 32 bits de orden de bytes de red al orden de bytes del host (de big-Endian a little-Endian).|
@@ -98,13 +98,13 @@ donde `pMsg` es un puntero a un objeto de C++ derivado de la clase `CObject`. Es
 
 Para obtener más información, consulte:
 
-- [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
+- [Windows Sockets: fondo](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: sockets de secuencias](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 

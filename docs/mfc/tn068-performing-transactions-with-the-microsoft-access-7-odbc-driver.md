@@ -9,11 +9,11 @@ helpviewer_keywords:
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
 ms.openlocfilehash: 3121587f85c4ea19cc92e39569008b597d24ea58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363796"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068: Realizar transacciones con el controlador ODBC de Microsoft Access 7
 
@@ -40,7 +40,7 @@ Cuando deba realizar varias transacciones uno tras otro, no puede llamar a `Requ
 
 Antes de iniciar una transacción, asegúrese de que el objeto de conjunto de registros está cerrado. Después de llamar a `BeginTrans`, llame a la función miembro `Open` función miembro. Cierre el conjunto de registros inmediatamente después de llamar a `CommitTrans` o `Rollback`. Tenga en cuenta que varias veces de apertura y cierre el conjunto de registros pueden ralentizar el rendimiento de la aplicación.
 
-## <a name="using-sqlfreestmt"></a>Uso de SQLFreeStmt
+## <a name="using-sqlfreestmt"></a>Using SQLFreeStmt
 
 También puede usar la función de la API de ODBC `SQLFreeStmt` cerrar explícitamente el cursor después de finalizar una transacción. Para iniciar otra transacción, llame a `BeginTrans` seguido `CRecordset::Requery`. Al llamar a `SQLFreeStmt`, debe especificar HSTMT del conjunto de registros como primer parámetro y *SQL_CLOSE* como segundo parámetro. Este método es más rápido que el conjunto de registros al principio de cada transacción de apertura y cierre. El código siguiente muestra cómo implementar esta técnica:
 

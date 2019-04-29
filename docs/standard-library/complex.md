@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212097"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -40,7 +40,7 @@ El conjunto de números complejos con las operaciones de suma compleja y multipl
 
 - El inverso aditivo de un número complejo (*un*, *b*) es (-*un*, -*b*) y el inverso multiplicativo de todos estos números complejos excepto (0, 0) es
 
-   (*un*/ (*un*<sup>2</sup> + *b*<sup>2</sup>), -*b*/ (*un*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
 Mediante la representación de un número complejo *z* = (*una*, *b*) en el formulario *z* = *una*  +  *bi*, donde *i*<sup>2</sup> = -1, las reglas para el álgebra del conjunto de números reales se puede aplicar al conjunto de números complejos y a sus componentes. Por ejemplo:
 

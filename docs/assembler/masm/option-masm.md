@@ -7,11 +7,11 @@ helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
 ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217262"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
@@ -28,11 +28,11 @@ Las opciones disponibles incluyen:
 |||||
 |-|-|-|-|
 |**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULADOR**|
-|**NOEMULATOR**|**EPÍLOGO**|**EXPR16**|**EXPR32**|
-|**IDIOMA**|**LJMP**|**NOLJMP**|**M510**|
+|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
+|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PRÓLOGO**|**READONLY**|**NOREADONLY**|
+|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
 |**EL ÁMBITO**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
 
 La sintaxis de LENGUAJE es **opción LANGUAGE:**<em>x</em>, donde *x* es uno de C, SYSCALL, STDCALL, PASCAL, FORTRAN o BASIC.  SYSCALL, PASCAL, FORTRAN y BASIC no se admiten con utilizado con [. MODELO](../../assembler/masm/dot-model.md) sin formato.

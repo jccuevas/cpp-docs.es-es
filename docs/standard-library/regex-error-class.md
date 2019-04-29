@@ -8,11 +8,11 @@ helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
 ms.openlocfilehash: eed961ea698591935c22fc748ff79583ae636b27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369623"
 ---
 # <a name="regexerror-class"></a>regex_error (Clase)
 
@@ -104,7 +104,7 @@ regex_error(regex_constants::error_code error);
 
 ### <a name="parameters"></a>Parámetros
 
-*Error*<br/>
+*error*<br/>
 Código de error.
 
 ### <a name="remarks"></a>Comentarios

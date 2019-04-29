@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368661"
 ---
 # <a name="logical-and-operator-ampamp"></a>Operador lógico AND: &amp;&amp;
 
@@ -41,7 +41,7 @@ char *pch = 0;
 
 Si `pch` es null (0), el lado derecho de la expresión no se evalúa. Por consiguiente, la asignación a través de un puntero null es imposible.
 
-## <a name="operator-keyword-for-"></a>Palabra clave del operador para &&
+## <a name="operator-keyword-for-"></a>Palabra clave del operador para & &
 
 El **y** operador es el equivalente textual de **&&**. Hay dos maneras de acceder a la **y** operador en los programas: incluir el archivo de encabezado `iso646.h`, o compilar con la [/Za](../build/reference/za-ze-disable-language-extensions.md) opción del compilador (deshabilitar extensiones de lenguaje).
 

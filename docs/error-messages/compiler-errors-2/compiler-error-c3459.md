@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
 ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363744"
 ---
 # <a name="compiler-error-c3459"></a>Error del compilador C3459
 
@@ -19,7 +19,7 @@ ms.locfileid: "50438029"
 
 Un atributo que se ha diseñado para aplicarse a una propiedad de indizador de clase se usó de forma incorrecta.
 
-Para obtener más información, consulte [Cómo: utilizar propiedades en C++ / c++ / CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Para obtener más información, vea [Cómo: Usar propiedades en C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Ejemplo
 

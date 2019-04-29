@@ -5,11 +5,11 @@ helpviewer_keywords:
 - C++/CX namespaces
 ms.assetid: 5ebc0b49-1f22-48a7-90c4-a310bab9aba6
 ms.openlocfilehash: a749220b4f1f735e9559d8e4aacca27d73fa5d76
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375215"
 ---
 # <a name="namespaces-reference-ccx"></a>Referencia de espacios de nombres (C++/CX)
 
@@ -25,7 +25,7 @@ Para simplificar la codificación de los programas que tienen como destino el ti
 |-----------|-----------------|
 |[espacio de nombres predeterminado](../cppcx/default-namespace.md)|Contiene descripciones de los tipos fundamentales integrados.|
 |[Espacio de nombres de plataforma](../cppcx/platform-namespace-c-cx.md)|Contiene descripciones de los tipos que puedes utilizar y también de los tipos internos utilizados únicamente por la infraestructura del compilador.|
-|[Collections Namespace](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Contiene descripciones de las mejoras y extensiones para el tiempo de ejecución de Windows`Windows::Foundation::Collections` espacio de nombres.|
+|[Windows::Foundation::Collections (Espacio de nombres)](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Contiene descripciones de las mejoras y extensiones para el tiempo de ejecución de Windows`Windows::Foundation::Collections` espacio de nombres.|
 
 ## <a name="see-also"></a>Vea también
 

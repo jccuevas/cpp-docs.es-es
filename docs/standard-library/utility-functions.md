@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362379"
 ---
 # <a name="ltutilitygt-functions"></a>Funciones de &lt;utility&gt;
 
@@ -39,7 +39,7 @@ T exchange(T& val, Other&& new_val)
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 El objeto que va a recibir el valor de new_val.
 
 *new_val*<br/>
@@ -100,7 +100,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Type*|El tipo del valor pasado en *Arg*, que puede ser diferente que el tipo de *Arg*. Lo suele determinar un argumento de plantilla de la función de reenvío.|
-|*arg*|Argumento que se va a convertir.|
+|*Arg*|Argumento que se va a convertir.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -170,7 +170,7 @@ El tipo del primer elemento par.
 *T2*<br/>
 El tipo del segundo elemento par.
 
-*incorporación de cambios*<br/>
+*pr*<br/>
 Par del que se selecciona.
 
 ### <a name="remarks"></a>Comentarios
@@ -232,7 +232,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>Parámetros
 
-*val1*<br/>
+*Val1*<br/>
 Valor que inicializa el primer elemento de `pair`.
 
 *Val2*<br/>
@@ -276,7 +276,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Type*|Pasa un tipo inferido a partir del tipo del argumento *Arg*, junto con las reglas de contracción de referencias.|
-|*arg*|Argumento que se va a convertir. Aunque el tipo de *Arg* parece estar especificado como una referencia rvalue, `move` también acepta argumentos lvalue porque las referencias de valor l se pueden enlazar a las referencias rvalue.|
+|*Arg*|Argumento que se va a convertir. Aunque el tipo de *Arg* parece estar especificado como una referencia rvalue, `move` también acepta argumentos lvalue porque las referencias de valor l se pueden enlazar a las referencias rvalue.|
 
 ### <a name="return-value"></a>Valor devuelto
 
