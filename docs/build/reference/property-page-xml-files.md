@@ -5,11 +5,11 @@ helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
 ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319475"
 ---
 # <a name="property-page-xml-rule-files"></a>Archivos XML de página de propiedades
 
@@ -137,7 +137,7 @@ En la sección siguiente se describen todos los elementos principales y algunos 
 
    i. **DisplayName**, **PageTemplate** y **Order** son propiedades relacionadas con la interfaz de usuario que están presentes en este modelo de datos que, en otros casos, es independiente de la interfaz de usuario. Con toda probabilidad estas propiedades se usarán en cualquier interfaz de usuario que se use para mostrar las páginas de propiedades. **DisplayName** y **Description** son dos propiedades que están presentes en casi todos los elementos del archivo XML. Y son las dos únicas que se localizan (la localización de estas cadenas se explicará en una publicación posterior).
 
-1. **Categoría:** Una regla puede tener varias categorías. El orden en que se muestran las categorías en el archivo XML es una sugerencia para que la interfaz de usuario muestre las categorías en el mismo orden. Por ejemplo, el orden de las categorías en el nodo C/C++ como se vea en la interfaz de usuario (General, Optimización, Preprocesador, ...).  es el mismo que en cl.xml. Una categoría de ejemplo tiene el aspecto siguiente:
+1. **Categoría**: Una regla puede tener varias categorías. El orden en que se muestran las categorías en el archivo XML es una sugerencia para que la interfaz de usuario muestre las categorías en el mismo orden. Por ejemplo, el orden de las categorías en el nodo C/C++ como se vea en la interfaz de usuario (General, Optimización, Preprocesador, ...).  es el mismo que en cl.xml. Una categoría de ejemplo tiene el aspecto siguiente:
 
     ```xml
     <Category Name="Optimization">
@@ -166,7 +166,7 @@ En la sección siguiente se describen todos los elementos principales y algunos 
 
    a. **Subtype** es un atributo que solo está disponible para **StringProperty** y **StringListProperty**; proporciona información contextual. Por ejemplo, el valor de "file" indica que la propiedad representa una ruta de acceso de archivo. Esta información contextual se usa para mejorar la experiencia de edición proporcionando un Explorador de Windows como el editor de la propiedad que permite al usuario elegir el archivo de manera visual.
 
-   b. **Categoría:** Esto declara que la categoría en la que pertenece esta propiedad. Intente buscar esta propiedad en la categoría **Archivos de salida** de la interfaz de usuario.
+   b. **Categoría**: Esto declara que la categoría en la que pertenece esta propiedad. Intente buscar esta propiedad en la categoría **Archivos de salida** de la interfaz de usuario.
 
    c. **Conmutador:** Cuando una regla representa una herramienta – como la herramienta de compilador en este caso: mayoría de las propiedades de la regla se pasa como modificadores a la herramienta ejecutable durante el tiempo de compilación. El valor de este atributo indica el literal de modificador que se va a usar. La propiedad anterior especifica que su modificador debe ser **Fo**. Combinada con el atributo **SwitchPrefix** de la regla primaria, esta propiedad se pasa al archivo ejecutable como **/Fo"Debug\"** (visible en la línea de comandos de C/C++ en la interfaz de usuario de la página de propiedades).
 

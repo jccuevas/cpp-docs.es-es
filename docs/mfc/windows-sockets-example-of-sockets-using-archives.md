@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305299"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Ejemplo de Sockets que usan archivos
 
@@ -47,11 +47,11 @@ En este modelo de comunicaciones, la palabra "Recibido", se envía el mensaje en
 
 Para obtener más información, consulte Especificación de Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Además, para obtener más información, consulte:
 
-- [Windows Sockets: Derivación de clases de Socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Sockets: derivar desde clases de socket](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets: Cómo funcionan los Sockets con archivos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets: cómo funcionan los sockets con archivos](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
+- [Windows Sockets: fondo](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>Vea también
 

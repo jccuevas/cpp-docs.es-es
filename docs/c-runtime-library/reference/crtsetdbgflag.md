@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348190"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ En la tabla siguiente se muestran los campos de bits de **_crtDbgFlag** y se des
 
 |Campo de bit|Default|Descripción|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Habilita las asignaciones del montón de depuración y el uso de identificadores de tipo de bloque de memoria, como **_CLIENT_BLOCK**. OFF: agrega nuevas asignaciones a la lista vinculada del montón, pero establece el tipo del bloque en **_IGNORE_BLOCK**.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: llama a [_CrtCheckMemory](crtcheckmemory.md) en cada solicitud de asignación y desasignación. OFF: **_CrtCheckMemory** se debe llamar explícitamente.<br /><br /> Las macros de comprobación de la frecuencia del montón no tienen ningún efecto cuando esta marca está establecida.|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Incluye **_CRT_BLOCK** tipos en estado de detección y la memoria de la pérdida de diferencia las operaciones. OFF: estas operaciones omiten la memoria que usa internamente la biblioteca en tiempo de ejecución.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: mantiene los bloques de memoria liberados en la lista vinculada del montón, les asigna el tipo **_FREE_BLOCK** y los rellena con el valor de byte 0xDD. OFF: no mantiene los bloques liberados en la lista vinculada del montón.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: realiza la comprobación automática de pérdidas cuando se cierra el programa con una llamada a [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) y genera un informe de errores si la aplicación no ha liberado toda la memoria que había asignado. OFF: no se realiza automáticamente la comprobación de pérdidas cuando se cierra el programa.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON: Habilitar las asignaciones del montón de depuración y el uso de identificadores de tipo de bloque de memoria, como **_CLIENT_BLOCK**. OFF: Agrega nuevas asignaciones a la lista vinculada del montón, pero establecer tipo del bloque en **_IGNORE_BLOCK**.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: Llame a [_CrtCheckMemory](crtcheckmemory.md) en cada solicitud de asignación y desasignación. OFF: **_CrtCheckMemory** se debe llamar explícitamente.<br /><br /> Las macros de comprobación de la frecuencia del montón no tienen ningún efecto cuando esta marca está establecida.|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON: Incluir **_CRT_BLOCK** tipos en estado de detección y la memoria de la pérdida de diferencia las operaciones. OFF: Estas operaciones omiten la memoria utilizada internamente por la biblioteca en tiempo de ejecución.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON: Mantener los bloques de memoria liberada en la lista vinculada del montón, les asigna el **_FREE_BLOCK** escriba y los rellena con el valor de byte 0xDD. OFF: No mantener los bloques liberados en la lista vinculada del montón.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON: Realiza la comprobación al salir del programa mediante una llamada a pérdidas automática [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) y generar un informe de errores si no se pudo liberar toda la memoria asignada por el la aplicación. OFF: No se realiza automáticamente la comprobación al salir del programa pérdidas.<br /><br /> También se puede combinar con cualquiera de las macros de comprobación de frecuencia del montón.|
 
 **Macros de frecuencia de comprobación del montón**
 

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349126"
 ---
 # <a name="moneypunct-class"></a>moneypunct (Clase)
 
@@ -69,7 +69,7 @@ class moneypunct;
 *CharType*<br/>
 Tipo usado dentro de un programa para codificar caracteres.
 
-*Internacional*<br/>
+*Intl*<br/>
 Una marca que especifica si las convenciones internacionales deben respetarse.
 
 ## <a name="remarks"></a>Comentarios
@@ -530,11 +530,11 @@ Valor entero que se usa para especificar el tipo de administración de memoria d
 
 Los valores posibles de la *_Refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 

@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
 ms.openlocfilehash: c976f9ec72929f2c8ff91fb9f9594d91c7457365
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331030"
 ---
 # <a name="smart-pointers-modern-c"></a>Punteros inteligentes (C++ moderno)
 
@@ -49,7 +49,7 @@ En el ejemplo se muestran los pasos básicos siguientes para utilizar punteros i
 
 1. Deje que el puntero inteligente elimine el objeto.
 
-Los punteros inteligentes están diseñados para ser lo más eficaces posible tanto en términos de memoria como de rendimiento. Por ejemplo, el único miembro de datos de `unique_ptr` es el puntero encapsulado. Esto significa que `unique_ptr` tiene exactamente el mismo tamaño que ese puntero, cuatro u ocho bytes. El acceso al puntero encapsulado a través del puntero inteligente sobrecargado * y los operadores -> no es mucho más lento que el acceso directo a los punteros sin formato.
+Los punteros inteligentes están diseñados para ser lo más eficaces posible tanto en términos de memoria como de rendimiento. Por ejemplo, el único miembro de datos de `unique_ptr` es el puntero encapsulado. Esto significa que `unique_ptr` tiene exactamente el mismo tamaño que ese puntero, cuatro u ocho bytes. Acceso a puntero encapsulado a través del puntero inteligente sobrecargado * y los operadores -> no es mucho más lento que el acceso directo a los punteros sin formato.
 
 Los punteros inteligentes tienen sus propias funciones miembro, a las que se accede mediante la notación “punto”. Por ejemplo, algunos punteros inteligentes de la biblioteca estándar de C++ tienen una función de miembro de restablecimiento que libera la propiedad del puntero. Esto es útil cuando se quiere liberar la memoria que es propiedad del puntero inteligente antes de que el puntero inteligente salga del ámbito, tal y como se muestra en el ejemplo siguiente.
 

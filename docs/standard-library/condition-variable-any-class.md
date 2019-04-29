@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
 ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279065"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any (Clase)
 
@@ -41,7 +41,7 @@ class condition_variable_any;
 
 |Name|Descripción|
 |----------|-----------------|
-|[condition_variable_any)](#condition_variable_any)|Construye un objeto `condition_variable_any`.|
+|[condition_variable_any](#condition_variable_any)|Construye un objeto `condition_variable_any`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -49,7 +49,7 @@ class condition_variable_any;
 |----------|-----------------|
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable_any`.|
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable_any`.|
-|[Espere](#wait)|Bloquea un subproceso.|
+|[wait](#wait)|Bloquea un subproceso.|
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 

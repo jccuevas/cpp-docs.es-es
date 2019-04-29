@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - signbit function
 ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356334"
 ---
 # <a name="signbit"></a>signbit
 
@@ -61,7 +61,7 @@ Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../
 ## <a name="see-also"></a>Vea también
 
 [Compatibilidad con el punto flotante](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite, _finite, _finitef](finite-finitef.md)<br/>
+[isfinite, _finite y _finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan, _isnan, _isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

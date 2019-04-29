@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353827"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -122,7 +122,7 @@ Devuelve cero si se ejecuta correctamente; devuelve un código de error si se pr
 
 ## <a name="remarks"></a>Comentarios
 
-El **strerror_s** función mapas *errnum* a una cadena de mensaje de error, devuelve la cadena de *búfer*. **_strerror_s** no toma el número de error usa el valor actual de **errno** para determinar el mensaje adecuado. Ni **strerror_s** ni **_strerror_s** imprimen realmente el mensaje: para ello, deberá llamar a una función de salida, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+El **strerror_s** función mapas *errnum* a una cadena de mensaje de error, devuelve la cadena de *búfer*. **_strerror_s** no toma el número de error usa el valor actual de **errno** para determinar el mensaje adecuado. Ni **strerror_s** ni **_strerror_s** imprimen realmente el mensaje: Para ello, deberá llamar a una función de salida, como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )

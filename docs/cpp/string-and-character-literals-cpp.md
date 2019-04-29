@@ -17,11 +17,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330848"
 ---
 # <a name="string-and-character-literals--c"></a>Literales de cadena y carácter (C++)
 
@@ -108,17 +108,17 @@ Hay tres tipos de secuencias de escape: simple, octal, hexadecimal. Las secuenci
 
 |Valor|Secuencia de escape|
 |-----------|---------------------|
-| Nueva línea | \\N |
+| Nueva línea | \\n |
 | Barra diagonal inversa | \\\\ |
 | Tabulación horizontal | \\t |
 | interrogación | ? o \\? |
-| Tabulación vertical | \\V |
+| Tabulación vertical | \\v |
 | Comilla simple | \\' |
-| Retroceso | \\B |
+| Retroceso | \\b |
 | Comilla doble | \\" |
-| Retorno de carro | \\R |
+| Retorno de carro | \\r |
 | Carácter nulo | \\0 |
-| Avance de página | \\F |
+| Avance de página | \\f |
 | Octal | \\OOO |
 | Alerta (campana) | \\a |
 | Hexadecimal | \\xhhh |
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>Literales de cadena sin formato (C++11)
 
-Un literal de cadena sin formato es una matriz terminada en null, de cualquier tipo de carácter, que contiene cualquier carácter gráfico, incluidas las comillas dobles ("), barra diagonal inversa (\\), o el carácter de nueva línea. Los literales de cadena sin formato suelen usarse en expresiones regulares que utilizan clases de caracteres, y en las cadenas HTML y XML. Para obtener ejemplos, vea el siguiente artículo: [preguntas más frecuentes de Bjarne Stroustrup sobre C++11](http://www.stroustrup.com/C++11FAQ.html).
+Un literal de cadena sin formato es una matriz terminada en null, de cualquier tipo de carácter, que contiene cualquier carácter gráfico, incluidas las comillas dobles ("), barra diagonal inversa (\\), o el carácter de nueva línea. Los literales de cadena sin formato suelen usarse en expresiones regulares que utilizan clases de caracteres, y en las cadenas HTML y XML. Consulte algunos ejemplos en el artículo siguiente: [Preguntas más frecuentes de Bjarne Stroustrup sobre C ++ 11](http://www.stroustrup.com/C++11FAQ.html).
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -373,7 +373,7 @@ El uso de códigos de escape hexadecimales insertados para especificar literales
 "\x05five"
 ```
 
-El resultado real es 5F hexadecimal, que es el código ASCII de un carácter de subrayado, seguido de los caracteres i, v y e. Para obtener el resultado correcto, puede utilizar una de las siguientes declaraciones:
+El resultado real es 5F hexadecimal, que es el código ASCII de un carácter de subrayado, seguido de los caracteres i, v y e. Para obtener el resultado correcto, puede utilizar una de las siguientes declaraciones:
 
 ```cpp
 "\005five"     // Use octal literal.

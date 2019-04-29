@@ -9,11 +9,11 @@ helpviewer_keywords:
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
 ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313888"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C++ nativo en la línea de comandos
 
@@ -172,5 +172,5 @@ El compilador de MSVC incluye una biblioteca de tiempo de ejecución de C (CRT) 
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)<br/>
-[Opciones del compilador MSVC](reference/compiler-options.md)
+[Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br/>
+[Opciones del compilador de MSVC](reference/compiler-options.md)

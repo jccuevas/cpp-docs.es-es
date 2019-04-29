@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341605"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ Si no se puede asignar el espacio, se genera una excepción de desbordamiento de
 
 **_alloca** asigna *tamaño* bytes a partir de la pila del programa. El espacio asignado automáticamente se libera cuando sale la función que realiza la llamada (no cuando la asignación simplemente queda fuera del ámbito). Por lo tanto, no pase el valor de puntero devuelto por **_alloca** como argumento a [libre](free.md).
 
-Hay restricciones para llamar explícitamente a **_alloca** en un controlador de excepciones (EH). Las rutinas del controlador de excepciones que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: llevan a cabo sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función de inclusión. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por lo tanto, llamar explícitamente a **_alloca** en cualquiera de lo siguientes escenarios, se produce un error del programa durante la devolución de la rutina de controlador de eventos que realiza la llamada:
+Hay restricciones para llamar explícitamente a **_alloca** en un controlador de excepciones (EH). Rutinas de controlador de eventos que se ejecutan en procesadores de clase x86 funcionan en su propio marco de memoria: Realizan sus tareas en el espacio de memoria que no se basa en la ubicación actual del puntero de pila de la función envolvente. Las implementaciones más habituales incluyen el control de excepciones estructuradas (SEH) de Windows NT y las expresiones de la cláusula catch de C++. Por lo tanto, llamar explícitamente a **_alloca** en cualquiera de lo siguientes escenarios, se produce un error del programa durante la devolución de la rutina de controlador de eventos que realiza la llamada:
 
 - Expresión de filtro de excepciones SEH de Windows NT: `__except ( _alloca() )`
 

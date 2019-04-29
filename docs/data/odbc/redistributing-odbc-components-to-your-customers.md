@@ -10,11 +10,11 @@ helpviewer_keywords:
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
 ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330081"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Redistribuir componentes ODBC a los clientes
 
@@ -26,11 +26,11 @@ Además, deberá incluir otro archivo en la mayoría de los casos. El archivo Od
 
 Los temas siguientes proporcionan más información sobre el uso de ODBC con las clases de base de datos:
 
-- [ODBC: La biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
+- [ODBC: la biblioteca de cursores ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-- [ODBC: Configurar un origen de datos ODBC](../../data/odbc/odbc-configuring-an-odbc-data-source.md)
+- [ODBC: configurar un origen de datos ODBC](../../data/odbc/odbc-configuring-an-odbc-data-source.md)
 
-- [ODBC: Llamar directamente a funciones de API de ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+- [ODBC: llamar directamente a funciones de la API de ODBC](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
 
 ## <a name="see-also"></a>Vea también
 

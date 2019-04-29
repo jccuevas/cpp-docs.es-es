@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309216"
 ---
 # <a name="ribbon-designer-mfc"></a>Diseñador de la cinta de opciones (MFC)
 
@@ -85,13 +85,13 @@ En la siguiente ilustración se muestran los distintos componentes del diseñado
 
 Los temas siguientes describen cómo usar las características del diseñador de la cinta de opciones:
 
-- [Cómo: Personalizar el botón aplicación](../mfc/how-to-customize-the-application-button.md)
+- [Cómo: personalizar el botón Aplicación](../mfc/how-to-customize-the-application-button.md)
 
-- [Cómo: Personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [Cómo: personalizar la barra de herramientas de acceso rápido](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Cómo: Agregar controles de cinta y controladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Cómo: agregar controles de cinta y controladores de eventos](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
-- [Cómo: Cargar un recurso de cinta desde una aplicación de MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
+- [Cómo: cargar un recurso de cinta desde una aplicación MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
 ## <a name="definitions-of-ribbon-elements"></a>Definiciones de elementos de la cinta de opciones
 

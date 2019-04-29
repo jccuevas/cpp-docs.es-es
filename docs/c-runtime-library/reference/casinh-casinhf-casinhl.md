@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
 ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340682"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
@@ -72,13 +72,13 @@ El seno hiperbólico inverso de *z*, en radianes. El resultado es independiente 
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **casinh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **casinh** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **casinh** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **casinh** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**casinh**, **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**,               **casinhf**, **casinhl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
