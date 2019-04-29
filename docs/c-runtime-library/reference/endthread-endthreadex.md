@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288828"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -67,7 +67,7 @@ Puede llamar a **_endthread** o **_endthreadex** explícitamente para terminar e
 Al igual que Win32 **ExitThread** API, **_endthreadex** no cierra el identificador de subproceso. Por lo tanto, cuando usa **_beginthreadex** y **_endthreadex**, debe cerrar el identificador de subproceso mediante una llamada a Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **_endthread** y **_endthreadex** hacer que los destructores de C++ pendientes en el subproceso no se puede llamar.
+> **_endthread** y **_endthreadex** provocar C++ destructores pendientes en el subproceso no se puede llamar.
 
 ## <a name="requirements"></a>Requisitos
 

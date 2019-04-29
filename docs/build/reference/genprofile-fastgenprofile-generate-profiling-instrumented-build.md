@@ -11,11 +11,11 @@ helpviewer_keywords:
 - FASTGENPROFILE
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 ms.openlocfilehash: cf6327b175344f1e2914792eb47a4838e544ea24
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292216"
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE (Generar compilación instrumentada de generación de perfiles)
 
@@ -70,6 +70,6 @@ También debe especificar **/LTCG** al especificar **/genprofile** o **/fastgenp
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)<br/>
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)<br/>
 [/LTCG (Generación de código en tiempo de enlace)](ltcg-link-time-code-generation.md)<br/>

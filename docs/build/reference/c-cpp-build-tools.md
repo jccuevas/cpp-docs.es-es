@@ -8,11 +8,11 @@ helpviewer_keywords:
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
 ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272850"
 ---
 # <a name="additional-msvc-build-tools"></a>Herramientas de generación MSVC adicionales
 
@@ -37,5 +37,5 @@ Visual C++ proporciona las utilidades de línea de comandos siguientes para ver 
 
 [Referencia de compilación de C/C++](c-cpp-building-reference.md)<br/>
 [Nombres representativos](decorated-names.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

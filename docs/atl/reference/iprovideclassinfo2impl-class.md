@@ -14,11 +14,11 @@ helpviewer_keywords:
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
 ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276047"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Clase IProvideClassInfo2Impl
 
@@ -59,7 +59,7 @@ La clase usada para administrar la información de tipo de la coclase. El valor 
 
 ### <a name="constructors"></a>Constructores
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|Constructor.|
 
@@ -72,7 +72,7 @@ La clase usada para administrar la información de tipo de la coclase. El valor 
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::_tih](#_tih)|Administra la información de tipo de la coclase.|
 

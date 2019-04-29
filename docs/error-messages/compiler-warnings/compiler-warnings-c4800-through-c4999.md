@@ -1,6 +1,6 @@
 ---
-title: C4800 de advertencias del compilador a través de C5999
-ms.date: 03/14/2019
+title: Advertencias del compilador de C4800 a C5999
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
-ms.translationtype: MT
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280326"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>C4800 de advertencias del compilador a través de C5999
+# <a name="compiler-warnings-c4800-through-c5999"></a>Advertencias del compilador de C4800 a C5999
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de advertencia generados por el compilador.
 
@@ -170,7 +170,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 
 |Advertencia|Mensaje|
 |-------------|------------|
-|[Advertencia (nivel 4) del compilador C4800](compiler-warning-level-3-c4800.md)| Conversión implícita de '*tipo*' a bool. Pérdida de información posible. |
+|[Advertencia del compilador (nivel 4) C4800](compiler-warning-level-3-c4800.md)| Conversión implícita de '*tipo*' a bool. Pérdida de información posible. |
 |[Advertencia del compilador (nivel 1) C4803](compiler-warning-level-1-c4803.md)|'*método*': el método raise tiene una clase de almacenamiento distinta de la del evento, '*eventos*'|
 |[Advertencia del compilador (nivel 1) C4804](compiler-warning-level-1-c4804.md)|'*operación*': uso no seguro del tipo 'bool' en la operación|
 |[Advertencia del compilador (nivel 1) C4805](compiler-warning-level-1-c4805.md)|'*operación*': combinación no segura del tipo '*type1*'y tipo'*type2*' en la operación|
@@ -206,8 +206,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 | Advertencia del compilador (nivel 4) C4847 | '\_\_declspec (no\_init\_all)' solo puede aplicarse a una función, un tipo de clase o una variable local: omite |
 | Advertencia del compilador (nivel 1) C4848 | compatibilidad con el atributo estándar ' ningún\_único\_dirección en C ++ 17 y versiones anteriores es una extensión de proveedor |
 |[Advertencia del compilador (nivel 4) C4866](c4866.md)| compilador no puede aplicar el orden de evaluación de izquierda a derecha de la llamada a *nombre_operador*|
-|[Advertencia (Error) del compilador C4867](compiler-warning-c4867.md)|'*función*': falta la lista de argumentos de llamada de función; utilice '*llamar*' para crear un puntero a miembro|
-|[Advertencia (nivel 4) del compilador C4868](compiler-warning-c4868.md)|'_archivo_(*line_number*)' compilador no puede aplicar el orden de evaluación de izquierda a derecha en la lista de inicialización entre llaves|
+|[Advertencia C4867 (Error) del compilador](compiler-warning-c4867.md)|'*función*': falta la lista de argumentos de llamada de función; utilice '*llamar*' para crear un puntero a miembro|
+|[Advertencia del compilador (nivel 4) C4868](compiler-warning-c4868.md)|'_archivo_(*line_number*)' compilador no puede aplicar el orden de evaluación de izquierda a derecha en la lista de inicialización entre llaves|
 |Advertencia del compilador (nivel 2) C4872|división de punto flotante por cero detectado al compilar el gráfico de llamadas para Concurrency:: parallel_for_each en: '*ubicación*'|
 |Advertencia del compilador (nivel 1) C4880|realiza la conversión de ' const *type_1*'para'*type_2*': desechar la declaración de un puntero o referencia puede provocar un comportamiento indefinido en una función de la restricción de amp|
 |Advertencia del compilador (nivel 4) C4881|el constructor o destructor no se invocará para la variable tile_static '*variable*'|
@@ -267,7 +267,7 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4974|'*símbolo*': marcado como en desuso|
 |Advertencia del compilador (nivel 3) C4981|Warbird: función '*función*' marcada como __forceinline no está entre líneas porque contiene semántica de excepción|
 |Advertencia del compilador (nivel 3) C4985|nombre del símbolo ': atributos no presentes en la declaración anterior.|
-|[Advertencia del compilador C4986](compiler-warning-c4986.md)|'*declaración*': especificación de excepción no coincide con la declaración anterior|
+|[Advertencia C4986 del compilador](compiler-warning-c4986.md)|'*declaración*': especificación de excepción no coincide con la declaración anterior|
 |Advertencia del compilador (nivel 4) C4987|se usó una extensión no estándar: 'throw (...)'|
 |Advertencia del compilador (nivel 4) C4988|'*variable*': variable declarada fuera del ámbito de clase o función|
 |Advertencia del compilador (nivel 4) C4989|'*tipo*': tipo tiene definiciones en conflicto.|
@@ -316,3 +316,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 | Advertencia del compilador (nivel 1) C5105 | expansión de macro producir 'defined' tiene un comportamiento indefinido |
 | Advertencia del compilador (nivel 1) C5106 | volver a definirse con distintos nombres de parámetro de macro |
 | Advertencia del compilador (nivel 1) C5107 | Falta la terminación '*char*' caracteres |
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Advertencias del compilador C4000 - C5999](compiler-warnings-c4000-c5999.md)
