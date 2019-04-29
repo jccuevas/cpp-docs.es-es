@@ -5,11 +5,11 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294166"
 ---
 # <a name="compiler-options-listed-by-category"></a>Opciones del compilador por categoría
 
@@ -17,7 +17,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="optimization"></a>Optimización
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Crea código pequeño.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Crea código rápido.|
@@ -33,7 +33,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="code-generation"></a>Generación de código
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/arch](arch-x86.md)|Utiliza instrucciones SSE o SSE2 en la generación de código. (solo x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|Genera un archivo de salida para ejecutar en Common Language Runtime.|
@@ -89,7 +89,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="preprocessor"></a>Preprocesador
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|Especifica un directorio de búsqueda para resolver las referencias a archivos que se transfieren a la directiva [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/C](c-preserve-comments-during-preprocessing.md)|Conserva los comentarios durante el preprocesamiento|
@@ -107,7 +107,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="language"></a>Lenguaje
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Controlar la evaluación de constexpr en tiempo de compilación.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Habilita [#pragma omp](../../preprocessor/omp.md) en el código fuente.|
@@ -131,7 +131,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="linking"></a>Vinculación
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|Establece el tamaño de la pila.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Crea una biblioteca de vínculos dinámicos.|
@@ -145,7 +145,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="miscellaneous"></a>Varios
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Enumera las opciones del compilador.|
 |[@](at-specify-a-compiler-response-file.md)|Especifica un archivo de respuesta.|
@@ -197,7 +197,7 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Opciones del compilador en desuso y quitadas
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Desusado. Utilice [/LN (Create MSIL Module)](ln-create-msil-module.md) en su lugar.|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Desusado. Crea un archivo de información de examen sin variables locales.|
@@ -218,5 +218,5 @@ Este artículo contiene una lista por categorías de las opciones del compilador
 ## <a name="see-also"></a>Vea también
 
 [Referencia de compilación de C/C++](c-cpp-building-reference.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
