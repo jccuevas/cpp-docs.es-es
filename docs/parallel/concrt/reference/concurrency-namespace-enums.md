@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337614"
 ---
 # <a name="concurrency-namespace-enums"></a>enumeraciones del espacio de nombres de simultaneidad
 
@@ -39,7 +39,7 @@ enum agent_status;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`agent_canceled`|`agent` se canceló.|
 |`agent_created`|El `agent` se ha creado pero no ha iniciado.|
@@ -65,7 +65,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`AGENTS_EVENT_CREATE`|Un tipo de evento que representa la creación de un objeto|
 |`AGENTS_EVENT_DESTROY`|Un tipo de evento que representa la eliminación de un objeto|
@@ -90,7 +90,7 @@ enum ConcRT_EventType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`CONCRT_EVENT_ATTACH`|Un tipo de evento que representa la acción de una asociación a un programador.|
 |`CONCRT_EVENT_BLOCK`|Un tipo de evento que representa la acción de un bloqueo de contexto.|
@@ -116,7 +116,7 @@ enum Concrt_TraceFlags;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`AgentEventFlag`||
 |`AllEventsFlag`||
@@ -140,7 +140,7 @@ enum CriticalRegionType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`InsideCriticalRegion`|Indica que el contexto está dentro de una región crítica. Dentro de una región crítica, las suspensiones asincrónicas se ocultan del programador. Debe ocurrir una suspensión, el Administrador de recursos esperará a que el subproceso se convierta en ejecutable y simplemente se reanudará en lugar de invocar el programador de nuevo. Los bloqueos tomados dentro de este tipo de región deben realizarse con extremo cuidado.|
 |`InsideHyperCriticalRegion`|Indica que el contexto está dentro de una región hyper crítica. Dentro de una región crítica hyper, suspensiones sincrónicas y asincrónicas se ocultan del programador. Debe una suspensión o de bloqueo se producen, el Administrador de recursos esperará a que el subproceso se convierta en ejecutable y simplemente se reanudará en lugar de invocar al programador de nuevo. Bloqueos tomados dentro de este tipo de región nunca deben compartirse con código que se ejecuta fuera de este tipo de región. Si lo hace, provocará un interbloqueo impredecible.|
@@ -160,7 +160,7 @@ enum DynamicProgressFeedbackType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|El programador no recopila información de progreso. Reequilibrio se realiza basándose únicamente en el nivel de suscripción del subproceso de hardware subyacente. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Este valor está reservado para su uso por el tiempo de ejecución.|
 |`ProgressFeedbackEnabled`|El programador recopila información de progreso y lo pasa al administrador de recursos. El Administrador de recursos usará esta información estadística para volver a equilibrar los recursos en nombre del programador además del nivel de suscripción de subproceso de hardware subyacente. Para obtener más información sobre los niveles de suscripción, consulte [IExecutionResource:: CurrentSubscriptionLevel](IExecutionResource-structure.md).|
@@ -175,7 +175,7 @@ enum join_type;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`greedy`|Expansiva `join` bloques de mensajería aceptan inmediatamente un mensaje en la propagación. Esto es más eficaz, pero tiene la posibilidad de un bloqueo activo, según la configuración de red.|
 |`non_greedy`|No expansivo `join` bloques de mensajería posponer mensajes e intentará consumen después de haber llegado todos. Estos se garantiza que funcionen, pero más lentamente.|
@@ -194,7 +194,7 @@ enum message_status;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`accepted`|El destino aceptó el mensaje.|
 |`declined`|El destino no aceptó el mensaje.|
@@ -215,7 +215,7 @@ enum PolicyElementKey;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`ContextPriority`|La prioridad del subproceso del sistema operativo de cada contexto en el programador. Si esta clave se establece en el valor `INHERIT_THREAD_PRIORITY` los contextos en el programador heredarán la prioridad del subproceso que creó el programador.<br /><br /> Valores válidos: Cualquiera de los valores válidos para el Windows `SetThreadPriority` función y el valor especial `INHERIT_THREAD_PRIORITY`<br /><br /> Valor predeterminado: `THREAD_PRIORITY_NORMAL`|
 |`ContextStackSize`|El tamaño de pila reservado de cada contexto en el programador en kilobytes.<br /><br /> Valores válidos: Números enteros positivos<br /><br /> Valor predeterminado: `0`, que indica que se utiliza el valor predeterminado de la variable del proceso para el tamaño de la pila.|
@@ -243,7 +243,7 @@ enum SchedulerType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`ThreadScheduler`|Indica una solicitud explícita de subprocesos Win32 normales.|
 |`UmsThreadDefault`|Subprocesos programables en modo usuario (UMS) no se admiten en el Runtime de simultaneidad en Visual Studio 2013. Usando `UmsThreadDefault` como valor de la directiva `SchedulerType` no se producirá un error. Sin embargo, un programador creado con esa directiva establecerá el uso de subprocesos Win32 como valor predeterminado.|
@@ -262,7 +262,7 @@ enum SchedulingProtocolType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`EnhanceForwardProgress`|El programador prefiere round-robin a través de grupos de programación después de ejecutar cada tarea. Contextos desbloqueados se programan normalmente en un modo de primero en el primero en salir (FIFO). Procesadores virtuales no almacenan en caché contextos desbloqueados.|
 |`EnhanceScheduleGroupLocality`|El programador prefiere continuar trabajando en tareas dentro del grupo de programación actual antes de pasar a otro grupo de programación. Contextos desbloqueados se almacenan en caché por cada procesador virtual y se programan normalmente en forma de último en el primero en salir (LIFO) mediante el procesador virtual que se les desbloqueado.|
@@ -281,7 +281,7 @@ enum SwitchingProxyState;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`Blocking`|Indica que el subproceso que realiza la llamada está bloqueando de forma cooperativa y debería ser propiedad exclusiva por el llamador hasta que posteriormente, volver a ejecutar y realizar otra acción.|
 |`Idle`|Indica que el subproceso de llamada ya no se necesita el componente Scheduler y se devuelven al administrador de recursos. El contexto que se enviaba es ya no puede ser utilizado por el Administrador de recursos.|
@@ -303,7 +303,7 @@ enum task_group_status;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`canceled`|El objeto `task_group` o `structured_task_group` se canceló. Puede que una o varias tareas no se hayan ejecutado.|
 |`completed`|Las tareas puestas en cola en el objeto `task_group` o `structured_task_group` se han completado correctamente.|
@@ -323,7 +323,7 @@ enum WinRTInitializationType;
 
 ### <a name="values"></a>Valores
 
-|Nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`DoNotInitializeWinRT`|Cuando la aplicación se ejecuta en los sistemas operativos con Windows 8 o una versión posterior, los subprocesos dentro del programador no se inicializarán en Windows Runtime.|
 |`InitializeWinRTAsMTA`|Cuando la aplicación se ejecuta en los sistemas operativos con Windows 8 o una versión posterior, cada subproceso del programador se inicializará en Windows en tiempo de ejecución y declarará que forma parte del apartamento multiproceso.|

@@ -3,11 +3,11 @@ title: 1. Introducción
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
 ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236455"
 ---
 # <a name="1-introduction"></a>1. Introducción
 
@@ -57,7 +57,7 @@ Los siguientes términos se usan en este documento:
 
   Una variable privada nombres de un bloque de almacenamiento que es único para el subproceso que hace la referencia. Hay varias maneras de especificar que una variable privada: una definición dentro de una región paralela, un `threadprivate` directiva, un `private`, `firstprivate`, `lastprivate`, o `reduction` cláusula o el uso de la variable como un `for`bucle variable de control en un `for` inmediatamente después de un bucle un `for` o `parallel for` directiva.
 
-- región
+- region
 
   Una extensión dinámica.
 
@@ -87,7 +87,7 @@ Los siguientes términos se usan en este documento:
 
   Uno o varios subprocesos cooperan y cumplen la ejecución de una construcción.
 
-- subproceso
+- thread
 
   Una entidad de ejecución tiene un flujo de control serie, un conjunto de variables privadas y el acceso a las variables compartidas.
 
@@ -133,5 +133,5 @@ Cuando se hace referencia esta especificación de API de OpenMP a C, se hace ref
 
 - [Funciones de biblioteca en tiempo de ejecución](3-run-time-library-functions.md)
 - [Variables de entorno](4-environment-variables.md)
-- [Definido por la implementación de comportamientos en OpenMP C/C ++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+- [Comportamientos definidos por la implementación de OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 - [Nuevas características en OpenMP C/C ++ versión 2.0](f-new-features-and-clarifications-in-version-2-0.md)

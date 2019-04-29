@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
 ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292411"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (Asignar nombre al archivo de asignaciones)
 
@@ -54,6 +54,6 @@ Símbolos globales en un archivo de asignaciones normalmente tienen uno o más c
 ## <a name="see-also"></a>Vea también
 
 [/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Especificar la ruta de acceso](specifying-the-pathname.md)

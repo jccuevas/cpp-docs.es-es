@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232407"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Específicos de Microsoft**
 
-**__cdecl** es el valor predeterminado convención de llamada para los programas C y C++. Dado que el llamador limpia la pila, puede realizar `vararg` funciones. El **__cdecl** convención de llamada crea archivos ejecutables mayores que [__stdcall](../cpp/stdcall.md), porque requiere que cada llamada a función incluya código de limpieza de la pila. En la lista siguiente se muestra la implementación de esta convención de llamada.
+**__cdecl** es el valor predeterminado convención de llamada de C y C++ programas. Dado que el llamador limpia la pila, puede realizar `vararg` funciones. El **__cdecl** convención de llamada crea archivos ejecutables mayores que [__stdcall](../cpp/stdcall.md), porque requiere que cada llamada a función incluya código de limpieza de la pila. En la lista siguiente se muestra la implementación de esta convención de llamada.
 
 |Elemento|Implementación|
 |-------------|--------------------|

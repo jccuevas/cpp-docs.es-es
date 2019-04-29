@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271351"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-Dado que el compilador de MSVC utiliza nombres representativos para las funciones de C++, se debe usar el nombre representativo *internal_name* o definir las funciones exportadas mediante `extern "C"` en el código fuente. El compilador también está contenido en las funciones de C que usan el [__stdcall](../../cpp/stdcall.md) con un carácter de subrayado la convención de llamada (\_) prefijo y sufijo se componen de la arroba (\@) seguido del número de bytes (en formato decimal) en el lista de argumentos.
+Dado que el compilador de MSVC utiliza nombres representativos para C++ funciones, se debe usar el nombre representativo *internal_name* o definir las funciones exportadas mediante `extern "C"` en el código fuente. El compilador también está contenido en las funciones de C que usan el [__stdcall](../../cpp/stdcall.md) con un carácter de subrayado la convención de llamada (\_) prefijo y sufijo se componen de la arroba (\@) seguido del número de bytes (en formato decimal) en el lista de argumentos.
 
 Para buscar los nombres representativos producidos por el compilador, utilice la [DUMPBIN](dumpbin-reference.md) herramienta o el vinculador [/MAP](map-generate-mapfile.md) opción. Los nombres representativos son específicos de cada compilador. Si exporta los nombres representativos en el archivo .DEF, los ejecutables que vinculen a la DLL se deberán compilar con la misma versión del compilador. Así, nos aseguramos de que los nombres representativos del autor de la llamada coincidan con los nombres exportados del archivo .DEF.
 

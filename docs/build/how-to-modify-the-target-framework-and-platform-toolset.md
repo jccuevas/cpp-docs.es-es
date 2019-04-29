@@ -1,5 +1,5 @@
 ---
-title: Filtrar Modificar la plataforma de destino y el conjunto de herramientas de plataforma
+title: Procedimiento Modificar la plataforma de destino y el conjunto de herramientas de plataforma
 ms.custom: conceptual
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273500"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Filtrar Modificar la plataforma de destino y el conjunto de herramientas de plataforma
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedimiento Modificar la plataforma de destino y el conjunto de herramientas de plataforma
 
 Puede cambiar la configuración del proyecto de Visual C++ a distintas versiones de .NET Framework de destino y utilizar conjuntos de herramientas de plataforma diferente. De forma predeterminada, el sistema de proyectos utiliza la versión de .NET Framework y la versión del conjunto de herramientas que corresponden a la versión de Visual Studio que se utiliza para crear el proyecto. Puede cambiar el conjunto de herramientas de la plataforma de destino modificando las propiedades del proyecto. Puede cambiar la versión de .Net Framework de destino modificando el archivo de proyecto (.vcxproj). No tiene que mantener una base de código independiente para cada destino de compilación.
 

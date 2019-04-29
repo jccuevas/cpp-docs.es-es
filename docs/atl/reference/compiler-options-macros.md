@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278428"
 ---
 # <a name="compiler-options-macros"></a>Macros de opciones de compilador
 
@@ -115,7 +115,7 @@ Definir esta macro con el fin de forzar el uso de sintaxis compatibles con el es
 
 Han cambiado las bibliotecas de ATL y MFC para que coincida con la conformidad de C++ estándar mejorada del compilador de Visual C++. Según el estándar ANSI C++, la sintaxis de un puntero a una función miembro de clase debe ser `&CMyClass::MyFunc`.
 
-Cuando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) no está definido (el caso predeterminado), ATL y MFC deshabilita el error C4867 en mapas de macro (mapas de mensajes en particular) para que pueda continuar el código que se crearon en versiones anteriores crear como antes. Si define **_ATL_ENABLE_PTM_WARNING**, el código debe ser compatible con el estándar de C++.
+Cuando [_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning) no está definido (el caso predeterminado), ATL y MFC deshabilita el error C4867 en mapas de macro (mapas de mensajes en particular) para que pueda continuar el código que se crearon en versiones anteriores crear como antes. Si define **_ATL_ENABLE_PTM_WARNING**, su código debería ser C++ compatible con el estándar.
 
 Sin embargo, el formato no estándar en desuso, por lo que deberá mover código existente a la sintaxis compatible con estándar de C++. Por ejemplo, los elementos siguientes:
 

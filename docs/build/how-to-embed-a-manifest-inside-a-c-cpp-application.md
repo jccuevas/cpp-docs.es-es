@@ -1,5 +1,5 @@
 ---
-title: Filtrar Incrustar un manifiesto en una aplicación C o C++
+title: Procedimiento Incrustar un manifiesto en una aplicación C o C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
 ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274387"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Filtrar Incrustar un manifiesto en una aplicación C o C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Procedimiento Incrustar un manifiesto en una aplicación C o C++
 
 Se recomienda que una aplicación de C o C++ (o biblioteca) tenga su manifiesto incrustado dentro del archivo binario final porque así garantiza comportamiento correcto en tiempo de ejecución en la mayoría de los escenarios. De forma predeterminada, Visual Studio intenta incrustar el manifiesto cuando compila un proyecto de archivos de origen. consulte [Manifest Generation en Visual Studio](manifest-generation-in-visual-studio.md) para obtener más información. Sin embargo si una aplicación compilada con nmake, son necesarios algunos cambios en el archivo MAKE existente. Esta sección muestra cómo cambiar archivos MAKE existente para insertar automáticamente el manifiesto dentro del archivo binario final.
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285991"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -85,7 +85,7 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
 |±SNaN|Igual que la entrada|INVALID||
-|±QNaN, indefinido|Igual que la entrada|||
+|±QNaN, indefinite|Igual que la entrada|||
 
 El **errno** valor se establece en ERANGE si *x* = -1. El **errno** valor se establece en **EDOM** si *x* < -1.
 

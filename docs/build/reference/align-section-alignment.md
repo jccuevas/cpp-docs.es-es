@@ -12,11 +12,11 @@ helpviewer_keywords:
 - section alignment
 - sections
 ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57809475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295271"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (Alineación de sección)
 
@@ -53,5 +53,5 @@ El valor de alineación que especifique no puede ser menor que la alineación de
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

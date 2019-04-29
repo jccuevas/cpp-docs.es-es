@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
 ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248238"
 ---
 # <a name="atl-property-page-wizard"></a>Asistente para páginas de propiedades ATL
 
@@ -38,7 +38,7 @@ Proporciona información para la clase de C++ creada para implementar el objeto.
 
 |||
 |-|-|
-|Término|de esquema JSON|
+|Término|Definición|
 |**Nombre corto**|Establece el nombre abreviado para el objeto. El nombre que proporcione determina la clase y **coclase** nombres, el archivo (**.cpp** y **.h**), los nombres de los **tipo** nombre y el  **Id. de programa**, a menos que cambie estos campos individualmente.|
 |**Archivo .h**|Establece el nombre del archivo de encabezado para la clase nueva del objeto. De forma predeterminada, este nombre se basa en el nombre que se proporciona en **nombre corto**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija, o bien para anexar la declaración de clase a un archivo existente. Si selecciona un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **finalizar** en el asistente.<br /><br /> El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la declaración de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.|
 |**Clase**|Establece el nombre de la clase que implementa el objeto. Este nombre se basa en el nombre que se proporciona en **nombre corto**, precedidos por 'C', el prefijo habitual para un nombre de clase.|
@@ -68,4 +68,4 @@ Proporciona información sobre la funcionalidad de COM para el objeto.
 
 [Opciones, Asistente para páginas de propiedades ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Cadenas, Asistente para páginas de propiedades ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Ejemplo: Implementación de una página de propiedades](../../atl/example-implementing-a-property-page.md)
+[Ejemplo: Implementar una página de propiedades](../../atl/example-implementing-a-property-page.md)

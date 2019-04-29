@@ -11,11 +11,11 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279104"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -38,7 +38,7 @@ A partir de Visual Studio 2015, la implementación de `steady_clock` ha cambiado
 
 ### <a name="structs"></a>Estructuras
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[common_type (Estructura)](../standard-library/common-type-structure.md)|Describe especializaciones de la clase de plantilla [common_type](../standard-library/common-type-class.md) para las creaciones de instancias de `duration` y `time_point`.|
 |[duration_values (Estructura)](../standard-library/duration-values-structure.md)|Proporciona valores concretos para el parámetro `Rep` de plantilla `duration`.|

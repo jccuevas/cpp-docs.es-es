@@ -15,11 +15,11 @@ helpviewer_keywords:
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
 ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259227"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS (clase)
 
@@ -35,7 +35,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>Definiciones de tipos públicas
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Hace referencia a clase [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Hace referencia a clase `CComFakeCriticalSection`.|
@@ -43,7 +43,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::Decrement](#decrement)|(Estático) Disminuye el valor de la variable especificada de una manera segura para subprocesos.|
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Estático) Incrementa el valor de la variable especificada de una manera segura para subprocesos.|

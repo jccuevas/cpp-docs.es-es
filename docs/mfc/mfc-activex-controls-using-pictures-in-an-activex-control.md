@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239297"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>Controles ActiveX MFC: Usar imágenes en un Control ActiveX
 
@@ -45,7 +45,7 @@ Las clases de controles ActiveX proporcionan varios componentes que puede usar p
 
 - Página de propiedades que manipula la propiedad o las propiedades de imagen de un control.
 
-   Esta página de propiedades forma parte de un grupo de páginas de propiedades estándar disponibles para los controles ActiveX. Para obtener más información sobre las páginas de propiedades de controles ActiveX, vea el artículo [controles ActiveX MFC: Uso de páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   Esta página de propiedades forma parte de un grupo de páginas de propiedades estándar disponibles para los controles ActiveX. Para obtener más información sobre las páginas de propiedades de controles ActiveX, vea el artículo [controles ActiveX MFC: usar páginas de propiedades estándar](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementar una propiedad de imagen personalizada en el control ActiveX
 
@@ -150,5 +150,5 @@ Después de completar las modificaciones, vuelva a generar el proyecto para inco
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Usar fuentes](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[Controles ActiveX MFC: Páginas de propiedades](../mfc/mfc-activex-controls-property-pages.md)
+[Controles ActiveX de MFC: usar fuentes](../mfc/mfc-activex-controls-using-fonts.md)<br/>
+[Controles ActiveX de MFC: páginas de propiedades](../mfc/mfc-activex-controls-property-pages.md)

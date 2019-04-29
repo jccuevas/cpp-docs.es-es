@@ -11,11 +11,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
 ms.openlocfilehash: 1731665ffa6117896490115028b4744e195beae2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291061"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Entrada y salida, Herramienta Manifiesto, Propiedades de configuración, Páginas de propiedades de &lt;NombreDeProyecto&gt; (Cuadro de diálogo)
 
@@ -65,4 +65,4 @@ Especifica si la aplicación es compatible con PPP. De forma predeterminada, el 
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [Páginas de propiedades de la herramienta Manifiesto](manifest-tool-property-pages.md)<br/>
-[Establece el compilador de C++ y crear propiedades en Visual Studio](../working-with-project-properties.md)<br/>
+[Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md)<br/>

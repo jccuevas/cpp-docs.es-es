@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219573"
 ---
 # <a name="general-window-creation-sequence"></a>Secuencia de creación de ventanas general
 
@@ -20,7 +20,7 @@ Cuando se crea una ventana de la ventana de su elección, como un elemento secun
 
 Todas las clases de ventana proporcionadas por emplear MFC [construcción en dos fases](../mfc/one-stage-and-two-stage-construction-of-objects.md). Es decir, durante una llamada de C++ **nuevo** operador, el constructor asigna y se inicializa un objeto de C++ pero no crea una ventana de Windows correspondiente. Que se realiza más adelante mediante una llamada a la [crear](../mfc/reference/cwnd-class.md#create) función de miembro del objeto de ventana.
 
-El `Create` función miembro hace que la ventana de Windows y almacena su `HWND` en miembro de datos públicos del objeto de C++ [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` le ofrece completos flexibilidad a través de los parámetros de creación. Antes de llamar a `Create`, que es posible que desee registrar una clase de ventana con la función global [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) con el fin de establecer los estilos de icono y de clase para el marco.
+El `Create` función miembro hace que la ventana de Windows y almacena su `HWND` en el C++ miembro de datos públicos del objeto [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` le ofrece completos flexibilidad a través de los parámetros de creación. Antes de llamar a `Create`, que es posible que desee registrar una clase de ventana con la función global [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) con el fin de establecer los estilos de icono y de clase para el marco.
 
 Ventanas de marco, puede usar el [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) función miembro en lugar de `Create`. `LoadFrame` hace que la ventana de Windows con menos parámetros. Obtiene muchos valores predeterminados de recursos, incluido el título del marco, icono, tabla de aceleradores y menús.
 

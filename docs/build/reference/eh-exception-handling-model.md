@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271806"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modelo de control de excepciones)
 
@@ -112,8 +112,8 @@ Sin embargo, el atributo que no produce excepciones no garantiza que una funció
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Controlar errores y excepciones](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Especificaciones de excepciones (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [Control de excepciones estructurado (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

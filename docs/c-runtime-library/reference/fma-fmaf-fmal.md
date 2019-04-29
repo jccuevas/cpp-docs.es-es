@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
 ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333500"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -94,7 +94,7 @@ De lo contrario, es posible que devuelva uno de los siguientes valores:
 
 |Problema|Volver|
 |-----------|------------|
-|*x* = infinito, *y* = 0 o<br /><br /> *x* = 0, *y* = infinito|NaN|
+|*x* = infinito, *y* = 0 o<br /><br /> *x* = 0, *y* = INFINITY|NaN|
 |*x* o *y* = exacta + infinito, *z* = infinito con signo opuesto|NaN|
 |*x* o *y* = NaN|NaN|
 |no (*x* = 0, *y*= indefinido) y *z* = NaN<br /><br /> no (*x*= indefinido, *y*= 0) y *z* = NaN|NaN|
@@ -113,7 +113,7 @@ Esta función calcula el valor como si fuera de precisión infinita y luego redo
 
 |Función|Encabezado C|Encabezado C++|
 |--------------|--------------|------------------|
-|**FMA**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

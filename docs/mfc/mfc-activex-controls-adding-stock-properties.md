@@ -10,11 +10,11 @@ helpviewer_keywords:
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225348"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Controles ActiveX MFC: Agregar propiedades estándar
 
@@ -73,7 +73,7 @@ Esto hace que la propiedad Caption disponibles para los usuarios de su control. 
 
 La `COleControl` clase proporciona nueve propiedades estándar. Puede agregar las propiedades que desee mediante el Asistente para agregar propiedades.
 
-|Property|Entrada del mapa de envíos|Cómo obtener acceso a valor|
+|Propiedad|Entrada del mapa de envíos|Cómo obtener acceso a valor|
 |--------------|------------------------|-------------------------|
 |`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Valor accesible como `m_sAppearance`.|
 |`BackColor`|DISP_STOCKPROP_BACKCOLOR( )|Valor accesible mediante una llamada a `GetBackColor`.|
@@ -103,6 +103,6 @@ El ejemplo siguiente se muestra cómo utilizar estas dos propiedades de color al
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Propiedades](../mfc/mfc-activex-controls-properties.md)<br/>
-[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX de MFC: propiedades](../mfc/mfc-activex-controls-properties.md)<br/>
+[Controles ActiveX de MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl (clase)](../mfc/reference/colecontrol-class.md)
