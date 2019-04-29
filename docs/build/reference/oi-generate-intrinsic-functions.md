@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
 ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320349"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (Generar funciones intrínsecas)
 
@@ -64,6 +64,6 @@ También usa [intrínseco](../../preprocessor/intrinsic.md) para crear funciones
 ## <a name="see-also"></a>Vea también
 
 [/O (Opciones) (Optimizar código)](o-options-optimize-code.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Intrínsecos del controlador](../../intrinsics/compiler-intrinsics.md)

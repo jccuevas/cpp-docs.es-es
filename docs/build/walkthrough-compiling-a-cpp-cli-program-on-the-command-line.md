@@ -3,11 +3,11 @@ title: 'Tutorial: Compilación de C++ / c++ / CLI programa en la línea de coman
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314174"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Tutorial: Compilación de C++ / c++ / CLI programa en la línea de comandos
 
@@ -61,5 +61,5 @@ Para habilitar la compilación de C / c++ / CLI, debe usar el [/CLR](reference/c
 ## <a name="see-also"></a>Vea también
 
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
-[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)<br/>
-[Opciones del compilador MSVC](reference/compiler-options.md)
+[Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)<br/>
+[Opciones del compilador de MSVC](reference/compiler-options.md)

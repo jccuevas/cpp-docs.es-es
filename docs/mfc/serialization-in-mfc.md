@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308218"
 ---
 # <a name="serialization-in-mfc"></a>Serialización en MFC
 
@@ -36,11 +36,11 @@ Si lo desea, puede omitir la serialización de MFC para crear su propio mecanism
 
 Los artículos siguientes tratan las dos tareas principales necesarias para la serialización:
 
-- [Serialización: Crear una clase Serializable](../mfc/serialization-making-a-serializable-class.md)
+- [Serialización: crear una clase serializable](../mfc/serialization-making-a-serializable-class.md)
 
-- [Serialización: Serializar un objeto](../mfc/serialization-serializing-an-object.md)
+- [Serialización: serializar un objeto](../mfc/serialization-serializing-an-object.md)
 
-El artículo [serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md) describe cuando la serialización es una técnica de entrada/salida adecuada en las aplicaciones de base de datos.
+El artículo [serialización: serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md) describe cuando la serialización es una técnica de entrada/salida adecuada en las aplicaciones de base de datos.
 
 ## <a name="see-also"></a>Vea también
 

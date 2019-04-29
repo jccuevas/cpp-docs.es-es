@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2936
 ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
 ms.openlocfilehash: 547690302661656cc5368f5969432de68ac91e3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302961"
 ---
 # <a name="compiler-error-c2936"></a>Error del compilador C2936
 
@@ -19,7 +19,7 @@ ms.locfileid: "50539560"
 
 No se puede usar una clase genérica o de plantilla como variable de datos local.
 
-Este error puede generarse si las llaves no tienen su pareja correspondiente.
+Este error puede producirse si las llaves no coinciden como es debido.
 
 El ejemplo siguiente genera la advertencia C2936:
 

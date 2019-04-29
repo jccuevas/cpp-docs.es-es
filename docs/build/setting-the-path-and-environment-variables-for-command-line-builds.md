@@ -19,11 +19,11 @@ helpviewer_keywords:
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
 ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315396"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos
 
@@ -38,8 +38,8 @@ Para ver qué variables de entorno se establecen mediante un acceso directo del 
 
 ## <a name="see-also"></a>Vea también
 
-[Usar el conjunto de herramientas MSVC desde la línea de comandos](building-on-the-command-line.md)<br/>
-[Referencia MSVC del vinculador](reference/linking.md)<br/>
-[Opciones del vinculador MSVC](reference/linker-options.md)<br/>
+[Uso del conjunto de herramientas MSVC desde la línea de comandos](building-on-the-command-line.md)<br/>
+[Referencia del enlazador MSVC](reference/linking.md)<br/>
+[Opciones del enlazador MSVC](reference/linker-options.md)<br/>
 [Referencia del compilador MSVC](reference/compiling-a-c-cpp-program.md)<br/>
-[Opciones del compilador MSVC](reference/compiler-options.md)
+[Opciones del compilador de MSVC](reference/compiler-options.md)
