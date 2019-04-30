@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389312"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -41,7 +41,7 @@ Especifica el segmento de datos en el que las variables inicializadas se almacen
 *"segment-name"*<br/>
 (Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.
 
-*"segmento-class"*<br/>
+*"segment-class"*<br/>
 (Opcional) Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.
 
 ## <a name="remarks"></a>Comentarios

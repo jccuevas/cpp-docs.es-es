@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
 ms.openlocfilehash: ae866b71d2a9f001c56b2c61d99749cab824b313
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392991"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>Acceso a todos los miembros de una colección
 

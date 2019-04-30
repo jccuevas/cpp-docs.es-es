@@ -1,5 +1,5 @@
 ---
-title: Filtrar Envolver una clase nativa para su uso porC#
+title: Procedimiento Envolver una clase nativa para su uso porC#
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
 ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387128"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>Procedimiento Envolver una clase nativa para su uso porC#
 

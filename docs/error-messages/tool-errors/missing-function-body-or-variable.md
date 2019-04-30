@@ -5,12 +5,12 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: c287d804df3222475d7cf32c6eb025f642dfb913
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378446"
 ---
 # <a name="missing-function-body-or-variable"></a>Cuerpo de función o variable no encontrados
 
@@ -20,7 +20,7 @@ Con un prototipo de función, el compilador puede continuar sin errores, pero el
 
 La llamada de función en main producirá el error LNK2019 porque el prototipo permite al compilador que cree que existe la función.  El vinculador busca que no es así.
 
-```
+```cpp
 // LNK2019_MFBV.cpp
 // LNK2019 expected
 void DoSomething(void);
@@ -33,7 +33,7 @@ int main() {
 
 En C++, asegúrese de que incluye la implementación de una función específica para una clase y no simplemente un prototipo en la definición de clase. Si va a definir la clase fuera del archivo de encabezado, no olvide incluir el nombre de clase antes de la función (`Classname::memberfunction`).
 
-```
+```cpp
 // LNK2019_MFBV_2.cpp
 // LNK2019 expected
 struct A {

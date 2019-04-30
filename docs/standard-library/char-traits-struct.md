@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379446"
 ---
 # <a name="chartraits-struct"></a>char_traits (Struct)
 
@@ -258,7 +258,7 @@ static char_type *copy(char_type* _To,
 *_To*<br/>
 El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-*_Desde*<br/>
+*_From*<br/>
 El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
 *_Num*<br/>
@@ -323,7 +323,7 @@ La matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres
 *dest_size*<br/>
 El tamaño de *dest*. Si `char_type` es **char**, entonces es este tamaño en bytes. Si `char_type` es **wchar_t**, a continuación, este tamaño no está en palabras.
 
-*_Desde*<br/>
+*_From*<br/>
 Matriz de cadenas o caracteres de origen que se va a copiar.
 
 *count*<br/>
@@ -384,7 +384,7 @@ El carácter EOF.
 
 Un valor que representa el final del archivo (por ejemplo, EOF o WEOF).
 
-El estándar de C++ indica que este valor no debe corresponder a un valor `char_type` válido. El compilador de Visual C++ exige esta restricción de tipo **char**, pero no para el tipo **wchar_t**. En el ejemplo siguiente se muestra esto.
+El estándar de C++ indica que este valor no debe corresponder a un valor `char_type` válido. El objeto Visual C++ compilador exige esta restricción de tipo **char**, pero no para el tipo **wchar_t**. En el ejemplo siguiente se muestra esto.
 
 ### <a name="example"></a>Ejemplo
 
@@ -766,7 +766,7 @@ static char_type *move(char_type* _To,
 *_To*<br/>
 El elemento situado al principio de la matriz de cadenas o caracteres destinada a recibir la secuencia de caracteres copiada.
 
-*_Desde*<br/>
+*_From*<br/>
 El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
 *_Num*<br/>
@@ -846,7 +846,7 @@ El elemento situado al principio de la matriz de cadenas o caracteres destinada 
 *dest_size*<br/>
 El tamaño de *dest*. Si `char_type` es **char**, está en bytes. Si `char_type` es **wchar_t**, está en palabras.
 
-*_Desde*<br/>
+*_From*<br/>
 El elemento situado al principio de la matriz de cadenas o caracteres de origen que se va a copiar.
 
 *count*<br/>

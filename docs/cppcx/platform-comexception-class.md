@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
 ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383352"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException (Clase)
 
@@ -55,7 +55,7 @@ La clase COMException tiene las propiedades siguientes.
 
 Las excepciones predefinidas siguientes se derivan de COMException. Difieren de COMException únicamente en su nombre, el nombre de su constructor y el valor HRESULT subyacente.
 
-|nombre|HRESULT subyacente|Descripción|
+|Name|HRESULT subyacente|Descripción|
 |----------|------------------------|-----------------|
 |COMException|*hresult definido por el usuario*|Se produce cuando se devuelve un HRESULT no reconocido de una llamada al método COM.|
 |AccessDeniedException|E_ACCESSDENIED|Se produce cuando se deniega el acceso a un recurso o a una característica.|

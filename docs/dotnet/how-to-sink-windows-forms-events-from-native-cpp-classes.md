@@ -1,5 +1,5 @@
 ---
-title: Filtrar Receptor de eventos de Windows Forms de clases nativas de C++
+title: Procedimiento Receptor de eventos de Windows Forms de clases nativas de C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
 ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387271"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Filtrar Receptor de eventos de Windows Forms de clases nativas de C++
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Procedimiento Receptor de eventos de Windows Forms de clases nativas de C++
 
 Puede habilitar clases de C++ nativas recibir devoluciones de llamada desde eventos administrados generados desde los controles de formularios Windows Forms u otros formularios con el formato de mapa de macros de MFC. Recibir eventos en las vistas y cuadros de diálogo es similar a la misma tarea para los controles.
 
