@@ -3,15 +3,15 @@ title: Usar expresiones lambda, objetos de función y funciones restringidas
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405331"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>Usar expresiones lambda, objetos de función y funciones restringidas
 
-El código de C++ AMP que se desea ejecutar en el Acelerador se especifica como un argumento en una llamada a la [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método. Puede proporcionar una expresión lambda o un objeto de función (functor) como ese argumento. Además, el objeto de función o expresión lambda puede llamar a una función con restricción AMP de C++. En este tema utiliza un algoritmo de suma de la matriz para demostrar las expresiones lambda, objetos de función y funciones restringidas. El ejemplo siguiente muestra el algoritmo sin código AMP de C++. Se crean dos dimensiones 1 matrices de igual longitud. Los elementos enteros correspondientes se agregan y se almacenan en una tercera matriz dimensional 1. No se utiliza C++ AMP.
+El C++ código AMP que se desea ejecutar en el Acelerador se especifica como un argumento en una llamada a la [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) método. Puede proporcionar una expresión lambda o un objeto de función (functor) como ese argumento. Además, el objeto de función o expresión lambda puede llamar a una función con restricción AMP de C++. En este tema utiliza un algoritmo de suma de la matriz para demostrar las expresiones lambda, objetos de función y funciones restringidas. El ejemplo siguiente muestra el algoritmo sin código AMP de C++. Se crean dos dimensiones 1 matrices de igual longitud. Los elementos enteros correspondientes se agregan y se almacenan en una tercera matriz dimensional 1. No se utiliza C++ AMP.
 
 ```cpp
 void CpuMethod() {

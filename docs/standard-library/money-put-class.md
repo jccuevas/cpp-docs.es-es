@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: b04160e9ed58f83bdc8ace218ae64b35395f6ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383547"
 ---
 # <a name="moneyput-class"></a>money_put (Clase)
 
@@ -120,7 +120,7 @@ Un formato de marca que cuando está establecido indica que el símbolo de moned
 *_Fill*<br/>
 Un carácter que se usa para el espaciado.
 
-*Val*<br/>
+*val*<br/>
 Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -242,7 +242,7 @@ Un formato de marca que cuando está establecido indica que el símbolo de moned
 *_Fill*<br/>
 Un carácter que se usa para el espaciado.
 
-*Val*<br/>
+*val*<br/>
 Un objeto de cadena que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto

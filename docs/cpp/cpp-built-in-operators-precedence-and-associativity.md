@@ -13,11 +13,11 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392354"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Operadores integrados de C++, precedencia y asociatividad
 
@@ -50,13 +50,13 @@ Operador *precedencia* especifica el orden de las operaciones en las expresiones
 |[Not lógico](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[Negación unaria](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[Suma unaria](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[Dirección de](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Address-of](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Direccionamiento indirecto](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Crear objeto](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[Destruir objeto](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Conversión de tipos](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Prioridad del grupo 4, de izquierda a derecha asociatividad**|
-|[Puntero a miembro (objetos o punteros)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; o ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[Puntero a miembro (objetos o punteros)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[.&#42; or ->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**Prioridad del grupo 5, de izquierda a derecha asociatividad**|
 |[Multiplicación](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[División](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|

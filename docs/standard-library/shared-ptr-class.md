@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412558"
 ---
 # <a name="sharedptr-class"></a>shared_ptr (Clase)
 
@@ -155,7 +155,7 @@ Varios subprocesos pueden leer y escribir diferentes objetos `shared_ptr` al mis
 
 |Operador|Descripción|
 |-|-|
-|[shared_ptr:: operator bool](#op_bool)|Comprueba si existe un recurso propio.|
+|[shared_ptr::operator bool](#op_bool)|Comprueba si existe un recurso propio.|
 |[shared_ptr::operator*](#op_star)|Obtiene el valor designado.|
 |[shared_ptr::operator=](#op_eq)|Reemplaza el recurso propio.|
 |[shared_ptr::operator-&gt;](#op_arrow)|Obtiene un puntero al valor designado.|
@@ -239,7 +239,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr:: operator bool
+## <a name="op_bool"></a>  shared_ptr::operator bool
 
 Comprueba si existe un recurso propio.
 
@@ -337,10 +337,10 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>Parámetros
 
-*SP*<br/>
+*sp*<br/>
 El puntero compartido que se va a copiar.
 
-*Asia Pacífico*<br/>
+*ap*<br/>
 El puntero automático que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -462,13 +462,13 @@ Tipo del eliminador.
 *ptr*<br/>
 Puntero que se va a copiar.
 
-*destructor*<br/>
+*dtor*<br/>
 El eliminador que se va a copiar.
 
 *A*<br/>
 Tipo del asignador.
 
-*Alloc*<br/>
+*alloc*<br/>
 El asignador que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -585,19 +585,19 @@ Tipo del eliminador.
 *A*<br/>
 Tipo del asignador.
 
-*destructor*<br/>
+*dtor*<br/>
 Eliminador.
 
-*ador*<br/>
+*ator*<br/>
 Asignador.
 
-*SP*<br/>
+*sp*<br/>
 El puntero inteligente que se va a copiar.
 
 *wp*<br/>
 El puntero débil.
 
-*Asia Pacífico*<br/>
+*ap*<br/>
 El puntero automático que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -721,7 +721,7 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>Parámetros
 
-*SP*<br/>
+*sp*<br/>
 El puntero compartido que se va a intercambiar.
 
 ### <a name="remarks"></a>Comentarios

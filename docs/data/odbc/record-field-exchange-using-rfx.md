@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395656"
 ---
 # <a name="record-field-exchange-using-rfx"></a>Intercambio de campos de registro: Utilizar RFX
 
@@ -20,9 +20,9 @@ En este tema se explica qué hacer para utilizar RFX en función de lo que hace 
 
 Los temas siguientes contienen información relacionada:
 
-- [Intercambio de campos de registro: Trabajar con el código de asistente](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) presenta los principales componentes de RFX y explica el código que el Asistente para aplicaciones MFC y **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) escribir para admitir RFX y cómo desea modificar el código del asistente.
+- [Intercambio de campos de registros: Trabajar con el código de asistente](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md) presenta los principales componentes de RFX y explica el código que el Asistente para aplicaciones MFC y **Agregar clase** (como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) escribir para admitir RFX y cómo desea modificar el código del asistente.
 
-- [Intercambio de campos de registro: Uso de las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) explica cómo escribir llamadas a las funciones RFX en su `DoFieldExchange` invalidar.
+- [Intercambio de campos de registros: Uso de las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md) explica cómo escribir llamadas a las funciones RFX en su `DoFieldExchange` invalidar.
 
 En la tabla siguiente se muestra su rol en relación con lo que hace el marco de trabajo para usted.
 
@@ -41,8 +41,8 @@ En la tabla siguiente se muestra su rol en relación con lo que hace el marco de
 ## <a name="see-also"></a>Vea también
 
 [Intercambio de campos de registros (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Intercambio de campos de registro: Funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[Intercambio de campos de registros: funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Conjunto de registros: obtener cálculos SUM y otros resultados agregados (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset (clase)](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange (clase)](../../mfc/reference/cfieldexchange-class.md)<br/>
 [Macros, funciones globales y Variables globales](../../mfc/reference/mfc-macros-and-globals.md)

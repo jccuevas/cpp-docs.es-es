@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394018"
 ---
 # <a name="deque-class"></a>deque (Clase)
 
@@ -111,7 +111,7 @@ class deque
 *Type*<br/>
 Tipo de datos de elementos que se va a almacenar en deque.
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de deque. Este argumento es opcional y el valor predeterminado es **asignador\<tipo >**.
 
 ## <a name="remarks"></a>Comentarios
@@ -235,7 +235,7 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar del argumento deque.
 
 *Último*<br/>
@@ -321,7 +321,7 @@ const_reference at(size_type pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 Subíndice (o número de posición) del elemento al que se va a hacer referencia en el deque.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -775,9 +775,9 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*Recuento*|Número de elementos del deque construido.|
 |*Val*|Valor de los elementos del deque construido.|
 |*Derecha*|Deque del cual el deque construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
-|* IList'|initializer_list que se va a copiar.|
+|* IList'| Initializer_list que se va a copiar.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1072,8 +1072,8 @@ iterator emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|*_WHERE*|Posición del [deque](../standard-library/deque-class.md) en la que se inserta el primer elemento.|
-|*Val*|Valor del elemento insertado en el `deque`.|
+|*_Where*|Posición del [deque](../standard-library/deque-class.md) en la que se inserta el primer elemento.|
+|*val*|Valor del elemento insertado en el `deque`.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1137,7 +1137,7 @@ void emplace_back(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|El elemento que se agrega al final del [deque](../standard-library/deque-class.md).|
+|*val*|El elemento que se agrega al final del [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Ejemplo
 
@@ -1187,7 +1187,7 @@ void emplace_front(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|El elemento que se agrega al principio del [deque](../standard-library/deque-class.md).|
+|*val*|El elemento que se agrega al principio del [deque](../standard-library/deque-class.md).|
 
 ### <a name="example"></a>Ejemplo
 
@@ -1334,13 +1334,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 Posición del elemento que se quitará del deque.
 
 *first*<br/>
 Posición del primer elemento que se ha quitado del deque.
 
-*Último*<br/>
+*last*<br/>
 Posición inmediatamente siguiente a la del último elemento que se ha quitado del deque.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1520,7 +1520,7 @@ IList);
 |*Where*|Posición del deque de destino donde se inserta el primer elemento.|
 |*Val*|Valor del elemento que se va a insertar en el deque.|
 |*Recuento*|Número de elementos que se van a insertar en el deque.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos del argumento deque que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos del argumento deque que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos del argumento deque que se va a copiar.|
 |*IList*|initializer_list de los elementos que se van a insertar.|
 
@@ -1591,7 +1591,7 @@ const_reference operator[](size_type pos) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*punto de venta*<br/>
+*pos*<br/>
 La posición del elemento deque al que se va a hacer referencia.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1816,7 +1816,7 @@ void push_back(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|El elemento que se agrega al final del deque.|
+|*val*|El elemento que se agrega al final del deque.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1835,7 +1835,7 @@ void push_front(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|El elemento que se agrega al principio del deque.|
+|*val*|El elemento que se agrega al principio del deque.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -2090,7 +2090,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 Nuevo tamaño del deque.
 
-*Val*<br/>
+*val*<br/>
 Valor de los nuevos elementos que se agregarán al deque si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, a los nuevos elementos se les asigna el valor predeterminado para la clase.
 
 ### <a name="remarks"></a>Comentarios

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
 ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397814"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Conjunto de registros: Cómo actualizar los registros (ODBC)
 
@@ -73,4 +73,4 @@ Cuando se llama a [AddNew](../../mfc/reference/crecordset-class.md#addnew) o [ed
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Cómo AddNew, Edit y Delete (ODBC) de trabajo](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Conjunto de registros: funcionamiento de AddNew, Edit y Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

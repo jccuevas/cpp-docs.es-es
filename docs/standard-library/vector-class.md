@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410907"
 ---
 # <a name="vector-class"></a>vector (Clase)
 
@@ -109,7 +109,7 @@ class vector
 *Type*<br/>
 Tipo de datos de elementos que se almacenará en el vector.
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria del vector. Este argumento es opcional y el valor predeterminado es `allocator<Type>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -224,7 +224,7 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar.
 
 *Último*<br/>
@@ -897,8 +897,8 @@ iterator emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|*_WHERE*|La posición del [vector](../standard-library/vector-class.md) donde se inserta el primer elemento.|
-|*Val*|Valor del elemento insertado en el `vector`.|
+|*_Where*|La posición del [vector](../standard-library/vector-class.md) donde se inserta el primer elemento.|
+|*val*|Valor del elemento insertado en el `vector`.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1080,9 +1080,9 @@ iterator erase(
 
 |Parámetro|Descripción|
 |-|-|
-|*_WHERE*|Posición del elemento que se quita del vector.|
+|*_Where*|Posición del elemento que se quita del vector.|
 |*first*|Posición del primer elemento que se quita del vector.|
-|*Último*|Posición inmediatamente siguiente al último elemento que se quita del vector.|
+|*last*|Posición inmediatamente siguiente al último elemento que se quita del vector.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1247,11 +1247,11 @@ void insert(
 
 |Parámetro|Descripción|
 |-|-|
-|*_WHERE*|Posición del vector donde se inserta el primer elemento.|
-|*Val*|Valor del elemento que se va a insertar en el vector.|
+|*_Where*|Posición del vector donde se inserta el primer elemento.|
+|*val*|Valor del elemento que se va a insertar en el vector.|
 |*count*|Número de elementos que se van a insertar en el vector.|
 |*first*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
-|*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
+|*last*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1386,7 +1386,7 @@ const_reference operator[](size_type Pos) const;
 
 |Parámetro|Descripción|
 |-|-|
-|*punto de venta*|Posición del elemento vector.|
+|*Pos*|Posición del elemento vector.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1753,7 +1753,7 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>Parámetros
 
-*NewSize*<br/>
+*Newsize*<br/>
 Nuevo tamaño del vector.
 
 *Val*<br/>
@@ -2102,7 +2102,7 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Recuento*|Número de elementos del vector construido.|
 |*Val*|Valor de los elementos del vector construido.|
 |*Derecha*|Vector del que el vector construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 

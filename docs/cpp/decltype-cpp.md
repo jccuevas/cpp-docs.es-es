@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399088"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*Expresión*|Una expresión. Para obtener más información, consulte [expresiones](../cpp/expressions-cpp.md).|
+|*expression*|Una expresión. Para obtener más información, consulte [expresiones](../cpp/expressions-cpp.md).|
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>Ejemplo
 
-**Visual Studio 2017 y versiones posterior:** el compilador analiza argumentos decltype cuando las plantillas se declara en lugar de crear una instancia. Por consiguiente, si se detecta una especialización no dependiente en el argumento decltype, no se aplaza hasta el momento de la creación de instancias, sino que se procesa inmediatamente y los errores resultantes se diagnostican en ese momento.
+**Visual Studio 2017 y versiones posterior:** El compilador analiza argumentos decltype cuando las plantillas se declara en lugar de crear una instancia. Por consiguiente, si se detecta una especialización no dependiente en el argumento decltype, no se aplaza hasta el momento de la creación de instancias, sino que se procesa inmediatamente y los errores resultantes se diagnostican en ese momento.
 
 En el ejemplo siguiente se muestra este tipo de error del compilador que se genera en el punto de declaración:
 

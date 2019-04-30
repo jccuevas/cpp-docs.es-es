@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
 ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395331"
 ---
 # <a name="compiler-error-c2978"></a>Error del compilador C2978
 
