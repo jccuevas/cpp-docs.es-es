@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412038"
 ---
 # <a name="timeget-class"></a>time_get (Clase)
 
@@ -220,7 +220,7 @@ iter_type first,
 *first*<br/>
 Iterador de entrada que indica el inicio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que indica el final de la secuencia.
 
 *iosbase*<br/>
@@ -232,10 +232,10 @@ Un campo iosbase donde se establecen los elementos de máscara de bits apropiado
 *ptm*<br/>
 Puntero a la estructura de tiempo en la que se debe almacenar la hora.
 
-*FMT*<br/>
+*fmt*<br/>
 Carácter especificador de conversión.
 
-*Mod*<br/>
+*mod*<br/>
 Carácter modificador opcional.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -313,7 +313,7 @@ virtual iter_type do_get_date(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -364,7 +364,7 @@ virtual iter_type do_get_monthname(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -407,7 +407,7 @@ virtual iter_type do_get_time(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -458,7 +458,7 @@ virtual iter_type do_get_weekday(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -501,7 +501,7 @@ virtual iter_type do_get_year(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -556,7 +556,7 @@ iter_type get(
 *first*<br/>
 Iterador de entrada que indica dónde comienza la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que indica dónde acaba la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -568,10 +568,10 @@ Se establecen los elementos de máscara de bits apropiados para que el estado de
 *ptm*<br/>
 Puntero a la estructura de tiempo en la que se va a almacenar la hora.
 
-*FMT*<br/>
+*fmt*<br/>
 Carácter especificador de conversión.
 
-*Mod*<br/>
+*mod*<br/>
 Carácter modificador opcional.
 
 *fmt_first*<br/>
@@ -613,7 +613,7 @@ iter_type get_date(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -707,7 +707,7 @@ iter_type get_monthname(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -799,7 +799,7 @@ iter_type get_time(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -880,7 +880,7 @@ iter_type get_weekday(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -957,7 +957,7 @@ iter_type get_year(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
 *iosbase*<br/>
@@ -1040,18 +1040,18 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Parámetros
 
-*Refs*<br/>
+*refs*<br/>
 Valor entero que se usa para especificar el tipo de administración de memoria del objeto.
 
 ### <a name="remarks"></a>Comentarios
 
 Los valores posibles de la *refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 

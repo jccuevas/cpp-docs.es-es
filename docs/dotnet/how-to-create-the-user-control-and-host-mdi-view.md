@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
 ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387440"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Filtrar Crear el Control de usuario y el Host en una vista MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Procedimiento Crear el Control de usuario y el Host en una vista MDI
 
 Los pasos siguientes muestran cómo crear un control de usuario de .NET Framework, editarlo en una biblioteca de clases de control (específicamente un proyecto de la Biblioteca de controles de Windows) y, después, compilar el proyecto en un ensamblado. El control, a continuación, se puede consumir desde una aplicación MFC que utiliza clases derivadas de [clase CView](../mfc/reference/cview-class.md) y [CWinFormsView (clase)](../mfc/reference/cwinformsview-class.md).
 

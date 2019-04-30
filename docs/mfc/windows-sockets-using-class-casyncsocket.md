@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399569"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets: Usar la clase CAsyncSocket
 
@@ -44,7 +44,7 @@ En este artículo se tratan los aspectos siguientes:
 
    [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
-     O bien
+     -o bien-
 
    [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
@@ -66,7 +66,7 @@ En este artículo se tratan los aspectos siguientes:
 
 1. Si el socket es un cliente, conecte el objeto de socket a un servidor de socket, mediante [CAsyncSocket:: Connect](../mfc/reference/casyncsocket-class.md#connect).
 
-     O bien
+     -o bien-
 
    Si el socket es un servidor, establecer el socket para empezar a escuchar (con [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)) de intentos de conexión desde un cliente. Al recibir una solicitud de conexión, aceptarla con [CAsyncSocket:: Accept](../mfc/reference/casyncsocket-class.md#accept).
 
@@ -103,11 +103,11 @@ A pesar de estos problemas, clase `CAsycnSocket` puede ser la opción más adecu
 
 Para obtener más información, consulte:
 
-- [Windows Sockets: En segundo plano](../mfc/windows-sockets-background.md)
+- [Windows Sockets: fondo](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets: Sockets de Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets: sockets de secuencias](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets: Sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets: sockets de datagrama](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Vea también
 

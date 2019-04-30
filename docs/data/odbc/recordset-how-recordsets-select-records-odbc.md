@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397827"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)
 
@@ -99,7 +99,7 @@ Si desea basar el conjunto de registros en una instrucción SQL compleja, deber�
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Conjunto de registros: cómo los conjuntos de registros actualizan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Conceptos básicos de ODBC](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Conjunto de registros: Bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Conjunto de registros: bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

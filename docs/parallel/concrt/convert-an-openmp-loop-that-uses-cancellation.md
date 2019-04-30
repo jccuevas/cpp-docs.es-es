@@ -6,11 +6,11 @@ helpviewer_keywords:
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
 ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413949"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Procedimiento Convertir un bucle OpenMP que usa la cancelación para usar el Runtime de simultaneidad
 

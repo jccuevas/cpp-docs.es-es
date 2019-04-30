@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412610"
 ---
 # <a name="sharedfuture-class"></a>shared_future (Clase)
 
@@ -56,7 +56,7 @@ Los objetos `shared_future` no están sincronizados. Llamar a métodos en el mis
 |----------|-----------------|
 |[get](#get)|Recupera el resultado almacenado en el *estado asincrónico asociado*.|
 |[valid](#valid)|Especifica si el objeto no está vacío.|
-|[Espere](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
+|[wait](#wait)|Bloquea el subproceso actual hasta que el estado asincrónico asociado esté listo.|
 |[wait_for](#wait_for)|Se bloquea hasta que el estado asincrónico asociado está listo, o bien hasta que el tiempo especificado haya transcurrido.|
 |[wait_until](#wait_until)|Se bloquea hasta que el estado asincrónico asociado está listo o hasta un punto determinado en el tiempo.|
 
@@ -72,7 +72,7 @@ Los objetos `shared_future` no están sincronizados. Llamar a métodos en el mis
 
 **Espacio de nombres:** std
 
-## <a name="get"></a>  shared_future::Get
+## <a name="get"></a>  shared_future::get
 
 Recupera el resultado almacenado en el *estado asincrónico asociado*.
 
@@ -106,7 +106,7 @@ shared_future& operator=(const shared_future& Right);
 ### <a name="parameters"></a>Parámetros
 
 *Derecha*<br/>
-Un objeto `shared_future`.
+Objeto `shared_future`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -142,7 +142,7 @@ Los constructores segundo y terceros crean un `shared_future` de objetos y trans
 
 El cuarto constructor crea un `shared_future` objeto que tiene el mismo estado asincrónico asociado que *derecha*.
 
-## <a name="valid"></a>  shared_future::Valid
+## <a name="valid"></a>  shared_future::valid
 
 Especifica si el objeto tiene un *estado asincrónico asociado*.
 

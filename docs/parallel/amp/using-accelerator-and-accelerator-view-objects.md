@@ -3,15 +3,15 @@ title: Usar objetos accelerator y accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405396"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Usar objetos accelerator y accelerator_view
 
-Puede usar el [acelerador](../../parallel/amp/reference/accelerator-class.md) y [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) clases para especificar el dispositivo o emulador para ejecutar el código de C++ AMP. Un sistema podría tener varios dispositivos o emuladores que difieren según la cantidad de memoria, la compatibilidad de memoria compartida, la compatibilidad con la depuración o compatibilidad de doble precisión. C++ Accelerated Massive Parallelism (C++ AMP) proporciona las API que puede usar para examinar los aceleradores disponibles, establecer uno como el valor predeterminado, especifique varios objetos accelerator_views para múltiples llamadas a y realizar tareas de depuración especiales.
+Puede usar el [acelerador](../../parallel/amp/reference/accelerator-class.md) y [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) clases para especificar el dispositivo o emulador para ejecutar su C++ código AMP en. Un sistema podría tener varios dispositivos o emuladores que difieren según la cantidad de memoria, la compatibilidad de memoria compartida, la compatibilidad con la depuración o compatibilidad de doble precisión. C++Accelerated Massive Parallelism (C++ AMP) proporciona las API que puede usar para examinar los aceleradores disponibles, establecer uno como el valor predeterminado, especifique varios objetos accelerator_views para múltiples llamadas a y realizar tareas de depuración especiales.
 
 ## <a name="using-the-default-accelerator"></a>Usar el Acelerador predeterminado
 

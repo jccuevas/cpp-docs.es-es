@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396799"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Error del compilador de recursos RW2002
 
@@ -69,7 +69,7 @@ Error de análisis
 
 1. **nombre de la clase control esperado**
 
-   El `class` campo de un **CONTROL** instrucción en el **diálogo** instrucción debe ser uno de los siguientes tipos: botón, COMBOBOX, EDIT, LISTBOX, barra de desplazamiento, estático, o definido por el usuario. Asegúrese de que la clase está escrita correctamente.
+   El `class` campo de un **CONTROL** instrucción en el **diálogo** instrucción debe ser uno de los siguientes tipos: BOTÓN, COMBOBOX, EDIT, LISTBOX, barra de desplazamiento, estático, o definido por el usuario. Asegúrese de que la clase está escrita correctamente.
 
 1. **Se esperaba el nombre de fuente**
 
@@ -141,7 +141,7 @@ Error de análisis
 
 1. **Tipo de control no válido**
 
-   Cada instrucción de control en un **diálogo** instrucción debe ser uno de los siguientes: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, icono, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, barra de desplazamiento. Asegúrese de que estas instrucciones de control estén escritas correctamente.
+   Cada instrucción de control en un **diálogo** instrucción debe ser uno de los siguientes: CASILLA DE VERIFICACIÓN, CUADRO COMBINADO, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICONO, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, BARRA DE DESPLAZAMIENTO. Asegúrese de que estas instrucciones de control estén escritas correctamente.
 
 1. **Tipo no válido**
 

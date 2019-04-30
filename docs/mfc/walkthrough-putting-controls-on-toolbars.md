@@ -1,16 +1,16 @@
 ---
 title: 'Tutorial: Insertar controles en barras de herramientas'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392458"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Tutorial: Insertar controles en barras de herramientas
 
@@ -62,7 +62,7 @@ En primer lugar, cree el **buscar** control de cuadro combinado:
 
 1. En la clase `CFindComboBox`, invalide el método virtual `PreTranslateMessage`. Este método habilitará el cuadro combinado para procesar el [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) mensaje. Si el usuario presiona la tecla Escape (`VK_ESCAPE`), devuelve el foco a la ventana marco principal. Si el usuario presiona la tecla Entrar (`VK_ENTER`), envía a la ventana marco principal un mensaje de `WM_COMMAND` que contiene el id. de comando `ID_EDIT_FIND_COMBO`.
 
-1. Cree una clase para el **buscar** botón de cuadro combinado, derivado de [CMFCToolBarComboBoxButton (clase)](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). En este ejemplo, se llama `CFindComboButton`.
+1. Cree una clase para el **buscar** botón de cuadro combinado, derivado de [CMFCToolBarComboBoxButton (clase)](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). En este ejemplo, se denomina `CFindComboButton`.
 
 1. El constructor de `CMFCToolbarComboBoxButton` toma tres parámetros: el id. de comando del botón, el índice de la imagen del botón y el estilo del cuadro combinado. Establezca estos parámetros de la siguiente forma:
 

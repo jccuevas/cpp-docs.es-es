@@ -4,11 +4,11 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404694"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Conversiones de tipos y seguridad de tipos (C++ moderno)
 
@@ -30,8 +30,8 @@ En una conversión de ampliación, un valor de una variable menor se asigna a un
 |----------|--------|
 |Cualquiera con o sin el signo de tipo entero excepto **long long** o **__int64**|**double**|
 |**BOOL** o **char**|Cualquier otro tipo integrado|
-|**short** o **wchar_t**|**int**, **largo**, **long long**|
-|**int**, **largo**|**long long**|
+|**short** o **wchar_t**|**int**, **long**, **long long**|
+|**int**, **long**|**long long**|
 |**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>Conversiones de restricción (coerción)

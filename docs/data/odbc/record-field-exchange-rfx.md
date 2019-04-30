@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395721"
 ---
 # <a name="record-field-exchange-rfx"></a>Intercambio de campos de registros (RFX)
 
@@ -38,11 +38,11 @@ Si necesita una descripción más avanzada de RFX, consulte [intercambio de camp
 
 Los siguientes temas explican los detalles del uso de objetos de conjunto de registros:
 
-- [Intercambio de campos de registro: Utilizar RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Intercambio de campos de registros: utilizar RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Intercambio de campos de registro: Uso de las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Intercambio de campos de registros: usar las funciones de RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [Intercambio de campos de registro: Funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [Intercambio de campos de registros: funcionamiento de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>Vea también
 

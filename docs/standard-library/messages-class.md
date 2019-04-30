@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383586"
 ---
 # <a name="messages-class"></a>messages (Clase)
 
@@ -152,10 +152,10 @@ virtual string_type do_get(
 *_Catval*<br/>
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer*<br/>
+*_Set*<br/>
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
 *_Dfault*<br/>
@@ -222,10 +222,10 @@ string_type get(
 *_Catval*<br/>
 El valor de identificación que especifica el catálogo de mensajes que se va a buscar.
 
-*_Establecer*<br/>
+*_Set*<br/>
 El primer identificado localizaba un mensaje en un catálogo de mensajes.
 
-*_Cuerpo*<br/>
+*_Message*<br/>
 El segundo identificado localizaba un mensaje en un catálogo de mensajes.
 
 *_Dfault*<br/>
@@ -264,11 +264,11 @@ El nombre de la configuración regional.
 
 Los valores posibles de la *_Refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 

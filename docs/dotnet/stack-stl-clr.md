@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384613"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -123,7 +123,7 @@ Tipo del contenedor subyacente.
 |[stack::top (STL/CLR)](#top)|Obtiene acceso al último elemento.|
 |[stack::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada a una nueva matriz.|
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|Obtiene acceso al último elemento.|
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a> Stack::const_reference (STL/CLR)
+## <a name="const_reference"></a> stack::const_reference (STL/CLR)
 
 El tipo de una referencia constante a un elemento.
 
@@ -248,7 +248,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> Stack:: container_type (STL/CLR)
+## <a name="container_type"></a> stack::container_type (STL/CLR)
 
 Tipo del contenedor subyacente.
 
@@ -290,7 +290,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Stack::difference_type (STL/CLR)
+## <a name="difference_type"></a> stack::difference_type (STL/CLR)
 
 Los tipos de una distancia con signo entre dos elementos.
 
@@ -348,7 +348,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> Stack:: Empty (STL/CLR)
+## <a name="empty"></a> stack::empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -402,7 +402,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a> Stack::generic_container (STL/CLR)
+## <a name="generic_container"></a> stack::generic_container (STL/CLR)
 
 El tipo de la interfaz genérica para el adaptador de contenedor.
 
@@ -465,7 +465,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a> Stack::generic_value (STL/CLR)
+## <a name="generic_value"></a> stack::generic_value (STL/CLR)
 
 El tipo de un elemento para su uso con la interfaz genérica para el contenedor.
 
@@ -523,7 +523,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a> Stack::get_container (STL/CLR)
+## <a name="get_container"></a> stack::get_container (STL/CLR)
 
 Obtiene acceso al contenedor subyacente.
 
@@ -565,7 +565,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> Stack:: operator = (STL/CLR)
+## <a name="op_as"></a> stack::operator= (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -619,7 +619,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> Stack:: POP (STL/CLR)
+## <a name="pop"></a> stack::pop (STL/CLR)
 
 Quita el último elemento.
 
@@ -667,7 +667,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a> Stack:: Push (STL/CLR)
+## <a name="push"></a> stack::push (STL/CLR)
 
 Agrega un nuevo elemento de la última.
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Stack:: size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -860,7 +860,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a> Stack:: Stack (STL/CLR)
+## <a name="stack"></a> stack::stack (STL/CLR)
 
 Construye un objeto de adaptador de contenedor.
 
@@ -878,7 +878,7 @@ explicit stack(container_type% wrapped);
 *right*<br/>
 Objeto que se va a copiar.
 
-*Ajustado*<br/>
+*wrapped*<br/>
 Contenedor ajustada para usarlo.
 
 ### <a name="remarks"></a>Comentarios
@@ -953,7 +953,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a> Stack::to_array (STL/CLR)
+## <a name="to_array"></a> stack::to_array (STL/CLR)
 
 Copia la secuencia controlada a una nueva matriz.
 
@@ -1003,7 +1003,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a> Stack:: Top (STL/CLR)
+## <a name="top"></a> stack::top (STL/CLR)
 
 Obtiene acceso al último elemento.
 
@@ -1055,7 +1055,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a> Stack::top_item (STL/CLR)
+## <a name="top_item"></a> stack::top_item (STL/CLR)
 
 Obtiene acceso al último elemento.
 
@@ -1107,7 +1107,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a> Stack:: value_type (STL/CLR)
+## <a name="value_type"></a> stack::value_type (STL/CLR)
 
 El tipo de un elemento.
 
@@ -1152,7 +1152,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a> operador! = (pila) (STL/CLR)
+## <a name="op_neq"></a> operator!= (stack) (STL/CLR)
 
 Pila de comparación de desigualdad.
 
@@ -1365,7 +1365,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador == (pila) (STL/CLR)
+## <a name="op_eq"></a> operator== (stack) (STL/CLR)
 
 Comparación de igualdad de la pila.
 
