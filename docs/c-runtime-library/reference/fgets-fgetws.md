@@ -30,11 +30,11 @@ helpviewer_keywords:
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
 ms.openlocfilehash: 16dfb7cb0401083960669a735a976fbcd4ad4081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333867"
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 
@@ -63,7 +63,7 @@ Ubicación de almacenamiento de los datos.
 *numChars*<br/>
 Número máximo de caracteres que se van a leer.
 
-*secuencia*<br/>
+*stream*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
 ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388532"
 ---
 # <a name="common-dialog-classes"></a>Clases de cuadros de diálogo comunes
 
@@ -24,7 +24,7 @@ Además de la clase [CDialog](../mfc/reference/cdialog-class.md), MFC proporcion
 
 ### <a name="common-dialog-classes"></a>Clases de cuadros de diálogo comunes
 
-|Clase de cuadro de diálogo derivada|Propósito|
+|Clase de cuadro de diálogo derivada|Finalidad|
 |--------------------------|-------------|
 |[CColorDialog](../mfc/reference/ccolordialog-class.md)|Permite el usuario seleccionar colores.|
 |[CFileDialog](../mfc/reference/cfiledialog-class.md)|Permite el usuario seleccione un nombre de archivo para abrir o guardar.|

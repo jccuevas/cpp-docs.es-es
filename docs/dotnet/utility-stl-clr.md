@@ -40,11 +40,11 @@ helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384470"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -73,7 +73,7 @@ Incluya el encabezado STL/CLR `<cliext/utility>` para definir la clase de planti
 |[operator== (pair) (STL/CLR)](#op_eq)|Comparación de igualdad del par.|
 |[operator!= (pair) (STL/CLR)](#op_neq)|Par de comparación de desigualdad.|
 |[operator< (pair) (STL/CLR)](#op_lt)|Par de comparación menor.|
-|[operador\<= (par) (STL/CLR)](#op_lteq)|Menor o igual emparejar comparación.|
+|[operator\<= (pair) (STL/CLR)](#op_lteq)|Menor o igual emparejar comparación.|
 |[operator> (pair) (STL/CLR)](#op_gt)|Comparación mayor que el par.|
 |[operator>= (pair) (STL/CLR)](#op_gteq)|Comparación igual o mayor del par.|
 
@@ -164,7 +164,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="first_type"></a> Pair::first_type (STL/CLR)
+## <a name="first_type"></a> pair::first_type (STL/CLR)
 
 El tipo del primer valor ajustado.
 
@@ -201,7 +201,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="op_as"></a> Pair::operator = (STL/CLR)
+## <a name="op_as"></a> pair::operator= (STL/CLR)
 
 Reemplaza el par de valores almacenado.
 
@@ -245,7 +245,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pair_pair"></a> Pair::Pair (STL/CLR)
+## <a name="pair_pair"></a> pair::pair (STL/CLR)
 
 Construye un objeto de par.
 
@@ -266,7 +266,7 @@ Par para almacenar.
 *val1*<br/>
 Primer valor que se almacenará.
 
-*Val2*<br/>
+*val2*<br/>
 Segundo valor que se almacenará.
 
 ### <a name="remarks"></a>Comentarios
@@ -367,7 +367,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="second_type"></a> Pair::second_type (STL/CLR)
+## <a name="second_type"></a> pair::second_type (STL/CLR)
 
 El tipo del segundo valor ajustado.
 
@@ -496,7 +496,7 @@ El tipo del segundo valor ajustado.
 *first*<br/>
 Primer valor de ajuste de línea.
 
-*segundo*<br/>
+*second*<br/>
 Segundo valor para ajustar.
 
 ### <a name="remarks"></a>Comentarios
@@ -526,7 +526,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> operador! = (par) (STL/CLR)
+## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
 
 Par de comparación de desigualdad.
 
@@ -634,7 +634,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (par) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (pair) (STL/CLR)
 
 Menor o igual emparejar comparación.
 
@@ -688,7 +688,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> operador == (par) (STL/CLR)
+## <a name="op_eq"></a> operator== (pair) (STL/CLR)
 
 Comparación de igualdad del par.
 
@@ -796,7 +796,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (par) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (pair) (STL/CLR)
 
 Comparación igual o mayor del par.
 

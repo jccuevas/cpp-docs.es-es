@@ -26,11 +26,11 @@ helpviewer_keywords:
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
 ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238487"
 ---
 # <a name="multipage-documents"></a>Documentos de varias páginas
 
@@ -56,7 +56,7 @@ El [CView](../mfc/reference/cview-class.md) clase define varias funciones miembr
 
 ### <a name="cviews-overridable-functions-for-printing"></a>Funciones reemplazables de CView para la impresión
 
-|nombre|Motivo de invalidación|
+|Name|Motivo de invalidación|
 |----------|---------------------------|
 |[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)|Para insertar valores en el cuadro de diálogo Imprimir, especialmente la longitud del documento|
 |[OnBeginPrinting](../mfc/reference/cview-class.md#onbeginprinting)|Para asignar fuentes u otros recursos GDI|

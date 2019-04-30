@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353994"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 
@@ -84,7 +84,7 @@ Cero si es correcto. Si se produce un error, el valor devuelto es un código de 
 |**NULL**|(cualquiera)|**EINVAL**|No modificado|
 |No **NULL** (apunta al búfer válido)|0|**EINVAL**|No modificado|
 |No **NULL** (apunta al búfer válido)|0 < *numberOfElements* < 9|**EINVAL**|Cadena vacía|
-|No **NULL** (apunta al búfer válido)|*numberOfElements* > = 9|0|Fecha actual con el formato especificado en la sección de comentarios|
+|No **NULL** (apunta al búfer válido)|*numberOfElements* >= 9|0|Fecha actual con el formato especificado en la sección de comentarios|
 
 ## <a name="security-issues"></a>Problemas de seguridad
 

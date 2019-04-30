@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
 ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301856"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Parallel Patterns Library (PPL)
 
@@ -27,7 +27,7 @@ PPL proporciona las características siguientes.
 
 PPL proporciona un modelo de programación que se parezca a la biblioteca estándar de C++. En el ejemplo siguiente se muestran muchas características de PPL: Calcula varios números de Fibonacci en serie y en paralelo. Ambos cálculos actúan sobre un [std:: Array](../../standard-library/array-class-stl.md) objeto. También se imprime en la consola el tiempo necesario para realizar ambos cálculos.
 
-La versión en serie usa la biblioteca estándar de C++ [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo para recorrer la matriz y almacena los resultados en un [std:: vector](../../standard-library/vector-class.md) objeto. La versión en paralelo realiza la misma tarea, pero usa la biblioteca PPL [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo y almacena los resultados en un [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objeto. La clase `concurrent_vector` permite que cada iteración del bucle agregue los elementos de forma simultánea, sin el requisito de sincronizar el acceso de escritura en el contenedor.
+La versión en serie usa el C++ biblioteca estándar de [std:: for_each](../../standard-library/algorithm-functions.md#for_each) algoritmo para recorrer la matriz y almacena los resultados en un [std:: vector](../../standard-library/vector-class.md) objeto. La versión en paralelo realiza la misma tarea, pero usa la biblioteca PPL [Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) algoritmo y almacena los resultados en un [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) objeto. La clase `concurrent_vector` permite que cada iteración del bucle agregue los elementos de forma simultánea, sin el requisito de sincronizar el acceso de escritura en el contenedor.
 
 Dado que `parallel_for_each` actúa de manera simultánea, la versión del cálculo en paralelo de este ejemplo debe ordenar el objeto `concurrent_vector` para generar los mismos resultados que la versión del cálculo en serie.
 

@@ -3,11 +3,11 @@ title: Gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405669"
 ---
 # <a name="graphics-c-amp"></a>Gráficos (C++ AMP)
 
@@ -263,7 +263,7 @@ También puede copiar de una textura a otra mediante el uso de la [Texture:: cop
 
 ## <a name="texture-view-classes"></a>Clases de vista de textura
 
-C++ AMP presenta la [texture_view (clase)](../../parallel/amp/reference/texture-view-class.md) en Visual Studio 2013. Las vistas de textura que admiten los mismos tipos de elemento de textura y rangos como el [texture (clase)](../../parallel/amp/reference/texture-class.md), pero a diferencia de las texturas, proporcionan acceso a las características de hardware adicionales como muestreo de textura y asignaciones MIP. Las vistas de textura admiten el acceso de solo lectura, de solo escritura y de lectura y escritura a los datos de textura subyacentes.
+C++AMP presenta la [texture_view (clase)](../../parallel/amp/reference/texture-view-class.md) en Visual Studio 2013. Las vistas de textura que admiten los mismos tipos de elemento de textura y rangos como el [texture (clase)](../../parallel/amp/reference/texture-class.md), pero a diferencia de las texturas, proporcionan acceso a las características de hardware adicionales como muestreo de textura y asignaciones MIP. Las vistas de textura admiten el acceso de solo lectura, de solo escritura y de lectura y escritura a los datos de textura subyacentes.
 
 - El acceso de solo lectura lo proporciona la especialización de la plantilla `texture_view<const T, N>`, que admite los elementos con 1, 2 o 4 componentes, el muestreo de textura y el acceso dinámico a un intervalo de niveles de asignación MIP que se determinan al crear instancias de la vista.
 

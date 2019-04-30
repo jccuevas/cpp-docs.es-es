@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
 ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348580"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
@@ -65,13 +65,13 @@ El arco coseno de *z*, en radianes. El resultado es ilimitado en el eje imaginar
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **cacos** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacos** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **cacos** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **cacos** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**cacos**, **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

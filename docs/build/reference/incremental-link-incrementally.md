@@ -13,11 +13,11 @@ helpviewer_keywords:
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270017"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (Vincular de forma incremental)
 
@@ -86,5 +86,5 @@ Asimismo, LINK realizará un vínculo completo si se da alguna de las situacione
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

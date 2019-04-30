@@ -4,11 +4,11 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398919"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Controlar errores y excepciones (C++ moderno)
 
@@ -90,7 +90,7 @@ Excepciones y aserciones son dos mecanismos diferentes para detectar errores en 
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Excepciones de C++ frente a excepciones SEH de Windows
 
-Programas de C y C++ pueden utilizar el mecanismo de (SEH) en el sistema operativo Windows de control de excepciones estructurado. Los conceptos en SEH se parecen a las excepciones de C++, salvo que SEH utiliza el **__try**, **__except**, y **__finally** construye en lugar de **intente** y **catch**. En Visual C++, las excepciones de C++ se implementan para SEH. Sin embargo, al escribir código de C++, use la sintaxis de la excepción de C++.
+Programas de C y C++ pueden utilizar el mecanismo de (SEH) en el sistema operativo Windows de control de excepciones estructurado. Los conceptos en SEH se parecen a las de C++ excepciones, salvo que SEH utiliza el **__try**, **__except**, y **__finally** construye en lugar de **intente**  y **catch**. En Visual C++, las excepciones de C++ se implementan para SEH. Sin embargo, al escribir código de C++, use la sintaxis de la excepción de C++.
 
 Para obtener más información sobre SEH, vea [control de excepciones estructurado (C/C ++)](../cpp/structured-exception-handling-c-cpp.md).
 
@@ -100,7 +100,7 @@ Especificaciones de excepciones se incluyeron en C++ como una manera de especifi
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo: La interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[Cómo: Interfaz entre código excepcional y no excepcional](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [Aquí está otra vez C++ (C++ moderno)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Referencia del lenguaje C++](../cpp/cpp-language-reference.md)<br/>
 [Biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md)

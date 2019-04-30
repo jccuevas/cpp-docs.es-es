@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364576"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -29,7 +29,7 @@ Cuando `/clr` (no `/clr:pure` o `/clr:safe`) se usa y **__clrcall** no es usa, t
 
 [/ CLR (common Language Runtime Compilation)](../build/reference/clr-common-language-runtime-compilation.md) implica que todas las funciones y punteros de función son **__clrcall** y el compilador no permitirá que una función dentro del compilando esté marcada como algo distinto de **__clrcall**. Cuando **/CLR: pure** sirve, **__clrcall** solo se puede especificar en punteros de función y declaraciones externas.
 
-Se puede llamar directamente a **__clrcall** funciones desde código C++ existente que se ha compilado con **/CLR** siempre que esa función tenga una implementación MSIL. **__clrcall** funciones no se puede llamar directamente desde funciones con asm insertado y llamar a intrínsecas de CPU, por ejemplo, incluso si esas funciones se compilan con `/clr`.
+Se puede llamar directamente a **__clrcall** funciones a partir de existente C++ código que se ha compilado con **/CLR** , siempre que esa función tenga una implementación MSIL. **__clrcall** funciones no se puede llamar directamente desde funciones con asm insertado y llamar a intrínsecas de CPU, por ejemplo, incluso si esas funciones se compilan con `/clr`.
 
 **__clrcall** punteros de función solo están diseñados para usarse en el dominio de aplicación en el que se crearon.  En lugar de pasar **__clrcall** punteros de función entre dominios de aplicación, use <xref:System.CrossAppDomainDelegate>. Para obtener más información, consulte [dominios de aplicación y Visual C++](../dotnet/application-domains-and-visual-cpp.md).
 

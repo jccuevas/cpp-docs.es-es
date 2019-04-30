@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
 ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412220"
 ---
 # <a name="submatch-class"></a>sub_match (Clase)
 
@@ -70,14 +70,14 @@ Una coincidencia de longitud cero puede aparecer cuando un grupo de capturas sol
 |-|-|
 |[compare](#compare)|Comparar la subcoincidencia con una secuencia.|
 |[length](#length)|Devuelve la longitud de una subcoincidencia.|
-|[coincide con](#matched)|Indica si la coincidencia se realizó correctamente.|
+|[matched](#matched)|Indica si la coincidencia se realizó correctamente.|
 |[str](#str)|Convierte la subcoincidencia a una cadena.|
 
 ### <a name="operators"></a>Operadores
 
 |Operador|Descripción|
 |-|-|
-|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
+|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|Convierte la subcoincidencia en una cadena.|
 
 ## <a name="example"></a>Ejemplo
 

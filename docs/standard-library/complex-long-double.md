@@ -9,11 +9,11 @@ helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
 ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389182"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -57,7 +57,7 @@ La especialización explícita de la clase de plantilla `complex` en una clase c
 
 Para obtener más información sobre la clase de plantilla `complex` y sus miembros, vea [complex (clase)](../standard-library/complex-class.md).
 
-**Específico de Microsoft**: el **long double** y **doble** tipos tienen la misma representación, pero son tipos distintos. Para obtener más información, consulte [tipos fundamentales](../cpp/fundamental-types-cpp.md).
+**Específico de Microsoft**: El **long double** y **doble** tipos tienen la misma representación, pero son tipos distintos. Para obtener más información, consulte [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Ejemplo
 

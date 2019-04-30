@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: ee1a9a6829dbef13b034300d696c43ddba48d9d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370962"
 ---
 # <a name="ltostreamgt-operators"></a>Operadores &lt;ostream&gt;
 
@@ -87,7 +87,7 @@ Un carácter.
 El tipo de elemento.
 
 *_Ostr*<br/>
-Un objeto `basic_ostream`.
+Objeto `basic_ostream`.
 
 *str*<br/>
 Una cadena de caracteres.
@@ -95,7 +95,7 @@ Una cadena de caracteres.
 *_Tr*<br/>
 Rasgos de los caracteres.
 
-*Val*<br/>
+*val*<br/>
 El tipo
 
 ### <a name="return-value"></a>Valor devuelto

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239340"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Controles ActiveX MFC: Uso de páginas de propiedades estándar
 
@@ -31,9 +31,9 @@ En este artículo se describe las páginas de propiedades estándar disponibles 
 
 Para obtener más información sobre el uso de páginas de propiedades en un control ActiveX, vea los siguientes artículos:
 
-- [Controles ActiveX MFC: Páginas de propiedades](../mfc/mfc-activex-controls-property-pages.md)
+- [Controles ActiveX de MFC: páginas de propiedades](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Controles ActiveX MFC: Agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Controles ActiveX MFC: agregar otra página de propiedades personalizadas](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC proporciona tres páginas de propiedades estándar para su uso con controles ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, y `CLSID_CPicturePropPage`. Estas páginas muestran una interfaz de usuario para el estándar de color, fuente y las propiedades de imagen, respectivamente.
 
@@ -54,4 +54,4 @@ Una vez realizadas estas modificaciones, recompile el proyecto. Ahora, el contro
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Agregar propiedades estándar](../mfc/mfc-activex-controls-adding-stock-properties.md)
+[Controles ActiveX de MFC: agregar propiedades estándar](../mfc/mfc-activex-controls-adding-stock-properties.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369038"
 ---
 # <a name="regular-expressions-c"></a>Expresiones regulares (C++)
 
@@ -21,7 +21,7 @@ La biblioteca estándar de C++ admite varias gramáticas de expresiones regulare
 
 La gramática de expresiones regulares para usar al especificado por el uso de uno de los `std::regex_constants::syntax_option_type` valores de enumeración. Estos gramáticas de expresiones regulares se definen en std::regex_constants:
 
-- `ECMAScript`: Se trata más cercana a la gramática usada JavaScript y los lenguajes. NET.
+- `ECMAScript`: Esto es más cercana a la gramática usada JavaScript y los lenguajes. NET.
 - `basic`: Las expresiones regulares de POSIX básicas o BRE.
 - `extended`: El POSIX amplía las expresiones regulares o ERE.
 - `awk`: Se trata de `extended`, pero tiene más secuencias de escape para caracteres no imprimibles.
@@ -34,7 +34,7 @@ Además de la gramática, se pueden aplicar varias marcas:
 - `icase`: Omitir mayúsculas y minúsculas al comparar.
 - `nosubs`: Omitir coincidencias marcadas (es decir, las expresiones entre paréntesis); no se almacenan las sustituciones.
 - `optimize`: Asegúrese de coincidencia con mayor rapidez, con el posible costo de mayor tiempo de construcción.
-- `collate`: Use las secuencias de intercalación de la configuración regional (por ejemplo, los intervalos de la forma "[a-z]").
+- `collate`: Use secuencias de intercalación de la configuración regional (por ejemplo, los intervalos de la forma "[a-z]").
 
 Cero o más marcadores se pueden combinar con la gramática para especificar el comportamiento del motor de expresiones regulares. Si solo se especifican las marcas, `ECMAScript` se asume que la gramática.
 
@@ -304,7 +304,7 @@ Un escape de carácter dsw es un nombre corto para una clase de caracteres, como
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
 |"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
-|"\W"|"[^[:w:]]"|"[^ a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"\*|
 
 \*Juego de caracteres ASCII
 
@@ -393,7 +393,7 @@ Un carácter ordinario es cualquier carácter válido que no tiene ningún signi
 
 En `ECMAScript`, los caracteres siguientes tienen significados especiales:
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 En `basic` y `grep`, los caracteres siguientes tienen significados especiales:
 
@@ -480,7 +480,7 @@ Una coincidencia parcial da resultado si la coincidencia llega al final de la se
 |"$&"|"&"|La secuencia de caracteres que coincide con la expresión regular completa (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`" (signo de dólar seguido de comilla de atrás)||La secuencia de caracteres que precede a la subsecuencia que coincide con la expresión regular (`[match.prefix().first, match.prefix().second)`)|
+|"$\`" (signo de dólar seguido de comilla de atrás) || La secuencia de caracteres que precede a la subsecuencia que coincide con la expresión regular (`[match.prefix().first, match.prefix().second)`)|
 |"$'" (signo de dólar seguido de comilla simple de cierre)||La secuencia de caracteres que sigue a la subsecuencia que coincide con la expresión regular (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|La secuencia de caracteres que coincide con el grupo de captura en la posición `n`, donde `n` es un número entre 0 y 9 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|

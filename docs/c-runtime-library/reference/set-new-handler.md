@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356505"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ Devuelve un puntero a la función registrada por de control de excepciones anter
 
 ## <a name="remarks"></a>Comentarios
 
-El C++ **_set_new_handler** función especifica una función de control de excepciones que obtiene el control si el **nuevo** operador no puede asignar memoria. Si **nueva** se produce un error, el sistema de tiempo de ejecución llama automáticamente a la función de control de excepciones que se pasó como argumento a **_set_new_handler**. **_PNH**, definido en New.h, es un puntero a una función que devuelve el tipo **int** y toma un argumento de tipo **size_t**. Use **size_t** para especificar la cantidad de espacio que se va a asignar.
+El C++ **_set_new_handler** función especifica una función de control de excepciones que obtiene el control si el **nueva** operador no puede asignar memoria. Si **nueva** se produce un error, el sistema de tiempo de ejecución llama automáticamente a la función de control de excepciones que se pasó como argumento a **_set_new_handler**. **_PNH**, definido en New.h, es un puntero a una función que devuelve el tipo **int** y toma un argumento de tipo **size_t**. Use **size_t** para especificar la cantidad de espacio que se va a asignar.
 
 No hay ningún controlador predeterminado.
 

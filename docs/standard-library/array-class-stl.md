@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377509"
 ---
 # <a name="array-class-c-standard-library"></a>Clase array (Biblioteca estándar de C++)
 
@@ -162,7 +162,7 @@ class array;
 |Operador|Descripción|
 |-|-|
 |[array::operator=](#op_eq)|Reemplaza la secuencia controlada.|
-|[Array:: operator\[\]](#op_at)|Obtiene acceso a un elemento en una posición especificada.|
+|[array::operator\[\]](#op_at)|Obtiene acceso a un elemento en una posición especificada.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -247,7 +247,7 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 Valor que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
@@ -303,7 +303,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Desactivar*<br/>
+*off*<br/>
 Posición del elemento al que se accederá.
 
 ### <a name="remarks"></a>Comentarios
@@ -963,7 +963,7 @@ void fill(const Type& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor del elemento que se va a insertar en la matriz.|
+|*val*|Valor del elemento que se va a insertar en la matriz.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1149,7 +1149,7 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Desactivar*<br/>
+*off*<br/>
 Posición del elemento al que se accederá.
 
 ### <a name="remarks"></a>Comentarios

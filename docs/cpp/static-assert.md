@@ -10,11 +10,11 @@ helpviewer_keywords:
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
 ms.openlocfilehash: d5ef1ba45001a2b1a3ee1f2da46f66224857b070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330659"
 ---
 # <a name="staticassert"></a>static_assert
 
@@ -32,7 +32,7 @@ static_assert( constant-expression ); // Visual Studio 2017 and later
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*expresión constante*|Una expresión constante entera que se puede convertir en un valor booleano.<br /><br /> Si la expresión evaluada es cero (false), el *literal de cadena* se muestra el parámetro y la compilación se produce un error. Si la expresión es distinto de cero (true), el **static_assert** declaración no tiene ningún efecto.|
+|*constant-expression*|Una expresión constante entera que se puede convertir en un valor booleano.<br /><br /> Si la expresión evaluada es cero (false), el *literal de cadena* se muestra el parámetro y la compilación se produce un error. Si la expresión es distinto de cero (true), el **static_assert** declaración no tiene ningún efecto.|
 |*string-literal*|Un mensaje que se muestra si el *expresión-constante* parámetro es cero. El mensaje es una cadena de caracteres en el [basar el juego de caracteres](../c-language/ascii-character-set.md) de que el compilador; es decir, no [caracteres anchos o multibyte](../c-language/multibyte-and-wide-characters.md).|
 
 ## <a name="remarks"></a>Comentarios

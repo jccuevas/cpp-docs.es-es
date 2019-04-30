@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
 ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370676"
 ---
 # <a name="packagedtask-class"></a>packaged_task (Clase)
 
@@ -114,7 +114,7 @@ packaged_task& operator=(packaged_task&& Right);
 ### <a name="parameters"></a>Parámetros
 
 *Derecha*<br/>
-Un objeto `packaged_task`.
+Objeto `packaged_task`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -170,9 +170,9 @@ template <class Fn, class Alloc>
 ### <a name="parameters"></a>Parámetros
 
 *Derecha*<br/>
-Un objeto `packaged_task`.
+Objeto `packaged_task`.
 
-*Alloc*<br/>
+*alloc*<br/>
 Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).
 
 *fn*<br/>
@@ -223,7 +223,7 @@ void swap(packaged_task& Right) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Derecha*<br/>
-Un objeto `packaged_task`.
+Objeto `packaged_task`.
 
 ## <a name="valid"></a> packaged_task::valid
 

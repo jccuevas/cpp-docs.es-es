@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
 ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316189"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (Omitir opciones de encabezado precompilado)
 
@@ -49,5 +49,5 @@ Para obtener más información sobre los encabezados precompilados, vea:
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

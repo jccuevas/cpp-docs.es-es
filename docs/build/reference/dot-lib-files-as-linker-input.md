@@ -15,11 +15,11 @@ helpviewer_keywords:
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
 ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293646"
 ---
 # <a name="lib-files-as-linker-input"></a>archivos .Lib como entrada del vinculador
 
@@ -70,4 +70,4 @@ int main() {
 ## <a name="see-also"></a>Vea también
 
 [Archivos de entrada de LINK](link-input-files.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Opciones del enlazador MSVC](linker-options.md)

@@ -5,23 +5,23 @@ f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
 ms.openlocfilehash: c314b554abb6c10e62b143f554777af50267e4e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245366"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C ++ 11:** especifica si una función podría generar excepciones.
+**C++11:** Especifica si una función podría generar excepciones.
 
 ## <a name="syntax"></a>Sintaxis
 
-> *expresión de noexcept*: &nbsp; &nbsp; &nbsp; &nbsp; **noexcept** &nbsp; &nbsp; &nbsp; &nbsp; **noexcept (** *expresión-constante* **)**
+> *noexcept-expression*: &nbsp;&nbsp;&nbsp;&nbsp;**noexcept** &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**
 
 ### <a name="parameters"></a>Parámetros
 
-*expresión constante*<br/>
+*constant-expression*<br/>
 Una expresión constante de tipo **bool** que indica si el conjunto de posibles tipos de excepción está vacío. La versión incondicional es equivalente a `noexcept(true)`.
 
 ## <a name="remarks"></a>Comentarios

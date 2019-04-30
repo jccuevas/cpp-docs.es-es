@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
 ms.openlocfilehash: 2df788efd93fb531822d858ea5aee1722487db81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387051"
 ---
 # <a name="compiler-error-c2261"></a>Error del compilador C2261
 
@@ -19,7 +19,7 @@ ms.locfileid: "50535751"
 
 Un valor no era válido.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> se utiliza para especificar un ensamblado de confianza. Por ejemplo, si a.dll desea especificar b.dll como un ensamblado de confianza, podría especificar (en a.dll): InternalsVisibleTo("b"). El tiempo de ejecución, a continuación, permite b.dll tener acceso a todo el contenido de a.dll (excepto los tipos privados).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> se utiliza para especificar un ensamblado de confianza. Por ejemplo, si a.dll desea especificar b.dll como un ensamblado de confianza, especificaría (en a.dll): InternalsVisibleTo("b"). El tiempo de ejecución, a continuación, permite b.dll tener acceso a todo el contenido de a.dll (excepto los tipos privados).
 
 Para obtener más información sobre la sintaxis correcta al especificar los ensamblados de confianza, consulte [ensamblados Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
 

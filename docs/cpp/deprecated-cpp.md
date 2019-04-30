@@ -8,11 +8,11 @@ helpviewer_keywords:
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
 ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398958"
 ---
 # <a name="deprecated-c"></a>en desuso (C++)
 
@@ -30,7 +30,7 @@ Si el compilador encuentra el uso de un identificador en desuso o la norma [ `[[
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo marcar funciones como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función en desuso.
+En el ejemplo siguiente se muestra cómo marcar funciones como desusadas y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la función desusada.
 
 ```cpp
 // deprecated.cpp
@@ -51,7 +51,7 @@ int main() {
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra cómo marcar clases como en desuso y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase en desuso.
+En el ejemplo siguiente se muestra cómo marcar clases como desusadas y cómo especificar un mensaje que se mostrará, en tiempo de compilación, cuando se use la clase desusada.
 
 ```cpp
 // deprecate_class.cpp

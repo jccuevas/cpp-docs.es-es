@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 8462bd21-6829-4dd3-ac81-c42d6fdf92f0
 ms.openlocfilehash: 8d8e7ab9bcbaf9ea8ce95558c53d5936473f9c8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222980"
 ---
 # <a name="hashmultiset-stlclr"></a>hash_multiset (STL/CLR)
 
@@ -236,7 +236,7 @@ Borrar o quitar un elemento llama al destructor para su valor almacenado. Destru
 
 ## <a name="members"></a>Miembros
 
-## <a name="begin"></a> hash_multiset:: begin (STL/CLR)
+## <a name="begin"></a> hash_multiset::begin (STL/CLR)
 
 Designa el principio de la secuencia controlada.
 
@@ -358,7 +358,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="clear"></a> hash_multiset:: Clear (STL/CLR)
+## <a name="clear"></a> hash_multiset::clear (STL/CLR)
 
 Quita todos los elementos.
 
@@ -416,7 +416,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_multiset:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> hash_multiset::const_iterator (STL/CLR)
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -458,7 +458,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_multiset:: const_reference (STL/CLR)
+## <a name="const_reference"></a> hash_multiset::const_reference (STL/CLR)
 
 El tipo de una referencia constante a un elemento.
 
@@ -503,7 +503,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_multiset:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> hash_multiset::const_reverse_iterator (STL/CLR)
 
 El tipo de un iterador inverso constante de la secuencia controlada...
 
@@ -545,7 +545,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_multiset:: Count (STL/CLR)
+## <a name="count"></a> hash_multiset::count (STL/CLR)
 
 Busca el número de elementos que coinciden con una clave especificada.
 
@@ -598,7 +598,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_multiset:: difference_type (STL/CLR)
+## <a name="difference_type"></a> hash_multiset::difference_type (STL/CLR)
 
 Los tipos de una distancia con signo entre dos elementos.
 
@@ -653,7 +653,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> hash_multiset:: Empty (STL/CLR)
+## <a name="empty"></a> hash_multiset::empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -705,7 +705,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_multiset:: end (STL/CLR)
+## <a name="end"></a> hash_multiset::end (STL/CLR)
 
 Designa el final de la secuencia controlada.
 
@@ -754,7 +754,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_multiset:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_multiset::equal_range (STL/CLR)
 
 Busca el intervalo que coincide con una clave especificada.
 
@@ -814,7 +814,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_multiset:: Erase (STL/CLR)
+## <a name="erase"></a> hash_multiset::erase (STL/CLR)
 
 Quita los elementos de las posiciones especificadas.
 
@@ -834,7 +834,7 @@ Principio del intervalo que se va a borrar.
 *key*<br/>
 Valor de clave para borrar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a borrar.
 
 *where*<br/>
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_multiset:: Find (STL/CLR)
+## <a name="find"></a> hash_multiset::find (STL/CLR)
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -1222,7 +1222,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_multiset"></a> hash_multiset:: hash_multiset (STL/CLR)
+## <a name="hash_multiset"></a> hash_multiset::hash_multiset (STL/CLR)
 
 Construye un objeto contenedor.
 
@@ -1257,10 +1257,10 @@ Principio del intervalo que se va a insertar.
 *hashfn*<br/>
 Función para las claves de asignación a los depósitos de hash.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
-*Pred*<br/>
+*pred*<br/>
 Orden de predicado de la secuencia controlada.
 
 *right*<br/>
@@ -1501,7 +1501,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_multiset:: Insert (STL/CLR)
+## <a name="insert"></a> hash_multiset::insert (STL/CLR)
 
 Agrega elementos.
 
@@ -1520,13 +1520,13 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
 *right*<br/>
 Enumeración que se va a insertar.
 
-*Val*<br/>
+*val*<br/>
 Valor de clave se va a insertar.
 
 *where*<br/>
@@ -1614,7 +1614,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> hash_multiset:: Iterator (STL/CLR)
+## <a name="iterator"></a> hash_multiset::iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -1656,7 +1656,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_multiset:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_multiset::key_comp (STL/CLR)
 
 Copia al delegado de ordenación de dos claves.
 
@@ -1715,7 +1715,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_multiset:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_multiset::key_compare (STL/CLR)
 
 Delegado de ordenación para dos claves.
 
@@ -1775,7 +1775,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_multiset:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> hash_multiset::key_type (STL/CLR)
 
 El tipo de una clave de ordenación.
 
@@ -1894,7 +1894,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="lower_bound"></a> hash_multiset:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> hash_multiset::lower_bound (STL/CLR)
 
 Busca el principio del intervalo que coincide con una clave especificada.
 
@@ -2079,7 +2079,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multiset::operator = (STL/CLR)
+## <a name="op"></a> hash_multiset::operator= (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -2134,7 +2134,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_multiset:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_multiset::rbegin (STL/CLR)
 
 Designa el principio de la secuencia controlada inversa.
 
@@ -2182,7 +2182,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_multiset:: Reference (STL/CLR)
+## <a name="reference"></a> hash_multiset::reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -2301,7 +2301,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_multiset:: rend (STL/CLR)
+## <a name="rend"></a> hash_multiset::rend (STL/CLR)
 
 Designa el final de la secuencia controlada inversa.
 
@@ -2350,7 +2350,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_multiset:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_multiset::reverse_iterator (STL/CLR)
 
 El tipo de un iterador invertido para la secuencia controlada.
 
@@ -2392,7 +2392,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_multiset:: Size (STL/CLR)
+## <a name="size"></a> hash_multiset::size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -2446,7 +2446,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_multiset:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_multiset::size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -2494,7 +2494,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multiset:: swap (STL/CLR)
+## <a name="swap"></a> hash_multiset::swap (STL/CLR)
 
 Intercambia el contenido de dos contenedores.
 
@@ -2612,7 +2612,7 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> hash_multiset:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> hash_multiset::upper_bound (STL/CLR)
 
 Busca el final del intervalo que coincide con una clave especificada.
 
@@ -2669,7 +2669,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_multiset:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_multiset::value_comp (STL/CLR)
 
 Copia al delegado de ordenación de dos valores de elemento.
 
@@ -2713,7 +2713,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_multiset:: value_compare (STL/CLR)
+## <a name="value_compare"></a> hash_multiset::value_compare (STL/CLR)
 
 Delegado de ordenación para dos valores de elemento.
 
@@ -2758,7 +2758,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_multiset:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_multiset::value_type (STL/CLR)
 
 El tipo de un elemento.
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
 ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340364"
 ---
 # <a name="commit"></a>_commit
 
@@ -47,7 +47,7 @@ int _commit(
 
 ### <a name="parameters"></a>Parámetros
 
-*FD*<br/>
+*fd*<br/>
 Descriptor de archivo que hace referencia al archivo abierto.
 
 ## <a name="return-value"></a>Valor devuelto

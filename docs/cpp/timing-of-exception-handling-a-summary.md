@@ -1,5 +1,5 @@
 ---
-title: 'Intervalos de control de excepciones: resumen'
+title: 'Control de tiempo de control de excepciones: Un resumen'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sequence [C++]
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
 ms.openlocfilehash: cbff7c4153646fcb3471e18d20a0e633fbd1307f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330458"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Intervalos de control de excepciones: resumen
+# <a name="timing-of-exception-handling-a-summary"></a>Control de tiempo de control de excepciones: Un resumen
 
 Un controlador de terminación se ejecuta independientemente de cómo el **__try** finaliza el bloque de instrucciones. Causas puede saltar fuera de la **__try** bloque, un `longjmp` instrucción que transfiere el control fuera del bloque y desenredar la pila debido al control de excepciones.
 

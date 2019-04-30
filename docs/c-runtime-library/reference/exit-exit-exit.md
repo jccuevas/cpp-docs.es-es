@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339356"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -97,7 +97,7 @@ No use **DLL_PROCESS_ATTACH** para llamar a **salir** desde **DllMain**. Para sa
 
 |Función|Encabezado necesario|
 |--------------|---------------------|
-|**salir**, **_Exit**, **_exit**|\<process.h> o \<stdlib.h>|
+|**exit**, **_Exit**, **_exit**|\<process.h> o \<stdlib.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

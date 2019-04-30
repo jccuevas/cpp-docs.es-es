@@ -10,11 +10,11 @@ helpviewer_keywords:
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
 ms.openlocfilehash: c96d009cf19981a475209233ee397af1cdcb352d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219525"
 ---
 # <a name="initinstance-member-function"></a>InitInstance Member (Función)
 
@@ -39,4 +39,4 @@ Puede agregar su propio código de inicialización o modificar el código escrit
 
 ## <a name="see-also"></a>Vea también
 
-[CWinApp: La clase de aplicación](../mfc/cwinapp-the-application-class.md)
+[CWinApp: La clase Application](../mfc/cwinapp-the-application-class.md)

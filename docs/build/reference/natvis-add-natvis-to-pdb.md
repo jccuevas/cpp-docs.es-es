@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
 ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320622"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (agregar Natvis a PDB)
 
@@ -46,5 +46,5 @@ LINK omite /NATVIS cuando un archivo PDB no se crea mediante el uso de un [/DEBU
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409790"
 ---
 # <a name="basicstring-class"></a>basic_string (Clase)
 
@@ -137,12 +137,12 @@ class basic_string;
 ### <a name="parameters"></a>Parámetros
 
 *CharType*<br/>
-El tipo de datos de un carácter único que se almacenará en la cadena. La biblioteca estándar de C++ proporciona especializaciones de esta clase de plantilla, con las definiciones de tipo [cadena](../standard-library/string-typedefs.md#string) elementos del tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, y [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
+El tipo de datos de un carácter único que se almacenará en la cadena. El C++ biblioteca estándar proporciona especializaciones de esta clase de plantilla, con las definiciones de tipo [cadena](../standard-library/string-typedefs.md#string) elementos del tipo **char**, [wstring](../standard-library/string-typedefs.md#wstring), para **wchar_t**, [u16string](../standard-library/string-typedefs.md#u16string) para `char16_t`, y [u32string](../standard-library/string-typedefs.md#u32string) para `char32_t`.
 
 *Rasgos*<br/>
 Diversas propiedades importantes de la `CharType` se describen los elementos de una especialización basic_string por la clase `Traits`. El valor predeterminado es `char_traits`< `CharType`>.
 
-*Asignador*<br/>
+*Allocator*<br/>
 El tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria de la cadena. El valor predeterminado es **allocator**< `CharType`>.
 
 ### <a name="constructors"></a>Constructores
@@ -325,7 +325,7 @@ Valor de carácter que se va a anexar.
 *first*<br/>
 Iterador de entrada que dirige al primer elemento del intervalo que se va a anexar.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada, const_pointer o const_iterator que dirige a la posición situada una posición después del último elemento del intervalo que se va a anexar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -483,10 +483,10 @@ Valor de carácter que se va a asignar.
 *first*<br/>
 Iterador de entrada, const_pointer o const_iterator que dirige al primer carácter del intervalo de la cadena de origen que se va a asignar al intervalo de destino.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada, const_pointer o const_iterator que dirige al carácter situado un carácter después del último del intervalo de la cadena de origen que se va a asignar al intervalo de destino.
 
-*Desactivar*<br/>
+*off*<br/>
 Posición en la que se va a empezar a asignar a los nuevos caracteres.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -768,7 +768,7 @@ Valor de carácter que se copia en la cadena que se crea.
 *first*<br/>
 Iterador de entrada, const_pointer o const_iterator, que dirige el primer elemento del intervalo de origen que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada, const_pointer o const_iterator, que dirige la posición que está más allá del último elemento del intervalo de origen que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1913,7 +1913,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 *first*<br/>
 Iterador que dirige a la posición del primer elemento del intervalo que se va a borrar.
 
-*Último*<br/>
+*last*<br/>
 Iterador que dirige a la posición situada una posición después del último elemento del intervalo que se va a borrar.
 
 *_It*<br/>
@@ -3049,7 +3049,7 @@ Iterador que direcciona la posición detrás de la cual se va a insertar un car�
 *first*<br/>
 Iterador de entrada, const_pointer o const_iterator, que dirige el primer elemento del intervalo de origen que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada, const_pointer o const_iterator, que dirige la posición que está más allá del último elemento del intervalo de origen que se va a insertar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -3951,7 +3951,7 @@ Iterador que dirige al último carácter de la cadena de operando que se va a qu
 *first*<br/>
 Iterador, const_pointer o const_iterator que dirige al primer carácter de la cadena de parámetro que se va a copiar.
 
-*Último*<br/>
+*last*<br/>
 Iterador, const_pointer o const_iterator que dirige al último carácter de la cadena de parámetro que se va a copiar.
 
 *count*<br/>

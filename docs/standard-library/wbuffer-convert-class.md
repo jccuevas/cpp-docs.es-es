@@ -7,11 +7,11 @@ helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
 ms.openlocfilehash: d19abf74bd9f794bc39ce04e5ed22e360cde75b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410894"
 ---
 # <a name="wbufferconvert-class"></a>wbuffer_convert (Clase)
 
@@ -29,7 +29,7 @@ class wbuffer_convert
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*codecvt*|La faceta [locale](../standard-library/locale-class.md) que representa el objeto de conversión.|
+|*Codecvt*|La faceta [locale](../standard-library/locale-class.md) que representa el objeto de conversión.|
 |*Elem*|Tipo de elemento de carácter ancho.|
 |*Rasgos*|Los rasgos asociados a *Elem*.|
 

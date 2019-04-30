@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238512"
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
@@ -85,7 +85,7 @@ Los proyectos MFC utilizan el símbolo de preprocesador \_UNICODE para indicar l
 
 Bibliotecas estáticas de MFC utilizan las siguientes convenciones de nomenclatura. Los nombres de biblioteca tienen el formato
 
-> <em>u</em>AFX<em>cd</em>. LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 donde las letras en cursiva en minúsculas son marcadores de posición para los especificadores, cuyo significado se muestra en la tabla siguiente:
 
@@ -103,8 +103,8 @@ Todas las bibliotecas que se muestran en la tabla siguiente se incluyen creado p
 |NAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC, versión de depuración|
 |UAFXCW.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de lanzamiento|
 |UAFXCWD.LIB|Biblioteca de vínculos estáticos de MFC con compatibilidad con Unicode, versión de depuración|
-|AFXNMCD. LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
-|AFXNMCDD. LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de depuración|
+|AFXNMCD.LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de lanzamiento|
+|AFXNMCDD.LIB|Biblioteca de vínculos estáticos MFC sin controles de cuadro de diálogo MFC, versión de depuración|
 
 Los archivos de depurador que tienen el mismo nombre base y una extensión .pdb también están disponibles para cada una de las bibliotecas estáticas.
 
@@ -119,7 +119,7 @@ Los archivos DLL de MFC tienen *versión* números que indican la compatibilidad
 |MFC*versión*. ARCHIVO DLL|Versión de DLL de MFC, ANSI o versión MBCS|
 |MFC*versión*U.DLL|DLL de MFC, versión de lanzamiento de Unicode|
 |MFC*versión*D.DLL|Versión de DLL de MFC, ANSI o MBCS de depuración|
-|MFC*versión*UD. ARCHIVO DLL|DLL de MFC, versión de depuración de Unicode|
+|MFC*version*UD.DLL|DLL de MFC, versión de depuración de Unicode|
 |MFCM*versión*. ARCHIVO DLL|DLL de MFC con controles de Windows Forms, versión de MBCS o ANSI|
 |MFCM*versión*U.DLL|DLL de MFC con controles de formularios de Windows, versión de lanzamiento de Unicode|
 |MFCM*versión*D.DLL|DLL de MFC con controles de Windows Forms, versión ANSI o MBCS de depuración|

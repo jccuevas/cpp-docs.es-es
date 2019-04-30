@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400661"
 ---
 # <a name="basicios-class"></a>basic_ios (Clase)
 
@@ -223,7 +223,7 @@ void clear(io_state state);
 *state*<br/>
 (Opcional) Las marcas que desea establecer después de borrar todas las marcas. Tiene como valor predeterminado `goodbit`.
 
-*reraise)*<br/>
+*reraise*<br/>
 (Opcional) Especifica si la excepción debe volver a generarse. El valor predeterminado es **false** (no volver a genera la excepción).
 
 ### <a name="remarks"></a>Comentarios
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*LOC*<br/>
+*Loc*<br/>
 Cadena de configuración regional.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -3,11 +3,11 @@ title: /GUARD (habilitar comprobaciones de restricción)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
 ms.openlocfilehash: e48921e57977cc7a1ca6a580fed78a6a2a960a02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292255"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (habilitar comprobaciones de restricción)
 
@@ -38,5 +38,5 @@ La opción /GUARD:CF debe especificarse tanto en el compilador como en el vincul
 ## <a name="see-also"></a>Vea también
 
 [/guard (Habilitar Protección de flujo de control)](guard-enable-control-flow-guard.md)<br/>
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

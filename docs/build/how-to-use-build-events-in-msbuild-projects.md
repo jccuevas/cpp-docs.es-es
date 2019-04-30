@@ -7,13 +7,13 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
 ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273487"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>Filtrar Usar eventos de compilación en proyectos de MSBuild
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>Procedimiento Usar eventos de compilación en proyectos de MSBuild
 
 Un evento de compilación es un comando que MSBuild se realiza en una determinada fase del proceso de compilación. El *anterior a la compilación* evento se produce antes de que empiece la compilación; el *anterior a la vinculación* evento tiene lugar antes de iniciar el paso de vínculo; y la *posterior a la compilación* evento tiene lugar después de la compilación finaliza correctamente. Se produce un evento de compilación solo si se produce el paso de compilación asociada. Por ejemplo, el evento anterior a la vinculación no se produce si no se ejecuta el paso de vinculación.
 

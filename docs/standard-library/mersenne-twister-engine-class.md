@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410985"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine (Clase)
 
@@ -50,7 +50,7 @@ El tipo de resultado integral sin signo. Para obtener información sobre los tip
 *U*, *S*, *T*, *L*<br/>
 **Parámetros de cambio de atenuación**. Utilizados como valores de cambio durante la codificación (atenuación). Condición previa: `U,S,T,L ≤ W`
 
-*D.*, *B*, *C*<br/>
+*D*, *B*, *C*<br/>
 **Parámetros de máscara de bit de atenuación**. Utilizados como valores de máscara de bit durante la codificación (atenuación). Condición previa: `D,B,C ≤ (1u<<W) - 1u`
 
 *F*<br/>

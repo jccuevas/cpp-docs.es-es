@@ -3,11 +3,11 @@ title: Sistema de tipos (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
 ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392094"
 ---
 # <a name="type-system-ccx"></a>Sistema de tipos (C++/CX)
 

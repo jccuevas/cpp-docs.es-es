@@ -1,5 +1,5 @@
 ---
-title: Filtrar Serializar estructuras de uso de PInvoke
+title: Procedimiento Serializar estructuras de uso de PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
 ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387245"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Filtrar Serializar estructuras de uso de PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Procedimiento Serializar estructuras de uso de PInvoke
 
 Este documento explica cómo funciones nativas que acepten las estructuras de estilo C se pueden llamar desde las funciones administradas por mediante P/Invoke. Aunque recomendamos que use las características de interoperabilidad de C++ en lugar de P/Invoke porque P/Invoke proporciona pocos informes, de errores de tiempo de compilación no es seguro para el tipo y puede resultar tedioso de implementar, si la API no administrada se empaqueta como un archivo DLL y el código fuente no es está disponible, P/Invoke es la única opción. En caso contrario, consulte los siguientes documentos:
 

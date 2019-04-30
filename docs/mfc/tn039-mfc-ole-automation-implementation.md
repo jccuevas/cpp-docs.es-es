@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305494"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: Implementación de Automation MFC/OLE
 
@@ -120,7 +120,7 @@ Nombre de la clase.
 *pszName*<br/>
 Nombre externo de la propiedad.
 
-*MemberName*<br/>
+*memberName*<br/>
 Nombre de la variable de miembro en el que se almacena la propiedad.
 
 *pfnAfterSet*<br/>
@@ -156,7 +156,7 @@ Nombre externo de la propiedad.
 *memberGet*<br/>
 Nombre de la función miembro que se usa para obtener la propiedad.
 
-*conjunto de miembros*<br/>
+*memberSet*<br/>
 Nombre de la función miembro que se usa para establecer la propiedad.
 
 *vtPropType*<br/>
@@ -228,7 +228,7 @@ Nombre de la clase.
 *pszName*<br/>
 Nombre externo de la propiedad.
 
-*DISPID*<br/>
+*dispid*<br/>
 El DISPID fijo para la propiedad o método.
 
 *pfnGet*<br/>
@@ -237,7 +237,7 @@ Nombre de la función miembro que se usa para obtener la propiedad.
 *pfnSet*<br/>
 Nombre de la función miembro que se usa para establecer la propiedad.
 
-*MemberName*<br/>
+*memberName*<br/>
 El nombre de la variable miembro para asignar a la propiedad
 
 *vtPropType*<br/>

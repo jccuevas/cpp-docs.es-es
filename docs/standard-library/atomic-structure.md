@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376674"
 ---
 # <a name="atomic-structure"></a>atomic (Estructura)
 
@@ -30,14 +30,14 @@ struct atomic;
 |[atomic](#atomic)|Construye un objeto atómico.|
 |**Operadores**||
 |[atomic:: operator Ty](#op_ty)|Lee y devuelve el valor almacenado. ([atomic::load](#load))|
-|[atomic:: operator =](#op_eq)|Utiliza un valor especificado para reemplazar el valor almacenado. ([atomic::store](#store))|
-|[atomic:: operator ++](#op_inc)|Incrementa el valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
-|[atomic:: operator +=](#op_add_eq)|Suma un valor especificado al valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
-|[atomic:: operator--](#op_dec)|Disminuye el valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
-|[atomic:: operator =](#op_sub_eq)|Resta un valor especificado del valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
-|[atomic:: operator & =](#op_and_eq)|Realiza un bit a bit en un valor especificado y el valor almacenado. Solo lo utilizan las especializaciones de entero.|
-|[atomic:: operator&#124;=](#op_or_eq)|Realiza un bit a bit o en un valor especificado y el valor almacenado. Solo lo utilizan las especializaciones de entero.|
-|[atomic:: operator ^ =](#op_xor_eq)|Realiza un exclusivo bit a bit o en un valor especificado y el valor almacenado. Solo lo utilizan las especializaciones de entero.|
+|[atomic::operator=](#op_eq)|Utiliza un valor especificado para reemplazar el valor almacenado. ([atomic::store](#store))|
+|[atomic::operator++](#op_inc)|Incrementa el valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
+|[atomic::operator+=](#op_add_eq)|Suma un valor especificado al valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
+|[atomic::operator--](#op_dec)|Disminuye el valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
+|[atomic::operator-=](#op_sub_eq)|Resta un valor especificado del valor almacenado. Solo lo utilizan las especializaciones de entero y de puntero.|
+|[atomic::operator&=](#op_and_eq)|Realiza un bit a bit en un valor especificado y el valor almacenado. Solo lo utilizan las especializaciones de entero.|
+|[atomic::operator&#124;=](#op_or_eq)|Realiza un bit a bit o en un valor especificado y el valor almacenado. Solo lo utilizan las especializaciones de entero.|
+|[atomic::operator^=](#op_xor_eq)|Realiza un exclusivo bit a bit o en un valor especificado y el valor almacenado. Solo lo utilizan las especializaciones de entero.|
 |**Funciones**||
 |[compare_exchange_strong](#compare_exchange_strong)|Realiza una *atomic_compare_and_exchange* operación en **esto** y devuelve el resultado.|
 |[compare_exchange_weak](#compare_exchange_weak)|Realiza una *weak_atomic_compare_and_exchange* operación en **esto** y devuelve el resultado.|
@@ -47,7 +47,7 @@ struct atomic;
 |[fetch_sub](#fetch_sub)|Resta un valor especificado del valor almacenado.|
 |[fetch_xor](#fetch_xor)|Realiza un exclusivo bit a bit o en un valor especificado y el valor almacenado.|
 |[is_lock_free](#is_lock_free)|Especifica si las operaciones atómicas sobre **esto** son *sin bloqueos*. Un tipo atómico *no tiene bloqueos* si ninguna operación atómica sobre ese tipo emplea bloqueos.|
-|[Carga](#load)|Lee y devuelve el valor almacenado.|
+|[load](#load)|Lee y devuelve el valor almacenado.|
 |[store](#store)|Utiliza un valor especificado para reemplazar el valor almacenado.|
 
 ## <a name="remarks"></a>Comentarios
@@ -60,11 +60,11 @@ Existe una especialización para cada tipo integral excepto **bool**. Cada espec
 
 ||||
 |-|-|-|
-|**atomic\<char >**|**atomic\<firmado char >**|**atomic\<unsigned char >**|
-|**atomic\<char16_t >**|**atomic\<char32_t >**|**atomic\<wchar_t >**|
-|**atomic\<corto >**|**atomic\<entero corto sin signo >**|**atomic\<int >**|
-|**atomic\<int sin signo >**|**atomic\<largo >**|**atomic\<unsigned long >**|
-|**atomic\<long long >**|**atomic\<long long sin signo >**|
+|**atomic\<char>**|**atomic\<firmado char >**|**atomic\<unsigned char >**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**atomic\<entero corto sin signo >**|**atomic\<int>**|
+|**atomic\<int sin signo >**|**atomic\<long>**|**atomic\<unsigned long >**|
+|**atomic\<long long>**|**atomic\<long long sin signo >**|
 
 Las especializaciones de entero se derivan de los tipos `atomic_integral` correspondientes. Por ejemplo, **atómica\<int sin signo >** se deriva de `atomic_uint`.
 
@@ -113,7 +113,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 Este operador se aplica el `memory_order_seq_cst` [memory_order](atomic-enums.md).
 
-## <a name="op_eq"></a> atomic:: operator =
+## <a name="op_eq"></a> atomic::operator=
 
 Almacena un valor especificado.
 
@@ -427,7 +427,7 @@ Ty atomic<Ty>::exchange(
 *Valor*<br/>
 Un valor de tipo *Ty*.
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -458,7 +458,7 @@ Ty atomic<Ty>::fetch_add (
 *Valor*<br/>
 Un valor de tipo *Ty*.
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -489,7 +489,7 @@ Ty atomic<Ty>::fetch_and (
 *Valor*<br/>
 Un valor de tipo *Ty*.
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -520,7 +520,7 @@ Ty atomic<Ty>::fetch_or (
 *Valor*<br/>
 Un valor de tipo *Ty*.
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -551,7 +551,7 @@ Ty atomic<Ty>::fetch_sub (
 *Valor*<br/>
 Un valor de tipo *Ty*.
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -582,7 +582,7 @@ Ty atomic<Ty>::fetch_xor (
 *Valor*<br/>
 Un valor de tipo *Ty*.
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -624,7 +624,7 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>Parámetros
 
-*Orden*<br/>
+*Order*<br/>
 Objeto `memory_order`. *Orden* no debe ser `memory_order_release` o `memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -651,7 +651,7 @@ void atomic<Ty>::store(
 *Valor*<br/>
 Un *Ty* objeto.
 
-*Orden*<br/>
+*Order*<br/>
 Un `memory_order` restricción.
 
 ### <a name="remarks"></a>Comentarios

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220460"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>Advertencia del compilador (nivel 4) C4571
 
@@ -29,7 +29,7 @@ Puede resolver en una de las siguientes maneras, C4571
 
 - No habilite C4571 si no desea que los bloques catch (...) para detectar las excepciones estructuradas, pero desea usar los bloques catch (...).  Puede detectar mediante las palabras clave de control de excepciones estructurado de excepciones estructuradas (**__try**, **__except**, y **__finally**).  Pero recuerde que, cuando se compila **/EHs** destructores solo se llamará cuando se produce una excepción de C++, no cuando se produce una excepción SEH.
 
-- Reemplace el bloque catch (...) con los bloques catch para excepciones concretas de C++ y, opcionalmente, agregue todo el control de excepciones de C++ de control de excepciones estructurado (**__try**, **__except**, y **_ _finally**).  Consulte [control de excepciones estructurado (C/C ++)](../../cpp/structured-exception-handling-c-cpp.md) para obtener más información.
+- Reemplace el bloque catch (...) con los bloques catch específica para C++ excepciones y si lo desea, agregue estructurado de excepciones en torno a la C++ control de excepciones (**__try**, **__except**, y **__finally**).  Consulte [control de excepciones estructurado (C/C ++)](../../cpp/structured-exception-handling-c-cpp.md) para obtener más información.
 
 Consulte [/EH (modelo de control de excepciones)](../../build/reference/eh-exception-handling-model.md) para obtener más información.
 

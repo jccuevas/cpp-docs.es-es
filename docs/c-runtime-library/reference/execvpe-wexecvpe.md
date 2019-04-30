@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
 ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339408"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -59,7 +59,7 @@ intptr_t _wexecvpe(
 
 ### <a name="parameters"></a>Parámetros
 
-*CmdName*<br/>
+*cmdname*<br/>
 Ruta de acceso del archivo que se va a ejecutar.
 
 *argv*<br/>
@@ -72,7 +72,7 @@ Matriz de punteros a la configuración del entorno.
 
 Si se ejecutan correctamente, estas funciones no vuelven al proceso de llamada. Un valor devuelto de -1 indica un error, en cuyo caso el **errno** se establece la variable global.
 
-|**errno** valor|Descripción|
+|**errno** value|Descripción|
 |-------------------|-----------------|
 |**E2BIG**|El espacio necesario para los argumentos y la configuración de entorno supera los 32 KB.|
 |**EACCES**|El archivo especificado tiene un bloqueo o una infracción de uso compartido.|

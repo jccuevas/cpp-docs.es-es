@@ -37,11 +37,11 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341995"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 
@@ -77,13 +77,13 @@ El **abs**, **labs**, **llabs** y **_abs64** funciones devuelven el valor absolu
 
 Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **abs** que toman y devuelven **largo**, **largo** **largo**,  **float**, **doble**, y **largo** **doble** valores. Estas sobrecargas se definen en el encabezado \<cmath>. En un programa C, **abs** siempre toma y devuelve un **int**.
 
-**Microsoft Specific**: dado que el intervalo de enteros negativos que puede representarse mediante cualquier tipo entero es mayor que el intervalo de enteros positivos que se pueden representar usando ese tipo, es posible proporcionar un argumento a estas funciones que no se puede convertir. Si el valor absoluto del argumento no puede representarse mediante el tipo de valor devuelto, el **abs** funciones devuelven el valor del argumento sin modificar. En concreto, `abs(INT_MIN)` devuelve `INT_MIN`, `labs(LONG_MIN)` devuelve `LONG_MIN`, `llabs(LLONG_MIN)` devuelve `LLONG_MIN` y `_abs64(_I64_MIN)` devuelve `_I64_MIN`. Esto significa que el **abs** funciones no se puede usar para garantizar un valor positivo.
+**Específico de Microsoft**: Dado que el intervalo de enteros negativos que se puede representar con cualquier tipo de entero es mayor que el intervalo de enteros positivos que se puede representar con ese tipo, se puede proporcionar un argumento a estas funciones que no se pueden convertir. Si el valor absoluto del argumento no puede representarse mediante el tipo de valor devuelto, el **abs** funciones devuelven el valor del argumento sin modificar. En concreto, `abs(INT_MIN)` devuelve `INT_MIN`, `labs(LONG_MIN)` devuelve `LONG_MIN`, `llabs(LLONG_MIN)` devuelve `LLONG_MIN` y `_abs64(_I64_MIN)` devuelve `_I64_MIN`. Esto significa que el **abs** funciones no se puede usar para garantizar un valor positivo.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C necesario|Encabezado C++ necesario|
 |-------------|-----------------------|---------------------------|
-|**ABS**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
+|**abs**, **labs**, **llabs**|\<math.h> o \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> o \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> o \<stdlib.h>|
 
 Para usar las versiones sobrecargadas de **abs** en C++, debe incluir el \<cmath > encabezado.

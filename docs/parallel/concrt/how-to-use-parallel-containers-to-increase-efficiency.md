@@ -7,13 +7,13 @@ helpviewer_keywords:
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
 ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394447"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Filtrar Usar contenedores paralelos para aumentar la eficacia
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Procedimiento Usar contenedores paralelos para aumentar la eficacia
 
 En este tema se muestra cómo se usan contenedores paralelos para almacenar de forma eficaz los datos y tener acceso a ellos en paralelo.
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223680"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution (Clase)
 
@@ -80,7 +80,7 @@ La clase de plantilla describe una distribución que produce valores de un enter
 
 ||||
 |-|-|-|
-|[negative_binomial_distribution)](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
+|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
 Los miembros de la propiedad `k()` y `p()` devolver valores de parámetro de la distribución almacenada actualmente *k* y *p* respectivamente.
@@ -253,7 +253,7 @@ El segundo constructor crea un objeto cuyos parámetros almacenados se inicializ
 
 Almacena los parámetros de la distribución.
 
-struct param_type {typedef negative_binomial_distribution`<`result_type > distribution_type; param_type (result_type k = 1, doble p = 0,5); result_type k() const; doble p() const;
+struct param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 

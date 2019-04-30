@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
 ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318217"
 ---
 # <a name="source-charset-set-source-character-set"></a>/ Source-CharSet (establecer juego de caracteres de origen)
 
@@ -54,8 +54,8 @@ Si desea establecer el juego de caracteres de origen y el juego de caracteres de
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/ Execution-CharSet (establecer juego de caracteres de ejecución)](execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (Establecer los juegos de caracteres de ejecución y origen en UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
 [/validate/charset (Validar los caracteres compatibles)](validate-charset-validate-for-compatible-characters.md)

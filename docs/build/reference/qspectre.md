@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319192"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -55,8 +55,8 @@ El impacto de rendimiento **/qspectre** se ha visto que ser insignificante en va
 El **/qspectre** opción del compilador genera código que se vincule implícitamente las versiones de las bibliotecas en tiempo de ejecución que se han creado para proporcionar las mitigaciones de Spectre. Estas bibliotecas son componentes opcionales que deben instalarse mediante el instalador de Visual Studio:
 
 - VC ++ 2017 versión *version_numbers* bibliotecas de Spectre \[(x86 y x64) | (ARM) | (ARM64)]
-- ATL de Visual C++ para \[(x86/x64) | ARM | ARM64] con mitigaciones de Spectre
-- MFC de Visual C++ \[x86/x64 | ARM | ARM64] con mitigaciones de Spectre
+- Visual C++ ATL para \[(x86/x64) | ARM | ARM64] con mitigaciones de Spectre
+- Visual C++ MFC para \[x86/x64 | ARM | ARM64] con mitigaciones de Spectre
 
 Si compila el código mediante el uso de **/qspectre** y estas bibliotecas no están instalados, los informes del sistema de compilación **advertencia MSB8038: Mitigación de Spectre está habilitada pero no se encuentran las bibliotecas de Spectre mitigadas**. Si se produce un error en el código MFC o ATL generar y el vinculador informa de un error como **error irrecuperable LNK1104: no se puede abrir el archivo '/ oldnames.lib'**, estas bibliotecas que falta pueden ser la causa.
 
@@ -79,5 +79,5 @@ Para obtener más información, consulte el sitio oficial [ADV180002 asesoramien
 ## <a name="see-also"></a>Vea también
 
 [/Q (Opciones) (Operaciones de bajo nivel)](q-options-low-level-operations.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
 ms.openlocfilehash: eac41de04ec883e7b5acf26596647f912b0b1d20
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316748"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (Método de representación)
 
@@ -55,5 +55,5 @@ También puede usar [pointers_to_members](../../preprocessor/pointers-to-members
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

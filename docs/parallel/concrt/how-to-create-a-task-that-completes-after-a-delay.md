@@ -1,18 +1,18 @@
 ---
-title: Filtrar Crear una tarea que finaliza después de un retraso
+title: Procedimiento Crear una tarea que finaliza después de un retraso
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
 ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413910"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Filtrar Crear una tarea que finaliza después de un retraso
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Procedimiento Crear una tarea que finaliza después de un retraso
 
 En este ejemplo se muestra cómo usar el [Concurrency:: Task](../../parallel/concrt/reference/task-class.md), [Concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [Concurrency:: Timer](../../parallel/concrt/reference/timer-class.md), y [Concurrency:: call](../../parallel/concrt/reference/call-class.md) las clases para crear una tarea que finaliza después de un retraso. Puede usar este método para crear bucles que ocasionalmente sondear en busca de datos, introducen los tiempos de espera, retrasar el control de entrada de usuario para un tiempo predeterminado y así sucesivamente.
 

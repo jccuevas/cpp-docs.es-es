@@ -1,5 +1,5 @@
 ---
-title: TANH, tanhf, tanhl
+title: tanh, tanhf, tanhl
 ms.date: 04/10/2018
 apiname:
 - tanh
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258322"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
 Calcula la tangente hiperbólica.
 
@@ -75,7 +75,7 @@ Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **tanh** que toma
 
 |Rutina|Encabezado necesario (C)|Encabezado necesario (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
+|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> o \<math.h>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

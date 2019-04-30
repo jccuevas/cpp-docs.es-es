@@ -39,11 +39,11 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
 ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391262"
 ---
 # <a name="cd2dgeometrysink-class"></a>Clase CD2DGeometrySink
 
@@ -91,7 +91,7 @@ class CD2DGeometrySink;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CD2DGeometrySink::m_pSink](#m_psink)|Un puntero a un ID2D1GeometrySink.|
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
 ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288759"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -73,17 +73,17 @@ La tangente de *z*.
 |Entrada|Excepción SEH|**_matherr** excepción|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|ninguna|_DOMAIN|
-|+ ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
+|± ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **ctan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ctan** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **ctan** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **ctan** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**Ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

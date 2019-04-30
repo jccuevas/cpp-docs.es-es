@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4008
 ms.assetid: fb45e535-cb68-4743-80e9-a6e34cfffeca
 ms.openlocfilehash: 99b78e1426cf1618e68ae74ae7e16dd0f08606ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359974"
 ---
 # <a name="compiler-warning-levels-2-and-3-c4008"></a>Advertencia del compilador (niveles 2 y 3) C4008
 

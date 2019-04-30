@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413221"
 ---
 # <a name="list-class"></a>list (Clase)
 
@@ -121,7 +121,7 @@ class list
 *Type*<br/>
 El tipo de datos de elementos que se almacenará en la lista.
 
-*Asignador*<br/>
+*Allocator*<br/>
 El tipo que representa el objeto asignador almacenado que encapsula los detalles sobre la asignación y la desasignación de memoria de la lista. Este argumento es opcional y el valor predeterminado es **asignador**\<*tipo*>.
 
 ## <a name="remarks"></a>Comentarios
@@ -242,7 +242,7 @@ void assign(
 
 ### <a name="parameters"></a>Parámetros
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento en el intervalo de elementos que se va a copiar de la lista de argumentos.
 
 *Último*<br/>
@@ -758,7 +758,7 @@ void emplace(iterator Where, Type&& val);
 |Parámetro|Descripción|
 |-|-|
 |*Where*|Posición de la [list](../standard-library/list-class.md) de destino donde se inserta el primer elemento.|
-|*Val*|El elemento que se agrega al final de la `list`.|
+|*val*|El elemento que se agrega al final de la `list`.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -800,7 +800,7 @@ void emplace_back(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Elemento que se agrega al final de [list](../standard-library/list-class.md).|
+|*val*|Elemento que se agrega al final de [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Elemento que se agrega al principio de [list](../standard-library/list-class.md).|
+|*val*|Elemento que se agrega al principio de [list](../standard-library/list-class.md).|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -986,7 +986,7 @@ Posición del elemento que se quitará de la lista.
 *first*<br/>
 Posición del primer elemento que se quitará de la lista.
 
-*Último*<br/>
+*last*<br/>
 Posición inmediatamente siguiente a la del último elemento que se quitará de la lista.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1153,7 +1153,7 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 |*Where*|Posición de la lista de destino donde se inserta el primer elemento.|
 |*Val*|Valor del elemento que se va a insertar en la lista.|
 |*Recuento*|Número de elementos que se van a insertar en la lista.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos de la lista de argumentos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos de la lista de argumentos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos de la lista de argumentos que se va a copiar.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -1276,7 +1276,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Recuento*|Número de elementos de la lista construida.|
 |*Val*|Valor de los elementos de la lista.|
 |*Derecha*|Lista de la que la lista construida va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list que contiene los elementos que se van a copiar.|
 
@@ -1440,7 +1440,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 *right*<br/>
 La lista de argumentos que se combinará con la lista de objetivo.
 
-*Comp.*<br/>
+*comp*<br/>
 El operador de comparación que se utiliza para ordenar los elementos de la lista de objetivo.
 
 ### <a name="remarks"></a>Comentarios
@@ -1678,7 +1678,7 @@ void push_back(void push_back(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|El elemento que se agrega al final de la lista.|
+|*val*|El elemento que se agrega al final de la lista.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1734,7 +1734,7 @@ void push_front(Type&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|El elemento que se agrega al principio de la lista.|
+|*val*|El elemento que se agrega al principio de la lista.|
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1894,7 +1894,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 Valor que, si lo contiene un elemento, hará que se quite ese elemento de la lista.
 
 ### <a name="remarks"></a>Comentarios
@@ -1952,7 +1952,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>Parámetros
 
-*Pred*<br/>
+*pred*<br/>
 Predicado unario que, si lo satisface un elemento, da lugar a la eliminación de ese elemento de la lista.
 
 ### <a name="example"></a>Ejemplo
@@ -2106,7 +2106,7 @@ void resize(size_type _Newsize, Type val);
 *_Newsize*<br/>
 Nuevo tamaño de la lista.
 
-*Val*<br/>
+*val*<br/>
 Valor de los nuevos elementos que se agregarán a la lista si el nuevo tamaño es mayor que el tamaño original. Si el valor se omite, a los nuevos elementos se les asigna el valor predeterminado para la clase.
 
 ### <a name="remarks"></a>Comentarios
@@ -2285,7 +2285,7 @@ void sort(Traits comp);
 
 ### <a name="parameters"></a>Parámetros
 
-*Comp.*<br/>
+*comp*<br/>
 Operador de comparación utilizado para ordenar elementos sucesivos.
 
 ### <a name="remarks"></a>Comentarios
@@ -2363,10 +2363,10 @@ Posición en la lista de destino anterior a la posición de inserción.
 *Origen*<br/>
 Lista de origen que se va a insertar en la lista de destino.
 
-*ITER*<br/>
+*Iter*<br/>
 Elemento que se va a insertar de la lista de origen.
 
-*Primero*<br/>
+*First*<br/>
 Primer elemento del intervalo que se va a insertar de la lista de origen.
 
 *Último*<br/>
@@ -2538,7 +2538,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>Parámetros
 
-*Pred*<br/>
+*pred*<br/>
 El predicado binario que se usa para comparar los elementos sucesivos.
 
 ### <a name="remarks"></a>Comentarios

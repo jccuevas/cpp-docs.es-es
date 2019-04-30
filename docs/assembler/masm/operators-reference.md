@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210819"
 ---
 # <a name="masm-operators-reference"></a>Referencia de operadores MASM
 
@@ -19,7 +19,7 @@ ms.locfileid: "50430465"
 ||||
 |-|-|-|
 |[* (multiplicar)](operator-multiply.md)|[+ (sumar)](operator-add.md)|[-(restar o negar)](operator-subtract-2.md)|
-|[. (campo)](operator-dot.md)|[/ (dividir)](operator-subtract-1.md)|[&#91;&#93;(índice)](operator-brackets.md)|
+|[. (field)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
 |[MOD (resto)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>Flujo de control

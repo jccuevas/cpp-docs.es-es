@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287647"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -64,7 +64,7 @@ Puntero a un búfer que contiene el nombre de ruta de acceso absoluta o completa
 *relPath*<br/>
 Nombre de ruta de acceso relativa.
 
-*MaxLength*<br/>
+*maxLength*<br/>
 Longitud máxima del búfer de nombre de ruta de acceso absoluta (*absPath*). Es esta longitud en bytes para **_fullpath** pero, en caracteres anchos (**wchar_t**) para **_wfullpath**.
 
 ## <a name="return-value"></a>Valor devuelto

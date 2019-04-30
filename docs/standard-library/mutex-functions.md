@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::lock [C++]
 - std::try_to_lock [C++]
 ms.openlocfilehash: b375aec0bee4183563b8cd55e4e8a27f79e7cd3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326331"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>Funciones y variables &lt;mutex&gt;
 
@@ -48,7 +48,7 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Parámetros
 
-*Marca*<br/>
+*Marcar*<br/>
 Un objeto [once_flag](../standard-library/once-flag-structure.md) que garantiza que solo se llama una vez al objeto que se puede llamar.
 
 *F*<br/>

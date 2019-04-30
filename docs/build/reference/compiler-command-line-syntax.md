@@ -6,11 +6,11 @@ helpviewer_keywords:
 - cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
 ms.openlocfilehash: 5cee76d5c053dbcfef33a191dc38a958338e4a82
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294348"
 ---
 # <a name="compiler-command-line-syntax"></a>Sintaxis de la línea de comandos del compilador
 
@@ -39,4 +39,4 @@ Para obtener información sobre el valor devuelto de cl.exe, vea [valor devuelto
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)
+[Opciones del compilador de MSVC](compiler-options.md)

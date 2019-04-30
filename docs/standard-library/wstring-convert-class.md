@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410803"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert (Clase)
 
@@ -42,7 +42,7 @@ class wstring_convert
 
 ### <a name="parameters"></a>Parámetros
 
-*codecvt*<br/>
+*Codecvt*<br/>
 La faceta [locale](../standard-library/locale-class.md) que representa el objeto de conversión.
 
 *Elem*<br/>
@@ -139,9 +139,9 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|La secuencia de bytes de un solo elemento que se van a convertir.|
 |*ptr*|La secuencia de caracteres de estilo C terminada en null que se va a convertir.|
-|*BSTR*|La [byte_string](#byte_string) que se va a convertir.|
+|*Bstr*|La [byte_string](#byte_string) que se va a convertir.|
 |*first*|El primer carácter de un intervalo de caracteres que se va convertir.|
-|*Último*|El último carácter de un intervalo de caracteres que se va convertir.|
+|*last*|El último carácter de un intervalo de caracteres que se va convertir.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -208,9 +208,9 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|
 |*Char*|El carácter ancho que se va a convertir.|
 |*Wptr*|La secuencia de estilo C terminada en null que empieza en `wptr` y que se va a convertir.|
-|*WSTR*|La [wide_string](#wide_string) que se va a convertir.|
+|*Wstr*|La [wide_string](#wide_string) que se va a convertir.|
 |*first*|El primer elemento del intervalo de elementos que se va a convertir.|
-|*Último*|El último elemento del intervalo de elementos que se va a convertir.|
+|*last*|El último elemento del intervalo de elementos que se va a convertir.|
 
 ### <a name="remarks"></a>Comentarios
 

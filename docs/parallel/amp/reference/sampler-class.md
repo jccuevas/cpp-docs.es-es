@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352598"
 ---
 # <a name="sampler-class"></a>sampler (Clase)
 
@@ -114,7 +114,7 @@ El modo de direccionamiento que se usará en el muestreo para todas las dimensio
 *_Border_color*<br/>
 El color del borde que se utilizará si el modo de direccionamiento es address_border. El valor predeterminado es `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
-*_Otro*<br/>
+*_Other*<br/>
 [5] Constructor de copia la `sampler` objeto que se va a copiar en el nuevo `sampler` instancia.
 
 [6] Constructor de movimiento el `sampler` mover en el nuevo objeto `sampler` instancia.
@@ -193,7 +193,7 @@ sampler& operator= (    // [2] move assignment operator
 
 ### <a name="parameters"></a>Parámetros
 
-*_Otro*<br/>
+*_Other*<br/>
 [1] operador de asignación el `sampler` objeto que se va a copiar en este `sampler`.
 
 [2] operador de asignación de movimiento del `sampler` mover este objeto `sampler`.

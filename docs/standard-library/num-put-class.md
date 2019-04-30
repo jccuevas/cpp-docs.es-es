@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223563"
 ---
 # <a name="numput-class"></a>num_put (Clase)
 
@@ -148,7 +148,7 @@ Ha especificado la secuencia que contiene la configuración regional con la face
 *_Fill*<br/>
 Un carácter que se usa para el espaciado.
 
-*Val*<br/>
+*val*<br/>
 El número o tipo booleano del que se va a obtener la salida.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -315,11 +315,11 @@ Valor entero que se usa para especificar el tipo de administración de memoria d
 
 Los valores posibles de la *_Refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 
@@ -390,7 +390,7 @@ Ha especificado la secuencia que contiene la configuración regional con la face
 *_Fill*<br/>
 Un carácter que se usa para el espaciado.
 
-*Val*<br/>
+*val*<br/>
 El número o tipo booleano del que se va a obtener la salida.
 
 ### <a name="return-value"></a>Valor devuelto

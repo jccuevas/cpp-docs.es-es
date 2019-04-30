@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348697"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 En la primera sobrecarga, una [CString](../../atl-mfc-shared/using-cstring.md) objeto que contiene el texto de nota asociado con el control de vínculo de comando actual.
 
-O bien
+-o bien-
 
 En la segunda sobrecarga, TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 

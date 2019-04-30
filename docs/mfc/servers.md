@@ -11,11 +11,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307840"
 ---
 # <a name="servers"></a>Servidores
 
@@ -43,21 +43,21 @@ La aplicación de servidor debe indicar la DLL del sistema OLE qué hacer si ya 
 
 Para obtener más información sobre los servidores, consulte:
 
-- [servidores: Implementación de un servidor](../mfc/servers-implementing-a-server.md)
+- [Servidores: implementar un servidor](../mfc/servers-implementing-a-server.md)
 
-- [servidores: Implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)
+- [Servidores: implementar documentos de servidor](../mfc/servers-implementing-server-documents.md)
 
-- [servidores: Implementación de Windows de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Servidores: implementar ventanas de marco en contexto](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [servidores: Elementos del servidor](../mfc/servers-server-items.md)
+- [Servidores: elementos del servidor](../mfc/servers-server-items.md)
 
-- [servidores: Problemas de la interfaz de usuario](../mfc/servers-user-interface-issues.md)
+- [Servidores: problemas de la interfaz de usuario](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>Vea también
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Contenedores](../mfc/containers.md)<br/>
-[Contenedores: Características avanzadas](../mfc/containers-advanced-features.md)<br/>
+[Contenedores: características avanzadas](../mfc/containers-advanced-features.md)<br/>
 [Menús y recursos (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Registro](../mfc/registration.md)<br/>
 [Servidores de automatización](../mfc/automation-servers.md)

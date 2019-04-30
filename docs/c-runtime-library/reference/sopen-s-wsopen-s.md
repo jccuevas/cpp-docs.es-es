@@ -32,11 +32,11 @@ helpviewer_keywords:
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
 ms.openlocfilehash: 1d5f35615aee058b51c0b14ff9ccd38894427b20
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355639"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s, _wsopen_s
 
@@ -63,7 +63,7 @@ errno_t _wsopen_s(
 
 ### <a name="parameters"></a>Parámetros
 
-*PFH*<br/>
+*pfh*<br/>
 Identificador de archivo, o -1 si se produce un error.
 
 *filename*<br/>
@@ -113,16 +113,16 @@ La expresión de entero *oflag* se forma combinando una o más constantes manifi
 | **_O_APPEND** | Mueve un puntero de archivo al final del archivo antes de cada operación de escritura. |
 | **_O_BINARY** | Abre el archivo en modo binario (sin traducir). (Vea [fopen](fopen-wfopen.md) para ver una descripción del modo binario.) |
 | **_O_CREAT** | Crea un archivo y lo abre para escribir en él. No tiene ningún efecto si el archivo especificado por *filename* existe. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | Crea un archivo temporal y, si es posible, no se vuelca en el disco. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | Crea un archivo temporal. El archivo se elimina cuando se cierra el último descriptor de archivo. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
-| **_O_CREAT**&AMP;#124; ` _O_EXCL` | Devuelve un valor de error si un archivo especificado por *filename* existe. Se aplica solo cuando se usa con **_O_CREAT**. |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | Crea un archivo temporal y, si es posible, no se vuelca en el disco. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | Crea un archivo temporal. El archivo se elimina cuando se cierra el último descriptor de archivo. El *pmode* argumento es obligatorio cuando **_O_CREAT** se especifica. |
+| **_O_CREAT** &#124; ` _O_EXCL` | Devuelve un valor de error si un archivo especificado por *filename* existe. Se aplica solo cuando se usa con **_O_CREAT**. |
 | **_O_NOINHERIT** | Impide que se cree un descriptor de archivo compartido. |
 | **_O_RANDOM** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
 | **_O_RDONLY** | Abre un archivo únicamente para leerlo. No se puede especificar con **_O_RDWR** o **_O_WRONLY**. |
 | **_O_RDWR** | Abre un archivo tanto para lectura como para escritura. No se puede especificar con **_O_RDONLY** o **_O_WRONLY**. |
 | **_O_SEQUENTIAL** | Especifica que el almacenamiento en caché está optimizado para el acceso secuencial (pero no restringido a este) desde el disco. |
 | **_O_TEXT** | Abre un archivo en modo de texto (traducido). (Para obtener más información, vea [E/S de archivo en modo binario y de texto](../../c-runtime-library/text-and-binary-mode-file-i-o.md) y [fopen](fopen-wfopen.md)). |
-| **_O_TRUNC** | Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizado con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** el **_O_TRUNC** marca destruye el contenido del archivo especificado. |
+| **_O_TRUNC** | Abre un archivo y lo trunca a longitud cero. El archivo debe tener permiso de escritura. No se puede especificar con **_O_RDONLY**. **_O_TRUNC** utilizado con **_O_CREAT** abre un archivo existente o crea un archivo. **Nota:** El **_O_TRUNC** marca destruye el contenido del archivo especificado. |
 | **_O_WRONLY** | Abre un archivo únicamente para escribir en él. No se puede especificar con **_O_RDONLY** o **_O_RDWR**. |
 | **_O_U16TEXT** | Abre un archivo en modo Unicode UTF-16. |
 | **_O_U8TEXT** | Abre un archivo en modo Unicode UTF-8. |
@@ -149,7 +149,7 @@ El *pmode* argumento siempre es necesario, a diferencia de **_sopen**. Al especi
 |-|-|
 | **_S_IREAD** | Solo se permite la lectura. |
 | **_S_IWRITE** | Escritura permitida. (De hecho, se permiten la lectura y escritura). |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Lectura y escritura permitidas. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Lectura y escritura permitidas. |
 
 Si no se ha concedido el permiso de escritura, el archivo será de solo lectura. En el sistema operativo Windows, todos los archivos se pueden leer; es decir, no se puede conceder permisos únicamente de escritura. Por lo tanto, los modos **_S_IWRITE** y **_S_IREAD** | **_S_IWRITE** son equivalentes.
 

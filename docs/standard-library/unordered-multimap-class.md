@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362938"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap (Clase)
 
@@ -193,7 +193,7 @@ class unordered_multimap;
 |Función miembro|Descripción|
 |-|-|
 |[begin](#begin)|Designa el principio de la secuencia controlada.|
-|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|
+|[bucket](#bucket)|Obtiene el número de depósito para un valor de clave.|
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|
@@ -215,7 +215,7 @@ class unordered_multimap;
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|
-|[rehash)](#rehash)|Recompila la tabla hash.|
+|[rehash](#rehash)|Recompila la tabla hash.|
 |[size](#size)|Cuenta el número de elementos.|
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|
 |[unordered_multimap](#unordered_multimap)|Construye un objeto contenedor.|
@@ -356,7 +356,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
@@ -858,7 +858,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1174,7 +1174,7 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1252,7 +1252,7 @@ size_type erase(
 *Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
@@ -1281,7 +1281,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1490,7 +1490,7 @@ IList);
 |*Val*|Valor de un elemento que se va a insertar en el unordered_multimap.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que unordered_multimap puede utilizar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
+|*First*|Posición del primer elemento que se va a copiar.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|

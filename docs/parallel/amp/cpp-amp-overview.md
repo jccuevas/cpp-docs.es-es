@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349908"
 ---
 # <a name="c-amp-overview"></a>Información general sobre C++ AMP
 
@@ -102,7 +102,7 @@ void CppAmpMethod() {
 
 Los mismos elementos básicos están presentes, pero se utilizan construcciones de C++ AMP:
 
-- Datos: Utilice las matrices de C++ para construir tres C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objetos. Se proporcionan cuatro valores para construir un `array_view` objeto: los valores de datos, el rango, el tipo de elemento y la longitud de la `array_view` objeto en cada dimensión. El rango y tipo se pasan como parámetros de tipo. Los datos y la longitud se pasan como parámetros del constructor. En este ejemplo, la matriz de C++ que se pasa al constructor es unidimensional. El rango y longitud que se usan para construir la forma rectangular de los datos en el `array_view` objeto y los valores se usan para rellenar la matriz de datos. La biblioteca en tiempo de ejecución también incluye el [array (clase)](../../parallel/amp/reference/array-class.md), que tiene una interfaz similar a la `array_view` clase y se explica más adelante en este artículo.
+- Datos: Usa C++ matrices para construir tres C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) objetos. Se proporcionan cuatro valores para construir un `array_view` objeto: los valores de datos, el rango, el tipo de elemento y la longitud de la `array_view` objeto en cada dimensión. El rango y tipo se pasan como parámetros de tipo. Los datos y la longitud se pasan como parámetros del constructor. En este ejemplo, la matriz de C++ que se pasa al constructor es unidimensional. El rango y longitud que se usan para construir la forma rectangular de los datos en el `array_view` objeto y los valores se usan para rellenar la matriz de datos. La biblioteca en tiempo de ejecución también incluye el [array (clase)](../../parallel/amp/reference/array-class.md), que tiene una interfaz similar a la `array_view` clase y se explica más adelante en este artículo.
 
 - Iteración: El [parallel_for_each (función) (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) proporciona un mecanismo para recorrer en iteración los elementos de datos, o *dominio del cálculo*. En este ejemplo, el dominio del cálculo especificado por `sum.extent`. El código que desea ejecutar se encuentra en una expresión lambda, o *función kernel*. El `restrict(amp)` indica que se usa solo el subconjunto del lenguaje C++ que C++ AMP pueda acelerar.
 

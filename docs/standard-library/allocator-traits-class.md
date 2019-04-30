@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410978"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits (clase)
 
@@ -78,7 +78,7 @@ class allocator_traits;
 
 Los siguientes métodos estáticos llaman al método correspondiente en un parámetro de asignador determinado.
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[allocate](#allocate)|Método estático que asigna memoria mediante el parámetro de asignador determinado.|
 |[construct](#construct)|Método estático que usa un asignador especificado para crear un objeto.|
@@ -93,7 +93,7 @@ Los siguientes métodos estáticos llaman al método correspondiente en un pará
 
 **Espacio de nombres:** std
 
-## <a name="allocate"></a>  allocator_traits::Allocate
+## <a name="allocate"></a>  allocator_traits::allocate
 
 Método estático que asigna memoria mediante el parámetro de asignador determinado.
 
@@ -106,13 +106,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*al*<br/>
 Un objeto de asignador.
 
 *count*<br/>
 Número de elementos que se van a asignar.
 
-*Sugerencia*<br/>
+*hint*<br/>
 `const_pointer` que puede ayudar al objeto de asignador a satisfacer la solicitud de almacenamiento al buscar la dirección de un objeto asignado antes de la solicitud. Un puntero nulo se trata como si no hubiera sugerencia.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -123,7 +123,7 @@ El primer método estático devuelve `al.allocate(count)`.
 
 Si la expresión tiene el formato correcto, el segundo método devuelve `al.allocate(count, hint)`; de lo contrario, devuelve `al.allocate(count)`.
 
-## <a name="construct"></a>  allocator_traits::Construct
+## <a name="construct"></a>  allocator_traits::construct
 
 Método estático que usa un asignador especificado para crear un objeto.
 
@@ -134,7 +134,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*al*<br/>
 Un objeto de asignador.
 
 *ptr*<br/>
@@ -147,7 +147,7 @@ Lista de argumentos que se pasa al constructor de objeto.
 
 Si la expresión tiene el formato correcto, la función miembro estática llama a `al.construct(ptr, args...)`; de lo contrario, se evalúa como `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-## <a name="deallocate"></a>  allocator_traits::DEALLOCATE
+## <a name="deallocate"></a>  allocator_traits::deallocate
 
 Método estático que usa un asignador especificado para desasignar un número determinado de objetos.
 
@@ -159,7 +159,7 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*al*<br/>
 Un objeto de asignador.
 
 *ptr*<br/>
@@ -174,7 +174,7 @@ Este método llama a `al.deallocate(ptr, count)`.
 
 Este método no produce nada.
 
-## <a name="destroy"></a>  allocator_traits::Destroy
+## <a name="destroy"></a>  allocator_traits::destroy
 
 Método estático que usa un asignador especificado para llamar al destructor de un objeto sin desasignar su memoria.
 
@@ -185,7 +185,7 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*al*<br/>
 Un objeto de asignador.
 
 *ptr*<br/>
@@ -205,7 +205,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*al*<br/>
 Un objeto de asignador.
 
 ### <a name="remarks"></a>Comentarios
@@ -222,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>Parámetros
 
-*Al*<br/>
+*al*<br/>
 Un objeto de asignador.
 
 ### <a name="return-value"></a>Valor devuelto

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
 ms.openlocfilehash: 812c2d29c42b523d7b88b03741dc20f08ee70f44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399634"
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057: Localización de componentes de MFC
 

@@ -3,11 +3,11 @@ title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
 ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394206"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
@@ -27,8 +27,8 @@ Incluir este encabezado también garantiza que los nombres declarados mediante v
 
 ## <a name="see-also"></a>Vea también
 
-[\<ccomplex >](../standard-library/ccomplex.md)<br/>
-[\<cmath >](../standard-library/cmath.md)<br/>
+[\<ccomplex>](../standard-library/ccomplex.md)<br/>
+[\<cmath>](../standard-library/cmath.md)<br/>
 [Referencia de archivos de encabezado](../standard-library/cpp-standard-library-header-files.md)<br/>
 [Información general sobre la biblioteca estándar de C++](../standard-library/cpp-standard-library-overview.md)<br/>
 [Seguridad para subprocesos en la biblioteca estándar de C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

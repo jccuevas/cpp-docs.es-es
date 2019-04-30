@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
 ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403807"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount (clase)
 
@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|nombre|Descripción|
+|Name|Descripción|
 |`m_CmdUsage`|Un `CMap` objeto que asigna comandos a sus recuentos de uso.|
 |`m_nMinUsagePercentage`|El porcentaje de uso mínimo de un comando que se usará con frecuencia.|
 |`m_nStartCount`|El contador de inicio que se usa para determinar si este objeto recopila la cantidad mínima de datos de seguimiento.|

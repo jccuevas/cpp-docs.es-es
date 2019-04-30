@@ -31,11 +31,11 @@ helpviewer_keywords:
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
 ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335404"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -72,13 +72,13 @@ El conjugado complejo de *z*.  El resultado tiene el mismo elemento real e imagi
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **conj** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **conj** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **conj** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **conj** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**Conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|**conj**,               **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
 ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236104"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Operaciones de CString relacionadas con cadenas de estilo C
 
@@ -50,8 +50,7 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-Puede usar métodos de `CString` (`SetAt`, por ejemplo) para modificar caracteres concretos del objeto de cadena. Sin embargo, el puntero con LPCTSTR es temporal y deja de ser válido cuando se realiza cualquier cambio en `CString`. 
-  `CString` también puede quedar fuera de su ámbito y eliminarse automáticamente. Te recomendamos que uses un puntero LPCTSTR actualizado de un `CString` objeto cada vez que usar uno.
+Puede usar métodos de `CString` (`SetAt`, por ejemplo) para modificar caracteres concretos del objeto de cadena. Sin embargo, el puntero con LPCTSTR es temporal y deja de ser válido cuando se realiza cualquier cambio en `CString`. `CString` también puede quedar fuera de su ámbito y eliminarse automáticamente. Te recomendamos que uses un puntero LPCTSTR actualizado de un `CString` objeto cada vez que usar uno.
 
 Habrá veces en las que necesite una copia de los datos de `CString` para modificarlos directamente. Use la función más protegida `strcpy_s` (o la función portable de Unicode/MBCS `_tcscpy_s`) para copiar el objeto `CString` en otro búfer. Ahí, los caracteres se podrán modificar con menor riesgo, como verá en este ejemplo.
 

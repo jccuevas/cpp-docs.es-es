@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362743"
 ---
 # <a name="unorderedset-class"></a>unordered_set (Clase)
 
@@ -188,7 +188,7 @@ class unordered_set;
 |Función miembro|Descripción|
 |-|-|
 |[begin](#begin)|Designa el principio de la secuencia controlada.|
-|[depósito](#bucket)|Obtiene el número de depósito para un valor de clave.|
+|[bucket](#bucket)|Obtiene el número de depósito para un valor de clave.|
 |[bucket_count](#bucket_count)|Obtiene el número de depósitos.|
 |[bucket_size](#bucket_size)|Obtiene el tamaño de un depósito.|
 |[cbegin](#cbegin)|Designa el principio de la secuencia controlada.|
@@ -210,7 +210,7 @@ class unordered_set;
 |[max_bucket_count](#max_bucket_count)|Obtiene el número máximo de depósitos.|
 |[max_load_factor](#max_load_factor)|Obtiene o establece los elementos máximos por depósito.|
 |[max_size](#max_size)|Obtiene el tamaño máximo de la secuencia controlada.|
-|[rehash)](#rehash)|Recompila la tabla hash.|
+|[rehash](#rehash)|Recompila la tabla hash.|
 |[size](#size)|Cuenta el número de elementos.|
 |[swap](#swap)|Intercambia el contenido de dos contenedores.|
 |[unordered_set](#unordered_set)|Construye un objeto contenedor.|
@@ -363,7 +363,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a asignar.
 
 ### <a name="remarks"></a>Comentarios
@@ -855,7 +855,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1165,7 +1165,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1236,7 +1236,7 @@ size_type erase(const key_type& Key);
 *Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
@@ -1265,7 +1265,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*keyVal*<br/>
+*keyval*<br/>
 Valor de clave que se va a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1462,7 +1462,7 @@ void insert(initializer_list<value_type> IList);
 |*Val*|Valor de un elemento que se va a insertar en el unordered_set a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto.|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que unordered_set puede utilizar para construir un elemento de[value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
+|*First*|Posición del primer elemento que se va a copiar.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|La [initializer_list](../standard-library/initializer-list.md) de la que se van a copiar los elementos.|

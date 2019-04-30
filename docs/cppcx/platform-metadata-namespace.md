@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
 ms.openlocfilehash: 9626b3a9d28d28fd52a0d2295af8fda8855cd90c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387609"
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata (Espacio de nombres)
 
@@ -30,7 +30,7 @@ namespace Platform {
 
 Aunque este espacio de nombres está previsto para uso interno, los exploradores pueden mostrar los siguientes miembros de este espacio de nombres.
 
-|nombre|Observación|
+|Name|Observación|
 |----------|------------|
 |Atributo|La clase base de los atributos.|
 |[Platform::Metadata::DefaultMemberAttribute (Atributo)](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|Indica la función preferida que se va a invocar entre varias funciones sobrecargadas posibles.|

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392718"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Controles ActiveX MFC: Temas avanzados
 
@@ -174,7 +174,7 @@ Puede crear controles de cuadro de diálogo que no tienen ninguna interfaz de us
 
 - Con el miembro Variable Asistente para agregar, seleccione **Control Variable** y, a continuación, seleccione el identificador. del control Escriba un nombre de variable de miembro y seleccione la clase del control contenedor como el **tipo de Control**.
 
-     O bien
+     -o bien-
 
 - Declare una variable local y la subclase como el elemento de cuadro de diálogo. Inserte código similar al siguiente (`CMyCtrl` es la clase contenedora, IDC_MYCTRL1 es el identificador del control):
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295466"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr (Clase)
 
@@ -99,7 +99,7 @@ Objeto `unique_ptr`.
 *Nptr*<br/>
 Interfaz `rvalue` cuyo tipo es `std::nullptr_t`.
 
-*PTR*<br/>
+*Ptr*<br/>
 Objeto `pointer`.
 
 *Eliminador*<br/>
@@ -117,7 +117,7 @@ Use la función del asistente [make_unique](../standard-library/memory-functions
 
 `unique_ptr` administra de forma única un recurso. Cada objeto `unique_ptr` almacena un puntero al objeto que posee o almacena un puntero null. Un recurso no puede ser propiedad de más de un objeto `unique_ptr`. Cuando se destruye un objeto `unique_ptr` que posee un recurso determinado, se libera el recurso. Un objeto `unique_ptr` se puede mover, pero no se puede copiar. Para más información, vea [Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-El recurso se libera llamando a un objeto almacenado `deleter` de tipo `Del` que sabe cómo se asignan los recursos de un `unique_ptr` determinado. El valor predeterminado `deleter` `default_delete<T>` se da por supuesto que el recurso que apunta `ptr` se asigna con `new`, y que se puede liberar llamando a `delete _Ptr`. (Una especialización parcial `unique_ptr<T[]>`administra los objetos de matriz asignados con `new[]`, y tiene el `deleter` `default_delete<T[]>` predeterminado, especializado en llamar a delete[] `ptr`.)
+El recurso se libera llamando a un objeto almacenado `deleter` de tipo `Del` que sabe cómo se asignan los recursos de un `unique_ptr` determinado. El valor predeterminado `deleter` `default_delete<T>` se da por supuesto que el recurso que apunta `ptr` se asigna con `new`, y que se puede liberar llamando a `delete _Ptr`. (Una especialización parcial `unique_ptr<T[]>`administra los objetos de matriz asignados con `new[]`, y tiene el valor predeterminado `deleter` `default_delete<T[]>`, especializado en llamar a delete [] `ptr`.)
 
 El puntero almacenado en un recurso propio, `stored_ptr` tiene el tipo `pointer`. Es `Del::pointer` si se define y `T *` si no se define. El objeto almacenado `deleter` `stored_deleter` no ocupa ningún espacio en el objeto si `deleter` no tiene estado. Observe que `Del` puede ser un tipo de referencia.
 

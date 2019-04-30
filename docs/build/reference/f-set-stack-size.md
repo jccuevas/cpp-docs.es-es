@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
 ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293100"
 ---
 # <a name="f-set-stack-size"></a>/F (Establecer el tamaño de la pila)
 
@@ -56,5 +56,5 @@ También puede establecer el tamaño de pila:
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

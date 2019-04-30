@@ -110,11 +110,11 @@ helpviewer_keywords:
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
 ms.openlocfilehash: 8350e8b7036731cf3e09b9ce26278b2a656d80be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364615"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -196,7 +196,7 @@ Tipo de un elemento de la secuencia controlada.
 |[list::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada a una nueva matriz.|
 |[list::unique (STL/CLR)](#unique)|Quita los elementos adyacentes que superan una prueba especificada.|
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |[list::back_item (STL/CLR)](#back_item)|Obtiene acceso al último elemento.|
 |[list::front_item (STL/CLR)](#front_item)|Obtiene acceso al primer elemento.|
@@ -236,7 +236,7 @@ Borrar o quitar un elemento llama al destructor para su valor almacenado. Destru
 
 ## <a name="members"></a>Miembros
 
-## <a name="assign"></a> List:: assign (STL/CLR)
+## <a name="assign"></a> list::assign (STL/CLR)
 
 Reemplaza todos los elementos.
 
@@ -257,13 +257,13 @@ Número de elementos que se van a insertar.
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
 *right*<br/>
 Enumeración que se va a insertar.
 
-*Val*<br/>
+*val*<br/>
 Valor del elemento que se va a insertar.
 
 ### <a name="remarks"></a>Comentarios
@@ -318,7 +318,7 @@ a b
 a b c
 ```
 
-## <a name="back"></a> List:: back (STL/CLR)
+## <a name="back"></a> list::back (STL/CLR)
 
 Obtiene acceso al último elemento.
 
@@ -369,7 +369,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> List::back_item (STL/CLR)
+## <a name="back_item"></a> list::back_item (STL/CLR)
 
 Obtiene acceso al último elemento.
 
@@ -420,7 +420,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> List:: begin (STL/CLR)
+## <a name="begin"></a> list::begin (STL/CLR)
 
 Designa el principio de la secuencia controlada.
 
@@ -475,7 +475,7 @@ a b c
 x y c
 ```
 
-## <a name="clear"></a> List:: Clear (STL/CLR)
+## <a name="clear"></a> list::clear (STL/CLR)
 
 Quita todos los elementos.
 
@@ -532,7 +532,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> List:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> list::const_iterator (STL/CLR)
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -573,7 +573,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> List:: const_reference (STL/CLR)
+## <a name="const_reference"></a> list::const_reference (STL/CLR)
 
 El tipo de una referencia constante a un elemento.
 
@@ -617,7 +617,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> List:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> list::const_reverse_iterator (STL/CLR)
 
 El tipo de un iterador inverso constante de la secuencia controlada...
 
@@ -659,7 +659,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a> List:: difference_type (STL/CLR)
+## <a name="difference_type"></a> list::difference_type (STL/CLR)
 
 Los tipos de una distancia con signo entre dos elementos.
 
@@ -713,7 +713,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> List:: Empty (STL/CLR)
+## <a name="empty"></a> list::empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -764,7 +764,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> List:: end (STL/CLR)
+## <a name="end"></a> list::end (STL/CLR)
 
 Designa el final de la secuencia controlada.
 
@@ -820,7 +820,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> List:: Erase (STL/CLR)
+## <a name="erase"></a> list::erase (STL/CLR)
 
 Quita los elementos de las posiciones especificadas.
 
@@ -836,7 +836,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 Principio del intervalo que se va a borrar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a borrar.
 
 *where*<br/>
@@ -899,7 +899,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> List:: front (STL/CLR)
+## <a name="front"></a> list::front (STL/CLR)
 
 Obtiene acceso al primer elemento.
 
@@ -950,7 +950,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> List::front_item (STL/CLR)
+## <a name="front_item"></a> list::front_item (STL/CLR)
 
 Obtiene acceso al primer elemento.
 
@@ -1001,7 +1001,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> List::generic_container (STL/CLR)
+## <a name="generic_container"></a> list::generic_container (STL/CLR)
 
 El tipo de la interfaz genérica para el contenedor.
 
@@ -1067,7 +1067,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> List::generic_iterator (STL/CLR)
+## <a name="generic_iterator"></a> list::generic_iterator (STL/CLR)
 
 El tipo de iterador para su uso con la interfaz genérica para el contenedor.
 
@@ -1125,7 +1125,7 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a> List::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a> list::generic_reverse_iterator (STL/CLR)
 
 El tipo de un iterador inverso para su uso con la interfaz genérica para el contenedor.
 
@@ -1182,7 +1182,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a> List::generic_value (STL/CLR)
+## <a name="generic_value"></a> list::generic_value (STL/CLR)
 
 El tipo de un elemento para su uso con la interfaz genérica para el contenedor.
 
@@ -1238,7 +1238,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> List:: Insert (STL/CLR)
+## <a name="insert"></a> list::insert (STL/CLR)
 
 Agrega elementos en una posición especificada.
 
@@ -1261,13 +1261,13 @@ Número de elementos que se van a insertar.
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
 *right*<br/>
 Enumeración que se va a insertar.
 
-*Val*<br/>
+*val*<br/>
 Valor del elemento que se va a insertar.
 
 *where*<br/>
@@ -1356,7 +1356,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a> List:: Iterator (STL/CLR)
+## <a name="iterator"></a> list::iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -1405,7 +1405,7 @@ a b c
 x b c
 ```
 
-## <a name="list"></a> List:: List (STL/CLR)
+## <a name="list"></a> list::list (STL/CLR)
 
 Construye un objeto contenedor.
 
@@ -1430,13 +1430,13 @@ Número de elementos que se van a insertar.
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
 *right*<br/>
 Objeto o intervalo que se va a insertar.
 
-*Val*<br/>
+*val*<br/>
 Valor del elemento que se va a insertar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1550,7 +1550,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="merge"></a> List:: Merge (STL/CLR)
+## <a name="merge"></a> list::merge (STL/CLR)
 
 Combina dos secuencias controladas ordenadas.
 
@@ -1564,7 +1564,7 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>Parámetros
 
-*Pred*<br/>
+*pred*<br/>
 Comparador para los pares de elemento.
 
 *right*<br/>
@@ -1647,7 +1647,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="op_as"></a> List::operator = (STL/CLR)
+## <a name="op_as"></a> list::operator= (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -1700,7 +1700,7 @@ a b c
 a b c
 ```
 
-## <a name="pop_back"></a> List:: pop_back (STL/CLR)
+## <a name="pop_back"></a> list::pop_back (STL/CLR)
 
 Quita el último elemento.
 
@@ -1747,7 +1747,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> List:: pop_front (STL/CLR)
+## <a name="pop_front"></a> list::pop_front (STL/CLR)
 
 Quita el primer elemento.
 
@@ -1794,7 +1794,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> List:: push_back (STL/CLR)
+## <a name="push_back"></a> list::push_back (STL/CLR)
 
 Agrega un nuevo elemento de la última.
 
@@ -1834,7 +1834,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> List:: push_front (STL/CLR)
+## <a name="push_front"></a> list::push_front (STL/CLR)
 
 Agrega un nuevo primer elemento.
 
@@ -1874,7 +1874,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a> List:: rbegin (STL/CLR)
+## <a name="rbegin"></a> list::rbegin (STL/CLR)
 
 Designa el principio de la secuencia controlada inversa.
 
@@ -1929,7 +1929,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> List:: Reference (STL/CLR)
+## <a name="reference"></a> list::reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -1984,7 +1984,7 @@ a b c
 A B C
 ```
 
-## <a name="remove"></a> List:: Remove (STL/CLR)
+## <a name="remove"></a> list::remove (STL/CLR)
 
 Quita un elemento con un valor especificado.
 
@@ -1996,7 +1996,7 @@ void remove(value_type val);
 
 #### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 Valor del elemento que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -2043,7 +2043,7 @@ a b c
 a c
 ```
 
-## <a name="remove_if"></a> List:: remove_if (STL/CLR)
+## <a name="remove_if"></a> list::remove_if (STL/CLR)
 
 Quita los elementos que pasan una prueba especificada.
 
@@ -2056,7 +2056,7 @@ template<typename Pred1>
 
 #### <a name="parameters"></a>Parámetros
 
-*Pred*<br/>
+*pred*<br/>
 Prueba de elementos que se va a quitar.
 
 ### <a name="remarks"></a>Comentarios
@@ -2107,7 +2107,7 @@ a b b b c
 b b b
 ```
 
-## <a name="rend"></a> List:: rend (STL/CLR)
+## <a name="rend"></a> list::rend (STL/CLR)
 
 Designa el final de la secuencia controlada inversa.
 
@@ -2163,7 +2163,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a> List:: Resize (STL/CLR)
+## <a name="resize"></a> list::resize (STL/CLR)
 
 Cambia el número de elementos.
 
@@ -2176,10 +2176,10 @@ void resize(size_type new_size, value_type val);
 
 #### <a name="parameters"></a>Parámetros
 
-*NEW_SIZE*<br/>
+*new_size*<br/>
 Nuevo tamaño de la secuencia controlada.
 
-*Val*<br/>
+*val*<br/>
 Valor del elemento de relleno.
 
 ### <a name="remarks"></a>Comentarios
@@ -2223,7 +2223,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse"></a> List:: Reverse (STL/CLR)
+## <a name="reverse"></a> list::reverse (STL/CLR)
 
 Invierte la secuencia controlada.
 
@@ -2270,7 +2270,7 @@ a b c
 c b a
 ```
 
-## <a name="reverse_iterator"></a> List:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> list::reverse_iterator (STL/CLR)
 
 El tipo de un iterador invertido para la secuencia controlada.
 
@@ -2319,7 +2319,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> List:: Size (STL/CLR)
+## <a name="size"></a> list::size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -2372,7 +2372,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> List:: size_type (STL/CLR)
+## <a name="size_type"></a> list::size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -2420,7 +2420,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="sort"></a> List:: Sort (STL/CLR)
+## <a name="sort"></a> list::sort (STL/CLR)
 
 Ordena la secuencia controlada.
 
@@ -2434,7 +2434,7 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>Parámetros
 
-*Pred*<br/>
+*pred*<br/>
 Comparador para los pares de elemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -2485,7 +2485,7 @@ c b a
 a b c
 ```
 
-## <a name="splice"></a> List:: splice (STL/CLR)
+## <a name="splice"></a> list::splice (STL/CLR)
 
 Restitch vínculos entre nodos.
 
@@ -2504,7 +2504,7 @@ void splice(iterator where, list<Value>% right,
 *first*<br/>
 Principio del intervalo que se une.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a unir.
 
 *right*<br/>
@@ -2578,7 +2578,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="swap"></a> List:: swap (STL/CLR)
+## <a name="swap"></a> list::swap (STL/CLR)
 
 Intercambia el contenido de dos contenedores.
 
@@ -2642,7 +2642,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a> List::to_array (STL/CLR)
+## <a name="to_array"></a> list::to_array (STL/CLR)
 
 Copia la secuencia controlada a una nueva matriz.
 
@@ -2691,7 +2691,7 @@ a b c d
 a b c
 ```
 
-## <a name="unique"></a> List:: UNIQUE (STL/CLR)
+## <a name="unique"></a> list::unique (STL/CLR)
 
 Quita los elementos adyacentes que superan una prueba especificada.
 
@@ -2705,7 +2705,7 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>Parámetros
 
-*Pred*<br/>
+*pred*<br/>
 Comparador para los pares de elemento.
 
 ### <a name="remarks"></a>Comentarios
@@ -2757,7 +2757,7 @@ a b c
 a a
 ```
 
-## <a name="value_type"></a> List:: value_type (STL/CLR)
+## <a name="value_type"></a> list::value_type (STL/CLR)
 
 El tipo de un elemento.
 
@@ -2802,7 +2802,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operador! = (lista) (STL/CLR)
+## <a name="op_neq"></a> operator!= (list) (STL/CLR)
 
 Lista de comparación de desigualdad.
 
@@ -3009,7 +3009,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador == (lista) (STL/CLR)
+## <a name="op_eq"></a> operator== (list) (STL/CLR)
 
 Comparación de igualdad de lista.
 

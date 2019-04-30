@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334871"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -65,7 +65,7 @@ Búfer proporcionado que contendrá el resultado de la conversión.
 *sizeInBytes*<br/>
 El tamaño del búfer en bytes.
 
-*valor*<br/>
+*value*<br/>
 Número que se va a convertir.
 
 *count*<br/>
@@ -118,7 +118,7 @@ La versión de depuración de esta función rellena primero el búfer con 0xFD. 
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Todas las versiones de la [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Ejemplo
 

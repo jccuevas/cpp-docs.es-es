@@ -3,11 +3,11 @@ title: Ref (Clases y structs) (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
 ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368596"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref (Clases y structs) (C++/CX)
 
@@ -130,6 +130,6 @@ En el ejemplo siguiente se muestra cómo exponer una clase ref pública que deri
 ## <a name="see-also"></a>Vea también
 
 [Sistema de tipos](../cppcx/type-system-c-cx.md)<br/>
-[Valor clases y structs](../cppcx/value-classes-and-structs-c-cx.md)<br/>
+[Clases y structs de valor](../cppcx/value-classes-and-structs-c-cx.md)<br/>
 [Referencia del lenguaje de Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)

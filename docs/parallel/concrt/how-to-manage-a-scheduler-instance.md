@@ -1,18 +1,18 @@
 ---
-title: Filtrar Administrar una instancia del programador
+title: Procedimiento Administrar una instancia del programador
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
 ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413884"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Filtrar Administrar una instancia del programador
+# <a name="how-to-manage-a-scheduler-instance"></a>Procedimiento Administrar una instancia del programador
 
 Las instancias del Programador permiten asociar directivas de programación concretas con varios tipos de cargas de trabajo. Este tema contiene dos ejemplos básicos que muestran cómo crear y administrar una instancia del programador.
 

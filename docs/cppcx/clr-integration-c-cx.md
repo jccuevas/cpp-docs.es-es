@@ -3,11 +3,11 @@ title: Integración de CLR (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
 ms.openlocfilehash: df0c5e9cfaf9a4148c8d16b68ee04b4e9ce82e6a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257782"
 ---
 # <a name="clr-integration-ccx"></a>Integración de CLR (C++/CX)
 
@@ -71,4 +71,4 @@ IReference\<T > en el tiempo de ejecución de Windows se asigna a Nullable\<T > 
 
 ## <a name="see-also"></a>Vea también
 
-[Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)
+[Interoperación con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)

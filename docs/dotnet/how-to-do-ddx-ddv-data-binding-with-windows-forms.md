@@ -1,5 +1,5 @@
 ---
-title: Filtrar Realice las DDX y DDV enlace de datos con Windows Forms
+title: Procedimiento Realice las DDX y DDV enlace de datos con Windows Forms
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
 ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387323"
 ---
-# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Filtrar Realice las DDX/DDV enlace de datos con Windows Forms
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Procedimiento Realice las DDX/DDV enlace de datos con Windows Forms
 
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) llamadas [CWinFormsControl:: CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) para crear un control que coincida con el identificador de control de recursos. Si usas `DDX_ManagedControl` para un `CWinFormsControl` control (en el asistente generó código), no debería llamar `CreateManagedControl` explícitamente para el mismo control.
 

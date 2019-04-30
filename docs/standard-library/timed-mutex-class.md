@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
 ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411960"
 ---
 # <a name="timedmutex-class"></a>timed_mutex (Clase)
 
@@ -154,7 +154,7 @@ Punto en el tiempo que especifica el umbral después del cual el método ya no i
 
 Si el subproceso que realiza la llamada ya posee `mutex`, el comportamiento es indefinido.
 
-## <a name="unlock"></a>  timed_mutex::Unlock
+## <a name="unlock"></a>  timed_mutex::unlock
 
 Libera la propiedad de `mutex`.
 

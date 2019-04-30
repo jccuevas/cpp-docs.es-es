@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383534"
 ---
 # <a name="moneyget-class"></a>money_get (Clase)
 
@@ -108,19 +108,19 @@ virtual iter_type do_get(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*Internacional*<br/>
+*Intl*<br/>
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
 *Estado*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente o no.
 
-*Val*<br/>
+*val*<br/>
 Una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -190,19 +190,19 @@ iter_type get(iter_type first,
 *first*<br/>
 Iterador de entrada que se dirige al principio de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que se dirige al final de la secuencia que se va a convertir.
 
-*Internacional*<br/>
+*Intl*<br/>
 Un valor booleano que indica el tipo de símbolo de moneda que se espera en la secuencia: **true** si es internacional, **false** si es nacional.
 
-*iosbase*<br/>
+*Iosbase*<br/>
 Un formato de marca que cuando está establecido indica que el símbolo de moneda es opcional. De lo contrario, es obligatorio.
 
 *Estado*<br/>
 Establece los elementos de máscara de bits apropiados para el estado de la secuencia en función de si las operaciones se realizaron correctamente.
 
-*Val*<br/>
+*val*<br/>
 Una cadena que almacena la secuencia convertida.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -291,11 +291,11 @@ Valor entero que se usa para especificar el tipo de administración de memoria d
 
 Los valores posibles de la *_Refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 

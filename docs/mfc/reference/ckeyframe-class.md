@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
 ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392614"
 ---
 # <a name="ckeyframe-class"></a>Clase CKeyFrame
 
@@ -64,7 +64,7 @@ class CKeyFrame : public CBaseKeyFrame;
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CKeyFrame::m_offset](#m_offset)|Especifica el desplazamiento de este fotograma clave desde un fotograma clave almacenado en m_pExistingKeyFrame.|
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Almacena un puntero a un keframe existente. Este fotograma clave se agrega al guion gráfico con m_offset el fotograma clave existente.|

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - library path linker option
 ms.assetid: 7240af0b-9a3d-4d53-8169-2a92cd6958ba
 ms.openlocfilehash: ab586c788825a854e7d3cb3760da6e4e5558de3a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269220"
 ---
 # <a name="libpath-additional-libpath"></a>/LIBPATH (Directorios de bibliotecas adicionales)
 
@@ -50,5 +50,5 @@ Utilice la opción/libpath para invalidar la ruta de acceso de la biblioteca de 
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245380"
 ---
 # <a name="nonstandard-behavior"></a>Comportamiento no estándar
 
@@ -21,7 +21,7 @@ La lista de los límites del compilador que difieren de los definidos en el est�
 
 ## <a name="covariant-return-types"></a>Tipos de valor devueltos de covariante
 
-Las clases base virtuales no se admiten como tipos devueltos de covariante cuando la función virtual tiene un número variable de argumentos. Esto no cumple con el párrafo 7 de la sección 10.3 de la especificación ISO de C++. El ejemplo siguiente no se compila, error del compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+Las clases base virtuales no se admiten como tipos de valor devueltos de covariante cuando la función virtual tiene un número variable de argumentos. Esto no cumple con el párrafo 7 de la sección 10.3 de la especificación ISO de C++. El ejemplo siguiente no se compila, error del compilador [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -75,7 +75,7 @@ Para obtener más información sobre las especificaciones de excepciones, vea [l
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-El estándar de C++ indica que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) no debe corresponder a una `char_type` valor. El compilador de Visual C++ exige esta restricción de tipo **char**, pero no para el tipo **wchar_t**. Esto no cumple con el requisito indicado en la tabla 62 de la sección 12.1.1 de la especificación ISO de C++. En el ejemplo siguiente se muestra esto.
+El C++ estándar de Estados que [char_traits:: EOF](../standard-library/char-traits-struct.md#eof) no debe corresponder a una `char_type` valor. El objeto Visual C++ compilador exige esta restricción de tipo **char**, pero no para el tipo **wchar_t**. Esto no cumple con el requisito indicado en la tabla 62 de la sección 12.1.1 de la especificación ISO de C++. En el ejemplo siguiente se muestra esto.
 
 ```cpp
 #include <iostream>

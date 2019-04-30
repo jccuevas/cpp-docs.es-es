@@ -13,11 +13,11 @@ helpviewer_keywords:
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
 ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273448"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importar y exportar funciones inline
 
@@ -42,7 +42,7 @@ Una característica de una función inline importada es que puede tomar su direc
 
 - [Determinar qué método de exportación para usar](determining-which-exporting-method-to-use.md)
 
-- [Importar a una aplicación mediante __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importación a una aplicación mediante __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>Vea también
 

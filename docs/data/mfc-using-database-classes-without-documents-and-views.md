@@ -18,11 +18,11 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396020"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: Uso de clases de base de datos sin documentos ni vistas
 
@@ -59,7 +59,7 @@ El Asistente para aplicaciones MFC tiene varias opciones **seleccione soporte t�
 |**Vista de base de datos sin compatibilidad con archivos**|Deriva de `CRecordView`|Proporciona compatibilidad con documentos pero no con la serialización. Puede almacenar el conjunto de registros y coordinar varias vistas; documento no admite la serialización o la **New**, **abierto**, **guardar**, y **Guardar como** comandos. Consulte [aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents). Si incluye una vista de base de datos, debe especificar el origen de datos.<br /><br /> Incluye un conjunto de registros, las bibliotecas de vínculos, una vista de registros y archivos de encabezado de la base de datos. (Disponible solo para las aplicaciones con el **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
 |**Vista de base de datos con compatibilidad con archivos**|Deriva de `CRecordView`|Proporciona compatibilidad total con documentos, incluida la serialización y relacionadas con documentos **archivo** comandos de menú. Las aplicaciones de base de datos se suelen aplicar a una base por registro en lugar de en un archivo por lo que no necesitan la serialización. Sin embargo, podría tener un uso especial para la serialización. Consulte [aplicaciones con documentos mínimos](#_core_applications_with_minimal_documents). Si incluye una vista de base de datos, debe especificar el origen de datos.<br /><br /> Incluye un conjunto de registros, las bibliotecas de vínculos, una vista de registros y archivos de encabezado de la base de datos. (Disponible solo para las aplicaciones con el **compatibilidad con la arquitectura documento/vista** opción seleccionada en el [tipo de aplicación, Asistente para aplicaciones MFC](../mfc/reference/application-type-mfc-application-wizard.md) página.)|
 
-Para obtener una explicación de las alternativas a la serialización y usos alternativos para la serialización, vea [serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
+Para obtener una explicación de las alternativas a la serialización y usos alternativos para la serialización, vea [serialización: serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
 
 ##  <a name="_core_applications_with_minimal_documents"></a> Aplicaciones con documentos mínimos
 
@@ -81,7 +81,7 @@ Normalmente, use esta opción para las aplicaciones sencillas basadas en formula
 
 ###  <a name="_core_a_document_with_file_support"></a> Documento con compatibilidad con archivos
 
-Seleccione la opción de base de datos del Asistente para aplicaciones **vista con compatibilidad con archivos de base de datos** cuando tenga un uso alternativo para el objeto relacionado en el documento **archivo** comandos de menú y serialización de documentos. Para la parte de acceso a datos del programa, puede usar el documento de la misma manera como se describe en [documento sin compatibilidad con archivos](#_core_a_document_without_file_support). Puede usar la funcionalidad de serialización del documento, por ejemplo, para leer y escribir un documento de perfil de usuario serializado que almacena las preferencias del usuario u otra información útil. Para obtener más ideas, consulte [serialización: Frente a serialización Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
+Seleccione la opción de base de datos del Asistente para aplicaciones **vista con compatibilidad con archivos de base de datos** cuando tenga un uso alternativo para el objeto relacionado en el documento **archivo** comandos de menú y serialización de documentos. Para la parte de acceso a datos del programa, puede usar el documento de la misma manera como se describe en [documento sin compatibilidad con archivos](#_core_a_document_without_file_support). Puede usar la funcionalidad de serialización del documento, por ejemplo, para leer y escribir un documento de perfil de usuario serializado que almacena las preferencias del usuario u otra información útil. Para obtener más ideas, consulte [serialización: serialización frente a Base de datos de entrada/salida](../mfc/serialization-serialization-vs-database-input-output.md).
 
 El Asistente para la aplicación es compatible con esta opción, pero debe escribir el código que serializa el documento. Store la información serializada en miembros de datos del documento.
 

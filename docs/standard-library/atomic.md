@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376606"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ Una operación atómica tiene dos propiedades clave que ayudan a usar varios sub
 
 En algunas plataformas no sería posible implementar realmente las operaciones atómicas para algunos tipos sin usar bloqueos `mutex`. Un tipo atómico *no tiene bloqueos* si ninguna operación atómica sobre ese tipo emplea bloqueos.
 
-**C++11**: en los controladores de señal puede realizar operaciones atómicas sobre un objeto `obj` si `obj.is_lock_free()` o `atomic_is_lock_free(x)` son True.
+**C++11**: En los controladores de señal puede realizar las operaciones atómicas sobre un objeto `obj` si `obj.is_lock_free()` o `atomic_is_lock_free(x)` son true.
 
 La clase [atomic_flag](../standard-library/atomic-flag-structure.md) proporciona un tipo atómico mínimo que contiene un **bool** marca. Sus operaciones nunca tienen bloqueos.
 
@@ -152,14 +152,14 @@ Existen nombres de typedef para especializaciones de la plantilla atómica para 
 
 ## <a name="structs"></a>Estructuras
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[atomic (Estructura)](../standard-library/atomic-structure.md)|Describe un objeto que realiza operaciones atómicas sobre un valor almacenado.|
 |[atomic_flag (Estructura)](../standard-library/atomic-flag-structure.md)|Describe un objeto que se establece de forma atómica y borra un **bool** marca.|
 
 ## <a name="enums"></a>Enumeraciones
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[memory_order (Enumeración)](../standard-library/atomic-enums.md#memory_order_enum)|Proporciona nombres simbólicos para las operaciones de sincronización en ubicaciones de memoria. Estas operaciones afectan a cómo las asignaciones de un subproceso se hacen visibles en otro.|
 
@@ -167,7 +167,7 @@ Existen nombres de typedef para especializaciones de la plantilla atómica para 
 
 En la lista siguiente, las funciones que no terminan en `_explicit` tienen la semántica `_explicit` correspondiente, salvo que tienen los argumentos implícitos [memory_order](../standard-library/atomic-enums.md#memory_order_enum) de `memory_order_seq_cst`.
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Realiza una operación *atómica de comparación e intercambio*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Realiza una operación *atómica de comparación e intercambio*.|

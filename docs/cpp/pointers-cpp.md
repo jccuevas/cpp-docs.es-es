@@ -8,21 +8,21 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223071"
 ---
 # <a name="pointers-c"></a>Punteros (C++)
 
 Los punteros se declaran mediante la siguiente secuencia.
 
-> \[*especificadores de clase de almacenamiento*] \[ *calificadores cv*] *especificadores de tipo* \[ *ms-modifier*]  *declarador* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 donde se puede usar cualquier declarador de puntero válido para *declarador*. La sintaxis de un declarador de puntero simple es la siguiente:
 
-> __\*__ \[*calificadores CV*] *identificador* \[ **=** *expresión*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. Los especificadores de la declaración:
 
@@ -50,7 +50,7 @@ El declarador de un puntero a función tiene el siguiente aspecto:
 
 Para una matriz de punteros, la sintaxis es la siguiente:
 
-> __\*__ *identificador* **\[** \[ *expresión-constante*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 Varios declaradores y sus inicializadores pueden aparecer juntos en una sola declaración en una lista separada por comas detrás del especificador de declaración.
 

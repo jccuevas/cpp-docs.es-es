@@ -1,16 +1,16 @@
 ---
-title: Filtrar Modificar las propiedades del proyecto de C++ y los destinos sin necesidad de cambiar el archivo de proyecto
+title: Procedimiento Modificar las propiedades del proyecto de C++ y los destinos sin necesidad de cambiar el archivo de proyecto
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
 ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273344"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Filtrar Modificar las propiedades del proyecto de C++ y los destinos sin necesidad de cambiar el archivo de proyecto
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Procedimiento Modificar las propiedades del proyecto de C++ y los destinos sin necesidad de cambiar el archivo de proyecto
 
 Puede invalidar las propiedades y los destinos del proyecto desde la línea de comandos de MSBuild sin cambiar el archivo de proyecto. Esto es útil cuando se quieren aplicar algunas propiedades de manera ocasional o temporal. Se presuponen ciertos conocimientos de MSBuild. Para obtener más información, vea [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 

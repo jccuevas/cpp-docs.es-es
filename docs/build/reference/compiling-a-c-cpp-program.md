@@ -7,11 +7,11 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294153"
 ---
 # <a name="compiling-a-cc-project"></a>Compilar un proyecto de C o C++
 
@@ -37,7 +37,7 @@ Las opciones del compilador se procesan "de izquierda a derecha" y, si se detect
 
 ## <a name="additional-compiler-topics"></a>Temas adicionales relacionados con el compilador
 
-- [Opciones del compilador MSVC](compiler-options.md)
+- [Opciones del compilador de MSVC](compiler-options.md)
 
 - [Archivos de encabezado precompilados](../creating-precompiled-header-files.md)
 

@@ -5,11 +5,11 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224082"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -67,7 +67,7 @@ Un tipo de exclusión mutua también se conoce como un *tipo bloqueable*. Si no 
 
 ### <a name="structs"></a>Structs
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[adopt_lock_t (Estructura)](../standard-library/adopt-lock-t-structure.md)|Representa un tipo que se utiliza para definir un `adopt_lock`.|
 |[defer_lock_t (Estructura)](../standard-library/defer-lock-t-structure.md)|Representa un tipo que define un objeto `defer_lock` que se utiliza para seleccionar uno de los constructores sobrecargados de `unique_lock`.|
@@ -76,7 +76,7 @@ Un tipo de exclusión mutua también se conoce como un *tipo bloqueable*. Si no 
 
 ### <a name="variables"></a>Variables
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Representa un objeto que se puede pasar a los constructores para `lock_guard` y `unique_lock` para indicar que el objeto de exclusión mutua que también se pasa al constructor está bloqueado.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Representa un objeto que se puede pasar al constructor de `unique_lock` para indicar que el constructor no debería bloquear el objeto de exclusión mutua que también se pasa a él.|

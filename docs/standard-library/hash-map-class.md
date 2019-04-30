@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405071"
 ---
 # <a name="hashmap-class"></a>hash_map (Clase)
 
@@ -121,9 +121,9 @@ Tipo de datos de clave que se almacenará en hash_map.
 Tipo de datos de elemento que se almacenará en hash_map.
 
 *Rasgos*<br/>
-Tipo que incluye dos objetos de función: uno de clase compare que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a enteros sin signo de tipo `size_t`. Este argumento es opcional, y hash_compare<`Key`, less<`Key`> > es el valor predeterminado.
+Tipo que incluye dos objetos de función: uno de clase compare que puede comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es un predicado unario que asigna valores de clave de los elementos a enteros sin signo de tipo `size_t`. Este argumento es opcional y hash_compare <`Key`, less <`Key`>> es el valor predeterminado.
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de hash_map. Este argumento es opcional y el valor predeterminado es allocator<pair <const `Key`, `Type`>>.
 
 ## <a name="remarks"></a>Comentarios
@@ -648,7 +648,7 @@ Valor clave de los elementos cuya coincidencia debe buscarse a partir del objeto
 
 La función miembro devuelve el número de elementos *x* del intervalo
 
-\[ lower_bound (*clave*), upper_bound (*clave*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 que es 0 o 1 en el caso de hash_map, que es un contenedor asociativo único.
 
@@ -891,7 +891,7 @@ emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_map](../standard-library/hash-map-class.md) a menos que `hash_map` ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
+|*val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_map](../standard-library/hash-map-class.md) a menos que `hash_map` ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -950,8 +950,8 @@ iterator emplace_hint(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_map](../standard-library/hash-map-class.md) a menos que `hash_map` ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
-|*_WHERE*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
+|*val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_map](../standard-library/hash-map-class.md) a menos que `hash_map` ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
+|*_Where*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1218,13 +1218,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 Posición del elemento que se va a quitar de hash_map.
 
 *first*<br/>
 Posición del primer elemento que se ha quitado de hash_map.
 
-*Último*<br/>
+*last*<br/>
 Posición inmediatamente siguiente al último elemento que se ha quitado de hash_map.
 
 *key*<br/>
@@ -1538,7 +1538,7 @@ hash_map(
 |*Al*|La clase de asignador de almacenamiento que se usará para este objeto hash_map, cuyo valor predeterminado es `Allocator`.|
 |*Comp.*|Función de comparación de tipo const `Traits` utilizada para ordenar los elementos del hash_map, que de forma predeterminada es `hash_compare`.|
 |*Derecha*|hash_map del que el mapa construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list|
 
@@ -1593,10 +1593,10 @@ iterator insert(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor de un elemento que se va a insertar en el objeto hash_map a menos que este ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
-|*_WHERE*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
+|*val*|Valor de un elemento que se va a insertar en el objeto hash_map a menos que este ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
+|*_Where*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
 |*first*|Posición del primer elemento que se va a copiar de un objeto hash_map.|
-|*Último*|Posición situada más allá del último elemento que se va a copiar de un objeto hash_map.|
+|*last*|Posición situada más allá del último elemento que se va a copiar de un objeto hash_map.|
 
 ### <a name="return-value"></a>Valor devuelto
 

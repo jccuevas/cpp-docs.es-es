@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
 ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261265"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Asistente para consumidores OLE DB ATL
 
@@ -36,13 +36,13 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
    - **Conexión** ficha
 
-      El contenido de esta pestaña depende del proveedor seleccionado. Aunque hay muchos tipos de proveedores, en esta sección se trata las conexiones para los dos más comunes: datos de SQL y ODBC. Los demás son similares variaciones en los campos que se describen aquí.
+      El contenido de esta pestaña depende del proveedor seleccionado. Aunque hay muchos tipos de proveedores, en esta sección se trata las conexiones para los dos más comunes: Datos de SQL y ODBC. Los demás son similares variaciones en los campos que se describen aquí.
 
       Para los datos SQL:
 
-      1. **Seleccione o escriba un nombre de servidor:** haga clic en el menú de lista desplegable para mostrar todos los servidores de datos registrados en la red y seleccionar uno.
+      1. **Seleccione o escriba un nombre de servidor:** Haga clic en el menú de lista desplegable para mostrar todos los servidores de datos registrados en la red y seleccionar uno.
 
-      1. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
+      1. **Especificar información para iniciar sesión en el servidor:** Escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
 
          > [!NOTE]
          > Hay un problema de seguridad con la característica de "Permitir guardar contraseña" del cuadro de diálogo Propiedades de vínculo de datos. En "Especifique la información para iniciar sesión en el servidor", hay dos botones de opción:
@@ -53,26 +53,26 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
          > Si selecciona **utilizar un nombre de usuario específico y una contraseña**, tiene la opción de guardar la contraseña (mediante la casilla de verificación para "Permitir guardar contraseña"); sin embargo, esta opción no es segura. Se recomienda que seleccione **seguridad integrada de uso Windows NT**; esta opción es segura porque cifra la contraseña.
          > Puede haber situaciones en las que desea seleccionar "Permitir guardar contraseña". Por ejemplo, si está lanzando una biblioteca con una solución de base de datos privado, debe no tener acceso directamente a la base de datos pero en su lugar, use una aplicación de nivel intermedio para comprobar el usuario (a través de cualquier esquema de autenticación que elija) y, a continuación, limitar al tipo de datos disponible para el usuario.
 
-      1. **Seleccione la base de datos en el servidor:** haga clic en el menú de lista desplegable para mostrar todas las instancias registradas de bases de datos en el servidor de datos y seleccione uno.
+      1. **Seleccione la base de datos en el servidor:** Haga clic en el menú de lista desplegable para mostrar todas las instancias registradas de bases de datos en el servidor de datos y seleccione uno.
 
          \- o -
 
-         **Adjuntar un archivo de base de datos como un nombre de base de datos:** especificar un archivo que se usará como la base de datos; escriba la ruta de acceso explícita.
+         **Adjuntar un archivo de base de datos como un nombre de base de datos:** Especificar un archivo que se usará como la base de datos; Escriba la ruta de acceso explícita.
 
       Para los datos ODBC:
 
-      1. **Especifique el origen de datos:** puede usar un nombre de origen de datos o una cadena de conexión.
+      1. **Especifique el origen de datos:** Puede usar un nombre de origen de datos o una cadena de conexión.
 
-         **Nombre del origen de datos de uso:** esta lista desplegable muestra los orígenes de datos registrados en su equipo. Puede configurar los orígenes de datos antes de tiempo mediante el Administrador de orígenes de datos ODBC
+         **Nombre del origen de datos de uso:** Esta lista desplegable muestra los orígenes de datos registrados en su equipo. Puede configurar los orígenes de datos antes de tiempo mediante el Administrador de orígenes de datos ODBC
 
          \- o -
 
-         **Usar cadena de conexión:** escriba una cadena de conexión que ya ha obtenido o haga clic en el **compilar** botón; el **Seleccionar origen de datos** aparece el cuadro de diálogo. Seleccione un origen de datos de archivo o equipo y haga clic en **Aceptar**.
+         **Usar cadena de conexión:** Escriba una cadena de conexión que ya ha obtenido o haga clic en el **compilar** botón; el **Seleccionar origen de datos** aparece el cuadro de diálogo. Seleccione un origen de datos de archivo o equipo y haga clic en **Aceptar**.
 
          > [!NOTE]
          > Puede obtener una cadena de conexión mediante la visualización de las propiedades de una conexión existente en **Explorador de servidores**, o bien puede crear una conexión haciendo doble clic en **Agregar conexión** en **Server Explorador**.
 
-      1. **Escriba la información para iniciar sesión en el servidor:** escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
+      1. **Especificar información para iniciar sesión en el servidor:** Escriba un nombre de usuario y una contraseña para iniciar sesión en el servidor de datos.
 
       1. Escriba el catálogo inicial que se usará.
 
@@ -80,9 +80,9 @@ Este asistente configura una clase de consumidor OLE DB con los enlaces de datos
 
    - **Advanced** ficha
 
-      **Configuración de red:** especifique el **nivel de suplantación** (el nivel de suplantación que el servidor está autorizado para usar al suplantar al cliente; se corresponde directamente con los niveles de suplantación de RPC) y  **Nivel de protección** (el nivel de protección de datos enviados entre cliente y servidor; se corresponde directamente con los niveles de protección de RPC).
+      **Configuración de red:** Especifique el **nivel de suplantación** (el nivel de suplantación que el servidor está autorizado para usar al suplantar al cliente; se corresponde directamente con los niveles de suplantación de RPC) y **nivel de protección** () el nivel de protección de datos enviados entre cliente y servidor. se corresponde directamente con los niveles de protección de RPC).
 
-      **Sí:** en **Connect timeout**, especifique el número de segundos de tiempo de inactividad permitido antes de que se produce un tiempo de espera. En **permisos de acceso**, especifique los permisos de acceso en la conexión de datos.
+      **Otro:** En **Connect timeout**, especifique el número de segundos de tiempo de inactividad permitido antes de que se produce un tiempo de espera. En **permisos de acceso**, especifique los permisos de acceso en la conexión de datos.
 
       Para obtener más información acerca de las propiedades de inicialización avanzadas, consulte la documentación suministrada con cada proveedor OLE DB.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370845"
 ---
 # <a name="output-file-stream-member-functions"></a>Funciones de miembro de flujo de archivos de salida
 
@@ -109,7 +109,7 @@ Use estas funciones miembro para probar errores al escribir en una secuencia:
 |[good](basic-ios-class.md#good)|Devuelve **True** si no existe ninguna condición de error (irrecuperable o de otro tipo) y la marca de fin de archivo no se establece.|
 |[eof](basic-ios-class.md#eof)|Devuelve **True** en la condición de fin de archivo.|
 |[clear](basic-ios-class.md#clear)|Establece el estado de error interno. Si se ha llamado con los argumentos predeterminados, borra todos los bits de error.|
-|[rdstate] (basic-ios-class.md #rdstate|Devuelve el estado de error actual.|
+|[rdstate](basic-ios-class.md#rdstate|Devuelve el estado de error actual.|
 
 El operador **!** operador está sobrecargado para llevar a cabo la misma función que el `fail` función. Por lo tanto, la expresión:
 

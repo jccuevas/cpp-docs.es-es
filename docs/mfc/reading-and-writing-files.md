@@ -13,11 +13,11 @@ helpviewer_keywords:
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
 ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324264"
 ---
 # <a name="reading-and-writing-files"></a>Leer y escribir en archivos
 
@@ -27,7 +27,7 @@ Si ha usado las funciones de administración de archivos de biblioteca en tiempo
 
 1. Use la `Read` y `Write` las funciones miembro para leer y escribir datos en el archivo.
 
-     O bien
+     -o bien-
 
 1. El `Seek` también está disponible para mover a un desplazamiento específico dentro del archivo de la función miembro.
 

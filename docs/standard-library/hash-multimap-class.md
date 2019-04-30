@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
 ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405084"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap (Clase)
 
@@ -121,7 +121,7 @@ Tipo de datos de elemento que se almacenará en hash_multimap.
 *Rasgos*<br/>
 El tipo que incluye dos objetos de función, uno de clase *rasgos* que es capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es unario predicado asignación de valores de clave de los elementos números enteros de tipo sin signo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key>>` es el valor predeterminado.
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de hash_multimap. Este argumento es opcional y el valor predeterminado es `allocator<pair <const Key, Type>>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -849,7 +849,7 @@ iterator emplace(ValTy&& val);
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_multimap](../standard-library/hash-multimap-class.md).|
+|*val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_multimap](../standard-library/hash-multimap-class.md).|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -906,8 +906,8 @@ iterator emplace_hint(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_multimap](../standard-library/hash-multimap-class.md) a menos que `hash_multimap` ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
-|*_WHERE*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
+|*val*|Valor usado para construir con movimiento un elemento que se va a insertar en el objeto [hash_multimap](../standard-library/hash-multimap-class.md) a menos que `hash_multimap` ya contenga ese elemento (o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente).|
+|*_Where*|Sugerencia con respecto al lugar donde se va a empezar a buscar el punto correcto de inserción.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1176,13 +1176,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 Posición del elemento que se va a quitar del hash_multimap.
 
 *first*<br/>
 Posición del primer elemento que se quitó del hash_multimap.
 
-*Último*<br/>
+*last*<br/>
 Posición inmediatamente siguiente al último elemento que se quitó del hash_multimap.
 
 *key*<br/>
@@ -1518,7 +1518,7 @@ hash_multimap(
 |*Al*|Clase de asignador de almacenamiento que se utilizará para este objeto hash_multimap, que de forma predeterminada es `Allocator`.|
 |*Comp.*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos del mapa, que de forma predeterminada es `Traits`.|
 |*Derecha*|Asignación de la que el conjunto construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list de la que se va a copiar.|
 
@@ -1577,7 +1577,7 @@ iterator insert(
 |-|-|
 |*Val*|Valor de un elemento que se va a insertar en el hash_multimap a menos que ya contenga ese elemento o, más en general, a menos que ya contenga un elemento cuya clave se ordena de forma equivalente.|
 |*Where*|Sugerencia sobre dónde empezar a buscar el punto correcto de inserción.|
-|*Primero*|Posición del primer elemento que se va a copiar de un mapa.|
+|*First*|Posición del primer elemento que se va a copiar de un mapa.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar de un mapa.|
 
 ### <a name="return-value"></a>Valor devuelto

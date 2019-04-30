@@ -11,11 +11,11 @@ helpviewer_keywords:
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
 ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57819473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318932"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (Establecer la suma de comprobación)
 
@@ -47,5 +47,5 @@ La opción /RELEASE se establece de forma predeterminada cuando la [/SUBSYSTEM: 
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

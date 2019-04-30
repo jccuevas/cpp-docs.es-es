@@ -10,11 +10,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826384"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341745"
 ---
 # <a name="precompiled-header-files"></a>Archivos de encabezado precompilados
 
@@ -118,7 +118,7 @@ Cuando se usa un encabezado precompilado creado con /Yc o/Yu, el compilador comp
 
 Esta tabla enumeran las opciones del compilador que podrían desencadenar una advertencia de incoherencia cuando se utiliza un encabezado precompilado:
 
-|Opción|nombre|Regla|
+|Opción|Name|Regla|
 |------------|----------|----------|
 |/D|Definir constantes y macros|Debe ser el mismo entre la compilación que creó el encabezado precompilado y la compilación actual. No se comprueba el estado de las constantes definidas, pero pueden producirse resultados impredecibles si los archivos dependen de los valores de las constantes que cambian.|
 |/E o /EP|Copiar los resultados del preprocesador en la salida estándar|Los encabezados precompilados no funcionan con la opción /E o /EP.|
@@ -310,4 +310,4 @@ int main( void )
 ## <a name="see-also"></a>Vea también
 
 [Referencia de compilación de C/C++](reference/c-cpp-building-reference.md)<br/>
-[Opciones del compilador MSVC](reference/compiler-options.md)
+[Opciones del compilador de MSVC](reference/compiler-options.md)

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
 ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335599"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
@@ -72,13 +72,13 @@ El arco seno de *z*, en radianes. El resultado es ilimitado en el eje imaginario
 
 ## <a name="remarks"></a>Comentarios
 
-Dado que C++ admite sobrecargas, puede llamar a sobrecargas de **casin** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **casin** siempre toma y devuelve un **_Dcomplex** valor.
+Dado que C++ permite las sobrecargas, puede llamar a sobrecargas de **casin** que toman y devuelven **_Fcomplex** y **_Lcomplex** valores. En un programa C, **casin** siempre toma y devuelve un **_Dcomplex** valor.
 
 ## <a name="requirements"></a>Requisitos
 
 |Rutina|Encabezado C|Encabezado C++|
 |-------------|--------------|------------------|
-|**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**casin**,               **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412974"
 ---
 # <a name="matchresults-class"></a>match_results (Clase)
 
@@ -69,10 +69,10 @@ La clase de plantilla describe un objeto que controla una secuencia no modificab
 |[length](#length)|Devuelve la longitud de una subcoincidencia.|
 |[max_size](#max_size)|Obtiene el número máximo de subcoincidencias.|
 |[Posición](#position)|Permite obtener el desplazamiento inicial de un subgrupo.|
-|[Prefijo](#prefix)|Obtiene la secuencia antes de la primera subcoincidencia.|
+|[prefix](#prefix)|Obtiene la secuencia antes de la primera subcoincidencia.|
 |[size](#size)|Número de recuentos de subcoincidencias.|
 |[str](#str)|Devuelve una subcoincidencia.|
-|[Sufijo](#suffix)|Obtiene la secuencia después de la última subcoincidencia.|
+|[suffix](#suffix)|Obtiene la secuencia después de la última subcoincidencia.|
 |[swap](#swap)|Intercambia dos objetos match_results.|
 
 ### <a name="operators"></a>Operadores
@@ -304,7 +304,7 @@ Tipo de iterador de salida.
 *out*<br/>
 Flujo de salida donde se va a escribir.
 
-*FMT*<br/>
+*fmt*<br/>
 Cadena de formato.
 
 *flags*<br/>
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Sub*<br/>
+*sub*<br/>
 El índice de la subcoincidencia.
 
 ### <a name="remarks"></a>Comentarios
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*Alloc*<br/>
+*alloc*<br/>
 Objeto de asignador que se va a almacenar.
 
 *right*<br/>
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Sub*<br/>
+*sub*<br/>
 Índice de la subcoincidencia.
 
 ### <a name="remarks"></a>Comentarios
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Sub*<br/>
+*sub*<br/>
 Índice de la subcoincidencia.
 
 ### <a name="remarks"></a>Comentarios

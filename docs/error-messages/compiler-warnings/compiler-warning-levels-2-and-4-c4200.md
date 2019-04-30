@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
 ms.openlocfilehash: 56a2ba641df610519949f64f6feeca18d9a99e93
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359961"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>Advertencia del compilador (niveles 2 y 4) C4200
 
@@ -19,7 +19,7 @@ se ha utilizado una extensión no estándar: matriz de tamaño cero en struct/un
 
 Indica que una estructura o unión contiene una matriz de tamaño cero.
 
-La declaración de una matriz de tamaño cero es una extensión de Microsoft. Esto genera una advertencia de nivel 2 al compilar un archivo de C++ y una advertencia de nivel 4 al compilar un archivo de C. La compilación de C++ también genera esta advertencia: "No se puede generar el constructor de copias o el operador de asignación de copias cuando el tipo definido por el usuario contiene una matriz de tamaño cero". Este ejemplo genera la advertencia C4200:
+La declaración de una matriz de tamaño cero es una extensión de Microsoft. Esto genera una advertencia de nivel 2 al compilar un archivo de C++ y una advertencia de nivel 4 al compilar un archivo de C. C++compilación también genera esta advertencia: "No se puede generar operador constructor o asignación de copia cuando UDT contiene una matriz de tamaño cero". Este ejemplo genera la advertencia C4200:
 
 ```cpp
 // C4200.cpp

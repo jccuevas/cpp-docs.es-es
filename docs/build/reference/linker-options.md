@@ -10,11 +10,11 @@ helpviewer_keywords:
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301765"
 ---
 # <a name="linker-options"></a>Opciones del enlazador
 
@@ -34,7 +34,7 @@ En la línea de comandos, opciones del enlazador no distinguen mayúsculas de mi
 
 Puede usar la pragma [comment](../../preprocessor/comment-c-cpp.md) para especificar algunas opciones del enlazador.
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|Especifica un archivo de respuesta.|
 |[/ALIGN](align-section-alignment.md)|Especifica la alineación de cada sección.|
@@ -137,4 +137,4 @@ Para obtener más información, vea [Compiler-Controlled LINK Options](compiler-
 ## <a name="see-also"></a>Vea también
 
 [Referencia de compilación de C/C++](c-cpp-building-reference.md)<br/>
-[Referencia MSVC del vinculador](linking.md)
+[Referencia del enlazador MSVC](linking.md)

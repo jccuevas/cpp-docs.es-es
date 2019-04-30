@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405175"
 ---
 # <a name="collate-class"></a>collate (Clase)
 
@@ -118,11 +118,11 @@ El nombre de la configuración regional.
 
 Los valores posibles de la *_Refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 El constructor inicializa su objeto base con **locale::**[faceta](../standard-library/locale-class.md#facet_class)(`_Refs`).
 
@@ -248,7 +248,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 *first*<br/>
 Un puntero al primer carácter de la secuencia cuyo valor hash tiene que determinarse.
 
-*Último*<br/>
+*last*<br/>
 Un puntero al último carácter de la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -276,7 +276,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 *first*<br/>
 Un puntero al primer carácter de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Un puntero al último carácter de la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -304,7 +304,7 @@ long hash(const CharType* first, const CharType* last) const;
 *first*<br/>
 Un puntero al primer carácter de la secuencia cuyo valor hash tiene que determinarse.
 
-*Último*<br/>
+*last*<br/>
 Un puntero al último carácter de la secuencia cuyo valor hash tiene que determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 *first*<br/>
 Un puntero al primer carácter de la secuencia que se va a convertir.
 
-*Último*<br/>
+*last*<br/>
 Un puntero al último carácter de la secuencia que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto

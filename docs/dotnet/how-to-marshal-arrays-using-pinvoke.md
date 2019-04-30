@@ -1,5 +1,5 @@
 ---
-title: Filtrar Uso de PInvoke de serializar matrices
+title: Procedimiento Uso de PInvoke de serializar matrices
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
 ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325447"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Filtrar Uso de PInvoke de serializar matrices
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Procedimiento Uso de PInvoke de serializar matrices
 
 En este tema se explica cómo funciones nativas que aceptan cadenas de estilo C se pueden llamar mediante el tipo de cadena CLR <xref:System.String> mediante la compatibilidad con la invocación de plataforma de .NET Framework. Los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) ya que P/Invoke proporciona pocos informes, de errores de tiempo de compilación no es seguro para el tipo y puede ser tedioso de implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción (en caso contrario, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 

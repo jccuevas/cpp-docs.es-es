@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330211"
 ---
 # <a name="platformstring-class"></a>Platform::String (Clase)
 
@@ -411,7 +411,7 @@ Segundo objeto `String`.
 
 ## <a name="operator-inequality"></a> String::operator!=
 
-Indica si dos especificada `String` objetos tienen valores diferentes.
+Indica si dos especificados `String` objetos tienen valores diferentes.
 
 ### <a name="syntax"></a>Sintaxis
 

@@ -6,13 +6,13 @@ helpviewer_keywords:
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
 ms.openlocfilehash: c8f4c40be84b2204e5b5632fe6d3d5a5d22b8719
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410011"
 ---
-# <a name="how-to-use-combinable-to-improve-performance"></a>Filtrar Usar la clase combinable para mejorar el rendimiento
+# <a name="how-to-use-combinable-to-improve-performance"></a>Procedimiento Usar la clase combinable para mejorar el rendimiento
 
 En este ejemplo se muestra cómo usar el [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) clase para calcular la suma de los números de una [std:: Array](../../standard-library/array-class-stl.md) objetos que son primos. La clase `combinable` mejora el rendimiento eliminando el estado compartido.
 

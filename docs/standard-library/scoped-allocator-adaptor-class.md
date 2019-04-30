@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348216"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor (clase)
 
@@ -65,7 +65,7 @@ Como ejemplo, se definen tres tipos:
 
 ### <a name="constructors"></a>Constructores
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Construye un objeto `scoped_allocator_adaptor`.|
 
@@ -88,7 +88,7 @@ Como ejemplo, se definen tres tipos:
 
 ### <a name="structs"></a>Estructuras
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[scoped_allocator_adaptor::rebind (Struct)](#rebind_struct)|Define el tipo `Outer::rebind\<Other>::other` como sinónimo de `scoped_allocator_adaptor\<Other, Inner...>`.|
 
@@ -111,7 +111,7 @@ Como ejemplo, se definen tres tipos:
 
 **Espacio de nombres:** std
 
-## <a name="allocate"></a>  scoped_allocator_adaptor::Allocate
+## <a name="allocate"></a>  scoped_allocator_adaptor::allocate
 
 Asigna memoria usando el asignador `Outer`.
 
@@ -124,7 +124,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 *count*<br/>
 Número de elementos para los que se va a asignar suficiente espacio de almacenamiento.
 
-*Sugerencia*<br/>
+*hint*<br/>
 Un puntero que es posible que ayude el objeto de asignador ubicando la dirección de un objeto asignado antes de la solicitud.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -169,7 +169,7 @@ Una lista de argumentos.
 *first*<br/>
 Un objeto del primer tipo en un par.
 
-*segundo*<br/>
+*second*<br/>
 Un objeto del segundo tipo en un par.
 
 *right*<br/>
@@ -195,7 +195,7 @@ El quinto método se comporta igual que `this->construct(ptr, piecewise_construc
 
 El sexto método se comporta igual que `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.
 
-## <a name="deallocate"></a>  scoped_allocator_adaptor::DEALLOCATE
+## <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
 
 Desasigna los objetos mediante el asignador exterior.
 
@@ -211,7 +211,7 @@ Puntero a la ubicación inicial de los objetos que se van a desasignar.
 *count*<br/>
 Número de objetos que se van a desasignar.
 
-## <a name="destroy"></a>  scoped_allocator_adaptor::Destroy
+## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
 
 Destruye un objeto especificado.
 
@@ -271,7 +271,7 @@ Una referencia al objeto almacenado de tipo `outer_allocator_type`.
 
 Define el tipo `Outer::rebind\<Other>::other` como sinónimo de `scoped_allocator_adaptor\<Other, Inner...>`.
 
-struct reenlace {typedef Other_traits::rebind\<otros > Other_alloc; typedef scoped_allocator_adaptor ()\<Other_alloc, interna... > other;};
+struct reenlace {typedef Other_traits::rebind\<otros > Other_alloc; typedef scoped_allocator_adaptor ()\<Other_alloc, interno... > other; };
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor (constructor)
 
@@ -297,10 +297,10 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 Un `scoped_allocator_adaptor` existente.
 
-*Al*<br/>
+*al*<br/>
 Un asignador existente que se usará como el asignador exterior.
 
-*REST*<br/>
+*rest*<br/>
 Una lista de asignadores que se usarán como los asignadores exteriores.
 
 ### <a name="remarks"></a>Comentarios
