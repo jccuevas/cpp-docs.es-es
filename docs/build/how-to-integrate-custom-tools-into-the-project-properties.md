@@ -1,5 +1,5 @@
 ---
-title: Filtrar Integrar herramientas personalizadas en las propiedades del proyecto
+title: Procedimiento Integrar herramientas personalizadas en las propiedades del proyecto
 ms.date: 04/27/2016
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
 ms.openlocfilehash: a959eddb36a2de90ebd5b5b1b9eb5e2f4e67c03a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810164"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342144"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Filtrar Integrar herramientas personalizadas en las propiedades del proyecto
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procedimiento Integrar herramientas personalizadas en las propiedades del proyecto
 
 Puede agregar opciones de herramienta personalizada de Visual Studio **páginas de propiedades** ventana mediante la creación de un archivo de esquema XML subyacente.
 

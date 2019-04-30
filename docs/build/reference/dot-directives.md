@@ -6,17 +6,17 @@ helpviewer_keywords:
 - dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
 ms.openlocfilehash: 2c21e8a18c76331f86a4e8966b4f67c9c9bc9b7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827214"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342823"
 ---
 # <a name="dot-directives"></a>Directivas dot
 
 Especificar directivas dot fuera de un bloque de descripción, al principio de una línea. Directivas dot comienzan con un punto (. ) y seguido de dos puntos (:). Se permiten espacios y tabulaciones. Nombres de directiva de punto son distingue mayúsculas de minúsculas y mayúsculas.
 
-|Directiva|Propósito|
+|Directiva|Finalidad|
 |---------------|-------------|
 |**. OMITIR:**|Omite los códigos de salida distinto de cero devueltos por comandos, desde el lugar que donde se especifica al final del archivo MAKE. De forma predeterminada, NMAKE se detiene si un comando devuelve un código de salida distinto de cero. Para restaurar la comprobación de errores, use **! CMDSWITCHES**. Para omitir el código de salida para un único comando, use el modificador de guión (-). Para omitir los códigos de salida para un archivo completo, use / me.|
 |**. PRECIOSOS:** *destinos*|Conserva *destinos* en disco si se interrumpen los comandos para actualizarlas; no tiene ningún efecto si un comando controla una interrupción eliminando el archivo. Separe los nombres de destino con uno o más espacios o tabulaciones. De forma predeterminada, NMAKE elimina un destino si se interrumpe una compilación mediante CTRL+C o CTRL+INTER. Cada uso de **. PRECIOSAS** se aplica a la totalidad del archivo MAKE; varias especificaciones son acumulativas.|

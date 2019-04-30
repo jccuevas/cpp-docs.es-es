@@ -5,11 +5,11 @@ helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177087"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345842"
 ---
 # <a name="overview-of-declarators"></a>Información general sobre los declaradores
 
@@ -157,15 +157,15 @@ int a, *b, c[5], **d, &e=a;
 - `declarator` se define como:
 
   - identifier
-  - nombre completo
-  - declarador (lista de argumentos) [cv-qualfiers] [especificación de excepción]
-  - declarador de [[-expresión-constante]]
+  - qualified-name
+  - declarator ( argument-list ) [cv-qualfiers] [exception-spec]
+  - declarator [ [ constant-expression ] ]
   - declarador de puntero-(operador)
   - (declarador)
 
 - y *puntero operador* es uno de:
 
-  - \* [calificador CV]
+  - \* [cv-qualifiers]
   - & [calificador CV]:: especificador de nombre anidado \* [calificador CV]
 
 Dado que un declarador puede contener declaradores, es posible construir los tipos derivados más complejos, como matrices de punteros, funciones que devuelven matrices de punteros a función, mediante las reglas anteriores.  Para formar cada paso de la construcción, comience con el identificador que representa el tipo de datos base y aplique la regla de sintaxis anterior con la expresión anterior como `declarator`.  El orden de aplicación de las reglas de sintaxis debe ser el inverso de como se indica la expresión en inglés.  Si aplica el *puntero operador* regla de sintaxis en una expresión de matriz o función, utilice paréntesis si desea que un puntero a la matriz o función, como se muestra en la última fila de la tabla siguiente.

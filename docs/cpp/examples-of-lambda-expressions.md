@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392198"
 ---
 # <a name="examples-of-lambda-expressions"></a>Ejemplos de expresiones lambda
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>Ejemplo
 
 Las expresiones lambda se pueden usar en el cuerpo de una función. La expresión lambda puede tener acceso a cualquier función o miembro de datos al que pueda tener acceso la función envolvente. Se puede capturar explícita o implícitamente el **esto** puntero para proporcionar acceso a los miembros de datos y funciones de la clase envolvente.
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): capturar **esto** por valor (`[*this]`) cuando la expresión lambda, se usará en las operaciones asincrónicas o paralelas donde el código podría ejecutarse después el objeto original queda fuera del ámbito.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Capturar **esto** por valor (`[*this]`) cuando la expresión lambda, se usará en las operaciones asincrónicas o paralelas donde el código podría ejecutarse después de que el objeto original queda fuera del ámbito.
 
 Puede usar el **esto** puntero explícitamente en una función, como se muestra aquí:
 
