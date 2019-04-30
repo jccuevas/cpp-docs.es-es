@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212391"
 ---
 # <a name="conditionvariable-class"></a>condition_variable (Clase)
 
@@ -52,7 +52,7 @@ class condition_variable;
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador condition_variable.|
 |[notify_all](#notify_all)|Desbloquea todos los subprocesos que están esperando el objeto `condition_variable`.|
 |[notify_one](#notify_one)|Desbloquea uno de los subprocesos que están esperando el objeto `condition_variable`.|
-|[Espere](#wait)|Bloquea un subproceso.|
+|[wait](#wait)|Bloquea un subproceso.|
 |[wait_for](#wait_for)|Bloquea un subproceso y establece un intervalo de tiempo después del cual el subproceso se desbloquea.|
 |[wait_until](#wait_until)|Bloquea un subproceso y establece un punto máximo en el tiempo en el que el subproceso se desbloquea.|
 

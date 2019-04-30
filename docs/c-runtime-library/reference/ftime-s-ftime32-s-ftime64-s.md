@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
 ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287686"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s, _ftime32_s, _ftime64_s
 
@@ -72,7 +72,7 @@ El **_ftime_s** función obtiene la hora local actual y lo almacena en la estruc
 |**dstflag**|Distinto de cero si el horario de verano está en vigor para la zona horaria local. (Consulte [_tzset](tzset.md) para obtener una explicación de cómo se determina el horario de verano).|
 |**millitm**|Fracción de segundo en milisegundos.|
 |**time**|La hora en segundos desde la medianoche (00:00:00) del 1 de enero de 1970, hora universal coordinada (UTC).|
-|**Zona horaria**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **timezone** se establece el valor de la variable global **_timezone** (consulte **_tzset**).|
+|**timezone**|Diferencia en minutos, que se desplaza hacia el oeste, entre la hora UTC y la hora local. El valor de **timezone** se establece el valor de la variable global **_timezone** (consulte **_tzset**).|
 
 El **_ftime64_s** función, que usa el **__timeb64** estructura, permite la creación del archivo fechas expresarse a través de 23:59:59, 31 de diciembre de 3000, UTC; mientras que **_ftime32_s** solo representa fechas hasta las 23:59:59 del 18 de enero de 2038, UTC. La medianoche del 1 de enero de 1970 es el límite inferior del intervalo de fechas para todas estas funciones.
 

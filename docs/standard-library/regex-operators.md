@@ -11,11 +11,11 @@ f1_keywords:
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369558"
 ---
 # <a name="ltregexgt-operators"></a>Operadores de &lt;regex&gt;
 
@@ -278,7 +278,7 @@ Clase de asignador.
 *BidIt*<br/>
 Tipo de iterador.
 
-*sistema operativo*<br/>
+*os*<br/>
 Secuencia de salida.
 
 *right*<br/>

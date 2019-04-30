@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224199"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ Para obtener más información sobre cómo deshabilitar las advertencias sobre i
 
 ### <a name="example"></a>Ejemplo
 
-Para especificar un valor para la macro _ITERATOR_DEBUG_LEVEL, use un [/D](../build/reference/d-preprocessor-definitions.md) para definirlo en la línea de comandos, o use la opción del compilador `#define` antes de la biblioteca estándar de C++ se incluyen los encabezados en los archivos de origen. Por ejemplo, en la línea de comandos para compilar *sample.cpp* en modo de depuración y usar el soporte técnico de iteradores de depuración, puede especificar la definición de macro _ITERATOR_DEBUG_LEVEL:
+Para especificar un valor para la macro _ITERATOR_DEBUG_LEVEL, use un [/D](../build/reference/d-preprocessor-definitions.md) para definirlo en la línea de comandos, o use la opción del compilador `#define` antes el C++ encabezados de la biblioteca estándar se incluyen en los archivos de origen. Por ejemplo, en la línea de comandos para compilar *sample.cpp* en modo de depuración y usar el soporte técnico de iteradores de depuración, puede especificar la definición de macro _ITERATOR_DEBUG_LEVEL:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 
@@ -69,4 +69,4 @@ En un archivo de código fuente, especifique la macro antes de los encabezados d
 
 [Checked Iterators](../standard-library/checked-iterators.md)<br/>
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[Bibliotecas seguras: Biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Bibliotecas seguras: biblioteca estándar de C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

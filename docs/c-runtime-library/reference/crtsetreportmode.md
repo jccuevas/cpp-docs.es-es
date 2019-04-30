@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335300"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -83,7 +83,7 @@ El **_CrtSetReportMode** función asigna el nuevo modo de informe especificado e
 |**_CRTDBG_MODE_DEBUG**|Escribe el mensaje en la ventana de salida del depurador.|
 |**_CRTDBG_MODE_FILE**|Escribe el mensaje en un identificador de archivos proporcionado por el usuario. Debe llamarse a [_CrtSetReportFile](crtsetreportfile.md) para definir el archivo o la secuencia específicos que se deben usar como destino.|
 |**_CRTDBG_MODE_WNDW**|Crea un cuadro de mensaje para mostrar el mensaje junto con el [anular](abort.md), **vuelva a intentar**, y **omitir** botones.|
-|**_CRTDBG_REPORT_MODE**|Devuelve *reportMode* especificado *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Devuelve *reportMode* especificado *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Cada tipo de informe se puede designar mediante uno, dos o tres modos, o sin ningún modo. Por consiguiente, es posible tener más de un destino definido para un único tipo de informe. Por ejemplo, el siguiente fragmento de código, errores de aserción para enviarse a una ventana de mensaje de depuración y a **stderr**:
 
@@ -102,7 +102,7 @@ Además, el modo o los modos de informe de cada tipo de informe se pueden contro
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** solo versiones de depuración de [Características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Versiones de depuración de [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md) solo.
 
 ## <a name="see-also"></a>Vea también
 

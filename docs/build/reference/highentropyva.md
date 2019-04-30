@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /HIGHENTROPYVA editbin option
 ms.assetid: ef4b7c63-440d-40ca-b39d-edefb3217505
 ms.openlocfilehash: 90d3c868eaab85e3b1a2a416c9aa14b0e27ec8f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270229"
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 
@@ -21,7 +21,7 @@ Especifica si la imagen ejecutable es compatible con la selección aleatoria del
 
 ## <a name="syntax"></a>Sintaxis
 
-> **/ HIGHENTROPYVA**[**: N**]
+> **/HIGHENTROPYVA**[**:NO**]
 
 ## <a name="remarks"></a>Comentarios
 

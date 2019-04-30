@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353578"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg, va_copy, va_end, va_start
 
@@ -94,7 +94,7 @@ Parámetro que precede al primer argumento opcional.
 
 ## <a name="remarks"></a>Comentarios
 
-El **va_arg**, **va_copy**, **va_end**, y **va_start** macros proporcionan una manera portable para tener acceso a los argumentos a una función cuando el función toma un número variable de argumentos. Hay dos versiones de las macros. Las macros definidas en STDARG.H cumplen el estándar ISO C99. Las definidas en VARARGS.H se han dejado de utilizar, pero se conservan por razones de compatibilidad con el código escrito antes del estándar ANSI C89.
+El **va_arg**, **va_copy**, **va_end**, y **va_start** macros proporcionan una manera portable para tener acceso a los argumentos a una función cuando el función toma un número variable de argumentos. Hay dos versiones de las macros: Las macros definidas en STDARG. H se ajusta a ISO C99 estándar; las macros definidas en VARARGS. H están en desuso, pero se conservan por compatibilidad con versiones anteriores con el código escrito antes del estándar ANSI C89.
 
 Estas macros suponen que la función toma un número fijo de argumentos necesarios, seguido por un número variable de argumentos opcionales. Los argumentos necesarios se declaran como parámetros ordinarios de la función; se puede obtener acceso a ellos con los nombres de parámetro. El acceso a los argumentos opcionales se obtiene a través de las macros de STDARG.H (o VARARGS.H para el código escrito antes del estándar ANSI C89), que establece un puntero al primer argumento opcional de la lista de argumentos, recupera argumentos de la lista y restablece el puntero cuando se finaliza el procesamiento del argumento.
 

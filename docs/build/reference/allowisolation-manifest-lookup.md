@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
 ms.openlocfilehash: fe76e0d40a2a19a002136a7e095875ad2903d434
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818458"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341078"
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION (Manifestar bucle)
 
@@ -47,5 +47,5 @@ Para obtener más información, consulte [Manifest Files Reference](/windows/des
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

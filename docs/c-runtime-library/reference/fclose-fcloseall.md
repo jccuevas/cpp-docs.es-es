@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334884"
 ---
 # <a name="fclose-fcloseall"></a>fclose, _fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*stream*<br/>
 Puntero a la estructura **FILE**.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -62,7 +62,7 @@ Consulte [_doserrno, errno, _sys_errlist y _sys_nerr](../../c-runtime-library/er
 
 El **_fcloseall** función cierra todas las secuencias abiertas excepto **stdin**, **stdout**, **stderr** (y en MS-DOS, **_stdaux**  y **_stdprn**). También cierra y elimina los archivos temporales creados por **tmpfile**. En ambas funciones, se vacían todos los búferes asociados a la secuencia antes de cerrarla. Los búferes asignados por el sistema se liberan cuando se cierra la secuencia. Los búferes asignados por el usuario con **setbuf** y **setvbuf** no se liberan automáticamente.
 
-**Nota:** Cuando estas funciones se usan para cerrar una secuencia, se cierran el descriptor de archivo subyacente y el identificador de archivos del SO (o socket), además de la secuencia. Por lo tanto, si el archivo se ha abierto originalmente como identificador de archivos o descriptor de archivo y se cierra con **fclose**, no llame también a **_close** para cerrar el descriptor de archivo; no llame a la función de Win32  **CloseHandle** para cerrar el identificador de archivo.
+**Nota:** Cuando estas funciones se usan para cerrar una secuencia, se cierra el subyacente descriptor de archivo y sistema operativo identificador de archivo (o socket), además de la secuencia. Por lo tanto, si el archivo se ha abierto originalmente como identificador de archivos o descriptor de archivo y se cierra con **fclose**, no llame también a **_close** para cerrar el descriptor de archivo; no llame a la función de Win32  **CloseHandle** para cerrar el identificador de archivo.
 
 **fclose** y **_fcloseall** incluyen código como protección frente a interferencias de otros subprocesos. Para la versión que no sea de bloqueo de un **fclose**, consulte **_fclose_nolock**.
 

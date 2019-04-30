@@ -100,11 +100,11 @@ helpviewer_keywords:
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
 ms.openlocfilehash: 9150d603f67051df4a6f182366623935e59fe9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393719"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
@@ -143,7 +143,7 @@ template<typename Key,
 *Key*<br/>
 El tipo del componente clave de un elemento de la secuencia controlada.
 
-*Asignado*<br/>
+*asignado*<br/>
 El tipo del componente adicional de un elemento de la secuencia controlada.
 
 ## <a name="requirements"></a>Requisitos
@@ -250,7 +250,7 @@ Borrar o quitar un elemento llama al destructor para su valor almacenado. Destru
 
 ## <a name="members"></a>Miembros
 
-## <a name="begin"></a> Map:: begin (STL/CLR)
+## <a name="begin"></a> map::begin (STL/CLR)
 
 Designa el principio de la secuencia controlada.
 
@@ -301,7 +301,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="clear"></a> Map:: Clear (STL/CLR)
+## <a name="clear"></a> map::clear (STL/CLR)
 
 Quita todos los elementos.
 
@@ -359,7 +359,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> Map:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> map::const_iterator (STL/CLR)
 
 El tipo de un iterador constante para la secuencia controlada.
 
@@ -401,7 +401,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> Map:: const_reference (STL/CLR)
+## <a name="const_reference"></a> map::const_reference (STL/CLR)
 
 El tipo de una referencia constante a un elemento.
 
@@ -446,7 +446,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> Map:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> map::const_reverse_iterator (STL/CLR)
 
 El tipo de un iterador inverso constante de la secuencia controlada...
 
@@ -488,7 +488,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> Map:: Count (STL/CLR)
+## <a name="count"></a> map::count (STL/CLR)
 
 Busca el número de elementos que coinciden con una clave especificada.
 
@@ -541,7 +541,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> Map:: difference_type (STL/CLR)
+## <a name="difference_type"></a> map::difference_type (STL/CLR)
 
 Los tipos de una distancia con signo entre dos elementos.
 
@@ -596,7 +596,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> Map:: Empty (STL/CLR)
+## <a name="empty"></a> map::empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -648,7 +648,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> Map:: end (STL/CLR)
+## <a name="end"></a> map::end (STL/CLR)
 
 Designa el final de la secuencia controlada.
 
@@ -695,7 +695,7 @@ int main()
     }
 ```
 
-## <a name="equal_range"></a> Map:: equal_range (STL/CLR)
+## <a name="equal_range"></a> map::equal_range (STL/CLR)
 
 Busca el intervalo que coincide con una clave especificada.
 
@@ -756,7 +756,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="erase"></a> Map:: Erase (STL/CLR)
+## <a name="erase"></a> map::erase (STL/CLR)
 
 Quita los elementos de las posiciones especificadas.
 
@@ -776,7 +776,7 @@ Principio del intervalo que se va a borrar.
 *key*<br/>
 Valor de clave para borrar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a borrar.
 
 *where*<br/>
@@ -849,7 +849,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> Map:: Find (STL/CLR)
+## <a name="find"></a> map::find (STL/CLR)
 
 Busca un elemento que coincide con una clave especificada.
 
@@ -908,7 +908,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="generic_container"></a> Map::generic_container (STL/CLR)
+## <a name="generic_container"></a> map::generic_container (STL/CLR)
 
 El tipo de la interfaz genérica para el contenedor.
 
@@ -972,7 +972,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="generic_iterator"></a> Map::generic_iterator (STL/CLR)
+## <a name="generic_iterator"></a> map::generic_iterator (STL/CLR)
 
 El tipo de iterador para su uso con la interfaz genérica para el contenedor.
 
@@ -1029,7 +1029,7 @@ int main()
 [a 1]
 ```
 
-## <a name="generic_reverse_iterator"></a> Map::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a> map::generic_reverse_iterator (STL/CLR)
 
 El tipo de un iterador inverso para su uso con la interfaz genérica para el contenedor.
 
@@ -1085,7 +1085,7 @@ int main()
 [c 3]
 ```
 
-## <a name="generic_value"></a> Map::generic_value (STL/CLR)
+## <a name="generic_value"></a> map::generic_value (STL/CLR)
 
 El tipo de un elemento para su uso con la interfaz genérica para el contenedor.
 
@@ -1139,7 +1139,7 @@ int main()
 [a 1]
 ```
 
-## <a name="insert"></a> Map:: Insert (STL/CLR)
+## <a name="insert"></a> map::insert (STL/CLR)
 
 Agrega elementos.
 
@@ -1158,13 +1158,13 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
 *right*<br/>
 Enumeración que se va a insertar.
 
-*Val*<br/>
+*val*<br/>
 Valor de clave se va a insertar.
 
 *where*<br/>
@@ -1259,7 +1259,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="iterator"></a> Map:: Iterator (STL/CLR)
+## <a name="iterator"></a> map::iterator (STL/CLR)
 
 El tipo de un iterador para la secuencia controlada.
 
@@ -1301,7 +1301,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> Map:: key_comp (STL/CLR)
+## <a name="key_comp"></a> map::key_comp (STL/CLR)
 
 Copia al delegado de ordenación de dos claves.
 
@@ -1360,7 +1360,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> Map:: key_compare (STL/CLR)
+## <a name="key_compare"></a> map::key_compare (STL/CLR)
 
 Delegado de ordenación para dos claves.
 
@@ -1420,7 +1420,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> Map:: KEY_TYPE (STL/CLR)
+## <a name="key_type"></a> map::key_type (STL/CLR)
 
 El tipo de una clave de ordenación.
 
@@ -1465,7 +1465,7 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> Map:: lower_bound (STL/CLR)
+## <a name="lower_bound"></a> map::lower_bound (STL/CLR)
 
 Busca el principio del intervalo que coincide con una clave especificada.
 
@@ -1524,7 +1524,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="make_value"></a> Map::make_value (STL/CLR)
+## <a name="make_value"></a> map::make_value (STL/CLR)
 
 Construye un objeto de valor.
 
@@ -1539,7 +1539,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 Valor de clave para usar.
 
-*asignado*<br/>
+*mapped*<br/>
 Valor asignado a buscar.
 
 ### <a name="remarks"></a>Comentarios
@@ -1573,7 +1573,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="map"></a> Map (STL/CLR)
+## <a name="map"></a> map::map (STL/CLR)
 
 Construye un objeto contenedor.
 
@@ -1599,10 +1599,10 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
-*Pred*<br/>
+*pred*<br/>
 Orden de predicado de la secuencia controlada.
 
 *right*<br/>
@@ -1746,7 +1746,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> Map:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> map::mapped_type (STL/CLR)
 
 El tipo de un valor asignado asociado a cada clave.
 
@@ -1791,7 +1791,7 @@ int main()
 1 2 3
 ```
 
-## <a name="op_as"></a> Map:: operator = (STL/CLR)
+## <a name="op_as"></a> map::operator= (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -1846,7 +1846,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op"></a> Map::operator(STL/CLR)
+## <a name="op"></a> map::operator(STL/CLR)
 
 Asigna una clave a su valor asignado asociado.
 
@@ -1913,7 +1913,7 @@ c1[b] = 2
 [A 10] [a 1] [b 2] [c 13]
 ```
 
-## <a name="rbegin"></a> Map:: rbegin (STL/CLR)
+## <a name="rbegin"></a> map::rbegin (STL/CLR)
 
 Designa el principio de la secuencia controlada inversa.
 
@@ -1964,7 +1964,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> Map:: Reference (STL/CLR)
+## <a name="reference"></a> map::reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -2009,7 +2009,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rend"></a> Map:: rend (STL/CLR)
+## <a name="rend"></a> map::rend (STL/CLR)
 
 Designa el final de la secuencia controlada inversa.
 
@@ -2062,7 +2062,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> Map:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> map::reverse_iterator (STL/CLR)
 
 El tipo de un iterador invertido para la secuencia controlada.
 
@@ -2104,7 +2104,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="size"></a> Map:: Size (STL/CLR)
+## <a name="size"></a> map::size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -2156,7 +2156,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> Map:: size_type (STL/CLR)
+## <a name="size_type"></a> map::size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -2204,7 +2204,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> Map:: swap (STL/CLR)
+## <a name="swap"></a> map::swap (STL/CLR)
 
 Intercambia el contenido de dos contenedores.
 
@@ -2272,7 +2272,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="to_array"></a> Map::to_array (STL/CLR)
+## <a name="to_array"></a> map::to_array (STL/CLR)
 
 Copia la secuencia controlada a una nueva matriz.
 
@@ -2322,7 +2322,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> Map:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> map::upper_bound (STL/CLR)
 
 Busca el final del intervalo que coincide con una clave especificada.
 
@@ -2381,7 +2381,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> Map:: value_comp (STL/CLR)
+## <a name="value_comp"></a> map::value_comp (STL/CLR)
 
 Copia al delegado de ordenación de dos valores de elemento.
 
@@ -2428,7 +2428,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_compare"></a> Map::value_compare (STL/CLR)
+## <a name="value_compare"></a> map::value_compare (STL/CLR)
 
 Delegado de ordenación para dos valores de elemento.
 
@@ -2476,7 +2476,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> Map:: value_type (STL/CLR)
+## <a name="value_type"></a> map::value_type (STL/CLR)
 
 El tipo de un elemento.
 
@@ -2520,7 +2520,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> operador! = (map) (STL/CLR)
+## <a name="op_neq"></a> operator!= (map) (STL/CLR)
 
 Lista de comparación de desigualdad.
 
@@ -2591,7 +2591,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> operador&lt; (map) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (map) (STL/CLR)
 
 Lista de menor de comparación.
 
@@ -2662,7 +2662,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operador&lt;= (map) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (map) (STL/CLR)
 
 Lista igual o comparación.
 
@@ -2733,7 +2733,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operador == (map) (STL/CLR)
+## <a name="op_eq"></a> operator== (map) (STL/CLR)
 
 Comparación de igualdad de lista.
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> operador&gt; (map) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (map) (STL/CLR)
 
 Comparación mayor que la lista.
 
@@ -2875,7 +2875,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operador&gt;= (map) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (map) (STL/CLR)
 
 Comparación igual o mayor de la lista.
 

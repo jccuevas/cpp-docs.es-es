@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
 ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270853"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (Controlar llamadas de comprobación de la pila)
 
@@ -67,5 +67,5 @@ Puede activar o desactivar las comprobaciones de la pila mediante la [check_stac
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333935"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,15 +44,15 @@ int fgetpos(
 
 ### <a name="parameters"></a>Parámetros
 
-*secuencia*<br/>
+*stream*<br/>
 Secuencia de destino.
 
-*punto de venta*<br/>
+*pos*<br/>
 Almacenamiento del indicador de posición.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **fgetpos** devuelve 0. En caso de error, devuelve un valor distinto de cero y establece **errno** a uno de los siguientes (definidas en STDIO de constantes del manifiesto. (H): **EBADF**, lo que significa que la secuencia especificada no es un puntero de archivo válido o no está accesible, o **EINVAL**, lo que significa que el *secuencia* valor o el valor de *pos* es válido, por ejemplo, si bien es un puntero nulo. Si *secuencia* o *pos* es un **NULL** puntero, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
+Si es correcto, **fgetpos** devuelve 0. En caso de error, devuelve un valor distinto de cero y establece **errno** a uno de los siguientes (definidas en STDIO de constantes del manifiesto. (H): **EBADF**, lo que significa que la secuencia especificada no es un puntero de archivo válido o no está accesible, o **EINVAL**, lo que significa que el *secuencia* valor o el valor de *pos*es válido, por ejemplo, si bien es un puntero nulo. Si *secuencia* o *pos* es un **NULL** puntero, la función invoca al controlador de parámetros no válidos, tal y como se describe en [validación de parámetros](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Comentarios
 

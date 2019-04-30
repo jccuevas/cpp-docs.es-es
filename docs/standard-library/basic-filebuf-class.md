@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377157"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf (Clase)
 
@@ -402,10 +402,10 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Nombre de archivo*<br/>
+*_Filename*<br/>
 Nombre del archivo que se va a abrir.
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ La función miembro abre el archivo con el nombre de archivo *filename* al llama
 
 Si **mode & ios_base:: Binary** es distinto de cero, la función anexa `b` a `strmode` para abrir una secuencia binaria en lugar de una secuencia de texto. A continuación, almacena el valor devuelto por `fopen` en el puntero de archivo `fp`. Si **mode & ios_base::ate** es distinto de cero y el puntero de archivo no es un puntero nulo, la función llama a `fseek`(**fp**, 0, `SEEK_END`) para colocar el flujo al final del archivo. Si esa operación de posicionamiento se produce un error, las llamadas de función [cerrar](#close)( `fp`) y almacena un puntero nulo en el puntero de archivo.
 
-Si el puntero de archivo no es un puntero nulo, la función determina la faceta de conversión de archivo: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >([getloc](../standard-library/basic-streambuf-class.md#getloc)) para que la usen [underflow](#underflow) y [overflow](#overflow).
+Si el puntero de archivo no es un puntero nulo, la función determina la faceta de conversión de archivo: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), para su uso por [subdesbordamiento](#underflow) y [desbordamiento](#overflow).
 
 Si el puntero de archivo es un puntero nulo, la función devuelve un puntero nulo. De lo contrario, devuelve **this**.
 

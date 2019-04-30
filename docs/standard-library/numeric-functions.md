@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236566"
 ---
 # <a name="ltnumericgt-functions"></a>Funciones &lt;numeric&gt;
 
@@ -49,10 +49,10 @@ Type accumulate(
 *first*<br/>
 Un iterador de entrada que direcciona el primer elemento del intervalo que se va a sumar o combinar según una operación binaria especificada.
 
-*Último*<br/>
+*last*<br/>
 Un iterador de entrada que direcciona el último elemento del intervalo que se va a sumar o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
 
-*Val*<br/>
+*val*<br/>
 Un valor inicial al que, a su vez, cada elemento se agrega o combina según una operación binaria específica.
 
 *binary_op*<br/>
@@ -189,10 +189,10 @@ OutputIterator adjacent_difference(
 *first*<br/>
 Iterador de entrada que direcciona el primer elemento del intervalo de entrada cuyos elementos se van a diferenciar con sus predecesores respectivos o donde se va a actuar sobre el par de valores mediante otra operación binaria especificada.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que direcciona el último elemento del intervalo de entrada cuyos elementos se van a diferenciar con sus predecesores respectivos o donde se va a actuar sobre el par de valores mediante otra operación binaria especificada.
 
-*Resultado*<br/>
+*result*<br/>
 Iterador de salida que direcciona el primer elemento de un intervalo de destino donde se va a almacenar la serie de diferencias o los resultados de la operación especificada.
 
 *binary_op*<br/>
@@ -306,7 +306,7 @@ Un iterador de entrada que direcciona el último elemento del primer intervalo c
 *first2*<br/>
 Un iterador de entrada que direcciona el primer elemento del segundo intervalo cuyo producto interno o producto interno generalizado con el primer intervalo debe calcularse.
 
-*Val*<br/>
+*val*<br/>
 Un valor inicial al que se va a agregar el producto interno o el producto interno generalizado entre los intervalos.
 
 *binary_op1*<br/>
@@ -319,7 +319,7 @@ La operación binaria que reemplaza la operación de elementos de producto inter
 
 La primera función miembro devuelve la suma de los productos de elementos y la agrega al valor inicial especificado. Por lo que para los intervalos de valores *a*i y *b*i, devuelve:
 
-`val` + ( *un*1 \* *b*1) + ( *un*2 \* *b*2) +... + ( *un*n \* *b*n)
+`val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n )
 
 reemplazando de manera iterativa *val* con `val` + ( *un* \* *b*).
 
@@ -437,10 +437,10 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *first*<br/>
 Un iterador de entrada que direcciona el primer elemento del intervalo que se va a rellenar.
 
-*Último*<br/>
+*last*<br/>
 Un iterador de entrada que direcciona el último elemento del intervalo que se va a rellenar.
 
-*valor*<br/>
+*value*<br/>
 El valor inicial para almacenar en el primer elemento y para incrementar sucesivamente los elementos posteriores.
 
 ### <a name="remarks"></a>Comentarios
@@ -511,10 +511,10 @@ OutputIterator partial_sum(
 *first*<br/>
 Iterador de entrada que direcciona el primer elemento del intervalo que se va a sumar parcialmente o combinar según una operación binaria especificada.
 
-*Último*<br/>
+*last*<br/>
 Iterador de entrada que direcciona el último elemento del intervalo que se va a sumar parcialmente o combinar según una operación binaria especificada que está una posición más allá del último elemento incluido realmente en la acumulación iterada.
 
-*Resultado*<br/>
+*result*<br/>
 Iterador de salida que direcciona el primer elemento de un intervalo de destino donde se va a almacenar la serie de sumas parciales o los resultados de la operación especificada.
 
 *binary_op*<br/>

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ASSEMBLYDEBUG linker option
 ms.assetid: 94443af3-470c-41d7-83a0-7434563d7982
 ms.openlocfilehash: b9899ea76b7a23a0d09442fca01e7d968c5e8aa6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273097"
 ---
 # <a name="assemblydebug-add-debuggableattribute"></a>/ASSEMBLYDEBUG (Agregar DebuggableAttribute)
 
@@ -78,5 +78,5 @@ Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358251"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>Controladores para mensajes estándar de Windows
 
@@ -23,7 +23,7 @@ Predeterminada de controladores de mensajes estándares de Windows (**WM_**) est
 
 `afx_msg void OnPaint();`
 
-El **afx_msg** palabra clave sugiere el efecto de C++ **virtual** palabra clave y distingue los controladores de otras `CWnd` funciones miembro. Sin embargo, tenga en cuenta que estas funciones no son realmente virtuales; en su lugar se implementan a través de mapas de mensajes. Mapas de mensajes dependen exclusivamente estándares macros de preprocesador, no en las extensiones del lenguaje C++. El **afx_msg** palabra clave se resuelve en un espacio en blanco tras el preprocesamiento.
+El **afx_msg** palabra clave sugiere el efecto de la C++ **virtual** palabra clave y distingue los controladores de otras `CWnd` funciones miembro. Sin embargo, tenga en cuenta que estas funciones no son realmente virtuales; en su lugar se implementan a través de mapas de mensajes. Mapas de mensajes dependen exclusivamente estándares macros de preprocesador, no en las extensiones del lenguaje C++. El **afx_msg** palabra clave se resuelve en un espacio en blanco tras el preprocesamiento.
 
 Para reemplazar un controlador definido en una clase base, simplemente defina una función con el mismo prototipo de la clase derivada y para crear una entrada de mapa de mensajes para el controlador. El controlador "reemplaza" cualquier controlador del mismo nombre en cualquiera de las clases de base de la clase.
 

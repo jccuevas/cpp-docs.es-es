@@ -3,11 +3,11 @@ title: Usar mosaicos
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405380"
 ---
 # <a name="using-tiles"></a>Usar mosaicos
 
@@ -291,13 +291,13 @@ Hay dos tipos de accesos a memoria que deben estar sincronizadas: acceso a la me
 
 Un *barrera de memoria* garantiza que están disponibles para otros subprocesos del mosaico de subprocesos tiene acceso a la memoria y que la memoria se ejecutan según el orden programado. Para asegurarse de esto, los compiladores y los procesadores no reordenan lecturas y escrituras a través de la barrera. En C++ AMP, se crea una barrera de memoria mediante una llamada a uno de estos métodos:
 
-- [tile_barrier:: Wait (método)](reference/tile-barrier-class.md#wait): crea una barrera alrededor tanto global y `tile_static` memoria.
+- [tile_barrier:: Wait (método)](reference/tile-barrier-class.md#wait): Crea una barrera alrededor tanto global y `tile_static` memoria.
 
-- [Método tile_barrier::wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): crea una barrera alrededor tanto global y `tile_static` memoria.
+- [Método tile_barrier::wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): Crea una barrera alrededor tanto global y `tile_static` memoria.
 
-- [Método tile_barrier::wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): crea una barrera alrededor únicamente la memoria global.
+- [Método tile_barrier::wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): Crea una barrera alrededor únicamente la memoria global.
 
-- [Método tile_barrier::wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): crea una barrera alrededor únicamente `tile_static` memoria.
+- [Método tile_barrier::wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Crea una barrera alrededor únicamente `tile_static` memoria.
 
 Una llamada a la barrera específica que necesite puede mejorar el rendimiento de la aplicación. El tipo de barrera influye en cómo el compilador y el hardware reordenan las instrucciones. Por ejemplo, si utiliza una barrera de memoria global, aplica accesos a memoria sólo globales y por lo tanto, el compilador y el hardware podrían cambiar el orden lee y escribe en `tile_static` variables en los dos lados de la barrera.
 

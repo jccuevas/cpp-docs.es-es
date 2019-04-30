@@ -10,11 +10,11 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
 ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412155"
 ---
 # <a name="systemclock-structure"></a>system_clock (Estructura)
 
@@ -50,12 +50,12 @@ Un reloj es *constante* si es *monotónico* y si el tiempo entre los ciclos de r
 |Name|Descripción|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|Estático. Devuelve el `time_point` que más se aproxima a una hora especificada.|
-|[Ahora](#now)|Estático. Devuelve la hora actual.|
+|[now](#now)|Estático. Devuelve la hora actual.|
 |[to_time_t](#to_time_t)|Estático. Devuelve el objeto `time_t` que más se aproxima a un `time_point` especificado.|
 
 ### <a name="public-constants"></a>Constantes públicas
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[system_clock::is_monotonic (Constante)](#is_monotonic_constant)|Especifica si el tipo de reloj es monotónico.|
 |[system_clock::is_steady (Constante)](#is_steady_constant)|Especifica si el tipo de reloj es constante.|
@@ -66,7 +66,7 @@ Un reloj es *constante* si es *monotónico* y si el tiempo entre los ciclos de r
 
 **Espacio de nombres:** std::chrono
 
-## <a name="from_time_t"></a>  system_clock:: from_time_t
+## <a name="from_time_t"></a>  system_clock::from_time_t
 
 Método estático que devuelve un [time_point](../standard-library/time-point-class.md) que más se aproxima a la vez que se representa mediante *Tm*.
 
@@ -111,7 +111,7 @@ En esta implementación, `system_clock::is_steady` siempre devuelve **false**.
 
 Un reloj es *constante* si es [monotónico](#is_monotonic_constant) y si el tiempo entre los ciclos de reloj es constante.
 
-## <a name="now"></a>  system_clock:: Now
+## <a name="now"></a>  system_clock::now
 
 Método estático que devuelve la hora actual.
 

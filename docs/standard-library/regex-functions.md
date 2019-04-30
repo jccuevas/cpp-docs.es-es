@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369610"
 ---
 # <a name="ltregexgt-functions"></a>Funciones &lt;regex&gt;
 
@@ -29,7 +29,7 @@ ms.locfileid: "50624827"
 |[regex_search](#regex_search)|Busca una coincidencia con la expresión regular.|
 |[swap](#swap)|Intercambia dos `basic_regex` o `match_results` objetos.|
 
-## <a name="regex_match"></a>  regex_match)
+## <a name="regex_match"></a>  regex_match
 
 Comprueba si una expresión regular coincide con toda la cadena de destino.
 
@@ -111,7 +111,7 @@ Marcadores para coincidencias.
 *first*<br/>
 Principio de la secuencia que debe coincidir.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que debe coincidir.
 
 *Match*<br/>
@@ -120,7 +120,7 @@ Los resultados de la coincidencia. Corresponde al tipo Elem: [smatch](../standar
 *ptr*<br/>
 Puntero al inicio de la secuencia que debe coincidir. Si *ptr* es `char*`, a continuación, usar `cmatch` y `regex`. Si *ptr* es `wchar_t*` , a continuación, usar `wcmatch` y `wregex`.
 
-*Re*<br/>
+*re*<br/>
 La expresión regular que debe coincidir. Tipo `regex` para `string` y `char*`, o `wregex` para `wstring` y `wchar_t*`.
 
 *str*<br/>
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>  regex_replace)
+## <a name="regex_replace"></a>  regex_replace
 
 Reemplaza las expresiones regulares que coincidan.
 
@@ -241,16 +241,16 @@ Marcadores para coincidencias.
 *first*<br/>
 Principio de la secuencia que debe coincidir.
 
-*FMT*<br/>
+*fmt*<br/>
 El formato para reemplazos.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que debe coincidir.
 
 *out*<br/>
 El tipo de iterador de salida.
 
-*Re*<br/>
+*re*<br/>
 La expresión regular que debe coincidir.
 
 *str*<br/>
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>  regex_search)
+## <a name="regex_search"></a>  regex_search
 
 Busca una coincidencia con la expresión regular.
 
@@ -380,7 +380,7 @@ Marcadores para coincidencias.
 *first*<br/>
 Principio de la secuencia que debe coincidir.
 
-*Último*<br/>
+*last*<br/>
 Final de la secuencia que debe coincidir.
 
 *Match*<br/>
@@ -389,7 +389,7 @@ Los resultados de la coincidencia.
 *ptr*<br/>
 Puntero al inicio de la secuencia que debe coincidir.
 
-*Re*<br/>
+*re*<br/>
 La expresión regular que debe coincidir.
 
 *str*<br/>

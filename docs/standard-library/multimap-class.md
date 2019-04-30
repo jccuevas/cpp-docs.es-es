@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348372"
 ---
 # <a name="multimap-class"></a>multimap (Clase)
 
@@ -120,7 +120,7 @@ Tipo que proporciona un objeto de función que puede comparar dos valores de ele
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria de la asignación. Este argumento es opcional y el valor predeterminado es `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Comentarios
@@ -515,7 +515,7 @@ El número de elementos cuyos criterios de ordenación coinciden con la clave de
 
 La función miembro devuelve el número de elementos del intervalo
 
-\[ lower_bound (*clave*), upper_bound (*clave*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 que tienen un valor de clave *clave*.
 
@@ -993,7 +993,7 @@ size_type erase(
 *Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
@@ -1216,7 +1216,7 @@ IList);
 |*Val*|Valor de un elemento que se va a insertar en la asignación múltiple.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que se puede usar la asignación para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
+|*First*|Posición del primer elemento que se va a copiar.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
@@ -1656,7 +1656,7 @@ multimap(
 |*Al*|Clase de asignador de almacenamiento que se utilizará para este objeto multimap, que de forma predeterminada es Allocator.|
 |*Comp.*|Función de comparación de tipo `constTraits` que se utiliza para ordenar los elementos del mapa, que de forma predeterminada es `Traits`.|
 |*Derecha*|Asignación de la que el conjunto construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list de la que se van a copiar los elementos.|
 

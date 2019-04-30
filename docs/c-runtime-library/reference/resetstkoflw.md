@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357543"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ Llame a **_resetstkoflw** para restaurar la página de protección cada vez que 
 
 En estos puntos, la pila no está suficientemente desenredada todavía.
 
-Las excepciones de desbordamiento de pila se generan como excepciones estructuradas, y no excepciones de C++, por lo que **_resetstkoflw** no es útil en un normal **catch** block, porque no detecta una excepción de desbordamiento de pila. Sin embargo, si se usa [_set_se_translator](set-se-translator.md) para implementar un traductor de excepciones estructuradas que provoca excepciones de C++ (como en el segundo ejemplo), una excepción de desbordamiento de pila da lugar a una excepción de C++ que un bloque catch de C++ puede controlar.
+Las excepciones de desbordamiento de pila se generan como excepciones estructuradas, y no C++ excepciones, por lo que **_resetstkoflw** no es útil en un normal **catch** block, porque no detecta un desbordamiento de pila excepción. Sin embargo, si se usa [_set_se_translator](set-se-translator.md) para implementar un traductor de excepciones estructuradas que provoca excepciones de C++ (como en el segundo ejemplo), una excepción de desbordamiento de pila da lugar a una excepción de C++ que un bloque catch de C++ puede controlar.
 
 No es seguro llamar a **_resetstkoflw** en un bloque catch de C++ al que se llega desde una excepción provocada por la función del traductor de excepciones estructuradas. En ese caso, no se libera espacio de pila y el puntero de pila no se restablece hasta que está fuera del bloque catch, aunque se haya llamado a destructores para todos los objetos que se puedan destruir antes del bloque catch. No se debe llamar a esta función hasta que se libere espacio en la pila y se haya restablecido el puntero de la pila. Por consiguiente, solo se debe llamar después de salir del bloque catch. En el bloque catch se debe usar el menor espacio de pila posible, porque un desbordamiento de pila que tenga lugar en el bloque catch que está tratando de recuperarse de un desbordamiento de pila anterior no es recuperable, y podría hacer que el programa dejara de responder porque el desbordamiento en el bloque catch desencadena una excepción controlada por el mismo bloque catch.
 
@@ -104,7 +104,7 @@ Control de excepciones estructurado no detecta un **STATUS_STACK_OVERFLOW** exce
 
 Para obtener más información sobre compatibilidad, vea [Compatibilidad](../../c-runtime-library/compatibility.md).
 
-**Bibliotecas:** todas las versiones de las [características de la biblioteca de CRT](../../c-runtime-library/crt-library-features.md).
+**Bibliotecas:** Todas las versiones de la [características de la biblioteca CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>Descripción
 
-El ejemplo siguiente muestra el uso recomendado de **_resetstkoflw** en un programa donde las excepciones estructuradas se convierten en excepciones de C++.
+El ejemplo siguiente muestra el uso recomendado de **_resetstkoflw** en un programa que las excepciones estructuradas se convierten en C++ excepciones.
 
 ### <a name="code"></a>Código
 

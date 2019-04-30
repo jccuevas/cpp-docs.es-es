@@ -9,11 +9,11 @@ helpviewer_keywords:
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
 ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397866"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Conjunto de registros: Filtrar registros (ODBC)
 
@@ -90,7 +90,7 @@ El uso de comillas anterior se ajusta a la especificación ODBC, pero algunos de
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Ordenar registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Conjunto de registros: Cómo actualizar los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Conjunto de registros: Bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Conjunto de registros: ordenar registros (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Conjunto de registros: cómo los conjuntos de registros seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Conjunto de registros: cómo los conjuntos de registros actualizan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Conjunto de registros: bloquear registros (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

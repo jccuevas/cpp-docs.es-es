@@ -3,11 +3,11 @@ title: Referencia del lenguaje Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
 ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384951"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Referencia del lenguaje Visual C++ (C++/CX)
 
@@ -32,8 +32,8 @@ Mediante el uso de C++ / c++ / CX, puede crear:
 |-|-|
 |[Referencia rápida](../cppcx/quick-reference-c-cx.md)|Tabla de palabras clave y operadores de C / c++ / CX.|
 |[Sistema de tipos](../cppcx/type-system-c-cx.md)|Describe básico de C++ / c++ / CX tipos y construcciones de programación y cómo utilizar C++ / c++ / CX para consumir y crear tipos en tiempo de ejecución de Windows.|
-|[Compilar aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Describe cómo utilizar el IDE para crear aplicaciones y vincular a bibliotecas estáticas y archivos DLL.|
-|[Interoperar con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)|Describe cómo los componentes que se escriben con C++ / c++ / CX puede usarse con los componentes que se escriben en JavaScript, cualquier administrado idioma o la biblioteca de plantillas C++ de Windows en tiempo de ejecución.|
+|[Compilación de aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)|Describe cómo utilizar el IDE para crear aplicaciones y vincular a bibliotecas estáticas y archivos DLL.|
+|[Interoperación con otros lenguajes](../cppcx/interoperating-with-other-languages-c-cx.md)|Describe cómo los componentes que se escriben con C++ / c++ / CX puede usarse con los componentes que se escriben en JavaScript, cualquier administrado idioma o la biblioteca de plantillas C++ de Windows en tiempo de ejecución.|
 |[Subprocesamiento y serialización](../cppcx/threading-and-marshaling-c-cx.md)|Describe cómo especificar el comportamiento de subprocesamiento y cálculo de referencias de los componentes que crees.|
 |[Referencia de espacios de nombres](../cppcx/namespaces-reference-c-cx.md)|Hace referencia a documentación para el espacio de nombres predeterminado, el espacio de nombres Platform, Platform::Collections y los espacios de nombres relacionados.|
 |[Funciones de CRT no admitidas en aplicaciones de la Plataforma universal de Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Enumera las funciones de CRT que no se pueden usar en aplicaciones de Windows Runtime.|

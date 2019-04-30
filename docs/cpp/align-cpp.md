@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258154"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -24,7 +24,7 @@ Use `__declspec(align(#))` para controlar con precisión la alineación de datos
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (align (** *#* **))** *declarador*
+> **__declspec( align(** *#* **) )** *declarator*
 
 ## <a name="remarks"></a>Comentarios
 
@@ -230,7 +230,7 @@ En la tabla siguiente se muestra el desplazamiento de cada miembro bajo diversos
 |b|1|2|2|2|
 |c|3|4|4|8|
 |d|32|32|32|32|
-|e|40|40|40|40|
+|h|40|40|40|40|
 |f|41|42|44|48|
 |sizeof(S)|64|64|64|64|
 
@@ -244,4 +244,4 @@ El desplazamiento de un objeto se basa en el desplazamiento del objeto anterior 
 
 [__declspec](../cpp/declspec.md)<br/>
 [Información general sobre las convenciones ABI de ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[x64 convenciones de software](../build/x64-software-conventions.md)
+[Convenciones de software x64](../build/x64-software-conventions.md)

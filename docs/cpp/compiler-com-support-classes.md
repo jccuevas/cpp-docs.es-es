@@ -8,11 +8,11 @@ helpviewer_keywords:
 - COM, compiler support
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
 ms.openlocfilehash: 066fe797bc500625e96e027777a70f278b88cddb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399205"
 ---
 # <a name="compiler-com-support-classes"></a>Clases de compatibilidad con COM del compilador
 
@@ -20,7 +20,7 @@ ms.locfileid: "50479669"
 
 Las clases estándar se utilizan para proporcionar compatibilidad con algunos de los tipos COM. Las clases se definen en \<comdef.h > y los archivos de encabezado generados a partir de la biblioteca de tipos.
 
-|Clase|Propósito|
+|Clase|Finalidad|
 |-----------|-------------|
 |[_bstr_t](../cpp/bstr-t-class.md)|Encapsula el tipo `BSTR` para proporcionar operadores y métodos útiles.|
 |[_com_error](../cpp/com-error-class.md)|Define el objeto de error iniciado por [_com_raise_error](../cpp/com-raise-error.md) en la mayoría de los errores.|

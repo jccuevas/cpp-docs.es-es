@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295492"
 ---
 # <a name="set-class"></a>set (Clase)
 
@@ -116,7 +116,7 @@ Tipo que proporciona un objeto de función que puede comparar dos valores de ele
 
 En C++14 puede habilitar la búsqueda heterogénea especificando el predicado `std::less<>` o `std::greater<>`, que no tienen ningún parámetro de tipo. Para obtener más información, vea [Búsqueda heterogénea en los contenedores asociativos](../standard-library/stl-containers.md#sequence_containers).
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto asignador almacenado que encapsula los detalles acerca de la asignación y desasignación de memoria del conjunto. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -488,7 +488,7 @@ Es 1 si el conjunto contiene un elemento cuyo criterio de ordenación coincide c
 
 La función miembro devuelve el número de elementos del intervalo siguiente:
 
-\[ lower_bound (*clave*), upper_bound (*clave*)).
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -1008,7 +1008,7 @@ size_type erase(
 *Where*<br/>
 Posición del elemento que se va a quitar.
 
-*Primero*<br/>
+*First*<br/>
 Posición del primer elemento que se va a quitar.
 
 *Último*<br/>
@@ -1308,7 +1308,7 @@ IList);
 |*Val*|Valor de un elemento que se va a insertar en el conjunto a menos que ya contenga un elemento cuyo valor se ordena de forma equivalente.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Si ese punto precede inmediatamente a *donde*, inserción se puede realizar en tiempo constante amortizado en lugar de tiempo logarítmico.)|
 |*ValTy*|Parámetro de plantilla que especifica el tipo de argumento que el conjunto puede usar para construir un elemento de [value_type](../standard-library/map-class.md#value_type)y realiza *Val* como argumento.|
-|*Primero*|Posición del primer elemento que se va a copiar.|
+|*First*|Posición del primer elemento que se va a copiar.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar.|
 |*InputIterator*|Argumento de la función de plantilla que cumple los requisitos de un [iterador de entrada](../standard-library/input-iterator-tag-struct.md) que apunta a elementos de un tipo que se puede usar para crear objetos [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|El elemento [initializer_list](../standard-library/initializer-list.md) del que se van a copiar los elementos.|
@@ -1991,8 +1991,8 @@ set(
 |-|-|
 |*Al*|La clase de asignador de almacenamiento que se usará para este objeto de conjunto, cuyo valor predeterminado es `Allocator`.|
 |*Comp.*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos del conjunto, que de forma predeterminada es `Compare`.|
-|*Derecho*|Conjunto del que el conjunto construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*Rght*|Conjunto del que el conjunto construido va a ser una copia.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 |*IList*|initializer_list de la que se van a copiar los elementos.|
 

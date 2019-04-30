@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812127"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342165"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Usar el conjunto de herramientas MSVC desde la línea de comandos
 
@@ -184,7 +184,7 @@ Describe cómo utilizar estas opciones del compilador para usar una biblioteca e
 [Opciones del compilador de C o C++](reference/compiler-options.md)<br/>
 Proporciona vínculos a artículos en los que se explican las opciones del compilador de C y C++, y CL.exe.
 
-[Opciones del vinculador MSVC](reference/linker-options.md)<br/>
+[Opciones del enlazador MSVC](reference/linker-options.md)<br/>
 Proporciona vínculos a artículos en los que se explican las opciones del enlazador y LINK.exe.
 
 [Herramientas de generación MSVC adicionales](reference/c-cpp-build-tools.md)<br/>
@@ -192,4 +192,4 @@ Proporciona vínculos a la C o C++ crear herramientas que se incluyen en Visual 
 
 ## <a name="see-also"></a>Vea también
 
-[Los proyectos y los sistemas de compilación](projects-and-build-systems-cpp.md)
+[Proyectos y sistemas de compilación](projects-and-build-systems-cpp.md)

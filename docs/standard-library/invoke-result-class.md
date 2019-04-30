@@ -10,11 +10,11 @@ helpviewer_keywords:
 - std::invoke_result_t
 - std::invoke_result::type
 ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404856"
 ---
 # <a name="invokeresult-class"></a>Clase invoke_result
 

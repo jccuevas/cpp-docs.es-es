@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278696"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346030"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Espacio de nombres de simultaneidad (C++ AMP)
 
@@ -57,7 +57,7 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Enumeraciones
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[access_type (enumeración)](concurrency-namespace-enums-amp.md#access_type)|Especifica el tipo de acceso de los datos.|
 |[queuing_mode (enumeración)](concurrency-namespace-enums-amp.md#queuing_mode)|Especifica los modos de la puesta en cola que se admiten en el acelerador.|
@@ -72,7 +72,7 @@ namespace Concurrency;
 |[Operator-(operador) (C++ AMP)](concurrency-namespace-operators-amp.md#operator-)|Calcula la diferencia de todos los componentes entre los argumentos especificados.|
 |[operador * (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_star)|Calcula el producto de todos los componentes de los argumentos especificados.|
 |[operador / (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_div)|Calcula el cociente de todos los componentes de los argumentos especificados.|
-|[Operator % (operador, C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcula el módulo del primer argumento especificado dividido por el segundo argumento especificado.|
+|[operador Operator % (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Calcula el módulo del primer argumento especificado dividido por el segundo argumento especificado.|
 
 ### <a name="functions"></a>Funciones
 
@@ -92,7 +92,7 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en la diferencia entre ese valor y un valor especificado como una operación atómica.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Sobrecargado. Establece el valor almacenado en la ubicación especificada en el operador `xor` bit a bit de ese valor y un valor especificado como una operación atómica.|
 |[copy](concurrency-namespace-functions-amp.md#copy)|Copia un objeto C++ AMP. Se cumplen todos los requisitos sincrónicos de transferencia de datos. Los datos no se pueden copiar cuando el código está ejecutando código en un acelerador. La forma general de esta función es `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia un objeto C++ AMP y devuelve [completion_future](completion-future-class.md) que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Copia un C++ objeto AMP y devuelve [completion_future](completion-future-class.md) que se puede esperar. Los datos no se pueden copiar cuando el código se está ejecutando en un acelerador. La forma general de esta función es `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Anula la ejecución de una función con la cláusula de restricción `restrict(amp)`.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Imprime una cadena con formato de Visual Studio **salida** ventana y genera un [runtime_exception](runtime-exception-class.md) excepción que tiene el mismo formato de cadena.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Imprime una cadena con formato de Visual Studio **salida** ventana. Se le llama desde una función con la cláusula de restricción `restrict(amp)`.|

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224147"
 ---
 # <a name="ltiteratorgt-functions"></a>Funciones de &lt;iterator&gt;
 
@@ -213,7 +213,7 @@ Ty *begin(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parámetros
 
-*entrega continua*<br/>
+*cont*<br/>
 Un contenedor.
 
 *array*<br/>
@@ -308,7 +308,7 @@ auto cbegin(const Container& cont)
 
 ### <a name="parameters"></a>Parámetros
 
-*entrega continua*<br/>
+*cont*<br/>
 Un contenedor o initializer_list.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -341,7 +341,7 @@ auto cend(const Container& cont)
 
 ### <a name="parameters"></a>Parámetros
 
-*entrega continua*<br/>
+*cont*<br/>
 Un contenedor o initializer_list.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -376,7 +376,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 *first*<br/>
 Primer iterador cuya distancia del segundo debe determinarse.
 
-*Último*<br/>
+*last*<br/>
 Segundo iterador cuya distancia del primero debe determinarse.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -454,7 +454,7 @@ Ty *end(Ty (& array)[Size]);
 
 ### <a name="parameters"></a>Parámetros
 
-*entrega continua*<br/>
+*cont*<br/>
 Un contenedor.
 
 *array*<br/>
@@ -558,7 +558,7 @@ inserter(
 *_Cont*<br/>
 Contenedor en el que se van a agregar nuevos elementos.
 
-*_WHERE*<br/>
+*_Where*<br/>
 Iterador que localiza el punto de inserción.
 
 ### <a name="remarks"></a>Comentarios
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntero a la matriz de destino.
 
 *Size*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>Parámetros
 
-*PTR*<br/>
+*Ptr*<br/>
 Puntero a la matriz de destino.
 
 ### <a name="return-value"></a>Valor devuelto

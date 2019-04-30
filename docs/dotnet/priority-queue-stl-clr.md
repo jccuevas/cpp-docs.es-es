@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384769"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -116,7 +116,7 @@ Tipo del contenedor subyacente.
 |[priority_queue::to_array (STL/CLR)](#to_array)|Copia la secuencia controlada a una nueva matriz.|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|Copia al delegado de ordenación para dos elementos.|
 
-|Property|Descripción|
+|Propiedad|Descripción|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|Tiene acceso al elemento de prioridad más alta.|
 
@@ -129,7 +129,7 @@ Tipo del contenedor subyacente.
 |Interfaz|Descripción|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Duplicar un objeto.|
-|IPriorityQueue\<valor, el contenedor >|Mantener el adaptador de contenedor genérico.|
+|IPriorityQueue\<Value, Container>|Mantener el adaptador de contenedor genérico.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> priority_queue:: container_type (STL/CLR)
+## <a name="container_type"></a> priority_queue::container_type (STL/CLR)
 
 Tipo del contenedor subyacente.
 
@@ -359,7 +359,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a> priority_queue:: Empty (STL/CLR)
+## <a name="empty"></a> priority_queue::empty (STL/CLR)
 
 Comprueba si no hay ningún elemento presente.
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 Reemplaza la secuencia controlada.
 
@@ -629,7 +629,7 @@ c a b
 c a b
 ```
 
-## <a name="pop"></a> priority_queue:: POP (STL/CLR)
+## <a name="pop"></a> priority_queue::pop (STL/CLR)
 
 Quita el elemento más alto proirity.
 
@@ -677,7 +677,7 @@ c a b
 b a
 ```
 
-## <a name="priority_queue"></a> priority_queue:: priority_queue (STL/CLR)
+## <a name="priority_queue"></a> priority_queue::priority_queue (STL/CLR)
 
 Construye un objeto de adaptador de contenedor.
 
@@ -701,16 +701,16 @@ template<typename InIt>
 
 #### <a name="parameters"></a>Parámetros
 
-*entrega continua*<br/>
+*cont*<br/>
 Contenedor que se va a copiar.
 
 *first*<br/>
 Principio del intervalo que se va a insertar.
 
-*Último*<br/>
+*last*<br/>
 Fin del intervalo que se va a insertar.
 
-*Pred*<br/>
+*pred*<br/>
 Orden de predicado de la secuencia controlada.
 
 *right*<br/>
@@ -864,7 +864,7 @@ c a b
 a c b
 ```
 
-## <a name="push"></a> priority_queue:: Push (STL/CLR)
+## <a name="push"></a> priority_queue::push (STL/CLR)
 
 Agrega un nuevo elemento.
 
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="reference"></a> priority_queue::Reference (STL/CLR)
+## <a name="reference"></a> priority_queue::reference (STL/CLR)
 
 El tipo de una referencia a un elemento.
 
@@ -954,7 +954,7 @@ c a b
 x a b
 ```
 
-## <a name="size"></a> priority_queue:: Size (STL/CLR)
+## <a name="size"></a> priority_queue::size (STL/CLR)
 
 Cuenta el número de elementos.
 
@@ -1008,7 +1008,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> priority_queue:: size_type (STL/CLR)
+## <a name="size_type"></a> priority_queue::size_type (STL/CLR)
 
 El tipo de una distancia con signo entre dos elementos.
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="top"></a> priority_queue:: Top (STL/CLR)
+## <a name="top"></a> priority_queue::top (STL/CLR)
 
 Tiene acceso al elemento de prioridad más alta.
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="value_type"></a> priority_queue:: value_type (STL/CLR)
+## <a name="value_type"></a> priority_queue::value_type (STL/CLR)
 
 El tipo de un elemento.
 

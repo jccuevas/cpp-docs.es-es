@@ -15,11 +15,11 @@ helpviewer_keywords:
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
 ms.openlocfilehash: c686de7dc9c9c20c404240db558d2ff66078ceb7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292736"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (Nombre del archivo de base de datos del programa)
 
@@ -66,6 +66,6 @@ CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 ## <a name="see-also"></a>Vea también
 
 [/F (Opciones del archivo de resultados)](output-file-f-options.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [Especificar la ruta de acceso](specifying-the-pathname.md)

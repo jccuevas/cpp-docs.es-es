@@ -5,17 +5,17 @@ helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
 ms.openlocfilehash: c60b6d821d8e16e87f86e3b79825aa1dee7867c8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320544"
 ---
 # <a name="nmake-options"></a>Opciones de NMAKE
 
 Opciones de NMAKE se describen en la tabla siguiente. Las opciones van precedidas por una barra diagonal (/) o un guión (-) y no distinguen mayúsculas de minúsculas. Use [! CMDSWITCHES](makefile-preprocessing-directives.md) para cambiar la configuración de opciones en un archivo MAKE o en Tools.ini.
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |/A|Fuerza la generación de todos los destinos evaluados, aunque no estén actualizados con respecto a los elementos dependientes. No fuerza la compilación de destinos no relacionados.|
 |/B|Fuerza la generación incluso si las marcas de tiempo son iguales. Se recomienda sólo para sistemas muy rápidos (resolución de dos segundos o menos).|

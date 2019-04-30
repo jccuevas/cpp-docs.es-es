@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389208"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; (Funciones)
 
@@ -331,7 +331,7 @@ El número complejo que es el coseno del número complejo de entrada.
 
 Identidades que definen los cosenos complejos:
 
-COS ( *z*) = (1/2)\*(exp ( *iz*) + exp (- *iz*))
+cos ( *z*) = (1/2)\*( exp ( *iz*) + exp (- *iz*) )
 
 cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)
 
@@ -1392,7 +1392,7 @@ El número complejo que es la tangente del número complejo de entrada.
 
 Identidades que definen la cotangente compleja:
 
-tan ( *z*) = seno ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))
+tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )
 
 ### <a name="example"></a>Ejemplo
 

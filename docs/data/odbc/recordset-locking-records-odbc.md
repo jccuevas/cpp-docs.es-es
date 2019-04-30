@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
 ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397801"
 ---
 # <a name="recordset-locking-records-odbc"></a>Conjunto de registros: Bloquear registros (ODBC)
 
@@ -66,5 +66,5 @@ El nuevo modo de bloqueo se sigue en vigor hasta que vuelva a cambiar o se cierr
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Realizar una combinación (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[Conjunto de registros: Agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Conjunto de registros: realizar una combinación (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[Conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

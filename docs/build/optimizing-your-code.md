@@ -1,6 +1,6 @@
 ---
 title: Optimizar el código
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828104"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341114"
 ---
 # <a name="optimizing-your-code"></a>Optimización del código
 
@@ -23,13 +23,13 @@ Al optimizar un archivo ejecutable, puede lograr un equilibrio entre velocidad d
 
 Los temas siguientes describen algunas de las características de optimización en el lenguaje de C o C++.
 
-[Directivas pragma y palabras clave de optimización](optimization-pragmas-and-keywords.md)<br/>
+[Las palabras clave y directivas pragma de optimización](optimization-pragmas-and-keywords.md) \
 Una lista de palabras clave y pragmas que puede usar en el código para mejorar el rendimiento.
 
-[Opciones del compilador por categoría](reference/compiler-options-listed-by-category.md)<br/>
+[Opciones del compilador por categoría](reference/compiler-options-listed-by-category.md) \
 Una lista de **/O** opciones del compilador que afectan específicamente al tamaño de código o la velocidad de ejecución.
 
-[Declarador de referencia a un valor R: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[Declarador de referencia rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Referencias a valor r admiten la implementación de *semántica de transferencia*. Si puede mejorar significativamente el movimiento semántica se usa para implementar las bibliotecas de plantillas, el rendimiento de las aplicaciones que usan esas plantillas.
 
 ### <a name="the-optimize-pragma"></a>La pragma optimize
@@ -52,10 +52,10 @@ Paradójicamente, la optimización de un programa para acelerar el proceso podr�
 
 Los temas siguientes describen las prácticas recomendadas de programación.
 
-[Sugerencias para mejorar código en el que la velocidad de ejecución es importante](tips-for-improving-time-critical-code.md)<br/>
+[Sugerencias para mejorar código crítico en el tiempo](tips-for-improving-time-critical-code.md) \
 Mejor codificación técnicas puede ofrecer un mejor rendimiento. Este tema sugieren técnicas de codificación que pueden ayudar a asegurarse de que las partes del código crítico en el tiempo se realizan satisfactoriamente o no.
 
-[Procedimientos recomendados para la optimización](optimization-best-practices.md)<br/>
+[Recomendaciones de optimización](optimization-best-practices.md) \
 Proporciona directrices generales sobre la mejor manera de optimizar la aplicación.
 
 ## <a name="debugging-optimized-code"></a>Depurar código optimizado
@@ -86,20 +86,19 @@ Los temas siguientes proporcionan información acerca de cómo optimizar la crea
 
 ## <a name="in-this-section"></a>En esta sección
 
-[Directivas pragma y palabras clave de optimización](optimization-pragmas-and-keywords.md)<br/>
-[Mejorar el rendimiento del compilador](improving-compiler-throughput.md)<br/>
-[Por qué los números de punto flotante pierden precisión](why-floating-point-numbers-may-lose-precision.md)<br/>
-[Representación de punto flotante IEEE](ieee-floating-point-representation.md)<br/>
-[Sugerencias para mejorar código en el que la velocidad de ejecución es importante](tips-for-improving-time-critical-code.md)<br/>
-[Uso de un nombre de función sin () no genera código](using-function-name-without-parens-produces-no-code.md)<br/>
-[Procedimientos recomendados para la optimización](optimization-best-practices.md)<br/>
-[Optimizaciones guiadas por perfiles](profile-guided-optimizations.md)<br/>
-[Variables de entorno para las optimizaciones guiadas por perfiles](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[Cómo: Combinación de varios perfiles PGO en un solo perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[Complemento de PGO de Visual Studio 2013 en el Centro de rendimiento y diagnóstico](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[Las palabras clave y directivas pragma de optimización](optimization-pragmas-and-keywords.md) \
+[Mejorar el rendimiento del compilador](improving-compiler-throughput.md) \
+[Por qué los números de punto flotante pierden precisión](why-floating-point-numbers-may-lose-precision.md) \
+[Representación de punto flotante de IEEE](ieee-floating-point-representation.md) \
+[Sugerencias para mejorar código crítico en el tiempo](tips-for-improving-time-critical-code.md) \
+[Nombre de función sin () No genera código](using-function-name-without-parens-produces-no-code.md) \
+[Recomendaciones de optimización](optimization-best-practices.md) \
+[Optimizaciones guiadas por perfil](profile-guided-optimizations.md) \
+[Variables de entorno para las optimizaciones guiadas por perfil](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Cómo: Combinación de varios perfiles PGO en un solo perfil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Vea también
 

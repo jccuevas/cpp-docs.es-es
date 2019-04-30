@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369818"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ En este código se muestran dos aleatorizaciones distintas (la aleatorización d
 
 A menudo, los URNG se describen según los siguientes aspectos:
 
-1. **Longitud del período**: número de iteraciones necesarias para repetir la secuencia de números generada. Cuanto más largo, mejor.
+1. **Longitud del período**: número de iteraciones necesario para repetir la secuencia de números generada. Cuanto más largo, mejor.
 
-2. **Rendimiento**: rapidez con la que se pueden generar los números y cantidad de memoria que requiere. Cuanto menos, mejor.
+2. **Rendimiento**: rapidez con que los números se generan y cantidad de memoria empleada. Cuanto menos, mejor.
 
-3. **Calidad**: cercanía de la secuencia generada a los números aleatorios auténticos. Esto se suele conocer como "*aleatoriedad*".
+3. **Calidad**: proximidad de la secuencia generada a números aleatorios auténticos. Esto se suele conocer como "*aleatoriedad*".
 
 Las siguientes secciones enumeran los generadores de números aleatorios (Urng) uniformes proporcionados en el \<aleatorio > encabezado.
 

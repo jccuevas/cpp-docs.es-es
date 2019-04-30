@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
 ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352117"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist (Clase)
 
@@ -32,7 +32,7 @@ class cache_freelist
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*sz*|El número de elementos de la matriz que se van a asignar.|
+|*Sz*|El número de elementos de la matriz que se van a asignar.|
 |*Max*|La clase máxima que representa el tamaño máximo de la lista libre. Esta puede ser [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) o [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Comentarios

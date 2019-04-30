@@ -3,11 +3,11 @@ title: /arch (x64)
 ms.date: 11/04/2016
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
 ms.openlocfilehash: c515307ee3a49ef746eea939e90d7aecbd661b95
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295290"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -50,5 +50,5 @@ El `__AVX__` se define el símbolo de preprocesador cuando la **/arch: AVX** se 
 ## <a name="see-also"></a>Vea también
 
 [/arch (Arquitectura de CPU mínima)](arch-minimum-cpu-architecture.md)<br/>
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

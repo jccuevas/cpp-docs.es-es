@@ -19,11 +19,11 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305481"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: Implementación de IUnknown en MFC/OLE
 
@@ -367,7 +367,7 @@ Además el marco de trabajo usa mapas de mensajes internamente. Esto le permite 
 
 Además de ser compatible con objetos COM independientes, MFC también es compatible con la agregación. Agregación sí es un tema demasiado complejo para tratarlo aquí; hacer referencia a la [agregación](/windows/desktop/com/aggregation) tema para obtener más información sobre la agregación. Esta nota solo describe la compatibilidad con la agregación que se encuentra integrada en el marco de trabajo y los mapas de interfaz.
 
-Hay dos maneras de utilizar la agregación: (1) usando un objeto COM compatible con la agregación e (2) implementando un objeto que pueda ser agregado por otro objeto. Estas capacidades se pueden denominar como “usar un objeto agregado” y “hacer que un objeto sea agregable”. MFC es compatible con ambas capacidades.
+Hay dos maneras de utilizar la agregación: (1) mediante un objeto COM que admite la agregación y (2) implementando un objeto que puede ser agregado por otro. Estas capacidades se pueden denominar como “usar un objeto agregado” y “hacer que un objeto sea agregable”. MFC es compatible con ambas capacidades.
 
 ### <a name="using-an-aggregate-object"></a>Usar un objeto agregado
 
@@ -570,7 +570,7 @@ INTERFACE_PART(theClass, iid, localClass)
 *theClass*<br/>
 El nombre de la clase que contiene el mapa de interfaz.
 
-*IID*<br/>
+*iid*<br/>
 El `IID` que se debe asignar a la clase incrustada.
 
 *localClass*<br/>

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407671"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>Subprocesamiento múltiple con C++ y MFC
 
@@ -40,17 +40,17 @@ Para obtener más información sobre cómo el sistema operativo controla los pro
 
 Para obtener más información sobre la compatibilidad con multithreading de MFC, vea los temas siguientes:
 
-- [Multithreading: Crear subprocesos de interfaz de usuario](multithreading-creating-user-interface-threads.md)
+- [Multithreading: crear subprocesos de interfaz de usuario](multithreading-creating-user-interface-threads.md)
 
-- [Multithreading: Crear subprocesos de trabajo](multithreading-creating-worker-threads.md)
+- [Multithreading: crear subprocesos de trabajo](multithreading-creating-worker-threads.md)
 
-- [Multithreading: Cómo usar las clases de sincronización](multithreading-how-to-use-the-synchronization-classes.md)
+- [Multithreading: cómo usar las clases de sincronización](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [Multithreading: Terminar subprocesos](multithreading-terminating-threads.md)
+- [Multithreading: terminar subprocesos](multithreading-terminating-threads.md)
 
-- [Multithreading: Sugerencias de programación](multithreading-programming-tips.md)
+- [Multithreading: sugerencias de programación](multithreading-programming-tips.md)
 
-- [Multithreading: Cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md)
+- [Multithreading: cuándo usar las clases de sincronización](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>Vea también
 

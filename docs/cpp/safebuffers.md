@@ -8,11 +8,11 @@ helpviewer_keywords:
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
 ms.openlocfilehash: 473a838a48ed6523ce78d0bc8128dd83636c81d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267388"
 ---
 # <a name="safebuffers"></a>safebuffers
 
@@ -30,7 +30,7 @@ __declspec( safebuffers )
 
 El **/GS** opción del compilador hace que el compilador comprobar las saturaciones de búfer mediante la inserción de comprobaciones de seguridad en la pila. Se describen los tipos de estructuras de datos que son aptos para las comprobaciones de seguridad en [/GS (comprobación de seguridad del búfer)](../build/reference/gs-buffer-security-check.md). Para obtener más información acerca de la detección de saturación del búfer, vea [características de seguridad de MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/).
 
-Un análisis manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer. En ese caso, puede suprimir las comprobaciones de seguridad para una función aplicando el **__declspec (safebuffers)** palabra clave para la declaración de función.
+Una revisión manual externo o realizado por un experto para revisar el código puede determinar si una función está protegida de la saturación del búfer. En ese caso, puede suprimir las comprobaciones de seguridad para una función aplicando el **__declspec (safebuffers)** palabra clave para la declaración de función.
 
 > [!CAUTION]
 >  Las comprobaciones de seguridad del búfer proporcionan una protección de seguridad importante y apenas repercuten en el rendimiento. Por tanto, se recomienda que no las suprima, excepto en el caso poco frecuente de que el rendimiento de una función tenga una importancia crítica y se sepa que la función está segura.

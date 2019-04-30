@@ -5,17 +5,17 @@ f1_keywords:
 - vc.tables.mfc.technotes
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
 ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306410"
 ---
 # <a name="technical-notes-by-number"></a>Notas técnicas por número
 
 Las notas de la técnicas siguiente se enumeran numéricamente, con la nota técnica de escritura más reciente en primer lugar. Para obtener una lista por categoría, vea [notas técnicas por categoría](../mfc/technical-notes-by-category.md).
 
-|número|Title|
+|número|Título|
 |------------|-----------|
 |71|[Implementación de IOleCommandTarget en MFC](../mfc/tn071-mfc-iolecommandtarget-implementation.md)|
 |70|[Nombres de clase de ventana MFC](../mfc/tn070-mfc-window-class-names.md)|

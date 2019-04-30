@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
 ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273227"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (Especificar directorios de metadatos)
 
@@ -49,6 +49,6 @@ Un único directorio puede pasarse a una **/AI** invocación. Especifique uno **
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [#using (directiva)](../../preprocessor/hash-using-directive-cpp.md)

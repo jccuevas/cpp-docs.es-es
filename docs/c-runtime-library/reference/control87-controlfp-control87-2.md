@@ -39,11 +39,11 @@ helpviewer_keywords:
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
 ms.openlocfilehash: e2ebfdc80a451ebf02563f78a62dd08618f92bcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340422"
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -73,7 +73,7 @@ int __control87_2(
 *new*<br/>
 Valores de bit de la nueva palabra de control.
 
-*Máscara*<br/>
+*mask*<br/>
 Máscara de los bits de la nueva palabra de control que se va a definir.
 
 *x86_cw*<br/>
@@ -90,7 +90,7 @@ Para **__control87_2**, el valor devuelto es 1, que indica éxito.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_control87** función obtiene y establece la palabra de control de punto flotante. La palabra de control de punto flotante permite que el programa cambie los modos de precisión, redondeo e infinito en el paquete matemático de punto flotante, en función de la plataforma. También puede usar **_control87** a o quitar una máscara excepciones de punto flotante. Si el valor de *máscara* es igual a 0, **_control87** Obtiene la palabra de control de punto flotante. Si *máscara* es distinto de cero, se establece un nuevo valor para la palabra de control: para cualquier bit que esté activado (es decir, igual a 1) en *máscara*, el bit correspondiente en *nuevo* se usa para actualizar el control Word. En otras palabras, **fpcntrl** = ((**fpcntrl** & ~*máscara*) &#124; (*nueva* & *máscara*)) donde **fpcntrl** es la palabra de control de punto flotante.
+El **_control87** función obtiene y establece la palabra de control de punto flotante. La palabra de control de punto flotante permite que el programa cambie los modos de precisión, redondeo e infinito en el paquete matemático de punto flotante, en función de la plataforma. También puede usar **_control87** a o quitar una máscara excepciones de punto flotante. Si el valor de *máscara* es igual a 0, **_control87** Obtiene la palabra de control de punto flotante. Si *máscara* es distinto de cero, se establece un nuevo valor para la palabra de control: Para cualquier bit que se encuentra en (es decir, igual a 1) en *máscara*, el bit correspondiente en *nuevo* se usa para actualizar la palabra de control. En otras palabras, **fpcntrl** = ((**fpcntrl** & ~*máscara*) &#124; (*nueva* & *máscara*)) donde **fpcntrl** es la palabra de control de punto flotante.
 
 > [!NOTE]
 > De forma predeterminada, las bibliotecas en tiempo de ejecución aplican máscaras a todas las excepciones de punto flotante.

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 93c11a89f7cdfa3949be2d97e401fad199a17d97
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278975"
 ---
 # <a name="lttuplegt-functions"></a>Funciones de &lt;tuple&gt;
 
@@ -107,7 +107,7 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_tuple"></a>  make_tuple)
+## <a name="make_tuple"></a>  make_tuple
 
 Crea una `tuple` a partir de valores de elemento.
 

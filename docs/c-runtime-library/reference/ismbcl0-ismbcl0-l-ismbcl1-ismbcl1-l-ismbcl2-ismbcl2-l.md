@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286635"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,12 +108,12 @@ El valor de salida se ve afectado por el valor de la categoría **LC_CTYPE** de 
 
 |Rutina|Condición de prueba (solo página de códigos 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS no Kanji: 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS no Kanji: 0 x 8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS de nivel 1: 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl1_l**|JIS de nivel 1: 0x889F < =*c*< = 0 x 9872.|
-|**_ismbcl2**|JIS de nivel 2: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS de nivel 2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|JIS no Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|JIS no Kanji: 0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|JIS de nivel 1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|JIS de nivel 1: 0x889F<=*c*<=0x9872.|
+|**_ismbcl2**|JIS de nivel 2: 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|JIS de nivel 2: 0x989F<=*c*<=0xEAA4.|
 
 Las funciones comprueban que el valor especificado *c* coincide con las condiciones de prueba se ha descrito anteriormente, pero no comprueben que *c* es un carácter multibyte válido. Si el byte inferior está en los intervalos 0x00 - 0x3F, 0x7F, o 0xFD - 0xFF, estas funciones devuelven un valor distinto de cero, lo que indica que el carácter cumple la condición de prueba. Use [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) para comprobar si el carácter multibyte está definido.
 

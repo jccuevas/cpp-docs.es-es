@@ -14,11 +14,11 @@ helpviewer_keywords:
 - packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
 ms.openlocfilehash: 9643b8b4b4b26b3f7a8a59ed0085601b1a53094d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270729"
 ---
 # <a name="gy-enable-function-level-linking"></a>/Gy (Habilitar vinculación en el nivel de función)
 
@@ -59,5 +59,5 @@ Las funciones inline siempre se empaquetan si sus instancias se crean como llama
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

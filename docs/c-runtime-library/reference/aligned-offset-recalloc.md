@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_offset_recalloc function
 ms.assetid: a258f54e-eeb4-4853-96fc-007d710f98e9
 ms.openlocfilehash: 5ee163d257665b5481d6ab1ead54698ace1ef210
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335664"
 ---
 # <a name="alignedoffsetrecalloc"></a>_aligned_offset_recalloc
 
@@ -51,13 +51,13 @@ void * _aligned_offset_recalloc(
 *memblock*<br/>
 Puntero de bloque de memoria actual.
 
-*Número*<br/>
+*number*<br/>
 Número de elementos.
 
 *size*<br/>
 Longitud en bytes de cada elemento.
 
-*Alineación*<br/>
+*alignment*<br/>
 Valor de la alineación, que debe ser un entero potencia de 2.
 
 *offset*<br/>

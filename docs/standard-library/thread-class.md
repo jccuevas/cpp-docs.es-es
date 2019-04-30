@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412077"
 ---
 # <a name="thread-class"></a>thread (Clase)
 
@@ -68,7 +68,7 @@ Cada subproceso de ejecución tiene un identificador único de tipo `thread::id`
 |[get_id](#get_id)|Devuelve el identificador único del subproceso asociado.|
 |[hardware_concurrency](#hardware_concurrency)|Estático. Devuelve una estimación del número de contextos de subprocesos de hardware.|
 |[join](#join)|Se bloquea hasta que el subproceso asociado se completa.|
-|[puede unir](#joinable)|Especifica si se puede unir el subproceso asociado.|
+|[joinable](#joinable)|Especifica si se puede unir el subproceso asociado.|
 |[native_handle](#native_handle)|Devuelve el tipo específico de la implementación que representa el identificador de subproceso.|
 |[swap](#swap)|Intercambia el estado del objeto con un determinado **subproceso** objeto.|
 
@@ -84,7 +84,7 @@ Cada subproceso de ejecución tiene un identificador único de tipo `thread::id`
 
 **Espacio de nombres:** std
 
-## <a name="detach"></a>  Thread::Detach
+## <a name="detach"></a>  thread::detach
 
 Desasocia el subproceso asociado. El sistema operativo pasa a ser responsable de liberar los recursos de subproceso al finalizar.
 
@@ -100,7 +100,7 @@ Si el subproceso que está asociado con el objeto de llamada no se puede unir, l
 
 Si el subproceso que está asociado con el objeto de llamada no es válido, la función produce un `system_error` que tiene un código de error de `no_such_process`.
 
-## <a name="get_id"></a>  Thread::get_id
+## <a name="get_id"></a>  thread::get_id
 
 Devuelve un identificador único para el subproceso asociado.
 
@@ -112,7 +112,7 @@ id get_id() const noexcept;
 
 Un objeto [thread::id](#id_class) que identifica de forma única el subproceso asociado, o `thread::id()` si ningún subproceso está asociado con el objeto.
 
-## <a name="hardware_concurrency"></a>  Thread::hardware_concurrency
+## <a name="hardware_concurrency"></a>  thread::hardware_concurrency
 
 Un método estático que devuelve una estimación del número de contextos de subprocesos de hardware.
 
@@ -140,7 +140,7 @@ El constructor predeterminado crea un objeto que no se compara como igual al obj
 
 Todos los objetos `thread::id` construidos de forma predeterminada son iguales.
 
-## <a name="join"></a>  Thread::Join
+## <a name="join"></a>  thread::join
 
 Se bloquea hasta que finaliza el subproceso de ejecución que está asociado con el objeto de llamada.
 
@@ -152,7 +152,7 @@ void join();
 
 Si la llamada se realiza correctamente, las llamadas siguientes a [get_id](#get_id) para el objeto que realiza la llamada devuelven un [thread::id](#id_class) predeterminado que no es igual que el `thread::id` de cualquier subproceso existente. Si la llamada no se realiza correctamente, el valor devuelto por `get_id` no cambia.
 
-## <a name="joinable"></a>  Thread::joinable
+## <a name="joinable"></a>  thread::joinable
 
 Especifica si se puede *unir* el subproceso asociado.
 
@@ -168,7 +168,7 @@ bool joinable() const noexcept;
 
 Un objeto de subproceso se puede *unir* si `get_id() != id()`.
 
-## <a name="native_handle"></a>  Thread::native_handle
+## <a name="native_handle"></a>  thread::native_handle
 
 Devuelve el tipo específico de la implementación que representa el identificador de subproceso. El identificador de subproceso puede usarse en aspectos específicos de la implementación.
 
@@ -203,7 +203,7 @@ Las llamadas de método se separan si el objeto que realiza la llamada se puede 
 
 Una vez realizada la asociación, `Other` se establece en un estado construido de forma predeterminada.
 
-## <a name="swap"></a>  Thread::swap
+## <a name="swap"></a>  thread::swap
 
 Intercambia el estado del objeto con el de un determinado **subproceso** objeto.
 

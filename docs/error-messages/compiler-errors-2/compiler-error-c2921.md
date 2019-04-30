@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2921
 ms.assetid: 323642a0-bfc4-4942-9f41-c3adf5c54296
 ms.openlocfilehash: 47f348f6c30d96e8c4ae40e0c26a8ebade14c8ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385880"
 ---
 # <a name="compiler-error-c2921"></a>Error del compilador C2921
 
 nueva definición: 'class': la clase genérica o de plantilla se está declarando de nuevo como 'type'
 
-Una clase genérica o de plantilla tiene varias declaraciones que no son equivalentes. Para corregir este error, use nombres diferentes para los distintos tipos o quite la nueva definición del nombre de tipo.
+Una clase genérica o de plantilla tiene varias declaraciones que no son equivalentes. Para corregir este error, utilice nombres diferentes para los distintos tipos o quite la nueva definición del nombre de tipo.
 
 El código siguiente genera el error C2921:
 

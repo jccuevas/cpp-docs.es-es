@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212421"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -39,7 +39,7 @@ Especifica el segmento en el que las variables sin inicializar se almacenan en e
 *"segment-name"*<br/>
 (Opcional) El nombre de un segmento. Cuando se usa con **pop**, se extrae la pila y *nombre de segmento* se convierte en el nombre del segmento activo.
 
-*"segmento-class"*<br/>
+*"segment-class"*<br/>
 (Opcional) Se incluye por compatibilidad con C++ antes de la versión 2.0. Se omite.
 
 ## <a name="remarks"></a>Comentarios

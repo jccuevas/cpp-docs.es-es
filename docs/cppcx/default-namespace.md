@@ -3,11 +3,11 @@ title: espacio de nombres predeterminado
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
 ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389468"
 ---
 # <a name="default-namespace"></a>espacio de nombres predeterminado
 
@@ -32,7 +32,7 @@ Todos los tipos integrados heredan los miembros siguientes.
 
 ### <a name="built-in-types"></a>Tipos integrados
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |`char16`|Un valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|
 |`float32`|Número de punto flotante de 32 bits conforme a IEEE 754.|

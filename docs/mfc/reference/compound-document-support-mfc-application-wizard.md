@@ -5,11 +5,11 @@ f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
 ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373445"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>Compatibilidad con documentos compuestos, Asistente para aplicaciones MFC
 
@@ -21,9 +21,9 @@ De forma predeterminada, la aplicación no contiene ninguna compatibilidad con d
 
   Determina si la aplicación proporciona compatibilidad con contenedores, compatibilidad con el servidor o ambos. Para obtener más información acerca de esta área, vea:
 
-  - [Contenedores: Implementación de un contenedor](../../mfc/containers-implementing-a-container.md)
+  - [Contenedores: implementar un contenedor](../../mfc/containers-implementing-a-container.md)
 
-  - [servidores: Implementación de un servidor](../../mfc/servers-implementing-a-server.md)
+  - [Servidores: implementar un servidor](../../mfc/servers-implementing-a-server.md)
 
   |Opción|Descripción|
   |------------|-----------------|

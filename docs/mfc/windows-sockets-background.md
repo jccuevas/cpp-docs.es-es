@@ -19,11 +19,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
 ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217883"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets: Fondo
 
@@ -93,11 +93,11 @@ Los sockets son muy útiles en al menos tres contextos de comunicación:
 
 Para obtener más información, consulte Especificación de Windows Sockets: **ntohs**, **ntohl**, **htons**, **htonl**. También puede consultar los temas siguientes:
 
-- [Windows Sockets: Usar Sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets: usar sockets con archivos](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets: Ejemplo de Sockets que usan archivos](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Sockets: ejemplo de sockets que usan archivos](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets: Usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets: usar la clase CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>Vea también
 

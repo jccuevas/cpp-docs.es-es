@@ -36,11 +36,11 @@ helpviewer_keywords:
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
 ms.openlocfilehash: 197a4f690a6626edbfec27ea4abef1999b6cedaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287711"
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen, _wfsopen
 
@@ -84,7 +84,7 @@ El **_fsopen** función abre el archivo especificado por *filename* como una sec
 
 La cadena de caracteres *modo* especifica el tipo de acceso solicitado para el archivo, como se muestra en la tabla siguiente.
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |**"r"**|Abre para lectura. Si el archivo no existe o no se encuentra el **_fsopen** llamar se produce un error.|
 |**"w"**|Abre un archivo vacío para escritura. Si el archivo especificado existe, se destruye su contenido.|
@@ -97,7 +97,7 @@ Use la **"w"** y **"w +"** tipos con cuidado, ya que podrían destruir archivos 
 
 Cuando se abre un archivo con el **"a"** o **"a +"** acceso tipo, todas las operaciones se producen al final del archivo de escritura. Se puede mover el puntero de archivo mediante [fseek](fseek-fseeki64.md) o [rebobinar](rewind.md), pero se desplaza siempre al final del archivo antes de cualquier escritura operación se lleva a cabo. Por consiguiente, los datos existentes no pueden sobrescribirse. Cuando el **"r +"**, **"w +"**, o **"a +"** se especifica el tipo de acceso, se permiten operaciones de lectura y escritura (se dice que el archivo está abierto para actualización). En cambio, si se cambia entre lectura y escritura, debe haber una operación intermedia [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) o [rewind](rewind.md). Se puede especificar la posición actual para el [fsetpos](fsetpos.md) o [fseek](fseek-fseeki64.md) operación, si lo desea. Además de los valores anteriores, uno de los siguientes caracteres puede incluirse en *modo* para especificar el modo de traducción para las nuevas líneas y de administración de archivos.
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |**t**|Abre un archivo en modo de texto (traducido). En este modo, fuente (CR-LF) combinaciones de retorno de la línea de carro se traducen en avances de una línea (LF) en la entrada y caracteres de LF se traducen en combinaciones CR-LF en la salida. Además, CTRL+Z se interpreta como carácter de final de archivo en la entrada. En los archivos abiertos para lectura o lectura/escritura, **_fsopen** comprueba un CTRL+Z al final del archivo y lo quita, si es posible. Esto se hace porque utilizar [fseek](fseek-fseeki64.md) y [ftell](ftell-ftelli64.md) para desplazarse por un archivo que finaliza con CTRL+Z puede hacer que [fseek](fseek-fseeki64.md) para que se comporte de forma incorrecta cerca del final del archivo.|
 |**b**|Abre un archivo en modo binario (sin traducir); las conversiones anteriores se suprimen.|
@@ -110,7 +110,7 @@ Si no se especifica **t** o **b** en *mode*, el modo de traducción está defini
 
 El argumento *shflag* es una expresión constante compuesta por una de las siguientes constantes de manifiesto, definidas en Share.h.
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |**_SH_COMPAT**|Establece el modo de compatibilidad para aplicaciones de 16 bits.|
 |**_SH_DENYNO**|Permite el acceso de lectura y escritura.|

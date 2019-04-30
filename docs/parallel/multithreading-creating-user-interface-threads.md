@@ -12,11 +12,11 @@ helpviewer_keywords:
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212914"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Multithreading: Crear subprocesos de interfaz de usuario MFC
 
@@ -26,7 +26,7 @@ Lo primero que debe hacer al crear un subproceso de interfaz de usuario es deriv
 
 ### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>Funciones que se deben reemplazar cuando se crea un subproceso de interfaz de usuario
 
-|Función|Propósito|
+|Función|Finalidad|
 |--------------|-------------|
 |[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|Realizar tareas de limpieza cuando el subproceso termina. Normalmente, se reemplaza.|
 |[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|Llevar a cabo la inicialización de la instancia del subproceso. Debe reemplazarse.|
@@ -51,9 +51,9 @@ MFC proporciona dos versiones de `AfxBeginThread` por medio de sobrecarga de par
 
 ## <a name="what-do-you-want-to-know-more-about"></a>¿Qué más desea saber?
 
-- [Multithreading: Terminar subprocesos](multithreading-terminating-threads.md)
+- [Multithreading: terminar subprocesos](multithreading-terminating-threads.md)
 
-- [Multithreading: Crear subprocesos de trabajo](multithreading-creating-worker-threads.md)
+- [Multithreading: crear subprocesos de trabajo](multithreading-creating-worker-threads.md)
 
 - [Los procesos y subprocesos](/windows/desktop/ProcThread/processes-and-threads)
 

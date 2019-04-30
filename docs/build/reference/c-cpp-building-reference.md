@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294764"
 ---
 # <a name="cc-building-reference"></a>Referencia de compilación de C/C++
 
@@ -26,7 +26,7 @@ Visual C++ proporciona dos formas de crear un programa de C o C++. La manera má
 [Referencia del compilador MSVC](compiling-a-c-cpp-program.md)<br/>
 Describe el compilador MSVC, que crea un archivo de objeto que contiene código máquina, directivas del vinculador, secciones, las referencias externas y los nombres de función/datos.
 
-[Referencia MSVC del vinculador](linking.md)<br/>
+[Referencia del enlazador MSVC](linking.md)<br/>
 Describe al vinculador, que combina el código de los archivos de objeto creados por el compilador y de las bibliotecas vinculadas estáticamente, resuelve las referencias de nombre y crea un archivo ejecutable.
 
 [Compatibilidad con Unicode en el compilador y el vinculador](unicode-support-in-the-compiler-and-linker.md)
@@ -48,16 +48,16 @@ Describe la personalización del proceso de compilación.
 [Creación de un programa de C o C++](../projects-and-build-systems-cpp.md)<br/>
 Ofrece vínculos a temas en los que se describe la compilación de programas desde la línea de comandos o desde el entorno de desarrollo integrado de Visual Studio.
 
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 Describe las opciones de configuración del compilador en el entorno de desarrollo o en la línea de comandos.
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
 Proporciona vínculos a temas que describen las opciones del compilador.
 
-[Referencia MSVC del vinculador](linking.md)<br/>
+[Referencia del enlazador MSVC](linking.md)<br/>
 Describe las opciones de configuración del vinculador dentro o fuera del entorno de desarrollo integrado.
 
-[Opciones del vinculador MSVC](linker-options.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)<br/>
 Proporciona vínculos a temas que describen las opciones del vinculador.
 
 [Referencia de BSCMAKE](bscmake-reference.md)<br/>

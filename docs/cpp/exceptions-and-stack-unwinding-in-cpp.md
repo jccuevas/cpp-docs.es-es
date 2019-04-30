@@ -3,11 +3,11 @@ title: Excepciones y desenredo de pila en C++
 ms.date: 11/04/2016
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
 ms.openlocfilehash: 5e094101557469a189311ce2c5344bb895696649
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398893"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>Excepciones y desenredo de pila en C++
 
@@ -25,7 +25,7 @@ En el mecanismo de excepciones de C++, el control se mueve desde la instrucción
 
 ## <a name="stack-unwinding-example"></a>Ejemplo de desenredo de la pila
 
-En el ejemplo siguiente se muestra cómo se desenreda la pila cuando se produce una excepción. La ejecución del subproceso salta de la instrucción throw de `C` a la instrucción catch de `main` y desenreda cada función a lo largo del recorrido. Observe el orden en que se crean los objetos `Dummy` y se destruyen después cuando salen del ámbito. Observe también que ninguna función se completa excepto `main`, que contiene la instrucción catch. La función `A` nunca vuelve de la llamada a `B()` y `B` nunca vuelve de la llamada a `C()`. Si quita los comentarios de la definición del puntero de `Dummy` y la correspondiente instrucción delete, y ejecuta después el programa, observe que el puntero nunca se elimina. Esto muestra lo que puede suceder cuando las funciones no proporcionan una garantía de excepción. Para obtener más información, vea Diseñar para excepciones. Si marca como comentario la instrucción catch, puede observar lo que sucede cuando un programa finaliza debido a una excepción no controlada.
+En el ejemplo siguiente se muestra cómo se desenreda la pila cuando se produce una excepción. La ejecución del subproceso salta de la instrucción throw de `C` a la instrucción catch de `main` y desenreda cada función a lo largo del recorrido. Observe el orden en que se crean los objetos `Dummy` y se destruyen después cuando salen del ámbito. Observe también que ninguna función se completa excepto `main`, que contiene la instrucción catch. La función `A` nunca vuelve de la llamada a `B()` y `B` nunca vuelve de la llamada a `C()`. Si quita los comentarios de la definición del puntero de `Dummy` y la correspondiente instrucción delete, y ejecuta después el programa, observe que el puntero nunca se elimina. Esto muestra lo que puede suceder cuando las funciones no proporcionan una garantía de excepción. Para obtener más información, vea el artículo sobre cómo Diseño de excepciones. Si marca como comentario la instrucción catch, puede observar lo que sucede cuando un programa finaliza debido a una excepción no controlada.
 
 ```cpp
 #include <string>

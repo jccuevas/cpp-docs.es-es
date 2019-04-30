@@ -11,11 +11,11 @@ helpviewer_keywords:
 - debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
 ms.openlocfilehash: 3e6ffce487cc8183e45f3a911e7060ea22b28216
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292064"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (Habilitar comprobación de errores del marco de pila en tiempo de ejecución)
 
@@ -49,5 +49,5 @@ Realiza las mismas operaciones que el [/RTC (comprobaciones de errores de tiempo
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

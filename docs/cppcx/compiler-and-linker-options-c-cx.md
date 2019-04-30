@@ -3,11 +3,11 @@ title: Opciones del compilador y del vinculador (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383365"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Opciones del compilador y del vinculador (C++/CX)
 
@@ -43,4 +43,4 @@ Al usar **/ZW**, el compilador se vincula automáticamente a la versión de DLL 
 
 ## <a name="see-also"></a>Vea también
 
-[Compilar aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)
+[Compilación de aplicaciones y bibliotecas](../cppcx/building-apps-and-libraries-c-cx.md)

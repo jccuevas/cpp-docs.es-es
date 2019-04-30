@@ -1,5 +1,5 @@
 ---
-title: Filtrar Crear proyectos de C++ comprobables (C++ / c++ / CLI)
+title: Procedimiento Crear proyectos de C++ comprobables (C++ / c++ / CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
 ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387466"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Cómo: crear proyectos de C++ comprobables (C++ / c++ / CLI)
 

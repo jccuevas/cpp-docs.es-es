@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331225"
 ---
 # <a name="semantics-of-expressions"></a>Semántica de las expresiones
 
@@ -52,7 +52,7 @@ El orden en que se evalúa la expresión mostrada en la ilustración anterior vi
 
 1. La suma (+) es la siguiente operación con mayor prioridad, por lo que `a` se suma al producto de `b` y `c`.
 
-1. El desplazamiento a la izquierda (<<) tiene la prioridad más baja en la expresión, pero aparece dos veces. Como el operador de desplazamiento a la izquierda se agrupa de izquierda a derecha, la subexpresión de la izquierda se evalúa primero y después se evalúa la de la derecha.
+1. Desplazamiento a la izquierda (<<) tiene la prioridad más baja en la expresión, pero hay dos apariciones. Como el operador de desplazamiento a la izquierda se agrupa de izquierda a derecha, la subexpresión de la izquierda se evalúa primero y después se evalúa la de la derecha.
 
 Cuando se utilizan paréntesis para agrupar subexpresiones, se modifica la prioridad, así como el orden en que se evalúa la expresión, como se muestra en la ilustración siguiente.
 
@@ -69,8 +69,8 @@ El lenguaje C++ indica ciertas compatibilidades al especificar operandos. En la 
 
 |Tipo esperado|Tipos permitidos|
 |-------------------|-------------------|
-|*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *Tipo*&<br /> `const` *Tipo*&<br /> `volatile` *Tipo*&<br /> `volatile const` *Tipo*<br /> `volatile const` *Tipo*&|
-|*Tipo* \*|*Tipo* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
+|*type*|`const` *Tipo*<br /> `volatile` *Tipo*<br /> *type*&<br /> `const` *Tipo*&<br /> `volatile` *Tipo*&<br /> `volatile const` *Tipo*<br /> `volatile const` *Tipo*&|
+|*type* \*|*type* \*<br /> `const` *Tipo* \*<br /> `volatile` *Tipo* \*<br /> `volatile const` *Tipo* \*|
 |`const` *Tipo*|*type*<br /> `const` *Tipo*<br />`const` *Tipo*&|
 |`volatile` *Tipo*|*type*<br /> `volatile` *Tipo*<br /> `volatile` *Tipo*&|
 
@@ -94,7 +94,7 @@ Una expresión puede modificar el valor de un objeto solo una vez entre "puntos 
 
 La definición del lenguaje C++ no especifica actualmente puntos de secuencia. Microsoft C++ utiliza los mismos puntos de secuencia que ANSI C para cualquier expresión que contenga operadores de C y que no use operadores sobrecargados. Cuando los operadores están sobrecargados, la semántica cambia de la secuencia de operadores a la secuencia de llamadas de función. Microsoft C++ utiliza los puntos de secuencia siguientes:
 
-- Operando izquierdo del operador AND lógico (&&). El operando izquierdo del operador AND lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador AND lógico.
+- Operando izquierdo del operador lógico AND (& &). El operando izquierdo del operador AND lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador AND lógico.
 
 - Operando izquierdo del operador OR lógico (&#124;&#124;). El operando izquierdo del operador OR lógico se evalúa totalmente y se aplican todos los efectos secundarios antes de continuar. No hay ninguna garantía de que se evalúe el operando derecho del operador OR lógico.
 

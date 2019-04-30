@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
 ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397151"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Error del evaluador de expresiones CXX0015
 

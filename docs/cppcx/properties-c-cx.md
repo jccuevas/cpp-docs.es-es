@@ -3,11 +3,11 @@ title: Propiedades (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
 ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375228"
 ---
 # <a name="properties-ccx"></a>Propiedades (C++/CX)
 

@@ -1,24 +1,24 @@
 ---
 title: Variables automáticas (ámbito de función)
-ms.date: 11/04/2016
+ms.date: 04/22/2019
 helpviewer_keywords:
 - automatic variables
 - variables, automatic
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: fe326621f421ecbbb0ce09dac91f1a71e8d669aa
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 60dcfe61be24516b96054532931fb65245ab31d0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59030318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226788"
 ---
 # <a name="automatic-function-scope-variables"></a>Variables automáticas (ámbito de función)
 
 Una variable declarada dentro de una función solo puede usarse dentro del ámbito de esa función.
 
-```
+```cpp
 // LNK2019_AV.cpp
 // compile with: /c
 void test(void);
@@ -35,7 +35,7 @@ int main() {
 
 Y entonces
 
-```
+```cpp
 // LNK2019_AV_2.cpp
 // compile with: LNK2019_AV.cpp
 // LNK2019 expected

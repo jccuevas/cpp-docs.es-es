@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
 ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271858"
 ---
 # <a name="editbin-options"></a>Opciones de EDITBIN
 
@@ -21,7 +21,7 @@ Una opción consta de un especificador de opción, que es un guión (-) o una ba
 
 EDITBIN tiene las siguientes opciones:
 
-|Opción|Propósito|
+|Opción|Finalidad|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|Especifica si se puede enlazar un archivo DLL.|
 |[/ALLOWISOLATION](allowisolation.md)|Especifica el archivo DLL o el comportamiento de búsqueda de manifiesto del archivo ejecutable.|

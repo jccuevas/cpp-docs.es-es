@@ -5,13 +5,13 @@ helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396433"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Filtrar Personalizar la barra de herramientas de acceso rápido
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Procedimiento Personalizar la barra de herramientas de acceso rápido
 
 La barra de herramientas de acceso rápido (QAT) es una barra de herramientas personalizable que contiene un conjunto de comandos que se muestran al lado del botón de la aplicación o en las fichas de categoría. La siguiente ilustración muestra una barra de herramientas de acceso rápido típico.
 
@@ -31,7 +31,7 @@ Para personalizar la barra de herramientas de acceso rápido, ábralo en el **pr
 
 En la tabla siguiente define las propiedades de la barra de herramientas de acceso rápido.
 
-|Property|de esquema JSON|
+|Propiedad|Definición|
 |--------------|----------------|
 |Posición de QAT|Especifica la posición de la barra de herramientas de acceso rápido al iniciar la aplicación. La posición puede ser **anteriormente** o **debajo** el control de la cinta de opciones.|
 |Elementos QAT|Especifica los comandos que están disponibles para la barra de herramientas de acceso rápido.|

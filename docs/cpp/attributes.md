@@ -3,11 +3,11 @@ title: Atributos de C++
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284752"
 ---
 # <a name="attributes-in-c"></a>Atributos de C++
 
@@ -15,7 +15,7 @@ El estándar de C++ define un conjunto de atributos y también permite a los pro
 
 En algunos casos, los atributos estándar se superponen con los parámetros de modificador declspec específicas del compilador. En Visual C++, puede usar el `[[deprecated]]` atributo en lugar de usar `declspec(deprecated)` y cualquier compilador conforme reconocerá el atributo. Para todos los demás parámetros de modificador declspec como dllimport y dllexport, hay todavía ningún atributo equivalente por lo que debe seguir usar la sintaxis del modificador declspec. Los atributos no afectan el sistema de tipos y no cambian el significado de un programa. Los compiladores omiten los valores de atributo que no reconocen.
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): en el ámbito de una lista de atributos, puede especificar el espacio de nombres para todos los nombres con una sola **mediante** introducer:
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): En el ámbito de una lista de atributos, puede especificar el espacio de nombres para todos los nombres con una sola **mediante** introducer:
 
 ```cpp
 void g() {
@@ -33,13 +33,13 @@ En C ++ 11, los atributos proporcionan una forma estandarizada para anotar las c
 void Foo(int);
 ```
 
-Los atributos representan una alternativa a las extensiones específicas del proveedor como __declspec () (Visual C++), las directivas #pragma, estandarizada o &#95; &#95;atributo&#95; &#95; (GNU). Sin embargo, todavía deberá usar las construcciones específicas del proveedor para la mayoría de los casos. El estándar especifica actualmente los siguientes atributos que se debería reconocer un compilador adecuado:
+Los atributos representan una alternativa a las extensiones específicas del proveedor como directivas #pragma, estandarizada __declspec () (Visual C++), o &#95; &#95;atributo&#95; &#95; (GNU). Sin embargo, todavía deberá usar las construcciones específicas del proveedor para la mayoría de los casos. El estándar especifica actualmente los siguientes atributos que se debería reconocer un compilador adecuado:
 
 - `[[noreturn]]` Especifica que nunca se devuelve una función; en otras palabras siempre produce una excepción. El compilador puede ajustar sus reglas de compilación para `[[noreturn]]` entidades.
 
 - `[[carries_dependency]]` Especifica que la función propaga la dependencia de datos de ordenación con respecto a la sincronización de subprocesos. El atributo puede aplicarse a uno o varios parámetros para especificar que el argumento pasado lleva a cabo una dependencia en el cuerpo de la función. El atributo puede aplicarse a la propia función, para especificar que el valor devuelto incluye una dependencia fuera de la función. El compilador puede usar esta información para generar código más eficaz.
 
-- `[[deprecated]]` **Visual Studio 2015 y versiones posterior:** especifica que una función no está pensada para usarse y puede que no exista en futuras versiones de una interfaz de biblioteca. El compilador puede utilizarlo para generar un mensaje informativo cuando el código de cliente intenta llamar a la función. Puede aplicarse a la declaración de una clase, un nombre typedef, una variable, un miembro de datos no estático, una función, un espacio de nombres, una enumeración, un enumerador o una especialización de plantilla.
+- `[[deprecated]]` **Visual Studio 2015 y versiones posterior:** Especifica que una función no está pensada para usarse y puede que no exista en futuras versiones de una interfaz de biblioteca. El compilador puede utilizarlo para generar un mensaje informativo cuando el código de cliente intenta llamar a la función. Puede aplicarse a la declaración de una clase, un nombre typedef, una variable, un miembro de datos no estático, una función, un espacio de nombres, una enumeración, un enumerador o una especialización de plantilla.
 
 - `[[fallthrough]]` **Visual Studio 2017 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) la `[[fallthrough]]` atributo se puede usar en el contexto de [cambiar](switch-statement-cpp.md) instrucciones como una sugerencia para el compilador (o cualquiera que lea el código) que se prevé el comportamiento de fallthrough. El compilador de Visual C++ actualmente no advierte sobre el comportamiento de fallthrough, por lo que este atributo no tiene ningún comportamiento del compilador efecto.
 
@@ -77,10 +77,10 @@ Los atributos representan una alternativa a las extensiones específicas del pro
 
   El ejemplo genera estas advertencias:
 
-  - 26494 (tipo de la regla 5: siempre debe inicializarse un objeto.)
+  - 26494 (tipo de regla 5: Siempre debe inicializarse un objeto.)
 
-  - 26485 (límites de la regla 3: ninguna matriz de decadencia de puntero.)
+  - 26485 (3 de la regla de límites: No hay discos a decadencia de puntero).
 
-  - 26481 (límites de la regla 1: no usar aritmética de puntero. Usar intervalo en su lugar).
+  - 26481 (1 de la regla de límites: No usar aritmética de puntero. Usar intervalo en su lugar).
 
   Las dos primeras advertencias se activan cuando se compila este código con la herramienta de análisis de código CppCoreCheck instalado y activado. Pero no se activa la advertencia tercer debido al atributo. Puede suprimir todo el perfil bounds escribiendo [[gsl::suppress(bounds)]] sin incluir un número específico de regla. C++ Core Guidelines están diseñados para ayudarle a escribir código mejor y más seguro. El atributo suprimir facilita desactivar las advertencias cuando no se querían.

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
 ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353864"
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -85,7 +85,7 @@ Todas estas funciones devuelven un puntero a la cadena de mensaje de error. Las 
 
 ## <a name="remarks"></a>Comentarios
 
-El **strerror** función mapas *errnum* en una cadena de mensaje de error y devuelve un puntero a la cadena. Ni **strerror** ni **_strerror** imprimen realmente el mensaje: para ello, debe llamar a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+El **strerror** función mapas *errnum* en una cadena de mensaje de error y devuelve un puntero a la cadena. Ni **strerror** ni **_strerror** imprimen realmente el mensaje: Para ello, debe llamar a una función de salida como [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )

@@ -3,11 +3,11 @@ title: R. Ejemplos
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
 ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362977"
 ---
 # <a name="a-examples"></a>R. Ejemplos
 
@@ -735,7 +735,7 @@ void g(int k, int n)
 
 ## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 ejemplos de la cláusula de atributos de datos copyprivate
 
-**Ejemplo 1:** El [copyprivate](2-directives.md#2728-copyprivate) cláusula puede usarse para difundir valores adquiridos por un único subproceso directamente a todas las instancias de las variables privadas de los demás subprocesos.
+**Ejemplo 1:** El [copyprivate](2-directives.md#2728-copyprivate) cláusula puede usarse para difundir valores adquiridos por un único subproceso directamente a todas las instancias de las variables privadas de los demás subprocesos.
 
 ```cpp
 float x, y;
@@ -757,7 +757,7 @@ void init( )
 
 Si la rutina *init* se llama desde una región de la serie, no se ve afectado por la presencia de las directivas de su comportamiento. Después de llamar a la *get_values* rutina se ha ejecutado por un subproceso, no hay ningún subproceso deja la construcción hasta que los objetos privados designados por *un*, *b*, *x*, y *y* en todos los subprocesos se convierten en ha definido con los valores leídos.
 
-**Ejemplo 2:** A diferencia del ejemplo anterior, suponga que un subproceso determinado, por ejemplo el subproceso principal debe realizar la operación de lectura. En este caso, el `copyprivate` cláusula no puede utilizarse para realizar la difusión directamente, pero se puede usar para proporcionar acceso a un objeto temporal compartido.
+**Ejemplo 2:** A diferencia del ejemplo anterior, suponga que un subproceso determinado, por ejemplo el subproceso principal debe realizar la operación de lectura. En este caso, el `copyprivate` cláusula no puede utilizarse para realizar la difusión directamente, pero se puede usar para proporcionar acceso a un objeto temporal compartido.
 
 ```cpp
 float read_next( )
@@ -917,7 +917,7 @@ int i, a;
 
 ## <a name="a31-thread-safe-lock-functions"></a>A.31 funciones de bloqueo de subprocesos
 
-En el ejemplo de C++ siguiente se muestra cómo inicializar una matriz de bloqueos en una región paralela mediante [omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
+La siguiente C++ en el ejemplo se muestra cómo inicializar una matriz de bloqueos en una región paralela mediante [omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions).
 
 ```cpp
 // A_13_omp_init_lock.cpp

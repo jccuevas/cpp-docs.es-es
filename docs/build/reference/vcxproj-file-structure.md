@@ -5,11 +5,11 @@ helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
 ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317125"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Estructura de los archivos .vcxproj y .props
 
@@ -292,5 +292,5 @@ Para crear una hoja de propiedades propia, copie uno de los archivos .props de l
 
 ## <a name="see-also"></a>Vea también
 
-[Establece el compilador de C++ y crear propiedades en Visual Studio](../working-with-project-properties.md)<br/>
+[Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md)<br/>
 [Archivos XML de página de propiedades](property-page-xml-files.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223761"
 ---
 # <a name="numget-class"></a>num_get (clase)
 
@@ -170,7 +170,7 @@ virtual iter_type do_get(
 *first*<br/>
 El principio del intervalo de caracteres del que se va a leer el número.
 
-*Último*<br/>
+*last*<br/>
 El final del intervalo de caracteres del que se va a leer el número.
 
 *_Iosbase*<br/>
@@ -179,7 +179,7 @@ El objeto [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan
 *_State*<br/>
 El estado al que failbit (ver [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.
 
-*Val*<br/>
+*val*<br/>
 Valor que se leyó.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -417,7 +417,7 @@ iter_type get(
 *first*<br/>
 El principio del intervalo de caracteres del que se va a leer el número.
 
-*Último*<br/>
+*last*<br/>
 El final del intervalo de caracteres del que se va a leer el número.
 
 *_Iosbase*<br/>
@@ -426,7 +426,7 @@ El objeto [ios_base](../standard-library/ios-base-class.md) cuyas marcas se usan
 *_State*<br/>
 El estado al que failbit (ver [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) se agrega en caso de error.
 
-*Val*<br/>
+*val*<br/>
 Valor que se leyó.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -580,11 +580,11 @@ Valor entero que se usa para especificar el tipo de administración de memoria d
 
 Los valores posibles de la *_Refs* parámetro y su importancia son:
 
-- 0: la vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
+- 0: La vigencia del objeto se administra mediante las configuraciones regionales que lo contienen.
 
-- 1: la vigencia del objeto se debe administrar de manera manual.
+- 1: La duración del objeto debe administrarse manualmente.
 
-- \> 1: no se definen estos valores.
+- \> 1: Estos valores no están definidos.
 
 No es posible mostrar ejemplos directos, porque el destructor está protegido.
 

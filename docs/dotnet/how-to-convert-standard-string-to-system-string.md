@@ -8,13 +8,13 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
 ms.openlocfilehash: e1fca0e8cb614c111af80324793cf8027be333a0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387518"
 ---
-# <a name="how-to-convert-standard-string-to-systemstring"></a>Filtrar Convertir cadenas estándar en System:: String
+# <a name="how-to-convert-standard-string-to-systemstring"></a>Procedimiento Convertir cadenas estándar en System:: String
 
 En este tema muestra cómo convertir una cadena de la biblioteca estándar de C++ ([\<cadena >](../standard-library/string.md)) a un <xref:System.String>.
 

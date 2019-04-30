@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
 ms.openlocfilehash: 71c50771889381ad2288637c23930103b5925a2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246935"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl Class
 
@@ -70,13 +70,13 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 ### <a name="protected-constants"></a>Constantes protegidas
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Fuente utilizada para mostrar texto en la ventana Vista previa.|
 
 ### <a name="protected-data-members"></a>Miembros de datos protegidos
 
-|nombre|Descripción|
+|Name|Descripción|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Color de fondo de la ventana Vista previa.|
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Color del texto de la ventana de vista previa.|

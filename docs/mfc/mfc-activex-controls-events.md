@@ -14,11 +14,11 @@ helpviewer_keywords:
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
 ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392679"
 ---
 # <a name="mfc-activex-controls-events"></a>Controles ActiveX MFC: Eventos
 
@@ -43,12 +43,12 @@ Con la vista de clases, puede agregar eventos estándar compatibles con la clase
 
 Dos artículos describen los eventos en detalle:
 
-- [Controles ActiveX MFC: Agregar eventos estándar](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
+- [Controles ActiveX de MFC: Agregar eventos estándar](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [Controles ActiveX MFC: Agregar eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [Controles ActiveX de MFC: agregar eventos personalizados](../mfc/mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>Vea también
 
 [Controles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Controles ActiveX MFC: Métodos](../mfc/mfc-activex-controls-methods.md)<br/>
+[Controles ActiveX de MFC: métodos](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl (clase)](../mfc/reference/colecontrol-class.md)

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412196"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine (Clase)
 
@@ -68,10 +68,10 @@ El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para 
 
 Aunque puede construir un generador directamente a partir de este motor, también puede usar una de estas definiciones de tipos predefinidas:
 
-`ranlux24_base`: se usa como base para `ranlux24`.
+`ranlux24_base`: Utilizado como base para `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: se usa como base para `ranlux48`.
+`ranlux48_base`: Utilizado como base para `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Para más detalles sobre el algoritmo de motor de resta con llevadas, vea el artículo de la Wikipedia sobre el [generador de Fibonacci retardado](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator).

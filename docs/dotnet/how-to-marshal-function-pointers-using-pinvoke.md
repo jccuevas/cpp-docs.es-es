@@ -1,5 +1,5 @@
 ---
-title: Filtrar Uso de PInvoke de serializar punteros a función
+title: Procedimiento Uso de PInvoke de serializar punteros a función
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
 ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400570"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Filtrar Uso de PInvoke de serializar punteros a función
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Procedimiento Uso de PInvoke de serializar punteros a función
 
 Este tema explica cómo administrados delegados puede usarse en lugar de punteros a función al interoperar con funciones no administradas mediante las características de .NET Framework P/Invoke. Sin embargo, los programadores de Visual C++ se recomienda utilizar las características de interoperabilidad de C++ en su lugar (cuando sea posible) ya que P/Invoke proporciona pocos informes, de errores de tiempo de compilación no es seguro para el tipo y puede ser tedioso de implementar. Si la API no administrada se empaqueta como un archivo DLL y el código fuente no está disponible, P/Invoke es la única opción. En caso contrario, vea los temas siguientes:
 

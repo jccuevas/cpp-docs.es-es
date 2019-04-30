@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
 ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369961"
 ---
 # <a name="promise-class"></a>promise (Clase)
 
@@ -44,7 +44,7 @@ class promise;
 
 |Name|Descripción|
 |----------|-----------------|
-|[objeto Promise](#promise)|Construye un objeto `promise`.|
+|[promise](#promise)|Construye un objeto `promise`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
@@ -65,7 +65,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>Jerarquía de herencia
 
-*objeto Promise*<br/>
+*promise*<br/>
 
 ## <a name="requirements"></a>Requisitos
 
@@ -98,7 +98,7 @@ promise& operator=(promise&& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*<br/>
-Un objeto `promise`.
+Objeto `promise`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -125,7 +125,7 @@ promise(promise&& Other) noexcept;
 Asignador de memoria. Para obtener más información, vea [\<allocators>](../standard-library/allocators-header.md).
 
 *Otros problemas*<br/>
-Un objeto `promise`.
+Objeto `promise`.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parámetros
 
-*EXC*<br/>
+*Exc*<br/>
 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que este método almacena como el resultado de la excepción.
 
 ### <a name="remarks"></a>Comentarios
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Parámetros
 
-*EXC*<br/>
+*Exc*<br/>
 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) que este método almacena como el resultado de la excepción.
 
 ### <a name="remarks"></a>Comentarios
@@ -252,7 +252,7 @@ void swap(promise& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*<br/>
-Un objeto `promise`.
+Objeto `promise`.
 
 ## <a name="see-also"></a>Vea también
 

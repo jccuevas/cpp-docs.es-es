@@ -8,11 +8,11 @@ helpviewer_keywords:
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
 ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397762"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Conjunto de registros: Parametrizar un conjunto de registros (ODBC)
 
@@ -176,5 +176,5 @@ El conjunto de registros contiene registros para aquellos estudiantes cuyos regi
 ## <a name="see-also"></a>Vea también
 
 [Conjunto de registros (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Conjunto de registros: Agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[Conjunto de registros: ¿Cómo se seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Conjunto de registros: agregar, actualizar y eliminar registros (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[Conjunto de registros: cómo los conjuntos de registros seleccionan los registros (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

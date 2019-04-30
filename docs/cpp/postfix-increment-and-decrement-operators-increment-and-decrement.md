@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392146"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Operadores de incremento y decremento postfijos: ++ y --
 
@@ -48,7 +48,7 @@ Aplicar el operador de incremento de postfijo a un puntero a una matriz de objet
 
 Los operandos e incremento de operadores de decremento de postfijo deben ser modificables (no **const**) valores l de tipo aritmético o puntero. El tipo del resultado es el mismo que el de la *postfix-expression*, pero ya no es un valor l.
 
-**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): el operando de un postfijo de incremento o decremento operador no puede ser de tipo **bool**.
+**Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): El operando de un postfijo de incremento o decremento operador no puede ser de tipo **bool**.
 
 El código siguiente muestra el operador de incremento de postfijo:
 

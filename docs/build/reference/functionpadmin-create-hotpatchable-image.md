@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
 ms.openlocfilehash: 699da3cea9914b5a10bdf769015d41c33936a902
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292400"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (Crear una imagen a la que se puede aplicar una revisión reciente)
 
@@ -47,5 +47,5 @@ Cuando se compila y vincula una imagen con una sola invocación de cl.exe, **/ho
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

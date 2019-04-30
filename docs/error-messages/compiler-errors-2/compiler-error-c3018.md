@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
 ms.openlocfilehash: 7a16c81cf2b9c2a815d2e35d10ae82d5a75547b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386725"
 ---
 # <a name="compiler-error-c3018"></a>Error del compilador C3018
 
-'var1': el incremento o la prueba 'for' de OpenMP debe utilizar la variable de índice 'var2'
+'var1': OpenMP 'for' prueba o incremento debe usar la variable índice 'var2'
 
 Un bucle `for` de una instrucción de OpenMP debe utilizar la misma variable para su comprobación y el incremento porque lo utiliza como su índice.
 

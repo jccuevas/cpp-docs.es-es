@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385055"
 ---
 # <a name="additive-operators--and--"></a>Operadores de adición: + y -
 
@@ -47,20 +47,20 @@ Operadores aditivos toman operandos de *aritmético*, *integral*, y *escalares* 
 |Tipo|Significado|
 |----------|-------------|
 |*operaciones aritméticas*|Los tipos enteros y de punto flotante se denominan colectivamente tipos “aritméticos”.|
-|*Entero*|Los tipos char e int de todos los tamaños (long, short) y las enumeraciones son tipos “enteros”.|
-|*escalar*|Los operandos escalares son operandos de tipo aritmético o puntero.|
+|*integral*|Los tipos char e int de todos los tamaños (long, short) y las enumeraciones son tipos “enteros”.|
+|*scalar*|Los operandos escalares son operandos de tipo aritmético o puntero.|
 
 Las combinaciones válidas para estos operadores son:
 
 *aritmética* + *aritmético*
 
-*escalar* + *integral*
+*scalar* + *integral*
 
-*entero* + *escalares*
+*integral* + *scalar*
 
 *aritmética* - *aritmético*
 
-*escalar* - *escalares*
+*scalar* - *scalar*
 
 Tenga en cuenta que la suma y resta no son operaciones equivalentes.
 

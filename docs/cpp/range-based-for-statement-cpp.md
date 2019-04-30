@@ -3,11 +3,11 @@ title: Instrucción for basada en intervalo (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244149"
 ---
 # <a name="range-based-for-statement-c"></a>Instrucción for basada en intervalo (C++)
 
@@ -24,7 +24,7 @@ for ( for-range-declaration : expression )
 
 Usar basado en intervalos **para** instrucción para construir bucles que deben ejecutarse a través de un "intervalo", que se define como cualquier cosa que puede iterar a través de, por ejemplo, `std::vector`, o cualquier otra biblioteca estándar de C++ cuyo intervalo de secuencia se define mediante un `begin()` y `end()`. El nombre que se declara en el `for-range-declaration` parte es local para el **para** instrucción y no se puede volver a declarar en `expression` o `statement`. Tenga en cuenta que el [automática](../cpp/auto-cpp.md) se prefiere la palabra clave en el `for-range-declaration` parte de la instrucción.
 
-**Novedades de Visual Studio 2017:** en función de rangos para bucles ya no necesitan que begin() y end() devuelvan objetos del mismo tipo. Esto permite que end() devuelva un objeto centinela como el usado por los intervalos tal como se define en la propuesta de intervalos V3. Para más información, vea [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (Generalización del bucle for basado en intervalos) y [range-v3 library](https://github.com/ericniebler/range-v3) (Biblioteca range-v3) en GitHub.
+**Novedad en Visual Studio 2017:**  Los bucles for basados en rangos ya no necesitan que las funciones begin() y end() devuelvan objetos del mismo tipo. Esto permite que end() devuelva un objeto centinela como el usado por los intervalos tal como se define en la propuesta de intervalos V3. Para más información, vea [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (Generalización del bucle for basado en intervalos) y [range-v3 library](https://github.com/ericniebler/range-v3) (Biblioteca range-v3) en GitHub.
 
 Este código muestra cómo usar basado en rango **para** bucles para recorrer en iteración una matriz y un vector:
 

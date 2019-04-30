@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411050"
 ---
 # <a name="allocator-class"></a>allocator (Clase)
 
@@ -77,7 +77,7 @@ Por lo tanto, un asignador define los siguientes tipos:
 
 Estos `Type`especifican la forma en que deben tomar los punteros y referencias para los elementos asignados. ( [Allocator:: pointer](#pointer) no es necesariamente el mismo que `Type*` para todos los objetos de asignador, aun cuando tenga esta definición obvia para la clase `allocator`.)
 
-**C++11 y versiones posteriores:** para permitir las operaciones de movimiento en el asignador, use la interfaz de asignador mínima e implemente el constructor de copias, los operadores == y! = y allocate y deallocate. Para obtener más información y ver un ejemplo, vea [Asignadores](../standard-library/allocators.md)
+**C ++ 11 y versiones posteriores:**  Para habilitar las operaciones de movimiento en el asignador, use la interfaz de asignador mínima e implementar el constructor de copias, == y! =, operadores de asignar y desasignar. Para obtener más información y ver un ejemplo, vea [Asignadores](../standard-library/allocators.md)
 
 ## <a name="members"></a>Miembros
 
@@ -134,7 +134,7 @@ const_pointer address(const_reference val) const;
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 Valor const o nonconst del objeto cuya dirección se busca.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -469,7 +469,7 @@ void construct(pointer ptr, _Other&&...   val);
 *ptr*<br/>
 Puntero a la ubicación donde se va a crear el objeto.
 
-*Val*<br/>
+*val*<br/>
 Valor con el que se va a inicializar el objeto que se está creando.
 
 ### <a name="remarks"></a>Comentarios

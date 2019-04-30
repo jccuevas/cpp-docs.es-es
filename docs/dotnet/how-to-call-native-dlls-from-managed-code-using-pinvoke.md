@@ -1,5 +1,5 @@
 ---
-title: Filtrar Llamar a DLL nativas desde código administrado mediante PInvoke
+title: Procedimiento Llamar a DLL nativas desde código administrado mediante PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
 ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222816"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Filtrar Llamar a DLL nativas desde código administrado mediante PInvoke
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Procedimiento Llamar a DLL nativas desde código administrado mediante PInvoke
 
 Funciones que se implementan en archivos DLL no administrado se pueden llamar desde código administrado mediante la funcionalidad de invocación de plataforma (P/Invoke). Si el código fuente para el archivo DLL no está disponible, P/Invoke es la única opción para interoperar. Sin embargo, a diferencia de otros lenguajes. NET, Visual C++ proporciona una alternativa a P/Invoke. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 

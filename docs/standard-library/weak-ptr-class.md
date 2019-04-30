@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
 ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410868"
 ---
 # <a name="weakptr-class"></a>weak_ptr (Clase)
 
@@ -284,7 +284,7 @@ El tipo controlado por el puntero compartido o débil de argumento.
 *wp*<br/>
 El puntero débil que se va a copiar.
 
-*SP*<br/>
+*sp*<br/>
 El puntero compartido que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios
@@ -520,7 +520,7 @@ El tipo controlado por el puntero compartido o débil de argumento.
 *wp*<br/>
 El puntero débil que se va a copiar.
 
-*SP*<br/>
+*sp*<br/>
 El puntero compartido que se va a copiar.
 
 ### <a name="remarks"></a>Comentarios

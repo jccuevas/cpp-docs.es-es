@@ -3,11 +3,11 @@ title: Interfaz de programación de aplicaciones de OpenMP C y C++
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362704"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>Interfaz de programación de aplicaciones de OpenMP C y C++
 
@@ -37,11 +37,11 @@ B. [Códigos auxiliares para funciones de biblioteca en tiempo de ejecución](b-
 
 C. [Gramática de OpenMP C y C++](c-openmp-c-and-cpp-grammar.md)
 
-D. [La cláusula schedule](d-using-the-schedule-clause.md)
+D. [Cláusula schedule](d-using-the-schedule-clause.md)
 
-E. [Definido por la implementación de comportamientos en OpenMP C/C ++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+E. [Comportamientos definidos por la implementación de OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
-F. [Las nuevas características y aclaraciones de la versión 2.0](f-new-features-and-clarifications-in-version-2-0.md)
+F. [Nuevas características y aclaraciones de la versión 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 
 ## <a name="see-also"></a>Vea también
 

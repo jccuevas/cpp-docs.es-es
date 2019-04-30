@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273318"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild en la línea de comandos - C++
 
@@ -51,7 +51,7 @@ Para obtener más información acerca de MSBuild, vea:
 
 ## <a name="in-this-section"></a>En esta sección
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[Tutorial: Uso de MSBuild para crear un proyecto de Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Muestra cómo crear un proyecto de Visual C++ mediante **MSBuild**.|
 |[Cómo: Usar de eventos de compilación en proyectos de MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Muestra cómo especificar una acción que se produce en una fase concreta de la compilación: antes de que empiece la compilación; antes de iniciar el paso de vínculo; o bien, una vez finalizada la compilación.|
@@ -62,4 +62,4 @@ Para obtener más información acerca de MSBuild, vea:
 
 ## <a name="see-also"></a>Vea también
 
-[Usar el conjunto de herramientas MSVC desde la línea de comandos](building-on-the-command-line.md)
+[Uso del conjunto de herramientas MSVC desde la línea de comandos](building-on-the-command-line.md)

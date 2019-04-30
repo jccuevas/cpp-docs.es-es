@@ -1,5 +1,5 @@
 ---
-title: subproceso
+title: thread
 ms.date: 11/04/2016
 f1_keywords:
 - thread_cpp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330523"
 ---
-# <a name="thread"></a>subproceso
+# <a name="thread"></a>thread
 
 **Específicos de Microsoft**
 
@@ -24,7 +24,7 @@ El **subproceso** modificador de clase de almacenamiento extendidos se usa para 
 
 ## <a name="syntax"></a>Sintaxis
 
-> **__declspec (thread)** *declarador*
+> **__declspec( thread )** *declarator*
 
 ## <a name="remarks"></a>Comentarios
 

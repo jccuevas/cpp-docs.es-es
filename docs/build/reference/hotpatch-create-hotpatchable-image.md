@@ -11,11 +11,11 @@ helpviewer_keywords:
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
 ms.openlocfilehash: 8830b26b8fdfc3db2aa5fe31a52e6226fd554946
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291657"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Crear una imagen a la que se puede aplicar una revisión reciente)
 
@@ -51,5 +51,5 @@ Dado que las instrucciones siempre son dos bytes o mayores en la arquitectura AR
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

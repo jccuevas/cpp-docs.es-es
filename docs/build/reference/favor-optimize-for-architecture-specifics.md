@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /favor compiler option [C++]
 ms.assetid: ad264df2-e30f-4d68-8bd0-10d6bee71a2a
 ms.openlocfilehash: b914d3e6e7a2865ec610249ff51d320d7890adcb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292827"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (optimizar para valores específicos de la arquitectura)
 
@@ -57,5 +57,5 @@ Para obtener información sobre cómo programar para la x64 arquitectura, consul
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)

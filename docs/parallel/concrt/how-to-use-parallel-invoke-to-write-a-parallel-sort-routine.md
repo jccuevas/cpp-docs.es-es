@@ -1,5 +1,5 @@
 ---
-title: Filtrar Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
+title: Procedimiento Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252937"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Filtrar Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
+# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Procedimiento Usar Parallel.Invoke para escribir una rutina de ordenación en paralelo
 
 Este documento describe cómo usar el [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) algoritmo para mejorar el rendimiento del algoritmo de ordenación bitónica. Este algoritmo divide de forma recursiva la secuencia de entrada en particiones ordenadas más pequeñas. Se puede ejecutar en paralelo porque cada operación de partición es independiente de las demás operaciones.
 

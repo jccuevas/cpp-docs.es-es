@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
 ms.openlocfilehash: f12dafc62e302d90e5cffa04ee93e662b78295be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339486"
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -77,7 +77,7 @@ Puntero al nombre del módulo (.exe o .dll) donde se produjo la aserción o el i
 *format*<br/>
 Puntero a la cadena de control de formato utilizada para crear el mensaje de usuario.
 
-*argumento*<br/>
+*argument*<br/>
 Argumentos de sustitución opcionales utilizados por *formato*.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -96,7 +96,7 @@ El [_RPT, _RPTF](rpt-rptf-rptw-rptfw-macros.md) depurar macros llamada **_CrtDbg
 
 La tabla siguiente enumeran las opciones disponibles para el modo de informe o modos y archivo y el comportamiento resultante de **_CrtDbgReport** y **_CrtDbgReportW**. Estas opciones se definen como marcas de bits en \<crtdbg.h>.
 
-|Modo de informe|Archivo de informe|**_CrtDbgReport**, **_CrtDbgReportW** comportamiento|
+|Modo de informe|Archivo de informe|**_CrtDbgReport**, **_CrtDbgReportW** behavior|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|No es aplicable|Escribe el mensaje mediante la API [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) de Windows.|
 |**_CRTDBG_MODE_WNDW**|No es aplicable|Llama a la API [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) de Windows para crear el cuadro de mensaje en el que se mostrará el mensaje junto con los botones **Anular**, **Reintentar** y **Omitir**. Si un usuario hace clic **anular**, **_CrtDbgReport** o **_CrtDbgReport** anula inmediatamente. Si un usuario hace clic en **Reintentar**, devuelve 1. Si un usuario hace clic **omitir**, la ejecución continúa y **_CrtDbgReport** y **_CrtDbgReportW** devuelven 0. Observe que si se hace clic en **Omitir** cuando existe una condición de error, se suele producir un "comportamiento indefinido".|

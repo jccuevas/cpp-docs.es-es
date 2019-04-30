@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341127"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Funciones Bessel: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -92,15 +92,15 @@ El **_j0**, **_j1**, y **_jn** rutinas devuelven funciones Bessel del primer tip
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NO VÁLIDO**|**_DOMINIO**|
+|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
 
 El **_y0**, **_y1**, y **_yn** rutinas devuelven funciones Bessel del segundo tipo: ordena 0, 1 y n, respectivamente.
 
 |Entrada|Excepción SEH|Excepción de Matherr|
 |-----------|-------------------|-----------------------|
-|+ **QNAN**, **IND**|**NO VÁLIDO**|**_DOMINIO**|
+|± **QNAN**, **IND**|**INVALID**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**NO VÁLIDO**|**_DOMINIO**|
+|&#124;x&#124; < 0.0|**INVALID**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Requisitos
 

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412350"
 ---
 # <a name="ltstringgt-functions"></a>Funciones &lt;string&gt;
 
@@ -82,7 +82,7 @@ La secuencia de entrada de la que se extraerá una cadena.
 *str*<br/>
 La cadena en la que se leen los caracteres de la secuencia de entrada.
 
-*Delim*<br/>
+*delim*<br/>
 El delimitador de línea.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -176,7 +176,7 @@ double stod(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -205,7 +205,7 @@ float stof(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -240,7 +240,7 @@ El valor del entero.
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|Contiene el índice del primer carácter que no se convertirá en la devolución.|
+|*idx*|Contiene el índice del primer carácter que no se convertirá en la devolución.|
 |*base*|La base numérica que se usará.|
 
 ### <a name="remarks"></a>Comentarios
@@ -272,7 +272,7 @@ long stol(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 |*base*|La base numérica que se usará.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -302,7 +302,7 @@ double stold(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -333,7 +333,7 @@ long long stoll(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 |*base*|La base numérica que se usará.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -365,7 +365,7 @@ unsigned long stoul(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 |*base*|La base numérica que se usará.|
 
 ### <a name="return-value"></a>Valor devuelto
@@ -397,7 +397,7 @@ unsigned long long stoull(
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*str*|La secuencia de caracteres que se convertirá.|
-|*IDX*|El valor del índice del primer carácter que no se convertirá.|
+|*idx*|El valor del índice del primer carácter que no se convertirá.|
 |*base*|La base numérica que se usará.|
 
 ### <a name="return-value"></a>Valor devuelto

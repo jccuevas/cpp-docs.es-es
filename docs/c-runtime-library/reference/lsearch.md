@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
 ms.openlocfilehash: 340e8ac382972b15acc52013d5d6a51352db969c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285661"
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -59,7 +59,7 @@ Objeto que se va a buscar.
 *base*<br/>
 Puntero a la base de la matriz en la que se va a buscar.
 
-*Número*<br/>
+*number*<br/>
 Número de elementos.
 
 *width*<br/>

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
 ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293763"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (Compilar un archivo DLL)
 
@@ -57,5 +57,5 @@ Tenga en cuenta que si crea la biblioteca de importación en un paso preliminar,
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

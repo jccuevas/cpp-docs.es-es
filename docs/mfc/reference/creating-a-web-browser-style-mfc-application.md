@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
 ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57809878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372236"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Crear una aplicación MFC estilo explorador web
 
@@ -71,7 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [Ejemplo MFCIE de MFC](https://github.com/Microsoft/VCSamples)<br/>
 [Asistente para aplicaciones MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Conjunto de compilador y las propiedades de compilación](../../build/working-with-project-properties.md)<br/>
+[Set compiler and build properties](../../build/working-with-project-properties.md) (Establecer las propiedades del compilador y la compilación)<br/>
 [Páginas de propiedades](../../build/reference/property-pages-visual-cpp.md)<br/>
-[Conjunto de compilador y las propiedades de compilación](../../build/working-with-project-properties.md)
+[Set compiler and build properties](../../build/working-with-project-properties.md) (Establecer las propiedades del compilador y la compilación)
 

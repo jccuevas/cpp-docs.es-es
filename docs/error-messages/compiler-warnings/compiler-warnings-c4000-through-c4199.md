@@ -1,6 +1,6 @@
 ---
-title: ': De advertencias del compilador c4000 a C4199'
-ms.date: 11/17/2017
+title: Advertencias del compilador de C4000 a C4199
+ms.date: 04/21/2019
 f1_keywords:
 - C4000
 - C4035
@@ -20,14 +20,14 @@ f1_keywords:
 - C4196
 - C4199
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-ms.openlocfilehash: 746bd86b9c5911ac8d4f7ae455b5a2184d302746
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
-ms.translationtype: MT
+ms.openlocfilehash: 1af76f1bad4d8df06d527063bc6618d0f8ef8f70
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226720"
 ---
-# <a name="compiler-warnings-c4000-through-c4199"></a>: De advertencias del compilador c4000 a C4199
+# <a name="compiler-warnings-c4000-through-c4199"></a>Advertencias del compilador de C4000 a C4199
 
 Los artículos de esta sección de la documentación explican un subconjunto de los mensajes de advertencia generados por el compilador.
 
@@ -186,3 +186,8 @@ Los artículos de esta sección de la documentación explican un subconjunto de 
 |Advertencia del compilador (nivel 1) C4196|se esperaba '%$L' o '%$L'; se encontró '%$L'|
 |[Advertencia del compilador (nivel 3) C4197](../../error-messages/compiler-warnings/compiler-warning-level-3-c4197.md)|'type': se omite volatile de nivel superior en la conversión|
 |Advertencia del compilador (nivel 1, nivel 2, nivel 3 y nivel 4) C4199|%s|
+
+## <a name="see-also"></a>Vea también
+
+[C /C++ herramientas errores y advertencias de compilación y el compilador](../compiler-errors-1/c-cpp-build-errors.md) \
+[Advertencias del compilador C4000 - C5999](compiler-warnings-c4000-c5999.md)

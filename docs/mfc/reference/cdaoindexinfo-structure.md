@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399777"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo (Estructura)
 
@@ -61,7 +61,7 @@ Al establecer una clave principal para una tabla, la clave principal se define a
 *m_bUnique*<br/>
 Indica si un objeto index representa un índice único para una tabla. Si esta propiedad es TRUE, el objeto index representa un índice único. Un índice único consta de uno o varios campos que se organizan de forma lógica todos los registros en una tabla en un único orden predefinido. Si el índice consta de un campo, los valores de ese campo deben ser únicos para toda la tabla. Si el índice consta de más de un campo, cada campo puede contener valores duplicados, pero cada combinación de valores de todos los campos indizados debe ser único.
 
-Si tanto el Unique y Primary propiedades de un objeto de índice se establecen en TRUE, el índice es único y principal: identifica de forma única todos los registros de la tabla en un orden lógico predefinido. Si la propiedad principal se establece en FALSE, el índice es un índice secundario. Índices secundarios (claves y columnas sin clave) organizan lógicamente los registros en un orden predefinido sin que actúa como un identificador para los registros de la tabla.
+Si tanto el Unique y Primary propiedades de un objeto de índice se establecen en TRUE, el índice es único y principal: Identifica todos los registros en la tabla en un orden lógico predefinido. Si la propiedad principal se establece en FALSE, el índice es un índice secundario. Índices secundarios (claves y columnas sin clave) organizan lógicamente los registros en un orden predefinido sin que actúa como un identificador para los registros de la tabla.
 
 Para obtener más información, vea los temas "Propiedad principal" y "Propiedad único" en la Ayuda de DAO.
 

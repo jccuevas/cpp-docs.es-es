@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335393"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ Valor actual del bit de palabra de control.
 *newControl*<br/>
 Valores de bit de la nueva palabra de control.
 
-*Máscara*<br/>
+*mask*<br/>
 Máscara de los bits de la nueva palabra de control que se va a definir.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -68,7 +68,7 @@ El **_controlfp_s** función es una versión independiente de la plataforma y m�
 
 Si el valor de *máscara* es igual a 0, **_controlfp_s** Obtiene la palabra de control de punto flotante y almacena el valor recuperado en *currentControl*.
 
-Si *máscara* es distinto de cero, se establece un nuevo valor para la palabra de control: para cualquier bit que esté establecido (es decir, igual a 1) en *máscara*, el bit correspondiente en *nuevo* se usa para actualizar el control Word. En otras palabras, *fpcntrl* = ((*fpcntrl* & ~*máscara*) &#124; (*newControl* & *máscara* )) donde *fpcntrl* es la palabra de control de punto flotante. En este escenario, *currentControl* se establece en el valor una vez se complete el cambio; no es el valor de bit de palabra de control anterior.
+Si *máscara* es distinto de cero, se establece un nuevo valor para la palabra de control: Para cualquiera que bits está establecido (es decir, igual a 1) en *máscara*, el bit correspondiente en *nuevo* se usa para actualizar la palabra de control. En otras palabras, *fpcntrl* = ((*fpcntrl* & ~*máscara*) &#124; (*newControl* & *máscara* )) donde *fpcntrl* es la palabra de control de punto flotante. En este escenario, *currentControl* se establece en el valor una vez se complete el cambio; no es el valor de bit de palabra de control anterior.
 
 > [!NOTE]
 > De forma predeterminada, las bibliotecas en tiempo de ejecución aplican máscaras a todas las excepciones de punto flotante.

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
 ms.openlocfilehash: ddcf83cafd5f499158f3116f04e40397b7f8d0a8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320089"
 ---
 # <a name="pdb-use-program-database"></a>/PDB (Utilizar la base de datos de programa)
 
@@ -55,5 +55,5 @@ Para obtener más información, consulte [archivos .pdb como entrada del vincula
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

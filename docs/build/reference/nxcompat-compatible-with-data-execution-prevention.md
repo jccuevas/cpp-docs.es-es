@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
 ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320375"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (compatible con la prevención de ejecución de datos)
 
@@ -50,5 +50,5 @@ Para obtener más información sobre la Prevención de ejecución de datos, vea 
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

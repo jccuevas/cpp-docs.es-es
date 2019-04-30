@@ -30,11 +30,11 @@ helpviewer_keywords:
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
 ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331745"
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s, _wgetenv_s
 
@@ -83,7 +83,7 @@ El búfer para almacenar el valor de la variable de entorno.
 *numberOfElements*<br/>
 Tamaño de *búfer*.
 
-*VarName*<br/>
+*varname*<br/>
 Nombre de la variable de entorno.
 
 ## <a name="return-value"></a>Valor devuelto
@@ -92,7 +92,7 @@ Cero si es correcto; en caso contrario, un código de error si se produce un err
 
 ### <a name="error-conditions"></a>Condiciones de error
 
-|*pReturnValue*|*buffer*|*numberOfElements*|*VarName*|Valor devuelto|
+|*pReturnValue*|*buffer*|*numberOfElements*|*varname*|Valor devuelto|
 |--------------------|--------------|------------------------|---------------|------------------|
 |**NULL**|any|any|any|**EINVAL**|
 |any|**NULL**|>0|any|**EINVAL**|

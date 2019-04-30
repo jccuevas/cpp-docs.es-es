@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216500"
 ---
 # <a name="lambda-expressions-in-c"></a>Expresiones lambda en C++
 
@@ -21,7 +21,7 @@ En C ++ 11 y versiones posteriores, una expresión lambda, a menudo denominado u
 
 - [Expresiones lambda frente a los objetos de función](lambda-expression-syntax.md)
 - [Trabajar con expresiones lambda](examples-of-lambda-expressions.md)
-- [expresiones lambda de constexpr](lambda-expressions-constexpr.md)
+- [constexpr lambda expressions](lambda-expressions-constexpr.md)
 
 ## <a name="parts-of-a-lambda-expression"></a>Partes de una expresión lambda
 
@@ -55,7 +55,7 @@ En esta ilustración se muestran las partes de una expresión lambda:
 
 1. *trailing-return-type* opcional.
 
-1. *cuerpo de lambda*.
+1. *lambda body*.
 
 ### <a name="capture-clause"></a>Cláusula capture
 
@@ -322,7 +322,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 Para obtener más información, consulte [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="constexpr-lambda-expressions"></a>expresiones lambda de constexpr
+## <a name="constexpr-lambda-expressions"></a>constexpr lambda expressions
 
 **Visual Studio 2017 versión 15.3 y versiones posterior** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Una expresión lambda se puede declarar como `constexpr` o se usan en una expresión constante cuando se permite la inicialización de cada miembro de datos que captura o se introduce dentro de una expresión constante.
 

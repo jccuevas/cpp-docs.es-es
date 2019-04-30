@@ -31,11 +31,11 @@ helpviewer_keywords:
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
 ms.openlocfilehash: 97a9a54be1b322edfe8cfeca84e03f9a6766b8fe
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314720"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Sugerencias para mejorar código en el que la velocidad de ejecución es importante
 
@@ -129,7 +129,7 @@ Es recomendable reutilizar código. Sin embargo, si va a usar el código de otra
 
 Si usa varios montones, hágalo con moderación. Los montones adicionales que se crean con `HeapCreate` y `HeapAlloc` le permiten administrar y, luego, desechar un conjunto relacionado de asignaciones. No asigne demasiada memoria. Si va a utilizar varios montones, preste especial atención a la cantidad de memoria que se asignó inicialmente.
 
-En lugar de usar varios montones, puede emplear funciones auxiliares que hagan de interfaz entre el código y el montón predeterminado. Las funciones auxiliares facilitan estrategias de asignación personalizadas que pueden mejorar el rendimiento de la aplicación. Por ejemplo, si realiza asignaciones pequeñas a menudo, puede que le convenga localizar las asignaciones en una parte del montón predeterminado. Puede asignar un gran bloque de memoria y, después, usar una función auxiliar para subasignar memoria de ese bloque. Si hace esto, no tendrá montones adicionales con memoria sin usar, porque la asignación saldrá del montón predeterminado.
+En lugar de usar varios montones, puede emplear funciones del asistente que hagan de interfaz entre el código y el montón predeterminado. Las funciones del asistente facilitan estrategias de asignación personalizadas que pueden mejorar el rendimiento de la aplicación. Por ejemplo, si realiza asignaciones pequeñas a menudo, puede que le convenga localizar las asignaciones en una parte del montón predeterminado. Puede asignar un gran bloque de memoria y, después, usar una función del asistente para subasignar memoria de ese bloque. Si hace esto, no tendrá montones adicionales con memoria sin usar, porque la asignación saldrá del montón predeterminado.
 
 Sin embargo, en ciertos casos, usar el montón predeterminado puede reducir la localidad de referencia. Utilice el Visor de procesos, Spy++ o el monitor de rendimiento para medir los efectos del movimiento de objetos de un montón a otro.
 

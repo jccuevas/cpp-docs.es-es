@@ -5,11 +5,11 @@ f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
 ms.openlocfilehash: 784969bea25bfff49a21c23b350afbfc8bdab59a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383521"
 ---
 # <a name="uniquelock-class"></a>unique_lock (Clase)
 
@@ -121,7 +121,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*<br/>
-Un objeto `unique_lock`.
+Objeto `unique_lock`.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -172,7 +172,7 @@ void swap(unique_lock& Other) noexcept;
 ### <a name="parameters"></a>Parámetros
 
 *Otros problemas*<br/>
-Un objeto `unique_lock`.
+Objeto `unique_lock`.
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -283,7 +283,7 @@ Un objeto [chrono::duration](../standard-library/duration-class.md) que especifi
 Punto en el tiempo que especifica el umbral después del cual el método ya no intenta obtener la propiedad de `mutex`.
 
 *Otros problemas*<br/>
-Un objeto `unique_lock`.
+Objeto `unique_lock`.
 
 ### <a name="remarks"></a>Comentarios
 

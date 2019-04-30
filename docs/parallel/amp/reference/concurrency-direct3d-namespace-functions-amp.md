@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405591"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Funciones de espacio de nombres Concurrency:: Direct3D (AMP)
 
@@ -156,7 +156,7 @@ El runtime de C++ AMP proporciona información detallada del error en modo de de
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Adquirir un bloqueo en un accelerator_view para realizar operaciones D3D en recursos compartidos con el accelerator_view de forma segura con. El objeto accelerator_view y todos los recursos de C++ AMP asociados a este objeto accelerator_view internamente toman este bloqueo al realizar operaciones y se bloquean mientras otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo es no recursivo: Es un comportamiento indefinido para llamar a esta función desde un subproceso que ya tenía el bloqueo. Es un comportamiento indefinido realizar operaciones en el elemento accelerator_view o cualquier contenedor de datos asociada al accelerator_view desde el subproceso que mantiene el bloqueo de acceso de D3D. Vea también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso D3D basado en ámbitos.
+Adquirir un bloqueo en un accelerator_view para realizar operaciones D3D en recursos compartidos con el accelerator_view de forma segura con. El objeto accelerator_view y todos C++ recursos de AMP asociados a este objeto accelerator_view internamente toman este bloqueo al realizar operaciones y se bloquean mientras otro subproceso mantiene el bloqueo de acceso de D3D. Este bloqueo es no recursivo: Es un comportamiento indefinido para llamar a esta función desde un subproceso que ya tenía el bloqueo. Es un comportamiento indefinido realizar operaciones en el elemento accelerator_view o cualquier contenedor de datos asociada al accelerator_view desde el subproceso que mantiene el bloqueo de acceso de D3D. Vea también scoped_d3d_access_lock, una clase de estilo RAII para un bloqueo de acceso D3D basado en ámbitos.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

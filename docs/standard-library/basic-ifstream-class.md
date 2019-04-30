@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400687"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream (Clase)
 
@@ -133,10 +133,10 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Parámetros
 
-*_Nombre de archivo*<br/>
+*_Filename*<br/>
 Nombre del archivo que se va a abrir.
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -237,10 +237,10 @@ void open(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Nombre de archivo*<br/>
+*_Filename*<br/>
 Nombre del archivo que se va a abrir.
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333331"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -98,7 +98,7 @@ Compruebe siempre el valor devuelto para ver si la función se realizó correcta
 
 **fopen_s** admite secuencias de archivo Unicode. Para abrir un archivo Unicode nuevo o existente, pase un *ccs* marca que especifica la codificación deseada a **fopen_s**:
 
-**fopen_s (& fp, "newfile.txt", "rw, ccs =**_codificación_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 Los valores permitidos de *codificación* son **UNICODE**, **UTF-8**, y **UTF-16LE**. Si no existe ningún valor se especifica para *codificación*, **fopen_s** usa la codificación ANSI.
 
@@ -168,18 +168,18 @@ Para obtener más información sobre el uso de los modos de texto y binario en E
 | **R** | Especifica que el almacenamiento en caché está optimizado para el acceso aleatorio (pero no restringido a este) desde el disco. |
 | **T** | Especifica un archivo como temporal. Si es posible, no se vuelca en el disco. |
 | **D** | Especifica un archivo como temporal. Se elimina cuando se cierra el puntero del último archivo. |
-| **CCS =**_codificación_ | Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
+| **ccs=**_encoding_ | Especifica el carácter codificado establecido (uno de **UTF-8**, **UTF-16LE**, o **UNICODE**) para este archivo. Deje sin especificar si desea la codificación ANSI. |
 
 Los caracteres válidos para el *modo* cadena utilizada en **fopen_s** y [_fdopen](fdopen-wfdopen.md) corresponden a *oflag* argumentos utilizados en [_ Abra](open-wopen.md) y [_sopen](sopen-wsopen.md), como se indica a continuación.
 
 |Los caracteres de *modo* cadena|Equivalente *oflag* valor para _open/_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**a +**|**_O_RDWR** &#124; **_O_APPEND** (normalmente **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**W**|**_O_WRONLY** (normalmente **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (normalmente **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|Ninguna|
@@ -188,9 +188,9 @@ Los caracteres válidos para el *modo* cadena utilizada en **fopen_s** y [_fdope
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**CCS = UNICODE**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Si usas **rb** modo, no tendrá que portar el código y espera leer una gran parte del archivo o no le preocupa el rendimiento de red, archivos de Win32 asignados en memoria también podrían ser una opción.
 

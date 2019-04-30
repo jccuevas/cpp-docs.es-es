@@ -3,11 +3,11 @@ title: Tipos fundamentales (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
 ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301463"
 ---
 # <a name="fundamental-types-ccx"></a>Tipos fundamentales (C++/CX)
 
@@ -17,16 +17,16 @@ Además el estándares tipos integrados de C++, C / c++ / CX admite el sistema d
 
 En la tabla siguiente se muestran los tipos de caracteres y booleanos integrados, y sus equivalentes de C++ estándar.
 
-|Espacio de nombres|C++ / c++ / nombre CX|de esquema JSON|Nombre de C++ estándar|Intervalo de valores|
+|Espacio de nombres|C++ / c++ / nombre CX|Definición|Nombre de C++ estándar|Intervalo de valores|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |Plataforma|Booleano|Un valor booleano de 8 bits.|bool|**True** (distinto de cero) y **false** (cero)|
-|default|char16|Valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|wchar_t<br /><br /> O bien<br /><br /> L'c'|(Especificado por el estándar Unicode)|
+|default|char16|Valor no numérico de 16 bits que representa un punto de código Unicode (UTF-16).|wchar_t<br /><br /> -o bien-<br /><br /> L'c'|(Especificado por el estándar Unicode)|
 
 ## <a name="numeric-types"></a>Tipos numéricos
 
 En la tabla siguiente se muestran los tipos numéricos integrados. Los tipos numéricos se declaran en el espacio de nombres `default` y son typedefs para el tipo integrado de C++ correspondiente. No todos los tipos integrados de C++ (por ejemplo, long) se admiten en el tiempo de ejecución de Windows. Por coherencia y claridad, se recomienda usar C++ / c++ / nombre CX.
 
-|C++ / c++ / nombre CX|de esquema JSON|Nombre de C++ estándar|Intervalo de valores|
+|C++ / c++ / nombre CX|Definición|Nombre de C++ estándar|Intervalo de valores|
 |-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
 |int8|Valor numérico con signo de 8 bits.|signed char|-128 a 127|
 |uint8|Valor numérico sin signo de 8 bits.|unsigned char|De {0} a 255|
@@ -43,7 +43,7 @@ En la tabla siguiente se muestran los tipos numéricos integrados. Los tipos num
 
 La tabla siguiente enumeran algunos tipos adicionales que se definen mediante la arquitectura en tiempo de ejecución de Windows y están integrados en C++ / c++ / CX. Object y String son tipos de referencia. Los demás son tipos de valores. Todos estos tipos se declaran en el espacio de nombres `Platform` . Para una lista completa, vea [Platform namespace](../cppcx/platform-namespace-c-cx.md).
 
-|nombre|de esquema JSON|
+|Name|Definición|
 |----------|----------------|
 |Object|Representa cualquier tipo en tiempo de ejecución de Windows.|
 |String|Serie de caracteres que representan texto.|

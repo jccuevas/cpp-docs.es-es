@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291566"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (Especificar una clave o par de claves para firmar un ensamblado)
 
@@ -69,5 +69,5 @@ Otras opciones del vinculador que afectan a la generación de ensamblado son:
 
 ## <a name="see-also"></a>Vea también
 
-[Referencia MSVC del vinculador](linking.md)<br/>
-[Opciones del vinculador MSVC](linker-options.md)
+[Referencia del enlazador MSVC](linking.md)<br/>
+[Opciones del enlazador MSVC](linker-options.md)

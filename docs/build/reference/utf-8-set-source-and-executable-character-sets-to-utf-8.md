@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
 ms.openlocfilehash: 5ac15c63041e76b8bb0d292868bb982c21866078
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317294"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (establecer origen y el ejecutable juegos de caracteres en UTF-8)
 
@@ -41,8 +41,8 @@ De forma predeterminada, Visual Studio detecta una marca de orden de bytes para 
 
 ## <a name="see-also"></a>Vea también
 
-[Opciones del compilador MSVC](compiler-options.md)<br/>
-[Sintaxis de línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
+[Opciones del compilador de MSVC](compiler-options.md)<br/>
+[Sintaxis de la línea de comandos del compilador MSVC](compiler-command-line-syntax.md)<br/>
 [/ Execution-CharSet (establecer juego de caracteres de ejecución)](execution-charset-set-execution-character-set.md)<br/>
 [/source/charset (Establecer el juego de caracteres de origen)](source-charset-set-source-character-set.md)<br/>
 [/validate/charset (Validar los caracteres compatibles)](validate-charset-validate-for-compatible-characters.md)

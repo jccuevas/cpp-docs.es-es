@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409764"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf (Clase)
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Parámetros
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -241,7 +241,7 @@ La posición para buscar relativa a *_Way*. Para obtener más información, vea 
 *_Way*<br/>
 El punto de partida de las operaciones de desplazamiento. Vea los valores posibles en [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura. Para obtener más información, vea [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Valor devuelto
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 La posición que se va a buscar.
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Especifica el modo de la posición del puntero. El valor predeterminado es permitirle modificar las posiciones de lectura y escritura.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -379,7 +379,7 @@ Si la función no se puede ejecutar correctamente, devuelve **traits_type::**[eo
 
 ### <a name="remarks"></a>Comentarios
 
-La función miembro virtual protegida intenta extraer el elemento actual `byte` del búfer de entrada, avanzar la posición de la secuencia actual y devolver el elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bytes**). Puede hacerlo de una manera: si una posición de lectura está disponible, toma `byte` como el elemento almacenado en la posición de lectura y avanza el puntero siguiente del búfer de entrada.
+La función miembro virtual protegida intenta extraer el elemento actual `byte` del búfer de entrada, avanzar la posición de la secuencia actual y devolver el elemento como **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **bytes**). Puede hacerlo en un aspecto: Si una posición de lectura está disponible, toma `byte` como el elemento almacenado en la posición de lectura y avanza el puntero siguiente del búfer de entrada.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

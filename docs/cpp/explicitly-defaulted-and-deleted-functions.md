@@ -3,11 +3,11 @@ title: Funciones establecidas como valor predeterminado y eliminadas explícitam
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184331"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Funciones establecidas como valor predeterminado y eliminadas explícitamente
 
@@ -38,8 +38,8 @@ Esto es útil en el caso de tipos simples, pero los tipos complejos suelen defin
 > [!NOTE]
 > Además, el estándar C++11 especifica las reglas adicionales siguientes:
 >
-> - Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está en desuso.
-> - Si se declara explícitamente un operador de asignación de copia o un destructor, la generación automática del constructor de copia está desusada.
+> - Si se declara explícitamente un constructor de copia o un destructor, la generación automática del operador de asignación de copia está desusada.
+> - Si se declara explícitamente un operador de asignación de copia o un destructor, la generación automática del constructor de copia está en desuso.
 >
 > En ambos casos, Visual Studio sigue generando automáticamente las funciones necesarias de forma implícita y no emite ninguna advertencia.
 
