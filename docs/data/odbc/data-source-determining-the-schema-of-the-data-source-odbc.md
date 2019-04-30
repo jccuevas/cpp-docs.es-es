@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data sources [C++], determining schema
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
 ms.openlocfilehash: c419a3ac2d870e6a85675492ee6c9b726427a0e9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395981"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Origen de datos: Determinar el esquema del origen de datos (ODBC)
 
@@ -22,4 +22,4 @@ Para configurar los miembros de datos en su `CRecordset` objetos, deberá conoce
 ## <a name="see-also"></a>Vea también
 
 [Origen de datos (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[Origen de datos: Administrar conexiones (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+[Origen de datos: administración de conexiones (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

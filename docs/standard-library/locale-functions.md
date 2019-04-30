@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::toupper [C++]
 - std::use_facet [C++]
 ms.openlocfilehash: b1ffe9e5294e4b945f81dbecbabba64c15c188a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413169"
 ---
 # <a name="ltlocalegt-functions"></a>Funciones de &lt;locale&gt;
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional en la que se va a comprobar la presencia de una faceta.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -105,10 +105,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento alfanumérico que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento alfanumérico que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -172,10 +172,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento alfabético que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -237,10 +237,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -302,10 +302,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -367,10 +367,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -432,10 +432,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -497,10 +497,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -561,10 +561,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -626,10 +626,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -691,10 +691,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -756,10 +756,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 Elemento que se va a probar.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el elemento que se va a probar.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -823,10 +823,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 El carácter que se va a convertir en minúscula.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -872,10 +872,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Parámetros
 
-*CH*<br/>
+*Ch*<br/>
 El carácter que se va a convertir en mayúscula.
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional que contiene el carácter que se va a convertir.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Parámetros
 
-*LOC*<br/>
+*Loc*<br/>
 Configuración regional const que contiene el tipo de faceta al que se hace referencia.
 
 ### <a name="return-value"></a>Valor devuelto

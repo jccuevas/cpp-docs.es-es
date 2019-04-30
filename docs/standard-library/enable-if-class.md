@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413767"
 ---
 # <a name="enableif-class"></a>enable_if (Clase)
 
@@ -50,7 +50,7 @@ En C++, el error en la sustitución de parámetros de la plantilla no es un erro
 
 A continuación, se presentan cuatro escenarios de ejemplo:
 
-- Escenario 1: Ajustar el tipo de valor devuelto de una función:
+- Escenario 1: Ajustar el valor devuelto de una función:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- Escenario 2: Agregar un parámetro de función que tiene un argumento predeterminado:
+- Escenario 2: Añadir un parámetro de función que tiene un argumento predeterminado:
 
 ```cpp
     template <your_stuff>
@@ -73,7 +73,7 @@ your_return_type_if_present
 }
 ```
 
-- Escenario 3: Agregar un parámetro de plantilla que tiene un argumento predeterminado:
+- Escenario 3: Añadir un parámetro de plantilla que tiene un argumento predeterminado:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>

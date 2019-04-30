@@ -39,11 +39,11 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411076"
 ---
 # <a name="allocatorbase-class"></a>allocator_base (Clase)
 
@@ -61,7 +61,7 @@ class allocator_base
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Type*|Tipo de elementos que asigna el asignador.|
-|*sincronización*|Directiva de sincronización del asignador, que es [sync_none (Clase)](../standard-library/sync-none-class.md), [sync_per_container (Clase)](../standard-library/sync-per-container-class.md), [sync_per_thread (Clase)](../standard-library/sync-per-thread-class.md) o [sync_shared (Clase)](../standard-library/sync-shared-class.md).|
+|*Sync*|Directiva de sincronización del asignador, que es [sync_none (Clase)](../standard-library/sync-none-class.md), [sync_per_container (Clase)](../standard-library/sync-per-container-class.md), [sync_per_thread (Clase)](../standard-library/sync-per-thread-class.md) o [sync_shared (Clase)](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Constructores
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Parámetros
 
-*Val*<br/>
+*val*<br/>
 Valor const o nonconst del objeto cuya dirección se busca.
 
 ### <a name="return-value"></a>Valor devuelto
@@ -240,7 +240,7 @@ void construct(pointer ptr, const Type& val);
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*ptr*|Puntero a la ubicación donde se va a crear el objeto.|
-|*Val*|Valor con el que se va a inicializar el objeto que se está creando.|
+|*val*|Valor con el que se va a inicializar el objeto que se está creando.|
 
 ### <a name="remarks"></a>Comentarios
 

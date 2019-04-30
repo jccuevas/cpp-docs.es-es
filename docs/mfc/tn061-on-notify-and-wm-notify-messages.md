@@ -1,5 +1,5 @@
 ---
-title: 'TN061: Mensajes ON_NOTIFY y WM_NOTIFY'
+title: 'TN061: Mensajes ON_NOTIFY y Wm_notify'
 ms.date: 06/28/2018
 f1_keywords:
 - ON_NOTIFY
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
 ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399582"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: Mensajes ON_NOTIFY y WM_NOTIFY
+# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: Mensajes ON_NOTIFY y Wm_notify
 
 > [!NOTE]
 > La nota técnica siguiente no se ha actualizado desde que se incluyó por primera vez en la documentación en línea. Como resultado, algunos procedimientos y temas podrían estar obsoletos o ser incorrectos. Para obtener información más reciente, se recomienda buscar el tema de interés en el índice de la documentación en línea.
@@ -31,7 +31,7 @@ Esta nota técnica proporciona información general sobre el nuevo mensaje WM_NO
 
 En Windows 3.x, controles notifique a sus elementos primarios de eventos, como clics del mouse, los cambios en contenido y la selección y el dibujo del control en segundo plano mediante el envío de un mensaje con el elemento primario. Simple notificaciones se envían como mensajes WM_COMMAND especiales, con el código de notificación (por ejemplo, BN_CLICKED) y controlar el Id. que se empaquetan en *wParam* y el identificador del control en *lParam*. Tenga en cuenta que puesto que *wParam* y *lParam* está lleno, no hay ninguna manera de pasar datos adicionales, estos mensajes pueden ser de solo notificación simple. Por ejemplo, en la notificación BN_CLICKED, no hay ninguna manera de enviar información acerca de la ubicación del cursor del mouse cuando se hizo clic en el botón.
 
-Cuando los controles en Windows 3.x deba envían un mensaje de notificación que incluye datos adicionales, usan una variedad de mensajes con una finalidad especial, incluyendo WM_CTLCOLOR, WM_VSCROLL, mensajes WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM WM_DELETEITEM, WM_ CHARTOITEM, WM_VKEYTOITEM y así sucesivamente. Estos mensajes se pueden reflejar al control que les enviado. Para obtener más información, consulte [TN062: reflexión de mensajes para controles de Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
+Cuando los controles en Windows 3.x deba envían un mensaje de notificación que incluye datos adicionales, usan una variedad de mensajes con una finalidad especial, incluyendo WM_CTLCOLOR, WM_VSCROLL, mensajes WM_HSCROLL, WM_DRAWITEM, WM_MEASUREITEM, WM_COMPAREITEM WM_DELETEITEM, WM_ CHARTOITEM, WM_VKEYTOITEM y así sucesivamente. Estos mensajes se pueden reflejar al control que les enviado. Para obtener más información, consulte [TN062: Mensaje de la reflexión para controles de Windows](../mfc/tn062-message-reflection-for-windows-controls.md).
 
 **Mensajes de notificación en Win32**
 
@@ -80,7 +80,7 @@ Algunas notificaciones son comunes a todos los nuevos controles de Windows. Esta
 |NM_KILLFOCUS|Control ha perdido el foco de entrada|
 |NM_OUTOFMEMORY|Control no pudo completar una operación porque no había suficiente memoria disponible|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Control de mensajes WM_NOTIFY en aplicaciones MFC
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: Tratamiento de mensajes WM_NOTIFY en aplicaciones MFC
 
 La función `CWnd::OnNotify` controla los mensajes de notificación. Su implementación predeterminada comprueba el mapa de mensajes para llamar a los controladores de notificación. En general, no se invalidan `OnNotify`. En su lugar, proporcione una función de controlador y agregue una entrada de mapa de mensajes para ese controlador para el mapa de mensajes de la clase de la ventana propietaria.
 
@@ -114,7 +114,7 @@ donde los parámetros son:
 *pNotifyStruct*<br/>
 Un puntero a la estructura de notificación, como se describe en la sección anterior.
 
-*Resultado*<br/>
+*result*<br/>
 Un puntero para el código de resultado establecerá antes de volver.
 
 ## <a name="example"></a>Ejemplo
@@ -183,7 +183,7 @@ El identificador de elemento secundario del control que envía la notificación.
 *pNotifyStruct*<br/>
 Un puntero a la estructura de notificación, como se describió anteriormente.
 
-*Resultado*<br/>
+*result*<br/>
 Un puntero para el código de resultado establecerá antes de volver.
 
 ##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE

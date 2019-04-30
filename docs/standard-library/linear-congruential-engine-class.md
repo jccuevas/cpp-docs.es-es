@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413260"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine (Clase)
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 El tipo de resultado integral sin signo. Para obtener información sobre los tipos posibles, vea [\<random>](../standard-library/random.md).
 
 *A*<br/>
-**Multiplicador**. **Condición previa**: vea la sección Comentarios.
+**Multiplicador**. **Error de condición previa**: vea la sección Comentarios.
 
 *C*<br/>
-**Incremento**. **Condición previa**: vea la sección Comentarios.
+**Incremento**. **Error de condición previa**: vea la sección Comentarios.
 
 *M*<br/>
-**Módulo**. **Condición previa**: vea los comentarios.
+**Módulo**. **Error de condición previa**: vea la sección Comentarios.
 
 ## <a name="members"></a>Miembros
 
@@ -80,7 +80,7 @@ Si *M* no es cero, los valores de los argumentos de plantilla *A* y *C* debe ser
 
 Aunque puede construir un generador directamente a partir de este motor, también puede usar una de estas definiciones de tipo predefinidas.
 
-`minstd_rand0`: motor estándar mínimo 1988 (Lewis, Goodman y Miller, 1969).
+`minstd_rand0`: Motor estándar mínimo 1988 (Lewis, Goodman y Miller, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;

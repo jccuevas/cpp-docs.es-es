@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405045"
 ---
 # <a name="hashset-class"></a>hash_set (Clase)
 
@@ -117,7 +117,7 @@ Tipo de datos de elemento que se almacenará en hash_set.
 *Rasgos*<br/>
 Tipo que incluye dos objetos de función, uno de clase que es comparar un predicado binario capaz de comparar dos valores de elemento como claves de ordenación para determinar su orden relativo y una función hash que es una clave asignación predicado unario valores de los elementos en tipos sin signo enteros de tipo `size_t`. Este argumento es opcional y `hash_compare<Key, less<Key> >` es el valor predeterminado.
 
-*Asignador*<br/>
+*Allocator*<br/>
 Tipo que representa el objeto de asignador almacenado que encapsula los detalles sobre la asignación y desasignación de memoria de hash_set. Este argumento es opcional y el valor predeterminado es `allocator<Key>`.
 
 ## <a name="remarks"></a>Comentarios
@@ -565,7 +565,7 @@ Es 0 si el objeto hash_set no contiene ningún elemento con una clave coincident
 
 La función miembro devuelve el número de elementos del intervalo siguiente:
 
-\[ lower_bound (*clave*), upper_bound (*clave*)).
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>Ejemplo
 
@@ -803,7 +803,7 @@ emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor de un elemento que se va a insertar en el objeto [hash_set](../standard-library/hash-set-class.md) a menos que `hash_set` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
+|*val*|Valor de un elemento que se va a insertar en el objeto [hash_set](../standard-library/hash-set-class.md) a menos que `hash_set` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -855,8 +855,8 @@ iterator emplace(
 
 |Parámetro|Descripción|
 |-|-|
-|*Val*|Valor de un elemento que se va a insertar en el objeto [hash_set](../standard-library/hash-set-class.md) a menos que `hash_set` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
-|*_WHERE*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Inserción se puede realizar en tiempo constante amortizado, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.)|
+|*val*|Valor de un elemento que se va a insertar en el objeto [hash_set](../standard-library/hash-set-class.md) a menos que `hash_set` ya contenga ese elemento o, de manera más general, un elemento cuya clave esté ordenada de manera equivalente.|
+|*_Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (Inserción se puede realizar en tiempo constante amortizado, en lugar de tiempo logarítmico, si el punto de inserción sigue inmediatamente a *_Where*.)|
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -1106,13 +1106,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>Parámetros
 
-*_WHERE*<br/>
+*_Where*<br/>
 Posición del elemento que se quita del hash_set.
 
 *first*<br/>
 Posición del primer elemento que se quita del hash_set.
 
-*Último*<br/>
+*last*<br/>
 Posición inmediatamente siguiente al último elemento que se quita del hash_set.
 
 *key*<br/>
@@ -1424,7 +1424,7 @@ hash_set(
 |*Al*|Clase de asignador de almacenamiento que se va a utilizar para este objeto `hash_set`, que toma como valor predeterminado `Allocator`.|
 |*Comp.*|Función de comparación de tipo `const Traits` que se utiliza para ordenar los elementos de `hash_set`, que toma como valor predeterminado `hash_compare`.|
 |*Derecha*|`hash_set` del que el `hash_set` construido va a ser una copia.|
-|*Primero*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
+|*First*|Posición del primer elemento en el intervalo de elementos que se va a copiar.|
 |*Último*|Posición del primer elemento más allá del intervalo de elementos que se va a copiar.|
 
 ### <a name="remarks"></a>Comentarios
@@ -1476,7 +1476,7 @@ void insert(
 |-|-|
 |*Val*|Valor de un elemento que se va a insertar en el `hash_set` a menos que `hash_set` ya contenga ese elemento o, más general, un elemento cuya clave esté ordenada de manera equivalente.|
 |*Where*|Lugar donde se va a iniciar la búsqueda del punto de inserción correcto. (La inserción se puede realizar en tiempo constante amortizado, en lugar de en tiempo logarítmico, si el punto de inserción sigue inmediatamente a `_Where`).|
-|*Primero*|Posición del primer elemento que se va a copiar de un `hash_set`.|
+|*First*|Posición del primer elemento que se va a copiar de un `hash_set`.|
 |*Último*|Posición situada más allá del último elemento que se va a copiar de un `hash_set`.|
 |*IList*|initializer_list de la que se van a copiar los elementos.|
 
