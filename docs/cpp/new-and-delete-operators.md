@@ -10,17 +10,17 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441306"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345895"
 ---
 # <a name="new-and-delete-operators"></a>Operadores new y delete
 
 C++ admite la asignación dinámica y la desasignación de objetos mediante el [nueva](../cpp/new-operator-cpp.md) y [eliminar](../cpp/delete-operator-cpp.md) operadores. Estos operadores asignan memoria para los objetos de un conjunto denominado almacén libre. El **nueva** operador llama a la función especial [new (operador)](../cpp/new-operator-cpp.md)y el **eliminar** operador llama a la función especial [operador delete](../cpp/delete-operator-cpp.md).
 
-El **nuevo** función en la biblioteca estándar de C++ admite el comportamiento especificado en el estándar de C++, que se usa para producir una excepción std:: bad_alloc si se produce un error en la asignación de memoria. Si aún desea la versión no producen excepciones de **nuevo**, vincule el programa con nothrownew.obj. Sin embargo, cuando se vincula con nothrownew.obj, el valor predeterminado **operador new** en la biblioteca estándar de C++ ya no funciona.
+El **nueva** funcionando en el C++ biblioteca estándar admite el comportamiento especificado en el C++ estándar, que se usa para producir una excepción std:: bad_alloc si se produce un error en la asignación de memoria. Si aún desea la versión no producen excepciones de **nuevo**, vincule el programa con nothrownew.obj. Sin embargo, cuando se vincula con nothrownew.obj, el valor predeterminado **operador new** en la biblioteca estándar de C++ ya no funciona.
 
 Para obtener una lista de los archivos de biblioteca que componen la biblioteca en tiempo de ejecución de C y la biblioteca estándar de C++, vea [características de la biblioteca CRT](../c-runtime-library/crt-library-features.md).
 
