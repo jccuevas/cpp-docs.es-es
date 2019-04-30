@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::basic_ostringstream [C++], str
 ms.assetid: aea699f7-350f-432a-acca-adbae7b483fb
 ms.openlocfilehash: 45a7eb1384c70b488e057fb9df8ad4c496272316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414144"
 ---
 # <a name="basicostringstream-class"></a>basic_ostringstream (Clase)
 
@@ -90,7 +90,7 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 
 ### <a name="parameters"></a>Parámetros
 
-*_Modo de*<br/>
+*_Mode*<br/>
 Una de las enumeraciones de [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
