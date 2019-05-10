@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315903"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446202"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (Generar prototipos de función)
 
@@ -29,7 +29,7 @@ Quitado. Crea un prototipo de función para cada función definida en el archivo
 
 ## <a name="remarks"></a>Comentarios
 
-Esta opción de compilador ya no está disponible. Se quitó en Visual C++ 2015. Esta página se conserva para usuarios de versiones anteriores de Visual C++.
+Esta opción de compilador ya no está disponible. Se ha eliminado en Visual Studio 2015. Esta página se conserva para usuarios de versiones anteriores de Visual Studio.
 
 El prototipo de función incluye el tipo de valor devuelto de función y una lista de tipos de argumento. La lista de tipos de argumento se crea a partir de los tipos de los parámetros formales de la función. Se omiten los prototipos de función ya presentes en el archivo de origen.
 

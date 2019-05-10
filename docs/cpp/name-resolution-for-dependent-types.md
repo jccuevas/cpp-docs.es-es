@@ -2,12 +2,12 @@
 title: Resolución de nombres para los tipos dependientes
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 798cc7067967e8992c32d7c0ced9f647e4877110
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345936"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222406"
 ---
 # <a name="name-resolution-for-dependent-types"></a>Resolución de nombres para los tipos dependientes
 
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>Desambiguación de plantilla
 
-Visual Studio 2012 exige la C ++ 98/03/11 reglas estándar para la Desambiguación de la palabra clave "template". En el ejemplo siguiente, Visual C++ 2010 aceptaría las líneas no conformes y las líneas que cumplen.  Visual Studio 2012 acepta solo las líneas que cumplen.
+Visual Studio 2012 exige la C ++ 98/03/11 reglas estándar para la Desambiguación de la palabra clave "template". En el ejemplo siguiente, Visual Studio 2010 aceptaría las líneas no conformes y las líneas que cumplen.  Visual Studio 2012 acepta solo las líneas que cumplen.
 
 ```cpp
 #include <iostream>

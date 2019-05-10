@@ -1,17 +1,15 @@
 ---
 title: MSBuild en la línea de comandos - C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273318"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220565"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild en la línea de comandos - C++
 
@@ -53,7 +51,7 @@ Para obtener más información acerca de MSBuild, vea:
 
 |Término|Definición|
 |----------|----------------|
-|[Tutorial: Uso de MSBuild para crear un proyecto de Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Muestra cómo crear un proyecto de Visual C++ mediante **MSBuild**.|
+|[Tutorial: Uso de MSBuild para crear un proyecto de C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Muestra cómo crear un Visual Studio C++ proyecto usando **MSBuild**.|
 |[Cómo: Usar de eventos de compilación en proyectos de MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Muestra cómo especificar una acción que se produce en una fase concreta de la compilación: antes de que empiece la compilación; antes de iniciar el paso de vínculo; o bien, una vez finalizada la compilación.|
 |[Cómo: Agregar un paso personalizado de compilación a proyectos de MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Muestra cómo agregar una fase definido por el usuario a la secuencia de compilación.|
 |[Cómo: Agregar herramientas personalizadas de compilación a proyectos de MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Muestra cómo asociar una herramienta de compilación con un archivo determinado.|

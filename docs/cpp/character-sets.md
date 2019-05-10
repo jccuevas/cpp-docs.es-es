@@ -1,26 +1,26 @@
 ---
 title: Juegos de caracteres
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331238"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222524"
 ---
 # <a name="character-sets"></a>Juegos de caracteres
 
-El texto de un programa de C++ se almacena en archivos de código fuente que usan una codificación de caracteres determinada. El estándar de C++ especifica un juego básico de caracteres de código fuente para los archivos de código fuente y un juego básico de caracteres de ejecución para los archivos compilados. Visual C++ permite usar un juego adicional de caracteres específicos de la configuración regional en los archivos de código fuente y los archivos compilados.
+El texto de un programa de C++ se almacena en archivos de código fuente que usan una codificación de caracteres determinada. El estándar de C++ especifica un juego básico de caracteres de código fuente para los archivos de código fuente y un juego básico de caracteres de ejecución para los archivos compilados. Microsoft C++ compilador (MSVC) permite que un conjunto adicional de caracteres específicos de la configuración regional que se utilizará en archivos de código fuente y los archivos compilados.
 
 ## <a name="character-sets"></a>Juegos de caracteres
 
-El estándar de C++ especifica un *juego básico de caracteres de código fuente* que se puede usar en los archivos de código fuente. Para representar caracteres ajenos a este conjunto, los caracteres adicionales se pueden especificar mediante el uso de un *nombre de carácter universal*. Cuando se compila, el *juego básico de caracteres de ejecución* y el *juego básico de caracteres anchos de ejecución* representan los caracteres y las cadenas que pueden aparecer en un programa. La implementación de Visual C++ permite caracteres adicionales en el código fuente y el código compilado.
+El estándar de C++ especifica un *juego básico de caracteres de código fuente* que se puede usar en los archivos de código fuente. Para representar caracteres ajenos a este conjunto, los caracteres adicionales se pueden especificar mediante el uso de un *nombre de carácter universal*. Cuando se compila, el *juego básico de caracteres de ejecución* y el *juego básico de caracteres anchos de ejecución* representan los caracteres y las cadenas que pueden aparecer en un programa. La implementación de MSVC permite caracteres adicionales en el código fuente y código compilado.
 
 ### <a name="basic-source-character-set"></a>Juego básico de caracteres de código fuente
 
@@ -36,7 +36,7 @@ El *juego básico de caracteres de código fuente* consta de 96 caracteres que p
 
 **Específicos de Microsoft**
 
-Visual C++ incluye el carácter `$` como miembro del juego básico de caracteres de código fuente. Visual C++ también permite usar un conjunto adicional de caracteres en archivos de código fuente, según la codificación del archivo. De forma predeterminada, Visual Studio almacena archivos de código fuente mediante la página de códigos predeterminada. Al guardar los archivos de código fuente mediante una página de códigos específicos de la configuración regional o una página de códigos Unicode, Visual C++ permite usar cualquiera de los caracteres de dicha página en el código fuente, excepto los códigos de control no permitidos explícitamente en el juego básico caracteres de código fuente. Por ejemplo, se pueden colocar caracteres de japonés en comentarios, identificadores o literales de cadena, si se guarda el archivo a través de una página de códigos de japonés. Visual C++ no permite las secuencias de caracteres que no pueden convertirse en caracteres multibyte o puntos de código Unicode válidos. Según las opciones del compilador, puede que no todos los caracteres permitidos se muestren en los identificadores. Para obtener más información, vea [Identifiers](../cpp/identifiers-cpp.md).
+MSVC incluye el `$` carácter como un miembro del juego de caracteres básico de origen. MSVC también permite un conjunto adicional de caracteres que se utilizará en archivos de origen, según la codificación del archivo. De forma predeterminada, Visual Studio almacena archivos de código fuente mediante la página de códigos predeterminada. Cuando se guardan los archivos de origen mediante el uso de una página de códigos específicas de configuración regional o una página de códigos Unicode, MSVC le permite usar cualquiera de los caracteres de dicha página de códigos en el código fuente, excepto para los códigos de control no permitidos explícitamente en el carácter de código fuente básicos establecido. Por ejemplo, se pueden colocar caracteres de japonés en comentarios, identificadores o literales de cadena, si se guarda el archivo a través de una página de códigos de japonés. MSVC no admite secuencias de caracteres que no se convierten en caracteres multibyte válidos o puntos de código Unicode. Según las opciones del compilador, puede que no todos los caracteres permitidos se muestren en los identificadores. Para obtener más información, vea [Identifiers](../cpp/identifiers-cpp.md).
 
 **FIN de Específicos de Microsoft**
 
@@ -48,7 +48,7 @@ Los nombres de carácter universal pueden usarse tanto en identificadores como e
 
 **Específicos de Microsoft**
 
-El compilador de Visual C++ trata indistintamente un carácter con el formato de nombre de carácter universal y con formato de literal. Por ejemplo, se puede declarar un identificador con formato de nombre de carácter universal y usarlo en el formato de literal:
+Microsoft C++ compilador trata un carácter en formato de nombre de carácter universal y forma literal indistintamente. Por ejemplo, se puede declarar un identificador con formato de nombre de carácter universal y usarlo en el formato de literal:
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

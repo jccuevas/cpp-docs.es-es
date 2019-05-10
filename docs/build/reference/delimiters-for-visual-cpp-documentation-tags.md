@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: fec10171270a76ed90e2a7459103a148af0ba735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272170"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446541"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Delimitadores para etiquetas de documentación en Visual C++
 
@@ -19,7 +19,7 @@ Puede usar los siguientes tipos de delimitadores con las etiquetas de documentac
 
 | | |
 |-|-|
-| `///` | Este es el formato que se muestra en los ejemplos de documentación y que usan las plantillas de proyecto de Visual C++.  |
+| `///` | Este es el formulario que se muestra en los ejemplos de documentación y utilizado por Visual Studio C++ plantillas de proyecto.  |
 | `/** */`  | Se trata de delimitadores de múltiples líneas.  |
 
 Hay varias reglas de formato cuando se usan los delimitadores `/** */`:

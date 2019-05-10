@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: b3e15c024b84bdf04c7c5611584dc1b14d82816f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f1e32ba4776f3e975dc0fbc72334a85d6c793c93
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319439"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446349"
 ---
 # <a name="resource-files-c"></a>Archivos de recursos (C++)
 
@@ -32,4 +32,4 @@ Vea [Trabajar con recursos](../../windows/working-with-resource-files.md) para o
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de archivos creados para proyectos de Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Tipos de archivos creados para Visual C++ proyectos](file-types-created-for-visual-cpp-projects.md)

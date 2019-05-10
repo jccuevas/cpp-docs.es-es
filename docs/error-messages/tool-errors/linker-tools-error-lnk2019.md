@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386348"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447710"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Error de las herramientas del vinculador LNK2019
 
@@ -86,7 +86,7 @@ Bibliotecas y archivos objeto vinculados en el código deben compilarse para la 
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Mezcle código que usa wchar nativo\_t con código que no
 
-. El trabajo de conformidad de lenguaje C++ que se realizó en Visual C++ 2005 convirtió `wchar_t` en un tipo nativo de forma predeterminada. Debe usar la opción del compilador [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) para generar código compatible con los archivos de objeto o biblioteca compilados con versiones anteriores de Visual C++. Si no todos los archivos se han compilado con la misma **/Zc:wchar\_t** configuración, el tipo no pueden resolver las referencias a tipos compatibles. Compruebe que los tipos `wchar_t` de todos los archivos de objeto o biblioteca sean compatibles, ya sea actualizando los tipos que se usan o mediante el uso de una configuración **/Zc:wchar_t** coherente cuando compile.
+C++trabajo de conformidad del lenguaje que se realizó en Visual Studio 2005 realizado `wchar_t` un tipo nativo de forma predeterminada. Debe usar el [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) opción del compilador para generar código compatible con los archivos de objeto o biblioteca compilados con versiones anteriores de Visual Studio. Si no todos los archivos se han compilado con la misma **/Zc:wchar\_t** configuración, el tipo no pueden resolver las referencias a tipos compatibles. Compruebe que los tipos `wchar_t` de todos los archivos de objeto o biblioteca sean compatibles, ya sea actualizando los tipos que se usan o mediante el uso de una configuración **/Zc:wchar_t** coherente cuando compile.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Problemas de la biblioteca de terceros y de Vcpkg
 

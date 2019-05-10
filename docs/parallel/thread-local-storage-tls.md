@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362730"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448901"
 ---
 # <a name="thread-local-storage-tls"></a>Almacenamiento local para el subproceso (TLS)
 
-El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subprocesos puede asignar ubicaciones en las que almacenar los datos específicos de esos subprocesos. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 y el compilador de Visual C++ ahora son compatibles con datos por subproceso que se enlazan estáticamente (en tiempo de carga) además de la implementación existente de la API.
+El almacenamiento local para el subproceso (TLS) es el método por el que cada subproceso de un determinado proceso con subprocesos puede asignar ubicaciones en las que almacenar los datos específicos de esos subprocesos. Datos específicos del subproceso de límite (tiempo de ejecución) se admiten dinámicamente por medio de la API de TLS ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 y Microsoft C++ ahora soporte enlazados estáticamente datos por subproceso (tiempo de carga) además de la implementación existente de la API de compilador.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Implementación del compilador de TLS
 

@@ -1,13 +1,13 @@
 ---
 title: Información general de la programación para Windows en C++
-ms.date: 03/28/2019
+ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362353"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221329"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -21,7 +21,7 @@ Las aplicaciones de consola de C++ se ejecutan desde la línea de comandos en un
 
 El término *aplicación cliente de escritorio nativa* hace referencia a una aplicación de división de particiones de C o C++ que usa nativo original [las API de C de Windows o COM APIs](/windows/desktop/apiindex/windows-api-list) para tener acceso al sistema operativo. Estas API son escrito principalmente en C. Al crear este tipo de aplicación, tiene la posibilidad de programar directamente con un bucle de mensajes de estilo C que procesa los eventos del sistema operativo, o utilizando *Microsoft Foundation Classes* (MFC), una biblioteca de C++ que se ajusta a Win32 de manera que es un poco orientada a objetos. No se considera "moderna" en comparación con la plataforma Universal de Windows (ver abajo), pero ambas siguen siendo totalmente compatibles y tienen millones de líneas de código que se ejecuta en el mundo de hoy en día. Una aplicación de Win32 que se ejecuta en una ventana requiere que el desarrollador trabaje explícitamente con mensajes de Windows dentro de una función de procedimiento de Windows. A pesar del nombre, una aplicación Win32 puede compilarse como una (x86) 32 bits o 64 bits (x64) binario. En el IDE de Visual Studio, los términos x86 y Win32 son sinónimos.
 
-Para empezar a trabajar con programación C++ tradicional de Windows, consulte [empezar a trabajar con Win32 y C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Después de tener cierto conocimiento de Win32, será más fácil obtener información sobre [MFC Desktop Applications](/mfc/mfc-desktop-applications). Para obtener un ejemplo de una aplicación de escritorio de C++ tradicional que usa gráficos sofisticados, consulte [Hilo: Desarrollo de aplicaciones de C++ para Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
+Para empezar a trabajar con programación C++ tradicional de Windows, consulte [empezar a trabajar con Win32 y C++](/windows/desktop/LearnWin32/learn-to-program-for-windows). Después de tener cierto conocimiento de Win32, será más fácil obtener información sobre [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Para obtener un ejemplo de una aplicación de escritorio de C++ tradicional que usa gráficos sofisticados, consulte [Hilo: Desarrollo de aplicaciones de C++ para Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>¿C++ o. NET? 
 

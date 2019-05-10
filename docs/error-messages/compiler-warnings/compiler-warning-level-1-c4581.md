@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397281"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447103"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Advertencia del compilador (nivel 1) C4581
 
 comportamiento desusado: "string1" reemplazado por 'cadena2' para procesar el atributo
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: comprobación de parámetros de atributos de Visual C++.
+Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: comprobación de parámetros de Visual C++ atributos.
 
 En versiones anteriores, se han aceptado los valores de atributo se incluyen entre comillas o no. Si el valor es una enumeración, no debe incluirse entre comillas.
 

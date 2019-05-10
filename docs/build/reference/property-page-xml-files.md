@@ -1,15 +1,15 @@
 ---
 title: Archivos XML de página de propiedades
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319475"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217724"
 ---
 # <a name="property-page-xml-rule-files"></a>Archivos XML de página de propiedades
 
@@ -19,7 +19,7 @@ Los únicos escenarios en los que es necesario comprender el funcionamiento inte
 
 En primer lugar, abra la página de propiedades de un proyecto (haga clic con el botón derecho en el nodo del proyecto en el **Explorador de soluciones** y seleccione Propiedades):
 
-![Propiedades de proyecto de Visual C++](../media/cpp-property-page-2017.png)
+![Visual Studio C++ las propiedades del proyecto](../media/cpp-property-page-2017.png)
 
 Cada nodo situado bajo **Propiedades de configuración** se denomina regla. En ocasiones, una regla representa una única herramienta como el compilador, pero en general, el término hace referencia a algo que tiene propiedades, que se ejecuta y que puede generar algún resultado. Cada regla se rellena a partir de un archivo XML en la carpeta VCTargets. Por ejemplo, la regla de C/C++ mostrada anteriormente se rellena desde "cl.xml".
 

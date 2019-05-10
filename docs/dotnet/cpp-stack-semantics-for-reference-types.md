@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209166"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448072"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Semántica de pila de C++ para los tipos de referencia
 
-Antes de Visual C++ 2005, una instancia de un tipo de referencia solo se creara con la `new` operador, que se creó el objeto en la basura recopilados de montón. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que usaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.
+Antes de Visual Studio 2005, una instancia de un tipo de referencia solo se creara con la `new` operador, que se creó el objeto en la basura recopilados de montón. Sin embargo, ahora puede crear una instancia de un tipo de referencia con la misma sintaxis que usaría para crear una instancia de un tipo nativo en la pila. Por lo tanto, no es necesario usar [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) para crear un objeto de un tipo de referencia. Y cuando el objeto queda fuera del ámbito, el compilador llama al destructor del objeto.
 
 ## <a name="remarks"></a>Comentarios
 

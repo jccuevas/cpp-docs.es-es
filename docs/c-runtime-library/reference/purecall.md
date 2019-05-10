@@ -23,12 +23,12 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: a7a6db42dc4b8d9b2962a66c7866aae9db55eb3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: df6dde91ccb952e66eb77c841b2b1ace12756b8c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231980"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446629"
 ---
 # <a name="purecall"></a>_purecall
 
@@ -42,7 +42,7 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>Comentarios
 
-El **_purecall** función es un detalle de implementación específico de Microsoft de Microsoft Visual C++ compilador. Esta función no está diseñada para ser llamada directamente por el código; además, no tiene ninguna declaración de encabezado pública. Se documenta aquí porque se trata de una exportación pública de la biblioteca en tiempo de ejecución de C.
+El **_purecall** función es un detalle de implementación específico de Microsoft de Microsoft C++ compilador. Esta función no está diseñada para ser llamada directamente por el código; además, no tiene ninguna declaración de encabezado pública. Se documenta aquí porque se trata de una exportación pública de la biblioteca en tiempo de ejecución de C.
 
 Una llamada a una función virtual pura es un error, porque no tiene ninguna implementación. El compilador genera código para invocar la **_purecall** función de controlador de error cuando se llama a una función virtual pura. De forma predeterminada, **_purecall** finaliza el programa. Antes de finalizar, el **_purecall** función invoca un **_purecall_handler** funcionando si uno se ha establecido para el proceso. Puede instalar su propia función de controlador de errores para llamadas de función virtual pura, para capturarlas con fines informativos o de depuración. Para usar su propio controlador de errores, cree una función que tiene el **_purecall_handler** firma, a continuación, usar [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md) para convertirlo en el controlador actual.
 

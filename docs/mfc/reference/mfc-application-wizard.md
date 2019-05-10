@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412753"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448494"
 ---
 # <a name="mfc-application-wizard"></a>Asistente para aplicaciones MFC
 
 El Asistente para aplicaciones MFC genera una aplicación que, al compilarse, implementa las características básicas de una aplicación ejecutable para Windows (.exe). La aplicación MFC inicial incluye archivos de código fuente de C++ (.cpp), archivos de recursos (.rc), archivos de encabezado (.h) y un archivo de proyecto (.vcxproj). El código generado en estos archivos iniciales se basa en MFC.
 
 > [!NOTE]
->  El asistente creará archivos adicionales para el proyecto en función de las opciones que seleccione. Por ejemplo, si selecciona **ayuda contextual** en el [características avanzadas](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, el asistente crea los archivos que son necesarios para compilar los archivos de Ayuda del proyecto. Para obtener más información acerca de los archivos que crea el asistente, consulte [tipos de archivo creados para proyectos de Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)y consulte el archivo Readme.txt del proyecto.
+>  El asistente creará archivos adicionales para el proyecto en función de las opciones que seleccione. Por ejemplo, si selecciona **ayuda contextual** en el [características avanzadas](../../mfc/reference/advanced-features-mfc-application-wizard.md) página, el asistente crea los archivos que son necesarios para compilar los archivos de Ayuda del proyecto. Para obtener más información acerca de los archivos que crea el asistente, consulte [tipos de archivo creados para Visual C++ proyectos](../../build/reference/file-types-created-for-visual-cpp-projects.md)y consulte el archivo Readme.txt del proyecto.
 
 ## <a name="overview"></a>Información general
 
@@ -35,7 +35,7 @@ En esta página del asistente se describe la configuración actual para la aplic
 
    - El proyecto se crea utilizando el estilo de proyecto de Visual Studio y permite el cambio de estilos visuales.
 
-   - El proyecto utiliza MFC en un archivo DLL compartido. Para más información, vea [DLLs in Visual C++](../../build/dlls-in-visual-cpp.md) (DLL en Visual C++).
+   - El proyecto utiliza MFC en un archivo DLL compartido. Para obtener más información, consulte [crear C /C++ archivos DLL en Visual Studio](../../build/dlls-in-visual-cpp.md).
 
 - [Compatibilidad con documentos compuestos, Asistente para aplicaciones MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 

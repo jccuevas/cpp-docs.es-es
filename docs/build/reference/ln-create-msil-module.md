@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176221"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446264"
 ---
 # <a name="ln-create-msil-module"></a>/LN (Crear un módulo MSIL)
 
@@ -36,7 +36,7 @@ Desea crear módulos si desea adoptar un enfoque basado en componentes para gene
 
 La extensión de archivo predeterminado para un módulo es. netmodule.
 
-En las versiones de Visual C++ anteriores a Visual C++ 2005, se creó un módulo con **/CLR: noAssembly**.
+En versiones anteriores a Visual Studio 2005, se creó un módulo con **/CLR: noAssembly**.
 
 El vinculador MSVC acepta archivos .netmodule como entrada y el archivo de salida generado por el vinculador será un ensamblado o .netmodule sin ninguna dependencia de tiempo de ejecución en cualquiera de los archivos .netmodule que se utilizaron como entrada del vinculador.  Para más información, consulte [Archivos .netmodule como entrada del vinculador](netmodule-files-as-linker-input.md).
 

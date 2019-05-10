@@ -1,16 +1,16 @@
 ---
 title: 'Tutorial: Quitar trabajo de un subproceso de interfaz de usuario'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407811"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857003"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Tutorial: Quitar trabajo de un subproceso de interfaz de usuario
 
@@ -54,9 +54,9 @@ En esta sección se describe cómo crear la aplicación básica de MFC.
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Para crear una aplicación MFC de Visual C++
 
-1. En el menú **Archivo** , haga clic en **Nuevo**y, a continuación, haga clic en **Proyecto**.
+1. Use la **MFC Application Wizard** para crear una aplicación MFC con todos los valores predeterminados. Vea [Tutorial: Usar los nuevos controles de Shell de MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) para obtener instrucciones sobre cómo abrir el Asistente para la versión de Visual Studio.
 
-1. En el **nuevo proyecto** cuadro de diálogo el **plantillas instaladas** panel, seleccione **Visual C++** y, a continuación, en el **plantillas** panel, seleccione **Aplicación MFC**. Escriba un nombre para el proyecto, por ejemplo, `Mandelbrot`y, a continuación, haga clic en **Aceptar** para mostrar el **MFC Application Wizard**.
+1. Escriba un nombre para el proyecto, por ejemplo, `Mandelbrot`y, a continuación, haga clic en **Aceptar** para mostrar el **MFC Application Wizard**.
 
 1. En el **tipo de aplicación** panel, seleccione **único documento**. Asegúrese de que el **compatibilidad con la arquitectura documento/vista** casilla está desactivada.
 

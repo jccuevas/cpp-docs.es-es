@@ -1,6 +1,6 @@
 ---
 title: Crear un proyecto ATL
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - vc.appwiz.ATL.project
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278116"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445993"
 ---
 # <a name="creating-an-atl-project"></a>Crear un proyecto ATL
 
@@ -33,7 +33,7 @@ La manera más fácil de crear un proyecto ATL es usar el Asistente para proyect
 
 1. Haga clic en **finalizar** para cerrar el asistente y abrir el proyecto nuevo en el entorno de desarrollo.
 
-Una vez creado el proyecto, puede ver los archivos creados en **el Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para obtener más información acerca de los tipos de archivo, consulte [tipos de archivo creados para proyectos de Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md). Para obtener más información sobre las configuraciones para el nuevo proyecto ATL y cómo cambiarlos, consulte [configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md).
+Una vez creado el proyecto, puede ver los archivos creados en **el Explorador de soluciones**. Para obtener más información sobre los archivos que crea el asistente para el proyecto, vea el archivo Readme.txt generado por el proyecto. Para obtener más información acerca de los tipos de archivo, consulte [tipos de archivo creados para Visual C++ proyectos](../../build/reference/file-types-created-for-visual-cpp-projects.md). Para obtener más información sobre las configuraciones para el nuevo proyecto ATL y cómo cambiarlos, consulte [configuraciones de proyecto ATL predeterminadas](../../atl/reference/default-atl-project-configurations.md).
 
 ## <a name="see-also"></a>Vea también
 

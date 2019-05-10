@@ -1,8 +1,6 @@
 ---
 title: Archivos de proyecto y solución
-ms.date: 11/04/2016
-f1_keywords:
-- vc.files.projectandsolution
+ms.date: 05/06/2019
 helpviewer_keywords:
 - project files [C++]
 - file types [C++], makefiles
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319582"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446591"
 ---
 # <a name="project-and-solution-files"></a>Archivos de proyecto y solución
 
@@ -26,7 +24,7 @@ Los archivos siguientes se generan al crear un proyecto en Visual Studio. Se usa
 |--------------|------------------------|--------------------------------|-----------------|
 |*Nombre_solución*.sln|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de la *solución*. Organiza todos los elementos de un proyecto o varios proyectos en una solución.|
 |*Nombre_proyecto*.suo|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *opciones de solución*. Almacena personalizaciones para la solución para que cada vez que se abra un proyecto o archivo en la solución, tenga la apariencia y el comportamiento deseados.|
-|*Nombre_proyecto*.vcxproj|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo del *proyecto*. Almacena información específica de cada proyecto. (En versiones anteriores, este archivo se denominaba *Nombre_proyecto*.vcproj o *Nombre_proyecto*.dsp). Para obtener un ejemplo de un archivo de proyecto de Visual C++, vea [Archivos de proyecto](project-files.md).|
+|*Nombre_proyecto*.vcxproj|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo del *proyecto*. Almacena información específica de cada proyecto. (En versiones anteriores, este archivo se denominaba *Nombre_proyecto*.vcproj o *Nombre_proyecto*.dsp). Para obtener un ejemplo de un C++ (.vcxproj) del archivo de proyecto, vea [archivos de proyecto](project-files.md).|
 |*Nombre_proyecto*.vcxitems|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo *Proyecto de elementos compartidos*. Este proyecto no se compila.  En su lugar, otro proyecto de C++ puede hacer referencia al proyecto, y sus archivos formarán parte del proceso de compilación del proyecto que hace referencia. Esto se puede usar para compartir código común con proyectos de C++ multiplataforma.|
 |*Nombre_proyecto*.sdf|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *base de datos de exploración*. Admite las características de exploración y navegación como **Ir a definición**, **Buscar todas las referencias**, y **Vista de clases**. Se genera mediante el análisis de los archivos de encabezado.|
 |*Projname*.vcxproj.filters|*Nombre_proyecto*|No se muestra en el Explorador de soluciones|El archivo de *filtros*. Especifica dónde colocar un archivo que se agrega a la solución. Por ejemplo, un archivo .h se coloca en el nodo **Archivos de encabezado**.|
@@ -36,4 +34,4 @@ Los archivos siguientes se generan al crear un proyecto en Visual Studio. Se usa
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de archivos creados para proyectos de Visual C++](file-types-created-for-visual-cpp-projects.md)
+[Tipos de archivos creados para Visual C++ proyectos](file-types-created-for-visual-cpp-projects.md)
