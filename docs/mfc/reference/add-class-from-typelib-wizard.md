@@ -1,25 +1,27 @@
 ---
 title: Asistente para agregar clases de la biblioteca de tipos
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297013"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525477"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Asistente para agregar clases de la biblioteca de tipos
 
-Use este asistente para agregar una clase MFC desde una biblioteca de tipos disponible. El asistente crea una clase para cada interfaz que agregue de la biblioteca de tipos seleccionada.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
+Este asistente no está disponible en Visual Studio de 2019 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Use este asistente para agregar una clase MFC desde una biblioteca de tipos disponible. El asistente crea una clase para cada interfaz que agregue de la biblioteca de tipos seleccionada.
 
 - **Agregar clase desde**
 
@@ -66,6 +68,8 @@ Use este asistente para agregar una clase MFC desde una biblioteca de tipos disp
    Establece el nombre del archivo de encabezado para la clase nueva. De forma predeterminada, este nombre se basa en el que se proporcione en **Clases generadas**. Haga clic en el botón de puntos suspensivos para guardar el nombre de archivo en la ubicación que elija, o bien para anexar la declaración de clase a un archivo existente. Si elige un archivo existente, el asistente no lo guardará en la ubicación seleccionada hasta que haga clic en **Finalizar** en el asistente.
 
    El asistente no sobrescribe un archivo. Si selecciona el nombre de un archivo existente, al hacer clic en **Finalizar**, el asistente le pedirá que indique si se debe anexar la declaración de clase al contenido del archivo. Haga clic en **Sí** para anexar el archivo; haga clic en **No** para volver al asistente y especificar otro nombre de archivo.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 
