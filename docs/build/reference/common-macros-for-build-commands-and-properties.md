@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294449"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221784"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros comunes para propiedades y comandos de MSBuild
 
@@ -121,7 +121,7 @@ Esta tabla describen un subconjunto frecuente de las macros disponibles; Hay muc
 |**$(FrameworkDir)**|El directorio en el que se instaló .NET Framework.|
 |**$(FrameworkSDKDir)**|El directorio en el que instaló .NET Framework. .NET Framework pudo haberse instalado como parte de Visual Studio o por separado.|
 |**$(FrameworkVersion)**|La versión de .NET Framework usada por Visual Studio. Junto con **$(FrameworkDir)**, la ruta de acceso completa a la versión de .NET Framework que usa Visual Studio.|
-|**$(FxCopDir)**|La ruta de acceso al archivo fxcop.cmd. El archivo fxcop.cmd no se instala con todas las ediciones de Visual C++.|
+|**$(FxCopDir)**|La ruta de acceso al archivo fxcop.cmd. El archivo fxcop.cmd no se instala con todas las ediciones de Visual Studio.|
 |**$(IntDir)**|Ruta de acceso al directorio especificado para los archivos intermedios. Si se trata de una ruta de acceso relativa, los archivos intermedios van a esta ruta de acceso anexados al directorio del proyecto. Esta ruta de acceso debe tener una barra diagonal final. Se resuelve en el valor de la propiedad **Intermediate Directory** . No use **$(OutDir)** para definir esta propiedad.|
 |**$(OutDir)**|Ruta de acceso al directorio del archivo de salida. Si se trata de una ruta de acceso relativa, los archivos de salida van a esta ruta de acceso anexados al directorio del proyecto. Esta ruta de acceso debe tener una barra diagonal final. Se resuelve en el valor de la propiedad **Output Directory** . No use **$(IntDir)** para definir esta propiedad.|
 |**$(Platform)**|El nombre de la plataforma del proyecto actual, por ejemplo, "Win32".|
@@ -143,7 +143,7 @@ Esta tabla describen un subconjunto frecuente de las macros disponibles; Hay muc
 |**$(TargetFileName)**|El nombre de archivo del archivo de salida principal de la generación (definido como nombre base + extensión de archivo).|
 |**$(TargetName)**|El nombre base del archivo de salida principal de la compilación.|
 |**$(TargetPath)**|El nombre de ruta de acceso absoluta del archivo de salida principal de la compilación (definido como unidad + ruta de acceso + nombre base + extensión de archivo).|
-|**$(VCInstallDir)**|El directorio en el que se incluye el contenido de C++ de la instalación de Visual Studio. Esta propiedad contiene la versión del conjunto de herramientas de Visual C++ de destino, que podría ser diferente a la del host de Visual Studio. Por ejemplo, al compilar con `$(PlatformToolset) = v140`, **$(VCInstallDir)** contiene la ruta de acceso a la instalación de Visual C++ 2015.|
+|**$(VCInstallDir)**|El directorio en el que se incluye el contenido de C++ de la instalación de Visual Studio. Esta propiedad contiene la versión de destino Microsoft C++ conjunto de herramientas (MSVC), que podría ser diferente que el host de Visual Studio. Por ejemplo, al compilar con `$(PlatformToolset) = v140`, **VCInstallDir** contiene la ruta de acceso a la instalación de Visual Studio 2015.|
 |**$(VSInstallDir)**|El directorio en el que instaló Visual Studio. Esta propiedad contiene la versión del conjunto de herramientas de Visual Studio de destino, que podría ser diferente a la del host de Visual Studio. Por ejemplo, al compilar con `$(PlatformToolset) = v110`, **$(VSInstallDir)** contiene la ruta de acceso a la instalación de Visual Studio 2012.|
 |**$(WebDeployPath)**|La ruta de acceso relativa desde la raíz de la implementación web donde residen las salidas del proyecto. Devuelve el mismo valor que <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|La ruta de acceso absoluta a la ubicación de **\<localhost>**. Por ejemplo, c:\inetpub\wwwroot.|

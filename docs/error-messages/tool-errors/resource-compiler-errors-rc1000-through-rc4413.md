@@ -1,15 +1,15 @@
 ---
-title: Las advertencias y errores del compilador de recursos
+title: Errores y advertencias del compilador de recursos
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
 ms.openlocfilehash: c760e59e183b78122b7498ca8faf2c70ac454fd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857259"
 ---
-# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Errores del compilador de recursos y advertencias (RCxxxx, RWxxxx)
+# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Errores y advertencias del compilador de recursos (RCxxxx, RWxxxx)
 
 En esta sección es una referencia a los errores generados por el compilador de recursos. Errores del compilador de recursos y las advertencias tienen el formato RC*xxxx* o RW*xxxx*, donde *xxxx* es un número de cuatro dígitos.
 

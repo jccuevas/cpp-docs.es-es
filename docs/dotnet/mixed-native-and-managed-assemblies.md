@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384860"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447285"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Ensamblados mixtos (nativos y administrados)
 
@@ -27,7 +27,7 @@ Por ejemplo, una biblioteca existente que consta únicamente de código C++ nati
 
 Visual C++ solo admite la generación de ensamblados administrados mixtos mediante la **/CLR** opción del compilador. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017. Si necesita puros o que se pueda comprobar los ensamblados administrados, se recomienda que crearlas en C#.
 
-Las versiones anteriores del conjunto de herramientas del compilador de Visual C++ admiten la generación de tres tipos distintos de ensamblados administrados: mixto, puro y comprobable. Los dos últimos se explican en [código puro y comprobable (C++ / c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Las versiones anteriores de Microsoft C++ conjunto de herramientas del compilador admite la generación de tres tipos distintos de ensamblados administrados: mixto, puro y comprobable. Los dos últimos se explican en [código puro y comprobable (C++ / c++ / CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>En esta sección
 

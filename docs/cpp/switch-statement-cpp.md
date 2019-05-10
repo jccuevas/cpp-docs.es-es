@@ -1,6 +1,6 @@
 ---
 title: switch (Instrucción) (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267094"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221939"
 ---
 # <a name="switch-statement-c"></a>switch (Instrucción) (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 En el ejemplo anterior, se incrementa `capa` si `c` es una `A` mayúscula. El **salto** instrucción después `capa++` finaliza la ejecución de la **cambiar** cuerpo de instrucción y el control pasa a la **mientras** bucle. Sin el **salto** instrucción, ejecución sería "pasen" a la siguiente instrucción con etiqueta, por lo que `lettera` y `nota` también se incrementarían. Se sirve un propósito similar por la **salto** instrucción para `case 'a'`. Si `c` es minúscula `a`, `lettera` se incrementa y el **salto** instrucción termina el **cambiar** cuerpo de instrucción. Si `c` no es un `a` o `A`, **predeterminada** se ejecuta la instrucción.
 
-**Visual Studio 2017 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) el `[[fallthrough]]` atributo se especifica en el estándar C ++ 17. Se puede usar en un **cambiar** instrucción como una sugerencia al compilador (o a cualquiera que lea el código) está pensado ese comportamiento. Actualmente el compilador de Visual C++ no advierte sobre el comportamiento de fallthrough, por lo que este atributo no tiene ningún efecto en el comportamiento del compilador. Tenga en cuenta que el atributo se aplica a una instrucción vacía en la instrucción con etiqueta; en otras palabras, el punto y coma es necesario.
+**Visual Studio 2017 y versiones posterior:** (disponible con [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) el `[[fallthrough]]` atributo se especifica en el estándar C ++ 17. Se puede usar en un **cambiar** instrucción como una sugerencia al compilador (o a cualquiera que lea el código) está pensado ese comportamiento. Microsoft C++ compilador actualmente no advierte sobre el comportamiento de fallthrough, por lo que este atributo no tiene ningún efecto en el comportamiento del compilador. Tenga en cuenta que el atributo se aplica a una instrucción vacía en la instrucción con etiqueta; en otras palabras, el punto y coma es necesario.
 
 ```cpp
 int main()

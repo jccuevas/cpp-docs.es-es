@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384756"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447250"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Consideraciones de rendimiento para la interoperabilidad (C++)
 
@@ -21,7 +21,7 @@ Este tema proporciona directrices para reducir el efecto de las transiciones de 
 
 Visual C++ admite los mismos mecanismos de interoperabilidad que otros lenguajes. NET, como Visual Basic y C# (P/Invoke), pero también proporciona compatibilidad para interoperabilidad es específica de Visual C++ (interoperabilidad de C++). Para las aplicaciones críticas para el rendimiento, es importante entender las implicaciones de rendimiento de cada técnica de interoperabilidad.
 
-Independientemente de la interoperabilidad técnica empleada, secuencias de transición especial, llamadas fragmentos de código thunk, se requieren cada vez que una función o viceversa no administrada llama a una función administrada. Estos fragmentos de código thunk se insertan automáticamente por el compilador de Visual C++, pero es importante tener en cuenta que, de manera acumulativa, estas transiciones pueden tener un costosas en términos de rendimiento.
+Independientemente de la interoperabilidad técnica empleada, secuencias de transición especial, llamadas fragmentos de código thunk, se requieren cada vez que una función o viceversa no administrada llama a una función administrada. Estos fragmentos de código thunk se insertan automáticamente por Microsoft C++ compilador, pero es importante tener en cuenta que, de manera acumulativa, estas transiciones pueden tener un costosas en términos de rendimiento.
 
 ## <a name="reducing-transitions"></a>Reducir las transiciones
 

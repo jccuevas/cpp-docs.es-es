@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331095"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222047"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Declarador de referencia rvalue: &amp;&amp;
 
@@ -35,7 +35,7 @@ Referencias a valor r admiten la implementación de *semántica de transferencia
 
 Para implementar la semántica de movimiento, suelen proporcionar un *constructor de movimiento,* y, opcionalmente, un operador de asignación de movimiento (**operador =**), a la clase. Las operaciones de copia y asignación cuyos orígenes son valores R aprovechan entonces automáticamente la semántica de transferencia de recursos. A diferencia del constructor de copia predeterminado, el compilador no proporciona un constructor de movimiento predeterminado. Para obtener más información sobre cómo escribir un constructor de movimiento y cómo utilizarlo en su aplicación, consulte [constructores de movimiento y operadores de asignación de movimiento (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-También puede sobrecargar funciones y operadores normales para aprovechar la semántica de transferencia de recursos. Visual C++ 2010 presenta la semántica de movimiento en la biblioteca estándar de C++. Por ejemplo, la clase `string` implementa operaciones que realizan semántica de transferencia de recursos. Considere el ejemplo siguiente que concatena varias cadenas e imprime el resultado:
+También puede sobrecargar funciones y operadores normales para aprovechar la semántica de transferencia de recursos. Visual Studio 2010 presenta la semántica de movimiento en el C++ biblioteca estándar. Por ejemplo, la clase `string` implementa operaciones que realizan semántica de transferencia de recursos. Considere el ejemplo siguiente que concatena varias cadenas e imprime el resultado:
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-Antes de Visual C++ 2010, con cada llamada a **operator +** asigna y devuelve un nuevo archivo temporal `string` objeto (un valor r). **operator +** no se puede anexar una cadena al otro porque no sabe si las cadenas de origen son valores l o valores r. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Mediante el uso de las referencias rvalue, **operator +** puede modificarse para que acepte valores r, que no se puede hacer referencia en otro lugar en el programa. Por lo tanto, **operator +** ahora se puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre la `string` de clases, vea [basic_string (clase)](../standard-library/basic-string-class.md).
+Antes de Visual Studio 2010, con cada llamada a **operator +** asigna y devuelve un nuevo archivo temporal `string` objeto (un valor r). **operator +** no se puede anexar una cadena al otro porque no sabe si las cadenas de origen son valores l o valores r. Si las cadenas de origen son ambas valores L, puede que se haga referencia a las mismas en otra parte del programa y, por consiguiente, no se deben modificar. Mediante el uso de las referencias rvalue, **operator +** puede modificarse para que acepte valores r, que no se puede hacer referencia en otro lugar en el programa. Por lo tanto, **operator +** ahora se puede anexar una cadena a otra. Esto puede reducir significativamente el número de asignaciones de memoria dinámica que la clase `string` debe realizar. Para obtener más información sobre la `string` de clases, vea [basic_string (clase)](../standard-library/basic-string-class.md).
 
-La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información acerca de la optimización de valor devuelto con nombre, vea [denominada optimización del valor devuelto en Visual C++ 2005](https://msdn.microsoft.com/library/ms364057.aspx).
+La semántica de transferencia de recursos también ayuda cuando el compilador no puede utilizar la optimización del valor devuelto (RVO) o la optimización del valor devuelto con nombre (NRVO). En estos casos, el compilador llama al constructor de movimiento si el tipo lo define. Para obtener más información acerca de la optimización de valor devuelto con nombre, vea [denominada optimización del valor devuelto en Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx).
 
 Para entender mejor la semántica de transferencia de recursos, considere el ejemplo de la inserción de un elemento en un objeto `vector`. Si se supera la capacidad del objeto `vector`, el objeto `vector` debe reasignar memoria para sus elementos y, a continuación, copiar cada elemento en otra ubicación de memoria para dejar espacio al elemento insertado. Cuando una operación de inserción copia un elemento, crea un nuevo elemento, llama al constructor de copias para copiar los datos del elemento anterior en el nuevo elemento y, a continuación, destruye el elemento anterior. La semántica de transferencia de recursos permite mover objetos directamente sin tener que realizar una asignación de gran consumo de memoria ni operaciones de copia.
 
 Para aprovechar la semántica de transferencia de recursos en el ejemplo `vector`, puede escribir un constructor de movimiento para mover los datos de un objeto a otro.
 
-Para obtener más información sobre la introducción de semántica de movimiento en la biblioteca estándar de C++ en Visual C++ 2010, consulte [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md).
+Para obtener más información sobre la introducción de semántica de movimiento en el C++ biblioteca estándar de Visual Studio 2010, consulte [ C++ biblioteca estándar de](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="perfect-forwarding"></a>Reenvío directo
 

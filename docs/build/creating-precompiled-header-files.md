@@ -1,20 +1,18 @@
 ---
 title: Archivos de encabezado precompilados
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341745"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220818"
 ---
 # <a name="precompiled-header-files"></a>Archivos de encabezado precompilados
 
@@ -43,7 +41,7 @@ Puede precompilar programas C y C++. En la programación de C++, es una práctic
 
 ## <a name="two-choices-for-precompiling-code"></a>Dos opciones para precompilar código
 
-Con Visual C++, puede precompilar cualquier código de C o C++; no se limita a precompilar solo los archivos de encabezado.
+Puede precompilar cualquier C o C++ código; no se limita a precompilar solo los archivos de encabezado.
 
 La precompilación requiere planificación, pero ofrece compilaciones mucho más rápidas si precompilar código fuente que no sean archivos de encabezado sencillos.
 
@@ -133,7 +131,7 @@ Esta tabla enumeran las opciones del compilador que podrían desencadenar una ad
 
 Las secciones anteriores presentan una visión general de los encabezados precompilados: /Yc y/Yu, la opción/Fp y el [hdrstop](../preprocessor/hdrstop.md) pragma. Esta sección describe un método para utilizar las opciones de encabezado precompilado manuales en un proyecto; finaliza con un archivo MAKE de ejemplo y el código que administra.
 
-Para otro enfoque para usar las opciones de encabezado precompilado manuales en un proyecto, estudie uno de los archivos MAKE ubicados en el directorio MFC\SRC que se crea durante la instalación predeterminada de Visual C++. Estos archivos MAKE adoptan un enfoque similar a la que se presentan en esta sección pero hace un mayor uso de macros de Microsoft programa mantenimiento Utility (NMAKE) y ofrecen mayor control del proceso de compilación.
+Para otro enfoque para usar las opciones de encabezado precompilado manuales en un proyecto, estudie uno de los archivos MAKE ubicados en el directorio MFC\SRC que se crea durante la instalación predeterminada de Visual Studio. Estos archivos MAKE adoptan un enfoque similar a la que se presentan en esta sección pero hace un mayor uso de macros de Microsoft programa mantenimiento Utility (NMAKE) y ofrecen mayor control del proceso de compilación.
 
 ## <a name="pch-files-in-the-build-process"></a>Archivos PCH en el proceso de compilación
 

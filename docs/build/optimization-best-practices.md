@@ -1,26 +1,26 @@
 ---
 title: Recomendaciones de optimización
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274175"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220272"
 ---
 # <a name="optimization-best-practices"></a>Recomendaciones de optimización
 
-En este documento se describen algunos procedimientos recomendados para la optimización en Visual C++.
+Este documento describe algunos procedimientos recomendados para optimizar C++ programas en Visual Studio.
 
 ## <a name="compiler-and-linker-options"></a>Opciones del compilador y del vinculador
 
 ### <a name="profile-guided-optimization"></a>Optimización guiada por perfiles
 
-Visual C++ admite *optimización guiada por perfiles* (PGO). Esta optimización utiliza datos de perfil de ejecuciones de entrenamiento de una versión instrumentada de una aplicación para controlar la optimización posterior de la aplicación. La utilización de PGO puede ocupar mucho tiempo; por tanto, no lo deberían utilizar todos los desarrolladores, sino que se recomienda utilizar PGO para la versión de lanzamiento final de un producto. Para obtener más información, consulte [optimizaciones guiadas por perfiles](profile-guided-optimizations.md).
+Visual Studio admite *optimización guiada por perfiles* (PGO). Esta optimización utiliza datos de perfil de ejecuciones de entrenamiento de una versión instrumentada de una aplicación para controlar la optimización posterior de la aplicación. La utilización de PGO puede ocupar mucho tiempo; por tanto, no lo deberían utilizar todos los desarrolladores, sino que se recomienda utilizar PGO para la versión de lanzamiento final de un producto. Para obtener más información, consulte [optimizaciones guiadas por perfiles](profile-guided-optimizations.md).
 
 Además, *Whole Program Optimization* (también se conoce como generación de código de tiempo de vínculo) y la **/O1** y **/O2** se han mejorado las optimizaciones. En general, una aplicación compilada con una de estas opciones es más rápida que la misma aplicación compilada con un compilador anterior.
 
@@ -93,13 +93,13 @@ Otra directiva pragma útil para limitar la profundidad del procesamiento en lí
 
 ## <a name="restrict-and-assume"></a>__restrict y \__assume
 
-Hay un par de palabras clave en Visual C++ que pueden mejorar el rendimiento: [__restrict](../cpp/extension-restrict.md) y [__assume](../intrinsics/assume.md).
+Hay un par de palabras clave en Visual Studio que pueden mejorar el rendimiento: [__restrict](../cpp/extension-restrict.md) y [__assume](../intrinsics/assume.md).
 
 En primer lugar, se debería tener en cuenta que `__restrict` y `__declspec(restrict)` son diferentes. Aunque están relacionadas de algún modo, su semántica es diferente. `__restrict` es un calificador de tipo, como `const` o `volatile`, pero exclusivamente para los tipos de puntero.
 
 Un puntero que se modifica con `__restrict` se conoce como un *puntero __restrict*. Un puntero __restrict es un puntero que solo se puede acceder a través de la \__restrict puntero. En otras palabras, no se puede usar otro puntero para tener acceso a los datos que apunta el \__restrict puntero.
 
-`__restrict` puede ser una herramienta eficaz para el optimizador de Visual C++, pero hay que utilizarla con cuidado. Si se utiliza incorrectamente, el optimizador podría realizar una optimización que interrumpiría su aplicación.
+`__restrict` puede ser una herramienta eficaz para Microsoft C++ optimizador, pero usar con mucho cuidado. Si se utiliza incorrectamente, el optimizador podría realizar una optimización que interrumpiría su aplicación.
 
 El `__restrict` reemplaza la palabra clave el **/OA** cambiar desde versiones anteriores.
 

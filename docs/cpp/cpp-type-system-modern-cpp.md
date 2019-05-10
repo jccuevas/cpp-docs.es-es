@@ -3,12 +3,12 @@ title: Sistema de tipos de C++ (C++ moderno)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392286"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222129"
 ---
 # <a name="c-type-system-modern-c"></a>Sistema de tipos de C++ (C++ moderno)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>Tipos (integrados) fundamentales
 
-A diferencia de algunos lenguajes, C++ no tiene un tipo base universal del que se deriven todos los demás tipos. La implementación del lenguaje de Visual C++ incluye muchas *tipos fundamentales*, también conocida como *tipos integrados*. Esto incluye los tipos numéricos, como **int**, **doble**, **largo**, **bool**, más el **char** y **wchar_t** tipos de caracteres ASCII y UNICODE, respectivamente. Los tipos más fundamentales (excepto **bool**, **doble**, **wchar_t** y tipos relacionados) todos tienen versiones sin signo, que modifican el intervalo de valores que puede almacenar la variable. Por ejemplo, un **int**, que almacena un entero con signo de 32 bits, puede representar un valor entre -2.147.483.648 a 2.147.483.647. Un **int sin signo**, que también se almacena como 32 bits, puede almacenar un valor comprendido entre 0 y 4.294.967.295. El número total de valores posibles en cada caso es el mismo; solo cambia el intervalo.
+A diferencia de algunos lenguajes, C++ no tiene un tipo base universal del que se deriven todos los demás tipos. El lenguaje incluye muchas *tipos fundamentales*, también conocida como *tipos integrados*. Esto incluye los tipos numéricos, como **int**, **doble**, **largo**, **bool**, más el **char** y **wchar_t** tipos de caracteres ASCII y UNICODE, respectivamente. Los tipos más fundamentales (excepto **bool**, **doble**, **wchar_t** y tipos relacionados) todos tienen versiones sin signo, que modifican el intervalo de valores que puede almacenar la variable. Por ejemplo, un **int**, que almacena un entero con signo de 32 bits, puede representar un valor entre -2.147.483.648 a 2.147.483.647. Un **int sin signo**, que también se almacena como 32 bits, puede almacenar un valor comprendido entre 0 y 4.294.967.295. El número total de valores posibles en cada caso es el mismo; solo cambia el intervalo.
 
 El compilador reconoce los tipos fundamentales y tiene reglas integradas que rigen las operaciones que se pueden realizar en esos tipos y cómo se pueden convertir en otros tipos fundamentales. Para obtener una lista completa de tipos integrados y su tamaño y los límites numéricos, vea [tipos fundamentales](../cpp/fundamental-types-cpp.md).
 

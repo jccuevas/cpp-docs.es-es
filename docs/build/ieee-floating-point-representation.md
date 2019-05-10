@@ -1,6 +1,6 @@
 ---
 title: Representación IEE de punto flotante
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188839"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220625"
 ---
 # <a name="ieee-floating-point-representation"></a>Representación IEE de punto flotante
 
-Microsoft Visual C++ es coherente con los estándares numéricos IEEE. El estándar IEEE 754 describe los formatos de punto flotante, una forma de representar números reales en hardware. Hay al menos cinco formatos internos para números de punto flotante que se puede representables en la que apunta el compilador de MSVC de hardware, pero el compilador usa sólo dos de ellos. El *precisión sencilla* (4 bytes) y *doble precisión* formatos (8 bytes) que se usan en Visual C++. Precisión sencilla que se declara con la palabra clave **float**. Precisión doble que se declara con la palabra clave **doble**. También especifica el estándar IEEE *Media precisión* (2 bytes) y *cuádruplo precisión* formatos (16 bytes), así como un *doble precisión extendida* (10 bytes) formato, que algunos compiladores de C y C++ se implementan como el **long double** tipo de datos. En el compilador de MSVC el **long double** tipo de datos se trata como un tipo distinto, pero el tipo de almacenamiento se asigna a **doble**. Hay, sin embargo, intrínseca y soporte técnico de lenguaje de ensamblado para realizar cálculos con los demás formatos, incluido el formato de doble precisión extendida (10 bytes), donde el hardware lo admite.
+Microsoft C++ (MSVC) es coherente con los estándares numéricos IEEE. El estándar IEEE 754 describe los formatos de punto flotante, una forma de representar números reales en hardware. Hay al menos cinco formatos internos para números de punto flotante que se puede representables en la que apunta el compilador de MSVC de hardware, pero el compilador usa sólo dos de ellos. El *precisión sencilla* (4 bytes) y *doble precisión* formatos (8 bytes) se usan en MSVC. Precisión sencilla que se declara con la palabra clave **float**. Precisión doble que se declara con la palabra clave **doble**. También especifica el estándar IEEE *Media precisión* (2 bytes) y *cuádruplo precisión* formatos (16 bytes), así como un *doble precisión extendida* (10 bytes) formato, que algunos compiladores de C y C++ se implementan como el **long double** tipo de datos. En el compilador de MSVC el **long double** tipo de datos se trata como un tipo distinto, pero el tipo de almacenamiento se asigna a **doble**. Hay, sin embargo, intrínseca y soporte técnico de lenguaje de ensamblado para realizar cálculos con los demás formatos, incluido el formato de doble precisión extendida (10 bytes), donde el hardware lo admite.
 
 Los valores se almacenan como sigue:
 

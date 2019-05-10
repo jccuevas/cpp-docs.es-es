@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 94166dfcb222d5cfece146e7ad67bb04d6ad06e9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161677"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221829"
 ---
 # <a name="platformarray-class"></a>Platform::Array (Clase)
 
@@ -56,8 +56,6 @@ La clase Array está sellada y no se puede heredar.
 El sistema de tipos en tiempo de ejecución de Windows no admite el concepto de matrices escalonadas y, por tanto, no se puede pasar un IVector < platform:: Array\<T >> como un parámetro de método o valor devuelto. Para pasar una matriz escalonada o un grupo de secuencias a través de la ABI, usa `IVector<IVector<T>^>`.
 
 Para obtener más información acerca de cuándo y cómo usar Platform:: Array, consulte [Array y WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
-
-El sistema de tipos en tiempo de ejecución de Windows no admite el concepto de matrices escalonadas y, por tanto, no se puede pasar un IVector < platform:: Array\<T >> como un parámetro de método o valor devuelto. Para pasar una matriz escalonada o un grupo de secuencias a través de la ABI, usa `IVector<IVector<T>^>`.
 
 Esta clase se define en el encabezado de vccorlib.h, que se incluye automáticamente por el compilador. Es visible en IntelliSense, pero no en Examinador de objetos porque no es un tipo público definido en platform.winmd.
 

@@ -1,23 +1,23 @@
 ---
 title: Referencia de compilación de C o C++ - Visual Studio
 description: Contenido de referencia de herramientas de compilación y de sistema de proyectos de C o C++ en Visual Studio.
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294764"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221442"
 ---
 # <a name="cc-building-reference"></a>Referencia de compilación de C/C++
 
-Visual C++ proporciona dos formas de crear un programa de C o C++. La manera más fácil (y más común) es [generar desde el IDE de Visual Studio](../creating-and-managing-visual-cpp-projects.md). La otra forma es [construido a partir de un símbolo del sistema mediante herramientas de línea de comandos](../building-on-the-command-line.md). En cualquier caso, puede crear y editar los archivos de código fuente con Visual Studio o un editor de terceros de su elección.
+Visual Studio proporciona dos formas de crear una C /C++ programa. La manera más fácil (y más común) es [generar desde el IDE de Visual Studio](../creating-and-managing-visual-cpp-projects.md). La otra forma es [construido a partir de un símbolo del sistema mediante herramientas de línea de comandos](../building-on-the-command-line.md). En cualquier caso, puede crear y editar los archivos de código fuente con Visual Studio o un editor de terceros de su elección.
 
 ## <a name="in-this-section"></a>En esta sección
 

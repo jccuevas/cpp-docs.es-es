@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345271"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449061"
 ---
 # <a name="how-to-manage-resources-c"></a>Procedimiento Administrar los recursos (C++)
 
@@ -100,7 +100,7 @@ Archivos de recursos administrados (.resx) son archivos XML. Cuando agrega un ar
 
 ## <a name="import-and-export-resources"></a>Importar y exportar recursos
 
-Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de herramientas), archivos HTML y recursos personalizados para usarlos en Visual C++. Puede exportar los mismos tipos de archivos desde un proyecto de Visual C++ para separar archivos que se pueden usar fuera del entorno de desarrollo.
+Puede importar recursos gráficos (mapas de bits, iconos, cursores y barras de herramientas), archivos HTML y recursos personalizados para usarlos en Visual C++. Puede exportar los mismos tipos de archivos desde Visual Studio C++ proyecto para separar los archivos que se pueden usar fuera del entorno de desarrollo.
 
 > [!NOTE]
 > Tipos de recursos como los aceleradores, los cuadros de diálogo y las tablas de cadenas no se pueden importar o exportar porque no son tipos de archivos independientes.

@@ -1,20 +1,20 @@
 ---
 title: Clase de contenedor::begin
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - begin method
 ms.assetid: 633708cb-17fe-488b-9fb1-1b5f2da0f46c
-ms.openlocfilehash: ede3b1d430a057772d1461d6565dcd3a13f86c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d3ea3501282c1570d9858f523c96b2eae234ecc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211941"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221731"
 ---
 # <a name="container-classbegin"></a>Clase de contenedor::begin
 
 > [!NOTE]
-> Este tema se incluye en la documentación de Visual C++ como un ejemplo no funcional de los contenedores usados en la biblioteca estándar de C++. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
+> Este tema es el de Visual Studio C++ documentación como un ejemplo funcional de los contenedores usados en el C++ biblioteca estándar. Para obtener más información, vea [Contenedores de la biblioteca estándar de C++](../standard-library/stl-containers.md).
 
 Devuelve un iterador que apunta al primer elemento de la secuencia (o más allá del final de una secuencia vacía).
 

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: af8edc41f6c2036d231eb7e922a631628294645a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857742"
 ---
 > [!IMPORTANT]
 > Los compiladores de Visual Studio y las herramientas de compilación pueden notificar muchas clases de errores y advertencias. Después de que se encuentra un error o advertencia, las herramientas de compilación pueden realizar suposiciones sobre la intención del código e intentar continuar, para que se pueden notificar más problemas al mismo tiempo. Si las herramientas hacen una suposición incorrecta, es posible que los errores o advertencias posteriores no se apliquen al proyecto. Cuando corrija problemas en el proyecto, empiece siempre por el primer error o advertencia notificados y recompile a menudo. Una solución posible desaparecerá muchos errores posteriores.

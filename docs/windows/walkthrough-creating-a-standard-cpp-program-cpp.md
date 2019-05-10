@@ -1,31 +1,26 @@
 ---
 title: 'Tutorial: Creación de un programa estándar de C++ (C++)'
 ms.custom: get-started-article
-ms.date: 09/18/2018
-f1_keywords:
-- vcfirstapp
-- vccreatefirst
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387804"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877419"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Tutorial: Creación de un programa estándar de C++ (C++)
 
-Puede usar Visual C++ en el entorno de desarrollo integrado (IDE) de Visual Studio para crear programas de C++ estándar. Siguiendo los pasos descritos en este tutorial, puede crear un proyecto, agregue un nuevo archivo al proyecto, modificar el archivo para agregar código de C++ y, a continuación, compilar y ejecutar el programa mediante el uso de Visual Studio.
+Puede usar Visual Studio para crear estándar C++ programas. Siguiendo los pasos descritos en este tutorial, puede crear un proyecto, agregue un nuevo archivo al proyecto, modificar el archivo para agregar código de C++ y, a continuación, compilar y ejecutar el programa mediante el uso de Visual Studio.
 
 Puede escribir su propio programa de C++ o utilizar uno de los programas de ejemplo. El programa de ejemplo en este tutorial es una aplicación de consola. Esta aplicación usa el `set` contenedor en la biblioteca estándar de C++.
 
-Visual C++ sigue el estándar de C++ de 2003, con estas excepciones principales: búsqueda de nombres en dos fases, especificaciones de excepciones y exportación. Además, Visual C++ admite varias características C ++ 0 x, por ejemplo, las expresiones lambda, auto, static_assert, referencias rvalue y plantillas extern.
-
 > [!NOTE]
-> Si se requiere compatibilidad con el estándar, use el `/Za` opción del compilador para deshabilitar las extensiones de Microsoft al estándar. Para obtener más información, consulte [/Za, /Ze (deshabilitar extensiones de lenguaje)](../build/reference/za-ze-disable-language-extensions.md).
+> Si el cumplimiento con una versión específica de la C++ estándar del lenguaje (es decir, C ++ 14 o C ++ 17) es necesario, utilice el `/std:C++14` o `/std:c++17` opción del compilador. (Visual Studio 2017 y versiones posterior.)
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -33,21 +28,59 @@ Para completar este tutorial, debe comprender los conceptos básicos del lenguaj
 
 ### <a name="to-create-a-project-and-add-a-source-file"></a>Para crear un proyecto y agregar un archivo de origen
 
+Los pasos siguientes varían dependiendo de qué versión de Visual Studio que esté usando. Asegúrese de que el selector de versión en la esquina superior izquierda de esta página se ha establecido correctamente.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-project-in-visual-studio-2019"></a>Para crear un C++ proyecto en Visual Studio de 2019
+
+1. En el menú principal, elija **archivo** > **New** > **proyecto** para abrir el **crear un nuevo proyecto** cuadro de diálogo cuadro.
+
+1. En la parte superior del cuadro de diálogo, establezca **lenguaje** a **C++**, establezca **plataforma** a **Windows**y establezca **deltipodeproyecto** a **consola**. 
+
+1. En la lista filtrada de tipos de proyecto, elija **aplicación de consola** , a continuación, elija **siguiente**. En la siguiente página, escriba un nombre para el proyecto y, si lo desea, especifique la ubicación del proyecto.
+
+1. Elija la **crear** botón para crear el proyecto.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-project-in-visual-studio-2017"></a>Para crear un C++ proyecto en Visual Studio 2017
+
 1. Cree un proyecto que apunta a **New** en el **archivo** menú y, a continuación, haga clic en **proyecto**.
 
 1. En el **Visual C++** panel tipos de proyecto, haga clic en **Windows Desktop**y, a continuación, haga clic en **aplicación de consola Windows**.
 
-   > [!NOTE]
-   > Para las versiones de Visual Studio anteriores a 2017, en el **nuevo proyecto** cuadro de diálogo, expanda **instalado** > **plantillas**  >  **Visual C++** y, a continuación, seleccione **Win32**. En el panel central, seleccione **Aplicación de consola Win32**.
+1. Escriba un nombre para el proyecto. De forma predeterminada, la solución que contiene el proyecto tiene el mismo nombre que el proyecto, pero puede escribir un nombre diferente. También puede escribir una ubicación diferente para el proyecto.
 
-   Escriba un nombre para el proyecto.
+1. Haga clic en **Aceptar** para crear el proyecto.
 
-   De forma predeterminada, la solución que contiene el proyecto tiene el mismo nombre que el proyecto, pero puede escribir un nombre diferente. También puede escribir una ubicación diferente para el proyecto.
+::: moniker-end
 
-   Haga clic en **Aceptar** para crear el proyecto.
+::: moniker range="vs-2015"
 
-   > [!NOTE]
-   > Las versiones de Visual Studio anteriores a 2017, complete el **Asistente para aplicaciones Win32**. Haga clic en **siguiente**, a continuación, asegúrese de que **aplicación de consola** está seleccionada y desactive el **encabezados precompilados** cuadro. Haga clic en **Finalizar**.
+### <a name="to-create-a-c-project-in-visual-studio-2015"></a>Para crear un C++ proyecto en Visual Studio 2015
+
+1. Cree un proyecto que apunta a **New** en el **archivo** menú y, a continuación, haga clic en **proyecto**.
+
+1. En el **Visual C++** panel tipos de proyecto, haga clic en **Windows Desktop**y, a continuación, haga clic en **aplicación de consola Windows**.
+
+1. En el **nuevo proyecto** cuadro de diálogo, expanda **instalado** > **plantillas** > **Visual C++** , y a continuación, seleccione **Win32**. En el panel central, seleccione **Aplicación de consola Win32**.
+
+1. Escriba un nombre para el proyecto. De forma predeterminada, la solución que contiene el proyecto tiene el mismo nombre que el proyecto, pero puede escribir un nombre diferente. También puede escribir una ubicación diferente para el proyecto.
+
+1. Haga clic en **Aceptar** para crear el proyecto.
+
+1. Completar la **Asistente para aplicaciones Win32**. 
+
+1. Haga clic en **siguiente**, a continuación, asegúrese de que **aplicación de consola** está seleccionada y desactive el **encabezados precompilados** cuadro. 
+
+1. Haga clic en **Finalizar**.
+
+::: moniker-end
+
+## <a name="add-a-new-source-file"></a>Agregue un nuevo archivo de origen
 
 1. Si **el Explorador de soluciones** no se muestra, en el **vista** menú, haga clic en **el Explorador de soluciones**.
 

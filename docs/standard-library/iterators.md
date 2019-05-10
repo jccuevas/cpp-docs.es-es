@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396150"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220333"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ Es importante comprender las promesas y las limitaciones de cada categoría de i
 > [!NOTE]
 > Puede evitar el uso de iteradores de forma explícita mediante bucles de tipo range-for. Para obtener más información, consulte [basada en intervalo para la instrucción](../cpp/range-based-for-statement-cpp.md).
 
-Visual C++ ahora ofrece iteradores comprobados e iteradores de depuración para asegurarse de que no sobrescriba los límites de su contenedor. Para obtener más información, vea [Iteradores comprobados](../standard-library/checked-iterators.md) y [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md).
+Microsoft C++ ahora ofrece iteradores comprobados e iteradores de depuración para asegurarse de que no sobrescriba los límites de su contenedor. Para obtener más información, vea [Iteradores comprobados](../standard-library/checked-iterators.md) y [Compatibilidad de los iteradores de depuración](../standard-library/debug-iterator-support.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323505"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220359"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -8262,7 +8262,7 @@ Contiene las coordenadas x e y del cursor. Estas coordenadas siempre son coorden
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una de las pruebas de posicionamiento del mouse enumera valores que se muestran a continuación.
+Una de las pruebas de posicionamiento del mouse valores enumerados. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obtener la lista de valores.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Parámetros
 
 *nHitTest*<br/>
-Especifica el [código de prueba de posicionamiento](#onnchittest). Una prueba de posicionamiento es una prueba que determina la ubicación del cursor.
+Especifica el [código de prueba de posicionamiento](#onnchittest). Una prueba de posicionamiento es una prueba que determina la ubicación del cursor. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obtener la lista de valores.
 
 *point*<br/>
 Especifica un `CPoint` objeto que contiene x e y coordenadas de la posición del cursor de la pantalla. Estas coordenadas siempre son relativas a la esquina superior izquierda de la pantalla.
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Parámetros
 
 *nHitTest*<br/>
-Especifica el [código de prueba de posicionamiento](#onnchittest). Una prueba de posicionamiento es una prueba que determina la ubicación del cursor.
+Especifica el [código de prueba de posicionamiento](#onnchittest). Una prueba de posicionamiento es una prueba que determina la ubicación del cursor. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obtener la lista de valores.
 
 *point*<br/>
 Especifica un `CPoint` objeto que contiene x e y coordenadas de la posición del cursor de la pantalla. Estas coordenadas siempre son relativas a la esquina superior izquierda de la pantalla.
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Parámetros
 
 *nHitTest*<br/>
-Especifica el [código de prueba de posicionamiento](#onnchittest). Una prueba de posicionamiento es una prueba que determina la ubicación del cursor.
+Especifica el [código de prueba de posicionamiento](#onnchittest). Una prueba de posicionamiento es una prueba que determina la ubicación del cursor. Consulte [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) para obtener la lista de valores.
 
 *point*<br/>
 Especifica un `CPoint` objeto que contiene x e y coordenadas de la posición del cursor de la pantalla. Estas coordenadas siempre son relativas a la esquina superior izquierda de la pantalla.

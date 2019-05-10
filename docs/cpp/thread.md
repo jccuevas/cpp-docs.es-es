@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330523"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221965"
 ---
 # <a name="thread"></a>thread
 
@@ -40,7 +40,7 @@ Al usar variables locales de subproceso en bibliotecas de carga dinámica, es pr
 
 1. Si la variable se inicializa con una llamada de función (incluidos constructores), solo se llamará a esta función para el subproceso que produjo el archivo binario o DLL cargar en el proceso y para esos subprocesos que se inició después de que se cargó el archivo binario o DLL. Las funciones de inicialización no se llama a ningún otro subproceso que ya se estaba ejecutando cuando se cargó la DLL. Inicialización dinámica produce en la llamada de DllMain para DLL_THREAD_ATTACH, pero el archivo DLL nunca obtiene que si el archivo DLL no está en el proceso cuando se inicia el subproceso del mensaje.
 
-1. Por lo general, las variables locales del subproceso que se inicializan estáticamente con valores constantes se inicializan correctamente en todos los subprocesos. Sin embargo, a partir de diciembre de 2017 hay un problema conocido de conformidad del compilador de Microsoft Visual C++ mediante el cual recepción las variables constexpr dinámica en lugar de la inicialización estática.
+1. Por lo general, las variables locales del subproceso que se inicializan estáticamente con valores constantes se inicializan correctamente en todos los subprocesos. Sin embargo, a partir de diciembre de 2017 hay un problema conocido de conformidad de Microsoft C++ compilador mediante el cual las variables constexpr recepción dinámica en lugar de la inicialización estática.
 
    Nota: Estos problemas se esperan que se solucione en futuras actualizaciones del compilador.
 

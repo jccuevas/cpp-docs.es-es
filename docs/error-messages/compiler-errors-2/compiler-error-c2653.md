@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-ms.openlocfilehash: d4a3a8a74483317b87e16458f44016f0aeca1379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2882764e1c0a84634c500d920f327fbebc4b19a9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350785"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447939"
 ---
 # <a name="compiler-error-c2653"></a>Error del compilador C2653
 
@@ -21,7 +21,7 @@ La sintaxis del lenguaje requiere una clase, estructura, unión o nombre del esp
 
 Este error puede producirse cuando se usa un nombre que no se ha declarado como una clase, estructura, unión o espacio de nombres delante de un operador de ámbito. Para corregir este problema, declare el nombre o incluir el encabezado que declara el nombre antes de utilizarse.
 
-También es posible si se intenta definir C2653 un *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres con ámbito anidado. Compuesta de espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. Se admiten los espacios de nombres compuestas a partir de Visual Studio 2015 Update 3 cuando se especifica la [/std: c ++ más reciente](../../build/reference/std-specify-language-standard-version.md) opción del compilador. A partir de Visual C++ 2017 versión 15.5, el compilador admite las definiciones de espacio de nombres compuestos cuando el [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) se especifica la opción.
+También es posible si se intenta definir C2653 un *espacio de nombres compuesto*, un espacio de nombres que contiene uno o más nombres de espacio de nombres con ámbito anidado. Compuesta de espacio de nombres no se permiten definiciones en C++ antes de C ++ 17. Se admiten los espacios de nombres compuestas a partir de Visual Studio 2015 Update 3 cuando se especifica la [/std: c ++ más reciente](../../build/reference/std-specify-language-standard-version.md) opción del compilador. A partir de Visual Studio 2017 versión 15.5, el compilador admite las definiciones de espacio de nombres compuestos cuando el [/std: c ++ 17](../../build/reference/std-specify-language-standard-version.md) se especifica la opción.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -42,7 +42,7 @@ En el código que no se compila para C ++ 17 o posterior estándares, espacios d
 
 ```cpp
 // C2653b.cpp
-namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,
+namespace a::b {int i;}   // C2653 prior to Visual Studio 2015 Update 3,
                           // C2429 thereafter. Use /std:c++17 or /std:c++latest to fix.
 
 namespace a {             // Use this form for compliant code under /std:c++14 (the default)

@@ -1,11 +1,7 @@
 ---
 title: Establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos
 ms.custom: conceptual
-ms.date: 11/04/2016
-f1_keywords:
-- include
-- Lib
-- Path
+ms.date: 05/06/2019
 helpviewer_keywords:
 - environment variables [C++]
 - VCVARS32.bat file
@@ -18,18 +14,18 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: fed3360294bec724af09b87e5abd7c6bb22fa285
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 30dadf365186ae74144a3225889c08eedfb89b47
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315396"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217605"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>Establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos
 
-Las herramientas de línea de comandos de compilación de Visual C++, requieren varias variables de entorno personalizadas para la configuración de instalación y compilación. Cuando se instala una carga de trabajo de C++ mediante el instalador de Visual Studio, crea archivos de comandos personalizada o archivos por lotes, que establece las variables de entorno necesarias. El instalador utiliza, a continuación, estos archivos de comandos para crear accesos directos del menú Inicio de Windows abrir una ventana de símbolo del sistema para desarrolladores. Estos métodos abreviados de establecer las variables de entorno para una determinada configuración de compilación. Cuando desea utilizar las herramientas de línea de comandos, puede ejecutar uno de estos métodos abreviados, o puede abrir una ventana del símbolo del sistema sin formato y, a continuación, ejecute uno de los archivos de comandos personalizada para establecer el entorno de configuración de compilación por sí mismo. Para obtener más información, consulte [usar el conjunto de herramientas desde la línea de comandos MSVC](building-on-the-command-line.md).
+Microsoft C++ herramientas de compilación de línea de comandos (MSVC) requieren varias variables de entorno personalizadas para la configuración de instalación y compilación. Cuando se instala una carga de trabajo de C++ mediante el instalador de Visual Studio, crea archivos de comandos personalizada o archivos por lotes, que establece las variables de entorno necesarias. El instalador utiliza, a continuación, estos archivos de comandos para crear accesos directos del menú Inicio de Windows abrir una ventana de símbolo del sistema para desarrolladores. Estos métodos abreviados de establecer las variables de entorno para una determinada configuración de compilación. Cuando desea utilizar las herramientas de línea de comandos, puede ejecutar uno de estos métodos abreviados, o puede abrir una ventana del símbolo del sistema sin formato y, a continuación, ejecute uno de los archivos de comandos personalizada para establecer el entorno de configuración de compilación por sí mismo. Para obtener más información, consulte [usar el conjunto de herramientas desde la línea de comandos MSVC](building-on-the-command-line.md).
 
-Las herramientas de línea de comandos de Visual C++ usan las variables de entorno PATH, TMP, INCLUDE, LIB y LIBPATH y también utilizar otras variables de entorno específicas de sus herramientas instaladas, plataformas y SDK. Incluso una simple instalación de Visual Studio puede establecer veinte o más variables de entorno. Dado que los valores de estas variables de entorno son específicos de la instalación y elija la configuración de compilación y pueden cambiarse mediante las actualizaciones del producto, se recomienda que use un acceso directo del símbolo desarrollador o uno de los personalizar archivos de comandos para establecerlos, en lugar de establecerlos en el entorno de Windows por su cuenta.
+Las herramientas de línea de comandos de MSVC usan las variables de entorno PATH, TMP, INCLUDE, LIB y LIBPATH y también utilizar otras variables de entorno específicas de sus herramientas instaladas, plataformas y SDK. Incluso una simple instalación de Visual Studio puede establecer veinte o más variables de entorno. Dado que los valores de estas variables de entorno son específicos de la instalación y elija la configuración de compilación y pueden cambiarse mediante las actualizaciones del producto, se recomienda que use un acceso directo del símbolo desarrollador o uno de los personalizar archivos de comandos para establecerlos, en lugar de establecerlos en el entorno de Windows por su cuenta.
 
 Para ver qué variables de entorno se establecen mediante un acceso directo del símbolo para desarrolladores, puede usar el comando. Abra una ventana del símbolo del sistema sin formato y capturar la salida del comando SET para una línea base. Abra una ventana de símbolo del sistema para desarrolladores y capturar la salida del comando SET para la comparación. Una herramienta de comparación como el integrado en el IDE de Visual Studio puede ser útil para comparar las variables de entorno y ver lo que se establece mediante el símbolo del sistema para desarrolladores. Para obtener información acerca de las variables de entorno específico utilizado por el compilador y vinculador, vea [Variables de entorno de CL](reference/cl-environment-variables.md).
 
