@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242884"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447186"
 ---
 # <a name="compiler-error-c3867"></a>Error del compilador C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242884"
 
 Ha intentado tomar la dirección de una función miembro sin calificar la función miembro con su nombre de clase y el operador de dirección.
 
-Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: conformidad de puntero a miembro mejorada. El código compilado antes de Visual C++ 2005 ahora generará el error C3867.
+Este error también puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: conformidad de puntero a miembro mejorada. El código compilado antes de Visual Studio 2005 generará el error C3867.
 
 ## <a name="example"></a>Ejemplo
 
