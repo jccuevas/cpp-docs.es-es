@@ -1,23 +1,25 @@
 ---
 title: Asistente para consumidores ODBC MFC
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310319"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525368"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Asistente para consumidores ODBC MFC
 
-> [!WARNING]
-> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
+::: moniker range="vs-2019"
+
+Este asistente no está disponible en Visual Studio de 2019 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Este asistente configura una clase de conjunto de registros ODBC y los enlaces de datos necesario para tener acceso al origen de datos especificado.
 
@@ -73,6 +75,8 @@ Este asistente configura una clase de conjunto de registros ODBC y los enlaces d
 - **Enlazar todas las columnas**
 
    Especifica si todas las columnas de la tabla seleccionada están enlazadas. Si selecciona esta casilla (predeterminado), se enlazan todas las columnas; Si no selecciona esta casilla, no hay columnas se enlazan y debe enlazar manualmente en la clase de conjunto de registros.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 

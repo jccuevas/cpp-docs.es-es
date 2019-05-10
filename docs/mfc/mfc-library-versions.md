@@ -1,6 +1,6 @@
 ---
 title: Versiones de la biblioteca MFC
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238512"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524795"
 ---
 # <a name="mfc-library-versions"></a>Versiones de la biblioteca MFC
 
@@ -129,7 +129,7 @@ Las bibliotecas de importación necesarias para crear aplicaciones o archivos DL
 
 Si se vincula dinámicamente a la versión compartida del archivo DLL de MFC, ya sea desde una aplicación o desde un archivo DLL de extensión MFC, debe incluir la búsqueda de coincidencias MFC*versión*. Archivo DLL o MFC*versión*U.DLL al implementar el producto.
 
-Para obtener una lista de DLL de Visual C++ que se puede distribuir con sus aplicaciones, consulte [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Para obtener una lista de Visual C++ archivos DLL que se puede distribuir con sus aplicaciones, consulte [código distribuible para Microsoft Visual Studio 2017 y Microsoft Visual Studio 2017 SDK (incluye utilidades y archivos BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) o [ Código distribuible para Visual Studio de 2019](/visualstudio/releases/2019/redistribution).
 
 Para obtener más información sobre la compatibilidad con MBCS y Unicode en MFC, vea [juego de caracteres Multibyte (MBCS) compatibilidad con Unicode y](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
