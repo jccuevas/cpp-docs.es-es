@@ -1,19 +1,19 @@
 ---
 title: 'Tutorial: Compilar un programa de C en la línea de comandos'
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03876ba47270252caa21d7e2994a4f8321a6d59e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314187"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877197"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Tutorial: Compilar un programa de C en la línea de comandos
 
@@ -27,40 +27,65 @@ Para completar este tutorial, deben haber instalado Visual Studio y los componen
 
 Visual Studio es un entorno de desarrollo integrado que admite un editor completo, los administradores de recursos, depuradores y los compiladores para numerosos lenguajes y plataformas. Para obtener información sobre estas características y cómo descargar e instalar Visual Studio, incluida la edición de Visual Studio Community gratis, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
 
-Build Tools para Visual Studio, versión de Visual Studio instala solo el conjunto de herramientas de línea de comandos, compiladores, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para laboratorios de compilación o aula ejercita e instala de forma relativamente rápida. Para instalar solo el conjunto de herramientas de línea de comandos, descargue [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721) y ejecute el instalador.
+Build Tools para Visual Studio, versión de Visual Studio instala solo el conjunto de herramientas de línea de comandos, compiladores, herramientas y las bibliotecas que necesita para compilar programas de C y C++. Es perfecto para laboratorios de compilación o aula ejercita e instala de forma relativamente rápida. Para instalar solo el conjunto de herramientas de línea de comandos, descargue las herramientas de compilación para Visual Studio desde el [descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/) página y ejecute el instalador.
 
 Antes de generar un programa de C o C++ en la línea de comandos, debe comprobar que las herramientas están instaladas y que puede acceder a ellos desde la línea de comandos. Visual C++ tiene requisitos complejos para el entorno de línea de comandos encontrar las herramientas, encabezados y bibliotecas que utiliza. **No se puede utilizar Visual C++ en una ventana del símbolo del sistema sin formato** sin una preparación. Necesita un *símbolo* ventana, que es una ventana de símbolo del sistema normal que tenga todas las variables de entorno necesarias. Afortunadamente, Visual C++ instala accesos directos para iniciar los símbolos del sistema para desarrolladores que tienen el entorno configurado para las compilaciones de línea de comandos. Lamentablemente, los nombres de los accesos directos del símbolo del sistema para desarrolladores y dónde están ubicados son diferentes en casi todas las versiones de Visual C++ y en diferentes versiones de Windows. La primera tarea del tutorial consiste en encontrar el método abreviado de derecho a usar.
 
 > [!NOTE]
 > Un acceso directo del símbolo para desarrolladores establece automáticamente las rutas de acceso correctas para el compilador y las herramientas y para los encabezados necesarios y las bibliotecas. Algunos de estos valores son diferentes para cada configuración de compilación. Deben establecer estos valores de entorno usted mismo si no usa uno de los métodos abreviados. Para obtener más información, consulte [establecer la ruta de acceso y las Variables de entorno para compilaciones de línea de comandos](setting-the-path-and-environment-variables-for-command-line-builds.md). Dado el entorno de compilación es complejo, se recomienda encarecidamente que usar un acceso directo del símbolo para desarrolladores en lugar de crear el suyo propio.
 
-## <a name="open-a-developer-command-prompt"></a>Abra un símbolo del sistema para desarrolladores
+Estas instrucciones varían dependiendo de qué versión de Visual Studio que esté usando. Antes de continuar, asegúrese de que el selector de versión en la esquina superior izquierda de esta página está establecido correctamente.
 
-1. Si ha instalado Visual Studio 2017 en Windows 10, abra el menú Inicio y, a continuación, desplácese hacia abajo y abra el **Visual Studio 2017** carpeta (no en la aplicación de Visual Studio 2017). Elija **símbolo del sistema para desarrolladores para VS 2017** para abrir la ventana de símbolo del sistema.
+::: moniker range="vs-2019"
 
-   Si ha instalado Microsoft Visual C++ Build Tools 2015 en Windows 10, abra el **iniciar** menú y, a continuación, desplácese hacia abajo y abra el **Visual C++ Build Tools** carpeta. Elija **línea de comandos de herramientas nativo de Visual C++ 2015 x86** para abrir la ventana de símbolo del sistema.
+## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Abra un símbolo del sistema para desarrolladores en Visual Studio de 2019
 
-   Si está usando una versión diferente de Visual Studio o ejecutan una versión diferente de Windows, busque en el menú Inicio o página de inicio de una carpeta de herramientas de Visual Studio que contenga un acceso directo del símbolo para desarrolladores. También puede usar la función de búsqueda de Windows para buscar "símbolo" y elija una que coincida con la versión instalada de Visual Studio. Use el método abreviado para abrir la ventana de símbolo del sistema.
+Si ha instalado Visual Studio de 2019 en Windows 10, abra el menú Inicio y, a continuación, desplácese hacia abajo y abra el **2019 de Visual Studio** carpeta (no en la aplicación de Visual Studio de 2019). Elija **símbolo del sistema para desarrolladores para VS 2019** para abrir la ventana de símbolo del sistema.
 
-1. A continuación, compruebe que la línea de comandos para desarrolladores de Visual C++ se ha configurado correctamente. En la ventana de símbolo del sistema, escriba `cl` y compruebe que el resultado es similar a esto:
+Si usa una versión diferente de Windows, busque en el menú Inicio o la página de inicio de una carpeta de herramientas de Visual Studio que contenga un acceso directo del símbolo para desarrolladores. También puede usar la función de búsqueda de Windows para buscar "símbolo" y elija una que coincida con la versión instalada de Visual Studio. Use el método abreviado para abrir la ventana de símbolo del sistema.
 
-   ```Output
-   C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
-   Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
-   Copyright (C) Microsoft Corporation.  All rights reserved.
+::: moniker-end
 
-   usage: cl [ option... ] filename... [ /link linkoption... ]
-   ```
+::: moniker range="vs-2017"
 
-   Puede haber diferencias en el directorio actual o números de versión, según la versión de Visual C++ y las actualizaciones instaladas. Si la salida anterior es similar a lo que ve, estará listo para compilar programas de C o C++ en la línea de comandos.
+## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Abra un símbolo del sistema para desarrolladores de Visual Studio 2017
 
-   > [!NOTE]
-   > Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes," error de C1034 o LNK1104 al ejecutar el **cl** de comandos, o bien no está usando un símbolo del sistema, o algo va mal con la instalación de Visual C++. Debe corregir este problema antes de continuar.
+Si ha instalado Visual Studio 2017 en Windows 10, abra el menú Inicio y, a continuación, desplácese hacia abajo y abra el **Visual Studio 2017** carpeta (no en la aplicación de Visual Studio 2017). Elija **símbolo del sistema para desarrolladores para VS 2017** para abrir la ventana de símbolo del sistema.
 
-   Si no se encuentra el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Si usa Visual Studio 2017, intente volver a instalar el **desarrollo de escritorio con C++** carga de trabajo en el instalador de Visual Studio. Para obtener más información, consulte [compatibilidad Install C++ en Visual Studio](vscpp-step-0-installation.md). O bien, vuelva a instalar el [Build Tools para Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=875721). No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
+Si está ejecutando una versión diferente de Windows, busque en el menú Inicio o la página de inicio de una carpeta de herramientas de Visual Studio que contenga un acceso directo del símbolo para desarrolladores. También puede usar la función de búsqueda de Windows para buscar "símbolo" y elija una que coincida con la versión instalada de Visual Studio. Use el método abreviado para abrir la ventana de símbolo del sistema.
 
-   > [!NOTE]
-   > Según la versión de Windows en el equipo y la configuración de seguridad del sistema, es posible que deba haga doble clic para abrir el menú contextual para el acceso de directo del símbolo del sistema para desarrolladores y, a continuación, elija **ejecutar como administrador** a compilar y ejecutar el programa que se crea siguiendo este tutorial correctamente.
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Abra un símbolo del sistema para desarrolladores de Visual Studio 2015
+
+Si ha instalado Microsoft Visual C++ Build Tools 2015 en Windows 10, abra el **iniciar** menú y, a continuación, desplácese hacia abajo y abra el **Visual C++ Build Tools** carpeta. Elija **línea de comandos de herramientas nativo de Visual C++ 2015 x86** para abrir la ventana de símbolo del sistema.
+
+Si está ejecutando una versión diferente de Windows, busque en el menú Inicio o la página de inicio de una carpeta de herramientas de Visual Studio que contenga un acceso directo del símbolo para desarrolladores. También puede usar la función de búsqueda de Windows para buscar "símbolo" y elija una que coincida con la versión instalada de Visual Studio. Use el método abreviado para abrir la ventana de símbolo del sistema.
+   
+::: moniker-end
+
+
+A continuación, compruebe que la línea de comandos para desarrolladores de Visual C++ se ha configurado correctamente. En la ventana de símbolo del sistema, escriba `cl` y compruebe que el resultado es similar a esto:
+
+```Output
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+```
+
+Puede haber diferencias en el directorio actual o números de versión, según la versión de Visual C++ y las actualizaciones instaladas. Si la salida anterior es similar a lo que ve, estará listo para compilar programas de C o C++ en la línea de comandos.
+
+> [!NOTE]
+> Si se produce un error, como "'cl' no se reconoce como un comando interno o externo, programa operable o archivo por lotes," error de C1034 o LNK1104 al ejecutar el **cl** de comandos, o bien no está usando un símbolo del sistema, o algo va mal con la instalación de Visual C++. Debe corregir este problema antes de continuar.
+
+Si no se encuentra el programador acceso directo del símbolo del sistema, o si recibe un mensaje de error al escribir `cl`, a continuación, la instalación de Visual C++ puede tener un problema. Si usa Visual Studio 2017 o versiones posteriores, intente volver a instalar el **con el desarrollo de escritorio C++**  carga de trabajo en el instalador de Visual Studio. Para obtener más información, consulte [compatibilidad Install C++ en Visual Studio](vscpp-step-0-installation.md). O bien, vuelva a instalar las herramientas de compilación desde el [descargas de Visual Studio](https://visualstudio.microsoft.com/downloads/) página. No vaya a la sección siguiente hasta que esto funcione. Para obtener más información sobre la instalación y solución de problemas de Visual Studio, consulte [instalar Visual Studio](/visualstudio/install/install-visual-studio).
+
+> [!NOTE]
+> Según la versión de Windows en el equipo y la configuración de seguridad del sistema, es posible que deba haga doble clic para abrir el menú contextual para el acceso de directo del símbolo del sistema para desarrolladores y, a continuación, elija **ejecutar como administrador** a compilar y ejecutar el programa que se crea siguiendo este tutorial correctamente.
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>Crear un archivo de código fuente de C y compilarlo en la línea de comandos
 
@@ -154,9 +179,9 @@ El compilador, cl.exe, tiene muchas más opciones que puede aplicar para crear, 
 
 Puede usar NMAKE y archivos MAKE o archivos de proyecto y MSBuild para configurar y compilar los proyectos más complejos en la línea de comandos. Para obtener más información sobre el uso de estas herramientas, consulte [referencia de NMAKE](reference/nmake-reference.md) y [MSBuild](msbuild-visual-cpp.md).
 
-Los lenguajes C y C++ son similares, pero no es el mismo. El compilador de MSVC usa una regla sencilla para determinar el idioma que desea utilizar cuando se compila el código. De forma predeterminada, el compilador de MSVC trata todos los archivos que finalizan en .c como código fuente de C y todos los archivos que finalizan en .cpp como código fuente de C++. Para forzar al compilador que trate todos los archivos como C no dependientes de la extensión de nombre de archivo, use el [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) opción del compilador.
+Los lenguajes C y C++ son similares, pero no es el mismo. Microsoft C /C++ compilador (MSVC) usa una regla sencilla para determinar el idioma que desea utilizar cuando se compila el código. De forma predeterminada, el compilador de MSVC trata todos los archivos que finalizan en .c como código fuente de C y todos los archivos que finalizan en .cpp como código fuente de C++. Para forzar al compilador que trate todos los archivos como C no dependientes de la extensión de nombre de archivo, use el [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) opción del compilador.
 
-El compilador de C de Visual C++ es compatible con el estándar ISO C99, pero no es totalmente compatible. En la mayoría de los casos, el código de C portátil compilará y ejecutará según lo previsto. Visual C++ no admite la mayoría de los cambios en ISO C11. Ciertas funciones de biblioteca y los nombres de función POSIX están en desuso por el compilador de MSVC. Se admiten las funciones, pero han cambiado los nombres preferidos. Para obtener más información, consulte [características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md) y [advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
+MSVC es compatible con el estándar ISO C99, pero no es totalmente compatible. En la mayoría de los casos, el código de C portátil compilará y ejecutará según lo previsto. Visual C++ no admite la mayoría de los cambios en ISO C11. Ciertas funciones de biblioteca y los nombres de función POSIX están en desuso por MSVC. Se admiten las funciones, pero han cambiado los nombres preferidos. Para obtener más información, consulte [características de seguridad de CRT](../c-runtime-library/security-features-in-the-crt.md) y [advertencia del compilador (nivel 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
 ## <a name="see-also"></a>Vea también
 

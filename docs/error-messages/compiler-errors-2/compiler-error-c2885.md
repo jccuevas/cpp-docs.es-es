@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388779"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447701"
 ---
 # <a name="compiler-error-c2885"></a>Error del compilador C2885
 
@@ -21,7 +21,7 @@ Ha utilizado un [mediante](../../cpp/using-declaration.md) declaración incorrec
 
 ## <a name="example"></a>Ejemplo
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: ya no es válido tener un `using` declaración a un tipo anidado; debe calificar explícitamente cada referencia de tipo anidado, coloque el tipo en un nombre espacio o crear una definición de tipo.
+Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: ya no es válido tener un `using` declaración a un tipo anidado; debe calificar explícitamente cada referencia de tipo anidado, coloque el tipo en una n espacio ombres, o crear una definición de tipo.
 
 El ejemplo siguiente genera C2885.
 
