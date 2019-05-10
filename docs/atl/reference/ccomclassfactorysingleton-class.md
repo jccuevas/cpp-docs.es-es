@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260180"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221177"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton (clase)
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 Cada llamada a la [CreateInstance](#createinstance) método simplemente consulta este objeto para un puntero de interfaz.
 
-Tenga en cuenta que el formulario actual de `m_spObj` presenta un cambio importante de la forma en que `CComClassFactorySingleton` funcionó en versiones anteriores de ATL. En versiones anteriores el `CComClassFactorySingleton` se creó el objeto al mismo tiempo como el generador de clases, durante la inicialización del servidor. En Visual C++ .NET 2003, el objeto se crea de forma diferida, en la primera solicitud. Este cambio podría producir errores en programas que se basan en la inicialización temprana.
+Tenga en cuenta que el formulario actual de `m_spObj` presenta un cambio importante de la forma en que `CComClassFactorySingleton` funcionó en versiones anteriores de ATL. En versiones anteriores el `CComClassFactorySingleton` se creó el objeto al mismo tiempo como el generador de clases, durante la inicialización del servidor. En Visual C++.NET 2003 y versiones posteriores, el objeto se crea de forma diferida, en la primera solicitud. Este cambio podría producir errores en programas que se basan en la inicialización temprana.
 
 ## <a name="see-also"></a>Vea también
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216426"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222052"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Operadores de desplazamiento a izquierda y derecha (&gt; &gt; y &lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Si desplaza a la izquierda un número con signo de modo que el bit de signo se vea afectado, el resultado es indefinido. En el ejemplo siguiente se muestra lo que ocurre en Visual C++ cuando un 1 bit se desplaza a la izquierda hasta la posición del bit de signo.
+Si desplaza a la izquierda un número con signo de modo que el bit de signo se vea afectado, el resultado es indefinido. El ejemplo siguiente muestra lo que sucede cuando un 1 bit se desplaza hacia la izquierda en la posición de bit de signo.
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 El operador de desplazamiento a la derecha hace que el patrón de bits en *shift-expression* se desplace a la derecha el número de posiciones especificado por *additive-expression*. En el caso de números sin signo, las posiciones de bits que quedan vacantes debido a la operación de desplazamiento se rellenan con ceros. Si se trata de números con signo, el bit de signo se emplea para rellenar las posiciones de bits vacantes. Es decir, si el número es positivo se usa 0 y si el número es negativo se usa 1.
 
 > [!IMPORTANT]
-> El resultado de un desplazamiento a la derecha de un número negativo con signo depende de la implementación. Aunque Visual C++ usa el bit de signo para rellenar las posiciones de bits vacantes, no hay ninguna garantía de que otras implementaciones también lo hagan.
+> El resultado de un desplazamiento a la derecha de un número negativo con signo depende de la implementación. Aunque Microsoft C++ compilador usa el bit de signo para rellenar las posiciones de bits vacantes, no hay ninguna garantía de que otras implementaciones también lo hagan.
 
 En este ejemplo se muestran operaciones de desplazamiento a la derecha que usan números sin signo:
 

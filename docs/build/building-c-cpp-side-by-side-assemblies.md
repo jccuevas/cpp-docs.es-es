@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195149"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221129"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Compilar ensamblados simultáneos de C/C++
 
 Un [side-by-side ensamblado](/windows/desktop/SbsCs/about-side-by-side-assemblies-) es una colección de recursos: un grupo de archivos DLL, clases de windows, servidores COM, bibliotecas de tipos o interfaces, disponibles para una aplicación para usar en tiempo de ejecución. La principal ventaja de volver a empaquetar los archivos DLL en ensamblados es que se pueden usar varias versiones de ensamblados de las aplicaciones al mismo tiempo y es posible a los ensamblados de servicio instalado actualmente en el caso de una versión de actualización.
 
-Una aplicación de Visual C++ puede utilizar uno o varios archivos DLL en distintas partes de la aplicación. En tiempo de ejecución, los archivos DLL se cargan en el proceso principal y se ejecuta el código necesario. La aplicación se basa en el sistema operativo para buscar los archivos DLL solicitados, saber qué otros archivos DLL dependientes debe cargarse y, a continuación, cargarlos junto con el archivo DLL solicitado. En las versiones de sistemas operativos Windows anteriores a Windows XP, Windows Server 2003 y Windows Vista, el cargador del sistema operativo busca archivos DLL dependientes en la carpeta local de la aplicación o en otra carpeta especificada en la ruta de acceso del sistema. En Windows XP, Windows Server 2003 y Windows Vista, el cargador del sistema operativo también puede buscar archivos DLL dependientes mediante una [manifiesto](/windows/desktop/sbscs/manifests) archivo y busque los ensamblados en paralelo que contienen estos archivos DLL.
+Un C++ aplicación puede usar uno o varios archivos DLL en distintas partes de la aplicación. En tiempo de ejecución, los archivos DLL se cargan en el proceso principal y se ejecuta el código necesario. La aplicación se basa en el sistema operativo para buscar los archivos DLL solicitados, saber qué otros archivos DLL dependientes debe cargarse y, a continuación, cargarlos junto con el archivo DLL solicitado. En las versiones de sistemas operativos Windows anteriores a Windows XP, Windows Server 2003 y Windows Vista, el cargador del sistema operativo busca archivos DLL dependientes en la carpeta local de la aplicación o en otra carpeta especificada en la ruta de acceso del sistema. En Windows XP, Windows Server 2003 y Windows Vista, el cargador del sistema operativo también puede buscar archivos DLL dependientes mediante una [manifiesto](/windows/desktop/sbscs/manifests) archivo y busque los ensamblados en paralelo que contienen estos archivos DLL.
 
 De forma predeterminada, cuando se genera un archivo DLL con Visual Studio, tiene un [manifiesto de aplicación](/windows/desktop/SbsCs/application-manifests) incrustado como recurso del tipo RT_MANIFEST con un identificador igual a 2. Al igual que para un archivo ejecutable, este manifiesto describe las dependencias de este archivo DLL en otros ensamblados. Esto supone que el archivo DLL no forma parte de un ensamblado en paralelo y las aplicaciones que dependen de este archivo DLL no se van a usar un manifiesto de aplicación para cargarlo, pero en su lugar se basan en el cargador del sistema operativo para encontrar este archivo DLL en la ruta de acceso del sistema.
 

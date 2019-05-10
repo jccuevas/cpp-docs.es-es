@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: 1d58efd57433a065f08e4111302f358405e3b9ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe765fa49b9aa11667e1eac4a9cfed54bb84fd8f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311441"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447866"
 ---
 # <a name="compiler-warning-c4430"></a>Advertencia del compilador C4430
 
 falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
 
-Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual C++ 2005: todas las declaraciones deben especificar explícitamente el tipo; ya no se presupone int.
+Este error puede generarse como resultado del trabajo de conformidad del compilador efectuado para Visual Studio 2005: todas las declaraciones deben especificar explícitamente el tipo; ya no se presupone int.
 
 C4430 siempre se emite como un error.  Puede desactivar esta advertencia con el `#pragma warning` o **/wd**; vea [advertencia](../../preprocessor/warning.md) o  [ /w, / W0, / W1, / W2, / w3, / W4, / W1, / W2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (nivel de advertencia)](../../build/reference/compiler-option-warning-level.md)para obtener más información.
 

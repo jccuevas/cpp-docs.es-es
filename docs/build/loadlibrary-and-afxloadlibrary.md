@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 96b8c0ce1116dbb08260573f25f941ca54169127
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 661d7742fb0fedae45bc063ba3821193d6c5438e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273794"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220613"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary y AfxLoadLibrary
 
@@ -48,4 +48,4 @@ Si Windows no pueden cargar el archivo DLL, el proceso puede intentar recuperars
 
 ## <a name="see-also"></a>Vea también
 
-- [Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+- [Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

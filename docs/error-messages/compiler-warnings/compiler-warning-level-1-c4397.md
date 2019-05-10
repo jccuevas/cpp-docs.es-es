@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: 4ad690d78c1544adbe365a35ba3b5921c883631e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f0a3c31f460a66523ed1c327cee097dc890bbeb
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365395"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447676"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>Advertencia del compilador (nivel 1) C4397
 
 DefaultCharSetAttribute se pasa por alto
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> se omite el compilador de Visual C++. Para especificar un juego de caracteres para el archivo DLL, utilice la opción CharSet de DllImport. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> se omite el Microsoft C++ compilador. Para especificar un juego de caracteres para el archivo DLL, utilice la opción CharSet de DllImport. Para obtener más información, consulte [utilizando interoperabilidad de C++ (PInvoke implícito)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
 ## <a name="example"></a>Ejemplo
 

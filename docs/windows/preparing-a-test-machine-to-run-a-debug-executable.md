@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362314"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448446"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Preparar un equipo de pruebas para ejecutar un archivo ejecutable de depuración
 
@@ -25,7 +25,7 @@ Hay tres maneras de implementar versiones de depuración de archivos DLL de bibl
 - Use la implementación local para instalar una versión de depuración de un archivo DLL de Visual C++ concreto en el directorio de instalación de la aplicación mediante los archivos que se proporcionan en el directorio Archivos de programa o Archivos de programa (x86), en \Microsoft Visual Studio \<versión>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Para realizar la depuración remota de una aplicación compilada mediante Visual C++ 2005 o Visual C++ 2008 en otro equipo, tiene que implementar versiones de depuración de los archivos DLL de biblioteca de Visual C++ como ensamblados en paralelo compartidos. Puede utilizar un proyecto de instalación o Windows Installer para instalar los módulos de combinación correspondientes.
+    >  Para la depuración remota de una aplicación compilada con Visual Studio 2005 o Visual Studio 2008 en otro equipo, tendrá que implementar versiones de depuración de Visual C++ archivos DLL como ensamblados en paralelo compartidos de biblioteca. Puede utilizar un proyecto de instalación o Windows Installer para instalar los módulos de combinación correspondientes.
 
 - Use la opción **Implementar** del cuadro de diálogo **Administrador de configuración** de Visual Studio para copiar la salida del proyecto y otros archivos en el equipo remoto.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409556"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448405"
 ---
 # <a name="idl-attributes"></a>Atributos IDL
 
@@ -27,7 +27,7 @@ Ahora, puede modificar el archivo .idl desde un archivo de código fuente con at
 
 Cuando no se usa con [atributos COM](com-attributes.md), los atributos IDL le permiten definir interfaces. Cuando se compila el código fuente, los atributos se usan para definir el archivo .idl generado. Cuando se usa con atributos COM en un proyecto ATL, algunos atributos IDL, tales como `coclass`, para insertarse en el proyecto de código.
 
-Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL que no se admiten en la versión actual de Visual C++. Este y otros atributos como [importlib](importlib.md) y [includelib](includelib-cpp.md) le ayudarán a utilizar los archivos .idl existentes en el proyecto actual de Visual C++.
+Tenga en cuenta que [idl_quote](idl-quote.md) permite usar construcciones MIDL que no se admiten en la versión actual de Visual C++. Este y otros atributos como [importlib](importlib.md) y [includelib](includelib-cpp.md) le ayudarán a utilizar los archivos .idl existentes en Visual Studio actual C++ proyecto.
 
 |Atributo|Descripción|
 |---------------|-----------------|

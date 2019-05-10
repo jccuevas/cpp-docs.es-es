@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330575"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221946"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Control de excepciones estructurado (SEH) es una extensión de Microsoft C para controlar determinadas situaciones excepcionales de código, como errores de hardware correctamente. Aunque Windows y Visual C++ admiten SEH, se recomienda que utilice el control de excepciones de C++ estándar de ISO porque hace que el código más portátil y flexible. No obstante, para mantener el código existente o para determinados tipos de programas, aún tendrá que usan SEH.
+Control de excepciones estructurado (SEH) es una extensión de Microsoft C para controlar determinadas situaciones excepcionales de código, como errores de hardware correctamente. Aunque Windows y Microsoft C++ admiten SEH, le recomendamos que use la norma ISO C++ control de excepciones porque hace que el código más portátil y flexible. No obstante, para mantener el código existente o para determinados tipos de programas, aún tendrá que usan SEH.
 
 **Específicas de Microsoft:**
 
@@ -34,7 +34,7 @@ Control de excepciones estructurado (SEH) es una extensión de Microsoft C para 
 
 Con SEH, puede asegurarse de que se liberen los recursos como bloques de memoria y los archivos correctamente si la ejecución finaliza inesperadamente. También puede controlar determinados problemas, por ejemplo, memoria insuficiente, mediante el uso de código estructurado conciso que no se basa en **goto** instrucciones ni realiza pruebas detalladas de los códigos de retorno.
 
-Las instrucciones try-except y try-finally mencionadas en este artículo son extensiones de Microsoft al lenguaje C. Admiten SEH al permitir que las aplicaciones tomen el control de un programa después de que se produzcan eventos que de lo contrario finalizarían la ejecución. Aunque SEH funciona con archivos de código fuente de C++, no está diseñado específicamente para C++. Si se utiliza SEH en un programa de C++ que se compila con la [/EHa o/EHsc](../build/reference/eh-exception-handling-model.md) opción, los destructores para objetos locales se denominan pero otro comportamiento de ejecución podría no ser los esperados. Para obtener un ejemplo, vea el ejemplo más adelante en este artículo. En la mayoría de los casos, en lugar de SEH se recomienda usar la norma ISO [control de excepciones de C++](../cpp/try-throw-and-catch-statements-cpp.md), que también admite Visual C++. Mediante el control de excepciones de C++, puede asegurarse de que el código sea más portátil y puede controlar excepciones de cualquier tipo.
+Las instrucciones try-except y try-finally mencionadas en este artículo son extensiones de Microsoft al lenguaje C. Admiten SEH al permitir que las aplicaciones tomen el control de un programa después de que se produzcan eventos que de lo contrario finalizarían la ejecución. Aunque SEH funciona con archivos de código fuente de C++, no está diseñado específicamente para C++. Si se utiliza SEH en un programa de C++ que se compila con la [/EHa o/EHsc](../build/reference/eh-exception-handling-model.md) opción, los destructores para objetos locales se denominan pero otro comportamiento de ejecución podría no ser los esperados. Para obtener un ejemplo, vea el ejemplo más adelante en este artículo. En la mayoría de los casos, en lugar de SEH se recomienda usar la norma ISO [ C++ control de excepciones](../cpp/try-throw-and-catch-statements-cpp.md), que Microsoft C++ también es compatible con el compilador. Mediante el control de excepciones de C++, puede asegurarse de que el código sea más portátil y puede controlar excepciones de cualquier tipo.
 
 Si tiene código de C que se utiliza SEH, se pueden mezclar código C++ que usa el control de excepciones de C++. Para obtener información, consulte [controlar las excepciones estructuradas en C++](../cpp/exception-handling-differences.md).
 

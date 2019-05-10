@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317125"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446505"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Estructura de los archivos .vcxproj y .props
 
@@ -21,13 +21,13 @@ Si decide editar manualmente un archivo .vcxproj, tenga en cuenta estos hechos:
 
 1. La estructura del archivo debe seguir un formato establecido, que se describe en este artículo.
 
-1. En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres comodín en los elementos de proyecto. Por ejemplo, esto no se admite:
+1. Visual Studio C++ sistema del proyecto actualmente no admite caracteres comodín en los elementos de proyecto. Por ejemplo, esto no se admite:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. En la actualidad, el sistema de proyectos de Visual C++ no admite las macros en las rutas de acceso de los elementos de proyecto. Por ejemplo, esto no se admite:
+1. Visual Studio C++ sistema del proyecto no admite actualmente las macros en las rutas de acceso de elemento de proyecto. Por ejemplo, esto no se admite:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ Los metadatos deben tener condiciones de configuración para cada configuración
 </ItemGroup>
 ```
 
-En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres comodín en los elementos de proyecto.
+Visual Studio C++ sistema del proyecto actualmente no admite caracteres comodín en los elementos de proyecto.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ En la actualidad, el sistema de proyectos de Visual C++ no admite caracteres com
 </ItemGroup>
 ```
 
-En la actualidad, el sistema de proyectos de Visual C++ no admite las macros en los elementos de proyecto.
+Visual Studio C++ sistema del proyecto no admite actualmente las macros en elementos de proyecto.
 
 ```xml
 <ItemGroup>

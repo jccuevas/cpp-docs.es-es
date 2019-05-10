@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173563"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222574"
 ---
 # <a name="cdc-class"></a>CDC (clase)
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Apunta a una cadena de caracteres que se va a medir. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *nTabPositions*<br/>
 Especifica el número de posiciones de tabulación en la matriz señalada por *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Apunta a una cadena de caracteres. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *str*<br/>
 Un `CString` objeto que contiene los caracteres especificados que se va a medir.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Apunta a una cadena de caracteres. También puede pasar un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *nTabPositions*<br/>
 Especifica el número de posiciones de tabulación en la matriz señalada por *lpnTabStopPositions*.
@@ -4087,7 +4087,7 @@ Especifica la dirección de la instancia del procedimiento de la función de dev
 Especifica un puntero lejano a los datos que se pasarán a la función de salida. Si *lpfnOutput* es NULL, *lpData* debe ser un puntero largo a la cadena que se generará.
 
 *nCount*<br/>
-Especifica el número de caracteres que se generará. Si este parámetro es 0, `GrayString` calcula la longitud de la cadena (suponiendo que *lpData* es un puntero a la cadena). Si *nCount* es -1 y la función señalada por *lpfnOutput* devuelve 0, la imagen se muestran pero no están atenuados.
+Especifica el número de caracteres que se generará. Si este parámetro es 0, `GrayString` calcula la longitud de la cadena (suponiendo que *lpData* es un puntero a la cadena). Si *nCount* es 1 y la función señalada por *lpfnOutput* devuelve 0, la imagen se muestran pero no están atenuados.
 
 *x*<br/>
 Especifica la coordenada x lógica de la posición inicial del rectángulo que agrega la cadena de texto.
@@ -6891,7 +6891,7 @@ Especifica la coordenada y lógica del punto inicial de la cadena.
 Apunta a la cadena de caracteres que se va a dibujar. Puede pasar un puntero a una matriz de caracteres o un [CString](../../atl-mfc-shared/reference/cstringt-class.md) objeto para este parámetro.
 
 *nCount*<br/>
-Especifica el número de caracteres de la cadena. Si *nCount* es -1, se calcula la longitud.
+Especifica el [longitud de la cadena](/windows/desktop/gdi/specifying-length-of-text-output-string) apunta *lpszString*.
 
 *nTabPositions*<br/>
 Especifica el número de valores de la matriz de posiciones de tabulación.

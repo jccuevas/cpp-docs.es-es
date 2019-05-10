@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387076"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447385"
 ---
 # <a name="compiler-error-c2259"></a>Error del compilador C2259
 
@@ -50,7 +50,7 @@ Hay dos posibles soluciones para el problema:
 
 - Usar el operador de resolución de ámbito para los métodos de interfaz implementados en la clase derivada para calificar el nombre del método implementado con el nombre de la interfaz.
 
-Error C2259 también se puede producir como resultado del trabajo de conformidad efectuado en Visual C++ 2005, **/Zc:** está activado de manera predeterminada. En esta situación, se puede resolver compilando con C2599 **/Zc:wchar_t-**, para obtener el comportamiento de las versiones anteriores o, preferiblemente, actualizando los tipos para que sean compatibles. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+Error C2259 también se puede producir como resultado del trabajo de conformidad efectuado en Visual Studio 2005, **/Zc:** está activado de manera predeterminada. En esta situación, se puede resolver compilando con C2599 **/Zc:wchar_t-**, para obtener el comportamiento de las versiones anteriores o, preferiblemente, actualizando los tipos para que sean compatibles. Para obtener más información, vea [/Zc:wchar_t (wchar_t es un tipo nativo)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 El ejemplo siguiente genera el error C2259:
 

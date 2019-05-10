@@ -1,16 +1,16 @@
 ---
 title: 'Tutorial: Crear una aplicación de cinta usando MFC'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558229"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Tutorial: Crear una aplicación de cinta usando MFC
 
@@ -22,9 +22,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Para crear una aplicación MFC con una cinta de opciones
 
-1. Use la **MFC Application Wizard** para crear una aplicación MFC que tiene una cinta de opciones. Para ejecutar el asistente, en el **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.
-
-1. En el **nuevo proyecto** cuadro de diálogo, expanda el **Visual C++** nodo bajo **plantillas instaladas**, seleccione **MFC**y, a continuación, seleccione  **Aplicación MFC**. Escriba un nombre para el proyecto, por ejemplo, *MFCRibbonApp*y, a continuación, haga clic en **Aceptar**.
+1. Use la **MFC Application Wizard** para crear una aplicación MFC que tiene una cinta de opciones. Vea [Tutorial: Usar los nuevos controles de Shell de MFC](walkthrough-using-the-new-mfc-shell-controls.md) para obtener instrucciones sobre cómo abrir el Asistente para la versión de Visual Studio.
 
 1. Establecer las siguientes opciones el **MFC Application Wizard**:
 
@@ -34,7 +32,7 @@ En este tutorial se da por supuesto que ha configurado Visual Studio para usar *
 
     1. En el **propiedades de la plantilla de documento** sección la **la extensión de archivo** , escriba una extensión de nombre de archivo para los documentos que crea esta aplicación, por ejemplo, *mfcrbnapp*.
 
-    1. En el **soporte técnico de la base de datos** sección, asegúrese de que **ninguno** está seleccionada.
+    1. En el **soporte técnico de la base de datos** sección (solo Visual Studio 2015), asegúrese de que **ninguno** está seleccionada.
 
     1. En el **características de la interfaz de usuario** sección, asegúrese de que **usar una cinta de opciones** está seleccionada.
 

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316761"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217777"
 ---
 # <a name="c-project-templates"></a>Plantillas de proyecto de C++
 
-Plantillas de proyecto de Visual Studio generan archivos de código fuente, las opciones del compilador, menús, barras de herramientas, iconos, referencias, y `#include` instrucciones que son adecuadas para el tipo de proyecto que desea crear. Visual Studio incluye diversos tipos de plantilla de proyecto de Visual C++, muchos de ellos con su correspondiente asistente para que pueda personalizar sus proyectos mientras los va creando. Justo después de crear un proyecto, se puede compilar y ejecutar la aplicación; un procedimiento recomendado consiste en compilar cada cierto tiempo mientras se desarrolla la aplicación.
+Plantillas de proyecto de Visual Studio generan archivos de código fuente, las opciones del compilador, menús, barras de herramientas, iconos, referencias, y `#include` instrucciones que son adecuadas para el tipo de proyecto que desea crear. Visual Studio incluye varios tipos de C++ plantillas de proyecto y proporciona asistentes para muchos de ellos para que pueda personalizar sus proyectos durante su creación. Justo después de crear un proyecto, se puede compilar y ejecutar la aplicación; un procedimiento recomendado consiste en compilar cada cierto tiempo mientras se desarrolla la aplicación.
 
 > [!NOTE]
 > Puede crear un proyecto de lenguaje C con plantillas de proyecto de C++. En el proyecto generado, busque los archivos que tengan la extensión de nombre de archivo .cpp y cámbiela por .c. Luego, en la página **Propiedades del proyecto** del proyecto (no de la solución), expanda **Propiedades de configuración**y **C/C++** y seleccione **Avanzadas**. Cambie la opción **Compilar como** por **Compilar como código de C (/TC)**.
 
 ## <a name="project-templates"></a>Plantillas de proyecto
 
-Las plantillas de proyecto que se incluyen en Visual Studio dependen de la versión del producto y de las cargas de trabajo que se hayan instalado. Si se ha instalado la carga de trabajo Desarrollo para el escritorio con C++, Visual Studio tiene estas plantillas de proyecto de Visual C++.
+Las plantillas de proyecto que se incluyen en Visual Studio dependen de la versión del producto y de las cargas de trabajo que se hayan instalado. Si ha instalado el desarrollo de escritorio con C++ carga de trabajo, Visual Studio tiene las siguientes C++ plantillas de proyecto.
 
 ### <a name="windows-desktop"></a>Escritorio de Windows
 

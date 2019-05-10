@@ -1,18 +1,21 @@
 ---
 title: 'Tutorial: Creación de una aplicación para UWP mediante WRL y Media Foundation'
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409215"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558271"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Tutorial: Creación de una aplicación para UWP mediante WRL y Media Foundation
 
-Obtenga información sobre cómo usar la biblioteca de plantillas de C++ (WRL) de Windows en tiempo de ejecución para crear una aplicación de plataforma Universal de Windows (UWP) que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+> [!NOTE]
+> Para nuevas aplicaciones UWP y componentes, recomendamos que use [C++ / c++ / WinRT](/windows/uwp/cpp-and-winrt-apis/), una nuevo estándar C ++ 17 proyección del lenguaje para Windows Runtime APIs. C++ / c++ / WinRT está disponible en el SDK de Windows 10 desde la versión 1803 en adelante. C++ / c++ / WinRT se implementa completamente en archivos de encabezado y está diseñado para proporcionarle acceso de primera clase a la API de Windows moderna.
+
+En este tutorial, obtendrá información sobre cómo usar el tiempo de ejecución de Windows C++ biblioteca de plantillas (WRL) para crear una aplicación de plataforma Universal de Windows (UWP) que usa [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 Este ejemplo crea una transformación personalizada de Media Foundation que aplica un efecto de escala de grises a las imágenes capturadas con una cámara web. La aplicación utiliza C++ para definir la transformación personalizada y C# para usar el componente para transformar las imágenes capturadas.
 
@@ -25,6 +28,8 @@ En la mayoría de los casos, puede usar C++ / c++ / CX para crear en tiempo de e
 > Aunque este ejemplo de código es largo, muestra el mínimo necesario para crear una transformación útil de Media Foundation. Puede utilizarlo como punto de partida para su propia transformación personalizada. En este ejemplo se adaptó a partir del [ejemplo de extensiones de medios](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), las extensiones de medios que usa para aplicar efectos a vídeo, decodificar vídeo y crear controladores de esquema que generen secuencias multimedia.
 
 ## <a name="prerequisites"></a>Requisitos previos
+
+- En Visual Studio 2017 y versiones posteriores, compatibilidad con UWP es un componente opcional. Para instalarlo, abra al instalador de Visual Studio desde el menú Inicio de Windows y busque su versión de Visual Studio. Elija **modificar** y, a continuación, asegúrese de que el **desarrollo de plataforma Universal de Windows** mosaico está activada. En **componentes opcionales** comprobar  **C++ herramientas para UWP (v141)** para Visual Studio 2017, o  **C++ herramientas para UWP (v142)** para Visual Studio de 2019. A continuación, compruebe la versión del SDK de Windows que desea usar. 
 
 - Experimentar con la [en tiempo de ejecución de Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 

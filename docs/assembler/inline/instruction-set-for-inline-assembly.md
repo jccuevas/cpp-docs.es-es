@@ -8,18 +8,18 @@ helpviewer_keywords:
 - assembler [C++], instruction set
 - instruction set [C++]
 ms.assetid: a45b5b22-9b5f-4545-81ec-70eb8ea2ef9b
-ms.openlocfilehash: 5d73b70603c3a3f51944a95fe54af11ecb50a9c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 97794261c0dc77ca41d543aa34a1fc2111c83619
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166937"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445913"
 ---
 # <a name="instruction-set-for-inline-assembly"></a>Conjunto de instrucciones para el ensamblado insertado
 
 **Específicos de Microsoft**
 
-El compilador de Visual C++ admite todos los códigos de operación con Pentium 4 y AMD Athlon. Se pueden crear instrucciones adicionales admitidas por el procesador de destino con el [Pseudoinstrucción _emit](../../assembler/inline/emit-pseudoinstruction.md).
+Microsoft C++ compilador admite todos los códigos de operación con Pentium 4 y AMD Athlon. Se pueden crear instrucciones adicionales admitidas por el procesador de destino con el [Pseudoinstrucción _emit](../../assembler/inline/emit-pseudoinstruction.md).
 
 **FIN de Específicos de Microsoft**
 
