@@ -1,6 +1,6 @@
 ---
 title: Archivos DLL y comportamiento de la biblioteca de tiempo de ejecución de Visual C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d3f3197b6b7b01e7f69767b72286d6d21470cb0e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314798"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217755"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Archivos DLL y comportamiento de la biblioteca de tiempo de ejecución de Visual C++
 
-Cuando se compila una biblioteca de vínculos dinámicos (DLL) mediante el uso de Visual C++, de forma predeterminada, el vinculador incluye la biblioteca de tiempo de ejecución de Visual C++ (VCRuntime). VCRuntime contiene código necesario para inicializar y finalizar un ejecutable de C o C++. Cuando se vincula a un archivo DLL, el código de VCRuntime proporciona una función de punto de entrada DLL interna denominada `_DllMainCRTStartup` que controla los mensajes de sistema operativo de Windows para el archivo DLL para asociar o desasociar un proceso o subproceso. El `_DllMainCRTStartup` función realiza tareas esenciales como la seguridad de búfer de pila configurado, inicialización de la biblioteca en tiempo de ejecución (CRT) de C y la finalización y llama a los constructores y destructores para los objetos globales y estáticos. `_DllMainCRTStartup` También llama a funciones de otras bibliotecas como WinRT, MFC y ATL para realizar su propia inicialización y terminación de enlace. Sin esta inicialización, CRT y otras bibliotecas, así como las variables estáticas, podría quedar en un estado no inicializado. Se llama a si el archivo DLL usa un CRT vinculado estáticamente o un archivo DLL de CRT vinculado dinámicamente la misma inicialización de VCRuntime interna y rutinas de terminación.
+Cuando se compila una biblioteca de vínculos dinámicos (DLL) mediante el uso de Visual Studio, de forma predeterminada, el vinculador incluye el objeto Visual C++ biblioteca en tiempo de ejecución (VCRuntime). VCRuntime contiene código necesario para inicializar y finalizar un ejecutable de C o C++. Cuando se vincula a un archivo DLL, el código de VCRuntime proporciona una función de punto de entrada DLL interna denominada `_DllMainCRTStartup` que controla los mensajes de sistema operativo de Windows para el archivo DLL para asociar o desasociar un proceso o subproceso. El `_DllMainCRTStartup` función realiza tareas esenciales como la seguridad de búfer de pila configurado, inicialización de la biblioteca en tiempo de ejecución (CRT) de C y la finalización y llama a los constructores y destructores para los objetos globales y estáticos. `_DllMainCRTStartup` También llama a funciones de otras bibliotecas como WinRT, MFC y ATL para realizar su propia inicialización y terminación de enlace. Sin esta inicialización, CRT y otras bibliotecas, así como las variables estáticas, podría quedar en un estado no inicializado. Se llama a si el archivo DLL usa un CRT vinculado estáticamente o un archivo DLL de CRT vinculado dinámicamente la misma inicialización de VCRuntime interna y rutinas de terminación.
 
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>_DllMainCRTStartup de punto de entrada DLL de forma predeterminada
 
@@ -32,7 +32,7 @@ En Windows, todos los archivos DLL pueden contener una función de punto de entr
 
 La biblioteca de VCRuntime proporciona una función de punto de entrada denominada `_DllMainCRTStartup` para controlar las operaciones de inicialización y terminación de forma predeterminada. En el proceso de adjuntar, el `_DllMainCRTStartup` función configura las comprobaciones de seguridad de búfer, inicializa el CRT y otras bibliotecas, inicializa la información de tipo en tiempo de ejecución, inicializa y llama a constructores para datos estáticos y no local, inicializa el almacenamiento local de subprocesos , incrementa un contador interno estático para cada operación de adjuntar y, a continuación, llama a un usuario o biblioteca-proporcionado por `DllMain`. En el proceso de desasociación, la función se lleva a cabo estos pasos en orden inverso. Llama a `DllMain`, disminuye el contador interno, llama a los destructores, la terminación de CRT las llamadas a funciones y registrado `atexit` funciones y notifica a cualquier otra biblioteca de terminación. Cuando el contador de los datos adjuntos se llega a cero, la función devuelve `FALSE` para indicar a Windows que se puede descargar el archivo DLL. El `_DllMainCRTStartup` también se denomina función de subproceso durante la asociación y desasociación de subproceso. En estos casos, el código de VCRuntime no ninguna inicialización adicional ni la finalización por sí mismo y simplemente llama a `DllMain` para pasar el mensaje a lo largo. Si `DllMain` devuelve `FALSE` del proceso de adjuntar, error, de señalización `_DllMainCRTStartup` llamadas `DllMain` nuevo y pasa `DLL_PROCESS_DETACH` como el *motivo* argumento, a continuación, recorre el resto de la proceso de finalización.
 
-Al compilar archivos DLL en Visual C++, el punto de entrada predeterminado `_DllMainCRTStartup` proporcionado por VCRuntime se vinculará automáticamente. No es necesario especificar una función de punto de entrada para el archivo DLL mediante la [/Entry (símbolo de punto de entrada)](reference/entry-entry-point-symbol.md) opción del vinculador.
+Al compilar archivos DLL en Visual Studio, el punto de entrada predeterminado `_DllMainCRTStartup` proporcionado por VCRuntime se vinculará automáticamente. No es necesario especificar una función de punto de entrada para el archivo DLL mediante la [/Entry (símbolo de punto de entrada)](reference/entry-entry-point-symbol.md) opción del vinculador.
 
 > [!NOTE]
 > Aunque es posible especificar otra función de punto de entrada para un archivo DLL utilizando el/Entry: opción del vinculador, no se recomienda, ya que la función de punto de entrada tendría que duplicar todo lo que `_DllMainCRTStartup` es así, en el mismo orden. VCRuntime proporciona funciones que permiten duplicar su comportamiento. Por ejemplo, puede llamar a [__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md) inmediatamente en el proceso de adjuntar para admitir la [/GS (comprobación de seguridad de búfer)](reference/gs-buffer-security-check.md) opción de comprobación del búfer. Puede llamar a la `_CRT_INIT` función, pasando los mismos parámetros como la función de punto de entrada, para realizar el resto de las funciones de inicialización o de finalización de la DLL.
@@ -41,7 +41,7 @@ Al compilar archivos DLL en Visual C++, el punto de entrada predeterminado `_Dll
 
 ## <a name="initialize-a-dll"></a>Inicializar un archivo DLL
 
-El archivo DLL puede tener código de inicialización que deberá ejecutarse cuando se cargue el archivo DLL. En orden para realizar sus propias funciones de inicialización y terminación de DLL, `_DllMainCRTStartup` llama a una función denominada `DllMain` que puede proporcionar. Su `DllMain` debe tener la firma requerida para un punto de entrada del archivo DLL. La función de punto de entrada predeterminado `_DllMainCRTStartup` llamadas `DllMain` usando los mismos parámetros pasados por Windows. De forma predeterminada, si no proporcionas un `DllMain` función, Visual C++ proporciona uno automáticamente y lo vincula en poder `_DllMainCRTStartup` siempre tiene que llamar. Esto significa que si no tiene que inicializar el archivo DLL, no hay nada especial que debe hacer al compilar el archivo DLL.
+El archivo DLL puede tener código de inicialización que deberá ejecutarse cuando se cargue el archivo DLL. En orden para realizar sus propias funciones de inicialización y terminación de DLL, `_DllMainCRTStartup` llama a una función denominada `DllMain` que puede proporcionar. Su `DllMain` debe tener la firma requerida para un punto de entrada del archivo DLL. La función de punto de entrada predeterminado `_DllMainCRTStartup` llamadas `DllMain` usando los mismos parámetros pasados por Windows. De forma predeterminada, si no proporcionas un `DllMain` función, Visual Studio proporciona uno automáticamente y lo vincula en poder `_DllMainCRTStartup` siempre tiene que llamar. Esto significa que si no tiene que inicializar el archivo DLL, no hay nada especial que debe hacer al compilar el archivo DLL.
 
 Se trata de la firma usada para `DllMain`:
 
@@ -98,7 +98,7 @@ extern "C" BOOL WINAPI DllMain (
 ```
 
 > [!NOTE]
-> Documentación del SDK de Windows anterior, se dice que se debe especificar el nombre real de la función de punto de entrada del archivo DLL en el vinculador de línea de comandos con la opción/Entry. Con Visual C++, no es necesario usar la opción/ENTRY si el nombre de la función de punto de entrada es `DllMain`. De hecho, si usa la opción/Entry y el nombre de su punto de entrada función algo distinto `DllMain`, CRT no se inicializan correctamente a menos que la función de punto de entrada hace que las mismas llamadas de inicialización que `_DllMainCRTStartup` hace.
+> Documentación del SDK de Windows anterior, se dice que se debe especificar el nombre real de la función de punto de entrada del archivo DLL en el vinculador de línea de comandos con la opción/Entry. Con Visual Studio, no es necesario usar la opción/ENTRY si el nombre de la función de punto de entrada es `DllMain`. De hecho, si usa la opción/Entry y el nombre de su punto de entrada función algo distinto `DllMain`, CRT no se inicializan correctamente a menos que la función de punto de entrada hace que las mismas llamadas de inicialización que `_DllMainCRTStartup` hace.
 
 <a name="initializing-regular-dlls"></a>
 
@@ -180,6 +180,6 @@ Una función de inicialización de ejemplo que se incluye identificadores de mul
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)<br/>
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)<br/>
 [Punto de entrada de DllMain](/windows/desktop/Dlls/dllmain)<br/>
 [Procedimientos recomendados de la biblioteca de vínculos dinámicos](/windows/desktop/Dlls/dynamic-link-library-best-practices)

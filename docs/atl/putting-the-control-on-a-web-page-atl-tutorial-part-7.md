@@ -1,14 +1,14 @@
 ---
 title: Colocar el control en una página web (Tutorial de ATL, Parte 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261545"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221237"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Colocar el control en una página web (Tutorial de ATL, Parte 7)
 
@@ -74,7 +74,7 @@ Ha agregado algún código VBScript que obtiene la propiedad Sides del control y
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Que indica que el Control es seguro para Scripting
 
-Puede ver la página Web con el control en el Explorador de Internet o, más conveniente, usar la vista de explorador Web integrada en Visual C++. Para ver el control en la vista de explorador Web, haga clic en PolyCtl.htm y haga clic en **ver en el explorador**.
+Sólo puede ver la página Web con el control de Internet Explorer. Otros exploradores ya no admiten controles ActiveX debido a vulnerabilidades de seguridad. 
 
 > [!NOTE]
 > Si el control no está visible, sabe que algunos exploradores necesitan ajustes de configuración para ejecutar los controles ActiveX. Consulte la documentación del explorador sobre cómo habilitar los controles ActiveX.

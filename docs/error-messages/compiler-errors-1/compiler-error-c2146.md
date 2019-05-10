@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 3a0fd9c49a71f6f53d1a109378e3a6894bb68723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175433"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447274"
 ---
 # <a name="compiler-error-c2146"></a>Error del compilador C2146
 
@@ -73,7 +73,7 @@ typename X<T>::Y func() { }
 
 También verá este error como resultado del trabajo de conformidad del compilador efectuado para Visual Studio .NET 2003: las especializaciones explícitas ya no buscan parámetros de plantilla desde la plantilla principal.
 
-El uso de `T` no se permite en la especialización explícita de la plantilla principal. Para que el código sea válido en las versiones de Visual Studio .NET 2003 y Visual Studio .NET de Visual C++, reemplace todas las instancias del parámetro de plantilla en la especialización por el tipo especializado explícitamente.
+El uso de `T` no se permite en la especialización explícita de la plantilla principal. Para que el código sea válido en el Visual Studio .NET 2003 y Visual Studio. NET, reemplace todas las instancias del parámetro de plantilla en la especialización por el tipo especializado explícitamente.
 
 En el ejemplo siguiente se compila en Visual Studio. NET, pero se producirá un error en Visual Studio .NET 2003:
 

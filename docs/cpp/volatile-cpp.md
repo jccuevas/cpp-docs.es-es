@@ -1,6 +1,6 @@
 ---
 title: volatile (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - volatile_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243963"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221876"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Los objetos que se declaran como **volátil** no se utilizan en ciertas optimiza
 
 ## <a name="iso-compliant"></a>Conforme a ISO
 
-Si está familiarizado con el C# palabra clave volatile, o está familiarizado con el comportamiento de **volátil** en versiones anteriores de Visual C++, tenga en cuenta que el estándar C ++ 11 de ISO **volátil** palabra clave es diferente y es compatible con Visual Studio cuando el [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) se especificó la opción del compilador. (Para ARM, se especifica de forma predeterminada). El **volátil** palabra clave en C ++ 11 estándar ISO de código es para usarse solo para el acceso de hardware; no lo utilice para la comunicación entre subprocesos. Para la comunicación entre subprocesos, use mecanismos como [std:: atomic\<T >](../standard-library/atomic.md) desde el [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md).
+Si está familiarizado con el C# palabra clave volatile, o que están familiarizados con el comportamiento de **volátil** en versiones anteriores de Microsoft C++ compilador (MSVC), tener en cuenta que el estándar C ++ 11 de ISO **volátil** palabra clave es diferente y se admite en MSVC cuando la [/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md) se especificó la opción del compilador. (Para ARM, se especifica de forma predeterminada). El **volátil** palabra clave en C ++ 11 estándar ISO de código es para usarse solo para el acceso de hardware; no lo utilice para la comunicación entre subprocesos. Para la comunicación entre subprocesos, use mecanismos como [std:: atomic\<T >](../standard-library/atomic.md) desde el [biblioteca estándar de C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Fin de Conforme a ISO
 

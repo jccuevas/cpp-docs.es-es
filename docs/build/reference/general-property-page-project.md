@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270905"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446567"
 ---
 # <a name="general-property-page-project"></a>Página de propiedades General (Proyecto)
 
@@ -98,7 +98,7 @@ Las propiedades de la sección General afectan a la ubicación de los archivos q
 
 - **Conjunto de herramientas de la plataforma**
 
-   Permite al proyecto elegir como destino una versión diferente de las bibliotecas y el compilador de Visual C++. Los proyectos de Visual C++ pueden tener como destino el conjunto de herramientas predeterminado instalado por Visual Studio, o bien uno de los conjuntos de herramientas instalado por varias versiones anteriores de Visual Studio, incluidos los que crean los archivos ejecutables que se pueden ejecutar en Windowx XP. Para obtener información acerca de cómo cambiar el conjunto de herramientas de plataforma, vea [Cómo: para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permite al proyecto elegir como destino una versión diferente de las bibliotecas y el compilador de Visual C++. Visual Studio C++ proyectos pueden tener como destino cualquier conjunto de herramientas predeterminado instalado Visual Studio, o uno de los conjuntos de herramientas instalados por varias versiones anteriores de Visual Studio, incluidos los conjuntos de herramientas que crean los archivos ejecutables que se pueden ejecutar en Windowx XP. Para obtener información acerca de cómo cambiar el conjunto de herramientas de plataforma, vea [Cómo: para modificar la plataforma de destino y el conjunto de herramientas de la plataforma](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Habilitar compilación incremental administrada**
 

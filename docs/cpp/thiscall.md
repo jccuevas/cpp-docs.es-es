@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266795"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221915"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ Una razón para utilizar **__thiscall** son las clases cuyas funciones miembro u
 
 Cuando se compila con [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), todas las funciones y punteros de función son `__clrcall` a menos que se especifique lo contrario. El **/CLR: pure** y **/CLR: safe** opciones del compilador están en desuso en Visual Studio 2015 y no se admite en Visual Studio 2017.
 
-En las versiones anteriores a Visual C++ 2005, el **__thiscall** convención de llamada puede no especificarse explícitamente en un programa, porque **__thiscall** no era una palabra clave.
+En versiones anteriores a Visual Studio 2005, el **__thiscall** convención de llamada puede no especificarse explícitamente en un programa, porque **__thiscall** no era una palabra clave.
 
 `vararg` funciones miembro utilizan el **__cdecl** convención de llamada. Todos los argumentos de función se insertan en la pila, con el **esto** puntero colocado en la pila por última vez
 

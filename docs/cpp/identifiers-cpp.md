@@ -1,6 +1,6 @@
 ---
 title: Identificadores (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184606"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222432"
 ---
 # <a name="identifiers-c"></a>Identificadores (C++)
 
@@ -70,7 +70,7 @@ Solo los 2048 primeros caracteres de los identificadores de Microsoft C++ son si
 
 - El número de argumentos para una función.
 
-El signo de dólar `$` también es un identificador válido en Visual C++. Visual C++ también permite usar los caracteres reales representados por los rangos válidos de nombres de carácter universal en los identificadores. Para usar dichos caracteres, se debe guardar el archivo mediante una página de códigos para codificación de archivos que los incluya.  En este ejemplo muestra cómo dos caracteres extendidos y nombres de carácter universal se pueden usar indistintamente en el código.
+El signo de dólar `$` es un carácter de identificador válido en Microsoft C++ compilador (MSVC). MSVC también permite utilizar los caracteres reales representados por los rangos válidos de nombres de carácter universal en los identificadores. Para usar dichos caracteres, se debe guardar el archivo mediante una página de códigos para codificación de archivos que los incluya.  En este ejemplo muestra cómo dos caracteres extendidos y nombres de carácter universal se pueden usar indistintamente en el código.
 
 ```cpp
 // extended_identifier.cpp

@@ -1,14 +1,14 @@
 ---
 title: Tipos de valor (C++ moderno)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 32cdb29ec1c59081ad7e0493888f290f21561d2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390911"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221885"
 ---
 # <a name="value-types-modern-c"></a>Tipos de valor (C++ moderno)
 
@@ -49,7 +49,7 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
 
 ## <a name="value-types-and-move-efficiency"></a>Tipos de valor y mover la eficacia
 
-Se evita la sobrecarga de asignación de copia debido a optimizaciones de copia de nuevo. Por ejemplo, cuando se inserta una cadena en el medio de un vector de cadenas, no habrá ninguna sobrecarga de reasignación de copia, sólo un movimiento - incluso si da como resultado un aumento del vector propio. Esto se aplica también a otras operaciones, por ejemplo realizar una operación de agregar en dos objetos muy grandes. ¿Cómo habilitar estas optimizaciones de operación valor? En algunos compiladores de C++, el compilador habilitará esto por usted implícitamente, al igual que el compilador pueden generarse automáticamente constructores de copia. Sin embargo, en Visual C++, su clase necesitará "participar en" para mover la asignación y constructores declarándolo en la definición de clase. Esto se logra mediante el uso de la y comercial doble (& &) referencia rvalue del miembro adecuado de declaraciones y definición de constructor de movimiento de funciones y los métodos de asignación de desplazamiento.  También deberá insertar el código correcto para "robar las interioridades" fuera el objeto de origen.
+Se evita la sobrecarga de asignación de copia debido a optimizaciones de copia de nuevo. Por ejemplo, cuando se inserta una cadena en el medio de un vector de cadenas, no habrá ninguna sobrecarga de reasignación de copia, sólo un movimiento - incluso si da como resultado un aumento del vector propio. Esto se aplica también a otras operaciones, por ejemplo realizar una operación de agregar en dos objetos muy grandes. ¿Cómo habilitar estas optimizaciones de operación valor? En algunos compiladores de C++, el compilador habilitará esto por usted implícitamente, al igual que el compilador pueden generarse automáticamente constructores de copia. Sin embargo, en C++, su clase necesitará "participar en" para mover la asignación y constructores declarándolo en la definición de clase. Esto se logra mediante el uso de la y comercial doble (& &) referencia rvalue del miembro adecuado de declaraciones y definición de constructor de movimiento de funciones y los métodos de asignación de desplazamiento.  También deberá insertar el código correcto para "robar las interioridades" fuera el objeto de origen.
 
 ¿Cómo se decide si necesita mover habilitado? Si ya sabe que necesita copiar construcción habilitado, probablemente desee mover habilitado si puede ser más barato que una copia en profundidad. Sin embargo, si sabe que necesita mover soporte técnico, no significa necesariamente que desea copia habilitado. Este último caso, se llama un "Mover tipo solo". Es un ejemplo ya está en la biblioteca estándar de `unique_ptr`. Como una nota al margen, la antigua `auto_ptr` está en desuso y se ha sustituido por `unique_ptr` debido precisamente a la falta de compatibilidad de la semántica de movimiento en la versión anterior de C++.
 

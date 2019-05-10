@@ -1,21 +1,21 @@
 ---
 title: Conceptos de Active Template Library (ATL)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223459"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221301"
 ---
 # <a name="active-template-library-atl-concepts"></a>Conceptos de Active Template Library (ATL)
 
 Active Template Library (ATL) es un conjunto de clases C++ basadas en plantillas que permiten crear objetos de modelo de objetos componentes (COM) pequeño y rápido. Ofrece una compatibilidad especial para las características clave de COM, incluidas las implementaciones estándar, las interfaces duales, interfaces de enumerador COM estándar, puntos de conexión, interfaces divisibles y controles ActiveX.
 
-Si lo hace mucho de la programación de ATL, desea obtener más información acerca de los atributos, una característica nueva en Visual C++ .NET está diseñado para simplificar la programación COM. Para obtener más información, consulte [programación con atributos](../windows/attributed-programming-concepts.md).
+Si lo hace mucho de la programación de ATL, deseará obtener más información acerca de los atributos de COM y. NET, que está diseñado para simplificar la programación COM. Para obtener más información, consulte [programación con atributos](../windows/attributed-programming-concepts.md). (Son atributos COM y .NET para que no debe confundirse con el \[ \[atributo]] de características en el C++ estándar.)
 
 ## <a name="in-this-section"></a>En esta sección
 

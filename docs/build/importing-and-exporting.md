@@ -1,6 +1,6 @@
 ---
 title: Importar y exportar
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188852"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220644"
 ---
 # <a name="importing-and-exporting"></a>Importar y exportar
 
@@ -31,8 +31,6 @@ Puede usar los archivos .def para [importar a una aplicación](importing-using-d
 
 ## <a name="using-declspec"></a>Utilizar __declspec
 
-Visual C++ usa **__declspec (dllimport)** y **__declspec (dllexport)** para reemplazar el **__export** palabra clave que se había utilizado previamente en las versiones de 16 bits de Visual C++.
-
 No es necesario usar **__declspec (dllimport)** para compilarse correctamente, pero si lo hace, el código permite que el compilador genere código de mejor calidad. El compilador es capaz de generar un código mejor, porque puede determinar si existe una función en un archivo DLL o no, que permite que el compilador genera código que omite un nivel de direccionamiento indirecto que normalmente estarían presente en una llamada de función que cruza un límite de DLL. Sin embargo, debe usar **__declspec (dllimport)** para importar las variables utilizadas en un archivo DLL.
 
 Con la sección EXPORTS de archivo .def adecuado, **__declspec (dllexport)** no es necesario. **__declspec (dllexport)** se agregó para proporcionar una manera sencilla de exportar funciones desde un archivo .exe o .dll sin utilizar un archivo .def.
@@ -47,4 +45,4 @@ El formato de archivo Portable ejecutable Win32 está diseñado para minimizar e
 
 ## <a name="see-also"></a>Vea también
 
-[Archivos DLL en Visual C++](dlls-in-visual-cpp.md)
+[Crear archivos DLL de C o C++ en Visual Studio](dlls-in-visual-cpp.md)

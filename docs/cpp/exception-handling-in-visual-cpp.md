@@ -1,23 +1,23 @@
 ---
-title: Control de excepciones en Visual C++
-ms.date: 11/04/2016
+title: Control de excepciones en MSVC
+ms.date: 05/07/2019
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: 506ead1b6e96f59717a92b6b0c48db0270b1822f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 47443f1b7021aac7755d77f797a4f7b7410281f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398881"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222063"
 ---
-# <a name="exception-handling-in-visual-c"></a>Control de excepciones en Visual C++
+# <a name="exception-handling-in-msvc"></a>Control de excepciones en MSVC
 
 Una excepción es una condición de error, posiblemente fuera del control del programa, que evita que el programa continúe a lo largo de su ruta normal de ejecución. Determinadas operaciones, incluidas la creación de objetos, la entrada/salida de archivo y las llamadas de función realizadas desde otros módulos, son posibles orígenes de excepciones aunque el programa se ejecute correctamente. Un código robusto prevé y controla las excepciones.
 
 Para detectar errores lógicos dentro de un programa o un módulo, utilice aserciones en lugar de excepciones (vea [utilizar aserciones](/visualstudio/debugger/c-cpp-assertions)).
 
-Visual C++ admite tres tipos de control de excepciones:
+Microsoft C++ compilador (MSVC) admite tres tipos de control de excepciones:
 
 - [Control de excepciones de C++](../cpp/cpp-exception-handling.md)
 
@@ -29,7 +29,7 @@ Visual C++ admite tres tipos de control de excepciones:
 
 - [Excepciones de MFC](../mfc/exception-handling-in-mfc.md)
 
-   Desde la versión 3.0, MFC ha utilizado las excepciones de C++ pero sigue admitiendo sus anteriores macros de control de excepciones, que son similares a las excepciones de C++ en su forma. Aunque estas macros no son recomendables para nueva programación, todavía se siguen admitiendo por razones de compatibilidad con versiones anteriores. En los programas que ya utilizan las macros, también puede utilizar libremente las excepciones de C++. Durante el preprocesamiento, las macros evalúan las palabras clave de control de excepciones definidas en la implementación de Visual C++ del lenguaje C++ a partir de la versión 2.0 de Visual C++. Puede dejar las macros de excepciones existentes en su sitio mientras empieza a utilizar las excepciones de C++.
+   Desde la versión 3.0, MFC ha utilizado las excepciones de C++ pero sigue admitiendo sus anteriores macros de control de excepciones, que son similares a las excepciones de C++ en su forma. Aunque estas macros no son recomendables para nueva programación, todavía se siguen admitiendo por razones de compatibilidad con versiones anteriores. En los programas que ya utilizan las macros, también puede utilizar libremente las excepciones de C++. Durante el preprocesamiento, las macros evalúan las palabras clave definidas en la implementación de MSVC de control de excepciones del C++ lenguaje a partir de Visual C++ versión 2.0. Puede dejar las macros de excepciones existentes en su sitio mientras empieza a utilizar las excepciones de C++.
 
 Utilice la [/EH](../build/reference/eh-exception-handling-model.md) opción del compilador para especificar el tipo de control de excepciones para usar en un proyecto; Control de excepciones de C++ es el valor predeterminado. No combine los mecanismos de control de errores; por ejemplo, no use las excepciones de C++ con control de excepciones estructurado. Si usa el control de excepciones de C++, el código será más portátil y podrá controlar todo tipo de excepciones. Para obtener más información sobre los inconvenientes de control de excepciones estructurado, consulte [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). Para obtener más información sobre la combinación de macros de MFC y excepciones de C++, consulte [Excepciones: Uso de macros de MFC y excepciones de C++](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 

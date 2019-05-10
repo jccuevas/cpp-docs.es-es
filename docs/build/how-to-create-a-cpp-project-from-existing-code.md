@@ -1,6 +1,6 @@
 ---
 title: Procedimiento Crear un proyecto de C++ a partir del código existente
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189045"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221457"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>Procedimiento Crear un proyecto de C++ a partir del código existente
 
@@ -26,8 +26,6 @@ Trasladar los archivos de código existentes a un proyecto de C++ permite usar l
 ### <a name="to-create-a-c-project-from-existing-code"></a>Para crear un proyecto de C++ a partir de código existente
 
 1. En el menú **Archivo**, seleccione **Nuevo** > **Project From Existing Code** (Proyecto a partir de código existente).
-
-1. En la primera página del asistente **Create New Project From Existing Code Files** (Crear nuevo proyecto de archivos de código fuente existentes), seleccione **Visual C++** en la lista **What type of project would you like to create?** (¿Qué tipo de proyecto desea crear?). Elija **Siguiente** para continuar.
 
 1. Especifique la ubicación del proyecto, el directorio para los archivos de origen y los tipos de archivos que el asistente importará al nuevo proyecto. Elija **Siguiente** para continuar.
 
@@ -44,7 +42,7 @@ Trasladar los archivos de código existentes a un proyecto de C++ permite usar l
 
     | Parámetro | Descripción |
     | --- | --- |
-    | **Usar Visual Studio** | Especifica que se usen las herramientas de compilación que se incluyen en Visual Studio para generar el proyecto nuevo. Esta opción está seleccionada de forma predeterminada.<br/><br/>Seleccione **Tipo de proyecto** para especificar el tipo de proyecto que generará el asistente. Elija **Proyecto de aplicación Windows**, **Proyecto aplicación de consola**, **Proyecto de biblioteca de vínculos dinámicos (DLL)** o **Proyecto de biblioteca estática (LIB)**.<br/><br/>Marque **Agregar compatibilidad con ATL** para agregar compatibilidad con ATL al nuevo proyecto.<br/><br/>Marque **Agregar compatibilidad con MFC** para agregar compatibilidad con MFC al nuevo proyecto.<br/><br/>Marque **Agregar compatibilidad con Common Language Runtime** para agregar compatibilidad con la programación en CLR al proyecto. Elija **Compatibilidad con Common Language Runtime** como tipo de cumplimiento; por ejemplo, **Common Language Runtime (sintaxis antigua)** para el cumplimiento con la sintaxis Extensiones administradas para C++, la sintaxis de programación de CLR anterior a Visual C++ 2005. |
+    | **Usar Visual Studio** | Especifica que se usen las herramientas de compilación que se incluyen en Visual Studio para generar el proyecto nuevo. Esta opción está seleccionada de forma predeterminada.<br/><br/>Seleccione **Tipo de proyecto** para especificar el tipo de proyecto que generará el asistente. Elija **Proyecto de aplicación Windows**, **Proyecto aplicación de consola**, **Proyecto de biblioteca de vínculos dinámicos (DLL)** o **Proyecto de biblioteca estática (LIB)**.<br/><br/>Marque **Agregar compatibilidad con ATL** para agregar compatibilidad con ATL al nuevo proyecto.<br/><br/>Marque **Agregar compatibilidad con MFC** para agregar compatibilidad con MFC al nuevo proyecto.<br/><br/>Marque **Agregar compatibilidad con Common Language Runtime** para agregar compatibilidad con la programación en CLR al proyecto. Elija la **compatible con Common Language Runtime** para el tipo de compatibilidad, como **Common Language Runtime (antigua sintaxis)** para el cumplimiento con las extensiones administradas para C++ sintaxis, la sintaxis de programación de CLR antes de Visual Studio 2005. |
     | **Usar el sistema de compilación externo** | Especifica que se usen las herramientas de compilación que no se incluyen en Visual Studio para generar el proyecto nuevo. Cuando esta opción está seleccionada, puede especificar líneas de comandos de compilación en las páginas **Especificar valores de configuración Debug** y **Especificar valores de configuración Release**. |
 
     ![Configuración del proyecto](media/settings.png)
