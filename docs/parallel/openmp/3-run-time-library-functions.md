@@ -1,13 +1,13 @@
 ---
 title: 3. Funciones de biblioteca en tiempo de ejecución
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525045"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611189"
 ---
 # <a name="3-run-time-library-functions"></a>3. Funciones de biblioteca en tiempo de ejecución
 
@@ -55,6 +55,8 @@ Esta función tiene los efectos que se ha descrito anteriormente, cuando se llam
 
 Esta llamada tiene prioridad sobre la `OMP_NUM_THREADS` variable de entorno. El valor predeterminado para el número de subprocesos, lo que se pueden establecer mediante una llamada a `omp_set_num_threads` o estableciendo la `OMP_NUM_THREADS` variable de entorno, se pueden reemplazar explícitamente en una sola `parallel` directiva especificando el `num_threads` cláusula.
 
+Para obtener más información, consulte [omp_set_dynamic ()](#317-omp_set_dynamic-function).
+
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 El `num_threads` cláusula, el `omp_set_num_threads` función y el `OMP_NUM_THREADS` variable de entorno controlar el número de subprocesos en un equipo.
 
 Si el número de subprocesos no se ha establecido explícitamente por el usuario, el valor predeterminado es definido por la implementación. Esta función se enlaza a la envolvente más cercana `parallel` directiva. Si se llama desde una parte de la serie de un programa, o desde una región paralela anidada que se serializa, esta función devuelve 1.
+
+Para obtener más información, consulte [omp_set_dynamic ()](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
@@ -165,6 +169,12 @@ Una llamada a `omp_set_dynamic` tiene prioridad sobre la `OMP_DYNAMIC` variable 
 
 El valor predeterminado para el ajuste dinámico de subprocesos es definido por la implementación. Como resultado, los códigos de usuario que dependen de un número específico de subprocesos para su ejecución correcta, deben deshabilitarse subprocesos dinámicos. Las implementaciones no son necesarias para proporcionar la capacidad de ajustar dinámicamente el número de subprocesos, pero son necesarios para proporcionar la interfaz para admitir la portabilidad entre todas las plataformas.
 
+#### <a name="microsoft-specific"></a>Específicos de Microsoft
+
+La compatibilidad actual de `omp_get_dynamic` y `omp_set_dynamic` es como sigue: 
+
+El parámetro de entrada `omp_set_dynamic` no afecta a la directiva de subproceso y no cambia el número de subprocesos. `omp_get_num_threads` siempre devuelve el número definido por el usuario, si se establece, o el número de subprocesos de forma predeterminada. En la implementación actual de Microsoft, `omp_set_dynamic(0)` desactiva threading dinámica para que se pueda reutilizar el conjunto existente de subprocesos para la siguiente región paralela. `omp_set_dynamic(1)` activa el subprocesamiento dinámica descartando el conjunto de subprocesos existente y crear un nuevo conjunto para la región paralela próximas. El número de subprocesos en el nuevo conjunto es el mismo que el conjunto anterior y se basa en el valor devuelto de `omp_get_num_threads`. Por lo tanto, para un rendimiento óptimo, use `omp_set_dynamic(0)` reutilizar los subprocesos existentes.
+
 #### <a name="cross-references"></a>Referencias cruzadas
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ El `omp_get_dynamic` función devuelve un valor distinto de cero si realizar un 
 int omp_get_dynamic(void);
 ```
 
-Si la implementación no implementa el ajuste dinámico del número de subprocesos, esta función siempre devuelve 0.
+Si la implementación no implementa el ajuste dinámico del número de subprocesos, esta función siempre devuelve 0. Para obtener más información, consulte [omp_set_dynamic ()](#317-omp_set_dynamic-function).
 
 #### <a name="cross-references"></a>Referencias cruzadas
 
