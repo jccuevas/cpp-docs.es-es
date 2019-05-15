@@ -4,16 +4,16 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782363"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446775"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
-Si tiene problemas con el Compilador de Microsoft Visual C++, el enlazador u otras herramientas y bibliotecas de Visual C++, nos gustaría que nos informara de ello. Si el problema está en la documentación, también queremos estar al tanto.
+Si tiene algún problema con el compilador, el vinculador o cualquier otras herramienta o biblioteca de Microsoft C++, háganoslo saber. Si el problema está en la documentación, también queremos estar al tanto.
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Cómo informar de un problema del conjunto de herramientas de C++
 
