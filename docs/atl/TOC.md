@@ -95,7 +95,7 @@
 ## [Clases de colección de ATL](atl-collection-classes.md)
 ## [Componente de registro de ATL (Registrador)](atl-registry-component-registrar.md)
 ### [Crear scripts del registrador](creating-registrar-scripts.md)
-#### [Comprender la sintaxis de Backus Nauer Form (BNF)](understanding-backus-nauer-form-bnf-syntax.md)
+#### [Conceptos sobre la sintaxis de forma de Backus-Naur (BNF)](understanding-backus-naur-form-bnf-syntax.md)
 #### [Comprender los árboles de análisis](understanding-parse-trees.md)
 #### [Ejemplos de scripting del registro](registry-scripting-examples.md)
 #### [Usar parámetros reemplazables (el preprocesador del registrador)](using-replaceable-parameters-the-registrar-s-preprocessor.md)

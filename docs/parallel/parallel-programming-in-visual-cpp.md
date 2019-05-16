@@ -2,12 +2,12 @@
 title: Programación en paralelo en Visual C++
 ms.date: 11/04/2016
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
-ms.openlocfilehash: 80f3708b7c5f5a2c5167e0c27324898195e9d340
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a14768f9ff19fddd811166e4c8fffe90fc46cb8
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362574"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708071"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Programación en paralelo en Visual C++
 
@@ -22,4 +22,4 @@ Visual C++ proporciona las siguientes tecnologías para ayudarle a crear multipr
 |[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|Clases que permiten el uso de procesadores de gráficos modernos para la programación de propósito general.|
 |[Compatibilidad del código antiguo con multithreading (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|Tecnologías más antiguas que pueden ser útiles en las aplicaciones más antiguas. Para las nuevas aplicaciones, usar el Runtime de simultaneidad o C++ AMP.|
 |[OpenMP](openmp/openmp-in-visual-cpp.md)|La implementación de Microsoft de la API de OpenMP.|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|En esta sección de la documentación contiene información sobre la mayoría de las características de Visual C++.|
+|[C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)|En esta sección de la documentación contiene información sobre la mayoría de las características de Visual C++.|

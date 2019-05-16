@@ -2,12 +2,12 @@
 title: Información general de la programación para Windows en C++
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f2cdb0d0225b47391ee18c398b7789ab42ca8f40
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221329"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708209"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Información general de la programación para Windows en C++
 
@@ -116,7 +116,7 @@ Visual Studio incluye un depurador eficaz de código nativo, herramientas de an�
 
 |Título|Descripción|
 |-----------|-----------------|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Tema primario para el contenido del desarrollador de Visual C++.|
+|[C++ en Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Tema primario para el contenido del desarrollador de Visual C++.|
 [Desarrollo de .NET con C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Crear contenedores para las bibliotecas nativas de C++ que le permiten la comunicación con aplicaciones de .NET y componentes.|
 |[Extensiones de componentes de .NET y UWP](../extensions/component-extensions-for-runtime-platforms.md)|Referencia de elementos de sintaxis compartidos por C++ / c++ / CX y c++ / CLI.|
 |[Aplicaciones de Windows universales (C++)](universal-windows-apps-cpp.md)|Escribir aplicaciones para UWP con C++ / c++ / CX o biblioteca de plantillas de Windows en tiempo de ejecución (WRL).|
