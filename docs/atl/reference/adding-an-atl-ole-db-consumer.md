@@ -1,36 +1,44 @@
 ---
-title: Agregar un consumidor OLE DB de ATL
-ms.date: 11/04/2016
+title: Adición de un consumidor OLE DB ATL
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL projects, adding ATL OLE DB consumers
-- OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261382"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706919"
 ---
-# <a name="adding-an-atl-ole-db-consumer"></a>Agregar un consumidor OLE DB de ATL
+# <a name="adding-an-atl-ole-db-consumer"></a>Adición de un consumidor OLE DB ATL
 
-Use este asistente para agregar un consumidor OLE DB ATL a un proyecto. Un consumidor OLE DB ATL consta de una OLE DB descriptor de acceso clase y enlaces de datos necesarios para tener acceso a un origen de datos. El proyecto se debe haber creado como una aplicación ATL COM o como una aplicación MFC o Win32 que contiene la compatibilidad con ATL (que el Asistente para consumidores OLE DB ATL agrega automáticamente).
+::: moniker range="vs-2019"
+
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores. Puede seguir agregando la funcionalidad manualmente. Para obtener más información, consulte [Crear un consumidor sin utilizar un asistente](../../data/oledb/creating-a-consumer-without-using-a-wizard.md).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Use este asistente para agregar un consumidor OLE DB ATL a un proyecto. Un consumidor OLE DB ATL consta de una clase de descriptor de acceso OLE DB y enlaces de datos necesarios para obtener acceso a un origen de datos. El proyecto debe haberse creado como aplicación COM de ATL o como aplicación MFC o Win32 que contiene compatibilidad ATL (que el Asistente para consumidores OLE DB ATL agrega automáticamente).
 
 > [!NOTE]
-> Puede agregar un consumidor OLE DB a un proyecto MFC. Si lo hace, el Asistente para consumidores OLE DB ATL agrega la compatibilidad con COM necesario al proyecto. Esto implica que cuando creó el proyecto MFC, se activó la **controles ActiveX** casilla de verificación (en el **características avanzadas** página de proyecto MFC Application Wizard), que está activada de forma predeterminada. Al seleccionar esta opción garantiza que la aplicación llama a `CoInitialize` y `CoUninitialize`. Si no seleccionó **controles ActiveX** cuando creó el proyecto MFC, deberá llamar a `CoInitialize` y `CoUninitialize` en el código principal.
+> Puede agregar un consumidor OLE DB a un proyecto MFC. Si lo hace, el Asistente para consumidores OLE DB ATL agrega la compatibilidad con COM necesaria al proyecto. Esto implica que cuando creó el proyecto MFC, activó la casilla **Controles ActiveX** (en la página **Características avanzadas** del Asistente para aplicaciones del proyecto MFC), que está activada de forma predeterminada. Al seleccionarse esta opción se garantiza que la aplicación llame a `CoInitialize` y `CoUninitialize`. Si no activó **Controles ActiveX** cuando creó el proyecto MFC, debe llamar a `CoInitialize` y `CoUninitialize` en su código principal.
 
 ## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>Para agregar un consumidor OLE DB ATL al proyecto
 
-1. En **vista de clases**, haga clic en el proyecto. En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar clase**.
+1. En **Vista de clases**, haga clic con el botón derecho en el proyecto. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
 
-1. En la carpeta de Visual C++, haga doble clic en el **consumidores OLE DB ATL** icono o selecciónelo y haga clic en **abierto**.
+1. En la carpeta Visual C++, haga doble clic en el icono **Consumidor OLE DB ATL** o selecciónelo y haga clic en **Abrir**.
 
    Se abre el Asistente para consumidores OLE DB ATL.
 
-1. Definir la configuración como se describe en [el Asistente para consumidores OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).
+1. Defina la configuración tal como se describe en [Asistente para consumidores OLE DB ATL](../../atl/reference/atl-ole-db-consumer-wizard.md).
 
-1. Haga clic en **finalizar** para cerrar el asistente. El código de consumidor OLE DB recién creado se insertará en el proyecto.
+1. Haga clic en **Finalizar** para cerrar el asistente. El código del consumidor OLE DB recién creado se insertará en el proyecto.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 
