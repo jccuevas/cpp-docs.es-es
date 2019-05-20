@@ -1,33 +1,43 @@
 ---
-title: Agregar un proveedor OLE DB de ATL
-ms.date: 11/04/2016
+title: Adición de un proveedor OLE DB ATL
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, adding ATL OLE DB provider to projects
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: 01a5ed4ac09c466cefe195cea83f73ba270c21bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 78f26f43d11471c83bf9efcfc3aa55a23f0fbf3e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261005"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524609"
 ---
-# <a name="adding-an-atl-ole-db-provider"></a>Agregar un proveedor OLE DB de ATL
+# <a name="adding-an-atl-ole-db-provider"></a>Adición de un proveedor OLE DB ATL
 
-Use este asistente para agregar un proveedor OLE DB de ATL a un proyecto. Un proveedor OLE DB ATL consta de un origen de datos, sesión, comandos y las clases de conjunto de filas. El proyecto se debe haber creado como una aplicación de COM de ATL.
+::: moniker range="vs-2019"
+
+El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Use este asistente para agregar un proveedor OLE DB ATL a un proyecto. Un proveedor OLE DB ATL consta de clases de origen de datos, sesión, comando y conjunto de filas. El proyecto debe haberse creado como aplicación COM de ATL.
 
 ## <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>Para agregar un proveedor OLE DB ATL al proyecto
 
-1. En **vista de clases**, haga clic en el proyecto. En el menú contextual, haga clic en **agregar** y, a continuación, haga clic en **Agregar clase**.
+1. En **Vista de clases**, haga clic con el botón derecho en el proyecto. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
 
-1. En el **Visual C++** carpeta, haga doble clic en el **proveedor OLE DB ATL** icono o selecciónelo y haga clic en **abierto**.
+1. En la carpeta **Visual C++**, haga doble clic en el icono **Proveedor OLE DB ATL** o selecciónelo y haga clic en **Abrir**.
 
    Se abre el Asistente para proveedores OLE DB ATL.
 
-1. Definir la configuración como se describe en [el Asistente para proveedores OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md).
+1. Defina la configuración tal como se describe en [Asistente para proveedores OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md).
 
-1. Haga clic en **finalizar** para cerrar el asistente, que se insertará el código del proveedor OLE DB recién creado en el proyecto.
+1. Haga clic en **Finalizar** para cerrar el asistente, que insertará el código del proveedor OLE DB recién creado en el proyecto.
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,90 +1,92 @@
 ---
 title: Asistente para proveedores OLE DB ATL
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 3f8ff69fd80056bc2ac5a52cf3f42c69f8e8c543
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248268"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706961"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Asistente para proveedores OLE DB ATL
 
-Este asistente crea las clases que componen un proveedor OLE DB.
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> En Visual Studio 2017 versión 15.9, este asistente de código ha quedado en desuso y se quitará en una versión futura de Visual Studio. Este asistente se usa con muy poca frecuencia. La compatibilidad general con ATL y MFC no se ve afectada por la eliminación de este asistente. Si quiere compartir sus comentarios sobre este desuso, rellene [esta encuesta](https://www.surveymonkey.com/r/QDWKKCN). Su opinión es importante para nosotros.
+Este asistente no está disponible en Visual Studio 2019 ni en versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 ## <a name="remarks"></a>Comentarios
 
-A partir de Visual Studio 2008, el script de registro generado por este asistente registrará sus componentes COM en **HKEY_CURRENT_USER** en lugar de **HKEY_LOCAL_MACHINE**. Para modificar este comportamiento, establezca el **registrar componentes para todos los usuarios** opción del Asistente para ATL.
+A partir de Visual Studio 2008, el script de registro producido por este asistente registrará sus componentes COM en **HKEY_CURRENT_USER** en lugar de **HKEY_LOCAL_MACHINE**. Para modificar este comportamiento, establezca la opción para **registrar componentes para todos los usuarios** del Asistente para ATL.
 
-En la tabla siguiente se describe las opciones para el Asistente para proveedores OLE DB ATL:
+En la siguiente tabla se describen las opciones del Asistente para proveedores OLE DB ATL:
 
 - **Nombre corto**
 
-   Escriba el nombre corto del proveedor que se va a crear. Los otros cuadros de edición en el asistente se rellenarán automáticamente en función de lo que escribe aquí. Puede modificar los otros cuadros de nombre si lo desea.
+   Escriba el nombre corto del proveedor que se va a crear. Los otros cuadros de edición del asistente se rellenarán automáticamente en función de lo que escriba aquí. Puede editar los otros cuadros de nombre si lo desea.
 
 - **Coclase**
 
-   El nombre de la coclase. El nombre de ProgID cambiará para coincidir con este nombre.
+   Nombre de la coclase. El nombre de ProgID cambiará para coincidir con este nombre.
 
 - **Con atributos**
 
-   Esta opción especifica si el asistente creará clases de proveedor mediante atributos o declaraciones de plantilla. Cuando se selecciona esta opción, el asistente utiliza atributos en lugar de declaraciones de plantilla (es la opción predeterminada si ha creado un proyecto con atributos). Cuando desactiva esta opción, el asistente utiliza las declaraciones de plantilla en lugar de atributos (la opción predeterminada si ha creado un proyecto sin atributos).
+   Esta opción especifica si el asistente creará clases de proveedor mediante atributos o declaraciones de plantilla. Al seleccionar esta opción, el asistente usa atributos en lugar de declaraciones de plantilla (esta es la opción predeterminada si creó un proyecto con atributos). Al borrar esta opción, el asistente usa declaraciones de plantilla en lugar de atributos (esta es la opción predeterminada si creó un proyecto sin atributos).
 
-   Si selecciona esta opción al crear un proyecto sin atributos, el asistente le advertirá de que el proyecto se convertirá en un proyecto con atributos y le preguntará si desea continuar o no.
+   Si selecciona esta opción tras crear un proyecto sin atributos, el asistente le advierte de que el proyecto se convertirá en un proyecto con atributos y le pregunta si desea continuar.
 
 - **ProgID**
 
-   El ProgID o el identificador de programación, es una cadena de texto que puede usar la aplicación en lugar de un GUID. El nombre de ProgID tiene la forma *Projectname.Coclassname*.
+   El identificador de programación o ProgID es una cadena de texto que puede utilizar la aplicación en lugar de un GUID. El nombre de ProgID tiene la forma *Projectname.Coclassname*.
 
 - **Versión**
 
-   El número de versión del proveedor. El valor predeterminado es 1.
+   Número de versión del proveedor. El valor predeterminado es 1.
 
-- **Clase de origen de datos**
+- **Clase DataSource**
 
-   El nombre de la clase de origen de datos del formulario C*Shortname*origen.
+   Nombre de la clase de origen de datos, cuya forma es C*Shortname*Source.
 
-- **Archivo .h de origen de datos**
+- **Archivo .h de DataSource**
 
-   El archivo de encabezado para la clase de origen de datos. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+   Archivo de encabezado para la clase de origen de datos. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
 
 - **Clase de sesión**
 
-   El nombre de la clase de sesión del formulario C*Shortname*sesión.
+   Nombre de la clase de sesión, cuya forma es C*Shortname*Session.
 
 - **Archivo .h de sesión**
 
-   El archivo de encabezado para la clase de sesión. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+   Archivo de encabezado para la clase de sesión. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
 
 - **Clase de comando**
 
-   El nombre de la clase de comando del formulario C*Shortname*comando.
+   Nombre de la clase de comando, cuya forma es C*Shortname*Command.
 
-- **Archivo .h de Command**
+- **Archivo .h de comando**
 
-   El archivo de encabezado para la clase de comando. Este nombre no se puede editar y depende del nombre del archivo de encabezado del conjunto de filas.
+   Archivo de encabezado para la clase de comando. Este nombre no se puede editar y depende del nombre del archivo de encabezado del conjunto de filas.
 
 - **Clase de conjunto de filas**
 
-   El nombre de la clase de conjunto de filas, del formulario C*Shortname*conjunto de filas.
+   Nombre de la clase de conjunto de filas, cuya forma es C*Shortname*Rowset.
 
-- **Archivo .h de Rowset**
+- **Archivo .h de conjunto de filas**
 
-   El archivo de encabezado para la clase de conjunto de filas. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
+   Archivo de encabezado para la clase de conjunto de filas. Puede editar este nombre de archivo o seleccionar un archivo de encabezado existente.
 
-- **Archivo .cpp de Rowset**
+- **Archivo .cpp de conjunto de filas**
 
    Archivo de implementación del proveedor. Puede editar este nombre de archivo o seleccionar un archivo de implementación existente.
 
+::: moniker-end
+
 ## <a name="see-also"></a>Vea también
 
-[Proveedor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
+[Agregar un proveedor OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)
