@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: de5c9056402cb1db25240772eb3c592523daafae
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 0638680482546f56f26b70660ab43bd9848438a3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525324"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707486"
 ---
 # <a name="provider-wizard-generated-files"></a>Archivos generados por el Asistente para proveedores
 
@@ -19,7 +19,7 @@ El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 El **Asistente para proveedores OLE DB ATL** genera los siguientes archivos. Los temas siguientes utilizan el nombre corto *Personalizado*, pero los nombres de archivo exacto dependen de la elección realizada cuando se crea el proveedor.
 
