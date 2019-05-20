@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: 78f26f43d11471c83bf9efcfc3aa55a23f0fbf3e
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 36c07da6249a106836433e127f95258d4ed5b509
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524609"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706945"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>Adición de un proveedor OLE DB ATL
 
@@ -21,7 +21,7 @@ El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 2
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Use este asistente para agregar un proveedor OLE DB ATL a un proyecto. Un proveedor OLE DB ATL consta de clases de origen de datos, sesión, comando y conjunto de filas. El proyecto debe haberse creado como aplicación COM de ATL.
 

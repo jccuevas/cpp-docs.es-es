@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 09af59d97ab87c66a0a7096e72cc7b92bc3a5dbf
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525268"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707495"
 ---
 # <a name="supporting-schema-rowsets"></a>Admitir conjuntos de filas de esquema
 
@@ -38,7 +38,7 @@ El Asistente para proveedores OLE DB ATL no está disponible en Visual Studio 
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 El **Asistente para proveedores OLE DB ATL** crea tres clases de esquema en el archivo de encabezado de sesión:
 

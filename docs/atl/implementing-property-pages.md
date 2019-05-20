@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c4ba69d8421a76a94e4a676cb62ee53936d77da3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 49058fe13457c2d0050452cbc0015575371e4043
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524581"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706904"
 ---
 # <a name="implementing-property-pages"></a>Implementar páginas de propiedades
 
@@ -21,7 +21,7 @@ El Asistente para páginas de propiedades ATL no está disponible en Visual Stud
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Las páginas de propiedades son objetos COM que implementan la interfaz `IPropertyPage` o `IPropertyPage2`. ATL proporciona compatibilidad con la implementación de páginas de propiedades a través del [Asistente para páginas de propiedades ATL](../atl/reference/atl-property-page-wizard.md) en el [cuadro de diálogo Agregar clase](../ide/add-class-dialog-box.md).
 
