@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 5ea7900df8d71157a7ea77dd27a8ba83dfe259a1
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 2dccb1c2081996ce7336652b207f3a68b20a3f9e
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611752"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975117"
 ---
 # <a name="run-time-object-model-services"></a>Servicios del modelo de objetos en tiempo de ejecución
 
@@ -165,7 +165,7 @@ Vea el ejemplo de [IMPLEMENT_DYNCREATE](#implement_dyncreate).
 
 **Encabezado:** afx.h
 
-## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
+## <a name="declare_olectltype"></a> declare_olectltype
 
 Declara el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la clase del control.
 
@@ -188,7 +188,7 @@ El nombre de la clase de control.
 
 **Encabezado:** afxctl.h
 
-## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
+## <a name="a-namedeclareproppageids-declareproppageids"></a><a name="declare_proppageids"> declare_proppageids
 
 Declara que el control OLE proporciona una lista de páginas de propiedades para mostrar sus propiedades.
 
@@ -361,7 +361,7 @@ El identificador de clase OLE es un identificador único de 128 bits para el obj
 
 **Encabezado:** afxdisp.h
 
-## <a name="implementolectltype"></a>IMPLEMENT_OLECTLTYPE
+## <a name="a-nameimplementolectltype-implementolectltype"></a><a name="implement_olectltype"> implement_olectltype
 
 Implementa el `GetUserTypeNameID` y `GetMiscStatus` las funciones miembro de la clase del control.
 
