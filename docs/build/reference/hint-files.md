@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446310"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707109"
 ---
 # <a name="hint-files"></a>Archivos de indicaciones
 
-Un *archivo de indicaciones* contiene macros que de otra manera provocarían que el analizador de bases de datos de navegación de C++ omitiera ciertas regiones del código. Al abrir un Visual Studio C++ proyecto, el analizador analiza el código en cada archivo de código fuente en el proyecto y genera una base de datos con información sobre cada identificador. Después, el IDE usa esa información para admitir características de navegación por el código, como el explorador **Vista de clases** y la **Barra de navegación**.
+Un *archivo de indicaciones* contiene macros que de otra manera provocarían que el analizador de bases de datos de navegación de C++ omitiera ciertas regiones del código. Al abrir un proyecto de C++ de Visual Studio, el analizador analiza el código de todos los archivos de código fuente del proyecto y genera una base de datos con información sobre todos los identificadores. Después, el IDE usa esa información para admitir características de navegación por el código, como el explorador **Vista de clases** y la **Barra de navegación**.
 
 El analizador de bases de datos de navegación de C++ es un analizador por aproximación que puede analizar grandes cantidades de código en poco tiempo. Una de las causas de su rapidez es el hecho de que omite el contenido de bloques. Por ejemplo, solo registra la ubicación y los parámetros de una función, mientras que omite su contenido. Algunas macros pueden provocar problemas con la heurística usada para determinar el inicio y final de un bloque. Estos problemas provocan que ciertas regiones de código se registren incorrectamente.
 
@@ -118,7 +118,7 @@ El sistema de análisis busca los archivos de indicaciones en directorios en el 
 
 - El directorio que contiene el paquete de instalación de Visual C++ (**vcpackages**). Este directorio contiene un archivo de indicaciones integrado que describe símbolos en los archivos del sistema que se usan con frecuencia, como **windows.h**. Por tanto, el proyecto hereda de manera automática la mayoría de las indicaciones que necesita.
 
-- La ruta de acceso del directorio raíz de un archivo de código fuente al directorio que contiene el propio archivo de código fuente. En un típico de Visual Studio C++ proyecto, el directorio raíz contiene el archivo de solución o proyecto.
+- La ruta de acceso del directorio raíz de un archivo de código fuente al directorio que contiene el propio archivo de código fuente. En un proyecto típico de C++ de Visual Studio, el directorio raíz contiene el archivo de la solución o del proyecto.
 
    La excepción a esta regla es si hay un *archivo de detención* en la ruta de acceso al archivo de código fuente. Un archivo de detención es cualquier archivo con el nombre **cpp.stop**. Un archivo de detención proporciona control adicional sobre el orden de búsqueda. En lugar de iniciarse desde el directorio raíz, el sistema de análisis busca desde el directorio que contiene el archivo de detención hasta el directorio que contiene el archivo de código fuente. En un proyecto típico, no se necesita ningún archivo de detención.
 
@@ -162,7 +162,7 @@ Las sugerencias usan esta sintaxis:
 
 En este ejemplo se muestra cómo se acumulan las sugerencias de los archivos de indicaciones. En este ejemplo no se usa ningún archivo de detención.
 
-La ilustración muestra algunos de los directorios físicos en Visual Studio C++ proyecto. Hay archivos de indicaciones en los directorios `vcpackages`, `Debug`, `A1` y `A2`.
+En la ilustración se muestran algunos de los directorios físicos de un proyecto de C++ de Visual Studio. Hay archivos de indicaciones en los directorios `vcpackages`, `Debug`, `A1` y `A2`.
 
 ### <a name="hint-file-directories"></a>Directorios de archivos de indicaciones
 
@@ -244,7 +244,7 @@ Estas notas se aplican a la lista anterior:
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de archivos creados para Visual C++ proyectos](file-types-created-for-visual-cpp-projects.md)<br>
+[Tipos de archivos creados para proyectos de C++ de Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
 [#define (directiva) (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef (directiva) (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Anotaciones SAL](../../c-runtime-library/sal-annotations.md)<br>

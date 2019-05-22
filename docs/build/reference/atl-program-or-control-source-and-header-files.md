@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: 15d49cf984e45feeaad454de13c4ab37622000a4
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 5c1e5fc111b38fc9e4173598f11fbad7a658d755
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446584"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707508"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>Archivos de encabezado y código fuente de controles o programas ATL
 
@@ -27,6 +27,6 @@ Todos estos archivos se encuentran en el directorio *Nombre_proyecto* y en las c
 
 ## <a name="see-also"></a>Vea también
 
-[Tipos de archivos creados para Visual C++ proyectos](file-types-created-for-visual-cpp-projects.md)<br>
+[Tipos de archivos creados para proyectos de C++ de Visual Studio](file-types-created-for-visual-cpp-projects.md)<br>
 [Archivos de encabezado y código fuente de controles o programas MFC](mfc-program-or-control-source-and-header-files.md)<br>
 [Proyectos de CLR](files-created-for-clr-projects.md)
