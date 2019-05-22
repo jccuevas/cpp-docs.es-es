@@ -1,5 +1,5 @@
 ---
-title: 'Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)'
+title: 'Conjunto de registros: obtener cálculos SUM y otros resultados agregados (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,56 +10,59 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397788"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707845"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: Obtener cálculos SUM y otros resultados agregados (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Conjunto de registros: obtener cálculos SUM y otros resultados agregados (ODBC)
+
+> [!NOTE] 
+> El Asistente para consumidores ODBC MFC no está disponible en Visual Studio 2019 ni en versiones posteriores. Aun así, puede crear un consumidor manualmente.
 
 Este tema es aplicable a las clases ODBC de MFC.
 
-En este tema se explica cómo obtener resultados agregados mediante el siguiente [SQL](../../data/odbc/sql.md) palabras clave:
+En este tema se explica cómo obtener resultados agregados mediante las siguientes palabras clave de [SQL](../../data/odbc/sql.md):
 
-- **SUMA** calcula el total de los valores de una columna con un tipo de datos numéricos.
+- **SUMA** calcula el total de los valores de una columna con un tipo de datos numérico.
 
-- **MIN** extrae el valor más pequeño en una columna con un tipo de datos numérico.
+- **MIN** extrae el valor menor de una columna con un tipo de datos numérico.
 
-- **MAX** extrae el valor más grande en una columna con un tipo de datos numérico.
+- **MAX** extrae el valor mayor de una columna con un tipo de datos numérico.
 
-- **AVG** calcula un valor medio de todos los valores en una columna con un tipo de datos numéricos.
+- **AVG** calcula la media de todos los valores de una columna con un tipo de datos numérico.
 
-- **RECUENTO** cuenta el número de registros en una columna de cualquier tipo de datos.
+- **COUNT** cuenta el número de registros de una columna de cualquier tipo de datos.
 
-Utilice estas funciones SQL para obtener información estadística acerca de los registros en un origen de datos, en lugar de extraer los registros del origen de datos. El conjunto de registros que se crea normalmente consta de un solo registro (si todas las columnas son agregados) que contiene un valor. (Puede haber más de un registro si ha usado un **GROUP BY** cláusula.) Este valor es el resultado del cálculo o extracción realizados por la función de SQL.
+Puede usar estas funciones SQL para obtener información estadística sobre los registros de un origen de datos, en lugar de extraer los registros de este. El conjunto de registros que se crea suele constar de un solo registro (si todas las columnas son agregados) que contiene un valor. Puede haber más de un registro si ha usado una cláusula **GROUP BY**. Este valor es el resultado del cálculo o la extracción que realiza la función SQL.
 
 > [!TIP]
->  Para agregar una instancia de SQL **GROUP BY** cláusula (y posiblemente un **HAVING** cláusula) a la instrucción SQL, debe anexarlo al final de `m_strFilter`. Por ejemplo:
+>  Para agregar una cláusula **GROUP BY** de SQL (y posiblemente una cláusula **HAVING**) a la instrucción SQL, debe anexarla al final de `m_strFilter`. Por ejemplo:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 ```
 
-Puede limitar el número de registros que se utiliza para obtener resultados agregados mediante el filtrado y ordenación de las columnas.
+Puede limitar el número de registros que usa para obtener resultados agregados mediante el filtrado y la ordenación de las columnas.
 
 > [!CAUTION]
->  Algunos operadores de agregación devuelven un tipo de datos diferentes de las columnas que están agregando.
+>  Algunos operadores de agregación devuelven un tipo de datos diferente de las columnas que están agregando.
 
-- **SUMA** y **AVG** podría devolver el siguiente tipo de datos mayor (por ejemplo, una llamada con `int` devuelve **largo** o **doble**).
+- **SUM** y **AVG** podrían devolver el siguiente tipo de datos mayor (por ejemplo, una llamada con `int` devuelve **LONG** o **double**).
 
-- **RECUENTO de** normalmente devuelve **largo** independientemente del tipo de columna de destino.
+- **COUNT** suele devolver **LONG**, independientemente del tipo de columna de destino.
 
-- **MAX** y **MIN** devuelven el mismo tipo de datos como las columnas que calculan.
+- **MAX** y **MIN** devuelven el mismo tipo de datos que el de las columnas que calculan.
 
-     Por ejemplo, el **Agregar clase** asistente crea `long` `m_lSales` dar cabida a una columna de ventas, pero se debe reemplazar esto con un `double m_dblSumSales` miembro de datos para acomodar el resultado agregado. Vea el ejemplo siguiente.
+     Por ejemplo, el Asistente para **agregar clase** crea `long` `m_lSales` para alojar una columna Sales, pero esto se debe reemplazar por un miembro de datos `double m_dblSumSales` para alojar el resultado agregado. Vea el ejemplo siguiente.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Para obtener un resultado agregado para un conjunto de registros
 
-1. Crear un conjunto de registros como se describe en [agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) que contiene las columnas que desea obtener resultados agregados.
+1. Cree un conjunto de registros, como se describe en [Agregar un consumidor ODBC de MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md), que contenga las columnas de las que quiere obtener resultados agregados.
 
-1. Modificar el [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) función para el conjunto de registros. Reemplace la cadena que representa el nombre de columna (el segundo argumento de la [RFX](../../data/odbc/record-field-exchange-using-rfx.md) llamadas a funciones) con una cadena que representa la función de agregación en la columna. Por ejemplo, reemplace:
+1. Modifique la función [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) para el conjunto de registros. Reemplace la cadena que representa el nombre de columna (el segundo argumento de las llamadas de función [RFX](../../data/odbc/record-field-exchange-using-rfx.md)) por una cadena que represente la función de agregación en la columna. Por ejemplo, reemplace:
 
     ```
     RFX_Long(pFX, "Sales", m_lSales);
@@ -74,9 +77,9 @@ Puede limitar el número de registros que se utiliza para obtener resultados agr
 1. Abra el conjunto de registros. El resultado de la operación de agregación se deja en `m_dblSumSales`.
 
 > [!NOTE]
->  El asistente asigna los nombres de miembro de datos sin prefijos de notación húngara. Por ejemplo, el asistente produciría `m_Sales` para una columna de ventas, en lugar de `m_lSales` nombre usado anteriormente en la ilustración.
+>  El asistente asigna los nombres de los miembros de datos sin prefijos de notación húngara. Por ejemplo, el asistente produciría `m_Sales` para una columna Sales, en lugar del nombre `m_lSales` usado anteriormente como ejemplo.
 
-Si usas un [CRecordView](../../mfc/reference/crecordview-class.md) clase para ver los datos, tendrá que cambiar la llamada de función DDX para mostrar el nuevo valor de miembro de datos; en este caso, cambiarlo de:
+Si usa una clase [CRecordView](../../mfc/reference/crecordview-class.md) para ver los datos, tendrá que cambiar la llamada de función DDX para mostrar el nuevo valor del miembro de datos. En este caso, cámbielo de:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);

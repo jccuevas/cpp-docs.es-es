@@ -1,38 +1,44 @@
 ---
-title: Agregar un componente de páginas Active Server ATL
-ms.date: 11/04/2016
-helpviewer_keywords:
-- ASP components, adding
-- ASP components
-- ATL, ASP components
-- ATL ASP components
+title: Adición de un componente de páginas Active Server ATL
+ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 2f7ad08cb514e33224c877bcbf1c5e8128e26185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261317"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706926"
 ---
-# <a name="adding-an-atl-active-server-page-component"></a>Agregar un componente de páginas Active Server ATL
+# <a name="adding-an-atl-active-server-page-component"></a>Adición de un componente de páginas Active Server ATL
 
-Para agregar un objeto de Active Template Library (ATL) al proyecto, el proyecto debe se crearon como una aplicación ATL COM o como una aplicación MFC con compatibilidad con ATL. Puede usar el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md) para crear una aplicación ATL, puede seleccionar **agregar compatibilidad con ATL a MFC** desde el [cuadro de diálogo Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo, o puede [agregar un objeto ATL a una aplicación MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad con ATL para una aplicación MFC.
 
-Componentes de servidor páginas Active forman parte de la arquitectura de Internet Information Services, que proporciona las siguientes características avanzadas de desarrollo Web:
+::: moniker range="vs-2019"
 
-- Puede incrustar componentes ASP en las páginas HTML para crear contenido dinámico, independiente del explorador.
+El Asistente para componentes de páginas Active Server ATL no está disponible en Visual Studio 2019 ni en versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+Para agregar un objeto Active Template Library (ATL) al proyecto, este se debe haber creado como aplicación COM ATL o como aplicación MFC con compatibilidad ATL. Puede usar el [Asistente para proyectos ATL](../../atl/reference/atl-project-wizard.md) para crear una aplicación ATL, puede seleccionar **Agregar compatibilidad de ATL a MFC** en el cuadro de diálogo [Agregar clase](../../ide/add-class-dialog-box.md), o bien [agregar un objeto ATL a la aplicación MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) para implementar la compatibilidad de ATL con una aplicación MFC.
+
+Los componentes de páginas Active Server forman parte de la arquitectura Internet Information Services, que proporciona las siguientes características avanzadas de desarrollo web:
+
+- Puede insertar componentes ASP en las páginas HTML para crear contenido dinámico, independiente del explorador.
 
 - Puede usar las páginas ASP para proporcionar conectividad de base de datos basada en estándares.
 
-- Puede usar las capacidades de control de errores ASP para las aplicaciones basadas en Web.
+- Puede usar las funciones de control de errores de ASP para las aplicaciones basadas en web.
 
 ## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Para agregar un componente de páginas Active Server ATL al proyecto
 
-1. En **el Explorador de soluciones** haga clic en el nombre del proyecto al que desea agregar el componente de páginas Active Server ATL.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto al que quiera agregar el componente de páginas Active Server ATL.
 
 1. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
 
-1. En el [Agregar clase](../../ide/add-class-dialog-box.md) cuadro de diálogo el **plantillas** panel, haga clic en **componente de página Active Server ATL**y, a continuación, haga clic en **abierto** para mostrar el [Asistente para componentes de páginas de Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. En el cuadro de diálogo [Agregar clase](../../ide/add-class-dialog-box.md), en el panel **Plantillas**, haga clic en **Componente de páginas Active Server ATL** y después en **Abrir** para mostrar el [Asistente para componentes de páginas Active Server ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>Vea también
 
