@@ -1,24 +1,24 @@
 ---
 title: 'Herencia de propiedades en proyectos de Visual Studio: C++'
-ms.date: 12/10/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 7e6e2ec4e4f1999639a1b0a0d7ce35873736e5e3
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 472700226ffc1f265f6fab84dbd44fca651b3c87
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220442"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837402"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Herencia de propiedades en proyectos de Visual Studio
 
-El sistema del proyecto de Visual Studio se basa en MSBuild, que define los formatos de archivo y las reglas para la creación de proyectos de cualquier tipo. MSBuild administra gran parte de la complejidad de la compilación para varias plataformas y configuraciones, pero debe comprender un poco su funcionamiento. Esto es especialmente importante si quiere definir configuraciones personalizadas o crear conjuntos reutilizables de propiedades que pueda compartir e importar en varios proyectos.
+El sistema de proyectos de Visual Studio se basa en MSBuild, que define los formatos de archivo y las reglas para compilar proyectos de cualquier tipo. MSBuild administra gran parte de la complejidad de la compilación para varias plataformas y configuraciones, pero debe comprender un poco su funcionamiento. Esto es especialmente importante si quiere definir configuraciones personalizadas o crear conjuntos reutilizables de propiedades que pueda compartir e importar en varios proyectos.
 
-## <a name="the-vcxproj-file-props-files-and-targets-files"></a>El archivo .vcxproj, archivos .props y .targets archivos
+## <a name="the-vcxproj-file-props-files-and-targets-files"></a>El archivo .vcxproj, archivos .props y .targets
 
-Propiedades del proyecto se almacenan directamente en el archivo de proyecto (*.vcxproj) o en otros archivos .targets o .props que las importaciones del archivo de proyecto y que proporcionan los valores predeterminados. Para Visual Studio 2015, estos archivos se encuentran en **\Archivos de programa (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Para Visual Studio 2017, estos archivos se encuentran en **\\Archivos de programa (x86)\\Microsoft Visual Studio\\2017\\_edición_\\Common7\\IDE\\VC\\VCTargets**, donde _edición_ es la edición de Visual Studio instalada. Las propiedades también se almacenan en los archivos .props personalizados que es posible que se agreguen a un proyecto propio. Se recomienda encarecidamente NO modificar esos archivos de forma manual y, en su lugar, usar las páginas de propiedades del IDE para modificar todas las propiedades, en especial las que participan en la herencia, a menos que se tenga un conocimiento excelente de MSBuild.
+Las propiedades del proyecto se almacenan directamente en el archivo de proyecto (*.vcxproj) o en otros archivos .targets o .props que el archivo de proyecto importa y que proporcionan los valores predeterminados. Para Visual Studio 2015, estos archivos se encuentran en **\Archivos de programa (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**. Para Visual Studio 2017 o Visual Studio 2019, estos archivos se encuentran en **\\Archivos de programa (x86)\\Microsoft Visual Studio\\&lt;2017 o 2019>\\_edición_\\Common7\\IDE\\VC\\VCTargets**, donde _edición_ es la edición de Visual Studio instalada. Las propiedades también se almacenan en los archivos .props personalizados que es posible que se agreguen a un proyecto propio. Se recomienda encarecidamente NO modificar esos archivos de forma manual y, en su lugar, usar las páginas de propiedades del IDE para modificar todas las propiedades, en especial las que participan en la herencia, a menos que se tenga un conocimiento excelente de MSBuild.
 
-Como se muestra anteriormente, la misma propiedad para la misma configuración puede asignarse un valor distinto en estos archivos diferentes. Cuando se compila un proyecto, el motor de MSBuild evalúa el archivo de proyecto y todos los archivos importados en un orden bien definido (descrito a continuación). Al evaluar cada archivo, los valores de propiedad definidos en ese archivo invalidarán los valores existentes. Los valores que no se especifiquen se heredan de los archivos que se evaluaron anteriormente. Por tanto, cuando se establece una propiedad con las páginas de propiedades, también es importante prestar atención a dónde se establece. Si se establece una propiedad en "X" en un archivo .props, pero se establece en "Y" en el archivo de proyecto, el proyecto se compilará con la propiedad establecida en "Y". Si la misma propiedad se establece en "Z" en un elemento de proyecto, como un archivo .cpp, el motor de MSBuild usará el valor de "Z". 
+Como se ha mostrado antes, se puede asignar otro valor a la misma propiedad para la misma configuración en estos archivos diferentes. Cuando se compila un proyecto, el motor de MSBuild evalúa el archivo de proyecto y todos los archivos importados en un orden bien definido (descrito a continuación). Al evaluar cada archivo, los valores de propiedad definidos en ese archivo invalidarán los valores existentes. Los valores que no se especifiquen se heredan de los archivos que se evaluaron anteriormente. Por tanto, cuando se establece una propiedad con las páginas de propiedades, también es importante prestar atención a dónde se establece. Si se establece una propiedad en "X" en un archivo .props, pero se establece en "Y" en el archivo de proyecto, el proyecto se compilará con la propiedad establecida en "Y". Si la misma propiedad se establece en "Z" en un elemento de proyecto, como un archivo .cpp, el motor de MSBuild usará el valor de "Z". 
 
 Este es el árbol básico de herencia:
 
@@ -33,7 +33,7 @@ Este es el árbol básico de herencia:
 > [!TIP]
 > En una página de propiedades, una propiedad en `bold` se define en el contexto actual. Se hereda una propiedad en fuente normal.
 
-## <a name="view-an-expanded-project-file-with-all-imported-values"></a>Ver un archivo de proyecto expandidos con todos los valores importados
+## <a name="view-an-expanded-project-file-with-all-imported-values"></a>Visualización de un archivo de proyecto expandido con todos los valores importados
 
 En ocasiones, es útil ver el archivo expandido para determinar cómo se hereda un valor de propiedad especificado. Para ver la versión ampliada, escriba el siguiente comando en un símbolo del sistema de Visual Studio. (Cambie los nombres de archivo de marcador de posición a los que desea usar).
 
@@ -61,13 +61,13 @@ Para obtener más información, consulte [Propiedades de MSBuild](/visualstudio/
 
 Una configuración es solo un grupo arbitrario de propiedades a las que se asigna un nombre. Visual Studio proporciona configuraciones de depuración y versión, y cada una establece varias propiedades de forma adecuada para una compilación de depuración o de versión. Se puede usar el **Administrador de configuración** para definir configuraciones personalizadas como una manera cómoda de agrupar propiedades para un tipo de compilación específico. 
 
-Para obtener una mejor idea de las configuraciones de compilación, abra **Administrador de propiedades** eligiendo **vista &#124; Administrador de propiedades** o **vista &#124; Other Windows &#124; Administrador de propiedades**  dependiendo de su configuración. **Administrador de propiedades** tiene nodos para cada par de configuración/plataforma en el proyecto. En cada uno de estos nodos hay nodos para las hojas de propiedades (los archivos .props) que establecen algunas propiedades específicas para esa configuración.
+Para obtener una mejor idea de las configuraciones de compilación, abra el **Administrador de propiedades** por medio de **Ver &#124; Administrador de propiedades** o **Ver &#124; Otras ventanas &#124; Administrador de propiedades**, en función de la configuración. El **Administrador de propiedades** tiene nodos para cada par de configuración y plataforma del proyecto. En cada uno de estos nodos hay nodos para las hojas de propiedades (los archivos .props) que establecen algunas propiedades específicas para esa configuración.
 
 ![Administrador de propiedades](media/property-manager.png "Property Manager")
 
-Si ir al panel General de las páginas de propiedades y establezca la propiedad juego de caracteres a "Sin establecer" en lugar de "Uso de Unicode" y haga clic en **Aceptar**, Administrador de propiedades mostrará ningún **compatibilidad con Unicode** hoja de propiedades la configuración actual, pero se seguirá allí para otras configuraciones.
+Si va al panel General en las páginas de propiedades y establece la propiedad Juego de caracteres en "Sin establecer" en lugar de "Usar Unicode" y hace clic en **Aceptar**, en el Administrador de propiedades no se mostrará ninguna hoja de propiedades **Compatibilidad con Unicode** para la configuración actual, pero seguirá estando ahí para otras configuraciones.
 
-Para obtener más información sobre el Administrador de propiedades y hojas de propiedades, vea [configuraciones de proyecto de Visual Studio C++ del recurso compartido o resuse](create-reusable-property-configurations.md).
+Para más información sobre el Administrador de propiedades y las hojas de propiedades, vea [Compartir o volver a usar la configuración del proyecto de Visual Studio - C++](create-reusable-property-configurations.md).
 
 > [!TIP]
 > El archivo .user es una característica heredada y se recomienda eliminarlo para conservar las propiedades agrupadas de forma correcta según la configuración y la plataforma.

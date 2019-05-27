@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899451"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934165"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Mejoras de conformidad de C++ en las versiones 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#improvements_159) de Visual Studio 2017
 
-Gracias a la compatibilidad de constexpr generalizado y NSDMI con los agregados, el compilador de Microsoft Visual C++ ya tiene la totalidad de las características que se agregaron en el estándar C++14. Tenga en cuenta que al compilador todavía le faltan algunas características de los estándares C++11 y C++98. Consulte [Visual C++ Language Conformance](../visual-cpp-language-conformance.md) (Conformidad del lenguaje Visual C++) para ver una tabla que muestra el estado actual del compilador.
+Gracias a la compatibilidad de constexpr generalizado y NSDMI con los agregados, el compilador de Microsoft C++ ya tiene la totalidad de las características que se agregaron en el estándar C++14. Tenga en cuenta que al compilador todavía le faltan algunas características de los estándares C++11 y C++98. Consulte [Visual C++ Language Conformance](../visual-cpp-language-conformance.md) (Conformidad del lenguaje Visual C++) para ver una tabla que muestra el estado actual del compilador.
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ Nueva sintaxis para habilitar solo un identificador de espacio de nombres único
 
 ### <a name="structured-bindings"></a>Enlaces estructurados
 
-En una sola declaración ahora es posible almacenar un valor con nombres individuales para sus componentes, cuando el valor es una matriz, un std::tuple o std::pair o tiene todos los miembros de datos no estáticos públicos. Para más información, vea [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Enlaces estructurados) y [Returning multiple values from a function](../../cpp/functions-cpp.md#multi_val) (Devolver varios valores de una función).
+En una sola declaración ahora es posible almacenar un valor con nombres individuales para sus componentes, cuando el valor es una matriz, un `std::tuple` o `std::pair` o tiene todos los miembros de datos no estáticos públicos. Para más información, vea [Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) (Enlaces estructurados) y [Returning multiple values from a function](../../cpp/functions-cpp.md#multi_val) (Devolver varios valores de una función).
 
 ### <a name="construction-rules-for-enum-class-values"></a>Reglas de construcción para valores de enum class
 
@@ -826,7 +826,7 @@ void f()
 
 ### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>No se permiten argumentos predeterminados en definiciones fuera de línea de funciones miembro
 
-No se permiten argumentos predeterminados en definiciones fuera de línea de funciones miembro en clases de plantilla. El compilador emitirá una advertencia en **/permissive** y un error en **/permissive-**.
+No se permiten argumentos predeterminados en definiciones fuera de línea de funciones miembro en clases de plantilla. El compilador emitirá una advertencia en **/permissive** y un error en **/permissive-** .
 
 En versiones anteriores de Visual Studio, el siguiente código con formato incorrecto podría generar un bloqueo en tiempo de ejecución. En la versión 15.3 de Visual Studio 2017 se produce la advertencia C5034: 'A\<T>::f': an out-of-line definition of a member of a class template cannot have default arguments (una definición de fuera de línea de un miembro de una plantilla de clase no puede tener argumentos predeterminados):
 
@@ -955,7 +955,7 @@ La advertencia se excluye en **/Wv:18** y está activada de forma predeterminada
 
 ### <a name="stdisconvertible-for-array-types"></a>std::is_convertible para tipos de matriz
 
-Las versiones anteriores del compilador daban resultados incorrectos para [std::is_convertible](../../standard-library/is-convertible-class.md) con los tipos de matriz. Esto requería que los autores de bibliotecas distinguieran mayúsculas y minúsculas en el compilador de Microsoft Visual C++ al usar el rasgo de tipo `std::is_convertible<...>`. En el siguiente ejemplo, las aserciones estáticas se validan en versiones anteriores de Visual Studio, pero no en Visual Studio 2017 versión 15.3:
+Las versiones anteriores del compilador daban resultados incorrectos para [std::is_convertible](../../standard-library/is-convertible-class.md) con los tipos de matriz. Esto requería que los autores de bibliotecas distinguieran mayúsculas y minúsculas en el compilador de Microsoft C++ al usar el rasgo de tipo `std::is_convertible<...>`. En el siguiente ejemplo, las aserciones estáticas se validan en versiones anteriores de Visual Studio, pero no en Visual Studio 2017 versión 15.3:
 
 ```cpp
 #include <type_traits>
@@ -1309,7 +1309,7 @@ Esta nueva advertencia C4768 se muestra en algunos encabezados de Windows SDK qu
 
 ### <a name="extern_linkage"></a>Vinculación de extern constexpr
 
-En versiones anteriores de Visual Studio, el compilador siempre proporcionaba una vinculación interna de variable de `constexpr` aunque la variable se marcase como `extern`. En la versión 15.5 de Visual Studio 2017, un nuevo conmutador de compilador (**/Zc:externConstexpr**) permite un comportamiento correcto que cumple con los estándares. Este acabará convirtiéndose en el conmutador predeterminado.
+En versiones anteriores de Visual Studio, el compilador siempre proporcionaba una vinculación interna de variable de `constexpr` aunque la variable se marcase como `extern`. En la versión 15.5 de Visual Studio 2017, un nuevo conmutador de compilador ( **/Zc:externConstexpr**) permite un comportamiento correcto que cumple con los estándares. Este acabará convirtiéndose en el conmutador predeterminado.
 
 ```cpp
 extern constexpr int x = 10;
@@ -1464,7 +1464,7 @@ int main()
 
 Con el operador noexcept en el sistema de tipo, es posible que las especializaciones parciales para hacer coincidir tipos "callable" determinados no se puedan compilar o que no se pueda elegir la plantilla principal debido a que falte una especialización parcial para los punteros de función noexcept.
 
-En tales casos, es posible que tenga que agregar más especializaciones parciales para controlar los punteros de función noexcept y los punteros noexcept en las funciones de miembro. Estas sobrecargas solo son lícitas en el modo **/std:c++17**. Si hay que conservar la compatibilidad de C++14 con versiones anteriores y está escribiendo código que utilizan otros usuarios, debe restringir estas nuevas sobrecargas a las directivas de `#ifdef`. Si está trabajando en un módulo autocontenido, en lugar de usar restricciones de `#ifdef`, puede compilar con el conmutador **/Zc:noexceptTypes-**.
+En tales casos, es posible que tenga que agregar más especializaciones parciales para controlar los punteros de función noexcept y los punteros noexcept en las funciones de miembro. Estas sobrecargas solo son lícitas en el modo **/std:c++17**. Si hay que conservar la compatibilidad de C++14 con versiones anteriores y está escribiendo código que utilizan otros usuarios, debe restringir estas nuevas sobrecargas a las directivas de `#ifdef`. Si está trabajando en un módulo autocontenido, en lugar de usar restricciones de `#ifdef`, puede compilar con el conmutador **/Zc:noexceptTypes-** .
 
 El código siguiente compila en **/std:c++14**, pero falla en **/std:c++17**, con el error C2027: "use of undefined type 'A\<T>'":
 
@@ -1697,7 +1697,7 @@ La búsqueda de nombres en dos fases requiere que los nombres no dependientes qu
 
 Una forma de manifestarse es con una búsqueda en las clases base dependientes. Antes, el compilador permitía el uso de nombres definidos en clases base dependientes, ya que se buscaban en el momento de crear las instancias, al resolverse todos los tipos. Ahora, ese código se trata como un error. En estos casos, puede forzar la búsqueda de la variable en el momento de crear las instancias. Para ello, puede certificarla con el tipo de clase base o convertirla en dependiente (por ejemplo, agregando un puntero `this->`).
 
-En el modo **/permissive-**, el siguiente código ahora genera C3861: *"base_value": no se encontró el identificador*:
+En el modo **/permissive-** , el siguiente código ahora genera C3861: *"base_value": no se encontró el identificador*:
 
 ```cpp
 template <class T>
@@ -1764,11 +1764,11 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>offsetof con expresiones constantes
 
-[offsetof](../../c-runtime-library/reference/offsetof-macro.md) tradicionalmente se ha implementado con una macro que requiere un [reinterpret_cast](../../cpp/reinterpret-cast-operator.md). En los contextos que requieran una expresión constante, no es un proceso válido, pero el compilador de Microsoft C++ tradicionalmente lo ha permitido. La macro offsetof que se distribuye como parte de la STL usa correctamente una función intrínseca del compilador (**__builtin_offsetof**), pero muchas personas han empleado el truco de la macro para definir su propio **offsetof**.
+[offsetof](../../c-runtime-library/reference/offsetof-macro.md) tradicionalmente se ha implementado con una macro que requiere un [reinterpret_cast](../../cpp/reinterpret-cast-operator.md). En los contextos que requieran una expresión constante, no es un proceso válido, pero el compilador de Microsoft C++ tradicionalmente lo ha permitido. La macro offsetof que se distribuye como parte de la STL usa correctamente una función intrínseca del compilador ( **__builtin_offsetof**), pero muchas personas han empleado el truco de la macro para definir su propio **offsetof**.
 
 En la versión 15.8 de Visual Studio 2017, el compilador restringe las áreas en las que pueden aparecer estos reinterpret_casts en el modo predeterminado a fin de que el código pueda ajustarse al comportamiento estándar de C++. En el modo [/permissive-](../../build/reference/permissive-standards-conformance.md), las restricciones son aún más estrictas. El uso del resultado de una macro offsetof en lugares donde se requieren expresiones constantes puede generar un código que emita la advertencia C4644 *el uso del patrón offsetof basado en macros en las expresiones de constante no es estándar; use el patrón offsetof definido en la biblioteca estándar de C++ en su lugar* o la advertencia C2975 *invalid template argument, expected compile-time constant expression* (argumento de plantilla no válido. Se esperaba una expresión constante en tiempo de compilación).
 
-El código siguiente genera C4644 en los modos **/default** y **/std:c++17**, y C2975 en el modo **/permissive-**:
+El código siguiente genera C4644 en los modos **/default** y **/std:c++17**, y C2975 en el modo **/permissive-** :
 
 ```cpp
 struct Data {
@@ -1810,7 +1810,7 @@ int main()
 
 Las versiones anteriores del compilador de Microsoft C++ no detectaban que una clase base tenía calificadores cv si esta también estaba sujeta a una expansión de paquete.
 
-En la versión 15.8 de Visual Studio 2017, en el modo **/permissive-**, el código siguiente genera la advertencia C3770 *'const S': is not a valid base class* ("Const S": No es una clase base válida):
+En la versión 15.8 de Visual Studio 2017, en el modo **/permissive-** , el código siguiente genera la advertencia C3770 *'const S': is not a valid base class* ("Const S": No es una clase base válida):
 
 ```cpp
 template<typename... T>
@@ -1826,7 +1826,7 @@ int main()
 
 ### <a name="template-keyword-and-nested-name-specifiers"></a>Palabra clave template y nested-name-specifiers
 
-En el modo **/permissive-**, el compilador ahora requiere que la palabra clave `template` preceda a un template-name si va después de un nested-name-specifier dependiente.
+En el modo **/permissive-** , el compilador ahora requiere que la palabra clave `template` preceda a un template-name si va después de un nested-name-specifier dependiente.
 
 El siguiente código en el modo **/permissive-** ahora genera la advertencia C7510: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled* ("foo": El nombre de la plantilla dependiente debe tener el prefijo "template". Nota: Vea la referencia a la creación de instancias de la plantilla de clase "X" que se está compilando):
 
@@ -1887,7 +1887,7 @@ struct A
 A<>::from_template_t<A<int>> a;
 ```
 
-En Visual Studio 2017 versión 15.9, en el modo **/permissive-**, el compilador genera la advertencia C3861: *'from_template': no se encontró el identificador*.
+En Visual Studio 2017 versión 15.9, en el modo **/permissive-** , el compilador genera la advertencia C3861: *'from_template': no se encontró el identificador*.
 
 Para corregir el error, declare `from_template` antes de `from_template_t`.
 
@@ -1903,13 +1903,13 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-Para ambos casos, el compilador genera la *advertencia C5050: Posible entorno no compatible al importar el módulo "m": no coinciden las versiones de C++.  Actual "201402" versión del módulo "201703"*.
+Para ambos casos, el compilador genera la *advertencia C5050: Posible entorno no compatible al importar el módulo "m": no coinciden las versiones de C++.  Actual "201402" versión del módulo "201703"* .
 
-Además, el compilador genera la advertencia C7536 cada vez que se modifica el archivo .ifc. El encabezado de la interfaz del módulo contiene un hash SHA2 del contenido debajo de él. En la importación, se aplica un algoritmo hash al archivo .ifc de la misma manera y después se compara con el hash proporcionado en el encabezado; si no coinciden, se genera el error C7536: *error de las comprobaciones de integridad de IFC.  SHA2 esperado: "66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6"*.
+Además, el compilador genera la advertencia C7536 cada vez que se modifica el archivo .ifc. El encabezado de la interfaz del módulo contiene un hash SHA2 del contenido debajo de él. En la importación, se aplica un algoritmo hash al archivo .ifc de la misma manera y después se compara con el hash proporcionado en el encabezado; si no coinciden, se genera el error C7536: *error de las comprobaciones de integridad de IFC.  SHA2 esperado: "66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6"* .
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Ordenación parcial que incluye alias y contextos no deducidos
 
-Hay divergencias en la aplicación de las reglas de ordenación parcial que afectan a los alias en contextos no deducidos. En el ejemplo siguiente, GCC y el compilador de C++ de Microsoft (en modo **/permissive-**) producirá un error, mientras que Clang acepta el código. 
+Hay divergencias en la aplicación de las reglas de ordenación parcial que afectan a los alias en contextos no deducidos. En el ejemplo siguiente, GCC y el compilador de C++ de Microsoft (en modo **/permissive-** ) producirá un error, mientras que Clang acepta el código. 
 
 ```cpp
 #include <utility>
@@ -2035,7 +2035,7 @@ constexpr void S<int>::f()
 }
 ```
 
-En la versión 15.9 de Visual Studio 2017, el código genera este error: *Error C3615: La función constexpr 'S<int>::f' no puede dar como resultado una expresión constante. Nota: El error se debió a una llamada de función no definida o una 'constexpr' no declarada. Nota: Consulte el uso de 'g'*. Para evitar el error, quite el calificador `constexpr` de la creación de instancia explícita de la función f(). 
+En la versión 15.9 de Visual Studio 2017, el código genera este error: *Error C3615: La función constexpr 'S<int>::f' no puede dar como resultado una expresión constante. Nota: El error se debió a una llamada de función no definida o una 'constexpr' no declarada. Nota: Consulte el uso de 'g'* . Para evitar el error, quite el calificador `constexpr` de la creación de instancia explícita de la función f(). 
 
 ## <a name="see-also"></a>Vea también
 
