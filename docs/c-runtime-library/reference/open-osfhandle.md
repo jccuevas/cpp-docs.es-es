@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174795"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -54,13 +54,13 @@ Tipos de operaciones permitidas.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si es correcto, **_open_osfhandle** devuelve un descriptor de archivo de tiempo de ejecución de C. En caso contrario, devuelve -1.
+Si se realiza correctamente, **_open_osfhandle** devuelve un descriptor de archivo en tiempo de ejecución de C. De lo contrario, devuelve -1.
 
 ## <a name="remarks"></a>Comentarios
 
-El **_open_osfhandle** función asigna un descriptor de archivo de tiempo de ejecución de C y lo asocia con el identificador de archivo del sistema operativo especificado por *osfhandle*. Para evitar una advertencia del compilador, convierta el *osfhandle* argumento desde **controlar** a **intptr_t**. El *marcas* argumento es una expresión de entero formada a partir de uno o más constantes del manifiesto definidos en \<fcntl.h >. Cuando se usan dos o más constantes de manifiesto para formar el *marcas* argumento, estas constantes se combinan con el operador OR bit a bit ( **&#124;** ).
+La función **_open_osfhandle** asigna un descriptor de archivo en tiempo de ejecución de C y lo asocia al identificador de archivo del sistema operativo especificado por *osfhandle*. Para evitar una advertencia del compilador, convierta el argumento *osfhandle* de **HANDLE** a **intptr_t**. El argumento *flags* es una expresión de entero formada por una o varias de las constantes del manifiesto, definidas en \<fcntl.h>. Cuando se usan dos o más constantes del manifiesto para formar el argumento *flags*, estas constantes se combinan con el operador bit a bit OR (**&#124;**).
 
-Estas constantes de manifiesto se definen en \<fcntl.h >:
+Estas constantes de manifiesto se definen en \<fcntl.h>:
 
 |||
 |-|-|
@@ -69,7 +69,7 @@ Estas constantes de manifiesto se definen en \<fcntl.h >:
 | **\_O\_TEXT** | Abre el archivo en modo de texto (traducido). |
 | **\_O\_WTEXT** | Abre el archivo en modo Unicode (UTF-16 traducido). |
 
-El **_open_osfhandle** llamada transfiere la propiedad del identificador de archivo de Win32 en el descriptor de archivo. Para cerrar un archivo abierto con **_open_osfhandle**, llame a [ \_cerrar](close.md). También se cierra el identificador de archivo del sistema operativo subyacente mediante una llamada a **_close**, por lo que no es necesario llamar a la función de Win32 **CloseHandle** en el identificador original. Si el descriptor de archivo pertenece a un **archivo &#42;**  secuencia, a continuación, llamar a [fclose](fclose-fcloseall.md) en que **archivo &#42;**  secuencia también tanto el descriptor de archivo cierra y el identificador subyacente. En este caso, no llame a **_close** en el descriptor de archivo.
+Con la llamada **_open_osfhandle**, se transfiere la propiedad del identificador de archivos de Win32 al descriptor del archivo. Para cerrar un archivo abierto mediante **_open_osfhandle**, llame a [\_close](close.md). El identificador de archivos del sistema operativo subyacente también se cierra mediante una llamada a **_close**. No llame a la función de Win32 **CloseHandle** en el identificador original. Si el descriptor del archivo pertenece a un flujo **FILE &#42;**, el hecho de llamar a [fclose](fclose-fcloseall.md) en dicho flujo **FILE &#42;** cerrará tanto el descriptor del archivo como el identificador subyacente. En este caso, no llame a **_close** en el descriptor del archivo o a **CloseHandle** en el identificador original.
 
 ## <a name="requirements"></a>Requisitos
 
