@@ -1,28 +1,29 @@
 ---
 title: C++ en Visual Studio
 description: Visual C++ es el nombre del compilador de Microsoft C++, el editor de código y las herramientas relacionadas del IDE de Visual Studio. Utilice Visual C++ para desarrollar programas para Windows, Linux, iOS y Android.
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222600"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934149"
 ---
 # <a name="c-in-visual-studio"></a>C++ en Visual Studio
 
 > [!NOTE]
-> Esta documentación para desarrolladores es aplicable a Visual Studio 2015 y Visual Studio 2017.
+> Esta documentación para desarrolladores es aplicable a Visual Studio 2015 y versiones posteriores. Utilice el selector de versión de la parte superior izquierda de la página para que coincida con su versión de Visual Studio.
 >
 > Si busca un paquete redistribuible de Visual C++ que le permita ejecutar un programa, vaya al [Centro de descarga de Microsoft](http://www.microsoft.com/download/) y escriba **Visual C++** en el cuadro de búsqueda.
 
-
 Microsoft Visual C++, con frecuencia abreviado como Visual C++ o MSVC, es el nombre de las herramientas y las bibliotecas de desarrollo de lenguaje ensamblador, C++ y C que están disponibles como parte de Visual Studio en Windows. Dichas herramientas y bibliotecas permiten crear aplicaciones de la Plataforma universal de Windows (UWP), aplicaciones nativas de servidor y escritorio de Windows, y aplicaciones y bibliotecas multiplataforma que se ejecuten en Windows, Linux, Android y iOS, así como aplicaciones y bibliotecas administradas que usen .NET Framework. Puede usar Visual C++ para escribir cualquier cosa, desde sencillas aplicaciones de consola hasta aplicaciones de lo más complejas y sofisticadas de escritorio de Windows, desde controladores de dispositivos y componentes del sistema operativo hasta juegos multiplataforma para dispositivos móviles, y desde dispositivos IoT de lo más simples hasta elementos multiservidor de informática de alto rendimiento en la nube de Azure.
+
+Visual Studio 2015, 2017 y 2019 pueden instalarse en paralelo. Puede usar Visual Studio 2019 (conjunto de herramientas del compilador v142) para editar y compilar programas con el conjunto de herramientas de Visual Studio 2015 (v140) y Visual Studio 2017 (v141).
 
 ## <a name="whats-new-and-conformance-history"></a>Historial de cumplimiento y novedades
 

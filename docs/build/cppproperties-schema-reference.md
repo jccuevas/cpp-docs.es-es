@@ -1,14 +1,14 @@
 ---
 title: Referencia del esquema de CppProperties.json
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220842"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837057"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Referencia del esquema de CppProperties.json
 
@@ -115,14 +115,14 @@ Una configuración puede tener cualquiera de las propiedades siguientes:
 |`compilerSwitches`|Uno o varios modificadores adicionales que pueden influir en el comportamiento de IntelliSense.|
 |`forcedInclude`|Encabezado que se va a incluir de forma automática en todas las unidades de compilación (se asigna a /FI para MSVC o -include para clang).|
 |`undefines`|Lista de macros de las que se van a anular las definiciones (se asigna a /U para MSVC).|
-|`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar variantes específicas de la arquitectura para MSVC, gcc o Clang:<br/><br/>-windows-msvc-x86 (valor predeterminado)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Motor de IntelliSense que se va usar. Puede especificar variantes específicas de la arquitectura para MSVC, gcc o Clang:<br/><br/>- windows-msvc-x86 (valor predeterminado)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-Nota: Los valores `msvc-x86` y `msvc-x64` por motivos de herencia solo se admiten. Use el `windows-msvc*` variantes.
+Nota: Los valores `msvc-x86` y `msvc-x64` solo se admiten por motivos de herencia. Use las variantes `windows-msvc*`.
 
 ## <a name="custom-configurations"></a>Configuraciones personalizadas
 
 
-Puede personalizar cualquiera de las configuraciones predeterminadas en `CppProperties.json`, o bien crear nuevas configuraciones. Todas aparecerán en el menú desplegable de configuración:
+Puede personalizar cualquiera de las configuraciones predeterminadas de `CppProperties.json`, o bien crear configuraciones. Todas aparecerán en el menú desplegable de configuración:
 
 ```json
 {
@@ -264,7 +264,7 @@ Dentro de `CppProperties.json` tiene acceso a las macros integradas siguientes:
 |-|-|
 |`${workspaceRoot}`| la ruta de acceso completa a la carpeta del área de trabajo.|
 |`${projectRoot}`| la ruta de acceso completa a la carpeta donde se coloca `CppProperties.json`.|
-|`${vsInstallDir}`| la ruta de acceso completa a la carpeta donde está instalada la instancia en ejecución de VS 2017.|
+|`${vsInstallDir}`| la ruta de acceso completa a la carpeta donde está instalada la instancia en ejecución de Visual Studio.|
 
 Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye windows.h y otros encabezados comunes de Windows SDK, es posible que le interese actualizar el archivo de configuración `CppProperties.json` con estos archivos de inclusión:
 
@@ -289,7 +289,7 @@ Por ejemplo, si el proyecto tiene una carpeta de inclusión y también incluye w
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` y `%VCToolsInstallDir%` no se establecen como variables de entorno globales, por lo que debe asegurarse de iniciar devenv.exe desde un "Símbolo del sistema para desarrolladores para VS 2017" que defina estas variables.
+> `%WindowsSdkDir%` y `%VCToolsInstallDir%` no se establecen como variables de entorno globales, por lo que debe asegurarse de iniciar devenv.exe desde un Símbolo del sistema para desarrolladores que defina estas variables. (Escriba "desarrollador" en el menú de inicio de Windows).
 
 ## <a name="troubleshoot-intellisense-errors"></a>Solución de errores de IntelliSense
 

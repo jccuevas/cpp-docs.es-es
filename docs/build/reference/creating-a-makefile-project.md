@@ -1,38 +1,55 @@
 ---
-title: Crear un proyecto de archivos MAKE de C++ en Visual Studio
-ms.date: 12/08/2018
+title: Creación de un proyecto de archivos Make de C++ en Visual Studio
+ms.date: 05/16/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272352"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837386"
 ---
-# <a name="create-a-c-makefile-project"></a>Crear un proyecto de archivos MAKE de C++
+# <a name="create-a-c-makefile-project"></a>Creación de un proyecto de archivos Make de C++
 
-Un *archivos Make* es un archivo de texto que contiene instrucciones sobre cómo compilar y vincular o *crear* un conjunto de archivos de código fuente en C++. Un programa *Make* lee el archivo Make e invoca un compilador, un vinculador y posiblemente otros programas para crear un archivo ejecutable. La implementación de Microsoft la *realizar* programa se denomina [NMAKE](nmake-reference.md);
+Un *archivos Make* es un archivo de texto que contiene instrucciones sobre cómo compilar y vincular o *crear* un conjunto de archivos de código fuente en C++. Un programa *Make* lee el archivo Make e invoca un compilador, un vinculador y posiblemente otros programas para crear un archivo ejecutable. La implementación de Microsoft del programa *make* se denomina [NMAKE](nmake-reference.md);
 
 Si tiene un proyecto de archivo Make existente, tiene estas opciones si desea codificarlo o depurarlo en el IDE de Visual Studio:
 
-- Cree un proyecto de archivos MAKE de Visual Studio que usa el archivo MAKE existente para configurar un archivo .vcxproj que va a usar Visual Studio para IntelliSense. (No tendrá todas las características del IDE que obtendrá con un proyecto de MSBuild nativo). Vea [Para crear un proyecto de archivos Make](#create_a_makefile_project) a continuación.
-- Use el asistente para **Crear nuevo proyecto de archivos de código fuente existentes** para crear un proyecto de MSBuild nativo a partir del código fuente. No se usará el archivo MAKE original después de esto. Para obtener más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 y versiones posteriores**: Use la **Abrir carpeta** característica para editar y compilar un proyecto de archivos MAKE como-sin ninguna participación del sistema MSBuild. Para más información, vea el artículo sobre los [proyectos Abrir carpeta para C++](../open-folder-projects-cpp.md).
+- Cree un proyecto de archivos Make en Visual Studio en el que se use el archivo Make existente para configurar un archivo .vcxproj que Visual Studio usará para IntelliSense. (No tendrá todas las características del IDE que obtendrá con un proyecto de MSBuild nativo). Vea [Para crear un proyecto de archivos Make](#create_a_makefile_project) a continuación.
+- Use el asistente para **Crear nuevo proyecto de archivos de código fuente existentes** para crear un proyecto de MSBuild nativo a partir del código fuente. Después de esto no se usará el archivo Make original. Para obtener más información, vea [Cómo: Crear un proyecto de C++ a partir del código existente](../how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 y versiones posteriores**: Use la característica **Abrir carpeta** para editar y compilar un proyecto de archivos Make como está, sin participación alguna del sistema MSBuild. Para más información, vea el artículo sobre los [proyectos Abrir carpeta para C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2019 y versiones posteriores**: Cree un proyecto de archivos Make de UNIX para Linux.
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para crear un proyecto de archivos MAKE con la plantilla de proyecto de archivos MAKE
+## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Para crear un proyecto de archivos Make con la plantilla de proyecto de archivos Make
 
 En Visual Studio 2017 y versiones posteriores, la plantilla de proyecto de archivos Make está disponible cuando se instala la carga de trabajo de Desarrollo de escritorio de C++.
 
-Siga el asistente para especificar los comandos y el entorno que el archivo Make va a usar. A continuación, puede utilizar este proyecto para compilar el código en Visual Studio.
+Siga el asistente para especificar los comandos y el entorno que el archivo Make va a usar. Después, podrá usar este proyecto para compilar el código en Visual Studio.
 
 De forma predeterminada, el proyecto de archivo Make no mostrará ningún archivo en el Explorador de soluciones. El proyecto de archivo Make especifica la configuración de compilación, que se refleja en la página de propiedades del proyecto.
 
 El archivo de salida que especifique en el proyecto no afectará al nombre que genera el script de compilación; sólo declara una intención. Aún así, el archivo Make controla el proceso de compilación y especifica los destinos de compilación.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Para crear un proyecto de archivos Make en Visual Studio 2019
+
+1. En el menú principal de Visual Studio, seleccione **Archivo** > **Nuevo** > **Proyecto** y escriba "archivo Make" en el cuadro de búsqueda. O bien, en el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C++** > **General** (Visual Studio 2015) u **Otros** (Visual Studio 2017) y, después, seleccione entre las dos opciones en función de si se va a destinar a Windows o Linux.
+
+1. **Solo Windows**: En la página **Configuración de depuración**, escriba la información sobre comandos, salida, limpieza y recompilación para las compilaciones de depuración y comercial. Haga clic en **Siguiente** si quiere especificar otros valores para una configuración de versión.
+
+1. Haga clic en **Finalizar** para cerrar el cuadro de diálogo y abrir el proyecto recién creado en el **Explorador de soluciones**.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Para crear un proyecto de archivos Make en Visual Studio 2015 o Visual Studio 2017
 
 1. En la página de inicio de Visual Studio, escriba "archivo Make" en el cuadro de búsqueda **Nuevo proyecto**. O bien, en el cuadro de diálogo **Nuevo proyecto**, expanda **Visual C++** > **General** (Visual Studio 2015) u **Otros** (Visual Studio 2017) y después seleccione **Proyecto de archivos Make** en el panel Plantillas para abrir el asistente para proyectos.
 
@@ -40,25 +57,27 @@ El archivo de salida que especifique en el proyecto no afectará al nombre que g
 
 1. Haga clic en **Finalizar** para cerrar el asistente y abrir el **Explorador de soluciones** del proyecto recién creado.
 
-Puede ver y editar las propiedades del proyecto en la página de propiedades. Consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md) para obtener información acerca de cómo mostrar la página de propiedades.
+::: moniker-end
 
-## <a name="makefile-project-wizard"></a>Asistente para proyecto de archivos MAKE
+Puede ver y editar las propiedades del proyecto en la página de propiedades. Vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md) para obtener información sobre cómo mostrar la página de propiedades.
 
-Después de crear un proyecto de archivos MAKE, puede ver y editar cada una de las siguientes opciones en el **Nmake** página de la página de propiedades del proyecto.
+## <a name="makefile-project-wizard"></a>Asistente para proyectos de archivos Make
 
-- **Línea de comandos de compilación:** Especifica la línea de comandos que se ejecutará cuando el usuario selecciona la compilación en el menú compilar. Se muestra en el campo de la línea de comandos de compilación en la página de Nmake de página de propiedades del proyecto.
+Después de crear un proyecto de archivos Make, puede ver y modificar cada una de las opciones siguientes en la página **Nmake** de la página de propiedades del proyecto.
 
-- **Salida:** Especifica el nombre del archivo que contendrá la salida para la línea de comandos. De forma predeterminada, esta opción se basa en el nombre del proyecto. Se muestra en el campo de salida en la página de Nmake de página de propiedades del proyecto.
+- **Línea de comandos de Compilar:** especifica la línea de comandos que se va a ejecutar cuando el usuario seleccione Compilar en el menú Compilar. Se muestra en el campo Línea de comandos de Compilar de la página Nmake de la página de propiedades del proyecto.
 
-- **Comandos para limpiar:** Especifica la línea de comandos que se ejecutará cuando el usuario seleccione Limpiar en el menú compilar. Se muestra en el campo de la línea de comandos de limpieza en la página de Nmake de página de propiedades del proyecto.
+- **Salida:** Especifica el nombre del archivo que contendrá la salida para la línea de comandos. De forma predeterminada, esta opción se basa en el nombre del proyecto. Se muestra en el campo Salida de la página Nmake de la página de propiedades del proyecto.
 
-- **Vuelva a generar la línea de comandos:** Especifica la línea de comandos que se ejecutará cuando el usuario seleccione volver a generar en el menú compilar. Muestra en la regeneración de todos los campos de la línea de comandos en la página de Nmake de página de propiedades del proyecto.
+- **Comandos de Limpiar:** especifica la línea de comandos que se va a ejecutar cuando el usuario seleccione Limpiar en el menú Compilar. Se muestra en el campo Línea de comandos de Limpiar de la página Nmake de la página de propiedades del proyecto.
+
+- **Línea de comandos de regeneración:** especifica la línea de comandos que se va a ejecutar cuando el usuario seleccione Recompilar en el menú Compilar. Se muestra en el campo Línea de comandos de regeneración de la página Nmake de la página de propiedades del proyecto.
 
 ## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procedimiento Habilitar IntelliSense para proyectos de archivos Make
 
-IntelliSense se produce un error en los proyectos de archivos MAKE cuando ciertas opciones de proyecto o las opciones del compilador se ha configurado correctamente. Siga estos pasos para configurar proyectos de archivos MAKE para que IntelliSense funcione según lo esperado:
+IntelliSense no funciona en los proyectos de archivos Make cuando no se configuran de manera correcta determinados valores del proyecto u opciones del compilador. Siga estos pasos para configurar proyectos de archivos Make para que IntelliSense funcione según lo esperado:
 
-1. Abra el cuadro de diálogo **Páginas de propiedades**. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+1. Abra el cuadro de diálogo **Páginas de propiedades**. Para obtener detalles, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
 1. Expanda el nodo **Propiedades de configuración**.
 
@@ -88,6 +107,6 @@ La próxima vez que abra el proyecto de archivo Make en el entorno de desarrollo
 
 [Usar IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [Referencia de NMAKE](nmake-reference.md)<br>
-[Cómo: Crear un proyecto de C++ desde el código existente](../how-to-create-a-cpp-project-from-existing-code.md)
-[caracteres especiales en un archivo MAKE](special-characters-in-a-makefile.md)<br/>
+[Cómo: Crear un proyecto de C++ a partir del código existente](../how-to-create-a-cpp-project-from-existing-code.md)
+[Caracteres especiales en un archivo Make](special-characters-in-a-makefile.md)<br/>
 [Contenido de un archivo MAKE](contents-of-a-makefile.md)<br/>

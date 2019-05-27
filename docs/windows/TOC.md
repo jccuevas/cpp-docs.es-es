@@ -3,7 +3,7 @@
 # [Tutorial: Creación de aplicaciones de escritorio de Windows](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Asistente para escritorio de Windows](win32-application-wizard.md)
 # [Biblioteca de plantillas activas (ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [Clases compartidas ATL y MFC](../atl-mfc-shared/TOC.md)
 # [Acceso a datos](../data/data-access-in-cpp.md)
 # [Texto y cadenas](../text/text-and-strings-in-visual-cpp.md)
