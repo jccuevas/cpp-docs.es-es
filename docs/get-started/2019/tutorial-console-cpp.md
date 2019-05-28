@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: f1e6b06c3212ae3ff192fdf402c0167575161656
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59430775"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "66182825"
 ---
 # <a name="create-a-c-console-app-project"></a>Creación de un proyecto de aplicación de consola de C++
 
@@ -36,7 +36,7 @@ Visual Studio usa *proyectos* para organizar el código de una aplicación y *so
    ![Selección de la plantilla de aplicación de consola](./media/calc-vs2019-choose-console-app.png "Choose the Console App template")
 
    > [!Important]
-   > Asegúrese de elegir la versión de C++ de la plantilla de **aplicación de consola**. Tiene las etiquetas **C++**, **Windows** y **consola** y el icono tiene "++" en una esquina.
+   > Asegúrese de elegir la versión de C++ de la plantilla de **aplicación de consola**. Tiene las etiquetas **C++** , **Windows** y **consola** y el icono tiene "++" en una esquina.
 
 1. En el cuadro de diálogo **Configurar el nuevo proyecto**, seleccione el cuadro de edición **Nombre del proyecto**, asigne al nuevo proyecto el nombre *CalculatorTutorial* y seleccione **Crear**.
 
@@ -120,7 +120,7 @@ Ahora, el código de esta plantilla se va a convertir en una aplicación de calc
 
    > Descripción del código:
    >
-   > - Las instrucciones `#include` permiten hacer referencia a código que se encuentra en otros archivos. En ocasiones, es posible que vea un nombre de archivo incluido entre corchetes angulares (**\<\>**); en otras, está rodeado por comillas (**" "**). En general, los corchetes angulares se usan al hacer referencia a la biblioteca C++ Standard, mientras que las comillas se usan para otros archivos.
+   > - Las instrucciones `#include` permiten hacer referencia a código que se encuentra en otros archivos. En ocasiones, es posible que vea un nombre de archivo incluido entre corchetes angulares ( **\<\>** ); en otras, está rodeado por comillas ( **" "** ). En general, los corchetes angulares se usan al hacer referencia a la biblioteca C++ Standard, mientras que las comillas se usan para otros archivos.
    > - La línea `using namespace std;` indica al compilador que espere que en este archivo se usen elementos de la biblioteca C++ Standard. Sin esta línea, cada palabra clave de la biblioteca tendría que ir precedida de `std::`, para denotar su ámbito. Por ejemplo, sin esa línea, cada referencia a `cout` se tendría que escribir como `std::cout`. La instrucción `using` se agrega para que el código parezca más limpio.
    > - La palabra clave `cout` se usa para imprimir en la salida estándar de C++. El operador **\<\<** indica al compilador que envíe a la salida estándar todo lo que esté a su derecha.
    > - La palabra clave **endl** es similar a la tecla Entrar; finaliza la línea y mueve el cursor a la siguiente. Un procedimiento recomendado consiste en colocar un elemento `\n` dentro de una cadena (entre "") para hacer lo mismo, ya que `endl` siempre vacía el búfer y puede afectar al rendimiento del programa, pero como esta aplicación es muy pequeña, en su lugar se usa `endl` para mejorar la legibilidad.
