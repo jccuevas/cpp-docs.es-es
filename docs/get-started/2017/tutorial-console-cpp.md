@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: b15bc7551c4bf99b6dd52f99bb5e69064ddb8308
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58867372"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "66182805"
 ---
 # <a name="create-a-c-console-app-project"></a>Creación de un proyecto de aplicación de consola de C++
 
@@ -113,7 +113,7 @@ Ahora, el código de esta plantilla se va a convertir en una aplicación de calc
 
    > Descripción del código:
    >
-   > - Las instrucciones `#include` permiten hacer referencia a código que se encuentra en otros archivos. En ocasiones, es posible que vea un nombre de archivo incluido entre corchetes angulares (**\<\>**); en otras, está rodeado por comillas (**" "**). En general, los corchetes angulares se usan al hacer referencia a la biblioteca C++ Standard, mientras que las comillas se usan para otros archivos.
+   > - Las instrucciones `#include` permiten hacer referencia a código que se encuentra en otros archivos. En ocasiones, es posible que vea un nombre de archivo incluido entre corchetes angulares ( **\<\>** ); en otras, está rodeado por comillas ( **" "** ). En general, los corchetes angulares se usan al hacer referencia a la biblioteca C++ Standard, mientras que las comillas se usan para otros archivos.
    > - La línea `#include "pch.h"` (o en versiones anteriores de Visual Studio, `#include "stdafx.h"`) hace referencia a algo que se conoce como un encabezado precompilado. Los programadores profesionales los suelen usar para mejorar los tiempos de compilación, pero están fuera del ámbito de este tutorial.
    > - La línea `using namespace std;` indica al compilador que espere que en este archivo se usen elementos de la biblioteca C++ Standard. Sin esta línea, cada palabra clave de la biblioteca tendría que ir precedida de `std::`, para denotar su ámbito. Por ejemplo, sin esa línea, cada referencia a `cout` se tendría que escribir como `std::cout`. La instrucción `using` se agrega para que el código parezca más limpio.
    > - La palabra clave `cout` se usa para imprimir en la salida estándar de C++. El operador **\<\<** indica al compilador que envíe a la salida estándar todo lo que esté a su derecha.
