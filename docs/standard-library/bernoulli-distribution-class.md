@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414131"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450864"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution (Clase)
 
@@ -90,7 +90,7 @@ Las funciones miembro `operator()` devuelven el siguiente valor generado basado 
 
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener más información sobre la función de probabilidad discreta de distribución de Bernoulli, vea el artículo de Wolfram MathWorld sobre la [distribución de Bernoulli](http://go.microsoft.com/fwlink/p/?linkid=398467).
+Para obtener más información sobre la función de probabilidad discreta de distribución de Bernoulli, vea el artículo de Wolfram MathWorld sobre la [distribución de Bernoulli](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## <a name="example"></a>Ejemplo
 

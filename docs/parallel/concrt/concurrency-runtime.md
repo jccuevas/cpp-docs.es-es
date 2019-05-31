@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414014"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449684"
 ---
 # <a name="concurrency-runtime"></a>Runtime de simultaneidad
 
@@ -63,7 +63,7 @@ Para obtener documentación de referencia, consulte [referencia](../../parallel/
 |-|-|
 |[Creación de operaciones asincrónicas en C++ para aplicaciones UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Se describen algunos de los puntos clave a tener en cuenta al usar el Runtime de simultaneidad para generar operaciones asincrónicas en una aplicación para UWP.|
 |[Tutorial: Conexión con tareas y solicitudes HTTP XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Se muestra cómo combinar tareas PPL con el `IXMLHTTPRequest2` y `IXMLHTTPRequest2Callback` interfaces para enviar solicitudes HTTP GET y POST a un servicio web en una aplicación para UWP.|
-|[Ejemplos de aplicaciones de Windows en tiempo de ejecución](http://code.msdn.microsoft.com/windowsapps)|Contiene ejemplos de código descargables y demostración de las aplicaciones para Windows 8.x. Los ejemplos de C++ usan características del runtime de simultaneidad, como tareas PPL, para procesar datos en segundo plano con objeto de que la UX siga respondiendo.|
+|[Ejemplos de aplicaciones de Windows en tiempo de ejecución](https://code.msdn.microsoft.com/windowsapps)|Contiene ejemplos de código descargables y demostración de las aplicaciones para Windows 8.x. Los ejemplos de C++ usan características del runtime de simultaneidad, como tareas PPL, para procesar datos en segundo plano con objeto de que la UX siga respondiendo.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Programación del flujo de datos en la Biblioteca de agentes asincrónicos
 
@@ -99,8 +99,8 @@ Para obtener documentación de referencia, consulte [referencia](../../parallel/
 |||
 |-|-|
 |[Patrones y sugerencias de programación Async en Hilo (aplicaciones de la Tienda Windows que usan C++ y XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Obtenga información sobre cómo se usa el Runtime de simultaneidad para implementar operaciones asincrónicas en Hilo, una aplicación en tiempo de ejecución de Windows con C++ y XAML.|
-|[Blog de programación en paralelo en código nativo](http://go.microsoft.com/fwlink/p/?linkid=183873)|Proporciona artículos de blog detallados adicionales sobre la programación paralela en el runtime de simultaneidad.|
-|[Foro de informática en paralelo en C++ y código nativo](http://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|
+|[Blog de programación en paralelo en código nativo](https://go.microsoft.com/fwlink/p/?linkid=183873)|Proporciona artículos de blog detallados adicionales sobre la programación paralela en el runtime de simultaneidad.|
+|[Foro de informática en paralelo en C++ y código nativo](https://go.microsoft.com/fwlink/p/?linkid=183874)|Le permite participar en los debates de la comunidad sobre el runtime de simultaneidad.|
 |[Programación en paralelo](/dotnet/standard/parallel-programming/index)|Se explican el modelo de programación paralelo que está disponible en .NET Framework.|
 
 ## <a name="see-also"></a>Vea también

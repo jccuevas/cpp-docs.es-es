@@ -2,12 +2,12 @@
 title: Gráficos (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405669"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449870"
 ---
 # <a name="graphics-c-amp"></a>Gráficos (C++ AMP)
 
@@ -25,7 +25,7 @@ El `norm` y `unorm` tipos son tipos escalares que limitan el intervalo de **floa
 
 ## <a name="short-vector-library"></a>Biblioteca de vectores cortos
 
-La biblioteca de vectores cortos proporciona algunas de las funcionalidades de la [tipo Vector](http://go.microsoft.com/fwlink/p/?linkid=248500) que se define en HLSL y se utiliza normalmente para definir elementos de textura. Un vector corto es una estructura de datos que contiene de uno a cuatro valores del mismo tipo. Los tipos admitidos son **doble**, **float**, **int**, `norm`, `uint`, y `unorm`. Los nombres de tipo se muestran en la siguiente tabla. Para cada tipo, hay también un correspondiente **typedef** que no tiene un carácter de subrayado en el nombre. Los tipos que tienen los caracteres de subrayado están en el [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Los tipos que no tienen los caracteres de subrayado están en el [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que están claramente separados de los tipos fundamentales con nombres similares, como **__int8** y **__int16**.
+La biblioteca de vectores cortos proporciona algunas de las funcionalidades de la [tipo Vector](https://go.microsoft.com/fwlink/p/?linkid=248500) que se define en HLSL y se utiliza normalmente para definir elementos de textura. Un vector corto es una estructura de datos que contiene de uno a cuatro valores del mismo tipo. Los tipos admitidos son **doble**, **float**, **int**, `norm`, `uint`, y `unorm`. Los nombres de tipo se muestran en la siguiente tabla. Para cada tipo, hay también un correspondiente **typedef** que no tiene un carácter de subrayado en el nombre. Los tipos que tienen los caracteres de subrayado están en el [Concurrency:: Graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md). Los tipos que no tienen los caracteres de subrayado están en el [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) para que están claramente separados de los tipos fundamentales con nombres similares, como **__int8** y **__int16**.
 
 ||Longitud 2|Longitud de 3|Longitud de 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ Muchas GPU tienen hardware y cachés que se optimizan para capturar los píxeles
 
 - Un vector corto que tiene dos o cuatro componentes. La única excepción es `double_4`, que no se permite.
 
-El objeto `texture` puede tener un intervalo de 1, 2 o 3. El objeto `texture` se puede capturar solamente por referencia en la expresión lambda de una llamada a `parallel_for_each`. La textura se almacena en la GPU como objetos de textura Direct3D. Para obtener más información sobre las texturas y los elementos de textura en Direct3D, vea [Introducción a las texturas en Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).
+El objeto `texture` puede tener un intervalo de 1, 2 o 3. El objeto `texture` se puede capturar solamente por referencia en la expresión lambda de una llamada a `parallel_for_each`. La textura se almacena en la GPU como objetos de textura Direct3D. Para obtener más información sobre las texturas y los elementos de textura en Direct3D, vea [Introducción a las texturas en Direct3D 11](https://go.microsoft.com/fwlink/p/?linkid=248502).
 
 El tipo de elemento de textura que se usa puede ser uno de los muchos formatos de textura utilizados en la programación de gráficos. Por ejemplo, un formato RGBA podría utilizar 32 bits, con 8 bits para cada uno de los elementos escalares R, G, B y A. El hardware de textura de una tarjeta gráfica puede tener acceso a los elementos individuales según el formato. Por ejemplo, si se utiliza el formato RGBA, el hardware de textura puede convertir cada elemento de 8 bits en un formato de 32 bits. En C++ AMP, se pueden establecer los bits por elemento escalar del elemento de textura para poder tener acceso automáticamente a los elementos escalares individuales en el código sin utilizar el desplazamiento de bit.
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 Como puede ver, los dos ejemplos de código son casi idénticos cuando todo lo que se está haciendo es escribir en el nivel de asignación MIP primario. Si utilizó `writeonly_texture_view` en código existente y no tiene previsto mejorar ese código, no tiene que cambiarlo. Sin embargo, si piensa seguir usando ese código, sugerimos que vuelva a escribirlo para usar `texture_view`, porque las mejoras que incluye admiten nuevas características de textura de hardware. Siga leyendo para obtener más información sobre estas nuevas capacidades.
 
-Para obtener más información sobre el desuso de `writeonly_texture_view`, consulte [general sobre el diseño de la vista de textura en C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) en la programación paralela en código nativo.
+Para obtener más información sobre el desuso de `writeonly_texture_view`, consulte [general sobre el diseño de la vista de textura en C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx) en la programación paralela en código nativo.
 
 ### <a name="instantiating-texture-view-objects"></a>Creación de instancias de objetos de vista de textura
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 Las vistas de textura cuyos elementos se basan en tipos de punto flotante, por ejemplo, float, float_2 o float_4, también se pueden leer mediante el muestreo de textura para aprovechar la compatibilidad de hardware con los distintos modos de filtrado y modos de direccionamiento. C++ AMP admite los dos modos de filtrado que son más comunes en los escenarios de cálculo, como el filtrado de puntos (vecino más cercano) y el filtrado lineal (media ponderada), así como cuatro modos de direccionamiento: ajustado, reflejado, fijo y borde. Para obtener más información sobre los modos de direccionamiento, vea [address_mode (enumeración)](reference/concurrency-graphics-namespace-enums.md#address_mode).
 
-Además de los modos que C++ AMP admite directamente, puede tener acceso a otros modos de filtrado y modos de direccionamiento de la plataforma subyacente mediante la API de interoperabilidad para adoptar una muestra de textura creada directamente con la API de la plataforma. Por ejemplo, Direct3D admite otros modos de filtrado, como el filtrado anisotrópico, y puede aplicar otro modo de direccionamiento a cada dimensión de una textura. Puede crear una muestra de textura cuyas coordenadas se ajusten verticalmente, se reflejen horizontalmente y se muestreen con el filtrado anisotrópico mediante las API de Direct3D, y después aprovechar la muestra en el código de C++ AMP mediante la API de interoperabilidad de `make_sampler`. Para obtener más información, consulte [muestreo de textura en C++ AMP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) en la programación paralela en código nativo.
+Además de los modos que C++ AMP admite directamente, puede tener acceso a otros modos de filtrado y modos de direccionamiento de la plataforma subyacente mediante la API de interoperabilidad para adoptar una muestra de textura creada directamente con la API de la plataforma. Por ejemplo, Direct3D admite otros modos de filtrado, como el filtrado anisotrópico, y puede aplicar otro modo de direccionamiento a cada dimensión de una textura. Puede crear una muestra de textura cuyas coordenadas se ajusten verticalmente, se reflejen horizontalmente y se muestreen con el filtrado anisotrópico mediante las API de Direct3D, y después aprovechar la muestra en el código de C++ AMP mediante la API de interoperabilidad de `make_sampler`. Para obtener más información, consulte [muestreo de textura en C++ AMP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx) en la programación paralela en código nativo.
 
-Las vistas de textura también admiten la lectura de asignaciones MIP. Las vistas de textura de solo lectura (las que tienen un tipo de elemento const) proporcionan la máxima flexibilidad porque se puede muestrear dinámicamente un intervalo de niveles de asignación MIP que se determina en la creación de instancias y porque se admiten los elementos que tienen 1, 2 o 4 componentes. Las vistas de textura de lectura y escritura que tienen elementos con un componente también admiten las asignaciones MIP, pero solo de un nivel que se determine en la creación de instancias. Para obtener más información, consulte [textura con asignaciones MIP](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) en la programación paralela en código nativo.
+Las vistas de textura también admiten la lectura de asignaciones MIP. Las vistas de textura de solo lectura (las que tienen un tipo de elemento const) proporcionan la máxima flexibilidad porque se puede muestrear dinámicamente un intervalo de niveles de asignación MIP que se determina en la creación de instancias y porque se admiten los elementos que tienen 1, 2 o 4 componentes. Las vistas de textura de lectura y escritura que tienen elementos con un componente también admiten las asignaciones MIP, pero solo de un nivel que se determine en la creación de instancias. Para obtener más información, consulte [textura con asignaciones MIP](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx) en la programación paralela en código nativo.
 
 ### <a name="writing-to-texture-view-objects"></a>Escribir en objetos de vista de textura
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>Interoperabilidad
 
-El runtime de C++ AMP admite la interoperabilidad entre `texture<T,1>` y [interfaz ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` y [interfaz ID3D11Texture2D](http://go.microsoft.com/fwlink/p/?linkId=255317)y entre `texture<T,3>`y [interfaz ID3D11Texture3D](http://go.microsoft.com/fwlink/p/?linkId=255377). El [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) método toma un `texture` objeto y devuelve un `IUnknown` interfaz. El [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) método toma un `IUnknown` interfaz y un `accelerator_view` objeto y devuelve un `texture` objeto.
+El runtime de C++ AMP admite la interoperabilidad entre `texture<T,1>` y [interfaz ID3D11Texture1D](https://go.microsoft.com/fwlink/p/?linkId=248503), entre `texture<T,2>` y [interfaz ID3D11Texture2D](https://go.microsoft.com/fwlink/p/?linkId=255317)y entre `texture<T,3>`y [interfaz ID3D11Texture3D](https://go.microsoft.com/fwlink/p/?linkId=255377). El [get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) método toma un `texture` objeto y devuelve un `IUnknown` interfaz. El [make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) método toma un `IUnknown` interfaz y un `accelerator_view` objeto y devuelve un `texture` objeto.
 
 ## <a name="see-also"></a>Vea también
 

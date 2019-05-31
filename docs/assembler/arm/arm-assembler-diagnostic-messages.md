@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167848"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449212"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>Mensajes de diagnóstico del ensamblador de ARM
 
@@ -33,13 +33,13 @@ El ensamblador de ARM Microsoft (*armasm*) emite errores y advertencias de diagn
 
 ## <a name="syntax"></a>Sintaxis
 
-> <em>nombre de archivo</em>**(**<em>número de línea</em>**):** \[ **error**|**advertencia** ] **A**<em>número</em>**:** *mensaje*
+> <em>nombre de archivo</em> **(** <em>número de línea</em> **):** \[ **error**|**advertencia** ] **A**<em>número</em> **:** *mensaje*
 
 ## <a name="diagnostic-messages---errors"></a>Mensajes de diagnóstico: errores
 
 > A2193: esta instrucción genera un comportamiento impredecible
 
-La arquitectura ARM no puede garantizar qué ocurre cuando se ejecuta esta instrucción.  Para obtener más información acerca de las formas bien definidas de esta instrucción, consulte el [Manual de referencia de arquitectura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
+La arquitectura ARM no puede garantizar qué ocurre cuando se ejecuta esta instrucción.  Para obtener más información acerca de las formas bien definidas de esta instrucción, consulte el [Manual de referencia de arquitectura ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ En el modo ARM, hay una sintaxis alternativa para especificar las constantes.  E
 
 > A4509: Este formato de instrucción condicional está en desuso
 
-Este formato de instrucción condicional ha dejado de utilizar ARM en la arquitectura de ARMv8. Se recomienda que cambie el código para usar las bifurcaciones condicionales. Para ver qué instrucciones condicionales siguen siendo compatibles, consulte el [Manual de referencia de arquitectura ARM](http://go.microsoft.com/fwlink/p/?linkid=246464).
+Este formato de instrucción condicional ha dejado de utilizar ARM en la arquitectura de ARMv8. Se recomienda que cambie el código para usar las bifurcaciones condicionales. Para ver qué instrucciones condicionales siguen siendo compatibles, consulte el [Manual de referencia de arquitectura ARM](https://go.microsoft.com/fwlink/p/?linkid=246464).
 
 Esta advertencia no es emite cuando el **- oldit** se usa el modificador de línea de comandos.
 

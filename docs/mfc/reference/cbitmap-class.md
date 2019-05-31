@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60086c428166bd021095ec6fe2c52d031b335d81
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388454"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450038"
 ---
 # <a name="cbitmap-class"></a>CBitmap (clase)
 
@@ -408,7 +408,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 De forma predeterminada, `LoadMappedBitmap` asignará los colores usados en los glifos de botón.
 
-Para obtener información acerca de cómo crear un mapa de bits asignado, vea la función de Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) y [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) estructura en el SDK de Windows.
+Para obtener información acerca de cómo crear un mapa de bits asignado, vea la función de Windows [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) y [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) estructura en el SDK de Windows.
 
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap
 

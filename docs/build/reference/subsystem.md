@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e67ec57c3a8d74fdd97a94ed04c29cad53af1ea5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317723"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450729"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -43,7 +43,7 @@ Una aplicación de modo de carácter de Windows. El sistema operativo proporcion
 **EFI_RUNTIME_DRIVER**<br/>
 Imagen de Extensible Firmware Interface (EFI)
 
-Las opciones de subsistema EFI describen imágenes ejecutables que se ejecutan en el entorno de Extensible Firmware Interface. Este entorno se suele proporcionar con el hardware y se ejecuta antes de que el sistema operativo se cargue. Las principales diferencias entre los tipos de imagen EFI son la ubicación de la memoria en la que la imagen se carga y la acción que se realiza cuando se devuelve la llamada a la imagen. Una imagen EFI_APPLICATION se descarga cuando se devuelve el control. Una imagen EFI_BOOT_SERVICE_DRIVER o EFI_RUNTIME_DRIVER se descarga solo si el control regresa con un código de error. Una imagen EFI_ROM se ejecuta desde la memoria ROM. Para obtener más información, vea las especificaciones en el [foro de EFI unificado](http://www.uefi.org/) sitio Web.
+Las opciones de subsistema EFI describen imágenes ejecutables que se ejecutan en el entorno de Extensible Firmware Interface. Este entorno se suele proporcionar con el hardware y se ejecuta antes de que el sistema operativo se cargue. Las principales diferencias entre los tipos de imagen EFI son la ubicación de la memoria en la que la imagen se carga y la acción que se realiza cuando se devuelve la llamada a la imagen. Una imagen EFI_APPLICATION se descarga cuando se devuelve el control. Una imagen EFI_BOOT_SERVICE_DRIVER o EFI_RUNTIME_DRIVER se descarga solo si el control regresa con un código de error. Una imagen EFI_ROM se ejecuta desde la memoria ROM. Para obtener más información, vea las especificaciones en el [foro de EFI unificado](https://www.uefi.org/) sitio Web.
 
 **NATIVO**<br/>
 Código que se ejecuta sin un entorno de subsistemas, por ejemplo, controladores de dispositivo en modo kernel y procesos del sistema nativos. Esta opción se reserva normalmente para las características del sistema operativo Windows.

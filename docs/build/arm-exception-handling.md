@@ -2,12 +2,12 @@
 title: Control de excepciones de ARM
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195360"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450480"
 ---
 # <a name="arm-exception-handling"></a>Control de excepciones de ARM
 
@@ -21,7 +21,7 @@ La EABI de ARM especifica un modelo de desenredado en excepciones en el que se u
 
 ### <a name="assumptions"></a>Suposiciones
 
-Las imágenes ejecutables de Windows en ARM usan el formato portable ejecutable (PE). Para obtener más información, consulte [especificación Microsoft PE y COFF](http://go.microsoft.com/fwlink/p/?linkid=84140). La información de control de excepciones se almacena en las secciones .pdata y .xdata de la imagen.
+Las imágenes ejecutables de Windows en ARM usan el formato portable ejecutable (PE). Para obtener más información, consulte [especificación Microsoft PE y COFF](https://go.microsoft.com/fwlink/p/?linkid=84140). La información de control de excepciones se almacena en las secciones .pdata y .xdata de la imagen.
 
 En el mecanismo de control de excepciones se dan algunas cosas por hecho en relación con el código que sigue la ABI para Windows en ARM:
 

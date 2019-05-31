@@ -2,12 +2,12 @@
 title: Paralelización y vectorización automáticas
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236704"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450241"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Paralelización y vectorización automáticas
 
@@ -107,12 +107,12 @@ Como en el Paralelizador automático, se puede especificar el [/Qvec-report (niv
 
 Para obtener más información sobre los códigos de motivo y mensajes, vea [mensajes del Vectorizador y Paralelizador](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Para obtener un ejemplo que muestra cómo funciona el vectorizador en la práctica, consulte [proyecto Austin, parte 2 de 6: Página cURL](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Para obtener un ejemplo que muestra cómo funciona el vectorizador en la práctica, consulte [proyecto Austin, parte 2 de 6: Página cURL](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>Vea también
 
 [loop](../preprocessor/loop.md)<br/>
-[Programación en paralelo en código nativo](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Programación en paralelo en código nativo](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (Paralelizador automático)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar/report (Nivel de información de paralelizador automático)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec/report (Nivel de información de vectorizador automático)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

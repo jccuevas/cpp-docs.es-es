@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 7eb75fb7b76399fd4bf1d3bea94dcec4b52230f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405149"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451189"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution (Clase)
 
@@ -90,7 +90,7 @@ Las funciones de propiedad `a()` y `b()` devuelven los valores respectivos para 
 
 Para obtener más información sobre las clases de distribución y sus miembros, vea [\<random>](../standard-library/random.md).
 
-Para obtener información detallada sobre la distribución de valor extremo, vea el artículo de Wolfram MathWorld sobre la [distribución de valor extremo](http://go.microsoft.com/fwlink/p/?linkid=401110).
+Para obtener información detallada sobre la distribución de valor extremo, vea el artículo de Wolfram MathWorld sobre la [distribución de valor extremo](https://go.microsoft.com/fwlink/p/?linkid=401110).
 
 ## <a name="example"></a>Ejemplo
 

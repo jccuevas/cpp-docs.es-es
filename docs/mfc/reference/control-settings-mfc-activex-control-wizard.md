@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373289"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450559"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Configuración del control, Asistente para controles ActiveX MFC
 
@@ -57,7 +57,7 @@ Para obtener más información sobre cómo seleccionar las opciones de esta pág
    Especifica que el control tiene el estándar Windows **sobre** cuadro de diálogo que muestra el número de versión e información de copyright.
 
    > [!NOTE]
-   > Cómo el usuario accede a la Ayuda del control depende de cómo haya implementado la Ayuda y si ha integrado la Ayuda del control con la Ayuda del contenedor. Para obtener más información sobre cómo integrar la Ayuda, en la [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) sitio Web, busque "Agregar contextuales ayuda a un Control ActiveX MFC".
+   > Cómo el usuario accede a la Ayuda del control depende de cómo haya implementado la Ayuda y si ha integrado la Ayuda del control con la Ayuda del contenedor. Para obtener más información sobre cómo integrar la Ayuda, en la [MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) sitio Web, busque "Agregar contextuales ayuda a un Control ActiveX MFC".
 
    Cuando se selecciona esta opción, se inserta el `AboutBox` controlar el método de la clase de control del proyecto (C*Nombre_proyecto*Ctrl.cpp) y se agregará AboutBox al mapa de envíos del proyecto. Esta opción se encuentra activada de forma predeterminada.
 
@@ -87,7 +87,7 @@ Para obtener más información sobre cómo seleccionar las opciones de esta pág
 
 - **Actúa como un control de marco sencillo**
 
-   Especifica que el control es un contenedor para otros controles estableciendo el bit OLEMISC_SIMPLEFRAME para el control. Para obtener más información sobre la [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542) sitio Web, busque "Contención de sitio de marco Simple".
+   Especifica que el control es un contenedor para otros controles estableciendo el bit OLEMISC_SIMPLEFRAME para el control. Para obtener más información sobre la [MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542) sitio Web, busque "Contención de sitio de marco Simple".
 
 - **Carga las propiedades de forma asincrónica**
 

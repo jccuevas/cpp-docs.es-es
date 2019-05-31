@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9949d1cab5a97b30df0b156289dff2dfbe15d851
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410985"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449671"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine (Clase)
 
@@ -71,7 +71,7 @@ Para obtener más información sobre los miembros del motor, vea [\<random>](../
 
 Esta clase de plantilla describe un motor de número aleatorio que devuelve valores en el intervalo cerrado [ `0`, `2`<sup>W</sup> - `1`]. Contiene un valor integral grande con `W * (N - 1) + R` bits. Extrae *W* bits a la vez desde este valor grande, y cuando ha utilizado todos los bits distorsiona el valor grande cambiando y mezclando los bits para que tenga un nuevo conjunto de bits para extraer. El estado del motor es el último `N` `W`-bit de valores que se usan si `operator()` se ha llamado al menos *N* agota el tiempo, en caso contrario, el `M` `W`-bit de valores que se han usado y el último `N - M` valores de la inicialización.
 
-El generador distorsiona el valor grande que contiene mediante el uso de un registro de desplazamiento de informe generalizado modificado definido por los valores de cambio *N* y *M*, un valor de cambio *R*y un máscara XOR condicional *A*. Además, los bits del registro de cambio sin procesar se codifican (atenúan) según una matriz de codificación de bits definida por los valores *U*, *d.*, *S*, *B* , *T*, *C*, y *L*.
+El generador distorsiona el valor grande que contiene mediante el uso de un registro de desplazamiento de informe generalizado modificado definido por los valores de cambio *N* y *M*, un valor de cambio *R*y un máscara XOR condicional *A*. Además, los bits del registro de cambio sin procesar se codifican (atenúan) según una matriz de codificación de bits definida por los valores *U*, *d.* , *S*, *B* , *T*, *C*, y *L*.
 
 El argumento de la plantilla `UIntType` debe ser lo suficientemente grande para contener valores de hasta `2`<sup>W</sup> - `1`. Los valores del resto de los argumentos de la plantilla deben cumplir los requisitos siguientes: `2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`.
 
@@ -99,7 +99,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;
 ```
 
-Para obtener información detallada sobre el algoritmo de Mersenne twister, vea el artículo de la Wikipedia sobre [Mersenne twister](http://go.microsoft.com/fwlink/p/?linkid=402356).
+Para obtener información detallada sobre el algoritmo de Mersenne twister, vea el artículo de la Wikipedia sobre [Mersenne twister](https://go.microsoft.com/fwlink/p/?linkid=402356).
 
 ## <a name="example"></a>Ejemplo
 

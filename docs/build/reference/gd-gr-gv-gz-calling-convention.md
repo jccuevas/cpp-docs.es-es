@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837274"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450849"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convención de llamada)
 
@@ -47,7 +47,7 @@ Estas opciones determinan el orden en el que se insertan los argumentos de funci
 
 **/Gz** especifica la convención de llamada `__stdcall` para todas las funciones, excepto las funciones miembro de C++, las funciones denominadas `main` y las funciones que se marcan como `__cdecl`, `__fastcall` o `__vectorcall`. Todas las funciones `__stdcall` deben tener prototipos. Esta convención de llamada solo está disponible en los compiladores destinados a x86 y la pasan por alto los compiladores que tienen como destino otras arquitecturas.
 
-**/Gv** especifica la convención de llamada `__vectorcall` para todas las funciones, excepto las funciones miembro de C++, las funciones denominadas main, las funciones con una lista de argumentos de variable `vararg` o las funciones que se marcan con un atributo `__cdecl`, `__stdcall` o `__fastcall` en conflicto. Esta convención de llamada solo está disponible en las arquitecturas de x86 y x64 que admiten /arch:SSE2 y versiones posteriores, y la pasan por alto los compiladores que tienen como destino la arquitectura ARM.
+**GV** especifica la `__vectorcall` convención de llamada para todas las funciones excepto C++ funciones miembro, funciones denominadas `main`, funciones con un `vararg` lista de argumentos variables o funciones que se marcan con un conflicto en la `__cdecl`, `__stdcall`, o `__fastcall` atributo. Esta convención de llamada solo está disponible en las arquitecturas de x86 y x64 que admiten /arch:SSE2 y versiones posteriores, y la pasan por alto los compiladores que tienen como destino la arquitectura ARM.
 
 Las funciones que toman un número variable de argumentos deben marcarse con `__cdecl`.
 
@@ -101,7 +101,7 @@ Para C, la convención de nomenclatura `__vectorcall` usa el nombre de la funci�
 
 1. Abra el cuadro de diálogo **Páginas de propiedades** del proyecto. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).
 
-1. Seleccione la página de propiedades **C/C++** > **Avanzadas**.
+1. Seleccione la página de propiedades **C/C++**  > **Avanzadas**.
 
 1. Modifique la propiedad **Convención de llamada**.
 
