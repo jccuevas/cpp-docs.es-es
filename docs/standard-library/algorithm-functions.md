@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411193"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450416"
 ---
 # <a name="ltalgorithmgt-functions"></a>Funciones &lt;algorithm&gt;
 
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-La función std::random_shuffle() está en desuso, reemplazado por [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Para un ejemplo de código y obtener más información, consulte [ \<aleatorio >](../standard-library/random.md) y la publicación de Stack Overflow [¿por qué son los métodos de std:: random_shuffle en desuso en C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+La función std::random_shuffle() está en desuso, reemplazado por [std:: shuffle](../standard-library/algorithm-functions.md#shuffle). Para un ejemplo de código y obtener más información, consulte [ \<aleatorio >](../standard-library/random.md) y la publicación de Stack Overflow [¿por qué son los métodos de std:: random_shuffle en desuso en C ++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
-ms.openlocfilehash: b8b6493b01ac2b88ea50ba50157328f59fdbedf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b44ef825626f60e9ae6c6e8600953959fcd7b3a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360390"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449232"
 ---
 # <a name="compiler-error-c2659"></a>Error del compilador C2659
 
 'operador' : función sobrecargada como operando izquierdo
 
-Había una función en el operando izquierdo del operador especificado. La causa más común de este error es que el compilador ha analizado el identificador situado a la izquierda del operador como una función, cuando el desarrollador pretendía que fuera una variable. Para obtener más información, consulte Wikipedia artículo [análisis más molestos](http://en.wikipedia.org/wiki/Most_vexing_parse). En este ejemplo se muestra una declaración de función y una definición de variable que pueden confundirse fácilmente:
+Había una función en el operando izquierdo del operador especificado. La causa más común de este error es que el compilador ha analizado el identificador situado a la izquierda del operador como una función, cuando el desarrollador pretendía que fuera una variable. Para obtener más información, consulte Wikipedia artículo [análisis más molestos](https://en.wikipedia.org/wiki/Most_vexing_parse). En este ejemplo se muestra una declaración de función y una definición de variable que pueden confundirse fácilmente:
 
 ```
 // C2659a.cpp

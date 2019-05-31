@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323640"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449567"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -375,7 +375,7 @@ Identificador de ventana secundaria. del control
 
 ### <a name="remarks"></a>Comentarios
 
-Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.
+Use `CreateEx` en lugar de [crear](#create) para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -1505,7 +1505,7 @@ El identificador de un elemento de vista de árbol ( `HTREEITEM`) que correspond
 
 ### <a name="remarks"></a>Comentarios
 
-Las ayudas de accesibilidad son las aplicaciones que ayudan a las personas con discapacidades utilizar los equipos. Se utiliza un identificador de la accesibilidad mediante el `IAccessible` interfaz para especificar de forma única un elemento en una ventana. Para obtener más información acerca de los identificadores de accesibilidad, busque el tema "Acerca de la compatibilidad con Active Accessibility" en [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Las ayudas de accesibilidad son las aplicaciones que ayudan a las personas con discapacidades utilizar los equipos. Se utiliza un identificador de la accesibilidad mediante el `IAccessible` interfaz para especificar de forma única un elemento en una ventana. Para obtener más información acerca de los identificadores de accesibilidad, busque el tema "Acerca de la compatibilidad con Active Accessibility" en [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Este método envía el [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) mensaje, que se describe en el SDK de Windows.
 
@@ -1541,7 +1541,7 @@ El identificador de accesibilidad que se corresponde con el *hItem* parámetro.
 
 ### <a name="remarks"></a>Comentarios
 
-Las ayudas de accesibilidad son las aplicaciones que ayudan a las personas con discapacidades utilizar los equipos. Se utiliza un identificador de la accesibilidad mediante el `IAccessible` interfaz para especificar de forma única un elemento en una ventana. Para obtener más información acerca de los identificadores de accesibilidad, busque el tema "Acerca de la compatibilidad con Active Accessibility" en [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Las ayudas de accesibilidad son las aplicaciones que ayudan a las personas con discapacidades utilizar los equipos. Se utiliza un identificador de la accesibilidad mediante el `IAccessible` interfaz para especificar de forma única un elemento en una ventana. Para obtener más información acerca de los identificadores de accesibilidad, busque el tema "Acerca de la compatibilidad con Active Accessibility" en [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Este método envía el [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) mensaje, que se describe en el SDK de Windows.
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Comentarios
 
-Para obtener más información sobre la diferencia entre la información sobre herramientas y recuadros informativos, busque el tema "Información sobre herramientas y recuadros informativos" en [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Para obtener más información sobre la diferencia entre la información sobre herramientas y recuadros informativos, busque el tema "Información sobre herramientas y recuadros informativos" en [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Este método envía el [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) mensaje, que se describe en el SDK de Windows.
 

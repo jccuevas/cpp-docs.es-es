@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 3822a3c751ac06154e4b13a12f449e7f0ff2cc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316876"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450716"
 ---
 # <a name="vc-directories-property-page-windows"></a>Directorios de VC++ (Página de propiedades) (Windows)
 
@@ -26,11 +26,11 @@ Use esta página de propiedades para indicar a Visual Studio los directorios que
 
 Para la versión de Linux de esta página, vea [Directorios de VC++ (C++ para Linux)](../../linux/prop-pages/directories-linux.md).
 
-Para acceder a la página de propiedades **Directorios de VC++**:
+Para acceder a la página de propiedades **Directorios de VC++** :
 
 1. Si la ventana **Explorador de soluciones** no es visible, seleccione **Ver** > **Explorador de soluciones** en el menú principal.
 1. Haga clic con el botón derecho en un nodo de proyecto (no en la solución de nivel superior) y seleccione **Propiedades**.
-1. En el panel de la izquierda del cuadro de diálogo **Páginas de propiedades**, seleccione **Propiedades de configuración** > **Directorios de VC++**.
+1. En el panel de la izquierda del cuadro de diálogo **Páginas de propiedades**, seleccione **Propiedades de configuración** > **Directorios de VC++** .
 
 Las propiedades de los directorios de VC++ se aplican a un proyecto, no al nodo de solución de nivel superior. Si no ve **Directorios de VC++** en **Propiedades de configuración**, seleccione un nodo de proyecto de C++ en la ventana **Explorador de soluciones**:
 
@@ -44,7 +44,7 @@ La configuración predeterminada de las propiedades **Directorios de VC++** depe
 
 Para ver los valores de cualquiera de los directorios:
 
-1. Seleccione una de las propiedades de la página **Directorios de VC++**. Por ejemplo, seleccione **Directorios de bibliotecas**.
+1. Seleccione una de las propiedades de la página **Directorios de VC++** . Por ejemplo, seleccione **Directorios de bibliotecas**.
 1. Haga clic el botón de flecha hacia abajo al final del campo de valor de propiedad.
 1. En el menú desplegable, seleccione **Editar**.
 
@@ -74,7 +74,7 @@ Hay dos maneras de definir macros propias:
 
 - Definir macros de usuario en un archivo .props. Para obtener más información, vea [Macros de la página de propiedades](../working-with-project-properties.md).
 
-Para obtener más información, vea estas entradas de blog: [Directorios de VC ++](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [heredado y hojas de propiedades](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), y [Guía de actualización de Visual Studio 2010 C++ Project](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx).
+Para obtener más información, vea estas entradas de blog: [Directorios de VC ++](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx), [heredado y hojas de propiedades](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx), y [Guía de actualización de Visual Studio 2010 C++ Project](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/).
 
 ## <a name="directory-types"></a>Tipos de directorio
 
@@ -103,4 +103,4 @@ Antes de cada compilación, Visual Studio consulta la marca de tiempo de todos l
 
 ## <a name="sharing-the-settings"></a>Compartir la configuración
 
-Puede compartir propiedades del proyecto con otros usuarios o en varios equipos. Para obtener más información, consulte [propiedades de compilación y el compilador de C++ establece en Visual Studio](../working-with-project-properties.md).
+Puede compartir propiedades del proyecto con otros usuarios o en varios equipos. Para más información, vea [Establecimiento del compilador de C++ y de propiedades de compilación en Visual Studio](../working-with-project-properties.md).

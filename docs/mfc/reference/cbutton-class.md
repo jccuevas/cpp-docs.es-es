@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348697"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450834"
 ---
 # <a name="cbutton-class"></a>CButton (clase)
 
@@ -153,7 +153,7 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
+**ON\_** _Notification_ **(** _id_, _memberFxn_ **)**
 
 donde *id* especifica el identificador de ventana secundaria del control que envía la notificación y *memberFxn* es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
@@ -808,7 +808,7 @@ TRUE si este método se realiza correctamente; en caso contrario, FALSE.
 
 ### <a name="remarks"></a>Comentarios
 
-Si un control de vínculo de botón o comando requiere el permiso de seguridad con privilegios elevados para realizar una acción, establezca el control en `elevation required` estado. Posteriormente, Windows muestra el icono de escudo de Control de cuentas de usuario (UAC) en el control. Para obtener más información, vea "Control de cuentas de usuario" en [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Si un control de vínculo de botón o comando requiere el permiso de seguridad con privilegios elevados para realizar una acción, establezca el control en `elevation required` estado. Posteriormente, Windows muestra el icono de escudo de Control de cuentas de usuario (UAC) en el control. Para obtener más información, vea "Control de cuentas de usuario" en [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Este método envía el [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) mensaje, que se describe en el SDK de Windows.
 

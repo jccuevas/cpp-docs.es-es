@@ -5,12 +5,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220675"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450740"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Procedimiento Modificar la plataforma de destino y el conjunto de herramientas de plataforma
 
@@ -22,7 +22,7 @@ Se puede cambiar a Visual Studio C++ a distintas versiones de .NET Framework de 
 Cuando se cambia la versión de .Net Framework de destino, también cambia el conjunto de herramientas de la plataforma a una versión que admite la versión de .Net Framework de destino. Por ejemplo, para definir como destino .NET Framework 4.5, debe utilizar un conjunto de herramientas de plataforma compatible, tal como Visual Studio 2015 (v140), Visual Studio 2013 (v120) o Visual Studio 2012 (v110). Puede utilizar el conjunto de herramientas de la plataforma **Windows7.1SDK** para las plataformas .NET Framework 2.0, 3.0, 3.5 y 4, así como x86, Itanium y x64.
 
 > [!NOTE]
->  Para cambiar el conjunto de herramientas de la plataforma de destino, debe tener la versión asociada de Visual Studio o Windows Platform SDK instalado. Por ejemplo, para definir como destino la plataforma Itanium con el conjunto de herramientas de la plataforma de **Windows7.1SDK** , debe tener instalado [Microsoft Windows SDK para Windows 7 y .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) ; sin embargo, podría utilizar otra versión compatible de Visual Studio para realizar el trabajo de desarrollo, siempre que el destino sea el conjunto de herramientas correcto de versión y plataforma de .NET Framework.
+>  Para cambiar el conjunto de herramientas de la plataforma de destino, debe tener la versión asociada de Visual Studio o Windows Platform SDK instalado. Por ejemplo, para definir como destino la plataforma Itanium con el conjunto de herramientas de la plataforma de **Windows7.1SDK** , debe tener instalado [Microsoft Windows SDK para Windows 7 y .NET Framework 4 SP1](https://www.microsoft.com/download/details.aspx?id=8279) ; sin embargo, podría utilizar otra versión compatible de Visual Studio para realizar el trabajo de desarrollo, siempre que el destino sea el conjunto de herramientas correcto de versión y plataforma de .NET Framework.
 
 Puede extender la plataforma de destino aún más creando un conjunto de herramientas personalizado de la plataforma. Para obtener más información, vea [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) en el blog de Visual C++.
 

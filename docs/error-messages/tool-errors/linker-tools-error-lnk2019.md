@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447710"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449615"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Error de las herramientas del vinculador LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Para corregir este error, cambie `unsigned short` a `wchar_t` o `WCHAR`, o compile LNK2019g.cpp con **/Zc:wchar_t-**.
+Para corregir este error, cambie `unsigned short` a `wchar_t` o `WCHAR`, o compile LNK2019g.cpp con **/Zc:wchar_t-** .
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](http://stackoverflow.com/q/12573816/2002113).
+Para obtener más información sobre las posibles causas y soluciones para el error LNK2001, consulte la pregunta desbordamiento de pila [¿qué es un error de símbolo externo sin definir referencia/unresolved y cómo lo corrijo?](https://stackoverflow.com/q/12573816/2002113).
 

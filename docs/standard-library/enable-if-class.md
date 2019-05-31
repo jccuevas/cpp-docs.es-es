@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413767"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451258"
 ---
 # <a name="enableif-class"></a>enable_if (Clase)
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-En C++, el error en la sustitución de parámetros de la plantilla no es un error en sí mismo, esto se denomina *SFINAE* (el error en la sustitución no es un error). Normalmente, `enable_if` se utiliza para eliminar candidatos de la resolución de sobrecarga, es decir, selecciona los conjuntos de sobrecarga para que una definición se pueda rechazar en favor de otra. Esto se ajusta al comportamiento SFINAE. Para obtener más información sobre SFINAE, vea el artículo de la Wikipedia sobre [el error en la sustitución no es un error](http://go.microsoft.com/fwlink/p/?linkid=394798).
+En C++, el error en la sustitución de parámetros de la plantilla no es un error en sí mismo, esto se denomina *SFINAE* (el error en la sustitución no es un error). Normalmente, `enable_if` se utiliza para eliminar candidatos de la resolución de sobrecarga, es decir, selecciona los conjuntos de sobrecarga para que una definición se pueda rechazar en favor de otra. Esto se ajusta al comportamiento SFINAE. Para obtener más información sobre SFINAE, vea el artículo de la Wikipedia sobre [el error en la sustitución no es un error](https://go.microsoft.com/fwlink/p/?linkid=394798).
 
 A continuación, se presentan cuatro escenarios de ejemplo:
 

@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220359"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451232"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 Además, `BringWindowToTop` activa las ventanas emergentes, de nivel superior y secundarias MDI. La función miembro `BringWindowToTop` se debe usar para mostrar cualquier ventana que esté oculta total o parcialmente por alguna ventana superpuesta.
 
-Esta función simplemente llama a Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) función. Llame a la [SetWindowPos](#setwindowpos) función para cambiar la posición de una ventana en el orden Z. La función `BringWindowToTop` no cambia el estilo de ventana para convertirla en una ventana de nivel superior. Para obtener más información, consulte [cuál es la diferencia entre HWND_TOP y HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Esta función simplemente llama a Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) función. Llame a la [SetWindowPos](#setwindowpos) función para cambiar la posición de una ventana en el orden Z. La función `BringWindowToTop` no cambia el estilo de ventana para convertirla en una ventana de nivel superior. Para obtener más información, consulte [cuál es la diferencia entre HWND_TOP y HWND_TOPMOST](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>Ejemplo
 
@@ -2455,7 +2455,7 @@ El *lpPathSpec* parámetro tiene el formato siguiente:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-En este ejemplo, *unidad* es una letra de unidad *directory* es un nombre de directorio válido y *filename* es un nombre de archivo válido que debe contener al menos un carácter comodín. Los caracteres comodín son un signo de interrogación (**?**), lo que significa que coincide con cualquier carácter y un asterisco (<strong>\*</strong>), lo que significa que coincide con cualquier número de caracteres.
+En este ejemplo, *unidad* es una letra de unidad *directory* es un nombre de directorio válido y *filename* es un nombre de archivo válido que debe contener al menos un carácter comodín. Los caracteres comodín son un signo de interrogación ( **?** ), lo que significa que coincide con cualquier carácter y un asterisco (<strong>\*</strong>), lo que significa que coincide con cualquier número de caracteres.
 
 Si especifica una cadena de longitud 0 para *lpPathSpec*, o si especifica solo un nombre de directorio, pero no incluya ninguna especificación de archivo, se cambiará a la cadena "\*.\*".
 
@@ -2523,7 +2523,7 @@ El *lpPathSpec* parámetro tiene el formato siguiente:
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-En este ejemplo, *unidad* es una letra de unidad *directory* es un nombre de directorio válido y *filename* es un nombre de archivo válido que debe contener al menos un carácter comodín. Los caracteres comodín son un signo de interrogación (**?**), lo que significa que coincide con cualquier carácter y un asterisco (<strong>\*</strong>), lo que significa que coincide con cualquier número de caracteres.
+En este ejemplo, *unidad* es una letra de unidad *directory* es un nombre de directorio válido y *filename* es un nombre de archivo válido que debe contener al menos un carácter comodín. Los caracteres comodín son un signo de interrogación ( **?** ), lo que significa que coincide con cualquier carácter y un asterisco (<strong>\*</strong>), lo que significa que coincide con cualquier número de caracteres.
 
 Si especifica una cadena de longitud cero para *lpPathSpec*, se usará el directorio actual y *lpPathSpec* no se modificará. Si especifica solo un nombre de directorio, pero no incluya ninguna especificación de archivo, se cambiará a la cadena "\*".
 
