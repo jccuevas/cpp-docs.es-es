@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: da703d6649cb430b572d4d0db44adcfdef8ed8c4
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446775"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451164"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Cómo notificar un problema con la documentación o el conjunto de herramientas de Visual C++
 
@@ -112,7 +112,7 @@ A continuación encontrará lo que se considera una buena reproducción:
 
 - Si procede, **conviene realizar comprobaciones con otros compiladores**. Las reproducciones que implican código C++ portátil deben comprobar su comportamiento con otros compiladores si es posible. En última instancia, el estándar determina la corrección de un programa. Ningún compilador es perfecto, aunque cuando Clang y GCC acepten su código sin diagnóstico y MSVC no lo haga, es probable que se trate de un error en el compilador. Existen otras posibilidades, como las diferencias entre el comportamiento de Unix y Windows o los distintos niveles de implementación de los estándares de C++, entre otras. Por otra parte, si todos los compiladores rechazan su código, es probable que este no sea correcto. Consultar distintos mensajes de error puede ayudarle a diagnosticar el problema.
 
-   Encontrará listas de compiladores en línea para probar su código en los [compiladores en línea de C++](https://isocpp.org/blog/2013/01/online-c-compilers) del sitio web del estándar ISO C++, o bien en esta [lista de compiladores en línea de C++](https://arnemertz.github.io/online-compilers/) de GitHub. Algunos ejemplos específicos son [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) y [Coliru](http://coliru.stacked-crooked.com/).
+   Encontrará listas de compiladores en línea para probar su código en los [compiladores en línea de C++](https://isocpp.org/blog/2013/01/online-c-compilers) del sitio web del estándar ISO C++, o bien en esta [lista de compiladores en línea de C++](https://arnemertz.github.io/online-compilers/) de GitHub. Algunos ejemplos específicos son [Wandbox](https://wandbox.org/), [Compiler Explorer](https://godbolt.org/) y [Coliru](https://coliru.stacked-crooked.com/).
 
    > [!NOTE]
    > Los sitios web de compiladores en línea no están afiliados a Microsoft. Muchos de estos sitios web de compiladores en línea se ejecutan como proyectos personales, y puede que algunos de ellos no estén disponibles cuando lea este artículo. Haga una búsqueda para encontrar otros que pueda usar.
