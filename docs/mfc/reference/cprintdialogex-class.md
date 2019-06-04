@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: e5ddb2f7b5616acc0f275ad21599abedfbd8d060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3959eb01e5c0a36410129925e7c3f53898e99196
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372847"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504798"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx (clase)
 
@@ -180,7 +180,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valor devuelto
 
-El INT_PTR valor devuelto es realmente un HRESULT. Vea la sección valores devolver en [PrintDlgEx](https://msdn.microsoft.com/library/windows/desktop/ms646942) en el SDK de Windows.
+El INT_PTR valor devuelto es realmente un HRESULT. Vea la sección valores devolver en [PrintDlgEx](/previous-versions/windows/desktop/legacy/ms646942\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 

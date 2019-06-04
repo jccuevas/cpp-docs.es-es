@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278090"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503232"
 ---
 # <a name="cregkey-class"></a>CRegKey (clase)
 
@@ -195,7 +195,7 @@ Opciones de la clave. El valor predeterminado es REG_OPTION_NON_VOLATILE. Para o
 El acceso de seguridad para la clave. El valor predeterminado es KEY_READ &#124; KEY_WRITE. Para obtener una lista de posibles valores y descripciones, consulte `RegCreateKeyEx`.
 
 *lpSecAttr*<br/>
-Un puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que indica si un proceso secundario puede heredar el identificador de la clave. De forma predeterminada, este parámetro es NULL (es decir, no se puede heredar el identificador).
+Un puntero a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) estructura que indica si un proceso secundario puede heredar el identificador de la clave. De forma predeterminada, este parámetro es NULL (es decir, no se puede heredar el identificador).
 
 *lpdwDisposition*<br/>
 [out] Si no es NULL, recupera REG_CREATED_NEW_KEY (si la clave no existía y se ha creado) o REG_OPENED_EXISTING_KEY (si la clave existía y se ha abierto).

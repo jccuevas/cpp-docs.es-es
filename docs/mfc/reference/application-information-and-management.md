@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612285"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504496"
 ---
 # <a name="application-information-and-management"></a>Información y administración de aplicaciones
 
@@ -98,7 +98,7 @@ Especifica un mensaje adicional que controla la creación del subproceso. Este i
 - **0** iniciar el subproceso inmediatamente después de crear.
 
 *lpSecurityAttrs*<br/>
-Apunta a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica los atributos de seguridad para el subproceso. Si es NULL, se utilizará los mismos atributos de seguridad que del subproceso creador. Para obtener más información sobre esta estructura, consulte el SDK de Windows.
+Apunta a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) estructura que especifica los atributos de seguridad para el subproceso. Si es NULL, se utilizará los mismos atributos de seguridad que del subproceso creador. Para obtener más información sobre esta estructura, consulte el SDK de Windows.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -110,7 +110,7 @@ El primer formulario del `AfxBeginThread` crea un subproceso de trabajo. El segu
 
 `AfxBeginThread` crea un nuevo `CWinThread` (objeto), llama a su [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) funcionan para empezar a ejecutar el subproceso y devuelve un puntero al subproceso. Se realizan comprobaciones en todo el procedimiento para asegurar que todos los objetos queden desasignados correctamente en caso de error en algún momento del proceso de creación. Para finalizar el subproceso, llame a [AfxEndThread](#afxendthread) desde dentro del subproceso o el valor devuelto de la función controladora del subproceso de trabajo.
 
-Multithreading se debe habilitar la aplicación; en caso contrario, se producirá un error en esta función. Para obtener más información sobre la habilitación de multithreading, consulte [/MD, / MT, /LD (utilizar la biblioteca de tiempo de ejecución)](../../build/reference/md-mt-ld-use-run-time-library.md) en *opciones del compilador de Visual C++*.
+Multithreading se debe habilitar la aplicación; en caso contrario, se producirá un error en esta función. Para obtener más información sobre la habilitación de multithreading, consulte [/MD, / MT, /LD (utilizar la biblioteca de tiempo de ejecución)](../../build/reference/md-mt-ld-use-run-time-library.md) en *opciones del compilador de Visual C++* .
 
 Para obtener más información sobre `AfxBeginThread`, consulte los artículos [Multithreading: Crear subprocesos de trabajo](../../parallel/multithreading-creating-worker-threads.md) y [Multithreading: Crear subprocesos de interfaz de usuario](../../parallel/multithreading-creating-user-interface-threads.md).
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Parámetros
 
 *nClassStyle*<br/>
-Especifica el estilo de clase de Windows o una combinación de estilos, creados mediante el uso de la operación bit a bit OR ( **&#124;**) operador para la clase de ventana. Para obtener una lista de estilos de clase, vea el [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura en el SDK de Windows. Si es NULL, los valores predeterminados se establecerá como sigue:
+Especifica el estilo de clase de Windows o una combinación de estilos, creados mediante el uso de la operación bit a bit OR ( **&#124;** ) operador para la clase de ventana. Para obtener una lista de estilos de clase, vea el [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) estructura en el SDK de Windows. Si es NULL, los valores predeterminados se establecerá como sigue:
 
 - Establece el estilo del mouse en CS_DBLCLKS, que envía haga doble clic en los mensajes al procedimiento de ventana cuando el usuario hace doble clic del mouse.
 

@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375800"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504846"
 ---
 # <a name="cmenu-class"></a>CMenu (clase)
 
@@ -769,7 +769,7 @@ Valor que especifica el significado de `nIDItem`. De forma predeterminada, `ByPo
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza correctamente, el valor devuelto es distinto de cero. Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, use la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), tal y como se describe en el SDK de Windows.
+Si la función se realiza correctamente, el valor devuelto es distinto de cero. Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, use la función de Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), tal y como se describe en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1267,7 +1267,7 @@ Valor que especifica el significado de *uItem*. Si este parámetro es FALSE, *uI
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza correctamente, el valor devuelto es distinto de cero. Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, use la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), tal y como se describe en el SDK de Windows.
+Si la función se realiza correctamente, el valor devuelto es distinto de cero. Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, use la función de Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), tal y como se describe en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -1476,7 +1476,7 @@ Puntero a un [TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams) n
 
 Si especifica TPM_RETURNCMD en el *fuFlags* parámetro, el valor devuelto es el identificador del elemento de menú del elemento que el usuario seleccionado. Si el usuario cancela el menú sin realizar una selección, o si se produce un error, el valor devuelto es 0.
 
-Si no especifica TPM_RETURNCMD en el *fuFlags* parámetro, el valor devuelto es distinto de cero si la función se realiza correctamente y 0 si se produce un error. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Si no especifica TPM_RETURNCMD en el *fuFlags* parámetro, el valor devuelto es distinto de cero si la función se realiza correctamente y 0 si se produce un error. Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Comentarios
 

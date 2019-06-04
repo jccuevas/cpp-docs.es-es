@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349269"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504537"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -83,7 +83,7 @@ Tamaño de la pila de un subproceso nuevo, o 0.
 Lista de argumentos que se pasarán a un nuevo subproceso, o **NULL**.
 
 *Seguridad*<br/>
-Puntero a una estructura de [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es **NULL**, no se puede heredar el identificador. Debe ser **NULL** para aplicaciones de Windows 95.
+Puntero a una estructura de [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) que determina si el identificador devuelto se puede heredar de procesos secundarios. Si *seguridad* es **NULL**, no se puede heredar el identificador. Debe ser **NULL** para aplicaciones de Windows 95.
 
 *initflag*<br/>
 Marcas que controlan el estado inicial de un nuevo subproceso. Establecer *initflag* en 0 para ejecutar inmediatamente, o en **CREATE_SUSPENDED** para crear el subproceso en un estado suspendido; use [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread) para ejecutar el subproceso. Establecer *initflag* a **STACK_SIZE_PARAM_IS_A_RESERVATION** marca para usar *stack_size* como inicial reservar el tamaño de la pila en bytes; si esta marca no se especifica, *stack_size* especifica el tamaño de confirmación.

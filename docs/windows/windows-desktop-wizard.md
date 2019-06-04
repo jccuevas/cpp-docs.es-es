@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708052"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503794"
 ---
 # <a name="windows-desktop-wizard"></a>Asistente para escritorio de Windows
 
@@ -51,7 +51,7 @@ Crea el tipo de aplicación especificado.
 
 |Opción|Descripción|
 |------------|-----------------|
-|**Aplicación de consola**|Crea una aplicación de consola. Programas de consola se desarrollan con [consola funciones](https://msdn.microsoft.com/library/ms813137.aspx), que proporcionan compatibilidad con modo de carácter en ventanas de consola. Visual C++ [bibliotecas en tiempo de ejecución](../c-runtime-library/c-run-time-library-reference.md) también proporcionan entrada y salida de ventanas de consola con funciones estándar de E/S, tales como `printf_s()` y `scanf_s()`. Las aplicaciones de consola no tienen interfaz gráfica de usuario. Al compilarse producen un archivo .exe que se puede ejecutar como una aplicación independiente desde la línea de comandos.<br /><br /> Puede agregar compatibilidad con MFC y ATL a las aplicaciones de consola.|
+|**Aplicación de consola**|Crea una aplicación de consola. Visual C++ [bibliotecas en tiempo de ejecución](../c-runtime-library/c-run-time-library-reference.md) también proporcionan entrada y salida de ventanas de consola con funciones estándar de E/S, tales como `printf_s()` y `scanf_s()`. Las aplicaciones de consola no tienen interfaz gráfica de usuario. Al compilarse producen un archivo .exe que se puede ejecutar como una aplicación independiente desde la línea de comandos.<br /><br /> Puede agregar compatibilidad con MFC y ATL a las aplicaciones de consola.|
 |**Aplicación de Windows**|Crea un programa Win32. Un programa Win32 es una aplicación ejecutable (EXE) escrita en C o C++, que utiliza llamadas a la API de Win32 para crear una interfaz gráfica de usuario.<br /><br /> No se puede agregar compatibilidad con MFC y ATL a una aplicación Windows.|
 |**Biblioteca de vínculos dinámicos**|Crea una biblioteca de vínculos dinámicos (DLL) de Win32. Una DLL de Win32 es un archivo binario, escrito en C o C++, que utiliza llamadas a la API de Win32 en lugar de llamadas a clases MFC y que actúa como una biblioteca compartida de funciones que múltiples aplicaciones pueden utilizar simultáneamente.<br /><br /> No se puede agregar compatibilidad con MFC o ATL a una aplicación de la DLL creada con este asistente, pero puede crear una DLL de MFC por elegir **nuevo > proyecto > DLL de MFC**.|
 |**Biblioteca estática**|Crea una biblioteca estática. Una biblioteca estática es un archivo que contiene objetos y sus funciones, así como datos que vincula al programa cuando se compila el archivo ejecutable. En este tema se explica cómo crear los archivos de inicio y [las propiedades del proyecto](../build/reference/property-pages-visual-cpp.md) para una biblioteca estática. Un archivo de biblioteca estática proporciona las siguientes ventajas:<br /><br />-Una biblioteca estática Win32 resulta útil si la aplicación que está trabajando realiza llamadas a la API de Win32 en lugar de a clases MFC.<br />-El proceso de vinculación es el mismo si el resto de la aplicación de Windows se escribe en C o C++.<br />-Puede vincular una biblioteca estática a un programa basado en MFC o a un programa no basados en MFC.|
@@ -87,4 +87,4 @@ Puede ver los archivos que el asistente crea para el proyecto en el **Explorador
 
 ## <a name="see-also"></a>Vea también
 
-[C++tipos de proyecto en Visual Studio](../build/reference/visual-cpp-project-types.md)
+[Tipos de proyectos de C++ en Visual Studio](../build/reference/visual-cpp-project-types.md)
