@@ -2,12 +2,12 @@
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
 ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 84b9242ad5af79ed48d716fb5a35db56428e9a98
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8e8bf2b12462a18c8a0e6c1c4d6677f18e2f0f34
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57808370"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451149"
 ---
 # <a name="configure-a-linux-project"></a>Configurar un proyecto de Linux
 
@@ -31,7 +31,7 @@ Para cambiar la configuración correspondiente al equipo Linux remoto, configure
 
 - El **Directorio raíz de la compilación remota** determina la ubicación raíz donde se crea el proyecto en el equipo Linux remoto.  El valor predeterminado es **~/projects**, a menos que se cambie.
 
-- El **Directorio del proyecto de compilación remota** es donde se creará este proyecto concreto en el equipo remoto Linux.  El valor predeterminado es **$(RemoteRootDir)/$(ProjectName)**, que se expandirá en un directorio con el nombre del proyecto actual, bajo el directorio raíz establecido arriba.
+- El **Directorio del proyecto de compilación remota** es donde se creará este proyecto concreto en el equipo remoto Linux.  El valor predeterminado es **$(RemoteRootDir)/$(ProjectName)** , que se expandirá en un directorio con el nombre del proyecto actual, bajo el directorio raíz establecido arriba.
 
 > [!NOTE]
 > Para cambiar el valor predeterminado de los compiladores de C y C++, o el enlazador y el archivador usados para compilar el proyecto, use las entradas pertinentes de la sección **C/C++ > General** y en la sección **Enlazador > General**.  Podrían establecerse para usar una versión determinada de GCC o incluso el compilador Clang, por ejemplo. Para más información, vea [Propiedades de C o C++ (C++ para Linux)](prop-pages/c-cpp-linux.md) y [Propiedades del enlazador (C++ para Linux)](prop-pages/linker-linux.md).
@@ -40,7 +40,7 @@ Para cambiar la configuración correspondiente al equipo Linux remoto, configure
 
 **Visual Studio 2017 15.6 y versiones anteriores**:<br/>
 De forma predeterminada, Visual Studio no incluye ningún archivo de inclusión de nivel de sistema del equipo Linux.  Por ejemplo, los elementos del directorio **/usr/include** no están presentes en Visual Studio.
-Para una compatibilidad total con [IntelliSense](/visualstudio/ide/using-intellisense), tendrá que copiar esos archivos en alguna ubicación del equipo de desarrollo y apuntar Visual Studio a esta ubicación.  Una opción es usar scp (Secure Copy) para copiar los archivos.  En Windows 10, puede usar [Bash en Windows](https://msdn.microsoft.com/commandline/wsl/about) para ejecutar scp.  En versiones anteriores de Windows, podría usar algo como [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+Para una compatibilidad total con [IntelliSense](/visualstudio/ide/using-intellisense), tendrá que copiar esos archivos en alguna ubicación del equipo de desarrollo y apuntar Visual Studio a esta ubicación.  Una opción es usar scp (Secure Copy) para copiar los archivos.  En Windows 10, puede usar [Bash en Windows](https://msdn.microsoft.com/commandline/wsl/about) para ejecutar scp.  En versiones anteriores de Windows, podría usar algo como [PSCP (PuTTY Secure Copy)](https://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Puede copiar los archivos mediante un comando similar al siguiente:
 
