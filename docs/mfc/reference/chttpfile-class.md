@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 3c701f933d622adc5f3d8b1eb2371406e5b45e6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a637ef8feb28396b1427341c8174e9a7adaa69a9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345804"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503492"
 ---
 # <a name="chttpfile-class"></a>CHttpFile (clase)
 
@@ -126,7 +126,7 @@ Una referencia a un [CString](../../atl-mfc-shared/reference/cstringt-class.md) 
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) puede llamarse para determinar la causa del error.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -319,7 +319,7 @@ Un puntero a Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-sy
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) puede llamarse para determinar la causa del error.
 
 ### <a name="remarks"></a>Comentarios
 
@@ -398,7 +398,7 @@ Una referencia a un código de estado. Códigos de estado indican el éxito o fr
 
 ### <a name="return-value"></a>Valor devuelto
 
-Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) puede llamarse para determinar la causa del error.
+Si es correcta, su valor es distinto de cero. En caso contrario, es cero. Si se produce un error en la llamada, la función de Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) puede llamarse para determinar la causa del error.
 
 ### <a name="remarks"></a>Comentarios
 

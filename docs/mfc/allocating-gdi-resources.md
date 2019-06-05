@@ -1,24 +1,24 @@
 ---
 title: Asignar recursos de GDI
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - resources [MFC], printing
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305008"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504628"
 ---
 # <a name="allocating-gdi-resources"></a>Asignar recursos de GDI
 
 En este artículo se explica cómo asignar y desasignar los objetos de la Interfaz de dispositivo gráfico (GDI) de Windows necesarios para la impresión.
 
 > [!NOTE]
->  Para obtener más información, consulte la documentación de SDK de GDI + en: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Para obtener más información, consulte el [documentación del SDK de GDI +](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Supongamos que necesita usar determinadas fuentes, lápices u otros objetos GDI para imprimir, pero no para la visualización en pantalla. Debido a la memoria que necesitan, no resulta eficiente asignar estos objetos cuando se inicia la aplicación. Cuando la aplicación no está imprimiendo un documento, esa memoria puede ser necesaria para otros fines. Es mejor asignarlos cuando comienza la impresión y, después, eliminarlos cuando la impresión haya terminado.
 

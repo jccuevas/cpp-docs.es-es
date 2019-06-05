@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451232"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504252"
 ---
 # <a name="cwnd-class"></a>CWnd (clase)
 
@@ -5607,7 +5607,7 @@ Es distinto de cero si la función se realiza correctamente. Es 0 si se produce 
 
 No se puede mover una ventana bloqueada. Sólo una ventana se puede bloquear a la vez. Para desbloquear una ventana que se bloquean con `LockWindowUpdate`, llame a [UnlockWindowUpdate](#unlockwindowupdate).
 
-Si una aplicación con una ventana bloqueada (o ninguna ventana secundaria bloqueada) llama a la [GetDC,](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx,](https://msdn.microsoft.com/library/windows/desktop/dd144873) o [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) función de Windows, la función llamada devuelve un dispositivo contexto cuya región visible está vacía. Esto sucederá hasta que la aplicación desbloquea la ventana mediante una llamada a la `UnlockWindowUpdate` función miembro.
+Si una aplicación con una ventana bloqueada (o ninguna ventana secundaria bloqueada) llama a la [GetDC,](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx,](/windows/desktop/api/winuser/nf-winuser-getdcex) o [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) función de Windows, la función llamada devuelve un dispositivo contexto cuya región visible está vacía. Esto sucederá hasta que la aplicación desbloquea la ventana mediante una llamada a la `UnlockWindowUpdate` función miembro.
 
 Mientras se bloquean las actualizaciones de la ventana, el sistema realiza un seguimiento del rectángulo delimitador de las operaciones de dibujos para contextos de dispositivo asociados a una ventana bloqueada. Cuando se vuelva a habilitar el dibujo, se invalida este rectángulo delimitador en la ventana bloqueada y sus ventanas secundarias para forzar una eventual [WM_PAINT](/windows/desktop/gdi/wm-paint) mensaje para actualizar la pantalla. Si no se ha producido ningún dibujo se ha bloqueado la ventana se actualiza, no se invalida ningún área.
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Comentarios
 
-Este método recibe el [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651) mensaje de notificación, que se describe en el SDK de Windows. Cuando el usuario inicia o cierra, el sistema operativo actualiza la configuración específica del usuario. El sistema envía este mensaje inmediatamente después de actualizar la configuración.
+Este método recibe el [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged) mensaje de notificación, que se describe en el SDK de Windows. Cuando el usuario inicia o cierra, el sistema operativo actualiza la configuración específica del usuario. El sistema envía este mensaje inmediatamente después de actualizar la configuración.
 
 > [!NOTE]
 > El marco de trabajo llama a esta función miembro para que la aplicación pueda controlar un mensaje de Windows. Los parámetros que se pasaron a la función reflejan los parámetros recibidos por el marco de trabajo cuando se recibió el mensaje. Si llama a la implementación de la clase base de esta función, esa implementación usará los parámetros que se pasaron originalmente con el mensaje y no los parámetros que proporciona a la función.

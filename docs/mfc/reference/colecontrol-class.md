@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160320"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503858"
 ---
 # <a name="colecontrol-class"></a>COleControl (clase)
 
@@ -1184,7 +1184,7 @@ Descriptor de tipos de parámetros del evento.
 
 Normalmente, esta función no debe llamarse directamente. En su lugar, llamará a las funciones de activación de eventos en la sección de asignación de evento de declaración de clase del control.
 
-El *pbParams* argumento es una lista separada por espacios de **VTS_**. Uno o varios de estos valores, separados por espacios (no por comas), especifican la lista de parámetros de la función. Los valores posibles son los siguientes:
+El *pbParams* argumento es una lista separada por espacios de **VTS_** . Uno o varios de estos valores, separados por espacios (no por comas), especifican la lista de parámetros de la función. Los valores posibles son los siguientes:
 
 |Símbolo|Tipo de parámetro|
 |------------|--------------------|
@@ -2811,7 +2811,7 @@ DWORD que describe qué forma o el aspecto de un objeto que se va a mostrarse. L
 - Rectángulo de DVASPECT_TRANSPARENT que abarcan todas las partes transparentes o irregulares.
 
 *pRect*<br/>
-Apunta a la [RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907) estructura que especifica el rectángulo en el que se debe dibujar el objeto. Este parámetro controla el posicionamiento y la ampliación del objeto.
+Apunta a la [RECTL](/previous-versions/dd162907\(v=vs.85\)) estructura que especifica el rectángulo en el que se debe dibujar el objeto. Este parámetro controla el posicionamiento y la ampliación del objeto.
 
 ### <a name="return-value"></a>Valor devuelto
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: b5d809fa4e0f608d4c0e6cbdaf8697688c6d3f9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09d385404edbc33883d2d2add2328b33876d23ae
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376791"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504640"
 ---
 # <a name="menu-editor-c"></a>Editor de menús (C++)
 
@@ -198,8 +198,6 @@ Win32
 
 [Editores de recursos](../windows/resource-editors.md)<br/>
 [Comandos de menú](../windows/menu-command-properties.md)<br/>
-
-<!--
-[User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)<br/>
-[Menus](../mfc/menus-mfc.md)<br/>
-[Menus](https://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)-->
+[Objetos de interfaz de usuario e identificadores de comando](../mfc/user-interface-objects-and-command-ids.md)<br/>
+[Menús](../mfc/menus-mfc.md)<br/>
+[Menús](/windows/desktop/menurc/menus)

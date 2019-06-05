@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373819"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504200"
 ---
 # <a name="cnetaddressctrl-class"></a>Clase CNetDirecciónCtrl
 
@@ -74,7 +74,7 @@ El ejemplo de código siguiente es una parte de un cuadro de diálogo que valida
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo de código desde el archivo de encabezado del cuadro de diálogo define el [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) y [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) variables que requieren el [CNetAddressCtrl::GetAddress](#getaddress)método.
+El siguiente ejemplo de código desde el archivo de encabezado del cuadro de diálogo define el [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) y [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) variables que requieren el [CNetAddressCtrl::GetAddress](#getaddress)método.
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>Parámetros
 
 *pAddress*<br/>
-[in, out] Puntero a un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) estructura.  Establecer el *pAddrInfo* miembro de esta estructura a la dirección de un [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) estructura antes de llamar a GetAddress (método).
+[in, out] Puntero a un [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address) estructura.  Establecer el *pAddrInfo* miembro de esta estructura a la dirección de un [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) estructura antes de llamar a GetAddress (método).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -199,7 +199,7 @@ El valor S_OK si este método se realiza correctamente; en caso contrario, un c�
 
 ### <a name="remarks"></a>Comentarios
 
-Si este método se realiza correctamente, el [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) estructura contiene información adicional acerca de la dirección de red.
+Si este método se realiza correctamente, el [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) estructura contiene información adicional acerca de la dirección de red.
 
 Use la [CNetAddressCtrl::SetAllowType](#setallowtype) método para especificar los tipos de direcciones que puede admitir el control de dirección de red actual. Use la [CNetAddressCtrl::GetAddress](#getaddress) método para validar y analizar la dirección de red que el usuario escribe. Use la [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) método para mostrar un recuadro informativo de mensaje de error si el [CNetAddressCtrl::GetAddress](#getaddress) método es incorrecto.
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>Valor devuelto
 
-Una combinación bit a bit (OR) de marcas que especifica los tipos de direcciones que puede admitir el control de dirección de red. Para obtener más información, consulte [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).
+Una combinación bit a bit (OR) de marcas que especifica los tipos de direcciones que puede admitir el control de dirección de red. Para obtener más información, consulte [NET_STRING](/windows/desktop/shell/net-string).
 
 ### <a name="remarks"></a>Comentarios
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |Parámetro|Descripción|
 |---------------|-----------------|
-|*dwAddrMask*|[in] Una combinación bit a bit (OR) de marcas que especifica los tipos de direcciones que puede admitir el control de dirección de red. Para obtener más información, consulte [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
+|*dwAddrMask*|[in] Una combinación bit a bit (OR) de marcas que especifica los tipos de direcciones que puede admitir el control de dirección de red. Para obtener más información, consulte [NET_STRING](/windows/desktop/shell/net-string).|
 
 ### <a name="return-value"></a>Valor devuelto
 

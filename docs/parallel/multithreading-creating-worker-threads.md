@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38757337b1bfe5c7994f9a9f26aad2526aa0279c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212832"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504575"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Multithreading: Crear subprocesos de trabajo en MFC
 
@@ -43,7 +43,7 @@ Hay dos versiones sobrecargadas de `AfxBeginThread`: una que solo se puede crear
 
 - (Opcional) CREATE_SUSPENDED si desea que el subproceso que se creará en un estado suspendido. El valor predeterminado es 0, es decir, iniciar el subproceso normalmente.
 
-- (Opcional) Los atributos de seguridad deseados. El valor predeterminado es el mismo acceso que el de su subproceso primario. Para obtener más información sobre el formato de esta información de seguridad, consulte [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) en el SDK de Windows.
+- (Opcional) Los atributos de seguridad deseados. El valor predeterminado es el mismo acceso que el de su subproceso primario. Para obtener más información sobre el formato de esta información de seguridad, consulte [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) en el SDK de Windows.
 
 `AfxBeginThread` crea e inicializa un `CWinThread` objeto automáticamente, lo inicia y devuelve su dirección, por lo que puede hacer referencia a él más adelante. Se realizan comprobaciones en todo el procedimiento para asegurar que todos los objetos queden desasignados correctamente en caso de error en algún momento del proceso de creación.
 

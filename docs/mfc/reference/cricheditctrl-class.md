@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372106"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504729"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl (clase)
 
@@ -503,7 +503,7 @@ Si es correcta, su valor es distinto de cero. En caso contrario, es cero.
 
 ### <a name="remarks"></a>Comentarios
 
-Use `CreateEx` en lugar de `Create` para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_**.
+Use `CreateEx` en lugar de `Create` para aplicar estilos extendidos de Windows, especificados por el prólogo de estilo extendido de Windows **WS_EX_** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ Depende del formulario:
 
 ### <a name="remarks"></a>Comentarios
 
-Si usa la primera forma, **función miembro GetSelText (** `lpBuf` **)**, debe asegurarse de que el búfer es lo suficientemente grande como para el texto que se va a recibir. Llame a [función miembro GetSel](#getsel) para determinar el número de caracteres de la selección actual.
+Si usa la primera forma, **función miembro GetSelText (** `lpBuf` **)** , debe asegurarse de que el búfer es lo suficientemente grande como para el texto que se va a recibir. Llame a [función miembro GetSel](#getsel) para determinar el número de caracteres de la selección actual.
 
 Para obtener más información, consulte [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) en el SDK de Windows.
 
@@ -1354,7 +1354,7 @@ El índice de carácter de la línea especificada en *nLínea* o -1 si el númer
 
 El índice de carácter es el número de caracteres desde el principio del control rich edit que la línea especificada.
 
-Para obtener más información, consulte [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) en el SDK de Windows.
+Para obtener más información, consulte [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 

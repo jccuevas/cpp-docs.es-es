@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260732"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503376"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken (clase)
 
@@ -246,7 +246,7 @@ Puntero a la nueva `CAccessToken` objeto.
 Especifica los derechos de acceso solicitado para el nuevo token. El valor predeterminado, MAXIMUM_ALLOWED, solicita todos los derechos de acceso que son válidos para el llamador. Consulte [derechos de acceso y las máscaras de acceso](/windows/desktop/SecAuthZ/access-rights-and-access-masks) para obtener más sobre derechos de acceso.
 
 *pTokenAttributes*<br/>
-Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo token y determina si los procesos secundarios pueden heredar el token. Si *pTokenAttributes* es NULL, el token Obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
+Puntero a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) estructura que especifica un descriptor de seguridad para el nuevo token y determina si los procesos secundarios pueden heredar el token. Si *pTokenAttributes* es NULL, el token Obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -295,10 +295,10 @@ Especifica marcas adicionales que controlan la clase de prioridad y la creación
 Si es TRUE, se carga el perfil del usuario con [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo proceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pProcessAttributes* es NULL, el proceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
+Puntero a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) estructura que especifica un descriptor de seguridad para el nuevo proceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pProcessAttributes* es NULL, el proceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
 
 *pThreadAttributes*<br/>
-Puntero a un [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) estructura que especifica un descriptor de seguridad para el nuevo subproceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pThreadAttributes* es NULL, el subproceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
+Puntero a un [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) estructura que especifica un descriptor de seguridad para el nuevo subproceso y determina si los procesos secundarios pueden heredar el identificador devuelto. Si *pThreadAttributes* es NULL, el subproceso obtiene un descriptor de seguridad predeterminado y no se puede heredar el identificador.
 
 *bInherit*<br/>
 Indica si el nuevo proceso hereda controla el proceso de llamada. Si es TRUE, cada identificador abierto heredable en el proceso de llamada se hereda el nuevo proceso. Identificadores heredados tienen los mismos privilegios de acceso y el valor que los identificadores originales.

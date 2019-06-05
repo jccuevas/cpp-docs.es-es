@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323305"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504663"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl (clase)
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Parámetros
 
 *pType*<br/>
-El tipo de datos del control que se va a crear. Debe ser un [tipo](https://msdn.microsoft.com/library/system.type) tipo de datos.
+El tipo de datos del control que se va a crear. Debe ser un [tipo](/dotnet/api/system.type) tipo de datos.
 
 *dwStyle*<br/>
 Estilo de ventana que se va a aplicar al control. Especificar una combinación de [estilos de ventana](../../mfc/reference/styles-used-by-mfc.md#window-styles). Actualmente, se admiten solo los estilos siguientes: WS_TABSTOP, WS_VISIBLE, WS_DISABLED y WS_GROUP.
@@ -136,7 +136,7 @@ Si se realiza correctamente, devuelve un valor distinto de cero. Si no lo consig
 
 Este método crea una instancia de un control de Windows Forms de .NET Framework en un contenedor de MFC.
 
-La primera sobrecarga del método acepta un tipo de datos de .NET Framework *PEscriba* para que MFC puede crear una instancia de un nuevo objeto de este tipo. *PEscriba* debe ser un [tipo](https://msdn.microsoft.com/library/system.type) tipo de datos.
+La primera sobrecarga del método acepta un tipo de datos de .NET Framework *PEscriba* para que MFC puede crear una instancia de un nuevo objeto de este tipo. *PEscriba* debe ser un [tipo](/dotnet/api/system.type) tipo de datos.
 
 La segunda sobrecarga del método crea un control de Windows Forms según el `TManagedControl` parámetro de plantilla de la `CWinFormsControl` clase. El tamaño y posición del control se basa en el `RECT` estructura se pasa al método. Solo *dwStyle* es importante para los estilos.
 

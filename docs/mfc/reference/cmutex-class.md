@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373653"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504187"
 ---
 # <a name="cmutex-class"></a>CMutex (clase)
 
@@ -77,14 +77,14 @@ Especifica si el subproceso que crea el `CMutex` objeto inicialmente tiene acces
 Nombre del objeto `CMutex`. Si existe otro exclusión mutua con el mismo nombre, *lpszName* se debe proporcionar si el objeto que se va a utilizar los límites del proceso. Si **NULL**, la exclusión mutua estará sin nombre. Si el nombre coincide con una exclusión mutua existente, el constructor crea un nuevo `CMutex` objeto que hace referencia a la exclusión mutua de ese nombre. Si el nombre coincide con un objeto de sincronización existente que no es una exclusión mutua, se producirá un error en la construcción.
 
 *lpsaAttribute*<br/>
-Atributos de seguridad para el objeto de exclusión mutua. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) en el SDK de Windows.
+Atributos de seguridad para el objeto de exclusión mutua. Para obtener una descripción completa de esta estructura, vea [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) en el SDK de Windows.
 
 ### <a name="remarks"></a>Comentarios
 
 Para obtener acceso a o liberar una `CMutex` , cree un [CMultiLock](../../mfc/reference/cmultilock-class.md) o [CSingleLock](../../mfc/reference/csinglelock-class.md) objeto y llamar a su [bloqueo](../../mfc/reference/csinglelock-class.md#lock) y [Unlock](../../mfc/reference/csinglelock-class.md#unlock) funciones de miembro. Si el `CMutex` se usan objetos independientes, llame a su `Unlock` función miembro para liberarlo.
 
 > [!IMPORTANT]
->  Después de crear el `CMutex` de objeto, utilice [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) para asegurarse de que la exclusión mutua no existía. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y es posible que pretende usar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.
+>  Después de crear el `CMutex` de objeto, utilice [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) para asegurarse de que la exclusión mutua no existía. Si la exclusión mutua existía inesperadamente, puede indicar un proceso invasor es uso inapropiado y es posible que pretende usar la exclusión mutua de forma malintencionada. En este caso, el procedimiento recomendado de preocupados por la seguridad es cerrar el identificador y continuar como si se produjo un error en la creación del objeto.
 
 ## <a name="see-also"></a>Vea también
 

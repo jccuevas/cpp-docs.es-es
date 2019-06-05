@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: d4e363f7de46de6f875a28a62d4ecdf929decdc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd60afc34b1a2de8f86037eb180aab86a9b8afde
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277511"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503080"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl (clase)
 
@@ -150,7 +150,7 @@ PROPSHEETPAGE m_psp;
 
 Utilice esta estructura para inicializar la apariencia de una página de propiedades después de se construye.
 
-Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea [PROPSHEETPAGE](https://msdn.microsoft.com/library/aa815151) en el SDK de Windows.
+Para obtener más información sobre esta estructura, incluida una lista de sus miembros, vea [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v3) en el SDK de Windows.
 
 ##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply
 

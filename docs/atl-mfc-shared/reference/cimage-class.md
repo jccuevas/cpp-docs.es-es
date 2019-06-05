@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235127"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503172"
 ---
 # <a name="cimage-class"></a>CImage (clase)
 
@@ -158,7 +158,7 @@ Para determinar si un mapa de bits adjunta es una sección DIB, llame a [IsDibSe
 > [!NOTE]
 > Uso global `CImage` objetos en un archivo DLL no se recomienda. Si necesita usar un global `CImage` objeto en un archivo DLL, llamada [CImage::ReleaseGDIPlus](#releasegdiplus) liberar explícitamente los recursos utilizados por GDI +.
 
-`CImage` no se pueden seleccionar en un nuevo [CDC](../../mfc/reference/cdc-class.md). `CImage` crea su propio HDC para la imagen. Dado que solo se puede seleccionar un HBITMAP en uno HDC a la vez, HBITMAP asociado con el `CImage` no se pueden seleccionar en otro HDC. Si necesita un CDC, recupere el HDC desde el `CImage` y darle a [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.MD#cdc__fromhandle.
+`CImage` no se pueden seleccionar en un nuevo [CDC](../../mfc/reference/cdc-class.md). `CImage` crea su propio HDC para la imagen. Dado que solo se puede seleccionar un HBITMAP en uno HDC a la vez, HBITMAP asociado con el `CImage` no se pueden seleccionar en otro HDC. Si necesita un CDC, recupere el HDC desde el `CImage` y darle a [CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
 ## <a name="example"></a>Ejemplo
 
@@ -480,7 +480,7 @@ Especifica el tipo de compresión para un mapa de bits comprimida de abajo a arr
 - El formato BI_BITFIELDS están comprimidos y la tabla de colores consta de tres de las máscaras de color DWORD que especifican los componentes rojos, verde y azules, respectivamente, de cada píxel. Esto es válido cuando se usa con los mapas de bits de 16 y 32 bpp.
 
 *pdwBitfields*<br/>
-Solo se usa si *eCompression* se establece a BI_BITFIELDS, en caso contrario, debe ser NULL. Un puntero a una matriz de tres DWORD las máscaras de bits, especifica los bits de cada píxel se utilizan para los componentes rojos, verde y azules del color, respectivamente. Para obtener información sobre las restricciones para los campos de bits, consulte [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) en el SDK de Windows.
+Solo se usa si *eCompression* se establece a BI_BITFIELDS, en caso contrario, debe ser NULL. Un puntero a una matriz de tres DWORD las máscaras de bits, especifica los bits de cada píxel se utilizan para los componentes rojos, verde y azules del color, respectivamente. Para obtener información sobre las restricciones para los campos de bits, consulte [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) en el SDK de Windows.
 
 *dwFlags*<br/>
 Especifica si el objeto de mapa de bits tiene un canal alfa. Puede ser una combinación de cero o más de los siguientes valores:
@@ -648,7 +648,7 @@ El número de bits por píxel.
 
 Este valor determina el número de bits que definen cada píxel y el número máximo de colores del mapa de bits.
 
-Normalmente, los bits por píxel es 1, 4, 8, 16, 24 o 32. Consulte la `biBitCount` miembro de [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) en el SDK de Windows para obtener más información acerca de este valor.
+Normalmente, los bits por píxel es 1, 4, 8, 16, 24 o 32. Consulte la `biBitCount` miembro de [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) en el SDK de Windows para obtener más información acerca de este valor.
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 

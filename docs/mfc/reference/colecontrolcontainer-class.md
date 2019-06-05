@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310443"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504563"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer (clase)
 
@@ -473,7 +473,7 @@ El identificador del control.
 Puntero a una variable booleana que recibe un valor de correcto o con errores de función (TRUE indica éxito, FALSE indica un error).
 
 *bSigned*<br/>
-Especifica si la función debe examinar el texto de un signo menos al principio y devolver un valor entero con signo si encuentra uno. Si el *bSigned* parámetro es TRUE, especifica que el valor que se va a recuperar un valor entero con signo, convierta el valor devuelto para un **int** tipo. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Especifica si la función debe examinar el texto de un signo menos al principio y devolver un valor entero con signo si encuentra uno. Si el *bSigned* parámetro es TRUE, especifica que el valor que se va a recuperar un valor entero con signo, convierta el valor devuelto para un **int** tipo. Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Valor devuelto
 
@@ -515,7 +515,7 @@ Especifica la longitud máxima, en caracteres, de la cadena que se copiarán en 
 
 Si la función se realiza correctamente, el valor devuelto especifica el número de caracteres copiados en el búfer, sin incluir el carácter nulo de terminación.
 
-Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, llame a [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Si la función no se realiza correctamente, el valor devuelto es cero. Para obtener información de error extendida, llame a [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

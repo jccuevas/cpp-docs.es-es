@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164077"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503743"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ Si desea controlar los mensajes de notificación de Windows enviados por un cont
 
 Cada entrada de mapa de mensajes tiene el formato siguiente:
 
-  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
+  **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
 
 donde `id` especifica el identificador de ventana secundaria de enviar la notificación, el control de edición y `memberFxn` es el nombre de la función de miembro primario que ha escrito para controlar la notificación.
 
@@ -708,7 +708,7 @@ Especifica el carácter que se mostrará en lugar del carácter escrito por el u
 
 ### <a name="remarks"></a>Comentarios
 
-Si crea el control de edición con el estilo ES_PASSWORD, el archivo DLL que admite el control determina el carácter de contraseña predeterminado. El manifiesto o la [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) método determina cuáles DLL es compatible con el control de edición. Si el archivo user32.dll es compatible con el control de edición, el carácter de contraseña predeterminada es asterisco ('* ', 002A U +). Si comctl32.dll versión 6 es compatible con el control de edición, el carácter predeterminado es negro círculo ('●', 25CF U +). Para obtener más información acerca de qué archivo DLL y versión admite los controles comunes, vea [Shell y las versiones de los controles comunes](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+Si crea el control de edición con el estilo ES_PASSWORD, el archivo DLL que admite el control determina el carácter de contraseña predeterminado. El manifiesto o la [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) método determina cuáles DLL es compatible con el control de edición. Si el archivo user32.dll es compatible con el control de edición, el carácter de contraseña predeterminada es asterisco ('* ', 002A U +). Si comctl32.dll versión 6 es compatible con el control de edición, el carácter predeterminado es negro círculo ('●', 25CF U +). Para obtener más información acerca de qué archivo DLL y versión admite los controles comunes, vea [Shell y las versiones de los controles comunes](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Este método envía el [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) mensaje, que se describe en el SDK de Windows.
 
@@ -867,7 +867,7 @@ El índice de carácter es el número de caracteres desde el principio del contr
 
 Esta función miembro solo se procesa por los controles de edición de varias líneas.
 
-Para obtener más información, consulte [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) en el SDK de Windows.
+Para obtener más información, consulte [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) en el SDK de Windows.
 
 ### <a name="example"></a>Ejemplo
 

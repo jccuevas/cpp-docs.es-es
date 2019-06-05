@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448463"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504786"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Implementación de ClickOnce para aplicaciones de Visual C++
 
@@ -42,7 +42,7 @@ Para obtener una descripción más detallada de la tecnología, vea [Seguridad e
 
 [Mage.exe (Herramienta de generación y edición de manifiestos)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (Herramienta de creación de certificados)](https://msdn.microsoft.com/library/windows/desktop/aa386968)<br>
+[Makecert.exe (Herramienta de creación de certificados)](/windows/desktop/SecCrypto/makecert)<br>
 [Implementar aplicaciones de escritorio](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Implementar aplicaciones, servicios y componentes](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>

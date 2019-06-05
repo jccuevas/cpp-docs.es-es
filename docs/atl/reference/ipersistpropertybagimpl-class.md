@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274898"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503145"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl (clase)
 
@@ -50,9 +50,9 @@ La clase derivada de `IPersistPropertyBagImpl`.
 
 ## <a name="remarks"></a>Comentarios
 
-El [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) interfaz permite que un objeto guardar sus propiedades en una bolsa de propiedades proporcionados por el cliente. Clase `IPersistPropertyBagImpl` proporciona una implementación predeterminada de esta interfaz e implementa `IUnknown` mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.
+El [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) interfaz permite que un objeto guardar sus propiedades en una bolsa de propiedades proporcionados por el cliente. Clase `IPersistPropertyBagImpl` proporciona una implementación predeterminada de esta interfaz e implementa `IUnknown` mediante el envío de información para el volcado de memoria se basa el dispositivo en modo de depuración.
 
-`IPersistPropertyBag` funciona junto con [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) y [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Estas dos interfaces de este últimas deben implementarse mediante el cliente. A través de `IPropertyBag`, el cliente guarda y carga las propiedades del objeto individuales. A través de `IErrorLog`, el objeto y el cliente pueden notificar los errores detectados.
+`IPersistPropertyBag` funciona junto con [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) y [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Estas dos interfaces de este últimas deben implementarse mediante el cliente. A través de `IPropertyBag`, el cliente guarda y carga las propiedades del objeto individuales. A través de `IErrorLog`, el objeto y el cliente pueden notificar los errores detectados.
 
 **Artículos relacionados con** [Tutorial de ATL](../../atl/active-template-library-atl-tutorial.md), [crear un proyecto ATL](../../atl/reference/creating-an-atl-project.md)
 
@@ -92,7 +92,7 @@ Devuelve S_OK.
 
 ### <a name="remarks"></a>Comentarios
 
-Consulte [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) en el SDK de Windows.
+Consulte [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) en el SDK de Windows.
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
@@ -106,7 +106,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ATL utiliza la asignación de propiedad del objeto para recuperar esta información.
 
-Consulte [IPersistPropertyBag](https://msdn.microsoft.com/library/aa768206.aspx) en el SDK de Windows.
+Consulte [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) en el SDK de Windows.
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
@@ -123,7 +123,7 @@ STDMETHOD(Save)(
 
 ATL utiliza la asignación de propiedad del objeto para almacenar esta información. De forma predeterminada, este método guarda todas las propiedades, independientemente del valor de *fSaveAllProperties*.
 
-Consulte [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) en el SDK de Windows.
+Consulte [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) en el SDK de Windows.
 
 ## <a name="see-also"></a>Vea también
 

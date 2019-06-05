@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225544"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504822"
 ---
 # <a name="menus-and-resources-menu-merging"></a>Menús y recursos: Combinación de menús
 
@@ -29,9 +29,7 @@ Los temas tratados en este artículo incluyen:
 
 ##  <a name="_core_menu_layouts"></a> Diseños de menú
 
-El primer paso es coordinar diseños de menú. Para obtener más información, consulte el **creación de menús** sección [consideraciones sobre la programación de menú](https://msdn.microsoft.com/library/ms647557.aspx) en el SDK de Windows.
-
-Aplicaciones de contenedor deben crear un nuevo menú para usarse solo cuando se activan los elementos incrustados en su lugar. Como mínimo, este menú debe constar de los siguientes, en el orden mostrado:
+El primer paso es coordinar diseños de menú. Aplicaciones de contenedor deben crear un nuevo menú para usarse solo cuando se activan los elementos incrustados en su lugar. Como mínimo, este menú debe constar de los siguientes, en el orden mostrado:
 
 1. Menú archivo idéntico al utilizado cuando se abren los archivos. (Normalmente no hay otros elementos de menú se colocan antes del siguiente elemento).
 
