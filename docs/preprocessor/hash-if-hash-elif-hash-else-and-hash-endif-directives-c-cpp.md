@@ -41,25 +41,25 @@ El **#if** la directiva con la **#elif**, **#else**, y **#endif** directivas, co
 &nbsp;&nbsp;&nbsp;&nbsp;*if-line text*
 
 *If-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***expresión constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***identificador*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***identificador*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *expresión constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identificador*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identificador*
 
 *elif-partes* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-line text*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*texto de elif-partes elif-línea*
 
 *elif-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***expresión constante*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *expresión constante*
 
 *otro-parte* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*else-line text*
 
 *otro-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *endif-línea* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 Cada **#if** directiva en un archivo de origen debe coincidir por un cierre **#endif** directiva. Cualquier número de **#elif** directivas pueden aparecer entre el **#if** y **#endif** directivas, pero a lo sumo una **#else** se permite la directiva. El **#else** directiva, si está presente, debe ser la última directiva antes de **#endif**.
 
@@ -73,7 +73,7 @@ El preprocesador selecciona una de las apariciones dadas de *texto* para su post
 
 El preprocesador procesa seleccionado *texto* y lo pasa al compilador. Si *texto* contiene las directivas de preprocesador, el preprocesador ejecuta esas directivas. Solo se compilan los bloques de texto seleccionados por el preprocesador.
 
-El preprocesador selecciona una única *texto* al evaluar la expresión constante que sigue a cada elemento de **#if** o **#elif** directiva hasta que encuentra una constante true (distinto de cero) expresión. Selecciona todo el texto (incluido a partir de otras directivas de preprocesador **#**) hasta su asociado **#elif**, **#else**, o **#endif** .
+El preprocesador selecciona una única *texto* al evaluar la expresión constante que sigue a cada elemento de **#if** o **#elif** directiva hasta que encuentra una constante true (distinto de cero) expresión. Selecciona todo el texto (incluido a partir de otras directivas de preprocesador **#** ) hasta su asociado **#elif**, **#else**, o **#endif** .
 
 Si todas las apariciones de *expresión-constante* son false, o si no hay ningún **#elif** aparecen las directivas, el preprocesador selecciona el bloque de texto después de la **#else** cláusula. Si el **#else** cláusula se omite y todas las instancias de *expresión-constante* en el **#if** bloque son false, no se selecciona ningún bloque de texto.
 
