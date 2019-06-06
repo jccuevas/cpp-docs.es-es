@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296714"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741724"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Agregar compatibilidad con ATL a un proyecto MFC
 
@@ -28,7 +28,7 @@ Si ya ha creado una aplicación basada en MFC, puede agregar compatibilidad para
 
 1. En el Explorador de soluciones, haga clic en el proyecto al que desea agregar compatibilidad con ATL.
 
-1. En el menú contextual, haga clic en **agregar**y, a continuación, haga clic en **Agregar clase**.
+1. En el menú contextual, haga clic en **Agregar** y después en **Agregar clase**.
 
 1. Seleccione el **agregar compatibilidad con ATL a proyectos MFC** icono.
 
@@ -47,4 +47,4 @@ Para obtener más información acerca de cómo agregar compatibilidad con ATL ca
 [Agregar una variable miembro](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Reemplazar una función virtual](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Controlador de mensajes de MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Navegar por la estructura de clases](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Navegar por la estructura de clases](../../ide/navigate-code-cpp.md)
