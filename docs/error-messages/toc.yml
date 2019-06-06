@@ -4246,6 +4246,8 @@
           href: compiler-warnings/c5046.md
 - name: Advertencias del compilador por versión del compilador
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
+- name: Advertencias del compilador desactivadas de forma predeterminada
+  href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
 - name: Errores en tiempo de ejecución de C
   expanded: false
   items:
