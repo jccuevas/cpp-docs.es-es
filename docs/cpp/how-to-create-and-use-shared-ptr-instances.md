@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174817"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821683"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Procedimiento Creación y uso de instancias shared_ptr
 
@@ -108,7 +108,7 @@ Puede pasar `shared_ptr` a otra función de las maneras siguientes:
 
 - Si tiene que proporcionar el acceso de una función del asistente al puntero subyacente y sabe que la función del asistente solo utilizará el puntero y volverá antes de que la función de llamada vuelva, esa función no necesita compartir la propiedad del puntero subyacente. Solo debe tener acceso al puntero dentro de la duración de `shared_ptr` del llamador. En este caso, es seguro pasar el puntero `shared_ptr` por referencia o pasar el puntero sin formato o una referencia al objeto subyacente. Pasarlo de esta manera proporciona una pequeña ventaja de rendimiento y también puede ayudarle a expresar la intención de la programación.
 
-- A veces, por ejemplo en `std:vector<shared_ptr<T>>`, puede ser necesario pasar cada `shared_ptr` a un cuerpo de expresión lambda o a un objeto de función con nombre. Si la expresión lambda o la función no almacena el puntero, debe pasar el puntero `shared_ptr` por referencia para evitar llamar al constructor de copias para cada elemento.
+- A veces, por ejemplo en `std::vector<shared_ptr<T>>`, puede ser necesario pasar cada `shared_ptr` a un cuerpo de expresión lambda o a un objeto de función con nombre. Si la expresión lambda o la función no almacena el puntero, debe pasar el puntero `shared_ptr` por referencia para evitar llamar al constructor de copias para cada elemento.
 
 ## <a name="example-6"></a>Ejemplo 6
 
