@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 06940bb72f9113e0a8148e15418504b35fc95099
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694262"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504469"
 ---
 # <a name="add-a-property"></a>Agregar una propiedad
 
@@ -95,7 +95,7 @@ Use este asistente para agregar una propiedad a una interfaz.
   |-------------------------|-----------------|
   |**Estándar**|Especifica una implementación estándar para la propiedad seleccionada en **Nombre de la propiedad**. El valor predeterminado. Para obtener más información, vea [Propiedades estándar](#stock-properties).<br /><br /> Si especifica **Estándar**, aparecen atenuados **Tipo de propiedad**, **Tipo de parámetro** y **Nombre de parámetro**.|
   |**Variable miembro**|Especifica que la propiedad se agrega como una variable miembro. Se pueden agregar propiedades personalizadas o la mayoría de las propiedades estándar como variables miembro. No puede especificar **Variable miembro** para las propiedades `Caption`, `hWnd` y `Text`.<br /><br /> Proporciona nombres predeterminados bajo **Nombre de variable** y **Función de notificación**. Este nombre se puede modificar.|
-  |**Get/Set (métodos)**|Especifica que la propiedad se agrega como las funciones `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad*, de forma predeterminada. Estos nombres aparecen en **Get (función)** y **Set (función)**.<br /><br /> Puede cambiar el valor predeterminado **Tipo de propiedad**, que pasa un valor para la función Get. Puede especificar parámetros para las funciones `Get` y `Set`.|
+  |**Get/Set (métodos)**|Especifica que la propiedad se agrega como las funciones `Get`*NombreDePropiedad* y `Set`*NombreDePropiedad*, de forma predeterminada. Estos nombres aparecen en **Get (función)** y **Set (función)** .<br /><br /> Puede cambiar el valor predeterminado **Tipo de propiedad**, que pasa un valor para la función Get. Puede especificar parámetros para las funciones `Get` y `Set`.|
 
 - **Get (función)**
 
@@ -191,5 +191,5 @@ Si va a agregar una propiedad a una interfaz dispinterface de MFC mediante el [A
 |`Font`|Devuelve o establece la fuente de ambiente del control. Es NULL si el control no tiene ninguna fuente.|
 |`ForeColor`|Devuelve o establece la propiedad `ForeColor` de ambiente del control.|
 |`hWnd`|Devuelve o establece la propiedad `hWnd` del control. `hWnd` no tiene ningún tipo de implementación **Variable miembro**.|
-|`ReadyState`|Devuelve o establece la propiedad `ReadyState` del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Para obtener más información, vea [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) en el *SDK de Internet*.|
+|`ReadyState`|Devuelve o establece la propiedad `ReadyState` del control. Un control puede estar no inicializado, inicializado, cargando, interactivo o completo. Para obtener más información, vea [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) en el *SDK de Internet*.|
 |`Text`|Devuelve o establece el texto contenido en un control. `Text` no tiene ningún tipo de implementación **Variable miembro**.|
