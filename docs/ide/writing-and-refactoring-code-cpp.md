@@ -1,17 +1,18 @@
 ---
 title: Escribir y refactorizar código (C++)
-ms.date: 04/30/2018
+description: Use el editor de código de C++ en Visual Studio para dar formato al código, recorrerlo, entenderlo y refactorizarlo.
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570435"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182635"
 ---
 # <a name="writing-and-refactoring-code-c"></a>Escribir y refactorizar código (C++)
 
-El editor de código de Visual C++ y el IDE proporcionan muchas ayudas a la programación. Algunas son exclusivas de C++ y algunas son básicamente iguales para todos los lenguajes de Visual Studio. Para obtener más información sobre las características compartidos, vea [Características del editor de código](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Las opciones para habilitar y configurar características específicas de C++ se encuentran en **Herramientas &#124; Opciones &#124; Editor de texto &#124; C/C++**. Después de elegir la opción que quiere establecer, puede obtener más ayuda si presiona **F1** cuando el cuadro de diálogo tenga el foco. Para las opciones de formato de código generales, escriba `Editor C++` en el **Inicio rápido**.
+El editor de código de C++ y el IDE de Visual Studio proporcionan muchas ayudas a la programación. Algunas son exclusivas de C++ y algunas son básicamente iguales para todos los lenguajes de Visual Studio. Para obtener más información sobre las características compartidos, vea [Características del editor de código](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Las opciones para habilitar y configurar características específicas de C++ se encuentran en **Herramientas &#124; Opciones &#124; Editor de texto &#124; C/C++**. Después de elegir la opción que quiere establecer, puede obtener más ayuda si presiona **F1** cuando el cuadro de diálogo tenga el foco. Para las opciones de formato de código generales, escriba `Editor C++` en el **Inicio rápido**.
 
 Las características experimentales, que se podrían incluir o no en una versión futura de Visual Studio, se encuentran en el cuadro de diálogo [Editor de texto C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). En Visual Studio 2017, se puede habilitar **IntelliSense predictivo** en este cuadro de diálogo.
 
@@ -107,7 +108,7 @@ Haga clic con el botón derecho en un archivo de código fuente y seleccione **E
 
 ## <a name="scrollbar-map-mode"></a>Modo de mapa de barra de desplazamiento
 
-El modo de mapa de barra de desplazamiento permite desplazarse y examinar rápidamente un archivo de código sin abandonar realmente su ubicación actual. También puede hacer clic en cualquier parte del mapa de código para ir directamente a esa ubicación. Para obtener más información, vea [Cómo: Hacer un seguimiento del código personalizando la barra de desplazamiento](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
+El modo de mapa de barra de desplazamiento permite desplazarse y examinar rápidamente un archivo de código sin abandonar realmente su ubicación actual. También puede hacer clic en cualquier parte del mapa de código para ir directamente a esa ubicación. Para obtener más información, vea [Cómo: Seguimiento del código mediante la personalización de la barra de desplazamiento](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
 
 ![Mapa de código en Visual C&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 

@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Implementación del programa (C++)'
-ms.date: 09/14/2018
+ms.date: 05/14/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769269"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182665"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Tutorial: Implementación del programa (C++)
 
@@ -30,9 +30,45 @@ En este tutorial se muestra cómo utilizar Windows Installer para implementar la
 
 - El tutorial no se puede completar en las ediciones Express de Visual Studio.
 
-- Si aún no lo ha hecho, descargue la extensión de proyectos del instalador de Microsoft Visual Studio, como se describe en los siguientes pasos. La extensión es gratis para desarrolladores de Visual Studio y agrega la funcionalidad de las plantillas de proyecto de instalación e implementación a Visual Studio.
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>Instalar la plantilla de proyecto de implementación y configuración de Visual Studio
 
-### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>Para instalar la plantilla de proyecto de implementación y configuración de Visual Studio
+Los pasos descritos en esta sección varían según la versión de Visual Studio que tenga instalada. Asegúrese de que el selector de versión en la esquina superior izquierda de esta página está establecido correctamente.
+
+::: moniker range="vs-2019"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>Para instalar la plantilla de proyecto de implementación y configuración de Visual Studio 2019
+
+1. Si aún no lo ha hecho, descargue la extensión de proyectos del instalador de Microsoft Visual Studio. La extensión es gratis para desarrolladores de Visual Studio y agrega la funcionalidad de las plantillas de proyecto de instalación e implementación a Visual Studio. Cuando esté conectado a Internet, en Visual Studio, elija **Extensiones** > **Administrar extensiones**. En el cuadro de diálogo **Extensiones y actualizaciones**, seleccione la pestaña **En línea** y escriba *Proyectos del instalador de Microsoft Visual Studio* en el cuadro de búsqueda. Presione **ENTRAR**, seleccione **Microsoft Visual Studio \<versión> Proyectos del instalador** y haga clic en **Descargar**. Opte por ejecutar e instalar la extensión y, a continuación, reinicie Visual Studio.
+
+1. En la barra de menús de Visual Studio, seleccione **Archivo**>**Proyectos y soluciones recientes** y, después, elija la opción para volver a abrir el proyecto.
+
+1. En la barra de menús, seleccione **Archivo** > **Nuevo** > **Proyecto** para abrir el cuadro de diálogo **Crear nuevo proyecto**. En el cuadro de búsqueda, escriba "Setup" y, en la lista de resultados, elija **Proyecto de instalación**.
+
+1. Escriba un nombre para el proyecto de instalación en el cuadro **Nombre**. En la lista desplegable **Solución**, seleccione **Agregar a la solución**. Haga clic en el botón **Aceptar** para crear el proyecto de instalación. Se abre una pestaña **Asistente de archivos (ProjectName)** en la ventana del editor.
+
+1. Haga clic con el botón derecho en el nodo **Carpeta de la aplicación** y seleccione **Agregar** > **Resultados del proyecto** para abrir el cuadro de diálogo **Agregar grupo de resultados del proyecto**.
+
+1. En el cuadro de diálogo, seleccione **Resultado principal** y haga clic en **Aceptar**. Aparece un nuevo elemento denominado **Resultado principal de Game (activo)** .
+
+1. Seleccione el elemento **Resultado principal de Game (activo)** , haga clic con el botón derecho y elija **Crear acceso directo al resultado principal de Game (activo)** . Aparece un nuevo elemento denominado **Acceso directo al resultado principal de Game (activo)** .
+
+1. Cambie el nombre del elemento de acceso directo por *Game*, arrastrar y colocar el elemento en el nodo **Menú Programas del usuario** en el lado izquierdo de la ventana.
+
+1. En el **Explorador de soluciones**, seleccione el proyecto **Game Installer** y elija **Ver** > **Ventana Propiedades** o presione **F4** para abrir la ventana **Propiedades**.
+
+1. Especifique detalles adicionales como desee que aparezcan en el instalador.  Por ejemplo, use *Contoso* para **Fabricante**, *Game Installer* para **Nombre de producto** y *http\://www.contoso.com* para **Dirección URL de soporte**.
+
+1. En la barra de menús, elija **Compilar** > **Administrador de configuración**. En la tabla **Proyecto**, en la columna **Compilar**, marque la casilla **Game Installer**. Haga clic en **Cerrar**.
+
+1. En la barra de menús, seleccione **Compilar** > **Compilar solución** para compilar los proyectos Game y Game Installer.
+
+1. En la carpeta de soluciones, busque el programa setup.exe compilado del proyecto de instalador de juego y después ejecútelo para instalar la aplicación de juego en el equipo. Puede copiar este archivo, y también el archivo GameInstaller.msi, para instalar la aplicación y sus archivos de biblioteca necesarios en otro equipo.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>Para instalar la plantilla de proyecto de implementación y configuración de Visual Studio 2017 y versiones anteriores
 
 1. Cuando esté conectado a Internet, en Visual Studio, elija **Herramientas** > **Extensiones y actualizaciones**.
 
@@ -54,9 +90,9 @@ En este tutorial se muestra cómo utilizar Windows Installer para implementar la
 
 1. Haga clic con el botón derecho en el nodo **Carpeta de la aplicación** y seleccione **Agregar** > **Resultados del proyecto** para abrir el cuadro de diálogo **Agregar grupo de resultados del proyecto**.
 
-1. En el cuadro de diálogo, seleccione **Resultado principal** y haga clic en **Aceptar**. Aparece un nuevo elemento denominado **Resultado principal de Game (activo)**.
+1. En el cuadro de diálogo, seleccione **Resultado principal** y haga clic en **Aceptar**. Aparece un nuevo elemento denominado **Resultado principal de Game (activo)** .
 
-1. Seleccione el elemento **Resultado principal de Game (activo)**, haga clic con el botón derecho y elija **Crear acceso directo al resultado principal de Game (activo)**. Aparece un nuevo elemento denominado **Acceso directo al resultado principal de Game (activo)**.
+1. Seleccione el elemento **Resultado principal de Game (activo)** , haga clic con el botón derecho y elija **Crear acceso directo al resultado principal de Game (activo)** . Aparece un nuevo elemento denominado **Acceso directo al resultado principal de Game (activo)** .
 
 1. Cambie el nombre del elemento de acceso directo por *Game*, arrastrar y colocar el elemento en el nodo **Menú Programas del usuario** en el lado izquierdo de la ventana.
 
@@ -69,6 +105,8 @@ En este tutorial se muestra cómo utilizar Windows Installer para implementar la
 1. En la barra de menús, seleccione **Compilar** > **Compilar solución** para compilar los proyectos Game y Game Installer.
 
 1. En la carpeta de soluciones, busque el programa setup.exe compilado del proyecto de instalador de juego y después ejecútelo para instalar la aplicación de juego en el equipo. Puede copiar este archivo, y también el archivo GameInstaller.msi, para instalar la aplicación y sus archivos de biblioteca necesarios en otro equipo.
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 

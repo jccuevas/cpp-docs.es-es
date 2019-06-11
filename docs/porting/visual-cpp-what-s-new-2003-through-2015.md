@@ -2,16 +2,16 @@
 title: Novedades de Visual C++ de 2003 a 2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: ae21a81869bd68c5a2641dba47b89d7e10b67567
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898861"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449807"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
-En esta página, se recopilan todas las páginas de novedades de todas las versiones de Visual C++, de Visual Studio 2015 a 2003. Esta información se pone a su disposición en caso de que pueda servir de ayuda al actualizar desde versiones anteriores de Visual C++.
+En esta página, se recopilan todas las páginas de novedades de todas las versiones de Visual C++, de Visual Studio 2015 a 2003. Esta información se pone a su disposición en caso de que pueda servir de ayuda al actualizar desde versiones anteriores de Visual Studio.
 
 > [!NOTE]
 > Para obtener información sobre la versión actual de Visual Studio, vea [What's new for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Novedades de Visual C++ en Visual Studio) y [Conformance Improvements in Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md) (Mejoras de conformidad de Visual C++ en Visual Studio).
@@ -20,7 +20,7 @@ En esta página, se recopilan todas las páginas de novedades de todas las versi
 
 En Visual Studio 2015 y versiones posteriores, las mejoras continuas en la conformidad del compilador a veces pueden cambiar la manera en que este entiende el código fuente existente. Cuando esto sucede, pueden producirse errores nuevos o diferentes durante la compilación o puede haber incluso diferencias de comportamiento en el código previamente compilado que parecía ejecutarse correctamente.
 
-Afortunadamente, estas diferencias tienen poco o ningún efecto en la mayoría del código fuente y cuando se necesitan código fuente u otros cambios para resolver estas diferencias, las correcciones suelen ser pequeñas y sencillas. Hemos incluido muchos ejemplos de código fuente previamente aceptable que es posible que deba cambiarse *(antes)* y las revisiones para corregirlos *(después)*.
+Afortunadamente, estas diferencias tienen poco o ningún efecto en la mayoría del código fuente y cuando se necesitan código fuente u otros cambios para resolver estas diferencias, las correcciones suelen ser pequeñas y sencillas. Hemos incluido muchos ejemplos de código fuente previamente aceptable que es posible que deba cambiarse *(antes)* y las revisiones para corregirlos *(después)* .
 
 Aunque estas diferencias pueden afectar a su código fuente u otros artefactos de compilación, no afectan a la compatibilidad binaria entre actualizaciones de versiones de Visual C++. Un tipo de cambio más drástico, el *cambio importante*, puede afectar a la compatibilidad binaria, pero este tipo de alteraciones de compatibilidad binaria solo se producen entre las versiones principales de Visual C++. por ejemplo, entre Visual C++ 2013 y Visual C++ 2015. Para obtener información sobre los cambios importantes que se produjeron entre Visual C++ 2013 y Visual C++ 2015, vea [Historial de cambios en Visual C++ 2003-2015](../porting/visual-cpp-change-history-2003-2015.md).
 
@@ -75,7 +75,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
     };
    ```
 
-   Las versiones anteriores del compilador de Visual C++ aceptaban esto, pero ahora el compilador produce el siguiente error:
+   Las versiones anteriores del compilador de Microsoft C++ aceptaban esto, pero ahora el compilador produce el siguiente error:
 
    ```Output
     error C2071: 'S::r': illegal storage class
@@ -253,7 +253,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 - **Placement new y delete**
 
-   Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](http://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa **placement new**, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
+   Se ha realizado un cambio en el operador **delete** a fin de adaptarlo al estándar de C++14. Detalles del cambio de los estándares se pueden encontrar en la página de [desasignación de ajuste de tamaño de C++](https://isocpp.org/files/papers/n3778.html). Los cambios agregan un formulario del operador **delete** global que toma un parámetro de tamaño. La novedad es que si antes usaba un operador **delete** con la misma firma (para que se correspondiese con un operador **placement new**), ahora recibirá un error del compilador (C2956, que se produce en el punto donde se usa **placement new**, ya que es la posición en el código en la que el compilador intenta identificar un operador **delete** coincidente adecuado).
 
    La función `void operator delete(void *, size_t)` era un operador **placement delete** correspondiente a la función **placement new**  `void * operator new(size_t, size_t)` en C++11. Con la desasignación con tamaño de C ++ 14, esta función **delete** es ahora una *función de desasignación habitual* (operador **delete** global). Según el estándar, si el uso de **placement new** busca una función **delete** correspondiente y encuentra una función de desasignación habitual, el programa tendrá un formato incorrecto.
 
@@ -1516,7 +1516,7 @@ Aunque estas diferencias pueden afectar a su código fuente u otros artefactos d
 
 #### <a name="compiler"></a>Compilador
 
-El Compilador de Microsoft Visual C++ admite estas características del lenguaje ISO C++11:
+MSVC admite estas características del lenguaje ISO C++11:
 
 - Argumentos predeterminados para plantillas de funciones.
 - Constructores de delegación
@@ -1682,7 +1682,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 ### <a name="windows-runtime-app-development-support"></a>Compatibilidad con el desarrollo de aplicaciones de Windows Runtime
 
 - **Modelo de interfaz de usuario basada en XAML nativo**. Para aplicaciones de Windows Runtime, puede usar el nuevo modelo de interfaz de usuario basada en XAML nativo.
-- **Extensiones de componentes de Visual C++**. Estas extensiones simplifican el uso de objetos de Windows Runtime, que son una parte necesaria de las aplicaciones de Windows Runtime. Para obtener más información, consulte [Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md) (Guía básica para aplicaciones de Windows Runtime con C++) y [Referencia del lenguaje Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md).
+- **Extensiones de componentes de Visual C++** . Estas extensiones simplifican el uso de objetos de Windows Runtime, que son una parte necesaria de las aplicaciones de Windows Runtime. Para obtener más información, consulte [Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md) (Guía básica para aplicaciones de Windows Runtime con C++) y [Referencia del lenguaje Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md).
 - **Juegos de DirectX**. Ahora puede desarrollar juegos atractivos mediante la nueva compatibilidad de DirectX con aplicaciones de Windows Runtime.
 - **Interoperabilidad XAML/DirectX**. Las aplicaciones de Windows Runtime que usan XAML y DirectX ahora interactúan eficazmente.
 - **Desarrollo de DLL del componente de Windows Runtime**. El desarrollo de DLL del componente hace que el entorno de Windows Runtime sea extensible.
@@ -1696,7 +1696,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 ### <a name="new-in-visual-studio-2012-update-1"></a>Novedades de Visual Studio 2012 Update 1
 
 Establezca Windows XP como destino al compilar el código de C++.
-Puede usar el compilador y las bibliotecas de Visual C++ para establecer como destino Windows XP y Windows Server 2003.
+Puede usar el compilador y las bibliotecas de Microsoft C++ para establecer como destino Windows XP y Windows Server 2003.
 
 #### <a name="parallel-programming-support"></a>Compatibilidad con la programación en paralelo
 
@@ -1737,11 +1737,11 @@ Además de las ventanas **Tareas paralelas** y **Pilas paralelas**, Visual Studi
 
 **Construcciones de código de C++.** El código de esqueleto está disponible para el modificador, la instrucción if-else, el bucle for y otras construcciones de código básico, en la lista desplegable Lista de miembros. Seleccione un fragmento de código de la lista para insertarlo en el código y, después, rellene la lógica necesaria. También puede crear sus propios fragmentos personalizados de código para usarlos en el editor.
 
-**Mejoras de la lista de miembros.** La lista desplegable **Lista de miembros** aparece automáticamente al escribir código en el editor de código. Los resultados se filtran de forma que solo se muestren los miembros pertinentes a medida que escribe. Puede controlar el tipo de lógica de filtrado que usa la Lista de miembros (en el cuadro de diálogo **Opciones**, en **Editor de texto** > **C/C++** > **Avanzado**).
+**Mejoras de la lista de miembros.** La lista desplegable **Lista de miembros** aparece automáticamente al escribir código en el editor de código. Los resultados se filtran de forma que solo se muestren los miembros pertinentes a medida que escribe. Puede controlar el tipo de lógica de filtrado que usa la Lista de miembros (en el cuadro de diálogo **Opciones**, en **Editor de texto** > **C/C++**  > **Avanzado**).
 
 **Coloración semántica.** Los tipos, las enumeraciones, las macros y otros tokens de C++ ahora tienen coloración de forma predeterminada.
 
-**Resaltado de referencia.** Al seleccionar un símbolo, ahora se resaltan todas las instancias del símbolo en el archivo actual. Presione **Ctrl**+**Mayús**+**Flecha arriba** o **Ctrl**+**Mayús**+**Flecha abajo** para desplazarse por las referencias resaltadas. Puede desactivar esta característica en el cuadro de diálogo **Opciones**, en **Editor de texto** > **C/C++** > **Avanzado**.
+**Resaltado de referencia.** Al seleccionar un símbolo, ahora se resaltan todas las instancias del símbolo en el archivo actual. Presione **Ctrl**+**Mayús**+**Flecha arriba** o **Ctrl**+**Mayús**+**Flecha abajo** para desplazarse por las referencias resaltadas. Puede desactivar esta característica en el cuadro de diálogo **Opciones**, en **Editor de texto** > **C/C++**  > **Avanzado**.
 
 ### <a name="application-lifecycle-management-tools"></a>Herramientas de administración del ciclo de vida de las aplicaciones
 
@@ -1787,7 +1787,7 @@ La cobertura de código se ha actualizado para instrumentar binarios de forma di
 
 **Declaración static_assert.** Una declaración **static_assert** prueba una aserción de software en tiempo de compilación, a diferencia de otros mecanismos de aserción que se prueban en tiempo de ejecución. Si se produce un error en la aserción, también se produce uno en la compilación y se emite un mensaje de error específico.
 
-**Palabras clave nullptr y __nullptr.** El compilador de Visual C++ permite usar la palabra clave **nullptr** con código nativo o con código administrado. La palabra clave **nullptr** indica que un tipo de identificador de objeto, puntero interior o puntero nativo no apunta a un objeto. El compilador interpreta **nullptr** como código administrado al usar la opción de compilador `/clr` y como código nativo cuando no se usa la opción `/clr`.
+**Palabras clave nullptr y __nullptr.** MSVC permite usar la palabra clave **nullptr** con código nativo o con código administrado. La palabra clave **nullptr** indica que un tipo de identificador de objeto, puntero interior o puntero nativo no apunta a un objeto. El compilador interpreta **nullptr** como código administrado al usar la opción de compilador `/clr` y como código nativo cuando no se usa la opción `/clr`.
 La palabra clave **__nullptr** específica de Microsoft tiene la misma finalidad que **nullptr**, pero solo se aplica a código nativo. Si compila código nativo de C o C++ mediante la opción del compilador `/clr`, el compilador no puede determinar si la palabra clave **nullptr** es un término nativo o administrado. Para que el compilador tenga clara su intención, use la palabra clave nullptr para especificar el término administrado y **__nullptr** para especificar el término nativo.
 
 **Opción del compilador /Zc:trigraphs.** De manera predeterminada, la compatibilidad con trígrafos está deshabilitada. Use la opción del compilador `/Zc:trigraphs` para habilitar la compatibilidad con trígrafos.
@@ -1801,9 +1801,9 @@ Un trígrafo se compone de dos signos de interrogación consecutivos (??) seguid
 
 **XOP intrínsecos, FMA4 intrínsecos y LWP intrínsecos.** Se han agregado nuevas funciones intrínsecas para admitir las funciones intrínsecas XOP agregadas para Visual Studio 2010 SP1, las funciones intrínsecas FMA4 agregadas para Visual Studio 2010 SP1 y las funciones intrínsecas LWP agregadas para las tecnologías de procesador de Visual Studio 2010 SP1. Use __cpuid, __cpuidex para determinar qué tecnologías de procesador son compatibles en un equipo determinado.
 
-### <a name="visual-c-projects-and-the-build-system"></a>Proyectos de Visual C++ y el sistema de compilación
+### <a name="visual-studio-c-projects-and-the-build-system"></a>Proyectos de Visual Studio C++ y el sistema de compilación
 
-**MSBuild.** Ahora, los proyectos y las soluciones de Visual C++ se compilan con MSBuild.exe, que sustituye a VCBuild.exe. MSBuild es la misma herramienta de compilación flexible y extensible basada en XML que usan los otros lenguajes y tipos de proyecto de Visual Studio. Debido a este cambio, los archivos de proyecto de Visual C++ ahora usan un formato de archivo XML y tienen la extensión de nombre de archivo .vcxproj. Visual C++ convierte de forma automática los archivos de proyecto de versiones anteriores de Visual Studio al nuevo formato de archivo.
+**MSBuild.** Ahora, los proyectos y las soluciones de Visual C++ se compilan con MSBuild.exe, que sustituye a VCBuild.exe. MSBuild es la misma herramienta de compilación flexible y extensible basada en XML que usan los otros lenguajes y tipos de proyecto de Visual Studio. Debido a este cambio, los archivos de proyecto de Visual Studio C++ ahora usan un formato de archivo XML y tienen la extensión de nombre de archivo .vcxproj. Visual Studio C++ convierte de forma automática los archivos de proyecto de versiones anteriores de Visual Studio al nuevo formato de archivo.
 
 **Directorios de VC++.** La configuración de los directorios de VC++ ahora se encuentra en dos lugares. Use las páginas de propiedades del proyecto para establecer los valores de los directorios de VC++ de cada proyecto. Use el **Administrador de propiedades** y una hoja de propiedades para establecer los valores por configuración y globales de los directorios de VC++.
 
@@ -1878,7 +1878,7 @@ Puesto que IntelliSense solo procesa la información que necesita en el momento,
 
 **Asistente para clases MFC.** Visual C++ 2010 trae de nuevo la estimada herramienta Asistente para clases MFC. El Asistente para clases MFC es una manera cómoda de agregar clases, mensajes y variables a un proyecto sin tener que modificar manualmente los conjuntos de archivos de código fuente.
 
-**Asistente para controles ATL.** El Asistente para controles ATL ya no rellena automáticamente el campo `ProgID`. Si un control ATL no tiene un `ProgID`, es posible que otras herramientas no funcionen con él. Un ejemplo de una herramienta que requiere que los controles tengan un `ProgID` es el cuadro de diálogo **Insertar control ActiveX**. Para más información sobre el cuadro de diálogo, vea **Insertar control ActiveX (cuadro de diálogo)**.
+**Asistente para controles ATL.** El Asistente para controles ATL ya no rellena automáticamente el campo `ProgID`. Si un control ATL no tiene un `ProgID`, es posible que otras herramientas no funcionen con él. Un ejemplo de una herramienta que requiere que los controles tengan un `ProgID` es el cuadro de diálogo **Insertar control ActiveX**. Para más información sobre el cuadro de diálogo, vea **Insertar control ActiveX (cuadro de diálogo)** .
 
 ### <a name="microsoft-macro-assembler-reference"></a>Referencia de Microsoft Macro Assembler
 
@@ -1915,7 +1915,7 @@ La adición del tipo de datos YMMWORD es compatible con los operandos multimedia
 
 #### <a name="c-support-library"></a>Biblioteca de compatibilidad de C++
 
-- C++ incluye la biblioteca de serialización. La biblioteca de serialización proporciona una manera fácil y optimizada de serializar datos entre entornos nativos y administrados. La biblioteca es una alternativa a los enfoques más complejos y menos eficientes como el uso de PInvoke. Para más información, vea **Información general de la serialización en C++**.
+- C++ incluye la biblioteca de serialización. La biblioteca de serialización proporciona una manera fácil y optimizada de serializar datos entre entornos nativos y administrados. La biblioteca es una alternativa a los enfoques más complejos y menos eficientes como el uso de PInvoke. Para más información, vea **Información general de la serialización en C++** .
 
 #### <a name="atl-server"></a>Servidor ATL
 
@@ -1934,7 +1934,7 @@ La adición del tipo de datos YMMWORD es compatible con los operandos multimedia
 - Las funciones intrínsecas admiten procesadores AMD e Intel más recientes. Algunas funciones intrínsecas nuevas admiten la mayor funcionalidad en procesadores AMD e Intel más recientes. Para más información sobre las nuevas funciones intrínsecas, vea **Supplemental Streaming SIMD Extensions 3 Instructions** (Instrucciones de Extensiones SIMD de streaming 3), **Streaming SIMD Extensions 4 Instructions** (Instrucciones de Extensiones SIMD de streaming 4), **SSE4A and Advanced Bit Manipulation Intrinsics** (SSE4A y funciones intrínsecas de manipulación de bits avanzada), **AES Intrinsics** (Funciones intrínsecas de AES), **_mm_clmulepi64_si128** y **__rdtscp**.
 - Se ha actualizado la función `__cpuid`. Las funciones `__cpuid` y `__cpuidex` ahora admiten varias características nuevas de las revisiones más recientes de los procesadores AMD e Intel. La función intrínseca `__cpuidex` es nueva y recopila más información de procesadores recientes.
 - La opción del compilador `/MP` reduce el tiempo de compilación total. La opción `/MP` puede reducir significativamente el tiempo total para compilar varios archivos de código fuente mediante la creación de varios procesos que compilan los archivos al mismo tiempo. Esta opción es especialmente útil en equipos compatibles con hyperthreading, varios procesadores o varios núcleos.
-- La opción del compilador `/Wp64` y la palabra clave **__w64** están en desuso. La opción del compilador `/Wp64` y la palabra clave **__w64**, que detecta problemas de portabilidad de 64 bits, están en desuso y se quitarán en una versión futura del compilador. En lugar de esta opción del compilador y palabra clave, use un compilador de Visual C++ que tenga una plataforma de 64 bits como destino.
+- La opción del compilador `/Wp64` y la palabra clave **__w64** están en desuso. La opción del compilador `/Wp64` y la palabra clave **__w64**, que detecta problemas de portabilidad de 64 bits, están en desuso y se quitarán en una versión futura del compilador. En lugar de esta opción del compilador y palabra clave, use un MSVC que tenga una plataforma de 64 bits como destino.
 - `/Qfast_transcendentals` genera código alineado para las funciones transcendentales.
 - `/Qimprecise_fwaits` quita los comandos fwait internos para probar bloques al usar la opción del compilador `/fp:except`.
 
@@ -1989,7 +1989,7 @@ El compilador tiene cambios importantes en esta versión.
 - Se ha agregado la opción del compilador `/bigobj`.
 - Se han agregado `/clr:pure`, `/clr:safe` y `/clr:oldSyntax`. (Las versiones posteriores están en desuso en Visual Studio 2015 y no se admiten en Visual Studio 2017).
 - Opciones del compilador en desuso: muchas opciones del compilador han quedado en desuso en esta versión; para más información, vea **Opciones obsoletas del compilador**.
-- Se ha reducido la aplicación doble de código thunk en código `/clr`; para más información, vea **Doble thunk (C++)**.
+- Se ha reducido la aplicación doble de código thunk en código `/clr`; para más información, vea **Doble thunk (C++)** .
 - Ya no se pueden usar `/EH` (modelo de control de excepciones) o `/EHs` para detectar una excepción que se inicia con un valor que no sea throw; use `/EHa`.
 - Se ha agregado la opción del compilador `/errorReport` (informar de los errores internos del compilador).
 - Se ha agregado la opción del compilador `/favor` (optimizar para 64).
