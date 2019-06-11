@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750041"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446684"
 ---
 # <a name="crt-initialization"></a>Inicialización de CRT
 
@@ -41,7 +41,7 @@ Una forma de determinar esta cuestión consiste en establecer un punto de interr
 
 Al examinar las funciones en la pila, observará que CRT está en bucle a través de una lista de punteros a función y una llamada a cada una de ellos a medida que los encuentra. Estas funciones son similares a `func()` o constructores de instancias de clase.
 
-La biblioteca de CRT obtiene la lista de punteros de función del compilador de Visual C++. Cuando el compilador encuentra un inicializador global, genera un inicializador dinámico en la sección `.CRT$XCU` (donde `CRT` es el nombre de sección y `XCU` es el nombre de grupo). Para obtener una lista de estos inicializadores dinámicos, ejecute el comando **dumpbin /all main.obj** y, después, busque la sección `.CRT$XCU` (cuando main.cpp se compila como un archivo de C++, y no como un archivo de C). La operación debe ser similar a la siguiente:
+La biblioteca de CRT obtiene la lista de punteros de función del compilador de Microsoft C++. Cuando el compilador encuentra un inicializador global, genera un inicializador dinámico en la sección `.CRT$XCU` (donde `CRT` es el nombre de sección y `XCU` es el nombre de grupo). Para obtener una lista de estos inicializadores dinámicos, ejecute el comando **dumpbin /all main.obj** y, después, busque la sección `.CRT$XCU` (cuando main.cpp se compila como un archivo de C++, y no como un archivo de C). La operación debe ser similar a la siguiente:
 
 ```
 SECTION HEADER #6
@@ -77,7 +77,7 @@ CRT define dos punteros:
 
 Los dos grupos no tienen ningún otro símbolo definido, excepto `__xc_a` y `__xc_z`.
 
-Ahora, cuando el vinculador lee varios grupos `.CRT`, los combina en una sección y los ordena alfabéticamente. Esto significa que los inicializadores globales definidos por el usuario (que el compilador de Visual C++ coloca en `.CRT$XCU`) siempre irán después de `.CRT$XCA` y antes de `.CRT$XCZ`.
+Ahora, cuando el vinculador lee varios grupos `.CRT`, los combina en una sección y los ordena alfabéticamente. Esto significa que los inicializadores globales definidos por el usuario (que el compilador de Microsoft C++ coloca en `.CRT$XCU`) siempre irán después de `.CRT$XCA` y antes de `.CRT$XCZ`.
 
 La sección será similar a la siguiente:
 

@@ -1,18 +1,16 @@
 ---
 title: Implementar un punto de conexión
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.impl.cp.overview
+ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693287"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182605"
 ---
 # <a name="implement-a-connection-point"></a>Implementar un punto de conexión
 
@@ -61,7 +59,7 @@ Un objeto conectable (es decir, un origen) puede mostrar un punto de conexión p
 
 ## <a name="implement-connection-point-wizard"></a>Asistente para implementar puntos de conexión
 
-Este asistente implementa un punto de conexión para un objeto COM. Un objeto conectable (es decir, un origen) puede mostrar un punto de conexión para sus propias interfaces o para cualquier interfaz de salida. En Visual C++ y Windows se proporcionan bibliotecas de tipos que tienen interfaces de salida. Cada interfaz de salida se puede implementar mediante un cliente en un objeto (es decir, un receptor).
+Este asistente implementa un punto de conexión para un objeto COM. Un objeto conectable (es decir, un origen) puede mostrar un punto de conexión para sus propias interfaces o para cualquier interfaz de salida. En MSVC y Windows se proporcionan bibliotecas de tipos que tienen interfaces de salida. Cada interfaz de salida se puede implementar mediante un cliente en un objeto (es decir, un receptor).
 
 Para obtener más información, vea [Puntos de conexión en ATL](../atl/atl-connection-points.md).
 

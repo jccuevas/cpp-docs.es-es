@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749911"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446656"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Errores potenciales que pasan los objetos de CRT entre los límites de DLL
 
@@ -23,7 +23,7 @@ HEAP[]: dirección no válida especificada en RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Causas
 
-Cada copia de la biblioteca de CRT tiene un estado independiente y distinto, que su aplicación o DLL mantiene en el almacenamiento local de subprocesos. Por ello, los objetos de CRT como identificadores de archivos, variables de entorno y configuraciones regionales solo son válidos para la copia de CRT en la aplicación o el archivo DLL donde se asignan o se establecen estos objetos. Cuando el archivo DLL y su clientes de aplicación utilizan varias copias de la biblioteca de CRT, no puede pasar estos objetos de CRT a través del límite de DLL y esperar que se capturen correctamente en el otro lado. Esto es especialmente cierto para las versiones de CRT antes de Universal CRT en Visual Studio 2015 y versiones posteriores. Había una biblioteca de CRT específica para cada una de las versiones de Visual Studio compiladas con Visual C++ 2013 o anterior. Los detalles de implementación internos de CRT, como sus estructuras de datos y las convenciones de nomenclatura, eran diferentes en cada versión. La vinculación dinámica de código compilado para una versión de CRT con otra versión de DLL de CRT nunca se ha admitido, aunque ha podido funcionar eventualmente (más por suerte que por características de diseño).
+Cada copia de la biblioteca de CRT tiene un estado independiente y distinto, que su aplicación o DLL mantiene en el almacenamiento local de subprocesos. Por ello, los objetos de CRT como identificadores de archivos, variables de entorno y configuraciones regionales solo son válidos para la copia de CRT en la aplicación o el archivo DLL donde se asignan o se establecen estos objetos. Cuando el archivo DLL y su clientes de aplicación utilizan varias copias de la biblioteca de CRT, no puede pasar estos objetos de CRT a través del límite de DLL y esperar que se capturen correctamente en el otro lado. Esto es especialmente cierto para las versiones de CRT antes de Universal CRT en Visual Studio 2015 y versiones posteriores. Había una biblioteca de CRT específica para cada una de las versiones de Visual Studio compiladas con Visual Studio 2013 o anterior. Los detalles de implementación internos de CRT, como sus estructuras de datos y las convenciones de nomenclatura, eran diferentes en cada versión. La vinculación dinámica de código compilado para una versión de CRT con otra versión de DLL de CRT nunca se ha admitido, aunque ha podido funcionar eventualmente (más por suerte que por características de diseño).
 
 Además, dado que cada copia de la biblioteca de CRT tiene su propio administrador de montón, la asignación de memoria en una biblioteca de CRT y el hecho de pasar el puntero a través de un límite de DLL que se va a liberar por una copia diferente de la biblioteca de CRT es un posible motivo por el que se pueden producir daños en el montón. Si diseña el archivo DLL para que pase objetos de CRT a través del límite o asigne memoria y espere que se va a liber fuera del archivo DLL, impedirá que los clientes de la aplicación de DLL utilicen la misma copia de la biblioteca CRT que el archivo DLL. El archivo DLL y sus clientes usan normalmente la misma copia de la biblioteca CRT solo si ambos están vinculados en tiempo de carga a la misma versión del archivo DLL de CRT. Dado que la versión de DLL de la biblioteca Universal CRT utilizada por Visual Studio 2015 y posterior en Windows 10 es ahora un componente de Windows implementado de forma centralizada, ucrtbase.dll, es la misma para las aplicaciones compiladas con Visual Studio 2015 y versiones posteriores. Sin embargo, incluso cuando el código de CRT es idéntico, no se puede entregar memoria asignada en un montón a un componente que utilice un montón diferente.
 
