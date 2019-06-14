@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220496"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042722"
 ---
 # <a name="open-folder-projects-for-c"></a>Proyectos Abrir carpeta para C++
 
 En Visual Studio 2017 y versiones posteriores, la característica "Abrir carpeta" permite abrir carpetas de archivos de código fuente y comenzar a escribir código compatible con IntelliSense, la exploración, la refactorización, la depuración, etc. de inmediato. No se carga ningún archivo .sln o .vcxproj; si es necesario, se pueden especificar tareas personalizadas así como parámetros de inicio y compilación a través de archivos .json simples. Para obtener información general sobre Abrir carpeta, vea [Desarrollo de código en Visual Studio sin proyectos o soluciones](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions).
 
-CMake está integrado en el IDE de Visual Studio como Herramientas de CMake para Visual Studio, un componente de la carga de trabajo de escritorio de C++. Para más información, vea el artículo sobre [proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md). Para cualquier otro sistema de compilación, puede usar la característica Abrir carpeta. Esta función desacopla eficazmente el editor de código, el depurador y los analizadores del sistema de compilación y el conjunto de herramientas del compilador. Puede usar el editor de código de C++ con sus características enriquecidas de IntelliSense, los analizadores de código y el depurador de Visual Studio con prácticamente cualquier sistema de compilación, incluidos CMake, Ninja, QMake (para proyectos de Qt), gyp, SCons, Gradle, Buck, Make y muchos más. Funciona incluso con un solo archivo o una colección flexible de archivos sin ningún sistema de compilación.
+CMake se integra en el IDE de Visual Studio como un componente de la C++ carga de trabajo de escritorio. Para más información, vea el artículo sobre [proyectos de CMake en Visual Studio](cmake-projects-in-visual-studio.md). Para cualquier otro sistema de compilación, puede usar la característica Abrir carpeta. Esta función desacopla eficazmente el editor de código, el depurador y los analizadores del sistema de compilación y el conjunto de herramientas del compilador. Puede usar el editor de código de C++ con sus características enriquecidas de IntelliSense, los analizadores de código y el depurador de Visual Studio con prácticamente cualquier sistema de compilación, incluidos CMake, Ninja, QMake (para proyectos de Qt), gyp, SCons, Gradle, Buck, Make y muchos más. Funciona incluso con un solo archivo o una colección flexible de archivos sin ningún sistema de compilación.
 
 Para usar Abrir carpeta, en el menú principal seleccione **Archivo | Abrir | Carpeta** o presione **Ctrl + Mayús + Alt + O**. En el Explorador de soluciones se muestran inmediatamente todos los archivos de la carpeta. Puede hacer clic en cualquier archivo para comenzar a editarlo. En segundo plano, Visual Studio comienza a indexar los archivos para habilitar las características de refactorización, navegación e IntelliSense. A medida que edita, crea, mueve o elimina archivos, Visual Studio hace seguimiento de manera automática de los cambios y actualiza de manera continua su indice de IntelliSense. 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Proyectos de QMake que tienen como destino el marco de trabajo de Qt
 
-Puede usar Herramientas de CMake para Visual Studio para establecer Qt como destino para compilar proyectos de Qt, o bien puede usar la [extensión Qt de Visual Studio](https://download.qt.io/development_releases/vsaddin/) para Visual Studio 2015 o Visual Studio 2017.
+Puede usar CMake para compilar proyectos Qt, o puede usar el [extensión de Visual Studio Qt](https://download.qt.io/development_releases/vsaddin/) para Visual Studio 2015 o Visual Studio 2017.
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp, Cons, SCons, Buck, etc.
 

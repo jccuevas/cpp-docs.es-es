@@ -1,15 +1,15 @@
 ---
 title: Proyectos de CMake en Visual Studio
-ms.date: 03/27/2019
+ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: ae686383d82453f291bbf81428748524160082f7
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.openlocfilehash: f2bafb75aae2eabb4e8f289435ddaeb61e6aabf4
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877179"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042663"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Proyectos de CMake en Visual Studio
 
@@ -20,13 +20,13 @@ CMake es una herramienta de código abierto multiplataforma para definir proceso
 
 ::: moniker range="vs-2019"
 
-2019 de Visual Studio presenta el **editor de configuración de CMake** y otras mejoras a través de Visual Studio 2017. El componente **Herramientas de Visual C++ para CMake** usa la característica **Abrir carpeta** para habilitar el IDE para el consumo de archivos de proyecto de CMake (por ejemplo, CMakeLists.txt) directamente para los propósitos de IntelliSense y la exploración. Se admiten generadores de Ninja y Visual Studio. Si usa un generador de Visual Studio, se genera un archivo de proyecto temporal y se pasa a msbuild.exe, pero nunca se carga para IntelliSense o con fines de exploración. También puede importar una caché de CMake existente. 
+2019 de Visual Studio presenta el **editor de configuración de CMake** y otras mejoras a través de Visual Studio 2017. El  **C++ CMake tools para Windows** componente utiliza la **Abrir carpeta** característica para habilitar el IDE para consumir los archivos de proyecto de CMake (por ejemplo, CMakeLists.txt) directamente para los fines de IntelliSense y la exploración. Se admiten generadores de Ninja y Visual Studio. Si usa un generador de Visual Studio, se genera un archivo de proyecto temporal y se pasa a msbuild.exe, pero nunca se carga para IntelliSense o con fines de exploración. También puede importar una caché de CMake existente. 
 
 ## <a name="installation"></a>Instalación
 
-**Herramientas de Visual C++ para CMake** se instala de forma predeterminada como parte de la carga de trabajo de **desarrollo para el escritorio con C++** y de la carga de trabajo **desarrollo de Linux con C++**. Consulte [proyectos CMake multiplataforma](../linux/cmake-linux-project.md) para obtener más información.
+**C++Herramientas de CMake para Windows** se instala de forma predeterminada como parte de la **con el desarrollo de escritorio C++**  carga de trabajo como parte de la **desarrollo de Linux con C++**  carga de trabajo. Consulte [proyectos CMake multiplataforma](../linux/cmake-linux-project.md) para obtener más información.
 
-![Componente de CMake en la carga de trabajo Escritorio de C++](media/cmake-install.png)
+![Componente de CMake en la carga de trabajo Escritorio de C++](media/cmake-install-2019.png)
 
 Para obtener más información, vea [Instalación de la carga de trabajo de Linux para C++ en Visual Studio](../linux/download-install-and-setup-the-linux-development-workload.md).
 
@@ -182,7 +182,7 @@ Visual Studio 2017 tiene una amplia compatibilidad para CMake, incluidos [proyec
 
 ## <a name="installation"></a>Instalación
 
-**Herramientas de Visual C++ para CMake** se instala de forma predeterminada como parte de la carga de trabajo de **desarrollo para el escritorio con C++** y de la carga de trabajo **desarrollo de Linux con C++**.
+**Herramientas de Visual C++ para CMake** se instala de forma predeterminada como parte de la carga de trabajo de **desarrollo para el escritorio con C++** y de la carga de trabajo **desarrollo de Linux con C++** .
 
 ![Componente de CMake en la carga de trabajo Escritorio de C++](media/cmake-install.png)
 
