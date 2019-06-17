@@ -1,16 +1,22 @@
 ---
 title: Configuración de un proyecto CMake de Linux en Visual Studio
 description: Cómo configurar, editar y compilar un proyecto CMake de Linux en Visual Studio
-ms.date: 05/21/2019
+ms.date: 06/07/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: e2cda5e9b942342cca035c48054aadb5425b69cf
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: e0a4abb7fe62880af12277d5c5c474d6ec4e0202
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182895"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821677"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Configuración de un proyecto de CMake de Linux
+
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
 
 Cuando se abre una carpeta que contiene un proyecto de CMake, Visual Studio usa los metadatos que CMake genera para configurar IntelliSense y las compilaciones automáticamente. La configuración local y los ajustes de depuración se almacenan en archivos JSON, que opcionalmente se pueden compartir con otras personas que usan Visual Studio. 
 
@@ -20,9 +26,9 @@ Para obtener información general sobre la compatibilidad de CMake en Visual Stu
 
 ## <a name="before-you-begin"></a>Antes de empezar
 
-En primer lugar, asegúrese de que tiene instalada la carga de trabajo de **desarrollo de Linux con C++**, incluido el componente de CMake. Vea [Instalación de la carga de trabajo de Linux para C++ en Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+En primer lugar, asegúrese de que tiene instalada la carga de trabajo de **desarrollo de Linux con C++** , incluido el componente de CMake. Vea [Instalación de la carga de trabajo de Linux para C++ en Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
 
-En el equipo Linux, asegúrese de tener instalado lo siguiente: 
+En el sistema Linux, asegúrese de tener instalado lo siguiente: 
 
 - gcc
 - gdb
@@ -31,15 +37,15 @@ En el equipo Linux, asegúrese de tener instalado lo siguiente:
 
 ::: moniker range="vs-2019"
 
-La compatibilidad de Linux con proyectos de CMake requiere tener instalada una versión reciente de CMake en el equipo de destino. A menudo, la versión ofrecida por el Administrador de paquetes predeterminado de distribución no es lo suficientemente reciente como para admitir todas las características del IDE. Visual Studio 2019 puede instalar automáticamente una copia local del usuario de CMake en equipos Linux remotos que no tienen instalada una versión reciente de CMake. Si no se detecta una versión compatible de CMake la primera vez que compile el proyecto, aparecerá una barra de información que le ofrece la posibilidad de instalar CMake.
-
-Estos se instalarán en `~/.vs/cmake`. Después de su implementación, el proyecto se volverá a generar automáticamente. Tenga en cuenta que, si la versión de CMake especificada en el campo `cmakeExecutable` de `CMakeSettings.json` no es válida (no existe o es una versión no compatible) y los binarios creados previamente están presentes, Visual Studio ignorará `cmakeExecutable` y usará los binarios creados previamente.
+La compatibilidad de Linux con proyectos de CMake requiere tener instalada una versión reciente de CMake en el equipo de destino. A menudo, la versión ofrecida por el Administrador de paquetes predeterminado de distribución no es lo suficientemente reciente como para admitir todas las características que Visual Studio requiere. Visual Studio 2019 detecta si hay una versión reciente de CMake instalada en el sistema Linux. Si no encuentra ninguna, muestra una barra de información encima del panel del editor que ofrece la posibilidad de instalarlo.
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
 La compatibilidad de CMake en Visual Studio requiere la compatibilidad de modo de servidor que se introdujo en CMake 3.8. Para ver una variante de CMake proporcionada por Microsoft, descargue los archivos binarios creados previamente más recientes en [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+
+Estos se instalarán en `~/.vs/cmake`. Después de su implementación, el proyecto se volverá a generar automáticamente. Tenga en cuenta que, si la versión de CMake especificada en el campo `cmakeExecutable` de `CMakeSettings.json` no es válida (no existe o es una versión no compatible) y los binarios creados previamente están presentes, Visual Studio ignorará `cmakeExecutable` y usará los binarios creados previamente.
 
 :::moniker-end
 
@@ -68,19 +74,29 @@ add_executable(hello-cmake hello.cpp)
 
 ## <a name="choose-a-linux-target"></a>Elija un destino de Linux
 
-En cuanto se abre la carpeta, Visual Studio analiza el archivo CMakeLists.txt y especifica un destino de Windows de **x86-Debug**. Para establecer Linux como destino, cambie la configuración del proyecto a **Linux-Debug** o **Linux-Release**.
+En cuanto se abre la carpeta, Visual Studio analiza el archivo CMakeLists.txt y especifica un destino de Windows de **x86-Debug**. Para establecer un sistema Linux remoto como destino, cambie la configuración del proyecto a **Linux-Debug** o **Linux-Release**. 
 
-De forma predeterminada, Visual Studio elige el primer sistema remoto de la lista **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones**. Si no se encuentra ninguna conexión remota, se le pedirá que cree una. Para obtener más información, vea [Conectarse al equipo Linux remoto](connect-to-your-remote-linux-computer.md).
+::: moniker range="vs-2019"
 
-Después de especificar un destino de Linux, el origen se copia en su máquina Linux. A continuación, CMake se ejecuta en la máquina Linux para generar la caché de CMake del proyecto.
+Para establecer el subsistema de Windows para Linux como destino, elija **WSL-Debug** o **WSL-Release** si usa GCC, o bien las variantes de Clang correspondientes si usa el conjunto de herramientas de Clang/LLVM. 
+
+**Visual Studio 2019 versión 16.1** Cuando el destino es WSL, no es necesario copiar nada ni disponer de orígenes o encabezados, porque el compilador de Linux tiene acceso directo al sistema de archivos de Windows donde están los archivos de origen, al igual que a los archivos de encabezado de Linux.
+
+::: moniker-end
+
+Si el destino es remoto, Visual Studio elige de forma predeterminada el primer sistema remoto que figura en la lista **Herramientas** > **Opciones** > **Multiplataforma** > **Administrador de conexiones**. Si no se encuentra ninguna conexión remota, se le pedirá que cree una. Para obtener más información, vea [Conectarse al equipo Linux remoto](connect-to-your-remote-linux-computer.md).
+
+Después de especificar un destino de Linux remoto, el origen se copia en el sistema remoto.
+
+Después de seleccionar un destino, CMake se ejecuta automáticamente en el sistema Linux para generar la memoria caché de CMake correspondiente al proyecto. 
 
 ![Generar la caché de CMake en Linux](media/cmake-linux-1.png "Generar la caché de CMake en Linux")
 
-Para proporcionar compatibilidad con IntelliSense para los encabezados remotos, Visual Studio los copia de manera automática del equipo Linux en un directorio en el equipo Windows local. Para obtener más información, vea [IntelliSense para los encabezados remotos](configure-a-linux-project.md#remote_intellisense).
+Para proporcionar compatibilidad con IntelliSense para los encabezados en sistemas Linux remotos, Visual Studio los copia de manera automática del equipo Linux en un directorio en el equipo Windows local. Para obtener más información, vea [IntelliSense para los encabezados remotos](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Depurar el proyecto
 
-Para depurar el código en el sistema remoto, establezca un punto de interrupción, seleccione el destino CMake como el elemento de inicio en el menú de barra de herramientas situado junto a la configuración del proyecto y haga elija **&#x23f5; Iniciar** en la barra de herramientas o presione F5.
+Para depurar el código en el sistema de destino de depuración especificado, establezca un punto de interrupción, seleccione el destino CMake como el elemento de inicio en el menú de barra de herramientas situado junto a la configuración del proyecto y elija **&#x23f5; Iniciar** en la barra de herramientas (o presione F5).
 
 Para personalizar los argumentos de la línea de comandos del programa, haga clic con el botón derecho en el archivo ejecutable en el **Explorador de soluciones** y seleccione **Configuración de depuración e inicio**. Esto abre o crea un archivo de configuración launch.vs.json que contiene información sobre el programa. Para especificar argumentos adicionales, agréguelos en la matriz de JSON `args`. Para obtener más información, vea [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (Proyectos Abrir carpeta para C++) y [Configure CMake debugging sessions](../build/configure-cmake-debugging-sessions.md) (Configuración de sesiones de depuración de CMake).
 
@@ -92,7 +108,7 @@ Un archivo CMakeSettings.json en un proyecto de CMake para Linux puede especific
 
 Para cambiar la configuración predeterminada de CMake en Visual Studio 2019, en la barra de herramientas principal, abra el menú desplegable **Configuración** y seleccione **Administrar configuraciones**. 
 
-   ![Administrar configuraciones de CMake](../build/media/vs2019-cmake-manage-configurations.png "Menú desplegable de configuraciones de CMake")
+![Administrar configuraciones de CMake](../build/media/vs2019-cmake-manage-configurations.png "Menú desplegable de configuraciones de CMake")
 
 Se abrirá el **Editor de configuración de CMake**, que puede usar para modificar el archivo `CMakeSettings.json` de la carpeta raíz del proyecto. También puede abrir el archivo directamente haciendo clic en el botón **Editar JSON** del editor. Para más información, vea [Personalización de la configuración de CMake](../build/customize-cmake-settings.md).
 
@@ -158,7 +174,7 @@ Puede usar estos valores opcionales para tener un mayor control:
 }
 ```
 
-Estas opciones permiten ejecutar comandos en el sistema remoto antes y después de compilar, y antes de la generación de CMake. Los valores pueden ser cualquier comando válido en el sistema remoto. La salida se canaliza de nuevo a Visual Studio.
+Estas opciones permiten ejecutar comandos en el sistema Linux antes y después de compilar, y antes de la generación de CMake. Los valores pueden ser cualquier comando válido en el sistema remoto. La salida se canaliza de nuevo a Visual Studio.
 
 ::: moniker range="vs-2019"
 

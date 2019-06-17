@@ -1,18 +1,30 @@
 ---
 title: Conexión a un equipo remoto Linux en Visual Studio
 description: En este artículo se describe cómo conectarse a una máquina remota Linux desde un proyecto de Visual Studio C++.
-ms.date: 07/20/2018
+ms.date: 06/07/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6348681ecc8e6f7863b2119810db24879526a1c6
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562853"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821613"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Conexión al equipo remoto Linux
 
-Al crear un proyecto de Linux C++ en Visual Studio, el código se copia al equipo Linux remoto y, después, se compila según la configuración de Visual Studio. Para configurar esta conexión remota:
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Cuando el destino es el subsistema de Windows para Linux (WSL), Visual Studio interactúa con la distribución de Linux directamente a través del sistema de archivos; no es necesaria ninguna conexión remota.
+
+::: moniker-end
+
+Al crear un proyecto de Linux C++ en Visual Studio para un sistema Linux (sea una máquina virtual o un equipo físico), el código se copia en el equipo Linux remoto y, después, se compila según la configuración de Visual Studio. Para configurar esta conexión remota:
 
 1. Compile el proyecto por primera vez o cree manualmente una nueva entrada al seleccionar **Herramientas > Opciones** y, luego, abrir el nodo **Multiplataforma > Administrador de conexiones** y hacer clic en el botón **Agregar**.
 

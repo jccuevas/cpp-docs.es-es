@@ -1,58 +1,137 @@
 ---
-title: Escribir y refactorizar código (C++)
+title: Editar y refactorizar código de C++ en Visual Studio
 description: Use el editor de código de C++ en Visual Studio para dar formato al código, recorrerlo, entenderlo y refactorizarlo.
-ms.date: 05/14/2019
+ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d4a74608a95df0fdd461f55d26fee97332a66aa8
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182635"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741628"
 ---
-# <a name="writing-and-refactoring-code-c"></a>Escribir y refactorizar código (C++)
+# <a name="edit-and-refactor-c-code-in-visual-studio"></a>Editar y refactorizar código de C++ en Visual Studio
 
-El editor de código de C++ y el IDE de Visual Studio proporcionan muchas ayudas a la programación. Algunas son exclusivas de C++ y algunas son básicamente iguales para todos los lenguajes de Visual Studio. Para obtener más información sobre las características compartidos, vea [Características del editor de código](/visualstudio/ide/writing-code-in-the-code-and-text-editor). Las opciones para habilitar y configurar características específicas de C++ se encuentran en **Herramientas &#124; Opciones &#124; Editor de texto &#124; C/C++**. Después de elegir la opción que quiere establecer, puede obtener más ayuda si presiona **F1** cuando el cuadro de diálogo tenga el foco. Para las opciones de formato de código generales, escriba `Editor C++` en el **Inicio rápido**.
+Visual Studio proporciona varias herramientas que sirven para escribir, editar y refactorizar código.
 
-Las características experimentales, que se podrían incluir o no en una versión futura de Visual Studio, se encuentran en el cuadro de diálogo [Editor de texto C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). En Visual Studio 2017, se puede habilitar **IntelliSense predictivo** en este cuadro de diálogo.
+##  <a name="intellisense"></a>IntelliSense
 
-## <a name="adding-new-files"></a>Agregar archivos nuevos
+IntelliSense es una herramienta de finalización de código muy eficaz que sugiere símbolos y fragmentos de código automáticamente a medida que va escribiendo. C++ IntelliSense en Visual Studio se ejecuta en tiempo real y, al actualizar el código base, lo analiza y realiza recomendaciones. A medida que se escriben más caracteres, la lista de resultados recomendados se va acotando.
 
-Para agregar archivos nuevos a un proyecto, haga clic con el botón derecho en el nodo de proyecto en el Explorador de soluciones y seleccione **Agregar &#124; Nuevo**.
+![Lista desplegable lista de miembros de C&#43;&#43;](../ide/media/cpp-statement-completion.png)
 
-## <a name="formatting-options"></a>Opciones de formato
+Algunos símbolos se omiten automáticamente para ayudar a acotar los resultados. Por ejemplo, al acceder a los miembros de un objeto de clase desde fuera de la clase, no podrá ver los miembros privados de forma predeterminada, ni los miembros protegidos (si no está en el contexto de una clase secundaria). El filtrado se puede ajustar con los botones de la parte inferior.
 
-Para establecer opciones de formato, como sangrías, finalización de llave y coloración, escriba "Formato de C++" en la ventana **Inicio rápido**. En Visual Studio 2017, versión 15.7 y posteriores se admite ClangFormat. Se puede configurar en la [página de propiedades Formato de C/C++](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting) en **Herramientas &#124; Opciones &#124; Editor de texto &#124; C/C++ &#124; Formato**.
+Después de elegir el símbolo de la lista desplegable, se puede autocompletar con las teclas **TAB** o **Entrar**, o con cualquiera de los otros caracteres de confirmación (de forma predeterminada: {}[]().,:;+-*/%&|^!=?@#\). Para agregar o quitar caracteres de esta lista, busque "IntelliSense" en **Inicio rápido** (Ctrl+Q) y elija la opción **Editor de texto > C/C++ > Avanzado**. La opción **Caracteres de confirmación de las listas de miembros** permite personalizar la lista con los cambios que quiera.
 
-![Opciones de formato de C++](media/cpp-formatting-options.png)
+La opción **Modo de filtro de la lista de miembros** controla qué tipos de sugerencias de Autocompletar de IntelliSense van a aparecer. Esta opción está establecida de manera predeterminada en **Aproximada**. En una búsqueda aproximada, si tiene un símbolo llamado *MyAwesomeClass*, puede escribir "MAC" y buscar la clase entre las sugerencias de Autocompletar. El algoritmo aproximado establece un umbral mínimo que los símbolos deben cumplir para figurar en la lista. El filtrado **Inteligente** muestra todos los símbolos que contienen las subcadenas que coinciden con lo que ha escrito. El filtrado **Prefijo** busca cadenas que comiencen por lo que ha escrito.
 
-## <a name="intellisense"></a>IntelliSense
+Para obtener más información sobre C++ IntelliSense, vea [IntelliSense de Visual C++](/visualstudio/ide/visual-cpp-intellisense) y [Configurar un proyecto de C++ para IntelliSense](/visualstudio/ide/visual-cpp-intellisense-configuration).
 
-IntelliSense es el nombre de un conjunto de características que proporcionan información en línea acerca de miembros, tipos y sobrecargas de función. La siguiente ilustración muestra la lista desplegable de miembros que aparece a medida que escribe. Puede presionar la tecla TAB para escribir el texto del elemento seleccionado en el archivo de código.
+## <a name="intellicode"></a>IntelliCode
 
-![C&#43; &#43; lista desplegable lista de miembros](../ide/media/vs2015_cpp_statement_completion.png "vs2015_cpp_statement_completion")
+IntelliCode es IntelliSense asistido por inteligencia artificial. Coloca al candidato más probable al principio de la lista de finalización. Las recomendaciones de IntelliCode se basan en miles de proyectos de código abierto de GitHub, cada uno con más de 100 estrellas. Cuando se combina en el contexto del código, la lista de finalización se adapta para promover prácticas habituales.
 
-Para obtener información completa, vea [IntelliSense para Visual C++](/visualstudio/ide/visual-cpp-intellisense).
+Al escribir C++, IntelliCode será de ayuda al usar bibliotecas muy conocidas, como la biblioteca estándar de C++. El contexto del código se usa para realizar las recomendaciones más útiles en primer lugar. En el siguiente ejemplo, la función miembro `size` se suele usar con la función `sort`, por lo que aparece al principio de la lista de resultados.
 
-## <a name="insert-snippets"></a>Insertar fragmentos de código
+![IntelliCode de C&#43;&#43;](../ide/media/intellicode-cpp.png "IntelliCode de C++")
+
+::: moniker range="vs-2019"
+
+En Visual Studio 2019, IntelliCode está disponible como componente opcional en la carga de trabajo **Desarrollo para el escritorio con C++** . Para asegurarse de que IntelliCode está activo para C++, vaya a **Herramientas** > **Opciones** > **IntelliCode** > **General** y establezca **Modelo base de C++** en **Habilitado**.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+En Visual Studio 2017, IntelliCode está disponible como una extensión en Visual Studio Marketplace.
+
+::: moniker-end
+
+## <a name="predictive-intellisense-experimental"></a>IntelliSense predictivo (experimental)
+
+**IntelliSense predictivo** es una característica experimental que usa el reconocimiento contextual para limitar el número de resultados que aparecen en la lista desplegable de IntelliSense. El algoritmo hace uso de la coincidencia de tipos para mostrar únicamente aquellos resultados que coincidan con el tipo esperado. Siguiendo un ejemplo muy básico, si escribe `int x =` e invoca la lista desplegable de IntelliSense, solo verá números enteros o funciones que devuelven enteros. Esta característica está desactivada de forma predeterminada porque aún está en fase de desarrollo. Funciona mejor con símbolos globales; todavía no se admiten funciones miembro. Para activarla, escriba "Predictivo" en **Inicio rápido** o vaya a **Herramientas** > **Opciones** > **Editor de texto** > **C/C++**  > **Experimental** > **Habilitar IntelliSense predictivo**.
+
+Para invalidar **IntelliSense predictivo** y mostrar una lista más larga, presione **Ctrl+J**. Si **IntelliSense predictivo** está activado, cuando se invoque **Ctrl+J** se quitará el filtro predictivo. Si se presiona **Ctrl+J** otra vez, se quita el filtro de accesibilidad de los resultados de la lista de miembros (cuando proceda). El botón ([+]) situado debajo de la lista desplegable de IntelliSense hace lo mismo que **Ctrl+J**. Mantenga el puntero sobre este botón para ver una información sobre herramientas sobre qué se está mostrando.
+
+![IntelliSense predictivo de C&#43;&#43;](../ide/media/predictive-intellisense-cpp.png "IntelliSense predictivo")
+
+La captura de pantalla anterior muestra varios botones debajo de la lista desplegable. Con ellos, se habilitan los filtros de IntelliSense para obtener distintos tipos de resultados:
+
+- Variables y constantes
+- Funciones
+- Tipos
+- Macros
+- Enumeraciones
+- Espacios de nombres
+
+Un botón aparece solo si es relevante en la sesión actual de IntelliSense. Normalmente, no se ven todos los botones al mismo tiempo.
+
+## <a name="template-intellisense"></a>IntelliSense para plantilla
+
+Cuando el símbolo de intercalación está dentro de una definición de plantilla, aparece una **barra de plantillas** que le permite proporcionar argumentos de plantilla de ejemplo para IntelliSense. 
+
+![IntelliSense para plantillas muestra las creaciones de instancias existentes en C&#43;&#43;](../ide/media/template-intellisense-cpp-1.png "IntelliSense para plantillas muestra las creaciones de instancias existentes")
+
+Haga clic en el icono **<T>** para expandir o contraer la **barra de plantillas**. Haga clic en el icono de lápiz o haga doble clic en la **barra de plantillas** para abrir la ventana **Editar**. 
+
+![IntelliSense para plantillas de C&#43; &#43;](../ide/media/template-intellisense-cpp-3.png "IntelliSense para plantillas")
+
+Las modificaciones que se realizan en la ventana se aplican directamente al código fuente, así se ve su efecto en tiempo real. 
+
+La barra de plantillas puede rellenar automáticamente los candidatos en función de las creaciones de instancias que haya en el código. Haga clic en **Agregar todas las creaciones de instancias existentes** para ver una lista de todos los argumentos concretos que se han usado para crear instancias de la plantilla a lo largo del código base.
+
+![Lista de resultados de IntelliSense para plantillas de C&#43;&#43;](../ide/media/template-intellisense-cpp-2.png "Lista de resultados de IntelliSense para plantillas")
+
+Una ventana en la parte inferior del editor señala dónde se ha detectado cada creación de instancias y cuáles han sido sus argumentos.
+
+![Mapa de creaciones de instancias de IntelliSense para plantillas de C&#43;&#43;](../ide/media/template-intellisense-cpp-4.png "Mapa de creaciones de instancias de IntelliSense para plantillas")
+
+La información de la **barra de plantillas** se considera como específica del usuario. Se almacena en la carpeta .vs y no se confirma en el control de código fuente.
+
+##  <a name="error-squiggles-and-quick-fixes"></a>Subrayados ondulados de error y soluciones rápidas
+
+Si el editor detecta problemas con el código, agregará subrayados ondulados de color debajo del problema. Un subrayado ondulado de color rojo señala código que no se va a compilar. El subrayado ondulado de color verde señala otros tipos de problemas, que pueden llegar a ser graves. Puede abrir la ventana **Lista de errores** para obtener más información sobre los problemas.
+
+En algunos tipos de errores, así como en patrones de programación comunes, el editor ofrecerá una **corrección rápida** en forma de bombilla, que aparece cuando se mantiene el puntero sobre el subrayado ondulado. Haga clic en la flecha abajo para ver las sugerencias. 
+
+En el siguiente ejemplo, hay un elemento `vector` declarado, pero no se encontró ninguna definición, por lo que el editor sugiere incluir el archivo de encabezado necesario:
+
+![Corrección rápida de C&#43;&#43;](../ide/media/quick-fix-for-header-cpp.png "Corrección rápida de C++")
+
+El editor también ofrece soluciones rápidas en algunas oportunidades de refactorización. Por ejemplo, si declara una clase en un archivo de encabezado, Visual Studio propondrá crear una definición para ella en un archivo .cpp aparte. 
+
+![Corrección rápida de C&#43;&#43;](../ide/media/quick-fix.png "Corrección rápida de C++")
+
+## <a name="change-tracking"></a>Seguimiento de cambios
+
+Cada vez que haga un cambio en un archivo, aparecerá una barra amarilla a la izquierda que informa de que se han realizado cambios sin guardar. Cuando guarde el archivo, la barra cambiará a color verde. Las barras verde y amarilla siguen apareciendo mientras el documento esté abierto en el editor. Señalan los cambios realizados desde que el documento se abrió por última vez.
+
+![Seguimiento de cambios de C&#43;&#43;](../ide/media/change-tracking-cpp.png "Seguimiento de cambios")
+
+## <a name="move-code"></a>Mover código
+
+Las líneas de código se pueden subir y bajar; para ello, solo tiene que seleccionarlas manteniendo la tecla Alt presionada y presionar las teclas de dirección **arriba/abajo**.
+
+##  <a name="insert-snippets"></a>Insertar fragmentos de código
 
 Un fragmento de código es una parte de código fuente predefinida. Haga clic con el botón derecho en un único punto o en el texto seleccionado para insertar un fragmento de código o rodear el texto seleccionado con el fragmento de código. La siguiente ilustración muestra los tres pasos necesarios para envolver una instrucción seleccionada con un bucle for. Las partes resaltadas en amarillo de la imagen final son campos que se pueden editar y a los que puede acceder con la tecla TAB. Para obtener más información, vea [Fragmentos de código](/visualstudio/ide/code-snippets).
 
-![Visual C&#43; &#43; Lista desplegable Insertar fragmento de código](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
+![Lista desplegable Insertar fragmento de código de C&#43;&#43;](../ide/media/vs2015_cpp_surround_with.png "vs2015_cpp_surround_with")
 
-## <a name="add-class"></a>Agregar clase
+##  <a name="add-class"></a>Agregar clase
 
-Agregue una clase nueva desde el menú **Proyecto** mediante el Asistente para clases.
+Agregue una nueva clase desde el menú **Proyecto** o desde el menú contextual del **Explorador de soluciones**:
 
-![Agregar nueva clase en Visual C&#43;&#43;](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
+![Agregar nueva clase en C&#43;&#43;](../ide/media/vs2017-add-class.png "vs2015_cpp_add_class")
 
 También puede usar el Asistente para clases para modificar o examinar una clase existente.
 
-![Visual C&#43; &#43; Asistente para clases](../ide/media/vs2015_cpp_class_wizard.png "vs2015_cpp_class_wizard")
+![Asistente para clases de C&#43;&#43;](../ide/media/vs2017-class-wizard.png)
 
 Para obtener más información, vea [Agregar funcionalidad con los asistentes para código (C++)](../ide/adding-functionality-with-code-wizards-cpp.md).
 
-## <a name="refactoring"></a>Refactorización
+##  <a name="refactoring"></a>Refactorización
 
 Las refactorizaciones están disponibles bajo el menú contextual Acción rápida, o bien haciendo clic en una [bombilla](/visualstudio/ide/perform-quick-actions-with-light-bulbs) en el editor.  Algunas se encuentran en el menú **Editar > Refactorizar**.  Entre ellas se incluyen:
 
@@ -64,66 +143,47 @@ Las refactorizaciones están disponibles bajo el menú contextual Acción rápid
 * [Convertir en literal de cadena sin formato](refactoring/convert-to-raw-string-literal.md)
 * [Cambiar firma](refactoring/change-signature.md)
 
-## <a name="navigate-and-understand"></a>Navegar y comprender
+## <a name="code-style-enforcement-with-clangformat-and-editorconfig"></a>Aplicación de estilo de código con ClangFormat y EditorConfig
 
-Visual C++ comparte muchas características de exploración de código con otros lenguajes. Para obtener más información, vea [Navegación en el código](/visualstudio/ide/navigating-code) y [Visualización de la estructura del código mediante distintas ventanas de herramienta](/visualstudio/ide/viewing-the-structure-of-code).
+Visual Studio 2017 y las versiones posteriores incluyen compatibilidad integrada con [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html), una conocida utilidad de formato de código para C++ basada en Clang/LLVM. Escriba "ClangFormat" en [Inicio rápido](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) para configurarla para que use uno de estos formatos comunes:
 
-## <a name="quickinfo"></a>InformaciónRápida
+- LLVM
+- Google
+- Chromium
+- Mozilla
+- WebKit
+- Programa para la mejora
 
-Coloque el mouse sobre una variable para ver su información de tipo.
+También puede proporcionar su propio archivo .clang-format o _clang-format para aplicar reglas personalizadas a todos los archivos de código del mismo nivel o por debajo.
 
-![Visual C&#43;&#43; InformaciónRápida](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
+Estos archivos se pueden compartir fácilmente a través del control de código fuente, lo que permite que todo el equipo de desarrollo use las mismas convenciones de código.
 
-## <a name="open-document-navigate-to-header"></a>Abrir documento (Ir a encabezado)
+![Formato de Clang de C&#43;&#43;](../ide/media/clang-format-cpp.png "Formato de Clang")
 
-Haga clic con el botón derecho en el nombre del encabezado en una directiva `#include` y abra el archivo de encabezado.
+Visual Studio 2017 y las versiones posteriores también admiten [EditorConfig](https://editorconfig.org/), que funciona de forma similar, si bien ClangFormat tiene más opciones de estilo que EditorConfig, incluido reglas que son específicas de C++. Con **EditorConfig** se crean archivos **.editorconfig** y se ponen en diferentes carpetas del código base para especificar estilos de código aplicables a esas carpetas y sus subcarpetas. Un archivo **.editorconfig** sustituye cualquier otro archivo **.editorconfig** que haya en las carpetas principales, y sobrescribe cualquier configuración de formato que se haya establecido a través de **Herramientas** > **Opciones**. Se pueden establecer reglas de tabulaciones frente a espacios o tamaños de sangría, entre otras muchas cosas. Para obtener más información, vea [Crear opciones de configuración del editor personalizadas y portátiles con EditorConfig](/visualstudio/ide/create-portable-custom-editor-options).
 
-![Visual C&#43; &#43; Opción de menú Abrir documento](../ide/media/vs2015_cpp_open_document.png "vs2015_cpp_open_document")
+## <a name="other-formatting-options"></a>Otras opciones de formato
 
-## <a name="peek-definition"></a>Definición de Peek
+El cuadro de búsqueda **Inicio rápido** constituye la forma más rápida de encontrar una configuración o una herramienta. Se encuentra en el menú principal. Solo tiene que empezar a escribir y la lista de autocompletar filtrará los resultados.
 
-Mantenga el puntero sobre una declaración de variable o función, haga clic con el botón derecho y, después, seleccione **Ver la definición** para ver una vista insertada de su definición. Para obtener más información, vea [Ver la definición (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
+![Inicio rápido de Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "Inicio rápido")
 
-![Visual C&#43;&#43; Ver la definición](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+Para establecer opciones de formato, como sangrías, finalización de llave y uso de colores, escriba "Formato de C++" en la ventana **Inicio rápido**.
 
-## <a name="go-to-definition"></a>Ir a definición
+![Opciones de formato de C++](media/cpp-formatting-options.png)
 
-Mantenga el puntero sobre una declaración de variable o función, haga clic con el botón derecho y, después, seleccione **Ir a definición** para abrir el documento donde se define el objeto.
+Encontrará otras opciones de formato en **Editar** > **Avanzado** en el menú principal.
 
-## <a name="view-call-hierarchy"></a>Ver jerarquía de llamadas
+![Opciones de edición avanzadas de C++](media/edit-advanced-cpp.png)
 
-Haga clic con el botón derecho en cualquier llamada a función y vea una lista recursiva de todas las funciones a las que llama y de todas las funciones que la llaman. Cada una de las funciones de la lista se pueden expandir de la misma manera. Para obtener más información, vea [Jerarquía de llamadas](/visualstudio/ide/reference/call-hierarchy).
+Las opciones para habilitar y configurar características de edición específicas de C++ se encuentran en **Herramientas** > **Opciones** > **Editor de texto** > **C/C++** . Después de elegir la opción que quiere establecer, puede obtener más ayuda si presiona **F1** cuando el cuadro de diálogo tenga el foco. Para acceder a las opciones de formato de código generales, escriba `Editor C++` en **Inicio rápido**.
 
-![Visual C&#43;&#43; Jerarquía de llamadas](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![Herramientas > Opciones en Visual Studio](../ide/media/tools-options.png "Opciones del editor")
 
-## <a name="toggle-header--code-file"></a>Alternar archivo de encabezado/código
+Las características experimentales, que se podrían incluir o no en una versión futura de Visual Studio, se encuentran en el cuadro de diálogo [Editor de texto C++ Experimental](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). En Visual Studio 2017 y versiones posteriores, **IntelliSense predictivo** se puede habilitar en este cuadro de diálogo.
 
-Haga clic con el botón derecho en **Alternar archivo de encabezado/código** para alternar entre un archivo de encabezado y su archivo de código asociado.
+## <a name="see-also"></a>Vea también
 
-## <a name="outlining"></a>esquematizar
-
-Haga clic con el botón derecho en un archivo de código fuente y seleccione **Esquematización** para contraer o expandir definiciones o regiones personalizadas para que sea más fácil examinar solo las partes que le interesan. Para obtener más información, vea [Esquematización](/visualstudio/ide/outlining).
-
-![Visual C&#43;&#43; Esquematización](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
-
-## <a name="scrollbar-map-mode"></a>Modo de mapa de barra de desplazamiento
-
-El modo de mapa de barra de desplazamiento permite desplazarse y examinar rápidamente un archivo de código sin abandonar realmente su ubicación actual. También puede hacer clic en cualquier parte del mapa de código para ir directamente a esa ubicación. Para obtener más información, vea [Cómo: Seguimiento del código mediante la personalización de la barra de desplazamiento](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar).
-
-![Mapa de código en Visual C&#43;&#43;](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
-
-## <a name="generate-graph-of-include-files"></a>Generar gráfico de archivos de inclusión
-
-Haga clic con el botón derecho en un archivo de código del proyecto y seleccione **Generar gráfico de archivos de inclusión** para ver un gráfico de los archivos que otros archivos incluyen.
-
-![Visual C&#43; &#43; Gráfico de archivos de inclusión](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
-
-## <a name="f1-help"></a>F1 Ayuda
-
-Coloque el cursor encima o justo después de cualquier tipo, palabra clave o función, y presione F1 para ir directamente al tema de referencia pertinente en docs.microsoft.com. F1 también funciona en elementos de la lista de errores y en muchos cuadros de diálogo.
-
-## <a name="quick-launch"></a>Inicio rápido
-
-Para navegar fácilmente hasta cualquier ventana o herramienta de Visual Studio, simplemente escriba su nombre en la ventana Inicio rápido situada en la esquina superior derecha de la interfaz de usuario. Se filtrará la lista de finalización automática a medida que escriba.
-
-![Inicio rápido de Visual Studio](../ide/media/vs2015_cpp_quick_launch.png "vs2015_cpp_quick_launch")
+[Lectura y reconocimiento de código C++](read-and-understand-code-cpp.md)</br>
+[Navegación en el código de C++ en Visual Studio](navigate-code-cpp.md)</br>
+[Colaborar con Live Share para C++](live-share-cpp.md)

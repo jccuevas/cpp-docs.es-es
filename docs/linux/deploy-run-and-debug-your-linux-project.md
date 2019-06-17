@@ -1,32 +1,59 @@
 ---
 title: Implementación, ejecución y depuración de un proyecto en C++ de Linux en Visual Studio
 description: En este artículo se describe cómo compilar, ejecutar y depurar código en el destino remoto desde un proyecto C++ de Linux en Visual Studio.
-ms.date: 09/12/2018
+ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562892"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821619"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Implementar, ejecutar y depurar el proyecto de Linux
 
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
+
 Una vez que haya creado un proyecto C++ de Linux en Visual Studio y se haya conectado a él mediante el [Administrador de conexiones de Linux](connect-to-your-remote-linux-computer.md), puede ejecutar y depurar el proyecto. Compile, ejecute y depure el código en el destino remoto.
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 versión 16.1** Puede tener como destino distintos sistemas Linux para la depuración y compilación. Especifique el equipo de compilación en la página de propiedades **General** y el equipo de depuración en la página de propiedades **Depuración**.
+
+::: moniker-end
 
 Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 
 - Depure con las características tradicionales de Visual Studio, como son los puntos de interrupción, las ventanas Inspección y mantener el mouse sobre una variable. Con estos métodos, puede depurar como lo haría normalmente para otros tipos de proyecto.
 
-- Vea la salida desde el equipo de destino en una ventana especial de la consola de Linux. También puede usar la consola para enviar la entrada al equipo de destino.
+- Vea la salida del equipo de destino en la ventana de la consola de Linux. También puede usar la consola para enviar la entrada al equipo de destino.
 
 ## <a name="debug-your-linux-project"></a>Depurar el proyecto de Linux
 
 1. Seleccione el modo de depuración en la página de propiedades **Depuración**.
 
+   
+   
+   ::: moniker range="vs-2019"
+
+   GDB se usa para depurar aplicaciones que se ejecutan en Linux. Al depurar en un sistema remoto (no WSL), GDB se puede ejecutar en dos modos diferentes, que pueden seleccionarse desde la opción **Modo de depuración** de la página de propiedades **Depuración** del proyecto:
+
+   ![Opciones de GDB](media/vs2019-debugger-settings.png)
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2017"
+
    GDB se usa para depurar aplicaciones que se ejecutan en Linux. GDB se puede ejecutar en dos modos diferentes, que pueden seleccionarse desde la opción **Modo de depuración** de la página de propiedades **Depuración** del proyecto:
 
-   ![Opciones de GDB](media/settings_debugger.png)
+   ![Opciones de GDB](media/vs2017-debugger-settings.png)
+
+   ::: moniker-end
+
 
    - En modo **gdbserver**, GDB se ejecuta localmente, con lo que se conecta a gdbserver, en el sistema remoto.  Tenga en cuenta que este es el único modo que admite la ventana Consola Linux.
 
@@ -77,11 +104,30 @@ Hay varias formas de interactuar con el proyecto de Linux y de depurarlo.
 
    `handle SIGILL nostop noprint`
 
+## <a name="debug-with-attach-to-process"></a>Depurar con la opción Asociar al proceso
+
+La página de propiedades [Depuración](prop-pages/debugging-linux.md) de los proyectos de Visual Studio y la configuración **Launch.vs.json** de los proyectos de CMake tienen ambas una opción que permite establecer una asociación con un proceso en ejecución. Si necesita más control del que se proporciona en esta opción, puede colocar un archivo denominado `Microsoft.MIEngine.Options.xml` en la raíz de la solución o del área de trabajo. A continuación se incluye un ejemplo sencillo:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SupplementalLaunchOptions>
+    <AttachOptions>
+      <AttachOptionsForConnection AdditionalSOLibSearchPath="/home/user/solibs">
+        <ServerOptions MIDebuggerPath="C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\VC\Linux\bin\gdb\7.9\x86_64-linux-gnu-gdb.exe"
+ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\ConsoleApplication17.out"/>
+        <SetupCommands>
+          <Command IgnoreFailures="true">-enable-pretty-printing</Command>
+        </SetupCommands>
+      </AttachOptionsForConnection>
+    </AttachOptions>
+</SupplementalLaunchOptions>
+```
+
+**AttachOptionsForConnection** tiene la mayoría de los atributos que probablemente necesite. En el ejemplo anterior se muestra cómo especificar una ubicación para buscar más bibliotecas .so. El elemento secundario **ServerOptions** permite asociar al proceso remoto con gdbserver en su lugar. Para ello, deberá especificar un cliente de gdb local (arriba se muestra el que venía incluido en Visual Studio 2017) y una copia local del archivo binario con símbolos. El elemento **SetupCommands** permite pasar comandos directamente a gdb. Puede encontrar todas las opciones disponibles en el [esquema LaunchOptions.xsd](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) en GitHub.
+
 ## <a name="next-steps"></a>Pasos siguientes
 
 - Para depurar dispositivos ARM en Linux, consulte la entrada de blog [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (Depuración de un dispositivo ARM insertado en Visual Studio).
-
-- Para efectuar la depuración con el comando **Asociar al proceso**, consulte la entrada de blog [Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) (Mejoras de la carga de trabajo de C++ en Linux para el sistema de proyectos, la ventana Consola Linux, rsync y el comando Asociar al proceso).
 
 ## <a name="see-also"></a>Vea también
 
