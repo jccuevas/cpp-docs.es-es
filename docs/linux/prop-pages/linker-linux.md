@@ -1,15 +1,23 @@
 ---
 title: Propiedades del enlazador (C++ para Linux)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678345"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821298"
 ---
 # <a name="linker-properties-linux-c"></a>Propiedades del enlazador (C++ para Linux)
+
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="general"></a>General
 
@@ -55,3 +63,5 @@ Marcar variables como de solo lectura después de la reubicación | Esta opción
 Habilitar enlace de función inmediata | Esta opción marca el objeto para el enlace de función inmediata.
 No requerir pila ejecutable | Esta opción indica en la salida que no requiere una pila de ejecutable.
 Archivo completo | El archivo completo usa todos los códigos de los orígenes y las dependencias adicionales.
+
+::: moniker-end

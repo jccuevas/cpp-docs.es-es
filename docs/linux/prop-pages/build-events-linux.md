@@ -1,15 +1,23 @@
 ---
 title: Eventos de compilación remota (C++ para Linux)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 165d3690-5bd8-4b0b-bc66-8b699d85a61b
-ms.openlocfilehash: 87647948b641fff7370003a59775a5680c176fb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e5c453da05fe65871fa7f6b0d4ca6528a96d4dd
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653874"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821480"
 ---
 # <a name="build-event-properties-linux-c"></a>Propiedades de evento de compilación (C++ para Linux)
+
+::: moniker range="vs-2015"
+
+La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones posteriores.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="pre-build-event"></a>Evento anterior a la compilación
 
@@ -64,3 +72,7 @@ Línea de comandos | Especifica una línea de comandos para que la ejecute la he
 Descripción | Especifica una descripción que se mostrará para la herramienta de eventos posteriores a la compilación.
 Usar en la compilación | Especifica si este evento de compilación se excluirá de la compilación en la configuración actual.
 Archivos adicionales para copiar | Especifica archivos adicionales que se copiarán del sistema remoto. También se puede proporcionar la lista en forma de pares de asignaciones de remoto a local usando la sintaxis siguiente: rutaDeAccesoRemotaCompleta1:=rutaDeAccesoLocalCompleta1;rutaDeAccesoRemotaCompleta2:=rutaDeAccesoLocalCompleta2, donde un archivo remoto se puede copiar en la ubicación especificada de la máquina local.
+
+::: moniker-end
+
+
