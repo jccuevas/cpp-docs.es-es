@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01116116ad6bb455d3b0fd8966e65b2fec4c5a35
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390989"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344361"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Cómo Agregar, editar o eliminar los controles (C++)
 
@@ -69,9 +69,9 @@ El **Editor de cuadro de diálogo** ficha aparece en la [ventana cuadro de herra
 
    - Seleccione el cuadro de diálogo en la ubicación donde desea colocar el control y el control aparece donde ha seleccionado.
 
-   - Arrastre y coloque el control desde el **cuadro de herramientas** ventana a la ubicación en el cuadro de diálogo y, a continuación, puede mover los controles o cambiar su tamaño y la forma.
+   - Arrastre y coloque el control desde el **cuadro de herramientas** ventana hasta la ubicación en el cuadro de diálogo. Puede, a continuación, mueva el control alrededor, o cambiar su tamaño y forma.
 
-   - Haga doble clic en el control en el **cuadro de herramientas** ventana y aparece en el cuadro de diálogo, a continuación, volver a colocar el control a la ubicación que prefiera.
+   - Haga doble clic en el control en el **cuadro de herramientas** ventana y aparece en el cuadro de diálogo. Cambia la posición del control a la ubicación que prefiera.
 
 ### <a name="to-add-multiple-controls"></a>Para agregar varios controles
 
@@ -87,7 +87,7 @@ El **Editor de cuadro de diálogo** ficha aparece en la [ventana cuadro de herra
 
 1. Coloque el cursor que aparece de forma de cruz, donde desea que la esquina superior izquierda del nuevo control en el cuadro de diálogo.
 
-1. Seleccione y mantenga presionado el botón del mouse para fijar la esquina superior izquierda del control en el cuadro de diálogo, a continuación, arrastre el cursor a la derecha y hacia abajo hasta que el control es el tamaño que desee.
+1. Seleccione y mantenga presionado el botón del mouse para fijar la esquina superior izquierda del control en el cuadro de diálogo. A continuación, arrastre el cursor a la derecha y hacia abajo, hasta que el control es el tamaño que desee.
 
    > [!NOTE]
    > Puede anclar cualquiera de las cuatro esquinas del control que se está dibujando. Este procedimiento utiliza la esquina superior izquierda como ejemplo.
@@ -99,7 +99,7 @@ El **Editor de cuadro de diálogo** ficha aparece en la [ventana cuadro de herra
 
 ### <a name="to-add-a-custom-control"></a>Para agregar un control personalizado
 
-Puede agregar controles personalizados al cuadro de diálogo seleccionando el **Control personalizado** icono en el **cuadro de herramientas** y arrástrela al cuadro de diálogo. Para agregar un **Syslink** de control, agregue un control personalizado y cambie el control **clase** propiedad **Syslink**. Esta acción hará que las propiedades actualizar y mostrar el **Syslink** propiedades del control. Para obtener información sobre la clase contenedora MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Puede agregar controles personalizados al cuadro de diálogo. Seleccione el **Custom Control** icono en el **cuadro de herramientas** y arrástrelo al cuadro de diálogo. Para agregar un `Syslink` de control, agregue un control personalizado y cambie el control **clase** propiedad `Syslink`. Esta acción hará que las propiedades actualizar y mostrar el `Syslink` propiedades del control. Para obtener información sobre la clase contenedora MFC, vea [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Controles de edición
 
@@ -139,7 +139,7 @@ Puede agregar controles personalizados al cuadro de diálogo seleccionando el **
 > [!TIP]
 > Para saltar de un control de cuadro de diálogo a su controlador existente, haga doble clic en el control.
 
-También puede usar el **Variables miembro** pestaña en el [Asistente para clases MFC](../mfc/reference/mfc-class-wizard.md) para agregar nuevas variables miembro a una clase especificada y ver variables de miembro que ya se han definido.
+También puede usar el **Variables miembro** pestaña en el [Asistente para clases MFC](../mfc/reference/mfc-class-wizard.md) para agregar nuevas variables miembro a una clase especificada y ver variables de miembro ya definida.
 
 ## <a name="delete-controls"></a>Eliminar los controles
 
@@ -149,7 +149,7 @@ En el cuadro de diálogo, seleccione el control, a continuación, presione el **
 
 ### <a name="troubleshooting"></a>Solución de problemas
 
-Después de agregar un control común o un control rich edit a un cuadro de diálogo, pero no aparecerá cuando se prueba el cuadro de diálogo o, por ejemplo, no aparecerá el cuadro de diálogo:
+Después de agregar un control común o un control rich edit a un cuadro de diálogo, no aparecerá cuando se prueba el cuadro de diálogo. O bien, no aparecerá el cuadro de diálogo. Por ejemplo:
 
 1. Cree un proyecto de Win32, modifique la configuración de la aplicación para crear una aplicación de Windows (no una aplicación de consola).
 
@@ -196,7 +196,7 @@ El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles
 |**Ruta de acceso**|Muestra el archivo donde se encuentra el control ActiveX.|
 
 > [!CAUTION]
-> Puede que no sea legal distribuir todos los controles ActiveX en el sistema. Consulte el contrato de licencia para el software que instaló los controles o póngase en contacto con la compañía del software.
+> Puede que no sea legal distribuir todos los controles ActiveX en el sistema. Consulte el contrato de licencia para el software que instaló los controles o póngase en contacto con la compañía de software.
 
 #### <a name="to-add-an-activex-control"></a>Para agregar un control ActiveX
 
@@ -215,7 +215,7 @@ El **insertar ActiveX Control** cuadro de diálogo le permite insertar controles
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>Para editar propiedades de un control ActiveX
 
-Controles ActiveX suministrados por proveedores independientes pueden estar equipados con sus propias propiedades y características. Estas propiedades se muestran en el **propiedades** ventana, incluida cualquier propiedad páginas creadas por los escritores del control ActiveX se muestran en el **las páginas de propiedades** cuadro de diálogo (para ver el  **Página de propiedades** de un control ActiveX concreto, seleccione el **página de propiedades** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window)).
+Controles ActiveX suministrados por proveedores independientes pueden estar equipados con sus propias propiedades y características. Estas propiedades se muestran en el **propiedades** ventana. Las páginas de propiedades creadas por los programadores del control ActiveX se muestran en el **las páginas de propiedades** cuadro de diálogo. (Para ver el **página de propiedades** de un control ActiveX concreto, seleccione el **página de propiedades** situado en la [ventana propiedades](/visualstudio/ide/reference/properties-window)).
 
 - Seleccione el **ActiveX** control y vaya al menú **vista** > **página de propiedades** para ver las propiedades. Realice los cambios necesarios en la página de propiedades.
 
