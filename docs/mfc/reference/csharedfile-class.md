@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: e86e64c1de232aba0c17a0fdfb3600e480567a57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a9bbf3072a665c04501025d421839fa90a37225
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324134"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344418"
 ---
 # <a name="csharedfile-class"></a>CSharedFile (clase)
 
@@ -46,15 +46,15 @@ class CSharedFile : public CMemFile
 
 ## <a name="remarks"></a>Comentarios
 
-Los archivos de memoria se comportan como los archivos de disco, salvo que el archivo se almacena en la memoria RAM en lugar de en disco. Un archivo de memoria es útil para el almacenamiento temporal rápido o para la transferencia de bytes sin formato o los objetos serializados entre procesos independientes.
+Los archivos de memoria se comportan como los archivos de disco. La diferencia es que un archivo de memoria se almacena en la memoria RAM en lugar de en disco. Un archivo de memoria es útil para el almacenamiento temporal rápido, o para la transferencia de bytes sin formato o los objetos serializados entre procesos independientes.
 
 Archivos de memoria compartida se diferencian de otros archivos de memoria en que se asigna memoria para ellos con el [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) función de Windows. El `CSharedFile` clase almacena los datos en un bloque de memoria asignado globalmente (creados con `GlobalAlloc`), y este bloque de memoria se puede compartir con otros OLE/COM uniforme transferencia operaciones de datos, por ejemplo, el Portapapeles o DDE mediante `IDataObject`.
 
 `GlobalAlloc` Devuelve un identificador HGLOBAL controlar en lugar de un puntero a la memoria, por ejemplo, el puntero devuelto por [malloc](../../c-runtime-library/reference/malloc.md). Se necesita el identificador HGLOBAL en determinadas aplicaciones. Por ejemplo, para colocar datos en el Portapapeles necesita un identificador HGLOBAL.
 
-Tenga en cuenta que `CSharedFile` no archivos asignados a memoria de uso y no se puede compartir directamente los datos entre procesos.
+`CSharedFile` no utilizar archivos asignados a memoria y los datos no se directamente puede compartir entre procesos.
 
-`CSharedFile` los objetos pueden asignar automáticamente su propia memoria o puede adjuntar su propio bloque de memoria para el `CSharedFile` objeto mediante una llamada a [CSharedFile::SetHandle](#sethandle). En cualquier caso, se asigna memoria para aumentar automáticamente el archivo de memoria en `nGrowBytes`-tamaño incrementos si `nGrowBytes` no es cero.
+`CSharedFile` los objetos pueden asignar automáticamente su propia memoria. O bien, puede adjuntar su propio bloque de memoria para el `CSharedFile` objeto mediante una llamada a [CSharedFile::SetHandle](#sethandle). En cualquier caso, se asigna memoria para aumentar automáticamente el archivo de memoria en `nGrowBytes`-tamaño incrementos si `nGrowBytes` no es cero.
 
 Para obtener más información, vea el artículo [archivos en MFC](../../mfc/files-in-mfc.md) y [manejo de archivos](../../c-runtime-library/file-handling.md) en el *referencia de la biblioteca de tiempo de ejecución*.
 
@@ -126,7 +126,7 @@ Especifica si el bloque de memoria puede aumentar.
 
 ### <a name="remarks"></a>Comentarios
 
-Si *bAllowGrow* es distinto de cero, el tamaño del bloque de memoria aumenta según sea necesario, por ejemplo, si se intenta intentó escribir más bytes en el archivo que se asignaron para el bloque de memoria.
+Si *bAllowGrow* es distinto de cero, aumenta el tamaño del bloque de memoria según sea necesario, por ejemplo, si se intenta escribir más bytes en el archivo que el tamaño del bloque de memoria.
 
 ## <a name="see-also"></a>Vea también
 
