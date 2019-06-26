@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c52921d2e9c4265d42b3e0187af1396ff8946bde
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404730"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400799"
 ---
 # <a name="try-finally-statement"></a>try-finally (Instrucción)
 
@@ -40,12 +40,12 @@ La sintaxis siguiente describe el **try-finally** instrucción:
 > **\_\_Por último**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;código de finalización<br/>
-> }<br/>
+> }
 
 ## <a name="grammar"></a>Gramática
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\_\_try** *compound-statement* **\_\_finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
 El **try-finally** instrucción es una extensión de Microsoft a los lenguajes C y C++ que permite a las aplicaciones de destino garanticen la ejecución del código de limpieza cuando se interrumpe la ejecución de un bloque de código. La limpieza consta de tareas como desasignar memoria, cerrar archivos y liberar identificadores de archivo. El **try-finally** instrucción resulta especialmente útil para las rutinas que tienen varios lugares donde se realiza una comprobación para un error que podría provocar prematura de devolución de la rutina.
 

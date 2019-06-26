@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314681"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400453"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Descripción de los pasos de compilación personalizada y los eventos de compilación
 
@@ -69,7 +69,7 @@ Los eventos de compilación y los pasos de compilación personalizada se ejecuta
 [Especificación de las herramientas de compilación personalizadas](specifying-custom-build-tools.md)<br/>
 [Especificación de eventos de compilación](specifying-build-events.md)<br/>
 [Solución de problemas de personalizaciones de compilación](troubleshooting-build-customizations.md)<br/>
-[Aplicación de formato a la presentación de un paso de compilación personalizada o de un evento de compilación](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[Aplicación de formato a la presentación de un paso de compilación personalizada o de un evento de compilación](formatting-the-output-of-a-custom-build-step-or-build-event.md)
 
 ## <a name="see-also"></a>Vea también
 
