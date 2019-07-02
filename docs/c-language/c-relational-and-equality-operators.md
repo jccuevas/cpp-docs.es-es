@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149653"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400530"
 ---
 # <a name="c-relational-and-equality-operators"></a>Operadores relacionales y de igualdad de C
 
@@ -26,7 +26,7 @@ Los operadores relacionales y de igualdad binarios comparan el primer operando c
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
 
 *equality-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ Los cuatro primeros operadores de la lista anterior tienen mayor prioridad que l
 
 Los operandos pueden tener tipo entero, flotante o puntero. Los tipos de operando pueden ser diferentes. Los operadores relacionales realizan las conversiones aritméticas habituales sobre operandos de tipo entero y flotante. Además, puede usar las siguientes combinaciones de tipos de operando con los operadores relacionales y de igualdad:
 
-- Ambos operandos de cualquier operador relacional o de igualdad puede ser punteros al mismo tipo. Para los operadores de igualdad (`==`) y desigualdad (`!=`), el resultado de la comparación indica si los dos punteros direccionan la misma ubicación de memoria. Para los otros operadores relacionales (**\<**, **>**, **\<**= y **>**=), el resultado de la comparación indica la posición relativa de las dos direcciones de memoria de los objetos a los que se señala. Los operadores relacionales comparan solo desplazamientos.
+- Ambos operandos de cualquier operador relacional o de igualdad puede ser punteros al mismo tipo. Para los operadores de igualdad (`==`) y desigualdad (`!=`), el resultado de la comparación indica si los dos punteros direccionan la misma ubicación de memoria. Para los otros operadores relacionales ( **\<** , **>** , **\<** = y **>** =), el resultado de la comparación indica la posición relativa de las dos direcciones de memoria de los objetos a los que se señala. Los operadores relacionales comparan solo desplazamientos.
 
    La comparación de puntero solo se define para partes del mismo objeto. Si los punteros hacen referencia a miembros de una matriz, la comparación es equivalente a la comparación de los subíndices correspondientes. La dirección del primer elemento de la matriz es “menor que” la dirección del último elemento. En el caso de las estructuras, los punteros a miembros de estructura declarados más tarde son “mayores que” los punteros a miembros declarados antes en la estructura. Los punteros a los miembros de la misma unión son iguales.
 
