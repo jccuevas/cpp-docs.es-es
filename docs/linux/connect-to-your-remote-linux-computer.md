@@ -1,16 +1,16 @@
 ---
-title: Conexión a un equipo remoto Linux en Visual Studio
-description: En este artículo se describe cómo conectarse a una máquina remota Linux desde un proyecto de Visual Studio C++.
-ms.date: 06/07/2019
+title: Conexión al sistema Linux de destino en Visual Studio
+description: En este artículo se describe cómo conectarse a una máquina remota Linux o WSL desde un proyecto de Visual Studio C++.
+ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6348681ecc8e6f7863b2119810db24879526a1c6
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
+ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821613"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285253"
 ---
-# <a name="connect-to-your-remote-linux-computer"></a>Conexión al equipo remoto Linux
+# <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Conexión al sistema Linux de destino en Visual Studio
 
 ::: moniker range="vs-2015"
 
@@ -18,13 +18,15 @@ La compatibilidad con Linux está disponible en Visual Studio 2017 y versiones p
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range=">=vs-2017"
 
-Cuando el destino es el subsistema de Windows para Linux (WSL), Visual Studio interactúa con la distribución de Linux directamente a través del sistema de archivos; no es necesaria ninguna conexión remota.
+Puede configurar un proyecto de Linux que tenga como destino una máquina remota o el subsistema Windows para Linux (WSL). Para máquinas remotas y para WSL en Visual Studio 2017, deberá configurar una conexión. 
 
-::: moniker-end
+## <a name="connect-to-a-remote-linux-computer"></a>Conexión a un equipo remoto Linux
 
-Al crear un proyecto de Linux C++ en Visual Studio para un sistema Linux (sea una máquina virtual o un equipo físico), el código se copia en el equipo Linux remoto y, después, se compila según la configuración de Visual Studio. Para configurar esta conexión remota:
+Al crear un proyecto de Linux C++ en Visual Studio para un sistema Linux (sea una máquina virtual o un equipo físico), el código se copia en el equipo Linux remoto y, después, se compila según la configuración de Visual Studio.
+
+Para configurar esta conexión remota:
 
 1. Compile el proyecto por primera vez o cree manualmente una nueva entrada al seleccionar **Herramientas > Opciones** y, luego, abrir el nodo **Multiplataforma > Administrador de conexiones** y hacer clic en el botón **Agregar**.
 
@@ -36,7 +38,7 @@ Al crear un proyecto de Linux C++ en Visual Studio para un sistema Linux (sea un
 
 1. Especifique la siguiente información:
 
-   | Entrada | Descripción
+   | Entrada | DESCRIPCIÓN
    | ----- | ---
    | **Nombre de host**           | Nombre o dirección IP del dispositivo de destino
    | **Puerto**                | Puerto en el que se ejecuta el servicio SSH, normalmente 22
@@ -46,6 +48,68 @@ Al crear un proyecto de Linux C++ en Visual Studio para un sistema Linux (sea un
    | **Archivo de clave privada**    | Archivo de clave privada creado para la conexión ssh
    | **Frase de contraseña**          | Frase de contraseña usada con la clave privada seleccionada anteriormente
 
-1. Haga clic en el botón **Conectar** para intentar la conexión con el equipo remoto.  Si se produce un error en la conexión, se marcan en rojo los cuadros de entrada que deben cambiarse.
+   Puede utilizar una contraseña o un archivo de claves y una frase de contraseña para la autenticación. Para muchos escenarios de desarrollo, la autenticación de contraseña es suficiente. Si prefiere usar un archivo de claves públicas y privadas, puede crear uno nuevo o [usar uno existente](https://security.stackexchange.com/questions/10203/reusing-private-public-keys). Actualmente, se admiten solo claves RSA y DSA. 
+   
+   Siga estos pasos para crear un archivo de claves privadas RSA:
+
+    1. En la máquina Windows, cree el par de claves ssh con `ssh-keygen -t rsa`. Esto creará una clave pública y una clave privada. De forma predeterminada, las claves se colocan en `C:\Users\%USERNAME%\.ssh` con los nombres `id_rsa.pub` y `id_rsa`.
+
+    1. En Windows, copie la clave pública a la máquina Linux: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`.
+
+    1. En el sistema Linux, agregue la clave a la lista de claves autorizadas (y asegúrese de que el archivo tiene los permisos correctos): `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+
+1. Haga clic en el botón **Conectar** para intentar la conexión con el equipo remoto. 
+
+   Si la conexión se realiza correctamente, Visual Studio empezará a configurar IntelliSense para usar los encabezados remotos. Para más información, consulte [IntelliSense para los encabezados en sistemas remotos](configure-a-linux-project.md#remote_intellisense).
+
+   Si se produce un error en la conexión, se marcan en rojo los cuadros de entrada que deben cambiarse.
 
    ![Error del Administrador de conexiones](media/settings_connectionmanagererror.png)
+
+   Si está utilizando archivos de claves para la autenticación, asegúrese de que el servidor SSH de la máquina de destino se esté ejecutando y esté configurada correctamente.
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2019"
+
+   Vaya a **Herramientas > Opciones > Multiplataforma > Registro** para habilitar el registro y ayudar a solucionar problemas de conexión:
+
+   ![Registro remoto](media/remote-logging-vs2019.png)
+
+   Los registros incluyen las conexiones, todos los comandos enviados a la máquina remota (su texto, código de salida y tiempo de ejecución) y toda la salida de Visual Studio al shell. El registro funciona para cualquier proyecto CMake multiplataforma o proyecto Linux basado en MSBuild en Visual Studio.
+
+   Puede configurar la salida para que vaya a un archivo o al panel **Registro multiplataforma** en la Ventana de salida. Para proyectos Linux basados en MSBuild, los comandos emitidos a la máquina remota por MSBuild no se enrutan a la **Ventana de salida** porque se emiten fuera de proceso. En su lugar, se registran en un archivo con el prefijo "msbuild_".
+
+   ::: moniker-end
+
+## <a name="connect-to-wsl"></a>Conexión a WSL
+
+::: moniker range="vs-2017"
+
+En Visual Studio 2017, se conecta a WSL mediante los mismos pasos que la conexión a una máquina Linux remota, tal como se describió anteriormente en este artículo. Utilice **localhost** para el **nombre de host**.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+En Visual Studio 2019 versión 16.1, no es necesario agregar una conexión remota ni configurar SSH cuando el destino es WSL. Todo lo que se necesita en el sistema Linux es gcc, make, gdb, rsync y zip. Visual Studio requiere rsync y zip solo para extraer los archivos de encabezado en el primer uso de la instancia WSL al sistema de archivos de Windows para utilizarlos en IntelliSense. En Visual Studio 2019 versión 16.1, la compatibilidad de WSL se basa en Windows versión 1809. Puede ejecutar una versión posterior de Windows, pero Visual Studio aún no aprovecha las nuevas funcionalidades de WSL.
+
+Si la distribución admite apt, puede instalar los paquetes necesarios con este comando:
+
+```bash
+sudo apt install g++ gdb make rsync zip
+```
+
+Para configurar el proyecto para WSL, consulte [Configuración de un proyecto Linux](configure-a-linux-project.md) o [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md), en función del tipo de proyecto que tenga.
+
+::: moniker-end
+
+## <a name="see-also"></a>Otras referencias
+
+[Configuración de un proyecto de Linux](configure-a-linux-project.md)<br />
+[Configuración de un proyecto de CMake en Linux](cmake-linux-project.md)<br />
+[Implementación, ejecución y depuración del proyecto Linux](deploy-run-and-debug-your-linux-project.md)<br />
+
+
+
+
