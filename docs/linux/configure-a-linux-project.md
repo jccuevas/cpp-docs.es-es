@@ -1,13 +1,13 @@
 ---
 title: Configuración de un proyecto de C++ para Linux en Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821569"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042634"
 ---
 # <a name="configure-a-linux-project"></a>Configuración de un proyecto de Linux
 
@@ -37,7 +37,7 @@ Para ver las opciones de configuración, seleccione el menú **Proyecto > Propie
 
 ![Configuración general](media/settings_general.png)
 
-De forma predeterminada, con la herramienta se crea un archivo ejecutable (.out). Para compilar una biblioteca estática o dinámica, o para usar un archivo Make existente, emplee la opción **Tipo de configuración**.
+De forma predeterminada, se crea un archivo ejecutable (.out). Para compilar una biblioteca estática o dinámica, o para usar un archivo Make existente, emplee la opción **Tipo de configuración**.
 
 Para obtener más información sobre la configuración de las páginas de propiedades, vea [Referencia de las páginas de propiedades de un proyecto de Linux](prop-pages-linux.md).
 
@@ -105,7 +105,7 @@ Cuando se agrega una conexión nueva en **Connection Manager**, Visual Studio de
 Esta funcionalidad depende de que el equipo Linux tenga instalado zip. Puede instalar zip mediante este comando apt-get:
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 Para administrar la caché de encabezados, vaya a **Herramientas > Opciones, multiplataforma > Connection Manager > Administrador de IntelliSense de encabezados remotos**. Para actualizar la caché de encabezados después de realizar cambios en el equipo Linux, seleccione la conexión remota y, después, haga clic en **Actualizar**. Haga clic en **Eliminar** para quitar los encabezados sin eliminar la propia conexión. Haga clic en **Explorar** para abrir el directorio local en el **Explorador de archivos**. Trate a esta carpeta como de solo lectura. Para descargar los encabezados de una conexión existente que se creó antes de Visual Studio 2017 versión 15.3, seleccione la conexión y, después, haga clic en **Descargar**.

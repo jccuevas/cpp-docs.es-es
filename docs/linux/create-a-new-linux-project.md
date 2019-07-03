@@ -1,13 +1,13 @@
 ---
 title: Creación de un proyecto de C++ para Linux en Visual Studio
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: e39e60c906901420a4809c22b4f4e71d3b621da1
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 0377e21177b29d998fc3e66bb1863dbc127c1fbe
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821633"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042713"
 ---
 # <a name="create-a-new-linux-project"></a>Creación de un proyecto de Linux
 
@@ -19,7 +19,7 @@ Los proyectos de Linux están disponibles en Visual Studio 2017 y versiones post
 
 En primer lugar, asegúrese de que está instalada la **carga de trabajo de desarrollo de Linux** para Visual Studio. Para más información, vea [Descargar, instalar y configurar la carga de trabajo de Linux](download-install-and-setup-the-linux-development-workload.md).
 
-Al crear un proyecto de C++ para Linux en Visual Studio, tiene la opción de crear un proyecto de Visual Studio o uno de CMake. En este artículo se describe cómo crear un proyecto de Visual Studio. Para obtener información sobre cómo crear y usar proyectos de CMake existentes, vea [Configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
+Al crear un proyecto de C++ para Linux en Visual Studio, tiene la opción de crear un proyecto de Visual Studio o uno de CMake. En este artículo se describe cómo crear un proyecto de Visual Studio. Para obtener información sobre cómo crear y usar proyectos de CMake existentes, vea [Creación y configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
 
 ## <a name="to-create-a-new-linux-project"></a>Para crear un proyecto de Linux
 
@@ -43,12 +43,18 @@ Haga lo siguiente para crear un proyecto de Linux en Visual Studio:
 
 ::: moniker-end
 
-   | Tipo de proyecto | Descripción |
+   | Tipo de proyecto | DESCRIPCIÓN |
    | ------------ | --- |
    | **Blink (Raspberry)**           | Proyecto destinado a un dispositivo Raspberry Pi con código de ejemplo que hace parpadear un LED |
    | **Aplicación de consola (Linux)** | Proyecto destinado a cualquier equipo Linux con código de ejemplo que muestra texto en la consola |
    | **Proyecto vacío (Linux)**       | Proyecto destinado a cualquier equipo Linux sin código de ejemplo |
    | **Proyecto de archivos MAKE (Linux)**    | Proyecto destinado a cualquier equipo Linux que se compila con un sistema de compilación estándar de archivos Make |
+
+   ::: moniker range="vs-2019"
+
+   Visual Studio 2019 permite crear un nuevo proyecto de CMake. Para obtener más información, vea [Creación y configuración de un proyecto de CMake de Linux](cmake-linux-project.md).
+   
+   ::: moniker-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 
