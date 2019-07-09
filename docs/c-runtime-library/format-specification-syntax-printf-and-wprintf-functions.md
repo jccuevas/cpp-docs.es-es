@@ -1,6 +1,6 @@
 ---
 title: 'Sintaxis de especificación de formato: Funciones printf y wprintf'
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: bccbe435d926a75990a4ca35b98c9b352dd40e8b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 07565da17eb53274e0c3203abbc8cddb9e61da90
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740319"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552254"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Sintaxis de especificación de formato: funciones printf y wprintf
 
@@ -22,7 +22,7 @@ Las distintas funciones `printf` y `wprintf` toman una cadena de formato y argum
 
 Una especificación de conversión consta de campos opcionales y obligatorios con este formato:
 
-**%**[[*marcas*](#flags)][[*ancho*](#width)][.[*precisión*](#precision)][[*tamaño*](#size)][*tipo*](#type)
+**%** [[*marcas*](#flags)][[*ancho*](#width)][.[*precisión*](#precision)][[*tamaño*](#size)][*tipo*](#type)
 
 Cada campo de la especificación de conversión es un carácter o un número que indica una opción de formato o un especificador de conversión. El campo obligatorio *tipo* especifica el tipo de conversión que se aplicará a un argumento. Los campos opcionales *marcas*, *ancho* y *precisión* controlan aspectos de formato adicionales, como espacios o ceros iniciales, justificación y precisión mostrada. El campo *tamaño* especifica el tamaño del argumento consumido y convertido.
 
@@ -64,7 +64,7 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**X**|Integer|Entero hexadecimal sin signo; usa “ABCDEF”.|
 |**e**|Punto flotante|Valor con signo que tiene el formato [-]*d.dddd*__e±__*dd*[*d*], donde *d* es un dígito decimal, *dddd* es uno o varios dígitos decimales en función de la precisión especificada, o seis de manera predeterminada, y *dd*[*d*] son dos o tres dígitos decimales en función del [formato de salida](../c-runtime-library/set-output-format.md) y el tamaño del exponente.|
 |**E**|Punto flotante|Es idéntico al formato de **e** salvo que el exponente se introduce mediante **E** en lugar de **e**.|
-|**f**|Punto flotante|Valor con signo que tiene el formato [-]*dddd*__.__*dddd*, donde *dddd* es uno o varios dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada, seis de forma predeterminada.|
+|**f**|Punto flotante|Valor con signo que tiene el formato [-]*dddd* __.__ *dddd*, donde *dddd* es uno o varios dígitos decimales. El número de dígitos que hay delante del separador decimal depende de la magnitud del número y el número de dígitos que hay detrás del separador decimal depende de la precisión solicitada, seis de forma predeterminada.|
 |**F**|Punto flotante|Idéntico al formato **f** salvo que la salida infinito y nan se ponen en mayúsculas.|
 |**g**|Punto flotante|Los valores con signo se muestran en formato **f** o **e**, lo que sea más conciso para el valor y la precisión especificados. El formato **e** solo se usa cuando el exponente del valor es menor que -4 o mayor o igual que el argumento *precision*. Los ceros a la derecha se truncan y el separador decimal tan solo aparece si va seguido de uno o más dígitos.|
 |**G**|Punto flotante|Es idéntico al formato de **g**, salvo que el exponente se introduce mediante **E** en lugar de **e** (cuando corresponda).|
@@ -74,7 +74,7 @@ Los tipos de enteros como `short`, `int`, `long`, `long long` y sus variantes `u
 |**p**|Tipo de puntero|Muestra el argumento como una dirección de dígitos hexadecimales.|
 |**s**|String|Cuando se usa con funciones `printf`, especifica una cadena de caracteres de byte único o multibyte; cuando se usa con funciones `wprintf`, especifica una cadena de carácter ancho. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
 |**S**|String|Cuando se usa con funciones `printf`, especifica una cadena de carácter ancho; cuando se usa con funciones `wprintf`, especifica una cadena de caracteres de byte único o multibyte. Los caracteres se muestran hasta el primer carácter nulo o hasta que se alcanza el valor de *precisión*.|
-|**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](/windows-hardware/drivers/ddi/content/wudfwdm/ns-wudfwdm-_unicode_string) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
+|**Z**|Estructura `ANSI_STRING` o `UNICODE_STRING`|Cuando la dirección de una estructura [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-_string) o [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) se pasa como argumento, muestra la cadena contenida en el búfer al que apunta el campo `Buffer` de la estructura. Use un prefijo del modificador *tamaño* de **w** para especificar un argumento `UNICODE_STRING`, por ejemplo, `%wZ`. El campo `Length` de la estructura debe establecerse en la longitud de la cadena expresada en bytes. El campo `MaximumLength` de la estructura debe establecerse en la longitud del búfer expresada en bytes.<br /><br /> Normalmente, el carácter de tipo **Z** tan solo se usa en funciones de depuración de controladores que utilizan una especificación de formato, como `dbgPrint` y `kdPrint`.|
 
 A partir de Visual Studio 2015, si el argumento correspondiente a un especificador de conversión de punto flotante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) es infinito, indefinido o NaN, la salida con formato se ajusta al estándar C99. Esta tabla enumera la salida con formato:
 
@@ -119,7 +119,7 @@ El primer campo opcional en una especificación de conversión contiene *directi
 |----------|-------------|-------------|
 |**-**|Alinear a la izquierda el resultado dentro del ancho de campo dado.|Alinear a la derecha.|
 |**+**|Usar un signo (+ o -) como prefijo del valor de salida si es de un tipo con signo.|El signo solo aparece para valores con signo negativo (-).|
-|**0**|Si *ancho* tiene el prefijo **0**, se agregan ceros iniciales hasta que se alcanza el ancho mínimo. Si aparecen tanto **0** como **-**, **0** se omite. Si **0** se especifica para un formato de entero (**i**, **u**, **x**, **X**, **o**, **d**) y también existe una especificación de precisión (por ejemplo, `%04.d`), **0** se omite. Si **0** se especifica para la el formato de punto flotante **a** o **A**, se anteponen ceros iniciales a la mantisa, después de `0x` o el prefijo `0X`.|Ningún relleno.|
+|**0**|Si *ancho* tiene el prefijo **0**, se agregan ceros iniciales hasta que se alcanza el ancho mínimo. Si aparecen tanto **0** como **-** , **0** se omite. Si **0** se especifica para un formato de entero (**i**, **u**, **x**, **X**, **o**, **d**) y también existe una especificación de precisión (por ejemplo, `%04.d`), **0** se omite. Si **0** se especifica para la el formato de punto flotante **a** o **A**, se anteponen ceros iniciales a la mantisa, después de `0x` o el prefijo `0X`.|Ningún relleno.|
 |**blank** (' ')|Utilice un espacio en blanco como prefijo del valor de salida si tiene signo y es positivo. El espacio en blanco se omite si aparecen las marcas blank y +.|No aparecen espacios en blanco.|
 |**#**|Cuando se usa con el formato **o**, **x** o **X**, la marca **#** utiliza 0, 0x o 0X, respectivamente, para utilizar como prefijo cualquier valor de salida distinto de cero.|No aparecen espacios en blanco.|
 ||Cuando se usa con el formato **e**, **E**, **f**, **F**, **a** o **A**, la marca **#** exige al valor de salida que contenga un punto decimal.|El punto decimal solo aparece si hay dígitos detrás.|
@@ -129,7 +129,7 @@ El primer campo opcional en una especificación de conversión contiene *directi
 
 ## <a name="width-specification"></a>Especificación del ancho
 
-En una especificación de conversión, el campo de especificación de ancho opcional aparece después de cualquier carácter de *marcas* . El argumento *ancho* es un entero decimal no negativo que controla el número mínimo de caracteres que aparecerán en la salida. Si el número de caracteres en el valor de salida es menor que el ancho especificado, se agregan espacios en blanco a la izquierda o a la derecha de los valores, dependiendo de si se especifica la marca de alineación a la izquierda (**-**), hasta que se alcanza el ancho mínimo. Si *ancho* tiene como prefijo 0, se agregan ceros iniciales a las conversiones de entero y punto flotante hasta que se alcanza el ancho mínimo, excepto cuando la conversión sea a un infinito o NaN.
+En una especificación de conversión, el campo de especificación de ancho opcional aparece después de cualquier carácter de *marcas* . El argumento *ancho* es un entero decimal no negativo que controla el número mínimo de caracteres que aparecerán en la salida. Si el número de caracteres en el valor de salida es menor que el ancho especificado, se agregan espacios en blanco a la izquierda o a la derecha de los valores, dependiendo de si se especifica la marca de alineación a la izquierda ( **-** ), hasta que se alcanza el ancho mínimo. Si *ancho* tiene como prefijo 0, se agregan ceros iniciales a las conversiones de entero y punto flotante hasta que se alcanza el ancho mínimo, excepto cuando la conversión sea a un infinito o NaN.
 
 La especificación de ancho nunca provoca el truncamiento de un valor. Si el número de caracteres del valor de salida es mayor que el ancho especificado, o si el argumento *ancho* no se proporciona, todos los caracteres del valor aparecen en la salida, sujeto a la especificación del argumento *precisión*.
 
@@ -159,7 +159,7 @@ El carácter de *tipo* determina la interpretación de *precisión* o la precisi
 
 |Tipo|Significado|Default|
 |----------|-------------|-------------|
-|**a**, **A**|La precisión especifica el número de dígitos que se muestran después del punto.|La precisión predeterminada es 13. Si la precisión es 0, no se imprime ningún punto decimal a menos que se use la marca **#**.|
+|**a**, **A**|La precisión especifica el número de dígitos que se muestran después del punto.|La precisión predeterminada es 13. Si la precisión es 0, no se imprime ningún punto decimal a menos que se use la marca **#** .|
 |**c**, **C**|La precisión no tiene ningún efecto.|El carácter se imprime.|
 |**d**, **i**, **o**, **u**, **x**, **X**|La precisión especifica el número mínimo de dígitos que se imprimen. Si el número de dígitos del argumento es menor que *precisión*, el valor de salida se rellena con ceros a la izquierda. El valor no se trunca cuando el número de dígitos supera al argumento *precisión*.|La precisión predeterminada es 1.|
 |**e**, **E**|La precisión especifica el número de dígitos que se almacenarán después del separador decimal. El último dígito impreso se redondea.|La precisión predeterminada es 6. Si *precisión* es 0 o no aparece un número detrás del punto (.), el punto decimal no se imprime.|

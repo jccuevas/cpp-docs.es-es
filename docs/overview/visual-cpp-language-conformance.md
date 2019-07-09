@@ -1,16 +1,16 @@
 ---
 title: Tabla de conformidad del lenguaje Microsoft C++
-ms.date: 05/20/2019
+ms.date: 07/02/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17d6a1b0685d6981c7df79e76ecc5142083e14c7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400902"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552355"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tabla de conformidad del lenguaje Microsoft C++
 
@@ -115,7 +115,7 @@ Para obtener detalles sobre las mejoras de conformidad y otros cambios en Visual
 |&nbsp;&nbsp;[P0306R4 Incorporación de \_\_VA_OPT\_\_ para la omisión de comas y la eliminación de comas](https://wg21.link/P0306R4)|No|
 |&nbsp;&nbsp;[P0315R4 Permitir lambdas en contextos no evaluados](https://wg21.link/P0315R4)|No|
 |&nbsp;&nbsp;[P0409R2 Permitir captura lambda \[=, this\]](https://wg21.link/P0409R2)|No|
-|&nbsp;&nbsp;[P0428R2 Sintaxis de plantilla familiar para expresiones lambda genéricas](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf)|No|
+|&nbsp;&nbsp;[P0428R2 Sintaxis de plantilla familiar para expresiones lambda genéricas](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|No|
 |&nbsp;&nbsp;[P0479R5 \[\] Atributos](https://wg21.link/P0479R5) \[likely\]\] y \[\[unlikely\]|No|
 |&nbsp;&nbsp;[P0542R5 Contratos](https://wg21.link/P0542R5)|No|
 |&nbsp;&nbsp;[P0614R1 Bucles for basado en intervalo con inicializadores](https://wg21.link/P0614R1)|No|

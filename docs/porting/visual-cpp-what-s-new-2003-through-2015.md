@@ -1,13 +1,13 @@
 ---
 title: Novedades de Visual C++ de 2003 a 2015
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449807"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552209"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Novedades de Visual C++ de 2003 a 2015
 
@@ -1682,7 +1682,7 @@ Esta compatibilidad mejorada con las normas ISO C/C++ puede requerir cambios en 
 ### <a name="windows-runtime-app-development-support"></a>Compatibilidad con el desarrollo de aplicaciones de Windows Runtime
 
 - **Modelo de interfaz de usuario basada en XAML nativo**. Para aplicaciones de Windows Runtime, puede usar el nuevo modelo de interfaz de usuario basada en XAML nativo.
-- **Extensiones de componentes de Visual C++** . Estas extensiones simplifican el uso de objetos de Windows Runtime, que son una parte necesaria de las aplicaciones de Windows Runtime. Para obtener más información, consulte [Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md) (Guía básica para aplicaciones de Windows Runtime con C++) y [Referencia del lenguaje Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md).
+- **Extensiones de componentes de Visual C++** . Estas extensiones simplifican el uso de objetos de Windows Runtime, que son una parte necesaria de las aplicaciones de Windows Runtime. Para obtener más información, consulte [Roadmap for Windows Runtime apps using C++](../cppcx/universal-windows-apps-cpp.md) (Guía básica para aplicaciones de Windows Runtime con C++) y [Referencia del lenguaje Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md).
 - **Juegos de DirectX**. Ahora puede desarrollar juegos atractivos mediante la nueva compatibilidad de DirectX con aplicaciones de Windows Runtime.
 - **Interoperabilidad XAML/DirectX**. Las aplicaciones de Windows Runtime que usan XAML y DirectX ahora interactúan eficazmente.
 - **Desarrollo de DLL del componente de Windows Runtime**. El desarrollo de DLL del componente hace que el entorno de Windows Runtime sea extensible.
