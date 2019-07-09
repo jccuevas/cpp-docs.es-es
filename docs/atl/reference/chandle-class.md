@@ -1,6 +1,6 @@
 ---
 title: CHandle (clase)
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 f1_keywords:
 - CHandle
 - ATLBASE/ATL::CHandle
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245639"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693406"
 ---
 # <a name="chandle-class"></a>CHandle (clase)
 
@@ -85,7 +85,7 @@ void Attach(HANDLE h) throw();
 
 ### <a name="remarks"></a>Comentarios
 
-Asigna el `CHandle` de objeto para el *h* controlar. En las compilaciones depura, se generará una ATLASSERT si *h* es NULL. Se realiza ninguna otra comprobación validez del identificador.
+Asigna el `CHandle` de objeto para el *h* identificador y, a continuación, llama a **h.Detach()** . En las compilaciones depura, se generará una ATLASSERT si *h* es NULL. Se realiza ninguna otra comprobación validez del identificador.
 
 ##  <a name="chandle"></a>  CHandle::CHandle
 
