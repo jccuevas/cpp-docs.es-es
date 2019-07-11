@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179911"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787370"
 ---
 # <a name="predefined-macros"></a>Macros predefinidas
 
@@ -186,7 +186,7 @@ El compilador admite estas macros predefinidas especificadas por ISO C99 y C ++ 
 
 - **&#95;&#95;STDCPP&#95;subprocesos&#95; &#95;**  definido como 1 si y solo si un programa puede tener más de un subproceso de ejecución y compilado como C++. En caso contrario, es indefinido.
 
-- **&#95;&#95;TIEMPO&#95; &#95;**  el momento de la traducción de la unidad de traducción preprocesado. El tiempo es una cadena de caracteres literales del formulario *hh: mm:*, igual que la hora devuelta por la biblioteca CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) función. Siempre se define esta macro.
+- **&#95;&#95;TIEMPO&#95; &#95;**  el momento de la traducción de la unidad de traducción preprocesado. El tiempo es una cadena de caracteres literales del formulario *hh: mm:* , igual que la hora devuelta por la biblioteca CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md) función. Siempre se define esta macro.
 
 ## <a name="microsoft-specific-predefined-macros"></a>Macros predefinidas específicas de Microsoft
 
@@ -362,16 +362,16 @@ MSVC admite estas macros predefinidas adicionales.
 
 - **&#95;MSC&#95;VIDOR** definido como un literal entero que codifica el número de elementos principal y secundario del número de versión del compilador. El número principal es el primer elemento del número de versión delimitado por puntos y el número secundario es el segundo elemento. Por ejemplo, si el número de versión del compilador de Microsoft C o C++ es 17.00.51106.1, la  **&#95;MSC&#95;VIDOR** macro se evalúa como 1700. Escriba `cl /?` en la línea de comandos para ver el número de versión del compilador. Siempre se define esta macro.
 
-   |Versión de Visual Studio|**&AMP;#95;MSC&AMP;#95;VER**|
+   |Versión de Visual Studio|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|
    |Visual Studio .NET 2003 (7.1)|1310|
    |Visual Studio 2005 (8.0)|1400|
-   |Visual Studio 2008 (9.0)|1500|
+   |Visual Studio 2008 (9.0)|1\.500|
    |Visual Studio 2010 (10.0)|1600|
    |Visual Studio 2012 (11.0)|1700|
-   |Visual Studio 2013 (12.0)|1800|
+   |Visual Studio 2013 (12.0)|1\.800|
    |Visual Studio 2015 (14.0)|1900|
    |Visual Studio 2017 RTW (15.0)|1910|
    |Visual Studio 2017 versión 15.3|1911|
@@ -381,6 +381,9 @@ MSVC admite estas macros predefinidas adicionales.
    |Visual Studio 2017, versión 15.8|1915|
    |Visual Studio 2017 versión 15.9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
+   |Visual Studio 2019, versión 16.1|1921|
+   |Visual Studio 2019 versión 16.2|1922|
+   |Visual Studio 2019 versión 16.3|1923|
 
    Para probar de versiones del compilador o actualizaciones en una versión determinada de Visual Studio o después, use el **>=** operador. Puede usar en una directiva condicional para comparar  **&#95;MSC&#95;VIDOR** con esa versión conocida. Si tiene varias versiones mutuamente excluyentes para comparar, pedir las comparaciones en orden descendente de número de versión. Por ejemplo, este código comprueba los compiladores que se lanzó en Visual Studio 2017 y versiones posteriores. A continuación, busca los compiladores que se publicaron en o después de Visual Studio 2015. A continuación, comprueba todos los compiladores que se lanzó antes que Visual Studio 2015:
 
