@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263066"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861105"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -42,7 +42,7 @@ Un contador de entero sin signo de 64 bits.
 
 |Función intrínseca|Arquitectura|
 |---------------|------------------|
-|`__rdtscp`|La familia AMD NPT 0Fh o versiones posteriores|
+|`__rdtscp`|x86, x64|
 
 **Archivo de encabezado** \<intrin.h >
 
@@ -50,25 +50,22 @@ Un contador de entero sin signo de 64 bits.
 
 Esta función intrínseca genera el `rdtscp` instrucción. Para determinar la compatibilidad de hardware para esta instrucción, llame a la `__cpuid` intrínseca con `InfoType=0x80000001` y comprobar poco 27 de `CPUInfo[3] (EDX)`. Este bit es 1 si se admite la instrucción y 0 en caso contrario.  Si ejecuta el código que usa esta función intrínseca en hardware que no es compatible con la `rdtscp` instrucciones, los resultados son impredecibles.
 
-> [!CAUTION]
->  A diferencia de `rdtsc`, `rdtscp` es una instrucción de serialización; no obstante, el compilador puede mover código alternativa intrínseco.
-
-La interpretación del valor TSC en esta generación de hardware difiere en las versiones anteriores de x64.  Consulte los manuales de hardware para obtener más información.
+Esta instrucción espera hasta que todas las instrucciones anteriores se han ejecutado y todas las cargas anteriores son visibles globalmente. Sin embargo, no es una instrucción de serialización. Consulte los manuales de Intel y AMD para obtener más información.
 
 El significado del valor de `TSC_AUX[31:0]` depende del sistema operativo.
 
 ## <a name="example"></a>Ejemplo
 
-```
+```cpp
 #include <intrin.h>
 #include <stdio.h>
 int main()
 {
-unsigned __int64 i;
-unsigned int ui;
-i = __rdtscp(&ui);
-printf_s("%I64d ticks\n", i);
-printf_s("TSC_AUX was %x\n", ui);
+    unsigned __int64 i;
+    unsigned int ui;
+    i = __rdtscp(&ui);
+    printf_s("%I64d ticks\n", i);
+    printf_s("TSC_AUX was %x\n", ui);
 }
 ```
 
@@ -79,7 +76,6 @@ TSC_AUX was 0
 
 **FIN de Específicos de Microsoft**
 
-Copyright 2007 by Advanced Micro Devices, Inc. Todos los derechos reservados. Reprodujo con permiso de Advanced Micro Devices, Inc.
 
 ## <a name="see-also"></a>Vea también
 
