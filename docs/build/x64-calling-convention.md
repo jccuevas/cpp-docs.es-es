@@ -1,16 +1,16 @@
 ---
-title: x64 convención de llamada
+title: Convención de llamadas x64
 description: Detalles de la convención de llamada predeterminada x64 ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313628"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861157"
 ---
-# <a name="x64-calling-convention"></a>x64 convención de llamada
+# <a name="x64-calling-convention"></a>Convención de llamadas x64
 
 Esta sección describen los procesos estándar y convenciones que usa una función (el llamador) para realizar llamadas a otra función (el destinatario) en x64 código.
 
@@ -45,7 +45,7 @@ En la tabla siguiente se resume cómo se pasan los parámetros:
 |Tipo de parámetro|Cómo se pasa|
 |--------------------|----------------|
 |Punto flotante|4 primeros parámetros - XMM0 a XMM3. Otros se pasan en la pila.|
-|Integer|4 primeros parámetros - RCX, RDX, R8, R9. Otros se pasan en la pila.|
+|Entero|4 primeros parámetros - RCX, RDX, R8, R9. Otros se pasan en la pila.|
 |Agregados (8, 16, 32 o 64 bits) y __m64|4 primeros parámetros - RCX, RDX, R8, R9. Otros se pasan en la pila.|
 |Agregados (otros)|Por el puntero. En primer lugar 4 parámetros se pasan como punteros en RCX, RDX, R8 y R9|
 |__m128|Por el puntero. En primer lugar 4 parámetros se pasan como punteros en RCX, RDX, R8 y R9|
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>Registros guardado del llamador y destinatario
 
-Destruyen los registros RAX, RCX, RDX, R8, R9, R10, R11 se consideran volátiles y se deben considerar en las llamadas de función (a menos que en caso contrario, seguridad-opuestas por análisis como la optimización de todo el programa).
+Destruyen los registros RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 y las partes superiores de YMM0-15 y ZMM0-15 se consideran volátil y se deben considerar en las llamadas de función (a menos que en caso contrario, seguridad-opuestas por análisis como la optimización de todo el programa). En AVX512VL, los registros XMM, YMM y ZMM 16-31 son volátiles.
 
-Los registros RBX, RBP, RDI, RSI, RSP, R12, R13, R14 y R15 se consideran no volátiles y deben guardarse y restaurarse con una función que los usa.
+Los registros RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 y XMM6-15 se consideran no volátiles y deben guardarse y restaurarse con una función que los usa.
 
 ## <a name="function-pointers"></a>Punteros de función
-
+ 
 Punteros de función son simplemente punteros a la etiqueta de la función respectiva. No hay ninguna tabla de requisitos de contenido (TDC) para punteros de función.
 
 ## <a name="floating-point-support-for-older-code"></a>Compatibilidad de punto flotante código antiguo

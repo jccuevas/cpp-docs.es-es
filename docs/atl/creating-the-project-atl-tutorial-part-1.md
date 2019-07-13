@@ -3,12 +3,12 @@ title: Crear el proyecto (Tutorial de ATL, Parte 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221403"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861020"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Crear el proyecto (Tutorial de ATL, Parte 1)
 
@@ -44,17 +44,12 @@ Este tutorial le guiará paso a paso a través de un proyecto ATL sin atributos 
 
     La ubicación para el código fuente normalmente será \Users\\\<username > \source\repos y una nueva carpeta se creará automáticamente.
 
-1. Haga clic en **Aceptar** y **proyecto ATL** abre el asistente.
+1. En Visual Studio 2019, acepte los valores predeterminados y haga clic en **Aceptar**. 
+   En Visual Studio 2017, haga clic en **Aceptar** para abrir el **proyecto ATL** asistente. Haga clic en **configuración de la aplicación** para ver las opciones disponibles. Dado que este proyecto crea un control y un control debe ser un servidor en proceso, deje el **tipo de aplicación** como un archivo DLL. Haga clic en **OK**.
 
-1. Haga clic en **configuración de la aplicación** para ver las opciones disponibles.
+Visual Studio creará el proyecto mediante la generación de varios archivos. Puede ver estos archivos en **el Explorador de soluciones** expandiendo el `Polygon` objeto. Los archivos se enumeran a continuación.
 
-1. Como va a crear un control y un control debe ser un servidor en proceso, deje el **tipo de aplicación** como un archivo DLL.
-
-1. Deje las demás opciones con sus valores predeterminados y haga clic en **Aceptar**.
-
-El **Asistente para proyectos ATL** creará el proyecto mediante la generación de varios archivos. Puede ver estos archivos en **el Explorador de soluciones** expandiendo el `Polygon` objeto. Los archivos se enumeran a continuación.
-
-|Archivo|Descripción|
+|Archivo|DESCRIPCIÓN|
 |----------|-----------------|
 |Polygon.cpp|Contiene la implementación de `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, y `DllUnregisterServer`. También contiene el mapa de objetos, que es una lista de los objetos ATL en el proyecto. Esto está inicialmente en blanco.|
 |Polygon.def|Este archivo de definición de módulo proporciona al vinculador con información acerca de las exportaciones requeridas por el archivo DLL.|
@@ -66,13 +61,13 @@ El **Asistente para proyectos ATL** creará el proyecto mediante la generación 
 |stdafx.cpp|El archivo que incluirá `#include` los archivos de implementación de ATL.|
 |stdafx.h|El archivo que incluirá `#include` los archivos de encabezado ATL.|
 
-1. En **el Explorador de soluciones**, haga clic en el `Polygon` proyecto.
+1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto `Polygon`.
 
 1. En el menú contextual, haga clic en **propiedades**.
 
 1. Haga clic en **vinculador**. Cambiar el **por UserRedirection** opción **Sí**.
 
-1. Haga clic en **Aceptar**.
+1. Haga clic en **OK**.
 
 En el paso siguiente, agregará un control a su proyecto.
 
