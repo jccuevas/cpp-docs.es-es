@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450716"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861044"
 ---
 # <a name="vc-directories-property-page-windows"></a>Directorios de VC++ (Página de propiedades) (Windows)
 
-Use esta página de propiedades para indicar a Visual Studio los directorios que se van a usar al compilar el proyecto seleccionado actualmente. Para establecer los directorios de varios proyectos en una solución, utilice una hoja de propiedades personalizadas, como se describe en [configuraciones de proyecto de Visual Studio C++ del recurso compartido o resuse](../create-reusable-property-configurations.md).
+Use esta página de propiedades para indicar a Visual Studio los directorios que se van a usar al compilar el proyecto seleccionado actualmente. Para establecer los directorios de varios proyectos en una solución, utilice una hoja de propiedades personalizadas, como se describe en [recurso compartido o volver a utilizar Visual Studio C++ configuración del proyecto](../create-reusable-property-configurations.md).
 
 Para la versión de Linux de esta página, vea [Directorios de VC++ (C++ para Linux)](../../linux/prop-pages/directories-linux.md).
 
@@ -54,7 +54,7 @@ Ahora verá un cuadro de diálogo similar al siguiente:
 
 ![Mostrar directorios de bibliotecas](../media/vcppdir_libdir.png "Cuadro de diálogo para agregar o quitar rutas de acceso de bibliotecas")
 
-Use este cuadro de diálogo para ver los directorios actuales. Pero si quiere cambiar o agregar un directorio, es mejor usar el **Administrador de propiedades** para crear una hoja de propiedades o modificar la hoja de propiedades de usuario predeterminada. Para obtener más información, consulte [configuraciones de proyecto de Visual Studio C++ del recurso compartido o resuse](../create-reusable-property-configurations.md).
+Use este cuadro de diálogo para ver los directorios actuales. Pero si quiere cambiar o agregar un directorio, es mejor usar el **Administrador de propiedades** para crear una hoja de propiedades o modificar la hoja de propiedades de usuario predeterminada. Para obtener más información, consulte [recurso compartido o volver a utilizar Visual Studio C++ configuración del proyecto](../create-reusable-property-configurations.md).
 
 Como se indicó anteriormente, muchas de las rutas de acceso heredadas se proporcionan como macros.  Para examinar el valor actual de una macro, haga clic en el botón **Macros** en la esquina inferior derecha del cuadro de diálogo. Tenga en cuenta que muchas macros dependen del tipo de configuración. Es posible que una macro en una compilación de depuración se evalúe como otra ruta de acceso que la misma macro en una compilación de versión.
 

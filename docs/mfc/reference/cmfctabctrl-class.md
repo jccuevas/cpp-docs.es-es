@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2588a4fe9903de624cbd3517c290a5439fe284a
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252950"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860974"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -125,14 +125,14 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Constructor predeterminado.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Destructor.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Muestra la pestaña especificada del control de ficha actual y establece el foco en esa pestaña.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Miembros de datos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Impide que pierde el foco cuando se inserta una nueva pestaña y se habilita la vista activa.|
 
@@ -336,7 +336,7 @@ TRUE si se realiza correctamente; en caso contrario, FALSE.
 
 En la tabla siguiente se describe los valores que se puede especificar para el *estilo* parámetro.
 
-|Estilo|Descripción|
+|Estilo|DESCRIPCIÓN|
 |-----------|-----------------|
 |STYLE_3D|Crea un control de ficha con una apariencia tridimensional.|
 |STYLE_FLAT|Crea un control de ficha con pestañas planas.|
@@ -348,7 +348,7 @@ En la tabla siguiente se describe los valores que se puede especificar para el *
 
 En la tabla siguiente se enumera los valores que se puede especificar para el *ubicación* parámetro.
 
-|Ubicación|Descripción|
+|Location|DESCRIPCIÓN|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Las pestañas se encuentran en la parte inferior del control de ficha.|
 |LOCATION_TOP|Las pestañas se encuentran en la parte superior del control de ficha.|
@@ -846,7 +846,7 @@ Siempre es TRUE.
 
 El valor de la *estilo* parámetro puede ser uno de los siguientes `CMFCTabCtrl::Style` enumeraciones.
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |STYLE_3D|Muestra las fichas tridimensionales, rectangulares con esquinas redondeadas.|
 |STYLE_3D_ONENOTE|Muestra las fichas tridimensionales que tienen uno de los lados vertical y un lado inclinado y que tienen esquinas redondeadas.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 El *resizeMode* parámetro puede ser uno de los siguientes `ResizeMode` valores de enumeración.
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |RESIZE_NO|No puede cambiarse el control de ficha.|
 |RESIZE_VERT|El control de ficha puede cambiar el tamaño verticalmente, pero no horizontalmente.|
@@ -1139,6 +1139,5 @@ Este método afecta a solo un control de ficha que muestra pestañas sin formato
 
 [Gráfico de jerarquías](../../mfc/hierarchy-chart.md)<br/>
 [Clases](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
 [CDockablePane (clase)](../../mfc/reference/cdockablepane-class.md)<br/>
 [CMFCBaseTabCtrl (clase)](../../mfc/reference/cmfcbasetabctrl-class.md)
