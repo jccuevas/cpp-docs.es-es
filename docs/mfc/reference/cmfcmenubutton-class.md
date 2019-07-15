@@ -1,6 +1,6 @@
 ---
 title: CMFCMenuButton (clase)
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894434"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton (clase)
 
@@ -43,26 +45,27 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Construye un objeto `CMFCMenuButton`.|
 
 ### <a name="public-methods"></a>Métodos públicos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Lo llama el marco para traducir los mensajes de ventana antes de enviarlos. (Invalida `CMFCButton::PreTranslateMessage`).|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Cambia el tamaño del botón según su tamaño de texto e imagen.|
 
 ### <a name="data-members"></a>Miembros de datos
 
-|Name|Descripción|
+|NOMBRE|DESCRIPCIÓN|
 |----------|-----------------|
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Especifica si desea mostrar el menú emergente del sistema predeterminada o usar [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Especifica si el menú emergente aparecerán debajo o a la derecha del botón.|
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Especifica si el botón de menú cambia su estado después de que el usuario suelta el botón.|
 |[CMFCMenuButton::m_hMenu](#m_hmenu)|Identificador del menú de Windows asociada.|
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|Un identificador que indica qué elemento del usuario seleccionado en el menú emergente.|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| Permitir el procesamiento de forma predeterminada (en texto o imagen del botón).|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -164,6 +167,28 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Comentarios
 
 El valor de esta variable de miembro es cero si el usuario cancela el menú sin realizar una selección o si se produce un error.
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+Permite el procesamiento predeterminado de texto o imágenes en el botón.
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Comentarios
+
+Configuración m_bDefaultClick en false hace que el botón Mostrar el menú al hacer clic en cualquier lugar en el botón.
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+Un entero que indica el elemento que el usuario selecciona en el menú emergente.
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Comentarios
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 
