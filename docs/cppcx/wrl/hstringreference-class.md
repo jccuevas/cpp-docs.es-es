@@ -1,11 +1,12 @@
 ---
 title: HStringReference (Clase)
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894389"
 ---
 # <a name="hstringreference-class"></a>HStringReference (Clase)
 
@@ -46,20 +47,21 @@ El tiempo de ejecución de Windows no administra la duración del búfer de resp
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Name                                                    | Descripción
+NOMBRE                                                    | DESCRIPCIÓN
 ------------------------------------------------------- | -----------------------------------------------------------
 [HStringReference::HStringReference](#hstringreference) | Inicializa una nueva instancia de la clase `HStringReference`.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Miembro                              | Descripción
+Member                              | DESCRIPCIÓN
 ----------------------------------- | ------------------------------------------------------------------
 [HStringReference::CopyTo](#copyto) | Copia actual `HStringReference` objeto a un objeto HSTRING.
 [HStringReference::Get](#get)       | Recupera el valor del identificador HSTRING subyacente.
+[HStringReference::GetRawBuffer](#getrawbuffer) | Recupera un puntero a los datos de cadena subyacente.
 
 ### <a name="public-operators"></a>Operadores públicos
 
-Name                                                  | Descripción
+NOMBRE                                                  | DESCRIPCIÓN
 ----------------------------------------------------- | ----------------------------------------------------------------------------------------------
 [HStringReference::operator=](#operator-assign)       | Mueve el valor de otro `HStringReference` el objeto actual `HStringReference` objeto.
 [HStringReference::operator==](#operator-equality)    | Indica si los dos parámetros son iguales.
@@ -106,6 +108,21 @@ HSTRING Get() const throw()
 ### <a name="return-value"></a>Valor devuelto
 
 El valor de identificador HSTRING subyacente.
+
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+Recupera un puntero a los datos de cadena subyacente.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parámetros
+
+*longitud* puntero a un **int** variable que recibe la longitud de los datos.
+
+### <a name="return-value"></a>Valor devuelto
+
+Un **const** puntero a los datos de cadena subyacente.
 
 ## <a name="hstringreference"></a>HStringReference::HStringReference
 

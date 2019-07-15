@@ -1,6 +1,6 @@
 ---
 title: HString (Clase)
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894404"
 ---
 # <a name="hstring-class"></a>HString (Clase)
 
@@ -62,20 +63,21 @@ El tiempo de ejecución de Windows proporciona acceso a las cadenas a través de
 
 ### <a name="public-constructors"></a>Constructores públicos
 
-Name                                | Descripción
+NOMBRE                                | DESCRIPCIÓN
 ----------------------------------- | -----------------------------------------------------
 [HString::HString](#hstring)        | Inicializa una nueva instancia de la clase `HString`.
 [HString::~HString](#tilde-hstring) | Destruye la instancia actual de la `HString` clase.
 
 ### <a name="public-methods"></a>Métodos públicos
 
-Name                                     | Descripción
+NOMBRE                                     | DESCRIPCIÓN
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [HString::Attach](#attach)               | Asocia especificado `HString` objeto con el actual `HString` objeto.
 [HString::CopyTo](#copyto)               | Copia actual `HString` objeto a un objeto HSTRING.
 [HString::Detach](#detach)               | Anula la asociación entre `HString` objetos desde su valor subyacente.
 [HString::Get](#get)                     | Recupera el valor del identificador HSTRING subyacente.
 [HString::GetAddressOf](#getaddressof)   | Recupera un puntero al identificador HSTRING subyacente.
+[HString::GetRawBuffer](#getrawbuffer)   | Recupera un puntero a los datos de cadena subyacente.
 [HString::IsValid](#isvalid)             | Indica si el actual `HString` objeto es válido.
 [HString::MakeReference](#makereference) | Crea un `HStringReference` objeto a partir de un parámetro de cadena especificado.
 [HString::Release](#release)             | Elimina el valor de cadena subyacente e inicializa actual `HString` objeto en un valor vacío.
@@ -83,7 +85,7 @@ Name                                     | Descripción
 
 ### <a name="public-operators"></a>Operadores públicos
 
-Name                                         | Descripción
+NOMBRE                                         | DESCRIPCIÓN
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString::operator=](#operator-assign)       | Mueve el valor de otro `HString` el objeto actual `HString` objeto.
 [HString::operator==](#operator-equality)    | Indica si los dos parámetros son iguales.
@@ -181,6 +183,22 @@ Puntero al identificador HSTRING subyacente.
 ### <a name="remarks"></a>Comentarios
 
 Después de realizar esta operación, se destruye el valor de cadena del identificador HSTRING subyacente.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Recupera un puntero a los datos de cadena subyacente.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Parámetros
+
+*longitud* puntero a un **int** variable que recibe la longitud de los datos.
+
+### <a name="return-value"></a>Valor devuelto
+
+Un **const** puntero a los datos de cadena subyacente.
+
 
 ## <a name="hstring"></a>HString::HString
 
